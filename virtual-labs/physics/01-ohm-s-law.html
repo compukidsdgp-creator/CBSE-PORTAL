@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBSEMOCK | Ohm's Law Virtual Lab</title>
+<style>
+:root{--navy:#101c2d;--panel:#17283c;--panel2:#20364d;--line:#35516b;--cyan:#42d5e8;--green:#75dc75;--amber:#ffc85b;--red:#ff7777;--muted:#9db1c5;--white:#edf5fb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -20%,#294967 0,#101b2b 50%,#0b1421 100%);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--white);min-height:100vh}
+header{padding:18px 24px;border-bottom:1px solid #31475e;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:#0c1725cc}
+.brand{font-weight:800;letter-spacing:1.5px}.brand span{color:var(--cyan)}.sub{font-size:12px;color:var(--muted);margin-top:4px}.tag{border:1px solid #3e617e;padding:7px 11px;border-radius:20px;color:#b9d9ee;font-size:12px}
+main{max-width:1440px;margin:auto;padding:20px}.topline{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:16px;flex-wrap:wrap}h1{font-size:clamp(22px,3vw,32px);margin:0 0 5px}.intro{color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:300px minmax(340px,1fr) 300px;gap:14px;align-items:stretch}
+.panel{background:linear-gradient(160deg,#1b2d42,#142235);border:1px solid #344e67;border-radius:15px;box-shadow:0 12px 30px #0004;overflow:hidden}.panelhead{padding:13px 15px;border-bottom:1px solid #314a63;font-size:12px;letter-spacing:1px;color:#bdd0e1;text-transform:uppercase;display:flex;justify-content:space-between}.panelbody{padding:15px}
+.formula{font-size:30px;text-align:center;font-weight:800;letter-spacing:2px;padding:12px 5px;color:#e8f5ff}.formula b:nth-child(1){color:#61b6ff}.formula b:nth-child(2){color:var(--green)}.formula b:nth-child(3){color:var(--amber)}
+.control{margin:15px 0 20px}.controltop{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:9px}.controltop strong{font-size:15px;color:var(--amber)}input[type=range]{width:100%;accent-color:var(--cyan);cursor:pointer}.limits{display:flex;justify-content:space-between;color:#8299ae;font-size:11px;margin-top:3px}
+.switchrow{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #31475d;font-size:13px}.toggle{width:48px;height:26px;border:0;border-radius:20px;background:#516276;position:relative;cursor:pointer}.toggle:after{content:"";position:absolute;left:4px;top:4px;width:18px;height:18px;border-radius:50%;background:white;transition:.2s}.toggle.on{background:#229c77}.toggle.on:after{left:26px}
+.bench{padding:12px;background:linear-gradient(135deg,#d9d3c6,#b6b4aa);border-radius:12px;min-height:370px;position:relative;overflow:hidden;color:#18212a}
+.bench:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#8e938f 1px,transparent 1.5px);background-size:13px 13px;opacity:.55}
+.benchlabel{position:relative;z-index:1;font-size:11px;font-weight:800;color:#36434b;letter-spacing:1px}
+.circuit{position:relative;z-index:1;width:100%;height:320px;display:block}
+.readings{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}.meter{background:#0c1722;border:2px solid #41566b;border-radius:9px;padding:10px;text-align:center;box-shadow:inset 0 0 12px #0008}.meter small{display:block;color:#a9bfd2;font-size:11px;letter-spacing:1px}.meter strong{font:700 clamp(20px,2.4vw,28px)/1.5 ui-monospace,monospace;color:var(--green);text-shadow:0 0 10px #69d96a55}.meter.volt strong{color:#59b7ff}.meter em{font-style:normal;font-size:12px;color:#9eb1c2}
+.graphwrap{background:#0c1725;border:1px solid #324b64;border-radius:10px;padding:10px;margin-top:14px}.graphtitle{display:flex;justify-content:space-between;font-size:12px;color:#b9cede;margin-bottom:6px}.graph{width:100%;height:190px;display:block}
+.insight{background:#102b36;border:1px solid #236072;border-radius:10px;padding:12px;margin-top:12px;font-size:13px;line-height:1.5;color:#c7e8ef}.insight b{color:#71e1e8}
+.steps{padding-left:19px;margin:0;color:#c7d6e4;font-size:13px;line-height:1.7}.steps li{margin-bottom:8px}.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.btn{border:1px solid #47647e;background:#243d55;color:#edf7ff;border-radius:8px;padding:9px 12px;cursor:pointer;font-weight:650;font-size:12px}.btn.primary{background:#087f88;border-color:#13a4ad}.btn:hover{filter:brightness(1.15)}
+.quiz{margin-top:14px;border-top:1px solid #31475d;padding-top:13px}.quiz p{font-size:13px;line-height:1.5}.quiz button{display:block;width:100%;text-align:left;margin:6px 0;padding:9px;border-radius:8px;border:1px solid #405a73;background:#1b3046;color:#dcebf7;cursor:pointer}.feedback{font-size:12px;min-height:18px;color:var(--green);margin-top:7px}
+footer{text-align:center;color:#7f95aa;font-size:11px;padding:18px}
+
+.ad-slot{border:1px dashed #58718a;background:linear-gradient(135deg,#14263a,#1b3046);color:#9eb5c9;border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.ad-slot:before{content:"ADVERTISEMENT";position:absolute;top:7px;left:10px;font-size:9px;letter-spacing:1.2px;color:#7892aa}
+.ad-slot .ad-copy{font-size:12px;line-height:1.5;padding:18px 10px;color:#b8cadd}
+.ad-slot strong{display:block;color:#d7e8f5;font-size:13px;margin-bottom:3px}
+.ad-top,.ad-bottom{max-width:970px;min-height:100px;margin:16px auto}
+.ad-rail{position:fixed;top:190px;width:150px;height:600px;z-index:5}
+.ad-left{left:max(8px,calc((100vw - 1440px)/2 - 164px))}
+.ad-right{right:max(8px,calc((100vw - 1440px)/2 - 164px))}
+.ad-rail .ad-copy{writing-mode:horizontal-tb}
+.ad-bottom{margin-top:18px;min-height:90px}
+@media(max-width:1650px){.ad-rail{width:120px;height:500px}.ad-left{left:8px}.ad-right{right:8px}}
+/* Reserve a dedicated gutter for the fixed side advertisements.
+   This keeps the experiment workspace fully visible instead of sitting underneath them. */
+@media(min-width:1251px){
+  main{width:calc(100% - 300px);max-width:1140px;margin-left:auto;margin-right:auto}
+  .ad-top,.ad-bottom{width:100%;max-width:970px}
+}
+@media(max-width:1250px){.ad-rail{display:none}main{width:auto;max-width:1440px}}
+@media(max-width:700px){.ad-top{min-height:76px;margin:10px 12px}.ad-bottom{min-height:76px;margin:14px 12px}.ad-top .ad-copy,.ad-bottom .ad-copy{font-size:11px}}
+@media print{.ad-slot{display:none!important}}
+
+
+.learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:15px}
+.learning-card{background:linear-gradient(155deg,#1b3047,#142438);border:1px solid #38546e;border-radius:13px;overflow:hidden}
+.learning-head{padding:12px 15px;border-bottom:1px solid #38546e;color:#c7d9e8;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.learning-body{padding:14px}.progress-track{height:8px;background:#0b1724;border-radius:20px;overflow:hidden;margin:9px 0}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#32c5d5,#75df9a);transition:width .2s}
+.step-item{display:flex;gap:9px;background:#102238;border:1px solid #344f68;border-radius:8px;padding:9px;margin:6px 0;font-size:13px;color:#c8d8e6}
+.step-item.done{border-color:#3d987c;background:#102d2b}.hintbox{display:none;background:#3a2f19;border:1px solid #8c7136;color:#ffe6a6;border-radius:9px;padding:11px;font-size:13px;margin-top:10px}
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.match-item,.match-target{border:1px solid #3c5a73;background:#102238;padding:10px;border-radius:8px;font-size:12px;text-align:center;color:#d8e8f4;cursor:pointer}
+.match-item.selected{outline:2px solid #4bd7df}.match-target{border-style:dashed;cursor:pointer}.match-target.correct{border-color:#65d99a;background:#12342c}
+.quiz-option{display:block;width:100%;text-align:left;margin:7px 0;background:#1a3046;border:1px solid #405b73;color:#e8f2fa;padding:10px;border-radius:8px;cursor:pointer}
+.quiz-option.correct{border-color:#61d99a;background:#12392e}.quiz-option.wrong{border-color:#ff8888;background:#402626}
+.lab-notes{width:100%;min-height:90px;background:#0b1927;color:#eaf5ff;border:1px solid #405b73;border-radius:8px;padding:10px}
+@media(max-width:760px){.learning-grid{grid-template-columns:1fr}}@media print{.learning-card{break-inside:avoid}}
+
+@media(max-width:1050px){.grid{grid-template-columns:280px 1fr}.right{grid-column:1/-1}.right .panelbody{display:grid;grid-template-columns:1fr 1fr;gap:18px}.right .panelbody>div{min-width:0}}
+@media(max-width:700px){main{padding:12px}.grid{grid-template-columns:1fr}.right{grid-column:auto}.right .panelbody{display:block}.bench{min-height:300px}.circuit{height:260px}.panelbody{padding:13px}.formula{font-size:26px}}
+
+/* V3 evolution studio */
+.v3-wrap{margin-top:18px;border:1px solid #3a5d78;border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#14283d,#0e1d2e);box-shadow:0 16px 36px #0005}
+.v3-head{padding:17px 18px;background:linear-gradient(100deg,#17364b,#1b2b45);border-bottom:1px solid #3b5a73;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.v3-head h2{font-size:19px;margin:0 0 4px}.v3-head p{font-size:12px;color:#a9bfd2;margin:0}
+.v3-score{display:flex;gap:8px;flex-wrap:wrap}.v3-pill{border:1px solid #42647e;background:#102338;padding:8px 11px;border-radius:20px;font-size:12px;color:#cce3f2}
+.v3-tabs{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid #304b63;overflow:auto}
+.v3-tab{white-space:nowrap;border:1px solid #3b5871;background:#152b40;color:#c7d9e8;padding:9px 13px;border-radius:9px;cursor:pointer;font-size:12px;font-weight:700}
+.v3-tab.active{background:#087f88;border-color:#27c2c6;color:white}
+.v3-panel{display:none;padding:16px}.v3-panel.active{display:block}
+.v3-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.v3-card{background:#102237;border:1px solid #35516b;border-radius:12px;padding:14px;min-width:0}
+.v3-card h3{font-size:14px;margin:0 0 8px;color:#e5f3fc}.v3-muted{font-size:12px;color:#a8bdd0;line-height:1.55}
+.v3-parts{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.v3-part{border:1px solid #4b6b84;background:#1c3851;border-radius:9px;padding:9px 11px;font-size:12px;cursor:grab;color:#e7f3fc;user-select:none}
+.v3-part:active{cursor:grabbing}.v3-part.used{opacity:.35;cursor:not-allowed}
+.v3-slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}
+.v3-slot{min-height:64px;border:1px dashed #6a879c;border-radius:9px;padding:9px;background:#0b1a29;color:#b6c9d9;font-size:11px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+.v3-slot.filled{border-style:solid;border-color:#4cba9b;background:#10352f;color:#d7fff0}
+.v3-slot strong{font-size:12px;color:#eaf6ff}
+.v3-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.v3-btn{border:1px solid #456680;background:#203c55;color:#edf7ff;border-radius:8px;padding:9px 12px;cursor:pointer;font-size:12px;font-weight:700}
+.v3-btn.primary{background:#087f88;border-color:#13a4ad}.v3-btn.warn{background:#593b24;border-color:#9c7040}
+.v3-feedback{min-height:22px;margin-top:10px;font-size:12px;color:#8de4bb;line-height:1.5}
+.v3-result{background:#0b1b29;border:1px solid #34516a;border-radius:10px;padding:12px;margin-top:10px;font:12px/1.7 ui-monospace,monospace;color:#bce9ee}
+.v3-select,.v3-input{background:#0b1a29;color:#e8f4fc;border:1px solid #45627a;border-radius:8px;padding:9px;width:100%;margin:6px 0 10px}
+.v3-mission{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid #36546e;border-radius:9px;background:#10243a;margin:8px 0}
+.v3-mission input{accent-color:#4bd6ae;margin-top:3px}.v3-mission b{display:block;font-size:12px}.v3-mission span{display:block;font-size:11px;color:#a9bfd2;margin-top:3px}
+.v3-bar{height:9px;background:#091522;border-radius:20px;overflow:hidden;margin:8px 0}.v3-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#36c6d5,#76df9c);transition:width .2s}
+@media(max-width:760px){.v3-grid{grid-template-columns:1fr}.v3-panel{padding:12px}.v3-head{align-items:flex-start}.v3-slots{grid-template-columns:1fr 1fr}}
+@media print{.v3-wrap{break-inside:avoid}.v3-tabs,.v3-actions{display:none!important}.v3-panel{display:block!important}}
+
+
+/* V3.1 scientific and assessment enhancements */
+.v31-wrap{margin:18px 0;border:1px solid #41627b;border-radius:15px;background:#102237;overflow:hidden}
+.v31-head{padding:15px 18px;background:#19344c;border-bottom:1px solid #3b5a73}
+.v31-head h2{margin:0 0 4px;font-size:18px}.v31-head p{margin:0;color:#aec3d5;font-size:12px}
+.v31-body{padding:15px;display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.v31-card{border:1px solid #36546c;background:#0d1d2e;border-radius:11px;padding:13px;min-width:0}
+.v31-card h3{margin:0 0 8px;font-size:14px;color:#e8f4fc}
+.v31-help{font-size:11px;color:#a9bfd0;line-height:1.5}
+.v31-termgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:10px 0}
+.v31-term{border:1px solid #4c718a;background:#19364f;color:#eaf6ff;border-radius:8px;padding:9px;text-align:left;cursor:pointer;font-size:11px}
+.v31-term small{display:block;color:#a9c2d5;margin-top:3px}
+.v31-term.selected{outline:2px solid #41d6d7;background:#15505a}
+.v31-wirelist{min-height:58px;background:#091827;border:1px solid #304c63;border-radius:8px;padding:9px;font-size:11px;color:#c7e6ec;line-height:1.7}
+.v31-input{width:100%;padding:9px;background:#091827;color:#eef7ff;border:1px solid #47647c;border-radius:7px;margin:5px 0 9px}
+.v31-btn{padding:8px 11px;border-radius:8px;border:1px solid #4b6c85;background:#203e58;color:#f1f8ff;font-size:11px;font-weight:700;cursor:pointer;margin:3px}
+.v31-btn.primary{background:#087f88;border-color:#16a7ad}
+.v31-feedback{font-size:11px;color:#91e5bd;min-height:20px;margin-top:8px;line-height:1.5}
+.v31-table{width:100%;border-collapse:collapse;font-size:11px;color:#d8e9f5}.v31-table th,.v31-table td{padding:7px;border-bottom:1px solid #29445b;text-align:right}.v31-table th:first-child,.v31-table td:first-child{text-align:left}
+.v31-canvas{width:100%;height:auto;background:#091827;border:1px solid #2f4d64;border-radius:8px}
+.v31-task{padding:10px;border:1px solid #34516a;border-radius:9px;margin:8px 0;background:#132b41}
+.v31-task label{font-size:11px;color:#c8dbea}.v31-task input{width:100%;margin-top:6px}
+.v31-rubric{display:grid;grid-template-columns:1fr auto;gap:7px;font-size:11px;color:#d2e4f0;padding:7px 0;border-bottom:1px solid #29445b}
+@media(max-width:760px){.v31-body{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header><div><div class="brand">CBSE<span>MOCK</span> <span style="color:#dceaf5">| PHYSICS STUDIO</span></div><div class="sub">Interactive virtual laboratory · Class 10 · Electricity</div></div><div class="tag">EXPERIMENT 01 / OHM'S LAW</div></header>
+<div class="ad-slot ad-top"><div class="ad-copy"><strong>Top banner placement</strong>Reserved advertising space · responsive leaderboard</div></div>
+<aside class="ad-slot ad-rail ad-left" aria-label="Left advertisement"><div class="ad-copy"><strong>Side ad</strong>Reserved placement<br>160 × 600</div></aside>
+<aside class="ad-slot ad-rail ad-right" aria-label="Right advertisement"><div class="ad-copy"><strong>Side ad</strong>Reserved placement<br>160 × 600</div></aside>
+<main>
+<div class="topline"><div><h1>Ohm's Law Laboratory</h1><div class="intro">Explore how potential difference, current and resistance are related.</div></div><div class="tag">V = I × R</div></div>
+<div class="grid">
+<section class="panel"><div class="panelhead">Experiment controls <span>01</span></div><div class="panelbody">
+<div class="formula"><b>V</b> = <b>I</b> × <b>R</b></div>
+<div class="control"><div class="controltop"><label for="voltage">Voltage (V)</label><strong id="vLabel">6.0 V</strong></div><input id="voltage" type="range" min="0" max="12" step=".5" value="6"><div class="limits"><span>0 V</span><span>12 V</span></div></div>
+<div class="control"><div class="controltop"><label for="resistance">Resistance (R)</label><strong id="rLabel">30 Ω</strong></div><input id="resistance" type="range" min="10" max="200" step="5" value="30"><div class="limits"><span>10 Ω</span><span>200 Ω</span></div></div>
+<div class="switchrow"><span>Power supply</span><button id="power" class="toggle on" aria-label="Toggle power"></button></div>
+<div class="switchrow"><span>Show circuit current</span><input id="showCurrent" type="checkbox" checked></div>
+<div class="switchrow"><span>Show voltage reading</span><input id="showVoltage" type="checkbox" checked></div>
+<div class="btnrow"><button class="btn primary" id="reset">Reset experiment</button><button class="btn" id="record">Record observation</button></div>
+<div class="insight" id="insight"><b>Observation:</b> At 6 V and 30 Ω, the current is 0.20 A. Try changing one variable at a time.</div>
+</div></section>
+<section class="panel"><div class="panelhead">Experimental workbench <span id="status">● POWER ON</span></div><div class="panelbody">
+<div class="bench"><div class="benchlabel">LOW-VOLTAGE DC CIRCUIT · SCHEMATIC WORKBENCH</div>
+<svg class="circuit" viewBox="0 0 760 330" role="img" aria-label="Circuit showing battery, switch, resistor, lamp, ammeter and voltmeter">
+<defs><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<!-- wires -->
+<path d="M105 145 H220 M270 145 H390 M450 145 H635 V250 H570 M490 250 H105 V145" fill="none" stroke="#252e34" stroke-width="12" stroke-linejoin="round"/>
+<path d="M105 145 H220 M270 145 H390 M450 145 H635 V250 H570 M490 250 H105 V145" fill="none" stroke="#e34d36" stroke-width="4" stroke-linejoin="round"/>
+<!-- battery -->
+<rect x="55" y="105" width="65" height="105" rx="16" fill="#28343a" stroke="#6d7777" stroke-width="4"/><rect x="73" y="94" width="28" height="15" rx="4" fill="#b77d37"/><text x="87" y="162" text-anchor="middle" fill="#f3d59a" font-size="25" font-weight="bold">+</text><text x="87" y="185" text-anchor="middle" fill="#e9edf0" font-size="13">DC</text><text x="87" y="226" text-anchor="middle" fill="#29343c" font-size="13">SUPPLY</text>
+<!-- lamp -->
+<circle cx="245" cy="145" r="28" fill="#f5e8c4" stroke="#7e7563" stroke-width="5"/><path id="bulbGlow" d="M230 145 Q245 125 260 145 Q245 165 230 145" fill="#ffcf62" opacity=".9" filter="url(#glow)"/><path d="M237 135 L253 155 M253 135 L237 155" stroke="#6c5c3c" stroke-width="3"/><text x="245" y="94" text-anchor="middle" fill="#36424a" font-size="14" font-weight="bold">LAMP</text>
+<!-- switch -->
+<circle cx="400" cy="145" r="7" fill="#202a30"/><circle cx="445" cy="145" r="7" fill="#202a30"/><path id="switchBlade" d="M400 145 L440 112" stroke="#242c32" stroke-width="9" stroke-linecap="round"/><text x="423" y="91" text-anchor="middle" fill="#36424a" font-size="14" font-weight="bold">SWITCH</text>
+<!-- resistor -->
+<rect x="305" y="231" width="105" height="38" rx="8" fill="#c99754" stroke="#60452a" stroke-width="3"/><path d="M324 233 V267 M344 233 V267 M365 233 V267 M386 233 V267" stroke="#6d3c24" stroke-width="6"/><text x="357" y="218" text-anchor="middle" fill="#28343a" font-size="16" font-weight="bold">R = <tspan id="svgR">30</tspan> Ω</text>
+<!-- ammeter -->
+<rect x="480" y="230" width="95" height="64" rx="9" fill="#263c37" stroke="#657c70" stroke-width="4"/><rect x="490" y="239" width="75" height="35" rx="4" fill="#b8d1b3"/><text id="svgA" x="527" y="263" text-anchor="middle" fill="#1d3a2d" font-size="20" font-family="monospace">0.200 A</text><text x="527" y="287" text-anchor="middle" fill="#eff7ef" font-size="12">AMMETER</text>
+<!-- voltmeter -->
+<path d="M245 117 V65 H650 V118" stroke="#2c75a9" stroke-width="4" fill="none"/><rect x="600" y="105" width="105" height="75" rx="10" fill="#24486a" stroke="#132d46" stroke-width="5"/><rect x="611" y="116" width="83" height="40" rx="4" fill="#c9e2ed"/><text id="svgV" x="652" y="143" text-anchor="middle" fill="#2675ad" font-size="19" font-family="monospace">6.00 V</text><text x="652" y="171" text-anchor="middle" fill="#eaf5ff" font-size="12">VOLTMETER</text>
+<text x="620" y="205" fill="#36424a" font-size="12">Parallel measurement</text>
+<path id="flow" d="M135 145 H210 M280 145 H380 M460 145 H620" stroke="#4df0b0" stroke-width="3" fill="none" stroke-dasharray="7 12" opacity="0"/>
+</svg></div>
+<div class="readings"><div class="meter"><small>AMMETER · CURRENT I</small><strong id="amps">0.200 A</strong><em id="ampNote">Circuit current</em></div><div class="meter volt"><small>VOLTMETER · VOLTAGE V</small><strong id="volts">6.00 V</strong><em>Potential difference</em></div></div>
+</div></section>
+<section class="panel right"><div class="panelhead">Live analysis <span>02</span></div><div class="panelbody">
+<div><div class="graphtitle"><span>V–I CHARACTERISTIC</span><span id="slope">Slope = 30 Ω</span></div><div class="graphwrap"><svg id="graph" class="graph" viewBox="0 0 320 190" aria-label="Voltage current graph"></svg></div><div class="insight" id="relationship">For a fixed resistance, current increases in direct proportion to voltage.</div></div>
+<div><div class="panelhead" style="padding:0 0 10px;border:0">Procedure</div><ol class="steps"><li>Set a voltage and resistance.</li><li>Switch on the DC supply.</li><li>Observe the ammeter and voltmeter.</li><li>Change voltage while keeping resistance fixed.</li><li>Compare the readings with the V–I graph.</li></ol>
+<div class="quiz"><b style="font-size:13px">Quick check</b><p>If voltage doubles while resistance stays constant, what happens to current?</p><button data-answer="a">A. It doubles</button><button data-answer="b">B. It becomes half</button><button data-answer="c">C. It stays the same</button><div class="feedback" id="feedback"></div></div></div>
+</div></section>
+</div>
+<section class="panel" style="margin-top:14px"><div class="panelhead">Observation notebook <span id="count">0 readings recorded</span></div><div class="panelbody"><div style="overflow:auto"><table style="width:100%;border-collapse:collapse;font-size:13px;min-width:430px"><thead><tr style="color:#9fb5c9;text-align:left"><th style="padding:8px">Trial</th><th>Voltage (V)</th><th>Resistance (Ω)</th><th>Current (A)</th><th>Power (W)</th></tr></thead><tbody id="records"><tr><td colspan="5" style="padding:12px;color:#8299ae">No observations yet. Adjust the controls and record a reading.</td></tr></tbody></table></div><div class="btnrow"><button class="btn" id="download">Download lab record (.csv)</button><button class="btn" onclick="window.print()">Print experiment</button></div></div></section>
+
+<section class="learning-grid">
+<div class="learning-card"><div class="learning-head">Guided experiment · progress tracker</div><div class="learning-body">
+<div class="muted">Complete each stage of the practical.</div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div id="progressText" class="muted">0 / 5 completed</div>
+<div id="stages">
+<label class="step-item"><input class="stage-check" type="checkbox"> Read the aim and principle</label>
+<label class="step-item"><input class="stage-check" type="checkbox"> Set voltage and resistance</label>
+<label class="step-item"><input class="stage-check" type="checkbox"> Switch on and observe readings</label>
+<label class="step-item"><input class="stage-check" type="checkbox"> Record at least two observations</label>
+<label class="step-item"><input class="stage-check" type="checkbox"> Complete the knowledge check</label></div>
+<div class="btnrow"><button class="btn" id="showHint">Show hint</button><button class="btn" id="resetStages">Reset progress</button></div>
+<div class="hintbox" id="hintText">Change one variable at a time. Keep resistance fixed while changing voltage to observe direct proportionality.</div>
+</div></div>
+<div class="learning-card"><div class="learning-head">Apparatus matching · drag or tap</div><div class="learning-body"><div class="muted">Tap an instrument, then tap its function (or drag it).</div>
+<div class="match-grid" style="margin-top:10px">
+<div class="match-item" draggable="true" data-match="ammeter">Ammeter</div><div class="match-target" data-target="ammeter">Measures current</div>
+<div class="match-item" draggable="true" data-match="voltmeter">Voltmeter</div><div class="match-target" data-target="voltmeter">Measures potential difference</div>
+<div class="match-item" draggable="true" data-match="resistor">Resistor</div><div class="match-target" data-target="resistor">Provides resistance</div></div><div id="matchFeedback" class="feedback">0 / 3 matched</div></div></div>
+<div class="learning-card"><div class="learning-head">Knowledge check</div><div class="learning-body"><p style="font-size:13px">A 20 Ω resistor is connected to a 10 V supply. What current flows?</p>
+<button class="quiz-option" data-q="wrong">A. 0.2 A</button><button class="quiz-option" data-q="right">B. 0.5 A</button><button class="quiz-option" data-q="wrong">C. 2.0 A</button><div id="quizFeedback" class="feedback">Choose an answer.</div></div></div>
+<div class="learning-card"><div class="learning-head">Practical notebook · export notes</div><div class="learning-body"><label style="font-size:12px">Student observations and conclusion</label><textarea id="labNotes" class="lab-notes" placeholder="Write your observations and conclusion..."></textarea>
+<div class="btnrow"><button class="btn primary" id="downloadNotebook">Download practical record</button><button class="btn" onclick="window.print()">Print lab sheet</button></div></div></div>
+</section>
+
+<section class="v3-wrap" id="evolutionStudio">
+  <div class="v3-head">
+    <div><h2>Ohm's Law · Interactive Investigation Studio</h2><p>Build, test, diagnose and explain a circuit — not just observe a preset simulation.</p></div>
+    <div class="v3-score"><span class="v3-pill">⭐ Score: <b id="v3Score">0</b></span><span class="v3-pill">🏅 Level: <b id="v3Level">Beginner</b></span><span class="v3-pill">✓ Tasks: <b id="v3Tasks">0 / 5</b></span></div>
+  </div>
+  <nav class="v3-tabs" aria-label="Investigation modes">
+    <button class="v3-tab active" data-v3tab="build">Build Circuit</button>
+    <button class="v3-tab" data-v3tab="fault">Find the Fault</button>
+    <button class="v3-tab" data-v3tab="missions">Investigation Missions</button>
+    <button class="v3-tab" data-v3tab="challenge">Challenge</button>
+    <button class="v3-tab" data-v3tab="record">Practical Record</button>
+  </nav>
+
+  <div class="v3-panel active" id="v3-build">
+    <div class="v3-grid">
+      <div class="v3-card">
+        <h3>1 · Component tray</h3><p class="v3-muted">Drag a component into each matching circuit position, or tap a component and then tap a position. Build a valid series circuit.</p>
+        <div class="v3-parts" id="v3Parts">
+          <div class="v3-part" draggable="true" data-part="battery">🔋 Battery</div>
+          <div class="v3-part" draggable="true" data-part="switch">⏻ Switch</div>
+          <div class="v3-part" draggable="true" data-part="resistor">▤ Resistor</div>
+          <div class="v3-part" draggable="true" data-part="ammeter">Ⓐ Ammeter</div>
+          <div class="v3-part" draggable="true" data-part="voltmeter">Ⓥ Voltmeter</div>
+        </div>
+        <div class="v3-slots">
+          <div class="v3-slot" data-slot="battery"><strong>Power source</strong><span>Drop battery here</span></div>
+          <div class="v3-slot" data-slot="switch"><strong>Control</strong><span>Drop switch here</span></div>
+          <div class="v3-slot" data-slot="resistor"><strong>Load</strong><span>Drop resistor here</span></div>
+          <div class="v3-slot" data-slot="ammeter"><strong>Current meter</strong><span>Connect ammeter in series</span></div>
+          <div class="v3-slot" data-slot="voltmeter"><strong>Voltage meter</strong><span>Connect voltmeter across load</span></div>
+        </div>
+        <div class="v3-actions"><button class="v3-btn primary" id="v3CheckBuild">Check my circuit</button><button class="v3-btn" id="v3ResetBuild">Reset builder</button></div>
+        <div class="v3-feedback" id="v3BuildFeedback" aria-live="polite">Complete all five positions, then validate your circuit.</div>
+      </div>
+      <div class="v3-card">
+        <h3>2 · Circuit behaviour</h3><p class="v3-muted">A correct arrangement places the ammeter in series and the voltmeter in parallel across the resistor. This simplified builder validates the arrangement and calculates an ideal circuit once validated.</p>
+        <label class="v3-muted" for="v3BuildV">Supply voltage (V)</label><input class="v3-input" id="v3BuildV" type="number" min="1" max="12" step="0.5" value="6">
+        <label class="v3-muted" for="v3BuildR">Resistance (Ω)</label><input class="v3-input" id="v3BuildR" type="number" min="1" max="100" value="30">
+        <div class="v3-result" id="v3BuildResult">Circuit not yet validated.<br>Use I = V ÷ R after completing the builder.</div>
+        <div class="v3-feedback" id="v3BuildInsight">Learning point: a voltmeter is connected in parallel; an ammeter is connected in series.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v3-panel" id="v3-fault">
+    <div class="v3-grid">
+      <div class="v3-card">
+        <h3>Fault-finding bench</h3><p class="v3-muted">Inspect the symptom, select the most likely fault, then submit your diagnosis. Each round uses a different fault scenario.</p>
+        <div class="v3-result" id="v3FaultScenario">Symptom: The circuit is switched on, but the ammeter reads 0.00 A.</div>
+        <label class="v3-muted" for="v3FaultChoice">Your diagnosis</label>
+        <select class="v3-select" id="v3FaultChoice">
+          <option value="">Choose a possible fault…</option>
+          <option value="open">The switch is open / circuit is broken</option>
+          <option value="parallel">The ammeter is connected in parallel</option>
+          <option value="voltmeter">The voltmeter is connected in series</option>
+          <option value="highr">The resistance is higher than expected</option>
+        </select>
+        <div class="v3-actions"><button class="v3-btn primary" id="v3CheckFault">Submit diagnosis</button><button class="v3-btn" id="v3NextFault">Next fault</button></div>
+        <div class="v3-feedback" id="v3FaultFeedback">Think about whether the circuit path is complete.</div>
+      </div>
+      <div class="v3-card"><h3>Diagnostic checklist</h3>
+        <div class="v3-mission"><span>1.</span><div><b>Check continuity</b><span>Is there a complete conducting path?</span></div></div>
+        <div class="v3-mission"><span>2.</span><div><b>Check meter placement</b><span>Ammeter: series. Voltmeter: parallel.</span></div></div>
+        <div class="v3-mission"><span>3.</span><div><b>Check component values</b><span>Compare expected current using I = V/R.</span></div></div>
+        <div class="v3-result" id="v3FaultHint">Tip: a zero reading often indicates an open path, but always inspect the meter connections too.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v3-panel" id="v3-missions">
+    <div class="v3-grid">
+      <div class="v3-card"><h3>Investigation missions</h3><p class="v3-muted">Use the main simulator controls above to explore each target. Mark a mission complete only after you have tested and understood it.</p>
+        <label class="v3-mission"><input type="checkbox" data-mission="1"><span><b>Mission 1 · Target current</b><span>Set R = 20 Ω and adjust voltage to obtain 0.30 A.</span></span></label>
+        <label class="v3-mission"><input type="checkbox" data-mission="2"><span><b>Mission 2 · Unknown resistance</b><span>For V = 6 V and I = 0.20 A, calculate the resistance.</span></span></label>
+        <label class="v3-mission"><input type="checkbox" data-mission="3"><span><b>Mission 3 · Verify the law</b><span>Keep resistance fixed and record at least three voltage readings.</span></span></label>
+        <label class="v3-mission"><input type="checkbox" data-mission="4"><span><b>Mission 4 · Predict before testing</b><span>Predict how current changes when resistance doubles at fixed voltage.</span></span></label>
+        <div class="v3-bar"><i id="v3MissionBar"></i></div><div class="v3-feedback" id="v3MissionFeedback">0 of 4 investigations completed.</div>
+      </div>
+      <div class="v3-card"><h3>Investigation prompts</h3>
+        <p class="v3-muted"><b>Mission 1:</b> Use I = V/R. What voltage is needed for 0.30 A through 20 Ω?</p>
+        <p class="v3-muted"><b>Mission 2:</b> Rearrange Ohm's law: R = V/I.</p>
+        <p class="v3-muted"><b>Mission 3:</b> Compare V/I for each observation. Is the ratio approximately constant?</p>
+        <p class="v3-muted"><b>Mission 4:</b> At constant voltage, doubling resistance halves current.</p>
+        <div class="v3-result">Record evidence in the Practical Record tab. Your main simulator readings and notebook remain available above.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v3-panel" id="v3-challenge">
+    <div class="v3-grid">
+      <div class="v3-card"><h3>Timed-style mastery challenge</h3><p class="v3-muted">Answer the question, then check your reasoning. Correct answers earn points once per challenge.</p>
+        <div class="v3-result" id="v3ChallengeQuestion">A 12 V battery is connected to a 4 Ω resistor. What current flows?</div>
+        <div id="v3ChallengeOptions">
+          <button class="v3-btn" data-challenge="2">2 A</button>
+          <button class="v3-btn" data-challenge="3">3 A</button>
+          <button class="v3-btn" data-challenge="4">4 A</button>
+          <button class="v3-btn" data-challenge="48">48 A</button>
+        </div>
+        <div class="v3-feedback" id="v3ChallengeFeedback">Use I = V/R.</div>
+        <button class="v3-btn" id="v3NextChallenge">Next question</button>
+      </div>
+      <div class="v3-card"><h3>Achievement board</h3>
+        <div class="v3-result" id="v3Achievements">No achievements yet. Earn points by validating your circuit, diagnosing faults and solving challenges.</div>
+        <p class="v3-muted">Points reward evidence of learning, not speed. Repeatedly clicking a correct answer does not award repeated points.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="v3-panel" id="v3-record">
+    <div class="v3-grid">
+      <div class="v3-card"><h3>Practical record builder</h3><p class="v3-muted">Compile a structured practical note using the readings recorded in the original simulator.</p>
+        <label class="v3-muted" for="v3Aim">Aim / conclusion</label><textarea id="v3Aim" class="lab-notes" placeholder="Write the aim, observation or conclusion…"></textarea>
+        <label class="v3-muted" for="v3Calc">Sample calculation</label><textarea id="v3Calc" class="lab-notes" placeholder="Show one calculation using V = I × R…"></textarea>
+        <div class="v3-actions"><button class="v3-btn primary" id="v3ExportRecord">Download complete practical record</button><button class="v3-btn" id="v3PrintRecord">Print record</button></div>
+        <div class="v3-feedback" id="v3RecordFeedback">Includes the original simulator's recorded observations.</div>
+      </div>
+      <div class="v3-card"><h3>What a good record includes</h3>
+        <div class="v3-mission"><span>01</span><div><b>Aim and principle</b><span>State the relationship being investigated.</span></div></div>
+        <div class="v3-mission"><span>02</span><div><b>Apparatus and circuit</b><span>List the components and describe meter connections.</span></div></div>
+        <div class="v3-mission"><span>03</span><div><b>Observation table</b><span>Record voltage, resistance and current.</span></div></div>
+        <div class="v3-mission"><span>04</span><div><b>Inference</b><span>Explain whether the evidence supports Ohm's law.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="v31-wrap" id="v31Enhancements">
+ <div class="v31-head"><h2>V3.1 · Circuit Wiring, Data Analysis & Teacher Assessment</h2><p>Extended practical workbench with terminal-level connections, evidence-based tasks and a structured assessment record.</p></div>
+ <div class="v31-body">
+  <div class="v31-card">
+   <h3>1 · Connect the circuit terminals</h3>
+   <p class="v31-help">Select two terminals to connect them with a wire. Build the series path: battery + → switch 1 → switch 2 → ammeter + → ammeter − → resistor 1 → resistor 2 → battery −. Then connect the voltmeter across the resistor.</p>
+   <div class="v31-termgrid" id="v31Terminals">
+    <button class="v31-term" data-node="bp">Battery +<small>Positive terminal</small></button>
+    <button class="v31-term" data-node="bn">Battery −<small>Negative terminal</small></button>
+    <button class="v31-term" data-node="s1">Switch 1<small>Input</small></button>
+    <button class="v31-term" data-node="s2">Switch 2<small>Output</small></button>
+    <button class="v31-term" data-node="ap">Ammeter +<small>Current input</small></button>
+    <button class="v31-term" data-node="am">Ammeter −<small>Current output</small></button>
+    <button class="v31-term" data-node="r1">Resistor 1<small>One end</small></button>
+    <button class="v31-term" data-node="r2">Resistor 2<small>Other end</small></button>
+    <button class="v31-term" data-node="vp">Voltmeter +<small>Across resistor 1</small></button>
+    <button class="v31-term" data-node="vm">Voltmeter −<small>Across resistor 2</small></button>
+   </div>
+   <div class="v31-help">Selected terminals connect as a pair. Required wire pairs:</div>
+   <div class="v31-wirelist" id="v31WireList">No wires connected yet.</div>
+   <div><button class="v31-btn primary" id="v31ValidateWires">Validate wiring</button><button class="v31-btn" id="v31UndoWire">Undo last wire</button><button class="v31-btn" id="v31ResetWires">Clear all wires</button></div>
+   <div class="v31-feedback" id="v31WireFeedback">Start by selecting Battery + and Switch 1.</div>
+  </div>
+  <div class="v31-card">
+   <h3>2 · Circuit response</h3>
+   <p class="v31-help">The idealised model checks the required electrical topology. Switch state and component values determine the calculated response.</p>
+   <label class="v31-help">Switch state</label><select id="v31Switch" class="v31-input"><option value="closed">Closed</option><option value="open">Open</option></select>
+   <label class="v31-help">Supply voltage (V)</label><input id="v31Voltage" class="v31-input" type="number" min="0.1" max="24" step="0.1" value="6">
+   <label class="v31-help">Resistance (Ω)</label><input id="v31Resistance" class="v31-input" type="number" min="1" max="1000" value="30">
+   <div class="v31-wirelist" id="v31CircuitOutput">Validate the wires to calculate the circuit response.</div>
+   <div class="v31-feedback">Model assumption: ideal battery, wires and meters; a single ohmic resistor. This is a learning simulation, not a hardware-grade circuit solver.</div>
+  </div>
+  <div class="v31-card">
+   <h3>3 · Auto-checked investigations</h3>
+   <p class="v31-help">Enter your answer and submit it. Completion is awarded only when the numerical result is correct.</p>
+   <div class="v31-task"><label>Mission A — What voltage gives 0.30 A through 20 Ω?</label><input id="v31AnsA" class="v31-input" type="number" step="0.01" placeholder="Voltage in volts"><button class="v31-btn primary" data-v31mission="A">Check answer</button><div class="v31-feedback" id="v31FeedA"></div></div>
+   <div class="v31-task"><label>Mission B — Find R when V = 6 V and I = 0.20 A.</label><input id="v31AnsB" class="v31-input" type="number" step="0.01" placeholder="Resistance in ohms"><button class="v31-btn primary" data-v31mission="B">Check answer</button><div class="v31-feedback" id="v31FeedB"></div></div>
+   <div class="v31-task"><label>Mission C — If voltage stays fixed and resistance doubles, current will…</label><select id="v31AnsC" class="v31-input"><option value="">Choose an answer</option><option value="double">Double</option><option value="half">Halve</option><option value="same">Stay the same</option></select><button class="v31-btn primary" data-v31mission="C">Check answer</button><div class="v31-feedback" id="v31FeedC"></div></div>
+  </div>
+  <div class="v31-card">
+   <h3>4 · Observation data & V-I graph</h3>
+   <p class="v31-help">Add experimental readings to build a graph of voltage (vertical axis) against current (horizontal axis). The gradient estimates resistance.</p>
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><label class="v31-help">Voltage (V)<input id="v31ReadV" class="v31-input" type="number" step="0.1" value="2"></label><label class="v31-help">Current (A)<input id="v31ReadI" class="v31-input" type="number" step="0.01" value="0.067"></label></div>
+   <button class="v31-btn primary" id="v31AddReading">Add reading</button><button class="v31-btn" id="v31ClearReadings">Clear data</button>
+   <canvas id="v31Graph" class="v31-canvas" width="560" height="300" aria-label="Voltage versus current graph"></canvas>
+   <div class="v31-wirelist" id="v31GraphAnalysis">Add at least two readings to estimate the gradient.</div>
+   <table class="v31-table"><thead><tr><th>Trial</th><th>V (V)</th><th>I (A)</th><th>V/I (Ω)</th></tr></thead><tbody id="v31Readings"></tbody></table>
+  </div>
+  <div class="v31-card">
+   <h3>5 · Teacher assessment & student progress</h3>
+   <label class="v31-help">Student name</label><input id="v31Student" class="v31-input" placeholder="Enter student name">
+   <label class="v31-help">Class / section</label><input id="v31Class" class="v31-input" placeholder="e.g. Class 10 A">
+   <div class="v31-rubric"><span>Circuit construction & wiring</span><b id="v31RubricWire">0 / 20</b></div>
+   <div class="v31-rubric"><span>Investigation answers</span><b id="v31RubricMission">0 / 20</b></div>
+   <div class="v31-rubric"><span>Fault diagnosis</span><b id="v31RubricFault">0 / 20</b></div>
+   <div class="v31-rubric"><span>Data collection & graph</span><b id="v31RubricGraph">0 / 20</b></div>
+   <div class="v31-rubric"><span>Reflection & practical record</span><b id="v31RubricRecord">0 / 20</b></div>
+   <div class="v31-wirelist" id="v31TotalScore">Assessment score: 0 / 100</div>
+   <label class="v31-help">Teacher feedback</label><textarea id="v31TeacherFeedback" class="v31-input" rows="3" placeholder="Feedback and next steps"></textarea>
+   <button class="v31-btn primary" id="v31ExportAssessment">Download teacher assessment</button>
+  </div>
+  <div class="v31-card">
+   <h3>6 · Expanded practical report</h3>
+   <p class="v31-help">The report combines the practical structure, readings, graph analysis, auto-checked tasks and teacher assessment.</p>
+   <label class="v31-help">Precautions / sources of error</label><textarea id="v31Precautions" class="v31-input" rows="3" placeholder="e.g. Ensure tight connections; avoid heating the resistor; read meters at eye level."></textarea>
+   <label class="v31-help">Conclusion</label><textarea id="v31Conclusion" class="v31-input" rows="3" placeholder="Explain whether the observations support Ohm's law."></textarea>
+   <button class="v31-btn primary" id="v31FullReport">Download complete practical report</button>
+   <div class="v31-feedback" id="v31ReportFeedback">The report is generated locally in your browser.</div>
+  </div>
+ </div>
+</section>
+
+</main>
+<div class="ad-slot ad-bottom"><div class="ad-copy"><strong>Bottom banner placement</strong>Reserved advertising space · responsive banner</div></div>
+<footer>CBSEMOCK Physics Studio · Conceptual circuit simulation for learning. Values are calculated using the ideal Ohm's law model.</footer>
+<script>
+const $=id=>document.getElementById(id);
+let power=true, records=[];
+function values(){let v=+$('voltage').value,r=+$('resistance').value;return {v,r,i:power&&v>0?v/r:0,p:power?v*v/r:0}}
+function drawGraph(r,v){
+ const svg=$('graph'),W=320,H=190,L=39,R=12,T=12,B=28,gw=W-L-R,gh=H-T-B;
+ let s=`<rect width="${W}" height="${H}" fill="#0c1725"/>`;
+ for(let n=0;n<=4;n++){let x=L+gw*n/4,y=T+gh*n/4;s+=`<path d="M${x} ${T}V${T+gh} M${L} ${y}H${L+gw}" stroke="#294158" stroke-width="1"/>`;s+=`<text x="${x}" y="${H-8}" fill="#90a9bd" font-size="9" text-anchor="middle">${(12*n/4).toFixed(0)}</text>`;s+=`<text x="${L-8}" y="${y+3}" fill="#90a9bd" font-size="9" text-anchor="end">${(12*n/4/r).toFixed(2)}</text>`}
+ s+=`<path d="M${L} ${T+gh}V${T} M${L} ${T+gh}H${L+gw}" stroke="#9bb2c6" stroke-width="1.5"/>`;
+ let maxI=12/r, x2=L+gw, y2=T+gh-(maxI/(12/10))*gh;
+ s+=`<path d="M${L} ${T+gh}L${x2} ${Math.max(T,y2)}" stroke="#54d9a0" stroke-width="2.5"/>`;
+ let px=L+gw*v/12,py=T+gh-(v/r)/(12/10)*gh;
+ s+=`<circle cx="${px}" cy="${py}" r="5" fill="#ffc85b" stroke="#fff1c6" stroke-width="1.5"/>`;
+ s+=`<text x="${L+gw/2}" y="${H-1}" fill="#b5c9da" font-size="10" text-anchor="middle">Voltage V (V)</text><text x="10" y="12" fill="#b5c9da" font-size="10">I (A)</text>`;
+ svg.innerHTML=s;
+}
+function update(){
+ const {v,r,i,p}=values();$('vLabel').textContent=v.toFixed(1)+' V';$('rLabel').textContent=r+' Ω';
+ $('amps').textContent=i.toFixed(3)+' A';$('volts').textContent=(power?v:0).toFixed(2)+' V';
+ $('svgA').textContent=i.toFixed(3)+' A';$('svgV').textContent=(power?v:0).toFixed(2)+' V';$('svgR').textContent=r;
+ $('ampNote').textContent=power?'Circuit current':'Supply switched off';
+ $('status').textContent=power?'● POWER ON':'○ POWER OFF';$('status').style.color=power?'#77e3a2':'#ff9a9a';
+ $('switchBlade').setAttribute('d',power?'M400 145 L440 112':'M400 145 L445 145');
+ $('bulbGlow').setAttribute('opacity',power&&v>0?Math.min(.95,.2+v/14):.08);
+ $('flow').setAttribute('opacity',power&&v>0?'.85':'0');
+ $('slope').textContent='Slope = '+r+' Ω';drawGraph(r,v);
+ $('insight').innerHTML=`<b>Observation:</b> ${power?'Current is '+i.toFixed(3)+' A.':'The switch is open; current is zero.'} ${power&&v>0?'For this ideal resistor, V/I = '+r.toFixed(1)+' Ω.':''}`;
+ $('relationship').textContent=power?'For a fixed resistance, current increases in direct proportion to voltage. The graph is a straight line through the origin.':'Switch on the supply to observe the V–I relationship.';
+}
+$('voltage').addEventListener('input',update);$('resistance').addEventListener('input',update);
+$('power').addEventListener('click',()=>{power=!power;$('power').classList.toggle('on',power);update()});
+$('showCurrent').addEventListener('change',e=>document.querySelector('.meter:not(.volt)').style.opacity=e.target.checked?'1':'.18');
+$('showVoltage').addEventListener('change',e=>document.querySelector('.meter.volt').style.opacity=e.target.checked?'1':'.18');
+$('reset').addEventListener('click',()=>{$('voltage').value=6;$('resistance').value=30;power=true;$('power').classList.add('on');$('showCurrent').checked=true;$('showVoltage').checked=true;document.querySelectorAll('.meter').forEach(x=>x.style.opacity='1');update()});
+$('record').addEventListener('click',()=>{let x=values();records.push(x);$('count').textContent=records.length+' readings recorded';$('records').innerHTML=records.map((a,n)=>`<tr style="border-top:1px solid #30475d"><td style="padding:9px">${n+1}</td><td>${a.v.toFixed(1)}</td><td>${a.r}</td><td>${a.i.toFixed(3)}</td><td>${a.p.toFixed(3)}</td></tr>`).join('')});
+$('download').addEventListener('click',()=>{if(!records.length){alert('Record at least one observation first.');return}let csv='Trial,Voltage (V),Resistance (ohm),Current (A),Power (W)\\n'+records.map((a,n)=>[n+1,a.v,a.r,a.i.toFixed(4),a.p.toFixed(4)].join(',')).join('\\n');let blob=new Blob([csv],{type:'text/csv'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='ohms-law-observations.csv';a.click();URL.revokeObjectURL(url)});
+document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{$('feedback').textContent=b.dataset.answer==='a'?'Correct! From I = V/R, doubling V doubles I when R is fixed.':'Not quite. Use I = V/R and keep R constant.';$('feedback').style.color=b.dataset.answer==='a'?'#75dc75':'#ffb0a0'}));
+update();
+
+const checks=[...document.querySelectorAll('.stage-check')];
+function progress(){let n=checks.filter(c=>c.checked).length;document.getElementById('progressText').textContent=n+' / 5 completed';document.getElementById('progressFill').style.width=(n/5*100)+'%';checks.forEach(c=>c.closest('.step-item').classList.toggle('done',c.checked))}
+checks.forEach(c=>c.addEventListener('change',progress));
+document.getElementById('showHint').onclick=()=>{let h=document.getElementById('hintText');h.style.display=h.style.display==='block'?'none':'block'};
+document.getElementById('resetStages').onclick=()=>{checks.forEach(c=>c.checked=false);progress()};
+let chosen=null,matched=new Set();
+document.querySelectorAll('.match-item').forEach(item=>{item.ondragstart=()=>chosen=item;item.onclick=()=>{chosen=item;document.querySelectorAll('.match-item').forEach(x=>x.classList.remove('selected'));item.classList.add('selected')}});
+document.querySelectorAll('.match-target').forEach(t=>{t.ondragover=e=>e.preventDefault();t.ondrop=e=>{e.preventDefault();match(chosen,t)};t.onclick=()=>match(chosen,t)});
+function match(item,target){if(!item)return;if(item.dataset.match===target.dataset.target){matched.add(item.dataset.match);target.classList.add('correct');target.textContent='✓ '+target.textContent;item.style.opacity='.35';item.draggable=false;item.onclick=null;document.getElementById('matchFeedback').textContent=matched.size+' / 3 matched'+(matched.size===3?' · Excellent!':'')}else document.getElementById('matchFeedback').textContent='Not quite. Try another match.';chosen=null}
+document.querySelectorAll('.quiz-option').forEach(b=>b.onclick=()=>{document.querySelectorAll('.quiz-option').forEach(x=>x.classList.remove('correct','wrong'));let ok=b.dataset.q==='right';b.classList.add(ok?'correct':'wrong');document.getElementById('quizFeedback').textContent=ok?'Correct! I = V/R = 10/20 = 0.5 A.':'Try again using I = V/R.';if(ok){checks[4].checked=true;progress()}});
+document.getElementById('downloadNotebook').onclick=()=>{let note=document.getElementById('labNotes').value||'No additional notes entered.';let lines=records.map((r,i)=>`Trial ${i+1}: V=${r.v} V, R=${r.r} ohm, I=${r.i.toFixed(3)} A, P=${r.p.toFixed(3)} W`).join('\n')||'No readings recorded.';let data=`CBSEMOCK PHYSICS PRACTICAL RECORD\nExperiment: Ohm's Law\nAim: Study the relationship between potential difference and current.\nPrinciple: V = I × R\n\nOBSERVATIONS\n${lines}\n\nSTUDENT NOTES / CONCLUSION\n${note}\n\nEducational ideal-resistor simulation.`;let u=URL.createObjectURL(new Blob([data],{type:'text/plain'}));let a=document.createElement('a');a.href=u;a.download='ohms-law-practical-record.txt';a.click();URL.revokeObjectURL(u)};
+progress();
+
+
+// V3 Evolution Studio — added without replacing the original V2 lab.
+(()=>{
+ const byId=id=>document.getElementById(id);
+ let score=0, completed=new Set(), chosenPart=null, placed={}, faultIndex=0, faultSolved=new Set(), challengeIndex=0, challengeSolved=new Set();
+ const faults=[
+  {symptom:"The circuit is switched on, but the ammeter reads 0.00 A.",answer:"open",why:"An open switch or broken conducting path prevents current from flowing."},
+  {symptom:"The ammeter reading is unexpectedly very low and the meter is heating.",answer:"parallel",why:"An ammeter has very low resistance and must be connected in series, not across the supply."},
+  {symptom:"The voltmeter reading is zero, and the circuit current is also zero.",answer:"voltmeter",why:"A voltmeter has very high resistance. In this model, placing it in series can interrupt useful circuit current."},
+  {symptom:"The supply is 6 V, but current is lower than the predicted 0.20 A for a 30 Ω load.",answer:"highr",why:"A resistance greater than 30 Ω produces a lower current at the same voltage."}
+ ];
+ const challenges=[
+  {q:"A 12 V battery is connected to a 4 Ω resistor. What current flows?",opts:[2,3,4,48],a:3,why:"I = V/R = 12/4 = 3 A."},
+  {q:"A current of 0.5 A flows through a 10 Ω resistor. What is the potential difference?",opts:[5,10,20,0.05],a:5,why:"V = I × R = 0.5 × 10 = 5 V."},
+  {q:"At constant voltage, resistance is doubled. What happens to current?",opts:["Doubles","Halves","Stays the same","Becomes zero"],a:"Halves",why:"I = V/R. With V fixed, doubling R halves I."}
+ ];
+ function award(key,points,label){if(completed.has(key))return;completed.add(key);score+=points;byId('v3Score').textContent=score;byId('v3Tasks').textContent=completed.size+' / 5';byId('v3Level').textContent=score>=100?'Circuit Expert':score>=50?'Investigator':score>=20?'Apprentice':'Beginner';updateAchievements(label)}
+ function updateAchievements(extra=''){byId('v3Achievements').textContent=(completed.size?Array.from(completed).map(x=>'✓ '+x).join('  ·  '):'No achievements yet.')+(extra?'  ·  '+extra:'')}
+ document.querySelectorAll('[data-v3tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-v3tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.v3-panel').forEach(p=>p.classList.toggle('active',p.id==='v3-'+b.dataset.v3tab))}));
+ document.querySelectorAll('.v3-part').forEach(p=>{p.addEventListener('dragstart',()=>chosenPart=p.dataset.part);p.addEventListener('click',()=>{chosenPart=p.dataset.part;document.querySelectorAll('.v3-part').forEach(x=>x.style.outline=x===p?'2px solid #4bd7df':'none');byId('v3BuildFeedback').textContent='Selected '+p.textContent.trim()+'. Now choose its matching position.'})});
+ document.querySelectorAll('.v3-slot').forEach(s=>{s.addEventListener('dragover',e=>e.preventDefault());s.addEventListener('drop',e=>{e.preventDefault();place(s)});s.addEventListener('click',()=>place(s))});
+ function place(slot){if(!chosenPart)return;const key=slot.dataset.slot;if(key!==chosenPart){byId('v3BuildFeedback').textContent='That component does not belong in this position. Try matching the component to its labelled position.';return}placed[key]=true;slot.classList.add('filled');slot.querySelector('span').textContent='✓ '+chosenPart.charAt(0).toUpperCase()+chosenPart.slice(1)+' placed';document.querySelector('[data-part="'+key+'"]').classList.add('used');chosenPart=null;byId('v3BuildFeedback').textContent=Object.keys(placed).length+' / 5 components placed.'}
+ byId('v3CheckBuild').onclick=()=>{if(Object.keys(placed).length!==5){byId('v3BuildFeedback').textContent='Complete all five component positions first.';return}let v=Number(byId('v3BuildV').value),r=Number(byId('v3BuildR').value);if(!(v>0&&v<=12&&r>0&&r<=100)){byId('v3BuildFeedback').textContent='Enter a voltage from 0–12 V and resistance from 1–100 Ω.';return}let i=v/r;byId('v3BuildResult').innerHTML='✓ Circuit arrangement validated<br>Supply voltage: '+v.toFixed(2)+' V<br>Resistance: '+r.toFixed(1)+' Ω<br>Calculated current: '+i.toFixed(3)+' A<br>Power: '+(v*i).toFixed(3)+' W';byId('v3BuildInsight').textContent='The arrangement follows the intended model: ammeter in series, voltmeter across the resistor. These values use an ideal Ohm’s law calculation.';byId('v3BuildFeedback').textContent='Well done — your circuit arrangement is correct.';award('Circuit builder validated',25,'Circuit Builder badge earned')};
+ byId('v3ResetBuild').onclick=()=>{placed={};chosenPart=null;document.querySelectorAll('.v3-slot').forEach(s=>{s.classList.remove('filled');s.querySelector('span').textContent=s.dataset.slot==='voltmeter'?'Connect voltmeter across load':'Drop '+s.dataset.slot+' here'});document.querySelectorAll('.v3-part').forEach(p=>{p.classList.remove('used');p.style.outline='none'});byId('v3BuildResult').innerHTML='Circuit not yet validated.<br>Use I = V ÷ R after completing the builder.';byId('v3BuildFeedback').textContent='Builder reset.'};
+ function showFault(){let f=faults[faultIndex];byId('v3FaultScenario').textContent='Symptom: '+f.symptom;byId('v3FaultChoice').value='';byId('v3FaultFeedback').textContent='Inspect the symptom and choose a diagnosis.';byId('v3FaultHint').textContent='Tip: '+(faultIndex===0?'check whether the conducting path is complete.':faultIndex===1?'remember the ammeter must be in series.':faultIndex===2?'remember the voltmeter must be in parallel.':'compare the expected current using I = V/R.')}
+ byId('v3CheckFault').onclick=()=>{let f=faults[faultIndex],ans=byId('v3FaultChoice').value;if(!ans){byId('v3FaultFeedback').textContent='Select a diagnosis first.';return}if(ans===f.answer){byId('v3FaultFeedback').textContent='Correct diagnosis. '+f.why;faultSolved.add(faultIndex);award('Fault '+(faultIndex+1)+' diagnosed',15,'Fault Finder badge earned')}else byId('v3FaultFeedback').textContent='Not quite. '+f.why};
+ byId('v3NextFault').onclick=()=>{faultIndex=(faultIndex+1)%faults.length;showFault()};showFault();
+ const missionChecks=[...document.querySelectorAll('[data-mission]')];missionChecks.forEach(c=>c.addEventListener('change',()=>{let n=missionChecks.filter(x=>x.checked).length;byId('v3MissionBar').style.width=(n/4*100)+'%';byId('v3MissionFeedback').textContent=n+' of 4 investigations completed.';if(n===4)award('All investigation missions completed',25,'Investigator badge earned')}));
+ function showChallenge(){let c=challenges[challengeIndex];byId('v3ChallengeQuestion').textContent=c.q;byId('v3ChallengeOptions').innerHTML=c.opts.map(o=>'<button class="v3-btn" data-v3answer="'+String(o).replace(/"/g,'&quot;')+'">'+o+(typeof o==='number'?'':'')+'</button>').join('');byId('v3ChallengeFeedback').textContent='Work it out, then select an answer.';byId('v3ChallengeOptions').querySelectorAll('button').forEach(b=>b.onclick=()=>{let val=Number.isNaN(Number(c.a))?b.dataset.v3answer:Number(b.dataset.v3answer);if(val===c.a){byId('v3ChallengeFeedback').textContent='Correct! '+c.why;if(!challengeSolved.has(challengeIndex)){challengeSolved.add(challengeIndex);award('Challenge '+(challengeIndex+1)+' solved',10,'Challenge badge earned')}}else byId('v3ChallengeFeedback').textContent='Try again. '+c.why})}
+ byId('v3NextChallenge').onclick=()=>{challengeIndex=(challengeIndex+1)%challenges.length;showChallenge()};showChallenge();
+ byId('v3ExportRecord').onclick=()=>{let rows=typeof records!=='undefined'?records:[];let obs=rows.length?rows.map((x,i)=>`${i+1},${x.v},${x.r},${x.i.toFixed(3)},${x.p.toFixed(3)}`).join('\n'):'No observations recorded';let txt=`CBSEMOCK — OHM'S LAW PRACTICAL RECORD\n\nAim / conclusion:\n${byId('v3Aim').value}\n\nSample calculation:\n${byId('v3Calc').value}\n\nObservation table\nTrial,Voltage (V),Resistance (ohm),Current (A),Power (W)\n${obs}\n\nInference: For a fixed resistance, current is directly proportional to potential difference in the ideal resistor model.\n`;let a=document.createElement('a'),u=URL.createObjectURL(new Blob([txt],{type:'text/plain'}));a.href=u;a.download='CBSEMOCK_Ohms_Law_Practical_Record.txt';a.click();URL.revokeObjectURL(u);byId('v3RecordFeedback').textContent='Practical record downloaded.'};
+ byId('v3PrintRecord').onclick=()=>window.print();
+})();
+
+
+// V3.1 enhancements
+(()=>{
+ const $=id=>document.getElementById(id);
+ const required=[['bp','s1'],['s1','s2'],['s2','ap'],['ap','am'],['am','r1'],['r1','r2'],['r2','bn'],['vp','r1'],['vm','r2']];
+ const labels={bp:'Battery +',bn:'Battery −',s1:'Switch 1',s2:'Switch 2',ap:'Ammeter +',am:'Ammeter −',r1:'Resistor 1',r2:'Resistor 2',vp:'Voltmeter +',vm:'Voltmeter −'};
+ let wires=[],pending=null,wireValid=false,readings=[],missions=new Set(),faultPoints=0,recordReflected=false;
+ const pair=(a,b)=>[a,b].sort().join('|');
+ function renderWires(){
+  $('v31WireList').innerHTML=wires.length?wires.map((w,i)=>(i+1)+'. '+labels[w[0]]+' ↔ '+labels[w[1]]).join('<br>'):'No wires connected yet.';
+  document.querySelectorAll('.v31-term').forEach(b=>b.classList.toggle('selected',b.dataset.node===pending));
+ }
+ document.querySelectorAll('.v31-term').forEach(b=>b.onclick=()=>{
+  const n=b.dataset.node;
+  if(!pending){pending=n;$('v31WireFeedback').textContent='Now select the terminal to connect to '+labels[n]+'.';}
+  else if(n===pending){pending=null;$('v31WireFeedback').textContent='Selection cancelled.';}
+  else if(wires.some(w=>pair(...w)===pair(pending,n))){pending=null;$('v31WireFeedback').textContent='That wire already exists.';}
+  else{wires.push([pending,n]);$('v31WireFeedback').textContent='Wire added: '+labels[pending]+' to '+labels[n]+'.';pending=null;wireValid=false;$('v31CircuitOutput').textContent='Wiring changed. Validate again.';}
+  renderWires();
+ });
+ $('v31UndoWire').onclick=()=>{wires.pop();wireValid=false;renderWires();$('v31CircuitOutput').textContent='Wiring changed. Validate again.'};
+ $('v31ResetWires').onclick=()=>{wires=[];pending=null;wireValid=false;renderWires();$('v31WireFeedback').textContent='All wires cleared.';$('v31CircuitOutput').textContent='Validate the wires to calculate the circuit response.'};
+ function updateCircuit(){
+  const v=Number($('v31Voltage').value),r=Number($('v31Resistance').value);
+  if(!wireValid){$('v31CircuitOutput').textContent='Validate the required connections first.';return}
+  if(!(v>0&&v<=24&&r>=1&&r<=1000)){$('v31CircuitOutput').textContent='Enter voltage 0–24 V and resistance 1–1000 Ω.';return}
+  const closed=$('v31Switch').value==='closed',i=closed?v/r:0;
+  $('v31CircuitOutput').innerHTML='✓ Topology valid<br>Switch: '+(closed?'Closed':'Open')+'<br>Current: '+i.toFixed(3)+' A<br>Voltage across resistor: '+(closed?v:0).toFixed(2)+' V<br>Power: '+(closed?v*i:0).toFixed(3)+' W';
+ }
+ $('v31ValidateWires').onclick=()=>{
+  const actual=new Set(wires.map(w=>pair(...w))),missing=required.filter(w=>!actual.has(pair(...w))),extra=wires.filter(w=>!required.some(x=>pair(...x)===pair(...w)));
+  if(missing.length||extra.length){wireValid=false;$('v31WireFeedback').textContent='Wiring needs correction. Missing: '+missing.map(w=>labels[w[0]]+'–'+labels[w[1]]).join(', ')+(extra.length?'. Remove unexpected connection(s).':'');$('v31CircuitOutput').textContent='Circuit not validated. Check the required series path and parallel voltmeter connections.';return}
+  wireValid=true;$('v31WireFeedback').textContent='Excellent. All required series and parallel connections are correct.';updateCircuit();scoreWire();
+ };
+ ['v31Switch','v31Voltage','v31Resistance'].forEach(id=>$(id).addEventListener('change',updateCircuit));
+ let wireAwarded=false;
+ function scoreWire(){if(!wireAwarded){wireAwarded=true;$('v31RubricWire').textContent='20 / 20';$('v31TotalScore').textContent='Assessment score: '+total()+' / 100';}}
+ function total(){return [20,missions.size*20/3, faultPoints, Math.min(20,readings.length*5),recordReflected?20:0].reduce((a,b)=>a+b,0)}
+ function refreshScore(){$('v31RubricMission').textContent=Math.round(missions.size*20/3)+' / 20';$('v31RubricFault').textContent=faultPoints+' / 20';$('v31RubricGraph').textContent=Math.min(20,readings.length*5)+' / 20';$('v31RubricRecord').textContent=(recordReflected?20:0)+' / 20';$('v31TotalScore').textContent='Assessment score: '+Math.round(total())+' / 100';}
+ const answers={A:{v:6,tol:.03,ex:'V = I × R = 0.30 × 20 = 6 V.'},B:{v:30,tol:.1,ex:'R = V/I = 6/0.20 = 30 Ω.'},C:{v:'half',ex:'At constant voltage, I is inversely proportional to R.'}};
+ document.querySelectorAll('[data-v31mission]').forEach(btn=>btn.onclick=()=>{
+  const k=btn.dataset.v31mission,a=answers[k],raw=$('v31Ans'+k).value,val=k==='C'?raw:Number(raw),ok=k==='C'?val===a.v:Number.isFinite(val)&&Math.abs(val-a.v)<=a.tol;
+  $('v31Feed'+k).textContent=ok?'Correct. '+a.ex:'Not yet. Revisit Ohm’s law and try again.';
+  if(ok&&!missions.has(k)){missions.add(k);refreshScore();}
+ });
+ function drawGraph(){
+  const c=$('v31Graph'),ctx=c.getContext('2d'),w=c.width,h=c.height;ctx.clearRect(0,0,w,h);
+  const maxI=Math.max(.1,...readings.map(x=>x.i))*1.15,maxV=Math.max(1,...readings.map(x=>x.v))*1.15,L=48,R=18,T=18,B=42,pw=w-L-R,ph=h-T-B;
+  ctx.strokeStyle='#28475e';ctx.lineWidth=1;for(let n=0;n<=5;n++){let x=L+pw*n/5,y=T+ph*n/5;ctx.beginPath();ctx.moveTo(x,T);ctx.lineTo(x,T+ph);ctx.stroke();ctx.beginPath();ctx.moveTo(L,y);ctx.lineTo(L+pw,y);ctx.stroke();}
+  ctx.fillStyle='#c5d9e8';ctx.font='12px sans-serif';ctx.fillText('Current (A)',w/2-28,h-10);ctx.save();ctx.translate(14,h/2+24);ctx.rotate(-Math.PI/2);ctx.fillText('Voltage (V)',0,0);ctx.restore();
+  ctx.fillStyle='#46d8df';readings.forEach(p=>{let x=L+p.i/maxI*pw,y=T+ph-p.v/maxV*ph;ctx.beginPath();ctx.arc(x,y,5,0,Math.PI*2);ctx.fill();});
+  if(readings.length>=2){let avg=readings.reduce((a,p)=>a+p.v/p.i,0)/readings.length;$('v31GraphAnalysis').textContent='Mean V/I ratio (resistance estimate): '+avg.toFixed(2)+' Ω. For an ideal ohmic resistor, the V-I graph is a straight line through the origin; its gradient is resistance.'}
+  else $('v31GraphAnalysis').textContent='Add at least two readings to estimate resistance from the V/I ratio.';
+  $('v31Readings').innerHTML=readings.map((p,i)=>'<tr><td>'+(i+1)+'</td><td>'+p.v.toFixed(2)+'</td><td>'+p.i.toFixed(3)+'</td><td>'+(p.i?p.v/p.i:0).toFixed(2)+'</td></tr>').join('');
+  refreshScore();
+ }
+ $('v31AddReading').onclick=()=>{let v=Number($('v31ReadV').value),i=Number($('v31ReadI').value);if(!(v>0&&i>0&&v<=24&&i<=10)){$('v31GraphAnalysis').textContent='Enter positive readings within the stated range.';return}readings.push({v,i});drawGraph()};
+ $('v31ClearReadings').onclick=()=>{readings=[];drawGraph()};drawGraph();
+ // If the original V3 fault-finder is used, reflect a completed diagnosis into the rubric.
+ const oldFault=$('v3CheckFault');if(oldFault)oldFault.addEventListener('click',()=>{setTimeout(()=>{if(($('v3FaultFeedback').textContent||'').startsWith('Correct diagnosis')){faultPoints=20;refreshScore()}},0)});
+ function safeText(id){return $(id)?$(id).value:''}
+ function download(name,content){const a=document.createElement('a'),u=URL.createObjectURL(new Blob([content],{type:'text/plain;charset=utf-8'}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+ function report(){
+  const obs=readings.length?readings.map((p,i)=>`${i+1}\t${p.v.toFixed(2)}\t${p.i.toFixed(3)}\t${(p.v/p.i).toFixed(2)}`).join('\n'):'No readings entered.';
+  return `CBSEMOCK — OHM'S LAW VIRTUAL PRACTICAL\nStudent: ${safeText('v31Student')}\nClass: ${safeText('v31Class')}\n\nAIM\nTo investigate the relationship between potential difference and current for an ohmic resistor.\n\nAPPARATUS\nBattery / power supply, resistor, switch, ammeter, voltmeter and connecting wires.\n\nPRINCIPLE\nFor a conductor at constant temperature, V = I × R.\n\nCIRCUIT & PROCEDURE\nConnect the ammeter in series and voltmeter in parallel across the resistor. Vary the potential difference and record current.\n\nOBSERVATIONS\nTrial\tVoltage (V)\tCurrent (A)\tV/I (Ω)\n${obs}\n\nGRAPH ANALYSIS\n${safeText('v31GraphAnalysis')}\n\nINVESTIGATION TASKS\nA: ${missions.has('A')?'Correct':'Not completed'}; B: ${missions.has('B')?'Correct':'Not completed'}; C: ${missions.has('C')?'Correct':'Not completed'}.\n\nPRECAUTIONS / SOURCES OF ERROR\n${safeText('v31Precautions')}\n\nCONCLUSION\n${safeText('v31Conclusion')}\n\nTEACHER ASSESSMENT\n${$('v31TotalScore').textContent}\nCircuit wiring: ${$('v31RubricWire').textContent}\nInvestigation answers: ${$('v31RubricMission').textContent}\nFault diagnosis: ${$('v31RubricFault').textContent}\nData & graph: ${$('v31RubricGraph').textContent}\nReflection: ${$('v31RubricRecord').textContent}\nTeacher feedback: ${safeText('v31TeacherFeedback')}\n`;
+ }
+ $('v31ExportAssessment').onclick=()=>download('Ohms_Law_Teacher_Assessment.txt',`Student: ${safeText('v31Student')}\nClass: ${safeText('v31Class')}\n${$('v31TotalScore').textContent}\nCircuit wiring: ${$('v31RubricWire').textContent}\nMissions: ${$('v31RubricMission').textContent}\nFault diagnosis: ${$('v31RubricFault').textContent}\nGraph/data: ${$('v31RubricGraph').textContent}\nReflection: ${$('v31RubricRecord').textContent}\nTeacher feedback: ${safeText('v31TeacherFeedback')}`);
+ $('v31FullReport').onclick=()=>{recordReflected=!!(safeText('v3Aim')||safeText('v3Calc')||safeText('v31Conclusion')||safeText('v31Precautions'));refreshScore();download('CBSEMOCK_Ohms_Law_Complete_Practical.txt',report());$('v31ReportFeedback').textContent='Complete practical report downloaded.'};
+})();
+
+</script>
+
+<script src="../../ads.js"></script>
+<script src="../../portal-shell.js"></script>
+</body></html>

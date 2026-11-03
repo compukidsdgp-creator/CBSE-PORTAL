@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2026-11-ct-ai-9-group-910",
+    "class_group": "9-10",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "month": "November 2026",
+    "title": "Computational Thinking & AI — Group 9-10 November 2026 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 9,
+        "file": "questions/ct-ai-9-november-2026.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

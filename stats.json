@@ -1,0 +1,236 @@
+{
+  "generated": "2026-10-29T16:20:26Z",
+  "total_portals": 38,
+  "total_papers": 110,
+  "total_questions_approx": 33,
+  "subjects": [
+    {
+      "file": "accountancy-xii.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "ai-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "biology-xii.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "business-xii.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "chemistry-xii.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "comp-app-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "cs-xii.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "economics-xii.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "english-comm-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "english-ll-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "english-xii.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "hindi-a-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "maths-basic-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "maths-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "maths-xii.html",
+      "folder": "resources",
+      "questions": 4,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "physics-xii.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "science-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "sst-x.html",
+      "folder": "resources",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Bengali Class 12 Practice Papers.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Biology XII Board Prep.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "CBSE Class 10 AI Mock Papers.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "CBSE Class XII CS Mock Papers.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Chemistry XII Board Prep.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Computer Applications Mock Tests _ Class 10 CBSE.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "English Communicative Mock Tests _ Class 10 CBSE.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "English Core XII.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "English Elective 001 Class 12 Practice Papers.html",
+      "folder": "root",
+      "questions": 10,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "English Language & Literature Mock Tests _ Class 10 CBSE.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Hindi Course A Class 10 CBSE.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Informatics Practices 065 Class 12 Practice Papers.html",
+      "folder": "root",
+      "questions": 14,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Mathematics Basic Mock Tests _ Class 10 CBSE.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Mathematics Standard Mock Tests _ Class 10 CBSE.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Mathematics XII Board Prep.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Physical Education 048 Class 12 Practice Papers.html",
+      "folder": "root",
+      "questions": 5,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Physics XII Board Prep.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Science Mock Tests _ Class 10 CBSE.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "Social Science Mock Tests _ Class 10 CBSE.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    },
+    {
+      "file": "index.html",
+      "folder": "root",
+      "questions": 0,
+      "updated": "2026-10-29"
+    }
+  ]
+}

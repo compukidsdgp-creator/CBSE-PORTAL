@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2026-11-english-10-c10",
+    "session": "2026–27",
+    "month": "November 2026",
+    "class": 10,
+    "class_group": "9-10",
+    "subject": "English Language & Literature (184)",
+    "title": "English Language & Literature — Class 10 November 2026 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202611-184-C10-01",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Reading Comprehension",
+      "topic": "Reading Comprehension",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which statement best describes an inference?",
+      "options": {
+        "A": "A fact copied word for word",
+        "B": "A conclusion drawn from textual clues",
+        "C": "A title chosen at random",
+        "D": "A personal opinion unrelated to the text"
+      },
+      "answer": "B",
+      "explanation": "An inference is a reasoned conclusion based on evidence and prior understanding.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading Comprehension"
+      ]
+    },
+    {
+      "id": "202611-184-C10-02",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Reading Comprehension",
+      "topic": "Reading Comprehension",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "The phrase “the plan was feasible” means the plan was:",
+      "options": {
+        "A": "Impossible",
+        "B": "Practical and capable of being carried out",
+        "C": "Already completed",
+        "D": "Unethical"
+      },
+      "answer": "B",
+      "explanation": "Feasible means possible or practical to do.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading Comprehension"
+      ]
+    },
+    {
+      "id": "202611-184-C10-03",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Tenses",
+      "topic": "Grammar – Tenses",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Choose the correct form: “By next Friday, they ____ the project.”",
+      "options": {
+        "A": "complete",
+        "B": "completed",
+        "C": "will have completed",
+        "D": "are completing yesterday"
+      },
+      "answer": "C",
+      "explanation": "Future perfect describes an action completed before a specified future time.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Tenses"
+      ]
+    },
+    {
+      "id": "202611-184-C10-04",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Modals",
+      "topic": "Grammar – Modals",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "“You ____ have informed us earlier; the delay caused difficulty.”",
+      "options": {
+        "A": "should",
+        "B": "can",
+        "C": "may",
+        "D": "will"
+      },
+      "answer": "A",
+      "explanation": "Should have expresses an expected action that was not done.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Modals"
+      ]
+    },
+    {
+      "id": "202611-184-C10-05",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Reported Speech",
+      "topic": "Grammar – Reported Speech",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "Direct: Mira said, “I have finished my work.”",
+      "options": {
+        "A": "Mira said that she has finished her work.",
+        "B": "Mira said that she had finished her work.",
+        "C": "Mira says she finished my work.",
+        "D": "Mira told that I had finished work."
+      },
+      "answer": "B",
+      "explanation": "Present perfect generally backshifts to past perfect after a past reporting verb.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Reported Speech"
+      ]
+    },
+    {
+      "id": "202611-184-C10-06",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Subject Verb Agreement",
+      "topic": "Grammar – Subject Verb Agreement",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Choose the correct verb: “Neither the teacher nor the students ____ absent.”",
+      "options": {
+        "A": "was",
+        "B": "were",
+        "C": "is",
+        "D": "has"
+      },
+      "answer": "B",
+      "explanation": "With neither…nor, the verb agrees with the nearer subject, “students”.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Subject Verb Agreement"
+      ]
+    },
+    {
+      "id": "202611-184-C10-07",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Writing – Analytical Paragraph",
+      "topic": "Writing – Analytical Paragraph",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "When comparing two data sets in an analytical paragraph, the writer should:",
+      "options": {
+        "A": "List every number without interpretation",
+        "B": "Identify key trends, comparisons and relevant figures",
+        "C": "Add unsupported causes",
+        "D": "Use informal chat language"
+      },
+      "answer": "B",
+      "explanation": "An analytical paragraph selects and interprets significant patterns in the data.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing – Analytical Paragraph"
+      ]
+    },
+    {
+      "id": "202611-184-C10-08",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Writing – Formal Letter",
+      "topic": "Writing – Formal Letter",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "A letter to a municipal authority about poor waste collection should use:",
+      "options": {
+        "A": "A respectful formal tone",
+        "B": "Personal insults",
+        "C": "Text-message abbreviations",
+        "D": "A fictional narrative"
+      },
+      "answer": "A",
+      "explanation": "A civic complaint should be clear, respectful and evidence-based.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing – Formal Letter"
+      ]
+    },
+    {
+      "id": "202611-184-C10-09",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "First Flight – Prose",
+      "topic": "First Flight – Prose",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "In “A Letter to God”, Lencho’s faith is primarily shown through his:",
+      "options": {
+        "A": "Refusal to grow crops",
+        "B": "Confidence that God will help after the hailstorm",
+        "C": "Decision to leave the village",
+        "D": "Disbelief in the post office"
+      },
+      "answer": "B",
+      "explanation": "Lencho writes to God because he firmly believes help will come.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "First Flight – Prose"
+      ]
+    },
+    {
+      "id": "202611-184-C10-10",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "First Flight – Poetry",
+      "topic": "First Flight – Poetry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "In “Dust of Snow”, the small natural incident changes the poet’s:",
+      "options": {
+        "A": "Clothing",
+        "B": "Mood and outlook",
+        "C": "Address",
+        "D": "Profession"
+      },
+      "answer": "B",
+      "explanation": "The falling snow from the hemlock tree changes the poet’s mood.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "First Flight – Poetry"
+      ]
+    },
+    {
+      "id": "202611-184-C10-11",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Footprints Without Feet",
+      "topic": "Footprints Without Feet",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "In “A Triumph of Surgery”, Tricki’s recovery is mainly due to:",
+      "options": {
+        "A": "More rich food",
+        "B": "Exercise, controlled diet and routine",
+        "C": "A complicated operation",
+        "D": "Complete isolation"
+      },
+      "answer": "B",
+      "explanation": "The vet restores Tricki’s health through controlled feeding and activity.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Footprints Without Feet"
+      ]
+    },
+    {
+      "id": "202611-184-C10-12",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Footprints Without Feet",
+      "topic": "Footprints Without Feet",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "In “The Thief’s Story”, Hari Singh returns to Anil because he:",
+      "options": {
+        "A": "Wants a reward immediately",
+        "B": "Recognises the value of trust and education",
+        "C": "Has lost the money",
+        "D": "Is forced by police"
+      },
+      "answer": "B",
+      "explanation": "Anil’s trust and the possibility of learning prompt Hari’s return.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Footprints Without Feet"
+      ]
+    },
+    {
+      "id": "202611-184-C10-13",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Literary Devices",
+      "topic": "Literary Devices",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "“The wind whispered through the trees” uses:",
+      "options": {
+        "A": "Personification",
+        "B": "Oxymoron",
+        "C": "Pun",
+        "D": "Onomatopoeia only"
+      },
+      "answer": "A",
+      "explanation": "The wind is given the human action of whispering.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Devices"
+      ]
+    },
+    {
+      "id": "202611-184-C10-14",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Vocabulary in Context",
+      "topic": "Vocabulary in Context",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The word “reluctant” means:",
+      "options": {
+        "A": "Eager",
+        "B": "Unwilling or hesitant",
+        "C": "Careless",
+        "D": "Certain"
+      },
+      "answer": "B",
+      "explanation": "Reluctant means not willing or hesitant to act.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Vocabulary in Context"
+      ]
+    },
+    {
+      "id": "202611-184-C10-15",
+      "class": 10,
+      "subject": "English Language & Literature",
+      "chapter": "Integrated Language Skills",
+      "topic": "Integrated Language Skills",
+      "type": "MCQ",
+      "difficulty": "Challenging",
+      "question": "A response that is both concise and well-supported should:",
+      "options": {
+        "A": "Repeat the question",
+        "B": "State the point and support it with relevant evidence",
+        "C": "Include every plot detail",
+        "D": "Avoid textual references"
+      },
+      "answer": "B",
+      "explanation": "A focused answer makes a clear claim and supports it with relevant evidence.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Integrated Language Skills"
+      ]
+    }
+  ]
+}

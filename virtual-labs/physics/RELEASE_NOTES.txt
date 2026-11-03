@@ -1,0 +1,4 @@
+V4 RELEASE
+- Preserved 40 Physics activities and index.
+- Kept locked Ohm's Law V3.1 unchanged.
+- Added experiment-specific investigation, fault finding, observation graphing, practical reports and teacher assessment to Activities 02–40.

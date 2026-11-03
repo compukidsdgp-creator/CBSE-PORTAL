@@ -1,0 +1,173 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CBSEMOCK Chemistry Research Studio</title><style>*{box-sizing:border-box}body{margin:0;background:#08131f;color:#eaf4fb;font:14px/1.45 Inter,system-ui,Arial}header{padding:28px max(20px,calc((100vw - 1450px)/2));background:#08131f;border-bottom:1px solid #29465d}.eyebrow{color:#46d7df;font-size:11px;font-weight:800;letter-spacing:1.5px}h1{font-size:clamp(28px,3vw,40px);margin:7px 0}p{color:#9eb4c7;max-width:800px}main{max-width:1450px;margin:auto;padding:20px}.lab{display:flex;flex-direction:column;gap:5px;text-decoration:none;color:#eaf4fb;background:linear-gradient(160deg,#132a3e,#0e1e2d);border:1px solid #29465d;border-radius:15px;padding:16px;min-height:112px}.lab:hover{border-color:#46d7df}.lab span{font-size:10px;color:#46d7df;font-weight:800}.lab small{margin-top:auto;color:#9eb4c7}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.master{display:block;margin-bottom:14px;padding:16px;background:#102438;border:1px solid #267c87;border-radius:14px;color:#eaf4fb;text-decoration:none}</style>
+<style id="cbsemock-ad-visibility-fix">
+/* CBSEMOCK AD SLOT VISIBILITY FIX */
+.ad{
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  box-sizing:border-box !important;
+  width:100% !important;
+  min-height:112px !important;
+  margin:18px 0 !important;
+  padding:18px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  border:2px dashed #46d7df !important;
+  border-radius:14px !important;
+  background:linear-gradient(120deg,#142d42,#1a354b) !important;
+  color:#eaf4fb !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+  letter-spacing:1.2px !important;
+  position:relative !important;
+  z-index:2 !important;
+}
+</style>
+
+<style id="cbsemock-master-alignment">
+/* Master-aligned structure: shared visual tokens and component geometry */
+:root{--bg:#08131f;--panel:#102235;--panel2:#142b40;--line:#29465d;--text:#eaf4fb;--muted:#9eb4c7;--cyan:#46d7df;--green:#6ee0ae}
+html,body{background:#08131f!important;color:#eaf4fb!important}
+header.top{position:sticky!important;top:0!important;z-index:50!important;background:#08131fee!important;border-bottom:1px solid #29465d!important;backdrop-filter:blur(14px)}
+.topin{max-width:1500px!important;margin:auto!important;padding:12px 22px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important}
+.brand{display:flex!important;align-items:center!important;gap:12px!important}.brand b{display:block!important;font-size:13px!important;letter-spacing:.7px!important;color:#eaf4fb!important}.brand small{display:block!important;color:#9eb4c7!important;font-size:11px!important;margin-top:3px!important}
+.logo{width:38px!important;height:38px!important;border-radius:11px!important;display:grid!important;place-items:center!important;background:#12374a!important;color:#46d7df!important;font-size:22px!important}
+.status{display:flex!important;gap:7px!important;flex-wrap:wrap!important}.chip{border:1px solid #29465d!important;background:#102235!important;color:#b8d0df!important;border-radius:999px!important;padding:6px 10px!important;font-size:10px!important;font-weight:800!important}
+.shell{max-width:1500px!important;margin:auto!important;padding:22px!important}
+.hero.master-hero{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;padding:8px 2px 18px!important;color:#eaf4fb!important}
+.hero.master-hero:after{display:none!important}.hero .eyebrow{font-size:10px!important;letter-spacing:1.7px!important;color:#46d7df!important;font-weight:900!important}.hero.master-hero h1{font-size:clamp(26px,3vw,38px)!important;color:#eaf4fb!important;margin:7px 0!important}.hero.master-hero .sub{color:#a9bfd0!important;max-width:850px!important;font-size:14px!important;line-height:1.6!important}.master-pills{display:flex!important;gap:7px!important;flex-wrap:wrap!important;margin-top:12px!important}.master-pills .pill{background:#102b3e!important;border:1px solid #29465d!important;color:#b9d5e4!important;border-radius:999px!important;font-size:10px!important;padding:5px 9px!important}
+.heroactions{display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important}.btn{border:1px solid #29465d!important;background:#123448!important;color:#eaf4fb!important;border-radius:9px!important;padding:9px 12px!important;font-size:11px!important;font-weight:800!important;cursor:pointer!important}.btn.ghost{background:#102235!important}
+.layout{display:grid!important;grid-template-columns:285px minmax(420px,1fr) 310px!important;gap:14px!important;align-items:start!important;margin-top:8px!important}
+.panel.master-panel,.panel.bench,.left-cabinet{background:#102235!important;border:1px solid #29465d!important;border-radius:14px!important;padding:0!important;box-shadow:0 12px 28px #0003!important;overflow:hidden!important;margin:0 0 14px!important;color:#eaf4fb!important}
+.ph{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;padding:13px 15px!important;border-bottom:1px solid #29465d!important;background:#122a3e!important}
+.ph h2{font-size:11px!important;letter-spacing:1px!important;color:#dcecf6!important;margin:0!important}.ph small{font-size:9px!important;letter-spacing:1px!important;color:#7fa8bd!important;font-weight:900!important}
+.pb{padding:14px!important}.hint{color:#9eb4c7!important;font-size:12px!important}
+.bench{min-height:550px!important}.tabs{display:flex!important;gap:5px!important;padding:9px 12px!important;border-bottom:1px solid #29465d!important;overflow:auto!important;background:#0d1d2c!important}
+.tab{white-space:nowrap!important;border:1px solid transparent!important;background:transparent!important;color:#9eb4c7!important;padding:8px 10px!important;border-radius:8px!important;font-size:10px!important;font-weight:900!important;cursor:pointer!important}
+.tab.active{background:#12404c!important;border-color:#267c87!important;color:#e9ffff!important}
+.view{display:none!important;padding:14px!important}.view.active{display:block!important}
+.rightcol{display:flex!important;flex-direction:column!important;gap:0!important}.rightcol .panel{margin-bottom:12px!important}
+input,select,textarea,button{font-family:inherit!important}
+input,select,textarea{background:#0b1b29!important;color:#eaf4fb!important;border:1px solid #35546a!important;border-radius:8px!important}
+.result,.infoCard{background:#0d1e2d!important;border:1px solid #29465d!important;border-radius:10px!important;color:#eaf4fb!important;padding:12px!important;margin:10px 0!important}
+.stat,.statgrid>div{background:#102b3e!important;border:1px solid #29465d!important;color:#eaf4fb!important}
+.ad{display:flex!important;visibility:visible!important;opacity:1!important;min-height:112px!important;width:100%!important;box-sizing:border-box!important;align-items:center!important;justify-content:center!important;text-align:center!important;border:2px dashed #46d7df!important;border-radius:12px!important;background:#102b3e!important;color:#9eb4c7!important;padding:18px!important;margin:14px 0!important;font-size:10px!important;font-weight:900!important;letter-spacing:1px!important}
+textarea{width:100%!important;min-height:85px!important;padding:10px!important;margin:6px 0 12px!important}
+@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)!important}.rightcol{grid-column:1/-1;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}}
+@media(max-width:760px){.shell{padding:12px!important}.layout{grid-template-columns:1fr!important}.rightcol{grid-column:auto;display:block!important}.hero.master-hero{display:block!important}.heroactions{margin-top:12px!important}.topin{padding:10px 12px!important}.bench{min-height:0!important}}
+</style>
+
+</head><body><header><div class="eyebrow">CBSEMOCK · CHEMISTRY VIRTUAL LABORATORIES</div><h1>Research Studio Collection</h1><p>40 experiments presented in the approved Acids, Bases & Indicators Research Studio environment.</p></header><main><a class="master" href="01-acid-base-indicator-lab.html"><b>01 · Acids, Bases & Indicators — Approved Master</b><br><small>Open locked reference laboratory</small></a><div class="grid"><a class="lab" href="01-acid-base-indicator-lab.html"><span>01 · EXPERIMENT</span><b>Acid–Base Indicator Lab</b><small>Open Research Studio ↗</small></a><a class="lab" href="02-ph-scale-explorer.html"><span>02 · EXPERIMENT</span><b>pH Scale Explorer</b><small>Open Research Studio ↗</small></a><a class="lab" href="03-neutralisation-reaction.html"><span>03 · EXPERIMENT</span><b>Neutralisation Reaction</b><small>Open Research Studio ↗</small></a><a class="lab" href="04-metals-with-acids.html"><span>04 · EXPERIMENT</span><b>Metals with Acids</b><small>Open Research Studio ↗</small></a><a class="lab" href="05-metals-with-water.html"><span>05 · EXPERIMENT</span><b>Metals with Water</b><small>Open Research Studio ↗</small></a><a class="lab" href="06-displacement-reactions.html"><span>06 · EXPERIMENT</span><b>Displacement Reactions</b><small>Open Research Studio ↗</small></a><a class="lab" href="07-precipitation-reactions.html"><span>07 · EXPERIMENT</span><b>Precipitation Reactions</b><small>Open Research Studio ↗</small></a><a class="lab" href="08-types-of-chemical-reactions.html"><span>08 · EXPERIMENT</span><b>Types of Chemical Reactions</b><small>Open Research Studio ↗</small></a><a class="lab" href="09-conservation-of-mass.html"><span>09 · EXPERIMENT</span><b>Conservation of Mass</b><small>Open Research Studio ↗</small></a><a class="lab" href="10-balancing-chemical-equations.html"><span>10 · EXPERIMENT</span><b>Balancing Chemical Equations</b><small>Open Research Studio ↗</small></a><a class="lab" href="11-filtration.html"><span>11 · EXPERIMENT</span><b>Filtration</b><small>Open Research Studio ↗</small></a><a class="lab" href="12-evaporation-and-crystallisation.html"><span>12 · EXPERIMENT</span><b>Evaporation and Crystallisation</b><small>Open Research Studio ↗</small></a><a class="lab" href="13-simple-distillation.html"><span>13 · EXPERIMENT</span><b>Simple Distillation</b><small>Open Research Studio ↗</small></a><a class="lab" href="14-paper-chromatography.html"><span>14 · EXPERIMENT</span><b>Paper Chromatography</b><small>Open Research Studio ↗</small></a><a class="lab" href="15-sublimation.html"><span>15 · EXPERIMENT</span><b>Sublimation</b><small>Open Research Studio ↗</small></a><a class="lab" href="16-temperature-and-solubility.html"><span>16 · EXPERIMENT</span><b>Temperature and Solubility</b><small>Open Research Studio ↗</small></a><a class="lab" href="17-rate-of-reaction-concentration.html"><span>17 · EXPERIMENT</span><b>Rate of Reaction: Concentration</b><small>Open Research Studio ↗</small></a><a class="lab" href="18-rate-of-reaction-temperature.html"><span>18 · EXPERIMENT</span><b>Rate of Reaction: Temperature</b><small>Open Research Studio ↗</small></a><a class="lab" href="19-catalyst-investigation.html"><span>19 · EXPERIMENT</span><b>Catalyst Investigation</b><small>Open Research Studio ↗</small></a><a class="lab" href="20-gas-tests-laboratory.html"><span>20 · EXPERIMENT</span><b>Gas Tests Laboratory</b><small>Open Research Studio ↗</small></a><a class="lab" href="21-electrolysis-of-water.html"><span>21 · EXPERIMENT</span><b>Electrolysis of Water</b><small>Open Research Studio ↗</small></a><a class="lab" href="22-electroplating-simulator.html"><span>22 · EXPERIMENT</span><b>Electroplating Simulator</b><small>Open Research Studio ↗</small></a><a class="lab" href="23-conductivity-of-solutions.html"><span>23 · EXPERIMENT</span><b>Conductivity of Solutions</b><small>Open Research Studio ↗</small></a><a class="lab" href="24-preparation-of-a-salt.html"><span>24 · EXPERIMENT</span><b>Preparation of a Salt</b><small>Open Research Studio ↗</small></a><a class="lab" href="25-flame-test-explorer.html"><span>25 · EXPERIMENT</span><b>Flame Test Explorer</b><small>Open Research Studio ↗</small></a><a class="lab" href="26-atomic-structure-explorer.html"><span>26 · EXPERIMENT</span><b>Atomic Structure Explorer</b><small>Open Research Studio ↗</small></a><a class="lab" href="27-electronic-configuration.html"><span>27 · EXPERIMENT</span><b>Electronic Configuration</b><small>Open Research Studio ↗</small></a><a class="lab" href="28-periodic-table-trends.html"><span>28 · EXPERIMENT</span><b>Periodic Table Trends</b><small>Open Research Studio ↗</small></a><a class="lab" href="29-ionic-bond-formation.html"><span>29 · EXPERIMENT</span><b>Ionic Bond Formation</b><small>Open Research Studio ↗</small></a><a class="lab" href="30-covalent-bond-formation.html"><span>30 · EXPERIMENT</span><b>Covalent Bond Formation</b><small>Open Research Studio ↗</small></a><a class="lab" href="31-saturated-and-unsaturated-carbon-compounds.html"><span>31 · EXPERIMENT</span><b>Saturated and Unsaturated Carbon Compounds</b><small>Open Research Studio ↗</small></a><a class="lab" href="32-esterification-reaction.html"><span>32 · EXPERIMENT</span><b>Esterification Reaction</b><small>Open Research Studio ↗</small></a><a class="lab" href="33-soap-and-detergent-cleaning.html"><span>33 · EXPERIMENT</span><b>Soap and Detergent Cleaning</b><small>Open Research Studio ↗</small></a><a class="lab" href="34-hard-and-soft-water.html"><span>34 · EXPERIMENT</span><b>Hard and Soft Water</b><small>Open Research Studio ↗</small></a><a class="lab" href="35-food-tests-starch-protein-and-fat.html"><span>35 · EXPERIMENT</span><b>Food Tests: Starch, Protein and Fat</b><small>Open Research Studio ↗</small></a><a class="lab" href="36-enthalpy-and-exothermic-reactions.html"><span>36 · EXPERIMENT</span><b>Enthalpy and Exothermic Reactions</b><small>Open Research Studio ↗</small></a><a class="lab" href="37-equilibrium-shift-explorer.html"><span>37 · EXPERIMENT</span><b>Equilibrium Shift Explorer</b><small>Open Research Studio ↗</small></a><a class="lab" href="38-redox-electron-transfer.html"><span>38 · EXPERIMENT</span><b>Redox: Electron Transfer</b><small>Open Research Studio ↗</small></a><a class="lab" href="39-titration-and-endpoint.html"><span>39 · EXPERIMENT</span><b>Titration and Endpoint</b><small>Open Research Studio ↗</small></a><a class="lab" href="40-organic-functional-group-identifier.html"><span>40 · EXPERIMENT</span><b>Organic Functional Group Identifier</b><small>Open Research Studio ↗</small></a></div></main><script id="cbsemock-master-aligned-layout">
+(function(){
+ const main=document.querySelector('main');
+ const layout=main&&main.querySelector('.layout');
+ if(!main||!layout||layout.dataset.masterAligned==='1')return;
+ const title=main.querySelector('.hero h1')?.textContent||'Chemistry Research Studio';
+ const lab=(main.querySelector('.kicker')?.textContent.match(/EXPERIMENT\s+(\d+)/i)||[])[1]||'';
+ const oldHeader=document.querySelector('header');
+ if(oldHeader){
+   const h=document.createElement('header');h.className='top';
+   h.innerHTML='<div class="topin"><div class="brand"><div class="logo">⚗</div><div><b>CBSEMOCK · CHEMISTRY RESEARCH STUDIO</b><small>Virtual chemical laboratory · '+title.replace(/[&<>"]/g,'')+'</small></div></div><div class="status"><span class="chip">CLASS X · CHEMISTRY</span><span class="chip">EXPERIMENT '+lab+'/40</span></div></div>';
+   oldHeader.replaceWith(h);
+ }
+ main.classList.add('shell');
+ const hero=main.querySelector('.hero');
+ if(hero){
+   hero.classList.add('master-hero');
+   const kicker=hero.querySelector('.kicker');
+   if(kicker){kicker.className='eyebrow';}
+   const p=hero.querySelector('p');if(p)p.className='sub';
+   const pills=hero.querySelector('.pills');if(pills)pills.className='master-pills';
+   const actions=document.createElement('div');actions.className='heroactions';
+   const reset=document.createElement('button');reset.className='btn ghost';reset.type='button';reset.textContent='↺ Reset experiment';
+   reset.addEventListener('click',()=>{const b=main.querySelector('[onclick*="reset"],button[onclick*="reset"]');if(b)b.click();else location.reload()});
+   actions.appendChild(reset);hero.appendChild(actions);
+ }
+ layout.dataset.masterAligned='1';
+ const leftOriginal=layout.children[0];
+ const side=layout.querySelector(':scope > aside.side');
+ if(!leftOriginal||!side)return;
+ const children=[...leftOriginal.children];
+ const findPanel=(rx)=>children.find(x=>x.matches('section.panel')&&rx.test(x.querySelector('h2')?.textContent||''));
+ const controls=findPanel(/experiment controls/i);
+ const workspace=findPanel(/live laboratory workspace/i);
+ const notebook=findPanel(/investigation notebook/i);
+ const mission=findPanel(/knowledge mission/i);
+ const challenge=children.find(x=>x.id==='handsOnChallengeMount');
+ const inAd=children.find(x=>x.matches('.ad'));
+ if(!controls||!workspace||!notebook||!mission)return;
+
+ function masterPanel(panel, label){
+   const h=panel.querySelector(':scope > h2');
+   const hint=panel.querySelector(':scope > .hint');
+   const head=document.createElement('div');head.className='ph';
+   if(h)head.appendChild(h);
+   const small=document.createElement('small');small.textContent=label||'EXPERIMENT MODULE';head.appendChild(small);
+   const body=document.createElement('div');body.className='pb';
+   if(hint)body.appendChild(hint);
+   [...panel.children].forEach(n=>{if(n!==head&&n!==body&&n!==h&&n!==hint)body.appendChild(n)});
+   panel.replaceChildren(head,body);panel.classList.add('master-panel');
+ }
+ masterPanel(controls,'SET VARIABLES & RUN MODEL');
+ masterPanel(notebook,'RECORD YOUR OBSERVATIONS');
+ masterPanel(mission,'CHECK YOUR UNDERSTANDING');
+
+ const left=document.createElement('aside');left.className='panel left-cabinet';
+ const leftHead=document.createElement('div');leftHead.className='ph';
+ leftHead.innerHTML='<h2>EXPERIMENT CONTROLS</h2><small>SET VARIABLES</small>';
+ const leftBody=document.createElement('div');leftBody.className='pb';
+ leftBody.appendChild(controls);
+ if(challenge)leftBody.appendChild(challenge);
+ left.append(leftHead,leftBody);
+
+ const centre=document.createElement('section');centre.className='panel bench';
+ const benchHead=document.createElement('div');benchHead.className='ph';
+ benchHead.innerHTML='<h2>EXPERIMENT WORKBENCH</h2><small>INTERACTIVE MODEL · LIVE OBSERVATIONS</small>';
+ const tabs=document.createElement('div');tabs.className='tabs';tabs.setAttribute('role','tablist');
+ const content=document.createElement('div');
+ const makeTab=(key,label)=>{const b=document.createElement('button');b.type='button';b.className='tab';b.dataset.masterTab=key;b.textContent=label;b.setAttribute('role','tab');tabs.appendChild(b)};
+ const makeView=(key)=>{const v=document.createElement('div');v.className='view';v.dataset.masterView=key;content.appendChild(v);return v};
+ makeTab('station','Lab station');makeTab('analysis','Scientific analysis');makeTab('notebook','Lab notebook');makeTab('assessment','Assessment');
+ const station=makeView('station'),analysis=makeView('analysis'),notes=makeView('notebook'),assessment=makeView('assessment');
+ masterPanel(workspace,'MODEL OUTPUT');
+ station.appendChild(workspace);
+ if(inAd)station.appendChild(inAd);
+ const result=controls.querySelector('.result')||leftBody.querySelector('.result');
+ if(result)analysis.appendChild(result);
+ const stats=workspace.querySelector('.statgrid');if(stats)analysis.appendChild(stats);
+ const expl=document.createElement('div');expl.className='infoCard';
+ expl.innerHTML='<b>Scientific analysis</b><p>Change one variable at a time. Run the model, compare the observations and explain the pattern using the scientific principles for this experiment.</p><p><b>Model limitation:</b> Results are educational simulations and should not be treated as physical measurements.</p>';
+ analysis.appendChild(expl);
+ const reflect=document.createElement('div');reflect.className='infoCard';
+ reflect.innerHTML='<label for="masterHypothesis">Research hypothesis</label><textarea id="masterHypothesis" placeholder="I predict that… because…"></textarea><label for="masterConclusion">Evidence-based conclusion</label><textarea id="masterConclusion" placeholder="The results show… because…"></textarea>';
+ analysis.appendChild(reflect);
+ masterPanel(notebook,'RECORD YOUR OBSERVATIONS');notes.appendChild(notebook);
+ masterPanel(mission,'KNOWLEDGE CHECK');assessment.appendChild(mission);
+ centre.append(benchHead,tabs,content);
+ const right=document.createElement('aside');right.className='rightcol';
+ side.querySelectorAll('.panel').forEach(p=>{
+   const h=p.querySelector(':scope > h2');if(h){const ph=document.createElement('div');ph.className='ph';ph.appendChild(h);const sm=document.createElement('small');sm.textContent='REFERENCE';ph.appendChild(sm);const pb=document.createElement('div');pb.className='pb';[...p.children].forEach(n=>{if(n!==ph&&n!==h&&n!==pb)pb.appendChild(n)});p.replaceChildren(ph,pb)}
+   p.classList.add('master-panel');right.appendChild(p);
+ });
+ layout.replaceChildren(left,centre,right);
+ function activate(key){
+   tabs.querySelectorAll('.tab').forEach(b=>{const on=b.dataset.masterTab===key;b.classList.toggle('active',on);b.setAttribute('aria-selected',String(on))});
+   content.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.dataset.masterView===key));
+ }
+ tabs.addEventListener('click',e=>{const b=e.target.closest('[data-master-tab]');if(b)activate(b.dataset.masterTab)});
+ activate('station');
+ // Retain all original controls and original script handlers; add research note export.
+ const exportBtn=document.createElement('button');exportBtn.type='button';exportBtn.className='btn ghost';exportBtn.textContent='Export research notes';
+ exportBtn.addEventListener('click',()=>{
+   const lines=['CBSEMOCK CHEMISTRY RESEARCH NOTES',title,'','Hypothesis',document.getElementById('masterHypothesis')?.value||'','Conclusion',document.getElementById('masterConclusion')?.value||''];
+   const blob=new Blob([lines.join('\n')],{type:'text/plain'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+   a.href=url;a.download='chemistry-research-notes-'+lab+'.txt';a.click();URL.revokeObjectURL(url);
+ });
+ const actions=hero?.querySelector('.heroactions');if(actions)actions.appendChild(exportBtn);
+})();
+</script>
+
+<script src="../../ads.js"></script>
+<script src="../../portal-shell.js"></script>
+</body></html>

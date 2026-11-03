@@ -1,0 +1,6 @@
+CBSEMOCK Chemistry – Latest Available Build
+
+Chemistry Complete Interactive V2: 40 experiments.
+
+Open index.html in Chrome or Edge. Individual experiments are standalone HTML pages.
+Important: The new integrated realistic workbench is currently included as the Physics V2 example. Other subject collections retain their latest previously created subject-specific interactions; they have not all yet been rebuilt into the new realistic workbench architecture.

@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2026-11-ct-ai-9-c9",
+    "session": "2026–27",
+    "month": "November 2026",
+    "class": 9,
+    "class_group": "9-10",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "title": "Computational Thinking & AI — Class 9 November 2026 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202611-CTAI-C9-01",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Computational Thinking",
+      "topic": "Computational Thinking",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which activity best represents decomposition?",
+      "options": {
+        "A": "Breaking a large problem into smaller manageable parts",
+        "B": "Guessing an answer without analysis",
+        "C": "Repeating the same step forever",
+        "D": "Ignoring the problem constraints"
+      },
+      "answer": "A",
+      "explanation": "Decomposition divides a complex problem into smaller subproblems.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computational Thinking"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-02",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Computational Thinking",
+      "topic": "Computational Thinking",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "A step-by-step finite procedure to solve a problem is called an:",
+      "options": {
+        "A": "Algorithm",
+        "B": "Database",
+        "C": "Interface",
+        "D": "Sensor"
+      },
+      "answer": "A",
+      "explanation": "An algorithm is an ordered set of steps for solving a problem.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computational Thinking"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-03",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Computational Thinking",
+      "topic": "Computational Thinking",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "A student notices that many school routes share the same sequence of turns. Identifying this similarity is:",
+      "options": {
+        "A": "Abstraction",
+        "B": "Pattern recognition",
+        "C": "Randomisation",
+        "D": "Encryption"
+      },
+      "answer": "B",
+      "explanation": "Pattern recognition identifies repeated similarities across problems or data.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computational Thinking"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-04",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Computational Thinking",
+      "topic": "Computational Thinking",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "In computational thinking, abstraction mainly means:",
+      "options": {
+        "A": "Keeping every detail",
+        "B": "Focusing on relevant details and ignoring unnecessary ones",
+        "C": "Writing code without planning",
+        "D": "Converting all data to images"
+      },
+      "answer": "B",
+      "explanation": "Abstraction simplifies a problem by focusing on important features.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computational Thinking"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-05",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Algorithms and Flowcharts",
+      "topic": "Algorithms and Flowcharts",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which flowchart symbol usually represents a decision?",
+      "options": {
+        "A": "Oval",
+        "B": "Diamond",
+        "C": "Rectangle",
+        "D": "Parallelogram"
+      },
+      "answer": "B",
+      "explanation": "A diamond represents a decision or condition with branching outcomes.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Algorithms and Flowcharts"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-06",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Algorithms and Flowcharts",
+      "topic": "Algorithms and Flowcharts",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "In a flowchart, the oval symbol usually represents:",
+      "options": {
+        "A": "Input/output",
+        "B": "Process",
+        "C": "Start or end",
+        "D": "Decision"
+      },
+      "answer": "C",
+      "explanation": "The terminator oval marks the beginning or end of a flowchart.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Algorithms and Flowcharts"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-07",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Data and Information",
+      "topic": "Data and Information",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which of these is an example of structured data?",
+      "options": {
+        "A": "A free-form voice recording",
+        "B": "A table of student roll numbers and marks",
+        "C": "A photograph of a classroom",
+        "D": "An unlabelled video"
+      },
+      "answer": "B",
+      "explanation": "Structured data is organised in a defined format such as rows and columns.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data and Information"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-08",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Data and Information",
+      "topic": "Data and Information",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "Why should data be checked before training an AI model?",
+      "options": {
+        "A": "To make the file larger",
+        "B": "Errors and missing values can lead to unreliable results",
+        "C": "To remove every unusual value automatically",
+        "D": "Because models cannot use numbers"
+      },
+      "answer": "B",
+      "explanation": "Poor-quality or biased data can produce inaccurate or unfair model outputs.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data and Information"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-09",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Introduction to AI",
+      "topic": "Introduction to AI",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Artificial Intelligence broadly refers to computer systems that:",
+      "options": {
+        "A": "Only store files",
+        "B": "Perform tasks that typically require human-like intelligence",
+        "C": "Always have a physical robot body",
+        "D": "Work without data"
+      },
+      "answer": "B",
+      "explanation": "AI systems perform tasks such as recognising patterns, understanding language or making predictions.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Introduction to AI"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-10",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "AI Domains",
+      "topic": "AI Domains",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Recognising objects in a photograph is primarily an example of:",
+      "options": {
+        "A": "Natural Language Processing",
+        "B": "Computer Vision",
+        "C": "Spreadsheet modelling",
+        "D": "Audio compression"
+      },
+      "answer": "B",
+      "explanation": "Computer vision enables systems to interpret visual information.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "AI Domains"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-11",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "AI Domains",
+      "topic": "AI Domains",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "A chatbot that interprets a typed question mainly uses:",
+      "options": {
+        "A": "Natural Language Processing",
+        "B": "Computer Vision",
+        "C": "Mechanical engineering",
+        "D": "GPS navigation"
+      },
+      "answer": "A",
+      "explanation": "NLP helps computers process and respond to human language.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "AI Domains"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-12",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Machine Learning Basics",
+      "topic": "Machine Learning Basics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "A model learns to predict house prices from labelled examples containing house features and known prices. This is:",
+      "options": {
+        "A": "Supervised learning",
+        "B": "Unsupervised learning",
+        "C": "Manual sorting",
+        "D": "Data deletion"
+      },
+      "answer": "A",
+      "explanation": "Supervised learning uses examples paired with known target labels or values.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Machine Learning Basics"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-13",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "Machine Learning Basics",
+      "topic": "Machine Learning Basics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "A model groups customers by similar purchasing behaviour without pre-labelled groups. This is:",
+      "options": {
+        "A": "Supervised learning",
+        "B": "Unsupervised learning",
+        "C": "Rule-based encryption",
+        "D": "Optical character recognition"
+      },
+      "answer": "B",
+      "explanation": "Unsupervised learning discovers patterns or groups in unlabelled data.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Machine Learning Basics"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-14",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "AI Ethics",
+      "topic": "AI Ethics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "An AI hiring system trained on biased historical data may:",
+      "options": {
+        "A": "Always become fairer",
+        "B": "Repeat or amplify existing bias",
+        "C": "Remove the need for human oversight",
+        "D": "Guarantee equal outcomes"
+      },
+      "answer": "B",
+      "explanation": "Biased training data can lead a model to reproduce unfair patterns.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "AI Ethics"
+      ]
+    },
+    {
+      "id": "202611-CTAI-C9-15",
+      "class": 9,
+      "subject": "Computational Thinking & AI",
+      "chapter": "AI Ethics and Safety",
+      "topic": "AI Ethics and Safety",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "Which practice is most responsible when using an AI tool for a school assignment?",
+      "options": {
+        "A": "Submit generated content without checking",
+        "B": "Verify facts, acknowledge assistance where required and protect personal data",
+        "C": "Enter classmates’ private information",
+        "D": "Assume every output is correct"
+      },
+      "answer": "B",
+      "explanation": "Responsible use includes verification, transparency and privacy protection.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "AI Ethics and Safety"
+      ]
+    }
+  ]
+}

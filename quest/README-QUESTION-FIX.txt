@@ -1,0 +1,1 @@
+Question display compatibility fix. Keep the existing data folder; this package retains the included November 2026 data. Replace the application folder with this build, then copy your current data folder over the included data folder if it contains your latest releases.

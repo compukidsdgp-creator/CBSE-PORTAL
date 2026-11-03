@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2026-11-hindi-a-9-c9",
+    "session": "2026–27",
+    "month": "November 2026",
+    "class": 9,
+    "class_group": "9-10",
+    "subject": "Hindi Course A (002)",
+    "title": "Hindi Course A — Class 9 November 2026 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202611-002-C9-01",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "अपठित गद्यांश",
+      "topic": "अपठित गद्यांश",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "अपठित गद्यांश का मुख्य भाव ज्ञात करने के लिए सबसे उपयुक्त तरीका क्या है?",
+      "options": {
+        "A": "केवल पहला शब्द पढ़ना",
+        "B": "पूरे गद्यांश के विचार और निष्कर्ष को समझना",
+        "C": "कठिन शब्दों को छोड़ देना",
+        "D": "शीर्षक से ही उत्तर बना लेना"
+      },
+      "answer": "B",
+      "explanation": "मुख्य भाव पूरे अनुच्छेद में विकसित विचार को समझकर निर्धारित किया जाता है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "अपठित गद्यांश"
+      ]
+    },
+    {
+      "id": "202611-002-C9-02",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "व्याकरण – शब्द भेद",
+      "topic": "व्याकरण – शब्द भेद",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "“सुंदर फूल खिला है।” वाक्य में “सुंदर” कौन-सा शब्द है?",
+      "options": {
+        "A": "संज्ञा",
+        "B": "सर्वनाम",
+        "C": "विशेषण",
+        "D": "क्रिया"
+      },
+      "answer": "C",
+      "explanation": "“सुंदर” फूल की विशेषता बताता है, इसलिए विशेषण है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "व्याकरण – शब्द भेद"
+      ]
+    },
+    {
+      "id": "202611-002-C9-03",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "व्याकरण – संज्ञा",
+      "topic": "व्याकरण – संज्ञा",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "“ईमानदारी” किस प्रकार की संज्ञा है?",
+      "options": {
+        "A": "व्यक्तिवाचक",
+        "B": "जातिवाचक",
+        "C": "भाववाचक",
+        "D": "समूहवाचक"
+      },
+      "answer": "C",
+      "explanation": "ईमानदारी एक गुण/भाव का नाम है, इसलिए भाववाचक संज्ञा है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "व्याकरण – संज्ञा"
+      ]
+    },
+    {
+      "id": "202611-002-C9-04",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "व्याकरण – सर्वनाम",
+      "topic": "व्याकरण – सर्वनाम",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "“वे कल विद्यालय आएँगे।” वाक्य में सर्वनाम कौन-सा है?",
+      "options": {
+        "A": "कल",
+        "B": "विद्यालय",
+        "C": "आएँगे",
+        "D": "वे"
+      },
+      "answer": "D",
+      "explanation": "“वे” संज्ञा के स्थान पर प्रयुक्त सर्वनाम है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "व्याकरण – सर्वनाम"
+      ]
+    },
+    {
+      "id": "202611-002-C9-05",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "व्याकरण – क्रिया",
+      "topic": "व्याकरण – क्रिया",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "“बच्चे मैदान में खेल रहे हैं।” वाक्य में मुख्य क्रिया समूह है:",
+      "options": {
+        "A": "बच्चे",
+        "B": "मैदान में",
+        "C": "खेल रहे हैं",
+        "D": "हैं मैदान"
+      },
+      "answer": "C",
+      "explanation": "“खेल रहे हैं” क्रिया समूह है जो कार्य और काल बताता है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "व्याकरण – क्रिया"
+      ]
+    },
+    {
+      "id": "202611-002-C9-06",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "व्याकरण – उपसर्ग",
+      "topic": "व्याकरण – उपसर्ग",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "“अनुशासन” शब्द में उपसर्ग है:",
+      "options": {
+        "A": "शासन",
+        "B": "अनु",
+        "C": "अनुश",
+        "D": "न"
+      },
+      "answer": "B",
+      "explanation": "“अनु” उपसर्ग “शासन” शब्द से पहले जुड़ा है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "व्याकरण – उपसर्ग"
+      ]
+    },
+    {
+      "id": "202611-002-C9-07",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "व्याकरण – प्रत्यय",
+      "topic": "व्याकरण – प्रत्यय",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "“मित्रता” शब्द में प्रत्यय है:",
+      "options": {
+        "A": "मित्र",
+        "B": "ता",
+        "C": "त्र",
+        "D": "मि"
+      },
+      "answer": "B",
+      "explanation": "“मित्र” में “ता” प्रत्यय जुड़कर भाववाचक शब्द बनाता है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "व्याकरण – प्रत्यय"
+      ]
+    },
+    {
+      "id": "202611-002-C9-08",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "लेखन – अनुच्छेद",
+      "topic": "लेखन – अनुच्छेद",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "एक प्रभावी अनुच्छेद में विचारों का क्रम कैसा होना चाहिए?",
+      "options": {
+        "A": "असंबद्ध",
+        "B": "तार्किक और क्रमबद्ध",
+        "C": "केवल प्रश्नों के रूप में",
+        "D": "बिना विराम चिह्न"
+      },
+      "answer": "B",
+      "explanation": "अनुच्छेद में विचार तार्किक क्रम में जुड़े होने चाहिए।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "लेखन – अनुच्छेद"
+      ]
+    },
+    {
+      "id": "202611-002-C9-09",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "लेखन – पत्र",
+      "topic": "लेखन – पत्र",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "औपचारिक पत्र में भाषा कैसी होनी चाहिए?",
+      "options": {
+        "A": "अत्यधिक बोलचाल की",
+        "B": "शिष्ट, स्पष्ट और विषयानुकूल",
+        "C": "अपमानजनक",
+        "D": "केवल संक्षिप्त संकेतों में"
+      },
+      "answer": "B",
+      "explanation": "औपचारिक पत्र में विनम्र और स्पष्ट भाषा अपेक्षित है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "लेखन – पत्र"
+      ]
+    },
+    {
+      "id": "202611-002-C9-10",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "साहित्य – काव्य",
+      "topic": "साहित्य – काव्य",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "कविता में समान ध्वनि की पुनरावृत्ति से उत्पन्न प्रभाव को क्या कहते हैं?",
+      "options": {
+        "A": "रस",
+        "B": "अनुप्रास अलंकार",
+        "C": "समास",
+        "D": "संधि"
+      },
+      "answer": "B",
+      "explanation": "एक ही वर्ण या ध्वनि की आवृत्ति अनुप्रास अलंकार कहलाती है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "साहित्य – काव्य"
+      ]
+    },
+    {
+      "id": "202611-002-C9-11",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "साहित्य – गद्य",
+      "topic": "साहित्य – गद्य",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "किसी कहानी के पात्र का चरित्र-चित्रण किस आधार पर करना चाहिए?",
+      "options": {
+        "A": "केवल नाम से",
+        "B": "उसके व्यवहार, संवाद और निर्णयों से",
+        "C": "पुस्तक के आकार से",
+        "D": "लेखक के जन्मस्थान से"
+      },
+      "answer": "B",
+      "explanation": "पात्र के गुण उसके कार्यों और संवादों से स्पष्ट होते हैं।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "साहित्य – गद्य"
+      ]
+    },
+    {
+      "id": "202611-002-C9-12",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "शब्दार्थ",
+      "topic": "शब्दार्थ",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "“परिश्रम” का निकटतम पर्यायवाची है:",
+      "options": {
+        "A": "आलस्य",
+        "B": "मेहनत",
+        "C": "विश्राम",
+        "D": "विलास"
+      },
+      "answer": "B",
+      "explanation": "परिश्रम का अर्थ मेहनत या श्रम है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "शब्दार्थ"
+      ]
+    },
+    {
+      "id": "202611-002-C9-13",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "विलोम शब्द",
+      "topic": "विलोम शब्द",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "“उन्नति” का विलोम शब्द है:",
+      "options": {
+        "A": "प्रगति",
+        "B": "विकास",
+        "C": "अवनति",
+        "D": "सफलता"
+      },
+      "answer": "C",
+      "explanation": "अवनति, उन्नति का विपरीत अर्थ देता है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "विलोम शब्द"
+      ]
+    },
+    {
+      "id": "202611-002-C9-14",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "मुहावरे",
+      "topic": "मुहावरे",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "“आँखों का तारा” मुहावरे का अर्थ है:",
+      "options": {
+        "A": "बहुत दूर होना",
+        "B": "बहुत प्रिय होना",
+        "C": "क्रोधित होना",
+        "D": "धोखा देना"
+      },
+      "answer": "B",
+      "explanation": "यह मुहावरा अत्यंत प्रिय व्यक्ति के लिए प्रयुक्त होता है।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "मुहावरे"
+      ]
+    },
+    {
+      "id": "202611-002-C9-15",
+      "class": 9,
+      "subject": "Hindi Course A",
+      "chapter": "पठन कौशल",
+      "topic": "पठन कौशल",
+      "type": "MCQ",
+      "difficulty": "Challenging",
+      "question": "किसी साहित्यिक अंश की व्याख्या करते समय सबसे उचित उत्तर कौन-सा है?",
+      "options": {
+        "A": "केवल कथानक दोहराना",
+        "B": "भाव, प्रसंग और पाठ-साक्ष्य के आधार पर अर्थ स्पष्ट करना",
+        "C": "लेखक के बारे में अनुमान लगाना",
+        "D": "असंबद्ध उदाहरण देना"
+      },
+      "answer": "B",
+      "explanation": "व्याख्या में प्रसंग, भाव और पाठ के प्रमाण का उपयोग होना चाहिए।",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "पठन कौशल"
+      ]
+    }
+  ]
+}

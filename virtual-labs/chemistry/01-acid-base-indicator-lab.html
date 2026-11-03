@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBSEMOCK | Chemistry Research Studio — Acids, Bases & Indicators</title>
+<style>
+:root{--bg:#08131f;--panel:#102235;--panel2:#142b40;--line:#29465d;--text:#eaf4fb;--muted:#9eb4c7;--cyan:#46d7df;--green:#6ee0ae;--amber:#f4c36b;--red:#ff8585;--purple:#b6a1ff;--shadow:0 18px 48px #0005}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 0%,#17354a 0,#08131f 40%,#07111b 100%);color:var(--text);font:14px/1.45 Inter,system-ui,Segoe UI,Arial,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+.top{position:sticky;top:0;z-index:20;background:#08131feF;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+.topin{max-width:1500px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}.logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#1cb9c4,#6255c8);display:grid;place-items:center;font-size:21px;box-shadow:0 7px 24px #1cb9c455}
+.brand b{display:block;font-size:15px;letter-spacing:.3px}.brand small{color:var(--muted);font-size:11px}
+.status{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#102438;border-radius:30px;padding:7px 11px;font-size:11px;color:#c9dbe8}.chip strong{color:var(--green)}
+.shell{max-width:1500px;margin:auto;padding:20px}
+.hero{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin:10px 0 18px;flex-wrap:wrap}
+.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+h1{font-size:clamp(25px,3vw,39px);line-height:1.1;margin:6px 0 8px;letter-spacing:-1px}
+.sub{color:var(--muted);max-width:760px;margin:0}
+.heroactions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1px solid #41627b;background:#1b354b;color:var(--text);padding:9px 13px;border-radius:9px;font-weight:700;font-size:12px;transition:.15s}
+.btn:hover{filter:brightness(1.18);transform:translateY(-1px)}.btn.primary{background:linear-gradient(120deg,#087f88,#176b91);border-color:#1b9eaa}.btn.good{background:#164333;border-color:#347c60}.btn.warn{background:#4c3520;border-color:#8d6939}.btn.ghost{background:transparent}
+.layout{display:grid;grid-template-columns:285px minmax(420px,1fr) 310px;gap:14px;align-items:start}
+.panel{background:linear-gradient(160deg,#132a3e,#0e1e2d);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);overflow:hidden}
+.ph{padding:14px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ph h2{font-size:13px;margin:0;letter-spacing:.2px}.ph small{color:var(--muted);font-size:10px}
+.pb{padding:14px}
+.sectionlabel{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#80a6bd;font-weight:800;margin:3px 0 9px}
+.chemical{display:flex;align-items:center;gap:9px;padding:9px;border:1px solid #29475e;background:#102438;border-radius:10px;margin:7px 0;cursor:pointer;transition:.15s}
+.chemical:hover,.chemical.active{border-color:var(--cyan);background:#12374a}.swatch{width:30px;height:34px;border-radius:8px;border:1px solid #ffffff35;flex:none;position:relative;overflow:hidden}
+.swatch:after{content:"";position:absolute;inset:40% 0 0;background:#ffffff20}
+.chemical b{display:block;font-size:11px}.chemical small{color:var(--muted);font-size:10px}
+.chemical .tag{margin-left:auto;font-size:9px;color:#b9d0df;border:1px solid #34536a;border-radius:20px;padding:3px 6px}
+.control{margin:12px 0}.control label{display:flex;justify-content:space-between;color:#c9dbe8;font-size:11px;margin-bottom:6px}.control output{color:var(--cyan);font-weight:800}
+input[type=range]{width:100%;accent-color:#38cbd3}
+.field{width:100%;background:#091a29;color:var(--text);border:1px solid #3a5b73;border-radius:8px;padding:9px}
+.muted{color:var(--muted);font-size:11px}
+.bench{min-height:620px}
+.tabs{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);overflow:auto}
+.tab{white-space:nowrap;border:1px solid transparent;background:transparent;color:#a9bfd0;padding:8px 11px;border-radius:8px;font-size:11px;font-weight:800}
+.tab.active{background:#12404c;border-color:#267c87;color:#e9ffff}
+.view{display:none;padding:15px}.view.active{display:block}
+.scene{min-height:330px;border:1px solid #294960;border-radius:13px;background:radial-gradient(ellipse at 50% 85%,#183b4d 0,#0a1a29 60%);position:relative;overflow:hidden;padding:18px}
+.scenehead{display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative;z-index:1}
+.scenehead b{font-size:12px}.scenehead span{font-size:10px;color:var(--muted)}
+.labbench{height:245px;display:flex;align-items:flex-end;justify-content:center;gap:clamp(10px,3vw,35px);padding:22px 10px 12px;position:relative}
+.labbench:after{content:"";position:absolute;left:3%;right:3%;bottom:11px;height:12px;border-radius:50%;background:linear-gradient(90deg,#234257,#557184,#203d52);box-shadow:0 12px 25px #0008}
+.vesselWrap{position:relative;z-index:1;text-align:center;min-width:80px}
+.vessel{width:76px;height:128px;margin:auto;position:relative;border:2px solid #9bb6c7aa;border-top:0;border-radius:5px 5px 18px 18px;background:linear-gradient(90deg,#ffffff08,#ffffff22,#ffffff08);overflow:hidden;box-shadow:inset 0 0 12px #ffffff10}
+.vessel.beaker{border-radius:2px 2px 10px 10px;width:90px;height:112px}
+.liquid{position:absolute;left:2px;right:2px;bottom:2px;height:55%;border-radius:0 0 12px 12px;background:#b0e5ef;transition:background .5s,height .3s;opacity:.9}
+.vessel:before{content:"";position:absolute;left:8px;top:0;width:55px;border-top:2px solid #c6dce8aa}
+.vessel .graduation{position:absolute;right:5px;top:24px;width:13px;height:50px;border-top:1px solid #ffffff80;border-bottom:1px solid #ffffff80;background:repeating-linear-gradient(to bottom,transparent 0 9px,#ffffff75 10px 11px)}
+.vessellabel{font-size:10px;color:#bfd0de;margin-top:8px}
+.dropzone{border:1px dashed #45677e;border-radius:10px;padding:9px 10px;color:#b4c9d8;font-size:10px;text-align:center;margin:8px auto 0;max-width:140px;min-height:35px}
+.dropzone.over{border-color:var(--cyan);background:#16404a}
+.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.metric{background:#0a1b2a;border:1px solid #29485f;border-radius:10px;padding:10px}
+.metric small{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.8px}.metric b{display:block;font-size:19px;margin-top:3px}.metric em{font-size:10px;color:var(--muted);font-style:normal}
+.phscale{margin-top:14px;padding:12px;background:#0a1a29;border:1px solid #29475d;border-radius:11px}
+.scale{height:15px;border-radius:20px;background:linear-gradient(90deg,#e64c48 0%,#f18b47 15%,#f4d65a 32%,#8cce79 50%,#4eb9a9 65%,#4e86d8 82%,#8b5dc2 100%);position:relative;margin:13px 2px 7px}
+.marker{position:absolute;top:-6px;width:4px;height:27px;background:white;border:1px solid #07131d;left:50%;transition:left .35s}
+.scaleNums{display:flex;justify-content:space-between;font-size:9px;color:#a9bdcc}
+.legend{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}
+.infoCard{padding:11px;border:1px solid #29485f;background:#0b1c2b;border-radius:10px;margin:8px 0}
+.infoCard b{font-size:11px}.infoCard p{font-size:10px;color:var(--muted);margin:5px 0 0;line-height:1.55}
+.indicators{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:8px}
+.ind{background:#0a1b2a;border:1px solid #2b4a61;border-radius:9px;padding:8px;text-align:center}
+.ind .dot{height:28px;width:28px;border-radius:50%;margin:0 auto 6px;border:1px solid #ffffff55;background:#ddd}
+.ind b{font-size:10px;display:block}.ind small{font-size:9px;color:var(--muted)}
+.dataTable{width:100%;border-collapse:collapse;font-size:10px}.dataTable th,.dataTable td{padding:8px;border-bottom:1px solid #29445b;text-align:left}.dataTable th{color:#9eb8ca;font-weight:700}
+.chart{width:100%;height:auto;background:#091a29;border:1px solid #29465d;border-radius:10px}
+.quizopt{display:block;width:100%;text-align:left;padding:10px;border:1px solid #35546b;border-radius:9px;background:#11283c;color:#dcebf5;margin:7px 0;font-size:11px}.quizopt.selected{border-color:var(--cyan);background:#12404a}.quizopt.correct{border-color:var(--green);background:#123a2d}.quizopt.wrong{border-color:var(--red);background:#40252a}
+.rightMetric{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid #274257;font-size:11px}.rightMetric span{color:var(--muted)}.rightMetric b{color:#e8f4fb}
+.progress{height:7px;background:#071521;border-radius:20px;overflow:hidden;margin:8px 0}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#27bac7,#69e0a7)}
+.safety{border:1px solid #805e34;background:#352a1c;border-radius:10px;padding:10px;color:#f7dcae;font-size:10px;line-height:1.5;margin-top:12px}
+footer{max-width:1500px;margin:15px auto 30px;padding:0 20px;color:#7892a7;font-size:10px}
+@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)}.rightcol{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rightcol .panel{height:100%}}
+@media(max-width:760px){.shell{padding:12px}.layout{grid-template-columns:1fr}.rightcol{grid-column:auto;display:block}.topin{padding:10px 12px}.hero{align-items:flex-start}.bench{min-height:0}.scene{padding:12px}.labbench{gap:8px}.vessel{transform:scale(.85);transform-origin:bottom center}.readout{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header class="top"><div class="topin">
+ <div class="brand"><div class="logo">⚗</div><div><b>CBSEMOCK · CHEMISTRY RESEARCH STUDIO</b><small>Virtual chemical laboratory · Acids, bases & indicators</small></div></div>
+ <div class="status"><span class="chip">CLASS X · CHEMISTRY</span><span class="chip">XP <strong id="xp">0</strong></span><span class="chip">LEVEL <strong id="level">Novice</strong></span></div>
+</div></header>
+<main class="shell">
+ <section class="hero">
+  <div><div class="eyebrow">Interactive practical · Experiment 01</div><h1>Acids, Bases & Indicators</h1><p class="sub">Investigate acidic and basic solutions, test indicators, measure pH, perform a virtual neutralisation and identify an unknown sample through experimental evidence.</p></div>
+  <div class="heroactions"><button class="btn ghost" id="resetAll">↺ Reset experiment</button><button class="btn" id="downloadCSV">↓ Export observations</button><button class="btn primary" id="downloadReport">⇩ Practical report</button></div>
+ </section>
+ <div class="layout">
+  <aside class="panel">
+   <div class="ph"><h2>CHEMICAL REAGENT CABINET</h2><small>SELECT A SAMPLE</small></div>
+   <div class="pb">
+    <div class="sectionlabel">Available solutions</div>
+    <div id="chemicals">
+     <div class="chemical active" draggable="true" data-chem="hcl"><div class="swatch" style="background:#d7efff"></div><div><b>Dilute hydrochloric acid</b><small>HCl · Strong acid model</small></div><span class="tag">ACID</span></div>
+     <div class="chemical" draggable="true" data-chem="vinegar"><div class="swatch" style="background:#e8e6bd"></div><div><b>Vinegar</b><small>CH₃COOH · Weak acid</small></div><span class="tag">ACID</span></div>
+     <div class="chemical" draggable="true" data-chem="water"><div class="swatch" style="background:#b9e7ef"></div><div><b>Distilled water</b><small>H₂O · Neutral reference</small></div><span class="tag">NEUTRAL</span></div>
+     <div class="chemical" draggable="true" data-chem="bicarb"><div class="swatch" style="background:#d9e5ce"></div><div><b>Baking soda solution</b><small>NaHCO₃ · Weak base</small></div><span class="tag">BASE</span></div>
+     <div class="chemical" draggable="true" data-chem="naoh"><div class="swatch" style="background:#c7e8ed"></div><div><b>Dilute sodium hydroxide</b><small>NaOH · Strong base model</small></div><span class="tag">BASE</span></div>
+     <div class="chemical" draggable="true" data-chem="mystery"><div class="swatch" style="background:linear-gradient(135deg,#c7d3dc,#9bafbf)"></div><div><b>Mystery solution X</b><small>Unknown sample · Identify it</small></div><span class="tag">UNKNOWN</span></div>
+    </div>
+    <div class="sectionlabel" style="margin-top:18px">Experiment controls</div>
+    <div class="control"><label>Sample volume <output id="volOut">20 mL</output></label><input type="range" id="volume" min="5" max="50" step="5" value="20"></div>
+    <div class="control"><label>Concentration <output id="concOut">0.10 M</output></label><input type="range" id="concentration" min="1" max="10" value="5"></div>
+    <div class="control"><label>Temperature <output id="tempOut">25 °C</output></label><input type="range" id="temperature" min="10" max="60" value="25"></div>
+    <div class="infoCard"><b>Selected reagent</b><p id="reagentInfo">Dilute hydrochloric acid is represented as a strong acid that ionises completely in this idealised model.</p></div>
+    <div class="safety">⚠ <b>Virtual safety notice</b><br>This is a browser-based educational simulation. Never mix real chemicals based on this activity. Real laboratory work requires teacher supervision, PPE and approved procedures.</div>
+   </div>
+  </aside>
+
+  <section class="panel bench">
+   <div class="ph"><h2>EXPERIMENT WORKBENCH</h2><small id="modeLabel">MODE · INDICATOR TESTING</small></div>
+   <nav class="tabs">
+    <button class="tab active" data-view="indicator">Indicator tests</button>
+    <button class="tab" data-view="ph">pH analyser</button>
+    <button class="tab" data-view="mix">Neutralisation</button>
+    <button class="tab" data-view="mystery">Mystery sample</button>
+    <button class="tab" data-view="record">Lab notebook</button>
+   </nav>
+   <div class="view active" id="view-indicator">
+    <div class="scene">
+     <div class="scenehead"><b>01 / Indicator reaction station</b><span>Drag a reagent to a test tube or select it from the cabinet</span></div>
+     <div class="labbench">
+      <div class="vesselWrap"><div class="vessel"><div class="liquid" id="tube1" style="background:#dcebf1"></div><div class="graduation"></div></div><div class="vessellabel">TEST TUBE A</div><div class="dropzone" data-drop="tube">Drop reagent here</div></div>
+      <div class="vesselWrap"><div class="vessel"><div class="liquid" id="tube2" style="background:#dcebf1"></div><div class="graduation"></div></div><div class="vessellabel">TEST TUBE B</div><div class="dropzone" data-drop="tube2">Drop reagent here</div></div>
+      <div class="vesselWrap"><div class="vessel beaker"><div class="liquid" id="beakerLiquid" style="background:#dcebf1"></div><div class="graduation"></div></div><div class="vessellabel">INDICATOR BEAKER</div><div class="dropzone" data-drop="beaker">Drop reagent here</div></div>
+     </div>
+     <div class="muted" style="text-align:center">Select a solution, then choose an indicator below to observe its characteristic colour.</div>
+    </div>
+    <div class="infoCard"><b>Choose an indicator</b><div class="indicators">
+     <button class="ind" data-ind="litmus"><div class="dot" id="litmusDot" style="background:#8664b9"></div><b>Litmus</b><small id="litmusText">Purple · untested</small></button>
+     <button class="ind" data-ind="universal"><div class="dot" id="universalDot" style="background:#8acb78"></div><b>Universal indicator</b><small id="universalText">Green · untested</small></button>
+     <button class="ind" data-ind="phenolphthalein"><div class="dot" id="phenolDot" style="background:#eee"></div><b>Phenolphthalein</b><small id="phenolText">Colourless · untested</small></button>
+    </div></div>
+    <div class="readout">
+     <div class="metric"><small>Sample pH</small><b id="metricPH">1.0</b><em>Model value</em></div>
+     <div class="metric"><small>Nature</small><b id="metricNature">Acidic</b><em id="metricStrength">Strong acid</em></div>
+     <div class="metric"><small>Indicator</small><b id="metricIndicator">—</b><em>Last test</em></div>
+    </div>
+   </div>
+   <div class="view" id="view-ph">
+    <div class="scene"><div class="scenehead"><b>02 / Digital pH analyser</b><span>Probe measurement · idealised solution model</span></div>
+     <div class="labbench">
+      <div class="vesselWrap"><div class="vessel beaker" style="height:145px"><div class="liquid" id="phLiquid" style="background:#dcebf1;height:60%"></div></div><div class="vessellabel">SAMPLE BEAKER</div></div>
+      <div style="align-self:center;text-align:center"><div style="font-size:38px">⌁</div><div class="muted">pH PROBE</div><div class="metric" style="margin-top:9px"><small>LIVE READING</small><b id="phDigital">1.0</b><em>pH units</em></div></div>
+     </div>
+    </div>
+    <div class="phscale"><div class="legend"><b>ACIDIC</b><b>NEUTRAL</b><b>BASIC</b></div><div class="scale"><div class="marker" id="phMarker"></div></div><div class="scaleNums"><span>0</span><span>2</span><span>4</span><span>6</span><span>7</span><span>8</span><span>10</span><span>12</span><span>14</span></div></div>
+    <div class="infoCard"><b>Interpretation</b><p id="phInterpretation">A pH below 7 indicates an acidic solution. The smaller the pH, the more acidic the solution in this model.</p></div>
+    <button class="btn primary" id="recordPH">＋ Record pH observation</button>
+   </div>
+   <div class="view" id="view-mix">
+    <div class="scene"><div class="scenehead"><b>03 / Neutralisation station</b><span>Acid + base → salt + water</span></div>
+     <div class="labbench">
+      <div class="vesselWrap"><div class="vessel"><div class="liquid" id="acidLiquid" style="background:#f0c8a6"></div></div><div class="vessellabel">ACID · 20 mL</div><div class="muted">HCl model</div></div>
+      <div style="align-self:center;font-size:25px;color:var(--cyan)">+</div>
+      <div class="vesselWrap"><div class="vessel"><div class="liquid" id="baseLiquid" style="background:#b7d9e8"></div></div><div class="vessellabel">BASE · 20 mL</div><div class="muted">NaOH model</div></div>
+      <div style="align-self:center;font-size:25px;color:var(--cyan)">→</div>
+      <div class="vesselWrap"><div class="vessel beaker"><div class="liquid" id="mixLiquid" style="background:#dcebf1;height:60%"></div></div><div class="vessellabel">REACTION MIXTURE</div></div>
+     </div>
+    </div>
+    <div class="control"><label>Acid volume <output id="acidVolOut">20 mL</output></label><input type="range" id="acidVol" min="5" max="50" value="20" step="5"></div>
+    <div class="control"><label>Base volume <output id="baseVolOut">20 mL</output></label><input type="range" id="baseVol" min="5" max="50" value="20" step="5"></div>
+    <div class="control"><label>Base concentration <output id="baseConcOut">0.10 M</output></label><input type="range" id="baseConc" min="1" max="10" value="5"></div>
+    <button class="btn primary" id="mixBtn">▶ Mix solutions</button> <button class="btn" id="resetMix">Reset mixture</button>
+    <div class="infoCard"><b>Reaction analysis</b><p id="mixAnalysis">Adjust volumes and concentration, then mix to compare acid and base amounts.</p><p id="equation" class="muted">HCl + NaOH → NaCl + H₂O</p></div>
+   </div>
+   <div class="view" id="view-mystery">
+    <div class="scene"><div class="scenehead"><b>04 / Unknown substance investigation</b><span>Use evidence, not guessing</span></div>
+     <div class="labbench">
+      <div class="vesselWrap"><div class="vessel"><div class="liquid" id="mysteryLiquid" style="background:#c9d8dc"></div></div><div class="vessellabel">UNKNOWN X</div></div>
+      <div style="max-width:220px"><div class="infoCard"><b>Case file</b><p>A sample has been submitted for identification. Test it with available indicators and the pH analyser. Select its likely nature and justify your conclusion.</p></div></div>
+     </div>
+    </div>
+    <div class="control"><label>Evidence test</label><select class="field" id="mysteryTest"><option value="">Select a test</option><option value="litmus">Litmus test</option><option value="universal">Universal indicator</option><option value="ph">pH probe</option></select></div>
+    <button class="btn primary" id="runMystery">Run selected test</button>
+    <div class="infoCard"><b>Evidence log</b><p id="mysteryEvidence">No tests performed yet.</p></div>
+    <div class="control"><label>Your conclusion</label><select class="field" id="mysteryConclusion"><option value="">Choose sample nature</option><option value="acid">Acidic</option><option value="neutral">Neutral</option><option value="base">Basic</option></select></div>
+    <button class="btn good" id="submitMystery">Submit identification</button><div class="v4-feedback" id="mysteryFeedback"></div>
+   </div>
+   <div class="view" id="view-record">
+    <div class="infoCard"><b>Laboratory observation notebook</b><p>Each recorded test is added to your notebook. Export observations as CSV or generate a practical report for revision and teacher review.</p></div>
+    <table class="dataTable"><thead><tr><th>#</th><th>Sample</th><th>Test</th><th>Observation</th><th>pH</th></tr></thead><tbody id="obsRows"><tr><td colspan="5" class="muted">No observations recorded yet.</td></tr></tbody></table>
+    <div class="control"><label>Student name</label><input class="field" id="studentName" placeholder="Enter student name"></div>
+    <div class="control"><label>Class / section</label><input class="field" id="studentClass" placeholder="e.g. Class X A"></div>
+    <div class="control"><label>Conclusion</label><textarea class="field" id="studentConclusion" rows="3" placeholder="What did your observations establish?"></textarea></div>
+   </div>
+  </section>
+
+  <aside class="rightcol" style="display:flex;flex-direction:column;gap:14px">
+   <section class="panel"><div class="ph"><h2>LIVE ANALYSIS</h2><small>MODEL OUTPUT</small></div><div class="pb">
+    <div class="rightMetric"><span>Selected sample</span><b id="rightSample">HCl</b></div>
+    <div class="rightMetric"><span>pH value</span><b id="rightPH">1.0</b></div>
+    <div class="rightMetric"><span>Classification</span><b id="rightClass">Acidic</b></div>
+    <div class="rightMetric"><span>Concentration</span><b id="rightConc">0.10 M</b></div>
+    <div class="rightMetric"><span>Temperature</span><b id="rightTemp">25 °C</b></div>
+    <div class="phscale"><div class="scale"><div class="marker" id="rightMarker"></div></div><div class="scaleNums"><span>0</span><span>7</span><span>14</span></div></div>
+   </div></section>
+   <section class="panel"><div class="ph"><h2>LEARNING PROGRESS</h2><small>MISSION TRACKER</small></div><div class="pb">
+    <div class="rightMetric"><span>Indicator tests</span><b id="progIndicator">0 / 3</b></div><div class="progress"><i id="barIndicator"></i></div>
+    <div class="rightMetric"><span>pH observations</span><b id="progPH">0 / 2</b></div><div class="progress"><i id="barPH"></i></div>
+    <div class="rightMetric"><span>Neutralisation</span><b id="progMix">0 / 1</b></div><div class="progress"><i id="barMix"></i></div>
+    <div class="rightMetric"><span>Mystery solution</span><b id="progMystery">0 / 1</b></div><div class="progress"><i id="barMystery"></i></div>
+    <div class="rightMetric"><span>Notebook records</span><b id="progRecords">0</b></div>
+   </div></section>
+   <section class="panel"><div class="ph"><h2>SCIENTIFIC INSIGHT</h2><small>CONCEPT CHECK</small></div><div class="pb">
+    <div class="infoCard"><b id="insightTitle">Why does pH matter?</b><p id="insightText">pH expresses how acidic or basic an aqueous solution is. It is related to hydrogen ion concentration.</p></div>
+    <div class="infoCard"><b>Key relationship</b><p>pH = −log₁₀[H⁺] (for dilute aqueous solutions under the usual school-level approximation).</p></div>
+    <button class="btn" id="showQuiz" style="width:100%">Open knowledge check →</button>
+   </div></section>
+  </aside>
+ </div>
+ <section class="panel" style="margin-top:15px" id="quizPanel">
+  <div class="ph"><h2>KNOWLEDGE CHECK · APPLY YOUR UNDERSTANDING</h2><small>3 QUESTIONS</small></div>
+  <div class="pb" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px" id="quizGrid">
+   <div class="infoCard"><b>Q1. Which pH indicates a neutral solution at 25 °C?</b><button class="quizopt" data-q="0" data-a="0">pH 2</button><button class="quizopt" data-q="0" data-a="1">pH 7</button><button class="quizopt" data-q="0" data-a="2">pH 12</button><div class="muted" id="qfb0"></div></div>
+   <div class="infoCard"><b>Q2. What happens to blue litmus in an acidic solution?</b><button class="quizopt" data-q="1" data-a="0">Turns red</button><button class="quizopt" data-q="1" data-a="1">Turns green</button><button class="quizopt" data-q="1" data-a="2">No change</button><div class="muted" id="qfb1"></div></div>
+   <div class="infoCard"><b>Q3. Neutralisation of an acid by a base produces generally…</b><button class="quizopt" data-q="2" data-a="0">Salt and water</button><button class="quizopt" data-q="2" data-a="1">Only oxygen</button><button class="quizopt" data-q="2" data-a="2">Metal and hydrogen</button><div class="muted" id="qfb2"></div></div>
+  </div>
+ </section>
+</main>
+<footer>CBSEMOCK Chemistry Research Studio · Educational simulation. Model values are simplified for school-level investigation; real solutions, indicators and experimental conditions may differ.</footer>
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+const chemicals={
+ hcl:{name:'Dilute hydrochloric acid',formula:'HCl',type:'acid',ph:1.0,colour:'#f3b4a8',desc:'A strong acid model. It is treated as fully ionised for this idealised school-level simulation.'},
+ vinegar:{name:'Vinegar',formula:'CH₃COOH',type:'acid',ph:3.0,colour:'#e6c58e',desc:'A weak acid model representing dilute ethanoic acid in vinegar.'},
+ water:{name:'Distilled water',formula:'H₂O',type:'neutral',ph:7.0,colour:'#a9dce5',desc:'Neutral reference sample at approximately 25 °C in this simplified model.'},
+ bicarb:{name:'Baking soda solution',formula:'NaHCO₃',type:'base',ph:8.3,colour:'#a7d6b5',desc:'A weakly basic solution model of sodium hydrogencarbonate.'},
+ naoh:{name:'Dilute sodium hydroxide',formula:'NaOH',type:'base',ph:13.0,colour:'#8fc8d9',desc:'A strong base model. It is treated as fully dissociated in this idealised simulation.'},
+ mystery:{name:'Mystery solution X',formula:'Unknown',type:'unknown',ph:5.0,colour:'#b8a6d9',desc:'An unknown sample with evidence to be gathered through indicator and pH tests.'}
+};
+let selected='hcl', observations=[],tested=new Set(),phCount=0,mixDone=false,mysteryEvidence=[],mysteryDone=false,xp=0,lastIndicator='—',quizDone=new Set();
+const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
+function concentration(){return Number($('concentration').value)/50}
+function samplePH(id=selected){
+ let base=chemicals[id].ph, factor=Number($('concentration').value)/5;
+ if(id==='hcl')return clamp(base-Math.log10(factor),0,6.9);
+ if(id==='naoh')return clamp(base+Math.log10(factor),7.1,14);
+ if(id==='vinegar')return clamp(base-.25*Math.log10(factor),1,6.9);
+ if(id==='bicarb')return clamp(base+.1*Math.log10(factor),7.1,10);
+ return base;
+}
+function nature(ph){return ph<6.95?'Acidic':ph>7.05?'Basic':'Neutral'}
+function strength(ph){return ph<3?'Strong acid':ph<6.95?'Weak acid':ph>11?'Strong base':ph>7.05?'Weak base':'Neutral'}
+function indicator(ind,ph){
+ if(ind==='litmus')return ph<6.95?{c:'#d94d58',t:'Red'}:ph>7.05?{c:'#4d78d8',t:'Blue'}:{c:'#8664b9',t:'Purple'};
+ if(ind==='universal'){let c=ph<3?'#e44b42':ph<5?'#ef8b42':ph<6.5?'#e8d65d':ph<7.5?'#79c875':ph<9?'#4bb6a1':ph<11?'#4387c9':'#8056bb';return {c,t:ph.toFixed(1)+' colour range'};}
+ return ph>8.2?{c:'#ed73bb',t:'Pink'}:{c:'#eee',t:'Colourless'};
+}
+function addXP(n){xp+=n;$('xp').textContent=xp;$('level').textContent=xp>=100?'Lab Analyst':xp>=50?'Investigator':xp>=20?'Apprentice':'Novice'}
+function updateProgress(){
+ $('progIndicator').textContent=tested.size+' / 3';$('barIndicator').style.width=Math.min(100,tested.size/3*100)+'%';
+ $('progPH').textContent=phCount+' / 2';$('barPH').style.width=Math.min(100,phCount/2*100)+'%';
+ $('progMix').textContent=(mixDone?1:0)+' / 1';$('barMix').style.width=(mixDone?100:0)+'%';
+ $('progMystery').textContent=(mysteryDone?1:0)+' / 1';$('barMystery').style.width=(mysteryDone?100:0)+'%';
+ $('progRecords').textContent=observations.length;
+}
+function updateSample(){
+ let chem=chemicals[selected],ph=samplePH(),n=nature(ph);
+ $('reagentInfo').textContent=chem.desc;$('volOut').textContent=$('volume').value+' mL';$('concOut').textContent=(Number($('concentration').value)/50).toFixed(2)+' M';$('tempOut').textContent=$('temperature').value+' °C';
+ $('metricPH').textContent=ph.toFixed(1);$('metricNature').textContent=n;$('metricStrength').textContent=strength(ph);
+ $('rightSample').textContent=chem.formula;$('rightPH').textContent=ph.toFixed(1);$('rightClass').textContent=n;$('rightConc').textContent=(Number($('concentration').value)/50).toFixed(2)+' M';$('rightTemp').textContent=$('temperature').value+' °C';
+ $('phDigital').textContent=ph.toFixed(1);$('phMarker').style.left=(ph/14*100)+'%';$('rightMarker').style.left=(ph/14*100)+'%';
+ $('phLiquid').style.background=indicator('universal',ph).c;$('tube1').style.background=chem.colour;$('tube2').style.background=chem.colour;$('beakerLiquid').style.background=chem.colour;$('mysteryLiquid').style.background=chem.colour;
+ $('phInterpretation').textContent=ph<7?'Acidic: pH is below 7. Lower pH corresponds to greater hydrogen ion activity in this simplified model.':ph>7?'Basic: pH is above 7. The solution is alkaline in this school-level model.':'Neutral: pH is approximately 7 at 25 °C.';
+ $('insightTitle').textContent=n+' solution';$('insightText').textContent=chem.name+' ('+chem.formula+') is represented by pH '+ph.toFixed(1)+'. '+(ph<7?'It is acidic and changes blue litmus red.':ph>7?'It is basic and changes red litmus blue.':'It is neutral and does not change litmus colour.');
+}
+function record(test,obs,ph=samplePH()){
+ observations.push({sample:chemicals[selected].name,test,obs,ph:ph.toFixed(1)});
+ $('obsRows').innerHTML=observations.map((o,i)=>`<tr><td>${i+1}</td><td>${o.sample}</td><td>${o.test}</td><td>${o.obs}</td><td>${o.ph}</td></tr>`).join('');
+ updateProgress();
+}
+function setView(view){
+ document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
+ document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+view));
+ $('modeLabel').textContent='MODE · '+view.toUpperCase();
+}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+document.querySelectorAll('.chemical').forEach(c=>{
+ c.addEventListener('click',()=>choose(c.dataset.chem));
+ c.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',c.dataset.chem)});
+});
+function choose(id){selected=id;document.querySelectorAll('.chemical').forEach(c=>c.classList.toggle('active',c.dataset.chem===id));updateSample()}
+['volume','concentration','temperature'].forEach(id=>$(id).addEventListener('input',updateSample));
+document.querySelectorAll('[data-drop]').forEach(z=>{
+ z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('over')});
+ z.addEventListener('dragleave',()=>z.classList.remove('over'));
+ z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('over');let id=e.dataTransfer.getData('text/plain');if(chemicals[id]){choose(id);z.textContent=chemicals[id].formula+' loaded';z.style.borderColor='var(--green)';}});
+ z.addEventListener('click',()=>{let id=selected;z.textContent=chemicals[id].formula+' loaded';z.style.borderColor='var(--green)'});
+});
+document.querySelectorAll('[data-ind]').forEach(b=>b.onclick=()=>{
+ let ind=b.dataset.ind,ph=samplePH(),res=indicator(ind,ph);
+ let map={litmus:['litmusDot','litmusText'],universal:['universalDot','universalText'],phenolphthalein:['phenolDot','phenolText']};
+ $(map[ind][0]).style.background=res.c;$(map[ind][1]).textContent=res.t;
+ lastIndicator=ind[0].toUpperCase()+ind.slice(1)+': '+res.t;$('metricIndicator').textContent=res.t;
+ tested.add(ind);record(ind,res.t,ph);addXP(5);updateProgress();
+});
+$('recordPH').onclick=()=>{record('pH probe',samplePH().toFixed(1)+' pH',samplePH());phCount++;addXP(5);updateProgress()};
+$('acidVol').oninput=()=>{$('acidVolOut').textContent=$('acidVol').value+' mL'};
+$('baseVol').oninput=()=>{$('baseVolOut').textContent=$('baseVol').value+' mL'};
+$('baseConc').oninput=()=>{$('baseConcOut').textContent=(Number($('baseConc').value)/50).toFixed(2)+' M'};
+$('mixBtn').onclick=()=>{
+ let va=Number($('acidVol').value),vb=Number($('baseVol').value),ca=Number($('concentration').value)/50,cb=Number($('baseConc').value)/50;
+ let na=va*ca,nb=vb*cb,excess=na-nb,ph=7;
+ if(Math.abs(excess)<.001)ph=7;
+ else if(excess>0)ph=clamp(7-Math.log10(1+excess/Math.max(1,va+vb)*100),1,6.9);
+ else ph=clamp(7+Math.log10(1+Math.abs(excess)/Math.max(1,va+vb)*100),7.1,13.5);
+ $('mixLiquid').style.background=indicator('universal',ph).c;
+ $('mixAnalysis').textContent=Math.abs(excess)<.001?'Approximately stoichiometric amounts: the idealised model is at the neutralisation point.':excess>0?'Acid is in excess. The mixture remains acidic in this simplified calculation.':'Base is in excess. The mixture remains basic in this simplified calculation.';
+ $('equation').textContent='HCl + NaOH → NaCl + H₂O  |  Approximate mixture pH: '+ph.toFixed(1);
+ record('Neutralisation mix','Acid amount '+na.toFixed(2)+' relative units; base amount '+nb.toFixed(2)+' relative units; '+nature(ph),ph);
+ if(!mixDone){mixDone=true;addXP(15)}updateProgress();
+};
+$('resetMix').onclick=()=>{$('acidVol').value=20;$('baseVol').value=20;$('baseConc').value=5;$('acidVolOut').textContent='20 mL';$('baseVolOut').textContent='20 mL';$('baseConcOut').textContent='0.10 M';$('mixLiquid').style.background='#dcebf1';$('mixAnalysis').textContent='Adjust volumes and concentration, then mix to compare acid and base amounts.';$('equation').textContent='HCl + NaOH → NaCl + H₂O'};
+$('mysteryTest').onchange=()=>{};
+$('runMystery').onclick=()=>{
+ let t=$('mysteryTest').value;if(!t){$('mysteryEvidence').textContent='Choose a test first.';return}
+ let ph=5.5,obs=t==='litmus'?'Blue litmus turns red; red litmus remains red.':t==='universal'?'Universal indicator gives a yellow-orange colour consistent with an acidic solution.':'pH probe reading: 5.5 (acidic).';
+ mysteryEvidence.push(t+': '+obs);$('mysteryEvidence').textContent=mysteryEvidence.join(' | ');record('Mystery X · '+t,obs,ph);addXP(5);
+};
+$('submitMystery').onclick=()=>{
+ let c=$('mysteryConclusion').value;if(!c){$('mysteryFeedback').textContent='Select a conclusion.';return}
+ if(c==='acid'&&mysteryEvidence.length>=1){$('mysteryFeedback').textContent='Correct. Your evidence supports an acidic unknown sample (X).';if(!mysteryDone){mysteryDone=true;addXP(20)}}else $('mysteryFeedback').textContent=c!=='acid'?'Not supported by the recorded evidence. Revisit the tests.':'Run at least one evidence test before concluding.';
+ updateProgress();
+};
+document.querySelectorAll('.quizopt').forEach(b=>b.onclick=()=>{
+ let q=Number(b.dataset.q),a=Number(b.dataset.a),correct=[1,0,0][q];
+ document.querySelectorAll(`.quizopt[data-q="${q}"]`).forEach(x=>x.classList.remove('selected','correct','wrong'));
+ b.classList.add(a===correct?'correct':'wrong');
+ $('qfb'+q).textContent=a===correct?'Correct — well done.': 'Review the concept and try another option.';
+ if(a===correct&&!quizDone.has(q)){quizDone.add(q);addXP(10)}
+});
+$('showQuiz').onclick=()=>{$('quizPanel').scrollIntoView({behavior:'smooth',block:'center'})};
+function csv(){let rows=[['Sample','Test','Observation','pH'],...observations.map(o=>[o.sample,o.test,o.obs,o.ph])];return rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\n')}
+function download(name,content,type='text/plain'){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([content],{type}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+$('downloadCSV').onclick=()=>download('CBSEMOCK_Acids_Bases_Observations.csv',csv(),'text/csv');
+$('downloadReport').onclick=()=>{
+ let txt=`CBSEMOCK CHEMISTRY VIRTUAL PRACTICAL\nExperiment: Acids, Bases and Indicators\nStudent: ${$('studentName').value}\nClass: ${$('studentClass').value}\n\nAIM\nTo investigate acidic, basic and neutral solutions using indicators and pH measurements.\n\nPRINCIPLE\nAcids and bases show characteristic behaviour with indicators. pH is related to hydrogen ion concentration: pH = -log10[H+]. Neutralisation of an acid by a base forms salt and water.\n\nAPPARATUS / SIMULATED REAGENTS\nTest tubes, beaker, pH probe, litmus, universal indicator, phenolphthalein, model solutions.\n\nOBSERVATIONS\n${observations.map((o,i)=>`${i+1}. ${o.sample} | ${o.test} | ${o.obs} | pH ${o.ph}`).join('\n')||'No observations recorded.'}\n\nCONCLUSION\n${$('studentConclusion').value}\n\nNOTE\nThis report contains simulated educational data and student-entered conclusions. It is not a record of a physical laboratory experiment.\n`;
+ download('CBSEMOCK_Acids_Bases_Practical_Report.txt',txt);
+};
+$('resetAll').onclick=()=>{
+ observations=[];tested.clear();phCount=0;mixDone=false;mysteryDone=false;mysteryEvidence=[];xp=0;quizDone.clear();$('xp').textContent='0';$('level').textContent='Novice';$('obsRows').innerHTML='<tr><td colspan="5" class="muted">No observations recorded yet.</td></tr>';$('mysteryEvidence').textContent='No tests performed yet.';$('mysteryFeedback').textContent='';$('studentConclusion').value='';document.querySelectorAll('.ind .dot').forEach((d,i)=>d.style.background=['#8664b9','#8acb78','#eee'][i]);document.querySelectorAll('.ind small').forEach((t,i)=>t.textContent=['Purple · untested','Green · untested','Colourless · untested'][i]);updateProgress();choose('hcl');$('mixAnalysis').textContent='Adjust volumes and concentration, then mix to compare acid and base amounts.';setView('indicator');
+};
+updateSample();updateProgress();
+})();
+</script>
+
+<script src="../../ads.js"></script>
+<script src="../../portal-shell.js"></script>
+</body>
+</html>

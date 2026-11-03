@@ -1,0 +1,3014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physics XII – CBSEMOCK Board Prep</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --navy:#0d1b2a;--teal:#00b4d8;--orange:#f77f00;--purple:#7b2d8b;
+  --red:#e63946;--green:#2d6a4f;--blue:#1d3557;--lgray:#f4f6fb;
+  --border:#dde3ee;--text:#1a1a2e;--gold:#ffd166;--pink:#ef476f;
+  --mint:#06d6a0;--coral:#ff6b6b;
+  --subj1:#1a237e;--subj2:#283593;--subj3:#3949ab;
+  --font:'Inter',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --lgray:#1a1c20;--text:#e4e0d8;--border:#3a3f4a;--navy:#3a5a8a;
+  --teal:#00c8f0;--gold:#ffd166;--mint:#00e8b0;--coral:#ff8888;
+  --pink:#ff6b9d;--orange:#ff9933;color-scheme:dark;
+}}
+:root[data-theme=dark]{
+  --lgray:#1a1c20;--text:#e4e0d8;--border:#3a3f4a;--navy:#3a5a8a;
+  --teal:#00c8f0;--gold:#ffd166;--mint:#00e8b0;--coral:#ff8888;
+  --pink:#ff6b9d;--orange:#ff9933;color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--lgray);color:var(--text);min-height:100vh}
+
+/* ── TOP NAV ── */
+.topnav{position:sticky;top:0;z-index:200;background:var(--subj1);
+  display:flex;align-items:center;gap:8px;padding:0 16px;height:56px;
+  box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.topnav .brand{color:#fff;font-weight:700;font-size:1.05rem;white-space:nowrap}
+.topnav .brand span{color:var(--teal)}
+.nav-search{flex:1;max-width:340px;margin:0 12px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  border-radius:8px;padding:6px 12px;color:#fff;font-size:.85rem;outline:none}
+.nav-search::placeholder{color:rgba(255,255,255,.5)}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.btn-dark{background:rgba(255,255,255,.15);border:none;color:#fff;
+  padding:6px 12px;border-radius:6px;cursor:pointer;font-size:.8rem}
+.btn-dark:hover{background:rgba(255,255,255,.25)}
+.streak-badge{background:var(--gold);color:#222;border-radius:20px;
+  padding:4px 10px;font-size:.78rem;font-weight:700}
+.user-chip{background:var(--teal);color:#fff;border-radius:50%;
+  width:34px;height:34px;display:flex;align-items:center;justify-content:center;
+  font-weight:700;cursor:pointer;font-size:.9rem}
+
+/* ── XP BAR ── */
+.xp-bar-wrap{position:sticky;top:56px;z-index:190;background:var(--subj2);
+  padding:4px 16px;display:flex;align-items:center;gap:10px}
+.xp-label{color:rgba(255,255,255,.8);font-size:.72rem;white-space:nowrap}
+.xp-track{flex:1;height:8px;background:rgba(255,255,255,.2);border-radius:4px;overflow:hidden}
+.xp-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--mint));
+  border-radius:4px;transition:width .6s ease;width:0%}
+.xp-pts{color:#fff;font-size:.72rem;font-weight:600;white-space:nowrap}
+.badge-row{display:flex;gap:4px}
+.bdg{font-size:1rem;cursor:default}
+
+/* ── MAIN TABS ── */
+.main-tabs-wrap{z-index:99;background:var(--subj1);padding:4px 16px 0}
+.tab-row{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;padding-bottom:6px;padding-top:4px;min-width:0}
+.tab-row::-webkit-scrollbar{display:none}
+.tab-row-label{font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;
+  letter-spacing:.08em;padding:4px 2px 0;white-space:nowrap;flex-shrink:0;
+  align-self:center;margin-right:4px}
+.tab-row-2{background:rgba(0,0,0,.18);margin:0 -16px;padding:0 16px}
+.main-tab{background:rgba(255,255,255,.12);border:none;color:rgba(255,255,255,.75);
+  padding:6px 13px;border-radius:20px;cursor:pointer;font-size:.79rem;
+  white-space:nowrap;font-family:var(--font);transition:all .2s;flex-shrink:0}
+.main-tab:hover{background:rgba(255,255,255,.22);color:#fff}
+.main-tab.active{background:var(--teal);color:#fff;font-weight:600}
+.tab-row-2 .main-tab.active{background:var(--gold);color:#111}
+
+/* ── SECTIONS ── */
+section{display:none;padding:24px 16px;max-width:1100px;margin:0 auto}
+section.visible{display:block}
+.sec-title{font-size:1.6rem;font-weight:700;color:var(--subj1);margin-bottom:4px}
+@media(prefers-color-scheme:dark){.sec-title{color:var(--teal)}}
+:root[data-theme=dark] .sec-title{color:var(--teal)}
+.sec-sub{color:#666;font-size:.9rem;margin-bottom:24px}
+@media(prefers-color-scheme:dark){.sec-sub{color:#aaa}}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,var(--subj1),var(--subj3));
+  color:#fff;border-radius:16px;padding:32px;margin-bottom:24px;position:relative;overflow:hidden}
+.hero::after{content:'⚡';position:absolute;right:24px;top:50%;transform:translateY(-50%);
+  font-size:5rem;opacity:.15}
+.hero h1{font-size:1.7rem;margin-bottom:8px}
+.hero p{opacity:.85;font-size:.95rem;max-width:500px;line-height:1.5}
+.hero-stats{display:flex;gap:16px;margin-top:20px;flex-wrap:wrap}
+.hstat{background:rgba(255,255,255,.15);border-radius:10px;padding:10px 18px;text-align:center}
+.hstat .val{font-size:1.4rem;font-weight:700}
+.hstat .lbl{font-size:.72rem;opacity:.8}
+
+/* ── CARDS GRID ── */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:24px}
+.card{background:#fff;border-radius:12px;padding:20px;border:1px solid var(--border);
+  cursor:pointer;transition:all .2s;position:relative}
+@media(prefers-color-scheme:dark){.card{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .card{background:#242830;border-color:#3a3f4a}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.card-icon{font-size:2rem;margin-bottom:10px}
+.card-title{font-weight:700;font-size:1rem;margin-bottom:6px;color:var(--subj1)}
+@media(prefers-color-scheme:dark){.card-title{color:var(--teal)}}
+:root[data-theme=dark] .card-title{color:var(--teal)}
+.card-desc{font-size:.82rem;color:#666;line-height:1.5}
+@media(prefers-color-scheme:dark){.card-desc{color:#aaa}}
+.card-badge{position:absolute;top:12px;right:12px;background:var(--teal);
+  color:#fff;font-size:.68rem;padding:2px 8px;border-radius:10px;font-weight:600}
+.card-progress{margin-top:12px;height:4px;background:var(--border);border-radius:2px}
+.card-progress-fill{height:100%;background:var(--teal);border-radius:2px;transition:width .4s}
+
+/* ── REMEMBER / FORMULA / WORKED BLOCKS ── */
+.remember{background:linear-gradient(135deg,#fff8e1,#fff3cd);border-left:4px solid var(--gold);
+  border-radius:8px;padding:16px;margin:16px 0}
+@media(prefers-color-scheme:dark){.remember{background:linear-gradient(135deg,#2a2410,#1e1c0a);border-color:var(--gold)}}
+:root[data-theme=dark] .remember{background:linear-gradient(135deg,#2a2410,#1e1c0a)}
+.remember h4{color:#b7860d;margin-bottom:8px;font-size:.85rem;text-transform:uppercase;letter-spacing:.5px}
+@media(prefers-color-scheme:dark){.remember h4{color:var(--gold)}}
+.formula-box{background:linear-gradient(135deg,#e8f4f8,#d1ecf7);border-left:4px solid var(--teal);
+  border-radius:8px;padding:16px;margin:16px 0}
+@media(prefers-color-scheme:dark){.formula-box{background:linear-gradient(135deg,#0d2030,#0a1a28)}}
+:root[data-theme=dark] .formula-box{background:linear-gradient(135deg,#0d2030,#0a1a28)}
+.formula-box h4{color:var(--teal);margin-bottom:10px;font-size:.85rem;text-transform:uppercase;letter-spacing:.5px}
+.formula-box .f{font-family:var(--mono);background:#fff;border-radius:6px;
+  padding:8px 12px;margin:6px 0;font-size:.9rem;color:var(--subj1);border:1px solid var(--border)}
+@media(prefers-color-scheme:dark){.formula-box .f{background:#1a2030;color:var(--teal);border-color:#3a3f4a}}
+:root[data-theme=dark] .formula-box .f{background:#1a2030;color:var(--teal);border-color:#3a3f4a}
+.worked{background:linear-gradient(135deg,#f0fff4,#e0f5ec);border-left:4px solid var(--mint);
+  border-radius:8px;padding:16px;margin:16px 0}
+@media(prefers-color-scheme:dark){.worked{background:linear-gradient(135deg,#0a1f14,#061410)}}
+:root[data-theme=dark] .worked{background:linear-gradient(135deg,#0a1f14,#061410)}
+.worked h4{color:#1a7a4a;margin-bottom:10px;font-size:.9rem;font-weight:700}
+@media(prefers-color-scheme:dark){.worked h4{color:var(--mint)}}
+:root[data-theme=dark] .worked h4{color:var(--mint)}
+.worked .step{display:flex;gap:10px;margin:8px 0;font-size:.88rem;line-height:1.6}
+.worked .step .sn{background:var(--mint);color:#fff;border-radius:50%;
+  width:22px;height:22px;min-width:22px;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:.75rem}
+.worked .ans{background:var(--mint);color:#fff;border-radius:6px;
+  padding:8px 12px;margin-top:10px;font-weight:700;font-size:.9rem}
+
+/* ── VS GRID ── */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:10px;
+  overflow:hidden;border:1px solid var(--border);margin:16px 0}
+.vs-grid .vs-head{background:var(--subj1);color:#fff;padding:10px 14px;
+  font-weight:700;font-size:.85rem;text-align:center}
+@media(prefers-color-scheme:dark){.vs-grid .vs-head{background:var(--subj2)}}
+:root[data-theme=dark] .vs-grid .vs-head{background:var(--subj2)}
+.vs-grid .vs-row{display:contents}
+.vs-grid .vs-row>div{padding:10px 14px;border-top:1px solid var(--border);font-size:.85rem;line-height:1.5}
+.vs-grid .vs-row>div:first-child{background:rgba(26,35,126,.04)}
+@media(prefers-color-scheme:dark){.vs-grid .vs-row>div:first-child{background:rgba(26,35,126,.15)}}
+
+/* ── DEF CARDS ── */
+.def-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:16px 0}
+.def-card{background:#fff;border-radius:10px;padding:14px;border:1px solid var(--border);
+  border-top:3px solid var(--subj3)}
+@media(prefers-color-scheme:dark){.def-card{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .def-card{background:#242830;border-color:#3a3f4a}
+.def-card .term{font-weight:700;font-size:.88rem;color:var(--subj1);margin-bottom:6px}
+@media(prefers-color-scheme:dark){.def-card .term{color:var(--teal)}}
+:root[data-theme=dark] .def-card .term{color:var(--teal)}
+.def-card .defn{font-size:.82rem;color:#555;line-height:1.5}
+@media(prefers-color-scheme:dark){.def-card .defn{color:#aaa}}
+:root[data-theme=dark] .def-card .defn{color:#aaa}
+
+/* ── COMP TABLE ── */
+.comp-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.85rem}
+.comp-table th{background:var(--subj1);color:#fff;padding:10px 12px;text-align:left}
+@media(prefers-color-scheme:dark){.comp-table th{background:var(--subj2)}}
+:root[data-theme=dark] .comp-table th{background:var(--subj2)}
+.comp-table td{padding:9px 12px;border-bottom:1px solid var(--border)}
+.comp-table tr:nth-child(even) td{background:rgba(26,35,126,.04)}
+@media(prefers-color-scheme:dark){.comp-table tr:nth-child(even) td{background:rgba(26,35,126,.12)}}
+
+/* ── PYQ BANK ── */
+.pyq-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.pyq-chip{background:var(--border);border:none;border-radius:20px;padding:5px 14px;
+  font-size:.78rem;cursor:pointer;font-family:var(--font);transition:all .2s}
+.pyq-chip.active{background:var(--subj1);color:#fff}
+@media(prefers-color-scheme:dark){.pyq-chip{background:#2a2e38;color:#ccc}}
+:root[data-theme=dark] .pyq-chip{background:#2a2e38;color:#ccc}
+.pyq-card{background:#fff;border-radius:10px;border:1px solid var(--border);
+  padding:16px;margin-bottom:12px}
+@media(prefers-color-scheme:dark){.pyq-card{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .pyq-card{background:#242830;border-color:#3a3f4a}
+.pyq-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.pyq-tag{font-size:.7rem;padding:2px 8px;border-radius:10px;font-weight:600}
+.pyq-year{background:var(--subj3);color:#fff}
+.pyq-marks{background:var(--orange);color:#fff}
+.pyq-ch{background:var(--teal);color:#fff}
+.pyq-q{font-size:.88rem;line-height:1.6;margin-bottom:8px}
+.pyq-ans-btn{background:none;border:1px solid var(--teal);color:var(--teal);
+  border-radius:6px;padding:5px 12px;font-size:.78rem;cursor:pointer;font-family:var(--font)}
+.pyq-ans-btn:hover{background:var(--teal);color:#fff}
+.pyq-ans{display:none;margin-top:10px;background:var(--lgray);border-radius:6px;
+  padding:10px;font-size:.83rem;line-height:1.6;border-left:3px solid var(--teal)}
+@media(prefers-color-scheme:dark){.pyq-ans{background:#1e2228}}
+:root[data-theme=dark] .pyq-ans{background:#1e2228}
+
+/* ── MISTAKE BANK ── */
+.mistake-card{background:#fff;border-radius:10px;border:1px solid var(--border);
+  border-left:4px solid var(--red);padding:16px;margin-bottom:12px}
+@media(prefers-color-scheme:dark){.mistake-card{background:#242830;border-color:#3a3f4a;border-left-color:var(--coral)}}
+:root[data-theme=dark] .mistake-card{background:#242830;border-left-color:var(--coral)}
+.mistake-card h4{color:var(--red);font-size:.88rem;margin-bottom:8px}
+@media(prefers-color-scheme:dark){.mistake-card h4{color:var(--coral)}}
+:root[data-theme=dark] .mistake-card h4{color:var(--coral)}
+.mistake-wrong{background:#fff5f5;border-radius:6px;padding:8px 12px;font-size:.83rem;
+  color:var(--red);margin:6px 0;font-family:var(--mono)}
+@media(prefers-color-scheme:dark){.mistake-wrong{background:#2a1515;color:var(--coral)}}
+:root[data-theme=dark] .mistake-wrong{background:#2a1515}
+.mistake-right{background:#f0fff4;border-radius:6px;padding:8px 12px;font-size:.83rem;
+  color:var(--green);margin:6px 0;font-family:var(--mono)}
+@media(prefers-color-scheme:dark){.mistake-right{background:#0a1f14;color:var(--mint)}}
+:root[data-theme=dark] .mistake-right{background:#0a1f14}
+
+/* ── EXAMINER'S EYE ── */
+.tip-card{background:#fff;border-radius:10px;border:1px solid var(--border);
+  border-left:4px solid var(--purple);padding:16px;margin-bottom:12px}
+@media(prefers-color-scheme:dark){.tip-card{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .tip-card{background:#242830}
+.tip-card h4{color:var(--purple);font-size:.88rem;margin-bottom:8px;display:flex;gap:6px;align-items:center}
+
+/* ── HIGH PROBABILITY ── */
+.hotq{background:linear-gradient(135deg,#fff3e0,#ffe0b2);border-radius:10px;
+  padding:14px;margin-bottom:10px;border-left:4px solid var(--orange)}
+@media(prefers-color-scheme:dark){.hotq{background:linear-gradient(135deg,#2a1800,#1e1200)}}
+:root[data-theme=dark] .hotq{background:linear-gradient(135deg,#2a1800,#1e1200)}
+.hotq .heat{float:right;font-size:.8rem;font-weight:700;color:var(--orange)}
+.hotq .q{font-size:.88rem;line-height:1.6;margin-top:4px}
+
+/* ── LAST MINUTE ── */
+.lm-block{background:#fff;border-radius:12px;border:1px solid var(--border);
+  padding:20px;margin-bottom:16px}
+@media(prefers-color-scheme:dark){.lm-block{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .lm-block{background:#242830}
+.lm-block h3{color:var(--subj1);margin-bottom:12px;font-size:1rem;display:flex;gap:8px;align-items:center}
+@media(prefers-color-scheme:dark){.lm-block h3{color:var(--teal)}}
+:root[data-theme=dark] .lm-block h3{color:var(--teal)}
+.lm-list{list-style:none;padding:0}
+.lm-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:.86rem;
+  display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+.lm-list li::before{content:'✓';color:var(--mint);font-weight:700;flex-shrink:0;margin-top:2px}
+
+/* ── PRACTICE PAPER ── */
+.practice-paper{background:#fff;border-radius:12px;border:1px solid var(--border);
+  padding:20px;margin-bottom:16px}
+@media(prefers-color-scheme:dark){.practice-paper{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .practice-paper{background:#242830}
+.pp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.pp-title{font-weight:700;color:var(--subj1);font-size:1rem}
+@media(prefers-color-scheme:dark){.pp-title{color:var(--teal)}}
+:root[data-theme=dark] .pp-title{color:var(--teal)}
+.pp-meta{font-size:.78rem;color:#666;margin-top:2px}
+.btn-start{background:var(--subj1);color:#fff;border:none;border-radius:8px;
+  padding:8px 20px;cursor:pointer;font-weight:600;font-size:.85rem;font-family:var(--font)}
+.btn-start:hover{background:var(--subj3)}
+.pp-section{margin-bottom:12px}
+.pp-sec-title{font-size:.8rem;font-weight:700;color:#888;text-transform:uppercase;
+  letter-spacing:.5px;margin-bottom:6px}
+.pp-q{font-size:.86rem;padding:8px 0;border-bottom:1px dashed var(--border);line-height:1.5}
+.pp-q .qno{font-weight:700;color:var(--subj3);margin-right:6px}
+.pp-q .marks{float:right;font-size:.75rem;color:#888;font-weight:600}
+
+/* ── EXAM SIMULATOR ── */
+.exam-sim{background:#fff;border-radius:12px;border:1px solid var(--border);padding:24px}
+@media(prefers-color-scheme:dark){.exam-sim{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .exam-sim{background:#242830}
+.sim-q{font-size:.95rem;line-height:1.7;margin-bottom:16px;font-weight:500}
+.sim-options{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.sim-opt{background:var(--lgray);border:2px solid var(--border);border-radius:8px;
+  padding:10px 14px;cursor:pointer;font-size:.88rem;transition:all .2s;text-align:left;
+  font-family:var(--font)}
+@media(prefers-color-scheme:dark){.sim-opt{background:#1e2228;border-color:#3a3f4a;color:var(--text)}}
+:root[data-theme=dark] .sim-opt{background:#1e2228;border-color:#3a3f4a}
+.sim-opt:hover{border-color:var(--teal);background:rgba(0,180,216,.08)}
+.sim-opt.correct{border-color:var(--mint);background:#f0fff4;color:#1a7a4a}
+.sim-opt.wrong{border-color:var(--red);background:#fff5f5;color:var(--red)}
+@media(prefers-color-scheme:dark){
+  .sim-opt.correct{background:#0a1f14;color:var(--mint)}
+  .sim-opt.wrong{background:#2a1515;color:var(--coral)}
+}
+:root[data-theme=dark] .sim-opt.correct{background:#0a1f14;color:var(--mint)}
+:root[data-theme=dark] .sim-opt.wrong{background:#2a1515;color:var(--coral)}
+.sim-nav{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.btn-sim{background:var(--subj1);color:#fff;border:none;border-radius:8px;
+  padding:8px 20px;cursor:pointer;font-size:.85rem;font-family:var(--font)}
+.sim-progress-wrap{font-size:.78rem;color:#888}
+.sim-explain{background:var(--lgray);border-radius:8px;padding:12px;font-size:.84rem;
+  line-height:1.6;margin-top:12px;display:none;border-left:3px solid var(--teal)}
+@media(prefers-color-scheme:dark){.sim-explain{background:#1e2228}}
+:root[data-theme=dark] .sim-explain{background:#1e2228}
+
+/* ── DASHBOARD ── */
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+.metric{background:#fff;border-radius:12px;border:1px solid var(--border);
+  padding:20px;text-align:center}
+@media(prefers-color-scheme:dark){.metric{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .metric{background:#242830}
+.metric .val{font-size:2rem;font-weight:700;color:var(--subj1)}
+@media(prefers-color-scheme:dark){.metric .val{color:var(--teal)}}
+:root[data-theme=dark] .metric .val{color:var(--teal)}
+.metric .lbl{font-size:.78rem;color:#888;margin-top:4px}
+.chapter-prog{background:#fff;border-radius:12px;border:1px solid var(--border);padding:20px;margin-bottom:16px}
+@media(prefers-color-scheme:dark){.chapter-prog{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .chapter-prog{background:#242830}
+.ch-row{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border)}
+.ch-row:last-child{border-bottom:none}
+.ch-name{flex:1;font-size:.83rem}
+.ch-bar-wrap{width:120px;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.ch-bar-fill{height:100%;background:var(--teal);border-radius:4px}
+.ch-pct{font-size:.75rem;color:#888;width:32px;text-align:right}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--subj1);color:#fff;
+  border-radius:10px;padding:12px 20px;font-size:.85rem;z-index:999;
+  transform:translateY(80px);opacity:0;transition:all .3s;max-width:300px}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;
+  display:none;align-items:center;justify-content:center}
+.modal-overlay.show{display:flex}
+.modal{background:#fff;border-radius:16px;padding:32px;max-width:400px;width:90%;text-align:center}
+@media(prefers-color-scheme:dark){.modal{background:#242830;color:var(--text)}}
+:root[data-theme=dark] .modal{background:#242830}
+.modal h2{margin-bottom:8px;color:var(--subj1);font-size:1.3rem}
+@media(prefers-color-scheme:dark){.modal h2{color:var(--teal)}}
+:root[data-theme=dark] .modal h2{color:var(--teal)}
+.modal p{color:#666;margin-bottom:20px;font-size:.9rem}
+@media(prefers-color-scheme:dark){.modal p{color:#aaa}}
+.modal input{width:100%;border:2px solid var(--border);border-radius:8px;
+  padding:10px 14px;font-size:1rem;outline:none;font-family:var(--font);
+  background:var(--lgray);color:var(--text)}
+.modal input:focus{border-color:var(--teal)}
+.btn-primary{background:var(--subj1);color:#fff;border:none;border-radius:8px;
+  padding:10px 24px;cursor:pointer;font-size:.9rem;font-family:var(--font);
+  font-weight:600;margin-top:14px;width:100%}
+.btn-primary:hover{background:var(--subj3)}
+
+/* ── CHAPTER SECTION HEADINGS ── */
+.ch-section{margin-bottom:24px}
+.ch-section h2{font-size:1.2rem;color:var(--subj1);border-bottom:2px solid var(--subj3);
+  padding-bottom:8px;margin-bottom:16px}
+@media(prefers-color-scheme:dark){.ch-section h2{color:var(--teal);border-color:var(--teal)}}
+:root[data-theme=dark] .ch-section h2{color:var(--teal);border-color:var(--teal)}
+.ch-section h3{font-size:1rem;color:var(--subj2);margin:16px 0 8px}
+@media(prefers-color-scheme:dark){.ch-section h3{color:#8cb4e8}}
+:root[data-theme=dark] .ch-section h3{color:#8cb4e8}
+.ch-section p{font-size:.88rem;line-height:1.7;color:var(--text);margin-bottom:10px}
+.ch-section ul{padding-left:20px;margin-bottom:10px}
+.ch-section ul li{font-size:.88rem;line-height:1.7;margin-bottom:4px}
+
+/* ── ACTIVITY ── */
+.activity{background:#fff;border-radius:10px;border:1px solid var(--border);
+  padding:16px;margin:16px 0}
+@media(prefers-color-scheme:dark){.activity{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .activity{background:#242830}
+.activity h4{font-size:.85rem;color:var(--subj2);margin-bottom:12px;font-weight:700}
+@media(prefers-color-scheme:dark){.activity h4{color:var(--teal)}}
+:root[data-theme=dark] .activity h4{color:var(--teal)}
+.mcq-opt{display:flex;gap:8px;align-items:flex-start;padding:8px;border-radius:6px;
+  cursor:pointer;font-size:.86rem;margin:4px 0;transition:background .15s}
+.mcq-opt:hover{background:rgba(0,180,216,.08)}
+.mcq-opt input{margin-top:3px}
+
+/* ── UTILITY ── */
+.tag{display:inline-block;background:var(--lgray);border:1px solid var(--border);
+  border-radius:12px;padding:2px 10px;font-size:.72rem;margin:2px}
+@media(prefers-color-scheme:dark){.tag{background:#2a2e38;border-color:#3a3f4a}}
+.highlight{background:linear-gradient(transparent 60%,rgba(255,209,102,.4) 60%)}
+@media(prefers-color-scheme:dark){.highlight{background:linear-gradient(transparent 60%,rgba(255,209,102,.2) 60%)}}
+.emoji-head{font-size:1.1rem;margin-right:6px}
+.notice{background:var(--lgray);border-radius:8px;padding:12px 16px;
+  font-size:.83rem;line-height:1.6;border-left:3px solid var(--subj3);margin:12px 0}
+@media(prefers-color-scheme:dark){.notice{background:#1e2228}}
+:root[data-theme=dark] .notice{background:#1e2228}
+
+/* ═══════════════ MOBILE RESPONSIVE ═══════════════ */
+@media(max-width:640px){
+  .topnav{padding:0 12px;gap:8px}
+  .topnav .brand{font-size:.92rem}
+  .nav-search{width:110px;font-size:.78rem}
+  .streak-badge{font-size:.78rem;padding:3px 7px}
+  .xp-bar-wrap{padding:6px 12px}
+  .main-tabs-wrap{z-index:99;padding:3px 8px 0}
+  .main-tab{padding:5px 10px;font-size:.72rem}
+  .hero{padding:20px 14px}
+  .hero h1{font-size:1.25rem}
+  .hero p{font-size:.85rem}
+  .hero-stats{gap:10px}
+  .hero-stat .val{font-size:1.3rem}
+  .cards-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .card{padding:14px 10px}
+  .sec-title{font-size:1.2rem}
+  .formula-box,.worked,.vs-grid,.def-grid,.comp-table,.remember,.pyq-card,.mistake-card,.tip-card,.hotq,.lm-block,.practice-paper,.dash-grid{
+    margin-left:0;margin-right:0}
+  .def-grid{grid-template-columns:1fr}
+  .vs-grid table,.comp-table table{font-size:.78rem}
+  .worked .step{flex-direction:column;gap:4px}
+  .sn{min-width:24px;height:24px;font-size:.75rem}
+  .dash-grid{grid-template-columns:1fr 1fr}
+  .sim-info{flex-direction:row;gap:10px;flex-wrap:wrap;justify-content:center}
+  .sim-stat-box{min-width:80px;padding:10px 14px}
+  .sim-num{font-size:1.5rem}
+  .sim-opts{gap:6px}
+  .sim-opt{font-size:.82rem;padding:9px 12px}
+  .pp-tabs{flex-wrap:nowrap;overflow-x:auto;gap:6px}
+  .pp-tab-btn{font-size:.78rem;padding:6px 12px}
+  .badge-showcase{grid-template-columns:1fr 1fr}
+  .act-day{width:32px;height:32px;font-size:.65rem}
+  .pyq-filter{gap:6px}
+  .pyq-chip{font-size:.75rem;padding:4px 10px}
+  section{padding:16px 10px}
+  .ch-section h2{font-size:1.05rem}
+  .ch-section h3{font-size:.92rem}
+  .hotq{padding:12px}
+}
+@media(max-width:380px){
+  .cards-grid{grid-template-columns:1fr}
+  .dash-grid{grid-template-columns:1fr}
+  .badge-showcase{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:1.1rem}
+}
+
+/* ═══ SIM NEXT BUTTON ═══ */
+.sim-next-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:18px;padding:14px 28px;
+  background:linear-gradient(135deg,var(--subj3) 0%,var(--teal) 100%);
+  color:#fff;border:none;border-radius:50px;
+  font-size:1rem;font-weight:700;font-family:var(--font);
+  cursor:pointer;letter-spacing:.3px;
+  box-shadow:0 4px 18px rgba(57,73,171,.35),0 1px 3px rgba(0,0,0,.15);
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+  position:relative;overflow:hidden;
+}
+.sim-next-btn::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.18) 0%,transparent 60%);
+  border-radius:inherit;pointer-events:none;
+}
+.sim-next-btn:hover{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 8px 28px rgba(57,73,171,.45),0 2px 6px rgba(0,0,0,.18);
+}
+.sim-next-btn:active{transform:translateY(0) scale(.97);box-shadow:0 2px 8px rgba(0,0,0,.18);}
+.sim-next-arrow{width:20px;height:20px;flex-shrink:0;transition:transform .22s ease;}
+.sim-next-btn:hover .sim-next-arrow{transform:translateX(4px);}
+@media(prefers-color-scheme:dark){
+  .sim-next-btn{box-shadow:0 4px 18px rgba(0,0,0,.45);}
+}
+:root[data-theme=dark] .sim-next-btn{box-shadow:0 4px 18px rgba(0,0,0,.45);}
+@media(max-width:640px){
+  .sim-next-btn{padding:12px 22px;font-size:.92rem;width:100%;justify-content:center;}
+}
+
+/* ═══ SIM LIVE DONUT (during quiz) ═══ */
+.sim-live-donut-wrap{display:flex;align-items:center;gap:14px;padding:10px 0 4px;margin-bottom:6px}
+.sim-live-legend{display:flex;flex-direction:column;gap:5px;font-size:.8rem}
+.sim-live-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.sim-live-dot.c{background:var(--mint)}
+.sim-live-dot.w{background:var(--coral)}
+.sim-live-dot.s{background:var(--border)}
+@media(max-width:640px){.sim-live-donut-wrap{padding:8px 0 2px}}
+
+/* ═══ SIM RESULT DASHBOARD ═══ */
+.sim-dash{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;margin:20px 0}
+.sim-donut-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+.sim-donut-legend{display:flex;flex-direction:column;gap:6px}
+.sim-legend-row{display:flex;align-items:center;gap:8px;font-size:.82rem}
+.sim-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.sim-bars-wrap{flex:1;min-width:200px}
+.sim-bars-title{font-weight:700;font-size:.88rem;margin-bottom:10px;color:var(--subj1)}
+@media(prefers-color-scheme:dark){.sim-bars-title{color:var(--teal)}}
+:root[data-theme=dark] .sim-bars-title{color:var(--teal)}
+.sim-bar-row{margin-bottom:10px}
+.sim-bar-label{font-size:.75rem;margin-bottom:3px;display:flex;justify-content:space-between}
+.sim-bar-track{height:14px;background:var(--border);border-radius:7px;overflow:hidden;display:flex}
+.sim-bar-seg-c{background:var(--mint);height:100%;transition:width .8s ease}
+.sim-bar-seg-w{background:var(--coral);height:100%;transition:width .8s ease .2s}
+.sim-review-title{font-weight:700;font-size:.88rem;margin:16px 0 8px;color:var(--subj1)}
+@media(prefers-color-scheme:dark){.sim-review-title{color:var(--teal)}}
+:root[data-theme=dark] .sim-review-title{color:var(--teal)}
+#sim-q-strip{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.sim-strip-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:.72rem;font-weight:700;cursor:default;
+  border:2px solid transparent;transition:transform .2s}
+.sim-strip-dot:hover{transform:scale(1.15)}
+.sim-strip-dot.c{background:var(--mint);color:#fff}
+.sim-strip-dot.w{background:var(--coral);color:#fff}
+.sim-strip-dot.s{background:var(--border);color:#666}
+@media(max-width:640px){
+  .sim-dash{flex-direction:column;align-items:center}
+  .sim-bars-wrap{width:100%}
+}
+
+/* ══ DESKTOP SIDE PANELS ══ */
+.portal-layout{display:block;padding-top:0}
+.side-panel{display:none}
+@media(min-width:1200px){
+  .portal-layout{display:grid;grid-template-columns:160px 1fr 160px;gap:0;align-items:start}
+  .side-panel{display:flex;flex-direction:column;gap:16px;padding:12px 8px;position:sticky;top:130px;height:calc(100vh - 130px);overflow-y:auto;scrollbar-width:none;z-index:1;overflow-x:hidden}
+  .side-panel::-webkit-scrollbar{display:none}
+  .main-content-wrap{min-width:0;position:relative;z-index:2}
+}
+/* Left panel — local vendor */
+.panel-left{background:#f8f9ff;border-right:1px solid #e8ecf4}
+/* Right panel — adsense */
+.panel-right{background:#f8f9ff;border-left:1px solid #e8ecf4}
+/* Vendor skyscraper card */
+/* AdSense skyscraper container */
+.adsense-sky{width:140px;text-align:center}
+.adsense-sky 
+/* ── MOBILE NAV BAR ── */
+.mobile-nav-bar{display:none}
+@media(max-width:768px){
+  .mobile-nav-bar{
+    display:flex;align-items:center;gap:8px;
+    background:var(--subj1,#1a237e);padding:7px 12px;
+    position:sticky;top:0;z-index:300;
+    border-bottom:2px solid var(--teal,#00b4d8);
+  }
+  .mobile-nav-bar a,.mobile-nav-bar button{
+    background:rgba(255,255,255,.15);border:none;color:#fff;
+    padding:5px 12px;border-radius:20px;font-size:.8rem;
+    font-weight:600;cursor:pointer;text-decoration:none;
+    font-family:inherit;white-space:nowrap;
+  }
+  .mobile-nav-bar a:hover,.mobile-nav-bar button:hover{background:rgba(255,255,255,.28)}
+  .mobile-nav-bar .mnb-title{flex:1;color:#fff;font-size:.85rem;font-weight:700;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topnav,.site-header{display:none !important}
+
+}
+
+html{scroll-padding-top:130px}
+section{scroll-margin-top:130px}
+</style>
+    <script src="../ads.js" defer></script>
+  <!-- AdSense: replace ca-pub-PENDING with Publisher ID after approval -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-PENDING" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Mobile nav bar -->
+<div class="mobile-nav-bar" id="mobileNavBar">
+  <a href="../index.html">🏠 Home</a>
+  <button onclick="mobileGoBack()">← Back</button>
+  <span class="mnb-title" id="mobileNavTitle">Menu</span>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal-overlay" id="nameModal">
+  <div class="modal">
+    <h2>⚡ Welcome to Physics XII</h2>
+    <p>Enter your name to personalise your XP and progress tracking.</p>
+    <input type="text" id="nameInput" placeholder="Your name…" maxlength="24" autocomplete="off">
+    <button class="btn-primary" onclick="saveName()">Start Learning 🚀</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <div class="brand">CBSE<span>MOCK</span> | Physics XII</div>
+  <input class="nav-search" type="text" placeholder="Search topics…" id="searchBox" oninput="filterSearch(this.value)">
+  <div class="nav-right">
+    <div class="streak-badge" id="streakBadge">🔥 0 days</div>
+    <button class="btn-dark" onclick="toggleDark()">🌙 Dark</button>
+    <div class="user-chip" id="userChip" onclick="go('dash')">?</div>
+  </div>
+</nav>
+
+<!-- XP BAR -->
+<div class="xp-bar-wrap">
+  <span class="xp-label" id="xpLabel">XP: 0</span>
+  <div class="xp-track"><div class="xp-fill" id="xpFill"></div></div>
+  <span class="xp-pts" id="xpLevel">Lv 1</span>
+  <div class="badge-row" id="badgeRow"></div>
+</div>
+
+<!-- MAIN TABS -->
+
+<div class="portal-layout">
+<div class="side-panel panel-left">
+  <div id="ad-left-1"></div>
+  <div id="ad-left-2"></div>
+  <div id="ad-left-3"></div>
+</div>
+<div class="main-content-wrap">
+<div class="main-tabs-wrap">
+  <!-- ROW 1: Home + Chapters -->
+  <div class="tab-row" id="mainTabs">
+    <button class="main-tab active" onclick="go('home')">🏠 Home</button>
+    <button class="main-tab" onclick="go('ch1')">⚡ Ch1</button>
+    <button class="main-tab" onclick="go('ch2')">🔲 Ch2</button>
+    <button class="main-tab" onclick="go('ch3')">🔋 Ch3</button>
+    <button class="main-tab" onclick="go('ch4')">🧲 Ch4</button>
+    <button class="main-tab" onclick="go('ch5')">🪄 Ch5</button>
+    <button class="main-tab" onclick="go('ch6')">♾️ Ch6</button>
+    <button class="main-tab" onclick="go('ch7')">〰️ Ch7</button>
+    <button class="main-tab" onclick="go('ch8')">💡 Ch8</button>
+    <button class="main-tab" onclick="go('ch9')">🔭 Ch9</button>
+    <button class="main-tab" onclick="go('ch10')">🌈 Ch10</button>
+    <button class="main-tab" onclick="go('ch11')">☢️ Ch11</button>
+    <button class="main-tab" onclick="go('ch12')">⚛️ Ch12</button>
+    <button class="main-tab" onclick="go('ch13')">🏛️ Ch13</button>
+    <button class="main-tab" onclick="go('ch14')">💻 Ch14</button>
+    <button class="main-tab" onclick="go('ch15')">📡 Ch15</button>
+  </div>
+  <!-- ROW 2: Study Tools (darker band) -->
+  <div class="tab-row tab-row-2" id="toolTabs">
+    <button class="main-tab" onclick="go('pyq')">📜 PYQ Bank</button>
+    <button class="main-tab" onclick="go('mistakes')">❌ Mistake Bank</button>
+    <button class="main-tab" onclick="go('examiner')">👁️ Examiner's Eye</button>
+    <button class="main-tab" onclick="go('highprob')">🔥 High-Prob Qs</button>
+    <button class="main-tab" onclick="go('lastmin')">⏱️ Last-Minute Rev</button>
+    <button class="main-tab" onclick="go('pp')">📝 Practice Papers</button>
+    <button class="main-tab" onclick="go('sim')">🎯 Exam Simulator</button>
+    <button class="main-tab" onclick="go('dash')">📊 Dashboard</button>
+  </div>
+</div>
+
+<!-- ═══════════════ HOME ═══════════════ -->
+<section id="sec-home" style="display:block" class="visible">
+<!-- ══ AD: TOP LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:4px 0 2px;">
+  <div id="ad-leader-top" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: TOP LEADERBOARD ══ -->
+
+  <div class="hero">
+    <h1>⚡ Physics XII — Board Exam Mastery</h1>
+    <p>15 chapters · CBSE pattern · PYQ bank · AI-powered practice. Everything you need to score 90+ in one place.</p>
+    <div class="hero-stats">
+      <div class="hstat"><div class="val">15</div><div class="lbl">Chapters</div></div>
+      <div class="hstat"><div class="val">200+</div><div class="lbl">PYQs</div></div>
+      <div class="hstat"><div class="val">120+</div><div class="lbl">Worked Examples</div></div>
+      <div class="hstat"><div class="val">5</div><div class="lbl">Full Practice Papers</div></div>
+    </div>
+  </div>
+  <div class="cards-grid">
+    <div class="card" onclick="go('ch1')">
+      <div class="card-icon">⚡</div>
+      <div class="card-title">Electric Charges &amp; Fields</div>
+      <div class="card-desc">Coulomb's law, electric field, dipole, Gauss's theorem. Most formula-heavy chapter.</div>
+      <span class="card-badge">Ch 1</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch1"></div></div>
+    </div>
+    <div class="card" onclick="go('ch2')">
+      <div class="card-icon">🔲</div>
+      <div class="card-title">Electrostatic Potential &amp; Capacitance</div>
+      <div class="card-desc">Potential, equipotential surfaces, capacitors — parallel plate, combinations, energy.</div>
+      <span class="card-badge">Ch 2</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch2"></div></div>
+    </div>
+    <div class="card" onclick="go('ch3')">
+      <div class="card-icon">🔋</div>
+      <div class="card-title">Current Electricity</div>
+      <div class="card-desc">Ohm's law, drift velocity, cells &amp; batteries, Wheatstone bridge, Kirchhoff's laws.</div>
+      <span class="card-badge">Ch 3</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch3"></div></div>
+    </div>
+    <div class="card" onclick="go('ch4')">
+      <div class="card-icon">🧲</div>
+      <div class="card-title">Moving Charges &amp; Magnetism</div>
+      <div class="card-desc">Biot-Savart, Ampere's law, force on charges, galvanometer, cyclotron.</div>
+      <span class="card-badge">Ch 4</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch4"></div></div>
+    </div>
+    <div class="card" onclick="go('ch5')">
+      <div class="card-icon">🪄</div>
+      <div class="card-title">Magnetism &amp; Matter</div>
+      <div class="card-desc">Bar magnet, Earth's magnetism, para/dia/ferro-magnetic materials.</div>
+      <span class="card-badge">Ch 5</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch5"></div></div>
+    </div>
+    <div class="card" onclick="go('ch6')">
+      <div class="card-icon">♾️</div>
+      <div class="card-title">Electromagnetic Induction</div>
+      <div class="card-desc">Faraday's law, Lenz's law, motional EMF, self &amp; mutual inductance, eddy currents.</div>
+      <span class="card-badge">Ch 6</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch6"></div></div>
+    </div>
+    <div class="card" onclick="go('ch7')">
+      <div class="card-icon">〰️</div>
+      <div class="card-title">Alternating Current</div>
+      <div class="card-desc">RMS values, phasors, LC/LCR circuits, resonance, power factor, transformer.</div>
+      <span class="card-badge">Ch 7</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch7"></div></div>
+    </div>
+    <div class="card" onclick="go('ch8')">
+      <div class="card-icon">💡</div>
+      <div class="card-title">Electromagnetic Waves</div>
+      <div class="card-desc">Maxwell's equations (qualitative), EM spectrum, properties and applications.</div>
+      <span class="card-badge">Ch 8</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch8"></div></div>
+    </div>
+    <div class="card" onclick="go('ch9')">
+      <div class="card-icon">🔭</div>
+      <div class="card-title">Ray Optics</div>
+      <div class="card-desc">Reflection, refraction, lenses, mirrors, prism, TIR, optical instruments.</div>
+      <span class="card-badge">Ch 9</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch9"></div></div>
+    </div>
+    <div class="card" onclick="go('ch10')">
+      <div class="card-icon">🌈</div>
+      <div class="card-title">Wave Optics</div>
+      <div class="card-desc">Huygens' principle, interference, diffraction, polarisation.</div>
+      <span class="card-badge">Ch 10</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch10"></div></div>
+    </div>
+    <div class="card" onclick="go('ch11')">
+      <div class="card-icon">☢️</div>
+      <div class="card-title">Dual Nature of Radiation</div>
+      <div class="card-desc">Photoelectric effect, de Broglie wavelength, electron emission.</div>
+      <span class="card-badge">Ch 11</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch11"></div></div>
+    </div>
+    <div class="card" onclick="go('ch12')">
+      <div class="card-icon">⚛️</div>
+      <div class="card-title">Atoms</div>
+      <div class="card-desc">Rutherford &amp; Bohr models, energy levels, hydrogen spectrum.</div>
+      <span class="card-badge">Ch 12</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch12"></div></div>
+    </div>
+    <div class="card" onclick="go('ch13')">
+      <div class="card-icon">🏛️</div>
+      <div class="card-title">Nuclei</div>
+      <div class="card-desc">Nuclear size, binding energy, radioactivity, fission, fusion.</div>
+      <span class="card-badge">Ch 13</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch13"></div></div>
+    </div>
+    <div class="card" onclick="go('ch14')">
+      <div class="card-icon">💻</div>
+      <div class="card-title">Semiconductor Electronics</div>
+      <div class="card-desc">p-n junction, diode, transistor, logic gates, rectification.</div>
+      <span class="card-badge">Ch 14</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch14"></div></div>
+    </div>
+    <div class="card" onclick="go('ch15')">
+      <div class="card-icon">📡</div>
+      <div class="card-title">Communication Systems</div>
+      <div class="card-desc">Modulation, AM, FM, bandwidth, propagation, satellite communication.</div>
+      <span class="card-badge">Ch 15</span>
+      <div class="card-progress"><div class="card-progress-fill" style="width:0%" id="prog-ch15"></div></div>
+    </div>
+  </div>
+  <div class="remember">
+    <h4>💡 Board Exam Strategy</h4>
+    <ul style="padding-left:18px;font-size:.87rem;line-height:1.8">
+      <li><strong>Units 1–2 (Electrostatics):</strong> ~18 marks — master derivations of Gauss's law, capacitor energy</li>
+      <li><strong>Units 3–5 (Magnetism &amp; EMI):</strong> ~20 marks — Biot-Savart, Faraday, transformer numericals</li>
+      <li><strong>Units 6–7 (Optics):</strong> ~18 marks — mirror/lens formula, interference fringe width</li>
+      <li><strong>Units 8–10 (Modern Physics):</strong> ~16 marks — photoelectric, Bohr radius, half-life</li>
+      <li><strong>Units 11 (Electronics &amp; Communication):</strong> ~8 marks — logic gates, modulation</li>
+    </ul>
+  </div>
+
+<!-- ══ AD: INLINE 1 ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0 4px;">
+  <div id="ad-inline-1" style="width:100%;max-width:580px;"></div>
+</div>
+<!-- ══ END AD: INLINE 1 ══ -->
+<!-- AdSense inline unit -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:580px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-MID-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+<!-- end AdSense inline -->
+</section>
+<!-- ═══════════════ CH1: ELECTRIC CHARGES & FIELDS ═══════════════ -->
+<section id="sec-ch1" style="display:none">
+  <div class="sec-title">⚡ Chapter 1: Electric Charges &amp; Fields</div>
+  <div class="sec-sub">Coulomb's Law · Electric Field · Dipole · Gauss's Theorem</div>
+
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>1.1 Electric Charge</h3>
+    <p>Electric charge is an intrinsic property of matter. It exists in two types: <strong>positive</strong> (proton, +e) and <strong>negative</strong> (electron, −e). Charge is <em>quantised</em> — q = ne where n is an integer and e = 1.6 × 10⁻¹⁹ C. Charge is conserved in all processes (the algebraic sum of charges in an isolated system remains constant).</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Quantisation of Charge</div><div class="defn">Charge exists only in integral multiples of e = 1.6×10⁻¹⁹ C. q = ne</div></div>
+      <div class="def-card"><div class="term">Conservation of Charge</div><div class="defn">Total charge in an isolated system is always constant. Charge can neither be created nor destroyed.</div></div>
+      <div class="def-card"><div class="term">Additive Nature</div><div class="defn">Total charge = algebraic sum of individual charges. +3C + (−1C) = +2C</div></div>
+      <div class="def-card"><div class="term">Point Charge</div><div class="defn">A hypothetical charge concentrated at a single geometric point — used for simplification in Coulomb's law.</div></div>
+    </div>
+
+    <h3>1.2 Coulomb's Law</h3>
+    <p>The electrostatic force between two point charges q₁ and q₂ separated by distance r in a medium of permittivity ε is:</p>
+    <div class="formula-box">
+      <h4>🔑 Key Formulae — Coulomb's Law</h4>
+      <div class="f">F = k·q₁·q₂ / r² &nbsp;&nbsp; where k = 1/(4πε₀) = 9×10⁹ N·m²/C²</div>
+      <div class="f">ε₀ = 8.854×10⁻¹² C²/(N·m²) &nbsp;(permittivity of free space)</div>
+      <div class="f">In medium: F_med = F_vac / ε_r &nbsp;&nbsp;(ε_r = relative permittivity/dielectric constant)</div>
+      <div class="f">Vector form: F⃗₁₂ = k·q₁·q₂·r̂₁₂ / r²</div>
+    </div>
+
+    <h3>1.3 Electric Field</h3>
+    <p>Electric field at a point is the force per unit positive test charge placed at that point. It is a vector field.</p>
+    <div class="formula-box">
+      <h4>🔑 Electric Field Formulae</h4>
+      <div class="f">E⃗ = F⃗/q₀ &nbsp;&nbsp;(definition)</div>
+      <div class="f">E = kq/r² &nbsp;&nbsp;(due to point charge q at distance r)</div>
+      <div class="f">E_dipole (axial) = 2kp / r³</div>
+      <div class="f">E_dipole (equatorial) = kp / r³</div>
+      <div class="f">Torque on dipole in uniform field: τ = pE sinθ &nbsp;or&nbsp; τ⃗ = p⃗ × E⃗</div>
+    </div>
+
+    <h3>1.4 Gauss's Theorem</h3>
+    <p>The total electric flux through any closed surface (Gaussian surface) equals the net charge enclosed divided by ε₀. This is one of Maxwell's four equations.</p>
+    <div class="formula-box">
+      <h4>🔑 Gauss's Law & Applications</h4>
+      <div class="f">Φ = ∮E⃗·dA⃗ = q_enc / ε₀</div>
+      <div class="f">Infinite line charge (λ C/m): E = λ/(2πε₀r)</div>
+      <div class="f">Infinite plane sheet (σ C/m²): E = σ/(2ε₀)</div>
+      <div class="f">Uniformly charged sphere (outside): E = kQ/r²</div>
+      <div class="f">Uniformly charged sphere (inside): E = kQr/R³</div>
+      <div class="f">Conducting sphere surface: E = σ/ε₀</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Coulomb's Law (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Two point charges +4 μC and −3 μC are placed 20 cm apart in air. Find the force between them.</p>
+      <div class="step"><div class="sn">1</div><div>Identify: q₁ = +4×10⁻⁶ C, q₂ = −3×10⁻⁶ C, r = 0.20 m, k = 9×10⁹ N·m²/C²</div></div>
+      <div class="step"><div class="sn">2</div><div>Apply Coulomb's law: F = k|q₁||q₂|/r² = 9×10⁹ × 4×10⁻⁶ × 3×10⁻⁶ / (0.20)²</div></div>
+      <div class="step"><div class="sn">3</div><div>Numerator = 9×10⁹ × 12×10⁻¹² = 108×10⁻³ = 0.108 N·m²</div></div>
+      <div class="step"><div class="sn">4</div><div>Denominator = (0.20)² = 0.04 m²</div></div>
+      <div class="step"><div class="sn">5</div><div>F = 0.108 / 0.04 = <strong>2.7 N</strong> (attractive, since charges are opposite)</div></div>
+      <div class="ans">✅ Answer: F = 2.7 N (attractive force)</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Electric Field due to Dipole (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> An electric dipole of moment p = 2×10⁻⁹ C·m is placed along the x-axis. Find E at axial and equatorial points both 30 cm away.</p>
+      <div class="step"><div class="sn">1</div><div>Given: p = 2×10⁻⁹ C·m, r = 0.30 m, k = 9×10⁹</div></div>
+      <div class="step"><div class="sn">2</div><div>Axial field: E_ax = 2kp/r³ = 2×9×10⁹×2×10⁻⁹ / (0.30)³</div></div>
+      <div class="step"><div class="sn">3</div><div>= 36 / 0.027 = <strong>1333 N/C</strong> (along dipole direction)</div></div>
+      <div class="step"><div class="sn">4</div><div>Equatorial field: E_eq = kp/r³ = 9×10⁹×2×10⁻⁹ / 0.027</div></div>
+      <div class="step"><div class="sn">5</div><div>= 18 / 0.027 = <strong>667 N/C</strong> (opposite to dipole direction)</div></div>
+      <div class="ans">✅ E_axial = 1333 N/C; E_equatorial = 667 N/C = E_axial/2</div>
+    </div>
+    <div class="worked">
+      <h4>Example 3 — Gauss's Law (Board 2024, 5M)</h4>
+      <p><strong>Q:</strong> Using Gauss's theorem, derive the expression for E due to a uniformly charged infinite plane sheet of surface charge density σ.</p>
+      <div class="step"><div class="sn">1</div><div>Choose a cylindrical Gaussian surface (pillbox) symmetric about the sheet, with each flat face of area A parallel to the sheet.</div></div>
+      <div class="step"><div class="sn">2</div><div>By symmetry, E is perpendicular to the sheet. Flux through curved surface = 0 (E ⊥ dA).</div></div>
+      <div class="step"><div class="sn">3</div><div>Total flux: Φ = E·A + E·A = 2EA (two flat faces)</div></div>
+      <div class="step"><div class="sn">4</div><div>Charge enclosed: q_enc = σA</div></div>
+      <div class="step"><div class="sn">5</div><div>Gauss's law: 2EA = σA/ε₀ ⟹ E = σ/(2ε₀)</div></div>
+      <div class="ans">✅ E = σ/(2ε₀), directed away from sheet on both sides</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    <div class="vs-grid">
+      <div class="vs-head">Electric Field Lines</div>
+      <div class="vs-head">Electric Flux</div>
+      <div class="vs-row"><div>Vector quantity (direction = tangent to field line)</div><div>Scalar quantity (dot product of E and A)</div></div>
+      <div class="vs-row"><div>Denser lines → stronger field</div><div>Proportional to total charge enclosed</div></div>
+      <div class="vs-row"><div>Never cross each other</div><div>Can be zero even if E ≠ 0 (e.g., closed surface enclosing no charge)</div></div>
+      <div class="vs-row"><div>Start from +ve, end at −ve charge</div><div>Positive when field exits, negative when field enters surface</div></div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-head">Coulomb's Law</div>
+      <div class="vs-head">Gauss's Law</div>
+      <div class="vs-row"><div>Applies to any two point charges</div><div>Applies to symmetric charge distributions</div></div>
+      <div class="vs-row"><div>Direct approach — find F, then E</div><div>Surface integral approach — much simpler for symmetric cases</div></div>
+      <div class="vs-row"><div>Gives force between charges</div><div>Gives total flux, used to find E at a surface</div></div>
+      <div class="vs-row"><div>Both are equivalent — Gauss's law can be derived from Coulomb's law</div><div>More powerful for extended charge distributions</div></div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Test Yourself — MCQ (Click to check)</h4>
+      <p style="font-size:.88rem;margin-bottom:10px"><strong>Q:</strong> A charge Q is placed inside a closed surface. If Q is doubled, the electric flux through the surface:</p>
+      <div class="mcq-opt" onclick="checkMCQ(this,'a','a')"><input type="radio" name="ch1q1"> Also doubles (Φ = Q/ε₀)</div>
+      <div class="mcq-opt" onclick="checkMCQ(this,'a','b')"><input type="radio" name="ch1q1"> Halves</div>
+      <div class="mcq-opt" onclick="checkMCQ(this,'a','c')"><input type="radio" name="ch1q1"> Remains the same</div>
+      <div class="mcq-opt" onclick="checkMCQ(this,'a','d')"><input type="radio" name="ch1q1"> Quadruples</div>
+    </div>
+  </div>
+
+  <div class="notice">📌 <strong>Examiner's Note:</strong> Always state the direction of E when asked. In Gauss's law derivations, explicitly justify symmetry before setting up the surface. Missing the word "symmetry" costs marks.</div>
+</section>
+
+<!-- ═══════════════ CH2: ELECTROSTATIC POTENTIAL ═══════════════ -->
+
+<!-- ══ ADSENSE MID-CONTENT ══ Auto responsive · goes live after approval ══ -->
+<div style="margin:8px 0;text-align:center;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE MID ══ -->
+<section id="sec-ch2" style="display:none">
+  <div class="sec-title">🔲 Chapter 2: Electrostatic Potential &amp; Capacitance</div>
+  <div class="sec-sub">Potential · Equipotential Surfaces · Capacitors · Dielectrics</div>
+
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>2.1 Electric Potential</h3>
+    <p>Electric potential at a point is the work done per unit positive charge in bringing a test charge from infinity to that point, without acceleration. It is a scalar quantity.</p>
+    <div class="formula-box">
+      <h4>🔑 Potential Formulae</h4>
+      <div class="f">V = W/q₀ &nbsp;&nbsp;(definition)</div>
+      <div class="f">V = kq/r &nbsp;&nbsp;(due to point charge at distance r)</div>
+      <div class="f">V_dipole (axial) = kp/r²</div>
+      <div class="f">V_dipole (equatorial) = 0 &nbsp;&nbsp;(always)</div>
+      <div class="f">Relation: E = −dV/dr &nbsp;(E is negative gradient of V)</div>
+      <div class="f">Potential difference: V_A − V_B = W_AB/q</div>
+    </div>
+
+    <h3>2.2 Capacitance &amp; Capacitors</h3>
+    <p>A capacitor stores electrical energy in the form of an electric field. Capacitance C = Q/V. For a parallel plate capacitor with plate area A, separation d:</p>
+    <div class="formula-box">
+      <h4>🔑 Capacitance Formulae</h4>
+      <div class="f">C = Q/V &nbsp;&nbsp;(definition)</div>
+      <div class="f">Parallel plate (air): C₀ = ε₀A/d</div>
+      <div class="f">Parallel plate (dielectric K): C = Kε₀A/d = KC₀</div>
+      <div class="f">Series: 1/C_eff = 1/C₁ + 1/C₂ + … &nbsp;&nbsp;(V divides, Q same)</div>
+      <div class="f">Parallel: C_eff = C₁ + C₂ + … &nbsp;&nbsp;(Q divides, V same)</div>
+      <div class="f">Energy stored: U = ½CV² = Q²/(2C) = QV/2</div>
+      <div class="f">Energy density: u = ½ε₀E²</div>
+    </div>
+
+    <h3>2.3 Equipotential Surfaces</h3>
+    <p>An equipotential surface is a surface where every point is at the same potential. Key property: the electric field is always perpendicular to equipotential surfaces. No work is done moving a charge along an equipotential surface.</p>
+  </div>
+
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Capacitor Energy (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> A 4 μF capacitor is charged to 200 V. Find (a) charge stored, (b) energy stored.</p>
+      <div class="step"><div class="sn">1</div><div>C = 4×10⁻⁶ F, V = 200 V</div></div>
+      <div class="step"><div class="sn">2</div><div>Charge: Q = CV = 4×10⁻⁶ × 200 = 8×10⁻⁴ C = <strong>0.8 mC</strong></div></div>
+      <div class="step"><div class="sn">3</div><div>Energy: U = ½CV² = ½ × 4×10⁻⁶ × (200)² = ½ × 4×10⁻⁶ × 40000</div></div>
+      <div class="step"><div class="sn">4</div><div>U = 2×10⁻⁶ × 40000 = <strong>0.08 J = 80 mJ</strong></div></div>
+      <div class="ans">✅ Q = 0.8 mC; U = 80 mJ</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Series-Parallel Combination (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Three capacitors of 2 μF, 3 μF, and 6 μF are connected in series across a 12 V battery. Find (a) equivalent capacitance, (b) charge on each capacitor.</p>
+      <div class="step"><div class="sn">1</div><div>Series: 1/C_eff = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1</div></div>
+      <div class="step"><div class="sn">2</div><div>C_eff = 1 μF</div></div>
+      <div class="step"><div class="sn">3</div><div>In series, charge is same on all: Q = C_eff × V = 1×10⁻⁶ × 12 = <strong>12 μC</strong></div></div>
+      <div class="step"><div class="sn">4</div><div>V₁ = Q/C₁ = 12/2 = 6 V; V₂ = 12/3 = 4 V; V₃ = 12/6 = 2 V. Check: 6+4+2 = 12 V ✓</div></div>
+      <div class="ans">✅ C_eff = 1 μF; Q on each = 12 μC</div>
+    </div>
+    <div class="worked">
+      <h4>Example 3 — Effect of Dielectric (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> A parallel plate capacitor (A = 100 cm², d = 2 mm) is connected to 100 V battery. A dielectric slab of K = 5 is inserted. Find new capacitance and energy stored.</p>
+      <div class="step"><div class="sn">1</div><div>A = 100×10⁻⁴ m² = 10⁻² m²; d = 2×10⁻³ m; K = 5</div></div>
+      <div class="step"><div class="sn">2</div><div>C₀ = ε₀A/d = 8.85×10⁻¹² × 10⁻² / 2×10⁻³ = 44.25×10⁻¹² F = 44.25 pF</div></div>
+      <div class="step"><div class="sn">3</div><div>New C = KC₀ = 5 × 44.25 pF = <strong>221.25 pF</strong></div></div>
+      <div class="step"><div class="sn">4</div><div>U = ½CV² = ½ × 221.25×10⁻¹² × (100)² = <strong>1.106 × 10⁻⁶ J ≈ 1.1 μJ</strong></div></div>
+      <div class="ans">✅ C = 221.25 pF; U = 1.1 μJ</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    <div class="vs-grid">
+      <div class="vs-head">Capacitors in Series</div>
+      <div class="vs-head">Capacitors in Parallel</div>
+      <div class="vs-row"><div>Same charge Q on each</div><div>Same voltage V across each</div></div>
+      <div class="vs-row"><div>Voltage divides: V = V₁ + V₂ + …</div><div>Charge divides: Q = Q₁ + Q₂ + …</div></div>
+      <div class="vs-row"><div>C_eff &lt; smallest individual C</div><div>C_eff &gt; largest individual C</div></div>
+      <div class="vs-row"><div>Used to withstand higher voltage</div><div>Used to increase total charge storage</div></div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-head">Electric Potential (V)</div>
+      <div class="vs-head">Electric Field (E)</div>
+      <div class="vs-row"><div>Scalar quantity (J/C or Volt)</div><div>Vector quantity (N/C or V/m)</div></div>
+      <div class="vs-row"><div>V = kq/r (proportional to 1/r)</div><div>E = kq/r² (proportional to 1/r²)</div></div>
+      <div class="vs-row"><div>Zero at infinity</div><div>Zero at infinity</div></div>
+      <div class="vs-row"><div>Related: E = −dV/dr</div><div>Perpendicular to equipotential surfaces</div></div>
+    </div>
+  </div>
+
+  <div class="notice">📌 <strong>Board Tip:</strong> When a dielectric is inserted with battery still connected, V is constant and C, Q, U all increase. When inserted after disconnecting, Q is constant — V and U decrease while C increases. This distinction appears almost every year.</div>
+</section>
+
+<!-- ═══════════════ CH3: CURRENT ELECTRICITY ═══════════════ -->
+<section id="sec-ch3" style="display:none">
+  <div class="sec-title">🔋 Chapter 3: Current Electricity</div>
+  <div class="sec-sub">Ohm's Law · Drift Velocity · Cells · Kirchhoff's Laws · Wheatstone Bridge</div>
+
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>3.1 Electric Current and Drift Velocity</h3>
+    <p>Electric current is the rate of flow of charge. In a metallic conductor, free electrons drift under an applied electric field with an average drift velocity v_d. The relation between current and drift velocity is fundamental.</p>
+    <div class="formula-box">
+      <h4>🔑 Current & Drift Formulae</h4>
+      <div class="f">I = Q/t = nAev_d &nbsp;&nbsp;(n = no. density of electrons)</div>
+      <div class="f">v_d = eEτ/m = eVτ/(mL) &nbsp;&nbsp;(τ = relaxation time)</div>
+      <div class="f">Ohm's Law: V = IR</div>
+      <div class="f">Resistivity: ρ = m/(ne²τ) &nbsp;&nbsp;(temperature dependent)</div>
+      <div class="f">R = ρL/A &nbsp;&nbsp;(resistance of wire)</div>
+      <div class="f">ρ_T = ρ₀(1 + αT) &nbsp;&nbsp;(α = temp. coefficient of resistance)</div>
+    </div>
+
+    <h3>3.2 EMF, Internal Resistance &amp; Cell Combinations</h3>
+    <p>A cell maintains a potential difference by doing work on charges. EMF (ε) is the work done per unit charge through the cell. Terminal voltage V = ε − Ir (during discharge) where r is internal resistance.</p>
+    <div class="formula-box">
+      <h4>🔑 Cell Combination Formulae</h4>
+      <div class="f">Terminal PD (discharge): V = ε − Ir</div>
+      <div class="f">Terminal PD (charge): V = ε + Ir</div>
+      <div class="f">n cells in series: ε_eq = nε; r_eq = nr; I = nε/(R + nr)</div>
+      <div class="f">n cells in parallel: ε_eq = ε; r_eq = r/n; I = ε/(R + r/n)</div>
+      <div class="f">Mixed (m rows, n in each): I = mnε/(mR + nr)</div>
+    </div>
+
+    <h3>3.3 Kirchhoff's Laws</h3>
+    <p><strong>KCL (Junction Rule):</strong> Sum of currents entering a junction = sum leaving. Based on conservation of charge.<br>
+    <strong>KVL (Loop Rule):</strong> The algebraic sum of changes in potential around any closed loop is zero. Based on conservation of energy.</p>
+
+    <h3>3.4 Wheatstone Bridge &amp; Meter Bridge</h3>
+    <div class="formula-box">
+      <h4>🔑 Bridge Conditions</h4>
+      <div class="f">Balanced Wheatstone: P/Q = R/S (no current through galvanometer)</div>
+      <div class="f">Meter bridge: R/S = l/(100−l) &nbsp;&nbsp;(l = balancing length in cm)</div>
+      <div class="f">Potentiometer (EMF comparison): ε₁/ε₂ = l₁/l₂</div>
+      <div class="f">Internal resistance: r = R(l₁−l₂)/l₂</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Drift Velocity (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> A copper wire of length 2 m, cross-section 2×10⁻⁶ m² carries a current of 3 A. Find the drift velocity. (n = 8.5×10²⁸ m⁻³)</p>
+      <div class="step"><div class="sn">1</div><div>I = nAev_d → v_d = I/(nAe)</div></div>
+      <div class="step"><div class="sn">2</div><div>v_d = 3 / (8.5×10²⁸ × 2×10⁻⁶ × 1.6×10⁻¹⁹)</div></div>
+      <div class="step"><div class="sn">3</div><div>Denominator = 8.5×10²⁸ × 2×10⁻⁶ × 1.6×10⁻¹⁹ = 27.2×10³ = 2.72×10⁴</div></div>
+      <div class="step"><div class="sn">4</div><div>v_d = 3 / 2.72×10⁴ ≈ <strong>1.1×10⁻⁴ m/s = 0.11 mm/s</strong></div></div>
+      <div class="ans">✅ v_d ≈ 1.1×10⁻⁴ m/s (extremely slow — electrons take minutes to travel 1 m!)</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Kirchhoff's Laws (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> In a circuit, two cells: ε₁ = 6V, r₁ = 1Ω and ε₂ = 4V, r₂ = 2Ω connected in opposition with external R = 5Ω. Find current.</p>
+      <div class="step"><div class="sn">1</div><div>Net EMF = ε₁ − ε₂ = 6 − 4 = 2 V (cells oppose each other)</div></div>
+      <div class="step"><div class="sn">2</div><div>Total resistance = R + r₁ + r₂ = 5 + 1 + 2 = 8 Ω</div></div>
+      <div class="step"><div class="sn">3</div><div>I = Net EMF / Total R = 2/8 = <strong>0.25 A</strong></div></div>
+      <div class="step"><div class="sn">4</div><div>Current flows in direction of stronger cell (ε₁)</div></div>
+      <div class="ans">✅ I = 0.25 A in the direction of the 6V cell</div>
+    </div>
+    <div class="worked">
+      <h4>Example 3 — Meter Bridge / Internal Resistance (Board 2024, 5M)</h4>
+      <p><strong>Q:</strong> In a potentiometer, the balancing length for a cell of EMF 1.25 V is 50 cm. When a resistance of 2Ω is connected across the cell, the balance length becomes 40 cm. Find internal resistance of the cell.</p>
+      <div class="step"><div class="sn">1</div><div>Formula: r = R(l₁ − l₂)/l₂</div></div>
+      <div class="step"><div class="sn">2</div><div>l₁ = 50 cm (open circuit), l₂ = 40 cm (with R = 2Ω), R = 2Ω</div></div>
+      <div class="step"><div class="sn">3</div><div>r = 2 × (50 − 40)/40 = 2 × 10/40 = 2 × 0.25 = <strong>0.5 Ω</strong></div></div>
+      <div class="ans">✅ Internal resistance r = 0.5 Ω</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    <div class="vs-grid">
+      <div class="vs-head">Ohmic Conductors</div>
+      <div class="vs-head">Non-Ohmic Conductors</div>
+      <div class="vs-row"><div>Obey Ohm's law (V ∝ I at constant T)</div><div>Do NOT follow V ∝ I</div></div>
+      <div class="vs-row"><div>R is constant; V-I graph is straight line</div><div>R changes with V or I; V-I graph is non-linear</div></div>
+      <div class="vs-row"><div>Examples: metal resistors, nichrome wire</div><div>Examples: diode, thermistor, LED</div></div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-head">Cells in Series</div>
+      <div class="vs-head">Cells in Parallel</div>
+      <div class="vs-row"><div>ε_eq = nε; r_eq = nr</div><div>ε_eq = ε; r_eq = r/n</div></div>
+      <div class="vs-row"><div>Higher EMF — good for large external R</div><div>Lower internal R — good for small external R</div></div>
+      <div class="vs-row"><div>Current limited by series resistance</div><div>Can deliver higher current</div></div>
+    </div>
+  </div>
+
+  <div class="notice">📌 <strong>Board Tip:</strong> In Kirchhoff's loop rule, always state the sign convention you are using (direction of traversal). Marks are given for correct setup of equations, not just the final answer. Draw the circuit diagram and mark assumed current directions before writing equations.</div>
+</section>
+
+<!-- ═══════════════ CH4: MOVING CHARGES & MAGNETISM ═══════════════ -->
+<section id="sec-ch4" style="display:none">
+  <div class="sec-title">🧲 Chapter 4: Moving Charges &amp; Magnetism</div>
+  <div class="sec-sub">Biot-Savart Law · Ampere's Law · Force on Charges · Cyclotron · Galvanometer</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>4.1 Magnetic Force on Charges &amp; Conductors</h3>
+    <div class="formula-box">
+      <h4>🔑 Key Formulae</h4>
+      <div class="f">F⃗ = q(v⃗ × B⃗) = qvB sinθ &nbsp;&nbsp;(force on moving charge)</div>
+      <div class="f">F⃗ = I(L⃗ × B⃗) = BIL sinθ &nbsp;&nbsp;(force on current-carrying conductor)</div>
+      <div class="f">Force between parallel wires: F/L = μ₀I₁I₂/(2πd)</div>
+      <div class="f">Torque on loop: τ = NIAB sinθ &nbsp;or&nbsp; τ⃗ = M⃗ × B⃗</div>
+      <div class="f">Magnetic moment: M = NIA &nbsp;&nbsp;(N turns, area A)</div>
+    </div>
+    <h3>4.2 Biot-Savart Law</h3>
+    <div class="formula-box">
+      <h4>🔑 Biot-Savart &amp; Applications</h4>
+      <div class="f">dB = (μ₀/4π) × I dl sinθ / r² &nbsp;&nbsp;(magnetic field due to element)</div>
+      <div class="f">B at centre of circular loop (radius R): B = μ₀I/(2R)</div>
+      <div class="f">B on axis of circular loop: B = μ₀IR²/[2(R²+x²)^(3/2)]</div>
+      <div class="f">B due to long straight wire at distance r: B = μ₀I/(2πr)</div>
+      <div class="f">μ₀ = 4π×10⁻⁷ T·m/A &nbsp;(permeability of free space)</div>
+    </div>
+    <h3>4.3 Ampere's Circuital Law &amp; Solenoid</h3>
+    <div class="formula-box">
+      <h4>🔑 Ampere's Law &amp; Solenoid/Toroid</h4>
+      <div class="f">∮B⃗·dl⃗ = μ₀I_enc &nbsp;&nbsp;(Ampere's law)</div>
+      <div class="f">B inside solenoid (n turns/m): B = μ₀nI</div>
+      <div class="f">B inside toroid: B = μ₀NI/(2πr) &nbsp;(N total turns, r = radius)</div>
+    </div>
+    <h3>4.4 Cyclotron &amp; Galvanometer</h3>
+    <p>Cyclotron: charged particles spiral outward in a magnetic field, accelerated by an electric field. Frequency is independent of velocity (resonance condition). A galvanometer measures small currents; can be converted to ammeter (low shunt S) or voltmeter (high series R).</p>
+    <div class="formula-box">
+      <h4>🔑 Cyclotron &amp; Meter Conversions</h4>
+      <div class="f">Cyclotron frequency: f = qB/(2πm) &nbsp;&nbsp;(independent of speed!)</div>
+      <div class="f">Cyclotron radius: r = mv/(qB)</div>
+      <div class="f">Shunt for ammeter: S = I_g·G/(I−I_g)</div>
+      <div class="f">Series R for voltmeter: R_s = V/I_g − G</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Magnetic Field at Centre of Loop (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> A circular coil of 50 turns and radius 10 cm carries a current of 2 A. Find B at centre.</p>
+      <div class="step"><div class="sn">1</div><div>B = μ₀NI/(2R) = (4π×10⁻⁷ × 50 × 2)/(2 × 0.10)</div></div>
+      <div class="step"><div class="sn">2</div><div>= (4π×10⁻⁷ × 100) / 0.20 = (4π×10⁻⁵) / 0.20</div></div>
+      <div class="step"><div class="sn">3</div><div>= 20π×10⁻⁵ = <strong>6.28×10⁻⁴ T = 0.628 mT</strong></div></div>
+      <div class="ans">✅ B = 6.28×10⁻⁴ T, directed perpendicular to the plane of the coil</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Galvanometer to Ammeter (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> A galvanometer (G = 25 Ω, I_g = 10 mA) is to be converted to an ammeter reading up to 5 A. Find shunt resistance.</p>
+      <div class="step"><div class="sn">1</div><div>S = I_g × G / (I − I_g) = (0.01 × 25)/(5 − 0.01)</div></div>
+      <div class="step"><div class="sn">2</div><div>= 0.25/4.99 ≈ <strong>0.0501 Ω ≈ 0.05 Ω</strong></div></div>
+      <div class="ans">✅ Shunt S = 0.05 Ω (very small, so it doesn't affect circuit)</div>
+    </div>
+  </div>
+  <div class="notice">📌 Always use right-hand rule to find direction of force. In board exams, direction must be stated explicitly to score full marks.</div>
+</section>
+
+<!-- ═══════════════ CH5: MAGNETISM & MATTER ═══════════════ -->
+<section id="sec-ch5" style="display:none">
+  <div class="sec-title">🪄 Chapter 5: Magnetism &amp; Matter</div>
+  <div class="sec-sub">Bar Magnet · Earth's Magnetism · Diamagnetic / Paramagnetic / Ferromagnetic</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="formula-box">
+      <h4>🔑 Key Formulae</h4>
+      <div class="f">B_axial (bar magnet) = (μ₀/4π)·2M/r³ &nbsp;&nbsp;(along axis)</div>
+      <div class="f">B_equatorial = (μ₀/4π)·M/r³ &nbsp;&nbsp;(along equator)</div>
+      <div class="f">Torque on bar magnet: τ = MB sinθ</div>
+      <div class="f">PE of dipole: U = −MB cosθ</div>
+      <div class="f">Intensity of magnetisation: I = M/V</div>
+      <div class="f">Magnetic susceptibility: χ = I/H; Permeability: μ_r = 1 + χ</div>
+      <div class="f">Curie's law (paramagnetic): χ ∝ 1/T</div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-head">Diamagnetic</div><div class="vs-head">Paramagnetic</div>
+      <div class="vs-row"><div>Weakly repelled by magnet</div><div>Weakly attracted by magnet</div></div>
+      <div class="vs-row"><div>χ is small negative (−1 ≤ χ &lt; 0)</div><div>χ is small positive (0 &lt; χ &lt; ε)</div></div>
+      <div class="vs-row"><div>μ_r slightly less than 1</div><div>μ_r slightly greater than 1</div></div>
+      <div class="vs-row"><div>Indep. of temperature; Examples: Cu, Bi, H₂O</div><div>Follows Curie's law; Examples: Al, Na, O₂</div></div>
+    </div>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Ferromagnetic</div><div class="defn">Strongly attracted; χ very large positive; forms domains; Examples: Fe, Co, Ni. Above Curie temp → paramagnetic.</div></div>
+      <div class="def-card"><div class="term">Hysteresis</div><div class="defn">Lag of B behind H in ferromagnetic material. Area of B-H loop = energy loss per cycle.</div></div>
+      <div class="def-card"><div class="term">Retentivity</div><div class="defn">B remaining when H is reduced to zero — measure of how well material retains magnetism.</div></div>
+      <div class="def-card"><div class="term">Coercivity</div><div class="defn">H needed to reduce B to zero — measure of material's resistance to demagnetisation.</div></div>
+    </div>
+  </div>
+  <div class="notice">📌 <strong>Board Tip:</strong> Distinguish clearly between B (magnetic field), H (magnetising field), and M (magnetisation). These are three different quantities. Also know Earth's declination, inclination (dip), and horizontal component.</div>
+</section>
+
+<!-- ═══════════════ CH6: EMI ═══════════════ -->
+<section id="sec-ch6" style="display:none">
+  <div class="sec-title">♾️ Chapter 6: Electromagnetic Induction</div>
+  <div class="sec-sub">Faraday's Law · Lenz's Law · Motional EMF · Self &amp; Mutual Inductance</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>6.1 Faraday's Laws</h3>
+    <p><strong>1st Law:</strong> Whenever the magnetic flux linked with a circuit changes, an EMF is induced.<br>
+    <strong>2nd Law:</strong> The magnitude of induced EMF = rate of change of magnetic flux.<br>
+    <strong>Lenz's Law:</strong> The direction of induced current opposes the change that caused it (conservation of energy).</p>
+    <div class="formula-box">
+      <h4>🔑 EMI Formulae</h4>
+      <div class="f">Magnetic flux: Φ = NBA cosθ &nbsp;&nbsp;(N turns, B field, A area)</div>
+      <div class="f">Induced EMF: ε = −dΦ/dt = −N·dΦ_per_turn/dt</div>
+      <div class="f">Motional EMF: ε = Bvl &nbsp;&nbsp;(conductor of length l moving at v⊥B)</div>
+      <div class="f">Self-inductance: L = NΦ/I &nbsp;&nbsp;(flux linkage per unit current)</div>
+      <div class="f">Self-induced EMF: ε = −L·dI/dt</div>
+      <div class="f">Energy in inductor: U = ½LI²</div>
+      <div class="f">Mutual inductance: M₁₂ = N₂Φ₂₁/I₁ &nbsp;; ε₂ = −M·dI₁/dt</div>
+      <div class="f">Solenoid inductance: L = μ₀N²A/l = μ₀n²Al</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Motional EMF (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> A conductor of length 0.5 m moves at 4 m/s perpendicular to a magnetic field B = 0.2 T. Find induced EMF and current if resistance = 0.4 Ω.</p>
+      <div class="step"><div class="sn">1</div><div>ε = Bvl = 0.2 × 4 × 0.5 = <strong>0.4 V</strong></div></div>
+      <div class="step"><div class="sn">2</div><div>I = ε/R = 0.4/0.4 = <strong>1 A</strong></div></div>
+      <div class="ans">✅ EMF = 0.4 V; Current = 1 A</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Self Inductance of Solenoid (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> A solenoid has 500 turns, length 0.5 m, area 4 cm². Find self-inductance.</p>
+      <div class="step"><div class="sn">1</div><div>L = μ₀N²A/l = 4π×10⁻⁷ × (500)² × 4×10⁻⁴ / 0.5</div></div>
+      <div class="step"><div class="sn">2</div><div>= 4π×10⁻⁷ × 250000 × 8×10⁻⁴ = 4π×10⁻⁷ × 200 = 800π×10⁻⁷</div></div>
+      <div class="step"><div class="sn">3</div><div>= 2513×10⁻⁷ ≈ <strong>2.51×10⁻⁴ H = 0.251 mH</strong></div></div>
+      <div class="ans">✅ L ≈ 0.25 mH</div>
+    </div>
+  </div>
+  <div class="notice">📌 Lenz's law direction is crucial — always explain why the induced current creates a force opposing the change. This qualitative reasoning is worth 2 marks in every derivation question.</div>
+</section>
+
+<!-- ═══════════════ CH7: ALTERNATING CURRENT ═══════════════ -->
+<section id="sec-ch7" style="display:none">
+  <div class="sec-title">〰️ Chapter 7: Alternating Current</div>
+  <div class="sec-sub">RMS · Phasor · LCR Circuit · Resonance · Power Factor · Transformer</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="formula-box">
+      <h4>🔑 AC Circuit Formulae</h4>
+      <div class="f">Instantaneous values: v = V₀ sinωt; i = I₀ sin(ωt±φ)</div>
+      <div class="f">RMS values: V_rms = V₀/√2; I_rms = I₀/√2</div>
+      <div class="f">Reactances: X_L = ωL; X_C = 1/(ωC)</div>
+      <div class="f">Impedance: Z = √[R² + (X_L − X_C)²]</div>
+      <div class="f">Phase angle: tanφ = (X_L − X_C)/R</div>
+      <div class="f">Resonance (series LCR): X_L = X_C → ω₀ = 1/√(LC); Z_min = R</div>
+      <div class="f">Resonant frequency: f₀ = 1/(2π√LC)</div>
+      <div class="f">Q-factor: Q = ω₀L/R = 1/(ω₀CR) = (1/R)√(L/C)</div>
+      <div class="f">Power: P = V_rms·I_rms·cosφ &nbsp;(cosφ = power factor)</div>
+      <div class="f">Transformer: V_s/V_p = N_s/N_p = I_p/I_s &nbsp;(ideal transformer)</div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-head">Resistor in AC</div><div class="vs-head">Capacitor in AC</div>
+      <div class="vs-row"><div>V and I in phase</div><div>I leads V by 90°</div></div>
+      <div class="vs-row"><div>Power dissipated: P = I²R</div><div>No power dissipated (reactive)</div></div>
+      <div class="vs-row"><div>Impedance = R (independent of frequency)</div><div>X_C = 1/ωC (decreases with frequency)</div></div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-head">Inductor in AC</div><div class="vs-head">Series LCR at Resonance</div>
+      <div class="vs-row"><div>V leads I by 90°</div><div>V and I in phase (φ = 0)</div></div>
+      <div class="vs-row"><div>No power dissipated (reactive)</div><div>Power factor = 1 (max power)</div></div>
+      <div class="vs-row"><div>X_L = ωL (increases with frequency)</div><div>Z = R (minimum impedance)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — LCR Circuit Impedance (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> A series LCR circuit has R = 10 Ω, L = 0.5 H, C = 40 μF, connected to 220 V, 50 Hz supply. Find Z, I_rms, phase angle.</p>
+      <div class="step"><div class="sn">1</div><div>ω = 2πf = 2π×50 = 314 rad/s</div></div>
+      <div class="step"><div class="sn">2</div><div>X_L = ωL = 314×0.5 = 157 Ω</div></div>
+      <div class="step"><div class="sn">3</div><div>X_C = 1/(ωC) = 1/(314×40×10⁻⁶) = 1/0.01256 = 79.6 Ω</div></div>
+      <div class="step"><div class="sn">4</div><div>Z = √[R² + (X_L−X_C)²] = √[100 + (157−79.6)²] = √[100 + (77.4)²] = √[100+5990.76] = √6090.76 ≈ <strong>78.04 Ω</strong></div></div>
+      <div class="step"><div class="sn">5</div><div>I_rms = V_rms/Z = 220/78.04 ≈ <strong>2.82 A</strong></div></div>
+      <div class="step"><div class="sn">6</div><div>tanφ = (X_L−X_C)/R = 77.4/10 = 7.74 → φ = tan⁻¹(7.74) ≈ <strong>82.6°</strong> (V leads I)</div></div>
+      <div class="ans">✅ Z ≈ 78 Ω; I_rms ≈ 2.82 A; φ ≈ 82.6° (inductive circuit)</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Transformer (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> A step-up transformer converts 220 V to 22000 V. Primary has 200 turns and power output is 11 kW. Find: (a) N_s, (b) I_s, (c) I_p.</p>
+      <div class="step"><div class="sn">1</div><div>N_s/N_p = V_s/V_p → N_s = N_p×V_s/V_p = 200×22000/220 = <strong>20000 turns</strong></div></div>
+      <div class="step"><div class="sn">2</div><div>I_s = P/V_s = 11000/22000 = <strong>0.5 A</strong></div></div>
+      <div class="step"><div class="sn">3</div><div>I_p = P/V_p = 11000/220 = <strong>50 A</strong></div></div>
+      <div class="ans">✅ N_s = 20000; I_s = 0.5 A; I_p = 50 A (step up V, step down I)</div>
+    </div>
+  </div>
+  <div class="notice">📌 Phasor diagrams are worth 2 marks in every AC question. Always draw and label them even if not explicitly asked.</div>
+</section>
+
+<!-- ═══════════════ CH8: EM WAVES ═══════════════ -->
+<section id="sec-ch8" style="display:none">
+  <div class="sec-title">💡 Chapter 8: Electromagnetic Waves</div>
+  <div class="sec-sub">Maxwell's Equations · EM Spectrum · Properties &amp; Applications</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <p>Maxwell showed that a changing electric field produces a magnetic field (displacement current) and vice versa. This led to the prediction of EM waves — transverse waves that travel at c = 3×10⁸ m/s in vacuum.</p>
+    <div class="formula-box">
+      <h4>🔑 EM Wave Formulae</h4>
+      <div class="f">Speed of EM wave: c = 1/√(μ₀ε₀) = 3×10⁸ m/s</div>
+      <div class="f">In medium: v = c/n &nbsp;where n = refractive index = c/v</div>
+      <div class="f">Displacement current: I_d = ε₀·dΦ_E/dt</div>
+      <div class="f">Intensity: I = u·c = (½ε₀E₀²)·c &nbsp;&nbsp;(energy per unit area per second)</div>
+    </div>
+    <table class="comp-table">
+      <tr><th>Region</th><th>Wavelength Range</th><th>Source</th><th>Application</th></tr>
+      <tr><td>Radio waves</td><td>&gt; 0.1 m</td><td>LC oscillators</td><td>AM/FM broadcasting</td></tr>
+      <tr><td>Microwaves</td><td>1 mm – 0.1 m</td><td>Klystron/magnetron</td><td>Radar, microwave oven</td></tr>
+      <tr><td>Infrared</td><td>700 nm – 1 mm</td><td>Hot bodies</td><td>TV remote, night vision</td></tr>
+      <tr><td>Visible light</td><td>400–700 nm</td><td>Atoms (electron transitions)</td><td>Vision, photography</td></tr>
+      <tr><td>Ultraviolet</td><td>1–400 nm</td><td>Sun, arc lamps</td><td>Sterilisation, forensics</td></tr>
+      <tr><td>X-rays</td><td>0.01–10 nm</td><td>X-ray tube</td><td>Medical imaging, crystallography</td></tr>
+      <tr><td>Gamma rays</td><td>&lt; 0.01 nm</td><td>Radioactive nuclei</td><td>Cancer therapy, food sterilisation</td></tr>
+    </table>
+  </div>
+  <div class="notice">📌 Memorise EM spectrum order: Radio → Micro → Infrared → Visible → UV → X-ray → Gamma (increasing frequency / decreasing wavelength). All travel at c in vacuum. Board frequently asks sources and uses of 2–3 specific regions.</div>
+</section>
+
+<!-- ═══════════════ CH9: RAY OPTICS ═══════════════ -->
+<section id="sec-ch9" style="display:none">
+  <div class="sec-title">🔭 Chapter 9: Ray Optics &amp; Optical Instruments</div>
+  <div class="sec-sub">Reflection · Refraction · TIR · Lenses · Mirrors · Prism · Instruments</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="formula-box">
+      <h4>🔑 Mirrors</h4>
+      <div class="f">Mirror formula: 1/v + 1/u = 1/f &nbsp;&nbsp;(all distances from pole; sign convention!)</div>
+      <div class="f">Magnification: m = −v/u = h'/h</div>
+      <div class="f">f = R/2 &nbsp;&nbsp;(focal length = half radius of curvature)</div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Refraction &amp; Lenses</h4>
+      <div class="f">Snell's law: n₁ sinθ₁ = n₂ sinθ₂ &nbsp;also&nbsp; n = c/v</div>
+      <div class="f">Critical angle: sinθ_c = n₂/n₁ &nbsp;(TIR when θ &gt; θ_c, n₁ &gt; n₂)</div>
+      <div class="f">Lens formula: 1/v − 1/u = 1/f</div>
+      <div class="f">Lensmaker's eq: 1/f = (n−1)[1/R₁ − 1/R₂]</div>
+      <div class="f">Power of lens: P = 1/f (in m) &nbsp;units: dioptre (D)</div>
+      <div class="f">Lenses in contact: P = P₁ + P₂ + … &nbsp;or 1/f = 1/f₁ + 1/f₂</div>
+      <div class="f">Refraction at spherical surface: n₂/v − n₁/u = (n₂−n₁)/R</div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Prism &amp; Optical Instruments</h4>
+      <div class="f">Prism: A + δ = i + e &nbsp;&nbsp;(angle of prism + deviation = sum of angles)</div>
+      <div class="f">At min. deviation: i = e; μ = sin[(A+δ_m)/2] / sin(A/2)</div>
+      <div class="f">Simple microscope: m = 1 + D/f &nbsp;&nbsp;(D = 25 cm least distance of distinct vision)</div>
+      <div class="f">Compound microscope: M = m_e × m_o = (L/f_o) × (1 + D/f_e)</div>
+      <div class="f">Astronomical telescope: M = −f_o/f_e &nbsp;(image at infinity)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Concave Mirror (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> An object 2 cm tall is placed 30 cm in front of a concave mirror of focal length 20 cm. Find image position, nature, and size.</p>
+      <div class="step"><div class="sn">1</div><div>u = −30 cm, f = −20 cm (concave mirror, sign convention: distances in direction of incident light are negative)</div></div>
+      <div class="step"><div class="sn">2</div><div>1/v = 1/f − 1/u = 1/(−20) − 1/(−30) = −1/20 + 1/30 = (−3+2)/60 = −1/60</div></div>
+      <div class="step"><div class="sn">3</div><div>v = −60 cm (real, inverted image, on same side as object)</div></div>
+      <div class="step"><div class="sn">4</div><div>m = −v/u = −(−60)/(−30) = −2 &nbsp;→&nbsp; image height = 2×2 = 4 cm (inverted)</div></div>
+      <div class="ans">✅ Image at 60 cm in front of mirror; real, inverted; magnified 2× (4 cm tall)</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Lens Combination (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Two lenses of focal lengths +20 cm and −30 cm are placed in contact. Find equivalent focal length and power.</p>
+      <div class="step"><div class="sn">1</div><div>1/f = 1/f₁ + 1/f₂ = 1/20 + 1/(−30) = 3/60 − 2/60 = 1/60</div></div>
+      <div class="step"><div class="sn">2</div><div>f = 60 cm = 0.60 m &nbsp;&nbsp;(converging combination)</div></div>
+      <div class="step"><div class="sn">3</div><div>P = 1/f = 1/0.60 = <strong>+1.67 D</strong></div></div>
+      <div class="ans">✅ f = 60 cm (converging); P = +1.67 D</div>
+    </div>
+  </div>
+  <div class="vs-grid">
+    <div class="vs-head">Concave Mirror</div><div class="vs-head">Convex Mirror</div>
+    <div class="vs-row"><div>Converging mirror; f is negative</div><div>Diverging mirror; f is positive</div></div>
+    <div class="vs-row"><div>Can form real and virtual images</div><div>Always forms virtual, erect, diminished image</div></div>
+    <div class="vs-row"><div>Used in headlights, shaving mirrors</div><div>Used in rear-view mirrors (wide field of view)</div></div>
+  </div>
+  <div class="notice">📌 In ALL optics numericals, write the sign convention at the start: "Using Cartesian sign convention: distances measured from pole; incident light travels in +x direction." This protects you from sign errors.</div>
+</section>
+
+<!-- ═══════════════ CH10: WAVE OPTICS ═══════════════ -->
+<section id="sec-ch10" style="display:none">
+  <div class="sec-title">🌈 Chapter 10: Wave Optics</div>
+  <div class="sec-sub">Huygens' Principle · Interference (YDSE) · Diffraction · Polarisation</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="formula-box">
+      <h4>🔑 YDSE (Young's Double Slit Experiment)</h4>
+      <div class="f">Path difference: Δ = d sinθ ≈ yd/D &nbsp;&nbsp;(y = distance from central fringe, d = slit sep., D = screen dist.)</div>
+      <div class="f">Constructive (bright): Δ = nλ; yn = nλD/d &nbsp;&nbsp;(n = 0,±1,±2…)</div>
+      <div class="f">Destructive (dark): Δ = (2n−1)λ/2; yn = (2n−1)λD/(2d)</div>
+      <div class="f">Fringe width: β = λD/d</div>
+      <div class="f">Intensity: I = 4I₀cos²(δ/2) where δ = 2πΔ/λ</div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Diffraction &amp; Polarisation</h4>
+      <div class="f">Single slit — 1st minima: a sinθ = λ → θ ≈ λ/a</div>
+      <div class="f">Central maximum width: 2λD/a</div>
+      <div class="f">Resolving power (microscope): RP = 2μ sinθ/λ</div>
+      <div class="f">Brewster's law (polarisation): tanθ_B = n₂/n₁ &nbsp;(at Brewster angle, reflected ray ⊥ refracted)</div>
+      <div class="f">Malus's law: I = I₀ cos²θ &nbsp;&nbsp;(θ = angle between analyser and polariser axes)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — YDSE Fringe Width (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> In YDSE, slit separation = 0.3 mm, screen distance = 1.5 m, wavelength = 600 nm. Find fringe width.</p>
+      <div class="step"><div class="sn">1</div><div>β = λD/d = (600×10⁻⁹ × 1.5) / (0.3×10⁻³)</div></div>
+      <div class="step"><div class="sn">2</div><div>= (900×10⁻⁹) / (3×10⁻⁴) = 3×10⁻³ m = <strong>3 mm</strong></div></div>
+      <div class="ans">✅ Fringe width β = 3 mm</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Malus's Law (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> Polarised light of intensity I₀ passes through an analyser at 60° to the polariser. Find transmitted intensity.</p>
+      <div class="step"><div class="sn">1</div><div>Malus's law: I = I₀ cos²θ = I₀ cos²60° = I₀ × (1/2)² = <strong>I₀/4</strong></div></div>
+      <div class="ans">✅ I = I₀/4</div>
+    </div>
+  </div>
+  <div class="notice">📌 YDSE is asked every year — either fringe width calculation or effect of changing λ, d or D. Also know: if entire setup is immersed in water (n=4/3), λ becomes λ/n, so fringe width decreases by factor n.</div>
+</section>
+
+<!-- ═══════════════ CH11: DUAL NATURE ═══════════════ -->
+<section id="sec-ch11" style="display:none">
+  <div class="sec-title">☢️ Chapter 11: Dual Nature of Radiation &amp; Matter</div>
+  <div class="sec-sub">Photoelectric Effect · de Broglie Hypothesis · Davisson-Germer</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="formula-box">
+      <h4>🔑 Photoelectric Effect (Einstein's Equation)</h4>
+      <div class="f">Energy of photon: E = hf = hc/λ &nbsp;&nbsp;(h = 6.626×10⁻³⁴ J·s)</div>
+      <div class="f">Einstein's equation: hf = φ + KE_max = φ + ½mv²_max</div>
+      <div class="f">Work function: φ = hf₀ &nbsp;&nbsp;(f₀ = threshold frequency)</div>
+      <div class="f">Stopping potential: eV₀ = KE_max = hf − φ</div>
+      <div class="f">de Broglie wavelength: λ = h/mv = h/p</div>
+      <div class="f">For electron accelerated through V: λ = h/√(2meV) = 1.227/√V nm</div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-head">Wave Nature of Light</div><div class="vs-head">Particle Nature of Light (Photon)</div>
+      <div class="vs-row"><div>Explains interference, diffraction, polarisation</div><div>Explains photoelectric effect, Compton effect</div></div>
+      <div class="vs-row"><div>Amplitude determines intensity</div><div>Number of photons determines intensity</div></div>
+      <div class="vs-row"><div>Frequency determines colour</div><div>Frequency determines photon energy (E = hf)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Photoelectric Effect (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Light of wavelength 300 nm falls on a metal with work function 2.5 eV. Find KE_max and stopping potential.</p>
+      <div class="step"><div class="sn">1</div><div>E = hc/λ = (6.626×10⁻³⁴ × 3×10⁸)/(300×10⁻⁹) = 6.626×10⁻¹⁹ J = 4.14 eV</div></div>
+      <div class="step"><div class="sn">2</div><div>KE_max = E − φ = 4.14 − 2.5 = <strong>1.64 eV = 2.63×10⁻¹⁹ J</strong></div></div>
+      <div class="step"><div class="sn">3</div><div>Stopping potential: eV₀ = 1.64 eV → V₀ = <strong>1.64 V</strong></div></div>
+      <div class="ans">✅ KE_max = 1.64 eV; V₀ = 1.64 V</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — de Broglie Wavelength (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> Find de Broglie wavelength of an electron accelerated through 100 V.</p>
+      <div class="step"><div class="sn">1</div><div>λ = 1.227/√V nm = 1.227/√100 = 1.227/10 = <strong>0.1227 nm = 1.227 Å</strong></div></div>
+      <div class="ans">✅ λ = 0.1227 nm (X-ray range — explains Davisson-Germer experiment)</div>
+    </div>
+  </div>
+  <div class="notice">📌 The stopping potential is independent of intensity — this was the proof that light is a particle. Intensity only affects the number of electrons (photocurrent), NOT their maximum KE. This conceptual point is tested frequently.</div>
+</section>
+
+<!-- ═══════════════ CH12: ATOMS ═══════════════ -->
+<section id="sec-ch12" style="display:none">
+  <div class="sec-title">⚛️ Chapter 12: Atoms</div>
+  <div class="sec-sub">Rutherford Model · Bohr Model · Energy Levels · Hydrogen Spectrum</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>12.1 Rutherford's Nuclear Model</h3>
+    <p>Rutherford's gold foil experiment proved: most of atom is empty space; nucleus is small, dense, positively charged; nucleus contains almost all the mass. Limitation: could not explain stability of atom or discrete spectra.</p>
+    <h3>12.2 Bohr's Model of Hydrogen Atom</h3>
+    <p>Bohr's postulates: electrons revolve in stationary orbits without radiating; angular momentum is quantised (L = nh/2π); energy is emitted/absorbed only when electron jumps between orbits.</p>
+    <div class="formula-box">
+      <h4>🔑 Bohr Model Formulae</h4>
+      <div class="f">Orbital radius: rₙ = n²a₀ &nbsp;where a₀ = 0.529 Å (Bohr radius, for H)</div>
+      <div class="f">Orbital velocity: vₙ = v₁/n &nbsp;where v₁ = 2.18×10⁶ m/s</div>
+      <div class="f">Energy: Eₙ = −13.6/n² eV &nbsp;&nbsp;(ground state n=1: −13.6 eV)</div>
+      <div class="f">Photon energy: hf = E_higher − E_lower = 13.6(1/n₁² − 1/n₂²) eV</div>
+      <div class="f">Wavenumber: 1/λ = R_H(1/n₁² − 1/n₂²) &nbsp;where R_H = 1.097×10⁷ m⁻¹</div>
+    </div>
+    <table class="comp-table">
+      <tr><th>Series</th><th>n₁</th><th>n₂</th><th>Region</th></tr>
+      <tr><td>Lyman</td><td>1</td><td>2,3,4…</td><td>Ultraviolet</td></tr>
+      <tr><td>Balmer</td><td>2</td><td>3,4,5…</td><td>Visible</td></tr>
+      <tr><td>Paschen</td><td>3</td><td>4,5,6…</td><td>Near Infrared</td></tr>
+      <tr><td>Brackett</td><td>4</td><td>5,6,7…</td><td>Infrared</td></tr>
+      <tr><td>Pfund</td><td>5</td><td>6,7,8…</td><td>Far Infrared</td></tr>
+    </table>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Energy Level Transition (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> An electron in hydrogen atom transitions from n=4 to n=2. Find wavelength of emitted photon.</p>
+      <div class="step"><div class="sn">1</div><div>1/λ = R_H(1/n₁² − 1/n₂²) = 1.097×10⁷ × (1/4 − 1/16) = 1.097×10⁷ × (4/16 − 1/16)</div></div>
+      <div class="step"><div class="sn">2</div><div>= 1.097×10⁷ × 3/16 = 1.097×10⁷ × 0.1875 = 2.057×10⁶ m⁻¹</div></div>
+      <div class="step"><div class="sn">3</div><div>λ = 1/2.057×10⁶ = <strong>4.86×10⁻⁷ m = 486 nm</strong> (Balmer series — blue-green visible)</div></div>
+      <div class="ans">✅ λ = 486 nm (Hβ line of Balmer series, visible region)</div>
+    </div>
+  </div>
+  <div class="notice">📌 Ionisation energy = energy to remove electron from ground state = +13.6 eV. Excitation energy = energy needed to jump from ground to excited state. These two are frequently confused.</div>
+</section>
+
+<!-- ═══════════════ CH13: NUCLEI ═══════════════ -->
+<section id="sec-ch13" style="display:none">
+  <div class="sec-title">🏛️ Chapter 13: Nuclei</div>
+  <div class="sec-sub">Nuclear Size · Binding Energy · Radioactivity · Fission &amp; Fusion</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="formula-box">
+      <h4>🔑 Nuclear Physics Formulae</h4>
+      <div class="f">Nuclear radius: R = R₀A^(1/3) &nbsp;where R₀ = 1.2×10⁻¹⁵ m, A = mass number</div>
+      <div class="f">Mass defect: Δm = [Z·m_p + (A−Z)·m_n] − M_nucleus</div>
+      <div class="f">Binding energy: BE = Δm·c² &nbsp;&nbsp;(1 amu = 931.5 MeV/c²)</div>
+      <div class="f">Binding energy per nucleon: BE/A &nbsp;&nbsp;(peaks at ⁵⁶Fe — most stable)</div>
+      <div class="f">Radioactive decay law: N = N₀e^(−λt)</div>
+      <div class="f">Activity: A = λN = A₀e^(−λt)</div>
+      <div class="f">Half-life: T½ = 0.693/λ = 0.693τ &nbsp;&nbsp;(τ = mean life = 1/λ)</div>
+      <div class="f">N after n half-lives: N = N₀/2ⁿ &nbsp;&nbsp;(n = t/T½)</div>
+    </div>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">α decay</div><div class="defn">Nucleus emits ₂⁴He. Mass number decreases by 4, atomic number by 2. E.g.: ²³⁸U → ²³⁴Th + ⁴He</div></div>
+      <div class="def-card"><div class="term">β⁻ decay</div><div class="defn">Neutron converts to proton: n → p + e⁻ + ν̄. Mass number unchanged, atomic number increases by 1.</div></div>
+      <div class="def-card"><div class="term">γ decay</div><div class="defn">Nucleus de-excites by emitting high-energy photon. No change in A or Z. Usually accompanies α or β decay.</div></div>
+      <div class="def-card"><div class="term">Nuclear Fission</div><div class="defn">Heavy nucleus splits into two medium nuclei + energy. Example: ²³⁵U + n → ¹⁴¹Ba + ⁹²Kr + 3n + 200 MeV</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Radioactive Decay (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> A radioactive element has T½ = 30 days. How much will remain from 1 kg after 90 days?</p>
+      <div class="step"><div class="sn">1</div><div>Number of half-lives: n = t/T½ = 90/30 = 3</div></div>
+      <div class="step"><div class="sn">2</div><div>N = N₀/2ⁿ = N₀/2³ = N₀/8</div></div>
+      <div class="step"><div class="sn">3</div><div>Mass remaining = 1/8 kg = <strong>0.125 kg = 125 g</strong></div></div>
+      <div class="ans">✅ 125 g remains after 90 days (3 half-lives)</div>
+    </div>
+    <div class="worked">
+      <h4>Example 2 — Binding Energy (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Find binding energy of ⁴He nucleus. (m_p = 1.007825 u, m_n = 1.008665 u, m(⁴He) = 4.002602 u, 1u = 931.5 MeV)</p>
+      <div class="step"><div class="sn">1</div><div>Mass of 2 protons + 2 neutrons = 2(1.007825) + 2(1.008665) = 2.01565 + 2.01733 = 4.03298 u</div></div>
+      <div class="step"><div class="sn">2</div><div>Δm = 4.03298 − 4.002602 = 0.030378 u</div></div>
+      <div class="step"><div class="sn">3</div><div>BE = 0.030378 × 931.5 = <strong>28.3 MeV</strong></div></div>
+      <div class="step"><div class="sn">4</div><div>BE/A = 28.3/4 = 7.07 MeV per nucleon</div></div>
+      <div class="ans">✅ Binding energy = 28.3 MeV; BE/nucleon = 7.07 MeV</div>
+    </div>
+  </div>
+  <div class="notice">📌 Mean life τ = T½/0.693 = 1.44 T½. After one mean life, N = N₀/e ≈ 0.37N₀. Distinguish clearly: fission releases energy because BE/nucleon increases for products; fusion also releases energy for the same reason.</div>
+</section>
+
+<!-- ═══════════════ CH14: SEMICONDUCTORS ═══════════════ -->
+<section id="sec-ch14" style="display:none">
+  <div class="sec-title">💻 Chapter 14: Semiconductor Electronics</div>
+  <div class="sec-sub">Intrinsic &amp; Extrinsic · p-n Junction · Diode · Transistor · Logic Gates</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>14.1 Semiconductors</h3>
+    <p>Semiconductors have conductivity between conductors and insulators. In <strong>intrinsic</strong> semiconductors (pure Si, Ge), n_e = n_h. <strong>Extrinsic</strong> semiconductors are doped: n-type (donor impurity like P, As — extra electrons) or p-type (acceptor impurity like B, In — extra holes).</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">p-n Junction</div><div class="defn">Junction of p-type and n-type semiconductor. At junction, diffusion creates a depletion layer with built-in potential barrier (~0.7V for Si).</div></div>
+      <div class="def-card"><div class="term">Forward Bias</div><div class="defn">p connected to +ve, n to −ve terminal. Barrier reduces; current flows. Acts as closed switch.</div></div>
+      <div class="def-card"><div class="term">Reverse Bias</div><div class="defn">p connected to −ve, n to +ve terminal. Barrier increases; only tiny reverse saturation current flows. Acts as open switch.</div></div>
+      <div class="def-card"><div class="term">Zener Diode</div><div class="defn">Designed to operate in reverse breakdown. Used as voltage regulator. Breakdown voltage called Zener voltage (V_Z).</div></div>
+    </div>
+    <h3>14.2 Transistor</h3>
+    <p>A transistor (BJT) has three regions: Emitter (heavily doped), Base (thin, lightly doped), Collector (moderately doped). Used as amplifier or switch.</p>
+    <div class="formula-box">
+      <h4>🔑 Transistor Parameters</h4>
+      <div class="f">I_E = I_B + I_C &nbsp;&nbsp;(KCL at transistor)</div>
+      <div class="f">DC current gain (CE): β = I_C/I_B &nbsp;&nbsp;(typically 20–200)</div>
+      <div class="f">α = I_C/I_E &nbsp;&nbsp;(CB configuration); α = β/(1+β)</div>
+      <div class="f">Voltage gain (CE amp): A_v = β × R_C/R_in</div>
+    </div>
+    <h3>14.3 Logic Gates</h3>
+    <table class="comp-table">
+      <tr><th>Gate</th><th>Symbol</th><th>Output</th><th>Boolean</th></tr>
+      <tr><td>AND</td><td>·</td><td>High only if ALL inputs high</td><td>Y = A·B</td></tr>
+      <tr><td>OR</td><td>+</td><td>High if ANY input high</td><td>Y = A+B</td></tr>
+      <tr><td>NOT</td><td>¬ or ‾</td><td>Inverts input</td><td>Y = Ā</td></tr>
+      <tr><td>NAND</td><td>AND+NOT</td><td>Low only if ALL inputs high</td><td>Y = ‾(A·B)</td></tr>
+      <tr><td>NOR</td><td>OR+NOT</td><td>High only if ALL inputs low</td><td>Y = ‾(A+B)</td></tr>
+    </table>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Half-wave Rectification (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> In a half-wave rectifier, the input frequency is 50 Hz. What is output frequency? What additional component converts it to full-wave?</p>
+      <div class="step"><div class="sn">1</div><div>Half-wave: only one half-cycle passes → output frequency = input frequency = <strong>50 Hz</strong></div></div>
+      <div class="step"><div class="sn">2</div><div>Full-wave rectifier uses 4 diodes in bridge configuration (Bridge Rectifier)</div></div>
+      <div class="step"><div class="sn">3</div><div>Full-wave output frequency = 2 × input = 100 Hz (both half-cycles utilised)</div></div>
+      <div class="ans">✅ Half-wave: 50 Hz; Full-wave: 100 Hz; Use bridge rectifier for full-wave</div>
+    </div>
+  </div>
+  <div class="notice">📌 NAND and NOR are "universal gates" — any other gate can be built from them alone. This is frequently asked as a 2-mark question. Also know: transistor in saturation = switch ON; cutoff = switch OFF.</div>
+</section>
+
+<!-- ═══════════════ CH15: COMMUNICATION ═══════════════ -->
+<section id="sec-ch15" style="display:none">
+  <div class="sec-title">📡 Chapter 15: Communication Systems</div>
+  <div class="sec-sub">Modulation · AM · FM · Bandwidth · Signal Propagation · Satellite</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <p>Communication system: Transmitter → Channel (medium) → Receiver. The signal must be modulated (superimposed on a carrier wave) to be transmitted efficiently over long distances.</p>
+    <div class="formula-box">
+      <h4>🔑 Modulation &amp; Communication Formulae</h4>
+      <div class="f">Modulation index (AM): m_a = A_m/A_c &nbsp;&nbsp;(A_m = signal amplitude, A_c = carrier amplitude)</div>
+      <div class="f">AM bandwidth: 2f_m &nbsp;&nbsp;(f_m = maximum audio frequency)</div>
+      <div class="f">FM bandwidth: 2(Δf + f_m) &nbsp;&nbsp;(Δf = frequency deviation)</div>
+      <div class="f">Range of transmission (line of sight): d = √(2Rh) &nbsp;(R = Earth radius = 6.4×10⁶ m, h = tower height)</div>
+      <div class="f">Power in AM wave: P_T = P_C(1 + m_a²/2)</div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-head">Amplitude Modulation (AM)</div><div class="vs-head">Frequency Modulation (FM)</div>
+      <div class="vs-row"><div>Carrier amplitude varies with signal</div><div>Carrier frequency varies with signal</div></div>
+      <div class="vs-row"><div>Bandwidth = 2f_m; simpler circuitry</div><div>Bandwidth larger; better quality, less noise</div></div>
+      <div class="vs-row"><div>Longer range (ground waves)</div><div>Shorter range (line of sight)</div></div>
+      <div class="vs-row"><div>Used for: MW, SW radio</div><div>Used for: FM radio, TV audio</div></div>
+    </div>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Ground Wave Propagation</div><div class="defn">Radio waves travel along Earth's surface. Used for AM radio. Range limited by attenuation.</div></div>
+      <div class="def-card"><div class="term">Sky Wave (Ionospheric)</div><div class="defn">Waves reflected by ionosphere. Used for short-wave international broadcasting. Frequency: 3–30 MHz.</div></div>
+      <div class="def-card"><div class="term">Space Wave (LOS)</div><div class="defn">Line-of-sight propagation. Used for TV, FM, satellite links. Range increases with tower height.</div></div>
+      <div class="def-card"><div class="term">Satellite Communication</div><div class="defn">Geostationary satellite at 36000 km covers ~1/3 of Earth. Three satellites can cover entire Earth (global coverage).</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example 1 — Range of TV Tower (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> A TV tower has height 100 m. Find its range of transmission. (R_Earth = 6.4×10⁶ m)</p>
+      <div class="step"><div class="sn">1</div><div>d = √(2Rh) = √(2 × 6.4×10⁶ × 100) = √(12.8×10⁸) = √(1.28×10⁹)</div></div>
+      <div class="step"><div class="sn">2</div><div>= 3.578×10⁴ m ≈ <strong>35.8 km ≈ 36 km</strong></div></div>
+      <div class="ans">✅ Range ≈ 36 km from tower base</div>
+    </div>
+  </div>
+  <div class="notice">📌 Chapter 15 carries fewer marks (~4-5) but is completely scoring. Memorise: AM bandwidth = 2f_m; three propagation modes and their frequency bands; geostationary orbit height = 36000 km. These are direct 1-mark questions.</div>
+</section>
+
+<!-- ═══════════════ PYQ BANK ═══════════════ -->
+<section id="sec-pyq" style="display:none">
+  <div class="sec-title">📜 Previous Year Question Bank</div>
+  <div class="sec-sub">Real CBSE board questions — year-tagged, chapter-wise, with model answers</div>
+
+  <div class="pyq-filter">
+    <button class="pyq-chip active" onclick="filterPYQ('all',this)">All Chapters</button>
+    <button class="pyq-chip" onclick="filterPYQ('electrostatics',this)">Electrostatics</button>
+    <button class="pyq-chip" onclick="filterPYQ('current',this)">Current Electricity</button>
+    <button class="pyq-chip" onclick="filterPYQ('magnetism',this)">Magnetism</button>
+    <button class="pyq-chip" onclick="filterPYQ('optics',this)">Optics</button>
+    <button class="pyq-chip" onclick="filterPYQ('modern',this)">Modern Physics</button>
+  </div>
+
+  <div class="pyq-card" data-cat="electrostatics">
+    <div class="pyq-meta">
+      <span class="pyq-tag pyq-year">2024</span>
+      <span class="pyq-tag pyq-marks">5M</span>
+      <span class="pyq-tag pyq-ch">Ch 1 – Electric Fields</span>
+    </div>
+    <div class="pyq-q">(a) State Gauss's law. Using it, derive an expression for the electric field intensity due to an infinite plane sheet of charge. (b) A charge Q is enclosed in a cube of side a. Find the electric flux through one face. [5]</div>
+    <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+    <div class="pyq-ans">
+      <strong>(a)</strong> Gauss's law: Total electric flux through a closed surface = q_enc/ε₀. For infinite plane sheet: Using cylindrical Gaussian surface (area A on each flat face), 2EA = σA/ε₀ → <strong>E = σ/(2ε₀)</strong>, directed away from sheet on both sides.<br><br>
+      <strong>(b)</strong> By symmetry, total flux through cube = Q/ε₀. Cube has 6 equal faces → Flux through one face = <strong>Q/(6ε₀)</strong>.
+    </div>
+  </div>
+
+  <div class="pyq-card" data-cat="electrostatics">
+    <div class="pyq-meta">
+      <span class="pyq-tag pyq-year">2023</span>
+      <span class="pyq-tag pyq-marks">3M</span>
+      <span class="pyq-tag pyq-ch">Ch 2 – Capacitance</span>
+    </div>
+    <div class="pyq-q">A parallel plate capacitor with air between the plates has a capacitance of 8 pF. What will be the capacitance if the distance between the plates is reduced to half and the space between them is filled with a substance of dielectric constant 6? [3]</div>
+    <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+    <div class="pyq-ans">
+      Original: C₀ = ε₀A/d = 8 pF<br>
+      New: d' = d/2; K = 6<br>
+      C' = Kε₀A/d' = 6 × ε₀A/(d/2) = 12 × ε₀A/d = 12 × C₀ = 12 × 8 = <strong>96 pF</strong>
+    </div>
+  </div>
+
+  <div class="pyq-card" data-cat="current">
+    <div class="pyq-meta">
+      <span class="pyq-tag pyq-year">2024</span>
+      <span class="pyq-tag pyq-marks">5M</span>
+      <span class="pyq-tag pyq-ch">Ch 3 – Current Electricity</span>
+    </div>
+    <div class="pyq-q">(a) State and explain Kirchhoff's laws. (b) Using Kirchhoff's laws find the current in each branch of the circuit: ε₁=12V, r₁=2Ω; ε₂=8V, r₂=1Ω; R=5Ω (cells in parallel with external R). [5]</div>
+    <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+    <div class="pyq-ans">
+      <strong>KCL:</strong> ΣI_in = ΣI_out at every junction (conservation of charge)<br>
+      <strong>KVL:</strong> ΣV = 0 around any closed loop (conservation of energy)<br><br>
+      <strong>Setup:</strong> Let I₁ through ε₁ branch, I₂ through ε₂ branch, I = I₁+I₂ through R.<br>
+      Loop 1 (outer): 12 − 2I₁ − 5(I₁+I₂) = 0 → 12 = 7I₁ + 5I₂ …(1)<br>
+      Loop 2 (inner): 8 − 1×I₂ − 5(I₁+I₂) = 0 → 8 = 5I₁ + 6I₂ …(2)<br>
+      Solving: (1)×6 − (2)×5: 72−40 = 42I₁−25I₁ → 32 = 17I₁ → <strong>I₁ = 1.88 A</strong><br>
+      From (2): I₂ = (8−5×1.88)/6 = (8−9.4)/6 = −0.23 A (negative → direction assumed wrong)<br>
+      <strong>I = I₁+I₂ through R = 1.65 A</strong>
+    </div>
+  </div>
+
+  <div class="pyq-card" data-cat="magnetism">
+    <div class="pyq-meta">
+      <span class="pyq-tag pyq-year">2023</span>
+      <span class="pyq-tag pyq-marks">5M</span>
+      <span class="pyq-tag pyq-ch">Ch 4 – Moving Charges</span>
+    </div>
+    <div class="pyq-q">(a) Derive an expression for the magnetic field at the centre of a circular current-carrying loop using Biot-Savart law. (b) A circular coil of 30 turns, radius 8 cm carries a current of 0.6 A. What is the magnitude of the magnetic field at the centre? [5]</div>
+    <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+    <div class="pyq-ans">
+      <strong>(a)</strong> By Biot-Savart: dB = (μ₀/4π)·Idl×r̂/r². For circular loop of radius R, every element dl is perpendicular to r̂. Integrating over full circle (total length = 2πR):<br>
+      B = (μ₀/4π)·I·(2πR)/R² = μ₀I/(2R)<br><br>
+      <strong>(b)</strong> B = μ₀NI/(2R) = (4π×10⁻⁷ × 30 × 0.6)/(2 × 0.08)<br>
+      = (4π×10⁻⁷ × 18)/0.16 = (72π×10⁻⁷)/0.16 = 450π×10⁻⁷ ≈ <strong>1.41×10⁻⁴ T</strong>
+    </div>
+  </div>
+
+  <div class="pyq-card" data-cat="optics">
+    <div class="pyq-meta">
+      <span class="pyq-tag pyq-year">2024</span>
+      <span class="pyq-tag pyq-marks">5M</span>
+      <span class="pyq-tag pyq-ch">Ch 9 – Ray Optics</span>
+    </div>
+    <div class="pyq-q">Draw a labelled ray diagram showing image formation by a compound microscope when final image is at the near point. Derive the expression for its magnifying power. [5]</div>
+    <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+    <div class="pyq-ans">
+      <strong>Diagram:</strong> Object just beyond f_o of objective → real, magnified intermediate image within f_e of eyepiece → virtual final image at D = 25 cm.<br><br>
+      <strong>Magnification:</strong><br>
+      m_o (objective) = −v_o/u_o ≈ L/f_o (for small f_o, L = tube length)<br>
+      m_e (eyepiece, image at D) = (1 + D/f_e)<br>
+      Total: <strong>M = m_o × m_e = (L/f_o)(1 + D/f_e)</strong><br>
+      For large magnification: small f_o and small f_e needed.
+    </div>
+  </div>
+
+  <div class="pyq-card" data-cat="modern">
+    <div class="pyq-meta">
+      <span class="pyq-tag pyq-year">2023</span>
+      <span class="pyq-tag pyq-marks">3M</span>
+      <span class="pyq-tag pyq-ch">Ch 11 – Dual Nature</span>
+    </div>
+    <div class="pyq-q">The work function of caesium metal is 2.14 eV. When light of frequency 6×10¹⁴ Hz is incident on the metal surface, photoemission of electrons occurs. (a) What is the maximum KE of the emitted electrons? (b) What is the stopping potential? (c) What is the maximum speed of the emitted photoelectrons? [3]</div>
+    <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+    <div class="pyq-ans">
+      E = hf = 6.63×10⁻³⁴ × 6×10¹⁴ = 3.98×10⁻¹⁹ J = 2.49 eV<br>
+      <strong>(a)</strong> KE_max = E − φ = 2.49 − 2.14 = <strong>0.35 eV = 5.6×10⁻²⁰ J</strong><br>
+      <strong>(b)</strong> Stopping potential V₀ = KE_max/e = <strong>0.35 V</strong><br>
+      <strong>(c)</strong> ½mv² = 5.6×10⁻²⁰ → v = √(2×5.6×10⁻²⁰/9.1×10⁻³¹) = √(1.23×10¹¹) ≈ <strong>3.5×10⁵ m/s</strong>
+    </div>
+  </div>
+
+  <div class="pyq-card" data-cat="modern">
+    <div class="pyq-meta">
+      <span class="pyq-tag pyq-year">2022</span>
+      <span class="pyq-tag pyq-marks">3M</span>
+      <span class="pyq-tag pyq-ch">Ch 13 – Nuclei</span>
+    </div>
+    <div class="pyq-q">The half-life of ⁹⁰Sr is 28 years. What is the disintegration rate of 15 mg of this isotope? (N_A = 6.023×10²³, atomic mass = 90) [3]</div>
+    <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+    <div class="pyq-ans">
+      N = (15×10⁻³/90) × 6.023×10²³ = (1/6000) × 6.023×10²³ = 1.004×10²⁰ atoms<br>
+      T½ = 28 yr = 28×3.156×10⁷ s = 8.83×10⁸ s<br>
+      λ = 0.693/T½ = 0.693/8.83×10⁸ = 7.85×10⁻¹⁰ s⁻¹<br>
+      Activity A = λN = 7.85×10⁻¹⁰ × 1.004×10²⁰ = <strong>7.88×10¹⁰ disintegrations/s = 7.88×10¹⁰ Bq</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MISTAKE BANK ═══════════════ -->
+<section id="sec-mistakes" style="display:none">
+  <div class="sec-title">❌ Common Mistakes Bank</div>
+  <div class="sec-sub">The errors that cost students marks every year — and how to fix them</div>
+
+  <div class="mistake-card">
+    <h4>Mistake 1 — Wrong Sign in Mirror/Lens Formula</h4>
+    <p>Students forget the sign convention and get the wrong image position, losing 3–5 marks.</p>
+    <div class="mistake-wrong">❌ WRONG: For concave mirror, f = +20 cm → 1/v = 1/f − 1/u = 1/20 − 1/(-30)</div>
+    <div class="mistake-right">✅ CORRECT: For concave mirror, f = −20 cm (negative in Cartesian convention). Always write convention first: "All distances measured from pole; direction of incident light = positive"</div>
+  </div>
+
+  <div class="mistake-card">
+    <h4>Mistake 2 — Confusing E and V for Dipole</h4>
+    <p>At equatorial point: E ≠ 0 but V = 0. Students reverse this and lose 2 marks.</p>
+    <div class="mistake-wrong">❌ WRONG: Electric field at equatorial point of dipole = 0 (since V = 0 there)</div>
+    <div class="mistake-right">✅ CORRECT: V = 0 at equatorial point, but E = kp/r³ ≠ 0 (the field points opposite to dipole moment). V = 0 does NOT mean E = 0.</div>
+  </div>
+
+  <div class="mistake-card">
+    <h4>Mistake 3 — Wrong Resonant Frequency Formula</h4>
+    <div class="mistake-wrong">❌ WRONG: f₀ = 1/(2πLC) or f₀ = 1/(√LC)</div>
+    <div class="mistake-right">✅ CORRECT: f₀ = 1/(2π√LC). At resonance, X_L = X_C: ω₀L = 1/(ω₀C) → ω₀ = 1/√(LC) → f₀ = ω₀/(2π) = 1/(2π√LC)</div>
+  </div>
+
+  <div class="mistake-card">
+    <h4>Mistake 4 — Intensity vs KE in Photoelectric Effect</h4>
+    <div class="mistake-wrong">❌ WRONG: Increasing light intensity increases KE of photoelectrons</div>
+    <div class="mistake-right">✅ CORRECT: Increasing intensity increases the NUMBER of photoelectrons (photocurrent), NOT their KE. KE depends only on frequency: KE_max = hf − φ. Stopping potential is independent of intensity.</div>
+  </div>
+
+  <div class="mistake-card">
+    <h4>Mistake 5 — Direction of Induced Current (Lenz's Law)</h4>
+    <div class="mistake-wrong">❌ WRONG: Stating direction without explaining WHY (no reference to opposing change)</div>
+    <div class="mistake-right">✅ CORRECT: Always write: "By Lenz's law, the induced current flows in a direction such that the magnetic force it creates opposes the motion/change causing it." Then state the specific direction using right-hand rule.</div>
+  </div>
+
+  <div class="mistake-card">
+    <h4>Mistake 6 — Capacitor Energy Formula Error</h4>
+    <div class="mistake-wrong">❌ WRONG: U = CV² (missing the ½)</div>
+    <div class="mistake-right">✅ CORRECT: U = ½CV² = Q²/(2C) = ½QV. All three forms are equivalent. The factor of ½ arises because charge and voltage build up gradually from zero.</div>
+  </div>
+
+  <div class="mistake-card">
+    <h4>Mistake 7 — Transistor Current Relations</h4>
+    <div class="mistake-wrong">❌ WRONG: I_C = I_B + I_E (wrong order — collector always ≫ base current)</div>
+    <div class="mistake-right">✅ CORRECT: I_E = I_B + I_C. Emitter current splits into large collector current (α·I_E) and tiny base current ((1−α)·I_E). β = I_C/I_B is large (20–200).</div>
+  </div>
+
+  <div class="mistake-card">
+    <h4>Mistake 8 — Nuclear Decay Equations (Charge/Mass Not Balanced)</h4>
+    <div class="mistake-wrong">❌ WRONG: ²³⁸U → ²³⁴Th + He (missing subscripts/charge numbers)</div>
+    <div class="mistake-right">✅ CORRECT: ⁹²²³⁸U → ⁹⁰²³⁴Th + ₂⁴He. Both mass numbers (A) and atomic numbers (Z) must balance. Check: 238=234+4 ✓; 92=90+2 ✓. Write subscripts and superscripts ALWAYS.</div>
+  </div>
+</section>
+
+<!-- ═══════════════ EXAMINER'S EYE ═══════════════ -->
+<section id="sec-examiner" style="display:none">
+  <div class="sec-title">👁️ Examiner's Eye</div>
+  <div class="sec-sub">What board examiners look for — and what costs marks silently</div>
+
+  <div class="tip-card">
+    <h4>🎯 Tip 1 — State the Law Before Using It</h4>
+    <p>Every derivation question awards 1–2 marks just for stating the law. Never dive into math without writing: "According to Gauss's law / Faraday's law / Coulomb's law…" Examiners mark this as a separate step.</p>
+  </div>
+
+  <div class="tip-card">
+    <h4>🎯 Tip 2 — Labelled Diagrams Are Compulsory</h4>
+    <p>For any question asking you to "derive" or "explain" a device (transformer, cyclotron, microscope, potentiometer), a labelled diagram is worth 1–2 marks. The marking scheme explicitly allocates marks for it. Draw it first, then derive.</p>
+  </div>
+
+  <div class="tip-card">
+    <h4>🎯 Tip 3 — Units in Every Numerical</h4>
+    <p>The marking scheme awards 1 mark specifically for the correct unit in the final answer. "E = 2.7" scores 0 for that step. "E = 2.7 N/C" scores full. Units are not optional.</p>
+  </div>
+
+  <div class="tip-card">
+    <h4>🎯 Tip 4 — Define Symbols in Formulae</h4>
+    <p>When you write "F = kq₁q₂/r²" and then calculate, define what each symbol means. Examiners check that you know the formula, not just copied it. One line of definitions gets you the "formula mark".</p>
+  </div>
+
+  <div class="tip-card">
+    <h4>🎯 Tip 5 — "State vs Derive" — Know the Difference</h4>
+    <p>"State" = write in one sentence with no proof. "Derive" = full mathematical proof from basics. "Explain" = conceptual explanation in words. Giving a derivation when asked to "state" wastes time but doesn't lose marks. Giving only a statement when asked to "derive" loses all derivation marks.</p>
+  </div>
+
+  <div class="tip-card">
+    <h4>🎯 Tip 6 — Phasor Diagrams for AC Questions</h4>
+    <p>Any AC circuit question about LCR — even if not explicitly asked — should include a phasor diagram showing V_R (along I), V_L (90° ahead of I), V_C (90° behind I), and resultant V. This is worth 2 marks in the marking scheme and takes 20 seconds to draw.</p>
+  </div>
+
+  <div class="tip-card">
+    <h4>🎯 Tip 7 — Direction of Magnetic Force</h4>
+    <p>When F = qvB sinθ or F = BIL sinθ — always state the direction using Fleming's Left-Hand Rule or right-hand rule. "F = 0.4 N" without direction scores partial credit only.</p>
+  </div>
+
+  <div class="tip-card">
+    <h4>🎯 Tip 8 — Two-Marks "Why" Questions</h4>
+    <p>Board frequently asks "why does [device] work?" or "why is [material] used?" These need cause-effect answers: e.g. "Nichrome is used because it has high resistivity AND low temperature coefficient of resistance — both conditions needed." One condition alone = 1 mark instead of 2.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ HIGH PROBABILITY ═══════════════ -->
+<section id="sec-highprob" style="display:none">
+  <div class="sec-title">🔥 High-Probability Questions</div>
+  <div class="sec-sub">Questions that appear in 3+ of last 5 board exams — guaranteed to be asked again</div>
+
+  <div class="hotq"><span class="heat">🔥🔥🔥 VERY HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch1–2: Derive E due to uniformly charged infinite plane sheet using Gauss's law</div>
+    <div class="q">Asked 4 out of 5 years. 3–5 marks. Must know: choose cylindrical Gaussian surface, argue flux through curved surface = 0, get E = σ/(2ε₀).</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥🔥🔥 VERY HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch3: Potentiometer — find internal resistance of a cell</div>
+    <div class="q">Appears every year. Formula: r = R(l₁−l₂)/l₂. Draw circuit diagram. State that potentiometer gives accurate result because no current flows through cell at balance.</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥🔥🔥 VERY HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch6: State and explain Faraday's laws of electromagnetic induction with Lenz's law</div>
+    <div class="q">5-mark question, asked almost every year. Define magnetic flux, state both laws, explain Lenz's law as conservation of energy, give one example (e.g. magnet approaching coil).</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥🔥🔥 VERY HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch7: LCR series circuit — impedance, current, resonance condition</div>
+    <div class="q">5-mark derivation + numerical. Draw phasor diagram. Derive Z = √(R² + (X_L−X_C)²). State resonance condition. Expected every year.</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥🔥🔥 VERY HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch9: Ray diagram + magnification for compound microscope</div>
+    <div class="q">5-mark. Draw ray diagram (both objective and eyepiece), derive M = (L/f_o)(1+D/f_e). Appears in ~4/5 recent papers.</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥🔥 HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch10: YDSE — fringe width formula and numerical</div>
+    <div class="q">3-mark. Derive β = λD/d or numerical calculation. Effect of changing medium (submerging in liquid) is a common twist.</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥🔥 HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch11: Einstein's photoelectric equation — explanation + numerical</div>
+    <div class="q">3–5 mark. Explain threshold frequency, stopping potential, independence from intensity. Calculate KE_max and stopping potential.</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥🔥 HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch12: Bohr's model — energy levels, spectral series, hydrogen spectrum</div>
+    <div class="q">3–5 mark. List postulates, derive radius and energy formulae, identify spectral series (Balmer = visible, Lyman = UV). Calculate wavelength of specific transition.</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥🔥 HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch14: p-n junction working + forward/reverse bias characteristics</div>
+    <div class="q">3–5 mark. Explain depletion layer, draw I-V characteristic curve (include both forward and reverse bias), label threshold voltage and breakdown voltage.</div>
+  </div>
+
+  <div class="hotq"><span class="heat">🔥 MODERATE-HIGH</span>
+    <div style="font-weight:700;margin-bottom:4px">Ch13: Binding energy per nucleon curve + nuclear stability</div>
+    <div class="q">3 mark. Draw BE/A vs A curve, identify Fe as most stable, explain why fission and fusion both release energy (both approach stability).</div>
+  </div>
+</section>
+
+<!-- ═══════════════ LAST MINUTE REVISION ═══════════════ -->
+<section id="sec-lastmin" style="display:none">
+  <div class="sec-title">⏱️ Last-Minute Revision</div>
+  <div class="sec-sub">Study this the night before the exam — all the quick wins</div>
+
+  <div class="lm-block">
+    <h3>⚡ Electrostatics — Quick Hits</h3>
+    <ul class="lm-list">
+      <li>Coulomb's constant k = 9×10⁹ N·m²/C²; ε₀ = 8.85×10⁻¹² C²/N·m²</li>
+      <li>Gauss's law: Φ = q_enc/ε₀; E for infinite sheet = σ/(2ε₀)</li>
+      <li>Dipole: axial E = 2kp/r³; equatorial E = kp/r³ (opposite direction)</li>
+      <li>Dipole equatorial potential = ZERO (but field ≠ 0)</li>
+      <li>Capacitor energy U = ½CV² = Q²/2C; energy density = ½ε₀E²</li>
+      <li>Battery connected → V constant, C increases with dielectric</li>
+      <li>Battery disconnected → Q constant, V decreases with dielectric</li>
+    </ul>
+  </div>
+
+  <div class="lm-block">
+    <h3>🔋 Current Electricity — Quick Hits</h3>
+    <ul class="lm-list">
+      <li>I = nAev_d; drift velocity is ~10⁻⁴ m/s (very slow!)</li>
+      <li>Terminal V = ε − Ir (discharge); = ε + Ir (charge)</li>
+      <li>Potentiometer internal resistance: r = R(l₁−l₂)/l₂</li>
+      <li>Wheatstone balanced: P/Q = R/S (no galvanometer deflection)</li>
+      <li>Resistivity increases with temperature for metals (α positive)</li>
+    </ul>
+  </div>
+
+  <div class="lm-block">
+    <h3>🧲 Magnetism + EMI — Quick Hits</h3>
+    <ul class="lm-list">
+      <li>B at centre of N-turn loop: B = μ₀NI/(2R)</li>
+      <li>B inside solenoid: B = μ₀nI (n = turns per metre)</li>
+      <li>Cyclotron frequency: f = qB/(2πm) — independent of speed!</li>
+      <li>Motional EMF: ε = Bvl; self-induced: ε = −L·dI/dt</li>
+      <li>Energy in inductor: U = ½LI²; solenoid L = μ₀N²A/l</li>
+      <li>Lenz's law = conservation of energy (induced current opposes change)</li>
+    </ul>
+  </div>
+
+  <div class="lm-block">
+    <h3>〰️ AC + EM Waves — Quick Hits</h3>
+    <ul class="lm-list">
+      <li>V_rms = V₀/√2; I_rms = I₀/√2</li>
+      <li>Z = √[R² + (X_L − X_C)²]; at resonance Z_min = R</li>
+      <li>Resonant frequency f₀ = 1/(2π√LC)</li>
+      <li>Transformer: V_s/V_p = N_s/N_p; step-up voltage → step-down current</li>
+      <li>EM spectrum order: Radio → Micro → IR → Visible → UV → X → Gamma</li>
+      <li>All EM waves travel at c = 3×10⁸ m/s in vacuum</li>
+    </ul>
+  </div>
+
+  <div class="lm-block">
+    <h3>🔭 Optics — Quick Hits</h3>
+    <ul class="lm-list">
+      <li>Mirror formula: 1/v + 1/u = 1/f; lens formula: 1/v − 1/u = 1/f</li>
+      <li>Concave mirror f = −R/2; Convex lens f = positive</li>
+      <li>TIR: sinθ_c = n₂/n₁ (n₁ &gt; n₂); occurs when light goes from denser to rarer</li>
+      <li>YDSE fringe width β = λD/d; bright fringe at nλD/d</li>
+      <li>Malus's law: I = I₀cos²θ; Brewster's law: tanθ_B = n</li>
+    </ul>
+  </div>
+
+  <div class="lm-block">
+    <h3>⚛️ Modern Physics — Quick Hits</h3>
+    <ul class="lm-list">
+      <li>Photoelectric: KE_max = hf − φ; stopping potential eV₀ = KE_max</li>
+      <li>de Broglie: λ = h/mv; for electron: λ = 1.227/√V nm</li>
+      <li>Bohr: E_n = −13.6/n² eV; r_n = 0.529n² Å</li>
+      <li>Radioactivity: N = N₀/2ⁿ (n half-lives); Activity A = λN</li>
+      <li>Half-life T½ = 0.693/λ; mean life τ = 1/λ = 1.44T½</li>
+      <li>1 amu = 931.5 MeV; BE/nucleon peaks at Fe-56</li>
+      <li>Transistor: I_E = I_B + I_C; β = I_C/I_B (CE config)</li>
+      <li>NAND and NOR are universal gates</li>
+    </ul>
+  </div>
+
+  <div class="remember">
+    <h4>🏆 Exam Day Checklist</h4>
+    <ul style="padding-left:18px;font-size:.87rem;line-height:2">
+      <li>Write sign convention at start of EVERY optics numerical</li>
+      <li>State the law before using it in every derivation</li>
+      <li>Draw and label diagram for compound microscope, transformer, cyclotron, potentiometer</li>
+      <li>Include units in EVERY final numerical answer</li>
+      <li>Draw phasor diagram for every LCR / AC question</li>
+      <li>Verify decay equations: both A and Z must balance</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════ PRACTICE PAPERS ═══════════════ -->
+<section id="sec-pp" style="display:none">
+  <div class="sec-title">📝 Practice Papers</div>
+  <div class="sec-sub">Full-length CBSE-pattern papers — 70 marks, 3 hours</div>
+
+  <div class="pp-tabs">
+    <button class="pp-tab-btn active" onclick="showPP('pp1',this)">Paper 1</button>
+    <button class="pp-tab-btn" onclick="showPP('pp2',this)">Paper 2</button>
+    <button class="pp-tab-btn" onclick="showPP('pp3',this)">Paper 3</button>
+  </div>
+
+  <!-- PAPER 1 -->
+  <div class="practice-paper" id="pp1">
+    <div class="pp-header">Practice Paper 1 · Physics XII · 70 Marks · 3 Hours</div>
+    <p style="font-size:.82rem;color:var(--text);opacity:.7;margin-bottom:1rem">General Instructions: All questions compulsory. Section A = MCQ (1M each). Section B = 2M each. Section C = 3M each. Section D = Case-based 4M. Section E = 5M each.</p>
+
+    <div class="pp-section">SECTION A — Multiple Choice (1 mark each)</div>
+    <div class="pp-q">1. The electric field inside a hollow spherical conductor placed in an external electric field is:<br>(a) Equal to external field &nbsp; (b) Zero &nbsp; (c) Double the external field &nbsp; (d) Half the external field</div>
+    <div class="pp-q">2. A wire of resistance R is bent into a circle. The effective resistance between the two ends of any diameter is:<br>(a) R &nbsp; (b) R/2 &nbsp; (c) R/4 &nbsp; (d) 2R</div>
+    <div class="pp-q">3. The cyclotron is used to accelerate:<br>(a) Neutrons &nbsp; (b) Electrons &nbsp; (c) Protons &nbsp; (d) Photons</div>
+    <div class="pp-q">4. In Young's double slit experiment, when the whole apparatus is immersed in water (n=4/3), the fringe width:<br>(a) Increases by 4/3 &nbsp; (b) Decreases by 3/4 &nbsp; (c) Remains same &nbsp; (d) Doubles</div>
+    <div class="pp-q">5. The stopping potential in photoelectric effect depends on:<br>(a) Intensity of incident light &nbsp; (b) Frequency of incident light &nbsp; (c) Nature of cathode material only &nbsp; (d) Both (b) and (c)</div>
+
+    <div class="pp-section">SECTION B — Short Answer (2 marks each)</div>
+    <div class="pp-q">6. State Kirchhoff's current law. What physical principle is it based on?</div>
+    <div class="pp-q">7. Define magnetic flux. What is the SI unit? Write its dimensional formula.</div>
+    <div class="pp-q">8. Draw the circuit symbol and truth table of a NAND gate. Why is it called a universal gate?</div>
+    <div class="pp-q">9. An object is placed 20 cm from a concave lens of focal length 15 cm. Find position and nature of image.</div>
+    <div class="pp-q">10. State the principle of working of a moving coil galvanometer.</div>
+
+    <div class="pp-section">SECTION C — Short Answer (3 marks each)</div>
+    <div class="pp-q">11. (a) State Gauss's law. (b) Using Gauss's law, derive the expression for electric field due to a uniformly charged infinite plane sheet of charge density σ.</div>
+    <div class="pp-q">12. A series LCR circuit has L = 0.5 H, C = 8 μF, R = 100 Ω. Find (a) resonant frequency, (b) impedance at resonance, (c) Q-factor.</div>
+    <div class="pp-q">13. With the help of a neat labelled diagram, describe the working of a potentiometer to compare the emf of two cells.</div>
+    <div class="pp-q">14. Explain the terms: (a) Critical angle (b) Total internal reflection. State two applications of TIR.</div>
+
+    <div class="pp-section">SECTION D — Case Study (4 marks)</div>
+    <div class="pp-q">15. <strong>Case Study: Transformer</strong><br>A transformer works on the principle of mutual induction. It has a primary coil of N_p turns and secondary coil of N_s turns. When AC voltage V_p is applied to the primary, V_s appears at the secondary where V_s/V_p = N_s/N_p.<br>
+    (a) What type of transformer has N_s &gt; N_p? (b) A transformer steps up 220V to 22,000V. Find N_s/N_p. (c) If primary current is 10A, find secondary current (ideal transformer). (d) Why can't a transformer work on DC?</div>
+
+    <div class="pp-section">SECTION E — Long Answer (5 marks each)</div>
+    <div class="pp-q">16. (a) Draw a labelled ray diagram to show the formation of image by a compound microscope when final image is at the near point. (b) Derive an expression for the total magnifying power. (c) How would the magnification change if an eyepiece of shorter focal length is used?</div>
+    <div class="pp-q">17. (a) State and prove Faraday's laws of electromagnetic induction. (b) A rectangular loop (25 cm × 10 cm) is placed in a magnetic field of 0.5 T perpendicular to its plane. The loop is pulled out of the field in 0.1 s. Find the induced emf and current if R = 2 Ω.</div>
+  </div>
+
+  <!-- PAPER 2 -->
+  <div class="practice-paper" id="pp2" style="display:none">
+    <div class="pp-header">Practice Paper 2 · Physics XII · 70 Marks · 3 Hours</div>
+    <div class="pp-section">SECTION A — Multiple Choice (1 mark each)</div>
+    <div class="pp-q">1. Equipotential surfaces are always:<br>(a) Parallel to electric field lines &nbsp; (b) Perpendicular to electric field lines &nbsp; (c) At 45° to field lines &nbsp; (d) Along field lines</div>
+    <div class="pp-q">2. The SI unit of magnetic susceptibility is:<br>(a) T &nbsp; (b) A/m &nbsp; (c) Dimensionless &nbsp; (d) H/m</div>
+    <div class="pp-q">3. In a step-down transformer, the current in secondary compared to primary is:<br>(a) Less &nbsp; (b) More &nbsp; (c) Equal &nbsp; (d) Zero</div>
+    <div class="pp-q">4. The wavelength of light in a medium of refractive index n is:<br>(a) nλ₀ &nbsp; (b) λ₀/n &nbsp; (c) λ₀/n² &nbsp; (d) n²λ₀</div>
+    <div class="pp-q">5. The de Broglie wavelength of a particle is independent of:<br>(a) Mass &nbsp; (b) Velocity &nbsp; (c) Charge &nbsp; (d) Momentum</div>
+
+    <div class="pp-section">SECTION B — Short Answer (2 marks each)</div>
+    <div class="pp-q">6. Derive the expression for energy stored in a parallel plate capacitor.</div>
+    <div class="pp-q">7. Define self-inductance. What is its SI unit? Write the dimensional formula.</div>
+    <div class="pp-q">8. What is Brewster's law? State Malus's law and write the mathematical form.</div>
+    <div class="pp-q">9. Calculate the de Broglie wavelength of an electron accelerated through a potential difference of 100 V.</div>
+    <div class="pp-q">10. What is the difference between intrinsic and extrinsic semiconductors?</div>
+
+    <div class="pp-section">SECTION C — Short Answer (3 marks each)</div>
+    <div class="pp-q">11. (a) What is drift velocity? (b) Derive the relation between current density J, drift velocity v_d and carrier density n. (c) Why is drift velocity of electrons very small (~10⁻⁴ m/s) yet current flows instantaneously?</div>
+    <div class="pp-q">12. The binding energy per nucleon for ₂₆Fe⁵⁶ is 8.8 MeV and for ₂He⁴ is 7.1 MeV. Explain why iron is the most stable nucleus. How does the BE/A curve explain both fission and fusion releasing energy?</div>
+    <div class="pp-q">13. With a circuit diagram, explain how a Wheatstone bridge works. State the balance condition.</div>
+    <div class="pp-q">14. Derive the expression for motional EMF (ε = Bvl) for a conductor of length l moving with velocity v perpendicular to magnetic field B.</div>
+
+    <div class="pp-section">SECTION D — Case Study (4 marks)</div>
+    <div class="pp-q">15. <strong>Case Study: Photoelectric Effect</strong><br>When light of frequency above threshold falls on a metal, electrons are emitted. Einstein proposed E = hf and KE_max = hf − φ. The stopping potential V₀ satisfies eV₀ = KE_max. Intensity affects current, not KE.<br>
+    (a) Define threshold frequency. (b) If φ = 2.0 eV and f = 7×10¹⁴ Hz, find KE_max. (c) What is the stopping potential? (d) Why does increasing intensity NOT change stopping potential?</div>
+
+    <div class="pp-section">SECTION E — Long Answer (5 marks each)</div>
+    <div class="pp-q">16. (a) Derive the expression for impedance of a series LCR circuit using phasor diagram. (b) What is resonance? (c) At resonance, f₀ = 1/(2π√LC). A series LCR has L=0.1H, C=10μF, R=50Ω. Find resonant frequency and Q-factor.</div>
+    <div class="pp-q">17. (a) State Bohr's postulates for hydrogen atom. (b) Derive the expression for radius of nth orbit and total energy of electron. (c) Calculate the wavelength of radiation emitted when electron transitions from n=3 to n=2 in hydrogen atom. (R_H = 1.097×10⁷ m⁻¹)</div>
+  </div>
+
+  <!-- PAPER 3 -->
+  <div class="practice-paper" id="pp3" style="display:none">
+    <div class="pp-header">Practice Paper 3 · Physics XII · 70 Marks · 3 Hours</div>
+    <div class="pp-section">SECTION A — Multiple Choice (1 mark each)</div>
+    <div class="pp-q">1. Assertion: Electric field lines never intersect each other. Reason: No two electric field lines can have the same direction at a point.<br>(a) Both A and R true, R is correct explanation &nbsp; (b) Both true, R not correct explanation &nbsp; (c) A true, R false &nbsp; (d) A false, R true</div>
+    <div class="pp-q">2. The power dissipated in a pure inductor connected to AC source is:<br>(a) V_rms × I_rms &nbsp; (b) Zero &nbsp; (c) V_rms²/X_L &nbsp; (d) I_rms² × X_L</div>
+    <div class="pp-q">3. In p-type semiconductor, majority carriers are:<br>(a) Electrons &nbsp; (b) Holes &nbsp; (c) Protons &nbsp; (d) Neutrons</div>
+    <div class="pp-q">4. Which EM wave is used in radar?<br>(a) Infrared &nbsp; (b) Ultraviolet &nbsp; (c) Microwaves &nbsp; (d) X-rays</div>
+    <div class="pp-q">5. The work function of a metal is 3.0 eV. The threshold frequency is approximately:<br>(a) 7.3×10¹⁴ Hz &nbsp; (b) 5×10¹⁴ Hz &nbsp; (c) 3×10¹⁵ Hz &nbsp; (d) 4.5×10¹⁴ Hz</div>
+
+    <div class="pp-section">SECTION B — Short Answer (2 marks each)</div>
+    <div class="pp-q">6. State the working principle of a cyclotron. What is the cyclotron frequency?</div>
+    <div class="pp-q">7. Define the angle of dip and angle of declination. Where on Earth is the angle of dip 90°?</div>
+    <div class="pp-q">8. What is AM modulation? Write the expression for modulated wave.</div>
+    <div class="pp-q">9. An object is placed 15 cm from a concave mirror of focal length 10 cm. Find image distance and magnification.</div>
+    <div class="pp-q">10. Why are NAND and NOR gates called universal gates? Give one example of each.</div>
+
+    <div class="pp-section">SECTION C — Short Answer (3 marks each)</div>
+    <div class="pp-q">11. (a) State Biot-Savart law. (b) Apply it to derive the magnetic field at the centre of a circular current-carrying loop of N turns and radius R. (c) State the direction using the right-hand rule.</div>
+    <div class="pp-q">12. (a) What is refraction through a prism? (b) Derive the relation n = sin[(A+δ_m)/2] / sin(A/2) where δ_m is the angle of minimum deviation. (c) What is dispersion?</div>
+    <div class="pp-q">13. Explain (a) depletion layer, (b) barrier potential in a p-n junction. How does forward bias change these?</div>
+    <div class="pp-q">14. Calculate the energy equivalent of 1 atomic mass unit (1 amu = 1.66×10⁻²⁷ kg). Express your answer in MeV.</div>
+
+    <div class="pp-section">SECTION D — Case Study (4 marks)</div>
+    <div class="pp-q">15. <strong>Case Study: Young's Double Slit Experiment</strong><br>Two coherent sources S₁ and S₂ are separated by distance d. Screen is at distance D. Path difference for a point P at height y: Δx = yd/D. Bright fringe when Δx = nλ; dark fringe when Δx = (2n−1)λ/2. Fringe width β = λD/d.<br>
+    (a) What conditions are needed for sustained interference? (b) β = 0.6 mm when D=1.5m, d=1mm. Find λ. (c) How does fringe width change when slit separation is halved? (d) If the experiment is done in water (n=1.33), find new fringe width.</div>
+
+    <div class="pp-section">SECTION E — Long Answer (5 marks each)</div>
+    <div class="pp-q">16. (a) Explain Huygens' principle. (b) Using it, prove Snell's law of refraction. (c) What is the critical angle for a glass-air interface where glass has n=1.5? Calculate it and explain what happens above this angle.</div>
+    <div class="pp-q">17. (a) Describe the construction and working of a common emitter transistor amplifier with a circuit diagram. (b) Derive the expression for voltage gain. (c) A CE amplifier has input resistance 1kΩ, output resistance 10kΩ, β=50. Calculate voltage gain.</div>
+  </div>
+
+  <!-- PAPER 2 -->
+  <div class="practice-paper" id="pp2" style="display:none">
+    <div class="pp-header">Practice Paper 2 · Physics XII · 70 Marks · 3 Hours</div>
+    <p style="font-size:.82rem;color:var(--text);opacity:.7;margin-bottom:1rem">Focus: Magnetism, EMI, Optics &amp; Modern Physics emphasis.</p>
+    <div class="pp-section">SECTION A — MCQ (16 × 1 = 16 M)</div>
+    <div class="pp-q">1. The magnetic moment of a current loop of area A carrying current I in a field B is: (a) IAB (b) IA (c) IB (d) A/I</div>
+    <div class="pp-q">2. The SI unit of magnetic flux is: (a) Tesla (b) Weber (c) Henry (d) Ampere·meter²</div>
+    <div class="pp-q">3. Lenz's law is a consequence of conservation of: (a) Charge (b) Momentum (c) Energy (d) Mass</div>
+    <div class="pp-q">4. In an AC circuit with only capacitor, the phase of current compared to voltage is: (a) Same (b) Leads by 90° (c) Lags by 90° (d) Leads by 45°</div>
+    <div class="pp-q">5. Which of the following is NOT an electromagnetic wave? (a) X-ray (b) γ-ray (c) Ultrasound (d) UV ray</div>
+    <div class="pp-q">6. For a convex mirror, image formed is always: (a) Real and magnified (b) Virtual and diminished (c) Real and inverted (d) Virtual and magnified</div>
+    <div class="pp-q">7. The radius of nth Bohr orbit is proportional to: (a) n (b) n² (c) n³ (d) 1/n</div>
+    <div class="pp-q">8. Which series of hydrogen spectrum lies in visible range? (a) Lyman (b) Balmer (c) Paschen (d) Brackett</div>
+    <div class="pp-q">9. Binding energy per nucleon is maximum for: (a) H-2 (b) Fe-56 (c) U-238 (d) He-4</div>
+    <div class="pp-q">10. A p-n junction diode in reverse bias has: (a) High resistance (b) Low resistance (c) No resistance (d) Negative resistance</div>
+    <div class="pp-q">11. In an n-type semiconductor, the majority carriers are: (a) Holes (b) Free electrons (c) Protons (d) Neutrons</div>
+    <div class="pp-q">12. The modulation index for AM must be: (a) Greater than 1 (b) Equal to 1 (c) Less than or equal to 1 (d) Any value</div>
+    <div class="pp-q">13-16. [Assertion-Reason: Diamagnetic substances repelled; Transformer works on AC; Photon has no charge; NAND gate is universal gate]</div>
+    <div class="pp-section">SECTION B — SA I (5 × 2 = 10 M)</div>
+    <div class="pp-q">17. State Fleming's right-hand rule and left-hand rule. When is each applied?</div>
+    <div class="pp-q">18. What is self-inductance? Give its SI unit and formula for a solenoid.</div>
+    <div class="pp-q">19. Draw a labelled diagram of an AC generator. State the principle.</div>
+    <div class="pp-q">20. What is RADAR? Mention the electromagnetic waves used in it and their properties.</div>
+    <div class="pp-q">21. State radioactive decay law. Write the expression for activity at time t.</div>
+    <div class="pp-section">SECTION C — SA II (7 × 3 = 21 M)</div>
+    <div class="pp-q">22. Derive an expression for the torque acting on a magnetic dipole in a uniform magnetic field.</div>
+    <div class="pp-q">23. Explain Faraday's laws of electromagnetic induction. Derive motional EMF: ε = Blv.</div>
+    <div class="pp-q">24. Derive the expression for impedance and phase angle in a series LCR circuit driven by AC.</div>
+    <div class="pp-q">25. State Huygen's principle. Using it, prove the law of reflection.</div>
+    <div class="pp-q">26. Explain photoelectric effect. Draw and explain the I-V graph for different intensities at same frequency.</div>
+    <div class="pp-q">27. Write three properties of nuclear forces. Compare nuclear stability using BE/nucleon curve.</div>
+    <div class="pp-q">28. Draw input and output characteristics of a CE transistor. Identify active, saturation and cut-off regions.</div>
+    <div class="pp-section">SECTION D — Case-Based (4 M)</div>
+    <div class="pp-q">29. A transformer has 1000 primary turns and 100 secondary turns. Primary supply = 220V. Find: (i) Secondary voltage (ii) If load = 100Ω, find secondary current (iii) Primary current assuming ideal transformer (iv) Power transferred.</div>
+    <div class="pp-section">SECTION E — LA (3 × 5 = 15 M)</div>
+    <div class="pp-q">30. (a) State and prove Biot-Savart law. (b) Using it, find magnetic field at the centre of a circular current-carrying loop. (c) Two loops of radii 5cm and 10cm carry currents 2A each. Find ratio of magnetic fields at centres.</div>
+    <div class="pp-q">31. (a) Define wavefront. Types of wavefronts. (b) Explain interference of light. Derive condition for constructive and destructive interference. (c) In YDSE: λ=589nm, d=0.2mm, D=1m. Find fringe width and position of 3rd dark fringe.</div>
+    <div class="pp-q">32. (a) Explain energy band theory in solids. (b) Distinguish between conductor, semiconductor and insulator using band theory. (c) Draw and explain a half-wave rectifier circuit. Find its frequency output if input is 50Hz.</div>
+  </div>
+
+  <!-- PAPER 3 -->
+  <div class="practice-paper" id="pp3" style="display:none">
+    <div class="pp-header">Practice Paper 3 · Physics XII · 70 Marks · 3 Hours (Challenge)</div>
+    <p style="font-size:.82rem;color:var(--text);opacity:.7;margin-bottom:1rem">Higher-order thinking &amp; numericals-heavy. Board Exam Level.</p>
+    <div class="pp-section">SECTION A — MCQ (16 M)</div>
+    <div class="pp-q">1. Two point charges +4μC and −1μC are placed 30cm apart. The point on the line joining them where E=0 is: (a) 10cm from +4μC outside (b) 30cm from −1μC outside (c) 20cm from +4μC on line between them (d) 60cm from −1μC outside</div>
+    <div class="pp-q">2. If the potential at a point is V = 3x² + 4y, then E at (1,1) is: (a) 6î + 4ĵ (b) −6î − 4ĵ (c) 6î − 4ĵ (d) −6î + 4ĵ [Hint: E = −∇V]</div>
+    <div class="pp-q">3. A proton and an alpha particle accelerated through same potential V. Ratio of their de Broglie wavelengths λp : λα = (a) 2√2 (b) √2 (c) 1 (d) 2</div>
+    <div class="pp-q">4. In a mass spectrometer, radius of circular path r = mv/qB. If kinetic energy is kept same, ratio of radii of proton and deuteron is: (a) 1:1 (b) 1:√2 (c) √2:1 (d) 1:2</div>
+    <div class="pp-q">5-16. [Numericals on: Resistance in parallel/series, Mutual inductance between coaxial solenoids, Fringe shift in YDSE, Threshold frequency from stopping potential graph, Alpha particle scattering closest distance, Q-value of nuclear reaction, AND/NOR gate combinations, Sky wave vs space wave propagation]</div>
+    <div class="pp-section">SECTION B — SA I (10 M)</div>
+    <div class="pp-q">17. A 2μF and 3μF capacitor connected in series across 100V. Find charge on each and pd across each.</div>
+    <div class="pp-q">18. A galvanometer of resistance 50Ω gives full-scale deflection for 1mA. Convert to (a) voltmeter for 10V (b) ammeter for 1A.</div>
+    <div class="pp-q">19. Electromagnetic spectrum: arrange in increasing order of wavelength: UV, X-ray, IR, visible, microwave, radio, γ-ray.</div>
+    <div class="pp-q">20. Calculate the energy released when 3.5 kg of U-235 undergoes fission. (1 fission → 200 MeV; NA=6×10²³)</div>
+    <div class="pp-q">21. A NOR gate output is 1 only when both inputs are 0. Write truth table for: (i) NOR gate (ii) NOR+NOT = OR reconstruction.</div>
+    <div class="pp-section">SECTION C — SA II (21 M)</div>
+    <div class="pp-q">22. Derive energy stored in an inductor: U = ½LI². A 2H inductor carries 5A; energy stored? If current doubles, what happens to energy?</div>
+    <div class="pp-q">23. Explain total internal reflection with diagram and two real-life applications. Derive expression for critical angle.</div>
+    <div class="pp-q">24. In Compton scattering, why is the effect observable with X-rays but not visible light? Derive expression for Compton shift.</div>
+    <div class="pp-q">25. Calculate the wavelength emitted when hydrogen electron jumps from n=5 to n=2. Identify the series. (R=1.097×10⁷ m⁻¹)</div>
+    <div class="pp-q">26. What is nuclear fission? Write the fission equation for U-235. Calculate energy in MeV. Compare with nuclear fusion.</div>
+    <div class="pp-q">27. Draw and explain the block diagram of an AM modulation system. Define modulation index and significance of keeping it ≤1.</div>
+    <div class="pp-q">28. Three equal resistors each R connected in triangle. Find equivalent resistance between any two vertices.</div>
+    <div class="pp-section">SECTION D — Case-Based (4 M)</div>
+    <div class="pp-q">29. Prism and Dispersion: A prism of angle 60° and μ=1.5. (i) Find minimum deviation. (ii) Refracting angle at minimum deviation. (iii) Why do different colours deviate by different amounts? (iv) Define dispersive power.</div>
+    <div class="pp-section">SECTION E — LA (15 M)</div>
+    <div class="pp-q">30. (a) Derive van de Graaff generator working from first principles — why charge accumulates on outer shell. (b) Practical uses. (c) A van de Graaff sphere of radius 1m is charged to V=3×10⁶V. Find: surface charge density, capacity, charge stored.</div>
+    <div class="pp-q">31. (a) Explain LASER principle: stimulated emission, population inversion, optical pumping. (b) How is laser light different from ordinary light? (c) Semiconductor lasers — how they differ from gas lasers. (d) Applications in medicine and communication.</div>
+    <div class="pp-q">32. (a) Explain the photodiode construction and working. (b) Draw and explain I-V characteristics in forward and reverse bias. (c) Why is photodiode used in reverse bias? (d) A photodiode registers current 10μA in dark and 20mA in light. Calculate the photocurrent.</div>
+  </div>
+</section>
+
+<!-- ═══════════════ EXAM SIMULATOR ═══════════════ -->
+<section id="sec-sim" style="display:none">
+  <div class="sec-title">🎮 Exam Simulator</div>
+  <div class="sec-sub">MCQ drill — 35 questions, timed, auto-scored with visual score dashboard</div>
+
+  <div id="sim-start">
+    <div class="sim-info">
+      <div class="sim-stat-box"><div class="sim-num">35</div><div>Questions</div></div>
+      <div class="sim-stat-box"><div class="sim-num">35</div><div>Minutes</div></div>
+      <div class="sim-stat-box"><div class="sim-num">All 15</div><div>Chapters</div></div>
+    </div>
+    <button class="btn-start" onclick="startSim()">Start Simulator ▶</button>
+  </div>
+
+  <div id="sim-quiz" style="display:none">
+    <div class="sim-header">
+      <span id="sim-q-num">Q 1/35</span>
+      <span id="sim-timer">⏱ 35:00</span>
+      <span id="sim-score-live">Score: 0</span>
+    </div>
+
+    <!-- LIVE DONUT (visible during quiz) -->
+    <div class="sim-live-donut-wrap">
+      <svg id="sim-live-donut" viewBox="0 0 120 120" width="90" height="90">
+        <circle cx="60" cy="60" r="50" fill="none" stroke="var(--border)" stroke-width="16"/>
+        <circle id="sldc" cx="60" cy="60" r="50" fill="none"
+          stroke="var(--mint)" stroke-width="16" stroke-linecap="butt"
+          stroke-dasharray="0 314" stroke-dashoffset="0"
+          style="transition:stroke-dasharray .5s ease;transform:rotate(-90deg);transform-origin:60px 60px"/>
+        <circle id="sldw" cx="60" cy="60" r="50" fill="none"
+          stroke="var(--coral)" stroke-width="16" stroke-linecap="butt"
+          stroke-dasharray="0 314" stroke-dashoffset="0"
+          style="transition:stroke-dasharray .5s ease .15s;transform:rotate(-90deg);transform-origin:60px 60px"/>
+        <text x="60" y="57" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)" id="sld-pct">0%</text>
+        <text x="60" y="71" text-anchor="middle" font-size="8" fill="var(--text)" opacity=".55">live</text>
+      </svg>
+      <div class="sim-live-legend">
+        <span class="sim-live-dot c"></span><span id="sld-c">0</span>
+        <span class="sim-live-dot w"></span><span id="sld-w">0</span>
+        <span class="sim-live-dot s"></span><span id="sld-s">0</span>
+      </div>
+    </div>
+
+    <div id="sim-q-text" class="sim-q-text"></div>
+    <div id="sim-opts" class="sim-opts"></div>
+    <div id="sim-feedback" class="sim-feedback" style="display:none"></div>
+    <button id="sim-next-btn" class="sim-next-btn" onclick="nextSimQ()" style="display:none">
+      <span class="sim-next-label">Next Question</span>
+      <svg class="sim-next-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </button>
+  </div>
+
+  <div id="sim-result" style="display:none">
+    <div class="sim-result-box">
+      <div class="sim-result-score" id="sim-final-score"></div>
+      <div class="sim-result-grade" id="sim-final-grade"></div>
+      <div class="sim-result-msg" id="sim-final-msg"></div>
+
+      <!-- GRAPHICAL DASHBOARD -->
+      <div class="sim-dash">
+        <!-- Donut chart -->
+        <div class="sim-donut-wrap">
+          <svg id="sim-donut" viewBox="0 0 120 120" width="160" height="160">
+            <circle cx="60" cy="60" r="50" fill="none" stroke="var(--border)" stroke-width="18"/>
+            <circle id="sim-donut-correct" cx="60" cy="60" r="50" fill="none"
+              stroke="var(--mint)" stroke-width="18" stroke-linecap="round"
+              stroke-dasharray="0 314" stroke-dashoffset="78.5"
+              style="transition:stroke-dasharray 1s ease;transform:rotate(-90deg);transform-origin:60px 60px"/>
+            <circle id="sim-donut-wrong" cx="60" cy="60" r="50" fill="none"
+              stroke="var(--coral)" stroke-width="18" stroke-linecap="round"
+              stroke-dasharray="0 314" stroke-dashoffset="78.5"
+              style="transition:stroke-dasharray 1s ease .3s;transform:rotate(-90deg);transform-origin:60px 60px"/>
+            <text x="60" y="55" text-anchor="middle" font-size="18" font-weight="700" fill="var(--text)" id="sim-donut-pct"></text>
+            <text x="60" y="72" text-anchor="middle" font-size="9" fill="var(--text)" opacity=".6">Score</text>
+          </svg>
+          <div class="sim-donut-legend">
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--mint)"></span><span id="sim-leg-correct">Correct: 0</span></div>
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--coral)"></span><span id="sim-leg-wrong">Incorrect: 0</span></div>
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--border)"></span><span id="sim-leg-skip">Skipped: 0</span></div>
+          </div>
+        </div>
+
+        <!-- Bar breakdown per chapter group -->
+        <div class="sim-bars-wrap">
+          <div class="sim-bars-title">Performance Breakdown</div>
+          <div id="sim-bar-chart"></div>
+        </div>
+      </div>
+
+      <!-- Q-by-Q review strip -->
+      <div class="sim-review-title">Question Review</div>
+      <div id="sim-q-strip"></div>
+
+      <button class="btn-start" onclick="resetSim()" style="margin-top:1.5rem">Try Again ↺</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DASHBOARD ═══════════════ -->
+<section id="sec-dash" style="display:none">
+  <div class="sec-title">📊 My Dashboard</div>
+  <div class="sec-sub">Your learning progress at a glance</div>
+
+  <div class="dash-grid">
+    <div class="dash-metric">
+      <div class="dash-val" id="dash-xp">0</div>
+      <div class="dash-label">Total XP Earned</div>
+    </div>
+    <div class="dash-metric">
+      <div class="dash-val" id="dash-streak">0</div>
+      <div class="dash-label">Day Streak 🔥</div>
+    </div>
+    <div class="dash-metric">
+      <div class="dash-val" id="dash-badges">0</div>
+      <div class="dash-label">Badges Earned</div>
+    </div>
+    <div class="dash-metric">
+      <div class="dash-val" id="dash-chapters">0/15</div>
+      <div class="dash-label">Chapters Started</div>
+    </div>
+  </div>
+
+  <div class="dash-section-title">Chapter Progress</div>
+  <div id="dash-ch-progress"></div>
+
+  <div class="dash-section-title">Study Activity (Last 7 Days)</div>
+  <div class="activity-grid" id="dash-activity"></div>
+
+  <div class="dash-section-title">Badges Earned</div>
+  <div class="badge-showcase" id="dash-badges-list">
+    <div class="badge-item locked" id="badge-starter">⚡ First Step</div>
+    <div class="badge-item locked" id="badge-streak3">🔥 3-Day Streak</div>
+    <div class="badge-item locked" id="badge-streak7">💪 Week Warrior</div>
+    <div class="badge-item locked" id="badge-ch5">📚 Midpoint</div>
+    <div class="badge-item locked" id="badge-ch15">🏆 All Chapters</div>
+    <div class="badge-item locked" id="badge-xp1000">💎 1000 XP</div>
+    <div class="badge-item locked" id="badge-sim-ace">🎯 Sim Ace</div>
+    <div class="badge-item locked" id="badge-pyq">📜 PYQ Explorer</div>
+  </div>
+
+  <button class="btn-secondary" onclick="resetProgress()" style="margin-top:1.5rem">Reset Progress</button>
+</section>
+
+</main>
+
+<!-- ═══ TOAST ═══ -->
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════
+   PHYSICS XII PORTAL — COMPLETE JAVASCRIPT
+   ═══════════════════════════════════════════════ */
+
+// ── SECTION MAP ──
+const MAP = {
+  home:'sec-home', ch1:'sec-ch1', ch2:'sec-ch2', ch3:'sec-ch3',
+  ch4:'sec-ch4', ch5:'sec-ch5', ch6:'sec-ch6', ch7:'sec-ch7',
+  ch8:'sec-ch8', ch9:'sec-ch9', ch10:'sec-ch10', ch11:'sec-ch11',
+  ch12:'sec-ch12', ch13:'sec-ch13', ch14:'sec-ch14', ch15:'sec-ch15',
+  pyq:'sec-pyq', mistakes:'sec-mistakes', examiner:'sec-examiner',
+  highprob:'sec-highprob', lastmin:'sec-lastmin', pp:'sec-pp',
+  sim:'sec-sim', dash:'sec-dash'
+};
+let curKey="home";
+
+// ── STORAGE HELPERS ──
+function ls(k,v){try{if(v!==undefined)localStorage.setItem(k,JSON.stringify(v));else{const r=localStorage.getItem(k);return r?JSON.parse(r):null;}}catch(e){return null;}}
+
+// ── STATE ──
+let state = ls('phyxii_state') || {
+  xp:0, streak:0, lastVisit:'', badges:[], chapProgress:{},
+  simBest:0, simCount:0, activity:{}, pyqOpened:0
+};
+
+function saveState(){ls('phyxii_state',state);}
+
+// ── NAVIGATION ──
+function go(key){
+  Object.values(MAP).forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)el.style.display='none';
+  });
+  const target=MAP[key];
+  if(target){
+    const el=document.getElementById(target);
+    if(el){el.style.display='block'; window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-(document.querySelector('.main-tabs-wrap')?document.querySelector('.main-tabs-wrap').getBoundingClientRect().bottom+8:138)),behavior:'smooth'});}
+  }
+  // active tab
+  document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
+  const btn=document.querySelector(`.main-tab[onclick*="'${key}'"]`);
+  if(btn){btn.classList.add('active');btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}
+  // track chapter progress
+  if(key.startsWith('ch')){
+    const ch=parseInt(key.slice(2));
+    if(!state.chapProgress[key])state.chapProgress[key]={visits:0};
+    state.chapProgress[key].visits++;
+    awardXP(10,'📖 Chapter visited!');
+    trackActivity();
+    saveState();
+    updateDash();
+  }
+  // track special sections
+  if(key==='pyq'){state.pyqOpened++;if(state.pyqOpened===1)awardBadge('badge-pyq','📜 PYQ Explorer!');}
+  if(key==='sim')checkBadges();
+}
+
+// ── XP SYSTEM ──
+function awardXP(pts,msg){
+  state.xp+=pts;
+  const bar=document.getElementById('xp-fill');
+  const lvl=document.getElementById('xp-level');
+  if(bar){const pct=Math.min(100,(state.xp%500)/5);bar.style.width=pct+'%';}
+  if(lvl){const L=Math.floor(state.xp/500)+1;lvl.textContent='Lv '+L;}
+  if(msg)showToast(msg+' +'+pts+'XP');
+  // badge checks
+  if(state.xp>=1000)awardBadge('badge-xp1000','💎 1000 XP reached!');
+  const dash=document.getElementById('dash-xp');
+  if(dash)dash.textContent=state.xp;
+  saveState();
+}
+
+// ── STREAK ──
+function checkStreak(){
+  const today=new Date().toDateString();
+  if(state.lastVisit===today)return;
+  const yesterday=new Date(Date.now()-86400000).toDateString();
+  if(state.lastVisit===yesterday){
+    state.streak++;
+  } else if(state.lastVisit!==today){
+    state.streak=1;
+  }
+  state.lastVisit=today;
+  if(state.streak>=3)awardBadge('badge-streak3','🔥 3-Day Streak!');
+  if(state.streak>=7)awardBadge('badge-streak7','💪 Week Warrior!');
+  const sb=document.querySelector('.streak-badge');
+  if(sb)sb.textContent='🔥'+state.streak;
+  const dashS=document.getElementById('dash-streak');
+  if(dashS)dashS.textContent=state.streak;
+  saveState();
+}
+
+// ── ACTIVITY TRACKING ──
+function trackActivity(){
+  const today=new Date().toDateString();
+  state.activity[today]=(state.activity[today]||0)+1;
+  saveState();
+}
+
+// ── BADGES ──
+function awardBadge(id,msg){
+  if(state.badges.includes(id))return;
+  state.badges.push(id);
+  const el=document.getElementById(id);
+  if(el)el.classList.remove('locked');
+  showToast('🏆 New Badge: '+msg);
+  awardXP(50,'');
+  const db=document.getElementById('dash-badges');
+  if(db)db.textContent=state.badges.length;
+  saveState();
+}
+
+function checkBadges(){
+  if(!state.badges.includes('badge-starter'))awardBadge('badge-starter','⚡ First Step!');
+  const chCount=Object.keys(state.chapProgress).length;
+  if(chCount>=5)awardBadge('badge-ch5','📚 Midpoint!');
+  if(chCount>=15)awardBadge('badge-ch15','🏆 All Chapters!');
+}
+
+// ── TOAST ──
+function showToast(msg){
+  const t=document.getElementById('toast');
+  if(!t)return;
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+// ── DARK MODE ──
+function toggleDark(){
+  const r=document.documentElement;
+  const cur=r.getAttribute('data-theme');
+  const next=cur==='dark'?'light':'dark';
+  r.setAttribute('data-theme',next);
+  ls('phyxii_theme',next);
+  const btn=document.getElementById('dark-toggle');
+  if(btn)btn.textContent=next==='dark'?'☀️':'🌙';
+}
+(function(){
+  const saved=ls('phyxii_theme');
+  if(saved){
+    document.documentElement.setAttribute('data-theme',saved);
+    const btn=document.getElementById('dark-toggle');
+    if(btn)btn.textContent=saved==='dark'?'☀️':'🌙';
+  }
+})();
+
+// ── NAME MODAL ──
+function saveName(){
+  const inp=document.getElementById('nameInput');
+  const name=inp?inp.value.trim():'';
+  if(!name)return;
+  ls('phyxii_name',name);
+  const uc=document.getElementById('user-chip');
+  if(uc)uc.textContent=name;
+  const modal=document.getElementById('nameModal');
+  if(modal)modal.classList.remove('show');
+  awardBadge('badge-starter','⚡ First Step!');
+  awardXP(25,'Welcome aboard!');
+}
+(function(){
+  const name=ls('phyxii_name');
+  if(!name){
+    const modal=document.getElementById('nameModal');
+    if(modal)setTimeout(()=>modal.classList.add('show'),800);
+  } else {
+    const uc=document.getElementById('user-chip');
+    if(uc)uc.textContent=name;
+  }
+})();
+
+// ── PYQ FILTER ──
+function filterPYQ(cat,btn){
+  document.querySelectorAll('.pyq-chip').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pyq-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
+  });
+}
+
+function toggleAns(btn){
+  const ans=btn.nextElementSibling;
+  if(!ans)return;
+  if(ans.style.display==='block'){
+    ans.style.display='none';
+    btn.textContent='Show Answer ▼';
+  } else {
+    ans.style.display='block';
+    btn.textContent='Hide Answer ▲';
+    awardXP(5,'📜 PYQ reviewed!');
+  }
+}
+
+// ── PRACTICE PAPERS ──
+function showPP(id,btn){
+  document.querySelectorAll('.practice-paper').forEach(p=>p.style.display='none');
+  document.querySelectorAll('.pp-tab-btn').forEach(b=>b.classList.remove('active'));
+  const el=document.getElementById(id);
+  if(el)el.style.display='block';
+  btn.classList.add('active');
+}
+
+// ── MCQ ACTIVITY (Chapter MCQs) ──
+function checkMCQ(qId,correct,btn){
+  const parent=btn.closest('.activity');
+  if(!parent)return;
+  if(parent.dataset.done==='1')return;
+  parent.dataset.done='1';
+  const all=parent.querySelectorAll('button');
+  all.forEach(b=>{
+    b.disabled=true;
+    if(b===btn)b.style.background=correct?'var(--mint)':'var(--coral)';
+    if(b.dataset.correct==='true')b.style.background='var(--mint)';
+  });
+  if(correct){
+    awardXP(15,'✅ Correct!');
+    showToast('✅ Correct! +15 XP');
+  } else {
+    showToast('❌ Not quite — review the concept.');
+  }
+  saveState();
+}
+
+// ══════════════════════════════════════════
+// EXAM SIMULATOR
+// ══════════════════════════════════════════
+const SIM_BANK = [
+  {q:"Electric field inside a charged hollow conductor is:",opts:["σ/ε₀","σ/(2ε₀)","Zero","kq/r²"],ans:2,exp:"A conductor shields its interior; no net field exists inside a closed conductor regardless of external field."},
+  {q:"The work done in moving a charge along an equipotential surface is:",opts:["Maximum","Minimum","Zero","Infinity"],ans:2,exp:"Equipotential surfaces have the same potential everywhere, so no work done (W = qΔV = 0)."},
+  {q:"Which formula gives capacitance of a parallel plate capacitor with dielectric?",opts:["C = ε₀A/d","C = Kε₀A/d","C = ε₀A/Kd","C = KA/ε₀d"],ans:1,exp:"Dielectric constant K increases capacitance: C = Kε₀A/d."},
+  {q:"Resistivity of a conductor depends on:",opts:["Length","Cross-section area","Temperature","All three"],ans:2,exp:"Resistivity is an intrinsic property of material, depending on temperature but NOT on dimensions of the conductor."},
+  {q:"In Wheatstone bridge at balance, no current flows through:",opts:["Battery","All resistors","Galvanometer","External circuit"],ans:2,exp:"Balance condition P/Q = R/S means equal potential at junction points, so no current through the galvanometer branch."},
+  {q:"The force between two parallel current-carrying conductors carrying currents in the same direction is:",opts:["Repulsive","Attractive","Zero","Depends on material"],ans:1,exp:"Same-direction currents attract; opposite-direction currents repel. This is the basis of the definition of 1 Ampere."},
+  {q:"Cyclotron cannot accelerate electrons because:",opts:["Electrons have no charge","Electrons move too fast and become relativistic quickly","Electrons are too heavy","Cyclotron only works for neutral particles"],ans:1,exp:"Electrons become relativistic even at low energies, making their mass increase and cyclotron frequency no longer constant."},
+  {q:"The phenomenon of electromagnetic induction was discovered by:",opts:["Maxwell","Ampere","Faraday","Hertz"],ans:2,exp:"Michael Faraday discovered electromagnetic induction in 1831 and formulated Faraday's laws."},
+  {q:"The Q-factor of an LCR resonant circuit is defined as:",opts:["R/ω₀L","ω₀L/R","ω₀C/R","RC/ω₀"],ans:1,exp:"Q = ω₀L/R = 1/(ω₀CR). Higher Q means sharper resonance and lower energy loss."},
+  {q:"Which EM radiation has the shortest wavelength?",opts:["X-rays","Gamma rays","UV rays","Microwaves"],ans:1,exp:"Gamma rays have the shortest wavelength (and highest frequency/energy), smaller than 0.01 nm."},
+  {q:"The phenomenon responsible for optical fibre working is:",opts:["Refraction","Diffraction","Total internal reflection","Scattering"],ans:2,exp:"TIR occurs when light hits the interface from a denser medium at an angle exceeding the critical angle — the basis of optical fibres."},
+  {q:"In YDSE, if the whole apparatus is immersed in a liquid of refractive index n, fringe width becomes:",opts:["nβ","β/n","β","β/n²"],ans:1,exp:"λ in medium = λ₀/n, so β' = λ'D/d = (λ₀/n)D/d = β/n. Fringe width decreases."},
+  {q:"According to de Broglie hypothesis, moving particles have associated wavelength λ =",opts:["hm/v","h/mv","mv/h","h/(2mv)"],ans:1,exp:"de Broglie wavelength λ = h/p = h/(mv), where h is Planck's constant and p is momentum."},
+  {q:"In Bohr's model, the energy of hydrogen atom in nth orbit is:",opts:["13.6n² eV","13.6/n eV","-13.6/n² eV","-13.6n eV"],ans:2,exp:"E_n = -13.6/n² eV. Negative sign indicates bound state. Ground state (n=1) energy = -13.6 eV."},
+  {q:"The half-life of a radioactive substance is related to decay constant λ by:",opts:["T½ = λ/0.693","T½ = 0.693λ","T½ = 0.693/λ","T½ = 1/λ"],ans:2,exp:"T½ = ln2/λ = 0.693/λ. Mean life τ = 1/λ = 1.44 T½."},
+  {q:"A transistor can be used as a switch when it operates in:",opts:["Active region only","Saturation and cutoff regions","Only in cutoff","Only in saturation"],ans:1,exp:"As a switch: ON state = saturation (maximum collector current), OFF state = cutoff (no collector current)."},
+  {q:"Which gate gives output 1 only when all inputs are 0?",opts:["AND","OR","NAND","NOR"],ans:3,exp:"NOR gate: output = 1 only when all inputs are 0. NOR = NOT + OR. NOR is a universal gate."},
+  {q:"The range of frequencies used in FM radio broadcasting is:",opts:["30 Hz – 30 kHz","300 kHz – 3 MHz","88 MHz – 108 MHz","3 GHz – 30 GHz"],ans:2,exp:"FM broadcasting uses the VHF band: 88–108 MHz. AM radio uses medium wave: 535–1605 kHz."},
+  {q:"Binding energy per nucleon is maximum for:",opts:["Hydrogen","Helium","Iron (Fe-56)","Uranium"],ans:2,exp:"Fe-56 has BE/nucleon ≈ 8.8 MeV, the highest of all nuclei. This is why it is the most stable nucleus."},
+  {q:"The stopping potential in photoelectric effect is independent of:",opts:["Frequency of incident light","Work function of metal","Intensity of incident light","Nature of metal"],ans:2,exp:"Stopping potential eV₀ = hf − φ depends on frequency and work function, but NOT on intensity. More intensity = more electrons, same KE_max."},
+  {q:"The electric potential at the centre of a uniformly charged ring of charge Q and radius R is:",opts:["Zero","KQ/R","KQ/R²","2KQ/R"],ans:1,exp:"V = KQ/R at centre. All charge elements are equidistant from centre, so V = kQ/R (not zero; only field is zero at centre)."},
+  {q:"In a series LCR circuit at resonance, impedance is:",opts:["Maximum","Minimum and equals R","Zero","Equal to inductive reactance"],ans:1,exp:"At resonance X_L = X_C, so Z = √(R²+(X_L-X_C)²) = R — minimum possible impedance."},
+  {q:"The magnifying power of a simple microscope is:",opts:["1 + D/f","f/D","D/f","1 - D/f"],ans:0,exp:"M = 1 + D/f when image is at near point D (25 cm). For relaxed eye, M = D/f."},
+  {q:"What is the unit of magnetic flux?",opts:["Tesla","Weber","Henry","Gauss"],ans:1,exp:"Magnetic flux Φ = B·A, unit = Weber (Wb) = Tesla·m². Also: 1 Wb = 10⁸ Maxwell."},
+  {q:"Photoelectric effect proves that light is made of:",opts:["Waves","Photons","Electrons","Neutrinos"],ans:1,exp:"Wave theory fails to explain threshold frequency and instantaneous emission. Einstein's photon model (E=hf) explains all observations."},
+  {q:"The critical angle θ_c for a medium of refractive index n is given by:",opts:["sin θ_c = n","sin θ_c = 1/n","tan θ_c = n","cos θ_c = n"],ans:1,exp:"At critical angle, refracted ray is at 90°: n·sin θ_c = 1·sin 90° → sin θ_c = 1/n."},
+  {q:"In a common emitter transistor amplifier, the phase difference between input and output voltage is:",opts:["0°","90°","180°","270°"],ans:2,exp:"CE amplifier gives 180° phase reversal. When base voltage rises, collector current rises, collector voltage falls — phase inversion."},
+  {q:"The process of superimposing message signal on carrier wave is called:",opts:["Rectification","Modulation","Demodulation","Amplification"],ans:1,exp:"Modulation is the process. AM, FM and PM are the three types. Demodulation is the reverse process at the receiver."},
+  {q:"Lenz's law is a consequence of the law of conservation of:",opts:["Charge","Mass","Energy","Momentum"],ans:2,exp:"Lenz's law states induced current opposes the cause — which ensures energy is conserved (work must be done against opposition)."},
+  {q:"Which type of semiconductor is formed by doping silicon with phosphorus?",opts:["Intrinsic","p-type","n-type","Compound"],ans:2,exp:"Phosphorus has 5 valence electrons; 4 bond with Si, the 5th is a free electron → n-type semiconductor (majority carriers: electrons)."},
+  {q:"The rms value of an AC voltage V = V₀ sin(ωt) is:",opts:["V₀","V₀/2","V₀/√2","√2 V₀"],ans:2,exp:"V_rms = V₀/√2 ≈ 0.707 V₀. Similarly I_rms = I₀/√2. These are the effective values equivalent to DC."},
+  {q:"The phenomenon of rotation of plane of polarisation of light is called:",opts:["Diffraction","Interference","Optical activity","Scattering"],ans:2,exp:"Optical activity (optical rotation) is the rotation of the plane of polarised light by chiral substances like sugar solutions."},
+  {q:"Mass defect in a nucleus is responsible for:",opts:["Radioactivity only","Binding energy","Nuclear fission only","Electron emission"],ans:1,exp:"Binding energy = Δm·c² (Einstein's mass-energy equivalence). The 'missing' mass (Δm) converts to the energy binding the nucleus."},
+  {q:"In amplitude modulation, the bandwidth required is:",opts:["Equal to signal frequency","Twice the signal frequency","Half the signal frequency","Equal to carrier frequency"],ans:1,exp:"AM bandwidth = 2f_m (upper sideband + lower sideband = f_c+f_m and f_c-f_m → bandwidth = 2f_m)."},
+  {q:"The work function of a metal in photoelectric effect is the energy needed to:",opts:["Ionise the metal atom","Remove an electron from the surface","Break the metal lattice","Excite an electron to higher orbital"],ans:1,exp:"Work function φ = minimum energy to liberate an electron from the metal surface. hf = φ + KE_max (Einstein's photoelectric equation)."}
+];
+
+let simQ = [];
+let simIdx = 0;
+let simScore = 0;
+let simTimer = null;
+let simTimeLeft = 2100; // 35 min
+let simAnswered = [];
+
+function startSim(){
+  simQ = [...SIM_BANK].sort(()=>Math.random()-0.5).slice(0,35);
+  simIdx = 0; simScore = 0; simTimeLeft = 2100;
+  simAnswered = new Array(35).fill(null); // null = skipped/unanswered
+  // reset live donut
+  const dc=document.getElementById('sldc'),dw=document.getElementById('sldw');
+  if(dc)dc.style.strokeDasharray='0 314';
+  if(dw){dw.style.strokeDasharray='0 314';dw.style.transform='rotate(-90deg)';}
+  const pt=document.getElementById('sld-pct');if(pt)pt.textContent='0%';
+  const ec=document.getElementById('sld-c'),ew=document.getElementById('sld-w'),es=document.getElementById('sld-s');
+  if(ec)ec.textContent='0 ✓';if(ew)ew.textContent='0 ✗';if(es)es.textContent='35 left';
+  document.getElementById('sim-start').style.display = 'none';
+  document.getElementById('sim-result').style.display = 'none';
+  document.getElementById('sim-quiz').style.display = 'block';
+  renderSimQ();
+  simTimer = setInterval(tickSim, 1000);
+}
+
+function tickSim(){
+  simTimeLeft--;
+  const m = Math.floor(simTimeLeft/60).toString().padStart(2,'0');
+  const s = (simTimeLeft%60).toString().padStart(2,'0');
+  const el = document.getElementById('sim-timer');
+  if(el) el.textContent = '⏱ '+m+':'+s;
+  if(simTimeLeft <= 0){ clearInterval(simTimer); endSim(); }
+}
+
+function renderSimQ(){
+  if(simIdx >= simQ.length){ clearInterval(simTimer); endSim(); return; }
+  const q = simQ[simIdx];
+  document.getElementById('sim-q-num').textContent = 'Q '+(simIdx+1)+'/35';
+  document.getElementById('sim-q-text').textContent = q.q;
+  document.getElementById('sim-feedback').style.display = 'none';
+  document.getElementById('sim-next-btn').style.display = 'none';
+  const opts = document.getElementById('sim-opts');
+  opts.innerHTML = '';
+  q.opts.forEach((o,i)=>{
+    const btn = document.createElement('button');
+    btn.className = 'sim-opt';
+    btn.textContent = String.fromCharCode(65+i) + '. ' + o;
+    btn.onclick = ()=> answerSim(i, btn, q);
+    opts.appendChild(btn);
+  });
+}
+
+function updateLiveDonut(){
+  const total=35;
+  const answered=simAnswered.filter(a=>a!==null);
+  const correct=simAnswered.filter((a,i)=>a!==null&&a===simQ[i].ans).length;
+  const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;
+  const skipped=total-simIdx-1; // remaining unanswered
+  const circ=2*Math.PI*50;
+  const cDash=circ*(correct/total);
+  const wDash=circ*(wrong/total);
+  const dc=document.getElementById('sldc');
+  const dw=document.getElementById('sldw');
+  const pct=answered.length?Math.round(correct/answered.length*100):0;
+  if(dc)dc.style.strokeDasharray=`${cDash} ${circ}`;
+  if(dw){
+    dw.style.strokeDasharray=`${wDash} ${circ}`;
+    dw.style.transform=`rotate(${(correct/total)*360-90}deg)`;
+    dw.style.transformOrigin='60px 60px';
+  }
+  const pt=document.getElementById('sld-pct');
+  if(pt)pt.textContent=`${pct}%`;
+  const ec=document.getElementById('sld-c');
+  const ew=document.getElementById('sld-w');
+  const es=document.getElementById('sld-s');
+  if(ec)ec.textContent=correct+' ✓';
+  if(ew)ew.textContent=wrong+' ✗';
+  if(es)es.textContent=(total-simIdx-1)+' left';
+}
+
+function answerSim(chosen, btn, q){
+  document.querySelectorAll('.sim-opt').forEach(b=>b.disabled=true);
+  const correct = chosen === q.ans;
+  if(correct){ simScore++; btn.classList.add('sim-correct'); }
+  else { btn.classList.add('sim-wrong'); document.querySelectorAll('.sim-opt')[q.ans].classList.add('sim-correct'); }
+  document.getElementById('sim-score-live').textContent = 'Score: '+simScore;
+  const fb = document.getElementById('sim-feedback');
+  fb.innerHTML = (correct?'✅ <strong>Correct!</strong> ':'❌ <strong>Incorrect.</strong> ') + q.exp;
+  fb.style.display = 'block';
+  fb.className = 'sim-feedback '+(correct?'sim-fb-correct':'sim-fb-wrong');
+  simAnswered[simIdx] = chosen; // record answer index for dashboard
+  updateLiveDonut(); // 🔄 live update
+  document.getElementById('sim-next-btn').style.display = 'inline-block';
+}
+
+function nextSimQ(){
+  simIdx++;
+  if(simIdx >= simQ.length){ clearInterval(simTimer); endSim(); }
+  else { renderSimQ(); }
+}
+
+function endSim(){
+  clearInterval(simTimer);
+  document.getElementById('sim-quiz').style.display='none';
+  document.getElementById('sim-result').style.display='block';
+  const total=35;
+  const pct=Math.round(simScore/total*100);
+  let grade='F',msg='Keep practising. Review the concepts.';
+  if(pct>=90){grade='A+';msg='Outstanding! Board topper material! 🏆';}
+  else if(pct>=75){grade='A';msg='Excellent! You are well-prepared.';}
+  else if(pct>=60){grade='B';msg='Good effort. Review weak areas.';}
+  else if(pct>=40){grade='C';msg='Needs work. Go through chapter notes.';}
+  document.getElementById('sim-final-score').textContent=`${simScore}/${total} (${pct}%)`;
+  document.getElementById('sim-final-grade').textContent=`Grade: ${grade}`;
+  document.getElementById('sim-final-msg').textContent=msg;
+
+  // ── GRAPHICAL DASHBOARD ──────────────────────────────────────
+  const wrong=(simAnswers||[]).filter((a,i)=>a!==null&&a!==simQ[i].ans).length;
+  const skipped=(simAnswered||[]).filter(a=>a===null).length;
+  const correct=simScore;
+  const circ=2*Math.PI*50;
+  setTimeout(()=>{
+    const dc=document.getElementById('sim-donut-correct');
+    const dw=document.getElementById('sim-donut-wrong');
+    const cDash=circ*(correct/total);
+    const wDash=circ*(wrong/total);
+    if(dc)dc.style.strokeDasharray=`${cDash} ${circ}`;
+    if(dw){
+      dw.style.strokeDasharray=`${wDash} ${circ}`;
+      dw.style.transform=`rotate(${(correct/total)*360-90}deg)`;
+      dw.style.transformOrigin='60px 60px';
+    }
+    const pt=document.getElementById('sim-donut-pct');
+    if(pt)pt.textContent=`${pct}%`;
+  },150);
+  const lc=document.getElementById('sim-leg-correct');
+  const lw=document.getElementById('sim-leg-wrong');
+  const ls=document.getElementById('sim-leg-skip');
+  if(lc)lc.textContent=`Correct: ${correct}`;
+  if(lw)lw.textContent=`Incorrect: ${wrong}`;
+  if(ls)ls.textContent=`Skipped: ${skipped}`;
+
+  // Bar chart by chapter group
+  const groups=[
+    {label:'Electrostatics (Ch1–2)',qs:[0,1,2,3,4]},
+    {label:'Current & Magnetism (Ch3–5)',qs:[5,6,7,8,9]},
+    {label:'Optics & Waves (Ch6–10)',qs:[10,11,12,13,14]},
+    {label:'Modern Physics (Ch11–15)',qs:[15,16,17,18,19]},
+    {label:'Extended Mix',qs:[20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]},
+  ];
+  const barChart=document.getElementById('sim-bar-chart');
+  if(barChart){
+    barChart.innerHTML='';
+    groups.forEach(g=>{
+      const valid=g.qs.filter(i=>i<(simQ||[]).length);
+      if(!valid.length)return;
+      const gc=valid.filter(i=>(simAnswered||[])[i]===(simQ||[])[i].ans).length;
+      const gw=valid.filter(i=>(simAnswered||[])[i]!==null&&(simAnswered||[])[i]!==(simQ||[])[i].ans).length;
+      const cp=Math.round(gc/valid.length*100);
+      const wp=Math.round(gw/valid.length*100);
+      barChart.innerHTML+=`<div class="sim-bar-row">
+        <div class="sim-bar-label"><span>${g.label}</span><span>${gc}/${valid.length} correct</span></div>
+        <div class="sim-bar-track">
+          <div class="sim-bar-seg-c" style="width:${cp}%"></div>
+          <div class="sim-bar-seg-w" style="width:${wp}%"></div>
+        </div></div>`;
+    });
+  }
+
+  // Q-by-Q strip
+  const strip=document.getElementById('sim-q-strip');
+  if(strip){
+    strip.innerHTML='';
+    (simQ||[]).forEach((q,i)=>{
+      const chosen=(simAnswered||[])[i];
+      const cls=chosen===null?'s':chosen===q.ans?'c':'w';
+      const dot=document.createElement('div');
+      dot.className=`sim-strip-dot ${cls}`;
+      dot.textContent=i+1;
+      dot.title=`Q${i+1}: ${cls==='c'?'Correct':cls==='w'?'Wrong':'Skipped'}`;
+      strip.appendChild(dot);
+    });
+  }
+
+  const xpEarned=simScore*10;
+  awardXP(xpEarned,'🎮 Sim complete!');
+  if(pct>=90)awardBadge('badge-sim-ace','🎯 Sim Ace!');
+  state.simCount=(state.simCount||0)+1;
+  state.simBest=Math.max(state.simBest||0,pct);
+  saveState();
+  updateDash();
+}
+
+function resetSim(){
+  document.getElementById('sim-start').style.display = 'block';
+  document.getElementById('sim-result').style.display = 'none';
+  document.getElementById('sim-quiz').style.display = 'none';
+}
+
+// ── DASHBOARD ──
+function updateDash(){
+  const dx=document.getElementById('dash-xp');
+  const ds=document.getElementById('dash-streak');
+  const db=document.getElementById('dash-badges');
+  const dc=document.getElementById('dash-chapters');
+  if(dx)dx.textContent=state.xp;
+  if(ds)ds.textContent=state.streak;
+  if(db)db.textContent=state.badges.length;
+  const chStarted=Object.keys(state.chapProgress).length;
+  if(dc)dc.textContent=chStarted+'/15';
+
+  // Chapter progress bars
+  const cNames=['Electric Charges & Fields','Electrostatic Potential','Current Electricity','Moving Charges & Magnetism','Magnetism & Matter','EMI','AC Circuits','EM Waves','Ray Optics','Wave Optics','Dual Nature','Atoms','Nuclei','Semiconductors','Communication Systems'];
+  const prog=document.getElementById('dash-ch-progress');
+  if(prog){
+    prog.innerHTML='';
+    cNames.forEach((name,i)=>{
+      const key='ch'+(i+1);
+      const visits=(state.chapProgress[key]||{}).visits||0;
+      const pct=Math.min(100,visits*20);
+      prog.innerHTML+=`<div style="margin-bottom:.75rem">
+        <div style="display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:3px"><span>${name}</span><span>${pct}%</span></div>
+        <div style="background:var(--border);border-radius:4px;height:8px"><div style="width:${pct}%;height:100%;background:var(--subj3);border-radius:4px;transition:width .5s"></div></div>
+      </div>`;
+    });
+  }
+
+  // Badges
+  state.badges.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)el.classList.remove('locked');
+  });
+
+  // Activity grid (last 7 days)
+  const ag=document.getElementById('dash-activity');
+  if(ag){
+    ag.innerHTML='';
+    for(let i=6;i>=0;i--){
+      const d=new Date(Date.now()-i*86400000);
+      const key=d.toDateString();
+      const count=state.activity[key]||0;
+      const intensity=count===0?'':count<3?'low':count<6?'mid':'high';
+      const label=d.toLocaleDateString('en',{weekday:'short',day:'numeric'});
+      ag.innerHTML+=`<div class="act-day ${intensity}" title="${label}: ${count} activities">${d.toLocaleDateString('en',{weekday:'short'})}</div>`;
+    }
+  }
+}
+
+function resetProgress(){
+  if(!confirm('Reset all progress? This cannot be undone.'))return;
+  try{localStorage.removeItem('phyxii_state');localStorage.removeItem('phyxii_name');}catch(e){}
+  location.reload();
+}
+
+// ── SEARCH ──
+function doSearch(e){
+  if(e.key!=='Enter')return;
+  const q=e.target.value.toLowerCase().trim();
+  if(!q)return;
+  const keyMap={
+    'coulomb':'ch1','gauss':'ch1','electric field':'ch1','charge':'ch1',
+    'capacitor':'ch2','potential':'ch2','capacitance':'ch2',
+    'current':'ch3','resistance':'ch3','ohm':'ch3','kirchhoff':'ch3','wheatstone':'ch3',
+    'magnetic':'ch4','biot':'ch4','ampere':'ch4','cyclotron':'ch4','force':'ch4',
+    'magnetism':'ch5','hysteresis':'ch5','para':'ch5','dia':'ch5',
+    'induction':'ch6','faraday':'ch6','lenz':'ch6','emf':'ch6',
+    'ac':'ch7','lc':'ch7','lcr':'ch7','resonance':'ch7','transformer':'ch7',
+    'em wave':'ch8','electromagnetic wave':'ch8','spectrum':'ch8',
+    'lens':'ch9','mirror':'ch9','optics':'ch9','microscope':'ch9','telescope':'ch9','prism':'ch9',
+    'interference':'ch10','diffraction':'ch10','ydse':'ch10','polarisation':'ch10','young':'ch10',
+    'photoelectric':'ch11','de broglie':'ch11','photon':'ch11',
+    'bohr':'ch12','hydrogen':'ch12','atom':'ch12','spectral':'ch12',
+    'nucleus':'ch13','radioactive':'ch13','half life':'ch13','binding energy':'ch13',
+    'semiconductor':'ch14','transistor':'ch14','diode':'ch14','logic gate':'ch14',
+    'communication':'ch15','modulation':'ch15','antenna':'ch15',
+    'pyq':'pyq','previous year':'pyq','board question':'pyq',
+    'mistake':'mistakes','error':'mistakes',
+    'examiner':'examiner','tip':'examiner',
+    'high probability':'highprob','important':'highprob',
+    'last minute':'lastmin','revision':'lastmin',
+    'practice paper':'pp','paper':'pp','test':'pp',
+    'simulator':'sim','quiz':'sim','mcq':'sim',
+    'dashboard':'dash','progress':'dash'
+  };
+  let matched='home';
+  for(const [term,key] of Object.entries(keyMap)){
+    if(q.includes(term)){matched=key;break;}
+  }
+  go(matched);
+  e.target.value='';
+  showToast('🔍 Navigating to '+matched.toUpperCase());
+}
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded', function(){
+  // Show home
+  go('home');
+  // Streak check
+  checkStreak();
+  // Update dashboard
+  updateDash();
+  // XP bar restore
+  const bar=document.getElementById('xp-fill');
+  const lvl=document.getElementById('xp-level');
+  if(bar){bar.style.width=Math.min(100,(state.xp%500)/5)+'%';}
+  if(lvl){lvl.textContent='Lv '+(Math.floor(state.xp/500)+1);}
+  // Streak badge
+  const sb=document.querySelector('.streak-badge');
+  if(sb)sb.textContent='🔥'+state.streak;
+  // Search
+  const si=document.getElementById('nav-search');
+  if(si)si.addEventListener('keydown',doSearch);
+  // Chapter progress bars on home
+  for(let i=1;i<=15;i++){
+    const key='ch'+i;
+    const bar=document.getElementById('progress-ch'+i);
+    if(bar){const v=(state.chapProgress[key]||{}).visits||0;bar.style.width=Math.min(100,v*20)+'%';}
+  }
+});
+</script>
+
+
+<!-- ══ ADSENSE BOTTOM LEADERBOARD ══ Highest RPM slot ══ -->
+<div style="padding:16px;text-align:center;border-top:1px solid #dde3ee;background:#f4f6fb;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE BOTTOM ══ -->
+
+</div>
+<div class="side-panel panel-right">
+  <div class="side-panel-inner">
+    <!-- ADSENSE SKYSCRAPER — goes live after approval -->
+    <div class="adsense-sky">
+      <div class="panel-label">Advertisement</div>
+      <div id="ad-right-1"></div>
+<div id="ad-right-2"></div>
+<div id="ad-right-3"></div>
+<!-- AdSense skyscraper -->
+<ins class="adsbygoogle"
+     style="display:block;width:160px;height:600px;"
+     data-ad-client="ca-pub-PENDING"
+     data-ad-slot="SLOT-SKY-PENDING"
+     data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<!-- end AdSense sky -->
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ AD: BOTTOM LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0;">
+  <div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: BOTTOM LEADERBOARD ══ -->
+<!-- AdSense bottom leaderboard -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:728px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-BOTTOM-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});
+// Mobile nav back button
+(function(){
+  const hist=[];
+  window.mobileGoBack=function(){
+    if(hist.length>1){hist.pop();var prev=hist[hist.length-1];_navToM(prev,false);}
+    else{_navToM('home',false);}
+  };
+  function _navToM(k,push){
+    if(push===undefined||push)hist.push(k);
+    var titleEl=document.getElementById('mobileNavTitle');
+    if(titleEl){
+      var btn=document.querySelector('.main-tab.active,.topnav-tab.active');
+      titleEl.textContent=btn?btn.textContent.trim():(k==='home'?'Home':k.toUpperCase());
+    }
+    if(typeof go==='function')go(k);
+    else if(typeof showMainSection==='function')showMainSection(k);
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    hist.push('home');
+    document.querySelectorAll('[onclick]').forEach(function(el){
+      var oc=el.getAttribute('onclick')||'';
+      var m=oc.match(/(?:go|showMainSection)\(['"](\w+)['"]/);
+      if(m){el.addEventListener('click',function(){
+        hist.push(m[1]);
+        var t=document.getElementById('mobileNavTitle');
+        if(t)t.textContent=el.textContent.trim().substring(0,24);
+      });}
+    });
+  });
+})();
+
+</script>
+</div>
+<!-- end AdSense bottom -->
+
+<script src="../portal-shell.js"></script>
+</body>
+</html>

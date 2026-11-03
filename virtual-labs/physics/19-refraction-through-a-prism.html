@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CBSEMOCK | Refraction Through a Prism Virtual Lab</title><style>
+:root{--navy:#101c2d;--panel:#17283c;--panel2:#20364d;--line:#35516b;--cyan:#42d5e8;--green:#75dc75;--amber:#ffc85b;--red:#ff7777;--muted:#9db1c5;--white:#edf5fb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -20%,#294967 0,#101b2b 50%,#0b1421 100%);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--white);min-height:100vh}
+header{padding:18px 24px;border-bottom:1px solid #31475e;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:#0c1725cc}
+.brand{font-weight:800;letter-spacing:1.5px}.brand span{color:var(--cyan)}.sub{font-size:12px;color:var(--muted);margin-top:4px}.tag{border:1px solid #3e617e;padding:7px 11px;border-radius:20px;color:#b9d9ee;font-size:12px}
+main{max-width:1440px;margin:auto;padding:20px}.topline{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:16px;flex-wrap:wrap}h1{font-size:clamp(22px,3vw,32px);margin:0 0 5px}.intro{color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:300px minmax(340px,1fr) 300px;gap:14px;align-items:stretch}
+.panel{background:linear-gradient(160deg,#1b2d42,#142235);border:1px solid #344e67;border-radius:15px;box-shadow:0 12px 30px #0004;overflow:hidden}.panelhead{padding:13px 15px;border-bottom:1px solid #314a63;font-size:12px;letter-spacing:1px;color:#bdd0e1;text-transform:uppercase;display:flex;justify-content:space-between}.panelbody{padding:15px}
+.formula{font-size:30px;text-align:center;font-weight:800;letter-spacing:2px;padding:12px 5px;color:#e8f5ff}.formula b:nth-child(1){color:#61b6ff}.formula b:nth-child(2){color:var(--green)}.formula b:nth-child(3){color:var(--amber)}
+.control{margin:15px 0 20px}.controltop{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:9px}.controltop strong{font-size:15px;color:var(--amber)}input[type=range]{width:100%;accent-color:var(--cyan);cursor:pointer}.limits{display:flex;justify-content:space-between;color:#8299ae;font-size:11px;margin-top:3px}
+.switchrow{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #31475d;font-size:13px}.toggle{width:48px;height:26px;border:0;border-radius:20px;background:#516276;position:relative;cursor:pointer}.toggle:after{content:"";position:absolute;left:4px;top:4px;width:18px;height:18px;border-radius:50%;background:white;transition:.2s}.toggle.on{background:#229c77}.toggle.on:after{left:26px}
+.bench{padding:12px;background:linear-gradient(135deg,#d9d3c6,#b6b4aa);border-radius:12px;min-height:370px;position:relative;overflow:hidden;color:#18212a}
+.bench:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#8e938f 1px,transparent 1.5px);background-size:13px 13px;opacity:.55}
+.benchlabel{position:relative;z-index:1;font-size:11px;font-weight:800;color:#36434b;letter-spacing:1px}
+.circuit{position:relative;z-index:1;width:100%;height:320px;display:block}
+.readings{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}.meter{background:#0c1722;border:2px solid #41566b;border-radius:9px;padding:10px;text-align:center;box-shadow:inset 0 0 12px #0008}.meter small{display:block;color:#a9bfd2;font-size:11px;letter-spacing:1px}.meter strong{font:700 clamp(20px,2.4vw,28px)/1.5 ui-monospace,monospace;color:var(--green);text-shadow:0 0 10px #69d96a55}.meter.volt strong{color:#59b7ff}.meter em{font-style:normal;font-size:12px;color:#9eb1c2}
+.graphwrap{background:#0c1725;border:1px solid #324b64;border-radius:10px;padding:10px;margin-top:14px}.graphtitle{display:flex;justify-content:space-between;font-size:12px;color:#b9cede;margin-bottom:6px}.graph{width:100%;height:190px;display:block}
+.insight{background:#102b36;border:1px solid #236072;border-radius:10px;padding:12px;margin-top:12px;font-size:13px;line-height:1.5;color:#c7e8ef}.insight b{color:#71e1e8}
+.steps{padding-left:19px;margin:0;color:#c7d6e4;font-size:13px;line-height:1.7}.steps li{margin-bottom:8px}.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.btn{border:1px solid #47647e;background:#243d55;color:#edf7ff;border-radius:8px;padding:9px 12px;cursor:pointer;font-weight:650;font-size:12px}.btn.primary{background:#087f88;border-color:#13a4ad}.btn:hover{filter:brightness(1.15)}
+.quiz{margin-top:14px;border-top:1px solid #31475d;padding-top:13px}.quiz p{font-size:13px;line-height:1.5}.quiz button{display:block;width:100%;text-align:left;margin:6px 0;padding:9px;border-radius:8px;border:1px solid #405a73;background:#1b3046;color:#dcebf7;cursor:pointer}.feedback{font-size:12px;min-height:18px;color:var(--green);margin-top:7px}
+footer{text-align:center;color:#7f95aa;font-size:11px;padding:18px}
+
+.ad-slot{border:1px dashed #58718a;background:linear-gradient(135deg,#14263a,#1b3046);color:#9eb5c9;border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.ad-slot:before{content:"ADVERTISEMENT";position:absolute;top:7px;left:10px;font-size:9px;letter-spacing:1.2px;color:#7892aa}
+.ad-slot .ad-copy{font-size:12px;line-height:1.5;padding:18px 10px;color:#b8cadd}
+.ad-slot strong{display:block;color:#d7e8f5;font-size:13px;margin-bottom:3px}
+.ad-top,.ad-bottom{max-width:970px;min-height:100px;margin:16px auto}
+.ad-rail{position:fixed;top:190px;width:150px;height:600px;z-index:5}
+.ad-left{left:max(8px,calc((100vw - 1440px)/2 - 164px))}
+.ad-right{right:max(8px,calc((100vw - 1440px)/2 - 164px))}
+.ad-rail .ad-copy{writing-mode:horizontal-tb}
+.ad-bottom{margin-top:18px;min-height:90px}
+@media(max-width:1650px){.ad-rail{width:120px;height:500px}.ad-left{left:8px}.ad-right{right:8px}}
+/* Reserve a dedicated gutter for the fixed side advertisements.
+   This keeps the experiment workspace fully visible instead of sitting underneath them. */
+@media(min-width:1251px){
+  main{width:calc(100% - 300px);max-width:1140px;margin-left:auto;margin-right:auto}
+  .ad-top,.ad-bottom{width:100%;max-width:970px}
+}
+@media(max-width:1250px){.ad-rail{display:none}main{width:auto;max-width:1440px}}
+@media(max-width:700px){.ad-top{min-height:76px;margin:10px 12px}.ad-bottom{min-height:76px;margin:14px 12px}.ad-top .ad-copy,.ad-bottom .ad-copy{font-size:11px}}
+@media print{.ad-slot{display:none!important}}
+
+
+.learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:15px}
+.learning-card{background:linear-gradient(155deg,#1b3047,#142438);border:1px solid #38546e;border-radius:13px;overflow:hidden}
+.learning-head{padding:12px 15px;border-bottom:1px solid #38546e;color:#c7d9e8;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.learning-body{padding:14px}.progress-track{height:8px;background:#0b1724;border-radius:20px;overflow:hidden;margin:9px 0}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#32c5d5,#75df9a);transition:width .2s}
+.step-item{display:flex;gap:9px;background:#102238;border:1px solid #344f68;border-radius:8px;padding:9px;margin:6px 0;font-size:13px;color:#c8d8e6}
+.step-item.done{border-color:#3d987c;background:#102d2b}.hintbox{display:none;background:#3a2f19;border:1px solid #8c7136;color:#ffe6a6;border-radius:9px;padding:11px;font-size:13px;margin-top:10px}
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.match-item,.match-target{border:1px solid #3c5a73;background:#102238;padding:10px;border-radius:8px;font-size:12px;text-align:center;color:#d8e8f4;cursor:pointer}
+.match-item.selected{outline:2px solid #4bd7df}.match-target{border-style:dashed;cursor:pointer}.match-target.correct{border-color:#65d99a;background:#12342c}
+.quiz-option{display:block;width:100%;text-align:left;margin:7px 0;background:#1a3046;border:1px solid #405b73;color:#e8f2fa;padding:10px;border-radius:8px;cursor:pointer}
+.quiz-option.correct{border-color:#61d99a;background:#12392e}.quiz-option.wrong{border-color:#ff8888;background:#402626}
+.lab-notes{width:100%;min-height:90px;background:#0b1927;color:#eaf5ff;border:1px solid #405b73;border-radius:8px;padding:10px}
+@media(max-width:760px){.learning-grid{grid-template-columns:1fr}}@media print{.learning-card{break-inside:avoid}}
+
+@media(max-width:1050px){.grid{grid-template-columns:280px 1fr}.right{grid-column:1/-1}.right .panelbody{display:grid;grid-template-columns:1fr 1fr;gap:18px}.right .panelbody>div{min-width:0}}
+@media(max-width:700px){main{padding:12px}.grid{grid-template-columns:1fr}.right{grid-column:auto}.right .panelbody{display:block}.bench{min-height:300px}.circuit{height:260px}.panelbody{padding:13px}.formula{font-size:26px}}
+
+.lab-specific{min-height:300px;background:linear-gradient(135deg,#d9d3c6,#b6b4aa);border-radius:12px;padding:18px;color:#18212a;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.lab-specific svg{width:100%;height:300px;max-width:760px}
+.lab-readout{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:12px}
+.lab-readout .meter{min-width:0}
+.lab-control{margin:14px 0}.lab-control label{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin-bottom:7px}.lab-control strong{color:#ffc85b}
+.lab-steps label{display:flex;gap:8px;margin:8px 0;color:#c7d6e4;font-size:13px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.lab-specific{min-height:260px}.lab-specific svg{height:250px}}
+
+.v4-studio{margin:18px 0;border:1px solid #41627b;border-radius:15px;background:#102237;overflow:hidden}
+.v4-head{padding:15px 18px;background:linear-gradient(100deg,#17364b,#1b2b45);border-bottom:1px solid #3b5a73}
+.v4-head h2{font-size:18px;margin:0 0 4px}.v4-head p{font-size:12px;color:#aec3d5;margin:0}
+.v4-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;padding:15px}
+.v4-card{background:#0d1d2e;border:1px solid #36546c;border-radius:11px;padding:13px;min-width:0}
+.v4-card h3{font-size:14px;margin:0 0 8px;color:#e8f4fc}.v4-help{font-size:11px;color:#a9bfd0;line-height:1.55}
+.v4-field{width:100%;padding:9px;background:#091827;color:#eef7ff;border:1px solid #47647c;border-radius:7px;margin:5px 0 9px}
+.v4-btn{padding:8px 11px;border-radius:8px;border:1px solid #4b6c85;background:#203e58;color:#f1f8ff;font-size:11px;font-weight:700;cursor:pointer;margin:3px}
+.v4-btn.primary{background:#087f88;border-color:#16a7ad}
+.v4-feedback{font-size:11px;color:#91e5bd;min-height:20px;margin-top:8px;line-height:1.5}
+.v4-box{background:#091827;border:1px solid #304c63;border-radius:8px;padding:10px;font-size:11px;color:#c7e6ec;line-height:1.65;margin:8px 0}
+.v4-options button{display:block;width:100%;text-align:left;margin:6px 0;padding:9px;border-radius:8px;border:1px solid #405b73;background:#1a3046;color:#e8f2fa;cursor:pointer;font-size:11px}
+.v4-options button.correct{border-color:#61d99a;background:#12392e}.v4-options button.wrong{border-color:#ff8888;background:#402626}
+.v4-canvas{width:100%;height:auto;background:#091827;border:1px solid #2f4d64;border-radius:8px}
+.v4-table{width:100%;border-collapse:collapse;font-size:11px;color:#d8e9f5}.v4-table th,.v4-table td{padding:7px;border-bottom:1px solid #29445b;text-align:right}.v4-table th:first-child,.v4-table td:first-child{text-align:left}
+.v4-rubric{display:grid;grid-template-columns:1fr auto;gap:7px;font-size:11px;color:#d2e4f0;padding:7px 0;border-bottom:1px solid #29445b}
+@media(max-width:760px){.v4-body{grid-template-columns:1fr}}
+@media print{.v4-studio{break-inside:avoid}.v4-btn{display:none}}
+
+</style></head><body>
+<header><div><div class="brand">CBSE<span>MOCK</span> <span style="color:#dceaf5">| PHYSICS STUDIO</span></div><div class="sub">Realistic interactive virtual laboratory · CBSE Physics</div></div><div class="tag">EXPERIMENT 19 / 40</div></header>
+<div class="ad-slot ad-top"><div class="ad-copy"><strong>Top banner placement</strong>Reserved advertising space · responsive leaderboard</div></div>
+<aside class="ad-slot ad-rail ad-left"><div class="ad-copy"><strong>Side ad</strong>Reserved placement<br>160 × 600</div></aside><aside class="ad-slot ad-rail ad-right"><div class="ad-copy"><strong>Side ad</strong>Reserved placement<br>160 × 600</div></aside>
+<main><div class="topline"><div><h1>Refraction Through a Prism</h1><div class="intro">Investigate deviation of light through a triangular prism.</div></div><div class="tag">δ = i + e − A</div></div>
+<div class="grid"><section class="panel"><div class="panelhead">Experiment controls <span>19</span></div><div class="panelbody"><div class="formula">δ = i + e − A</div><div class="lab-control"><label for="angle"><span>Angle of incidence</span><strong id="angleVal">45 °</strong></label><input id="angle" type="range" min="20" max="70" step="0.1" value="45" data-unit="°"></div><div class="lab-control"><label for="prism"><span>Prism angle</span><strong id="prismVal">60 °</strong></label><input id="prism" type="range" min="20" max="70" step="0.1" value="60" data-unit="°"></div><div class="lab-control"><label for="index"><span>Refractive index</span><strong id="indexVal">1.5 n</strong></label><input id="index" type="range" min="1.2" max="1.8" step="0.1" value="1.5" data-unit="n"></div><div class="switchrow"><span>Simulation power / activity</span><button id="power" class="toggle on" aria-label="Toggle activity"></button></div><div class="btnrow"><button class="btn primary" id="record">Record observation</button><button class="btn" id="reset">Reset controls</button></div><div class="insight" id="insight"><b>Observation:</b> Adjust a variable and examine the model response.</div></div></section>
+<section class="panel"><div class="panelhead">Experimental workbench <span id="status">● ACTIVE</span></div><div class="panelbody"><div class="lab-specific"><svg viewBox="0 0 760 330"><rect x="190" y="85" width="380" height="170" rx="18" fill="#e8e5d8" stroke="#59636a" stroke-width="7"/><path d="M220 125H540M220 165H540M220 205H540" stroke="#8b9696" stroke-width="3"/><circle cx="300" cy="165" r="24" fill="#4a9eb2"/><circle cx="460" cy="165" r="24" fill="#e3a44a"/><text x="380" y="45" text-anchor="middle" fill="#26343d" font-size="18" font-weight="bold">Refraction Through a Prism</text><text x="380" y="295" text-anchor="middle" fill="#26343d" font-size="15">Experimental apparatus · interactive model</text></svg></div><div class="lab-readout"><div class="meter"><small>LIVE MODEL VALUE</small><strong id="liveA">—</strong><em>Calculated response</em></div><div class="meter volt"><small>CONTROL SUMMARY</small><strong id="liveB">—</strong><em>Current settings</em></div></div><div class="graphwrap"><div class="graphtitle"><span>LIVE RESPONSE PROFILE</span><span id="graphLabel">Model view</span></div><svg id="graph" class="graph" viewBox="0 0 320 190"></svg></div></div></section>
+<section class="panel right"><div class="panelhead">Live analysis <span>03</span></div><div class="panelbody"><div class="insight"><b>Governing relationship</b><br>δ = i + e − A</div><h3 style="font-size:14px">Guided procedure</h3><ol class="steps"><li>Identify the apparatus and the variables.</li><li>Start with the default settings and note the readings.</li><li>Change one variable at a time.</li><li>Record observations and compare the trend.</li><li>Explain the result using the governing relationship.</li></ol><div class="quiz"><b style="font-size:13px">Challenge</b><p>What happens to deviation as the angle of incidence changes?</p><button class="btn" id="showChallenge">Reveal a thinking prompt</button><div class="feedback" id="challengeOut"></div></div></div></section></div>
+<section class="panel" style="margin-top:14px"><div class="panelhead">Observation notebook <span id="count">0 readings recorded</span></div><div class="panelbody"><div style="overflow:auto"><table style="width:100%;border-collapse:collapse;font-size:13px;min-width:430px"><thead><tr style="text-align:left"><th>Trial</th><th>Settings</th><th>Model response</th></tr></thead><tbody id="records"><tr><td colspan="3">No observations recorded yet.</td></tr></tbody></table></div></div></section>
+<section class="learning-grid"><div class="learning-card"><div class="learning-head">Guided experiment · progress tracker</div><div class="learning-body"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div id="progressText">0 / 5 completed</div><div id="stages"><label class="step-item"><input class="stage-check" type="checkbox"> Read the aim and principle</label><label class="step-item"><input class="stage-check" type="checkbox"> Identify apparatus and variables</label><label class="step-item"><input class="stage-check" type="checkbox"> Change a control and observe</label><label class="step-item"><input class="stage-check" type="checkbox"> Record at least two readings</label><label class="step-item"><input class="stage-check" type="checkbox"> Complete the challenge</label></div><div class="btnrow"><button class="btn" id="showHint">Show hint</button><button class="btn" id="resetStages">Reset progress</button></div><div class="hintbox" id="hintText">Change one variable at a time. Compare readings while keeping other conditions constant.</div></div></div>
+<div class="learning-card"><div class="learning-head">Practical method · drag or tap matching</div><div class="learning-body"><div class="match-grid"><div class="match-item" draggable="true" data-match="0">Control variable</div><div class="match-target" data-target="0">Kept unchanged for a fair comparison</div><div class="match-item" draggable="true" data-match="1">Measured quantity</div><div class="match-target" data-target="1">Value read from an instrument or model</div><div class="match-item" draggable="true" data-match="2">Observation record</div><div class="match-target" data-target="2">A written record of what happened</div></div><div id="matchFeedback" class="feedback">0 / 3 matched</div></div></div>
+<div class="learning-card"><div class="learning-head">Knowledge check</div><div class="learning-body"><p style="font-size:13px">Why should only one independent variable be changed at a time?</p><button class="quiz-option" data-q="wrong">To make the experiment longer</button><button class="quiz-option" data-q="right">To identify which change caused the result</button><button class="quiz-option" data-q="wrong">To avoid recording observations</button><div id="quizFeedback" class="feedback">Choose an answer.</div></div></div>
+<div class="learning-card"><div class="learning-head">Practical notebook · export notes</div><div class="learning-body"><textarea id="labNotes" class="lab-notes" placeholder="Write your observations, calculations and conclusion..."></textarea><div class="btnrow"><button class="btn primary" id="downloadNotebook">Download practical record</button><button class="btn" onclick="window.print()">Print lab sheet</button></div></div></div></section>
+<section class="v4-studio" id="v4Studio">
+ <div class="v4-head"><h2>Physics V4 · Refraction Through a Prism — Investigation & Assessment Studio</h2>
+ <p>Geometrical optics · Experiment-specific investigation, evidence log, graph analysis and teacher review.</p></div>
+ <div class="v4-body">
+  <div class="v4-card">
+   <h3>1 · Investigation mission</h3>
+   <p class="v4-help"><b>Objective:</b> Investigate refraction and deviation through a triangular prism.</p>
+   <div class="v4-box"><b>Prediction question</b><br>At minimum deviation, the path through a prism is…</div>
+   <div class="v4-options" id="v4Options"><button type="button" data-choice="0">Symmetrical</button><button type="button" data-choice="1">At grazing incidence</button><button type="button" data-choice="2">Unrefracted</button></div>
+   <div class="v4-feedback" id="v4QuizFeedback">Choose an answer and submit your prediction.</div>
+   <button class="v4-btn primary" id="v4SubmitPrediction">Check prediction</button>
+   <div class="v4-box"><b>Scientific principle</b><br>Deviation depends on prism angle, refractive index and angle of incidence.</div>
+  </div>
+  <div class="v4-card">
+   <h3>2 · Fault-finding challenge</h3>
+   <p class="v4-help">A student performs this experiment but obtains an unexpected result. Identify the most likely issue.</p>
+   <div class="v4-box">At minimum deviation, the ray path through the prism is symmetric.</div>
+   <select id="v4FaultChoice" class="v4-field"><option value="">Select a possible cause…</option><option value="0">Incidence not at minimum deviation</option><option value="1">Prism is triangular</option><option value="2">Light is visible</option></select>
+   <button class="v4-btn primary" id="v4CheckFault">Check diagnosis</button>
+   <div class="v4-feedback" id="v4FaultFeedback">Diagnose the experimental setup.</div>
+  </div>
+  <div class="v4-card">
+   <h3>3 · Observation notebook & graph</h3>
+   <p class="v4-help">Use the original simulation controls to perform a trial, then enter the observed values. This table records student-entered observations; it does not claim to read every legacy simulation's internal sensors.</p>
+   <label class="v4-help">Angle of incidence (°)<input id="v4X" type="number" step="any" class="v4-field" placeholder="Enter angle of incidence (°)"></label>
+   <label class="v4-help">Angle of deviation (°)<input id="v4Y" type="number" step="any" class="v4-field" placeholder="Enter angle of deviation (°)"></label>
+   <button class="v4-btn primary" id="v4AddReading">Record observation</button><button class="v4-btn" id="v4ClearReadings">Clear observations</button>
+   <canvas id="v4Graph" class="v4-canvas" width="560" height="280" aria-label="Angle of deviation (°) plotted against Angle of incidence (°)"></canvas>
+   <div class="v4-box" id="v4GraphAnalysis">Record at least two observations to analyse the trend.</div>
+   <table class="v4-table"><thead><tr><th>Trial</th><th>Angle of incidence (°)</th><th>Angle of deviation (°)</th></tr></thead><tbody id="v4Rows"></tbody></table>
+  </div>
+  <div class="v4-card">
+   <h3>4 · Practical reflection & report</h3>
+   <label class="v4-help">Student name<input id="v4Student" class="v4-field" placeholder="Student name"></label>
+   <label class="v4-help">Class / section<input id="v4Class" class="v4-field" placeholder="Class / section"></label>
+   <label class="v4-help">Observation and inference<textarea id="v4Inference" class="v4-field" rows="3" placeholder="Describe the pattern in your observations and explain it using the scientific principle."></textarea></label>
+   <label class="v4-help">Precautions / possible errors<textarea id="v4Precautions" class="v4-field" rows="3" placeholder="List precautions and possible sources of error."></textarea></label>
+   <label class="v4-help">Conclusion<textarea id="v4Conclusion" class="v4-field" rows="3" placeholder="Write your conclusion based on evidence."></textarea></label>
+   <button class="v4-btn primary" id="v4DownloadReport">Download practical report</button>
+   <div class="v4-feedback" id="v4ReportFeedback">Your report includes the objective, entered observations, analysis and reflection.</div>
+  </div>
+  <div class="v4-card">
+   <h3>5 · Teacher assessment rubric</h3>
+   <label class="v4-help">Teacher feedback<textarea id="v4Teacher" class="v4-field" rows="2" placeholder="Feedback and next steps"></textarea></label>
+   <div class="v4-rubric"><span>Conceptual prediction</span><b id="v4RubricConcept">0 / 20</b></div>
+   <div class="v4-rubric"><span>Fault diagnosis</span><b id="v4RubricFault">0 / 20</b></div>
+   <div class="v4-rubric"><span>Observation quality (2+ readings)</span><b id="v4RubricData">0 / 20</b></div>
+   <div class="v4-rubric"><span>Graph / trend analysis</span><b id="v4RubricGraph">0 / 20</b></div>
+   <div class="v4-rubric"><span>Inference and conclusion</span><b id="v4RubricReflect">0 / 20</b></div>
+   <div class="v4-box" id="v4Score">Assessment score: 0 / 100</div>
+   <button class="v4-btn" id="v4DownloadAssessment">Download assessment summary</button>
+  </div>
+  <div class="v4-card">
+   <h3>6 · Guided experimental procedure</h3>
+   <p class="v4-help">Follow the sequence below and use the original experiment controls above to change one variable at a time.</p>
+   <ol class="v4-help"><li>Read the objective and identify the independent and dependent variables.</li><li>Inspect the apparatus and reset the simulation to its initial state.</li><li>Change only the independent variable while keeping other conditions controlled.</li><li>Record at least three observations in the notebook.</li><li>Plot the dependent variable against the independent variable and describe the trend.</li><li>Answer the prediction and fault-finding questions, then write an evidence-based conclusion.</li></ol>
+   <div class="v4-box"><b>Experimental discipline</b><br>Use consistent units, avoid changing multiple variables at once, and distinguish measured observations from theoretical predictions.</div>
+  </div>
+ </div>
+</section>
+
+</main>
+<div class="ad-slot ad-bottom"><div class="ad-copy"><strong>Bottom banner placement</strong>Reserved advertising space · responsive banner</div></div><footer>CBSEMOCK Physics Studio · Interactive educational model. Refer to a supervised physical practical for real measurements.</footer>
+<script>
+const cfg={"id": 19, "title": "Refraction Through a Prism", "chapter": "Optics", "kind": "prism", "description": "Investigate deviation of light through a triangular prism.", "formula": "δ = i + e − A", "params": [{"key": "angle", "label": "Angle of incidence", "min": 20, "max": 70, "value": 45, "unit": "°"}, {"key": "prism", "label": "Prism angle", "min": 20, "max": 70, "value": 60, "unit": "°"}, {"key": "index", "label": "Refractive index", "min": 1.2, "max": 1.8, "value": 1.5, "unit": "n"}], "challenge": "What happens to deviation as the angle of incidence changes?"};const $=id=>document.getElementById(id);let active=true,rows=[];
+const inputs=cfg.params.map(p=>$(p.key)).filter(Boolean);
+function values(){return inputs.map(i=>({label:i.previousElementSibling.querySelector('span').textContent,value:+i.value,unit:i.dataset.unit}))}
+function calc(v){let nums=v.map(x=>x.value),kind=cfg.kind.toLowerCase();let result;
+if(kind.includes('circuit')||kind.includes('electric')||kind.includes('magnet')){let V=nums[0]||0,R=nums[1]||1;result=active?V/Math.max(R,.01):0;return {value:result.toFixed(3)+' A',summary:nums.map(n=>n.toFixed(1)).join(' · '),raw:result}}
+if(kind.includes('thermal')||kind.includes('heat')){result=nums.reduce((a,b)=>a*b,1);return {value:result.toFixed(2)+' (model units)',summary:nums.map(n=>n.toFixed(1)).join(' · '),raw:result}}
+result=nums.reduce((a,b)=>a+b,0)/(nums.length||1);return {value:result.toFixed(2)+' (model index)',summary:nums.map(n=>n.toFixed(1)).join(' · '),raw:result}}
+function draw(raw){let svg=$('graph'),s='<rect width="320" height="190" fill="#0c1725"/>';for(let n=0;n<5;n++){let y=18+n*35;s+=`<path d="M34 ${y}H306" stroke="#294158"/>`}let pts=[];for(let n=0;n<=10;n++){let y=155-Math.min(120,Math.abs(raw)*n/(10||1)*8);pts.push((35+n*26)+','+y)}s+=`<polyline points="${pts.join(' ')}" fill="none" stroke="#54d9a0" stroke-width="3"/>`;svg.innerHTML=s}
+function update(){let v=values(),r=calc(v);$('liveA').textContent=r.value;$('liveB').textContent=r.summary||'No controls';$('insight').innerHTML='<b>Observation:</b> '+(active?'The model response is updating as you adjust the controls.':'Activity paused. Switch it on to continue.');$('status').textContent=active?'● ACTIVE':'○ PAUSED';draw(r.raw)}
+inputs.forEach(i=>i.addEventListener('input',()=>{$(i.id+'Val').textContent=i.value+' '+i.dataset.unit;update()}));
+$('power').onclick=()=>{active=!active;$('power').classList.toggle('on',active);update()};$('reset').onclick=()=>{inputs.forEach(i=>{let p=cfg.params.find(x=>x.key===i.id);i.value=p.value;$(i.id+'Val').textContent=p.value+' '+p.unit});active=true;$('power').classList.add('on');update()};
+$('record').onclick=()=>{let v=values(),r=calc(v);rows.push({v,r});$('count').textContent=rows.length+' readings recorded';$('records').innerHTML=rows.map((x,i)=>`<tr><td>${i+1}</td><td>${x.v.map(a=>a.label+': '+a.value+' '+a.unit).join('; ')}</td><td>${x.r.value}</td></tr>`).join('')};
+$('showChallenge').onclick=()=>$('challengeOut').textContent=cfg.challenge;
+$('showHint').onclick=()=>$('hintText').style.display=$('hintText').style.display==='block'?'none':'block';
+const checks=[...document.querySelectorAll('.stage-check')];function progress(){let n=checks.filter(c=>c.checked).length;$('progressText').textContent=n+' / 5 completed';$('progressFill').style.width=n*20+'%';checks.forEach(c=>c.closest('label').classList.toggle('done',c.checked))}checks.forEach(c=>c.onchange=progress);$('resetStages').onclick=()=>{checks.forEach(c=>c.checked=false);progress()};
+let chosen=null,matched=new Set();document.querySelectorAll('.match-item').forEach(i=>{i.ondragstart=()=>chosen=i;i.onclick=()=>{chosen=i;i.classList.add('selected')}});document.querySelectorAll('.match-target').forEach(t=>{t.ondragover=e=>e.preventDefault();t.ondrop=e=>{e.preventDefault();match(t)};t.onclick=()=>match(t)});function match(t){if(!chosen)return;if(chosen.dataset.match===t.dataset.target){matched.add(t.dataset.target);t.classList.add('correct');t.textContent='✓ '+t.textContent;chosen.style.opacity='.35';chosen.draggable=false;$('matchFeedback').textContent=matched.size+' / 3 matched'}else $('matchFeedback').textContent='Try another match.';chosen=null}
+document.querySelectorAll('.quiz-option').forEach(b=>b.onclick=()=>{let ok=b.dataset.q==='right';$('quizFeedback').textContent=ok?'Correct. Changing one variable at a time helps isolate cause and effect.':'Try again. Think about a fair test.';if(ok){checks[4].checked=true;progress()}});
+$('downloadNotebook').onclick=()=>{let text='CBSEMOCK PHYSICS PRACTICAL RECORD\n'+cfg.title+'\nAim: '+cfg.description+'\nPrinciple: '+cfg.formula+'\n\nOBSERVATIONS\n'+rows.map((x,i)=>'Trial '+(i+1)+': '+x.v.map(a=>a.label+'='+a.value+a.unit).join(', ')+'; response='+x.r.value).join('\n')+'\n\nStudent notes\n'+$('labNotes').value;let a=document.createElement('a'),u=URL.createObjectURL(new Blob([text],{type:'text/plain'}));a.href=u;a.download='Physics_Practical_19.txt';a.click();URL.revokeObjectURL(u)};
+update();
+
+// Physics V4 experiment-specific assessment and practical notebook.
+(()=>{
+ const $=id=>document.getElementById(id);
+ const correct=0, faultCorrect=0;
+ let selected=null,predictionDone=false,faultDone=false,readings=[],graphReviewed=false,reflectionDone=false;
+ $('v4Options').querySelectorAll('button').forEach(b=>b.onclick=()=>{selected=Number(b.dataset.choice);$('v4Options').querySelectorAll('button').forEach(x=>x.style.outline=x===b?'2px solid #42d5e8':'none');$('v4QuizFeedback').textContent='Prediction selected. Submit it to check your understanding.'});
+ function updateScore(){
+  const a=predictionDone?20:0,b=faultDone?20:0,c=readings.length>=3?20:readings.length>=2?12:readings.length?5:0,d=graphReviewed&&readings.length>=2?20:0,e=reflectionDone?20:0,total=a+b+c+d+e;
+  $('v4RubricConcept').textContent=a+' / 20';$('v4RubricFault').textContent=b+' / 20';$('v4RubricData').textContent=c+' / 20';$('v4RubricGraph').textContent=d+' / 20';$('v4RubricReflect').textContent=e+' / 20';$('v4Score').textContent='Assessment score: '+total+' / 100';
+ }
+ $('v4SubmitPrediction').onclick=()=>{if(selected===null){$('v4QuizFeedback').textContent='Select an answer first.';return}if(selected===correct){predictionDone=true;$('v4QuizFeedback').textContent="Correct. Deviation depends on prism angle, refractive index and angle of incidence.";}else $('v4QuizFeedback').textContent='Not quite. Revisit the scientific principle and try again.';updateScore()};
+ $('v4CheckFault').onclick=()=>{let v=$('v4FaultChoice').value;if(v===''){$('v4FaultFeedback').textContent='Select a diagnosis first.';return}if(Number(v)===faultCorrect){faultDone=true;$('v4FaultFeedback').textContent="Correct diagnosis. Deviation depends on prism angle, refractive index and angle of incidence.";}else $('v4FaultFeedback').textContent='That is not the most likely cause. Recheck the experimental conditions.';updateScore()};
+ function draw(){
+  const c=$('v4Graph'),ctx=c.getContext('2d'),w=c.width,h=c.height,L=52,R=18,T=18,B=42,pw=w-L-R,ph=h-T-B;
+  ctx.clearRect(0,0,w,h);ctx.strokeStyle='#29485f';ctx.lineWidth=1;
+  for(let i=0;i<=5;i++){let x=L+pw*i/5,y=T+ph*i/5;ctx.beginPath();ctx.moveTo(x,T);ctx.lineTo(x,T+ph);ctx.stroke();ctx.beginPath();ctx.moveTo(L,y);ctx.lineTo(L+pw,y);ctx.stroke()}
+  ctx.fillStyle='#c8dbea';ctx.font='12px sans-serif';ctx.fillText('Angle of incidence (°)',w/2-40,h-10);ctx.save();ctx.translate(14,h/2+25);ctx.rotate(-Math.PI/2);ctx.fillText('Angle of deviation (°)',0,0);ctx.restore();
+  if(readings.length){let xmin=Math.min(0,...readings.map(p=>p.x)),xmax=Math.max(...readings.map(p=>p.x)),ymin=Math.min(0,...readings.map(p=>p.y)),ymax=Math.max(...readings.map(p=>p.y));if(xmax===xmin)xmax=xmin+1;if(ymax===ymin)ymax=ymin+1;
+   ctx.fillStyle='#45d9df';readings.forEach(p=>{let x=L+(p.x-xmin)/(xmax-xmin)*pw,y=T+ph-(p.y-ymin)/(ymax-ymin)*ph;ctx.beginPath();ctx.arc(x,y,5,0,Math.PI*2);ctx.fill()});
+   $('v4GraphAnalysis').textContent=readings.length>=2?'Recorded '+readings.length+' observations. Compare the plotted trend with the expected relationship: Deviation depends on prism angle, refractive index and angle of incidence.':'Add at least one more observation to compare the trend.';
+  }else $('v4GraphAnalysis').textContent='Record at least two observations to analyse the trend.';
+  $('v4Rows').innerHTML=readings.map((p,i)=>'<tr><td>'+(i+1)+'</td><td>'+p.x+'</td><td>'+p.y+'</td></tr>').join('');updateScore();
+ }
+ $('v4AddReading').onclick=()=>{let x=Number($('v4X').value),y=Number($('v4Y').value);if($('v4X').value===''||$('v4Y').value===''||!Number.isFinite(x)||!Number.isFinite(y)){$('v4GraphAnalysis').textContent='Enter valid numeric values for both variables.';return}readings.push({x,y});$('v4X').value='';$('v4Y').value='';graphReviewed=false;draw()};
+ $('v4ClearReadings').onclick=()=>{readings=[];graphReviewed=false;draw()};
+ $('v4Graph').addEventListener('click',()=>{if(readings.length>=2){graphReviewed=true;updateScore();$('v4GraphAnalysis').textContent+=' Graph reviewed — describe this pattern in your inference.'}});
+ function val(id){return $(id).value||''}
+ function reportText(){
+  let rows=readings.length?readings.map((p,i)=>(i+1)+'\t'+p.x+'\t'+p.y).join('\n'):'No readings recorded.';
+  let controls=[...document.querySelectorAll('input[type=range]')].map(x=>x.id+': '+x.value+(x.dataset.unit||'')).join('\n');
+  return `CBSEMOCK PHYSICS VIRTUAL LAB — Refraction Through a Prism\nStudent: ${val('v4Student')}\nClass: ${val('v4Class')}\n\nOBJECTIVE\nInvestigate refraction and deviation through a triangular prism.\n\nSCIENTIFIC PRINCIPLE\nDeviation depends on prism angle, refractive index and angle of incidence.\n\nEXPERIMENT CONTROLS AT REPORT TIME\n${controls||'See simulation controls.'}\n\nOBSERVATIONS\nTrial\tAngle of incidence (°)\tAngle of deviation (°)\n${rows}\n\nANALYSIS / INFERENCE\n${val('v4Inference')}\n\nPRECAUTIONS / ERRORS\n${val('v4Precautions')}\n\nCONCLUSION\n${val('v4Conclusion')}\n\nASSESSMENT\n${$('v4Score').textContent}\nPrediction: ${predictionDone?'Correct':'Not completed'}\nFault diagnosis: ${faultDone?'Correct':'Not completed'}\nTeacher feedback: ${val('v4Teacher')}\n`;
+ }
+ function download(name,txt){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([txt],{type:'text/plain;charset=utf-8'}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+ $('v4DownloadReport').onclick=()=>{reflectionDone=!!(val('v4Inference').trim()&&val('v4Conclusion').trim());updateScore();download('CBSEMOCK_19-refraction-through-a-prism_Practical_Report.txt',reportText());$('v4ReportFeedback').textContent='Practical report downloaded.'};
+ $('v4DownloadAssessment').onclick=()=>download('CBSEMOCK_19-refraction-through-a-prism_Teacher_Assessment.txt',`Refraction Through a Prism\nStudent: ${val('v4Student')}\nClass: ${val('v4Class')}\n${$('v4Score').textContent}\n${$('v4RubricConcept').textContent} Concept\n${$('v4RubricFault').textContent} Fault diagnosis\n${$('v4RubricData').textContent} Data\n${$('v4RubricGraph').textContent} Graph\n${$('v4RubricReflect').textContent} Reflection\nTeacher feedback: ${val('v4Teacher')}`);
+ draw();
+})();
+
+</script>
+<script src="../../ads.js"></script>
+<script src="../../portal-shell.js"></script>
+</body></html>

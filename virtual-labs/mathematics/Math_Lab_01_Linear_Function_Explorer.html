@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mathematics Lab 01 | Linear Function Explorer | CBSEMOCK</title>
+<style>
+:root{--bg:#081522;--panel:#102438;--panel2:#153149;--line:#294b63;--ink:#edf7ff;--muted:#a6bdce;--cyan:#48d9e5;--mint:#73e4b0;--gold:#ffd36e;--red:#ff8f8f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#1b4561,#081522 58%);color:var(--ink);font:14px/1.5 Inter,Segoe UI,Arial,sans-serif}
+header{position:sticky;top:0;z-index:20;background:#081522ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:900;letter-spacing:1px}.brand span{color:var(--cyan)}.headmeta{color:var(--muted);font-size:11px}.pill{border:1px solid #3b7183;color:#a9f2ed;border-radius:30px;padding:6px 10px;font-size:10px;font-weight:800}
+.ad{max-width:1100px;min-height:58px;margin:12px auto;border:1px dashed #547086;border-radius:10px;display:grid;place-items:center;color:#91aabc;background:#102438;font-size:10px;letter-spacing:1px}
+main{max-width:1500px;margin:auto;padding:16px}.hero{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:10px 0 16px}.eyebrow{color:var(--cyan);font-size:10px;letter-spacing:1.8px;font-weight:900}.hero h1{font-size:clamp(24px,3vw,34px);margin:4px 0}.sub{color:var(--muted);max-width:800px}.hero-tags{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.tag{font-size:10px;color:#c7dce9;background:#153149;border:1px solid #31566d;padding:6px 9px;border-radius:7px}
+.studentbar{display:grid;grid-template-columns:repeat(3,1fr) 1.2fr;gap:8px;padding:12px;background:#0d2031;border:1px solid var(--line);border-radius:12px;margin-bottom:14px}.studentbar label{font-size:10px;color:var(--muted)}input,select,textarea{font:inherit;color:var(--ink);background:#091a29;border:1px solid #35566d;border-radius:7px;padding:8px;min-width:0}input[type=text],select{width:100%;margin-top:4px}.layout{display:grid;grid-template-columns:265px minmax(400px,1fr) 285px;gap:12px;align-items:start}.panel{background:linear-gradient(150deg,#122b40,#0e2133);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:0 10px 28px #0003}.ph{padding:11px 14px;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:1.5px;color:#b9d6e6;font-weight:900}.pb{padding:13px}.metric{background:#091a29;border:1px solid #29485e;border-radius:9px;padding:10px;text-align:center;margin:7px 0}.metric small{display:block;color:var(--muted);font-size:10px}.metric strong{display:block;color:var(--mint);font:700 21px ui-monospace,monospace}.control{margin:12px 0}.control label{display:flex;justify-content:space-between;gap:8px;color:#c9dce8;font-size:11px}.control b{color:var(--cyan)}input[type=range]{width:100%;padding:0;accent-color:var(--cyan);margin-top:9px}.btn{border:1px solid #41677f;background:#1b3b52;color:#eefaff;padding:9px 11px;border-radius:8px;font-weight:750;font-size:11px;cursor:pointer}.btn.primary{background:#087f88;border-color:#28b9bd}.btn.good{background:#176247;border-color:#3d9e78}.btn.warn{background:#604a20;border-color:#9d7c3a}.btn:disabled{opacity:.45;cursor:not-allowed}.btnrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}.tabs button{background:#10283b;color:#b8cedd;border:1px solid #2d4c62;border-radius:8px;padding:8px 11px;font-size:11px;font-weight:800;cursor:pointer}.tabs button.active{background:#087f88;color:white;border-color:#2bc2c2}.tab{display:none}.tab.active{display:block}.stage{background:#e4ecec;color:#122a3a;border-radius:11px;padding:12px}.stagehead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}.stagehead h2{font-size:14px;margin:0}.stagehead span{font-size:10px;color:#36586a}.graphwrap{position:relative;background:#0a1927;border:1px solid #3b5a70;border-radius:9px;padding:7px}canvas{display:block;width:100%;height:auto;touch-action:manipulation}.graphhint{font-size:10px;color:#37596b;margin-top:7px}.readouts{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.readouts .metric{margin:0}.readouts .metric strong{font-size:16px}.formula{font:700 17px ui-monospace,monospace;color:#8ff0d7;text-align:center;padding:10px;background:#091a29;border-radius:9px;border:1px solid #29485e}.note{padding:10px;border:1px solid #286174;background:#102d3a;border-radius:9px;color:#c8edf0;font-size:11px;margin-top:10px}.muted{color:var(--muted);font-size:11px}.sectiontitle{font-size:13px;margin:2px 0 9px}.step{display:flex;gap:9px;margin:9px 0;color:#c5d8e5;font-size:11px}.step i{font-style:normal;flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#17475a;color:#8ef1e3;font-weight:900}.output{background:#091a29;border:1px solid #2b4a60;border-radius:8px;padding:10px;color:#bde9d8;font:11px/1.5 ui-monospace,monospace;white-space:pre-wrap;min-height:48px}.field{margin:8px 0}.field label{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}.field textarea{width:100%;min-height:58px;resize:vertical}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:10px}th,td{padding:8px;border-bottom:1px solid #29485e;text-align:left;white-space:nowrap}th{color:#83dfe5;background:#102b40}td{color:#d4e4ed}.challenge{padding:11px;background:#0b1d2c;border:1px solid #31536b;border-radius:9px;margin:8px 0}.challenge p{margin:3px 0 9px;font-size:12px}.choice{display:block;width:100%;text-align:left;margin:5px 0}.feedback{font-size:11px;min-height:20px;margin-top:7px;color:#9deac9}.rightcard{margin-bottom:11px}.progress{height:7px;background:#071522;border-radius:9px;overflow:hidden;margin:8px 0}.progress i{display:block;width:0;height:100%;background:linear-gradient(90deg,#0d9a9d,#7de4b5)}.adinline{border:1px dashed #547086;border-radius:8px;padding:15px;text-align:center;color:#829bad;font-size:9px;margin:12px 0}.footer{text-align:center;color:#718ba0;padding:18px;font-size:10px}
+@media(max-width:1050px){.layout{grid-template-columns:245px minmax(0,1fr)}.rightcol{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.rightcard{margin:0}}
+@media(max-width:700px){header{padding:10px}.headmeta{display:none}main{padding:10px}.hero{display:block}.hero-tags{justify-content:flex-start;margin-top:9px}.studentbar{grid-template-columns:1fr 1fr}.layout{grid-template-columns:1fr}.rightcol{grid-column:auto;display:block}.readouts{grid-template-columns:1fr 1fr}.tabs{position:sticky;top:55px;background:#081522;padding:7px 0;z-index:10}.stagehead{align-items:flex-start}}
+@media print{header,.ad,.tabs,.btn,.no-print{display:none!important}body{background:white;color:#111}.panel{box-shadow:none;border:1px solid #aaa;break-inside:avoid}.pb,.ph{color:#111}.tab{display:block!important}.layout{display:block}.panel{margin-bottom:12px}}
+</style></head><body>
+<header><div><div class="brand">CBSE<span>MOCK</span> · MATHEMATICS STUDIO</div><div class="headmeta">Classes 9–12 · Interactive virtual practical laboratory</div></div><div class="pill">LAB 01 · GOLD STANDARD CANDIDATE</div></header>
+<div class="ad">ADVERTISEMENT · TOP BANNER RESERVED SPACE</div>
+<main>
+<section class="hero"><div><div class="eyebrow">ALGEBRA & COORDINATE GEOMETRY · INVESTIGATION 01</div><h1>Linear Function Explorer</h1><div class="sub">Investigate how slope and intercept transform a straight-line graph. Manipulate variables, collect evidence, test mathematical conjectures and explain what the graph reveals.</div></div><div class="hero-tags"><span class="tag">Guided discovery</span><span class="tag">Live graphing</span><span class="tag">Practical record</span><span class="tag">Assessment</span></div></section>
+<section class="studentbar">
+<label>Student name<input id="student" type="text" placeholder="Enter student name"></label><label>Class / section<input id="className" type="text" placeholder="e.g. Class 9 A"></label><label>Roll number<input id="roll" type="text" placeholder="Roll number"></label><label>Experiment date<input id="date" type="text"></label>
+</section>
+<div class="layout">
+<aside>
+<section class="panel"><div class="ph">01 · Experiment controls</div><div class="pb">
+<div class="formula" id="equation">y = 2x + 1</div>
+<div class="control"><label for="m">Slope (m) <b id="mval">2</b></label><input id="m" type="range" min="-5" max="5" step=".5" value="2"></div>
+<div class="control"><label for="c">Y-intercept (c) <b id="cval">1</b></label><input id="c" type="range" min="-8" max="8" step=".5" value="1"></div>
+<div class="control"><label for="x">Probe x-coordinate <b id="xval">2</b></label><input id="x" type="range" min="-8" max="8" step=".5" value="2"></div>
+<div class="control"><label for="scale">Graph scale <b id="scaleval">1×</b></label><input id="scale" type="range" min=".5" max="2" step=".25" value="1"></div>
+<div class="btnrow"><button class="btn primary" id="reset">↺ Reset apparatus</button><button class="btn" id="random">⚄ Random trial</button></div>
+<div class="note" id="controlHint">Change one variable at a time. Observe the graph before changing another setting.</div>
+</div></section>
+<section class="panel" style="margin-top:11px"><div class="ph">02 · Mathematical apparatus</div><div class="pb">
+<div class="step"><i>1</i><div><b>Coordinate plane</b><br><span class="muted">Move the probe to inspect ordered pairs.</span></div></div>
+<div class="step"><i>2</i><div><b>Slope control</b><br><span class="muted">Change steepness and direction.</span></div></div>
+<div class="step"><i>3</i><div><b>Intercept control</b><br><span class="muted">Shift the line vertically.</span></div></div>
+<div class="step"><i>4</i><div><b>Data recorder</b><br><span class="muted">Capture readings in your notebook.</span></div></div>
+<div class="adinline">ADVERTISEMENT · LEFT PANEL SLOT</div>
+</div></section>
+</aside>
+<section class="panel"><div class="ph">03 · Investigation workspace</div><div class="pb">
+<nav class="tabs" aria-label="Experiment sections">
+<button class="active" data-tab="station">Lab station</button><button data-tab="theory">Theory & procedure</button><button data-tab="analysis">Analysis</button><button data-tab="notebook">Notebook</button><button data-tab="assessment">Assessment</button>
+</nav>
+<div class="tab active" id="station">
+<div class="stage"><div class="stagehead"><h2>Interactive coordinate plane</h2><span>Drag the probe point or use the x slider</span></div><div class="graphwrap"><canvas id="plot" width="760" height="450" aria-label="Interactive graph of y equals mx plus c"></canvas></div><div class="graphhint">The green line represents y = mx + c. The yellow point is the selected ordered pair. Click the graph to move the probe horizontally.</div></div>
+<div class="readouts"><div class="metric"><small>Function rule</small><strong id="eqMini">y = 2x + 1</strong></div><div class="metric"><small>Selected point</small><strong id="point">(2, 5)</strong></div><div class="metric"><small>Gradient</small><strong id="gradient">2</strong></div><div class="metric"><small>Y-intercept</small><strong id="intercept">1</strong></div></div>
+<div class="note" id="liveExplain">Positive slope: the line rises from left to right. The y-intercept is where it crosses the vertical axis.</div>
+<div class="btnrow"><button class="btn primary" id="record">＋ Record current reading</button><button class="btn" id="tangent">Show slope triangle</button><button class="btn" id="hideTriangle">Hide triangle</button></div>
+</div>
+<div class="tab" id="theory">
+<h3 class="sectiontitle">Mathematical idea</h3><p class="muted">A linear function has the form <b>y = mx + c</b>. The coefficient m is the slope (rate of change), and c is the y-intercept. For every unit increase in x, y changes by m units.</p>
+<div class="formula">m = (y₂ − y₁) / (x₂ − x₁) &nbsp; and &nbsp; y = mx + c</div>
+<h3 class="sectiontitle" style="margin-top:16px">Aim and procedure</h3>
+<div class="step"><i>1</i><div>Set an initial slope and intercept. Predict how the line will appear.</div></div><div class="step"><i>2</i><div>Change only the slope. Record the direction and steepness of the line.</div></div><div class="step"><i>3</i><div>Restore the slope and change the intercept. Observe the vertical shift.</div></div><div class="step"><i>4</i><div>Select at least three x-values and calculate corresponding y-values.</div></div><div class="step"><i>5</i><div>Compare your observations with the equation and write a conclusion.</div></div>
+<h3 class="sectiontitle">Variables</h3><div class="readouts"><div class="metric"><small>Independent</small><strong style="font-size:12px">m or c</strong></div><div class="metric"><small>Dependent</small><strong style="font-size:12px">Graph / y</strong></div><div class="metric"><small>Controlled</small><strong style="font-size:12px">Other value</strong></div><div class="metric"><small>Relationship</small><strong style="font-size:12px">Linear</strong></div></div>
+<div class="note">Fair-test rule: change one parameter at a time while keeping the other parameter fixed.</div>
+</div>
+<div class="tab" id="analysis">
+<h3 class="sectiontitle">Live mathematical analysis</h3><div class="readouts"><div class="metric"><small>Rate of change</small><strong id="rate">2</strong></div><div class="metric"><small>x-intercept</small><strong id="xint">−0.5</strong></div><div class="metric"><small>Angle to +x axis</small><strong id="angle">63.4°</strong></div><div class="metric"><small>Value at x = 0</small><strong id="zero">1</strong></div></div>
+<div class="formula" id="working">At x = 2: y = 2 × 2 + 1 = 5</div>
+<h3 class="sectiontitle" style="margin-top:15px">Value table</h3><div class="tablewrap"><table><thead><tr><th>x</th><th>Calculation</th><th>y</th><th>Ordered pair</th></tr></thead><tbody id="valueRows"></tbody></table></div>
+<div class="note" id="analysisText">The slope gives the change in y for each one-unit increase in x.</div>
+</div>
+<div class="tab" id="notebook">
+<h3 class="sectiontitle">Digital practical notebook</h3>
+<div class="field"><label>Hypothesis – what do you predict?</label><textarea id="hypothesis" placeholder="If the slope increases, I predict that..."></textarea></div>
+<div class="field"><label>Observations – what did you notice?</label><textarea id="observations" placeholder="Record the effect of changing m and c..."></textarea></div>
+<div class="field"><label>Conclusion – what mathematical rule did you discover?</label><textarea id="conclusion" placeholder="The experiment shows that..."></textarea></div>
+<div class="field"><label>Possible source of error / limitation</label><textarea id="errors" placeholder="For example, graph scale or rounding..."></textarea></div>
+<div class="btnrow"><button class="btn primary" id="saveTrial">Save current trial</button><button class="btn" id="exportCSV">Export data CSV</button><button class="btn good" id="report">Print / save practical report PDF</button></div>
+<div class="tablewrap" style="margin-top:12px"><table><thead><tr><th>#</th><th>Equation</th><th>Probe point</th><th>Recorded y</th><th>Time</th></tr></thead><tbody id="trialRows"></tbody></table></div>
+<div class="output" id="notebookFeedback">Your saved trials will appear here.</div>
+</div>
+<div class="tab" id="assessment">
+<h3 class="sectiontitle">Knowledge check</h3><div class="muted">Answer all five questions. Feedback is provided after each response.</div>
+<div id="quiz"></div><div class="metric"><small>Assessment score</small><strong id="score">0 / 5</strong></div>
+<div class="progress"><i id="quizProgress"></i></div><button class="btn primary" id="grade">Check answers</button><div class="feedback" id="quizFeedback"></div>
+<h3 class="sectiontitle" style="margin-top:17px">Investigation challenge</h3>
+<div class="challenge"><p><b>Challenge A:</b> Create a horizontal line that crosses the y-axis at 4.</p><button class="btn" id="challengeA">Check my graph</button><div class="feedback" id="challengeAFeedback"></div></div>
+<div class="challenge"><p><b>Challenge B:</b> Create a line with negative gradient passing through (0, −3).</p><button class="btn" id="challengeB">Check my graph</button><div class="feedback" id="challengeBFeedback"></div></div>
+<div class="challenge"><p><b>Challenge C:</b> Find a line for which y = 0 when x = 3.</p><button class="btn" id="challengeC">Check my graph</button><div class="feedback" id="challengeCFeedback"></div></div>
+</div>
+</div></section>
+<aside class="rightcol">
+<section class="panel rightcard"><div class="ph">04 · Live result monitor</div><div class="pb"><div class="metric"><small>Current function</small><strong id="eqRight" style="font-size:15px">y = 2x + 1</strong></div><div class="metric"><small>y at selected x</small><strong id="yout">5.00</strong></div><div class="metric"><small>Graph behaviour</small><strong id="behaviour" style="font-size:13px">Increasing</strong></div><div class="note" id="interpretation">Positive slope means increasing function.</div></div></section>
+<section class="panel rightcard"><div class="ph">05 · Teacher observation</div><div class="pb"><div class="muted">Suggested assessment rubric</div><div class="step"><i>✓</i><div>Correct use of controls – 2 marks</div></div><div class="step"><i>✓</i><div>Accurate observations – 2 marks</div></div><div class="step"><i>✓</i><div>Mathematical reasoning – 3 marks</div></div><div class="step"><i>✓</i><div>Conclusion and communication – 3 marks</div></div><div class="metric"><small>Total</small><strong>10 marks</strong></div><div class="muted">Teacher can review the student's exported practical report.</div></div></section>
+<section class="panel rightcard"><div class="ph">06 · Quick reference</div><div class="pb"><div class="formula">y = mx + c</div><p class="muted"><b>m &gt; 0</b> increasing line<br><b>m &lt; 0</b> decreasing line<br><b>m = 0</b> horizontal line<br><b>c</b> vertical-axis crossing</p><div class="adinline">ADVERTISEMENT · SIDEBAR SLOT</div></div></section>
+</aside>
+</div>
+</main>
+<div class="ad">ADVERTISEMENT · BOTTOM BANNER RESERVED SPACE</div><footer>CBSEMOCK · Mathematics Discovery Studio · Lab 01 · Interactive educational model</footer>
+<script>
+(()=>{const $=id=>document.getElementById(id),cv=$('plot'),ctx=cv.getContext('2d');let triangle=false,trials=[],last={};
+const fmt=n=>Number.isInteger(n)?String(n):Number(n).toFixed(2).replace(/\.?0+$/,'');
+function equation(m,c){return `y = ${fmt(m)}x ${c<0?'−':'+'} ${fmt(Math.abs(c))}`;}
+function draw(){const m=+$('m').value,c=+$('c').value,x=+$('x').value,scale=+$('scale').value,y=m*x+c;
+$('mval').textContent=fmt(m);$('cval').textContent=fmt(c);$('xval').textContent=fmt(x);$('scaleval').textContent=fmt(scale)+'×';
+const eq=equation(m,c);['equation','eqMini','eqRight'].forEach(id=>$(id).textContent=eq);
+$('yout').textContent=y.toFixed(2);$('point').textContent=`(${fmt(x)}, ${fmt(y)})`;$('gradient').textContent=fmt(m);$('intercept').textContent=fmt(c);$('rate').textContent=fmt(m);$('zero').textContent=fmt(c);
+$('xint').textContent=m===0?(c===0?'All x':'None'):fmt(-c/m);$('angle').textContent=(Math.atan(m)*180/Math.PI).toFixed(1)+'°';$('working').textContent=`At x = ${fmt(x)}: y = ${fmt(m)} × ${fmt(x)} + (${fmt(c)}) = ${fmt(y)}`;
+const behaviour=m>0?'Increasing':m<0?'Decreasing':'Constant';$('behaviour').textContent=behaviour;$('interpretation').textContent=m>0?'As x increases, y increases.':m<0?'As x increases, y decreases.':'The output remains constant as x changes.';
+$('liveExplain').textContent=`${behaviour} function. The line crosses the y-axis at (0, ${fmt(c)}); its gradient is ${fmt(m)}.`;
+$('analysisText').textContent=m===0?'A zero gradient gives a constant function.':`For every +1 change in x, y changes by ${fmt(m)}. The slope triangle has rise ${fmt(m)} and run 1.`;
+const W=cv.width,H=cv.height,ox=W/2,oy=H/2,unit=27*scale;ctx.clearRect(0,0,W,H);
+ctx.fillStyle='#0a1927';ctx.fillRect(0,0,W,H);ctx.strokeStyle='#203b50';ctx.lineWidth=1;
+for(let gx=-14;gx<=14;gx++){let px=ox+gx*unit;ctx.beginPath();ctx.moveTo(px,0);ctx.lineTo(px,H);ctx.stroke();}
+for(let gy=-8;gy<=8;gy++){let py=oy-gy*unit;ctx.beginPath();ctx.moveTo(0,py);ctx.lineTo(W,py);ctx.stroke();}
+ctx.strokeStyle='#a9c5d5';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,oy);ctx.lineTo(W,oy);ctx.moveTo(ox,0);ctx.lineTo(ox,H);ctx.stroke();
+ctx.fillStyle='#c8dbe8';ctx.font='12px Arial';for(let i=-12;i<=12;i+=2){ctx.fillText(i,ox+i*unit+3,oy+15);}for(let i=-6;i<=6;i+=2){if(i)ctx.fillText(i,ox+7,oy-i*unit-3);}
+ctx.strokeStyle='#62e4b2';ctx.lineWidth=3;ctx.beginPath();let started=false;for(let px=0;px<=W;px++){let xv=(px-ox)/unit,yv=m*xv+c,py=oy-yv*unit;if(py>=-50&&py<=H+50){if(!started){ctx.moveTo(px,py);started=true}else ctx.lineTo(px,py)}}ctx.stroke();
+if(triangle&&m!==0){let ax=ox+x*unit,ay=oy-y*unit,bx=ax+unit,by=ay,cx=ax+unit,cy=oy-(m*(x+1)+c)*unit;ctx.strokeStyle='#ffd36e';ctx.lineWidth=2;ctx.setLineDash([5,4]);ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(bx,by);ctx.lineTo(cx,cy);ctx.lineTo(ax,ay);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#ffe29b';ctx.font='12px Arial';ctx.fillText('run = 1',bx+4,by+15);ctx.fillText('rise = '+fmt(m),cx+5,(cy+by)/2);}
+let px=ox+x*unit,py=oy-y*unit;ctx.fillStyle='#ffd36e';ctx.beginPath();ctx.arc(px,py,7,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#fff2c5';ctx.lineWidth=2;ctx.stroke();
+$('valueRows').innerHTML=[-2,-1,0,1,2].map(v=>`<tr><td>${v}</td><td>${fmt(m)} × ${v} + (${fmt(c)})</td><td>${fmt(m*v+c)}</td><td>(${v}, ${fmt(m*v+c)})</td></tr>`).join('');
+last={m,c,x,y,eq};}
+['m','c','x','scale'].forEach(id=>$(id).addEventListener('input',draw));
+$('reset').onclick=()=>{Object.entries({m:2,c:1,x:2,scale:1}).forEach(([k,v])=>$(k).value=v);triangle=false;draw();};
+$('random').onclick=()=>{$('m').value=(Math.floor(Math.random()*17)-8)/2;$('c').value=Math.floor(Math.random()*13)-6;$('x').value=Math.floor(Math.random()*13)-6;draw();};
+$('record').onclick=()=>{trials.push({...last,time:new Date().toLocaleTimeString()});renderTrials();$('notebookFeedback').textContent='Reading recorded successfully.';};
+$('saveTrial').onclick=()=>{$('record').click();document.querySelector('[data-tab="notebook"]').click();};
+function renderTrials(){$('trialRows').innerHTML=trials.map((t,i)=>`<tr><td>${i+1}</td><td>${t.eq}</td><td>(${fmt(t.x)}, ${fmt(t.y)})</td><td>${fmt(t.y)}</td><td>${t.time}</td></tr>`).join('');}
+$('tangent').onclick=()=>{triangle=true;draw();};$('hideTriangle').onclick=()=>{triangle=false;draw();};
+cv.addEventListener('click',e=>{let r=cv.getBoundingClientRect(),px=(e.clientX-r.left)*cv.width/r.width,unit=27*(+$('scale').value);let xv=Math.round((px-cv.width/2)/unit*2)/2;$('x').value=Math.max(-8,Math.min(8,xv));draw();});
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.id===b.dataset.tab));});
+$('challengeA').onclick=()=>{$('challengeAFeedback').textContent=(+$('m').value===0&&+$('c').value===4)?'Correct. Your graph is y = 4.':'Set m = 0 and c = 4.';};
+$('challengeB').onclick=()=>{$('challengeBFeedback').textContent=(+$('m').value<0&&+$('c').value===-3)?'Correct. Negative gradient and y-intercept −3.':'Choose m below zero and set c = −3.';};
+$('challengeC').onclick=()=>{$('challengeCFeedback').textContent=(Math.abs(+$('m').value*3 + +$('c').value)<.001)?'Correct. Your line passes through (3, 0).':'Adjust m and c until 3m + c = 0.';};
+const questions=[
+['What does the slope represent?',['The y-intercept','Change in y for each unit change in x','The x-coordinate','The area under the line'],1],
+['If m = 0, the graph is:',['Vertical','Curved','Horizontal','A circle'],2],
+['For y = −3x + 2, the line is:',['Increasing','Decreasing','Constant','Undefined'],1],
+['Where does y = 2x + 5 cross the y-axis?',['(5, 0)','(0, 2)','(0, 5)','(−5, 0)'],2],
+['If y = 0 when x = 4 and c = 8, what is m?',['2','−2','4','−4'],1]];
+$('quiz').innerHTML=questions.map((q,i)=>`<div class="challenge"><p><b>Q${i+1}.</b> ${q[0]}</p>${q[1].map((a,j)=>`<label class="choice"><input type="radio" name="q${i}" value="${j}"> ${a}</label>`).join('')}<div class="feedback" id="qf${i}"></div></div>`).join('');
+$('grade').onclick=()=>{let score=0;questions.forEach((q,i)=>{let v=document.querySelector(`input[name=q${i}]:checked`),ok=v&&+v.value===q[2];if(ok)score++;$('qf'+i).textContent=v?(ok?'Correct.':'Not quite. Review the concept and try again.'):'Please select an answer.';$('qf'+i).style.color=ok?'#8ce8b9':'#ffbd88';});$('score').textContent=score+' / 5';$('quizProgress').style.width=(score/5*100)+'%';$('quizFeedback').textContent=score>=4?'Strong understanding.':score>=2?'Good start. Review the explanations and retry.':'Revisit the theory tab and try again.';};
+$('exportCSV').onclick=()=>{let rows=[['Trial','Equation','Slope','Intercept','x','y','Time'],...trials.map((t,i)=>[i+1,t.eq,t.m,t.c,t.x,t.y,t.time])];download('linear_function_trials.csv',rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n'),'text/csv');};
+$('report').onclick=()=>window.print();
+function download(name,data,type){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([data],{type}));a.href=u;a.download=name;a.click();URL.revokeObjectURL(u);}
+$('date').value=new Date().toISOString().slice(0,10);draw();
+})();
+</script>
+<script src="../../ads.js"></script>
+<script src="../../portal-shell.js"></script>
+</body></html>

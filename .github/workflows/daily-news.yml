@@ -1,0 +1,31 @@
+name: Daily CBSE News Update
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # 9:30 AM IST every day
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch CBSE news and write news.html
+        run: python3 fetch_news.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "cbse-news-bot"
+          git config user.email "bot@cbsemock.org.in"
+          git add news.html
+          git diff --cached --quiet || git commit -m "chore: daily CBSE news update $(date -u +%Y-%m-%d)" && git push

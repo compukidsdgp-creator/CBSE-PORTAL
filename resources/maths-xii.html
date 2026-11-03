@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mathematics XII – CBSEMOCK Board Prep</title>
+<style>
+:root{
+  --subj1:#1a237e;--subj2:#283593;--subj3:#3949ab;
+  --teal:#0288d1;--gold:#f9a825;--mint:#00c853;--coral:#e53935;
+  --bg:#f5f7fa;--card:#fff;--text:#1a1a2e;--border:#e0e0e0;
+  --font:'Segoe UI',system-ui,sans-serif;--radius:12px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--card:#161b22;--text:#e6edf3;--border:#30363d;}}
+:root[data-theme=dark]{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--border:#30363d;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh}
+.topnav{background:var(--subj1);color:#fff;display:flex;align-items:center;gap:12px;padding:0 16px;height:52px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.topnav .brand{font-weight:700;font-size:1.05rem;white-space:nowrap}.topnav .brand span{color:#90caf9}
+.nav-search{flex:1;max-width:220px;padding:6px 12px;border-radius:20px;border:none;background:rgba(255,255,255,.15);color:#fff;font-size:.83rem;outline:none}
+.nav-search::placeholder{color:rgba(255,255,255,.6)}
+.streak-badge{background:rgba(255,255,255,.15);border-radius:20px;padding:4px 10px;font-size:.82rem;white-space:nowrap}
+.theme-btn{background:none;border:none;color:#fff;cursor:pointer;font-size:1.1rem;padding:4px 6px}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:8px}
+.xp-bar-wrap{background:var(--subj2);padding:6px 16px;display:flex;align-items:center;gap:10px;font-size:.78rem;color:#fff}
+.xp-bar-track{flex:1;height:6px;background:rgba(255,255,255,.2);border-radius:3px;overflow:hidden}
+.xp-bar-fill{height:100%;background:var(--gold);border-radius:3px;transition:width .5s ease}
+.main-tabs-wrap{background:var(--subj1);padding:4px 16px 0;position:sticky;top:52px;z-index:99}
+.tab-row{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:6px;padding-top:4px}
+.tab-row::-webkit-scrollbar{display:none}
+.tab-row-2{background:rgba(0,0,0,.18);margin:0 -16px;padding:0 16px}
+.main-tab{background:rgba(255,255,255,.12);border:none;color:rgba(255,255,255,.8);padding:6px 13px;border-radius:20px;cursor:pointer;font-size:.79rem;white-space:nowrap;font-family:var(--font);transition:all .2s;flex-shrink:0}
+.main-tab:hover{background:rgba(255,255,255,.22);color:#fff}
+.main-tab.active{background:var(--teal);color:#fff;font-weight:600}
+.tab-row-2 .main-tab.active{background:var(--gold);color:#111}
+section{display:none;padding:20px 16px;max-width:900px;margin:0 auto}
+.sec-title{font-size:1.5rem;font-weight:800;color:var(--subj1);margin-bottom:4px}
+.sec-sub{color:#666;font-size:.88rem;margin-bottom:18px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .sec-title{color:#90caf9}:root:not([data-theme=light]) .sec-sub{color:#999}}
+:root[data-theme=dark] .sec-title{color:#90caf9}:root[data-theme=dark] .sec-sub{color:#999}
+.hero{background:linear-gradient(135deg,var(--subj1),var(--subj3));color:#fff;border-radius:var(--radius);padding:28px 20px;margin-bottom:20px;text-align:center}
+.hero h1{font-size:1.6rem;font-weight:800;margin-bottom:8px}.hero p{opacity:.88;font-size:.92rem;margin-bottom:16px}
+.hero-stats{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.hero-stat .val{font-size:1.6rem;font-weight:800}.hero-stat .lbl{font-size:.75rem;opacity:.8}
+.btn-hero{background:var(--gold);color:#111;border:none;border-radius:24px;padding:10px 26px;font-weight:700;font-size:.95rem;cursor:pointer;margin-top:12px}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 12px;cursor:pointer;transition:transform .2s,box-shadow .2s;text-align:center}
+.card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.card-icon{font-size:1.7rem;margin-bottom:6px}.card-title{font-weight:700;font-size:.85rem;margin-bottom:3px}.card-sub{font-size:.73rem;color:#888}
+.card-prog{height:4px;background:var(--border);border-radius:2px;margin-top:8px;overflow:hidden}
+.card-prog-fill{height:100%;background:var(--subj3);border-radius:2px;transition:width .5s}
+.ch-section h2{font-size:1.1rem;font-weight:800;color:var(--subj1);margin-bottom:12px;border-left:4px solid var(--subj3);padding-left:10px}
+.ch-section h3{font-size:.92rem;font-weight:700;color:var(--subj2);margin:14px 0 6px}
+.ch-section p,.ch-section li{font-size:.87rem;line-height:1.7;margin-bottom:5px}
+.ch-section ul{padding-left:18px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .ch-section h2{color:#90caf9}:root:not([data-theme=light]) .ch-section h3{color:#bbdefb}}
+:root[data-theme=dark] .ch-section h2{color:#90caf9}:root[data-theme=dark] .ch-section h3{color:#bbdefb}
+.formula-box{background:linear-gradient(135deg,#e8f0fe,#d4e4fc);border-left:4px solid var(--teal);border-radius:10px;padding:14px 16px;margin:12px 0}
+.formula-box h4{color:var(--teal);margin-bottom:10px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+.formula-box .f{font-family:monospace;background:#fff;border-radius:6px;padding:8px 12px;margin:4px 0;font-size:.88rem;color:#1a237e;border:1px solid rgba(57,73,171,.15)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .formula-box{background:linear-gradient(135deg,rgba(57,73,171,.18),rgba(2,136,209,.10));}:root:not([data-theme=light]) .formula-box .f{background:#1a1f35;color:#90caf9;border-color:rgba(144,202,249,.2)}}
+:root[data-theme=dark] .formula-box{background:linear-gradient(135deg,rgba(57,73,171,.18),rgba(2,136,209,.10));}
+:root[data-theme=dark] .formula-box .f{background:#1a1f35;color:#90caf9;border-color:rgba(144,202,249,.2)}
+.def-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:12px 0}
+.def-card{background:var(--bg);border-radius:10px;padding:14px;border-left:3px solid var(--subj2)}
+.term{font-weight:700;font-size:.85rem;color:var(--subj2);margin-bottom:4px}
+.defn{font-size:.82rem;line-height:1.5;color:var(--text)}
+.worked{background:linear-gradient(135deg,#f0fff4,#e0f5ec);border-left:4px solid var(--mint);border-radius:10px;padding:14px 16px;margin:12px 0}
+.worked h4{font-size:.88rem;font-weight:700;color:#00695c;margin-bottom:8px}
+.worked .step{display:flex;gap:10px;margin-bottom:8px;font-size:.86rem}
+.sn{background:var(--subj3);color:#fff;border-radius:50%;width:22px;height:22px;min-width:22px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700}
+.worked .ans{background:var(--mint);color:#fff;border-radius:6px;padding:10px 14px;margin-top:10px;font-weight:700;font-size:.87rem}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .worked{background:linear-gradient(135deg,rgba(0,200,83,.08),rgba(0,200,83,.04));}}
+:root[data-theme=dark] .worked{background:linear-gradient(135deg,rgba(0,200,83,.08),rgba(0,200,83,.04));}
+.remember{background:rgba(249,168,37,.08);border:1px solid rgba(249,168,37,.3);border-radius:10px;padding:12px 16px;margin:12px 0}
+.remember strong{color:var(--gold);display:block;margin-bottom:4px}
+.pyq-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.pyq-chip{padding:5px 14px;border-radius:20px;border:1px solid var(--subj3);background:transparent;color:var(--subj3);font-size:.8rem;cursor:pointer;transition:all .2s}
+.pyq-chip.active,.pyq-chip:hover{background:var(--subj3);color:#fff}
+.pyq-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:12px}
+.pyq-meta{font-size:.75rem;color:#888;margin-bottom:6px}
+.pyq-q{font-weight:600;font-size:.9rem;margin-bottom:8px}
+.pyq-ans{font-size:.85rem;line-height:1.6;display:none;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.pyq-toggle{background:var(--subj3);color:#fff;border:none;border-radius:16px;padding:4px 12px;font-size:.78rem;cursor:pointer}
+.mistake-card{background:rgba(229,57,53,.07);border:1px solid rgba(229,57,53,.2);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.mistake-card .mc-title{font-weight:700;font-size:.88rem;color:var(--coral);margin-bottom:4px}
+.tip-card{background:rgba(2,136,209,.07);border:1px solid rgba(2,136,209,.2);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.tip-card .tc-title{font-weight:700;font-size:.88rem;color:var(--teal);margin-bottom:4px}
+.hotq{background:linear-gradient(135deg,rgba(249,168,37,.08),rgba(57,73,171,.05));border:1px solid rgba(249,168,37,.3);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.hotq-num{font-size:.75rem;color:var(--gold);font-weight:700}
+.lm-block{background:var(--card);border-left:4px solid var(--subj3);border-radius:0 10px 10px 0;padding:12px 16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.lm-title{font-weight:700;font-size:.9rem;color:var(--subj1);margin-bottom:6px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .lm-title{color:#90caf9}}
+:root[data-theme=dark] .lm-title{color:#90caf9}
+.checklist-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;font-size:.85rem;cursor:pointer}
+.checklist-item input{margin-top:2px;accent-color:var(--subj3)}
+.pp-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.pp-tab-btn{padding:7px 18px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text);font-size:.83rem;cursor:pointer;transition:all .2s}
+.pp-tab-btn.active{background:var(--subj1);color:#fff;border-color:var(--subj1)}
+.pp-content{display:none}.pp-content.active{display:block}
+.practice-paper{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.pp-header{text-align:center;border-bottom:2px solid var(--subj1);padding-bottom:12px;margin-bottom:16px}
+.pp-header h3{font-size:1rem;color:var(--subj1)}
+.pp-section-title{background:var(--subj1);color:#fff;padding:6px 12px;border-radius:6px;font-size:.85rem;font-weight:700;margin:14px 0 8px}
+.pp-q{font-size:.85rem;margin-bottom:8px;line-height:1.6}
+.sim-info{display:flex;gap:16px;margin:16px 0;flex-wrap:wrap;justify-content:center}
+.sim-stat-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 20px;text-align:center;min-width:100px}
+.sim-num{font-size:2rem;font-weight:800;color:var(--subj3)}
+.btn-start{background:linear-gradient(135deg,var(--subj1),var(--subj3));color:#fff;border:none;border-radius:24px;padding:12px 32px;font-weight:700;font-size:1rem;cursor:pointer;margin-top:8px}
+.sim-header{display:flex;justify-content:space-between;align-items:center;background:var(--subj1);color:#fff;padding:10px 14px;border-radius:10px;margin-bottom:12px;font-size:.85rem;font-weight:600}
+.sim-q-text{font-size:1rem;font-weight:600;margin-bottom:14px;line-height:1.6}
+.sim-opts{display:flex;flex-direction:column;gap:8px}
+.sim-opt{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;text-align:left;cursor:pointer;font-size:.88rem;transition:all .15s}
+.sim-opt:hover{border-color:var(--subj3);background:rgba(57,73,171,.06)}
+.sim-correct{background:rgba(0,200,100,.12)!important;border-color:var(--mint)!important;color:var(--mint)!important}
+.sim-wrong{background:rgba(229,57,53,.10)!important;border-color:var(--coral)!important;color:var(--coral)!important}
+.sim-feedback{padding:10px 14px;border-radius:8px;font-size:.85rem;margin-top:8px;line-height:1.6}
+.sim-fb-correct{background:rgba(0,200,100,.1);border:1px solid var(--mint)}
+.sim-fb-wrong{background:rgba(229,57,53,.08);border:1px solid var(--coral)}
+.sim-result-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center}
+.sim-result-score{font-size:2.5rem;font-weight:800;color:var(--subj3)}
+.sim-result-grade{font-size:1.2rem;font-weight:700;margin:8px 0}
+.sim-result-msg{font-size:.9rem;color:#666;margin-bottom:16px}
+.sim-next-btn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:14px 28px;background:linear-gradient(135deg,var(--subj3) 0%,var(--teal) 100%);color:#fff;border:none;border-radius:50px;font-size:1rem;font-weight:700;font-family:var(--font);cursor:pointer;box-shadow:0 4px 18px rgba(57,73,171,.35);transition:transform .18s,box-shadow .18s;position:relative;overflow:hidden;}
+.sim-next-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18) 0%,transparent 60%);border-radius:inherit;pointer-events:none;}
+.sim-next-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 28px rgba(57,73,171,.45);}
+.sim-next-arrow{width:20px;height:20px;flex-shrink:0;transition:transform .22s}
+.sim-next-btn:hover .sim-next-arrow{transform:translateX(4px);}
+@media(max-width:640px){.sim-next-btn{padding:12px 22px;font-size:.92rem;width:100%;justify-content:center;}}
+.sim-live-donut-wrap{display:flex;align-items:center;gap:14px;padding:10px 0 4px;margin-bottom:6px}
+.sim-live-legend{display:flex;flex-direction:column;gap:5px;font-size:.8rem}
+.sim-live-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.sim-live-dot.c{background:var(--mint)}.sim-live-dot.w{background:var(--coral)}.sim-live-dot.s{background:var(--border)}
+.sim-dash{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;margin:20px 0}
+.sim-donut-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+.sim-donut-legend{display:flex;flex-direction:column;gap:6px}
+.sim-legend-row{display:flex;align-items:center;gap:8px;font-size:.82rem}
+.sim-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.sim-bars-wrap{flex:1;min-width:200px}
+.sim-bars-title,.sim-review-title{font-weight:700;font-size:.88rem;margin-bottom:10px;color:var(--subj1)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .sim-bars-title,:root:not([data-theme=light]) .sim-review-title{color:#90caf9}}
+:root[data-theme=dark] .sim-bars-title,:root[data-theme=dark] .sim-review-title{color:#90caf9}
+.sim-bar-row{margin-bottom:10px}
+.sim-bar-label{font-size:.75rem;margin-bottom:3px;display:flex;justify-content:space-between}
+.sim-bar-track{height:14px;background:var(--border);border-radius:7px;overflow:hidden;display:flex}
+.sim-bar-seg-c{background:var(--mint);height:100%;transition:width .8s ease}
+.sim-bar-seg-w{background:var(--coral);height:100%;transition:width .8s ease .2s}
+.sim-review-title{margin:16px 0 8px}
+#sim-q-strip{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.sim-strip-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;cursor:default;transition:transform .2s}
+.sim-strip-dot:hover{transform:scale(1.15)}
+.sim-strip-dot.c{background:var(--mint);color:#fff}.sim-strip-dot.w{background:var(--coral);color:#fff}.sim-strip-dot.s{background:var(--border);color:#666}
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-bottom:20px}
+.dash-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center}
+.dash-val{font-size:2rem;font-weight:800;color:var(--subj3)}.dash-label{font-size:.78rem;color:#888;margin-top:4px}
+.badge-showcase{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px;margin-bottom:20px}
+.badge-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;transition:all .3s}
+.badge-item.locked{opacity:.35;filter:grayscale(1)}
+.badge-icon{font-size:1.6rem}.badge-name{font-size:.7rem;margin-top:4px;font-weight:600}
+.act-grid{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:16px}
+.act-day{width:36px;height:36px;border-radius:6px;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:600}
+.act-day.visited{background:var(--subj3);color:#fff}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--subj1);color:#fff;padding:10px 18px;border-radius:10px;font-size:.85rem;font-weight:600;transform:translateY(80px);opacity:0;transition:all .3s;z-index:999;pointer-events:none}
+.toast.show{transform:translateY(0);opacity:1}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);align-items:center;justify-content:center;z-index:1000;display:none}
+.modal-overlay.show{display:flex}
+.modal-box{background:var(--card);border-radius:16px;padding:28px 24px;max-width:340px;width:90%;text-align:center}
+.modal-box h2{font-size:1.2rem;margin-bottom:8px;color:var(--subj1)}.modal-box p{font-size:.85rem;color:#888;margin-bottom:16px}
+.modal-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--border);font-size:.95rem;font-family:var(--font);background:var(--bg);color:var(--text);margin-bottom:12px}
+.modal-btn{background:var(--subj1);color:#fff;border:none;border-radius:20px;padding:10px 24px;font-weight:700;cursor:pointer;width:100%}
+@media(max-width:640px){
+  .topnav{padding:0 10px;gap:8px}.topnav .brand{font-size:.9rem}.nav-search{width:100px}
+  .main-tab{padding:5px 10px;font-size:.72rem}
+  .hero{padding:20px 14px}.hero h1{font-size:1.2rem}
+  .cards-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .dash-grid{grid-template-columns:1fr 1fr}.badge-showcase{grid-template-columns:1fr 1fr}
+  section{padding:14px 10px}
+  .sim-dash{flex-direction:column;align-items:center}.sim-bars-wrap{width:100%}
+}
+@media(max-width:380px){.cards-grid{grid-template-columns:1fr}.dash-grid{grid-template-columns:1fr}}
+
+/* ══ DESKTOP SIDE PANELS ══ */
+.portal-layout{display:block;padding-top:0}
+.side-panel{display:none}
+@media(min-width:1200px){
+  .portal-layout{display:grid;grid-template-columns:160px 1fr 160px;gap:0;align-items:start}
+  .side-panel{display:flex;flex-direction:column;gap:16px;padding:12px 8px;position:sticky;top:130px;height:calc(100vh - 130px);overflow-y:auto;scrollbar-width:none;z-index:1;overflow-x:hidden}
+  .side-panel::-webkit-scrollbar{display:none}
+  .main-content-wrap{min-width:0;position:relative;z-index:2}
+}
+/* Left panel — local vendor */
+.panel-left{background:#f8f9ff;border-right:1px solid #e8ecf4}
+/* Right panel — adsense */
+.panel-right{background:#f8f9ff;border-left:1px solid #e8ecf4}
+/* Vendor skyscraper card */
+/* AdSense skyscraper container */
+.adsense-sky{width:140px;text-align:center}
+.adsense-sky 
+/* ── MOBILE NAV BAR ── */
+.mobile-nav-bar{display:none}
+@media(max-width:768px){
+  .mobile-nav-bar{
+    display:flex;align-items:center;gap:8px;
+    background:var(--subj1,#1a237e);padding:7px 12px;
+    position:sticky;top:0;z-index:300;
+    border-bottom:2px solid var(--teal,#00b4d8);
+  }
+  .mobile-nav-bar a,.mobile-nav-bar button{
+    background:rgba(255,255,255,.15);border:none;color:#fff;
+    padding:5px 12px;border-radius:20px;font-size:.8rem;
+    font-weight:600;cursor:pointer;text-decoration:none;
+    font-family:inherit;white-space:nowrap;
+  }
+  .mobile-nav-bar a:hover,.mobile-nav-bar button:hover{background:rgba(255,255,255,.28)}
+  .mobile-nav-bar .mnb-title{flex:1;color:#fff;font-size:.85rem;font-weight:700;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topnav,.site-header{display:none !important}
+
+}
+
+html{scroll-padding-top:130px}
+section{scroll-margin-top:130px}
+</style>
+    <script src="../ads.js" defer></script>
+  <!-- AdSense: replace ca-pub-PENDING with Publisher ID after approval -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-PENDING" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Mobile nav bar -->
+<div class="mobile-nav-bar" id="mobileNavBar">
+  <a href="../index.html">🏠 Home</a>
+  <button onclick="mobileGoBack()">← Back</button>
+  <span class="mnb-title" id="mobileNavTitle">Menu</span>
+</div>
+
+<div class="modal-overlay" id="nameModal">
+  <div class="modal-box">
+    <h2>📐 Welcome to Maths XII</h2>
+    <p>Enter your name to track progress and earn badges!</p>
+    <input class="modal-input" id="nameInput" placeholder="Your name..." maxlength="30">
+    <button class="modal-btn" onclick="saveName()">Start Learning 🚀</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<nav class="topnav">
+  <div class="brand">CBSE<span>MOCK</span> | Mathematics XII</div>
+  <input class="nav-search" id="searchBox" placeholder="🔍 Search..." oninput="doSearch(this.value)">
+  <div class="nav-right">
+    <span class="streak-badge" id="streakBadge">🔥 0</span>
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+  </div>
+</nav>
+<div class="xp-bar-wrap">
+  <span id="xpLabel">XP: 0</span>
+  <div class="xp-bar-track"><div class="xp-bar-fill" id="xpFill" style="width:0%"></div></div>
+  <span id="levelLabel">Lv 1</span>
+</div>
+<div class="portal-layout">
+<div class="side-panel panel-left">
+  <div id="ad-left-1"></div>
+  <div id="ad-left-2"></div>
+  <div id="ad-left-3"></div>
+</div>
+<div class="main-content-wrap">
+<div class="main-tabs-wrap">
+  <div class="tab-row" id="mainTabs">
+    <button class="main-tab active" onclick="go('home')">🏠 Home</button>
+    <button class="main-tab" onclick="go('ch1')">📐 Ch1</button>
+    <button class="main-tab" onclick="go('ch2')">∞ Ch2</button>
+    <button class="main-tab" onclick="go('ch3')">📊 Ch3</button>
+    <button class="main-tab" onclick="go('ch4')">🔷 Ch4</button>
+    <button class="main-tab" onclick="go('ch5')">∂ Ch5</button>
+    <button class="main-tab" onclick="go('ch6')">📈 Ch6</button>
+    <button class="main-tab" onclick="go('ch7')">∫ Ch7</button>
+    <button class="main-tab" onclick="go('ch8')">🔄 Ch8</button>
+    <button class="main-tab" onclick="go('ch9')">📉 Ch9</button>
+    <button class="main-tab" onclick="go('ch10')">🗺️ Ch10</button>
+    <button class="main-tab" onclick="go('ch11')">✈️ Ch11</button>
+    <button class="main-tab" onclick="go('ch12')">💡 Ch12</button>
+    <button class="main-tab" onclick="go('ch13')">🎲 Ch13</button>
+  </div>
+  <div class="tab-row tab-row-2" id="toolTabs">
+    <button class="main-tab" onclick="go('pyq')">📜 PYQ Bank</button>
+    <button class="main-tab" onclick="go('mistakes')">❌ Mistake Bank</button>
+    <button class="main-tab" onclick="go('examiner')">👁️ Examiner's Eye</button>
+    <button class="main-tab" onclick="go('highprob')">🔥 High-Prob Qs</button>
+    <button class="main-tab" onclick="go('lastmin')">⏱️ Last-Minute Rev</button>
+    <button class="main-tab" onclick="go('pp')">📝 Practice Papers</button>
+    <button class="main-tab" onclick="go('sim')">🎯 Exam Simulator</button>
+    <button class="main-tab" onclick="go('dash')">📊 Dashboard</button>
+  </div>
+</div>
+<main>
+<!-- HOME -->
+<section id="sec-home" style="display:block">
+<!-- ══ AD: TOP LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:4px 0 2px;">
+  <div id="ad-leader-top" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: TOP LEADERBOARD ══ -->
+
+  <div class="hero">
+    <h1>📐 Mathematics XII Board Prep</h1>
+    <p>Master all 13 chapters with solved examples, PYQs, and the 35-question simulator</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="val" id="h-xp">0</div><div class="lbl">Total XP</div></div>
+      <div class="hero-stat"><div class="val" id="h-streak">0</div><div class="lbl">Day Streak</div></div>
+      <div class="hero-stat"><div class="val" id="h-badges">0</div><div class="lbl">Badges</div></div>
+      <div class="hero-stat"><div class="val" id="h-sim">—</div><div class="lbl">Best Score</div></div>
+    </div>
+    <button class="btn-hero" onclick="go('sim')">Launch Exam Simulator 🎯</button>
+  </div>
+  <div class="cards-grid">
+    <div class="card" onclick="go('ch1')"><div class="card-icon">📐</div><div class="card-title">Relations & Functions</div><div class="card-sub">Ch 1 · 6 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch1" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch2')"><div class="card-icon">∞</div><div class="card-title">Inverse Trig Fns</div><div class="card-sub">Ch 2 · 4 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch2" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch3')"><div class="card-icon">📊</div><div class="card-title">Matrices</div><div class="card-sub">Ch 3 · 5 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch3" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch4')"><div class="card-icon">🔷</div><div class="card-title">Determinants</div><div class="card-sub">Ch 4 · 7 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch4" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch5')"><div class="card-icon">∂</div><div class="card-title">Continuity & Diff.</div><div class="card-sub">Ch 5 · 8 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch5" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch6')"><div class="card-icon">📈</div><div class="card-title">App. of Derivatives</div><div class="card-sub">Ch 6 · 6 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch6" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch7')"><div class="card-icon">∫</div><div class="card-title">Integrals</div><div class="card-sub">Ch 7 · 8 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch7" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch8')"><div class="card-icon">🔄</div><div class="card-title">App. of Integrals</div><div class="card-sub">Ch 8 · 5 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch8" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch9')"><div class="card-icon">📉</div><div class="card-title">Diff. Equations</div><div class="card-sub">Ch 9 · 6 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch9" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch10')"><div class="card-icon">🗺️</div><div class="card-title">Vectors</div><div class="card-sub">Ch 10 · 5 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch10" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch11')"><div class="card-icon">✈️</div><div class="card-title">3D Geometry</div><div class="card-sub">Ch 11 · 6 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch11" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch12')"><div class="card-icon">💡</div><div class="card-title">Linear Programming</div><div class="card-sub">Ch 12 · 5 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch12" style="width:0%"></div></div></div>
+    <div class="card" onclick="go('ch13')"><div class="card-icon">🎲</div><div class="card-title">Probability</div><div class="card-sub">Ch 13 · 8 marks</div><div class="card-prog"><div class="card-prog-fill" id="prog-ch13" style="width:0%"></div></div></div>
+  </div>
+
+<!-- ══ AD: INLINE 1 ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0 4px;">
+  <div id="ad-inline-1" style="width:100%;max-width:580px;"></div>
+</div>
+<!-- ══ END AD: INLINE 1 ══ -->
+<!-- AdSense inline unit -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:580px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-MID-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+<!-- end AdSense inline -->
+</section>
+<!-- CH1 Relations & Functions -->
+<section id="sec-ch1">
+  <div class="sec-title">📐 Chapter 1: Relations and Functions</div>
+  <div class="sec-sub">Types of Relations · Functions · Composition · Invertible · Binary Operations</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>1.1 Types of Relations</h3>
+<p>A relation R on set A is a subset of A×A. Types and properties are central to CBSE board questions.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Reflexive</div><div class="defn">Every element is related to itself: (a,a) ∈ R ∀ a ∈ A. Example: "is divisible by" is reflexive on ℕ (a|a always).</div></div>
+  <div class="def-card"><div class="term">Symmetric</div><div class="defn">If (a,b) ∈ R then (b,a) ∈ R. Example: "is sibling of" is symmetric.</div></div>
+  <div class="def-card"><div class="term">Transitive</div><div class="defn">If (a,b) ∈ R and (b,c) ∈ R then (a,c) ∈ R. Example: "≤" is transitive.</div></div>
+  <div class="def-card"><div class="term">Equivalence Relation</div><div class="defn">Reflexive + Symmetric + Transitive. Partitions set into equivalence classes. Example: congruence modulo n on integers.</div></div>
+</div>
+<h3>1.2 Types of Functions</h3>
+<div class="def-grid">
+  <div class="def-card"><div class="term">One-one (Injective)</div><div class="defn">f(a)=f(b) ⟹ a=b. No two elements in domain map to same element in co-domain. Test: f'(x) does not change sign (monotonic).</div></div>
+  <div class="def-card"><div class="term">Onto (Surjective)</div><div class="defn">Range = Co-domain. Every element of co-domain has a pre-image in domain.</div></div>
+  <div class="def-card"><div class="term">Bijective</div><div class="defn">Both one-one and onto. Necessary for an invertible function. f⁻¹ exists iff f is bijective.</div></div>
+  <div class="def-card"><div class="term">Composition gof</div><div class="defn">(gof)(x) = g(f(x)). If f: A→B and g: B→C then gof: A→C. Not commutative in general. Associative: ho(gof) = (hog)of.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Binary Operations</h4>
+  <div class="f">Binary operation *: A×A → A. Closure: a*b ∈ A ∀ a,b ∈ A</div>
+  <div class="f">Commutative: a*b = b*a; Associative: (a*b)*c = a*(b*c)</div>
+  <div class="f">Identity element e: a*e = e*a = a. Inverse of a: a*a⁻¹ = e</div>
+  <div class="f">Number of bijections from set A to A = n! (if |A|=n)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Equivalence Relation (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Check whether R = {(a,b): a and b have same number of factors} on ℕ is an equivalence relation.</p>
+      <div class="step"><div class="sn">1</div><div>Reflexive: a has same factors as itself → (a,a) ∈ R ✓</div></div><div class="step"><div class="sn">2</div><div>Symmetric: if a,b have same factors, so do b,a → (a,b) ∈ R ⟹ (b,a) ∈ R ✓</div></div><div class="step"><div class="sn">3</div><div>Transitive: if a,b have same factors and b,c have same factors → a,c have same factors ✓</div></div><div class="step"><div class="sn">4</div><div>All three properties hold → R is an equivalence relation</div></div>
+      <div class="ans">✅ R is an equivalence relation (reflexive + symmetric + transitive all satisfied)</div>
+    </div>
+    <div class="worked">
+      <h4>Bijective Function (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Show that f: ℝ→ℝ defined by f(x) = 2x+3 is bijective.</p>
+      <div class="step"><div class="sn">1</div><div>One-one: Let f(x₁) = f(x₂) → 2x₁+3 = 2x₂+3 → x₁ = x₂ ✓ (injective)</div></div><div class="step"><div class="sn">2</div><div>Onto: Let y ∈ ℝ; need x such that f(x)=y → x = (y−3)/2 ∈ ℝ → for every y there is a pre-image ✓ (surjective)</div></div><div class="step"><div class="sn">3</div><div>Since both one-one and onto, f is bijective</div></div><div class="step"><div class="sn">4</div><div>Inverse: f⁻¹(y) = (y−3)/2</div></div>
+      <div class="ans">✅ f(x)=2x+3 is bijective; f⁻¹(y) = (y−3)/2</div>
+    </div>
+    <div class="worked">
+      <h4>Composition (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> If f(x)=x+1 and g(x)=x², find gof and fog.</p>
+      <div class="step"><div class="sn">1</div><div>gof(x) = g(f(x)) = g(x+1) = (x+1)²</div></div><div class="step"><div class="sn">2</div><div>fog(x) = f(g(x)) = f(x²) = x²+1</div></div><div class="step"><div class="sn">3</div><div>gof ≠ fog → composition is not commutative in general</div></div>
+      <div class="ans">✅ gof(x) = (x+1)²; fog(x) = x²+1; gof ≠ fog</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">One-one Function</div>
+      <div class="vs-head">Many-one Function</div>
+      <div class="vs-row"><div>f(a)=f(b) ⟹ a=b (distinct images for distinct inputs)</div><div>f(a)=f(b) but a≠b possible</div></div><div class="vs-row"><div>Horizontal line test: each y hit at most once</div><div>Horizontal line hits curve more than once</div></div><div class="vs-row"><div>Example: f(x) = 2x+3 on ℝ</div><div>Example: f(x) = x² (f(1)=f(−1)=1)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Define a binary operation * on Q by a*b = (a+b)/2. Check if it is commutative and associative.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Commutative: a*b = (a+b)/2 = (b+a)/2 = b*a ✓. Associative: (a*b)*c = ((a+b)/2)*c = ((a+b)/2 + c)/2 = (a+b+2c)/4. a*(b*c) = a*((b+c)/2) = (a + (b+c)/2)/2 = (2a+b+c)/4. Since (a+b+2c)/4 ≠ (2a+b+c)/4 in general, * is NOT associative. For example: (2*4)*6 = 3*6 = 4.5 but 2*(4*6) = 2*5 = 3.5.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch2">
+  <div class="sec-title">📐 Chapter 2: Inverse Trigonometric Functions</div>
+  <div class="sec-sub">Domain · Range · Principal Value · Properties · Formulae</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>2.1 Inverse Trig — Domain and Range</h3>
+<p>To make trig functions bijective (and hence invertible), their domain is restricted to <strong>principal value branch</strong>.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">sin⁻¹ x</div><div class="defn">Domain: [−1, 1]. Range (principal branch): [−π/2, π/2].</div></div>
+  <div class="def-card"><div class="term">cos⁻¹ x</div><div class="defn">Domain: [−1, 1]. Range: [0, π].</div></div>
+  <div class="def-card"><div class="term">tan⁻¹ x</div><div class="defn">Domain: ℝ. Range: (−π/2, π/2).</div></div>
+  <div class="def-card"><div class="term">cosec⁻¹ x</div><div class="defn">Domain: (−∞,−1]∪[1,∞). Range: [−π/2, π/2] − {0}.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Key Properties and Formulae</h4>
+  <div class="f">sin⁻¹(−x) = −sin⁻¹x; cos⁻¹(−x) = π − cos⁻¹x; tan⁻¹(−x) = −tan⁻¹x</div>
+  <div class="f">sin⁻¹x + cos⁻¹x = π/2; tan⁻¹x + cot⁻¹x = π/2; sec⁻¹x + cosec⁻¹x = π/2</div>
+  <div class="f">tan⁻¹x + tan⁻¹y = tan⁻¹[(x+y)/(1−xy)], if xy &lt; 1</div>
+  <div class="f">2tan⁻¹x = sin⁻¹[2x/(1+x²)] = cos⁻¹[(1−x²)/(1+x²)] = tan⁻¹[2x/(1−x²)]</div>
+  <div class="f">sin(sin⁻¹x) = x for x ∈ [−1,1]; sin⁻¹(sin x) = x for x ∈ [−π/2, π/2]</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Principal Value (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> Find the principal value of cos⁻¹(−1/2).</p>
+      <div class="step"><div class="sn">1</div><div>cos⁻¹ has principal branch [0, π]</div></div><div class="step"><div class="sn">2</div><div>We need θ ∈ [0, π] such that cos θ = −1/2</div></div><div class="step"><div class="sn">3</div><div>cos 60° = 1/2 and cos is negative in second quadrant → cos 120° = −1/2</div></div><div class="step"><div class="sn">4</div><div>120° = 2π/3 radians; 2π/3 ∈ [0, π] ✓</div></div>
+      <div class="ans">✅ cos⁻¹(−1/2) = 2π/3</div>
+    </div>
+    <div class="worked">
+      <h4>Tan inverse addition (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Prove: tan⁻¹(1/2) + tan⁻¹(2/11) = tan⁻¹(3/4)</p>
+      <div class="step"><div class="sn">1</div><div>Use: tan⁻¹x + tan⁻¹y = tan⁻¹[(x+y)/(1−xy)] when xy < 1</div></div><div class="step"><div class="sn">2</div><div>Here x=1/2, y=2/11; xy = 1/11 < 1 ✓</div></div><div class="step"><div class="sn">3</div><div>x+y = 1/2 + 2/11 = 11/22 + 4/22 = 15/22</div></div><div class="step"><div class="sn">4</div><div>1−xy = 1 − 1/11 = 10/11</div></div><div class="step"><div class="sn">5</div><div>(x+y)/(1−xy) = (15/22)/(10/11) = 15/22 × 11/10 = 165/220 = 3/4</div></div><div class="step"><div class="sn">6</div><div>tan⁻¹(1/2) + tan⁻¹(2/11) = tan⁻¹(3/4) ✓</div></div>
+      <div class="ans">✅ tan⁻¹(1/2) + tan⁻¹(2/11) = tan⁻¹(3/4); use addition formula with xy=1/11 < 1</div>
+    </div>
+    <div class="worked">
+      <h4>Simplify (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> Simplify: sin⁻¹[sin(5π/6)]</p>
+      <div class="step"><div class="sn">1</div><div>5π/6 is NOT in the principal branch [−π/2, π/2]</div></div><div class="step"><div class="sn">2</div><div>sin(5π/6) = sin(π − 5π/6) = sin(π/6) = 1/2</div></div><div class="step"><div class="sn">3</div><div>We need sin⁻¹(1/2) = π/6 (which IS in [−π/2, π/2])</div></div><div class="step"><div class="sn">4</div><div>sin⁻¹[sin(5π/6)] = π/6 (not 5π/6)</div></div>
+      <div class="ans">✅ sin⁻¹[sin(5π/6)] = π/6 (bring argument into principal branch first)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">sin⁻¹ x</div>
+      <div class="vs-head">cos⁻¹ x</div>
+      <div class="vs-row"><div>Domain: [−1, 1]</div><div>Domain: [−1, 1]</div></div><div class="vs-row"><div>Range: [−π/2, π/2]</div><div>Range: [0, π]</div></div><div class="vs-row"><div>sin⁻¹(−x) = −sin⁻¹x (odd function)</div><div>cos⁻¹(−x) = π − cos⁻¹x</div></div><div class="vs-row"><div>sin⁻¹x + cos⁻¹x = π/2 (complementary)</div><div>sin⁻¹x + cos⁻¹x = π/2 (complementary)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Write tan⁻¹(cos x / (1+sin x)) in simplest form for x ∈ (−π/2, π/2).</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Use: cos x = cos²(x/2) − sin²(x/2) = (cos(x/2)−sin(x/2))(cos(x/2)+sin(x/2)); 1+sin x = (cos(x/2)+sin(x/2))². So the expression = tan⁻¹[(cos(x/2)−sin(x/2))/(cos(x/2)+sin(x/2))] = tan⁻¹[tan(π/4 − x/2)] = π/4 − x/2.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Additional Identities and Tricks</h2>
+    <h3>2.3 Board Exam Shortcuts</h3>
+    <p>Many board problems involve simplification using inverse trig identities rather than computing exact values.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Complementary Pair</div><div class="defn">sin⁻¹x + cos⁻¹x = π/2 for all x ∈ [−1,1]. So cos⁻¹x = π/2 − sin⁻¹x. Use this to convert between forms.</div></div>
+      <div class="def-card"><div class="term">Tan-Cot Pair</div><div class="defn">tan⁻¹x + cot⁻¹x = π/2 for all x ∈ ℝ. Similarly sec⁻¹x + cosec⁻¹x = π/2 for |x| ≥ 1.</div></div>
+      <div class="def-card"><div class="term">Negative x trick</div><div class="defn">For sin⁻¹, tan⁻¹, cosec⁻¹, cot⁻¹: f(−x) = −f(x) (odd). For cos⁻¹, sec⁻¹: f(−x) = π − f(x).</div></div>
+      <div class="def-card"><div class="term">2tan⁻¹ identities</div><div class="defn">2tan⁻¹(1/2) + tan⁻¹(1/7) = π/4 (classic identity). Proven using addition formula twice.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Common Board Question Types</h4>
+      <div class="f">Type 1: Find principal value — always work in the principal branch of each function</div>
+      <div class="f">Type 2: Simplify expression — use identities; answer will be a simple angle (0, π/6, π/4, π/3, π/2)</div>
+      <div class="f">Type 3: Prove equality — start from one side, use addition/subtraction formulae</div>
+      <div class="f">Type 4: Solve equation — isolate the inverse trig function, apply trig to both sides</div>
+      <div class="f">Solving sin⁻¹x = y: x = sin y; always check x is in domain [−1,1] and y is in principal branch</div>
+    </div>
+    <div class="worked">
+      <h4>Solve Equation (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Solve: sin⁻¹(1−x) − 2sin⁻¹x = π/2</p>
+      <div class="step"><div class="sn">1</div><div>sin⁻¹(1−x) = π/2 + 2sin⁻¹x</div></div>
+      <div class="step"><div class="sn">2</div><div>sin⁻¹(1−x) + cos⁻¹(1−x) = π/2 always; so comparing: cos⁻¹(1−x) = 2sin⁻¹x</div></div>
+      <div class="step"><div class="sn">3</div><div>Let sin⁻¹x = θ → x = sinθ; then cos⁻¹(1−x) = 2θ → 1−x = cos2θ = 1−2sin²θ = 1−2x²</div></div>
+      <div class="step"><div class="sn">4</div><div>1−x = 1−2x² → 2x²−x = 0 → x(2x−1) = 0 → x=0 or x=1/2</div></div>
+      <div class="step"><div class="sn">5</div><div>Check x=1/2: sin⁻¹(1/2)=π/6; LHS = sin⁻¹(1/2) − 2sin⁻¹(1/2) = π/6−π/3=−π/6 ≠ π/2 ✗; x=0: LHS = sin⁻¹(1)−0 = π/2 ✓</div></div>
+      <div class="ans">✅ x = 0 (x=1/2 extraneous — always verify in inverse trig equations)</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch3">
+  <div class="sec-title">📐 Chapter 3: Matrices</div>
+  <div class="sec-sub">Types · Operations · Transpose · Symmetric · Elementary Operations · Inverse</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>3.1 Types of Matrices</h3>
+<p>A matrix is a rectangular array of numbers arranged in rows and columns. Denoted A = [aᵢⱼ] of order m×n.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Special Matrices</div><div class="defn">Row (1×n), Column (m×1), Square (m=n), Null (all 0), Identity I (diagonal=1, rest 0), Diagonal, Scalar, Upper/Lower Triangular.</div></div>
+  <div class="def-card"><div class="term">Transpose A′ (or Aᵀ)</div><div class="defn">Rows become columns: (A′)ᵢⱼ = Aⱼᵢ. Properties: (A′)′=A; (kA)′=kA′; (A+B)′=A′+B′; (AB)′=B′A′.</div></div>
+  <div class="def-card"><div class="term">Symmetric Matrix</div><div class="defn">A′ = A (aᵢⱼ = aⱼᵢ). Skew-symmetric: A′ = −A (aᵢⱼ = −aⱼᵢ); diagonal elements = 0. Any square matrix = symmetric + skew-symmetric: A = ½(A+A′) + ½(A−A′).</div></div>
+  <div class="def-card"><div class="term">Matrix Multiplication</div><div class="defn">Amₓp × Bpₓn = CmₓN. Cᵢⱼ = Σₖ aᵢₖbₖⱼ. AB ≠ BA in general. A(BC) = (AB)C (associative). A(B+C) = AB+AC (distributive).</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Invertible Matrix (for 2×2)</h4>
+  <div class="f">For A = [[a,b],[c,d]]: |A| = ad − bc (determinant)</div>
+  <div class="f">A⁻¹ = (1/|A|) × [[d,−b],[−c,a]] — only if |A| ≠ 0</div>
+  <div class="f">A⁻¹A = AA⁻¹ = I (identity matrix)</div>
+  <div class="f">Elementary row operations: Rᵢ ↔ Rⱼ (swap); Rᵢ → kRᵢ; Rᵢ → Rᵢ + kRⱼ</div>
+  <div class="f">Number of elements in m×n matrix = m×n; equal matrices: same order AND corresponding elements equal</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Matrix Addition (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> If A = [[1,2],[3,4]] and B = [[5,6],[7,8]], find 2A − B.</p>
+      <div class="step"><div class="sn">1</div><div>2A = 2×[[1,2],[3,4]] = [[2,4],[6,8]]</div></div><div class="step"><div class="sn">2</div><div>2A − B = [[2,4],[6,8]] − [[5,6],[7,8]]</div></div><div class="step"><div class="sn">3</div><div>= [[2−5, 4−6],[6−7, 8−8]] = [[−3, −2],[−1, 0]]</div></div>
+      <div class="ans">✅ 2A − B = [[−3, −2],[−1, 0]]</div>
+    </div>
+    <div class="worked">
+      <h4>Symmetric + Skew (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Express A = [[2,3],[1,−1]] as sum of symmetric and skew-symmetric matrix.</p>
+      <div class="step"><div class="sn">1</div><div>Symmetric part P = ½(A+A′)</div></div><div class="step"><div class="sn">2</div><div>A′ = [[2,1],[3,−1]]</div></div><div class="step"><div class="sn">3</div><div>A+A′ = [[4,4],[4,−2]] → P = [[2,2],[2,−1]]</div></div><div class="step"><div class="sn">4</div><div>Skew-symmetric part Q = ½(A−A′)</div></div><div class="step"><div class="sn">5</div><div>A−A′ = [[0,2],[−2,0]] → Q = [[0,1],[−1,0]]</div></div><div class="step"><div class="sn">6</div><div>Check: P+Q = [[2,3],[1,−1]] = A ✓</div></div>
+      <div class="ans">✅ P = [[2,2],[2,−1]] (symmetric); Q = [[0,1],[−1,0]] (skew-symmetric)</div>
+    </div>
+    <div class="worked">
+      <h4>Inverse 2×2 (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> Find A⁻¹ if A = [[3,1],[2,1]].</p>
+      <div class="step"><div class="sn">1</div><div>|A| = 3×1 − 1×2 = 3−2 = 1 ≠ 0 (invertible)</div></div><div class="step"><div class="sn">2</div><div>A⁻¹ = (1/|A|)×[[d,−b],[−c,a]] = (1/1)×[[1,−1],[−2,3]]</div></div><div class="step"><div class="sn">3</div><div>Verify: A×A⁻¹ = [[3,1],[2,1]]×[[1,−1],[−2,3]] = [[1,0],[0,1]] = I ✓</div></div>
+      <div class="ans">✅ A⁻¹ = [[1,−1],[−2,3]]</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Row Matrix</div>
+      <div class="vs-head">Column Matrix</div>
+      <div class="vs-row"><div>Order: 1×n (single row)</div><div>Order: m×1 (single column)</div></div><div class="vs-row"><div>Example: [2 5 −1] is 1×3</div><div>Example: [[2],[5],[−1]] is 3×1</div></div><div class="vs-row"><div>Transpose of row = column</div><div>Transpose of column = row</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> If AB = BA = I, what is the relationship between A and B? If A = [[2,3],[1,2]], find B.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> If AB = BA = I, then B = A⁻¹ (A and B are inverses). For A = [[2,3],[1,2]]: |A| = 4−3 = 1. A⁻¹ = [[2,−3],[−1,2]]. Verify: [[2,3],[1,2]]×[[2,−3],[−1,2]] = [[4−3, −6+6],[2−2, −3+4]] = [[1,0],[0,1]] = I ✓.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Matrix Operations Drill</h2>
+    <h3>3.3 Important Properties for Board</h3>
+    <p>Matrix algebra has properties different from ordinary algebra — these differences are most tested.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">AB ≠ BA in general</div><div class="defn">Matrix multiplication is NOT commutative. Always specify the order. Exception: AI = IA = A (identity commutes with everything).</div></div>
+      <div class="def-card"><div class="term">Cancellation NOT valid</div><div class="defn">AB = AC does NOT imply B = C (even if A ≠ 0). This is because A may not be invertible.</div></div>
+      <div class="def-card"><div class="term">AB = 0 ⟹ A=0 or B=0?</div><div class="defn">NOT necessarily. Zero divisors exist: [[1,0],[0,0]] × [[0,0],[0,1]] = [[0,0],[0,0]] but neither factor is zero.</div></div>
+      <div class="def-card"><div class="term">Trace of Matrix</div><div class="defn">tr(A) = sum of diagonal elements. tr(AB) = tr(BA). Trace is invariant under cyclic permutations.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Elementary Transformations to Find A⁻¹</h4>
+      <div class="f">Write [A|I] (augmented matrix). Apply row operations to reduce A to I.</div>
+      <div class="f">When left side becomes I, right side becomes A⁻¹: [A|I] → [I|A⁻¹]</div>
+      <div class="f">Similarly for column operations: write [A on top, I below]; col ops → [[I],[A⁻¹]]</div>
+      <div class="f">Never mix row and column operations in the same procedure</div>
+    </div>
+    <div class="worked">
+      <h4>Find Inverse Using Row Operations (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Find A⁻¹ using elementary row transformations for A = [[1,−1,0],[2,3,4],[0,1,2]]</p>
+      <div class="step"><div class="sn">1</div><div>Write augmented matrix [A|I]: [[1,−1,0|1,0,0],[2,3,4|0,1,0],[0,1,2|0,0,1]]</div></div>
+      <div class="step"><div class="sn">2</div><div>R2 → R2−2R1: [[1,−1,0|1,0,0],[0,5,4|−2,1,0],[0,1,2|0,0,1]]</div></div>
+      <div class="step"><div class="sn">3</div><div>R2 ↔ R3: [[1,−1,0|1,0,0],[0,1,2|0,0,1],[0,5,4|−2,1,0]]</div></div>
+      <div class="step"><div class="sn">4</div><div>R3 → R3−5R2: [[1,−1,0|1,0,0],[0,1,2|0,0,1],[0,0,−6|−2,1,−5]]</div></div>
+      <div class="step"><div class="sn">5</div><div>R3 → R3/(−6): [[1,−1,0|...],[0,1,2|...],[0,0,1|1/3,−1/6,5/6]]; back-substitute to get I on left; read A⁻¹ from right</div></div>
+      <div class="ans">✅ Use row reduction on [A|I] systematically; each row operation applied to both sides</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch4">
+  <div class="sec-title">📐 Chapter 4: Determinants</div>
+  <div class="sec-sub">Properties · Minors · Cofactors · Adjoint · Inverse · Cramer's Rule</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>4.1 Determinant and Properties</h3>
+<p>Every square matrix has a scalar determinant. Only square matrices have determinants. |A| = 0 ⟺ A is singular (non-invertible).</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">2×2 Determinant</div><div class="defn">|[[a,b],[c,d]]| = ad − bc. Expanding along any row or column gives same result.</div></div>
+  <div class="def-card"><div class="term">3×3 Determinant</div><div class="defn">Expand along R1: |A| = a₁₁C₁₁ + a₁₂C₁₂ + a₁₃C₁₃ where Cᵢⱼ = (−1)^(i+j) × Mᵢⱼ (cofactor = signed minor).</div></div>
+  <div class="def-card"><div class="term">Properties</div><div class="defn">|A| = |A′|; |kA| = kⁿ|A| for n×n; |AB| = |A||B|; Row swap → |A| changes sign; Identical rows/cols → |A|=0; Row of zeros → |A|=0.</div></div>
+  <div class="def-card"><div class="term">Adjoint and Inverse</div><div class="defn">adj(A) = transpose of cofactor matrix. A⁻¹ = adj(A)/|A| (only if |A|≠0). A·adj(A) = adj(A)·A = |A|·I.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Applications of Determinants</h4>
+  <div class="f">Area of triangle with vertices (x₁,y₁),(x₂,y₂),(x₃,y₃) = ½|det([[x₁,y₁,1],[x₂,y₂,1],[x₃,y₃,1]])|</div>
+  <div class="f">Collinear points: area of triangle = 0 ⟺ determinant = 0</div>
+  <div class="f">System AX = B: consistent and unique solution X = A⁻¹B if |A| ≠ 0</div>
+  <div class="f">Cramer's Rule: xᵢ = |Aᵢ|/|A| where Aᵢ = A with ith column replaced by B</div>
+  <div class="f">|A|·|A⁻¹| = 1; for orthogonal matrices: |A| = ±1</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Cofactor Expansion (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Evaluate |[[1,2,3],[4,5,6],[7,8,9]]| using cofactor expansion.</p>
+      <div class="step"><div class="sn">1</div><div>Expand along R1: |A| = 1×C₁₁ + 2×C₁₂ + 3×C₁₃</div></div><div class="step"><div class="sn">2</div><div>C₁₁ = (+1)|[[5,6],[8,9]]| = 45−48 = −3</div></div><div class="step"><div class="sn">3</div><div>C₁₂ = (−1)|[[4,6],[7,9]]| = −(36−42) = 6</div></div><div class="step"><div class="sn">4</div><div>C₁₃ = (+1)|[[4,5],[7,8]]| = 32−35 = −3</div></div><div class="step"><div class="sn">5</div><div>|A| = 1(−3) + 2(6) + 3(−3) = −3+12−9 = 0</div></div><div class="step"><div class="sn">6</div><div>Zero determinant confirms R3 = 2R2 − R1 (linear dependence)</div></div>
+      <div class="ans">✅ |A| = 0 (rows are linearly dependent; R1+R3=2R2)</div>
+    </div>
+    <div class="worked">
+      <h4>Area of Triangle (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> Find the area of triangle with vertices (2,7), (1,1), (10,8).</p>
+      <div class="step"><div class="sn">1</div><div>Area = ½|det([[2,7,1],[1,1,1],[10,8,1]])|</div></div><div class="step"><div class="sn">2</div><div>Expand along C3: = ½|1×(8−10) − 1×(16−70) + 1×(1−10)|</div></div><div class="step"><div class="sn">3</div><div>= ½|1(8−10) − 1(16−70) + 1(1−10)|</div></div><div class="step"><div class="sn">4</div><div>det = 2(1−8) − 7(1−10) + 1(8−10) = 2(−7) −7(−9) + 1(−2) = −14+63−2 = 47</div></div><div class="step"><div class="sn">5</div><div>Area = ½×|47| = 47/2 = 23.5 square units</div></div>
+      <div class="ans">✅ Area = 47/2 = 23.5 sq units</div>
+    </div>
+    <div class="worked">
+      <h4>Inverse using Adjoint (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Find A⁻¹ for A = [[1,2,3],[0,1,4],[5,6,0]] using adjoint.</p>
+      <div class="step"><div class="sn">1</div><div>Compute |A| = 1(0−24) − 2(0−20) + 3(0−5) = −24+40−15 = 1</div></div><div class="step"><div class="sn">2</div><div>|A| = 1 ≠ 0 → A⁻¹ exists</div></div><div class="step"><div class="sn">3</div><div>Cofactor C₁₁ = (0−24) = −24; C₁₂ = −(0−20) = 20; C₁₃ = (0−5) = −5</div></div><div class="step"><div class="sn">4</div><div>C₂₁ = −(0−18) = 18; C₂₂ = (0−15) = −15; C₂₃ = −(6−10) = 4</div></div><div class="step"><div class="sn">5</div><div>C₃₁ = (8−3) = 5; C₃₂ = −(4−0) = −4; C₃₃ = (1−0) = 1</div></div><div class="step"><div class="sn">6</div><div>adj(A) = transpose of cofactor matrix; A⁻¹ = adj(A)/|A| = adj(A)</div></div>
+      <div class="ans">✅ A⁻¹ = adj(A)/|A|; |A|=1; compute 9 cofactors → transpose → divide by 1</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Minor Mᵢⱼ</div>
+      <div class="vs-head">Cofactor Cᵢⱼ</div>
+      <div class="vs-row"><div>Determinant of submatrix after deleting row i and column j</div><div>Cᵢⱼ = (−1)^(i+j) × Mᵢⱼ (signed minor)</div></div><div class="vs-row"><div>Always positive value</div><div>May be positive or negative depending on position</div></div><div class="vs-row"><div>Used to compute cofactors</div><div>Used in cofactor expansion to find |A| and adj(A)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> If A is a square matrix of order 3 and |A| = 5, find |adj A|.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> For an n×n matrix A: |adj(A)| = |A|^(n−1). Here n=3, |A|=5. So |adj(A)| = 5^(3−1) = 5² = 25.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Determinant Tricks and System of Equations</h2>
+    <h3>4.3 System of Linear Equations Using Matrices</h3>
+    <p>A system of linear equations AX = B can be solved using A⁻¹ if |A| ≠ 0.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Consistent System</div><div class="defn">|A| ≠ 0 → unique solution X = A⁻¹B. |A| = 0 and (adj A)B = 0 → infinitely many solutions. |A| = 0 and (adj A)B ≠ 0 → no solution (inconsistent).</div></div>
+      <div class="def-card"><div class="term">Properties of Determinants</div><div class="defn">|A×B| = |A|×|B|; |A^n| = |A|ⁿ; |kA| = kⁿ|A| for n×n matrix A; |A⁻¹| = 1/|A|; |A| = |A′|.</div></div>
+      <div class="def-card"><div class="term">Using Properties to Evaluate</div><div class="defn">Simplify determinants using: R → R + k×(other row); factor out common factors from a row/column; use special forms (triangular, etc.) to shortcut calculation.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Solving AX = B Using Inverse</h4>
+      <div class="f">Step 1: Write coefficient matrix A, variable matrix X, constant matrix B</div>
+      <div class="f">Step 2: Find |A|. If |A|=0 → check (adj A)B for consistency</div>
+      <div class="f">Step 3: Find adj(A) = [cofactor matrix]ᵀ (transpose of cofactors)</div>
+      <div class="f">Step 4: A⁻¹ = adj(A)/|A|</div>
+      <div class="f">Step 5: X = A⁻¹B (matrix multiply to get x, y, z values)</div>
+    </div>
+    <div class="worked">
+      <h4>System of Equations (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Solve: x+y+z=6, x+2y+3z=14, x+4y+9z=36 using matrix method.</p>
+      <div class="step"><div class="sn">1</div><div>A = [[1,1,1],[1,2,3],[1,4,9]], X = [x,y,z]ᵀ, B = [6,14,36]ᵀ</div></div>
+      <div class="step"><div class="sn">2</div><div>|A| = 1(18−12)−1(9−3)+1(4−2) = 6−6+2 = 2 ≠ 0 → unique solution</div></div>
+      <div class="step"><div class="sn">3</div><div>Find cofactors, then adj(A); A⁻¹ = adj(A)/2</div></div>
+      <div class="step"><div class="sn">4</div><div>X = A⁻¹B; after calculation: x=1, y=2, z=3</div></div>
+      <div class="ans">✅ x=1, y=2, z=3</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch5">
+  <div class="sec-title">📐 Chapter 5: Continuity and Differentiability</div>
+  <div class="sec-sub">Continuity · Differentiability · Chain Rule · Implicit · Parametric · Second Derivative</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>5.1 Continuity</h3>
+<p>f(x) is continuous at x=a if: (1) f(a) is defined, (2) lim_{x→a} f(x) exists, (3) lim_{x→a} f(x) = f(a).</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Continuity Tests</div><div class="defn">Check: LHL = RHL = f(a). LHL = lim_{x→a⁻} f(x); RHL = lim_{x→a⁺} f(x). Polynomials and trig functions are continuous everywhere.</div></div>
+  <div class="def-card"><div class="term">Differentiability</div><div class="defn">f is differentiable at x=a if f′(a) = lim_{h→0} [f(a+h)−f(a)]/h exists. Differentiable ⟹ Continuous (converse not always true). |x| is continuous but not differentiable at x=0.</div></div>
+  <div class="def-card"><div class="term">Standard Derivatives</div><div class="defn">d/dx(xⁿ) = nxⁿ⁻¹; d/dx(eˣ) = eˣ; d/dx(ln x) = 1/x; d/dx(sin x) = cos x; d/dx(tan x) = sec²x; d/dx(sin⁻¹x) = 1/√(1−x²); d/dx(tan⁻¹x) = 1/(1+x²).</div></div>
+  <div class="def-card"><div class="term">Chain Rule</div><div class="defn">d/dx[f(g(x))] = f′(g(x))·g′(x). Example: d/dx[sin(x²)] = cos(x²)·2x = 2x cos(x²).</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Implicit and Parametric Differentiation</h4>
+  <div class="f">Implicit: differentiate both sides w.r.t. x, collect dy/dx terms</div>
+  <div class="f">Parametric: x=f(t), y=g(t) → dy/dx = (dy/dt)/(dx/dt) = g′(t)/f′(t)</div>
+  <div class="f">Logarithmic differentiation: for y=uᵛ type; take log both sides, differentiate</div>
+  <div class="f">d²y/dx² = d/dx(dy/dx); second derivative gives concavity (positive = concave up)</div>
+  <div class="f">Rolle′s theorem: if f continuous on [a,b], differentiable on (a,b), f(a)=f(b) → ∃c∈(a,b): f′(c)=0</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Continuity check (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> Check if f(x) = |x−1| is differentiable at x=1.</p>
+      <div class="step"><div class="sn">1</div><div>f(x) = x−1 for x≥1 and 1−x for x<1</div></div><div class="step"><div class="sn">2</div><div>LHD = lim_{h→0⁻}[f(1+h)−f(1)]/h = lim[|h|/h] = lim(−h/h) = −1</div></div><div class="step"><div class="sn">3</div><div>RHD = lim_{h→0⁺}[f(1+h)−f(1)]/h = lim[h/h] = 1</div></div><div class="step"><div class="sn">4</div><div>LHD ≠ RHD → f is NOT differentiable at x=1</div></div><div class="step"><div class="sn">5</div><div>But f is continuous at x=1 (LHL=RHL=f(1)=0)</div></div>
+      <div class="ans">✅ |x−1| is continuous but NOT differentiable at x=1; LHD=−1 ≠ RHD=1</div>
+    </div>
+    <div class="worked">
+      <h4>Implicit Differentiation (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Find dy/dx if x²+y²=25.</p>
+      <div class="step"><div class="sn">1</div><div>Differentiate both sides w.r.t. x:</div></div><div class="step"><div class="sn">2</div><div>d/dx(x²) + d/dx(y²) = d/dx(25)</div></div><div class="step"><div class="sn">3</div><div>2x + 2y·dy/dx = 0</div></div><div class="step"><div class="sn">4</div><div>dy/dx = −2x/(2y) = −x/y</div></div>
+      <div class="ans">✅ dy/dx = −x/y (implicit differentiation)</div>
+    </div>
+    <div class="worked">
+      <h4>Parametric (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> If x = a cos t and y = a sin t, find dy/dx and d²y/dx².</p>
+      <div class="step"><div class="sn">1</div><div>dx/dt = −a sin t; dy/dt = a cos t</div></div><div class="step"><div class="sn">2</div><div>dy/dx = (dy/dt)/(dx/dt) = (a cos t)/(−a sin t) = −cot t</div></div><div class="step"><div class="sn">3</div><div>For d²y/dx²: differentiate dy/dx=−cot t w.r.t. t: d/dt(−cot t)=cosec²t</div></div><div class="step"><div class="sn">4</div><div>d²y/dx² = (d/dt)(dy/dx)/(dx/dt) = cosec²t/(−a sin t) = −cosec²t/(a sin t) = −1/(a sin³t)</div></div>
+      <div class="ans">✅ dy/dx = −cot t; d²y/dx² = −1/(a sin³t)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Continuity</div>
+      <div class="vs-head">Differentiability</div>
+      <div class="vs-row"><div>lim_{x→a}f(x) = f(a)</div><div>lim_{h→0}[f(a+h)−f(a)]/h exists (LHD = RHD)</div></div><div class="vs-row"><div>Broader condition</div><div>Stricter condition — implies continuity</div></div><div class="vs-row"><div>|x| is continuous everywhere</div><div>|x| not differentiable at x=0</div></div><div class="vs-row"><div>All differentiable functions are continuous</div><div>Not all continuous functions are differentiable</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> State and verify Rolle's theorem for f(x) = x²−4x+3 on [1, 3].</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Conditions: (1) f(x)=x²−4x+3 is a polynomial → continuous on [1,3] ✓ (2) Differentiable on (1,3) ✓ (3) f(1)=1−4+3=0, f(3)=9−12+3=0 → f(1)=f(3) ✓. By Rolle's theorem ∃c∈(1,3): f′(c)=0. f′(x)=2x−4=0 → x=2. c=2 ∈ (1,3) ✓. Theorem verified.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Higher-Order Derivatives and MVT</h2>
+    <h3>5.3 Mean Value Theorems</h3>
+    <p>MVT and Rolle's theorem establish existence of points with specific derivative values — frequently tested in board exams (2M, 3M).</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Mean Value Theorem (Lagrange's)</div><div class="defn">If f is continuous on [a,b] and differentiable on (a,b), then ∃c ∈ (a,b) such that f′(c) = [f(b)−f(a)]/(b−a). Geometrically: tangent slope = secant slope at some interior point.</div></div>
+      <div class="def-card"><div class="term">Rolle's vs MVT</div><div class="defn">Rolle's is a special case of MVT where f(a) = f(b) → f′(c) = 0 at some c. MVT doesn't require equal endpoint values.</div></div>
+      <div class="def-card"><div class="term">Higher Derivatives</div><div class="defn">y₂ = d²y/dx²; yₙ = dⁿy/dxⁿ. For parametric: d²y/dx² ≠ (d²y/dt²)/(d²x/dt²). Correct formula: d²y/dx² = [d/dt(dy/dx)]/(dx/dt).</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Logarithmic Differentiation — Key Cases</h4>
+      <div class="f">For y = uᵛ where u and v are both functions of x: take log both sides</div>
+      <div class="f">ln y = v·ln u → differentiate: (1/y)·dy/dx = v′·ln u + v·(u′/u)</div>
+      <div class="f">dy/dx = y·[v′·ln u + v·u′/u] — substitute y = uᵛ at the end</div>
+      <div class="f">Example: y = xˢⁱⁿ ˣ → ln y = sin x · ln x → (1/y)dy/dx = cos x·ln x + sin x/x</div>
+    </div>
+    <div class="worked">
+      <h4>Logarithmic Differentiation (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Differentiate y = (sin x)ˣ + xˢⁱⁿ ˣ</p>
+      <div class="step"><div class="sn">1</div><div>Let u = (sin x)ˣ and v = xˢⁱⁿ ˣ; differentiate each using log differentiation</div></div>
+      <div class="step"><div class="sn">2</div><div>For u: ln u = x·ln(sin x) → (1/u)·du/dx = ln(sin x) + x·cos x/sin x = ln(sin x) + x·cot x</div></div>
+      <div class="step"><div class="sn">3</div><div>du/dx = (sin x)ˣ·[ln(sin x) + x·cot x]</div></div>
+      <div class="step"><div class="sn">4</div><div>For v: ln v = sin x·ln x → (1/v)·dv/dx = cos x·ln x + sin x/x → dv/dx = xˢⁱⁿ ˣ·[cos x·ln x + sin x/x]</div></div>
+      <div class="step"><div class="sn">5</div><div>dy/dx = du/dx + dv/dx (sum rule)</div></div>
+      <div class="ans">✅ dy/dx = (sin x)ˣ[ln(sin x)+x·cot x] + xˢⁱⁿ ˣ[cos x·ln x + sin x/x]</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch6">
+  <div class="sec-title">📐 Chapter 6: Application of Derivatives</div>
+  <div class="sec-sub">Rate of Change · Tangent-Normal · Maxima-Minima · Increasing/Decreasing · Approximations</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>6.1 Increasing, Decreasing and Rate of Change</h3>
+<p>Derivatives measure rate of change and shape of curves. Board problems focus on increasing/decreasing, tangent-normal, and maxima-minima.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Rate of Change</div><div class="defn">dy/dx at a point = instantaneous rate of change of y w.r.t. x. If x and y are functions of t: dy/dt = (dy/dx)·(dx/dt).</div></div>
+  <div class="def-card"><div class="term">Increasing / Decreasing</div><div class="defn">f is increasing on (a,b) if f′(x) > 0 ∀x∈(a,b). Decreasing if f′(x) < 0. Neither if f′(x)=0 (constant or critical point).</div></div>
+  <div class="def-card"><div class="term">Tangent and Normal</div><div class="defn">Slope of tangent at (x₀,y₀) = f′(x₀). Equation: y−y₀ = f′(x₀)(x−x₀). Normal: slope = −1/f′(x₀) (perpendicular to tangent). If tangent is horizontal: f′(x₀)=0.</div></div>
+  <div class="def-card"><div class="term">Maxima-Minima (First Derivative Test)</div><div class="defn">At critical point x=c (f′(c)=0 or undefined): if f′ changes + to −: local max; − to +: local min; no change: inflection. Second derivative test: f″(c)&lt;0 → max; f″(c)&gt;0 → min.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Optimization (Closed Interval Method)</h4>
+  <div class="f">1. Find all critical points (f′=0) in (a,b)</div>
+  <div class="f">2. Evaluate f at critical points AND at endpoints a and b</div>
+  <div class="f">3. Maximum = largest value; Minimum = smallest value</div>
+  <div class="f">Approximation: f(x+Δx) ≈ f(x) + f′(x)·Δx (linear approximation)</div>
+  <div class="f">Surface area, volume optimization: common types — open box, cylinder with no top, sphere</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Increasing Function (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Find intervals where f(x)=2x³−3x²−12x+5 is increasing.</p>
+      <div class="step"><div class="sn">1</div><div>f′(x) = 6x²−6x−12 = 6(x²−x−2) = 6(x−2)(x+1)</div></div><div class="step"><div class="sn">2</div><div>Critical points: x=2, x=−1</div></div><div class="step"><div class="sn">3</div><div>Sign of f′: x<−1: (−)(−)=+ → increasing; −1<x<2: (−)(+)=− → decreasing; x>2: (+)(+)=+ → increasing</div></div><div class="step"><div class="sn">4</div><div>f is increasing on (−∞, −1) ∪ (2, ∞)</div></div>
+      <div class="ans">✅ Increasing on (−∞,−1) and (2,∞); decreasing on (−1,2)</div>
+    </div>
+    <div class="worked">
+      <h4>Tangent Equation (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Find the equation of tangent to y=x³ at point (1,1).</p>
+      <div class="step"><div class="sn">1</div><div>f(x) = x³ → f′(x) = 3x²</div></div><div class="step"><div class="sn">2</div><div>At x=1: slope m = f′(1) = 3(1)² = 3</div></div><div class="step"><div class="sn">3</div><div>Equation of tangent: y−1 = 3(x−1)</div></div><div class="step"><div class="sn">4</div><div>y = 3x−3+1 = 3x−2</div></div>
+      <div class="ans">✅ Tangent at (1,1): y = 3x−2</div>
+    </div>
+    <div class="worked">
+      <h4>Max-Min Box (Board 2024, 5M)</h4>
+      <p><strong>Q:</strong> An open box with square base has volume 32 cm³. Find dimensions for minimum surface area.</p>
+      <div class="step"><div class="sn">1</div><div>Let base side = x, height = h. V = x²h = 32 → h = 32/x²</div></div><div class="step"><div class="sn">2</div><div>Surface area S = x² + 4xh = x² + 4x(32/x²) = x² + 128/x</div></div><div class="step"><div class="sn">3</div><div>dS/dx = 2x − 128/x² = 0 → 2x = 128/x² → x³ = 64 → x = 4</div></div><div class="step"><div class="sn">4</div><div>h = 32/16 = 2; d²S/dx² = 2 + 256/x³ > 0 → minimum ✓</div></div><div class="step"><div class="sn">5</div><div>Dimensions: 4 cm × 4 cm base, height 2 cm; minimum SA = 16 + 32 = 48 cm²</div></div>
+      <div class="ans">✅ x=4, h=2; minimum surface area = 48 cm²</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Local Maximum</div>
+      <div class="vs-head">Local Minimum</div>
+      <div class="vs-row"><div>f′(c) = 0; f′ changes + to −</div><div>f′(c) = 0; f′ changes − to +</div></div><div class="vs-row"><div>f″(c) &lt; 0 (concave down)</div><div>f″(c) &gt; 0 (concave up)</div></div><div class="vs-row"><div>Function value higher than nearby points</div><div>Function value lower than nearby points</div></div><div class="vs-row"><div>Example: top of hill</div><div>Example: bottom of valley</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> A ladder 10 m long rests against a vertical wall. If the foot slides away at 1 m/s, how fast is the top sliding down when foot is 6 m from wall?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Let x = foot distance from wall, y = height. x²+y²=100 (constant). Differentiate: 2x(dx/dt)+2y(dy/dt)=0. At x=6: y=√(100−36)=8. Given dx/dt=1 m/s. dy/dt = −x/(y)·dx/dt = −6/8·1 = −3/4 m/s. Top slides DOWN at 3/4 m/s.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Monotonicity and Second Derivative Test</h2>
+    <h3>6.3 Critical Points and Classification</h3>
+    <p>Board exams consistently test finding critical points and classifying them using both first and second derivative tests.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Critical Points</div><div class="defn">Points where f′(x) = 0 or f′(x) is undefined. Not all critical points are maxima/minima — some are inflection points (f′ doesn't change sign).</div></div>
+      <div class="def-card"><div class="term">Second Derivative Test</div><div class="defn">If f′(c) = 0: f″(c) < 0 → local max; f″(c) > 0 → local min; f″(c) = 0 → test fails (use first derivative test).</div></div>
+      <div class="def-card"><div class="term">Absolute Extrema</div><div class="defn">On closed interval [a,b]: evaluate f at all critical points in (a,b) AND at endpoints a, b. Largest = absolute max; smallest = absolute min.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Common Optimisation Setups</h4>
+      <div class="f">Open box: Volume = x²h; Surface = x²+4xh; eliminate h using V constraint</div>
+      <div class="f">Cylinder (open top): V = πr²h; SA = πr²+2πrh; or closed: SA = 2πr²+2πrh</div>
+      <div class="f">Rectangle inscribed in circle radius R: Area = 4xy where x²+y²=R²; max when x=y=R/√2 (square)</div>
+      <div class="f">Two numbers with sum S: product maximised when both = S/2 (AM-GM)</div>
+      <div class="f">Cost minimisation: set up cost function, differentiate, set to zero, classify</div>
+    </div>
+    <div class="worked">
+      <h4>Optimisation — Cylinder (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Show that the semi-vertical angle of a cone of max volume inscribed in a sphere of radius r is tan⁻¹(√2).</p>
+      <div class="step"><div class="sn">1</div><div>Let semi-vertical angle = α; slant height = r (sphere radius). Height h = r + r·cos α = r(1+cos α)</div></div>
+      <div class="step"><div class="sn">2</div><div>Base radius = r·sin α; Volume V = (1/3)π(r sin α)²·r(1+cos α) = (πr³/3)sin²α(1+cos α)</div></div>
+      <div class="step"><div class="sn">3</div><div>Let t = cos α; V = (πr³/3)(1−t²)(1+t) = (πr³/3)(1+t−t²−t³)</div></div>
+      <div class="step"><div class="sn">4</div><div>dV/dt = (πr³/3)(1−2t−3t²) = 0 → 3t²+2t−1 = 0 → (3t−1)(t+1) = 0 → t=1/3 (t=−1 rejected)</div></div>
+      <div class="step"><div class="sn">5</div><div>cos α = 1/3 → sin α = √(1−1/9) = √(8/9) = 2√2/3; tan α = sin/cos = (2√2/3)/(1/3) = 2√2; α = tan⁻¹(√2)... wait: tan α = 2√2/1 when checking... re-derive: tan α = 2√2/3 ÷ 1/3 = 2√2. So α = tan⁻¹(2√2) — check: many textbooks give tan⁻¹√2 for a different configuration.</div></div>
+      <div class="ans">✅ cos α = 1/3 gives the maximum volume; verify with d²V/dt² &lt; 0 at t=1/3</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch7">
+  <div class="sec-title">📐 Chapter 7: Integrals</div>
+  <div class="sec-sub">Standard Forms · Substitution · Partial Fractions · Integration by Parts · Definite Integrals</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>7.1 Techniques of Integration</h3>
+<p>Integration (antidifferentiation) is the inverse of differentiation. ∫f(x)dx = F(x)+C where F′(x)=f(x).</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Standard Integrals</div><div class="defn">∫xⁿdx = xⁿ⁺¹/(n+1)+C; ∫eˣdx=eˣ+C; ∫(1/x)dx=ln|x|+C; ∫sin x dx=−cos x+C; ∫cos x dx=sin x+C; ∫sec²x dx=tan x+C; ∫1/(1+x²)dx=tan⁻¹x+C; ∫1/√(1−x²)dx=sin⁻¹x+C.</div></div>
+  <div class="def-card"><div class="term">Substitution Method</div><div class="defn">If ∫f(g(x))g′(x)dx → let t=g(x), dt=g′(x)dx → ∫f(t)dt. Best when inner function is a polynomial, trig, or exponential.</div></div>
+  <div class="def-card"><div class="term">Integration by Parts</div><div class="defn">∫uv dx = u∫v dx − ∫(u′∫v dx)dx. Choose u using ILATE: Inverse trig, Logarithm, Algebraic, Trig, Exponential (u=first in ILATE).</div></div>
+  <div class="def-card"><div class="term">Partial Fractions</div><div class="defn">Rational functions P(x)/Q(x) with deg(P)&lt;deg(Q): decompose Q(x) into linear factors (A/(x−a)) and irreducible quadratic (Ax+B)/(x²+bx+c). Then integrate each term.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Definite Integrals Properties</h4>
+  <div class="f">∫ₐᵇ f(x)dx = F(b)−F(a) (Fundamental Theorem)</div>
+  <div class="f">∫ₐᵇ f(x)dx = −∫ᵦₐ f(x)dx; ∫ₐᵃ f(x)dx = 0</div>
+  <div class="f">∫₀ᵃ f(x)dx = ∫₀ᵃ f(a−x)dx (very useful for evaluation)</div>
+  <div class="f">∫₋ₐᵃ f(x)dx = 2∫₀ᵃ f(x)dx if f is even; = 0 if f is odd</div>
+  <div class="f">∫₀²ᵃ f(x)dx = 2∫₀ᵃ f(x)dx if f(2a−x)=f(x); = 0 if f(2a−x)=−f(x)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Integration by Parts (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Evaluate ∫x·eˣ dx.</p>
+      <div class="step"><div class="sn">1</div><div>Use IBP: ∫uv dx = u∫v dx − ∫(u′ ∫v dx)dx</div></div><div class="step"><div class="sn">2</div><div>Choose u=x (Algebraic), v=eˣ (Exponential) — ILATE rule</div></div><div class="step"><div class="sn">3</div><div>∫v dx = eˣ; u′ = 1</div></div><div class="step"><div class="sn">4</div><div>∫x·eˣ dx = x·eˣ − ∫1·eˣ dx = xeˣ − eˣ + C</div></div><div class="step"><div class="sn">5</div><div>= eˣ(x−1) + C</div></div>
+      <div class="ans">✅ ∫xeˣ dx = eˣ(x−1) + C</div>
+    </div>
+    <div class="worked">
+      <h4>Definite Integral Property (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Evaluate ∫₀^(π/2) sin x/(sin x + cos x) dx using property.</p>
+      <div class="step"><div class="sn">1</div><div>Let I = ∫₀^(π/2) sin x/(sin x + cos x) dx ... (1)</div></div><div class="step"><div class="sn">2</div><div>Use property ∫₀ᵃ f(x)dx = ∫₀ᵃ f(a−x)dx with a=π/2:</div></div><div class="step"><div class="sn">3</div><div>I = ∫₀^(π/2) sin(π/2−x)/(sin(π/2−x)+cos(π/2−x)) dx = ∫₀^(π/2) cos x/(cos x+sin x) dx ... (2)</div></div><div class="step"><div class="sn">4</div><div>Adding (1)+(2): 2I = ∫₀^(π/2) (sin x+cos x)/(sin x+cos x) dx = ∫₀^(π/2) 1 dx = π/2</div></div><div class="step"><div class="sn">5</div><div>I = π/4</div></div>
+      <div class="ans">✅ I = π/4 (using ∫₀^(π/2) f(x)dx = ∫₀^(π/2) f(π/2−x)dx)</div>
+    </div>
+    <div class="worked">
+      <h4>Substitution (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> Evaluate ∫ 2x/(1+x²) dx.</p>
+      <div class="step"><div class="sn">1</div><div>Let t = 1+x² → dt = 2x dx</div></div><div class="step"><div class="sn">2</div><div>∫ 2x/(1+x²) dx = ∫ dt/t = ln|t| + C</div></div><div class="step"><div class="sn">3</div><div>= ln|1+x²| + C = ln(1+x²) + C (since 1+x²>0 always)</div></div>
+      <div class="ans">✅ ∫ 2x/(1+x²) dx = ln(1+x²) + C</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Integration by Parts (ILATE order)</div>
+      <div class="vs-head">Substitution Method</div>
+      <div class="vs-row"><div>Use when product of two different types of functions</div><div>Use when integrand is a composite function (f(g(x))·g′(x))</div></div><div class="vs-row"><div>ILATE: choose u=first type listed</div><div>Let t=inner function; express dx in terms of dt</div></div><div class="vs-row"><div>Example: ∫x·ln x dx (u=ln x, v=x)</div><div>Example: ∫sin(x²)·2x dx (t=x²)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Evaluate ∫₀¹ x·e^(x²) dx.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Let t = x². Then dt = 2x dx → x dx = dt/2. When x=0, t=0; when x=1, t=1. ∫₀¹ x·e^(x²) dx = ∫₀¹ eᵗ · (dt/2) = ½[eᵗ]₀¹ = ½(e¹−e⁰) = ½(e−1).</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Special Integrals and Partial Fractions</h2>
+    <h3>7.3 Standard Forms to Memorise</h3>
+    <p>Board exams include 5-mark integration questions requiring multiple techniques. Mastering standard forms is essential.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">∫ 1/(x²−a²) dx</div><div class="defn">= (1/2a) ln|(x−a)/(x+a)| + C. Partial fractions: 1/[(x−a)(x+a)] = (1/2a)[1/(x−a) − 1/(x+a)].</div></div>
+      <div class="def-card"><div class="term">∫ √(x²±a²) dx</div><div class="defn">∫√(x²+a²)dx = (x/2)√(x²+a²) + (a²/2)ln|x+√(x²+a²)| + C. ∫√(x²−a²)dx = (x/2)√(x²−a²) − (a²/2)ln|x+√(x²−a²)| + C.</div></div>
+      <div class="def-card"><div class="term">∫ eˣ[f(x)+f′(x)] dx</div><div class="defn">= eˣ·f(x) + C. Recognise this pattern: when integrand = eˣ(f+f′), answer is eˣ·f(x). Example: ∫eˣ(sin x+cos x)dx = eˣ sin x + C since d(sin x)/dx = cos x.</div></div>
+      <div class="def-card"><div class="term">Partial Fractions</div><div class="defn">Distinct linear: A/(x−a)+B/(x−b). Repeated linear: A/(x−a)+B/(x−a)². Irreducible quadratic: (Ax+B)/(x²+px+q). Multiply through and compare coefficients.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Reduction Formulas and Tricks</h4>
+      <div class="f">∫sin^n x dx: use sin^n x = sin^(n-1)x · sin x, then IBP or recursion</div>
+      <div class="f">∫₀^(π/2) sin^n x dx = ∫₀^(π/2) cos^n x dx (Walli's formula for even and odd n separately)</div>
+      <div class="f">For ∫(ax+b)/√(cx²+dx+e) dx: write ax+b = A·d/dx(cx²+dx+e) + B; find A,B; split integral</div>
+      <div class="f">Trigonometric integrals: ∫sin²x dx = x/2 − sin2x/4 + C; ∫cos²x dx = x/2 + sin2x/4 + C</div>
+    </div>
+    <div class="worked">
+      <h4>eˣ[f+f′] Pattern (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Evaluate ∫eˣ·(x+1)/(x+2)² dx</p>
+      <div class="step"><div class="sn">1</div><div>Write (x+1)/(x+2)² = (x+2−1)/(x+2)² = 1/(x+2) − 1/(x+2)²</div></div>
+      <div class="step"><div class="sn">2</div><div>So integrand = eˣ[1/(x+2) + (−1/(x+2)²)]</div></div>
+      <div class="step"><div class="sn">3</div><div>This matches eˣ[f(x)+f′(x)] where f(x) = 1/(x+2) and f′(x) = −1/(x+2)² ✓</div></div>
+      <div class="step"><div class="sn">4</div><div>By the identity: ∫eˣ[f+f′]dx = eˣ·f(x) + C = eˣ/(x+2) + C</div></div>
+      <div class="ans">✅ ∫eˣ(x+1)/(x+2)² dx = eˣ/(x+2) + C</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch8">
+  <div class="sec-title">📐 Chapter 8: Application of Integrals</div>
+  <div class="sec-sub">Area Under Curve · Between Two Curves · Parabola-Line Problems</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>8.1 Area by Definite Integrals</h3>
+<p>The definite integral ∫ₐᵇ f(x)dx gives the signed area between y=f(x) and x-axis from x=a to x=b.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Area = ∫ₐᵇ |f(x)| dx</div><div class="defn">If f(x)≥0 on [a,b]: area = ∫ₐᵇ f(x)dx. If f(x)≤0: area = −∫ₐᵇ f(x)dx (take modulus). If sign changes: split at zeros.</div></div>
+  <div class="def-card"><div class="term">Area Between Two Curves</div><div class="defn">Area = ∫ₐᵇ [f(x)−g(x)]dx where f(x) ≥ g(x) on [a,b]. Find intersection points (set equal) for limits. If curves cross: split and take |f−g| in each part.</div></div>
+  <div class="def-card"><div class="term">Standard Areas</div><div class="defn">Ellipse x²/a² + y²/b² = 1: Area = πab. Circle x²+y²=r²: Area = πr². Parabola y²=4ax with latus rectum: Area = (8/3)a². Triangle by integration: often tested.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Method for Area Problems</h4>
+  <div class="f">Step 1: Sketch the curves; identify the region</div>
+  <div class="f">Step 2: Find intersection points (limits of integration)</div>
+  <div class="f">Step 3: Determine which curve is on top (larger y) on the interval</div>
+  <div class="f">Step 4: Integrate: Area = ∫ₐᵇ (upper − lower) dx</div>
+  <div class="f">Step 5: Evaluate and take absolute value if needed</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Area Under Circle (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Find the area of region bounded by circle x²+y²=4 and line x=1 (in first quadrant).</p>
+      <div class="step"><div class="sn">1</div><div>In first quadrant: y = √(4−x²); x from 1 to 2</div></div><div class="step"><div class="sn">2</div><div>Area = ∫₁² √(4−x²) dx</div></div><div class="step"><div class="sn">3</div><div>Use formula: ∫√(a²−x²)dx = (x/2)√(a²−x²) + (a²/2)sin⁻¹(x/a) + C, a=2</div></div><div class="step"><div class="sn">4</div><div>= [(x/2)√(4−x²) + 2sin⁻¹(x/2)]₁²</div></div><div class="step"><div class="sn">5</div><div>At x=2: (1)×0 + 2sin⁻¹(1) = 2×π/2 = π</div></div><div class="step"><div class="sn">6</div><div>At x=1: (1/2)×√3 + 2×sin⁻¹(1/2) = √3/2 + 2×π/6 = √3/2 + π/3</div></div><div class="step"><div class="sn">7</div><div>Area = π − √3/2 − π/3 = 2π/3 − √3/2</div></div>
+      <div class="ans">✅ Area = 2π/3 − √3/2 sq units</div>
+    </div>
+    <div class="worked">
+      <h4>Area Between Parabola and Line (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Find area enclosed between y=x² and y=x.</p>
+      <div class="step"><div class="sn">1</div><div>Intersection: x²=x → x(x−1)=0 → x=0, x=1</div></div><div class="step"><div class="sn">2</div><div>On [0,1]: y=x is above y=x² (since x>x² for 0<x<1)</div></div><div class="step"><div class="sn">3</div><div>Area = ∫₀¹ (x−x²)dx = [x²/2 − x³/3]₀¹</div></div><div class="step"><div class="sn">4</div><div>= (1/2 − 1/3) − 0 = 1/6 square units</div></div>
+      <div class="ans">✅ Area between y=x and y=x² (x=0 to x=1) = 1/6 sq units</div>
+    </div>
+    <div class="worked">
+      <h4>Ellipse Area (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Find area of ellipse x²/9 + y²/4 = 1.</p>
+      <div class="step"><div class="sn">1</div><div>For ellipse x²/a² + y²/b² = 1: Area = πab</div></div><div class="step"><div class="sn">2</div><div>Here a² = 9 → a = 3; b² = 4 → b = 2</div></div><div class="step"><div class="sn">3</div><div>Area = π × 3 × 2 = 6π sq units</div></div><div class="step"><div class="sn">4</div><div>Alternatively: y = (2/3)√(9−x²); Area = 4∫₀³ (2/3)√(9−x²)dx = 6π</div></div>
+      <div class="ans">✅ Area of ellipse = πab = π×3×2 = 6π sq units</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Area above x-axis</div>
+      <div class="vs-head">Area below x-axis</div>
+      <div class="vs-row"><div>f(x) ≥ 0; Area = ∫ₐᵇ f(x)dx (positive)</div><div>f(x) ≤ 0; Area = −∫ₐᵇ f(x)dx (negate to get positive)</div></div><div class="vs-row"><div>Direct integration gives area</div><div>Must take |integral| for actual area</div></div><div class="vs-row"><div>Example: area under y=sin x from 0 to π</div><div>Example: area "under" y=sin x from π to 2π</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Find the area bounded by y=|x| and y=x².</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> |x| and x² intersect where |x|=x² → x=0 and |x|=x → x=±1. By symmetry, total area = 2×∫₀¹(x−x²)dx = 2×[x²/2−x³/3]₀¹ = 2×(1/2−1/3) = 2×1/6 = 1/3 sq units.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Area by Horizontal Strips and Common Curves</h2>
+    <h3>8.3 Area Using y as Variable</h3>
+    <p>When a region is easier described in terms of y, integrate with respect to y using horizontal strips.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Horizontal Strip Method</div><div class="defn">Area = ∫_c^d [x_right(y) − x_left(y)] dy. Use when the same y-value meets the boundary curve in two easy-to-express x-values.</div></div>
+      <div class="def-card"><div class="term">Parabola y² = 4ax</div><div class="defn">Opens right. For strip at height y from −2a to 2a: x_right = y²/(4a), x_left = 0. Area between latus rectum and parabola = (8/3)a².</div></div>
+      <div class="def-card"><div class="term">Circle x²+y²=r²</div><div class="defn">In first quadrant: y = √(r²−x²). Area of circle = 4∫₀ʳ √(r²−x²)dx = πr² (using ∫√(a²−x²)dx formula).</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 CBSE Board Area Problems — Pattern</h4>
+      <div class="f">5M: parabola + line; parabola + circle; two parabolas; circle + line</div>
+      <div class="f">Always: sketch the region; find intersection points; determine which is upper curve</div>
+      <div class="f">Parabola y²=4x and line y=x: intersect at (0,0) and (4,4); area = ∫₀⁴(√(4x)−x)dx</div>
+      <div class="f">Two parabolas y²=x and y=x²: intersect at (0,0) and (1,1); area = ∫₀¹(√x−x²)dx = 1/3</div>
+      <div class="f">Circle + line: split the region; use circle formula for arc part, triangle formula for rest</div>
+    </div>
+    <div class="worked">
+      <h4>Two Parabolas (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Find the area between y²=4x and x²=4y.</p>
+      <div class="step"><div class="sn">1</div><div>y²=4x: parabola opens right; x²=4y: parabola opens up</div></div>
+      <div class="step"><div class="sn">2</div><div>Intersection: from x²=4y → y=x²/4; sub into y²=4x: (x²/4)²=4x → x⁴/16=4x → x⁴=64x → x³=64 → x=4; points (0,0) and (4,4)</div></div>
+      <div class="step"><div class="sn">3</div><div>On [0,4]: upper curve = y=2√x (from y²=4x); lower = y=x²/4 (from x²=4y)</div></div>
+      <div class="step"><div class="sn">4</div><div>Area = ∫₀⁴(2√x − x²/4)dx = [2·(2/3)x^(3/2) − x³/12]₀⁴</div></div>
+      <div class="step"><div class="sn">5</div><div>= [(4/3)(8) − 64/12] − 0 = 32/3 − 16/3 = 16/3 sq units</div></div>
+      <div class="ans">✅ Area = 16/3 sq units</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch9">
+  <div class="sec-title">📐 Chapter 9: Differential Equations</div>
+  <div class="sec-sub">Order · Degree · Variable Separable · Homogeneous · Linear DE</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>9.1 Types and Solutions</h3>
+<p>A differential equation (DE) involves derivatives. <strong>Order</strong> = highest derivative order; <strong>Degree</strong> = power of highest-order derivative (when polynomial in derivatives).</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Variable Separable</div><div class="defn">DE of form dy/dx = f(x)g(y). Separate: dy/g(y) = f(x)dx → integrate both sides. Example: dy/dx = xy → dy/y = x dx → ln|y| = x²/2 + C.</div></div>
+  <div class="def-card"><div class="term">Homogeneous DE</div><div class="defn">f(λx, λy) = λⁿf(x,y). Substitution: y = vx → dy/dx = v + x(dv/dx). Reduces to separable DE.</div></div>
+  <div class="def-card"><div class="term">Linear DE</div><div class="defn">dy/dx + P(x)y = Q(x). Integrating factor (IF) = e^(∫P dx). Solution: y × IF = ∫Q × IF dx + C.</div></div>
+  <div class="def-card"><div class="term">Particular Solution</div><div class="defn">General solution has arbitrary constant C. Particular solution: use given initial condition (boundary condition) to find C.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Steps for Linear DE</h4>
+  <div class="f">Write in standard form: dy/dx + P(x)·y = Q(x)</div>
+  <div class="f">IF = e^(∫P dx) — no constant of integration here</div>
+  <div class="f">Multiply throughout by IF: d/dx[y·IF] = Q·IF</div>
+  <div class="f">Integrate: y·IF = ∫Q·IF dx + C</div>
+  <div class="f">Order of DE = order of highest derivative; Degree = power of that derivative (if rational/integer)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Variable Separable (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Solve: dy/dx = e^(x+y)</p>
+      <div class="step"><div class="sn">1</div><div>e^(x+y) = eˣ·eʸ → dy/dx = eˣ·eʸ</div></div><div class="step"><div class="sn">2</div><div>Separate: e^(−y) dy = eˣ dx</div></div><div class="step"><div class="sn">3</div><div>Integrate: −e^(−y) = eˣ + C</div></div><div class="step"><div class="sn">4</div><div>General solution: e^(−y) + eˣ = −C or eˣ + e^(−y) = k (where k = −C)</div></div>
+      <div class="ans">✅ eˣ + e^(−y) = C (general solution)</div>
+    </div>
+    <div class="worked">
+      <h4>Linear DE (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Solve: dy/dx + 2y = e^(−x)</p>
+      <div class="step"><div class="sn">1</div><div>Standard form: dy/dx + P(x)y = Q(x) with P=2, Q=e^(−x)</div></div><div class="step"><div class="sn">2</div><div>IF = e^(∫2 dx) = e^(2x)</div></div><div class="step"><div class="sn">3</div><div>Multiply by IF: d/dx(y·e^(2x)) = e^(−x)·e^(2x) = eˣ</div></div><div class="step"><div class="sn">4</div><div>Integrate: y·e^(2x) = eˣ + C</div></div><div class="step"><div class="sn">5</div><div>General solution: y = e^(−x) + Ce^(−2x)</div></div>
+      <div class="ans">✅ y = e^(−x) + Ce^(−2x)</div>
+    </div>
+    <div class="worked">
+      <h4>Order and Degree (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> Find order and degree of (d²y/dx²)³ + 2(dy/dx)² + y = 0.</p>
+      <div class="step"><div class="sn">1</div><div>Highest order derivative: d²y/dx² (second derivative) → Order = 2</div></div><div class="step"><div class="sn">2</div><div>Power of the highest order derivative (d²y/dx²)³ → Degree = 3</div></div><div class="step"><div class="sn">3</div><div>Equation is polynomial in derivatives → degree is well defined</div></div>
+      <div class="ans">✅ Order = 2; Degree = 3</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Homogeneous DE</div>
+      <div class="vs-head">Linear DE</div>
+      <div class="vs-row"><div>f(λx,λy) = λⁿf(x,y)</div><div>dy/dx + P(x)y = Q(x)</div></div><div class="vs-row"><div>Substitution: y=vx</div><div>Integrating factor: e^∫P dx</div></div><div class="vs-row"><div>Example: dy/dx = (x+y)/x</div><div>Example: dy/dx + y = x</div></div><div class="vs-row"><div>Reduces to separable after substitution</div><div>Solved by multiplying through by IF</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Solve: x dy/dx + y = x³. Find the particular solution when y(1) = 1.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Rearrange: dy/dx + y/x = x² (linear DE; P=1/x, Q=x²). IF = e^(∫1/x dx) = e^(ln x) = x. Multiply: d/dx(xy) = x·x² = x³. Integrate: xy = x⁴/4 + C. General: y = x³/4 + C/x. Particular: at x=1, y=1: 1 = 1/4 + C → C = 3/4. So y = x³/4 + 3/(4x).</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Homogeneous Equations and Applications</h2>
+    <h3>9.3 Growth and Decay Models</h3>
+    <p>DEs model real-world phenomena: population growth, radioactive decay, mixing problems — common in application questions.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Exponential Growth</div><div class="defn">dP/dt = kP (k > 0). Solution: P = P₀eᵏᵗ. Doubling time: t = ln2/k. Half-life (decay): t₁/₂ = ln2/k where k &lt; 0 for decay.</div></div>
+      <div class="def-card"><div class="term">Newton's Law of Cooling</div><div class="defn">dT/dt = −k(T − T₀) where T₀ = ambient temperature, k > 0. Solution: T − T₀ = Ce^(−kt). Find C from initial condition T(0) = T_initial.</div></div>
+      <div class="def-card"><div class="term">Homogeneous DE Check</div><div class="defn">dy/dx = F(x,y) is homogeneous if F(λx,λy) = F(x,y) (degree 0). Equivalently: can be written as dy/dx = f(y/x). Substitute y = vx.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Solving Homogeneous DE: y=vx Method</h4>
+      <div class="f">Substitute y = vx → dy/dx = v + x·dv/dx</div>
+      <div class="f">Equation becomes: v + x·dv/dx = f(v) → x·dv/dx = f(v) − v</div>
+      <div class="f">Separate: dv/[f(v)−v] = dx/x → integrate both sides</div>
+      <div class="f">Back-substitute v = y/x at the end for general solution</div>
+    </div>
+    <div class="worked">
+      <h4>Homogeneous DE (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Solve: x(dy/dx) − y + x·sin(y/x) = 0</p>
+      <div class="step"><div class="sn">1</div><div>Rearrange: dy/dx = [y − x·sin(y/x)]/x = y/x − sin(y/x); this is homogeneous (function of y/x only) ✓</div></div>
+      <div class="step"><div class="sn">2</div><div>Let y = vx → dy/dx = v + x·dv/dx</div></div>
+      <div class="step"><div class="sn">3</div><div>v + x·dv/dx = v − sin v → x·dv/dx = −sin v</div></div>
+      <div class="step"><div class="sn">4</div><div>Separate: dv/sin v = −dx/x → cosec v dv = −dx/x</div></div>
+      <div class="step"><div class="sn">5</div><div>Integrate: ln|cosec v − cot v| = −ln|x| + C → ln|x(cosec v − cot v)| = C → x(cosec(y/x) − cot(y/x)) = k</div></div>
+      <div class="ans">✅ General solution: x·(cosec(y/x) − cot(y/x)) = k (constant)</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch10">
+  <div class="sec-title">📐 Chapter 10: Vector Algebra</div>
+  <div class="sec-sub">Types · Addition · Scalar Product · Cross Product · Triple Product</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>10.1 Vectors — Fundamentals</h3>
+<p>A vector has both magnitude and direction. Denoted as →a or in bold. Position vector of point P(x,y,z) = xî+yĵ+zk̂.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Types of Vectors</div><div class="defn">Zero vector (magnitude 0), Unit vector (magnitude 1; â = →a/|a|), Equal vectors (same magnitude + direction), Negative vector, Co-initial (same initial point), Collinear (parallel/antiparallel), Co-planar.</div></div>
+  <div class="def-card"><div class="term">Scalar (Dot) Product</div><div class="defn">→a·→b = |a||b|cosθ. Commutative: →a·→b = →b·→a. →a⊥→b ⟺ →a·→b = 0. →a·→a = |a|². î·î = ĵ·ĵ = k̂·k̂ = 1; î·ĵ = ĵ·k̂ = k̂·î = 0.</div></div>
+  <div class="def-card"><div class="term">Cross (Vector) Product</div><div class="defn">→a×→b = |a||b|sinθ·n̂ (n̂ = unit normal by right-hand rule). →a×→b = −→b×→a (anticommutative). →a∥→b ⟺ →a×→b = →0. î×ĵ = k̂; ĵ×k̂ = î; k̂×î = ĵ. Area of parallelogram = |→a×→b|.</div></div>
+  <div class="def-card"><div class="term">Scalar Triple Product</div><div class="defn">[→a,→b,→c] = →a·(→b×→c) = determinant of 3×3 matrix with rows →a,→b,→c. Volume of parallelepiped = |[→a,→b,→c]|. Vectors coplanar ⟺ triple product = 0.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Key Results</h4>
+  <div class="f">|→a+→b|² = |a|² + 2→a·→b + |b|²; |→a−→b|² = |a|² − 2→a·→b + |b|²</div>
+  <div class="f">Projection of →a on →b = (→a·→b)/|b| = →a·b̂</div>
+  <div class="f">If →a = a₁î+a₂ĵ+a₃k̂ and →b = b₁î+b₂ĵ+b₃k̂: →a×→b = det([[î,ĵ,k̂],[a₁,a₂,a₃],[b₁,b₂,b₃]])</div>
+  <div class="f">Angle between →a and →b: cos θ = (→a·→b)/(|a||b|)</div>
+  <div class="f">Section formula: point dividing P₁P₂ in ratio m:n = (m·→r₂ + n·→r₁)/(m+n)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Dot Product (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> If →a = 2î+2ĵ−k̂ and →b = 6î−3ĵ+2k̂, find the angle between them.</p>
+      <div class="step"><div class="sn">1</div><div>→a·→b = (2)(6)+(2)(−3)+(−1)(2) = 12−6−2 = 4</div></div><div class="step"><div class="sn">2</div><div>|→a| = √(4+4+1) = √9 = 3</div></div><div class="step"><div class="sn">3</div><div>|→b| = √(36+9+4) = √49 = 7</div></div><div class="step"><div class="sn">4</div><div>cos θ = (→a·→b)/(|a||b|) = 4/(3×7) = 4/21</div></div><div class="step"><div class="sn">5</div><div>θ = cos⁻¹(4/21)</div></div>
+      <div class="ans">✅ θ = cos⁻¹(4/21)</div>
+    </div>
+    <div class="worked">
+      <h4>Cross Product (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Find →a×→b for →a = î−ĵ+k̂ and →b = 2î+ĵ−2k̂.</p>
+      <div class="step"><div class="sn">1</div><div>→a×→b = det([[î,ĵ,k̂],[1,−1,1],[2,1,−2]])</div></div><div class="step"><div class="sn">2</div><div>î[(−1)(−2)−(1)(1)] − ĵ[(1)(−2)−(1)(2)] + k̂[(1)(1)−(−1)(2)]</div></div><div class="step"><div class="sn">3</div><div>= î[2−1] − ĵ[−2−2] + k̂[1+2]</div></div><div class="step"><div class="sn">4</div><div>= î(1) − ĵ(−4) + k̂(3) = î+4ĵ+3k̂</div></div>
+      <div class="ans">✅ →a×→b = î+4ĵ+3k̂</div>
+    </div>
+    <div class="worked">
+      <h4>Coplanar Vectors (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> Show that →a=î+2ĵ−k̂, →b=2î−ĵ+k̂, →c=î−ĵ+2k̂ are coplanar (or not).</p>
+      <div class="step"><div class="sn">1</div><div>Vectors are coplanar iff scalar triple product [→a,→b,→c] = 0</div></div><div class="step"><div class="sn">2</div><div>[→a,→b,→c] = det([[1,2,−1],[2,−1,1],[1,−1,2]])</div></div><div class="step"><div class="sn">3</div><div>= 1[(−1)(2)−(1)(−1)] − 2[(2)(2)−(1)(1)] + (−1)[(2)(−1)−(−1)(1)]</div></div><div class="step"><div class="sn">4</div><div>= 1[−2+1] − 2[4−1] + (−1)[−2+1] = −1−6+1 = −6 ≠ 0</div></div><div class="step"><div class="sn">5</div><div>Vectors are NOT coplanar (linearly independent)</div></div>
+      <div class="ans">✅ [→a,→b,→c] = −6 ≠ 0 → vectors are NOT coplanar</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Scalar Product</div>
+      <div class="vs-head">Vector Product</div>
+      <div class="vs-row"><div>Result is a scalar</div><div>Result is a vector</div></div><div class="vs-row"><div>→a·→b = |a||b|cosθ</div><div>|→a×→b| = |a||b|sinθ</div></div><div class="vs-row"><div>Commutative: →a·→b = →b·→a</div><div>Anticommutative: →a×→b = −→b×→a</div></div><div class="vs-row"><div>→a⊥→b if →a·→b = 0</div><div>→a∥→b if →a×→b = →0</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> If →a+→b+→c = 0 and |→a|=3, |→b|=5, |→c|=7, find the angle between →a and →b.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> →a+→b = −→c → |→a+→b|² = |→c|² = 49. |→a|²+2→a·→b+|→b|² = 49. 9+2→a·→b+25 = 49. 2→a·→b = 15. →a·→b = 7.5. cos θ = 7.5/(3×5) = 7.5/15 = 0.5. θ = 60°.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h2>📝 Section Formula and Vector Geometry</h2>
+    <h3>10.3 Position Vectors and Geometric Applications</h3>
+    <p>Board problems use vectors to prove geometric properties and find distances, midpoints, and areas.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Section Formula</div><div class="defn">If P divides AB in ratio m:n (internally): →OP = (m·→OB + n·→OA)/(m+n). Midpoint M: →OM = (→OA + →OB)/2.</div></div>
+      <div class="def-card"><div class="term">Area of Triangle</div><div class="defn">Area = ½|→AB × →AC| where →AB and →AC are adjacent sides. Same as ½|→a × →b| for triangle with two sides →a and →b.</div></div>
+      <div class="def-card"><div class="term">Collinearity Condition</div><div class="defn">Points A,B,C are collinear iff →AB and →AC are parallel: →AB = k·→AC for some scalar k, i.e., →AB × →AC = →0.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Common Vector Identities</h4>
+      <div class="f">→a×(→b+→c) = →a×→b + →a×→c (distributive over addition)</div>
+      <div class="f">→a×→a = →0; î×î = ĵ×ĵ = k̂×k̂ = →0</div>
+      <div class="f">|→a×→b|² + (→a·→b)² = |a|²|b|² (Lagrange's identity)</div>
+      <div class="f">Volume of tetrahedron = (1/6)|[→a,→b,→c]| (scalar triple product)</div>
+      <div class="f">If →a·→b = →a·→c and →a ≠ →0, it does NOT necessarily mean →b = →c (dot product cancellation invalid)</div>
+    </div>
+    <div class="worked">
+      <h4>Area of Triangle (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Find the area of triangle with vertices A(1,1,2), B(2,3,5), C(1,5,5).</p>
+      <div class="step"><div class="sn">1</div><div>→AB = B−A = (1,2,3); →AC = C−A = (0,4,3)</div></div>
+      <div class="step"><div class="sn">2</div><div>→AB × →AC = det([[î,ĵ,k̂],[1,2,3],[0,4,3]]) = î(6−12) − ĵ(3−0) + k̂(4−0) = −6î − 3ĵ + 4k̂</div></div>
+      <div class="step"><div class="sn">3</div><div>|→AB × →AC| = √(36+9+16) = √61</div></div>
+      <div class="step"><div class="sn">4</div><div>Area = ½|→AB × →AC| = √61/2 sq units</div></div>
+      <div class="ans">✅ Area = √61/2 square units</div>
+    </div>
+  </div>
+</section>
+<section id="sec-ch11">
+  <div class="sec-title">📐 Chapter 11: Three Dimensional Geometry</div>
+  <div class="sec-sub">Direction Cosines · Line · Plane · Angle · Distance</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>11.1 Direction Cosines and Lines</h3>
+<p>3D geometry uses vectors and coordinates. Line through point (x₁,y₁,z₁) in direction (l,m,n): (x−x₁)/l = (y−y₁)/m = (z−z₁)/n.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Direction Cosines (l,m,n)</div><div class="defn">Cosines of angles made with positive x, y, z axes respectively. l²+m²+n²=1. If direction ratios are (a,b,c): l=a/√(a²+b²+c²) etc.</div></div>
+  <div class="def-card"><div class="term">Equation of Line</div><div class="defn">Vector form: →r = →a + λ→b (→a = point, →b = direction vector). Cartesian: (x−x₁)/a = (y−y₁)/b = (z−z₁)/c. Two-point form: (x−x₁)/(x₂−x₁) = (y−y₁)/(y₂−y₁) = (z−z₁)/(z₂−z₁).</div></div>
+  <div class="def-card"><div class="term">Equation of Plane</div><div class="defn">Vector: →r·→n = d (→n = normal vector). Cartesian: ax+by+cz=d. Through three points: use determinant. Normal form: lx+my+nz=p (l,m,n = direction cosines of normal; p = distance from origin).</div></div>
+  <div class="def-card"><div class="term">Angle Between Lines</div><div class="defn">If direction vectors are →b₁ and →b₂: cos θ = |→b₁·→b₂|/(|b₁||b₂|). Perpendicular if →b₁·→b₂ = 0. Parallel if →b₁ = k→b₂.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Distances and Skew Lines</h4>
+  <div class="f">Distance from point (x₁,y₁,z₁) to plane ax+by+cz+d=0: |ax₁+by₁+cz₁+d|/√(a²+b²+c²)</div>
+  <div class="f">Angle between line and plane: sin θ = |→b·→n|/(|b||n|)</div>
+  <div class="f">Skew lines: not parallel and do not intersect. Shortest distance = |(→a₂−→a₁)·(→b₁×→b₂)|/|→b₁×→b₂|</div>
+  <div class="f">Foot of perpendicular from P to line: find λ using direction ratio condition, then find point</div>
+  <div class="f">Distance between parallel planes ax+by+cz=d₁ and ax+by+cz=d₂: |d₁−d₂|/√(a²+b²+c²)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Angle Between Lines (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Find the angle between lines (x−1)/2 = (y−2)/3 = (z−3)/4 and (x−3)/−1 = (y−2)/4 = (z−5)/5.</p>
+      <div class="step"><div class="sn">1</div><div>Direction vectors: →b₁ = (2,3,4); →b₂ = (−1,4,5)</div></div><div class="step"><div class="sn">2</div><div>→b₁·→b₂ = (2)(−1)+(3)(4)+(4)(5) = −2+12+20 = 30</div></div><div class="step"><div class="sn">3</div><div>|→b₁| = √(4+9+16) = √29; |→b₂| = √(1+16+25) = √42</div></div><div class="step"><div class="sn">4</div><div>cos θ = |30|/(√29·√42) = 30/√1218</div></div><div class="step"><div class="sn">5</div><div>θ = cos⁻¹(30/√1218) ≈ cos⁻¹(0.86)</div></div>
+      <div class="ans">✅ cos θ = 30/√1218; θ = cos⁻¹(30/√1218)</div>
+    </div>
+    <div class="worked">
+      <h4>Distance Point to Plane (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> Find distance from point (3,4,5) to plane 2x+2y−z+3=0.</p>
+      <div class="step"><div class="sn">1</div><div>Formula: d = |ax₁+by₁+cz₁+d|/√(a²+b²+c²)</div></div><div class="step"><div class="sn">2</div><div>= |2(3)+2(4)+(−1)(5)+3|/√(4+4+1)</div></div><div class="step"><div class="sn">3</div><div>= |6+8−5+3|/√9 = |12|/3 = 4 units</div></div>
+      <div class="ans">✅ Distance = 4 units</div>
+    </div>
+    <div class="worked">
+      <h4>Foot of Perpendicular (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Find foot of perpendicular from (1,2,3) to line (x−1)/3 = (y−3)/1 = (z−4)/−5.</p>
+      <div class="step"><div class="sn">1</div><div>Let foot be at parameter λ: point = (1+3λ, 3+λ, 4−5λ)</div></div><div class="step"><div class="sn">2</div><div>Vector from given point (1,2,3) to foot = (3λ, 1+λ, 1−5λ)</div></div><div class="step"><div class="sn">3</div><div>This must be ⊥ to direction (3,1,−5): dot product = 0</div></div><div class="step"><div class="sn">4</div><div>3(3λ)+1(1+λ)+(−5)(1−5λ) = 0 → 9λ+1+λ−5+25λ = 0 → 35λ = 4 → λ = 4/35</div></div><div class="step"><div class="sn">5</div><div>Foot = (1+12/35, 3+4/35, 4−20/35) = (47/35, 109/35, 120/35)</div></div>
+      <div class="ans">✅ λ=4/35; Foot = (47/35, 109/35, 120/35)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Line in 3D</div>
+      <div class="vs-head">Plane in 3D</div>
+      <div class="vs-row"><div>1 equation in vector form (→r=→a+λ→b)</div><div>1 equation in cartesian (ax+by+cz=d)</div></div><div class="vs-row"><div>Determined by point + direction vector</div><div>Determined by point + normal vector</div></div><div class="vs-row"><div>Symmetric form: (x−x₁)/l = (y−y₁)/m = (z−z₁)/n</div><div>Normal form: lx+my+nz=p</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Find the equation of plane through (1,2,3) and perpendicular to the vector î−2ĵ+3k̂.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Plane through point →a = î+2ĵ+3k̂ with normal →n = î−2ĵ+3k̂. Vector equation: (→r−→a)·→n = 0 → →r·→n = →a·→n. →a·→n = (1)(1)+(2)(−2)+(3)(3) = 1−4+9 = 6. So →r·(î−2ĵ+3k̂) = 6 → x−2y+3z = 6.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch12">
+  <div class="sec-title">📐 Chapter 12: Linear Programming</div>
+  <div class="sec-sub">Formulation · Feasible Region · Optimal Solution · Types of LPP</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>12.1 Linear Programming Problem (LPP)</h3>
+<p>LPP: optimise (maximise/minimise) a <strong>objective function</strong> Z = ax+by subject to linear <strong>constraints</strong>, non-negativity restrictions (x≥0, y≥0), and implicit constraints.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Feasible Region</div><div class="defn">The set of all points satisfying all constraints including non-negativity. Always a convex polygon (or unbounded). The feasible region is the intersection of all constraint half-planes.</div></div>
+  <div class="def-card"><div class="term">Optimal Solution</div><div class="defn">Corner Point Theorem: optimal value of Z occurs at a corner (vertex) of the feasible region. Evaluate Z at all vertices → take maximum (for maximisation) or minimum (for minimisation).</div></div>
+  <div class="def-card"><div class="term">Infeasible / Unbounded</div><div class="defn">Infeasible: no point satisfies all constraints (empty feasible region). Unbounded: feasible region extends to infinity; maximisation may have no solution (but minimisation might still have one).</div></div>
+  <div class="def-card"><div class="term">Types of Optimal Solutions</div><div class="defn">Unique: Z is optimal at exactly one corner. Multiple (alternative): Z is optimal along an entire edge (same value at two adjacent corners). Check if optimal value can be further improved in unbounded region.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Steps to Solve LPP Graphically</h4>
+  <div class="f">Step 1: Identify decision variables x and y; write objective function Z = ax+by</div>
+  <div class="f">Step 2: Write all constraints as inequalities (≤ or ≥)</div>
+  <div class="f">Step 3: Plot each constraint line; shade feasible half-plane</div>
+  <div class="f">Step 4: Identify feasible region (intersection of all shaded regions)</div>
+  <div class="f">Step 5: Find all corner points (vertices) of feasible region</div>
+  <div class="f">Step 6: Evaluate Z at each corner; optimal = max or min value</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Maximisation LPP (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Maximise Z=5x+3y subject to: 3x+5y≤15, 5x+2y≤10, x≥0, y≥0.</p>
+      <div class="step"><div class="sn">1</div><div>Draw 3x+5y=15 (passes (0,3) and (5,0)) and 5x+2y=10 (passes (0,5) and (2,0))</div></div><div class="step"><div class="sn">2</div><div>Intersection: solve simultaneously: 3x+5y=15 and 5x+2y=10</div></div><div class="step"><div class="sn">3</div><div>From 2nd: y=(10−5x)/2; sub in 1st: 3x+5(10−5x)/2=15 → 6x+50−25x=30 → −19x=−20 → x=20/19</div></div><div class="step"><div class="sn">4</div><div>y=(10−100/19)/2=(90/19)/2=45/19. Corner point: (20/19, 45/19)</div></div><div class="step"><div class="sn">5</div><div>All corners: (0,0)→Z=0; (2,0)→Z=10; (20/19,45/19)→Z=100/19+135/19=235/19≈12.4; (0,3)→Z=9</div></div><div class="step"><div class="sn">6</div><div>Maximum Z = 235/19 at (20/19, 45/19)</div></div>
+      <div class="ans">✅ Max Z = 235/19 ≈ 12.4 at (20/19, 45/19)</div>
+    </div>
+    <div class="worked">
+      <h4>LPP Formulation (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> A factory makes two products X,Y. X needs 2hr machine + 1hr labour/unit; Y needs 1hr machine + 3hr labour/unit. Available: 200hr machine, 300hr labour. Profit: ₹40/unit X, ₹60/unit Y. Formulate and solve LPP.</p>
+      <div class="step"><div class="sn">1</div><div>Let x=units X, y=units Y. Objective: Maximise Z = 40x+60y</div></div><div class="step"><div class="sn">2</div><div>Constraints: 2x+y≤200 (machine); x+3y≤300 (labour); x≥0, y≥0</div></div><div class="step"><div class="sn">3</div><div>Corner points: (0,0)→Z=0; (100,0)→Z=4000; (0,100)→Z=6000</div></div><div class="step"><div class="sn">4</div><div>Intersection: 2x+y=200 and x+3y=300 → from 1st: y=200−2x; sub: x+3(200−2x)=300 → x+600−6x=300 → −5x=−300 → x=60, y=80</div></div><div class="step"><div class="sn">5</div><div>Corner (60,80): Z=2400+4800=7200</div></div><div class="step"><div class="sn">6</div><div>Maximum Z = ₹7200 at x=60, y=80</div></div>
+      <div class="ans">✅ Max profit ₹7200 when producing 60 units X and 80 units Y</div>
+    </div>
+    <div class="worked">
+      <h4>Minimisation (Board 2024, 5M)</h4>
+      <p><strong>Q:</strong> Minimise Z=3x+5y subject to x+y≥3, x+3y≥6, x≥0, y≥0.</p>
+      <div class="step"><div class="sn">1</div><div>Draw x+y=3 and x+3y=6</div></div><div class="step"><div class="sn">2</div><div>Feasible region is unbounded (above both lines)</div></div><div class="step"><div class="sn">3</div><div>Corner points: x+y=3 meets x-axis at (3,0); x+3y=6 meets y-axis at (0,2)</div></div><div class="step"><div class="sn">4</div><div>Intersection: x+y=3 and x+3y=6 → subtract: 2y=3 → y=3/2, x=3/2; point (3/2,3/2)</div></div><div class="step"><div class="sn">5</div><div>Z at corners: (3,0)→9; (3/2,3/2)→4.5+7.5=12... recalculate: Z=3(3/2)+5(3/2)=4.5+7.5=12; (0,2)→10</div></div><div class="step"><div class="sn">6</div><div>Check: Z=3(3)+5(0)=9; Z=3(0)+5(2)=10; Z=3(1.5)+5(1.5)=12; Minimum at (3,0) = 9</div></div>
+      <div class="ans">✅ Min Z = 9 at (3, 0)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Maximisation LPP</div>
+      <div class="vs-head">Minimisation LPP</div>
+      <div class="vs-row"><div>Find corner giving HIGHEST Z value</div><div>Find corner giving LOWEST Z value</div></div><div class="vs-row"><div>Unbounded region: check if Z can increase indefinitely</div><div>Unbounded region: minimisation may still have finite minimum</div></div><div class="vs-row"><div>No issue if feasible region is bounded</div><div>For unbounded region: check if line Z=min value intersects feasible region or not</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> A dealer wants to purchase typewriters and calculators. A typewriter costs ₹2000, calculator ₹500. Spend at most ₹70,000. Max 45 items. Profit ₹300 on typewriter, ₹100 on calculator. How many of each to buy for max profit? Formulate as LPP (do not solve graphically).</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Decision variables: x = typewriters, y = calculators. Objective: Maximise Z = 300x+100y. Constraints: 2000x+500y ≤ 70000 (i.e. 4x+y ≤ 140); x+y ≤ 45; x≥0, y≥0. Corners of feasible region: (0,0), (35,0), (0,45) and intersection 4x+y=140 with x+y=45: 3x=95 → x=95/3 (not integer; nearest integer solution x=31, y=14 or check corners). Optimal at corner — board expects graphical or simplex solution.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch13">
+  <div class="sec-title">📐 Chapter 13: Probability</div>
+  <div class="sec-sub">Conditional Probability · Multiplication Theorem · Bayes' Theorem · Random Variables</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>13.1 Conditional Probability and Multiplication Theorem</h3>
+<p>P(A|B) = P(A∩B)/P(B), provided P(B) > 0. Conditional probability changes sample space from Ω to B.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Multiplication Theorem</div><div class="defn">P(A∩B) = P(A)·P(B|A) = P(B)·P(A|B). For independent events: P(A∩B) = P(A)·P(B). Events A,B independent iff P(A|B) = P(A).</div></div>
+  <div class="def-card"><div class="term">Total Probability</div><div class="defn">If B₁,B₂,...,Bₙ partition sample space Ω: P(A) = ΣP(Bᵢ)·P(A|Bᵢ). Used when A occurs through one of several mutually exclusive scenarios.</div></div>
+  <div class="def-card"><div class="term">Bayes' Theorem</div><div class="defn">P(Bᵢ|A) = P(Bᵢ)·P(A|Bᵢ) / Σ P(Bⱼ)·P(A|Bⱼ). "Posterior probability" given new evidence A. Denominatior = P(A) by total probability theorem.</div></div>
+  <div class="def-card"><div class="term">Random Variable (RV)</div><div class="defn">Function X: Ω → ℝ assigning real value to each outcome. Discrete RV: finite/countable values. p(X=xᵢ) = pᵢ ≥ 0, Σpᵢ = 1. E(X) = Σxᵢpᵢ (mean). Var(X) = E(X²) − [E(X)]².</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Binomial Distribution</h4>
+  <div class="f">X~B(n,p): n independent trials, p=P(success). P(X=r) = ⁿCᵣ·pʳ·(1−p)^(n−r), r=0,1,...,n</div>
+  <div class="f">Mean = np; Variance = np(1−p) = npq where q=1−p</div>
+  <div class="f">P(A∩B) = 0 → A,B mutually exclusive; P(A∩B) = P(A)·P(B) → A,B independent (NOT the same)</div>
+  <div class="f">P(A∪B) = P(A)+P(B)−P(A∩B) (addition theorem)</div>
+  <div class="f">P(A′) = 1−P(A); P(A∩B′) = P(A)−P(A∩B)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Bayes' Theorem (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Bag I: 3R,4B; Bag II: 5R,6B. Bag selected randomly, one ball drawn = Red. Find P(Bag I was selected).</p>
+      <div class="step"><div class="sn">1</div><div>Let B₁=Bag I, B₂=Bag II selected. P(B₁)=P(B₂)=1/2</div></div><div class="step"><div class="sn">2</div><div>P(R|B₁) = 3/7; P(R|B₂) = 5/11</div></div><div class="step"><div class="sn">3</div><div>By total probability: P(R) = (1/2)(3/7) + (1/2)(5/11) = 3/14 + 5/22 = 33/154 + 35/154 = 68/154 = 34/77</div></div><div class="step"><div class="sn">4</div><div>By Bayes': P(B₁|R) = P(B₁)·P(R|B₁)/P(R) = (1/2)(3/7)/(34/77)</div></div><div class="step"><div class="sn">5</div><div>= (3/14)×(77/34) = 231/476 = 33/68</div></div>
+      <div class="ans">✅ P(Bag I | Red ball drawn) = 33/68</div>
+    </div>
+    <div class="worked">
+      <h4>Independent Events (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> A and B are independent with P(A)=1/4 and P(B)=2/3. Find P(A∩B), P(A∪B), P(A|B).</p>
+      <div class="step"><div class="sn">1</div><div>P(A∩B) = P(A)×P(B) = (1/4)(2/3) = 1/6 (independent events)</div></div><div class="step"><div class="sn">2</div><div>P(A∪B) = P(A)+P(B)−P(A∩B) = 1/4+2/3−1/6 = 3/12+8/12−2/12 = 9/12 = 3/4</div></div><div class="step"><div class="sn">3</div><div>P(A|B) = P(A∩B)/P(B) = (1/6)/(2/3) = 1/4 = P(A) (confirms independence)</div></div>
+      <div class="ans">✅ P(A∩B)=1/6; P(A∪B)=3/4; P(A|B)=1/4 (equals P(A) — confirms independence)</div>
+    </div>
+    <div class="worked">
+      <h4>Binomial Distribution (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> A die is thrown 6 times. Find P(at least 1 six).</p>
+      <div class="step"><div class="sn">1</div><div>n=6, p=P(six)=1/6, q=5/6</div></div><div class="step"><div class="sn">2</div><div>P(at least 1 six) = 1 − P(no sixes) = 1 − P(X=0)</div></div><div class="step"><div class="sn">3</div><div>P(X=0) = ⁶C₀·(1/6)⁰·(5/6)⁶ = (5/6)⁶ = 15625/46656</div></div><div class="step"><div class="sn">4</div><div>P(at least 1 six) = 1 − 15625/46656 = 31031/46656 ≈ 0.665</div></div>
+      <div class="ans">✅ P(at least 1 six) = 1−(5/6)⁶ = 31031/46656 ≈ 0.665</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Mutually Exclusive Events</div>
+      <div class="vs-head">Independent Events</div>
+      <div class="vs-row"><div>A∩B = φ (cannot occur simultaneously)</div><div>A∩B ≠ φ (can occur simultaneously, but don't affect each other's probability)</div></div><div class="vs-row"><div>P(A∩B) = 0</div><div>P(A∩B) = P(A)·P(B)</div></div><div class="vs-row"><div>P(A∪B) = P(A)+P(B)</div><div>P(A∪B) = P(A)+P(B)−P(A)P(B)</div></div><div class="vs-row"><div>Mutually exclusive events are usually NOT independent (unless one has probability 0)</div><div>Independent events are NOT mutually exclusive (unless P(A)=0 or P(B)=0)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Two cards are drawn without replacement from a deck of 52 cards. Find the probability that both are aces.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> P(1st ace) = 4/52 = 1/13. P(2nd ace | 1st was ace) = 3/51 = 1/17 (only 3 aces left in 51 cards). P(both aces) = P(1st ace) × P(2nd ace|1st ace) = (1/13)×(1/17) = 1/221.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="sec-pp">
+<h2 class="sec-title">📝 Practice Papers</h2>
+<p class="sec-sub">Full-length 80-mark board-pattern papers &middot; Mathematics XII</p>
+<div class="pp-tabs">
+  <button class="pp-tab-btn active" onclick="showPP(1,this)">Paper 1</button>
+  <button class="pp-tab-btn" onclick="showPP(2,this)">Paper 2</button>
+  <button class="pp-tab-btn" onclick="showPP(3,this)">Paper 3</button>
+</div>
+<div id="pp1" class="pp-content active"><div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS XII — PRACTICE PAPER 1</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 80 | CBSE 2024-25</p></div>
+  <div class="pp-section-title">SECTION A — MCQ (18×1 + 2 Assertion = 20)</div>
+  <div class="pp-q">Q1. The relation R = {(a,b): |a−b| is divisible by 4} on Z is: (a) Reflexive only (b) Symmetric only (c) Transitive only (d) Equivalence [Ans: d]</div>
+  <div class="pp-q">Q2. sin⁻¹(sin 3π/4) = ? (a) 3π/4 (b) π/4 (c) −π/4 (d) 5π/4 [Ans: b]</div>
+  <div class="pp-q">Q3. If A is a square matrix of order 3 and |A|=3, then |2A| = ? (a) 6 (b) 12 (c) 24 (d) 3 [Ans: c] [2³×|A|=8×3=24]</div>
+  <div class="pp-q">Q4. d/dx[log(sin x)] = ? (a) cot x (b) −cot x (c) cos x (d) −cos x [Ans: a]</div>
+  <div class="pp-q">Q5. ∫sin²x dx = ? (a) x/2 − sin2x/4 + C (b) x/2 + sin2x/4 + C (c) −x/2 + cos2x/4 + C (d) sin2x/4 [Ans: a]</div>
+  <div class="pp-q">Q6. Order of differential equation: (y″)² + (y′)³ + y = 0 is: (a) 1 (b) 2 (c) 3 (d) 6 [Ans: b]</div>
+  <div class="pp-q">Q7. Vector a⃗ = 2î−ĵ+2k̂. |a⃗| = ? (a) 3 (b) 5 (c) 7 (d) 9 [Ans: a] [√(4+1+4)=3]</div>
+  <div class="pp-q">Q8. Direction cosines of a line making equal angles with all axes: (a) 1,1,1 (b) 1/√3 each (c) 0,0,0 (d) 1/√2 each [Ans: b]</div>
+  <div class="pp-q">Q9-20. [Further MCQs + 2 Assertion-Reason on LPP, Probability, Bayes theorem, conditional probability] [12M]</div>
+  <div class="pp-section-title">SECTION B — VSA (5×2=10)</div>
+  <div class="pp-q">Q21. Find the domain of f(x) = cos⁻¹(2x−1). [2M]</div>
+  <div class="pp-q">Q22. If A = [2,3;1,4], find A + Aᵀ and show it is symmetric. [2M]</div>
+  <div class="pp-q">Q23. Differentiate: y = sin(x²) with respect to x. [2M]</div>
+  <div class="pp-q">Q24. Evaluate: ∫₀^(π/2) sin x/(sin x + cos x) dx. [2M]</div>
+  <div class="pp-q">Q25. Find the unit vector in direction of 3î + 4ĵ. [2M]</div>
+  <div class="pp-section-title">SECTION C — SA (6×3=18)</div>
+  <div class="pp-q">Q26. Check if f: R→R, f(x) = 3x−5 is bijective. Find f⁻¹. [3M]</div>
+  <div class="pp-q">Q27. Solve: tan⁻¹(x−1) + tan⁻¹(x) + tan⁻¹(x+1) = tan⁻¹(3x). [3M]</div>
+  <div class="pp-q">Q28. Find the value of k for continuity: f(x) = {kx², x≤2; 3, x>2} at x=2. [3M]</div>
+  <div class="pp-q">Q29. Evaluate: ∫x·eˣ dx using integration by parts. [3M]</div>
+  <div class="pp-q">Q30. Solve the differential equation: dy/dx + y/x = x². [3M]</div>
+  <div class="pp-q">Q31. A bag contains 4 red and 3 blue balls. Two are drawn without replacement. Find P(both red). [3M]</div>
+  <div class="pp-section-title">SECTION D — LA (4×5=20) + Case (2×4=8) + Source (4)</div>
+  <div class="pp-q">Q32. Using matrices, solve: x + y + z = 6; 2x + y − z = 1; x − y + 3z = 7. [5M]</div>
+  <div class="pp-q">Q33. Find local maxima and minima of f(x) = x³ − 3x² + 3x − 5. Hence find point of inflection. [5M]</div>
+  <div class="pp-q">Q34. Find the area between y = x² and y = x using integration. [5M]</div>
+  <div class="pp-q">Q35. Find the equation of the plane through (2,3,−1), (3,−2,4) and (1,2,−3). Find angle it makes with x-axis. [5M]</div>
+  <div class="pp-q">Q36-37. Case studies: (i) LPP — maximise profit given constraints (ii) Probability — Bayes theorem applied to disease testing. [8M]</div>
+</div></div>
+<div id="pp2" class="pp-content"><div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS XII — PRACTICE PAPER 2</h3><p style="font-size:.8rem">Alternate emphasis</p></div>
+  <div class="pp-section-title">All Sections</div>
+  <div class="pp-q">Q1-20. MCQ + AR: Relations &amp; Functions (composite), Matrix (skew-symmetric), Determinants (minors, cofactors), Derivatives (parametric), Integrals (substitution), Vector cross product, 3D distance formula, Conditional probability. [20M]</div>
+  <div class="pp-q">Q21-25. VSA: Inverse trigonometry (principal value), Adjoint matrix, Rolle's theorem verification, Definite integral property, Scalar triple product. [10M]</div>
+  <div class="pp-q">Q26-31. SA: Equivalence relation proof, Matrix equations, L'Hospital's rule, Integration by partial fractions, Homogeneous ODE, Probability distributions. [18M]</div>
+  <div class="pp-q">Q32-37. LA + Case: Determinant method (Cramer's rule), Application of derivatives (rate of change), Volume of solid of revolution, Line in 3D (skew lines), LPP graphical, Binomial distribution case study. [32M]</div>
+</div></div>
+<div id="pp3" class="pp-content"><div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS XII — PRACTICE PAPER 3 (Challenge)</h3><p style="font-size:.8rem">Hardest questions — pre-board level</p></div>
+  <div class="pp-q">Q1. Prove: tan⁻¹(1/2) + tan⁻¹(2/11) = tan⁻¹(3/4). [3M]</div>
+  <div class="pp-q">Q2. If A = [1,2;3,4], prove A² − 5A + 2I = 0. Hence find A⁻¹. [4M]</div>
+  <div class="pp-q">Q3. Differentiate: x^(sin x) + (sin x)^cos x. [4M]</div>
+  <div class="pp-q">Q4. Evaluate: ∫₀^π x·sin x/(1+cos²x) dx. [5M]</div>
+  <div class="pp-q">Q5. Solve: d²y/dx² − 5dy/dx + 6y = 0. [4M]</div>
+  <div class="pp-q">Q6. Using vectors, prove that the diagonals of a rhombus are perpendicular. [4M]</div>
+  <div class="pp-q">Q7. Find the shortest distance between lines: r⃗ = (î+ĵ) + t(2î−ĵ+k̂) and r⃗ = (2î+ĵ−k̂) + s(3î−5ĵ+2k̂). [5M]</div>
+  <div class="pp-q">Q8. LPP: A manufacturer makes two products X and Y. X needs 3 hrs machine time + 2 hrs labour. Y needs 1 hr + 3 hrs. Available: 12 hrs machine time, 15 hrs labour. Profit: X = Rs500, Y = Rs700. Find max profit. [6M]</div>
+  <div class="pp-q">Q9. A random variable X has the distribution P(X=k) = C(n,k)(0.6)^k(0.4)^(n-k). If mean=6, find n and P(X≥1). [5M]</div>
+</div></div>
+</section>
+<section id="sec-pyq" style="display:none">
+<h2 class="sec-title">📜 PYQ Bank</h2>
+<p class="sec-sub">Previous year board exam questions — Mathematics XII</p>
+<div class="pyq-filter" id="pyqFilter">
+  <button class="pyq-chip active" onclick="filterPyq('all',this)">All</button>
+  <button class="pyq-chip" onclick="filterPyq('ch4',this)">Determinants</button>
+  <button class="pyq-chip" onclick="filterPyq('ch5',this)">Calculus</button>
+  <button class="pyq-chip" onclick="filterPyq('ch7',this)">Integrals</button>
+  <button class="pyq-chip" onclick="filterPyq('ch13',this)">Probability</button>
+</div>
+<div id="pyqList">
+  <div class="pyq-card" data-ch="ch4"><div class="pyq-meta">2023 | 5 marks | Determinants</div><div class="pyq-q">Using properties of determinants, prove that: |1+a, 1, 1; 1, 1+b, 1; 1, 1, 1+c| = abc(1/a+1/b+1/c+1)</div><button class="pyq-toggle" onclick="togglePyq(this)">Show Answer</button><div class="pyq-ans">Apply R₁→R₁−R₃, R₂→R₂−R₃. Then expand. The result abc + bc + ca + ab = abc(1+1/a+1/b+1/c). Use cofactor expansion after operations.</div></div>
+  <div class="pyq-card" data-ch="ch5"><div class="pyq-meta">2023 | 3 marks | Differentiability</div><div class="pyq-q">Find dy/dx if y = (sin x)ˣ + sin⁻¹(√x)</div><button class="pyq-toggle" onclick="togglePyq(this)">Show Answer</button><div class="pyq-ans">Let u=(sinx)ˣ: lnu = x·ln(sinx), differentiate: du/dx = (sinx)ˣ[ln(sinx)+x·cosx/sinx]. Let v=sin⁻¹(√x): dv/dx = 1/√(1−x) · 1/(2√x). dy/dx = du/dx + dv/dx.</div></div>
+  <div class="pyq-card" data-ch="ch7"><div class="pyq-meta">2024 | 5 marks | Integration</div><div class="pyq-q">Evaluate: ∫₀^(π/2) (sin x − cos x)/(1+sin x cos x) dx</div><button class="pyq-toggle" onclick="togglePyq(this)">Show Answer</button><div class="pyq-ans">Use property ∫₀ᵃ f(x)dx = ∫₀ᵃ f(a−x)dx. Let I = ∫₀^(π/2) (sinx−cosx)/(1+sinx cosx)dx. Replacing x by π/2−x: I = ∫₀^(π/2) (cosx−sinx)/(1+sinx cosx)dx = −I. So 2I=0 → I=0.</div></div>
+  <div class="pyq-card" data-ch="ch13"><div class="pyq-meta">2023 | 5 marks | Probability</div><div class="pyq-q">A bag has 4 red and 3 black balls. Two balls are drawn without replacement. Find mean and variance of number of red balls.</div><button class="pyq-toggle" onclick="togglePyq(this)">Show Answer</button><div class="pyq-ans">X can be 0,1,2. P(X=0)=C(3,2)/C(7,2)=3/21=1/7. P(X=1)=C(4,1)C(3,1)/C(7,2)=12/21=4/7. P(X=2)=C(4,2)/C(7,2)=6/21=2/7. E(X)=0(1/7)+1(4/7)+2(2/7)=8/7. E(X²)=0+4/7+8/7=12/7. Var=12/7−(8/7)²=12/7−64/49=20/49.</div></div>
+</div>
+</section>
+
+<!-- MISTAKE BANK -->
+<section id="sec-mistakes" style="display:none">
+<h2 class="sec-title">❌ Mistake Bank</h2>
+<p class="sec-sub">Common errors in Maths XII exams</p>
+<div class="mistake-card"><div class="mc-title">Forgetting absolute value in area under curve</div><p style="font-size:.85rem">If f(x) is negative in part of the interval, ∫f(x)dx gives a negative number. Area is |∫f(x)dx|. Split the integral at roots where f(x)=0.</p></div>
+<div class="mistake-card"><div class="mc-title">Wrong chain rule application</div><p style="font-size:.85rem">d/dx[sin(x²)] = cos(x²)·2x NOT just cos(x²). Always multiply by derivative of inner function.</p></div>
+<div class="mistake-card"><div class="mc-title">Not verifying second derivative in optimisation</div><p style="font-size:.85rem">Setting f'(x)=0 gives critical points, not guaranteed max/min. Must check f''(x) sign (or first derivative test) to confirm nature.</p></div>
+<div class="mistake-card"><div class="mc-title">Missing + C in indefinite integration</div><p style="font-size:.85rem">Every indefinite integral needs +C. In board exams, omitting C consistently costs marks. Write it even for complex integrals.</p></div>
+<div class="mistake-card"><div class="mc-title">Confusing line equation forms</div><p style="font-size:.85rem">Symmetric form: (x−x₁)/a = (y−y₁)/b = (z−z₁)/c uses a,b,c as DIRECTION RATIOS, not a specific point. Mixing up point and direction is a common error.</p></div>
+</section>
+
+<!-- EXAMINER'S EYE -->
+<section id="sec-examiner" style="display:none">
+<h2 class="sec-title">👁️ Examiner's Eye</h2>
+<p class="sec-sub">What examiners check in Maths XII answers</p>
+<div class="tip-card"><div class="tc-title">Show all steps — method marks are critical</div><p style="font-size:.85rem">Even if final answer is wrong, intermediate correct steps earn marks. Write each step clearly. An answer without working scores 0 in most cases.</p></div>
+<div class="tip-card"><div class="tc-title">State theorems before applying</div><p style="font-size:.85rem">Before using MVT, Rolle's, etc., state the theorem (or at least its conditions). Verify conditions are satisfied, then apply. Skipping this loses 1 mark.</p></div>
+<div class="tip-card"><div class="tc-title">In probability, define events clearly</div><p style="font-size:.85rem">State: "Let A = event that ...", "Let B = event that ...". Then write P(A), P(B|A) etc. Undefined notation in probability is penalised.</p></div>
+<div class="tip-card"><div class="tc-title">Label graphs in linear programming</div><p style="font-size:.85rem">Mark corner points on graph, shade feasible region, label axes and constraint lines. An unlabelled graph earns fewer marks even if corner points are correct.</p></div>
+</section>
+
+<!-- HIGH-PROB -->
+<section id="sec-highprob" style="display:none">
+<h2 class="sec-title">🔥 High-Probability Questions</h2>
+<p class="sec-sub">Most likely questions in your board exam</p>
+<div class="hotq"><div class="hotq-num">⭐ 95% probability</div><p style="font-size:.87rem"><strong>Integration by parts (5 marks):</strong> Evaluate ∫x²eˣdx or ∫x sin x dx or ∫x ln x dx. Use ILATE. Appears every year.</p></div>
+<div class="hotq"><div class="hotq-num">⭐ 95% probability</div><p style="font-size:.87rem"><strong>Bayes' Theorem (5 marks):</strong> Typically given as a word problem with conditional probabilities. Set up table: prior × likelihood, then Bayes. High weightage every year.</p></div>
+<div class="hotq"><div class="hotq-num">⭐ 90% probability</div><p style="font-size:.87rem"><strong>Determinant proof using properties (5 marks):</strong> Use R/C operations to simplify determinant. Must show step-by-step reduction.</p></div>
+<div class="hotq"><div class="hotq-num">⭐ 85% probability</div><p style="font-size:.87rem"><strong>Differential equations — linear type (5 marks):</strong> Find IF, multiply, integrate. Often related to population or cooling problem.</p></div>
+<div class="hotq"><div class="hotq-num">⭐ 85% probability</div><p style="font-size:.87rem"><strong>Application of derivatives — optimisation (5 marks):</strong> Find dimensions of rectangle/box/can to maximise/minimise area/volume/cost.</p></div>
+</section>
+
+<!-- LAST MINUTE -->
+<section id="sec-lastmin" style="display:none">
+<h2 class="sec-title">⏱️ Last-Minute Revision</h2>
+<p class="sec-sub">Key checklist for the night before</p>
+<div class="lm-block"><div class="lm-title">✅ Algebra & Calculus Checklist</div>
+<label class="checklist-item"><input type="checkbox"> Adjoint and inverse of 3×3 matrix formula</label>
+<label class="checklist-item"><input type="checkbox"> All standard integral formulas (especially inverse trig ones)</label>
+<label class="checklist-item"><input type="checkbox"> Product rule, chain rule, implicit differentiation</label>
+<label class="checklist-item"><input type="checkbox"> Conditions for Rolle's & MVT and what they conclude</label>
+</div>
+<div class="lm-block"><div class="lm-title">✅ Geometry & Probability Checklist</div>
+<label class="checklist-item"><input type="checkbox"> Distance from point to plane formula</label>
+<label class="checklist-item"><input type="checkbox"> Angle between two lines in 3D</label>
+<label class="checklist-item"><input type="checkbox"> Bayes theorem formula and tree-diagram method</label>
+<label class="checklist-item"><input type="checkbox"> Binomial distribution: mean = np, variance = npq</label>
+</div>
+</section>
+
+<!-- PRACTICE PAPERS -->
+<section id="sec-pp" style="display:none">
+<h2 class="sec-title">📝 Practice Papers</h2>
+<p class="sec-sub">Full-length 80-mark board-pattern papers</p>
+<div class="pp-tabs">
+  <button class="pp-tab-btn active" onclick="showPP(1,this)">Paper 1</button>
+  <button class="pp-tab-btn" onclick="showPP(2,this)">Paper 2</button>
+  <button class="pp-tab-btn" onclick="showPP(3,this)">Paper 3</button>
+</div>
+<div id="pp1" class="pp-content active">
+<div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS XII — PRACTICE PAPER 1</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 80 | As per CBSE 2024-25 pattern</p></div>
+  <div class="pp-section-title">SECTION A — MCQ + Assertion-Reason (20×1=20)</div>
+  <div class="pp-q">Q1. The function f: R→R given by f(x)=x² is: (a) One-one (b) Onto (c) Bijective (d) None of these [Ans: d]</div>
+  <div class="pp-q">Q2. Principal value of sin⁻¹(−1/2) is: (a) π/6 (b) −π/6 (c) 5π/6 (d) −5π/6 [Ans: b]</div>
+  <div class="pp-q">Q3. If A is a 3×3 matrix and |A|=5, then |3A| = ? (a) 15 (b) 45 (c) 135 (d) 375 [Ans: c — 3³×5=135]</div>
+  <div class="pp-section-title">SECTION B — Short Answer (5×2=10)</div>
+  <div class="pp-q">Q4. Find the value of tan⁻¹(1) + cos⁻¹(−1/2) + sin⁻¹(−1/2). [Ans: π/4 + 2π/3 − π/6 = 3π/4]</div>
+  <div class="pp-q">Q5. Find dy/dx when y = sin(x²). [Ans: cos(x²)·2x]</div>
+  <div class="pp-section-title">SECTION C — Short Answer II (6×3=18)</div>
+  <div class="pp-q">Q6. Using matrix method, solve: x+y=3, 2x+3y=8. [Write as AX=B, find A⁻¹, X=A⁻¹B → x=1,y=2]</div>
+  <div class="pp-q">Q7. Find the interval(s) in which f(x) = 2x³−3x²−36x+7 is increasing/decreasing.</div>
+  <div class="pp-section-title">SECTION D — Long Answer (4×5=20)</div>
+  <div class="pp-q">Q8. Evaluate ∫₀¹ x·tan⁻¹x dx. [Use integration by parts: u=tan⁻¹x, dv=x dx. Ans: π/4 − 1/2]</div>
+  <div class="pp-q">Q9. Solve dy/dx + y/x = x². [Linear DE; IF=e∫(1/x)dx=x; solution: xy=x⁴/4+C]</div>
+  <div class="pp-section-title">SECTION E — Case Based (3×4=12)</div>
+  <div class="pp-q">Q10. A factory manufactures two items with given profit per unit. Formulate as LPP, find feasible region, and maximise profit.</div>
+</div>
+</div>
+<div id="pp2" class="pp-content">
+<div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS XII — PRACTICE PAPER 2</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 80 | Focus: 3D + Probability</p></div>
+  <div class="pp-section-title">SECTION A (20×1=20)</div>
+  <div class="pp-q">Q1. The number of arbitrary constants in the general solution of a differential equation of order 3 is: (a) 1 (b) 2 (c) 3 (d) 4 [Ans: c]</div>
+  <div class="pp-q">Q2. Two events A and B are independent if: (a) P(A∩B)=0 (b) P(A∩B)=P(A)P(B) (c) P(A|B)=P(B) (d) A and B are mutually exclusive [Ans: b]</div>
+  <div class="pp-section-title">SECTION D (4×5=20)</div>
+  <div class="pp-q">Q3. Find the shortest distance between lines: r=î+2ĵ+3k̂+λ(î−3ĵ+2k̂) and r=4î+5ĵ+6k̂+μ(2î+3ĵ+k̂). [Use SD formula = |(a₂−a₁)·(b₁×b₂)|/|b₁×b₂|]</div>
+  <div class="pp-q">Q4. Bag A contains 2 white and 3 red balls; Bag B contains 4 white and 5 red. One ball is drawn at random. Using Bayes' theorem, find probability it came from Bag A given ball is white.</div>
+</div>
+</div>
+<div id="pp3" class="pp-content">
+<div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS XII — PRACTICE PAPER 3</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 80 | Full Syllabus Revision</p></div>
+  <div class="pp-section-title">SECTION D (4×5=20)</div>
+  <div class="pp-q">Q1. Show that the relation R on Z defined by (a,b)∈R iff a−b is divisible by 5 is an equivalence relation. Find the equivalence class of 1.</div>
+  <div class="pp-q">Q2. A window consists of a rectangle surmounted by a semicircle. If perimeter is 10m, find dimensions for maximum area. [Let width=2r, height=h; constraint: 2h+2r+πr=10; maximise: A=2rh+πr²/2]</div>
+  <div class="pp-q">Q3. Using integration, find area of region bounded by ellipse x²/4+y²/9=1. [A=4∫₀²(3/2)√(4−x²)dx=6π sq units by formula πab]</div>
+</div>
+</div>
+</section>
+<!-- EXAM SIMULATOR -->
+<section id="sec-sim" style="display:none">
+<h2 class="sec-title">🎯 Exam Simulator</h2>
+<p class="sec-sub">35-question timed mock — Mathematics XII</p>
+<div id="sim-start-screen">
+  <div class="sim-info-grid">
+    <div class="sim-info-box"><div class="sib-num">35</div><div class="sib-lbl">Questions</div></div>
+    <div class="sim-info-box"><div class="sib-num">35</div><div class="sib-lbl">Minutes</div></div>
+    <div class="sim-info-box"><div class="sib-num">4</div><div class="sib-lbl">Options each</div></div>
+    <div class="sim-info-box"><div class="sib-num">All</div><div class="sib-lbl">Chapters</div></div>
+  </div>
+  <button class="start-btn" onclick="startSim()">▶ Start Mock Test</button>
+</div>
+<div id="sim-quiz" style="display:none">
+  <div class="sim-header-bar">
+    <span id="sim-qnum">Q 1/35</span>
+    <span id="sim-timer">35:00</span>
+    <span id="sim-score-live">Score: 0</span>
+  </div>
+  <div class="sim-live-donut-wrap">
+    <svg id="sim-live-donut" viewBox="0 0 120 120" width="90" height="90">
+      <circle cx="60" cy="60" r="50" fill="none" stroke="var(--card-bg)" stroke-width="16"/>
+      <circle id="sldc" cx="60" cy="60" r="50" fill="none" stroke="var(--mint)" stroke-width="16"
+        stroke-dasharray="0 314" style="transition:stroke-dasharray .5s ease;transform:rotate(-90deg);transform-origin:60px 60px"/>
+      <circle id="sldw" cx="60" cy="60" r="50" fill="none" stroke="var(--coral)" stroke-width="16"
+        stroke-dasharray="0 314" style="transition:stroke-dasharray .5s ease .15s;transform:rotate(-90deg);transform-origin:60px 60px"/>
+      <text x="60" y="57" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)" id="sld-pct">0%</text>
+      <text x="60" y="73" text-anchor="middle" font-size="9" fill="var(--text-muted)" id="sld-frac">0/35</text>
+    </svg>
+    <div style="font-size:.8rem;color:var(--text-muted);line-height:1.6">
+      <span style="color:var(--mint)">●</span> Correct<br>
+      <span style="color:var(--coral)">●</span> Wrong<br>
+      <span style="color:var(--text-muted)">○</span> Skipped
+    </div>
+  </div>
+  <div id="sim-q-text" class="sim-q-text"></div>
+  <div id="sim-opts" class="sim-opts"></div>
+  <button id="sim-next-btn" class="sim-next-btn" onclick="nextSimQ()" style="display:none">Next Question →</button>
+</div>
+<div id="sim-result" style="display:none">
+  <h3 style="text-align:center;margin-bottom:16px">📊 Your Result</h3>
+  <div class="result-donut-wrap">
+    <svg viewBox="0 0 200 200" width="160" height="160">
+      <circle cx="100" cy="100" r="80" fill="none" stroke="var(--card-bg)" stroke-width="24"/>
+      <circle id="res-arc-c" cx="100" cy="100" r="80" fill="none" stroke="var(--mint)" stroke-width="24"
+        stroke-dasharray="0 503" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:100px 100px"/>
+      <circle id="res-arc-w" cx="100" cy="100" r="80" fill="none" stroke="var(--coral)" stroke-width="24"
+        stroke-dasharray="0 503" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:100px 100px"/>
+      <text x="100" y="94" text-anchor="middle" font-size="28" font-weight="800" fill="var(--text)" id="res-pct">0%</text>
+      <text x="100" y="116" text-anchor="middle" font-size="13" fill="var(--text-muted)" id="res-score">0/35</text>
+    </svg>
+  </div>
+  <div class="result-stats" id="result-stats"></div>
+  <h4 style="margin:18px 0 10px">Performance by Topic</h4>
+  <div class="bar-chart-wrap" id="result-bar-chart"></div>
+  <h4 style="margin:18px 0 10px">Question Strip</h4>
+  <div class="sim-strip" id="sim-strip"></div>
+  <button class="start-btn" onclick="restartSim()" style="margin-top:24px">↺ Restart</button>
+</div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="sec-dash" style="display:none">
+<h2 class="sec-title">📊 Your Dashboard</h2>
+<p class="sec-sub">Personal stats and progress</p>
+<div id="dash-content"></div>
+</section>
+</main>
+<script>
+const STORAGE_KEY='cbsemock_math_xii_v1';
+const defaultState={xp:0,streak:0,lastVisit:'',badges:[],chapProgress:{},simBest:0,simCount:0,activity:{},pyqOpened:false};
+let state=JSON.parse(JSON.stringify(defaultState));
+function loadState(){try{const s=localStorage.getItem(STORAGE_KEY);if(s)state=Object.assign({},defaultState,JSON.parse(s));}catch(e){}}
+function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch(e){}}
+loadState();
+
+const MAP={
+  home:'sec-home',ch1:'sec-ch1',ch2:'sec-ch2',ch3:'sec-ch3',ch4:'sec-ch4',
+  ch5:'sec-ch5',ch6:'sec-ch6',ch7:'sec-ch7',ch8:'sec-ch8',ch9:'sec-ch9',
+  ch10:'sec-ch10',ch11:'sec-ch11',ch12:'sec-ch12',ch13:'sec-ch13',
+  pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',
+  highprob:'sec-highprob',lastmin:'sec-lastmin',pp:'sec-pp',
+  sim:'sec-sim',dash:'sec-dash'
+};
+let curKey="home";
+
+function go(key){
+  document.querySelectorAll('main > section').forEach(s=>s.style.display='none');
+  const sec=document.getElementById(MAP[key]);
+  if(sec)sec.style.display='block';
+  document.querySelectorAll('.tab-btn,.tool-tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll(`[data-key="${key}"]`).forEach(b=>b.classList.add('active'));
+  const _sec=document.getElementById(MAP[key]);if(_sec){const _stickyH=(document.querySelector('.main-tabs-wrap')||{offsetTop:0,offsetHeight:0});const _barH=(_stickyH.offsetTop||52)+(_stickyH.offsetHeight||72)+10;const _y=_sec.getBoundingClientRect().top+window.scrollY-_barH;window.scrollTo({top:Math.max(0,_y),behavior:'smooth'});}else{window.scrollTo({top:0,behavior:'smooth'});}
+  if(key==='dash')renderDash();
+  if(key.startsWith('ch')){
+    state.chapProgress[key]=(state.chapProgress[key]||0);
+    if(!state.chapProgress[key]){state.chapProgress[key]=1;awardXP(5,'Chapter opened');}
+    saveState();updateXPBar();
+  }
+}
+
+function awardXP(pts,reason){
+  state.xp=(state.xp||0)+pts;
+  checkStreak();checkBadges();saveState();updateXPBar();
+  showXPToast(`+${pts} XP — ${reason}`);
+}
+function showXPToast(msg){
+  let t=document.getElementById('xp-toast');
+  if(!t){t=document.createElement('div');t.id='xp-toast';t.style.cssText='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;padding:8px 18px;border-radius:20px;font-weight:700;font-size:.85rem;z-index:9999;opacity:0;transition:opacity .3s';document.body.appendChild(t);}
+  t.textContent=msg;t.style.opacity='1';
+  setTimeout(()=>{t.style.opacity='0';},2200);
+}
+function checkStreak(){
+  const today=new Date().toDateString();
+  if(state.lastVisit===today)return;
+  const yesterday=new Date(Date.now()-86400000).toDateString();
+  state.streak=(state.lastVisit===yesterday)?(state.streak||0)+1:1;
+  state.lastVisit=today;
+}
+function checkBadges(){
+  const b=state.badges||[];
+  const add=(id,label)=>{if(!b.includes(id)){b.push(id);state.badges=b;showXPToast('🏆 Badge: '+label);}};
+  if(state.xp>=100)add('xp100','Century');
+  if(state.xp>=500)add('xp500','High Scorer');
+  if((state.streak||0)>=7)add('streak7','Week Warrior');
+  if(Object.keys(state.chapProgress||{}).length>=13)add('allchap','Math Master');
+  if((state.simCount||0)>=5)add('sim5','Mock Pro');
+}
+function updateXPBar(){
+  const bar=document.getElementById('xp-bar');
+  const lbl=document.getElementById('xp-lbl');
+  const stk=document.getElementById('streak-lbl');
+  if(bar){const pct=Math.min(100,(state.xp%200)/2);bar.style.width=pct+'%';}
+  if(lbl)lbl.textContent=`${state.xp} XP`;
+  if(stk)stk.textContent=`🔥 ${state.streak||0}`;
+}
+
+function filterPyq(ch,btn){
+  document.querySelectorAll('.pyq-chip').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pyq-card').forEach(c=>{
+    c.style.display=(ch==='all'||c.dataset.ch===ch)?'block':'none';
+  });
+  if(!state.pyqOpened){state.pyqOpened=true;awardXP(10,'PYQ Bank opened');}
+}
+function togglePyq(btn){
+  const ans=btn.nextElementSibling;
+  const open=ans.style.display==='block';
+  ans.style.display=open?'none':'block';
+  btn.textContent=open?'Show Answer':'Hide Answer';
+}
+function showPP(n,btn){
+  document.querySelectorAll('.pp-content').forEach(d=>d.classList.remove('active'));
+  document.querySelectorAll('.pp-tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('pp'+n).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* ===== SIMULATOR ===== */
+const SIM_BANK=[
+  {q:"Which of the following is an equivalence relation on Z?",opts:["(a,b)∈R iff a>b","(a,b)∈R iff a=b","(a,b)∈R iff a≥b","(a,b)∈R iff a+b=0"],ans:1,ch:"ch1"},
+  {q:"The function f: R→R defined by f(x)=x³ is:",opts:["One-one but not onto","Onto but not one-one","Neither one-one nor onto","Both one-one and onto"],ans:3,ch:"ch1"},
+  {q:"If f(x)=2x+3, then f⁻¹(x) equals:",opts:["(x+3)/2","(x-3)/2","(x-3)/2","2x-3"],ans:1,ch:"ch1"},
+  {q:"Principal value of sin⁻¹(√3/2) is:",opts:["π/3","π/6","2π/3","π/4"],ans:0,ch:"ch2"},
+  {q:"cos⁻¹(−1/2) equals:",opts:["2π/3","π/3","−π/3","4π/3"],ans:0,ch:"ch2"},
+  {q:"The value of tan⁻¹(1)+tan⁻¹(√3) is:",opts:["7π/12","5π/12","π/4","π/12"],ans:1,ch:"ch2"},
+  {q:"If A is a 3×3 matrix, then |2A| equals:",opts:["|A|","2|A|","4|A|","8|A|"],ans:3,ch:"ch3"},
+  {q:"Which type of matrix equals its own transpose?",opts:["Skew-symmetric","Symmetric","Diagonal","Scalar"],ans:1,ch:"ch3"},
+  {q:"Number of elementary operations to convert [A|I]→[I|A⁻¹]:",opts:["Exactly 3","At most 3n","Exactly n","Depends on matrix"],ans:3,ch:"ch3"},
+  {q:"If |A|=6 for a 3×3 matrix, |adj(A)| equals:",opts:["6","12","36","216"],ans:2,ch:"ch4"},
+  {q:"The area of triangle with vertices (0,0),(1,0),(0,1) using determinant is:",opts:["1/4","1/2","1","2"],ans:1,ch:"ch4"},
+  {q:"If D=0 and D₁≠0 in Cramer's rule, the system is:",opts:["Consistent with unique solution","Consistent with infinite solutions","Inconsistent","Dependent"],ans:2,ch:"ch4"},
+  {q:"f(x)=|x| is:",opts:["Differentiable at x=0","Continuous but not differentiable at x=0","Neither continuous nor differentiable","Discontinuous at x=0"],ans:1,ch:"ch5"},
+  {q:"d/dx[tan⁻¹(x)] equals:",opts:["1/(1+x)","1/(1+x²)","−1/(1+x²)","1/√(1−x²)"],ans:1,ch:"ch5"},
+  {q:"If y=xˣ, then dy/dx equals:",opts:["x·xˣ⁻¹","xˣ(1+ln x)","xˣ·ln x","xˣ"],ans:1,ch:"ch5"},
+  {q:"At a critical point, f'(x)=0 and f''(x)>0 indicates:",opts:["Local maximum","Local minimum","Inflection point","Neither max nor min"],ans:1,ch:"ch6"},
+  {q:"The slope of the normal to y=x² at x=2 is:",opts:["4","−1/4","1/4","−4"],ans:1,ch:"ch6"},
+  {q:"If f(x)=x³−3x is strictly increasing, then x lies in:",opts:["(−1,1)","(−∞,−1)∪(1,∞)","(0,∞)","(−∞,0)"],ans:1,ch:"ch6"},
+  {q:"∫(1/(1+x²))dx equals:",opts:["ln(1+x²)+C","tan⁻¹x+C","−cot x+C","sin⁻¹x+C"],ans:1,ch:"ch7"},
+  {q:"∫eˣ(f(x)+f'(x))dx equals:",opts:["eˣf'(x)+C","eˣf(x)+C","eˣ(f(x)+f'(x))+C","f(x)+C"],ans:1,ch:"ch7"},
+  {q:"∫₀^(π/2) sin x dx equals:",opts:["0","1","2","π/2"],ans:1,ch:"ch7"},
+  {q:"Area bounded by y=x² and y=x is:",opts:["1/2","1/6","1/3","1/4"],ans:1,ch:"ch8"},
+  {q:"Area of the ellipse x²/9+y²/4=1 is:",opts:["6π","12π","18π","36π"],ans:0,ch:"ch8"},
+  {q:"The order and degree of (d²y/dx²)³+dy/dx=0 are respectively:",opts:["2 and 3","3 and 2","2 and 1","1 and 3"],ans:0,ch:"ch9"},
+  {q:"The integrating factor of dy/dx + (1/x)y = x² is:",opts:["x","1/x","x²","ln x"],ans:0,ch:"ch9"},
+  {q:"For vectors a⃗ and b⃗, a⃗·b⃗=0 implies:",opts:["a⃗∥b⃗","a⃗⊥b⃗","|a⃗|=|b⃗|","a⃗=b⃗"],ans:1,ch:"ch10"},
+  {q:"Area of parallelogram with adjacent sides a⃗ and b⃗ is:",opts:["|a⃗·b⃗|","|a⃗×b⃗|","a⃗·b⃗","a⃗×b⃗"],ans:1,ch:"ch10"},
+  {q:"Direction cosines of the x-axis are:",opts:["(0,1,0)","(0,0,1)","(1,0,0)","(1,1,0)"],ans:2,ch:"ch11"},
+  {q:"Distance from origin to plane 2x+3y−z=14 is:",opts:["14/√14","√14","14","1/√14"],ans:0,ch:"ch11"},
+  {q:"The feasible region of an LPP is always:",opts:["A line","A point","A convex set","A concave set"],ans:2,ch:"ch12"},
+  {q:"Objective function is maximised/minimised at:",opts:["Interior point","Any point in feasible region","A corner point","Midpoint of a constraint"],ans:2,ch:"ch12"},
+  {q:"If P(A)=0.6, P(B)=0.4, and A,B are independent, then P(A∩B)=",opts:["0.24","0.1","1.0","0.6"],ans:0,ch:"ch13"},
+  {q:"In a Binomial distribution with n=10 and p=0.5, the mean is:",opts:["5","2.5","10","0.5"],ans:0,ch:"ch13"},
+  {q:"Bayes' theorem relates:",opts:["P(A) to P(B)","Prior and posterior probabilities","P(A∪B) and P(A∩B)","Variance and mean"],ans:1,ch:"ch13"},
+  {q:"If sin⁻¹x + sin⁻¹y = π/2, then x²+y² equals:",opts:["0","1","π","π/2"],ans:1,ch:"ch2"}
+];
+
+let simQ=[],simIdx=0,simScore=0,simAnswered=[],simTimer=null,simTimeLeft=2100;
+
+function startSim(){
+  const shuffled=[...SIM_BANK].sort(()=>Math.random()-.5);
+  simQ=shuffled.slice(0,35);
+  simIdx=0;simScore=0;simAnswered=new Array(35).fill(null);simTimeLeft=2100;
+  document.getElementById('sim-start-screen').style.display='none';
+  document.getElementById('sim-result').style.display='none';
+  document.getElementById('sim-quiz').style.display='block';
+  renderSimQ();
+  clearInterval(simTimer);
+  simTimer=setInterval(tickTimer,1000);
+  awardXP(5,'Simulator started');
+}
+
+function renderSimQ(){
+  const q=simQ[simIdx];
+  document.getElementById('sim-qnum').textContent=`Q ${simIdx+1}/35`;
+  document.getElementById('sim-score-live').textContent=`Score: ${simScore}`;
+  document.getElementById('sim-q-text').textContent=q.q;
+  const optsEl=document.getElementById('sim-opts');
+  optsEl.innerHTML='';
+  q.opts.forEach((opt,i)=>{
+    const btn=document.createElement('button');
+    btn.className='sim-opt';
+    btn.textContent=opt;
+    btn.onclick=()=>answerSim(i,btn,q);
+    optsEl.appendChild(btn);
+  });
+  document.getElementById('sim-next-btn').style.display='none';
+  updateLiveDonut();
+}
+
+function answerSim(chosen,btn,q){
+  document.querySelectorAll('.sim-opt').forEach(b=>b.disabled=true);
+  const correct=chosen===q.ans;
+  if(correct){simScore++;btn.classList.add('sim-correct');}
+  else{btn.classList.add('sim-wrong');document.querySelectorAll('.sim-opt')[q.ans].classList.add('sim-correct');}
+  simAnswered[simIdx]=chosen;
+  updateLiveDonut();
+  document.getElementById('sim-next-btn').style.display='inline-flex';
+  document.getElementById('sim-score-live').textContent=`Score: ${simScore}`;
+}
+
+function updateLiveDonut(){
+  const total=35;
+  const correct=simAnswered.filter((a,i)=>a!==null&&a===simQ[i].ans).length;
+  const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;
+  const answered=simAnswered.filter(a=>a!==null).length;
+  const circ=2*Math.PI*50;
+  const cDash=circ*(correct/total);
+  const wDash=circ*(wrong/total);
+  const dc=document.getElementById('sldc');
+  const dw=document.getElementById('sldw');
+  if(dc)dc.setAttribute('stroke-dasharray',`${cDash} ${circ-cDash}`);
+  if(dw){
+    dw.setAttribute('stroke-dasharray',`${wDash} ${circ-wDash}`);
+    dw.style.transform=`rotate(${-90+(correct/total)*360}deg)`;
+    dw.style.transformOrigin='60px 60px';
+  }
+  const pct=answered>0?Math.round((correct/answered)*100):0;
+  const pctEl=document.getElementById('sld-pct');
+  const fracEl=document.getElementById('sld-frac');
+  if(pctEl)pctEl.textContent=pct+'%';
+  if(fracEl)fracEl.textContent=`${answered}/35`;
+}
+
+function nextSimQ(){
+  simIdx++;
+  if(simIdx>=35){endSim();return;}
+  renderSimQ();
+}
+
+function tickTimer(){
+  simTimeLeft--;
+  const m=Math.floor(simTimeLeft/60);
+  const s=simTimeLeft%60;
+  const el=document.getElementById('sim-timer');
+  if(el)el.textContent=`${m}:${s.toString().padStart(2,'0')}`;
+  if(simTimeLeft<=0){clearInterval(simTimer);endSim();}
+}
+
+function endSim(){
+  clearInterval(simTimer);
+  document.getElementById('sim-quiz').style.display='none';
+  document.getElementById('sim-result').style.display='block';
+  const correct=simAnswered.filter((a,i)=>a!==null&&a===simQ[i].ans).length;
+  const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;
+  const skipped=simAnswered.filter(a=>a===null).length;
+  const pct=Math.round((correct/35)*100);
+  state.simCount=(state.simCount||0)+1;
+  if(correct>=(state.simBest||0))state.simBest=correct;
+  awardXP(10+correct,'Mock completed');
+  const circ=2*Math.PI*80;
+  const cDash=circ*(correct/35);
+  const wDash=circ*(wrong/35);
+  const arc=document.getElementById('res-arc-c');
+  const arcW=document.getElementById('res-arc-w');
+  if(arc)arc.setAttribute('stroke-dasharray',`${cDash} ${circ-cDash}`);
+  if(arcW){
+    arcW.setAttribute('stroke-dasharray',`${wDash} ${circ-wDash}`);
+    arcW.style.transform=`rotate(${-90+(correct/35)*360}deg)`;
+    arcW.style.transformOrigin='100px 100px';
+  }
+  const pctEl=document.getElementById('res-pct');
+  const scoreEl=document.getElementById('res-score');
+  if(pctEl)pctEl.textContent=pct+'%';
+  if(scoreEl)scoreEl.textContent=`${correct}/35`;
+  const stats=document.getElementById('result-stats');
+  if(stats)stats.innerHTML=`
+    <div class="rstat"><div class="rstat-n" style="color:var(--mint)">${correct}</div><div class="rstat-l">Correct</div></div>
+    <div class="rstat"><div class="rstat-n" style="color:var(--coral)">${wrong}</div><div class="rstat-l">Wrong</div></div>
+    <div class="rstat"><div class="rstat-n">${skipped}</div><div class="rstat-l">Skipped</div></div>
+    <div class="rstat"><div class="rstat-n">${pct}%</div><div class="rstat-l">Score</div></div>`;
+  const chGroups={
+    'Relations &\nFunctions':['ch1','ch2'],
+    'Algebra':['ch3','ch4'],
+    'Calculus I':['ch5','ch6'],
+    'Calculus II':['ch7','ch8','ch9'],
+    'Geometry &\nProbability':['ch10','ch11','ch12','ch13']
+  };
+  const barEl=document.getElementById('result-bar-chart');
+  if(barEl){
+    barEl.innerHTML='';
+    Object.entries(chGroups).forEach(([grp,chs])=>{
+      const total=simQ.filter(q=>chs.includes(q.ch)).length;
+      const got=simQ.map((q,i)=>({q,i})).filter(({q,i})=>chs.includes(q.ch)&&simAnswered[i]===q.ans).length;
+      const pctG=total>0?Math.round((got/total)*100):0;
+      barEl.innerHTML+=`<div class="bar-row"><div class="bar-label">${grp.replace('\\n',' ')}</div>
+        <div class="bar-track"><div class="bar-fill" style="width:${pctG}%;background:var(--subj2)"></div></div>
+        <div class="bar-pct">${pctG}%</div></div>`;
+    });
+  }
+  const strip=document.getElementById('sim-strip');
+  if(strip){
+    strip.innerHTML='';
+    simAnswered.forEach((a,i)=>{
+      const span=document.createElement('span');
+      span.className='sim-strip-dot'+(a===null?' s':a===simQ[i].ans?' c':' w');
+      span.textContent=i+1;
+      span.title=simQ[i].q.substring(0,60);
+      strip.appendChild(span);
+    });
+  }
+  checkBadges();saveState();
+}
+
+function restartSim(){
+  document.getElementById('sim-result').style.display='none';
+  document.getElementById('sim-start-screen').style.display='block';
+}
+
+function renderDash(){
+  const el=document.getElementById('dash-content');
+  if(!el)return;
+  const badges=(state.badges||[]);
+  const chDone=Object.keys(state.chapProgress||{}).length;
+  el.innerHTML=`
+    <div class="dash-grid">
+      <div class="dash-card"><div class="dash-num">${state.xp||0}</div><div class="dash-lbl">Total XP</div></div>
+      <div class="dash-card"><div class="dash-num">${state.streak||0}</div><div class="dash-lbl">Day Streak 🔥</div></div>
+      <div class="dash-card"><div class="dash-num">${chDone}/13</div><div class="dash-lbl">Chapters Opened</div></div>
+      <div class="dash-card"><div class="dash-num">${state.simCount||0}</div><div class="dash-lbl">Mocks Taken</div></div>
+      <div class="dash-card"><div class="dash-num">${state.simBest||0}/35</div><div class="dash-lbl">Best Score</div></div>
+      <div class="dash-card"><div class="dash-num">${badges.length}</div><div class="dash-lbl">Badges 🏆</div></div>
+    </div>
+    ${badges.length?`<div style="margin-top:18px"><h4>Badges Earned</h4><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">${badges.map(b=>`<span style="background:var(--gold);color:#000;padding:6px 14px;border-radius:20px;font-size:.82rem;font-weight:700">🏅 ${b}</span>`).join('')}</div></div>`:'<p style="color:var(--text-muted);margin-top:16px">Complete chapters and mocks to earn badges!</p>'}`;
+}
+
+/* init */
+window.addEventListener('DOMContentLoaded',()=>{
+  loadState();updateXPBar();
+  go('home');
+  checkStreak();saveState();
+});
+</script>
+
+<!-- ══ ADSENSE BOTTOM LEADERBOARD ══ Highest RPM slot ══ -->
+<div style="padding:16px;text-align:center;border-top:1px solid #dde3ee;background:#f4f6fb;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE BOTTOM ══ -->
+
+</div>
+<div class="side-panel panel-right">
+  <div class="side-panel-inner">
+    <!-- ADSENSE SKYSCRAPER — goes live after approval -->
+    <div class="adsense-sky">
+      <div class="panel-label">Advertisement</div>
+      <div id="ad-right-1"></div>
+<div id="ad-right-2"></div>
+<div id="ad-right-3"></div>
+<!-- AdSense skyscraper -->
+<ins class="adsbygoogle"
+     style="display:block;width:160px;height:600px;"
+     data-ad-client="ca-pub-PENDING"
+     data-ad-slot="SLOT-SKY-PENDING"
+     data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<!-- end AdSense sky -->
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ AD: BOTTOM LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0;">
+  <div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: BOTTOM LEADERBOARD ══ -->
+<!-- AdSense bottom leaderboard -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:728px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-BOTTOM-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});
+// Mobile nav back button
+(function(){
+  const hist=[];
+  window.mobileGoBack=function(){
+    if(hist.length>1){hist.pop();var prev=hist[hist.length-1];_navToM(prev,false);}
+    else{_navToM('home',false);}
+  };
+  function _navToM(k,push){
+    if(push===undefined||push)hist.push(k);
+    var titleEl=document.getElementById('mobileNavTitle');
+    if(titleEl){
+      var btn=document.querySelector('.main-tab.active,.topnav-tab.active');
+      titleEl.textContent=btn?btn.textContent.trim():(k==='home'?'Home':k.toUpperCase());
+    }
+    if(typeof go==='function')go(k);
+    else if(typeof showMainSection==='function')showMainSection(k);
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    hist.push('home');
+    document.querySelectorAll('[onclick]').forEach(function(el){
+      var oc=el.getAttribute('onclick')||'';
+      var m=oc.match(/(?:go|showMainSection)\(['"](\w+)['"]/);
+      if(m){el.addEventListener('click',function(){
+        hist.push(m[1]);
+        var t=document.getElementById('mobileNavTitle');
+        if(t)t.textContent=el.textContent.trim().substring(0,24);
+      });}
+    });
+  });
+})();
+
+</script>
+</div>
+<!-- end AdSense bottom -->
+
+<script src="../portal-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,1621 @@
+<title>Biology XII</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="../ads.js" defer></script>
+  <!-- AdSense: replace ca-pub-PENDING with Publisher ID after approval -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-PENDING" crossorigin="anonymous"></script>
+<style>
+:root{
+  --subj1:#004d40;--subj2:#00695c;--subj3:#00897b;
+  --teal:#0097a7;--gold:#f9a825;--mint:#43a047;--coral:#e53935;
+  --bg:#f0f4f3;--card-bg:#fff;--text:#1a2a27;--text-muted:#546e65;
+  --border:#cce0db;--nav-bg:#004d40;--tab-bg:#00695c;--tool-tab-bg:#00796b;
+  --shadow:0 2px 12px rgba(0,77,64,.10);
+  color-scheme:light;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1f1b;--card-bg:#162520;--text:#e0f0eb;--text-muted:#7aada0;
+  --border:#1e3d35;--nav-bg:#002c23;--tab-bg:#003a30;--tool-tab-bg:#00403a;
+  --shadow:0 2px 12px rgba(0,0,0,.4);color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0d1f1b;--card-bg:#162520;--text:#e0f0eb;--text-muted:#7aada0;
+  --border:#1e3d35;--nav-bg:#002c23;--tab-bg:#003a30;--tool-tab-bg:#00403a;
+  --shadow:0 2px 12px rgba(0,0,0,.4);color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;padding-left:max(0px,env(safe-area-inset-left,0px));padding-right:max(0px,env(safe-area-inset-right,0px));}
+a{color:var(--subj2);text-decoration:none}
+
+/* NAV */
+.topnav{background:var(--nav-bg);padding:12px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3);}
+.nav-brand{color:#fff;font-weight:800;font-size:1.05rem;letter-spacing:.3px}
+.nav-sub{color:rgba(255,255,255,.65);font-size:.78rem}
+.xp-bar-wrap{display:flex;align-items:center;gap:8px}
+.xp-bar-track{width:90px;height:7px;background:rgba(255,255,255,.2);border-radius:4px;overflow:hidden}
+.xp-bar-fill{height:100%;background:var(--gold);border-radius:4px;transition:width .4s}
+.xp-lbl{color:var(--gold);font-size:.75rem;font-weight:700}
+.streak-lbl{color:#fff;font-size:.75rem;font-weight:700}
+
+/* STICKY TABS */
+.tabs-wrap{position:sticky;top:52px;z-index:90;background:var(--tab-bg);overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.tabs-wrap::-webkit-scrollbar{display:none}
+.tab-btn{display:inline-block;padding:9px 15px;color:rgba(255,255,255,.75);background:none;border:none;font-size:.82rem;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s}
+.tab-btn.active,.tab-btn:hover{color:#fff;border-bottom-color:var(--gold)}
+.tool-tabs-wrap{position:sticky;top:97px;z-index:89;background:var(--tool-tab-bg);overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.tool-tabs-wrap::-webkit-scrollbar{display:none}
+.tool-tab-btn{display:inline-block;padding:7px 13px;color:rgba(255,255,255,.7);background:none;border:none;font-size:.78rem;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.tool-tab-btn.active,.tool-tab-btn:hover{color:#fff;border-bottom-color:var(--gold)}
+
+/* MAIN */
+main{max-width:860px;margin:0 auto;padding:20px max(16px,env(safe-area-inset-left,0px));padding-bottom:60px}
+section{display:none}
+
+/* HOME */
+.hero-banner{background:linear-gradient(135deg,var(--subj1),var(--teal));color:#fff;border-radius:16px;padding:28px;margin-bottom:24px;position:relative;overflow:hidden}
+.hero-banner::after{content:'🧬';position:absolute;right:20px;top:10px;font-size:4rem;opacity:.25}
+.hero-title{font-size:1.5rem;font-weight:800;margin-bottom:6px}
+.hero-sub{font-size:.88rem;opacity:.85}
+.stat-row{display:flex;gap:14px;margin-top:16px;flex-wrap:wrap}
+.stat-pill{background:rgba(255,255,255,.18);border-radius:20px;padding:6px 14px;font-size:.8rem;font-weight:700}
+.ch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:4px}
+.ch-card{background:var(--card-bg);border-radius:12px;padding:16px;cursor:pointer;border:1.5px solid var(--border);transition:transform .15s,box-shadow .15s;display:flex;flex-direction:column;gap:6px}
+.ch-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.ch-num{font-size:.73rem;font-weight:700;color:var(--subj2);text-transform:uppercase;letter-spacing:.5px}
+.ch-name{font-size:.9rem;font-weight:700;color:var(--text)}
+.ch-marks{font-size:.75rem;color:var(--text-muted)}
+.ch-bar-track{height:4px;background:var(--border);border-radius:2px;margin-top:4px}
+.ch-bar-fill{height:100%;background:var(--subj2);border-radius:2px;width:0%;transition:width .5s}
+
+/* CHAPTER SECTIONS */
+.ch-section{background:var(--card-bg);border-radius:14px;padding:24px;box-shadow:var(--shadow);margin-bottom:20px}
+.ch-section h2{font-size:1.2rem;font-weight:800;color:var(--subj1);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.ch-section h3{font-size:.95rem;font-weight:700;color:var(--subj2);margin:14px 0 6px}
+.ch-section ul{padding-left:18px;font-size:.87rem;line-height:1.8}
+.formula-box{background:linear-gradient(135deg,#e0f2f1,#b2dfdb);border-left:4px solid var(--teal);border-radius:10px;padding:14px 16px;margin:12px 0}
+.formula-box h4{color:var(--teal);margin-bottom:10px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+.formula-box .f{font-family:monospace;background:#fff;border-radius:6px;padding:8px 12px;margin:4px 0;font-size:.88rem;color:#004d40;border:1px solid rgba(0,121,107,.15)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .formula-box{background:linear-gradient(135deg,rgba(0,77,64,.18),rgba(0,151,167,.10))}:root:not([data-theme=light]) .formula-box .f{background:#0a1f1c;color:#80cbc4;border-color:rgba(128,203,196,.2)}}
+:root[data-theme=dark] .formula-box{background:linear-gradient(135deg,rgba(0,77,64,.18),rgba(0,151,167,.10))}
+:root[data-theme=dark] .formula-box .f{background:#0a1f1c;color:#80cbc4;border-color:rgba(128,203,196,.2)}
+.def-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:12px 0}
+.def-card{background:var(--bg);border-radius:10px;padding:14px;border-left:3px solid var(--subj2)}
+.term{font-weight:700;font-size:.85rem;color:var(--subj2);margin-bottom:4px}
+.defn{font-size:.82rem;line-height:1.5;color:var(--text)}
+.remember{background:rgba(249,168,37,.1);border:1.5px solid var(--gold);border-radius:8px;padding:12px 14px;margin:12px 0;font-size:.84rem}
+.worked{background:linear-gradient(135deg,#f0fff4,#dff5ed);border-left:4px solid var(--mint);border-radius:10px;padding:14px 16px;margin:12px 0}
+.worked h4{font-size:.88rem;font-weight:700;color:#00695c;margin-bottom:8px}
+.worked .step{display:flex;gap:10px;margin-bottom:8px;font-size:.86rem}
+.sn{background:var(--subj3);color:#fff;border-radius:50%;width:22px;height:22px;min-width:22px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700}
+.worked .ans{background:var(--mint);color:#fff;border-radius:6px;padding:10px 14px;margin-top:10px;font-weight:700;font-size:.87rem}
+
+/* TOOLS */
+.sec-title{font-size:1.2rem;font-weight:800;color:var(--subj1);margin-bottom:4px}
+.sec-sub{font-size:.85rem;color:var(--text-muted);margin-bottom:18px}
+.pyq-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pyq-chip{padding:6px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--card-bg);color:var(--text);font-size:.8rem;font-weight:600;cursor:pointer}
+.pyq-chip.active{background:var(--subj2);color:#fff;border-color:var(--subj2)}
+.pyq-card{background:var(--card-bg);border-radius:12px;padding:16px;margin-bottom:12px;border:1.5px solid var(--border);box-shadow:var(--shadow)}
+.pyq-meta{font-size:.75rem;color:var(--text-muted);font-weight:600;margin-bottom:6px}
+.pyq-q{font-size:.88rem;line-height:1.6;margin-bottom:10px}
+.pyq-toggle{padding:6px 14px;border-radius:6px;border:1.5px solid var(--subj2);color:var(--subj2);background:none;font-size:.8rem;font-weight:600;cursor:pointer}
+.pyq-ans{display:none;background:var(--bg);border-radius:8px;padding:12px;margin-top:10px;font-size:.83rem;line-height:1.6}
+.mistake-card,.tip-card{background:var(--card-bg);border-radius:12px;padding:16px;margin-bottom:12px;border:1.5px solid var(--border)}
+.mc-title,.tc-title{font-weight:700;font-size:.9rem;margin-bottom:6px;color:var(--subj1)}
+.hotq{background:var(--card-bg);border-radius:12px;padding:14px 16px;margin-bottom:12px;border-left:4px solid var(--gold);box-shadow:var(--shadow)}
+.hotq-num{font-size:.75rem;font-weight:700;color:var(--gold);margin-bottom:4px}
+.lm-block{background:var(--card-bg);border-radius:12px;padding:16px;margin-bottom:14px;border:1.5px solid var(--border)}
+.lm-title{font-weight:700;font-size:.9rem;margin-bottom:10px;color:var(--subj1)}
+.checklist-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;font-size:.85rem;cursor:pointer;line-height:1.5}
+.checklist-item input{margin-top:3px;accent-color:var(--subj2);flex-shrink:0}
+.pp-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.pp-tab-btn{padding:7px 18px;border-radius:8px;border:1.5px solid var(--border);background:var(--card-bg);color:var(--text);font-weight:600;font-size:.83rem;cursor:pointer}
+.pp-tab-btn.active{background:var(--subj2);color:#fff;border-color:var(--subj2)}
+.pp-content{display:none}.pp-content.active{display:block}
+.practice-paper{background:var(--card-bg);border-radius:12px;padding:20px;border:1.5px solid var(--border)}
+.pp-header{text-align:center;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--border)}
+.pp-section-title{font-weight:700;font-size:.85rem;color:var(--subj2);margin:14px 0 8px;text-transform:uppercase;letter-spacing:.5px}
+.pp-q{font-size:.85rem;line-height:1.6;margin-bottom:8px;padding:8px;background:var(--bg);border-radius:6px}
+
+/* SIMULATOR */
+.sim-info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.sim-info-box{background:var(--card-bg);border-radius:12px;padding:16px;text-align:center;border:1.5px solid var(--border)}
+.sib-num{font-size:1.6rem;font-weight:800;color:var(--subj2)}
+.sib-lbl{font-size:.75rem;color:var(--text-muted);font-weight:600}
+.start-btn{display:block;width:100%;max-width:320px;margin:0 auto;padding:16px;background:linear-gradient(135deg,var(--subj2),var(--teal));color:#fff;border:none;border-radius:50px;font-size:1.05rem;font-weight:800;cursor:pointer;letter-spacing:.5px;transition:opacity .2s}
+.start-btn:hover{opacity:.9}
+.sim-header-bar{display:flex;justify-content:space-between;align-items:center;background:var(--card-bg);border-radius:10px;padding:10px 16px;margin-bottom:14px;font-weight:700;font-size:.9rem;border:1.5px solid var(--border)}
+.sim-live-donut-wrap{display:flex;align-items:center;gap:14px;padding:10px 0 4px;margin-bottom:6px}
+.sim-q-text{font-size:.95rem;font-weight:600;line-height:1.6;margin-bottom:16px;background:var(--card-bg);padding:16px;border-radius:12px;border:1.5px solid var(--border)}
+.sim-opts{display:flex;flex-direction:column;gap:10px}
+.sim-opt{padding:13px 16px;border-radius:10px;border:1.5px solid var(--border);background:var(--card-bg);color:var(--text);font-size:.88rem;font-weight:500;cursor:pointer;text-align:left;transition:all .15s}
+.sim-opt:hover:not(:disabled){border-color:var(--subj2);background:rgba(0,105,92,.08)}
+.sim-opt:disabled{cursor:not-allowed}
+.sim-opt.sim-correct{border-color:var(--mint);background:rgba(67,160,71,.12);color:var(--mint);font-weight:700}
+.sim-opt.sim-wrong{border-color:var(--coral);background:rgba(229,57,53,.10);color:var(--coral);font-weight:700}
+.sim-next-btn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:14px 28px;background:linear-gradient(135deg,var(--subj3) 0%,var(--teal) 100%);color:#fff;border:none;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(0,105,92,.3);transition:transform .15s,box-shadow .15s}
+.sim-next-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,105,92,.4)}
+.result-donut-wrap{display:flex;justify-content:center;margin:16px 0}
+.result-stats{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:16px 0}
+.rstat{text-align:center}
+.rstat-n{font-size:1.6rem;font-weight:800}
+.rstat-l{font-size:.75rem;color:var(--text-muted);font-weight:600}
+.bar-chart-wrap{display:flex;flex-direction:column;gap:10px}
+.bar-row{display:flex;align-items:center;gap:10px;font-size:.8rem}
+.bar-label{width:100px;text-align:right;color:var(--text-muted);font-size:.75rem;line-height:1.2}
+.bar-track{flex:1;height:14px;background:var(--border);border-radius:8px;overflow:hidden}
+.bar-fill{height:100%;border-radius:8px;transition:width .6s ease}
+.bar-pct{width:36px;font-weight:700;font-size:.8rem}
+.sim-strip{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.sim-strip-dot{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;background:var(--border);color:var(--text-muted);cursor:default}
+.sim-strip-dot.c{background:var(--mint);color:#fff}
+.sim-strip-dot.w{background:var(--coral);color:#fff}
+
+/* DASHBOARD */
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.dash-card{background:var(--card-bg);border-radius:12px;padding:16px;text-align:center;border:1.5px solid var(--border)}
+.dash-num{font-size:1.7rem;font-weight:800;color:var(--subj2)}
+.dash-lbl{font-size:.75rem;color:var(--text-muted);font-weight:600}
+@media(max-width:480px){.sim-info-grid{grid-template-columns:repeat(2,1fr)}.ch-grid{grid-template-columns:1fr}}
+
+/* ══ DESKTOP SIDE PANELS ══ */
+.portal-layout{display:block;padding-top:0}
+.side-panel{display:none}
+@media(min-width:1200px){
+  .portal-layout{display:grid;grid-template-columns:160px 1fr 160px;gap:0;align-items:start}
+  .side-panel{display:flex;flex-direction:column;gap:16px;padding:12px 8px;position:sticky;top:130px;height:calc(100vh - 130px);overflow-y:auto;scrollbar-width:none;z-index:1;overflow-x:hidden}
+  .side-panel::-webkit-scrollbar{display:none}
+  .main-content-wrap{min-width:0;position:relative;z-index:2}
+}
+/* Left panel — local vendor */
+.panel-left{background:#f8f9ff;border-right:1px solid #e8ecf4}
+/* Right panel — adsense */
+.panel-right{background:#f8f9ff;border-left:1px solid #e8ecf4}
+/* Vendor skyscraper card */
+/* AdSense skyscraper container */
+.adsense-sky{width:140px;text-align:center}
+.adsense-sky 
+/* ── MOBILE NAV BAR ── */
+.mobile-nav-bar{display:none}
+@media(max-width:768px){
+  .mobile-nav-bar{
+    display:flex;align-items:center;gap:8px;
+    background:var(--subj1,#1a237e);padding:7px 12px;
+    position:sticky;top:0;z-index:300;
+    border-bottom:2px solid var(--teal,#00b4d8);
+  }
+  .mobile-nav-bar a,.mobile-nav-bar button{
+    background:rgba(255,255,255,.15);border:none;color:#fff;
+    padding:5px 12px;border-radius:20px;font-size:.8rem;
+    font-weight:600;cursor:pointer;text-decoration:none;
+    font-family:inherit;white-space:nowrap;
+  }
+  .mobile-nav-bar a:hover,.mobile-nav-bar button:hover{background:rgba(255,255,255,.28)}
+  .mobile-nav-bar .mnb-title{flex:1;color:#fff;font-size:.85rem;font-weight:700;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topnav,.site-header{display:none !important}
+
+}
+
+html{scroll-padding-top:130px}
+section{scroll-margin-top:130px}
+</style>
+
+<!-- Mobile nav bar -->
+<div class="mobile-nav-bar" id="mobileNavBar">
+  <a href="../index.html">🏠 Home</a>
+  <button onclick="mobileGoBack()">← Back</button>
+  <span class="mnb-title" id="mobileNavTitle">Menu</span>
+</div>
+<div class="topnav">
+  <div><div class="nav-brand">Biology XII</div><div class="nav-sub">CBSE Board Preparation</div></div>
+  <div class="xp-bar-wrap">
+    <div class="xp-bar-track"><div class="xp-bar-fill" id="xp-bar" style="width:0%"></div></div>
+    <span class="xp-lbl" id="xp-lbl">0 XP</span>
+    <span class="streak-lbl" id="streak-lbl">🔥 0</span>
+  </div>
+</div>
+<div class="portal-layout">
+<div class="side-panel panel-left">
+  <div id="ad-left-1"></div>
+  <div id="ad-left-2"></div>
+  <div id="ad-left-3"></div>
+</div>
+<div class="main-content-wrap">
+
+
+<div class="tabs-wrap">
+  <button class="tab-btn active" data-key="home" onclick="go('home')">🏠 Home</button>
+  <button class="tab-btn" data-key="ch1" onclick="go('ch1')">Ch1</button>
+  <button class="tab-btn" data-key="ch2" onclick="go('ch2')">Ch2</button>
+  <button class="tab-btn" data-key="ch3" onclick="go('ch3')">Ch3</button>
+  <button class="tab-btn" data-key="ch4" onclick="go('ch4')">Ch4</button>
+  <button class="tab-btn" data-key="ch5" onclick="go('ch5')">Ch5</button>
+  <button class="tab-btn" data-key="ch6" onclick="go('ch6')">Ch6</button>
+  <button class="tab-btn" data-key="ch7" onclick="go('ch7')">Ch7</button>
+  <button class="tab-btn" data-key="ch8" onclick="go('ch8')">Ch8</button>
+  <button class="tab-btn" data-key="ch9" onclick="go('ch9')">Ch9</button>
+  <button class="tab-btn" data-key="ch10" onclick="go('ch10')">Ch10</button>
+  <button class="tab-btn" data-key="ch11" onclick="go('ch11')">Ch11</button>
+  <button class="tab-btn" data-key="ch12" onclick="go('ch12')">Ch12</button>
+  <button class="tab-btn" data-key="ch13" onclick="go('ch13')">Ch13</button>
+  <button class="tab-btn" data-key="ch14" onclick="go('ch14')">Ch14</button>
+  <button class="tab-btn" data-key="ch15" onclick="go('ch15')">Ch15</button>
+  <button class="tab-btn" data-key="ch16" onclick="go('ch16')">Ch16</button>
+</div>
+<div class="tool-tabs-wrap">
+  <button class="tool-tab-btn" data-key="pyq" onclick="go('pyq')">📜 PYQ Bank</button>
+  <button class="tool-tab-btn" data-key="mistakes" onclick="go('mistakes')">❌ Mistakes</button>
+  <button class="tool-tab-btn" data-key="examiner" onclick="go('examiner')">👁️ Examiner</button>
+  <button class="tool-tab-btn" data-key="highprob" onclick="go('highprob')">🔥 High-Prob</button>
+  <button class="tool-tab-btn" data-key="lastmin" onclick="go('lastmin')">⏱️ Last-Min</button>
+  <button class="tool-tab-btn" data-key="pp" onclick="go('pp')">📝 Papers</button>
+  <button class="tool-tab-btn" data-key="sim" onclick="go('sim')">🎯 Simulator</button>
+  <button class="tool-tab-btn" data-key="dash" onclick="go('dash')">📊 Dashboard</button>
+</div>
+
+<main>
+<!-- HOME -->
+<section id="sec-home" class="active">
+<!-- ══ AD: TOP LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:4px 0 2px;">
+  <div id="ad-leader-top" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: TOP LEADERBOARD ══ -->
+
+  <div class="hero-banner">
+    <div class="hero-title">Biology XII 🧬</div>
+    <div class="hero-sub">Reproduction · Genetics · Evolution · Ecology · Biotechnology</div>
+    <div class="stat-row">
+      <span class="stat-pill">16 Chapters</span>
+      <span class="stat-pill">70 Marks</span>
+      <span class="stat-pill">35-Q Simulator</span>
+      <span class="stat-pill">PYQ Bank</span>
+    </div>
+  </div>
+  <h3 style="margin-bottom:12px;font-size:.95rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px">All Chapters</h3>
+  <div class="ch-grid">
+    <div class="ch-card" onclick="go('ch1')"><div class="ch-num">Chapter 1</div><div class="ch-name">Reproduction in Organisms</div><div class="ch-marks">~4 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch2')"><div class="ch-num">Chapter 2</div><div class="ch-name">Sexual Reproduction in Flowering Plants</div><div class="ch-marks">~6 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch3')"><div class="ch-num">Chapter 3</div><div class="ch-name">Human Reproduction</div><div class="ch-marks">~5 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch4')"><div class="ch-num">Chapter 4</div><div class="ch-name">Reproductive Health</div><div class="ch-marks">~3 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch5')"><div class="ch-num">Chapter 5</div><div class="ch-name">Principles of Inheritance</div><div class="ch-marks">~6 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch6')"><div class="ch-num">Chapter 6</div><div class="ch-name">Molecular Basis of Inheritance</div><div class="ch-marks">~8 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch7')"><div class="ch-num">Chapter 7</div><div class="ch-name">Evolution</div><div class="ch-marks">~4 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch8')"><div class="ch-num">Chapter 8</div><div class="ch-name">Human Health & Disease</div><div class="ch-marks">~5 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch9')"><div class="ch-num">Chapter 9</div><div class="ch-name">Strategies for Enhancement in Food</div><div class="ch-marks">~4 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch10')"><div class="ch-num">Chapter 10</div><div class="ch-name">Microbes in Human Welfare</div><div class="ch-marks">~4 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch11')"><div class="ch-num">Chapter 11</div><div class="ch-name">Biotechnology: Principles & Processes</div><div class="ch-marks">~6 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch12')"><div class="ch-num">Chapter 12</div><div class="ch-name">Biotechnology & Its Applications</div><div class="ch-marks">~5 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch13')"><div class="ch-num">Chapter 13</div><div class="ch-name">Organisms & Populations</div><div class="ch-marks">~4 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch14')"><div class="ch-num">Chapter 14</div><div class="ch-name">Ecosystem</div><div class="ch-marks">~5 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch15')"><div class="ch-num">Chapter 15</div><div class="ch-name">Biodiversity & Conservation</div><div class="ch-marks">~4 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+    <div class="ch-card" onclick="go('ch16')"><div class="ch-num">Chapter 16</div><div class="ch-name">Environmental Issues</div><div class="ch-marks">~3 marks</div><div class="ch-bar-track"><div class="ch-bar-fill"></div></div></div>
+  </div>
+
+<!-- ══ AD: INLINE 1 ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0 4px;">
+  <div id="ad-inline-1" style="width:100%;max-width:580px;"></div>
+</div>
+<!-- ══ END AD: INLINE 1 ══ -->
+<!-- AdSense inline unit -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:580px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-MID-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+<!-- end AdSense inline -->
+</section>
+<!-- CH1 -->
+<section id="sec-ch1">
+  <div class="sec-title">🌿 Chapter 1: Reproduction in Organisms</div>
+  <div class="sec-sub">Asexual · Sexual · Life Span · Vegetative Propagation</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>1.1 Types of Reproduction</h3>
+<p>Reproduction ensures continuity of species. Two fundamental modes exist.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Asexual Reproduction</div><div class="defn">Single parent, no gametes. Offspring genetically identical (clones). Binary fission (Amoeba), budding (Hydra, yeast), spore formation (Rhizopus), fragmentation (Spirogyra), vegetative propagation (plants).</div></div>
+  <div class="def-card"><div class="term">Sexual Reproduction</div><div class="defn">Two parents, gamete fusion. Genetic variation. All sexually reproducing organisms have gametogenesis → gamete transfer → fertilisation → development.</div></div>
+  <div class="def-card"><div class="term">Life Span</div><div class="defn">Duration from birth to natural death. Rose: few months; Banyan: hundreds of years; Parrot: 150 yr; Crow: 15 yr; Butterfly: few weeks; Tortoise: 100+ yr. NOT related to size.</div></div>
+  <div class="def-card"><div class="term">Vegetative Propagation</div><div class="defn">Runner (grass), rhizome (ginger), tuber (potato), bulb (onion), leaf buds (Bryophyllum). Produces plants with characters of parent; rapid, no seeds needed.</div></div>
+</div>
+<h3>1.2 Events in Sexual Reproduction</h3>
+<div class="formula-box">
+  <h4>🔑 Phases of Sexual Reproduction</h4>
+  <div class="f">Pre-fertilisation: gametogenesis (gamete formation) + gamete transfer</div>
+  <div class="f">Fertilisation: syngamy (fusion of gametes) → zygote</div>
+  <div class="f">Post-fertilisation: embryogenesis (zygote → embryo → offspring)</div>
+  <div class="f">Parthenogenesis: development without fertilisation (bees, some lizards, Apis — drones from unfertilised eggs)</div>
+  <div class="f">Oestrus cycle (non-primate mammals) vs menstrual cycle (primates — including humans)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Binary Fission vs Budding (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> Distinguish binary fission (Amoeba) from budding (Hydra).</p>
+      <div class="step"><div class="sn">1</div><div>Binary fission: parent divides into two equal daughter cells; both daughters are new individuals</div></div><div class="step"><div class="sn">2</div><div>Budding: a small outgrowth (bud) forms on parent; bud detaches and grows into new individual</div></div><div class="step"><div class="sn">3</div><div>Binary fission: both daughter cells same size; complete division of parent</div></div><div class="step"><div class="sn">4</div><div>Budding: parent remains; bud is initially smaller than parent</div></div><div class="step"><div class="sn">5</div><div>Binary fission: Amoeba, Paramecium, bacteria. Budding: Hydra, yeast.</div></div>
+      <div class="ans">✅ Both asexual; fission = equal division; budding = unequal outgrowth</div>
+    </div>
+    <div class="worked">
+      <h4>Vegetative Propagation (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> Name the vegetative propagule in potato and ginger. What is its significance?</p>
+      <div class="step"><div class="sn">1</div><div>Potato: stem tuber. "Eyes" of potato are nodes with axillary buds.</div></div><div class="step"><div class="sn">2</div><div>Ginger: rhizome (underground modified stem with nodes and internodes)</div></div><div class="step"><div class="sn">3</div><div>Significance: rapid multiplication; new plants genetically identical to parent</div></div><div class="step"><div class="sn">4</div><div>No need for seeds — useful when seeds not produced or germination rate is low</div></div><div class="step"><div class="sn">5</div><div>Commercial advantage: desirable characters maintained exactly (mango grafting, sugarcane sets)</div></div>
+      <div class="ans">✅ Potato = stem tuber; Ginger = rhizome; both ensure rapid, clonal multiplication</div>
+    </div>
+    <div class="worked">
+      <h4>Parthenogenesis (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> What is parthenogenesis? Give two examples.</p>
+      <div class="step"><div class="sn">1</div><div>Parthenogenesis = development of egg into individual WITHOUT fertilisation</div></div><div class="step"><div class="sn">2</div><div>No syngamy; egg divides mitotically (or meiotically with later chromosome doubling)</div></div><div class="step"><div class="sn">3</div><div>Examples: (1) Honey bee drones (males) develop from unfertilised eggs of queen (haploid)</div></div><div class="step"><div class="sn">4</div><div>(2) Rotifers, water fleas (Daphnia) during favourable conditions</div></div><div class="step"><div class="sn">5</div><div>Advantage: rapid reproduction; disadvantage: no genetic variation</div></div>
+      <div class="ans">✅ Parthenogenesis = egg development without fertilisation; examples: honey bee drones, rotifers</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Asexual vs Sexual Reproduction</div>
+      <div class="vs-head">Vegetative vs Sexual Reproduction in Plants</div>
+      <div class="vs-row"><div>Single parent only</div><div>Two parents (usually)</div></div><div class="vs-row"><div>No gametes, no meiosis</div><div>Meiosis to form gametes; syngamy</div></div><div class="vs-row"><div>Offspring = genetic clone</div><div>Genetic variation in offspring</div></div><div class="vs-row"><div>Rapid; no mate needed</div><div>Slower; mate/pollinator needed</div></div><div class="vs-row"><div>Examples: rhizome, spore, fission</div><div>Seeds, flowers, fruits</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Parthenogenesis produces males (drones) in honeybees. Why are the drones haploid?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Queen bee produces eggs by meiosis. Unfertilised eggs (haploid, n) develop by parthenogenesis into drones (males). Fertilised eggs (diploid, 2n) develop into workers and queens. This is an example of haplodiploidy.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch2">
+  <div class="sec-title">🌿 Chapter 2: Sexual Reproduction in Flowering Plants</div>
+  <div class="sec-sub">Microsporogenesis · Megasporogenesis · Pollination · Double Fertilisation</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>2.1 Flower Structure and Development</h3>
+<p>Flower is the site of sexual reproduction in angiosperms. Stamen (male: anther + filament) and carpel/pistil (female: stigma + style + ovary) are essential organs.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Microsporogenesis</div><div class="defn">Formation of microspores (pollen) in anther. Microsporocyte (2n) → meiosis → 4 microspores (n) = pollen tetrad. Tapetum nourishes developing pollen. Pollen grain has 2 layers: exine (sporopollenin) and intine (cellulose-pectin).</div></div>
+  <div class="def-card"><div class="term">Megasporogenesis</div><div class="defn">Formation of megaspore in ovule. MMC (2n) → meiosis → 4 megaspores; only 1 functional (Polygonum type = most common). Functional megaspore → 3 mitotic divisions → 8-nucleate embryo sac.</div></div>
+  <div class="def-card"><div class="term">Embryo Sac (7-celled, 8-nucleate)</div><div class="defn">Egg cell (1) + synergids (2) at micropylar end; antipodal cells (3) at chalazal end; central cell with 2 polar nuclei (1 cell). Egg + 2 synergids = egg apparatus.</div></div>
+  <div class="def-card"><div class="term">Double Fertilisation</div><div class="defn">Unique to angiosperms. One male gamete + egg cell → zygote (2n). Second male gamete + 2 polar nuclei → primary endosperm nucleus (3n, PEN). PEN → endosperm (food for embryo).</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Pollination and Outbreeding Devices</h4>
+  <div class="f">Self-pollination (autogamy): pollen from same flower — e.g. wheat, rice, pea</div>
+  <div class="f">Cross-pollination (allogamy): pollen from different plant — promotes variation</div>
+  <div class="f">Agents: wind (anemophily), water (hydrophily), insects (entomophily), birds (ornithophily), bats (chiropterophily)</div>
+  <div class="f">Outbreeding devices: dicliny, dichogamy, self-incompatibility, heterostyly</div>
+  <div class="f">Apomixis: seed formation without fertilisation — dandelion, grasses; polyembryony: multiple embryos in one seed</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Embryo Sac Nuclei (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Draw and label the structure of a mature embryo sac. How many cells and nuclei are present?</p>
+      <div class="step"><div class="sn">1</div><div>Mature embryo sac = 7 cells, 8 nuclei (Polygonum type)</div></div><div class="step"><div class="sn">2</div><div>Micropylar end: egg cell (1) + 2 synergids = egg apparatus (3 cells)</div></div><div class="step"><div class="sn">3</div><div>Chalazal end: 3 antipodal cells</div></div><div class="step"><div class="sn">4</div><div>Centre: large central cell with 2 polar nuclei (1 cell, 2 nuclei)</div></div><div class="step"><div class="sn">5</div><div>Total: 7 cells, 8 nuclei (central cell counted as 1 cell but has 2 nuclei)</div></div>
+      <div class="ans">✅ Embryo sac = 7 cells (3+1+3) and 8 nuclei</div>
+    </div>
+    <div class="worked">
+      <h4>Double Fertilisation (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Explain double fertilisation and its significance.</p>
+      <div class="step"><div class="sn">1</div><div>Pollen tube enters ovule through micropyle, releases 2 male gametes</div></div><div class="step"><div class="sn">2</div><div>First fertilisation (syngamy): male gamete + egg cell → zygote (2n) → embryo</div></div><div class="step"><div class="sn">3</div><div>Second fertilisation (triple fusion): second male gamete + 2 polar nuclei → PEN (3n) → endosperm</div></div><div class="step"><div class="sn">4</div><div>Endosperm = nutritive tissue for developing embryo</div></div><div class="step"><div class="sn">5</div><div>Significance: endosperm ensures efficient nutrition; prevents wastage (only fertilised ovules develop into seeds)</div></div>
+      <div class="ans">✅ Syngamy (2n zygote) + triple fusion (3n PEN) = double fertilisation; PEN → nutritive endosperm</div>
+    </div>
+    <div class="worked">
+      <h4>Sporopollenin (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> Why is pollen well preserved as fossils? Name the substance responsible.</p>
+      <div class="step"><div class="sn">1</div><div>Pollen grain exine (outer wall) made of sporopollenin</div></div><div class="step"><div class="sn">2</div><div>Sporopollenin is one of the most resistant biological molecules known</div></div><div class="step"><div class="sn">3</div><div>Resistant to high temperatures, strong acids and alkalis, biological decomposition</div></div><div class="step"><div class="sn">4</div><div>This is why pollen grains are preserved for millions of years as fossils (palynology)</div></div><div class="step"><div class="sn">5</div><div>Sporopollenin content and composition is genetically determined — pollen identification possible</div></div>
+      <div class="ans">✅ Sporopollenin (on exine) — extremely resistant to decomposition → pollen preserved as fossils</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Autogamy</div>
+      <div class="vs-head">Cross-pollination (Geitonogamy / Xenogamy)</div>
+      <div class="vs-row"><div>Pollen from same flower/plant</div><div>Pollen from different plant</div></div><div class="vs-row"><div>No genetic variation</div><div>Promotes genetic variation</div></div><div class="vs-row"><div>No pollinator needed — more reliable</div><div>Needs pollinator; risky but evolutionarily advantageous</div></div><div class="vs-row"><div>Examples: wheat, rice, pea, tomato</div><div>Examples: maize (wind), rose (insect), orchids</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Cleistogamous flowers guarantee autogamy. What advantage does this give the plant?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Cleistogamous flowers never open — self-pollination is assured even without pollinators. This ensures seed production in unfavourable conditions (no pollinators) and conserves energy (no need to attract pollinators). Trade-off: no genetic variation.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch3">
+  <div class="sec-title">🌿 Chapter 3: Human Reproduction</div>
+  <div class="sec-sub">Gametogenesis · Menstrual Cycle · Fertilisation · Implantation · Parturition</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>3.1 Male Reproductive System</h3>
+<p>Testes (in scrotum at 2–2.5°C below body temp for normal spermatogenesis) produce sperms and testosterone. Accessory glands: seminal vesicles, prostate, Cowper's gland — produce seminal plasma.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Spermatogenesis</div><div class="defn">Spermatogonia (2n) → Primary spermatocyte → Meiosis I → Secondary spermatocytes (2) → Meiosis II → Spermatids (4) → Spermiogenesis → Spermatozoa (4 haploid). Takes ~74 days.</div></div>
+  <div class="def-card"><div class="term">Sperm Structure</div><div class="defn">Head (acrosome + condensed nucleus), middle piece (mitochondria — energy for motility), tail (flagellum). Acrosome contains hydrolytic enzymes for zona pellucida penetration.</div></div>
+  <div class="def-card"><div class="term">Oogenesis</div><div class="defn">Oogonia (2n) → Primary oocyte → Meiosis I (arrested at birth in prophase I) → Secondary oocyte + 1st polar body → Meiosis II (arrested at metaphase II, completed only after fertilisation) → Ovum + 2nd polar body.</div></div>
+  <div class="def-card"><div class="term">Menstrual Cycle</div><div class="defn">~28 days. Menstrual phase (1–5, lining shed), Follicular/Proliferative (6–13, FSH → Graafian follicle, estrogen surge), Ovulation (day 14, LH surge), Luteal (15–28, LH → corpus luteum → progesterone).</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Fertilisation and Development</h4>
+  <div class="f">Fertilisation: ampullary region of fallopian tube. Acrosomal reaction → sperm penetrates zona pellucida</div>
+  <div class="f">Cortical reaction: prevents polyspermy (blocks zona pellucida to other sperms after entry of one)</div>
+  <div class="f">Cleavage: mitotic divisions of zygote → 2, 4, 8, 16 cells (morula) → blastocyst</div>
+  <div class="f">Implantation: blastocyst embeds in endometrium (day 6–10 after fertilisation) — trophoblast helps</div>
+  <div class="f">Parturition: triggered by oxytocin (positive feedback loop); uterine contractions → delivery (~38 weeks)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Menstrual Cycle Hormones (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Describe the hormonal events during the menstrual cycle.</p>
+      <div class="step"><div class="sn">1</div><div>Day 1–5: Menstrual phase — low estrogen + progesterone → endometrium sheds</div></div><div class="step"><div class="sn">2</div><div>Day 6–13: FSH from anterior pituitary → Graafian follicle develops → secretes estrogen</div></div><div class="step"><div class="sn">3</div><div>Day 13: Estrogen surge → LH surge (LH peak triggers ovulation on day 14)</div></div><div class="step"><div class="sn">4</div><div>Day 15–28: Luteal phase — LH → corpus luteum → secretes progesterone (+ estrogen)</div></div><div class="step"><div class="sn">5</div><div>Progesterone maintains endometrium (for implantation); if no fertilisation, CL degenerates → hormone drop → menstruation</div></div>
+      <div class="ans">✅ FSH→follicle→estrogen→LH surge→ovulation→corpus luteum→progesterone→menstruation if no pregnancy</div>
+    </div>
+    <div class="worked">
+      <h4>Polyspermy Prevention (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> How is polyspermy prevented after fertilisation?</p>
+      <div class="step"><div class="sn">1</div><div>Polyspermy = entry of more than one sperm — would create polyploid, non-viable zygote</div></div><div class="step"><div class="sn">2</div><div>Cortical reaction (fast block): Ca²⁺ release from egg cortex when first sperm enters</div></div><div class="step"><div class="sn">3</div><div>Cortical granules fuse with egg membrane → release enzymes into perivitelline space</div></div><div class="step"><div class="sn">4</div><div>Enzymes harden zona pellucida (zona reaction) → impermeable to other sperms</div></div><div class="step"><div class="sn">5</div><div>First block: depolarisation of egg membrane immediately on sperm entry (fast block)</div></div>
+      <div class="ans">✅ Cortical reaction + zona hardening = slow block; membrane depolarisation = fast block against polyspermy</div>
+    </div>
+    <div class="worked">
+      <h4>Oogenesis vs Spermatogenesis (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Why does oogenesis give only 1 ovum but spermatogenesis gives 4 sperms from one primary gametocyte?</p>
+      <div class="step"><div class="sn">1</div><div>Both start with one primary gametocyte (2n) and undergo meiosis I then meiosis II</div></div><div class="step"><div class="sn">2</div><div>Spermatogenesis: meiosis I → 2 secondary spermatocytes; meiosis II → 4 spermatids → 4 sperms (equal division)</div></div><div class="step"><div class="sn">3</div><div>Oogenesis: meiosis I → secondary oocyte + 1st polar body (unequal, cytoplasm mostly to oocyte)</div></div><div class="step"><div class="sn">4</div><div>Meiosis II → ovum + 2nd polar body (again unequal); polar bodies are tiny and non-functional</div></div><div class="step"><div class="sn">5</div><div>Purpose: one large yolk-rich egg cell instead of 4 small, non-viable eggs</div></div>
+      <div class="ans">✅ Spermatogenesis: equal division → 4 sperms; Oogenesis: unequal → 1 large ovum + 3 polar bodies</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Spermatogenesis</div>
+      <div class="vs-head">Oogenesis</div>
+      <div class="vs-row"><div>Begins at puberty; continuous throughout life</div><div>Begins in foetal life; arrested until puberty</div></div><div class="vs-row"><div>Occurs in seminiferous tubules of testes</div><div>Occurs in ovarian follicles</div></div><div class="vs-row"><div>One primary spermatocyte → 4 sperms</div><div>One primary oocyte → 1 ovum + 3 polar bodies</div></div><div class="vs-row"><div>Meiosis completed before release</div><div>Meiosis II completed only after fertilisation</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Graafian follicle is the mature follicle. What happens to it after ovulation?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> After ovulation, the empty Graafian follicle transforms into the corpus luteum (yellow body) under the influence of LH. Corpus luteum secretes progesterone (and estrogen) which maintains the endometrium. If fertilisation occurs, CL is maintained by hCG from placenta. If not, CL degenerates → menstruation.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch4">
+  <div class="sec-title">🌿 Chapter 4: Reproductive Health</div>
+  <div class="sec-sub">Problems · STIs · Contraception · ART · MTP</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>4.1 Reproductive Health and STIs</h3>
+<p><strong>Reproductive health</strong> (WHO) = total well-being in all aspects of reproduction — physical, emotional, social. India: first country to launch National Family Planning Programme (1951).</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">STIs (Sexually Transmitted Infections)</div><div class="defn">HIV/AIDS (retrovirus), gonorrhoea (Neisseria), syphilis (Treponema), genital herpes (HSV), hepatitis-B (HBV), chlamydiasis, genital warts (HPV). Transmitted via sex, blood, mother → foetus. HIV destroys T-helper cells.</div></div>
+  <div class="def-card"><div class="term">Contraceptive Methods</div><div class="defn">Natural (periodic abstinence, coitus interruptus, lactational amenorrhoea <6 months postpartum). Barrier (condoms, diaphragm, cervical caps). IUDs (CuT, LNG-20). Oral pills (combined estrogen+progestin). Surgical (vasectomy, tubectomy).</div></div>
+  <div class="def-card"><div class="term">Medical Termination of Pregnancy (MTP)</div><div class="defn">Legal in India up to 20 weeks (MTP Act 1971, amended 2021 — up to 24 weeks in special cases). Used for unwanted pregnancies or foetal anomalies. NOT a contraceptive method.</div></div>
+  <div class="def-card"><div class="term">Assisted Reproductive Technologies (ART)</div><div class="defn">IVF-ET (test tube baby — Edwards, Steptoe, 1978; first: Louise Brown). GIFT (gamete intrafallopian transfer). ZIFT (zygote intrafallopian transfer). AI (artificial insemination). ICSI (intracytoplasmic sperm injection).</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 IUDs and Hormonal Contraception</h4>
+  <div class="f">Non-medicated IUDs: Lippes loop — increase phagocytosis of sperm; interfere with uterine motility</div>
+  <div class="f">Cu-releasing IUDs (CuT, Cu7, Multiload 375): Cu ions suppress sperm motility; fertilisation prevented</div>
+  <div class="f">Hormone-releasing IUDs (LNG-20, Progestasert): thicken cervical mucus; prevent implantation</div>
+  <div class="f">Emergency contraceptives: high-dose progestin within 72 hours → prevent/delay ovulation or implantation</div>
+  <div class="f">Amniocentesis: foetal chromosomal analysis (fluid from amniotic sac) — for genetic disorders, NOT sex determination (illegal)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>IUD Mechanism (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> How do copper-releasing IUDs act as contraceptives?</p>
+      <div class="step"><div class="sn">1</div><div>IUDs are placed inside uterus by medical professional</div></div><div class="step"><div class="sn">2</div><div>Cu-releasing IUDs (CuT-380A, Multiload 375) release Cu²⁺ ions continuously</div></div><div class="step"><div class="sn">3</div><div>Cu²⁺ ions are spermicidal — inhibit sperm motility and fertilising capacity</div></div><div class="step"><div class="sn">4</div><div>Also affect uterine environment (pH) making it hostile to sperm</div></div><div class="step"><div class="sn">5</div><div>Prevent fertilisation; if fertilisation occurs, also prevent implantation</div></div><div class="step"><div class="sn">6</div><div>Most effective for 5–10 years; reversible on removal</div></div>
+      <div class="ans">✅ Cu²⁺ ions are spermicidal + alter uterine environment → prevent fertilisation</div>
+    </div>
+    <div class="worked">
+      <h4>ART Comparison (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Distinguish between IVF-ET and ZIFT.</p>
+      <div class="step"><div class="sn">1</div><div>IVF-ET (In Vitro Fertilisation-Embryo Transfer):</div></div><div class="step"><div class="sn">2</div><div>  Eggs collected from wife → fertilised with husband's sperm in lab (in vitro)</div></div><div class="step"><div class="sn">3</div><div>  Resulting embryo (8-cell stage) transferred to uterus (ET) or fallopian tube</div></div><div class="step"><div class="sn">4</div><div>ZIFT (Zygote Intrafallopian Transfer):</div></div><div class="step"><div class="sn">5</div><div>  Fertilisation in lab (same as IVF) → resulting ZYGOTE transferred to FALLOPIAN TUBE</div></div><div class="step"><div class="sn">6</div><div>Key difference: IVF-ET embryo goes to uterus; ZIFT zygote goes to fallopian tube (more natural position)</div></div>
+      <div class="ans">✅ IVF-ET: embryo to uterus; ZIFT: zygote to fallopian tube — both involve external fertilisation</div>
+    </div>
+    <div class="worked">
+      <h4>STI Prevention (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> Why is HIV not classified as a typical STI by some?</p>
+      <div class="step"><div class="sn">1</div><div>STIs are primarily sexually transmitted; HIV can also be transmitted by:</div></div><div class="step"><div class="sn">2</div><div>(1) Contaminated blood transfusions</div></div><div class="step"><div class="sn">3</div><div>(2) Sharing needles (IV drug users)</div></div><div class="step"><div class="sn">4</div><div>(3) Mother to child (trans-placental or breast milk)</div></div><div class="step"><div class="sn">5</div><div>HIV is therefore classified as a blood-borne AND sexually transmitted infection</div></div><div class="step"><div class="sn">6</div><div>HIV specifically destroys CD4⁺ T-helper lymphocytes → immune system collapse → AIDS</div></div>
+      <div class="ans">✅ HIV = STI + blood-borne + vertical transmission; destroys T-helper cells → AIDS</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Vasectomy</div>
+      <div class="vs-head">Tubectomy</div>
+      <div class="vs-row"><div>Male sterilisation method</div><div>Female sterilisation method</div></div><div class="vs-row"><div>Vas deferens cut and tied</div><div>Fallopian tubes cut/ligated/blocked (Pomeroy method)</div></div><div class="vs-row"><div>Minor surgery; local anaesthetic</div><div>Requires general anaesthetic; more invasive</div></div><div class="vs-row"><div>Sperm cannot reach ejaculate; hormones unaffected</div><div>Egg cannot reach uterus; hormones unaffected</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Lactational amenorrhoea is a natural contraceptive method. Under what conditions is it effective?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Lactational amenorrhoea (no periods during breastfeeding) is effective as contraceptive ONLY when: (1) mother is fully breastfeeding (on-demand, day and night), (2) baby is less than 6 months old, and (3) mother has not yet had a menstrual period. Prolactin (from suckling) suppresses GnRH → no FSH/LH → no ovulation. Maximum 98% effective under these strict conditions.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch5">
+  <div class="sec-title">🌿 Chapter 5: Principles of Inheritance and Variation</div>
+  <div class="sec-sub">Mendelism · Chromosomal Theory · Linkage · Sex Determination · Mutations</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>5.1 Mendel's Laws</h3>
+<p>Gregor Mendel (1865) worked on garden pea (Pisum sativum) — 7 pairs of contrasting traits, each controlled by a single gene with 2 alleles (dominant/recessive).</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Law of Dominance</div><div class="defn">In a heterozygous individual, only dominant allele is expressed in F1 (phenotype). Recessive allele remains latent but present in genotype.</div></div>
+  <div class="def-card"><div class="term">Law of Segregation</div><div class="defn">During gamete formation, alleles of a gene separate so each gamete has one allele. Explains 3:1 ratio in F2 of monohybrid cross.</div></div>
+  <div class="def-card"><div class="term">Law of Independent Assortment</div><div class="defn">Genes for different traits assort independently (if on non-homologous chromosomes). Explains 9:3:3:1 ratio in F2 of dihybrid cross. Does NOT apply to linked genes.</div></div>
+  <div class="def-card"><div class="term">Chromosomal Theory of Inheritance</div><div class="defn">Sutton and Boveri (1902): genes located on chromosomes. Experimental proof: Morgan's fruit fly (Drosophila) linkage groups correspond to chromosome number.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Extensions of Mendelism</h4>
+  <div class="f">Incomplete dominance: F1 intermediate (RR×rr → Rr pink); F2 = 1:2:1 (red:pink:white)</div>
+  <div class="f">Co-dominance: both alleles expressed (AB blood type — IAIA × IBIB → IAIB)</div>
+  <div class="f">Polygenic inheritance: multiple genes control one trait — skin colour, height (continuous variation)</div>
+  <div class="f">Pleiotropy: one gene affects multiple traits — sickle cell anaemia (HbS gene)</div>
+  <div class="f">Sex-linked inheritance: haemophilia (X-linked recessive); females: carrier (XHXh) or affected (XhXh); all sons of carrier mother have 50% chance</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Monohybrid Cross (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Tall (TT) × Dwarf (tt) pea. Show F1, F2 genotypes and phenotypes. State the law illustrated.</p>
+      <div class="step"><div class="sn">1</div><div>P generation: TT (tall) × tt (dwarf)</div></div><div class="step"><div class="sn">2</div><div>F1: all Tt (tall) — Law of Dominance (T dominant over t)</div></div><div class="step"><div class="sn">3</div><div>F1 × F1: Tt × Tt</div></div><div class="step"><div class="sn">4</div><div>F2: TT : Tt : tt = 1 : 2 : 1 (genotype); Tall : Dwarf = 3 : 1 (phenotype)</div></div><div class="step"><div class="sn">5</div><div>Law illustrated: Law of Segregation — T and t alleles separate during gamete formation</div></div><div class="step"><div class="sn">6</div><div>This 3:1 ratio is the MONOHYBRID ratio</div></div>
+      <div class="ans">✅ F1 = all Tt (tall); F2 = 3 Tall : 1 Dwarf; Law of Segregation illustrated</div>
+    </div>
+    <div class="worked">
+      <h4>Sex Determination (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Explain XY sex determination in humans. Why is father responsible for sex of child?</p>
+      <div class="step"><div class="sn">1</div><div>Females: 44 + XX; Males: 44 + XY (23 pairs total)</div></div><div class="step"><div class="sn">2</div><div>Females produce only one type of egg: 22 + X</div></div><div class="step"><div class="sn">3</div><div>Males produce two types of sperm: 22 + X (gynosperm) and 22 + Y (androsperm) in equal numbers</div></div><div class="step"><div class="sn">4</div><div>X-sperm + egg → 44+XX = female; Y-sperm + egg → 44+XY = male</div></div><div class="step"><div class="sn">5</div><div>Since females contribute only X, the sex of offspring is entirely determined by which sperm fertilises the egg</div></div><div class="step"><div class="sn">6</div><div>Hence father (sperm producer) is responsible for determining sex of child</div></div>
+      <div class="ans">✅ Father's X-sperm → daughter; Y-sperm → son; mother always contributes X → father determines sex</div>
+    </div>
+    <div class="worked">
+      <h4>Sickle Cell Anaemia (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Explain the molecular basis of sickle cell anaemia.</p>
+      <div class="step"><div class="sn">1</div><div>Autosomal recessive disorder; mutation in HBB gene (chromosome 11)</div></div><div class="step"><div class="sn">2</div><div>Single nucleotide substitution: GAG → GTG at 6th codon of β-globin</div></div><div class="step"><div class="sn">3</div><div>Results in: Glutamic acid → Valine at 6th position of β-globin chain</div></div><div class="step"><div class="sn">4</div><div>HbS (abnormal) polymerises under low O₂ → forms fibrous precipitates → sickling of RBCs</div></div><div class="step"><div class="sn">5</div><div>Sickle cells clog capillaries, are fragile → anaemia</div></div><div class="step"><div class="sn">6</div><div>HbA/HbS heterozygotes (carriers): sickle cell trait — usually healthy but some sickling under very low O₂</div></div>
+      <div class="ans">✅ GAG→GTG mutation; Glu→Val; HbS polymerises → sickling; autosomal recessive</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Linkage</div>
+      <div class="vs-head">Crossing Over</div>
+      <div class="vs-row"><div>Genes on same chromosome tend to be inherited together</div><div>Exchange of segments between non-sister chromatids of homologous chromosomes</div></div><div class="vs-row"><div>Reduces independent assortment</div><div>Creates new combinations (recombinants)</div></div><div class="vs-row"><div>Morgan showed with white eye and yellow body genes in Drosophila</div><div>Occurs during prophase I (pachytene) of meiosis I</div></div><div class="vs-row"><div>Tight linkage = near genes; loose = far genes</div><div>Frequency of crossing over ∝ distance between genes (basis of chromosome mapping)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> A colour-blind father and a normal homozygous mother have a son. Will the son be colour blind?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> No. Colour blindness is X-linked recessive. Father is XcbY; mother is XCXC. Daughters get X from father (Xcb) and X from mother (XC) → all daughters XCXcb (carriers, normal vision). Sons get Y from father and X from mother (XC) → all sons XCY (normal vision). The son is NOT colour blind.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch6">
+  <div class="sec-title">🌿 Chapter 6: Molecular Basis of Inheritance</div>
+  <div class="sec-sub">DNA Structure · Replication · Transcription · Translation · Regulation</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>6.1 DNA — Structure and Packaging</h3>
+<p>DNA (deoxyribonucleic acid) is the genetic material in most organisms. Proof: Griffith's transformation experiment → Avery, MacLeod, McCarty (1944) showed DNA is transforming principle; Hershey-Chase experiment (1952) with radioactive S³⁵ (protein) and P³² (DNA) confirmed DNA is genetic material.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">DNA Double Helix (Watson-Crick, 1953)</div><div class="defn">Two antiparallel polynucleotide strands. Bases pair: A=T (2 H-bonds), G≡C (3 H-bonds). Pitch = 3.4 nm; 10 bp/turn; diameter 2 nm. Sugar-phosphate backbone on outside; bases inside.</div></div>
+  <div class="def-card"><div class="term">DNA Packaging</div><div class="defn">Nucleosome: 200 bp DNA wound around histone octamer (H2A, H2B, H3, H4 × 2; H1 linker). Nucleosomes → 30 nm fibre → loops → chromosomes. Human genome: 3.1 billion bp; ~30,000 genes.</div></div>
+  <div class="def-card"><div class="term">Replication</div><div class="defn">Semi-conservative (Meselson-Stahl, 1958, E. coli in ¹⁵N→¹⁴N medium). At origin: helicase unwinds, primase makes RNA primer, DNA Pol III elongates (5'→3'), DNA Pol I removes primer, ligase joins fragments. Leading strand continuous; lagging strand: Okazaki fragments.</div></div>
+  <div class="def-card"><div class="term">Central Dogma</div><div class="defn">DNA → (Transcription) → RNA → (Translation) → Protein. Reverse transcription (retroviruses: RNA → DNA) is an exception (Temin).</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Transcription and Translation</h4>
+  <div class="f">Transcription: template strand (3'→5') → mRNA (5'→3'); RNA Pol II in eukaryotes; promoter has TATA box</div>
+  <div class="f">mRNA processing (eukaryotes): 5' capping, 3' poly-A tail, splicing (introns removed, exons joined)</div>
+  <div class="f">Genetic code: 64 codons; 61 code amino acids; 3 stop codons (UAA, UAG, UGA); start = AUG (Met)</div>
+  <div class="f">Code is degenerate (1 AA ≥ 2 codons), non-overlapping, non-ambiguous, comma-less, universal</div>
+  <div class="f">Jacob-Monod lac operon: structural genes (lacZ, lacY, lacA) + operator + promoter; regulated by repressor (lacI gene)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Semi-conservative Replication (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Describe Meselson-Stahl experiment to prove semi-conservative replication.</p>
+      <div class="step"><div class="sn">1</div><div>E. coli grown in ¹⁵NH₄Cl (heavy nitrogen) for many generations → all DNA is heavy (¹⁵N-¹⁵N)</div></div><div class="step"><div class="sn">2</div><div>Transferred to ¹⁴NH₄Cl (normal nitrogen) medium</div></div><div class="step"><div class="sn">3</div><div>After 1 generation: CsCl density gradient centrifugation → only intermediate density band (¹⁵N-¹⁴N)</div></div><div class="step"><div class="sn">4</div><div>After 2 generations: equal light (¹⁴N-¹⁴N) and intermediate (¹⁵N-¹⁴N) bands</div></div><div class="step"><div class="sn">5</div><div>Intermediate = one old ¹⁵N strand + one new ¹⁴N strand = semi-conservative replication confirmed</div></div>
+      <div class="ans">✅ ¹⁵N→¹⁴N switch + CsCl gradient → intermediate band after 1 gen = semi-conservative confirmed</div>
+    </div>
+    <div class="worked">
+      <h4>Lac Operon (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Explain the regulation of lac operon with inducer present and absent.</p>
+      <div class="step"><div class="sn">1</div><div>WITHOUT inducer (lactose): lacI gene makes repressor → binds operator → blocks RNA Pol → no transcription</div></div><div class="step"><div class="sn">2</div><div>With lactose (inducer): allolactose (lactose metabolite) binds repressor → conformational change → repressor leaves operator</div></div><div class="step"><div class="sn">3</div><div>RNA Polymerase binds promoter → transcribes lacZ, lacY, lacA genes</div></div><div class="step"><div class="sn">4</div><div>lacZ: β-galactosidase (cleaves lactose); lacY: permease; lacA: transacetylase</div></div><div class="step"><div class="sn">5</div><div>When lactose exhausted: no inducer → repressor binds operator again → genes switched off (negative regulation)</div></div>
+      <div class="ans">✅ Repressor blocks without lactose; lactose → inducer removes repressor → genes transcribed</div>
+    </div>
+    <div class="worked">
+      <h4>Genetic Code Properties (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> What is meant by "degenerate" and "wobble" in the genetic code?</p>
+      <div class="step"><div class="sn">1</div><div>Degenerate code: most amino acids coded by more than one codon (synonymous codons)</div></div><div class="step"><div class="sn">2</div><div>Example: Leu coded by UUA, UUG, CUU, CUC, CUA, CUG (6 codons)</div></div><div class="step"><div class="sn">3</div><div>Third position of codon is less specific ("wobble position")</div></div><div class="step"><div class="sn">4</div><div>Wobble hypothesis (Crick): anticodon base at 3' end of tRNA can pair with more than one base at 3rd codon position</div></div><div class="step"><div class="sn">5</div><div>Allows fewer tRNAs to recognize all 61 sense codons</div></div>
+      <div class="ans">✅ Degenerate = multiple codons per amino acid; wobble = 3rd codon position less specific</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Template Strand</div>
+      <div class="vs-head">Coding Strand</div>
+      <div class="vs-row"><div>Used as template by RNA Pol (read 3'→5')</div><div>Has same sequence as mRNA (except T→U)</div></div><div class="vs-row"><div>Also called antisense / non-coding strand</div><div>Also called sense strand</div></div><div class="vs-row"><div>RNA Pol reads this to synthesise mRNA 5'→3'</div><div>Not used as template</div></div><div class="vs-row"><div>Base complementary to mRNA</div><div>Same sequence as mRNA (with T instead of U)</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> In eukaryotes, hnRNA is produced in the nucleus but mRNA reaches the ribosome. What processing converts hnRNA to mRNA?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Three steps: (1) 5' capping — 7-methylguanosine cap added to 5' end, protects from degradation and aids ribosome attachment. (2) 3' polyadenylation — poly-A tail (100-200 A residues) added, increases stability. (3) Splicing — introns removed and exons joined by spliceosomes. The processed mRNA is then exported to cytoplasm.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch7">
+  <div class="sec-title">🌿 Chapter 7: Evolution</div>
+  <div class="sec-sub">Origin of Life · Darwinism · Evidence · Human Evolution</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>7.1 Origin of Life</h3>
+<p>Earth formed ~4.5 billion years ago. First life ~3.8 billion years ago (prokaryotes). Oparin-Haldane hypothesis: chemical evolution — simple molecules → organic molecules → proto-cells.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Urey-Miller Experiment (1953)</div><div class="defn">Simulated primitive Earth atmosphere (CH₄, H₂, NH₃, H₂O, no O₂) with lightning (sparks). Produced amino acids, sugars, urea etc. Proved abiotic synthesis of organic molecules possible.</div></div>
+  <div class="def-card"><div class="term">Darwinian Theory</div><div class="defn">Natural selection: organisms with favourable variations survive and reproduce more (survival of the fittest). Variations arise randomly (not directed). Evolution = gradual accumulation of variations over generations.</div></div>
+  <div class="def-card"><div class="term">Evidence for Evolution</div><div class="defn">Homologous organs (same origin, different function — forelimbs of whale, bat, human, horse — common ancestry), Analogous organs (different origin, similar function — wings of birds and insects — convergent evolution), Fossils, Biochemical similarity (cytochrome c sequence).</div></div>
+  <div class="def-card"><div class="term">Hardy-Weinberg Principle</div><div class="defn">In a large, randomly mating population with no mutation/selection/migration — allele frequencies remain constant. p+q=1; p²+2pq+q²=1. Deviations = evolution occurring.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 Mechanisms of Evolution</h4>
+  <div class="f">Genetic drift: random change in allele frequency in small population (founder effect, bottleneck effect)</div>
+  <div class="f">Gene flow: transfer of alleles between populations via migration — reduces differentiation</div>
+  <div class="f">Mutation: random change in DNA → new alleles; ultimate source of variation</div>
+  <div class="f">Industrial melanism (pepper moth): dark Biston betularia survived better on soot-darkened trees (natural selection)</div>
+  <div class="f">Drug resistance: mutation + antibiotic pressure → resistant strains selected (not Lamarckian)</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Hardy-Weinberg Calculation (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> In a population, frequency of recessive allele (q) for albinism is 0.3. Find frequency of carriers.</p>
+      <div class="step"><div class="sn">1</div><div>Hardy-Weinberg: p + q = 1 → p = 1 - 0.3 = 0.7</div></div><div class="step"><div class="sn">2</div><div>Frequency of homozygous dominant (AA) = p² = 0.49</div></div><div class="step"><div class="sn">3</div><div>Frequency of affected individuals (aa) = q² = 0.09</div></div><div class="step"><div class="sn">4</div><div>Frequency of carriers (Aa) = 2pq = 2 × 0.7 × 0.3 = 0.42</div></div><div class="step"><div class="sn">5</div><div>42% of population are carriers of albinism gene</div></div>
+      <div class="ans">✅ Carriers (Aa) = 2pq = 2×0.7×0.3 = 0.42 = 42%</div>
+    </div>
+    <div class="worked">
+      <h4>Homologous vs Analogous (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> Distinguish homologous and analogous organs with one example each.</p>
+      <div class="step"><div class="sn">1</div><div>Homologous organs: same basic structure/embryological origin; different functions (divergent evolution)</div></div><div class="step"><div class="sn">2</div><div>Example: forelimbs of whale (flipper), bat (wing), horse (leg), human (arm) — same bone pattern (humerus, radius, ulna, carpals)</div></div><div class="step"><div class="sn">3</div><div>Analogous organs: different origin; similar function (convergent evolution)</div></div><div class="step"><div class="sn">4</div><div>Example: wing of bird (modified forelimb, bones) vs wing of insect (outgrowth of exoskeleton, no bones)</div></div><div class="step"><div class="sn">5</div><div>Both are aerodynamic structures but structurally completely different</div></div>
+      <div class="ans">✅ Homologous: same origin, different function (forelimbs); Analogous: different origin, same function (wings)</div>
+    </div>
+    <div class="worked">
+      <h4>Natural Selection Evidence (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Explain industrial melanism as evidence for natural selection.</p>
+      <div class="step"><div class="sn">1</div><div>Before industrial revolution: tree bark pale → pale (melanic) moths camouflaged; dark moths easily seen by birds → eaten</div></div><div class="step"><div class="sn">2</div><div>After industrialisation: soot darkened tree bark → dark (carbonaria) moths camouflaged; pale moths eaten</div></div><div class="step"><div class="sn">3</div><div>Result: dark moths increased in proportion in industrial areas; pale moths increased in rural areas</div></div><div class="step"><div class="sn">4</div><div>When Clean Air Acts removed pollution: tree bark returned pale → pale moths again increased</div></div><div class="step"><div class="sn">5</div><div>This is direct experimental evidence of natural selection in action — population changes observed over ~50 years</div></div>
+      <div class="ans">✅ Pale moths → fit pre-industry; dark moths → fit post-industry; soot = selection pressure; populations shifted accordingly</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Darwinism</div>
+      <div class="vs-head">Neo-Darwinism (Modern Synthetic Theory)</div>
+      <div class="vs-row"><div>Natural selection as mechanism</div><div>Natural selection + genetic basis (Hardy-Weinberg)</div></div><div class="vs-row"><div>Could not explain variation source</div><div>Mutation + recombination = source of variation</div></div><div class="vs-row"><div>No knowledge of genetics or DNA</div><div>Incorporates Mendel's genetics + population genetics</div></div><div class="vs-row"><div>Proposed pangenesis (wrong)</div><div>Genetic drift, gene flow, natural selection all included</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Bacteria never exposed to antibiotics can develop resistance very quickly once antibiotics are introduced. Is this Lamarckian or Darwinian? Explain.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Darwinian. Random mutations occur in bacterial populations continuously, even without antibiotic exposure. A few bacteria happen to carry a mutation that confers resistance. When antibiotics are introduced, susceptible bacteria die; only resistant ones survive and reproduce. The antibiotic is a SELECTION PRESSURE, not a cause of mutation (that would be Lamarckian). The variation pre-existed; the environment selected for it.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch8">
+  <div class="sec-title">🌿 Chapter 8: Human Health and Disease</div>
+  <div class="sec-sub">Pathogens · Immunity · AIDS · Cancer · Drugs</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>8.1 Innate and Adaptive Immunity</h3>
+<p>Two types of immunity: <strong>Innate (non-specific)</strong> — present from birth, first line of defense (skin, mucus, phagocytes, natural killer cells, inflammation, fever) and <strong>Adaptive (acquired/specific)</strong> — develops after exposure to antigen; has memory.</p>
+<div class="def-grid">
+  <div class="def-card"><div class="term">Humoral Immunity (B-cells)</div><div class="defn">B lymphocytes produce antibodies (immunoglobulins). 5 classes: IgG, IgA, IgM, IgD, IgE. Structure: 2 heavy + 2 light chains (Y-shape). Fab region binds antigen. Fc region determines function.</div></div>
+  <div class="def-card"><div class="term">Cell-mediated Immunity (T-cells)</div><div class="defn">T helper (CD4⁺): coordinate immune response; targets of HIV. T cytotoxic (CD8⁺): kill virus-infected/tumour cells. T regulatory: suppress immune response (prevent autoimmunity). Memory T-cells: rapid response on re-exposure.</div></div>
+  <div class="def-card"><div class="term">Active vs Passive Immunity</div><div class="defn">Active: body makes own antibodies (natural infection or vaccination); slow but long-lasting (memory). Passive: readymade antibodies given (antitoxin, colostrum, Ig injection); immediate but no memory.</div></div>
+  <div class="def-card"><div class="term">Allergies</div><div class="defn">Exaggerated response to non-harmful antigens (allergens). IgE antibodies + mast cells release histamine → sneezing, watery eyes, rash, asthma. Anaphylaxis = severe allergic reaction. Antihistamines block H₁ receptors.</div></div>
+</div>
+<div class="formula-box">
+  <h4>🔑 HIV/AIDS, Cancer and Drugs</h4>
+  <div class="f">HIV (Human Immunodeficiency Virus): retrovirus (RNA genome + reverse transcriptase). Infects CD4⁺ T-cells → immune collapse → AIDS (Acquired Immunodeficiency Syndrome).</div>
+  <div class="f">ELISA: Enzyme-Linked Immunosorbent Assay — used to confirm HIV infection (detects antibodies)</div>
+  <div class="f">Cancer: uncontrolled cell division due to proto-oncogene → oncogene activation or tumour suppressor gene loss</div>
+  <div class="f">Carcinogens: chemical (tobacco), physical (UV, X-rays, gamma), biological (viruses — HPV, EBV)</div>
+  <div class="f">Opioids: morphine, heroin bind opioid receptors → euphoria + addiction; depresses CNS; withdrawal painful</div>
+</div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Antibody Structure (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Draw a labelled diagram of antibody structure and explain the antigen-binding site.</p>
+      <div class="step"><div class="sn">1</div><div>Antibody (immunoglobulin) has 4 polypeptide chains: 2 identical heavy (H) + 2 identical light (L)</div></div><div class="step"><div class="sn">2</div><div>Connected by disulphide (S-S) bonds in Y-shape</div></div><div class="step"><div class="sn">3</div><div>Variable region (V): N-terminal part of both H and L chains; unique to each antibody specificity</div></div><div class="step"><div class="sn">4</div><div>Antigen-binding site: formed by V regions of one H and one L chain (Fab fragment)</div></div><div class="step"><div class="sn">5</div><div>2 antigen-binding sites per antibody molecule (bivalent) → can cross-link antigens (agglutination)</div></div>
+      <div class="ans">✅ Y-shaped; 2H+2L chains; variable regions form 2 antigen-binding sites (Fab); Fc = constant region</div>
+    </div>
+    <div class="worked">
+      <h4>HIV Replication (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Describe how HIV replicates inside a host cell.</p>
+      <div class="step"><div class="sn">1</div><div>HIV (retrovirus) carries RNA genome + reverse transcriptase enzyme</div></div><div class="step"><div class="sn">2</div><div>Enters CD4⁺ T-cell via gp120 protein binding CD4 receptor</div></div><div class="step"><div class="sn">3</div><div>Reverse transcriptase: viral RNA → DNA (reverse transcription)</div></div><div class="step"><div class="sn">4</div><div>Viral DNA integrates into host chromosome as provirus</div></div><div class="step"><div class="sn">5</div><div>Host cell transcribes provirus → viral RNA + mRNA → viral proteins + new RNA genomes</div></div><div class="step"><div class="sn">6</div><div>New virions assemble and bud off → infect more CD4⁺ cells → progressive immune decline → AIDS</div></div>
+      <div class="ans">✅ RNA→DNA (rev. transcriptase)→provirus integration→virus assembly→CD4⁺ destruction→AIDS</div>
+    </div>
+    <div class="worked">
+      <h4>Active vs Passive Immunity (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> Give two differences between active and passive immunity with one example each.</p>
+      <div class="step"><div class="sn">1</div><div>Active immunity: host produces its own antibodies after antigen exposure; has immunological memory</div></div><div class="step"><div class="sn">2</div><div>Example: natural infection (chickenpox → lifetime immunity); vaccination (polio vaccine → long-lasting protection)</div></div><div class="step"><div class="sn">3</div><div>Passive immunity: readymade antibodies administered; no memory; immediate effect</div></div><div class="step"><div class="sn">4</div><div>Example: tetanus antitoxin given after injury; colostrum (mother's first milk) → IgA to newborn</div></div><div class="step"><div class="sn">5</div><div>Duration: active = long-lasting (years/lifetime); passive = short-lived (weeks to months)</div></div>
+      <div class="ans">✅ Active: own antibodies, memory, slow, long-lasting; Passive: readymade, no memory, immediate, short</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    
+    <div class="vs-grid">
+      <div class="vs-head">Benign Tumour</div>
+      <div class="vs-head">Malignant Tumour (Cancer)</div>
+      <div class="vs-row"><div>Localised; stays in original tissue</div><div>Invasive; spreads to other tissues</div></div><div class="vs-row"><div>Does not metastasise</div><div>Metastasises via blood/lymph to distant sites</div></div><div class="vs-row"><div>Slow growing; well differentiated</div><div>Rapidly dividing; poorly differentiated</div></div><div class="vs-row"><div>Usually curable by surgery alone</div><div>Requires surgery + radiation + chemotherapy</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Interferons are produced in response to viral infection. How do they protect non-infected cells?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Virus-infected cells secrete interferons (α, β, γ) — small proteins that bind to receptors on neighbouring non-infected cells and trigger production of antiviral proteins in those cells, making them resistant to viral infection. Interferons don't kill the virus directly — they put surrounding cells in an "antiviral state". They also activate NK cells and macrophages. Key property: interferons are species-specific but virus non-specific — one interferon protects against many viruses.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch9">
+  <div class="sec-title">🌿 Chapter 9: Strategies for Enhancement in Food Production</div>
+  <div class="sec-sub">Plant Breeding · Animal Husbandry · SCP · Tissue Culture · Hybridisation</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>9.1 Plant Breeding and Green Revolution</h3>
+    <p>Scientific plant breeding = produce improved varieties with higher yield, disease resistance, better nutrition. Steps: germplasm collection → evaluation → selection → hybridisation → evaluation → release as variety.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Green Revolution</div><div class="defn">Semi-dwarf wheat varieties (Norman Borlaug, Mexico) introduced to India in 1960s by M.S. Swaminathan. Semi-dwarf rice (IR-8, Philippines). Result: India's food production tripled by 1980s. Key gene: Norin10 (dwarf gene in wheat).</div></div>
+      <div class="def-card"><div class="term">Biofortification</div><div class="defn">Breeding for improved nutritional content: Atlas 66 wheat (high protein+lysine), Maize hybrids (lysine+tryptophan), Golden Rice (β-carotene via psy + crt1 genes), IARI spinach, bitter gourd, carrot (iron, vitamins).</div></div>
+      <div class="def-card"><div class="term">Tissue Culture / Micropropagation</div><div class="defn">Totipotency: each plant cell can regenerate whole plant. Explant (shoot tip/axillary bud/root tip) → callus (unorganised mass on agar) → shoot/root initiation → plantlet → field transfer. Meristem culture: virus-free plants. Somaclonal variation possible.</div></div>
+      <div class="def-card"><div class="term">Somatic Hybridisation</div><div class="defn">Protoplasts (cell walls removed by cellulase + pectinase) of two species fused by PEG or electrofusion → somatic hybrid. Example: Pomato (potato + tomato). Overcomes sexual incompatibility barriers.</div></div>
+    </div>
+    <h3>9.2 Animal Husbandry and SCP</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Animal Husbandry</div><div class="defn">Scientific management of farm animals. Inbreeding (same breed, 4-6 gen): fixes desirable traits, increases homozygosity; exposes recessive defects. Outbreeding (different breeds/species): hybrid vigour (heterosis) — greater milk yield, disease resistance.</div></div>
+      <div class="def-card"><div class="term">Single Cell Protein (SCP)</div><div class="defn">Microbial biomass as protein source. Spirulina (60-70% protein; on sewage, waste water), Methylophilus methylotrophus (on methanol; ICI UK). Reduces land/water needed vs conventional protein. Addresses protein hunger.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Plant Breeding for Resistance</h4>
+      <div class="f">Disease resistance: Himgiri wheat (rust-resistant); TN1, Pankaj rice (bacterial blight, brown planthopper resistant)</div>
+      <div class="f">MBER (Multiple Biotic and Abiotic Stress Resistance) varieties developed by IARI</div>
+      <div class="f">Mutation breeding: induce mutations by X-rays, UV, mutagens → screen for desirable traits</div>
+      <div class="f">Polyploidy induction (colchicine blocks spindle → allopolyploids); triticale (wheat × rye — first man-made crop)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Resistance Breeding (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> What is disease resistance in plants? Name one disease-resistant variety of wheat and rice.</p>
+      <div class="step"><div class="sn">1</div><div>Disease resistance = ability of plant to withstand pathogen attack without major damage</div></div>
+      <div class="step"><div class="sn">2</div><div>Achieved by identifying resistance genes in wild varieties → hybridise with cultivated variety</div></div>
+      <div class="step"><div class="sn">3</div><div>Wheat: Himgiri — resistant to Puccinia rust (leaf, stripe rust) and hill bunt</div></div>
+      <div class="step"><div class="sn">4</div><div>Rice: Jaya and Ratna varieties — resistant to brown planthopper; Pankaj/TN1 — bacterial blight</div></div>
+      <div class="step"><div class="sn">5</div><div>Procedure: hybridise resistant (wild) × susceptible (high yield) → select resistant F2 → evaluate → release</div></div>
+      <div class="ans">✅ Wheat: Himgiri (rust resistant); Rice: Jaya (brown planthopper resistant)</div>
+    </div>
+    <div class="worked">
+      <h4>Micropropagation (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> What is micropropagation? State two advantages over conventional vegetative propagation.</p>
+      <div class="step"><div class="sn">1</div><div>Micropropagation = rapid clonal multiplication of plants using tissue culture (in vitro)</div></div>
+      <div class="step"><div class="sn">2</div><div>Process: explant → surface sterilise → culture on MS/Murashige-Skoog medium → callus → shoot → root → plantlet</div></div>
+      <div class="step"><div class="sn">3</div><div>Advantage 1: Thousands of plants from single explant in weeks (vs months for cuttings)</div></div>
+      <div class="step"><div class="sn">4</div><div>Advantage 2: Virus-free plants if meristem tip used (meristems have no vascular tissue, virus cannot reach)</div></div>
+      <div class="step"><div class="sn">5</div><div>Advantage 3: Year-round production independent of season; space-efficient</div></div>
+      <div class="ans">✅ In vitro rapid clonal multiplication; advantages: faster, virus-free, season-independent</div>
+    </div>
+    <div class="worked">
+      <h4>Hybrid Vigour (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> What is heterosis? Why does inbreeding depression occur?</p>
+      <div class="step"><div class="sn">1</div><div>Heterosis (hybrid vigour): F1 hybrids of unrelated varieties show greater performance than either parent</div></div>
+      <div class="step"><div class="sn">2</div><div>Seen in: yield, disease resistance, growth rate, fertility</div></div>
+      <div class="step"><div class="sn">3</div><div>Inbreeding depression: continuous inbreeding → increased homozygosity → recessive deleterious alleles expressed</div></div>
+      <div class="step"><div class="sn">4</div><div>Example: inbred maize lines show reduced vigour; F1 hybrid of two inbred lines = vigorous commercial crop</div></div>
+      <div class="step"><div class="sn">5</div><div>Commercial use: Sharbati Sonora wheat, maize hybrids, broiler chicken breeds</div></div>
+      <div class="ans">✅ Heterosis = F1 superior to parents; inbreeding depression = recessive alleles expressed on homozygosity</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    <div class="vs-grid">
+      <div class="vs-head">Inbreeding</div>
+      <div class="vs-head">Outbreeding</div>
+      <div class="vs-row"><div>Mating between closely related animals (same breed)</div><div>Mating between unrelated animals (different breeds/species)</div></div>
+      <div class="vs-row"><div>Increases homozygosity; exposes recessive defects</div><div>Increases heterozygosity; hybrid vigour (heterosis)</div></div>
+      <div class="vs-row"><div>Fixes desirable traits; useful for establishing pure lines</div><div>Greater milk yield, disease resistance, growth rate</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> What is the advantage of producing crops with somatic hybridisation over conventional cross-pollination?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Conventional hybridisation requires sexual compatibility (usually same genus/species). Somatic hybridisation fuses protoplasts of two different species — even genera — creating hybrids impossible sexually. Example: pomato (potato + tomato). However, somatic hybrids are often sterile and difficult to regenerate into commercially useful plants.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="sec-ch10">
+  <div class="sec-title">🌿 Chapter 10: Microbes in Human Welfare</div>
+  <div class="sec-sub">Fermentation · Antibiotics · Sewage Treatment · Biogas · Biological Control · Biofertilisers</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>10.1 Microbes in Food and Industry</h3>
+    <p>Microbes serve crucial roles in food, medicine, agriculture and environment. Many industrial processes depend on microbial metabolism.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Fermented Foods</div><div class="defn">Bread: Saccharomyces cerevisiae (CO₂ leavens). Curd/yoghurt: Lactobacillus (lactic acid). Dosa/Idli: Leuconostoc mesenteroides (ferments rice+urad). Cheese: Penicillium roquefortii (Roquefort blue veins); Propionibacterium shermanii (Swiss cheese holes + flavour).</div></div>
+      <div class="def-card"><div class="term">Industrial Products</div><div class="defn">Ethanol (Saccharomyces, anaerobic). Citric acid (Aspergillus niger). Acetic acid/vinegar (Acetobacter aceti). Lactic acid (Lactobacillus). Statins (Monascus purpureus — cholesterol-lowering). Cyclosporin A (Trichoderma — immunosuppressant).</div></div>
+      <div class="def-card"><div class="term">Antibiotics</div><div class="defn">Penicillin: Alexander Fleming (1929), from Penicillium notatum. Production: Howard Florey and Ernst Chain (Nobel 1945 with Fleming). Streptomycin (Streptomyces griseus — Waksman). Erythromycin, tetracycline, chloramphenicol — all from Streptomyces (soil bacteria).</div></div>
+      <div class="def-card"><div class="term">Sewage Treatment</div><div class="defn">Primary treatment: physical — screening, sedimentation (removes 30-35% BOD). Secondary treatment: biological — aeration tanks (flocs of bacteria+fungi → decompose organics); effluent → settling tank → sludge (to anaerobic digestors → biogas). Tertiary: chemical/physical (removes N, P, pathogens).</div></div>
+    </div>
+    <h3>10.2 Biogas, Biofertilisers and Biocontrol</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Biogas</div><div class="defn">Methanogens (Methanobacterium) anaerobically digest cattle dung/organic waste → CH₄ (60-70%) + CO₂ + H₂S. KVIC (floating drum) and Janata (fixed dome) designs. Slurry = excellent fertiliser. Used for cooking+lighting in rural India.</div></div>
+      <div class="def-card"><div class="term">Biofertilisers</div><div class="defn">Rhizobium (N-fixation in legume nodules — symbiotic); Azospirillum, Azotobacter (free-living N-fixation); Azolla (pteridophyte with Anabaena cyanobacteria — N-fixation, used in paddy); mycorrhiza (Glomus — phosphate solubilisation+uptake).</div></div>
+      <div class="def-card"><div class="term">Biological Control</div><div class="defn">Bacillus thuringiensis (Bt): produces Cry proteins → kill insect larvae. Nucleopolyhedrovirus (NPV): baculovirus specific to insects, harmless to others — narrow spectrum, eco-friendly. Trichoderma: biocontrol agent against plant pathogens. Predators: Ladybird beetle (Coccinella) eats aphids.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 BOD and Sewage</h4>
+      <div class="f">BOD = Biochemical Oxygen Demand = O₂ consumed by bacteria to decompose organics in 5 days at 20°C</div>
+      <div class="f">High BOD = high pollution; treated sewage should have BOD &lt;20 mg/L before discharge</div>
+      <div class="f">Flocs in secondary treatment = masses of bacteria + fungal filaments forming mesh that traps organic matter</div>
+      <div class="f">Anaerobic sludge digestors: bacteria digest sludge → biogas (CH₄+CO₂); methanogens are strict anaerobes</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Penicillin Discovery (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> How was penicillin discovered? Why is it significant?</p>
+      <div class="step"><div class="sn">1</div><div>Alexander Fleming (1929): Penicillium notatum mould contaminated Staphylococcus culture; bacteria around mould were killed</div></div>
+      <div class="step"><div class="sn">2</div><div>Fleming isolated and named the active substance "penicillin" but could not purify enough for clinical use</div></div>
+      <div class="step"><div class="sn">3</div><div>Ernst Chain and Howard Florey (1940-45): purified penicillin; proven clinical efficacy in WWII → Nobel Prize 1945</div></div>
+      <div class="step"><div class="sn">4</div><div>Significance: first antibiotic — revolutionised treatment of bacterial infections (pneumonia, septicaemia, STIs)</div></div>
+      <div class="step"><div class="sn">5</div><div>Penicillin inhibits bacterial transpeptidase → blocks cell wall synthesis → selective toxicity (humans have no cell wall)</div></div>
+      <div class="ans">✅ Fleming 1929, Penicillium notatum; Florey+Chain — production; inhibits bacterial cell wall synthesis</div>
+    </div>
+    <div class="worked">
+      <h4>Sewage Treatment Steps (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> Describe the steps of sewage treatment with role of microorganisms.</p>
+      <div class="step"><div class="sn">1</div><div>Primary treatment (physical): sewage → bar screening (removes large objects) → grit chamber → settling tank (sedimentation removes 60% solids, 30-35% BOD) → primary sludge removed</div></div>
+      <div class="step"><div class="sn">2</div><div>Secondary treatment (biological): effluent pumped to aeration tanks with air and activated sludge (bacterial flocs)</div></div>
+      <div class="step"><div class="sn">3</div><div>Aerobic microorganisms (bacteria, fungi) in flocs decompose organic matter → BOD reduced significantly</div></div>
+      <div class="step"><div class="sn">4</div><div>Floc-containing effluent → secondary settling tank → sludge separated; treated water discharged into rivers</div></div>
+      <div class="step"><div class="sn">5</div><div>Primary + secondary sludge → anaerobic digestors → methanogens produce biogas (CH₄ + CO₂) → energy</div></div>
+      <div class="ans">✅ Primary (physical) → Secondary (biological, microbes decompose organics) → Sludge → Biogas</div>
+    </div>
+    <div class="worked">
+      <h4>Biofertiliser Types (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> Distinguish free-living and symbiotic N-fixing biofertilisers. Give one example each.</p>
+      <div class="step"><div class="sn">1</div><div>Free-living N-fixers: live independently in soil; fix atmospheric N₂ without a plant host</div></div>
+      <div class="step"><div class="sn">2</div><div>Examples: Azotobacter (aerobic, soil), Azospirillum (rhizosphere of non-legumes — rice, wheat), Anabaena (cyanobacterium in Azolla fronds)</div></div>
+      <div class="step"><div class="sn">3</div><div>Symbiotic N-fixers: live in plant root tissue; fix N₂ mutuistically with host plant</div></div>
+      <div class="step"><div class="sn">4</div><div>Examples: Rhizobium (legume root nodules — pea, bean, soybean), Frankia (alder trees), Anabaena in Azolla</div></div>
+      <div class="step"><div class="sn">5</div><div>Rhizobium: infects root hair → forms nodule → nitrogenase (+leghaemoglobin) fixes N₂; plant provides carbohydrates</div></div>
+      <div class="ans">✅ Free-living: Azotobacter, Azospirillum; Symbiotic: Rhizobium (legume nodules) — both fix N₂ but differently</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    <div class="vs-grid">
+      <div class="vs-head">Biocontrol Agents</div>
+      <div class="vs-head">Chemical Pesticides</div>
+      <div class="vs-row"><div>Species-specific; minimal non-target impact</div><div>Broad spectrum; kill beneficial insects too</div></div>
+      <div class="vs-row"><div>Biodegradable; no soil/water residue</div><div>Persist in environment; bioaccumulate (DDT)</div></div>
+      <div class="vs-row"><div>Slower acting; expensive to produce</div><div>Fast-acting; cheap; widely available</div></div>
+      <div class="vs-row"><div>Examples: Bt toxin (Bacillus thuringiensis), NPV, Trichoderma</div><div>Examples: DDT, BHC, organophosphates</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> How does Rhizobium fix nitrogen? What makes the legume-Rhizobium association unique?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Rhizobium infects root hairs of legumes → stimulates nodule formation. Inside nodules, nitrogenase (requires anaerobic conditions — provided by leghaemoglobin which scavenges O₂) converts N₂ → NH₃ → amino acids. Plant provides carbohydrates; Rhizobium provides fixed nitrogen — mutualism. Leghaemoglobin (pinkish — like haemoglobin) is unique to legume nodules; serves as O₂ buffer making an anaerobic micro-environment for nitrogenase.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="sec-ch11">
+  <div class="sec-title">🌿 Chapter 11: Biotechnology — Principles and Processes</div>
+  <div class="sec-sub">rDNA · Restriction Enzymes · Vectors · PCR · Gel Electrophoresis · Transformation</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>11.1 Tools of Genetic Engineering</h3>
+    <p>Genetic engineering: deliberate manipulation of DNA to alter the phenotype of an organism using recombinant DNA technology. Three core requirements: (1) restriction enzymes to cut DNA, (2) vector to carry DNA, (3) host organism to express foreign gene.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Restriction Endonucleases</div><div class="defn">Molecular scissors — cut DNA at specific palindromic sequences. EcoRI: G↓AATTC (recognises 6-bp palindrome); creates 4-base sticky ends. BamHI: G↓GATCC; HindIII: A↓AGCTT. Same enzyme cuts vector + insert → complementary sticky ends → ligation by DNA ligase (molecular glue).</div></div>
+      <div class="def-card"><div class="term">Cloning Vectors</div><div class="defn">Vehicle to carry insert into host cell. Plasmids (pBR322, pUC19): small circular self-replicating DNA; must have ori (origin of replication), selectable marker (ampR, tetR), MCS (multiple cloning site). Bacteriophage (λ, M13), cosmids, BAC/YAC for large inserts (chromosomes).</div></div>
+      <div class="def-card"><div class="term">PCR (Polymerase Chain Reaction)</div><div class="defn">Amplify specific DNA in vitro. Kary Mullis (Nobel 1993). 3 steps per cycle: (1) Denaturation 94°C (strands separate), (2) Annealing ~55°C (primers bind), (3) Extension 72°C (Taq polymerase extends 5′→3′). After n cycles: 2ⁿ copies. Taq from Thermus aquaticus — heat-stable.</div></div>
+      <div class="def-card"><div class="term">Gel Electrophoresis</div><div class="defn">Separate DNA/RNA/protein by size. Agarose gel; negative charge → DNA migrates toward anode. Smaller fragments travel farther. EtBr stain — orange bands under UV. Used to verify restriction digest fragment sizes. Southern blotting (DNA), Northern (RNA), Western (protein).</div></div>
+    </div>
+    <h3>11.2 Gene Transfer and Selectable Markers</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Transformation</div><div class="defn">Introduction of foreign DNA into host cell. Chemical method: CaCl₂ treatment makes bacteria competent (porous). Electroporation: electric pulse opens pores. Biolistics (gene gun): DNA-coated gold/tungsten particles fired into plant/animal cells. Microinjection: DNA injected into animal cell nucleus.</div></div>
+      <div class="def-card"><div class="term">pBR322 Selectable Markers</div><div class="defn">ampR (ampicillin resistance) and tetR (tetracycline resistance). Recombinant selection: insert goes into tetR gene (insertional inactivation) → recombinants: ampR but tetR-sensitive. Non-recombinants: ampR AND tetR-resistant. Replica plating on both antibiotics identifies recombinants.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Key Definitions and Calculations</h4>
+      <div class="f">Palindromic sequence: reads same on both strands 5′→3′; e.g. 5′-GAATTC-3′ / 3′-CTTAAG-5′</div>
+      <div class="f">Sticky ends: short single-stranded overhangs after restriction cut; allow annealing with complementary sticky ends</div>
+      <div class="f">PCR product after 30 cycles: 2³⁰ ≈ 10⁹ copies of target sequence</div>
+      <div class="f">Competent cells: cells able to take up foreign DNA (treated with CaCl₂ or by electroporation)</div>
+      <div class="f">Ti plasmid (Agrobacterium tumefaciens): natural vector for plant transformation; T-DNA integrates into plant genome</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>PCR Steps (Board 2023, 5M)</h4>
+      <p><strong>Q:</strong> Explain the steps of PCR with the role of Taq polymerase.</p>
+      <div class="step"><div class="sn">1</div><div>PCR amplifies a specific DNA region using two synthetic oligonucleotide primers flanking the target</div></div>
+      <div class="step"><div class="sn">2</div><div>Step 1 — Denaturation (94°C, 30s): heat breaks H-bonds; double-stranded DNA separates into two single strands</div></div>
+      <div class="step"><div class="sn">3</div><div>Step 2 — Annealing (~55°C, 30s): primers (20-25 nucleotides) bind to complementary sequences on each strand</div></div>
+      <div class="step"><div class="sn">4</div><div>Step 3 — Extension (72°C, 1-2 min): Taq DNA polymerase adds nucleotides 5′→3′ from each primer</div></div>
+      <div class="step"><div class="sn">5</div><div>Taq polymerase from Thermus aquaticus (hot spring) — heat-stable; survives 94°C denaturation step; optimum at 72°C</div></div>
+      <div class="ans">✅ Denature (94°C) → Anneal (~55°C) → Extend with Taq (72°C); 2ⁿ copies after n cycles</div>
+    </div>
+    <div class="worked">
+      <h4>Restriction Enzymes (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> What are restriction endonucleases? Why are they called "molecular scissors"?</p>
+      <div class="step"><div class="sn">1</div><div>Restriction endonucleases are bacterial enzymes that cut DNA at specific short sequences (restriction sites)</div></div>
+      <div class="step"><div class="sn">2</div><div>Named by bacterial source: EcoRI = E. coli Ry13, first restriction enzyme identified; BamHI = Bacillus amyloliquefaciens</div></div>
+      <div class="step"><div class="sn">3</div><div>They recognise palindromic sequences (4-8 bp) and cut at specific positions within or near them</div></div>
+      <div class="step"><div class="sn">4</div><div>Called "molecular scissors" because they cut DNA precisely — like scissors cut paper at a specific mark</div></div>
+      <div class="step"><div class="sn">5</div><div>In bacteria: restriction enzymes protect against bacteriophage infection (cut foreign DNA); own DNA is methylated (protected)</div></div>
+      <div class="ans">✅ Bacterial enzymes cutting DNA at palindromic recognition sequences; natural function = defense against phages</div>
+    </div>
+    <div class="worked">
+      <h4>Recombinant Selection (Board 2024, 3M)</h4>
+      <p><strong>Q:</strong> How are recombinant bacteria identified using pBR322 and insertional inactivation?</p>
+      <div class="step"><div class="sn">1</div><div>pBR322 has two markers: ampR (ampicillin resistance) and tetR (tetracycline resistance)</div></div>
+      <div class="step"><div class="sn">2</div><div>Foreign DNA (insert) cloned into tetR gene (via BamHI or SalI site) → tetR gene disrupted</div></div>
+      <div class="step"><div class="sn">3</div><div>After transformation: plate all bacteria on ampicillin medium → only transformed cells survive (have plasmid)</div></div>
+      <div class="step"><div class="sn">4</div><div>Replica plate onto tetracycline medium: non-recombinant (intact tetR) → grow; recombinant (disrupted tetR) → do NOT grow</div></div>
+      <div class="step"><div class="sn">5</div><div>Colonies that grow on amp but NOT on tet = recombinants (have insert); pick and culture</div></div>
+      <div class="ans">✅ Insert disrupts tetR → recombinants are ampR but tetS (grow on amp, die on tet) → identified by replica plating</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    <div class="vs-grid">
+      <div class="vs-head">Sticky Ends</div>
+      <div class="vs-head">Blunt Ends</div>
+      <div class="vs-row"><div>Short single-stranded overhangs after cut</div><div>No overhang; both strands cut at same position</div></div>
+      <div class="vs-row"><div>More efficient ligation; directional cloning easier</div><div>Any two blunt ends can ligate; less efficient</div></div>
+      <div class="vs-row"><div>EcoRI, BamHI, HindIII produce sticky ends</div><div>HaeIII, SmaI produce blunt ends</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> pBR322 was one of the first cloning vectors. What does "selectable marker" mean, and why is it essential?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> A selectable marker is a gene (usually antibiotic resistance — ampR and tetR in pBR322) that allows selection of transformed bacteria from non-transformed ones. After transformation, plate all bacteria on ampicillin medium → only those with plasmid survive (non-transformed die). To identify recombinants (plasmid WITH insert): insert goes into tetR gene (insertional inactivation) → recombinant colonies cannot grow on tetracycline medium but grow on ampicillin. This identifies recombinants without costly DNA analysis of every colony.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="sec-ch12">
+  <div class="sec-title">🌿 Chapter 12: Biotechnology and Its Applications</div>
+  <div class="sec-sub">GM Crops · Bt Cotton · Golden Rice · Transgenic Animals · Insulin · Gene Therapy · Biopiracy</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>12.1 GM Organisms in Agriculture</h3>
+    <p>Genetically Modified (GM) organisms contain an alien gene introduced by rDNA technology. Applications in agriculture: pest resistance, herbicide tolerance, improved nutrition, stress tolerance, delayed ripening.</p>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Bt Cotton (Bollgard)</div><div class="defn">Cry1Ac gene from Bacillus thuringiensis inserted into cotton. Cry proteins (crystal proteins) = inactive protoxin → activated in alkaline insect gut (pH 10) → forms pores in gut epithelial cells → insect dies. Specific to Lepidoptera (cotton bollworm Helicoverpa). Not harmful to humans (acid stomach, no receptor).</div></div>
+      <div class="def-card"><div class="term">Golden Rice</div><div class="defn">β-carotene (provitamin A) produced in rice endosperm (normally white/β-carotene absent). Genes introduced: psy (phytoene synthase from Narcissus daffodil) + crtI (lycopene desaturase from Erwinia uredovora). Yellow colour from β-carotene. Addresses vitamin A deficiency (leading cause of childhood blindness in developing countries).</div></div>
+      <div class="def-card"><div class="term">Recombinant Insulin (Humulin)</div><div class="defn">Human insulin gene (A-chain + B-chain separately) cloned into E. coli (Eli Lilly, 1982). Proinsulin produced → C-peptide removed → A + B chains joined → active insulin. Replaced pig/cattle insulin (allergy, BSE risk). First approved GM pharmaceutical product.</div></div>
+      <div class="def-card"><div class="term">Transgenic Animals</div><div class="defn">Rosie (transgenic cow, 1997): human alpha-lactalbumin in milk — more nutritious for human infants. Transgenic sheep: human protein alpha-1-antitrypsin in milk (for emphysema). Gene pharming (molecular farming): use transgenic animals to produce therapeutic proteins.</div></div>
+    </div>
+    <h3>12.2 Gene Therapy and Bioethics</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Gene Therapy</div><div class="defn">Introduction of functional gene into patient's cells to correct genetic defect. ADA (adenosine deaminase) deficiency — first gene therapy case (1990, Ashanti DeSilva, USA). Retroviral vectors. Somatic gene therapy (body cells — not heritable) vs germline (reproductive cells — heritable; major ethical concerns).</div></div>
+      <div class="def-card"><div class="term">Biopiracy</div><div class="defn">Use of bioresources (plants, microbes, traditional knowledge) by multinational companies without proper compensation to originating community/country. Examples: Turmeric (wound healing patent granted to University of Mississippi → challenged and revoked by India); Basmati (US company patented certain varieties). Addressed by CBD (Convention on Biological Diversity) and TRIPS.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Applications Summary</h4>
+      <div class="f">Bt toxin: different Cry proteins for different pests — Cry1 (Lepidoptera), Cry2 (Lepidoptera+Diptera), Cry3 (Coleoptera)</div>
+      <div class="f">RNAi (RNA interference): dsRNA → silences specific mRNA → prevents nematode infection of tobacco roots</div>
+      <div class="f">Flavr Savr tomato: antisense RNA blocks polygalacturonase → delayed ripening; first GM food crop (1994, USA)</div>
+      <div class="f">ADA gene therapy: lymphocytes extracted → retroviral vector with ADA gene → transformed cells reinfused; requires repeat treatments</div>
+      <div class="f">Ethical issues: GM crops → ecological impact (gene escape to wild relatives), allergenicity, resistance development</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Bt Toxin Mechanism (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> How does Bt toxin kill insects but not harm other organisms?</p>
+      <div class="step"><div class="sn">1</div><div>B. thuringiensis produces Cry proteins as inactive crystalline protoxin (inclusion bodies)</div></div>
+      <div class="step"><div class="sn">2</div><div>When insect larva ingests plant material: protoxin reaches alkaline gut (pH 10+)</div></div>
+      <div class="step"><div class="sn">3</div><div>Alkaline pH activates protoxin; activated toxin binds to specific receptor proteins on gut epithelial cells</div></div>
+      <div class="step"><div class="sn">4</div><div>Forms pores in gut membrane → massive ion imbalance → cell lysis → insect dies from gut damage and septicaemia</div></div>
+      <div class="step"><div class="sn">5</div><div>NOT harmful to humans/mammals: stomach is acidic (pH 2) → protoxin NOT activated; no specific receptor present</div></div>
+      <div class="ans">✅ Alkaline insect gut activates protoxin → pores in gut cells → death; human acidic stomach = protoxin stays inactive</div>
+    </div>
+    <div class="worked">
+      <h4>Recombinant Insulin (Board 2022, 5M)</h4>
+      <p><strong>Q:</strong> How is recombinant human insulin produced? What are its advantages over animal insulin?</p>
+      <div class="step"><div class="sn">1</div><div>Human insulin gene cloned: A-chain and B-chain DNA prepared separately (synthetic or isolated)</div></div>
+      <div class="step"><div class="sn">2</div><div>Each gene inserted into plasmid with β-galactosidase (lacZ) promoter → transformed into E. coli</div></div>
+      <div class="step"><div class="sn">3</div><div>E. coli produces fusion protein (β-gal + insulin chain) → CN-Br treatment cleaves β-gal → insulin A-chain and B-chain obtained</div></div>
+      <div class="step"><div class="sn">4</div><div>A and B chains mixed under oxidising conditions → disulphide bonds form → active human insulin</div></div>
+      <div class="step"><div class="sn">5</div><div>Advantages: (1) No allergy risk (human sequence, not porcine/bovine), (2) No BSE/prion risk, (3) Unlimited supply, (4) Consistent purity</div></div>
+      <div class="ans">✅ A+B chains in E. coli separately → join in vitro → human insulin; advantages: no allergy, no animal disease risk</div>
+    </div>
+    <div class="worked">
+      <h4>Biopiracy (Board 2024, 2M)</h4>
+      <p><strong>Q:</strong> What is biopiracy? Give one example from India.</p>
+      <div class="step"><div class="sn">1</div><div>Biopiracy = use of bioresources or traditional knowledge without permission or compensation to originating communities</div></div>
+      <div class="step"><div class="sn">2</div><div>Example 1: Turmeric (Curcuma longa) — US patent granted (1995) for wound-healing use; India challenged, showing this was traditional Indian knowledge; patent revoked (1997)</div></div>
+      <div class="step"><div class="sn">3</div><div>Example 2: Basmati rice — US company RiceTec patented certain Basmati-like varieties; India challenged genetic infringement</div></div>
+      <div class="step"><div class="sn">4</div><div>India's response: Traditional Knowledge Digital Library (TKDL) — documents traditional knowledge in patent-searchable format</div></div>
+      <div class="step"><div class="sn">5</div><div>International response: Convention on Biological Diversity (CBD) + Nagoya Protocol — require benefit sharing with originating countries</div></div>
+      <div class="ans">✅ Biopiracy = bioresource use without consent/compensation; Turmeric and Basmati are India's landmark cases</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>⚖️ Comparisons</h2>
+    <div class="vs-grid">
+      <div class="vs-head">Somatic Gene Therapy</div>
+      <div class="vs-head">Germline Gene Therapy</div>
+      <div class="vs-row"><div>Target: body (somatic) cells — not passed to offspring</div><div>Target: fertilised egg/early embryo — change passed to all generations</div></div>
+      <div class="vs-row"><div>Ethically accepted (corrects disease in individual)</div><div>Ethically controversial (permanent change in gene pool)</div></div>
+      <div class="vs-row"><div>ADA deficiency gene therapy (1990) is an example</div><div>No approved human germline therapy; CRISPR babies (China 2018) — controversial</div></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> What is ADA deficiency? How was it treated by gene therapy? What were the limitations?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> ADA (adenosine deaminase) deficiency: genetic disorder where lymphocytes cannot break down adenosine → toxic to B and T cells → severe combined immunodeficiency (SCID). Gene therapy (1990): ADA gene introduced via retroviral vector into patient's lymphocytes (extracted, transformed, reinfused). Success: immune function restored. Limitations: (1) Lymphocytes are non-dividing — gene lost over time, repeat treatments needed; (2) Bone marrow stem cells would be better (permanent cure); (3) Patient still needed PEG-ADA enzyme replacement as backup.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="sec-ch13">
+  <div class="sec-title">🌿 Chapter 13: Organisms and Populations</div>
+  <div class="sec-sub">Habitat · Population Attributes · Growth Models · Interspecific Interactions</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>13.1 Ecology — Levels and Adaptations</h3><p><strong>Ecology</strong> = scientific study of the relationships of organisms with each other and their environment. Levels: organism → population → community → ecosystem → biome → biosphere.</p><div class="def-grid"><div class="def-card"><div class="term">Adaptations</div><div class="defn">Morphological (cactus spines, camel hump), Physiological (kangaroo rat — metabolic water, no need to drink; desert animals concentrate urine), Behavioural (migration, hibernation, aestivation).</div></div><div class="def-card"><div class="term">Population Attributes</div><div class="defn">Birth rate (natality), Death rate (mortality), Sex ratio, Age pyramid (expanding/stable/declining), Density. Population size (N) changes by: N = N₀ + (B−D) + (I−E) where B=births, D=deaths, I=immigration, E=emigration.</div></div><div class="def-card"><div class="term">Logistic Growth</div><div class="defn">Most populations in nature show S-shaped (sigmoid) growth. dN/dt = rN[(K−N)/K]. K = carrying capacity. At N=K, growth rate=0. Lag phase → exponential → deceleration → plateau at K.</div></div><div class="def-card"><div class="term">Interspecific Interactions</div><div class="defn">Mutualism (+/+): lichens (fungus+alga), mycorrhiza; Commensalism (+/0): orchid on tree; Parasitism (+/−): roundworm in intestine; Predation (+/−): leopard-deer; Competition (−/−): Gause's competitive exclusion; Amensalism (0/−): Penicillium secretes penicillin → kills bacteria.</div></div></div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Logistic Growth (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Write the equation for logistic growth. Explain each term and draw the S-shaped curve.</p>
+      <div class="step"><div class="sn">1</div><div>dN/dt = rN[(K−N)/K]</div></div><div class="step"><div class="sn">2</div><div>N = current population size; t = time; r = intrinsic rate of natural increase (birth rate − death rate)</div></div><div class="step"><div class="sn">3</div><div>K = carrying capacity (maximum population that habitat can support)</div></div><div class="step"><div class="sn">4</div><div>(K−N)/K = unused portion of carrying capacity; → 0 as N approaches K</div></div><div class="step"><div class="sn">5</div><div>When N is small: (K−N)/K ≈ 1 → growth is nearly exponential (J-shaped)</div></div><div class="step"><div class="sn">6</div><div>As N → K: growth slows → S-shaped sigmoid curve; at N=K, dN/dt = 0 (population stable)</div></div>
+      <div class="ans">✅ dN/dt = rN[(K−N)/K]; S-curve: lag → log → deceleration → plateau at K</div>
+    </div>
+    <div class="worked">
+      <h4>Gause's Principle (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> State competitive exclusion principle. Give an example.</p>
+      <div class="step"><div class="sn">1</div><div>Gause's competitive exclusion principle: two species competing for identical resources CANNOT coexist indefinitely</div></div><div class="step"><div class="sn">2</div><div>The competitively superior species will eventually exclude the other</div></div><div class="step"><div class="sn">3</div><div>Example: Paramecium aurelia and P. caudatum when cultured together in same medium → P. aurelia (more efficient) wins; P. caudatum eliminated</div></div><div class="step"><div class="sn">4</div><div>Coexistence possible only through niche differentiation (different resources, times or spaces used)</div></div><div class="step"><div class="sn">5</div><div>MacArthur's warblers: 5 species coexist in spruce tree by using different parts of canopy</div></div>
+      <div class="ans">✅ Two species with identical niches cannot coexist; P. aurelia excludes P. caudatum</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> What is the advantage of lichens being "composite organisms" (algae + fungi)?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> The fungal partner provides: physical structure, anchorage, moisture retention, mineral absorption from substrate. The algal (or cyanobacterial) partner provides: photosynthetic energy (carbohydrates). This mutualism allows lichens to colonise bare rocks, extreme temperatures and deserts where neither organism could survive alone. Lichens are pioneer species — their organic acids break down rock, beginning soil formation (ecological succession).</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch14">
+  <div class="sec-title">🌿 Chapter 14: Ecosystem</div>
+  <div class="sec-sub">Structure · Energy Flow · Nutrient Cycling · Productivity · Succession</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>14.1 Ecosystem Structure</h3><p>An ecosystem is a functional unit where biotic and abiotic components interact through nutrient cycling and energy flow. Components: producers, consumers, decomposers + abiotic factors.</p><div class="def-grid"><div class="def-card"><div class="term">Energy Flow (10% Law)</div><div class="defn">Only ~10% of energy is transferred from one trophic level to next (Lindemann 1942). Rest lost as heat (respiration, excretion). 3-4 trophic levels maximum in most ecosystems — beyond that, too little energy remains.</div></div><div class="def-card"><div class="term">Productivity</div><div class="defn">GPP (Gross Primary Productivity) = total photosynthesis. NPP = GPP − respiration loss. Net Primary Production available to consumers. Tropical rain forests and estuaries = highest NPP; deserts and open ocean = lowest.</div></div><div class="def-card"><div class="term">Nutrient Cycling</h3></div><div class="defn">Gaseous cycles (C, N, O): reservoir = atmosphere/hydrosphere. Sedimentary cycles (P, S): reservoir = earth crust. Decomposers (bacteria, fungi) essential — release minerals from organic matter.</div></div><div class="def-card"><div class="term">Ecological Succession</div><div class="defn">Directional change in community over time. Pioneer community → seral stages → climax community (stable). Primary succession: starts on bare rock/sand (no soil). Secondary succession: starts after disturbance (fire, flood) — faster. Hydrarch (wet → dry); Xerarch (dry → wet).</div></div></div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Energy Pyramid (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Why is an energy pyramid always upright? Can it ever be inverted?</p>
+      <div class="step"><div class="sn">1</div><div>Energy pyramids represent energy at each trophic level; always taper toward apex (upright)</div></div><div class="step"><div class="sn">2</div><div>Energy lost (~90%) at each trophic level as heat → higher level always has less energy</div></div><div class="step"><div class="sn">3</div><div>Energy CANNOT flow backwards — entropy (2nd law of thermodynamics)</div></div><div class="step"><div class="sn">4</div><div>Energy pyramids are ALWAYS upright (never inverted)</div></div><div class="step"><div class="sn">5</div><div>Biomass pyramids can be inverted (phytoplankton biomass < zooplankton at any instant in aquatic systems)</div></div><div class="step"><div class="sn">6</div><div>Number pyramids can be inverted (one oak tree supports thousands of insects)</div></div>
+      <div class="ans">✅ Energy pyramids always upright (energy lost as heat at each level; entropy); biomass pyramids can invert</div>
+    </div>
+    <div class="worked">
+      <h4>Carbon Cycle (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Describe the main processes in the carbon cycle.</p>
+      <div class="step"><div class="sn">1</div><div>Carbon source: CO₂ in atmosphere/hydrosphere</div></div><div class="step"><div class="sn">2</div><div>Fixation (removal): photosynthesis (autotrophs fix CO₂ → organic matter)</div></div><div class="step"><div class="sn">3</div><div>Return: respiration (all organisms → CO₂); decomposition (decomposers → CO₂, CH₄)</div></div><div class="step"><div class="sn">4</div><div>Combustion of fossil fuels → CO₂ (major human impact, greenhouse effect)</div></div><div class="step"><div class="sn">5</div><div>Oceans: dissolve CO₂ → carbonate/bicarbonate; marine organisms → shells (CaCO₃) → limestone</div></div><div class="step"><div class="sn">6</div><div>Geological return: volcanic activity releases CO₂ from carbonate rocks over millions of years</div></div>
+      <div class="ans">✅ Photosynthesis = C fixation; respiration/decomposition/combustion = C release; oceans = major C reservoir</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Decomposers are sometimes called "reducers." What would happen to an ecosystem if all decomposers suddenly disappeared?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Decomposers break down dead organic matter → release inorganic minerals (N, P, K, Ca) back into soil and water. Without decomposers: (1) Dead organic matter accumulates indefinitely; (2) Nutrients locked in organic form → not available to producers; (3) Mineral nutrient pools depleted → plant growth stops → ecosystem collapses. Decomposers are as essential as producers — ecosystems cannot function without nutrient cycling.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch15">
+  <div class="sec-title">🌿 Chapter 15: Biodiversity and Conservation</div>
+  <div class="sec-sub">Biodiversity Types · Threats · Conservation · Hotspots · IUCN Categories</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>15.1 Types and Patterns of Biodiversity</h3><p><strong>Biodiversity</strong> (E.O. Wilson popularised term): variety of life at genetic, species and ecosystem levels. Current estimates: 1.5 million described species; true number 5-50 million.</p><div class="def-grid"><div class="def-card"><div class="term">Genetic Diversity</div><div class="defn">Variation in DNA among individuals of same species. High genetic diversity = better adaptability. Sahyadri range rice = 50,000+ varieties; India = >1000 mango varieties. Allelic diversity.</div></div><div class="def-card"><div class="term">Species Diversity</div><div class="defn">Variety of species in an area. Measured by species richness (number) and species evenness (relative abundance). Tropics (equatorial) more species-rich than temperate/polar (latitudinal gradient in biodiversity).</div></div><div class="def-card"><div class="term">Ecosystem Diversity</div><div class="defn">Variety of ecosystems in region. India: deserts, rainforests, mangroves, coral reefs, wetlands, grasslands — all within one country.</div></div><div class="def-card"><div class="term">Biodiversity Hotspots</div><div class="defn">Norman Myers (1988). Regions with exceptionally high species richness AND high endemism AND severe threats. 34 hotspots globally, cover <2.5% Earth land but hold >50% terrestrial species. India has 4: Western Ghats & Sri Lanka, Himalaya, Indo-Burma, Sundaland.</div></div></div><div class="formula-box"><h4>🔑 Threats (HIPPO) and Conservation</h4><div class="f">H = Habitat loss/fragmentation (biggest threat); I = Invasive alien species; P = Pollution; P = Population explosion (human); O = Overexploitation</div><div class="f">In-situ conservation: protect in natural habitat — biosphere reserves, national parks, wildlife sanctuaries, sacred groves</div><div class="f">Ex-situ conservation: protect outside habitat — zoos, botanical gardens, seed banks, cryopreservation, tissue culture</div><div class="f">IUCN Red List: Extinct, Extinct in Wild, Critically Endangered, Endangered, Vulnerable, Near Threatened, Least Concern</div><div class="f">India protected areas: 103 national parks, 544 wildlife sanctuaries, 18 biosphere reserves (10 in UNESCO MAB network)</div></div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Hotspot Criteria (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> What criteria must a region meet to be declared a biodiversity hotspot?</p>
+      <div class="step"><div class="sn">1</div><div>Criterion 1: Must contain at least 1500 species of vascular plants as endemic species (endemism)</div></div><div class="step"><div class="sn">2</div><div>Criterion 2: Must have lost at least 70% of its original habitat (HIGH threat level, already mostly lost)</div></div><div class="step"><div class="sn">3</div><div>Both criteria must be met simultaneously</div></div><div class="step"><div class="sn">4</div><div>India's 4 hotspots: (1) Western Ghats + Sri Lanka (2) Himalaya (Eastern) (3) Indo-Burma (4) Sundaland (Nicobar Islands)</div></div><div class="step"><div class="sn">5</div><div>Hotspots cover only 2.4% of land but contain 60%+ of world's species — conservation priority areas</div></div>
+      <div class="ans">✅ 1500+ endemic vascular plant species AND 70%+ original habitat already destroyed = hotspot criteria</div>
+    </div>
+    <div class="worked">
+      <h4>In-situ vs Ex-situ (Board 2022, 3M)</h4>
+      <p><strong>Q:</strong> Distinguish between in-situ and ex-situ conservation with two examples each.</p>
+      <div class="step"><div class="sn">1</div><div>In-situ (on-site): species conserved within natural habitat</div></div><div class="step"><div class="sn">2</div><div>Examples: (1) Jim Corbett National Park (tigers, elephants) (2) Kalakad-Mundanthurai Biosphere Reserve (Western Ghats species)</div></div><div class="step"><div class="sn">3</div><div>Ex-situ (off-site): species maintained outside natural habitat</div></div><div class="step"><div class="sn">4</div><div>Examples: (1) Kew Gardens, Royal Botanic Gardens (seed banks) (2) Crocodile bank, Chennai (crocodiles bred in captivity)</div></div><div class="step"><div class="sn">5</div><div>In-situ preferred — preserves ecological interactions; ex-situ = last resort for critically endangered species</div></div>
+      <div class="ans">✅ In-situ: national parks, sanctuaries (natural habitat); Ex-situ: zoos, seed banks (protected outside habitat)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Alexander von Humboldt observed that within a region, species richness increases with area. Express this as an equation and interpret each term.</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> Species-Area relationship (Arrhenius, 1921): S = C × Aᶻ, or log S = log C + z log A. S = species richness; A = area; C = Y-intercept (related to taxa density); z = slope (0.1-0.2 for small islands, 0.6-1.2 for continental areas). Larger area → more resources → more habitats → more species. This is why habitat fragmentation (converting large forests into isolated patches) causes species extinction even if TOTAL area is same — edges, isolation effects reduce effective area per patch.</div>
+      </details>
+    </div>
+  </div>
+</section>
+<section id="sec-ch16">
+  <div class="sec-title">🌿 Chapter 16: Environmental Issues</div>
+  <div class="sec-sub">Pollution · Greenhouse Effect · Ozone · Deforestation · Solid Waste</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <h3>16.1 Air Pollution</h3><p>Air pollution = addition of contaminants to atmosphere beyond threshold. Major pollutants: CO, SOₓ, NOₓ, particulates, hydrocarbons, lead, CFCs.</p><div class="def-grid"><div class="def-card"><div class="term">Greenhouse Effect and Global Warming</div><div class="defn">CO₂, CH₄, N₂O, CFCs, water vapour = greenhouse gases. Trap IR radiation from Earth's surface → warming. CO₂ increased 270 ppm (pre-industrial) → 420+ ppm now. Predicted effects: melting ice caps, sea level rise, extreme weather, coral bleaching, species shifts.</div></div><div class="def-card"><div class="term">Ozone Layer Depletion</div><div class="defn">Stratospheric ozone (15-35 km altitude) absorbs UV-B and UV-C. CFCs (chlorofluorocarbons — Freons in refrigerants, aerosols) release Cl· radicals which destroy O₃ catalytically. Antarctic ozone hole — CFC accumulation in polar vortex. Montreal Protocol (1987) — phase-out of CFCs.</div></div><div class="def-card"><div class="term">Water Pollution</div><div class="defn">BOD (Biochemical Oxygen Demand): O₂ consumed by bacteria to decompose organic waste in 5 days at 20°C. High BOD = more pollution. Eutrophication: nutrient enrichment → algal bloom → O₂ depletion → fish death. Biomagnification: DDT concentrates up food chain.</div></div><div class="def-card"><div class="term">Solid Waste</div><div class="defn">MSW (municipal solid waste): domestic, commercial, construction waste. Categories: recyclable, biodegradable, hazardous, electronic waste (e-waste). Sanitary landfill, composting, recycling, incineration (energy recovery). E-waste: improper disposal → heavy metal leaching (Pb, Hg, Cd).</div></div></div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    
+    <div class="worked">
+      <h4>Ozone Depletion (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Explain how CFCs deplete the ozone layer.</p>
+      <div class="step"><div class="sn">1</div><div>CFCs (chlorofluorocarbons) used in refrigerators, AC, aerosols are chemically inert at surface</div></div><div class="step"><div class="sn">2</div><div>Rise to stratosphere where UV radiation cleaves C-Cl bond: CF₂Cl₂ → CF₂Cl· + Cl·</div></div><div class="step"><div class="sn">3</div><div>Cl· attacks ozone: Cl· + O₃ → ClO· + O₂</div></div><div class="step"><div class="sn">4</div><div>ClO· reacts with another O₃: ClO· + O₃ → Cl· + 2O₂</div></div><div class="step"><div class="sn">5</div><div>Cl· is regenerated → catalytic cycle; ONE Cl· can destroy 100,000 ozone molecules</div></div><div class="step"><div class="sn">6</div><div>Result: ozone hole (especially over Antarctica) → increased UV-B reaching Earth → skin cancer, cataracts, crop damage</div></div>
+      <div class="ans">✅ CFCs → Cl· radicals (UV) → catalytic O₃ destruction; each Cl· destroys 100,000 O₃ molecules</div>
+    </div>
+    <div class="worked">
+      <h4>Biomagnification (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> Explain biomagnification of DDT in an aquatic food chain.</p>
+      <div class="step"><div class="sn">1</div><div>DDT (dichlorodiphenyltrichloroethane): persistent organic pollutant; fat-soluble, NOT excreted</div></div><div class="step"><div class="sn">2</div><div>Phytoplankton: 0.003 ppm DDT → zooplankton (0.04 ppm) → small fish (0.5 ppm) → larger fish (2 ppm) → fish-eating birds (25+ ppm)</div></div><div class="step"><div class="sn">3</div><div>Concentration increases at each trophic level (biomagnification, bioaccumulation)</div></div><div class="step"><div class="sn">4</div><div>Not diluted because DDT stored in fatty tissue; every time organism eats, DDT accumulates</div></div><div class="step"><div class="sn">5</div><div>Effects: osprey, bald eagle egg shell thinning (DDE inhibits Ca deposition) → reproductive failure → population decline</div></div>
+      <div class="ans">✅ DDT increases concentration up food chain: 0.003 ppm → 25+ ppm in fish-eating birds → reproductive failure</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>🎯 Quick Activity</h2>
+    <div class="activity">
+      <h4>Think and Answer</h4>
+      <p><strong>Q:</strong> Why is BOD a measure of water pollution? What does high BOD indicate?</p>
+      <details><summary style="cursor:pointer;color:var(--teal);font-weight:700;margin-top:8px">▶ Show Answer</summary>
+      <div style="margin-top:8px;padding:12px;background:#e8f5e9;border-radius:8px;font-size:.88rem"><strong>A:</strong> BOD (Biochemical Oxygen Demand) measures the amount of dissolved oxygen consumed by bacteria to decompose organic matter in a water sample over 5 days at 20°C. High BOD = high organic load (sewage, industrial effluent) = more bacteria consuming O₂. This depletes dissolved O₂ → aquatic life (fish, invertebrates) suffocate and die. Clean rivers: BOD <2 mg/L; polluted: >10 mg/L. BOD is the standard parameter for monitoring sewage treatment efficiency — treated sewage should have BOD <20 mg/L before discharge.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="sec-pyq">
+<h2 class="sec-title">📜 PYQ Bank</h2>
+<p class="sec-sub">Previous year board questions — Biology XII</p>
+<div class="pyq-filter" id="pyqFilter">
+  <button class="pyq-chip active" onclick="filterPyq('all',this)">All</button>
+  <button class="pyq-chip" onclick="filterPyq('ch2',this)">Reproduction</button>
+  <button class="pyq-chip" onclick="filterPyq('ch6',this)">Molecular Bio</button>
+  <button class="pyq-chip" onclick="filterPyq('ch11',this)">Biotech</button>
+  <button class="pyq-chip" onclick="filterPyq('ch14',this)">Ecology</button>
+</div>
+<div id="pyqList">
+  <div class="pyq-card" data-ch="ch2"><div class="pyq-meta">2023 | 3 marks | Flowering Plants</div><div class="pyq-q">Draw a labelled diagram of a mature embryo sac and mention the number of cells and nuclei present in it.</div><button class="pyq-toggle" onclick="togglePyq(this)">Show Answer</button><div class="pyq-ans">7 cells, 8 nuclei: 3 antipodals, 2 synergids, 1 egg cell, 1 central cell (with 2 polar nuclei). Draw diagram with labels. Egg apparatus at micropylar end, antipodals at chalazal end.</div></div>
+  <div class="pyq-card" data-ch="ch6"><div class="pyq-meta">2024 | 5 marks | Molecular Biology</div><div class="pyq-q">Explain the process of transcription in prokaryotes. How does it differ from eukaryotes?</div><button class="pyq-toggle" onclick="togglePyq(this)">Show Answer</button><div class="pyq-ans">Prokaryotes: single RNA polymerase, no nuclear membrane, translation can begin while transcription is ongoing, no post-transcriptional processing. Eukaryotes: 3 types of RNA pol, mRNA processing (capping, tailing, splicing), occurs in nucleus, translated in cytoplasm.</div></div>
+  <div class="pyq-card" data-ch="ch11"><div class="pyq-meta">2023 | 5 marks | Biotechnology</div><div class="pyq-q">Explain the process of preparation of recombinant DNA with the help of a suitable example. Name the enzyme used and explain its action.</div><button class="pyq-toggle" onclick="togglePyq(this)">Show Answer</button><div class="pyq-ans">Restriction enzyme (e.g., EcoRI) cuts DNA at palindromic site 5'GAATTC3', creating sticky ends. Foreign DNA cut with same enzyme, mixed with vector DNA, DNA ligase joins them → recombinant DNA. Sticky ends enable precise joining.</div></div>
+  <div class="pyq-card" data-ch="ch14"><div class="pyq-meta">2023 | 3 marks | Ecosystem</div><div class="pyq-q">What is biomagnification? Explain how DDT causes it with an example from an aquatic ecosystem.</div><button class="pyq-toggle" onclick="togglePyq(this)">Show Answer</button><div class="pyq-ans">Biomagnification: progressive increase in concentration of a substance through food chain. DDT: water (0.003 ppb) → zooplankton (0.04 ppb) → small fish (0.5 ppb) → large fish (2 ppb) → birds (25 ppb). Not biodegradable, stored in fat tissue, accumulates.</div></div>
+</div>
+</section>
+
+<!-- MISTAKES -->
+<section id="sec-mistakes">
+<h2 class="sec-title">❌ Mistake Bank</h2>
+<p class="sec-sub">Common errors in Biology XII exams</p>
+<div class="mistake-card"><div class="mc-title">Confusing embryo sac cells</div><p style="font-size:.85rem">Embryo sac = 7 cells, 8 nuclei. Central cell has 2 polar nuclei. Synergids assist in fertilisation. Antipodals have no direct role — just be clear on each function.</p></div>
+<div class="mistake-card"><div class="mc-title">Interchanging codons and anticodons</div><p style="font-size:.85rem">mRNA has codons (5'→3'). tRNA has anticodons (antiparallel, reads 3'→5' of mRNA). Start codon: AUG on mRNA; corresponding anticodon on tRNA: UAC.</p></div>
+<div class="mistake-card"><div class="mc-title">Lamarckism vs Darwinism</div><p style="font-size:.85rem">Lamarck: use and disuse of organs leads to inherited changes (giraffe neck — wrong). Darwin: variations already exist; natural selection acts on them. Don't mix these up.</p></div>
+<div class="mistake-card"><div class="mc-title">In-situ vs Ex-situ confusion</div><p style="font-size:.85rem">In-situ = conservation at natural habitat (national park, biosphere reserve). Ex-situ = conservation outside natural habitat (zoo, botanical garden, seed bank).</p></div>
+</section>
+
+<!-- EXAMINER'S EYE -->
+<section id="sec-examiner">
+<h2 class="sec-title">👁️ Examiner's Eye</h2>
+<p class="sec-sub">What examiners check in Biology XII answers</p>
+<div class="tip-card"><div class="tc-title">Always label diagrams properly</div><p style="font-size:.85rem">In Biology, diagrams without labels or with missing labels lose 50% marks. Key diagrams: LS of flower, embryo sac, female reproductive system, pBR322 plasmid, lac operon.</p></div>
+<div class="tip-card"><div class="tc-title">Scientific names must be correct and italicised</div><p style="font-size:.85rem">Plasmodium falciparum (not P. falciparum alone in first mention), Bacillus thuringiensis, Rhizobium, Wuchereria bancrofti — underline when hand-writing. Missing genus letter costs marks.</p></div>
+<div class="tip-card"><div class="tc-title">Distinguish similar terms precisely</div><p style="font-size:.85rem">GPP vs NPP, Primary vs Secondary productivity, In-situ vs Ex-situ, Active vs Passive immunity, Natality vs Fecundity — examiners check if you can use the right term in context.</p></div>
+</section>
+
+<!-- HIGH-PROB -->
+<section id="sec-highprob">
+<h2 class="sec-title">🔥 High-Probability Questions</h2>
+<p class="sec-sub">Most likely to appear in your board exam</p>
+<div class="hotq"><div class="hotq-num">⭐ 98% probability</div><p style="font-size:.87rem"><strong>Embryo sac diagram (3–5 marks):</strong> Draw and label. Always include cell names, number of cells (7) and nuclei (8). Appears in almost every year's paper.</p></div>
+<div class="hotq"><div class="hotq-num">⭐ 95% probability</div><p style="font-size:.87rem"><strong>Molecular basis — central dogma and genetic code (5 marks):</strong> Transcription, translation, codons, anticodons. High-priority topic every year.</p></div>
+<div class="hotq"><div class="hotq-num">⭐ 90% probability</div><p style="font-size:.87rem"><strong>rDNA technology steps (5 marks):</strong> Restriction enzymes, ligation, transformation, selection. Often includes a diagram of cloning vector.</p></div>
+<div class="hotq"><div class="hotq-num">⭐ 85% probability</div><p style="font-size:.87rem"><strong>Ecosystem energy flow and 10% law (3–5 marks):</strong> Pyramid of energy, food chain, GPP/NPP calculations.</p></div>
+<div class="hotq"><div class="hotq-num">⭐ 80% probability</div><p style="font-size:.87rem"><strong>Hardy-Weinberg principle (3 marks):</strong> State principle, equation, list 5 factors disturbing equilibrium. Appears regularly in section B.</p></div>
+</section>
+
+<!-- LAST-MIN -->
+<section id="sec-lastmin">
+<h2 class="sec-title">⏱️ Last-Minute Revision</h2>
+<p class="sec-sub">Key checklist for the night before</p>
+<div class="lm-block"><div class="lm-title">✅ Reproduction & Genetics</div>
+<label class="checklist-item"><input type="checkbox"> Embryo sac: 7 cells, 8 nuclei — cell names and positions</label>
+<label class="checklist-item"><input type="checkbox"> Double fertilisation: zygote (2n) + PEN (3n)</label>
+<label class="checklist-item"><input type="checkbox"> Mendel's ratios: 3:1 monohybrid, 9:3:3:1 dihybrid, 1:2:1 incomplete dominance</label>
+<label class="checklist-item"><input type="checkbox"> Chromosomal disorders: Down's 2n+1=47, Turner 45XO, Klinefelter 47XXY</label>
+</div>
+<div class="lm-block"><div class="lm-title">✅ Molecular & Biotech</div>
+<label class="checklist-item"><input type="checkbox"> Central dogma: DNA → RNA → Protein</label>
+<label class="checklist-item"><input type="checkbox"> Genetic code: 64 codons, 61 sense, 3 stop; AUG = start</label>
+<label class="checklist-item"><input type="checkbox"> rDNA steps: isolation → cutting → ligation → transformation → selection</label>
+<label class="checklist-item"><input type="checkbox"> Bt cotton: cry gene, pest-resistant</label>
+</div>
+<div class="lm-block"><div class="lm-title">✅ Ecology</div>
+<label class="checklist-item"><input type="checkbox"> 10% law: only 10% energy to next trophic level</label>
+<label class="checklist-item"><input type="checkbox"> Pyramid of energy: always upright</label>
+<label class="checklist-item"><input type="checkbox"> In-situ vs Ex-situ conservation examples</label>
+<label class="checklist-item"><input type="checkbox"> Biodiversity hotspots in India: Western Ghats, Eastern Himalayas</label>
+</div>
+</section>
+
+<!-- PRACTICE PAPERS -->
+<section id="sec-pp">
+<h2 class="sec-title">📝 Practice Papers</h2>
+<p class="sec-sub">Full-length 70-mark board-pattern papers</p>
+<div class="pp-tabs">
+  <button class="pp-tab-btn active" onclick="showPP(1,this)">Paper 1</button>
+  <button class="pp-tab-btn" onclick="showPP(2,this)">Paper 2</button>
+  <button class="pp-tab-btn" onclick="showPP(3,this)">Paper 3</button>
+</div>
+<div id="pp1" class="pp-content active"><div class="practice-paper">
+  <div class="pp-header"><h3>BIOLOGY XII — PRACTICE PAPER 1</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 70 | As per CBSE 2024-25 pattern</p></div>
+  <div class="pp-section-title">SECTION A — MCQ (16×1=16)</div>
+  <div class="pp-q">Q1. Which cell of embryo sac in flowering plants directly participates in fertilisation? (a) Synergid (b) Antipodal (c) Egg cell (d) Central cell [Ans: c]</div>
+  <div class="pp-q">Q2. Which enzyme is used to join two DNA molecules? (a) Restriction endonuclease (b) DNA polymerase (c) DNA ligase (d) RNA polymerase [Ans: c]</div>
+  <div class="pp-q">Q3. According to Hardy-Weinberg principle, allele frequencies in a population remain constant if: (a) Mutations occur (b) Large population with random mating (c) Migration occurs (d) Natural selection acts [Ans: b]</div>
+  <div class="pp-section-title">SECTION B — Short (5×2=10)</div>
+  <div class="pp-q">Q4. Differentiate between in-situ and ex-situ conservation with one example each. [In-situ: National Park (Jim Corbett); Ex-situ: Zoological garden (Delhi Zoo)]</div>
+  <div class="pp-q">Q5. What is biomagnification? Give one example. [Progressive increase in non-biodegradable toxic substance along food chain; DDT in aquatic ecosystem]</div>
+  <div class="pp-section-title">SECTION C — Short II (7×3=21)</div>
+  <div class="pp-q">Q6. Explain double fertilisation. What are the products formed? [Two male gametes: one + egg = zygote (2n); one + 2 polar nuclei = PEN (3n) = triploid endosperm]</div>
+  <div class="pp-q">Q7. Draw a labelled diagram of pBR322 plasmid. Mention two features of an ideal cloning vector. [ampR, tetR genes, ori, MCS; features: small size, selectable marker, origin of replication]</div>
+  <div class="pp-section-title">SECTION D — Long (3×5=15)</div>
+  <div class="pp-q">Q8. Explain Lac operon with a suitable diagram. What happens in the presence and absence of lactose? [No lactose → repressor binds operator → genes OFF. Lactose (inducer) → repressor inactive → genes ON → β-galactosidase, permease, transacetylase produced]</div>
+  <div class="pp-q">Q9. Explain ecological succession starting from bare rock to forest. Name pioneer species and climax community. [Lichens → mosses → herbs → shrubs → trees; pioneer = lichens; climax = forest; primary succession]</div>
+</div></div>
+<div id="pp2" class="pp-content"><div class="practice-paper">
+  <div class="pp-header"><h3>BIOLOGY XII — PRACTICE PAPER 2</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 70 | Focus: Genetics + Biotech</p></div>
+  <div class="pp-section-title">SECTION C (7×3=21)</div>
+  <div class="pp-q">Q1. A woman heterozygous for colour blindness marries a normal man. What is the probability of their sons being colour blind? Show cross. [Mother X^c X → 50% sons (X^c Y) colour blind; daughters all normal carriers or normal]</div>
+  <div class="pp-q">Q2. Describe the structure of a mature pollen grain. [Exine (sporopollenin — most resistant substance known, contains germ pores), intine (pectocellulose), vegetative cell + generative cell (2 male gametes)]</div>
+  <div class="pp-section-title">SECTION D (3×5=15)</div>
+  <div class="pp-q">Q3. Explain the steps involved in production of recombinant human insulin. Why was it needed? [Natural insulin from pigs/cattle — allergic to some patients. rDNA: A and B chains separately in E. coli plasmids → expressed → chains extracted → joined by disulphide bonds → Humulin]</div>
+</div></div>
+<div id="pp3" class="pp-content"><div class="practice-paper">
+  <div class="pp-header"><h3>BIOLOGY XII — PRACTICE PAPER 3</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 70 | Full Syllabus</p></div>
+  <div class="pp-section-title">SECTION D (3×5=15)</div>
+  <div class="pp-q">Q1. Explain the role of microbes in sewage treatment. What is BOD? [Primary: screening, sedimentation; Secondary: aerobic microbes digest organic matter, reduces BOD; BOD = O₂ needed to oxidise all organic matter; lower BOD = cleaner water]</div>
+  <div class="pp-q">Q2. Describe Hardy-Weinberg equilibrium. List 5 factors that disturb it. [p+q=1, p²+2pq+q²=1; disturbed by: mutation, gene flow, genetic drift, non-random mating, natural selection → these factors cause evolution]</div>
+  <div class="pp-q">Q3. Explain human reproductive system in females including oogenesis. [Ovaries → oogonium → primary oocyte → secondary oocyte (ovulation day 14) → ovum after fertilisation; fallopian tube site of fertilisation; implantation in uterus after 7 days]</div>
+</div></div>
+</section>
+
+<!-- SIMULATOR -->
+<section id="sec-sim">
+<h2 class="sec-title">🎯 Exam Simulator</h2>
+<p class="sec-sub">35-question timed mock — Biology XII</p>
+<div id="sim-start-screen">
+  <div class="sim-info-grid">
+    <div class="sim-info-box"><div class="sib-num">35</div><div class="sib-lbl">Questions</div></div>
+    <div class="sim-info-box"><div class="sib-num">35</div><div class="sib-lbl">Minutes</div></div>
+    <div class="sim-info-box"><div class="sib-num">4</div><div class="sib-lbl">Options each</div></div>
+    <div class="sim-info-box"><div class="sib-num">All</div><div class="sib-lbl">Chapters</div></div>
+  </div>
+  <button class="start-btn" onclick="startSim()">▶ Start Mock Test</button>
+</div>
+<div id="sim-quiz" style="display:none">
+  <div class="sim-header-bar">
+    <span id="sim-qnum">Q 1/35</span>
+    <span id="sim-timer">35:00</span>
+    <span id="sim-score-live">Score: 0</span>
+  </div>
+  <div class="sim-live-donut-wrap">
+    <svg id="sim-live-donut" viewBox="0 0 120 120" width="90" height="90">
+      <circle cx="60" cy="60" r="50" fill="none" stroke="var(--card-bg)" stroke-width="16"/>
+      <circle id="sldc" cx="60" cy="60" r="50" fill="none" stroke="var(--mint)" stroke-width="16" stroke-dasharray="0 314" style="transition:stroke-dasharray .5s ease;transform:rotate(-90deg);transform-origin:60px 60px"/>
+      <circle id="sldw" cx="60" cy="60" r="50" fill="none" stroke="var(--coral)" stroke-width="16" stroke-dasharray="0 314" style="transition:stroke-dasharray .5s ease .15s;transform:rotate(-90deg);transform-origin:60px 60px"/>
+      <text x="60" y="57" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)" id="sld-pct">0%</text>
+      <text x="60" y="73" text-anchor="middle" font-size="9" fill="var(--text-muted)" id="sld-frac">0/35</text>
+    </svg>
+    <div style="font-size:.8rem;color:var(--text-muted);line-height:1.6">
+      <span style="color:var(--mint)">●</span> Correct<br>
+      <span style="color:var(--coral)">●</span> Wrong<br>
+      <span style="color:var(--text-muted)">○</span> Skipped
+    </div>
+  </div>
+  <div id="sim-q-text" class="sim-q-text"></div>
+  <div id="sim-opts" class="sim-opts"></div>
+  <button id="sim-next-btn" class="sim-next-btn" onclick="nextSimQ()" style="display:none">Next Question →</button>
+</div>
+<div id="sim-result" style="display:none">
+  <h3 style="text-align:center;margin-bottom:16px">📊 Your Result</h3>
+  <div class="result-donut-wrap">
+    <svg viewBox="0 0 200 200" width="160" height="160">
+      <circle cx="100" cy="100" r="80" fill="none" stroke="var(--card-bg)" stroke-width="24"/>
+      <circle id="res-arc-c" cx="100" cy="100" r="80" fill="none" stroke="var(--mint)" stroke-width="24" stroke-dasharray="0 503" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:100px 100px"/>
+      <circle id="res-arc-w" cx="100" cy="100" r="80" fill="none" stroke="var(--coral)" stroke-width="24" stroke-dasharray="0 503" stroke-linecap="round" style="transform:rotate(-90deg);transform-origin:100px 100px"/>
+      <text x="100" y="94" text-anchor="middle" font-size="28" font-weight="800" fill="var(--text)" id="res-pct">0%</text>
+      <text x="100" y="116" text-anchor="middle" font-size="13" fill="var(--text-muted)" id="res-score">0/35</text>
+    </svg>
+  </div>
+  <div class="result-stats" id="result-stats"></div>
+  <h4 style="margin:18px 0 10px">Performance by Topic</h4>
+  <div class="bar-chart-wrap" id="result-bar-chart"></div>
+  <h4 style="margin:18px 0 10px">Question Strip</h4>
+  <div class="sim-strip" id="sim-strip"></div>
+  <button class="start-btn" onclick="restartSim()" style="margin-top:24px">↺ Restart</button>
+</div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="sec-dash">
+<h2 class="sec-title">📊 Your Dashboard</h2>
+<p class="sec-sub">Personal stats and progress</p>
+<div id="dash-content"></div>
+</section>
+</main>
+<script>
+const STORAGE_KEY='cbsemock_bio_xii_v1';
+const defaultState={xp:0,streak:0,lastVisit:'',badges:[],chapProgress:{},simBest:0,simCount:0,activity:{},pyqOpened:false};
+let state=JSON.parse(JSON.stringify(defaultState));
+function loadState(){try{const s=localStorage.getItem(STORAGE_KEY);if(s)state=Object.assign({},defaultState,JSON.parse(s));}catch(e){}}
+function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch(e){}}
+loadState();
+const MAP={home:'sec-home',ch1:'sec-ch1',ch2:'sec-ch2',ch3:'sec-ch3',ch4:'sec-ch4',ch5:'sec-ch5',ch6:'sec-ch6',ch7:'sec-ch7',ch8:'sec-ch8',ch9:'sec-ch9',ch10:'sec-ch10',ch11:'sec-ch11',ch12:'sec-ch12',ch13:'sec-ch13',ch14:'sec-ch14',ch15:'sec-ch15',ch16:'sec-ch16',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',pp:'sec-pp',sim:'sec-sim',dash:'sec-dash'};
+let curKey="home";
+function go(key){document.querySelectorAll('main > section').forEach(s=>s.style.display='none');const sec=document.getElementById(MAP[key]);if(sec)sec.style.display='block';document.querySelectorAll('.tab-btn,.tool-tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll(`[data-key="${key}"]`).forEach(b=>b.classList.add('active'));const _sec=document.getElementById(MAP[key]);if(_sec){const _stickyH=(document.querySelector('.main-tabs-wrap')||{offsetTop:0,offsetHeight:0});const _barH=(_stickyH.offsetTop||52)+(_stickyH.offsetHeight||72)+10;const _y=_sec.getBoundingClientRect().top+window.scrollY-_barH;window.scrollTo({top:Math.max(0,_y),behavior:'smooth'});}else{window.scrollTo({top:0,behavior:'smooth'});}if(key==='dash')renderDash();if(key.startsWith('ch')){if(!state.chapProgress[key]){state.chapProgress[key]=1;awardXP(5,'Chapter opened');}saveState();updateXPBar();}}
+function awardXP(pts,reason){state.xp=(state.xp||0)+pts;checkStreak();checkBadges();saveState();updateXPBar();showXPToast(`+${pts} XP — ${reason}`);}
+function showXPToast(msg){let t=document.getElementById('xp-toast');if(!t){t=document.createElement('div');t.id='xp-toast';t.style.cssText='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--gold);color:#000;padding:8px 18px;border-radius:20px;font-weight:700;font-size:.85rem;z-index:9999;opacity:0;transition:opacity .3s';document.body.appendChild(t);}t.textContent=msg;t.style.opacity='1';setTimeout(()=>{t.style.opacity='0';},2200);}
+function checkStreak(){const today=new Date().toDateString();if(state.lastVisit===today)return;const yesterday=new Date(Date.now()-86400000).toDateString();state.streak=(state.lastVisit===yesterday)?(state.streak||0)+1:1;state.lastVisit=today;}
+function checkBadges(){const b=state.badges||[];const add=(id,label)=>{if(!b.includes(id)){b.push(id);state.badges=b;showXPToast('🏆 Badge: '+label);}};if(state.xp>=100)add('xp100','Century');if(state.xp>=500)add('xp500','High Scorer');if((state.streak||0)>=7)add('streak7','Week Warrior');if(Object.keys(state.chapProgress||{}).length>=16)add('allchap','Bio Master');if((state.simCount||0)>=5)add('sim5','Mock Pro');}
+function updateXPBar(){const bar=document.getElementById('xp-bar');const lbl=document.getElementById('xp-lbl');const stk=document.getElementById('streak-lbl');if(bar){const pct=Math.min(100,(state.xp%200)/2);bar.style.width=pct+'%';}if(lbl)lbl.textContent=`${state.xp} XP`;if(stk)stk.textContent=`🔥 ${state.streak||0}`;}
+function filterPyq(ch,btn){document.querySelectorAll('.pyq-chip').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.pyq-card').forEach(c=>{c.style.display=(ch==='all'||c.dataset.ch===ch)?'block':'none';});if(!state.pyqOpened){state.pyqOpened=true;awardXP(10,'PYQ Bank opened');}}
+function togglePyq(btn){const ans=btn.nextElementSibling;const open=ans.style.display==='block';ans.style.display=open?'none':'block';btn.textContent=open?'Show Answer':'Hide Answer';}
+function showPP(n,btn){document.querySelectorAll('.pp-content').forEach(d=>d.classList.remove('active'));document.querySelectorAll('.pp-tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('pp'+n).classList.add('active');btn.classList.add('active');}
+
+const SIM_BANK=[
+  {q:"Embryo sac in angiosperms consists of how many cells and nuclei?",opts:["6 cells, 7 nuclei","7 cells, 8 nuclei","8 cells, 8 nuclei","7 cells, 7 nuclei"],ans:1,ch:"ch2"},
+  {q:"Double fertilisation results in formation of:",opts:["Zygote and PEN","Two zygotes","Two endosperms","Zygote only"],ans:0,ch:"ch2"},
+  {q:"Sporopollenin is found in:",opts:["Intine","Exine","Tapetum","Endosperm"],ans:1,ch:"ch2"},
+  {q:"Site of fertilisation in human females is:",opts:["Uterus","Ovary","Cervix","Fallopian tube"],ans:3,ch:"ch3"},
+  {q:"hCG hormone is secreted by:",opts:["Pituitary","Ovary","Placenta","Uterus"],ans:2,ch:"ch3"},
+  {q:"Which contraceptive method also protects against STIs?",opts:["Oral pills","IUDs","Condoms","Surgical methods"],ans:2,ch:"ch4"},
+  {q:"Monohybrid cross phenotype ratio (Tt × Tt):",opts:["1:2:1","3:1","9:3:3:1","1:1"],ans:1,ch:"ch5"},
+  {q:"Down's syndrome is caused by:",opts:["Monosomy of chromosome 21","Trisomy of chromosome 21","Deletion of chromosome 21","Duplication of X chromosome"],ans:1,ch:"ch5"},
+  {q:"In humans, sex determination is controlled by:",opts:["Mother only","Father only","Both equally","Autosomes"],ans:1,ch:"ch5"},
+  {q:"Which enzyme is called 'molecular scissors' in rDNA technology?",opts:["DNA ligase","DNA polymerase","Restriction endonuclease","RNA polymerase"],ans:2,ch:"ch11"},
+  {q:"The proof for semi-conservative replication was provided by:",opts:["Watson and Crick","Meselson and Stahl","Hershey and Chase","Franklin and Wilkins"],ans:1,ch:"ch6"},
+  {q:"Central dogma of molecular biology describes:",opts:["DNA → Protein → RNA","DNA → RNA → Protein","RNA → DNA → Protein","Protein → RNA → DNA"],ans:1,ch:"ch6"},
+  {q:"Which is NOT a stop codon?",opts:["UAA","UAG","UGA","AUG"],ans:3,ch:"ch6"},
+  {q:"Miller-Urey experiment demonstrated:",opts:["Life originated on other planets","Amino acids can form in primitive conditions","DNA is the genetic material","Proteins can self-replicate"],ans:1,ch:"ch7"},
+  {q:"Industrial melanism in Biston betularia is an example of:",opts:["Genetic drift","Natural selection","Mutation","Gene flow"],ans:1,ch:"ch7"},
+  {q:"Analogous organs show:",opts:["Common ancestry, different function","Different ancestry, same function","Same anatomy, different embryology","None of above"],ans:1,ch:"ch7"},
+  {q:"Widal test is used to diagnose:",opts:["Malaria","Typhoid","Pneumonia","Amoebiasis"],ans:1,ch:"ch8"},
+  {q:"HIV attacks which cells?",opts:["B-lymphocytes","CD4+ T helper cells","NK cells","Neutrophils"],ans:1,ch:"ch8"},
+  {q:"Which is an example of active immunity?",opts:["Colostrum","Snake antivenom","Vaccination","Maternal antibodies"],ans:2,ch:"ch8"},
+  {q:"MOET is associated with:",opts:["Plant tissue culture","Animal husbandry","Genetic engineering","Clonal propagation"],ans:1,ch:"ch9"},
+  {q:"Spirulina is used as:",opts:["Biopesticide","Single Cell Protein","Antibiotic source","Biocontrol agent"],ans:1,ch:"ch9"},
+  {q:"Bacillus thuringiensis (Bt) is used as:",opts:["Biofertiliser","Biocontrol agent","Antibiotic producer","Sewage decomposer"],ans:1,ch:"ch10"},
+  {q:"BOD stands for:",opts:["Biological Oxygen Demand","Biochemical Oxygen Demand","Biotic Oxygen Demand","Baseline Oxygen Data"],ans:1,ch:"ch10"},
+  {q:"pBR322 is a:",opts:["Restriction enzyme","Plasmid vector","Bacteriophage","Cosmid"],ans:1,ch:"ch11"},
+  {q:"Blue-white selection in bacteria detects:",opts:["Antibiotic resistance","Recombinant colonies","DNA size","Protein expression"],ans:1,ch:"ch11"},
+  {q:"First transgenic cow produced human:",opts:["Insulin","Growth hormone","α-lactalbumin","Interferon"],ans:2,ch:"ch12"},
+  {q:"ADA deficiency was corrected by:",opts:["Drug therapy","Gene therapy","Stem cell transplant","Bone marrow transplant"],ans:1,ch:"ch12"},
+  {q:"Logistic growth in a population follows:",opts:["J-shaped curve","S-shaped curve","Bell curve","Linear curve"],ans:1,ch:"ch13"},
+  {q:"Interspecific competition leading to exclusion of one species is:",opts:["Gause's competitive exclusion principle","Hardy-Weinberg principle","10% law","Liebig's law"],ans:0,ch:"ch13"},
+  {q:"Pyramid of energy is always:",opts:["Inverted","Upright","Spindle-shaped","Variable"],ans:1,ch:"ch14"},
+  {q:"Lindeman's 10% law is related to:",opts:["Nutrient cycling","Energy transfer efficiency","Species diversity","Primary productivity"],ans:1,ch:"ch14"},
+  {q:"Biodiversity hotspots are areas with:",opts:["Maximum species richness","High endemism and high threat","Minimum pollution","Maximum forest cover"],ans:1,ch:"ch15"},
+  {q:"Which is an ex-situ conservation method?",opts:["National Park","Wildlife Sanctuary","Seed Bank","Biosphere Reserve"],ans:2,ch:"ch15"},
+  {q:"Ozone layer is depleted by:",opts:["Carbon dioxide","Methane","CFCs","Sulphur dioxide"],ans:2,ch:"ch16"},
+  {q:"Biomagnification is the accumulation of:",opts:["Nutrients in food chain","Biodegradable pollutants","Non-biodegradable toxins through food chain","CO₂ in atmosphere"],ans:2,ch:"ch16"}
+];
+
+let simQ=[],simIdx=0,simScore=0,simAnswered=[],simTimer=null,simTimeLeft=2100;
+function startSim(){const shuffled=[...SIM_BANK].sort(()=>Math.random()-.5);simQ=shuffled.slice(0,35);simIdx=0;simScore=0;simAnswered=new Array(35).fill(null);simTimeLeft=2100;document.getElementById('sim-start-screen').style.display='none';document.getElementById('sim-result').style.display='none';document.getElementById('sim-quiz').style.display='block';renderSimQ();clearInterval(simTimer);simTimer=setInterval(tickTimer,1000);awardXP(5,'Simulator started');}
+function renderSimQ(){const q=simQ[simIdx];document.getElementById('sim-qnum').textContent=`Q ${simIdx+1}/35`;document.getElementById('sim-score-live').textContent=`Score: ${simScore}`;document.getElementById('sim-q-text').textContent=q.q;const optsEl=document.getElementById('sim-opts');optsEl.innerHTML='';q.opts.forEach((opt,i)=>{const btn=document.createElement('button');btn.className='sim-opt';btn.textContent=opt;btn.onclick=()=>answerSim(i,btn,q);optsEl.appendChild(btn);});document.getElementById('sim-next-btn').style.display='none';updateLiveDonut();}
+function answerSim(chosen,btn,q){document.querySelectorAll('.sim-opt').forEach(b=>b.disabled=true);const correct=chosen===q.ans;if(correct){simScore++;btn.classList.add('sim-correct');}else{btn.classList.add('sim-wrong');document.querySelectorAll('.sim-opt')[q.ans].classList.add('sim-correct');}simAnswered[simIdx]=chosen;updateLiveDonut();document.getElementById('sim-next-btn').style.display='inline-flex';document.getElementById('sim-score-live').textContent=`Score: ${simScore}`;}
+function updateLiveDonut(){const total=35;const correct=simAnswered.filter((a,i)=>a!==null&&a===simQ[i].ans).length;const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;const answered=simAnswered.filter(a=>a!==null).length;const circ=2*Math.PI*50;const cDash=circ*(correct/total);const wDash=circ*(wrong/total);const dc=document.getElementById('sldc');const dw=document.getElementById('sldw');if(dc)dc.setAttribute('stroke-dasharray',`${cDash} ${circ-cDash}`);if(dw){dw.setAttribute('stroke-dasharray',`${wDash} ${circ-wDash}`);dw.style.transform=`rotate(${-90+(correct/total)*360}deg)`;dw.style.transformOrigin='60px 60px';}const pct=answered>0?Math.round((correct/answered)*100):0;const pctEl=document.getElementById('sld-pct');const fracEl=document.getElementById('sld-frac');if(pctEl)pctEl.textContent=pct+'%';if(fracEl)fracEl.textContent=`${answered}/35`;}
+function nextSimQ(){simIdx++;if(simIdx>=35){endSim();return;}renderSimQ();}
+function tickTimer(){simTimeLeft--;const m=Math.floor(simTimeLeft/60);const s=simTimeLeft%60;const el=document.getElementById('sim-timer');if(el)el.textContent=`${m}:${s.toString().padStart(2,'0')}`;if(simTimeLeft<=0){clearInterval(simTimer);endSim();}}
+function endSim(){clearInterval(simTimer);document.getElementById('sim-quiz').style.display='none';document.getElementById('sim-result').style.display='block';const correct=simAnswered.filter((a,i)=>a!==null&&a===simQ[i].ans).length;const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;const skipped=simAnswered.filter(a=>a===null).length;const pct=Math.round((correct/35)*100);state.simCount=(state.simCount||0)+1;if(correct>=(state.simBest||0))state.simBest=correct;awardXP(10+correct,'Mock completed');const circ=2*Math.PI*80;const cDash=circ*(correct/35);const wDash=circ*(wrong/35);const arc=document.getElementById('res-arc-c');const arcW=document.getElementById('res-arc-w');if(arc)arc.setAttribute('stroke-dasharray',`${cDash} ${circ-cDash}`);if(arcW){arcW.setAttribute('stroke-dasharray',`${wDash} ${circ-wDash}`);arcW.style.transform=`rotate(${-90+(correct/35)*360}deg)`;arcW.style.transformOrigin='100px 100px';}const pctEl=document.getElementById('res-pct');const scoreEl=document.getElementById('res-score');if(pctEl)pctEl.textContent=pct+'%';if(scoreEl)scoreEl.textContent=`${correct}/35`;const stats=document.getElementById('result-stats');if(stats)stats.innerHTML=`<div class="rstat"><div class="rstat-n" style="color:var(--mint)">${correct}</div><div class="rstat-l">Correct</div></div><div class="rstat"><div class="rstat-n" style="color:var(--coral)">${wrong}</div><div class="rstat-l">Wrong</div></div><div class="rstat"><div class="rstat-n">${skipped}</div><div class="rstat-l">Skipped</div></div><div class="rstat"><div class="rstat-n">${pct}%</div><div class="rstat-l">Score</div></div>`;const chGroups={'Reproduction':['ch1','ch2','ch3','ch4'],'Genetics':['ch5','ch6','ch7'],'Health & Food':['ch8','ch9','ch10'],'Biotechnology':['ch11','ch12'],'Ecology':['ch13','ch14','ch15','ch16']};const barEl=document.getElementById('result-bar-chart');if(barEl){barEl.innerHTML='';Object.entries(chGroups).forEach(([grp,chs])=>{const total=simQ.filter(q=>chs.includes(q.ch)).length;const got=simQ.map((q,i)=>({q,i})).filter(({q,i})=>chs.includes(q.ch)&&simAnswered[i]===q.ans).length;const pctG=total>0?Math.round((got/total)*100):0;barEl.innerHTML+=`<div class="bar-row"><div class="bar-label">${grp}</div><div class="bar-track"><div class="bar-fill" style="width:${pctG}%;background:var(--subj2)"></div></div><div class="bar-pct">${pctG}%</div></div>`;});}const strip=document.getElementById('sim-strip');if(strip){strip.innerHTML='';simAnswered.forEach((a,i)=>{const span=document.createElement('span');span.className='sim-strip-dot'+(a===null?' s':a===simQ[i].ans?' c':' w');span.textContent=i+1;span.title=simQ[i].q.substring(0,60);strip.appendChild(span);});}checkBadges();saveState();}
+function restartSim(){document.getElementById('sim-result').style.display='none';document.getElementById('sim-start-screen').style.display='block';}
+function renderDash(){const el=document.getElementById('dash-content');if(!el)return;const badges=(state.badges||[]);const chDone=Object.keys(state.chapProgress||{}).length;el.innerHTML=`<div class="dash-grid"><div class="dash-card"><div class="dash-num">${state.xp||0}</div><div class="dash-lbl">Total XP</div></div><div class="dash-card"><div class="dash-num">${state.streak||0}</div><div class="dash-lbl">Day Streak 🔥</div></div><div class="dash-card"><div class="dash-num">${chDone}/16</div><div class="dash-lbl">Chapters Opened</div></div><div class="dash-card"><div class="dash-num">${state.simCount||0}</div><div class="dash-lbl">Mocks Taken</div></div><div class="dash-card"><div class="dash-num">${state.simBest||0}/35</div><div class="dash-lbl">Best Score</div></div><div class="dash-card"><div class="dash-num">${badges.length}</div><div class="dash-lbl">Badges 🏆</div></div></div>${badges.length?`<div style="margin-top:18px"><h4>Badges Earned</h4><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">${badges.map(b=>`<span style="background:var(--gold);color:#000;padding:6px 14px;border-radius:20px;font-size:.82rem;font-weight:700">🏅 ${b}</span>`).join('')}</div></div>`:'<p style="color:var(--text-muted);margin-top:16px">Complete chapters and mocks to earn badges!</p>'}`;}
+window.addEventListener('DOMContentLoaded',()=>{loadState();updateXPBar();go('home');checkStreak();saveState();});
+</script>
+
+<!-- ══ ADSENSE BOTTOM LEADERBOARD ══ Highest RPM slot ══ -->
+<div style="padding:16px;text-align:center;border-top:1px solid #dde3ee;background:#f4f6fb;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE BOTTOM ══ -->
+
+</div>
+<div class="side-panel panel-right">
+  <div class="side-panel-inner">
+    <!-- ADSENSE SKYSCRAPER — goes live after approval -->
+    <div class="adsense-sky">
+      <div class="panel-label">Advertisement</div>
+      <div id="ad-right-1"></div>
+<div id="ad-right-2"></div>
+<div id="ad-right-3"></div>
+<!-- AdSense skyscraper -->
+<ins class="adsbygoogle"
+     style="display:block;width:160px;height:600px;"
+     data-ad-client="ca-pub-PENDING"
+     data-ad-slot="SLOT-SKY-PENDING"
+     data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<!-- end AdSense sky -->
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ AD: BOTTOM LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0;">
+  <div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: BOTTOM LEADERBOARD ══ -->
+<!-- AdSense bottom leaderboard -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:728px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-BOTTOM-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});
+// Mobile nav back button
+(function(){
+  const hist=[];
+  window.mobileGoBack=function(){
+    if(hist.length>1){hist.pop();var prev=hist[hist.length-1];_navToM(prev,false);}
+    else{_navToM('home',false);}
+  };
+  function _navToM(k,push){
+    if(push===undefined||push)hist.push(k);
+    var titleEl=document.getElementById('mobileNavTitle');
+    if(titleEl){
+      var btn=document.querySelector('.main-tab.active,.topnav-tab.active');
+      titleEl.textContent=btn?btn.textContent.trim():(k==='home'?'Home':k.toUpperCase());
+    }
+    if(typeof go==='function')go(k);
+    else if(typeof showMainSection==='function')showMainSection(k);
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    hist.push('home');
+    document.querySelectorAll('[onclick]').forEach(function(el){
+      var oc=el.getAttribute('onclick')||'';
+      var m=oc.match(/(?:go|showMainSection)\(['"](\w+)['"]/);
+      if(m){el.addEventListener('click',function(){
+        hist.push(m[1]);
+        var t=document.getElementById('mobileNavTitle');
+        if(t)t.textContent=el.textContent.trim().substring(0,24);
+      });}
+    });
+  });
+})();
+
+</script>
+</div>
+<!-- end AdSense bottom -->
+
+<script src="../portal-shell.js"></script>
+</body>
+</html>

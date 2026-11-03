@@ -1,0 +1,105 @@
+{
+  "session": "2026–27",
+  "release": "QUEST-RELEASE-2026-11-COMBINED",
+  "month": "November 2026",
+  "quests": [
+    {
+      "id": "quest-release-2026-11-hindi-a-9-group-910",
+      "class_group": "9-10",
+      "subject": "Hindi Course A (002)",
+      "month": "November 2026",
+      "manifest": "questions/hindi-a-9-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-maths-standard-9-group-910",
+      "class_group": "9-10",
+      "subject": "Mathematics Standard (041)",
+      "month": "November 2026",
+      "manifest": "questions/maths-standard-9-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-social-science-9-group-910",
+      "class_group": "9-10",
+      "subject": "Social Science (087)",
+      "month": "November 2026",
+      "manifest": "questions/social-science-9-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-science-9-group-910",
+      "class_group": "9-10",
+      "subject": "Science (086)",
+      "month": "November 2026",
+      "manifest": "questions/science-9-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-maths-basic-10-group-910",
+      "class_group": "9-10",
+      "subject": "Mathematics Basic (241)",
+      "month": "November 2026",
+      "manifest": "questions/maths-basic-10-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-english-communicative-10-group-910",
+      "class_group": "9-10",
+      "subject": "English Communicative (101)",
+      "month": "November 2026",
+      "manifest": "questions/english-communicative-10-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-computer-applications-10-group-910",
+      "class_group": "9-10",
+      "subject": "Computer Applications (165)",
+      "month": "November 2026",
+      "manifest": "questions/computer-applications-10-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-english-9-group-910",
+      "class_group": "9-10",
+      "subject": "English Language & Literature (184)",
+      "month": "November 2026",
+      "manifest": "questions/english-9-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-ct-ai-9-group-910",
+      "class_group": "9-10",
+      "subject": "Computational Thinking & AI (CT & AI)",
+      "month": "November 2026",
+      "manifest": "questions/ct-ai-9-group-910-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-physics-group-1112",
+      "class_group": "11-12",
+      "subject": "Physics (042)",
+      "month": "November 2026",
+      "manifest": "questions/physics-group-1112-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-chemistry-group-1112",
+      "class_group": "11-12",
+      "subject": "Chemistry (043)",
+      "month": "November 2026",
+      "manifest": "questions/chemistry-group-1112-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-biology-group-1112",
+      "class_group": "11-12",
+      "subject": "Biology (044)",
+      "month": "November 2026",
+      "manifest": "questions/biology-group-1112-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-mathematics-group-1112",
+      "class_group": "11-12",
+      "subject": "Mathematics (041)",
+      "month": "November 2026",
+      "manifest": "questions/mathematics-group-1112-november-2026-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-11-computer-science-group-1112",
+      "class_group": "11-12",
+      "subject": "Computer Science (083)",
+      "month": "November 2026",
+      "manifest": "questions/computer-science-group-1112-november-2026-manifest.json"
+    }
+  ]
+}

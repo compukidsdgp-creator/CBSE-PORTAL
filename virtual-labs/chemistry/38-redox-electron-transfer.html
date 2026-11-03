@@ -1,0 +1,510 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="generator" content="CBSEMOCK Chemistry Labs V2 - Colourful Drag and Drop"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Track oxidation and reduction through electron transfer."><title>CBSEMOCK | Lab 38 Redox: Electron Transfer</title><style>*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0%,#e7f7ff,#f4f7ff 42%,#fff2f8);font:15px/1.5 Inter,system-ui,Arial;color:#18233c}header{background:linear-gradient(100deg,#101a36,#263d70);color:white;position:sticky;top:0;z-index:5;box-shadow:0 5px 20px #18234c30}.nav{max-width:1450px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{font-size:22px;font-weight:950}.logo span{color:#42e3d0}.nav a{color:#c4fff6;text-decoration:none;font-weight:800}main{max-width:1450px;margin:auto;padding:20px}.hero{border-radius:25px;padding:28px;color:white;background:linear-gradient(115deg,#6244d7,#2679d8 52%,#12bda8);box-shadow:0 16px 36px #536acb35;position:relative;overflow:hidden}.hero:after{content:"LAB";position:absolute;right:22px;bottom:-26px;font-size:110px;font-weight:1000;opacity:.12}.kicker{font-size:11px;letter-spacing:2px;font-weight:900;color:#d5fff8}.hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:8px 0}.hero p{max-width:820px;margin:0;color:#eff6ff}.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.pill{border:1px solid #ffffff55;background:#ffffff20;padding:5px 11px;border-radius:30px;font-size:12px;font-weight:750}.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:17px;margin-top:18px}.panel{background:#ffffffdf;border:1px solid #e1e7f4;border-radius:20px;padding:19px;box-shadow:0 8px 24px #22345a0b;margin-bottom:16px}.panel h2{font-size:18px;margin:0 0 6px}.hint{color:#69758b;font-size:13px;margin:0 0 14px}.ad{border:1px dashed #b9c5d8;border-radius:13px;min-height:62px;display:grid;place-items:center;color:#8b96a9;background:#ffffffa8;font-size:11px;margin:14px 0}.control-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.control-grid label,label{display:block;font-weight:750;font-size:13px;margin:8px 0}.control-grid input,.control-grid select,select{width:100%;margin-top:7px;padding:10px;border:1px solid #dbe3f0;border-radius:11px;background:white;font:inherit}.control-grid input[type=range],input[type=range]{accent-color:#6755e8;padding:0}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}button{border:0;border-radius:11px;padding:11px 15px;background:linear-gradient(100deg,#6c55e8,#3285e8);color:white;font-weight:850;cursor:pointer;box-shadow:0 5px 12px #5a6cd12b}button.ghost{background:#eef2fb;color:#3b4b6b;box-shadow:none;border:1px solid #dbe3f0}.workspace{min-height:300px;border-radius:19px;background:linear-gradient(145deg,#eaf1ff,#f3edff 55%,#e5fbf7);border:1px solid #dce4f4;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:20px;gap:14px;overflow:hidden}.main-emoji{font-size:85px;filter:drop-shadow(0 10px 8px #465b8433);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-9px) rotate(3deg)}}.visual-copy{text-align:center;display:grid;gap:4px}.visual-copy b{font-size:19px}.visual-copy span,.visual-copy small{color:#62718a}.result{margin-top:14px;padding:15px;border-radius:15px;background:linear-gradient(110deg,#f0edff,#e8fbfa);border:1px solid #d7dff7;min-height:86px}.result b{color:#5141b8}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.stat{background:#f6f7ff;border-radius:12px;padding:11px;text-align:center}.stat strong{font-size:18px;color:#5748c6;display:block}.stat small{font-size:10px;color:#718098}.side{position:sticky;top:80px;align-self:start}.steps{padding-left:20px;color:#53627b;font-size:13px}.steps li{margin:7px 0}.quizopt{display:block;border:1px solid #e1e7f4;border-radius:11px;padding:10px;margin:7px 0;cursor:pointer;font-size:13px}.quizopt:hover{background:#f3f5ff}.progress{height:8px;background:#e9edf6;border-radius:10px;overflow:hidden;margin-top:10px}.progress div{height:100%;width:0;background:linear-gradient(90deg,#ff6da9,#7a62ef,#19c9ad);transition:.3s}table{width:100%;border-collapse:collapse;font-size:12px}td,th{padding:8px;border-bottom:1px solid #e8edf5;text-align:left}th{background:#f5f7fc;color:#596780}.well-row{display:flex;align-items:center;gap:24px}.testtube{width:70px;height:150px;border:4px solid #92a9c4;border-top:0;border-radius:0 0 22px 22px;position:relative;background:#ffffff80;overflow:hidden}.liquid{position:absolute;bottom:0;left:0;right:0;height:65%;background:#e85a58;transition:.4s}.ph-gradient{height:24px;width:min(650px,90%);border-radius:25px;background:linear-gradient(90deg,#e53935,#ff9800,#ffeb3b,#4caf50,#03a9f4,#3f51b5,#7b1fa2)}.ph-number{font-size:76px;font-weight:1000;color:#169b71}.titration-scene{height:175px;display:flex;align-items:end;gap:80px}.burette{height:155px;width:24px;border:3px solid #9db0c7;border-radius:8px 8px 3px 3px;position:relative;background:linear-gradient(to top,#67b9e8 55%,#ffffff80 55%)}.tap{position:absolute;bottom:-10px;left:-12px;width:45px;height:7px;background:#8498b4}.flask{width:125px;height:105px;border:4px solid #91a8c3;border-top:0;border-radius:8px 8px 48px 48px;position:relative;overflow:hidden;background:#ffffff88}.flask-liquid{position:absolute;bottom:0;height:45%;width:100%;background:#f3a1b9;transition:.3s}.chart{width:100%;max-width:720px}.chart canvas{width:100%;height:auto}.electro-scene{height:205px;width:100%;display:grid;place-items:center}.beaker{width:230px;height:150px;border:4px solid #8ea6c2;border-top:0;border-radius:0 0 28px 28px;position:relative;background:linear-gradient(to top,#70cce5aa 65%,transparent 65%)}.electrode{position:absolute;top:5px;width:9px;height:115px;background:#58677c}.left{left:55px}.right{right:55px}.gas{position:absolute;bottom:52px;width:42px;border-radius:30px 30px 8px 8px;background:radial-gradient(circle,#fff 15%,#9ce5ff 65%,#42a6df);transition:height .4s;height:0}.leftgas{left:39px}.rightgas{right:39px}.wire{text-align:center;color:#50627e;font-size:12px;font-weight:900;margin-top:5px}.ratio{display:flex;gap:25px;align-items:center;justify-content:center;flex-wrap:wrap}.ratio span{background:#fff;padding:10px 17px;border-radius:12px}.chrom-paper{height:190px;width:115px;background:#fff;border:1px solid #cbd5e1;position:relative;box-shadow:0 5px 15px #34445b20}.baseline{position:absolute;bottom:18px;width:100%;border-top:2px dashed #64748b}.solvent-front{position:absolute;bottom:80px;border-top:2px dashed #20a6c7;width:100%}.spot{position:absolute;bottom:90px;left:42px;width:30px;height:13px;background:#8b5cf6;border-radius:50%;box-shadow:0 -15px 0 #f59e0b,0 -35px 0 #14b8a6;transition:bottom .3s}.flame-scene{text-align:center}.flame-shape{font-size:100px;transition:color .3s;filter:drop-shadow(0 8px 12px #ed9a4a55)}.atom-scene{width:220px;height:190px;position:relative;display:grid;place-items:center}.nucleus{z-index:2;background:#f59e0b;color:#fff;border-radius:50%;padding:17px;font-weight:900;box-shadow:0 0 0 8px #fbbf2433}.orbit{position:absolute;border:2px solid #7c8ed0aa;border-radius:50%;width:110px;height:65px}.o2{transform:rotate(60deg)}.o3{transform:rotate(-60deg)}.electrons{position:absolute;top:3px;color:#3859d6;font-size:20px;letter-spacing:9px}.micelle{width:170px;height:170px;border-radius:50%;background:repeating-conic-gradient(#24b7b0 0deg 10deg,#c9f3ee 10deg 20deg);display:grid;place-items:center;box-shadow:0 8px 25px #236a7130}.oil{background:#f6a43a;color:white;border-radius:50%;padding:26px;font-weight:900}.side .ad{min-height:110px}footer{text-align:center;color:#8791a4;font-size:12px;padding:24px}@media(max-width:960px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:600px){main{padding:12px}.hero{padding:20px}.nav{padding:10px}.nav .sub{display:none}.control-grid{grid-template-columns:1fr}.statgrid{grid-template-columns:1fr 1fr}.well-row{gap:12px}}@media print{header,.ad,button,.side{display:none!important}body{background:white}.layout{display:block}}
+/* Colour-rich CBSEMOCK V2 visual layer */
+:root{--ink:#18233c;--violet:#7048e8;--cyan:#13b8c8;--pink:#f05aa6;--lime:#9bd94b;--orange:#ff9b42}
+body{background:radial-gradient(circle at 5% 3%,#dff8ff 0,transparent 26%),radial-gradient(circle at 95% 8%,#ffe4f2 0,transparent 27%),linear-gradient(135deg,#f4f0ff,#eafaff 48%,#fff5e8)!important}
+header{background:linear-gradient(105deg,#101a36,#45318c 55%,#087e91)!important}
+.hero{background:linear-gradient(115deg,#5c35d5 0%,#287fe8 42%,#10b9a6 72%,#a5d93d 120%)!important;box-shadow:0 18px 45px #5e4bd344!important}
+.panel{border-color:#d9dff5!important;box-shadow:0 10px 28px #403d8220,0 2px 5px #ffffff inset!important}
+.panel h2{color:#302b70}
+.workspace{background:radial-gradient(circle at 20% 20%,#fff 0,#e6f7ff 35%,#f0eaff 70%,#e3fff4 100%)!important;border:1px solid #cbd9ff!important}
+button{background:linear-gradient(105deg,#7347e8,#3986f4 58%,#12b8ae)!important}
+button.ghost{background:#f1efff!important;color:#4c4387!important}
+.result{background:linear-gradient(110deg,#fce8f3,#eeeaff 48%,#e1fbf5)!important;border-color:#ded2fa!important}
+.stat{background:linear-gradient(145deg,#f2efff,#e6fbff)!important}
+.ad{background:linear-gradient(90deg,#fff8e9,#fff0f8,#effaff)!important}
+.dd-wrap{border:1px solid #d9d4ff;border-radius:20px;padding:18px;background:linear-gradient(125deg,#fff1f7,#f1edff 45%,#e6fbff);margin:16px 0;box-shadow:0 10px 28px #5946a51c}
+.dd-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.dd-head h2{margin:0;color:#432a9c;font-size:19px}
+.dd-tag{background:linear-gradient(90deg,#ffdbef,#e5e0ff,#d8fbf2);color:#49349d;padding:6px 11px;border-radius:30px;font-size:11px;font-weight:900}
+.dd-instruction{color:#59647c;font-size:13px;margin:8px 0 14px}
+.dd-board{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dd-bank,.dd-targets{background:#ffffffb8;border:1px solid #e2e2f4;border-radius:15px;padding:12px;min-height:150px}
+.dd-bank h3,.dd-targets h3{margin:0 0 10px;font-size:13px;color:#5d4bb0}
+.dd-items{display:flex;flex-wrap:wrap;gap:9px}
+.dd-item{background:linear-gradient(120deg,#fff,#f2edff);border:1px solid #cfc4ff;color:#40318e;border-radius:12px;padding:10px 12px;font-weight:850;font-size:12px;cursor:grab;box-shadow:0 4px 9px #5644a21c;user-select:none;touch-action:manipulation}
+.dd-item:active{cursor:grabbing;transform:scale(.98)}
+.dd-item.selected{outline:3px solid #ff9b42;background:#fff2dc}
+.dd-item.done{opacity:.45;cursor:default;text-decoration:line-through}
+.dd-slot{border:2px dashed #b8b6df;border-radius:12px;padding:11px;margin:8px 0;background:#fafaff;min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:#4f5870;transition:.2s}
+.dd-slot strong{color:#4b379f}
+.dd-slot.over{background:#e5fbf5;border-color:#11b99e;transform:scale(1.01)}
+.dd-slot.correct{background:#e6fbef;border:1px solid #69c88b;color:#17663d}
+.dd-slot.wrong{animation:ddshake .25s;background:#fff0ef;border-color:#ef7777}
+@keyframes ddshake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.dd-feedback{padding:10px 12px;border-radius:12px;background:#fff;border:1px solid #e4e2f5;margin-top:11px;font-size:13px;color:#4d5570;min-height:42px}
+.dd-progress{height:9px;background:#e4e6f3;border-radius:20px;overflow:hidden;margin-top:10px}
+.dd-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff6cac,#7a58ec,#16c6b1);transition:.3s}
+.dd-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.dd-actions button{padding:9px 12px;font-size:12px}
+@media(max-width:700px){.dd-board{grid-template-columns:1fr}.dd-wrap{padding:13px}.dd-bank,.dd-targets{min-height:unset}}
+</style><style id='cbsemock-v8-locked-css'>
+:root{--bg:#08131f;--panel:#102235;--panel2:#142b40;--line:#29465d;--text:#eaf4fb;--muted:#9eb4c7;--cyan:#46d7df;--green:#6ee0ae;--amber:#f4c36b;--red:#ff8585;--purple:#b6a1ff;--shadow:0 18px 48px #0005}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 0%,#17354a 0,#08131f 40%,#07111b 100%);color:var(--text);font:14px/1.45 Inter,system-ui,Segoe UI,Arial,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+.top{position:sticky;top:0;z-index:20;background:#08131feF;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+.topin{max-width:1500px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}.logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#1cb9c4,#6255c8);display:grid;place-items:center;font-size:21px;box-shadow:0 7px 24px #1cb9c455}
+.brand b{display:block;font-size:15px;letter-spacing:.3px}.brand small{color:var(--muted);font-size:11px}
+.status{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#102438;border-radius:30px;padding:7px 11px;font-size:11px;color:#c9dbe8}.chip strong{color:var(--green)}
+.shell{max-width:1500px;margin:auto;padding:20px}
+.hero{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin:10px 0 18px;flex-wrap:wrap}
+.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+h1{font-size:clamp(25px,3vw,39px);line-height:1.1;margin:6px 0 8px;letter-spacing:-1px}
+.sub{color:var(--muted);max-width:760px;margin:0}
+.heroactions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border:1px solid #41627b;background:#1b354b;color:var(--text);padding:9px 13px;border-radius:9px;font-weight:700;font-size:12px;transition:.15s}
+.btn:hover{filter:brightness(1.18);transform:translateY(-1px)}.btn.primary{background:linear-gradient(120deg,#087f88,#176b91);border-color:#1b9eaa}.btn.good{background:#164333;border-color:#347c60}.btn.warn{background:#4c3520;border-color:#8d6939}.btn.ghost{background:transparent}
+.layout{display:grid;grid-template-columns:285px minmax(420px,1fr) 310px;gap:14px;align-items:start}
+.panel{background:linear-gradient(160deg,#132a3e,#0e1e2d);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);overflow:hidden}
+.ph{padding:14px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ph h2{font-size:13px;margin:0;letter-spacing:.2px}.ph small{color:var(--muted);font-size:10px}
+.pb{padding:14px}
+.sectionlabel{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#80a6bd;font-weight:800;margin:3px 0 9px}
+.chemical{display:flex;align-items:center;gap:9px;padding:9px;border:1px solid #29475e;background:#102438;border-radius:10px;margin:7px 0;cursor:pointer;transition:.15s}
+.chemical:hover,.chemical.active{border-color:var(--cyan);background:#12374a}.swatch{width:30px;height:34px;border-radius:8px;border:1px solid #ffffff35;flex:none;position:relative;overflow:hidden}
+.swatch:after{content:"";position:absolute;inset:40% 0 0;background:#ffffff20}
+.chemical b{display:block;font-size:11px}.chemical small{color:var(--muted);font-size:10px}
+.chemical .tag{margin-left:auto;font-size:9px;color:#b9d0df;border:1px solid #34536a;border-radius:20px;padding:3px 6px}
+.control{margin:12px 0}.control label{display:flex;justify-content:space-between;color:#c9dbe8;font-size:11px;margin-bottom:6px}.control output{color:var(--cyan);font-weight:800}
+input[type=range]{width:100%;accent-color:#38cbd3}
+.field{width:100%;background:#091a29;color:var(--text);border:1px solid #3a5b73;border-radius:8px;padding:9px}
+.muted{color:var(--muted);font-size:11px}
+.bench{min-height:620px}
+.tabs{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);overflow:auto}
+.tab{white-space:nowrap;border:1px solid transparent;background:transparent;color:#a9bfd0;padding:8px 11px;border-radius:8px;font-size:11px;font-weight:800}
+.tab.active{background:#12404c;border-color:#267c87;color:#e9ffff}
+.view{display:none;padding:15px}.view.active{display:block}
+.scene{min-height:330px;border:1px solid #294960;border-radius:13px;background:radial-gradient(ellipse at 50% 85%,#183b4d 0,#0a1a29 60%);position:relative;overflow:hidden;padding:18px}
+.scenehead{display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative;z-index:1}
+.scenehead b{font-size:12px}.scenehead span{font-size:10px;color:var(--muted)}
+.labbench{height:245px;display:flex;align-items:flex-end;justify-content:center;gap:clamp(10px,3vw,35px);padding:22px 10px 12px;position:relative}
+.labbench:after{content:"";position:absolute;left:3%;right:3%;bottom:11px;height:12px;border-radius:50%;background:linear-gradient(90deg,#234257,#557184,#203d52);box-shadow:0 12px 25px #0008}
+.vesselWrap{position:relative;z-index:1;text-align:center;min-width:80px}
+.vessel{width:76px;height:128px;margin:auto;position:relative;border:2px solid #9bb6c7aa;border-top:0;border-radius:5px 5px 18px 18px;background:linear-gradient(90deg,#ffffff08,#ffffff22,#ffffff08);overflow:hidden;box-shadow:inset 0 0 12px #ffffff10}
+.vessel.beaker{border-radius:2px 2px 10px 10px;width:90px;height:112px}
+.liquid{position:absolute;left:2px;right:2px;bottom:2px;height:55%;border-radius:0 0 12px 12px;background:#b0e5ef;transition:background .5s,height .3s;opacity:.9}
+.vessel:before{content:"";position:absolute;left:8px;top:0;width:55px;border-top:2px solid #c6dce8aa}
+.vessel .graduation{position:absolute;right:5px;top:24px;width:13px;height:50px;border-top:1px solid #ffffff80;border-bottom:1px solid #ffffff80;background:repeating-linear-gradient(to bottom,transparent 0 9px,#ffffff75 10px 11px)}
+.vessellabel{font-size:10px;color:#bfd0de;margin-top:8px}
+.dropzone{border:1px dashed #45677e;border-radius:10px;padding:9px 10px;color:#b4c9d8;font-size:10px;text-align:center;margin:8px auto 0;max-width:140px;min-height:35px}
+.dropzone.over{border-color:var(--cyan);background:#16404a}
+.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.metric{background:#0a1b2a;border:1px solid #29485f;border-radius:10px;padding:10px}
+.metric small{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.8px}.metric b{display:block;font-size:19px;margin-top:3px}.metric em{font-size:10px;color:var(--muted);font-style:normal}
+.phscale{margin-top:14px;padding:12px;background:#0a1a29;border:1px solid #29475d;border-radius:11px}
+.scale{height:15px;border-radius:20px;background:linear-gradient(90deg,#e64c48 0%,#f18b47 15%,#f4d65a 32%,#8cce79 50%,#4eb9a9 65%,#4e86d8 82%,#8b5dc2 100%);position:relative;margin:13px 2px 7px}
+.marker{position:absolute;top:-6px;width:4px;height:27px;background:white;border:1px solid #07131d;left:50%;transition:left .35s}
+.scaleNums{display:flex;justify-content:space-between;font-size:9px;color:#a9bdcc}
+.legend{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}
+.infoCard{padding:11px;border:1px solid #29485f;background:#0b1c2b;border-radius:10px;margin:8px 0}
+.infoCard b{font-size:11px}.infoCard p{font-size:10px;color:var(--muted);margin:5px 0 0;line-height:1.55}
+.indicators{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:8px}
+.ind{background:#0a1b2a;border:1px solid #2b4a61;border-radius:9px;padding:8px;text-align:center}
+.ind .dot{height:28px;width:28px;border-radius:50%;margin:0 auto 6px;border:1px solid #ffffff55;background:#ddd}
+.ind b{font-size:10px;display:block}.ind small{font-size:9px;color:var(--muted)}
+.dataTable{width:100%;border-collapse:collapse;font-size:10px}.dataTable th,.dataTable td{padding:8px;border-bottom:1px solid #29445b;text-align:left}.dataTable th{color:#9eb8ca;font-weight:700}
+.chart{width:100%;height:auto;background:#091a29;border:1px solid #29465d;border-radius:10px}
+.quizopt{display:block;width:100%;text-align:left;padding:10px;border:1px solid #35546b;border-radius:9px;background:#11283c;color:#dcebf5;margin:7px 0;font-size:11px}.quizopt.selected{border-color:var(--cyan);background:#12404a}.quizopt.correct{border-color:var(--green);background:#123a2d}.quizopt.wrong{border-color:var(--red);background:#40252a}
+.rightMetric{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid #274257;font-size:11px}.rightMetric span{color:var(--muted)}.rightMetric b{color:#e8f4fb}
+.progress{height:7px;background:#071521;border-radius:20px;overflow:hidden;margin:8px 0}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#27bac7,#69e0a7)}
+.safety{border:1px solid #805e34;background:#352a1c;border-radius:10px;padding:10px;color:#f7dcae;font-size:10px;line-height:1.5;margin-top:12px}
+footer{max-width:1500px;margin:15px auto 30px;padding:0 20px;color:#7892a7;font-size:10px}
+@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)}.rightcol{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rightcol .panel{height:100%}}
+@media(max-width:760px){.shell{padding:12px}.layout{grid-template-columns:1fr}.rightcol{grid-column:auto;display:block}.topin{padding:10px 12px}.hero{align-items:flex-start}.bench{min-height:0}.scene{padding:12px}.labbench{gap:8px}.vessel{transform:scale(.85);transform-origin:bottom center}.readout{grid-template-columns:repeat(3,1fr)}}
+
+
+/* V8: locked Acid–Base Research Studio environment */
+body{background:radial-gradient(circle at 12% 0%,#17354a 0,#08131f 40%,#07111b 100%)!important;color:#eaf4fb!important;font:14px/1.45 Inter,system-ui,Segoe UI,Arial,sans-serif!important}
+header{position:sticky!important;top:0!important;z-index:20!important;background:#08131feF!important;border-bottom:1px solid #29465d!important;backdrop-filter:blur(16px)!important;box-shadow:none!important}
+.v8topin{max-width:1500px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:16px;justify-content:space-between}
+.v8brand{display:flex;align-items:center;gap:11px}.v8logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#1cb9c4,#6255c8);display:grid;place-items:center;font-size:21px;box-shadow:0 7px 24px #1cb9c455}
+.v8brand b{display:block;font-size:15px;letter-spacing:.3px}.v8brand small{color:#9eb4c7;font-size:11px}
+.v8status{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.v8chip{border:1px solid #29465d;background:#102438;border-radius:30px;padding:7px 11px;font-size:11px;color:#c9dbe8}
+main{max-width:1500px!important;margin:auto!important;padding:20px!important}
+.hero{border-radius:15px!important;padding:21px 23px!important;color:#eaf4fb!important;background:linear-gradient(145deg,#132a3e,#0e1e2d)!important;border:1px solid #29465d!important;box-shadow:0 18px 48px #0005!important;position:relative!important;overflow:hidden!important}
+.hero:after{display:none!important}
+.kicker{font-size:11px!important;letter-spacing:1.5px!important;font-weight:800!important;color:#46d7df!important}
+.hero h1{font-size:clamp(25px,3vw,39px)!important;line-height:1.1!important;margin:6px 0 8px!important;color:#eaf4fb!important}
+.hero p{max-width:820px!important;margin:0!important;color:#9eb4c7!important}
+.pills{display:flex!important;gap:8px!important;flex-wrap:wrap!important;margin-top:15px!important}
+.pill{border:1px solid #29465d!important;background:#102438!important;padding:5px 11px!important;border-radius:30px!important;font-size:12px!important;font-weight:750!important;color:#c9dbe8!important}
+.layout{display:grid!important;grid-template-columns:285px minmax(420px,1fr) 310px!important;gap:14px!important;align-items:start!important;margin-top:14px!important}
+.panel{background:linear-gradient(160deg,#132a3e,#0e1e2d)!important;border:1px solid #29465d!important;border-radius:15px!important;padding:14px!important;box-shadow:0 18px 48px #0003!important;margin-bottom:12px!important;color:#eaf4fb!important}
+.panel h2{font-size:13px!important;margin:0 0 6px!important;letter-spacing:.2px!important;color:#eaf4fb!important}
+.hint,.steps,.muted{color:#9eb4c7!important}
+.control-grid input,.control-grid select,select,input[type=text],input[type=number],textarea{background:#091a29!important;color:#eaf4fb!important;border:1px solid #3a5b73!important;border-radius:8px!important}
+label{color:#c9dbe8!important}
+button{border:1px solid #1b9eaa!important;border-radius:9px!important;padding:9px 13px!important;background:linear-gradient(120deg,#087f88,#176b91)!important;color:#eaf4fb!important;font-weight:750!important;box-shadow:none!important}
+button.ghost{background:transparent!important;color:#c9dbe8!important;box-shadow:none!important;border:1px solid #41627b!important}
+.workspace{min-height:330px!important;border-radius:13px!important;background:radial-gradient(ellipse at 50% 85%,#183b4d 0,#0a1a29 60%)!important;border:1px solid #294960!important;color:#eaf4fb!important}
+.result{margin-top:0!important;padding:15px!important;border-radius:12px!important;background:linear-gradient(110deg,#102d3d,#12333b)!important;border:1px solid #267c87!important;min-height:86px!important;color:#eaf4fb!important}
+.result b{color:#46d7df!important}
+.statgrid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:9px!important;margin-top:12px!important}
+.stat{background:#0a1b2a!important;border:1px solid #29485f!important;border-radius:10px!important;padding:11px!important;text-align:center!important;color:#eaf4fb!important}
+.stat strong{font-size:18px!important;color:#6ee0ae!important;display:block!important}
+.stat small{font-size:10px!important;color:#9eb4c7!important}
+.side{position:sticky!important;top:80px!important;align-self:start!important}
+.quizopt{display:block!important;width:100%!important;text-align:left!important;border:1px solid #35546b!important;border-radius:9px!important;padding:10px!important;margin:7px 0!important;cursor:pointer!important;font-size:12px!important;background:#11283c!important;color:#dcebf5!important}
+.quizopt:hover{background:#12404a!important}
+.progress{height:8px!important;background:#071521!important;border-radius:10px!important;overflow:hidden!important;margin-top:10px!important}
+.progress div{height:100%!important;width:0;background:linear-gradient(90deg,#27bac7,#69e0a7)!important;transition:.3s!important}
+table{width:100%!important;border-collapse:collapse!important;font-size:12px!important;color:#eaf4fb!important}
+td,th{padding:8px!important;border-bottom:1px solid #29445b!important;text-align:left!important}
+th{background:#102438!important;color:#9eb8ca!important}
+/* Ad slots remain visible in their original source positions. */
+.v8center{min-width:0}
+.v8tabs{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid #29465d;overflow:auto;background:#0b1c2b;border-radius:14px 14px 0 0}
+.v8tab{white-space:nowrap;border:1px solid transparent!important;background:transparent!important;color:#a9bfd0!important;padding:8px 11px!important;border-radius:8px!important;font-size:11px!important;font-weight:800!important;box-shadow:none!important}
+.v8tab.active{background:#12404c!important;border-color:#267c87!important;color:#e9ffff!important}
+.v8pane{display:none}.v8pane.active{display:block}
+.v8center .panel{border-radius:0 0 15px 15px!important;margin-bottom:0!important}
+.v8analysis{padding:14px;border:1px solid #29465d;border-radius:12px;background:#0a1a29;margin-top:12px;color:#c9dbe8;font-size:12px;line-height:1.6}
+.v8analysis b{color:#46d7df}
+.v8reflection{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.v8reflection label{display:block;font-size:11px}
+.v8reflection textarea{width:100%;min-height:80px;padding:9px;border:1px solid #3a5b73;border-radius:8px;background:#091a29;color:#eaf4fb}
+@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)!important}.side{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:static!important}.side .panel{height:100%}}
+@media(max-width:760px){main{padding:12px!important}.layout{grid-template-columns:1fr!important}.side{grid-column:auto;display:block}.v8topin{padding:10px 12px}.workspace{min-height:250px!important}.v8reflection{grid-template-columns:1fr}}
+</style>
+<style id="cbsemock-ad-visibility-fix">
+/* CBSEMOCK AD SLOT VISIBILITY FIX */
+.ad{
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  box-sizing:border-box !important;
+  width:100% !important;
+  min-height:112px !important;
+  margin:18px 0 !important;
+  padding:18px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  border:2px dashed #46d7df !important;
+  border-radius:14px !important;
+  background:linear-gradient(120deg,#142d42,#1a354b) !important;
+  color:#eaf4fb !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+  letter-spacing:1.2px !important;
+  position:relative !important;
+  z-index:2 !important;
+}
+</style>
+
+<style id="cbsemock-master-alignment">
+/* Master-aligned structure: shared visual tokens and component geometry */
+:root{--bg:#08131f;--panel:#102235;--panel2:#142b40;--line:#29465d;--text:#eaf4fb;--muted:#9eb4c7;--cyan:#46d7df;--green:#6ee0ae}
+html,body{background:#08131f!important;color:#eaf4fb!important}
+header.top{position:sticky!important;top:0!important;z-index:50!important;background:#08131fee!important;border-bottom:1px solid #29465d!important;backdrop-filter:blur(14px)}
+.topin{max-width:1500px!important;margin:auto!important;padding:12px 22px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important}
+.brand{display:flex!important;align-items:center!important;gap:12px!important}.brand b{display:block!important;font-size:13px!important;letter-spacing:.7px!important;color:#eaf4fb!important}.brand small{display:block!important;color:#9eb4c7!important;font-size:11px!important;margin-top:3px!important}
+.logo{width:38px!important;height:38px!important;border-radius:11px!important;display:grid!important;place-items:center!important;background:#12374a!important;color:#46d7df!important;font-size:22px!important}
+.status{display:flex!important;gap:7px!important;flex-wrap:wrap!important}.chip{border:1px solid #29465d!important;background:#102235!important;color:#b8d0df!important;border-radius:999px!important;padding:6px 10px!important;font-size:10px!important;font-weight:800!important}
+.shell{max-width:1500px!important;margin:auto!important;padding:22px!important}
+.hero.master-hero{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;padding:8px 2px 18px!important;color:#eaf4fb!important}
+.hero.master-hero:after{display:none!important}.hero .eyebrow{font-size:10px!important;letter-spacing:1.7px!important;color:#46d7df!important;font-weight:900!important}.hero.master-hero h1{font-size:clamp(26px,3vw,38px)!important;color:#eaf4fb!important;margin:7px 0!important}.hero.master-hero .sub{color:#a9bfd0!important;max-width:850px!important;font-size:14px!important;line-height:1.6!important}.master-pills{display:flex!important;gap:7px!important;flex-wrap:wrap!important;margin-top:12px!important}.master-pills .pill{background:#102b3e!important;border:1px solid #29465d!important;color:#b9d5e4!important;border-radius:999px!important;font-size:10px!important;padding:5px 9px!important}
+.heroactions{display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important}.btn{border:1px solid #29465d!important;background:#123448!important;color:#eaf4fb!important;border-radius:9px!important;padding:9px 12px!important;font-size:11px!important;font-weight:800!important;cursor:pointer!important}.btn.ghost{background:#102235!important}
+.layout{display:grid!important;grid-template-columns:285px minmax(420px,1fr) 310px!important;gap:14px!important;align-items:start!important;margin-top:8px!important}
+.panel.master-panel,.panel.bench,.left-cabinet{background:#102235!important;border:1px solid #29465d!important;border-radius:14px!important;padding:0!important;box-shadow:0 12px 28px #0003!important;overflow:hidden!important;margin:0 0 14px!important;color:#eaf4fb!important}
+.ph{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;padding:13px 15px!important;border-bottom:1px solid #29465d!important;background:#122a3e!important}
+.ph h2{font-size:11px!important;letter-spacing:1px!important;color:#dcecf6!important;margin:0!important}.ph small{font-size:9px!important;letter-spacing:1px!important;color:#7fa8bd!important;font-weight:900!important}
+.pb{padding:14px!important}.hint{color:#9eb4c7!important;font-size:12px!important}
+.bench{min-height:550px!important}.tabs{display:flex!important;gap:5px!important;padding:9px 12px!important;border-bottom:1px solid #29465d!important;overflow:auto!important;background:#0d1d2c!important}
+.tab{white-space:nowrap!important;border:1px solid transparent!important;background:transparent!important;color:#9eb4c7!important;padding:8px 10px!important;border-radius:8px!important;font-size:10px!important;font-weight:900!important;cursor:pointer!important}
+.tab.active{background:#12404c!important;border-color:#267c87!important;color:#e9ffff!important}
+.view{display:none!important;padding:14px!important}.view.active{display:block!important}
+.rightcol{display:flex!important;flex-direction:column!important;gap:0!important}.rightcol .panel{margin-bottom:12px!important}
+input,select,textarea,button{font-family:inherit!important}
+input,select,textarea{background:#0b1b29!important;color:#eaf4fb!important;border:1px solid #35546a!important;border-radius:8px!important}
+.result,.infoCard{background:#0d1e2d!important;border:1px solid #29465d!important;border-radius:10px!important;color:#eaf4fb!important;padding:12px!important;margin:10px 0!important}
+.stat,.statgrid>div{background:#102b3e!important;border:1px solid #29465d!important;color:#eaf4fb!important}
+.ad{display:flex!important;visibility:visible!important;opacity:1!important;min-height:112px!important;width:100%!important;box-sizing:border-box!important;align-items:center!important;justify-content:center!important;text-align:center!important;border:2px dashed #46d7df!important;border-radius:12px!important;background:#102b3e!important;color:#9eb4c7!important;padding:18px!important;margin:14px 0!important;font-size:10px!important;font-weight:900!important;letter-spacing:1px!important}
+textarea{width:100%!important;min-height:85px!important;padding:10px!important;margin:6px 0 12px!important}
+@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)!important}.rightcol{grid-column:1/-1;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}}
+@media(max-width:760px){.shell{padding:12px!important}.layout{grid-template-columns:1fr!important}.rightcol{grid-column:auto;display:block!important}.hero.master-hero{display:block!important}.heroactions{margin-top:12px!important}.topin{padding:10px 12px!important}.bench{min-height:0!important}}
+</style>
+
+</head><body>
+<header></header>
+<main><section class="hero"><div class="kicker">VIRTUAL CHEMISTRY WORKBENCH · EXPERIMENT 38</div><h1>Redox: Electron Transfer</h1><p>Track oxidation and reduction through electron transfer.</p><div class="pills"><span class="pill">Interactive model</span><span class="pill">Live observations</span><span class="pill">Notebook & assessment</span><span class="pill">CBSE Chemistry</span></div></section>
+<div class="ad">ADVERTISEMENT · TOP LEADERBOARD SLOT</div><div class="layout"><div>
+<section class="panel"><h2>🎛️ Experiment controls</h2><p class="hint">Change the variables, run the model and compare the predicted observations. The controls are designed around this experiment's concepts.</p><div class="control-grid"><label>Experimental condition<select id="condition" onchange="runLab()"><option>Standard conditions</option><option>Change condition A</option><option>Change condition B</option></select></label><label>Progress <output id="stageV">3 / 5</output><input id="stage" type="range" min="1" max="5" value="3" oninput="runLab()"></label></div><div class="result"><b id="resultTitle">Ready to investigate</b><div id="resultDetail" class="hint" style="margin:6px 0 0">Track oxidation and reduction through electron transfer.</div></div></section>
+<div id="handsOnChallengeMount"></div><section class="panel"><h2>🔬 Live laboratory workspace</h2><p class="hint">Visual feedback changes with your experiment settings.</p><div class="workspace"><div class="main-emoji" id="mainEmoji">🧪</div><div class="visual-copy"><b id="visualTitle">Experiment ready</b><span id="visualText">Adjust a condition and run the model to see the predicted outcome.</span></div></div><div class="statgrid"><div class="stat"><strong id="statA">LIVE</strong><small>EXPERIMENT STATE</small></div><div class="stat"><strong id="statB">38</strong><small>LAB NUMBER</small></div><div class="stat"><strong id="statC">READY</strong><small>MODEL STATUS</small></div></div></section>
+<div class="ad">ADVERTISEMENT · IN-CONTENT SLOT</div>
+<section class="panel"><h2>📓 Investigation notebook</h2><p class="hint">Record trials as you explore. Export observations for your practical record.</p><div style="overflow:auto"><table><thead><tr><th>Time</th><th>Observation</th><th>Inference</th></tr></thead><tbody id="log"></tbody></table></div><div class="toolbar"><button onclick="record()">＋ Record observation</button><button class="ghost" onclick="downloadCSV()">Download CSV</button><button class="ghost" onclick="window.print()">Print report</button></div></section>
+<section class="panel"><h2>🏆 Knowledge mission</h2><p class="hint">Which statement best describes this experiment?</p><label class="quizopt"><input type="radio" name="quiz" value="A"> The observation provides evidence for the concept</label><label class="quizopt"><input type="radio" name="quiz" value="B"> The apparatus changes the element identity</label><label class="quizopt"><input type="radio" name="quiz" value="C"> The result is unrelated to variables</label><div class="toolbar"><button onclick="checkQuiz()">Check answer</button></div><p id="feedback" class="hint" aria-live="polite">Choose an answer to complete the mission.</p><div class="progress"><div id="progress"></div></div></section>
+</div><aside class="side"><section class="panel"><h2>🧠 Concept companion</h2><p class="hint">Track oxidation and reduction through electron transfer.</p><div class="result"><b>Key learning</b><div class="hint" style="margin:6px 0 0">Track oxidation and reduction through electron transfer.</div></div></section><section class="panel"><h2>🧭 Suggested procedure</h2><ol class="steps"><li>Read the aim and identify the variables.</li><li>Set one condition at a time.</li><li>Run the simulation and observe the change.</li><li>Repeat with a different condition.</li><li>Record evidence and write an inference.</li></ol></section><section class="panel"><h2>🛡️ Safety and model note</h2><p class="hint">This is a digital educational model, not a real laboratory instrument. Do not handle chemicals, flames, electricity or glassware based on this simulation. Practical work must be supervised and follow school laboratory safety rules. Some values and animations are simplified.</p></section><section class="ad">ADVERTISEMENT · SIDEBAR SLOT</section></aside></div><footer>CBSEMOCK Virtual Chemistry Labs · Premium interactive learning · Educational model only</footer></main>
+<script>const KIND="redox",LAB="38",ANSWER="A";let POWER=false;const ELEMENTS={1:"Hydrogen",2:"Helium",3:"Lithium",4:"Beryllium",5:"Boron",6:"Carbon",7:"Nitrogen",8:"Oxygen",9:"Fluorine",10:"Neon",11:"Sodium",12:"Magnesium",13:"Aluminium",14:"Silicon",15:"Phosphorus",16:"Sulfur",17:"Chlorine",18:"Argon",19:"Potassium",20:"Calcium"},TOPICNOTE="Track oxidation and reduction through electron transfer.";
+const $=id=>document.getElementById(id);
+function setText(id,t){if($(id))$(id).textContent=t}
+function setWidth(id,v){if($(id))$(id).style.width=v+"%"}
+function runLab(){
+ const kind=KIND;
+ if(kind==="acidbase"){
+  let s=$("sample").value, i=$("indicator").value;
+  let data={lemon:["Lemon juice",2.5,"acid"],vinegar:["Vinegar",3,"acid"],water:["Distilled water",7,"neutral"],soap:["Soap solution",10,"base"],baking:["Baking soda solution",8.3,"base"]}[s];
+  let [name,ph,type]=data, colour=type==="acid"?"#ed554b":type==="base"?"#4665c8":"#45ae78", obs="";
+  if(i==="universal")obs=type==="acid"?"Red-orange":type==="base"?"Blue-purple":"Green";
+  if(i==="blue")obs=type==="acid"?"Blue litmus turns red":"No change to blue litmus";
+  if(i==="red")obs=type==="base"?"Red litmus turns blue":"No change to red litmus";
+  if(i==="turmeric")obs=type==="base"?"Yellow turns reddish-brown":"Remains yellow";
+  $("liquid").style.background=colour;setText("sampleName",name);setText("colourName",obs);setText("pHread","Approximate pH model: "+ph);
+  setResult("Indicator observation: "+obs+". The sample is "+type+".","This is a representative educational model; natural samples vary in concentration.");
+ }
+ if(kind==="ph"){
+  let p=+$("ph").value;setText("phv",p.toFixed(1));setText("phNumber",p.toFixed(1));
+  let c=p<7?"Acidic":p>7?"Basic":"Neutral";setText("phClass",c);setText("phText",p<7?"Hydrogen-ion concentration is greater than in neutral water.":p>7?"Hydroxide-ion character predominates in this simplified comparison.":"At about 25°C, pure water has pH close to 7.");
+  $("phNumber").style.color=p<7?"#e34d5a":p>7?"#425bd0":"#169b71";
+  setResult("pH "+p.toFixed(1)+" is "+c.toLowerCase()+".","pH is logarithmic: a one-unit change represents a tenfold change in hydrogen-ion concentration.");
+ }
+ if(kind==="titration"){
+  let v=+$("volume").value, ca=+$("acid").value, cb=+$("base").value, eq=25*ca/cb, ratio=v/eq;
+  let ph=ratio<1?Math.max(1,7-5*(1-ratio)):ratio>1?Math.min(13,7+5*(ratio-1)):7;
+  setText("volv",v.toFixed(1)+" mL");$("liquid").style.background=ratio<.98?"#f3a1b9":ratio>1.02?"#a78bfa":"#e7a4d7";
+  setResult("Delivered base: "+v.toFixed(1)+" mL. Model endpoint: "+eq.toFixed(1)+" mL. Approximate pH trend: "+ph.toFixed(1)+".",Math.abs(v-eq)<.6?"Near the equivalence region. Add drops slowly and watch the indicator.":"Continue adding titrant and observe the colour transition.");
+  drawCurve(eq,v);
+ }
+ if(kind==="electrolysis"){
+  let on=POWER,volt=+$("volt").value;setText("voltV",volt+" V");
+  let h=on?volt*2:0,o=on?volt:0;setText("hvol",h.toFixed(0)+" units");setText("ovol",o.toFixed(0)+" units");
+  setText("ratio",on&&volt>0?"Model gas ratio H₂:O₂ = 2:1":"Power off");$("gasH").style.height=(on?Math.min(75,volt*6):0)+"%";$("gasO").style.height=(on?Math.min(48,volt*4):0)+"%";
+  setResult(on&&volt>0?"Gas bubbles form at both electrodes; hydrogen volume is modelled as twice oxygen.":"Switch on the power supply to begin electrolysis.","Overall equation: 2H₂O(l) → 2H₂(g) + O₂(g). The display is qualitative, not a real gas-volume measurement.");
+ }
+ if(kind==="chromatography"){
+  let f=+$("front").value,p=+$("pigment").value,rf=Math.min(1,p/f);$("frontline").style.bottom=(100-10*f)+"%";$("spot").style.bottom=(100-10*p)+"%";setText("rf","Rf = "+rf.toFixed(2));
+  setResult("Pigment travelled "+p+" cm; solvent front travelled "+f+" cm. Rf = "+rf.toFixed(2)+".","Rf is a ratio under the same experimental conditions. It has no unit.");
+ }
+ if(kind==="flame"){
+  let m=$("metal").value,d={sodium:["Sodium","Yellow-orange","#ffb000"],potassium:["Potassium","Lilac","#b28cff"],copper:["Copper","Blue-green","#20c9a6"],calcium:["Calcium","Brick red","#e86b55"],lithium:["Lithium","Crimson","#e43c62"]}[m];
+  setText("flameName",d[0]);setText("flameColour",d[1]);$("flameShape").style.color=d[2];setResult(d[0]+" ions produce a characteristic "+d[1].toLowerCase()+" flame in this demonstration.","Flame colours arise from electronic transitions; observations can be affected by contamination.");
+ }
+ if(kind==="atom"){
+  let p=+$("p").value,n=+$("n").value,e=+$("e").value;setText("pv",p);setText("nv",n);setText("ev",e);setText("nucleus",p+"p⁺ · "+n+"n");setText("atomName",ELEMENTS[p]||"Element "+p);setText("atomCharge",e===p?"Neutral atom":e<p?"Positive ion ("+(p-e)+"+)":"Negative ion ("+(e-p)+"−)");
+  setText("electrons",Array(Math.min(e,18)).fill("●").join(" "));
+  setResult("Atomic number = "+p+". Mass number = "+(p+n)+". Net charge = "+(p-e)+".","Changing proton number changes the element; changing neutron number changes the isotope.");
+ }
+ if(kind==="mass"){
+  let a=+$("massA").value,b=+$("massB").value,closed=$("system").value==="closed",total=a+b,shown=closed?total:Math.max(0,total-4);
+  setResult("Initial total mass: "+total+" g. Measured final mass in this model: "+shown+" g.",closed?"In a closed system, total mass is conserved.":"In an open system, a gas may escape, so measured mass can decrease although total matter is conserved.");
+ }
+ if(kind==="balance"){
+  let a=+$("coefA").value,b=+$("coefB").value;let leftH=2*a,rightH=2*b,rightO=b;
+  setResult("Equation: "+a+"H₂ + O₂ → "+b+"H₂O. Hydrogen: "+leftH+" vs "+rightH+"; oxygen: 2 vs "+rightO+".",a===b&&b===2?"Balanced for hydrogen and oxygen.":"Adjust coefficients to make each atom count equal on both sides.");
+ }
+ if(kind==="rate"){
+  let c=+$("conc").value,t=+$("temp").value;setText("cv",c+"%");setText("tv",t+"°C");let rate=(c/50)*(Math.max(.2,(t+273)/298));setResult("Relative rate index: "+rate.toFixed(2)+" (illustrative).","Higher concentration or temperature generally increases successful collision frequency. This index is not an experimental rate constant.");
+ }
+ if(kind==="solubility"){
+  let t=+$("temp").value,s=+$("solute").value;setText("tv",t+"°C");setText("sv",s+" g");let cap=15+t*.75;setResult("Model solubility capacity: "+cap.toFixed(1)+" g per 100 g water. Added solute: "+s+" g.",s>cap?"The model predicts undissolved solid remains.":"The model predicts the selected amount can dissolve.");
+ }
+ if(kind==="conductivity"){
+  let s=$("solution").value,c=+$("conc").value;setText("cv",c+"%");let factor={salt:1,acid:1.2,sugar:.03,distilled:.005}[s],v=c*factor;setResult("Relative conductivity index: "+v.toFixed(1)+".",factor>.5?"Mobile ions carry charge through the solution.":"Few mobile ions are present, so conductivity is low in this model.");
+ }
+ if(kind==="soap"){
+  let water=$("water").value,agent=$("agent").value,d=+$("dirt").value;setText("dirtv",d+"%");let clean=Math.max(0,100-d)*(water==="Hard water"&&agent==="Soap"?.45:.85);setText("soapResult",water==="Hard water"&&agent==="Soap"?"Soap scum competes with lather":"Micelles help lift oily dirt");setText("soapDetail","Illustrative cleaning index: "+clean.toFixed(0)+".");setResult("Cleaning model index: "+clean.toFixed(0)+".","Hard water contains calcium and magnesium ions; detergents generally work better than soap in hard water.");
+ }
+ if(kind==="organic"){
+  let c=$("compound").value,d={"Ethanol":["Alcohol","–OH"],"Ethanoic acid":["Carboxylic acid","–COOH"],"Ethene":["Alkene","C=C"],"Ethane":["Alkane","C–C"],"Ethanal":["Aldehyde","–CHO"],"Ethyl ethanoate":["Ester","–COO–"]}[c];setResult(c+" contains the "+d[0]+" functional group / feature "+d[1]+".","Recognising the functional group helps predict characteristic chemical behaviour.");
+ }
+ if(kind==="bond"){
+  let a=$("atomA").value,b=$("atomB").value;let ionic=["Sodium","Chlorine"].includes(a)||["Sodium","Chlorine"].includes(b);setResult(a+" + "+b+": "+(ionic?"electron transfer and oppositely charged ions are modelled.":"shared electron pairs are modelled in a covalent bond."),"Bond type depends on the atoms and their electron arrangements; this simplified selector is a concept prompt.");
+ }
+ if(kind==="energy"){
+  let p=$("process").value,n=+$("prog").value;setText("progV",n+"%");let ex=p!=="Thermal decomposition";setResult(p+" at "+n+"% model progress.",ex?"Exothermic example: energy is transferred to the surroundings.":"Endothermic example: energy is absorbed from the surroundings.");
+ }
+ if(kind==="equilibrium"){
+  let p=+$("pressure").value,t=+$("temp").value;setText("pressV",p+" atm");setText("tempV",t+"°C");setResult("Pressure: "+p+" atm. Temperature: "+t+"°C.","For N₂ + 3H₂ ⇌ 2NH₃, increased pressure favours the side with fewer gas molecules; temperature effect depends on reaction enthalpy.");
+ }
+ if(kind==="periodic"){
+  let p=+$("period").value,g=+$("group").value;setResult("Selected position: period "+p+", group "+g+".","Across a period, atomic radius generally decreases; down a group, atomic radius generally increases.");
+ }
+ if(kind==="gastest"){
+  let g=$("gas").value,t=$("test").value;let r=(g==="Hydrogen"&&t==="Lit splint")?"Squeaky pop":(g==="Oxygen"&&t==="Glowing splint")?"Glowing splint relights":(g==="Carbon dioxide"&&t==="Limewater")?"Limewater turns milky":"No characteristic positive result for this test combination";setResult(g+" + "+t+": "+r+".","Gas tests are practical demonstrations and must only be carried out by a trained teacher under school safety rules.");
+ }
+ if(kind==="separation"||kind==="distillation"||kind==="salt"||kind==="reaction"||kind==="food"||kind==="redox"){
+  let s=$("condition")?.value||"Standard conditions",st=+$("stage")?.value||3;setText("stageV",st+" / 5");setResult("Selected condition: "+s+". Stage "+st+" of 5.",TOPICNOTE);
+ }
+}
+function setResult(head,detail){$("resultTitle").textContent=head;$("resultDetail").textContent=detail}
+function addDrop(){let el=$("volume");el.value=Math.min(50,+el.value+1);runLab()}
+function resetVolume(){if($("volume")){$("volume").value=0;runLab()}}
+function setPH(v){$("ph").value=v;runLab()}
+function nextSample(){let e=$("sample");e.selectedIndex=(e.selectedIndex+1)%e.options.length;runLab()}
+function checkBalance(){runLab()}
+function togglePower(){POWER=!POWER;$("power").textContent=POWER?"Switch power OFF":"Switch power ON";runLab()}
+function resetLab(){POWER=false;if($("power"))$("power").textContent="Switch power ON";if($("volume"))$("volume").value=0;runLab()}
+function drawCurve(eq,v){let c=$("curve");if(!c)return;let x=c.getContext("2d");x.clearRect(0,0,c.width,c.height);x.strokeStyle="#dbe2ef";x.lineWidth=1;for(let i=0;i<5;i++){x.beginPath();x.moveTo(35,20+i*40);x.lineTo(680,20+i*40);x.stroke()}x.strokeStyle="#635bdb";x.lineWidth=4;x.beginPath();for(let i=0;i<=100;i++){let vol=i/2,ph=vol<eq?3+3*vol/eq:6+7*(vol-eq)/(50-eq||1);let xx=35+i*6.4,yy=190-(Math.max(0,Math.min(14,ph))*12);if(i===0)x.moveTo(xx,yy);else x.lineTo(xx,yy)}x.stroke();x.fillStyle="#ee5b9c";x.beginPath();x.arc(35+eq*12.8,106,6,0,Math.PI*2);x.fill();x.fillStyle="#445";x.font="12px Arial";x.fillText("Base added (mL)",560,205);x.fillText("pH trend",8,14)}
+let logRows=[];
+function record(){runLab();let row=[new Date().toLocaleTimeString(),$("resultTitle").textContent,$("resultDetail").textContent];logRows.push(row);let tr=document.createElement("tr");row.forEach(v=>{let td=document.createElement("td");td.textContent=v;tr.appendChild(td)});$("log").appendChild(tr)}
+function downloadCSV(){if(!logRows.length)record();let csv=[["Time","Observation","Inference"],...logRows].map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(",")).join("\n");let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="CBSEMOCK_Lab_"+LAB+"_Notebook.csv";a.click();URL.revokeObjectURL(a.href)}
+function checkQuiz(){let a=document.querySelector('input[name=quiz]:checked');if(!a){$("feedback").textContent="Select an answer first.";return}let ok=a.value===ANSWER;$("feedback").textContent=ok?"Correct — mission completed!":"Not yet. Review the observation and try again."; $("progress").style.width=ok?"100%":"35%"}
+window.addEventListener("DOMContentLoaded",runLab);
+
+</script>
+<script>
+(()=>{
+const taskData=[["Electron donor", "Oxidation side", "Oxidation is loss of electrons."], ["Electron acceptor", "Reduction side", "Reduction is gain of electrons."], ["Electron transfer", "Reaction pathway", "Redox involves oxidation and reduction together."]];
+const lab=String(38);
+const items=taskData||[];
+let completed=new Set(),selected=null;
+function el(tag,cls,html){const n=document.createElement(tag);if(cls)n.className=cls;if(html!==undefined)n.innerHTML=html;return n}
+function init(){
+ const anchor=[...document.querySelectorAll('section.panel')].find(s=>s.textContent.includes('Live laboratory workspace'))||document.querySelector('.layout > div');
+ if(!anchor)return;
+ const panel=el('section','dd-wrap');
+ panel.innerHTML='<div class="dd-head"><h2>🧪 Hands-on drag & drop challenge</h2><span class="dd-tag">PRACTICAL SKILL BUILDER</span></div><p class="dd-instruction">Drag each laboratory item from the tray to its correct destination. On a phone or tablet, tap an item and then tap its destination. Complete all placements to finish the challenge.</p><div class="dd-board"><div class="dd-bank"><h3>🧰 EQUIPMENT & MATERIALS</h3><div class="dd-items" id="ddItems"></div></div><div class="dd-targets"><h3>🎯 DROP ZONES</h3><div id="ddSlots"></div></div></div><div class="dd-feedback" id="ddFeedback" aria-live="polite">Choose an item and place it in the matching zone.</div><div class="dd-progress"><span id="ddBar"></span></div><div class="dd-actions"><button type="button" id="ddReset" class="ghost">↻ Reset challenge</button><button type="button" id="ddHint" class="ghost">💡 Give me a hint</button></div>';
+ anchor.parentNode.insertBefore(panel,anchor);
+ const bank=panel.querySelector('#ddItems'),slots=panel.querySelector('#ddSlots');
+ // Shuffle deterministically so the bank is not in answer order.
+ const shuffled=items.map((x,i)=>({x,i})).sort((a,b)=>((a.i*7+3)%11)-((b.i*7+3)%11));
+ shuffled.forEach(({x,i})=>{
+  const b=el('button','dd-item',x[0]);b.type='button';b.draggable=true;b.dataset.id=i;
+  b.addEventListener('dragstart',e=>{if(completed.has(i)){e.preventDefault();return}e.dataTransfer.setData('text/plain',String(i));});
+  b.addEventListener('click',()=>{if(completed.has(i))return;panel.querySelectorAll('.dd-item').forEach(n=>n.classList.remove('selected'));b.classList.add('selected');selected=i;panel.querySelector('#ddFeedback').textContent='Selected: '+x[0]+'. Now tap the matching destination.';});
+  bank.appendChild(b);
+ });
+ items.forEach((x,i)=>{
+  const s=el('div','dd-slot','<span><strong>Drop zone '+(i+1)+'</strong><br>'+x[1]+'</span><b>＋</b>');s.dataset.accept=i;
+  s.addEventListener('dragover',e=>{e.preventDefault();if(!completed.has(i))s.classList.add('over')});
+  s.addEventListener('dragleave',()=>s.classList.remove('over'));
+  s.addEventListener('drop',e=>{e.preventDefault();s.classList.remove('over');const id=Number(e.dataTransfer.getData('text/plain'));place(id,i)});
+  s.addEventListener('click',()=>{if(selected!==null)place(selected,i)});
+  slots.appendChild(s);
+ });
+ function place(id,zone){
+  if(!Number.isInteger(id)||id<0||id>=items.length||completed.has(id))return;
+  const feedback=panel.querySelector('#ddFeedback');
+  if(id!==zone){const slot=slots.children[zone];slot.classList.remove('wrong');void slot.offsetWidth;slot.classList.add('wrong');feedback.textContent='Not quite. '+items[id][0]+' does not belong in this zone. Try another match.';return}
+  completed.add(id);const item=panel.querySelector('.dd-item[data-id="'+id+'"]');item.classList.add('done');item.classList.remove('selected');item.disabled=true;
+  const slot=slots.children[zone];slot.classList.add('correct');slot.innerHTML='<span><strong>✓ '+items[id][1]+'</strong><br>'+items[id][2]+'</span><b>✓</b>';
+  selected=null;const pct=Math.round(completed.size/items.length*100);panel.querySelector('#ddBar').style.width=pct+'%';
+  feedback.textContent='Correct! '+items[id][2];
+  if(completed.size===items.length){feedback.textContent='🏆 Challenge completed! You matched every item correctly. Now run the simulation and record your observation in the notebook.';panel.querySelector('.dd-tag').textContent='CHALLENGE COMPLETE';}
+ }
+ panel.querySelector('#ddReset').addEventListener('click',()=>{completed.clear();selected=null;initReset()});
+ function initReset(){
+  panel.querySelectorAll('.dd-item').forEach(b=>{b.disabled=false;b.classList.remove('done','selected')});
+  panel.querySelectorAll('.dd-slot').forEach((s,i)=>{s.className='dd-slot';s.innerHTML='<span><strong>Drop zone '+(i+1)+'</strong><br>'+items[i][1]+'</span><b>＋</b>'});
+  panel.querySelector('#ddBar').style.width='0%';panel.querySelector('#ddFeedback').textContent='Challenge reset. Try matching the items again.';panel.querySelector('.dd-tag').textContent='PRACTICAL SKILL BUILDER';
+ }
+ panel.querySelector('#ddHint').addEventListener('click',()=>{const left=items.findIndex((x,i)=>!completed.has(i));if(left<0){panel.querySelector('#ddFeedback').textContent='All matches are complete. Great work!';return}panel.querySelector('#ddFeedback').textContent='Hint: look for the item whose purpose matches “'+items[left][1]+'”.'});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+
+
+<script id="cbsemock-master-aligned-layout">
+(function(){
+ const main=document.querySelector('main');
+ const layout=main&&main.querySelector('.layout');
+ if(!main||!layout||layout.dataset.masterAligned==='1')return;
+ const title=main.querySelector('.hero h1')?.textContent||'Chemistry Research Studio';
+ const lab=(main.querySelector('.kicker')?.textContent.match(/EXPERIMENT\s+(\d+)/i)||[])[1]||'';
+ const oldHeader=document.querySelector('header');
+ if(oldHeader){
+   const h=document.createElement('header');h.className='top';
+   h.innerHTML='<div class="topin"><div class="brand"><div class="logo">⚗</div><div><b>CBSEMOCK · CHEMISTRY RESEARCH STUDIO</b><small>Virtual chemical laboratory · '+title.replace(/[&<>"]/g,'')+'</small></div></div><div class="status"><span class="chip">CLASS X · CHEMISTRY</span><span class="chip">EXPERIMENT '+lab+'/40</span></div></div>';
+   oldHeader.replaceWith(h);
+ }
+ main.classList.add('shell');
+ const hero=main.querySelector('.hero');
+ if(hero){
+   hero.classList.add('master-hero');
+   const kicker=hero.querySelector('.kicker');
+   if(kicker){kicker.className='eyebrow';}
+   const p=hero.querySelector('p');if(p)p.className='sub';
+   const pills=hero.querySelector('.pills');if(pills)pills.className='master-pills';
+   const actions=document.createElement('div');actions.className='heroactions';
+   const reset=document.createElement('button');reset.className='btn ghost';reset.type='button';reset.textContent='↺ Reset experiment';
+   reset.addEventListener('click',()=>{const b=main.querySelector('[onclick*="reset"],button[onclick*="reset"]');if(b)b.click();else location.reload()});
+   actions.appendChild(reset);hero.appendChild(actions);
+ }
+ layout.dataset.masterAligned='1';
+ const leftOriginal=layout.children[0];
+ const side=layout.querySelector(':scope > aside.side');
+ if(!leftOriginal||!side)return;
+ const children=[...leftOriginal.children];
+ const findPanel=(rx)=>children.find(x=>x.matches('section.panel')&&rx.test(x.querySelector('h2')?.textContent||''));
+ const controls=findPanel(/experiment controls/i);
+ const workspace=findPanel(/live laboratory workspace/i);
+ const notebook=findPanel(/investigation notebook/i);
+ const mission=findPanel(/knowledge mission/i);
+ const challenge=children.find(x=>x.id==='handsOnChallengeMount');
+ const inAd=children.find(x=>x.matches('.ad'));
+ if(!controls||!workspace||!notebook||!mission)return;
+
+ function masterPanel(panel, label){
+   const h=panel.querySelector(':scope > h2');
+   const hint=panel.querySelector(':scope > .hint');
+   const head=document.createElement('div');head.className='ph';
+   if(h)head.appendChild(h);
+   const small=document.createElement('small');small.textContent=label||'EXPERIMENT MODULE';head.appendChild(small);
+   const body=document.createElement('div');body.className='pb';
+   if(hint)body.appendChild(hint);
+   [...panel.children].forEach(n=>{if(n!==head&&n!==body&&n!==h&&n!==hint)body.appendChild(n)});
+   panel.replaceChildren(head,body);panel.classList.add('master-panel');
+ }
+ masterPanel(controls,'SET VARIABLES & RUN MODEL');
+ masterPanel(notebook,'RECORD YOUR OBSERVATIONS');
+ masterPanel(mission,'CHECK YOUR UNDERSTANDING');
+
+ const left=document.createElement('aside');left.className='panel left-cabinet';
+ const leftHead=document.createElement('div');leftHead.className='ph';
+ leftHead.innerHTML='<h2>EXPERIMENT CONTROLS</h2><small>SET VARIABLES</small>';
+ const leftBody=document.createElement('div');leftBody.className='pb';
+ leftBody.appendChild(controls);
+ if(challenge)leftBody.appendChild(challenge);
+ left.append(leftHead,leftBody);
+
+ const centre=document.createElement('section');centre.className='panel bench';
+ const benchHead=document.createElement('div');benchHead.className='ph';
+ benchHead.innerHTML='<h2>EXPERIMENT WORKBENCH</h2><small>INTERACTIVE MODEL · LIVE OBSERVATIONS</small>';
+ const tabs=document.createElement('div');tabs.className='tabs';tabs.setAttribute('role','tablist');
+ const content=document.createElement('div');
+ const makeTab=(key,label)=>{const b=document.createElement('button');b.type='button';b.className='tab';b.dataset.masterTab=key;b.textContent=label;b.setAttribute('role','tab');tabs.appendChild(b)};
+ const makeView=(key)=>{const v=document.createElement('div');v.className='view';v.dataset.masterView=key;content.appendChild(v);return v};
+ makeTab('station','Lab station');makeTab('analysis','Scientific analysis');makeTab('notebook','Lab notebook');makeTab('assessment','Assessment');
+ const station=makeView('station'),analysis=makeView('analysis'),notes=makeView('notebook'),assessment=makeView('assessment');
+ masterPanel(workspace,'MODEL OUTPUT');
+ station.appendChild(workspace);
+ if(inAd)station.appendChild(inAd);
+ const result=controls.querySelector('.result')||leftBody.querySelector('.result');
+ if(result)analysis.appendChild(result);
+ const stats=workspace.querySelector('.statgrid');if(stats)analysis.appendChild(stats);
+ const expl=document.createElement('div');expl.className='infoCard';
+ expl.innerHTML='<b>Scientific analysis</b><p>Change one variable at a time. Run the model, compare the observations and explain the pattern using the scientific principles for this experiment.</p><p><b>Model limitation:</b> Results are educational simulations and should not be treated as physical measurements.</p>';
+ analysis.appendChild(expl);
+ const reflect=document.createElement('div');reflect.className='infoCard';
+ reflect.innerHTML='<label for="masterHypothesis">Research hypothesis</label><textarea id="masterHypothesis" placeholder="I predict that… because…"></textarea><label for="masterConclusion">Evidence-based conclusion</label><textarea id="masterConclusion" placeholder="The results show… because…"></textarea>';
+ analysis.appendChild(reflect);
+ masterPanel(notebook,'RECORD YOUR OBSERVATIONS');notes.appendChild(notebook);
+ masterPanel(mission,'KNOWLEDGE CHECK');assessment.appendChild(mission);
+ centre.append(benchHead,tabs,content);
+ const right=document.createElement('aside');right.className='rightcol';
+ side.querySelectorAll('.panel').forEach(p=>{
+   const h=p.querySelector(':scope > h2');if(h){const ph=document.createElement('div');ph.className='ph';ph.appendChild(h);const sm=document.createElement('small');sm.textContent='REFERENCE';ph.appendChild(sm);const pb=document.createElement('div');pb.className='pb';[...p.children].forEach(n=>{if(n!==ph&&n!==h&&n!==pb)pb.appendChild(n)});p.replaceChildren(ph,pb)}
+   p.classList.add('master-panel');right.appendChild(p);
+ });
+ layout.replaceChildren(left,centre,right);
+ function activate(key){
+   tabs.querySelectorAll('.tab').forEach(b=>{const on=b.dataset.masterTab===key;b.classList.toggle('active',on);b.setAttribute('aria-selected',String(on))});
+   content.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.dataset.masterView===key));
+ }
+ tabs.addEventListener('click',e=>{const b=e.target.closest('[data-master-tab]');if(b)activate(b.dataset.masterTab)});
+ activate('station');
+ // Retain all original controls and original script handlers; add research note export.
+ const exportBtn=document.createElement('button');exportBtn.type='button';exportBtn.className='btn ghost';exportBtn.textContent='Export research notes';
+ exportBtn.addEventListener('click',()=>{
+   const lines=['CBSEMOCK CHEMISTRY RESEARCH NOTES',title,'','Hypothesis',document.getElementById('masterHypothesis')?.value||'','Conclusion',document.getElementById('masterConclusion')?.value||''];
+   const blob=new Blob([lines.join('\n')],{type:'text/plain'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+   a.href=url;a.download='chemistry-research-notes-'+lab+'.txt';a.click();URL.revokeObjectURL(url);
+ });
+ const actions=hero?.querySelector('.heroactions');if(actions)actions.appendChild(exportBtn);
+})();
+</script>
+
+<script src="../../ads.js"></script>
+<script src="../../portal-shell.js"></script>
+</body></html>

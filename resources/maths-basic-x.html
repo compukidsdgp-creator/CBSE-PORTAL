@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mathematics Basic X — CBSE Mock Portal</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+<style>
+:root{
+  --navy:#0d1b2a;--teal:#00b4d8;--orange:#f77f00;--purple:#7b2d8b;
+  --red:#e63946;--green:#2d6a4f;--blue:#1d3557;--lgray:#f4f6fb;
+  --border:#dde3ee;--text:#1a1a2e;--gold:#ffd166;--pink:#ef476f;
+  --mint:#06d6a0;--coral:#ff6b6b;
+  --subj1:#283593;--subj2:#3949ab;--subj3:#7986cb;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --lgray:#1a1c20;--text:#e4e0d8;--border:#3a3f4a;--navy:#3a5a8a;
+  --teal:#00c8f0;--gold:#ffd166;--mint:#00e8b0;--coral:#ff8888;
+  --pink:#ff6b9d;--orange:#ff9933;
+  color-scheme:dark
+}}
+:root[data-theme=dark]{
+  --lgray:#1a1c20;--text:#e4e0d8;--border:#3a3f4a;--navy:#3a5a8a;
+  --teal:#00c8f0;--gold:#ffd166;--mint:#00e8b0;--coral:#ff8888;
+  --pink:#ff6b9d;--orange:#ff9933;
+  color-scheme:dark
+}
+.theme-btn{background:rgba(255,255,255,.15);border:none;color:#fff;border-radius:6px;padding:.3rem .7rem;cursor:pointer;font-size:.78rem;font-weight:600;margin-left:.4rem;transition:.2s}.theme-btn:hover{background:rgba(255,255,255,.28)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:var(--lgray);color:var(--text);font-size:15px}
+.topnav{background:var(--navy);color:#fff;display:flex;align-items:center;gap:.8rem;padding:.55rem 1rem;position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.topnav .brand{font-weight:700;font-size:1rem;color:#fff;text-decoration:none}
+.topnav .brand span{color:var(--teal)}
+.nav-links{display:flex;gap:.4rem;flex-wrap:wrap;margin-left:auto}
+.nav-links a{color:#cdd;font-size:.78rem;text-decoration:none;padding:.3rem .55rem;border-radius:5px}
+#navUser{color:var(--gold);font-size:.8rem;cursor:pointer}
+.xp-bar-wrap{background:var(--subj1);padding:.35rem 1rem;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.xp-track{flex:1;min-width:120px;height:8px;background:rgba(255,255,255,.2);border-radius:4px;overflow:hidden}
+#xpBar{height:100%;background:var(--gold);border-radius:4px;transition:width .5s}
+#xpLevel{color:#fff;font-size:.78rem;font-weight:600;white-space:nowrap}
+#xpLabel{color:rgba(255,255,255,.7);font-size:.72rem}
+#streakLabel{color:var(--gold);font-size:.82rem;font-weight:700}
+
+
+
+
+section{display:none}section.active{display:block}
+.sec-content{max-width:900px;margin:0 auto;padding:1.2rem 1rem 2rem}
+h2{font-size:1.25rem;font-weight:700;color:var(--subj1);margin:.7rem 0 .5rem}
+h3{font-size:1rem;font-weight:700;color:var(--subj2);margin:.9rem 0 .4rem}
+h4{font-size:.9rem;font-weight:700;color:#555;margin:.6rem 0 .3rem}
+.hero{background:linear-gradient(135deg,var(--subj1),var(--subj3));color:#fff;border-radius:14px;padding:1.4rem 1.2rem;margin-bottom:1rem}
+.hero h1{font-size:1.45rem;font-weight:700;margin-bottom:.3rem}
+.hero p{font-size:.88rem;opacity:.88;margin-bottom:.8rem}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.5rem}
+.hero-badge{background:rgba(255,255,255,.18);border-radius:20px;padding:.28rem .7rem;font-size:.78rem;font-weight:600}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.7rem;margin:.8rem 0}
+.card{background:#fff;border-radius:10px;padding:.9rem .8rem;box-shadow:0 1px 4px rgba(0,0,0,.07);cursor:pointer;transition:transform .18s,box-shadow .18s;border:1.5px solid var(--border)}
+.card:hover{transform:translateY(-3px);box-shadow:0 4px 14px rgba(0,0,0,.13)}
+.card.c1{border-top:4px solid var(--subj1)}.card.c2{border-top:4px solid var(--teal)}.card.c3{border-top:4px solid var(--purple)}.card.c4{border-top:4px solid var(--green)}.card.c5{border-top:4px solid var(--mint)}
+.card-icon{font-size:1.6rem;margin-bottom:.4rem}.card-title{font-size:.85rem;font-weight:700}.card-sub{font-size:.75rem;color:#888}
+.topic-card{border-left:4px solid var(--subj2)!important;border-top:none!important}
+.metric-row{display:flex;gap:.7rem;flex-wrap:wrap;margin:.6rem 0}
+.metric-card{background:#fff;border-radius:10px;padding:.8rem 1rem;flex:1;min-width:110px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid var(--subj2);text-align:center}
+.metric-card .mv{font-size:1.5rem;font-weight:800;color:var(--subj1)}.metric-card .ml{font-size:.72rem;color:#888}
+.remember{background:#fff3cd;border-left:4px solid var(--gold);border-radius:8px;padding:.7rem 1rem;margin:.6rem 0;font-size:.84rem;color:#555}
+.formula-box{background:#1e1e2e;color:#cdd6f4;font-family:monospace;font-size:.8rem;padding:1rem;border-radius:8px;overflow-x:auto;white-space:pre;margin:.6rem 0;line-height:1.6}
+.worked{background:#e8f5e9;border-left:4px solid var(--green);border-radius:8px;padding:.8rem 1rem;margin:.6rem 0;font-size:.84rem}
+.worked h4{color:var(--green);margin-bottom:.4rem}
+.def-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.7rem;margin:.6rem 0}
+.def-card{background:#fff;border-radius:10px;padding:.8rem;box-shadow:0 1px 4px rgba(0,0,0,.07);border-left:4px solid var(--subj2);font-size:.84rem;line-height:1.5}
+.def-card .dk{font-weight:700;color:var(--subj1);margin-bottom:.3rem}
+.info-row{display:flex;gap:.7rem;flex-wrap:wrap;margin:.6rem 0}
+.info-box{background:#fff;border-radius:10px;padding:.8rem 1rem;flex:1;min-width:180px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.info-box .ib-title{font-weight:700;color:var(--subj2);margin-bottom:.3rem;font-size:.88rem}
+.info-box p,.info-box li{font-size:.82rem;color:#555;line-height:1.5}
+.comp-table{width:100%;border-collapse:collapse;margin:.6rem 0;font-size:.83rem;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.comp-table th{background:var(--navy);color:#fff;padding:.55rem .7rem;text-align:left;font-size:.8rem}
+.comp-table td{padding:.5rem .7rem;border-bottom:1px solid var(--border);vertical-align:top}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table tr:nth-child(even) td{background:var(--lgray)}
+.chip-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0}
+.chip{padding:.28rem .65rem;border-radius:20px;font-size:.75rem;font-weight:600}
+.chip-orange{background:#fff3e0;color:#e65100}.chip-blue{background:#e3f2fd;color:#1565c0}
+.chip-green{background:#e8f5e9;color:#2e7d32}.chip-red{background:#ffebee;color:#b71c1c}
+.chip-purple{background:#f3e5f5;color:#6a1b9a}.chip-teal{background:#e0f7fa;color:#00695c}
+.badge-chip{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .65rem;border-radius:20px;font-size:.74rem;font-weight:600;margin:.2rem}
+.badge-chip.earned{background:var(--gold);color:#333}.badge-chip.locked{background:#eee;color:#aaa}
+.exam-mode-card{background:#fff;border-radius:10px;padding:1rem;border:2px solid var(--border);cursor:pointer;transition:all .2s;margin:.4rem 0}
+.exam-mode-card:hover,.exam-mode-card.selected{border-color:var(--subj1);background:#fff3e0}
+.exam-mode-card h3{font-size:.9rem;color:var(--subj1);margin-bottom:.2rem}
+.exam-mode-card p{font-size:.78rem;color:#777}
+.exam-toolbar{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;background:var(--subj1);color:#fff;padding:.6rem 1rem;border-radius:8px;margin-bottom:.7rem;font-size:.82rem}
+.exam-timer{font-weight:700;font-size:.95rem;font-variant-numeric:tabular-nums}
+.exam-timer.warn{color:var(--gold)}
+.exam-btn{padding:.45rem .9rem;border:none;border-radius:6px;font-size:.8rem;font-weight:700;cursor:pointer}
+.exam-btn.primary{background:var(--subj1);color:#fff}.exam-btn.secondary{background:rgba(255,255,255,.2);color:#fff}.exam-btn.danger{background:var(--red);color:#fff}
+.palette-wrap{overflow-x:auto;margin-bottom:.6rem}
+#examPalette{display:flex;flex-wrap:wrap;gap:.3rem;padding:.4rem}
+.palette-btn{width:32px;height:32px;border:2px solid var(--border);border-radius:6px;font-size:.75rem;font-weight:700;cursor:pointer;background:#fff;display:flex;align-items:center;justify-content:center}
+.palette-btn.answered{background:var(--subj2);color:#fff;border-color:var(--subj2)}
+.palette-btn.reviewed{background:#7b2d8b;color:#fff;border-color:#7b2d8b}
+.palette-btn.current{outline:3px solid var(--subj1);outline-offset:2px}
+.question-card{background:#fff;border-radius:10px;padding:1rem;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+.q-header{display:flex;gap:.5rem;align-items:center;margin-bottom:.6rem}
+.q-num-badge{background:var(--subj1);color:#fff;border-radius:6px;padding:.2rem .55rem;font-size:.75rem;font-weight:700}
+.q-marks-badge{background:var(--lgray);border-radius:6px;padding:.2rem .55rem;font-size:.75rem;color:#666}
+.q-text{font-size:.9rem;font-weight:600;margin-bottom:.7rem;line-height:1.5}
+.mcq-opts{display:grid;gap:.4rem}
+.mcq-opt{display:flex;align-items:flex-start;gap:.6rem;background:var(--lgray);border-radius:8px;padding:.55rem .7rem;cursor:pointer;font-size:.84rem;border:2px solid transparent;transition:all .18s}
+.mcq-opt:hover{border-color:var(--subj2)}.mcq-opt.selected{border-color:var(--subj1);background:#fff3e0}
+.opt-letter{background:var(--subj1);color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;flex-shrink:0}
+.dashboard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.7rem;margin:.6rem 0}
+.dash-card{background:#fff;border-radius:10px;padding:.8rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+.dash-card .dv{font-size:1.4rem;font-weight:800;color:var(--subj1)}.dash-card .dl{font-size:.72rem;color:#888;margin-top:.15rem}
+.result-q{background:#fff;border-radius:8px;padding:.6rem .8rem;margin:.3rem 0;font-size:.83rem;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.rq-q{font-weight:600;margin-bottom:.2rem}
+.rq-correct{color:var(--green)}.rq-wrong{color:var(--red)}.rq-skip{color:#888}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:1.5rem;max-width:340px;width:90%;text-align:center}
+.modal-box h2{color:var(--subj1);margin-bottom:.5rem}
+.modal-box input{width:100%;border:2px solid var(--border);border-radius:8px;padding:.6rem .9rem;font-size:.9rem;margin:.7rem 0;outline:none}
+.modal-box input:focus{border-color:var(--subj1)}
+.modal-box button{background:var(--subj1);color:#fff;border:none;border-radius:8px;padding:.65rem 1.6rem;font-size:.9rem;font-weight:700;cursor:pointer;width:100%}
+#toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:.55rem 1.2rem;border-radius:20px;font-size:.82rem;font-weight:600;opacity:0;transition:opacity .3s;z-index:999;pointer-events:none}
+#toast.show{opacity:1}
+.xp-pop{position:fixed;top:60px;right:1rem;background:var(--gold);color:#333;font-weight:800;font-size:.9rem;padding:.3rem .8rem;border-radius:12px;z-index:998;animation:floatUp .9s ease forwards}
+@keyframes floatUp{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-40px)}}
+.pp-header{background:var(--subj1);color:#fff;border-radius:8px;padding:.8rem 1.2rem;margin-bottom:.8rem;text-align:center}
+.pp-header h3{font-size:1rem;font-weight:700;margin:0}
+.pp-header p{font-size:.8rem;opacity:.85;margin:.2rem 0 0}
+.pp-section{margin:.8rem 0}
+.pp-section h4{font-size:.88rem;font-weight:700;color:var(--subj1);background:var(--lgray);padding:.35rem .7rem;border-radius:5px;margin-bottom:.5rem}
+.pp-q{font-size:.84rem;margin:.4rem 0;padding:.35rem .5rem .35rem 0;border-bottom:1px dashed var(--border);line-height:1.5}
+.q-num{font-weight:700;color:var(--subj1);margin-right:.4rem}
+.marks{float:right;background:var(--subj1);color:#fff;font-size:.72rem;padding:.15rem .45rem;border-radius:10px;margin-left:.5rem}
+
+.formula-box{background:linear-gradient(135deg,#e8eaf6,#9fa8da);border-left:4px solid #3949ab;border-radius:10px;padding:14px 16px;margin:12px 0}
+.formula-box h4{color:#3949ab;margin-bottom:10px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+.formula-box .f{font-family:monospace;background:#fff;border-radius:6px;padding:8px 12px;margin:4px 0;font-size:.88rem;color:#1a237e;border:1px solid rgba(57,73,171,.15)}
+.def-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:12px 0}
+.def-card{background:var(--lgray);border-radius:10px;padding:14px;border-left:3px solid var(--subj2)}
+.term{font-weight:700;font-size:.85rem;color:var(--subj2);margin-bottom:4px}
+.defn{font-size:.82rem;line-height:1.5;color:var(--text)}
+.worked{background:linear-gradient(135deg,#e3f2fd,#90caf9);border-left:4px solid #3949ab;border-radius:10px;padding:14px 16px;margin:12px 0}
+.worked h4{font-size:.88rem;font-weight:700;color:#1a237e;margin-bottom:8px}
+.worked .step{display:flex;gap:10px;margin-bottom:8px;font-size:.86rem}
+.sn{background:#3949ab;color:#fff;border-radius:50%;width:22px;height:22px;min-width:22px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700}
+.worked .ans{background:#1a237e;color:#fff;border-radius:6px;padding:10px 14px;margin-top:10px;font-weight:700;font-size:.87rem}
+.sec-title{font-size:1.4rem;font-weight:700;color:var(--subj1);margin-bottom:4px;padding:8px 0}
+.sec-sub{font-size:.85rem;color:var(--subj2);margin-bottom:16px;letter-spacing:.02em}
+.ch-section{background:#fff;border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .formula-box{background:linear-gradient(135deg,rgba(26,35,126,.18),rgba(57,73,171,.10))}:root:not([data-theme=light]) .formula-box .f{background:#0a0e2e;color:#9fa8da;border-color:rgba(159,168,218,.2)}:root:not([data-theme=light]) .ch-section{background:#1a1c20}}
+:root[data-theme=dark] .formula-box{background:linear-gradient(135deg,rgba(26,35,126,.18),rgba(57,73,171,.10))}
+:root[data-theme=dark] .formula-box .f{background:#0a0e2e;color:#9fa8da;border-color:rgba(159,168,218,.2)}
+:root[data-theme=dark] .ch-section{background:#1a1c20}
+.main-tabs-wrap{z-index:99;background:var(--subj1);padding:4px 16px 0}
+.tab-row{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;padding-bottom:6px;padding-top:4px;min-width:0}
+.tab-row::-webkit-scrollbar{display:none}
+.tab-row-label{font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;
+  letter-spacing:.08em;padding:4px 2px 0;white-space:nowrap;flex-shrink:0;
+  align-self:center;margin-right:4px}
+.tab-row-2{background:rgba(0,0,0,.18);margin:0 -16px;padding:0 16px}
+.main-tab{background:rgba(255,255,255,.12);border:none;color:rgba(255,255,255,.75);
+  padding:6px 13px;border-radius:20px;cursor:pointer;font-size:.79rem;
+  white-space:nowrap;font-family:var(--font);transition:all .2s;flex-shrink:0}
+.main-tab:hover{background:rgba(255,255,255,.22);color:#fff}
+.main-tab.active{background:var(--teal);color:#fff;font-weight:600}
+.tab-row-2 .main-tab.active{background:var(--gold);color:#111}
+.sim-info{display:flex;flex-direction:row;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem}
+.sim-stat-box{background:var(--lgray);border-radius:12px;padding:18px 24px;text-align:center;min-width:80px}
+.sim-num{font-size:1.8rem;font-weight:800;color:var(--subj1)}
+.sim-header{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;font-weight:600;margin-bottom:8px;padding:8px 0}
+.sim-q-text{font-size:.97rem;line-height:1.7;margin-bottom:12px;font-weight:500;padding:12px 0}
+.sim-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.sim-opt{background:var(--lgray);border:2px solid var(--border);border-radius:8px;padding:10px 16px;text-align:left;cursor:pointer;font-size:.9rem;font-family:var(--font);transition:all .2s}
+.sim-opt:hover:not(:disabled){border-color:var(--subj2);background:#e8f5e9}
+.sim-correct{border-color:var(--mint)!important;background:#f0fff4!important;color:#1a7a4a!important}
+.sim-wrong{border-color:var(--coral)!important;background:#fff5f5!important;color:var(--coral)!important}
+.sim-feedback{border-radius:8px;padding:10px 14px;font-size:.87rem;margin-bottom:10px;line-height:1.6}
+.sim-fb-correct{background:#f0fff4;border-left:4px solid var(--mint)}
+.sim-fb-wrong{background:#fff5f5;border-left:4px solid var(--coral)}
+.sim-next-btn{display:inline-flex;align-items:center;gap:8px;background:var(--subj1);color:#fff;border:none;border-radius:24px;padding:12px 28px;font-size:.92rem;font-weight:600;cursor:pointer;font-family:var(--font);transition:all .25s;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.sim-next-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.sim-next-arrow{font-size:1.1rem;transition:transform .2s}
+.sim-next-btn:hover .sim-next-arrow{transform:translateX(4px)}
+.sim-live-donut-wrap{display:flex;align-items:center;gap:14px;padding:10px 0 4px;margin-bottom:6px}
+.sim-live-legend{display:flex;flex-direction:column;gap:5px;font-size:.8rem}
+.sim-live-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.sim-live-dot.c{background:var(--mint)}.sim-live-dot.w{background:var(--coral)}.sim-live-dot.s{background:var(--border)}
+.sim-result-box{background:var(--lgray);border-radius:16px;padding:24px;text-align:center}
+.sim-result-score{font-size:2.2rem;font-weight:900;color:var(--subj1);margin-bottom:4px}
+.sim-result-grade{font-size:1.4rem;font-weight:700;margin-bottom:8px}
+.sim-result-msg{font-size:.95rem;margin-bottom:20px;color:var(--text);opacity:.8}
+.sim-dash{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;margin:20px 0;text-align:left}
+.sim-donut-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+.sim-donut-legend{display:flex;flex-direction:column;gap:6px}
+.sim-legend-row{display:flex;align-items:center;gap:8px;font-size:.82rem}
+.sim-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.sim-bars-wrap{flex:1;min-width:200px}
+.sim-bars-title{font-weight:700;font-size:.88rem;margin-bottom:10px;color:var(--subj1)}
+.sim-bar-row{margin-bottom:12px}
+.sim-bar-label{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px}
+.sim-bar-track{height:12px;background:var(--border);border-radius:6px;overflow:hidden;display:flex}
+.sim-bar-seg-c{height:100%;background:var(--mint);transition:width .8s ease}
+.sim-bar-seg-w{height:100%;background:var(--coral);transition:width .8s ease .1s}
+.sim-review-title{font-weight:700;font-size:.88rem;margin:16px 0 8px;color:var(--subj1)}
+#sim-q-strip{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.sim-strip-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;cursor:default}
+.sim-strip-dot.c{background:#d4f7e0;color:#1a7a4a}
+.sim-strip-dot.w{background:#ffd6d6;color:#b71c1c}
+.sim-strip-dot.s{background:var(--border);color:var(--text)}
+@media(max-width:640px){.sim-dash{flex-direction:column;align-items:center}.sim-bars-wrap{width:100%}}
+.btn-start{display:block;margin:1.5rem auto;background:var(--subj1);color:#fff;border:none;border-radius:24px;padding:14px 36px;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:var(--font);transition:all .25s;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.btn-start:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(0,0,0,.28)}
+
+/* ── QUESTION BANK ── */
+.qbank{display:flex;flex-direction:column;gap:10px;margin:12px 0}
+.qitem{background:#fff;border-radius:8px;padding:12px 14px;border-left:4px solid var(--subj2);font-size:.85rem;line-height:1.6;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+@media(prefers-color-scheme:dark){.qitem{background:#242830;border-left-color:var(--teal)}}
+:root[data-theme=dark] .qitem{background:#242830;border-left-color:var(--teal)}
+.qtag{display:inline-block;background:var(--subj1);color:#fff;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:5px;letter-spacing:.03em}
+.case-block{background:linear-gradient(135deg,#f3f0ff,#e8e4ff);border-left:4px solid var(--purple);border-radius:8px;padding:14px;margin:12px 0}
+@media(prefers-color-scheme:dark){.case-block{background:linear-gradient(135deg,#1a1428,#120f20)}}
+:root[data-theme=dark] .case-block{background:linear-gradient(135deg,#1a1428,#120f20)}
+.case-block p{font-size:.86rem;line-height:1.6;margin-bottom:10px;color:var(--text)}
+
+/* ══ DESKTOP SIDE PANELS ══ */
+.portal-layout{display:block;padding-top:0}
+.side-panel{display:none}
+@media(min-width:1200px){
+  .portal-layout{display:grid;grid-template-columns:160px 1fr 160px;gap:0;align-items:start}
+  .side-panel{display:flex;flex-direction:column;gap:16px;padding:12px 8px;position:sticky;top:130px;height:calc(100vh - 130px);overflow-y:auto;scrollbar-width:none;z-index:1;overflow-x:hidden}
+  .side-panel::-webkit-scrollbar{display:none}
+  .main-content-wrap{min-width:0;position:relative;z-index:2}
+}
+/* Left panel — local vendor */
+.panel-left{background:#f8f9ff;border-right:1px solid #e8ecf4}
+/* Right panel — adsense */
+.panel-right{background:#f8f9ff;border-left:1px solid #e8ecf4}
+/* Vendor skyscraper card */
+/* AdSense skyscraper container */
+.adsense-sky{width:140px;text-align:center}
+.adsense-sky 
+/* ── MOBILE NAV BAR ── */
+.mobile-nav-bar{display:none}
+@media(max-width:768px){
+  .mobile-nav-bar{
+    display:flex;align-items:center;gap:8px;
+    background:var(--subj1,#1a237e);padding:7px 12px;
+    position:sticky;top:0;z-index:300;
+    border-bottom:2px solid var(--teal,#00b4d8);
+  }
+  .mobile-nav-bar a,.mobile-nav-bar button{
+    background:rgba(255,255,255,.15);border:none;color:#fff;
+    padding:5px 12px;border-radius:20px;font-size:.8rem;
+    font-weight:600;cursor:pointer;text-decoration:none;
+    font-family:inherit;white-space:nowrap;
+  }
+  .mobile-nav-bar a:hover,.mobile-nav-bar button:hover{background:rgba(255,255,255,.28)}
+  .mobile-nav-bar .mnb-title{flex:1;color:#fff;font-size:.85rem;font-weight:700;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topnav,.site-header{display:none !important}
+
+}
+
+html{scroll-padding-top:130px}
+section{scroll-margin-top:130px}
+</style>
+    <script src="../ads.js" defer></script>
+  <!-- AdSense: replace ca-pub-PENDING with Publisher ID after approval -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-PENDING" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Mobile nav bar -->
+<div class="mobile-nav-bar" id="mobileNavBar">
+  <a href="../index.html">🏠 Home</a>
+  <button onclick="mobileGoBack()">← Back</button>
+  <span class="mnb-title" id="mobileNavTitle">Menu</span>
+</div>
+
+<nav class="topnav">
+  <a class="brand" href="../index.html">CBSE<span>Mock</span></a>
+  <div class="nav-links"><a href="../index.html">🏠 Home</a><a href="#">📚 Resources</a></div>
+  <span id="navUser" onclick="showNameModal()">👤 Student</span>
+  <span id="streakLabel">🔥 0</span>
+</nav>
+<div class="xp-bar-wrap">
+  <div class="xp-track"><div id="xpBar" style="width:0%"></div></div>
+  <span id="xpLevel">Lv 1 · Maths Beginner</span>
+  <span id="xpLabel">0 XP · 0% to next</span>
+</div>
+<div class="portal-layout">
+<div class="side-panel panel-left">
+  <div id="ad-left-1"></div>
+  <div id="ad-left-2"></div>
+  <div id="ad-left-3"></div>
+</div>
+<div class="main-content-wrap">
+<div class="main-tabs-wrap">
+  <!-- ROW 1: Home + Subject Tabs -->
+  <div class="tab-row" id="mainTabs">
+    <span class="tab-row-label">Chapters</span>
+    <button class="main-tab active" onclick="go('home')">🏠 Home</button>
+    <button class="main-tab" onclick="go('num')">Ch1 Real Numbers</button>
+    <button class="main-tab" onclick="go('poly')">Ch2 Polynomials</button>
+    <button class="main-tab" onclick="go('linear')">Ch3 Linear Eqns</button>
+    <button class="main-tab" onclick="go('quad')">Ch4 Quadratics</button>
+    <button class="main-tab" onclick="go('ap')">Ch5 AP</button>
+    <button class="main-tab" onclick="go('tri')">Ch6 Triangles</button>
+    <button class="main-tab" onclick="go('coord')">Ch7 Coordinates</button>
+    <button class="main-tab" onclick="go('trg')">Ch8 Trigonometry</button>
+    <button class="main-tab" onclick="go('apptrg')">Ch9 Applic. Trig</button>
+    <button class="main-tab" onclick="go('circles')">Ch10 Circles</button>
+    <button class="main-tab" onclick="go('areas')">Ch11 Areas</button>
+    <button class="main-tab" onclick="go('vol')">Ch12 SA &amp; Vol</button>
+    <button class="main-tab" onclick="go('sta')">Ch13 Statistics</button>
+    <button class="main-tab" onclick="go('prob')">Ch14 Probability</button>
+  </div>
+
+  <div class="tab-row tab-row-2" id="toolTabs">
+    <button class="main-tab" onclick="go('pyq')">📜 PYQ Bank</button>
+    <button class="main-tab" onclick="go('mistakes')">❌ Mistake Bank</button>
+    <button class="main-tab" onclick="go('examiner')">👁️ Examiner's Eye</button>
+    <button class="main-tab" onclick="go('highprob')">🔥 High-Prob Qs</button>
+    <button class="main-tab" onclick="go('lastmin')">⏱️ Last-Minute Rev</button>
+    <button class="main-tab" onclick="go('pp')">📝 Practice Papers</button>
+    <button class="main-tab" onclick="go('sim')">🎯 Exam Simulator</button>
+    <button class="main-tab" onclick="go('dash')">📊 Dashboard</button>
+  </div>
+</div><!-- HOME -->
+<section id="sec-home" class="active">
+<!-- ══ AD: TOP LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:4px 0 2px;">
+  <div id="ad-leader-top" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: TOP LEADERBOARD ══ -->
+
+  <div class="sec-content">
+    <div class="hero">
+      <h1>🧮 Mathematics Basic — Class X</h1>
+      <p>Simpler questions, same chapters. Focus on concepts and application.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">80 Marks</span>
+        <span class="hero-badge">3 Hours</span>
+        <span class="hero-badge">Internal: 20M</span>
+        <span class="hero-badge">Easier than Standard</span>
+      </div>
+    </div>
+    <div class="remember">📌 <strong>Maths Basic vs Standard:</strong> Same chapters, same NCERT textbook — but Basic paper has simpler questions, more direct application, less proof-based questions. Ideal for non-Maths stream in XI-XII.</div>
+    <div class="metric-row">
+      <div class="metric-card"><div class="mv">15</div><div class="ml">Chapters</div></div>
+      <div class="metric-card"><div class="mv">80</div><div class="ml">Board Marks</div></div>
+      <div class="metric-card"><div class="mv">20</div><div class="ml">Internal Marks</div></div>
+    </div>
+    <div class="cards-grid">
+      <div class="card c1 topic-card" onclick="go('num')"><div class="card-icon">🔢</div><div class="card-title">Number Systems</div><div class="card-sub">Real Numbers, HCF, LCM</div></div>
+      <div class="card c2 topic-card" onclick="go('poly')"><div class="card-icon">📊</div><div class="card-title">Algebra</div><div class="card-sub">Polynomials, Equations, AP</div></div>
+      <div class="card c3 topic-card" onclick="go('tri')"><div class="card-icon">📐</div><div class="card-title">Geometry</div><div class="card-sub">Triangles, Circles, Areas</div></div>
+      <div class="card c4 topic-card" onclick="go('trg')"><div class="card-icon">📏</div><div class="card-title">Trigonometry</div><div class="card-sub">Ratios, Heights & Distances</div></div>
+      <div class="card c5 topic-card" onclick="go('sta')"><div class="card-icon">📈</div><div class="card-title">Statistics</div><div class="card-sub">Mean, Median, Mode, Prob.</div></div>
+    </div>
+    <h3>🏅 Badges</h3>
+    <div id="badgeRowHome"></div>
+    <button class="exam-btn primary" style="margin-top:1rem" onclick="resumeLearning()">▶ Resume Learning</button>
+  </div>
+
+<!-- ══ AD: INLINE 1 ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0 4px;">
+  <div id="ad-inline-1" style="width:100%;max-width:580px;"></div>
+</div>
+<!-- ══ END AD: INLINE 1 ══ -->
+<!-- AdSense inline unit -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:580px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-MID-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+<!-- end AdSense inline -->
+</section>
+<!-- NUMBER SYSTEMS -->
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 1 · REAL NUMBERS
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-num">
+  <div class="sec-title">🔢 Real Numbers</div>
+  <div class="sec-sub">Ch 1 · Euclid's Division · FTA · Irrational Numbers · Decimal Expansions</div>
+
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Euclid's Division Lemma</div><div class="defn">For any two positive integers a and b, unique integers q and r exist such that <strong>a = bq + r</strong>, 0 ≤ r &lt; b. Used to find HCF step-by-step.</div></div>
+      <div class="def-card"><div class="term">HCF by Euclid</div><div class="defn">Divide larger by smaller; replace with (smaller, remainder); repeat until remainder = 0. Last non-zero remainder = HCF(a, b).</div></div>
+      <div class="def-card"><div class="term">Fundamental Theorem of Arithmetic</div><div class="defn">Every composite number is a <strong>unique product of primes</strong> (order aside). Forms basis for LCM and HCF via prime factorisation.</div></div>
+      <div class="def-card"><div class="term">LCM × HCF = a × b</div><div class="defn">Valid for exactly <strong>two numbers</strong>. If HCF = 12 and LCM = 360, product = 12 × 360 = 4320 = a × b.</div></div>
+      <div class="def-card"><div class="term">Irrational Numbers</div><div class="defn">Cannot be written as p/q (q ≠ 0). Decimal is non-terminating, non-repeating. √2, √3, √5, π, e are all irrational.</div></div>
+      <div class="def-card"><div class="term">Terminating Decimal</div><div class="defn">p/q terminates ⟺ q = 2<sup>m</sup> × 5<sup>n</sup>. If denominator has any other prime factor, decimal is non-terminating repeating.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Master Formulae</h4>
+      <div class="f">Euclid: a = bq + r, 0 ≤ r &lt; b</div>
+      <div class="f">HCF(a,b) × LCM(a,b) = a × b (two numbers only)</div>
+      <div class="f">Terminating: denominator = 2<sup>m</sup> · 5<sup>n</sup> only</div>
+      <div class="f">√p is irrational for any prime p (proof by contradiction)</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — HCF by Euclid (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> Find HCF(252, 105).</p>
+      <div class="step"><div class="sn">1</div><div>252 = 105 × 2 + 42</div></div>
+      <div class="step"><div class="sn">2</div><div>105 = 42 × 2 + 21</div></div>
+      <div class="step"><div class="sn">3</div><div>42 = 21 × 2 + 0 → stop</div></div>
+      <div class="ans">✅ HCF(252, 105) = 21</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Decimal Type (Board 2022, 1M)</h4>
+      <p><strong>Q:</strong> Is 17/8 terminating or non-terminating?</p>
+      <div class="step"><div class="sn">1</div><div>Denominator 8 = 2³. No prime other than 2.</div></div>
+      <div class="ans">✅ Terminating. 17/8 = 2.125</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Chapter MCQs</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> HCF(8, 9, 25) = ?<br><em>Options: (A) 1 &nbsp; (B) 2 &nbsp; (C) 3 &nbsp; (D) 5</em><br><strong>Ans: (A) 1</strong> — all three are co-prime with each other.</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Which of these is irrational?<br><em>(A) √9 &nbsp; (B) √25 &nbsp; (C) √7 &nbsp; (D) √16</em><br><strong>Ans: (C) √7</strong> — 7 is prime, so √7 is irrational.</div>
+      <div class="qitem"><span class="qtag">MCQ 3</span> The decimal expansion of 7/20 is:<br><em>(A) Terminating &nbsp; (B) Non-terminating recurring &nbsp; (C) Non-recurring &nbsp; (D) None</em><br><strong>Ans: (A)</strong> — 20 = 2² × 5, so it terminates. 7/20 = 0.35.</div>
+      <div class="qitem"><span class="qtag">MCQ 4</span> If HCF(a, b) = 12 and a × b = 1800, LCM = ?<br><em>(A) 100 &nbsp; (B) 150 &nbsp; (C) 216 &nbsp; (D) 300</em><br><strong>Ans: (B) 150</strong> — LCM = 1800 ÷ 12 = 150.</div>
+      <div class="qitem"><span class="qtag">MCQ 5</span> √2 × √8 is:<br><em>(A) Rational &nbsp; (B) Irrational &nbsp; (C) Integer &nbsp; (D) Fraction</em><br><strong>Ans: (A) Rational</strong> — √2 × √8 = √16 = 4, a rational number.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>🔁 Assertion–Reason</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>Assertion (A):</strong> √5 is irrational.<br>
+        <strong>Reason (R):</strong> Square root of any positive integer is irrational.<br>
+        <em>Options: (A) Both A and R are true, R is the correct explanation &nbsp; (B) Both true, R is NOT correct explanation &nbsp; (C) A true, R false &nbsp; (D) A false, R true</em><br>
+        <strong>Ans: (C)</strong> — A is true (√5 is irrational). R is false — √4 = 2 is rational.
+      </div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>Assertion (A):</strong> 6/15 has terminating decimal expansion.<br>
+        <strong>Reason (R):</strong> A fraction p/q terminates if q = 2<sup>m</sup> × 5<sup>n</sup>.<br>
+        <strong>Ans: (A)</strong> — 6/15 = 2/5; denominator 5 = 5¹ ✓. R correctly explains A.
+      </div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📦 Case-Based Question</h3>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A school timetable committee is scheduling periods for Music (every 36 minutes) and Sports (every 54 minutes). Both start at 8:00 AM. The committee also wants to know if the total minutes in the school day (360 min) can be written as a product of primes.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1 (1M)</span> Find HCF(36, 54). <strong>Ans: 18</strong> (36 = 2²×3², 54 = 2×3³; HCF = 2×3² = 18)</div>
+        <div class="qitem"><span class="qtag">Q2 (1M)</span> When will both activities next coincide? <strong>Ans:</strong> LCM = 36×54/18 = 108 min = 9:48 AM.</div>
+        <div class="qitem"><span class="qtag">Q3 (2M)</span> Write prime factorisation of 360. <strong>Ans:</strong> 360 = 2³ × 3² × 5.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>✍️ Short Answer (2–3 Marks)</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">SA 1 (2M)</span> Prove that √3 is irrational.<br><strong>Ans:</strong> Assume √3 = p/q (lowest terms). Then 3 = p²/q², so p² = 3q². Thus 3 | p², so 3 | p. Let p = 3m. Then 9m² = 3q², so q² = 3m², meaning 3 | q. But then 3 is a common factor of p and q, contradicting our assumption. ∴ √3 is irrational. ✓</div>
+      <div class="qitem"><span class="qtag">SA 2 (2M)</span> Find HCF and LCM of 510 and 92 using prime factorisation.<br><strong>Ans:</strong> 510 = 2 × 3 × 5 × 17; 92 = 2² × 23. HCF = 2. LCM = 2² × 3 × 5 × 17 × 23 = 23460.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📘 Long Answer (5 Marks)</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">LA (5M)</span> Three bells ring at intervals of 6, 12, and 18 minutes. All ring together at 8:00 AM. (i) After how many minutes will they ring together again? (ii) How many times will they ring together in next 3 hours? (iii) Is this interval rational or irrational — justify.<br>
+      <strong>Ans:</strong> (i) LCM(6,12,18) = 36 minutes. (ii) 3 hours = 180 min; 180 ÷ 36 = 5 times (not counting 8:00 AM start). (iii) 36 is rational — it equals 36/1, which is p/q form with q ≠ 0.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 2 · POLYNOMIALS
+══════════════════════════════════════════════════════════════ -->
+
+<!-- ══ ADSENSE MID-CONTENT ══ Auto responsive · goes live after approval ══ -->
+<div style="margin:8px 0;text-align:center;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE MID ══ -->
+<section id="sec-poly">
+  <div class="sec-title">🧮 Polynomials</div>
+  <div class="sec-sub">Ch 2 · Zeroes · Relationship with Coefficients · Division Algorithm</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Zero of a Polynomial</div><div class="defn">Value of x for which p(x) = 0. Linear p(x) has 1 zero; quadratic has at most 2; cubic has at most 3.</div></div>
+      <div class="def-card"><div class="term">Sum &amp; Product of Zeroes</div><div class="defn">For ax² + bx + c: α + β = −b/a; α × β = c/a. <em>Key shortcuts — memorise both!</em></div></div>
+      <div class="def-card"><div class="term">Geometrical Meaning</div><div class="defn">Zero = x-intercept of the graph. Number of zeroes = number of times graph cuts x-axis.</div></div>
+      <div class="def-card"><div class="term">Division Algorithm</div><div class="defn">p(x) = g(x) × q(x) + r(x), where degree(r) &lt; degree(g). Same as Euclid but for polynomials.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Quadratic Zeroes Formulae</h4>
+      <div class="f">α + β = −b/a &nbsp;|&nbsp; αβ = c/a</div>
+      <div class="f">Quadratic with zeroes α, β: x² − (α+β)x + αβ = 0</div>
+      <div class="f">If zeroes are given, form: k[x² − (sum)x + (product)]</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Find zeroes (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> Find zeroes of p(x) = x² − 5x + 6 and verify.</p>
+      <div class="step"><div class="sn">1</div><div>Factor: x² − 5x + 6 = (x−2)(x−3). Zeroes: x = 2 and x = 3.</div></div>
+      <div class="step"><div class="sn">2</div><div>Verify: α+β = 2+3 = 5 = −(−5)/1 ✓ ; αβ = 2×3 = 6 = 6/1 ✓</div></div>
+      <div class="ans">✅ Zeroes are 2 and 3.</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 Chapter MCQs</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Zeroes of x² − 3x − 4 are:<br><em>(A) −1, 4 &nbsp; (B) 1, −4 &nbsp; (C) −1, −4 &nbsp; (D) 1, 4</em><br><strong>Ans: (A)</strong> — (x−4)(x+1)=0.</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> If sum of zeroes = 3 and product = −10, the quadratic is:<br><em>(A) x²+3x−10 &nbsp; (B) x²−3x+10 &nbsp; (C) x²−3x−10 &nbsp; (D) x²+3x+10</em><br><strong>Ans: (C)</strong> x²−(sum)x+(product) = x²−3x−10.</div>
+      <div class="qitem"><span class="qtag">MCQ 3</span> Number of zeroes of a cubic polynomial (at most):<br><em>(A) 1 &nbsp; (B) 2 &nbsp; (C) 3 &nbsp; (D) 4</em><br><strong>Ans: (C) 3</strong></div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>🔁 Assertion–Reason</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> x² + 1 has no real zeroes.<br>
+        <strong>R:</strong> The discriminant b²−4ac = 0−4 = −4 &lt; 0.<br>
+        <strong>Ans: (A)</strong> Both true, R correctly explains A.
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📦 Case-Based Question</h3>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A garden path is rectangular. Its area is represented by p(x) = x² + 5x + 6 square metres, where x is a positive integer.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Find zeroes of p(x). <strong>Ans:</strong> (x+2)(x+3)=0; zeroes −2 and −3.</div>
+        <div class="qitem"><span class="qtag">Q2</span> What are the possible dimensions if x = 4? <strong>Ans:</strong> p(4) = 16+20+6 = 42 m². Dimensions: (4+2)(4+3) = 6m × 7m.</div>
+        <div class="qitem"><span class="qtag">Q3</span> Verify sum and product of zeroes. <strong>Ans:</strong> Sum = −2+(−3) = −5 = −5/1 ✓; Product = (−2)(−3) = 6 = 6/1 ✓</div>
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>✍️ Short Answer</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">SA (3M)</span> If α and β are zeroes of 2x² + 5x − 12, find α + β, αβ, and 1/α + 1/β.<br>
+      <strong>Ans:</strong> α+β = −5/2; αβ = −12/2 = −6. 1/α + 1/β = (α+β)/(αβ) = (−5/2)/(−6) = 5/12.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 3 · PAIR OF LINEAR EQUATIONS
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-linear">
+  <div class="sec-title">⚖️ Pair of Linear Equations</div>
+  <div class="sec-sub">Ch 3 · Graphical · Substitution · Elimination · Cross-Multiplication</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Consistent System</div><div class="defn">a₁/a₂ ≠ b₁/b₂ → unique solution (lines intersect). a₁/a₂ = b₁/b₂ = c₁/c₂ → infinitely many solutions (coincident lines).</div></div>
+      <div class="def-card"><div class="term">Inconsistent System</div><div class="defn">a₁/a₂ = b₁/b₂ ≠ c₁/c₂ → no solution (lines are parallel). Graph shows parallel lines that never meet.</div></div>
+      <div class="def-card"><div class="term">Substitution Method</div><div class="defn">Express one variable from one equation; substitute into the other. Best when a coefficient is 1.</div></div>
+      <div class="def-card"><div class="term">Elimination Method</div><div class="defn">Multiply equations to make coefficients equal; add/subtract to eliminate one variable. Most reliable method.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Consistency Conditions</h4>
+      <div class="f">Unique solution: a₁/a₂ ≠ b₁/b₂</div>
+      <div class="f">No solution (parallel): a₁/a₂ = b₁/b₂ ≠ c₁/c₂</div>
+      <div class="f">Infinite solutions (same line): a₁/a₂ = b₁/b₂ = c₁/c₂</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Elimination (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Solve: 2x + 3y = 11 and 2x − 4y = −24.</p>
+      <div class="step"><div class="sn">1</div><div>Subtract eq2 from eq1: 7y = 35 → y = 5.</div></div>
+      <div class="step"><div class="sn">2</div><div>Substitute: 2x + 15 = 11 → 2x = −4 → x = −2.</div></div>
+      <div class="ans">✅ x = −2, y = 5</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 Chapter MCQs</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> x + y = 5 and 2x + 2y = 10 represents:<br><em>(A) unique solution &nbsp; (B) no solution &nbsp; (C) infinitely many &nbsp; (D) none</em><br><strong>Ans: (C)</strong> — ratios 1/2 = 1/2 = 5/10, same line.</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Graphically, 3x − y = 2 and 9x − 3y = 12 are:<br><em>(A) intersecting &nbsp; (B) coincident &nbsp; (C) parallel &nbsp; (D) perpendicular</em><br><strong>Ans: (C) Parallel</strong> — 3/9 = 1/3 = −1/−3, but 2/12 ≠ 1/3.</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>🔁 Assertion–Reason</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> x + y = 6 and 2x + 2y = 12 have infinitely many solutions.<br>
+        <strong>R:</strong> The two equations represent the same line.<br>
+        <strong>Ans: (A)</strong> Both correct, R explains A.
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📦 Case-Based</h3>
+    <div class="case-block">
+      <p><strong>Passage:</strong> Two friends Riya and Priya together have 45 marbles. Riya has 15 more than Priya. Let Riya = x, Priya = y.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Form the equations. <strong>Ans:</strong> x + y = 45; x − y = 15.</div>
+        <div class="qitem"><span class="qtag">Q2</span> Solve for x and y. <strong>Ans:</strong> Adding: 2x = 60; x = 30, y = 15.</div>
+        <div class="qitem"><span class="qtag">Q3</span> What type of system is this? <strong>Ans:</strong> Consistent with unique solution (lines intersect).</div>
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>✍️ Short &amp; Long Answer</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">SA (3M)</span> Solve by substitution: 3x + 2y = 10 and x − y = 1.<br>
+      <strong>Ans:</strong> x = 1 + y → 3(1+y) + 2y = 10 → 5y = 7 → y = 7/5; x = 1 + 7/5 = 12/5.</div>
+      <div class="qitem"><span class="qtag">LA (5M)</span> A boat covers 32 km upstream and 36 km downstream in 7 hours. It covers 40 km upstream and 48 km downstream in 9 hours. Find speed of boat and stream.<br>
+      <strong>Ans:</strong> Let boat speed = b, stream = s. Up-speed = b−s, down-speed = b+s. Equations: 32/(b−s) + 36/(b+s) = 7 and 40/(b−s) + 48/(b+s) = 9. Let u = 1/(b−s), v = 1/(b+s). Solve: u = 1/8, v = 1/12. So b−s = 8, b+s = 12. Therefore b = 10 km/h, s = 2 km/h.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 4 · QUADRATIC EQUATIONS
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-quad">
+  <div class="sec-title">📐 Quadratic Equations</div>
+  <div class="sec-sub">Ch 4 · Factorisation · Quadratic Formula · Discriminant · Nature of Roots</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Standard Form</div><div class="defn">ax² + bx + c = 0, a ≠ 0. Every quadratic has at most two real roots.</div></div>
+      <div class="def-card"><div class="term">Quadratic Formula</div><div class="defn">x = [−b ± √(b²−4ac)] / 2a. Always works even when factorisation is hard.</div></div>
+      <div class="def-card"><div class="term">Discriminant (D)</div><div class="defn">D = b²−4ac. D &gt; 0: two distinct real roots. D = 0: two equal roots. D &lt; 0: no real roots.</div></div>
+      <div class="def-card"><div class="term">Completing the Square</div><div class="defn">Write ax²+bx+c = a(x+b/2a)² + (c−b²/4a). Useful method to derive the formula.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Key Formulae</h4>
+      <div class="f">x = [−b ± √(b²−4ac)] / 2a</div>
+      <div class="f">D = b²−4ac: D&gt;0 distinct; D=0 equal; D&lt;0 no real roots</div>
+      <div class="f">For equal roots: D = 0 → b² = 4ac</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Discriminant (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Find the nature of roots: 2x² − 4x + 3 = 0.</p>
+      <div class="step"><div class="sn">1</div><div>D = (−4)² − 4(2)(3) = 16 − 24 = −8.</div></div>
+      <div class="step"><div class="sn">2</div><div>D &lt; 0 → no real roots.</div></div>
+      <div class="ans">✅ No real roots exist.</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Which value of k gives equal roots for kx² + 2x + 1 = 0?<br><em>(A) k=1 &nbsp; (B) k=2 &nbsp; (C) k=−1 &nbsp; (D) k=0</em><br><strong>Ans: (A) k=1</strong> — D=4−4k=0 → k=1.</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Roots of x² − 7x + 10 = 0 are:<br><em>(A) 2, 5 &nbsp; (B) −2, −5 &nbsp; (C) 2, −5 &nbsp; (D) −2, 5</em><br><strong>Ans: (A) 2, 5</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> x² + 1 = 0 has no solution in real numbers.<br>
+        <strong>R:</strong> D = 0 − 4(1)(1) = −4 &lt; 0.<br>
+        <strong>Ans: (A)</strong> Both correct, R correctly explains.
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📦 Case-Based + SA + LA</h3>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A rectangular field has length 4 more than breadth. Area = 96 m². Let breadth = x.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Form the equation. <strong>Ans:</strong> x(x+4) = 96 → x² + 4x − 96 = 0.</div>
+        <div class="qitem"><span class="qtag">Q2</span> Find the dimensions. <strong>Ans:</strong> (x+12)(x−8) = 0 → x = 8 (positive). Breadth=8m, Length=12m.</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">SA (2M)</span> Find k if 3x² − kx + 4 = 0 has equal roots.<br><strong>Ans:</strong> D = k² − 48 = 0 → k = ±4√3.</div>
+      <div class="qitem"><span class="qtag">LA (5M)</span> A train travels 360 km at uniform speed. If speed were 5 km/h more, time would be 1 hr less. Find speed.<br>
+      <strong>Ans:</strong> Speed = x; 360/x − 360/(x+5) = 1 → 360(x+5) − 360x = x(x+5) → 1800 = x²+5x → x²+5x−1800=0 → (x+45)(x−40)=0 → x = 40 km/h.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 5 · ARITHMETIC PROGRESSIONS
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-ap">
+  <div class="sec-title">🔢 Arithmetic Progressions</div>
+  <div class="sec-sub">Ch 5 · nth Term · Sum of n Terms · Identifying APs</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Arithmetic Progression</div><div class="defn">Sequence where difference between consecutive terms is constant. Common difference d = a₂ − a₁ = a₃ − a₂.</div></div>
+      <div class="def-card"><div class="term">nth Term (aₙ)</div><div class="defn">aₙ = a + (n−1)d, where a = first term, d = common difference. Last term l = a + (n−1)d.</div></div>
+      <div class="def-card"><div class="term">Sum of n Terms (Sₙ)</div><div class="defn">Sₙ = n/2 × [2a + (n−1)d] = n/2 × (first + last term). Also: nth term = Sₙ − Sₙ₋₁.</div></div>
+      <div class="def-card"><div class="term">Three Terms in AP</div><div class="defn">Take as (a−d), a, (a+d). Four terms: (a−3d), (a−d), (a+d), (a+3d). Simplifies calculations.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 AP Formulae</h4>
+      <div class="f">aₙ = a + (n−1)d</div>
+      <div class="f">Sₙ = n/2 [2a + (n−1)d] = n/2 (a + l)</div>
+      <div class="f">d = (l−a)/(n−1)</div>
+      <div class="f">nth term from end = l − (n−1)d</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Sum problem (Board 2022, 4M)</h4>
+      <p><strong>Q:</strong> Find number of terms in AP 3, 7, 11... whose sum = 406.</p>
+      <div class="step"><div class="sn">1</div><div>a=3, d=4. Sₙ = n/2[6+(n−1)4] = n(2n+1).</div></div>
+      <div class="step"><div class="sn">2</div><div>n(2n+1)=406 → 2n²+n−406=0 → n=14 (taking positive root).</div></div>
+      <div class="ans">✅ 14 terms needed.</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> 10th term of AP: −5, −1, 3, 7... is:<br><em>(A) 31 &nbsp; (B) 35 &nbsp; (C) 27 &nbsp; (D) 39</em><br><strong>Ans: (A) 31</strong> — a=−5, d=4; a₁₀ = −5+36 = 31.</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Sum of first 10 natural numbers is:<br><em>(A) 45 &nbsp; (B) 55 &nbsp; (C) 50 &nbsp; (D) 60</em><br><strong>Ans: (B) 55</strong> — S₁₀ = 10/2 × 11 = 55.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> 2, 4, 8, 16 is NOT an AP.<br>
+        <strong>R:</strong> Common difference between consecutive terms is not constant (2, 4, 8...).<br>
+        <strong>Ans: (A)</strong> Both correct, R explains A.
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📦 Case + SA + LA</h3>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A student saves ₹1 on day 1, ₹2 on day 2, ₹3 on day 3, continuing for 30 days (an AP).</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> How much on day 30? <strong>Ans:</strong> a₃₀ = 1 + 29×1 = ₹30.</div>
+        <div class="qitem"><span class="qtag">Q2</span> Total savings? <strong>Ans:</strong> S₃₀ = 30/2 × (1+30) = ₹465.</div>
+        <div class="qitem"><span class="qtag">Q3</span> On which day does saving cross ₹25? <strong>Ans:</strong> aₙ = n > 25 → day 26.</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">SA (3M)</span> In an AP, 7th term is 13 and 11th term is 21. Find the AP.<br><strong>Ans:</strong> a₇ = a+6d = 13; a₁₁ = a+10d = 21. Subtract: 4d = 8 → d = 2. a = 13−12 = 1. AP: 1, 3, 5, 7...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 6 · TRIANGLES
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-tri">
+  <div class="sec-title">🔺 Triangles</div>
+  <div class="sec-sub">Ch 6 · Similarity · Pythagoras Theorem · Criteria AA/SAS/SSS</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Basic Proportionality Theorem</div><div class="defn">If a line is drawn parallel to one side of a triangle, it divides the other two sides proportionally. (Thales' Theorem)</div></div>
+      <div class="def-card"><div class="term">Similarity Criteria</div><div class="defn">AA: two angles equal. SAS: two sides proportional with included angle equal. SSS: all three sides proportional.</div></div>
+      <div class="def-card"><div class="term">Areas of Similar Triangles</div><div class="defn">Ratio of areas = square of ratio of corresponding sides. (area₁/area₂ = (side₁/side₂)²)</div></div>
+      <div class="def-card"><div class="term">Pythagoras Theorem</div><div class="defn">In right △, (hypotenuse)² = sum of squares of other two sides. Converse: if a²+b²=c², it is a right triangle.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Key Results</h4>
+      <div class="f">BPT: DE ∥ BC ⟹ AD/DB = AE/EC</div>
+      <div class="f">Area ratio: Δ₁/Δ₂ = (AB/PQ)² = (BC/QR)² = (CA/RP)²</div>
+      <div class="f">Pythagoras: AC² = AB² + BC² (right angle at B)</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — BPT (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> In △ABC, DE ∥ BC. AD = 3, DB = 5, AE = x, EC = 10. Find x.</p>
+      <div class="step"><div class="sn">1</div><div>By BPT: AD/DB = AE/EC → 3/5 = x/10.</div></div>
+      <div class="step"><div class="sn">2</div><div>x = 30/5 = 6.</div></div>
+      <div class="ans">✅ AE = 6 units</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> If △ABC ~ △PQR and BC/QR = 3/5, ratio of areas is:<br><em>(A) 3/5 &nbsp; (B) 6/10 &nbsp; (C) 9/25 &nbsp; (D) 27/125</em><br><strong>Ans: (C) 9/25</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> A 12m ladder leans against a wall reaching 8m. Distance from base to wall:<br><em>(A) 8.94m &nbsp; (B) √80m &nbsp; (C) 4√5m &nbsp; (D) Both B and C</em><br><strong>Ans: (D)</strong> — √(144−64) = √80 = 4√5.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> All squares are similar.<br>
+        <strong>R:</strong> All corresponding angles are equal (90°) and corresponding sides are proportional.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📦 Case + SA + LA</h3>
+    <div class="case-block">
+      <p><strong>Passage:</strong> Two poles of height 6m and 11m stand on level ground. Wires connect their tops to the base of the other pole. Point of intersection of wires is at height h from ground.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> This involves similar triangles concept. If poles are 10m apart, draw and identify the triangles. <strong>Ans:</strong> Two pairs of similar triangles formed by the crossing wires.</div>
+        <div class="qitem"><span class="qtag">Q2</span> Height of intersection = (6×11)/(6+11) ≈ 3.9 m. Verify this is less than both poles. <strong>Ans:</strong> Yes, 3.9 &lt; 6 &lt; 11. ✓</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">LA (5M)</span> Prove Pythagoras theorem. State its converse and use it to check if a triangle with sides 8, 15, 17 is right-angled.<br>
+      <strong>Ans (outline):</strong> Standard proof using similar triangles (construct altitude to hypotenuse). Converse: if c²=a²+b², it's right-angled. Check: 8²+15²=64+225=289=17². ✓ Right-angled at the angle between 8 and 15.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 7 · COORDINATE GEOMETRY
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-coord">
+  <div class="sec-title">🗺️ Coordinate Geometry</div>
+  <div class="sec-sub">Ch 7 · Distance Formula · Section Formula · Area of Triangle</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Distance Formula</div><div class="defn">Distance PQ = √[(x₂−x₁)² + (y₂−y₁)²]. Always positive. Used to show collinearity, equidistance, etc.</div></div>
+      <div class="def-card"><div class="term">Section Formula</div><div class="defn">Point dividing P(x₁,y₁) and Q(x₂,y₂) in ratio m:n internally: x = (mx₂+nx₁)/(m+n), y = (my₂+ny₁)/(m+n).</div></div>
+      <div class="def-card"><div class="term">Midpoint Formula</div><div class="defn">Special case of section (1:1): midpoint = ((x₁+x₂)/2, (y₁+y₂)/2).</div></div>
+      <div class="def-card"><div class="term">Area of Triangle</div><div class="defn">Area = ½ |x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|. Zero means points are collinear.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Key Formulae</h4>
+      <div class="f">Distance = √[(x₂−x₁)² + (y₂−y₁)²]</div>
+      <div class="f">Section (m:n): x = (mx₂+nx₁)/(m+n)</div>
+      <div class="f">Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2)</div>
+      <div class="f">Area = ½|x₁(y₂−y₃)+x₂(y₃−y₁)+x₃(y₁−y₂)|</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Distance (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> Show that A(3,−2), B(1,0), C(−1,2) are collinear.</p>
+      <div class="step"><div class="sn">1</div><div>AB = √[(3−1)²+(−2−0)²] = √8 = 2√2</div></div>
+      <div class="step"><div class="sn">2</div><div>BC = √[(1+1)²+(0−2)²] = √8 = 2√2. AC = √[(3+1)²+(−2−2)²] = √32 = 4√2.</div></div>
+      <div class="step"><div class="sn">3</div><div>AB + BC = 2√2 + 2√2 = 4√2 = AC ✓ → collinear.</div></div>
+      <div class="ans">✅ Points are collinear.</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R + Case</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Midpoint of (3,4) and (−1,2) is:<br><em>(A) (1,3) &nbsp; (B) (2,6) &nbsp; (C) (1,2) &nbsp; (D) (−1,3)</em><br><strong>Ans: (A) (1,3)</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Distance of (3,4) from origin:<br><em>(A) 25 &nbsp; (B) 5 &nbsp; (C) 7 &nbsp; (D) 12</em><br><strong>Ans: (B) 5</strong> — √(9+16)=5.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> (0,0), (1,1), (2,2) are collinear.<br>
+        <strong>R:</strong> Area of triangle formed = 0.<br>
+        <strong>Ans: (A)</strong> Both true, R correctly explains A.
+      </div>
+    </div>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A city map has three bus stops at A(1,2), B(7,5), C(4,−1). A new stop D divides AB in ratio 2:1.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Find D. <strong>Ans:</strong> D = ((2×7+1×1)/3, (2×5+1×2)/3) = (5, 4).</div>
+        <div class="qitem"><span class="qtag">Q2</span> Find AC. <strong>Ans:</strong> AC = √[(1−4)²+(2+1)²] = √(9+9) = 3√2.</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">SA (3M)</span> Find area of △ with vertices (2,3), (−1,0), (2,−4).<br><strong>Ans:</strong> Area = ½|2(0+4)+(−1)(−4−3)+2(3−0)| = ½|8+7+6| = ½×21 = 10.5 sq units.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 8 · INTRODUCTION TO TRIGONOMETRY
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-trg">
+  <div class="sec-title">📏 Introduction to Trigonometry</div>
+  <div class="sec-sub">Ch 8 · Trig Ratios · Standard Angles · Complementary Angles · Identities</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Six Trig Ratios</div><div class="defn">sin A = P/H; cos A = B/H; tan A = P/B; cosec A = H/P; sec A = H/B; cot A = B/P. (P=perpendicular, B=base, H=hypotenuse)</div></div>
+      <div class="def-card"><div class="term">Standard Angles</div><div class="defn">0°, 30°, 45°, 60°, 90°. sin grows 0→1; cos decreases 1→0 as angle increases from 0° to 90°.</div></div>
+      <div class="def-card"><div class="term">Complementary Angles</div><div class="defn">sin(90°−A) = cos A; cos(90°−A) = sin A; tan(90°−A) = cot A. Used to simplify expressions.</div></div>
+      <div class="def-card"><div class="term">Pythagorean Identities</div><div class="defn">sin²A + cos²A = 1 (most important!); 1 + tan²A = sec²A; 1 + cot²A = cosec²A.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Standard Values Table</h4>
+      <div class="f">sin: 0°=0, 30°=½, 45°=1/√2, 60°=√3/2, 90°=1</div>
+      <div class="f">cos: 0°=1, 30°=√3/2, 45°=1/√2, 60°=½, 90°=0</div>
+      <div class="f">tan: 0°=0, 30°=1/√3, 45°=1, 60°=√3, 90°=∞</div>
+      <div class="f">Identities: sin²+cos²=1; sec²−tan²=1; cosec²−cot²=1</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Identity Proof (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Prove: (sin A − 2sin³A)/(2cos³A − cos A) = tan A.</p>
+      <div class="step"><div class="sn">1</div><div>LHS = sinA(1−2sin²A) / cosA(2cos²A−1)</div></div>
+      <div class="step"><div class="sn">2</div><div>= sinA(1−2sin²A) / cosA(2(1−sin²A)−1) = sinA(1−2sin²A) / cosA(1−2sin²A)</div></div>
+      <div class="step"><div class="sn">3</div><div>= sinA / cosA = tanA = RHS ✓</div></div>
+      <div class="ans">✅ Proved.</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> sin 60° × cos 30° + cos 60° × sin 30° =<br><em>(A) 0 &nbsp; (B) 1 &nbsp; (C) √3/2 &nbsp; (D) ½</em><br><strong>Ans: (B) 1</strong> — This is sin(60°+30°) = sin 90° = 1.</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> tan 45° + cot 45° =<br><em>(A) 0 &nbsp; (B) 1 &nbsp; (C) 2 &nbsp; (D) √2</em><br><strong>Ans: (C) 2</strong> — tan 45°=1; cot 45°=1. Sum=2.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> sin(90°−A) = cos A.<br>
+        <strong>R:</strong> Complementary angle identities relate trig ratios of complementary angles.<br>
+        <strong>Ans: (A)</strong> Both correct, R explains A.
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📦 Case + SA + LA</h3>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A student notices that a right triangle has perpendicular = 5 and hypotenuse = 13. All six trig ratios are asked.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Find base. <strong>Ans:</strong> base = √(169−25) = √144 = 12.</div>
+        <div class="qitem"><span class="qtag">Q2</span> Find all 6 ratios. <strong>Ans:</strong> sinA=5/13, cosA=12/13, tanA=5/12, cosecA=13/5, secA=13/12, cotA=12/5.</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">SA (2M)</span> Evaluate: sin²30° + 2cos²45° + tan²60°.<br><strong>Ans:</strong> (1/2)² + 2(1/√2)² + (√3)² = 1/4 + 1 + 3 = 4¼ = 17/4.</div>
+      <div class="qitem"><span class="qtag">LA (5M)</span> Prove: (1 + secA)/secA = sin²A/(1−cosA).<br>
+      <strong>Ans:</strong> RHS = sin²A/(1−cosA) = (1−cos²A)/(1−cosA) = (1−cosA)(1+cosA)/(1−cosA) = 1+cosA = 1 + 1/secA = (secA+1)/secA = LHS ✓</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 9 · SOME APPLICATIONS OF TRIGONOMETRY
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-apptrg">
+  <div class="sec-title">🏔️ Applications of Trigonometry</div>
+  <div class="sec-sub">Ch 9 · Heights and Distances · Angle of Elevation · Angle of Depression</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Angle of Elevation</div><div class="defn">Angle between horizontal and the line of sight when looking <strong>up</strong> at an object. Observer is below object.</div></div>
+      <div class="def-card"><div class="term">Angle of Depression</div><div class="defn">Angle between horizontal and line of sight when looking <strong>down</strong>. Observer is above object.</div></div>
+      <div class="def-card"><div class="term">Approach</div><div class="defn">Draw a right triangle. Identify opposite, adjacent, hypotenuse relative to the given angle. Apply sin/cos/tan.</div></div>
+      <div class="def-card"><div class="term">Alternate Angles</div><div class="defn">Angle of depression from top = angle of elevation from bottom (alternate interior angles — parallel lines).</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Quick Reminders</h4>
+      <div class="f">Height = distance × tan(elevation angle)</div>
+      <div class="f">Distance = height / tan(elevation angle)</div>
+      <div class="f">tan 30° = 1/√3; tan 45° = 1; tan 60° = √3</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Tower Height (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> A tower casts a shadow 40m long. Angle of elevation of sun is 30°. Find height of tower.</p>
+      <div class="step"><div class="sn">1</div><div>tan 30° = height / shadow = h / 40.</div></div>
+      <div class="step"><div class="sn">2</div><div>h = 40 × tan 30° = 40 × (1/√3) = 40/√3 = 40√3/3 ≈ 23.1 m.</div></div>
+      <div class="ans">✅ Height = 40√3/3 m</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> A pole 6m high casts a shadow 6m long. The angle of elevation of the sun is:<br><em>(A) 30° &nbsp; (B) 45° &nbsp; (C) 60° &nbsp; (D) 90°</em><br><strong>Ans: (B) 45°</strong> — tan θ = 6/6 = 1 → θ = 45°.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Angle of depression = angle of elevation between same two points.<br>
+        <strong>R:</strong> They are alternate interior angles formed by a transversal with parallel lines.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📦 Case + SA + LA</h3>
+    <div class="case-block">
+      <p><strong>Passage:</strong> From the top of a 75m building, two cars are seen on opposite sides. Angles of depression are 60° and 45°.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Distance of car 1 (60° depression). <strong>Ans:</strong> d₁ = 75/tan60° = 75/√3 = 25√3 m.</div>
+        <div class="qitem"><span class="qtag">Q2</span> Distance of car 2 (45° depression). <strong>Ans:</strong> d₂ = 75/tan45° = 75 m.</div>
+        <div class="qitem"><span class="qtag">Q3</span> Distance between the two cars. <strong>Ans:</strong> 25√3 + 75 = 25(√3 + 3) m.</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">LA (5M)</span> Two observers on opposite sides of a tower observe it at 30° and 60° elevation. Tower height = 100m. Find the distance between observers.<br>
+      <strong>Ans:</strong> d₁ = 100/tan30° = 100√3; d₂ = 100/tan60° = 100/√3 = 100√3/3. Total = 100√3 + 100√3/3 = 400√3/3 ≈ 231 m.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 10 · CIRCLES
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-circles">
+  <div class="sec-title">⭕ Circles</div>
+  <div class="sec-sub">Ch 10 · Tangent · Chord · Theorems</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Tangent</div><div class="defn">Line touching circle at exactly one point (point of tangency). Always <strong>perpendicular to radius</strong> at that point.</div></div>
+      <div class="def-card"><div class="term">Tangents from External Point</div><div class="defn">Two tangents from same external point are equal in length. If PA and PB are tangents, PA = PB.</div></div>
+      <div class="def-card"><div class="term">Angle in Semicircle</div><div class="defn">Angle subtended by diameter at any point on circle = 90°. Important theorem for geometry problems.</div></div>
+      <div class="def-card"><div class="term">Number of Tangents</div><div class="defn">From external point: 2 tangents. From point on circle: 1 tangent. From point inside circle: 0 tangents.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Key Theorems</h4>
+      <div class="f">Radius ⊥ tangent at point of contact</div>
+      <div class="f">Tangents from external point are equal</div>
+      <div class="f">∠OPA = ∠OPB (tangents bisect the angle at external point)</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Tangent Length (Board 2022, 2M)</h4>
+      <p><strong>Q:</strong> PA is tangent from P to circle (centre O, radius 5cm). OP = 13cm. Find PA.</p>
+      <div class="step"><div class="sn">1</div><div>∠OAP = 90° (radius ⊥ tangent).</div></div>
+      <div class="step"><div class="sn">2</div><div>PA = √(OP²−OA²) = √(169−25) = √144 = 12 cm.</div></div>
+      <div class="ans">✅ PA = 12 cm.</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R + Case</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> If OP = 10, OA = 6 (radius), then tangent length PA =<br><em>(A) 4 &nbsp; (B) 8 &nbsp; (C) 10 &nbsp; (D) 16</em><br><strong>Ans: (B) 8</strong> — √(100−36) = √64 = 8.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Two tangents from an external point make equal angles with the line joining that point to the centre.<br>
+        <strong>R:</strong> The tangents are equal in length.<br>
+        <strong>Ans: (B)</strong> Both true, but R does not directly explain A (the reason is OA=OB and OA⊥PA, OB⊥PB and OP common → congruent triangles → equal angles).
+      </div>
+    </div>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A circle has centre O and radius 7cm. P is 25cm from centre. Two tangents PA and PB are drawn.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Find tangent length PA. <strong>Ans:</strong> √(625−49) = √576 = 24 cm.</div>
+        <div class="qitem"><span class="qtag">Q2</span> PA = PB. Justify. <strong>Ans:</strong> Tangents from same external point are equal (theorem).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 11 · AREAS RELATED TO CIRCLES
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-areas">
+  <div class="sec-title">🥧 Areas Related to Circles</div>
+  <div class="sec-sub">Ch 11 · Sector · Segment · Combinations</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Area of Sector</div><div class="defn">Area = (θ/360) × πr². Arc length = (θ/360) × 2πr. θ is the angle at centre in degrees.</div></div>
+      <div class="def-card"><div class="term">Area of Segment</div><div class="defn">Minor segment = Area of sector − Area of triangle. For standard angles use sin θ for triangle.</div></div>
+      <div class="def-card"><div class="term">Perimeter of Sector</div><div class="defn">= 2r + arc length = 2r + (θ/360) × 2πr. Two radii + arc.</div></div>
+      <div class="def-card"><div class="term">Common Combinations</div><div class="defn">Ring (annulus) = π(R²−r²). Flower petals: use sectors from square/equilateral triangle corners.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Key Formulae (use π = 22/7 unless told otherwise)</h4>
+      <div class="f">Area of sector = (θ/360) × πr²</div>
+      <div class="f">Length of arc = (θ/360) × 2πr</div>
+      <div class="f">Segment area = sector area − triangle area</div>
+      <div class="f">Area of equil. △ = (√3/4)a² ; sin 60° = √3/2</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Sector (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Find area of sector with r = 14cm and θ = 45°.</p>
+      <div class="step"><div class="sn">1</div><div>Area = (45/360) × (22/7) × 14² = (1/8) × (22/7) × 196</div></div>
+      <div class="step"><div class="sn">2</div><div>= (1/8) × 22 × 28 = 616/8 = 77 cm².</div></div>
+      <div class="ans">✅ Area = 77 cm²</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R + Case</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Area of sector with r=7cm, θ=90°:<br><em>(A) 38.5 cm² &nbsp; (B) 77 cm² &nbsp; (C) 154 cm² &nbsp; (D) 22 cm²</em><br><strong>Ans: (A) 38.5 cm²</strong> — ¼ × 22/7 × 49 = 38.5.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Area of minor segment is less than area of major segment.<br>
+        <strong>R:</strong> Minor segment corresponds to minor arc (angle &lt; 180°).<br>
+        <strong>Ans: (A)</strong>
+      </div>
+    </div>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A brooch has a silver circle of diameter 28mm. Six sector-shaped petals each with angle 60° are cut out of it.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Area of each petal. <strong>Ans:</strong> r=14mm; (60/360)×(22/7)×196 = 102.67mm².</div>
+        <div class="qitem"><span class="qtag">Q2</span> Total area of 6 petals. <strong>Ans:</strong> 6 × 102.67 = 616 mm² (= area of full circle! 6×60°=360°).</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">LA (5M)</span> A horse is tied to one corner of a square field of side 15m with a 5m rope. Find area it can graze. Also find area if rope is 7m.<br>
+      <strong>Ans:</strong> Corner angle = 90°. Area for 5m rope = (90/360)×π×25 = 25π/4 = 19.625 m². For 7m rope: 49π/4 = 38.5 m².</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 12 · SURFACE AREAS AND VOLUMES
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-vol">
+  <div class="sec-title">📦 Surface Areas and Volumes</div>
+  <div class="sec-sub">Ch 12 · Cylinder · Cone · Sphere · Combinations · Conversion</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Cylinder</div><div class="defn">CSA = 2πrh; TSA = 2πr(r+h); Volume = πr²h. Most common shape in board problems.</div></div>
+      <div class="def-card"><div class="term">Cone</div><div class="defn">Slant height l = √(r²+h²); CSA = πrl; TSA = πr(l+r); Volume = ⅓πr²h.</div></div>
+      <div class="def-card"><div class="term">Sphere &amp; Hemisphere</div><div class="defn">Sphere: SA = 4πr²; V = (4/3)πr³. Hemisphere: CSA = 2πr²; TSA = 3πr²; V = (2/3)πr³.</div></div>
+      <div class="def-card"><div class="term">Conversion of Shapes</div><div class="defn">When shape A melts to form shape B: Volume of A = Volume of B. Very common board question type.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 All Formulae in One Place</h4>
+      <div class="f">Cylinder: V=πr²h; CSA=2πrh; TSA=2πr(r+h)</div>
+      <div class="f">Cone: l=√(r²+h²); V=⅓πr²h; CSA=πrl; TSA=πr(r+l)</div>
+      <div class="f">Sphere: V=(4/3)πr³; SA=4πr²</div>
+      <div class="f">Hemisphere: V=(2/3)πr³; CSA=2πr²; TSA=3πr²</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Conversion (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> A cone (r=5cm, h=12cm) is melted and recast as a sphere. Find radius of sphere.</p>
+      <div class="step"><div class="sn">1</div><div>V(cone) = ⅓ × π × 25 × 12 = 100π cm³.</div></div>
+      <div class="step"><div class="sn">2</div><div>(4/3)πR³ = 100π → R³ = 75 → R = ∛75 ≈ 4.22 cm.</div></div>
+      <div class="ans">✅ Radius ≈ 4.22 cm (or ∛75 cm exactly).</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R + Case</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Volume of cone with r=3, h=7 (use π=22/7):<br><em>(A) 66 cm³ &nbsp; (B) 198 cm³ &nbsp; (C) 22 cm³ &nbsp; (D) 44 cm³</em><br><strong>Ans: (A) 66 cm³</strong> — ⅓×22/7×9×7=66.</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> TSA of a hemisphere of radius 7cm:<br><em>(A) 462 cm² &nbsp; (B) 308 cm² &nbsp; (C) 154 cm² &nbsp; (D) 616 cm²</em><br><strong>Ans: (A) 462 cm²</strong> — 3πr² = 3×22/7×49 = 462.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> When a solid cone is melted into spheres, volume is conserved.<br>
+        <strong>R:</strong> Mass is conserved; since density is same, volume is conserved.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+    </div>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A toy is in the shape of a cone surmounted on a hemisphere, both of radius 3.5cm. Height of cone = 4cm.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Total volume? <strong>Ans:</strong> V(cone)+V(hemisphere) = ⅓π(3.5)²×4 + ⅔π(3.5)³ = 51.33+89.83 = 141.16 cm³.</div>
+        <div class="qitem"><span class="qtag">Q2</span> Total surface area? <strong>Ans:</strong> CSA(cone)+CSA(hemisphere). l=√(3.5²+4²)=5.32. TSA = π×3.5×5.32 + 2π×3.5² = 58.5+77 = 135.5 cm².</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 13 · STATISTICS
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-sta">
+  <div class="sec-title">📊 Statistics</div>
+  <div class="sec-sub">Ch 13 · Mean · Median · Mode · Ogives</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Mean (Grouped Data)</div><div class="defn">Direct Method: x̄ = Σfᵢxᵢ/Σfᵢ. Assumed Mean Method: x̄ = a + (Σfᵢdᵢ/Σfᵢ). xᵢ = class midpoint.</div></div>
+      <div class="def-card"><div class="term">Median (Grouped)</div><div class="defn">Median = l + [(n/2−cf)/f] × h. l=lower class boundary; cf=cumulative freq before median class; f=freq of median class; h=class width.</div></div>
+      <div class="def-card"><div class="term">Mode (Grouped)</div><div class="defn">Mode = l + [(f₁−f₀)/(2f₁−f₀−f₂)] × h. Modal class = class with highest frequency. f₁ = max freq.</div></div>
+      <div class="def-card"><div class="term">Ogive</div><div class="defn">Cumulative frequency curve. Less-than ogive: plot (upper limit, cf). More-than ogive: plot (lower limit, more-than cf). Intersection point gives median.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Key Formulae</h4>
+      <div class="f">Mean: x̄ = Σfᵢxᵢ/Σfᵢ (direct method)</div>
+      <div class="f">Median: l + [(n/2−cf)/f] × h</div>
+      <div class="f">Mode: l + [(f₁−f₀)/(2f₁−f₀−f₂)] × h</div>
+      <div class="f">Empirical: Mode = 3×Median − 2×Mean</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Mode (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> Find mode for: Classes 10-20, 20-30, 30-40, 40-50 with frequencies 6, 11, 14, 5.</p>
+      <div class="step"><div class="sn">1</div><div>Modal class = 30-40 (highest freq = 14). l=30, f₁=14, f₀=11, f₂=5, h=10.</div></div>
+      <div class="step"><div class="sn">2</div><div>Mode = 30 + [(14-11)/(28-11-5)] × 10 = 30 + [3/12]×10 = 30 + 2.5 = 32.5.</div></div>
+      <div class="ans">✅ Mode = 32.5</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R + Case</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Median of 3, 1, 4, 1, 5, 9, 2, 6 is:<br><em>(A) 3 &nbsp; (B) 3.5 &nbsp; (C) 4 &nbsp; (D) 5</em><br><strong>Ans: (B) 3.5</strong> — Sorted: 1,1,2,3,4,5,6,9. n=8; median=(3+4)/2=3.5.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Intersection of less-than and more-than ogives gives the median.<br>
+        <strong>R:</strong> At the median, the cumulative frequency is n/2.<br>
+        <strong>Ans: (A)</strong> Both true, R correctly explains A.
+      </div>
+    </div>
+    <div class="case-block">
+      <p><strong>Passage:</strong> Monthly wages (₹) of 50 workers: 6000-7000: 5 workers; 7000-8000: 10; 8000-9000: 20; 9000-10000: 10; 10000-11000: 5.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> Find mean wage. <strong>Ans:</strong> Midpoints: 6500,7500,8500,9500,10500. Σfx = 5×6500+10×7500+20×8500+10×9500+5×10500 = 32500+75000+170000+95000+52500=425000. Mean = 425000/50 = ₹8500.</div>
+        <div class="qitem"><span class="qtag">Q2</span> Find modal class. <strong>Ans:</strong> 8000-9000 (highest freq = 20).</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">LA (5M)</span> Find mean and median for data: Class 0-10: f=8; 10-20: f=16; 20-30: f=36; 30-40: f=34; 40-50: f=6.<br>
+      <strong>Ans:</strong> n=100. Midpoints: 5,15,25,35,45. Σfx=8×5+16×15+36×25+34×35+6×45=40+240+900+1190+270=2640. Mean=26.4. Cumulative: 8,24,60,94,100. n/2=50; median class=20-30. Median=20+[(50-24)/36]×10=20+7.22=27.22.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CH 14 · PROBABILITY
+══════════════════════════════════════════════════════════════ -->
+<section id="sec-prob">
+  <div class="sec-title">🎲 Probability</div>
+  <div class="sec-sub">Ch 14 · Classical Probability · Complementary Events · Cards &amp; Dice</div>
+  <div class="ch-section">
+    <h3>📖 Key Concepts</h3>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Classical Probability</div><div class="defn">P(E) = (Number of favourable outcomes) / (Total possible outcomes). Always between 0 and 1.</div></div>
+      <div class="def-card"><div class="term">Complementary Event</div><div class="defn">P(not E) = 1 − P(E). P(E) + P(Ē) = 1 always.</div></div>
+      <div class="def-card"><div class="term">Equally Likely Outcomes</div><div class="defn">A fair die has 6 equally likely outcomes. A fair coin has 2 equally likely outcomes. Standard deck: 52 equally likely cards.</div></div>
+      <div class="def-card"><div class="term">Impossible &amp; Sure Events</div><div class="defn">Impossible event: P = 0. Sure (certain) event: P = 1. All other probabilities are strictly between 0 and 1.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Common Probability Facts</h4>
+      <div class="f">P(E) = Favourable/Total; 0 ≤ P(E) ≤ 1</div>
+      <div class="f">Standard deck: 52 cards; 4 suits; 13 per suit; 12 face cards; 4 aces</div>
+      <div class="f">Die: sample space {1,2,3,4,5,6}; P(even) = 3/6 = ½</div>
+      <div class="f">Two coins: sample space {HH, HT, TH, TT}; P(at least 1H) = 3/4</div>
+    </div>
+    <div class="worked">
+      <h4>✏️ Worked — Card Problem (Board 2023, 2M)</h4>
+      <p><strong>Q:</strong> From a deck of 52 cards, find P(king) and P(not a face card).</p>
+      <div class="step"><div class="sn">1</div><div>Kings = 4. P(king) = 4/52 = 1/13.</div></div>
+      <div class="step"><div class="sn">2</div><div>Face cards = 12. P(not face) = 1 − 12/52 = 40/52 = 10/13.</div></div>
+      <div class="ans">✅ P(king) = 1/13; P(not face) = 10/13.</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h3>📝 MCQs + A-R + Case + SA + LA</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> P(getting 7 on a die) =<br><em>(A) 1/6 &nbsp; (B) 7/6 &nbsp; (C) 0 &nbsp; (D) 1</em><br><strong>Ans: (C) 0</strong> — Impossible event; 7 is not on a standard die.</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Two coins tossed. P(exactly one head) =<br><em>(A) ¼ &nbsp; (B) ½ &nbsp; (C) ¾ &nbsp; (D) 1</em><br><strong>Ans: (B) ½</strong> — Favourable: {HT, TH} = 2 out of 4.</div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> P(getting an even prime on a die) = 1/6.<br>
+        <strong>R:</strong> 2 is the only even prime; P = 1/6.<br>
+        <strong>Ans: (A)</strong> Both correct, R explains A.
+      </div>
+    </div>
+    <div class="case-block">
+      <p><strong>Passage:</strong> A bag has 4 red, 3 blue, and 5 green balls. One ball is drawn at random.</p>
+      <div class="qbank">
+        <div class="qitem"><span class="qtag">Q1</span> P(red ball). <strong>Ans:</strong> 4/12 = 1/3.</div>
+        <div class="qitem"><span class="qtag">Q2</span> P(not green ball). <strong>Ans:</strong> (4+3)/12 = 7/12.</div>
+        <div class="qitem"><span class="qtag">Q3</span> P(blue or red). <strong>Ans:</strong> 7/12.</div>
+      </div>
+    </div>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">SA (2M)</span> A box has 12 defective and 48 good items. P(picking defective) = ?<br><strong>Ans:</strong> P = 12/60 = 1/5.</div>
+      <div class="qitem"><span class="qtag">LA (5M)</span> Cards numbered 1 to 30 are placed in a box. Find P(i) prime (ii) divisible by 5 (iii) perfect square (iv) a number &gt; 25.<br>
+      <strong>Ans:</strong> Total = 30. (i) Primes: 2,3,5,7,11,13,17,19,23,29 = 10 → P = 10/30 = 1/3. (ii) Div by 5: 5,10,15,20,25,30 = 6 → P = 6/30 = 1/5. (iii) Perfect sq: 1,4,9,16,25 = 5 → P = 5/30 = 1/6. (iv) &gt;25: 26,27,28,29,30 = 5 → P = 5/30 = 1/6.</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="sec-worked">
+  <div class="sec-title">🧩 Solved Problems</div>
+  <div class="sec-sub">Mixed Board-Style Problems — All Topics</div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Problem 1 — AP and Sum (Board 2023, 4M)</h4>
+      <p><strong>Q:</strong> How many terms of AP: 3, 7, 11, 15... are needed so that sum = 406?</p>
+      <div class="step"><div class="sn">1</div><div>a = 3, d = 4. Sn = n/2 × [2×3 + (n-1)×4] = n/2 × [6 + 4n - 4] = n/2 × (4n + 2) = n(2n+1).</div></div>
+      <div class="step"><div class="sn">2</div><div>n(2n+1) = 406. 2n^2 + n - 406 = 0. Discriminant = 1 + 3248 = 3249 = 57^2. n = (-1 + 57)/4 = 14.</div></div>
+      <div class="ans">✅ Number of terms = 14.</div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-pp">
+<h2 class="sec-title">📝 Practice Papers</h2>
+<p class="sec-sub">Full-length 80-mark board-pattern papers &middot; Mathematics Basic X</p>
+<div class="pp-tabs">
+  <button class="pp-tab-btn active" onclick="showPP(1,this)">Paper 1</button>
+  <button class="pp-tab-btn" onclick="showPP(2,this)">Paper 2</button>
+  <button class="pp-tab-btn" onclick="showPP(3,this)">Paper 3</button>
+</div>
+<div id="pp1" class="pp-content active"><div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS BASIC X — PRACTICE PAPER 1</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 80 | CBSE 2024-25</p></div>
+  <div class="pp-section-title">SECTION A — MCQ (20×1=20)</div>
+  <div class="pp-q">Q1. HCF of 12 and 18 is: (a) 6 (b) 3 (c) 9 (d) 12 [Ans: a]</div>
+  <div class="pp-q">Q2. If p(x) = x² − 5x + 6, then p(2) = ? (a) 0 (b) −1 (c) 1 (d) 2 [Ans: a]</div>
+  <div class="pp-q">Q3. The discriminant of x² − 4x + 4 = 0 is: (a) 0 (b) 16 (c) −16 (d) 8 [Ans: a] [D=16−16=0, equal roots]</div>
+  <div class="pp-q">Q4. The 10th term of AP: 2, 7, 12, ... is: (a) 45 (b) 47 (c) 52 (d) 50 [Ans: b] [a+(n-1)d=2+9×5=47]</div>
+  <div class="pp-q">Q5. If ΔABC ~ ΔPQR and AB/PQ = 3/4, then area ratio = ? (a) 3:4 (b) 9:16 (c) 16:9 (d) 4:3 [Ans: b]</div>
+  <div class="pp-q">Q6. Distance between (0,0) and (3,4): (a) 3 (b) 4 (c) 5 (d) 7 [Ans: c]</div>
+  <div class="pp-q">Q7. sin²θ + cos²θ = ? (a) 0 (b) 1 (c) 2 (d) Depends on θ [Ans: b]</div>
+  <div class="pp-q">Q8. tan 45° = ? (a) 0 (b) 1/√2 (c) 1 (d) √3 [Ans: c]</div>
+  <div class="pp-q">Q9. Area of sector of angle 90° in circle of radius 7cm = ? (a) 38.5 cm² (b) 77 cm² (c) 154 cm² (d) 19.25 cm² [Ans: a] [90/360×π×49=38.5]</div>
+  <div class="pp-q">Q10. Curved surface area of cylinder, r=7, h=10: (a) 440 cm² (b) 880 cm² (c) 440π (d) 220π [Ans: a] [2×22/7×7×10=440]</div>
+  <div class="pp-q">Q11. Mean of 3,5,7,9,11 = ? (a) 5 (b) 7 (c) 9 (d) 6 [Ans: b]</div>
+  <div class="pp-q">Q12. P(getting head when tossing a fair coin) = ? (a) 1 (b) 0 (c) 1/2 (d) 1/4 [Ans: c]</div>
+  <div class="pp-q">Q13-20. [MCQs on Euclid's division lemma, Coordinate geometry (midpoint), Tangent properties, Volume of sphere, Median formula, Mode formula, Complementary events, Number of zeros of a polynomial] [8M]</div>
+  <div class="pp-section-title">SECTION B — VSA (5×2=10)</div>
+  <div class="pp-q">Q21. Find HCF(336, 54) using Euclid's algorithm. [2M]</div>
+  <div class="pp-q">Q22. Find the zeros of p(x) = x² − 3x − 4. [2M]</div>
+  <div class="pp-q">Q23. Find the roots of 2x² − 5x + 3 = 0 by factorisation. [2M]</div>
+  <div class="pp-q">Q24. In ΔABC, DE || BC, AD=2, DB=3, AE=4. Find AC. [2M]</div>
+  <div class="pp-q">Q25. The mean of 15 observations is 8. If 5 is added to each, find new mean. [2M]</div>
+  <div class="pp-section-title">SECTION C — SA (6×3=18)</div>
+  <div class="pp-q">Q26. Prove that √2 is irrational. [3M]</div>
+  <div class="pp-q">Q27. The sum of 3rd and 9th term of an AP is 24. If the 6th term is 12, find first term and common difference. [3M]</div>
+  <div class="pp-q">Q28. A ladder 10m long reaches a wall at point 8m high. Find distance of foot from wall. Draw diagram. [3M]</div>
+  <div class="pp-q">Q29. From top of a 20m tower, the angle of depression of a car is 30°. Find distance of car from base. [3M]</div>
+  <div class="pp-q">Q30. Find the area of shaded region: circle of radius 14cm with square of side 10cm inscribed. [3M]</div>
+  <div class="pp-q">Q31. Find mean of following data using assumed mean method: [3M]
+    Class: 0-10, 10-20, 20-30, 30-40, 40-50; Frequency: 5, 10, 15, 12, 8</div>
+  <div class="pp-section-title">SECTION D — LA (4×5=20) + Case (2×4=8) + Source</div>
+  <div class="pp-q">Q32. Solve graphically: 2x + y = 8; x + y = 5. Find area of triangle formed with x-axis. [5M]</div>
+  <div class="pp-q">Q33. Sides of a right triangle are x, x+1, x+2 (hypotenuse = x+2). Find sides. Also find the perimeter. [5M]</div>
+  <div class="pp-q">Q34. A hemispherical bowl of radius 9cm is full of ice cream. It is distributed in cones (r=3cm, h=12cm) with hemispherical top. How many students get ice cream? [5M]</div>
+  <div class="pp-q">Q35. (a) A bag has 3 red, 5 white, 7 black balls. Ball drawn randomly. P(red) = ? P(not black) = ? P(white or red) = ? (b) Two dice thrown. P(sum = 8)? P(same number)? [5M]</div>
+  <div class="pp-q">Q36. Case: Rohan's teacher draws a circle on the board. Tangents from external point P touch at A and B. PA=PB=5cm, OA=3cm. Answer: (i) OAP angle (ii) OP length (iii) Area of OAPB (iv) PA/OA. [4M]</div>
+  <div class="pp-q">Q37. Case: Ananya collects data on daily screen time of 30 students. Modal class is 4-5hrs, frequency = 12; preceding class frequency = 8; following class = 6. Find mode. [4M]</div>
+</div></div>
+<div id="pp2" class="pp-content"><div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS BASIC X — PRACTICE PAPER 2</h3><p style="font-size:.8rem">Different chapter focus</p></div>
+  <div class="pp-q">Q1-37. Full 80-mark paper focusing on: LCM method problems, Relationship between zeros and coefficients, Sum of AP terms, Coordinate geometry (distance and section formula), Trigonometric identities, Heights and distances (two angle problems), Surface area combination shapes, Median using ogive. [80M]</div>
+</div></div>
+<div id="pp3" class="pp-content"><div class="practice-paper">
+  <div class="pp-header"><h3>MATHEMATICS BASIC X — PRACTICE PAPER 3 (Challenge)</h3><p style="font-size:.8rem">Slightly harder — for extra practice</p></div>
+  <div class="pp-q">Q1. Prove: If n is odd, n² is also odd. [2M]</div>
+  <div class="pp-q">Q2. If zeros of x² + px + q are double of zeros of x² + 3x + 2, find p and q. [4M]</div>
+  <div class="pp-q">Q3. A train travels 360km at uniform speed. If speed were 5km/h more, it would take 1hr less. Find speed. [5M]</div>
+  <div class="pp-q">Q4. AP: sum of first 7 terms = 49, sum of first 17 terms = 289. Find sum of n terms. [5M]</div>
+  <div class="pp-q">Q5. ΔABC, right-angled at C. If tanA = 5/12, find all other trigonometric ratios of A. [4M]</div>
+  <div class="pp-q">Q6. Prove: (sin A + cos A)² + (sin A − cos A)² = 2. [3M]</div>
+  <div class="pp-q">Q7. A sphere of diameter 12cm is dropped in a cylinder of radius 6cm containing water. How much does water level rise? [5M]</div>
+</div></div>
+</section>
+
+<section id="sec-pyq">
+  <div class="sec-title">📜 PYQ Bank — Mathematics Basic (Class 10)</div>
+  <div class="sec-sub">CBSE board questions 2019–2024 — Real Numbers, Polynomials, Algebra, Geometry, Trigonometry, Statistics</div>
+  <div class="sec-sub" style="color:var(--coral);font-weight:600">⚠️ Maths Basic — same syllabus as Standard, slightly easier application questions</div>
+  <div class="def-grid">
+    <div class="def-card"><div class="def-term">Real Numbers — HCF/LCM (2022, 2023, 2024)</div><div class="def-desc"><strong>Q:</strong> Find HCF of 96 and 404 by prime factorisation. (2 marks)<br><strong>Answer:</strong> 96 = 2⁵ × 3; 404 = 2² × 101; HCF = 2² = 4.<br><strong>Also asked:</strong> Prove √3 irrational (proof by contradiction), LCM × HCF = product of two numbers (always verify).</div></div>
+    <div class="def-card"><div class="def-term">Quadratic Equations — Factorisation (2021, 2022, 2023)</div><div class="def-desc"><strong>Q:</strong> Solve: x² + 5x + 6 = 0 by factorisation. (2 marks)<br><strong>Answer:</strong> (x + 2)(x + 3) = 0 → x = −2 or x = −3.<br><strong>Also asked:</strong> Complete the square method, quadratic formula, nature of roots (b²−4ac).</div></div>
+    <div class="def-card"><div class="def-term">Triangles — Similarity &amp; Pythagoras (2020, 2021, 2023)</div><div class="def-desc"><strong>Q:</strong> In △ABC, DE ∥ BC. If AD = 3cm, DB = 4cm, AE = 2.4cm, find EC. (2 marks)<br><strong>Answer:</strong> By BPT: AD/DB = AE/EC → 3/4 = 2.4/EC → EC = 3.2 cm.<br><strong>Also asked:</strong> Pythagoras theorem proof, similar triangle area ratio.</div></div>
+    <div class="def-card"><div class="def-term">Coordinate Geometry — Distance &amp; Section Formula (2021, 2022)</div><div class="def-desc"><strong>Q:</strong> Find the distance between A(3, 4) and B(−2, −8). (2 marks)<br><strong>Answer:</strong> d = √[(3−(−2))² + (4−(−8))²] = √[25 + 144] = √169 = 13 units.<br><strong>Also:</strong> Midpoint, section formula, area of triangle using coordinates.</div></div>
+    <div class="def-card"><div class="def-term">Trigonometry — Identities (2019–2024 every year)</div><div class="def-desc"><strong>Q:</strong> Prove: (sin A + cosec A)² + (cos A + sec A)² = 7 + tan²A + cot²A. (3 marks)<br><strong>Strategy:</strong> Expand LHS, use sin²+cos²=1, 1+tan²=sec², 1+cot²=cosec². Always expand the more complex side.<br><strong>Also asked:</strong> Values of sin/cos/tan 30°, 45°, 60° applied in equations.</div></div>
+    <div class="def-card"><div class="def-term">Statistics — Mean/Median/Mode (2020, 2021, 2022, 2023)</div><div class="def-desc"><strong>Q:</strong> Find the mode of: 3, 5, 7, 5, 8, 3, 5, 7, 5 → Mode = 5 (appears 4 times). (1 mark)<br><strong>3-mark Q:</strong> Find mean using assumed mean method from frequency table. Set up: d = x − A, Σfd, apply formula x̄ = A + Σfd/Σf.<br><strong>5-mark Q:</strong> Median from cumulative frequency ogive — plot and find n/2 point.</div></div>
+    <div class="def-card"><div class="def-term">Surface Area &amp; Volume (2020, 2022, 2024)</div><div class="def-desc"><strong>Q:</strong> A cone of radius 6 cm and slant height 10 cm. Find total surface area. (3 marks)<br><strong>Answer:</strong> TSA = πrl + πr² = π(6)(10) + π(36) = 60π + 36π = 96π = 301.44 cm².<br><strong>Also asked:</strong> Cylinder + hemisphere combination, volume of frustum, conversion questions.</div></div>
+    <div class="def-card"><div class="def-term">Probability (2019–2024 every year)</div><div class="def-desc"><strong>Q:</strong> A card is drawn from a deck of 52 cards. Find probability of getting a king. (1 mark)<br><strong>Answer:</strong> P = 4/52 = 1/13.<br><strong>3-mark Q (2023):</strong> Two dice rolled — find P(sum = 7). Sample space = 36; favourable = (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6; P = 6/36 = 1/6.</div></div>
+  </div>
+  <div class="formula-box">
+    <strong>📋 Maths Basic Marks Pattern:</strong> MCQ+Assertion (20×1=20) + SA-I (5×2=10) + SA-II (6×3=18) + LA (4×5=20) + Case-based (3×4=12) = 80 marks. Trigonometry + Statistics + Algebra = 40% of paper. Master these 3.
+  </div>
+</section>
+<section id="sec-mistakes">
+  <div class="sec-title">❌ Mistake Bank — Mathematics Basic</div>
+  <div class="sec-sub">Most costly errors in Maths Basic boards — these lose marks needlessly</div>
+  <div class="def-grid">
+    <div class="def-card"><div class="def-term">Trigonometry — Identity Application Error</div><div class="def-desc"><strong>Mistake:</strong> Writing sin²A + cos²A = 0 instead of 1 under exam pressure — cancels all subsequent steps.<br><strong>Fix:</strong> Write the three Pythagorean identities at the top of every trig proof as a reference before starting. They are: sin²+cos²=1, 1+tan²=sec², 1+cot²=cosec².</div></div>
+    <div class="def-card"><div class="def-term">Quadratic Formula — Sign Error in Discriminant</div><div class="def-desc"><strong>Mistake:</strong> Computing b²−4ac as (−5)²−4(1)(6) = 25−24 = 1 but then writing x = −b ± √1 / 2a with wrong sign of b.<br><strong>Fix:</strong> Write the formula explicitly: x = [−(−5) ± √1] / 2 → [5 ± 1]/2 = 3 or 2. Box the formula first, substitute second.</div></div>
+    <div class="def-card"><div class="def-term">Statistics — Wrong Class Mark</div><div class="def-desc"><strong>Mistake:</strong> For class 10–20, using class mark = 10 instead of 15 (lower + upper limit divided by 2).<br><strong>Fix:</strong> Class mark = (lower + upper) / 2 always. For 10–20 → (10+20)/2 = 15. This error affects the entire mean calculation.</div></div>
+    <div class="def-card"><div class="def-term">Probability — Not Simplifying Fraction</div><div class="def-desc"><strong>Mistake:</strong> Writing P = 4/52 without simplifying to 1/13 — CBSE marking scheme shows simplified form; unsimplified may lose ½ mark.<br><strong>Fix:</strong> Always simplify probability fractions. Check HCF of numerator and denominator before writing final answer.</div></div>
+    <div class="def-card"><div class="def-term">BPT — Mixing AD/DB with AB/DB</div><div class="def-desc"><strong>Mistake:</strong> In Basic Proportionality Theorem, writing AD/AB = AE/AC instead of AD/DB = AE/EC.<br><strong>Fix:</strong> BPT states: if DE ∥ BC then AD/DB = AE/EC (parts, not whole). Draw the diagram and label before applying formula.</div></div>
+    <div class="def-card"><div class="def-term">Circles — Tangent Length Formula</div><div class="def-desc"><strong>Mistake:</strong> Forgetting that tangent from external point: PA² = PC × PB (power of a point) or PA = PB (equal tangents from same external point).<br><strong>Fix:</strong> Equal tangents from external point is used in 90% of CBSE circle tangent problems. Draw the figure — PT² = PO² − r².</div></div>
+  </div>
+  <div class="formula-box">
+    <strong>📓 Maths Basic Rule:</strong> For every 3-mark or 5-mark question, write: "Given → To Prove/Find → Construction (if needed) → Proof/Solution → Result." This structured approach earns step marks even when the final answer is wrong.
+  </div>
+</section>
+
+<!-- ══ ADSENSE MID-CONTENT ══ Auto responsive · goes live after approval ══ -->
+<div style="margin:8px 0;text-align:center;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE MID ══ -->
+<section id="sec-examiner">
+  <div class="sec-title">👁️ Examiner's Eye — Mathematics Basic</div>
+  <div class="sec-sub">What the CBSE Maths Basic examiner checks — how to earn step marks</div>
+  <div class="def-grid">
+    <div class="def-card"><div class="def-term">Step Marks — How They Work</div><div class="def-desc"><strong>3-mark question:</strong> 1 mark for correct method/formula + 1 mark for substitution + 1 mark for answer.<br><strong>5-mark question:</strong> 1 mark formula + 2 marks working + 1 mark correct steps + 1 mark final answer.<br>If final answer is wrong but all steps are correct → 4/5 marks. Never leave a question blank.</div></div>
+    <div class="def-card"><div class="def-term">Proof Questions — What Examiner Checks</div><div class="def-desc"><strong>Mandatory:</strong> "Given", "To Prove", and "Proof" headings. Missing "Given" or "To Prove" → −1 mark. The proof must use valid mathematical steps — circular proofs (assuming what you need to prove) get zero.</div></div>
+    <div class="def-card"><div class="def-term">Construction Questions</div><div class="def-desc"><strong>Examiner checks:</strong> Correct arc marks visible (don't erase them), angles within ±1°, lengths within ±1mm. Write steps of construction below the figure. Each step = ½ to 1 mark. Pencil + compass only — no freehand allowed.</div></div>
+    <div class="def-card"><div class="def-term">Case-Based Questions (4 marks each)</div><div class="def-desc"><strong>Pattern:</strong> A real-life scenario + 4 sub-questions (1 mark each). Read the scenario once, underline key measurements. The 4 questions are usually: formula identification, substitution, calculation, interpretation.<br>These are the easiest marks in the paper — don't skip them.</div></div>
+    <div class="def-card"><div class="def-term">Diagram and Labelling</div><div class="def-desc"><strong>Mandatory for:</strong> All geometry proofs, trigonometry height/distance, surface area problems. Unlabelled or missing diagram = −1 mark in 5-mark questions. Draw neatly but quickly — 30 seconds per diagram.</div></div>
+    <div class="def-card"><div class="def-term">MCQ and Assertion-Reason</div><div class="def-desc"><strong>No step marks here</strong> — right or wrong. Common trap in Assertion-Reason: both A and R are true but R does NOT explain A → answer is (b), not (a). For each A-R question, check: (1) Is A true? (2) Is R true? (3) If both true, does R justify A? Answer logically.</div></div>
+  </div>
+  <div class="formula-box">
+    <strong>🎯 Maths Basic Examiner Secret:</strong> Write units in every answer — cm², m³, degrees. "96π cm²" not just "96π". Missing units can cost ½ mark per question. In a 5-mark question with 4 sub-answers, 4 missing units = 2 marks lost.
+  </div>
+</section>
+<section id="sec-highprob">
+  <div class="sec-title">🔥 High-Probability — Mathematics Basic</div>
+  <div class="sec-sub">Topics that appear in Maths Basic board every year — don't miss these</div>
+  <div class="def-grid">
+    <div class="def-card"><div class="def-term">📌 Probability — 100% probability</div><div class="def-desc"><strong>Every year:</strong> 1-mark card probability, 3-mark two-dice sum problem, case-based probability.<br><strong>Must know:</strong> P(event) = favourable outcomes / total outcomes. Cards: 52 total, 4 suits of 13 each. Dice: 36 outcomes for two dice. These are calculation-free if sample space is memorised.</div></div>
+    <div class="def-card"><div class="def-term">📌 Statistics (Mean/Median/Mode) — 100% probability</div><div class="def-desc"><strong>Every year:</strong> Find mean using assumed mean method (3 marks), mode from frequency table (1 mark), median using ogive (5 marks).<br><strong>Formulas:</strong> Mean = A + Σfd/Σf; Mode = l + [(f₁−f₀)/(2f₁−f₀−f₂)]×h; Median = l + [(n/2−cf)/f]×h</div></div>
+    <div class="def-card"><div class="def-term">📌 Quadratic Equations — 92% probability</div><div class="def-desc"><strong>Every year:</strong> Solve by factorisation (2 marks) + word problem (5 marks).<br><strong>Word problems:</strong> Train speed, age problems, rectangles. Identify: let x = ?, form equation, solve by factorisation or formula, reject negative root if needed.</div></div>
+    <div class="def-card"><div class="def-term">📌 Trigonometric Identities — 90% probability</div><div class="def-desc"><strong>Every year:</strong> Prove identity (3 marks) + evaluate expression using standard angles (1-2 marks).<br><strong>Must know:</strong> sin 30°=½, cos 30°=√3/2, tan 45°=1, sin 90°=1, cos 0°=1. Memorise 5 identities and use them in proofs.</div></div>
+    <div class="def-card"><div class="def-term">📌 Surface Area &amp; Volume — 88% probability</div><div class="def-desc"><strong>Every year:</strong> Cylinder + hemisphere or cone + cylinder combined volume (5 marks).<br><strong>Formula list:</strong> CSA cylinder = 2πrh; CSA cone = πrl; SA sphere = 4πr²; Volume: πr²h (cyl), ⅓πr²h (cone), ⁴⁄₃πr³ (sphere).</div></div>
+    <div class="def-card"><div class="def-term">📌 Similar Triangles / BPT — 85% probability</div><div class="def-desc"><strong>Every year:</strong> BPT application (2 marks) + similarity condition proof (3-5 marks).<br><strong>Must know:</strong> AA, SSS, SAS similarity criteria. Ratio of areas = (ratio of sides)². Pythagoras theorem for right triangles.</div></div>
+    <div class="def-card"><div class="def-term">📌 Arithmetic Progressions — 90% probability</div><div class="def-desc"><strong>Every year:</strong> Find nth term (1-2 marks) + sum of n terms (3 marks) + word problem on AP (5 marks).<br><strong>Formulas:</strong> aₙ = a + (n−1)d; Sₙ = n/2 × [2a + (n−1)d] or n/2 × (a + l). Always identify a, d, n first.</div></div>
+    <div class="def-card"><div class="def-term">📌 HCF/LCM + Proof of Irrationality — 88% probability</div><div class="def-desc"><strong>Every year:</strong> HCF by prime factorisation (2 marks) + prove √2 or √3 irrational (3 marks).<br><strong>Proof structure:</strong> Assume √2 = p/q (rational, HCF(p,q)=1) → 2 divides p → 2 divides p → 2 divides q → contradiction → irrational. This exact proof appears 4/6 years.</div></div>
+  </div>
+  <div class="formula-box">
+    <strong>🎯 Maths Basic Top-5 (by marks):</strong> (1) Statistics 5-mark Ogive = 5 marks (2) Surface Area/Volume = 5 marks (3) Quadratic word problem = 5 marks (4) Similar Triangles proof = 5 marks (5) Probability 3-mark = 3 marks. These 5 = 23 marks. Get these right.
+  </div>
+</section>
+<section id="sec-lastmin">
+  <div class="sec-title">⏱️ Last-Minute Revision — Mathematics Basic</div>
+  <div class="sec-sub">48 hours before Maths Basic board — formula recall and strategy</div>
+  <div class="def-grid">
+    <div class="def-card"><div class="def-term">📐 Trigonometry Table</div><div class="def-desc"><strong>Write this from memory right now:</strong><br>
+      sin 0°=0, sin 30°=½, sin 45°=1/√2, sin 60°=√3/2, sin 90°=1<br>
+      cos is reverse of sin (cos 0°=1, cos 90°=0)<br>
+      tan = sin/cos: tan 30°=1/√3, tan 45°=1, tan 60°=√3<br>
+      <strong>Identities:</strong> sin²θ+cos²θ=1 | sec²θ=1+tan²θ | cosec²θ=1+cot²θ</div></div>
+    <div class="def-card"><div class="def-term">📊 Statistics Formulas</div><div class="def-desc"><strong>Mean (Assumed Mean):</strong> x̄ = A + Σfd/Σf where d = x − A<br>
+      <strong>Mode:</strong> l + [(f₁−f₀)/(2f₁−f₀−f₂)] × h<br>
+      <strong>Median:</strong> l + [(n/2 − cf) / f] × h<br>
+      <strong>For ogive:</strong> Plot (upper boundary, cumulative frequency); find n/2 on y-axis; draw horizontal line to curve; drop vertical to x-axis = median.</div></div>
+    <div class="def-card"><div class="def-term">📏 Area and Volume Quick List</div><div class="def-desc"><strong>Write these 8 formulas from memory:</strong><br>
+      Circle: A = πr², C = 2πr<br>
+      Cylinder: V = πr²h, CSA = 2πrh<br>
+      Cone: V = ⅓πr²h, CSA = πrl, l = √(r²+h²)<br>
+      Sphere: V = ⁴⁄₃πr³, SA = 4πr²<br>
+      Hemisphere: V = ⅔πr³, CSA = 2πr²</div></div>
+    <div class="def-card"><div class="def-term">🎲 Probability Quick-Recall</div><div class="def-desc"><strong>Card probability:</strong> 52 cards; 4 suits (Hearts, Diamonds, Clubs, Spades); 13 per suit; 4 kings, 4 queens, 4 aces, 4 jacks; 26 red, 26 black.<br>
+      <strong>Dice:</strong> 1 die = 6 outcomes; 2 dice = 36 outcomes. P(sum=7) = 6/36 = 1/6. P(sum=12) = 1/36.<br>
+      <strong>Bag problems:</strong> P = favourable/total. Always simplify.</div></div>
+    <div class="def-card"><div class="def-term">✅ Maths Basic Checklist</div><div class="def-desc">✅ Trigonometry table written from memory<br>✅ 3 statistics formulas (mean/mode/median) written<br>✅ 8 area/volume formulas memorised<br>✅ Irrational number proof written (√2 or √3)<br>✅ BPT theorem and application practised<br>✅ Quadratic factorisation — 5 examples<br>✅ AP nth term + sum formulas written<br>✅ 1 full mock paper timed in 3 hours</div></div>
+    <div class="def-card"><div class="def-term">⏰ Exam Time Plan (3 hours, 80 marks)</div><div class="def-desc"><strong>Section-wise time:</strong><br>
+      Section A MCQ (20 marks): 25 minutes<br>
+      Section B SA-I 2-mark (10 marks): 15 minutes<br>
+      Section C SA-II 3-mark (18 marks): 30 minutes<br>
+      Section D LA 5-mark (20 marks): 40 minutes<br>
+      Section E Case-based (12 marks): 25 minutes<br>
+      Check + fill blanks: 5 minutes</div></div>
+  </div>
+  <div class="formula-box">
+    <strong>⏱ Maths Basic Last Tip:</strong> Attempt Section E (Case-based, 12 marks) right after MCQs — these are diagram-based, not hard, and worth 15% of paper. Students who do Section E early score 10–12/12. Students who leave it for last often score 4–6/12 due to time pressure.
+  </div>
+</section>
+<section id="sec-sim">
+  <div class="sec-title">🎮 Exam Simulator</div>
+  <div class="sec-sub">MCQ drill — 35 questions, timed, auto-scored with visual score dashboard</div>
+  <div id="sim-start">
+    <div class="sim-info">
+      <div class="sim-stat-box"><div class="sim-num">35</div><div>Questions</div></div>
+      <div class="sim-stat-box"><div class="sim-num">35</div><div>Minutes</div></div>
+      <div class="sim-stat-box"><div class="sim-num">14 Chapters</div><div>Chapters</div></div>
+    </div>
+    <button class="btn-start" onclick="startSim()">Start Simulator ▶</button>
+  </div>
+  <div id="sim-quiz" style="display:none">
+    <div class="sim-header">
+      <span id="sim-q-num">Q 1/35</span>
+      <span id="sim-timer">⏱ 35:00</span>
+      <span id="sim-score-live">Score: 0</span>
+    </div>
+    <div class="sim-live-donut-wrap">
+      <svg id="sim-live-donut" viewBox="0 0 120 120" width="90" height="90">
+        <circle cx="60" cy="60" r="50" fill="none" stroke="var(--border)" stroke-width="16"/>
+        <circle id="sldc" cx="60" cy="60" r="50" fill="none" stroke="var(--mint)" stroke-width="16" stroke-linecap="butt" stroke-dasharray="0 314" stroke-dashoffset="0" style="transition:stroke-dasharray .5s ease;transform:rotate(-90deg);transform-origin:60px 60px"/>
+        <circle id="sldw" cx="60" cy="60" r="50" fill="none" stroke="var(--coral)" stroke-width="16" stroke-linecap="butt" stroke-dasharray="0 314" stroke-dashoffset="0" style="transition:stroke-dasharray .5s ease .15s;transform:rotate(-90deg);transform-origin:60px 60px"/>
+        <text x="60" y="57" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)" id="sld-pct">0%</text>
+        <text x="60" y="71" text-anchor="middle" font-size="8" fill="var(--text)" opacity=".55">live</text>
+      </svg>
+      <div class="sim-live-legend">
+        <span class="sim-live-dot c"></span><span id="sld-c">0 ✓</span>
+        <span class="sim-live-dot w"></span><span id="sld-w">0 ✗</span>
+        <span class="sim-live-dot s"></span><span id="sld-s">35 left</span>
+      </div>
+    </div>
+    <div id="sim-q-text" class="sim-q-text"></div>
+    <div id="sim-opts" class="sim-opts"></div>
+    <div id="sim-feedback" class="sim-feedback" style="display:none"></div>
+    <button id="sim-next-btn" class="sim-next-btn" onclick="nextSimQ()" style="display:none">
+      <span class="sim-next-label">Next Question</span>
+      <span class="sim-next-arrow">→</span>
+    </button>
+  </div>
+  <div id="sim-result" style="display:none">
+    <div class="sim-result-box">
+      <div class="sim-result-score" id="sim-final-score"></div>
+      <div class="sim-result-grade" id="sim-final-grade"></div>
+      <div class="sim-result-msg" id="sim-final-msg"></div>
+      <div class="sim-dash">
+        <div class="sim-donut-wrap">
+          <svg viewBox="0 0 120 120" width="130" height="130">
+            <circle cx="60" cy="60" r="50" fill="none" stroke="var(--border)" stroke-width="16"/>
+            <circle id="sim-donut-correct" cx="60" cy="60" r="50" fill="none" stroke="var(--mint)" stroke-width="16" stroke-linecap="butt" stroke-dasharray="0 314" stroke-dashoffset="0" style="transition:stroke-dasharray .8s ease;transform:rotate(-90deg);transform-origin:60px 60px"/>
+            <circle id="sim-donut-wrong" cx="60" cy="60" r="50" fill="none" stroke="var(--coral)" stroke-width="16" stroke-linecap="butt" stroke-dasharray="0 314" stroke-dashoffset="0" style="transition:stroke-dasharray .8s ease .2s;transform:rotate(-90deg);transform-origin:60px 60px"/>
+            <text id="sim-donut-pct" x="60" y="57" text-anchor="middle" font-size="16" font-weight="700" fill="var(--text)">0%</text>
+            <text x="60" y="72" text-anchor="middle" font-size="8" fill="var(--text)" opacity=".5">score</text>
+          </svg>
+          <div class="sim-donut-legend">
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--mint)"></span><span id="sim-leg-correct">Correct: 0</span></div>
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--coral)"></span><span id="sim-leg-wrong">Incorrect: 0</span></div>
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--border)"></span><span id="sim-leg-skip">Skipped: 0</span></div>
+          </div>
+        </div>
+        <div class="sim-bars-wrap">
+          <div class="sim-bars-title">Topic Breakdown</div>
+          <div id="sim-bar-chart"></div>
+        </div>
+      </div>
+      <div class="sim-review-title">Question Review</div>
+      <div id="sim-q-strip"></div>
+      <button class="btn-start" onclick="resetSim()" style="margin-top:1.5rem">Try Again ↺</button>
+    </div>
+  </div>
+</section>
+<section id="examView">
+  <div class="sec-content" id="examSetup">
+    <h2>📝 Practice Test</h2>
+    <div id="examModeCards"></div>
+    <button class="exam-btn primary" style="margin-top:1rem;width:100%" onclick="startExam()">Start ▶</button>
+  </div>
+  <div class="sec-content" id="examRunning" style="display:none">
+    <div class="exam-toolbar">
+      <span>⏱ <span id="examTimer" class="exam-timer">00:00</span></span>
+      <span style="flex:1"></span>
+      <button class="exam-btn secondary" onclick="toggleReview()">★ Mark</button>
+      <button class="exam-btn danger" onclick="submitExam()">Submit</button>
+    </div>
+    <div class="palette-wrap"><div id="examPalette"></div></div>
+    <div id="examQCard"></div>
+    <div style="display:flex;gap:.5rem;margin-top:.8rem">
+      <button class="exam-btn secondary" style="flex:1" onclick="prevQ()">◀ Prev</button>
+      <button class="exam-btn primary" style="flex:1" onclick="nextQ()">Next ▶</button>
+    </div>
+  </div>
+  <div class="sec-content" id="examResult" style="display:none">
+    <h2>📊 Result</h2>
+    <div class="dashboard-grid" id="examSummary"></div>
+    <h3 style="margin-top:1rem">Review</h3>
+    <div id="examReview"></div>
+    <button class="exam-btn primary" style="margin-top:1rem" onclick="resetExam()">Retry</button>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="sec-dash">
+  <div class="sec-content">
+    <h2>📊 Dashboard</h2>
+    <div class="dashboard-grid">
+      <div class="dash-card"><div class="dv" id="dXP">0</div><div class="dl">XP</div></div>
+      <div class="dash-card"><div class="dv" id="dLv">1</div><div class="dl">Level</div></div>
+      <div class="dash-card"><div class="dv" id="dStreak">0</div><div class="dl">Streak</div></div>
+      <div class="dash-card"><div class="dv" id="dExams">0</div><div class="dl">Tests Done</div></div>
+    </div>
+    <h3>🏅 Badges</h3><div id="badgeRowDash"></div>
+    <h3 style="margin-top:1rem">Topic Progress</h3><div id="topicProgress"></div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="nameModal">
+  <div class="modal-box">
+    <h2>👋 Hi!</h2>
+    <p style="font-size:.85rem;color:#777">Your name:</p>
+    <input type="text" id="nameInput" placeholder="Name" maxlength="30">
+    <button onclick="saveName()">Start!</button>
+  </div>
+</div>
+<div id="toast"></div>
+<script>
+const GS_KEY='ck_maths_basic_x_gs';
+const LEVELS=[
+  {name:'Maths Beginner',min:0},{name:'Number Explorer',min:100},
+  {name:'Algebra Starter',min:250},{name:'Geometry Thinker',min:450},
+  {name:'Trig Solver',min:700},{name:'Stats Analyst',min:1000},
+  {name:'Problem Solver',min:1400},{name:'Maths Champion',min:2000}
+];
+const ALL_BADGES=[
+  {id:'first_visit',name:'First Step',icon:'👣',desc:'Opened the portal'},
+  {id:'streak3',name:'3-Day Streak',icon:'🔥',desc:'3 days in a row'},
+  {id:'streak7',name:'Week Warrior',icon:'⚡',desc:'7-day streak'},
+  {id:'xp500',name:'XP 500',icon:'💡',desc:'Earned 500 XP'},
+  {id:'xp1000',name:'XP 1000',icon:'🌟',desc:'Earned 1000 XP'},
+  {id:'exam_done',name:'Test Taker',icon:'📝',desc:'Completed a test'},
+  {id:'perfect_score',name:'Full Marks',icon:'🏆',desc:'100% in a test'},
+  {id:'num_done',name:'Number Master',icon:'🔢',desc:'Visited Number Systems'},
+  {id:'alg_done',name:'Algebra Pro',icon:'📊',desc:'Visited Algebra'},
+  {id:'geo_done',name:'Geo Expert',icon:'📐',desc:'Visited Geometry'},
+  {id:'sta_done',name:'Stats Wizard',icon:'📈',desc:'Visited Statistics'}
+];
+
+const MAP={home:'sec-home',alg:'sec-poly',geo:'sec-tri',num:'sec-num',poly:'sec-poly',linear:'sec-linear',quad:'sec-quad',ap:'sec-ap',tri:'sec-tri',coord:'sec-coord',trg:'sec-trg',apptrg:'sec-apptrg',circles:'sec-circles',areas:'sec-areas',vol:'sec-vol',sta:'sec-sta',prob:'sec-prob',worked:'sec-worked',pp:'sec-pp',exam:'examView',dash:'sec-dash',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',sim:'sec-sim'};
+let curKey="home";
+const ALL_SECS=Object.values(MAP);
+const TOPIC_LABELS={num:'Number Systems',alg:'Algebra',geo:'Geometry',trg:'Trigonometry',sta:'Statistics'};
+const ALL_TOPIC_KEYS=Object.keys(TOPIC_LABELS);
+const tabMap={home:0,num:1,alg:2,geo:3,trg:4,sta:5,pp:6,exam:7,dash:8};
+
+const EXAM_QS={
+  num:[
+    {q:'HCF of 12 and 18 is:',opts:['2','3','6','9'],ci:2,type:'mcq',marks:1,tid:'num',qid:'n1'},
+    {q:'Is 17/40 a terminating decimal?',opts:['Yes, 40 = 2³×5','No, it contains 3','Cannot say','Depends on 17'],ci:0,type:'mcq',marks:1,tid:'num',qid:'n2'},
+    {q:'√3 is:',opts:['Rational','Irrational','Integer','Whole number'],ci:1,type:'mcq',marks:1,tid:'num',qid:'n3'}
+  ],
+  alg:[
+    {q:'Sum of zeroes of 2x² - 5x + 3 is:',opts:['5/2','3/2','-5/2','5'],ci:0,type:'mcq',marks:1,tid:'alg',qid:'a1'},
+    {q:'Discriminant of x² - 4x + 4 = 0:',opts:['0','4','8','16'],ci:0,type:'mcq',marks:1,tid:'alg',qid:'a2'},
+    {q:'If AP is 2, 5, 8, 11..., the 10th term is:',opts:['29','30','31','32'],ci:0,type:'mcq',marks:1,tid:'alg',qid:'a3'},
+    {q:'For consistent and unique solution, the lines must be:',opts:['Parallel','Coincident','Intersecting','Perpendicular only'],ci:2,type:'mcq',marks:1,tid:'alg',qid:'a4'}
+  ],
+  geo:[
+    {q:'A tangent to a circle makes what angle with the radius at the point of contact?',opts:['45°','60°','90°','180°'],ci:2,type:'mcq',marks:1,tid:'geo',qid:'g1'},
+    {q:'Volume of a cone with r=3 and h=7 (use π=22/7):',opts:['66','198','66π','None'],ci:0,type:'mcq',marks:1,tid:'geo',qid:'g2'},
+    {q:'If △ABC ~ △PQR and AB=4, PQ=6, Area(ABC)=16, Area(PQR)=?',opts:['36','24','18','9'],ci:0,type:'mcq',marks:1,tid:'geo',qid:'g3'}
+  ],
+  trg:[
+    {q:'Value of sin 30° + cos 60°:',opts:['0','1','√2','2'],ci:1,type:'mcq',marks:1,tid:'trg',qid:'t1'},
+    {q:'If tan θ = 1, then θ =',opts:['30°','45°','60°','90°'],ci:1,type:'mcq',marks:1,tid:'trg',qid:'t2'}
+  ],
+  sta:[
+    {q:'Empirical relation between Mean, Median and Mode:',opts:['Mode=3Median-2Mean','Mean=3Mode-2Median','Median=3Mean-2Mode','All equal'],ci:0,type:'mcq',marks:1,tid:'sta',qid:'s1'},
+    {q:'P(getting a head) on tossing a coin:',opts:['0','1/4','1/2','1'],ci:2,type:'mcq',marks:1,tid:'sta',qid:'s2'},
+    {q:'Probability of an impossible event is:',opts:['1','-1','0','0.5'],ci:2,type:'mcq',marks:1,tid:'sta',qid:'s3'}
+  ]
+};
+
+const EXAM_MODES={
+  full:{label:'Full Mock (80M)',mins:90,marks:80,topics:['num','alg','geo','trg','sta']},
+  algebra:{label:'Algebra Test',mins:25,marks:20,topics:['num','alg']},
+  geo:{label:'Geometry + Trig',mins:25,marks:20,topics:['geo','trg']},
+  quick:{label:'Quick Quiz',mins:10,marks:10,topics:['alg','sta']}
+};
+
+// ─── GS helpers ────────────────────────────────────────────────────────────
+function getGS(){try{const r=localStorage.getItem(GS_KEY);return r?JSON.parse(r):null}catch(e){return null}}
+function saveGS(gs){try{localStorage.setItem(GS_KEY,JSON.stringify(gs))}catch(e){}}
+function initGS(){return{name:'',xp:0,streak:0,lastDate:'',badges:[],topicVisits:{},examsCompleted:0,bestScore:0}}
+
+function getLevel(xp){let l=0;for(let i=0;i<LEVELS.length;i++)if(xp>=LEVELS[i].min)l=i;return l}
+function getLevelProgress(xp){const lv=getLevel(xp);const cur=LEVELS[lv].min;const next=LEVELS[lv+1]?LEVELS[lv+1].min:cur+1000;const pct=Math.min(100,Math.round((xp-cur)/(next-cur)*100));return{pct,lv,name:LEVELS[lv].name,next:next-xp,cur:xp-cur}}
+
+function updateXPBar(gs){const p=getLevelProgress(gs.xp);document.getElementById('xpBar').style.width=p.pct+'%';document.getElementById('xpLevel').textContent=`Lv ${p.lv+1} · ${p.name}`;document.getElementById('xpLabel').textContent=`${gs.xp} XP · ${p.pct}% to next`}
+function addXP(amt){let gs=getGS()||initGS();gs.xp+=amt;saveGS(gs);updateXPBar(gs);showXPPop('+'+amt+' XP');checkBadges(gs)}
+function showXPPop(text){const d=document.createElement('div');d.className='xp-pop';d.textContent=text;document.body.appendChild(d);setTimeout(()=>d.remove(),1000)}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+function updateStreak(){let gs=getGS()||initGS();const today=new Date().toDateString();if(gs.lastDate===today)return;gs.streak=gs.lastDate===new Date(Date.now()-86400000).toDateString()?gs.streak+1:1;gs.lastDate=today;saveGS(gs);document.getElementById('streakLabel').textContent='🔥 '+gs.streak;checkBadges(gs)}
+function recordTopicVisit(key){let gs=getGS()||initGS();if(!gs.topicVisits[key]){gs.topicVisits[key]=1;gs.xp+=50;showXPPop('+50 XP');showToast('New topic unlocked! +50 XP');}else{gs.topicVisits[key]=(gs.topicVisits[key]||0)+1;}saveGS(gs);updateXPBar(gs);checkBadges(gs)}
+function checkBadges(gs){const earned=new Set(gs.badges);let changed=false;const cond={first_visit:true,streak3:gs.streak>=3,streak7:gs.streak>=7,xp500:gs.xp>=500,xp1000:gs.xp>=1000,exam_done:gs.examsCompleted>0,perfect_score:gs.bestScore>=100,num_done:!!gs.topicVisits['num'],alg_done:!!gs.topicVisits['alg'],geo_done:!!gs.topicVisits['geo'],sta_done:!!gs.topicVisits['sta']};for(const b of ALL_BADGES){if(cond[b.id]&&!earned.has(b.id)){gs.badges.push(b.id);changed=true;showToast(b.icon+' Badge: '+b.name);}}if(changed){saveGS(gs);renderBadgesRow()}}
+function renderBadgesRow(){let gs=getGS()||initGS();const earned=new Set(gs.badges);['badgeRowHome','badgeRowDash'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.innerHTML=ALL_BADGES.map(b=>`<span class="badge-chip ${earned.has(b.id)?'earned':'locked'}">${b.icon} ${b.name}</span>`).join('')})}
+
+// ─── Navigation ────────────────────────────────────────────────────────────
+function showMainSection(k){ALL_SECS.forEach(id=>{const s=document.getElementById(id);if(s)s.classList.remove('active')});const target=MAP[k]||MAP['home'];const sec=document.getElementById(target);if(sec)sec.classList.add('active');document.querySelectorAll('.main-tab').forEach((t,i)=>{t.classList.toggle('active',i===(tabMap[k]??0))});if(ALL_TOPIC_KEYS.includes(k))recordTopicVisit(k)}
+function go(k){showMainSection(k)}
+function resumeLearning(){let gs=getGS()||initGS();const visited=ALL_TOPIC_KEYS.filter(k=>gs.topicVisits[k]);const next=ALL_TOPIC_KEYS.find(k=>!gs.topicVisits[k]);go(next||visited[visited.length-1]||'num')}
+
+// ─── Name modal ────────────────────────────────────────────────────────────
+function showNameModal(){document.getElementById('nameModal').classList.add('open')}
+function saveName(){const n=document.getElementById('nameInput').value.trim();if(!n)return;let gs=getGS()||initGS();gs.name=n;saveGS(gs);document.getElementById('navUser').textContent='👤 '+n;document.getElementById('nameModal').classList.remove('open');showToast('Welcome, '+n+'!')}
+
+// ─── Exam ───────────────────────────────────────────────────────────────────
+let examState=null;
+function buildExamModes(){const c=document.getElementById('examModeCards');c.innerHTML='';Object.entries(EXAM_MODES).forEach(([k,m])=>{const d=document.createElement('div');d.className='exam-mode-card';d.dataset.mode=k;d.innerHTML=`<h3>${m.label}</h3><p>${m.mins} mins · ${m.marks} marks</p>`;d.onclick=()=>{document.querySelectorAll('.exam-mode-card').forEach(x=>x.classList.remove('selected'));d.classList.add('selected');examState={mode:k}};c.appendChild(d)})}
+function getExamQuestions(topics){let qs=[];topics.forEach(t=>{if(EXAM_QS[t])qs=qs.concat(EXAM_QS[t])});return qs}
+function startExam(){if(!examState?.mode){showToast('Select a mode first');return}const mode=EXAM_MODES[examState.mode];const qs=getExamQuestions(mode.topics);examState={...examState,qs,curr:0,answers:{},reviewed:new Set(),startTime:Date.now(),mins:mode.mins};document.getElementById('examSetup').style.display='none';document.getElementById('examRunning').style.display='block';renderPalette();renderQuestion();startTimer()}
+function startTimer(){if(examState.timerInterval)clearInterval(examState.timerInterval);examState.timerInterval=setInterval(()=>{const elapsed=Math.floor((Date.now()-examState.startTime)/1000);const total=examState.mins*60;const left=total-elapsed;if(left<=0){clearInterval(examState.timerInterval);submitExam();return}const m=String(Math.floor(left/60)).padStart(2,'0');const s=String(left%60).padStart(2,'0');const el=document.getElementById('examTimer');el.textContent=`${m}:${s}`;el.classList.toggle('warn',left<120)},1000)}
+function renderPalette(){const pal=document.getElementById('examPalette');pal.innerHTML=examState.qs.map((q,i)=>{let cls='palette-btn';if(examState.answers[i]!==undefined)cls+=' answered';if(examState.reviewed.has(i))cls+=' reviewed';if(i===examState.curr)cls+=' current';return`<button class="${cls}" onclick="jumpQ(${i})">${i+1}</button>`}).join('')}
+function renderQuestion(){const q=examState.qs[examState.curr];const saved=examState.answers[examState.curr];document.getElementById('examQCard').innerHTML=`<div class="question-card"><div class="q-header"><span class="q-num-badge">Q ${examState.curr+1}/${examState.qs.length}</span><span class="q-marks-badge">${q.marks} mark</span></div><div class="q-text">${escHtml(q.q)}</div><div class="mcq-opts">${q.opts.map((o,i)=>`<div class="mcq-opt${saved===i?' selected':''}" onclick="selectOpt(${i})"><span class="opt-letter">${'ABCD'[i]}</span>${escHtml(o)}</div>`).join('')}</div></div>`;renderPalette()}
+function selectOpt(i){examState.answers[examState.curr]=i;renderQuestion()}
+function toggleReview(){if(examState.reviewed.has(examState.curr))examState.reviewed.delete(examState.curr);else examState.reviewed.add(examState.curr);renderPalette()}
+function jumpQ(i){examState.curr=i;renderQuestion()}
+function prevQ(){if(examState.curr>0){examState.curr--;renderQuestion()}}
+function nextQ(){if(examState.curr<examState.qs.length-1){examState.curr++;renderQuestion()}}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function submitExam(){clearInterval(examState.timerInterval);document.getElementById('examRunning').style.display='none';document.getElementById('examResult').style.display='block';let correct=0,total=examState.qs.length;examState.qs.forEach((q,i)=>{if(examState.answers[i]===q.ci)correct++});const pct=Math.round(correct/total*100);document.getElementById('examSummary').innerHTML=`<div class="dash-card"><div class="dv">${correct}/${total}</div><div class="dl">Score</div></div><div class="dash-card"><div class="dv">${pct}%</div><div class="dl">Percent</div></div>`;document.getElementById('examReview').innerHTML=examState.qs.map((q,i)=>{const ua=examState.answers[i];const ok=ua===q.ci;return`<div class="result-q"><div class="rq-q">${i+1}. ${escHtml(q.q)}</div><div class="${ok?'rq-correct':ua===undefined?'rq-skip':'rq-wrong'}">${ok?'✓ Correct: '+q.opts[q.ci]:ua===undefined?'— Skipped (Ans: '+q.opts[q.ci]+')':'✗ Your: '+q.opts[ua]+' | Correct: '+q.opts[q.ci]}</div></div>`}).join('');let gs=getGS()||initGS();gs.examsCompleted=(gs.examsCompleted||0)+1;gs.bestScore=Math.max(gs.bestScore||0,pct);gs.xp+=correct*15;saveGS(gs);updateXPBar(gs);renderBadgesRow();checkBadges(gs);updateDash()}
+function resetExam(){document.getElementById('examRunning').style.display='none';document.getElementById('examResult').style.display='none';document.getElementById('examSetup').style.display='block';examState=null;buildExamModes()}
+
+// ─── Dashboard ─────────────────────────────────────────────────────────────
+function updateDash(){let gs=getGS()||initGS();document.getElementById('dXP').textContent=gs.xp;document.getElementById('dLv').textContent=getLevel(gs.xp)+1;document.getElementById('dStreak').textContent=gs.streak;document.getElementById('dExams').textContent=gs.examsCompleted||0;const tp=document.getElementById('topicProgress');tp.innerHTML=ALL_TOPIC_KEYS.map(k=>{const v=gs.topicVisits[k]||0;return`<div style="margin:.3rem 0;font-size:.83rem"><strong>${TOPIC_LABELS[k]}:</strong> ${v?'✅ Visited ('+v+'x)':'⬜ Not visited'}</div>`}).join('')}
+
+// ─── Init ───────────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded',()=>{
+  let gs=getGS();
+  if(!gs){gs=initGS();saveGS(gs);showNameModal()}
+  else if(gs.name){document.getElementById('navUser').textContent='👤 '+gs.name}
+  updateXPBar(gs);
+  document.getElementById('streakLabel').textContent='🔥 '+(gs.streak||0);
+  updateStreak();
+  renderBadgesRow();
+  buildExamModes();
+  updateDash();
+  checkBadges(gs);
+  addXP(10);
+});
+
+function toggleTheme(){const r=document.documentElement,b=document.getElementById('themeBtn'),cur=r.getAttribute('data-theme');if(cur==='dark'){r.setAttribute('data-theme','light');if(b){b.textContent='🌙 Dark';}localStorage.setItem('theme','light');}else{r.setAttribute('data-theme','dark');if(b){b.textContent='☀️ Light';}localStorage.setItem('theme','dark');}}
+(function(){const t=localStorage.getItem('theme');const r=document.documentElement;const b=document.getElementById('themeBtn');if(t){r.setAttribute('data-theme',t);if(b){b.textContent=t==='dark'?'☀️ Light':'🌙 Dark';}}})();
+
+const SIM_BANK = [
+  {q:"The concept of 'sustainable development' aims to meet the needs of the present without compromising the ability of __ generations to meet their own needs.",opts:["past","future","current","affluent"],ans:1,exp:"Sustainable development (Brundtland Commission, 1987): meeting present needs without compromising future generations' ability to meet theirs."},
+  {q:"Which of the following is a primary sector activity?",opts:["Banking","Fishing","Manufacturing","Retail Trade"],ans:1,exp:"Primary sector involves extraction/production from nature: agriculture, fishing, mining, forestry. Manufacturing is secondary; banking/retail are tertiary."},
+  {q:"GDP stands for:",opts:["Gross Domestic Product","General Development Plan","Gross Deficit Parameter","Government Development Programme"],ans:0,exp:"GDP = Gross Domestic Product — total monetary value of all goods and services produced within a country's borders in a specific time period."},
+  {q:"The French Revolution began in the year:",opts:["1776","1789","1804","1815"],ans:1,exp:"The French Revolution began in 1789 with the storming of the Bastille on 14 July 1789, marking the end of the ancien régime."},
+  {q:"Which gas is responsible for the greenhouse effect?",opts:["Oxygen","Nitrogen","Carbon Dioxide","Hydrogen"],ans:2,exp:"CO₂ (and other greenhouse gases) trap heat radiation from Earth's surface, causing the greenhouse effect and global warming."},
+  {q:"Democracy is a system of government in which power is vested in:",opts:["A king","The military","The people","A prime minister"],ans:2,exp:"Democracy (Greek: demos = people, kratos = power) is government by the people, directly or through elected representatives."},
+  {q:"The chemical formula for water is:",opts:["H₂O₂","HO","H₂O","H₃O"],ans:2,exp:"Water is H₂O — two hydrogen atoms covalently bonded to one oxygen atom. H₂O₂ is hydrogen peroxide, a different compound."},
+  {q:"Which planet is known as the 'Red Planet'?",opts:["Venus","Jupiter","Mars","Saturn"],ans:2,exp:"Mars appears red due to iron oxide (rust) on its surface. It's the fourth planet from the Sun and has two moons: Phobos and Deimos."},
+  {q:"The speed of light in vacuum is approximately:",opts:["3×10⁶ m/s","3×10⁸ m/s","3×10¹⁰ m/s","3×10⁴ m/s"],ans:1,exp:"Speed of light c ≈ 3×10⁸ m/s (exactly 299,792,458 m/s). It is the universal speed limit — nothing with mass can reach or exceed it."},
+  {q:"Photosynthesis produces:",opts:["CO₂ and water","Glucose and oxygen","Glucose and CO₂","Water and nitrogen"],ans:1,exp:"Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ (glucose) + 6O₂. Chlorophyll absorbs light energy for this reaction."},
+  {q:"Which of the following is NOT a fundamental right in India?",opts:["Right to Equality","Right to Property","Right to Freedom","Right against Exploitation"],ans:1,exp:"Right to Property was removed as a fundamental right by the 44th Amendment (1978) and is now only a legal right under Article 300A."},
+  {q:"The Harappan civilisation flourished around:",opts:["5000–4000 BCE","2600–1900 BCE","1000–500 BCE","3500–3000 BCE"],ans:1,exp:"The Indus Valley Civilisation (Harappan) flourished approximately 2600–1900 BCE, with major cities at Mohenjo-daro and Harappa."},
+  {q:"Which organelle is called the 'powerhouse of the cell'?",opts:["Nucleus","Ribosome","Mitochondria","Chloroplast"],ans:2,exp:"Mitochondria produce ATP (energy currency) through cellular respiration. They have their own DNA and are believed to be of endosymbiotic origin."},
+  {q:"The law of demand states that as price increases, quantity demanded:",opts:["Increases","Decreases","Remains the same","First increases then decreases"],ans:1,exp:"Law of demand: inverse relationship between price and quantity demanded, ceteris paribus. As price rises, demand falls (and vice versa)."},
+  {q:"Which type of government has a federal structure?",opts:["Unitary","Federal","Both A and B","Neither"],ans:1,exp:"A federal government divides power between central and state governments (e.g., India, USA). A unitary government concentrates power at the centre (e.g., UK, France)."},
+  {q:"The process by which plants lose water through their leaves is called:",opts:["Photosynthesis","Transpiration","Respiration","Excretion"],ans:1,exp:"Transpiration is the evaporation of water from plant surfaces (mainly leaves through stomata). It drives the uptake of water and minerals from roots."},
+  {q:"The SI unit of force is:",opts:["Watt","Joule","Newton","Pascal"],ans:2,exp:"Force is measured in Newtons (N). 1 N = force needed to accelerate 1 kg by 1 m/s². Named after Sir Isaac Newton."},
+  {q:"Which acid is present in the human stomach?",opts:["Sulphuric acid","Nitric acid","Hydrochloric acid","Acetic acid"],ans:2,exp:"The stomach produces HCl (hydrochloric acid, pH 1.5–2) to aid protein digestion and kill bacteria. Pepsin (enzyme) works best in this acidic environment."},
+  {q:"Universal Adult Franchise means the right to vote is given to:",opts:["All adults regardless of caste, religion, gender","Only literate adults","Only taxpayers","Only educated citizens"],ans:0,exp:"Universal Adult Franchise: all citizens above 18 years can vote regardless of caste, class, religion, gender, or education. India adopted this in its first election (1952)."},
+  {q:"The 'Dandi March' was related to which freedom movement event?",opts:["Non-Cooperation Movement","Civil Disobedience Movement","Quit India Movement","Champaran Satyagraha"],ans:1,exp:"Gandhi led the Salt March (Dandi March) in March 1930, walking 385 km to Dandi to make salt — launching the Civil Disobedience Movement."},
+  {q:"Which of the following is a renewable source of energy?",opts:["Coal","Petroleum","Solar energy","Natural gas"],ans:2,exp:"Solar energy is renewable — it is continuously replenished by the Sun. Coal, petroleum and natural gas are fossil fuels that are non-renewable."},
+  {q:"The chromosome number in human somatic cells is:",opts:["23","46","44","48"],ans:1,exp:"Human somatic (body) cells have 46 chromosomes (23 pairs). Gametes (egg/sperm) have 23 chromosomes each (haploid). After fertilisation, 46 is restored."},
+  {q:"Inflation means:",opts:["Fall in the general price level","Rise in the general price level","Rise in GDP","Fall in unemployment"],ans:1,exp:"Inflation is a sustained rise in the general price level. It means money's purchasing power decreases over time. Measured by the Consumer Price Index (CPI)."},
+  {q:"The Preamble to the Indian Constitution begins with:",opts:["We the People of India","We, the Citizens of India","We, the Representatives of India","We, the Leaders of India"],ans:0,exp:"The Preamble begins: 'WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a...' — asserting popular sovereignty."},
+  {q:"Which element has the atomic number 6?",opts:["Nitrogen","Oxygen","Carbon","Boron"],ans:2,exp:"Carbon (C) has atomic number 6 — 6 protons and 6 electrons. Carbon forms the basis of organic chemistry and all life on Earth."},
+  {q:"What does 'GDP per capita' measure?",opts:["Total GDP of a country","Average income per person","Total exports of a country","Government revenue"],ans:1,exp:"GDP per capita = GDP ÷ Population. It measures average economic output per person — used to compare living standards between countries."},
+  {q:"Which layer of the atmosphere protects us from harmful UV radiation?",opts:["Troposphere","Stratosphere (ozone layer)","Mesosphere","Thermosphere"],ans:1,exp:"The ozone layer in the stratosphere (15–35 km altitude) absorbs 97–99% of the Sun's UV-B and UV-C radiation, protecting life on Earth."},
+  {q:"Newton's third law of motion states that every action has an equal and opposite:",opts:["Force","Reaction","Momentum","Acceleration"],ans:1,exp:"Newton's 3rd Law: For every action, there is an equal and opposite reaction. Forces always occur in pairs — action-reaction forces act on different bodies."},
+  {q:"The term 'secular' in the Indian Constitution means:",opts:["India has a state religion","All religions are banned","India treats all religions equally","Only Hinduism is promoted"],ans:2,exp:"Secular India (42nd Amendment, 1976) means: no state religion, equal respect for all religions, no discrimination on religious grounds."},
+  {q:"Acid rain is primarily caused by:",opts:["CO₂ and CO","SO₂ and NOₓ","O₃ and CFCs","H₂O and CH₄"],ans:1,exp:"Acid rain forms when SO₂ (sulphur dioxide) and NOₓ (nitrogen oxides) from burning fossil fuels dissolve in rainwater forming H₂SO₄ and HNO₃."},
+  {q:"The function of the kidney is to:",opts:["Produce insulin","Filter blood and remove waste","Produce bile","Pump blood"],ans:1,exp:"Kidneys filter blood (150 L/day), removing urea, excess salts and water as urine. They also regulate blood pressure, pH and red blood cell production."},
+  {q:"Which economic system allows for private ownership and market prices?",opts:["Socialism","Communism","Mixed economy","Capitalism"],ans:3,exp:"Capitalism features private ownership of means of production, free market prices and profit motive. Mixed economy combines elements of capitalism and socialism."},
+  {q:"The chemical process of rusting involves:",opts:["Iron reacting with nitrogen","Iron reacting with oxygen and water","Iron reacting with carbon dioxide","Iron reacting with hydrogen"],ans:1,exp:"Rusting: Iron + Oxygen + Water → Iron oxide (Fe₂O₃). It is an electrochemical process requiring both O₂ and H₂O. Galvanising (zinc coating) prevents rusting."},
+  {q:"The term 'federalism' refers to:",opts:["Rule by a dictator","Division of power between central and state governments","Single central government","Military rule"],ans:1,exp:"Federalism divides powers between national (central) and subnational (state) governments, each having authority in their respective domains."},
+  {q:"Which of the following statements about natural selection is correct?",opts:["All individuals in a species are identical","Organisms best adapted to environment survive and reproduce more","Evolution happens in individual organisms","All traits acquired in lifetime are inherited"],ans:1,exp:"Darwin's natural selection: individuals with advantageous traits survive and reproduce more, passing those traits to offspring — 'survival of the fittest.'"}
+];
+let simQ = [];
+let simIdx = 0;
+let simScore = 0;
+let simTimer = null;
+let simTimeLeft = 2100;
+let simAnswered = [];
+
+function startSim(){
+  simQ = [...SIM_BANK].sort(()=>Math.random()-0.5).slice(0,35);
+  simIdx=0;simScore=0;simTimeLeft=2100;
+  simAnswered=new Array(35).fill(null);
+  const dc=document.getElementById('sldc'),dw=document.getElementById('sldw');
+  if(dc)dc.style.strokeDasharray='0 314';
+  if(dw){dw.style.strokeDasharray='0 314';dw.style.transform='rotate(-90deg)';}
+  const pt=document.getElementById('sld-pct');if(pt)pt.textContent='0%';
+  const ec=document.getElementById('sld-c'),ew=document.getElementById('sld-w'),es=document.getElementById('sld-s');
+  if(ec)ec.textContent='0 ✓';if(ew)ew.textContent='0 ✗';if(es)es.textContent='35 left';
+  document.getElementById('sim-start').style.display='none';
+  document.getElementById('sim-result').style.display='none';
+  document.getElementById('sim-quiz').style.display='block';
+  renderSimQ();
+  simTimer=setInterval(tickSim,1000);
+}
+function tickSim(){
+  simTimeLeft--;
+  const m=Math.floor(simTimeLeft/60).toString().padStart(2,'0');
+  const s=(simTimeLeft%60).toString().padStart(2,'0');
+  const el=document.getElementById('sim-timer');
+  if(el)el.textContent='⏱ '+m+':'+s;
+  if(simTimeLeft<=0){clearInterval(simTimer);endSim();}
+}
+function renderSimQ(){
+  if(simIdx>=simQ.length){clearInterval(simTimer);endSim();return;}
+  const q=simQ[simIdx];
+  document.getElementById('sim-q-num').textContent='Q '+(simIdx+1)+'/35';
+  document.getElementById('sim-q-text').textContent=q.q;
+  document.getElementById('sim-feedback').style.display='none';
+  document.getElementById('sim-next-btn').style.display='none';
+  const opts=document.getElementById('sim-opts');
+  opts.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const btn=document.createElement('button');
+    btn.className='sim-opt';
+    btn.textContent=String.fromCharCode(65+i)+'. '+o;
+    btn.onclick=()=>answerSim(i,btn,q);
+    opts.appendChild(btn);
+  });
+}
+function updateLiveDonut(){
+  const total=35;
+  const correct=simAnswered.filter((a,i)=>a!==null&&a===simQ[i].ans).length;
+  const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;
+  const circ=2*Math.PI*50;
+  const cDash=circ*(correct/total);
+  const wDash=circ*(wrong/total);
+  const dc=document.getElementById('sldc');
+  const dw=document.getElementById('sldw');
+  const answered=simAnswered.filter(a=>a!==null).length;
+  const pct=answered?Math.round(correct/answered*100):0;
+  if(dc)dc.style.strokeDasharray=`${cDash} ${circ}`;
+  if(dw){
+    dw.style.strokeDasharray=`${wDash} ${circ}`;
+    dw.style.transform=`rotate(${(correct/total)*360-90}deg)`;
+    dw.style.transformOrigin='60px 60px';
+  }
+  const pt=document.getElementById('sld-pct');
+  if(pt)pt.textContent=`${pct}%`;
+  const ec=document.getElementById('sld-c');
+  const ew=document.getElementById('sld-w');
+  const es=document.getElementById('sld-s');
+  if(ec)ec.textContent=correct+' ✓';
+  if(ew)ew.textContent=wrong+' ✗';
+  if(es)es.textContent=(total-simIdx-1)+' left';
+}
+function answerSim(chosen,btn,q){
+  document.querySelectorAll('.sim-opt').forEach(b=>b.disabled=true);
+  const correct=chosen===q.ans;
+  if(correct){simScore++;btn.classList.add('sim-correct');}
+  else{btn.classList.add('sim-wrong');document.querySelectorAll('.sim-opt')[q.ans].classList.add('sim-correct');}
+  document.getElementById('sim-score-live').textContent='Score: '+simScore;
+  const fb=document.getElementById('sim-feedback');
+  fb.innerHTML=(correct?'✅ <strong>Correct!</strong> ':'❌ <strong>Incorrect.</strong> ')+q.exp;
+  fb.style.display='block';
+  fb.className='sim-feedback '+(correct?'sim-fb-correct':'sim-fb-wrong');
+  simAnswered[simIdx]=chosen;
+  updateLiveDonut();
+  document.getElementById('sim-next-btn').style.display='inline-flex';
+}
+function nextSimQ(){
+  simIdx++;
+  if(simIdx>=simQ.length){clearInterval(simTimer);endSim();}
+  else{renderSimQ();}
+}
+function endSim(){
+  clearInterval(simTimer);
+  document.getElementById('sim-quiz').style.display='none';
+  document.getElementById('sim-result').style.display='block';
+  const total=35;
+  const pct=Math.round(simScore/total*100);
+  let grade='F',msg='Keep practising. Review the concepts.';
+  if(pct>=90){grade='A+';msg='Outstanding! Board topper material! 🏆';}
+  else if(pct>=75){grade='A';msg='Excellent! You are well-prepared.';}
+  else if(pct>=60){grade='B';msg='Good effort. Review weak areas.';}
+  else if(pct>=40){grade='C';msg='Needs work. Go through chapter notes.';}
+  document.getElementById('sim-final-score').textContent=`${simScore}/${total} (${pct}%)`;
+  document.getElementById('sim-final-grade').textContent=`Grade: ${grade}`;
+  document.getElementById('sim-final-msg').textContent=msg;
+  const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;
+  const skipped=simAnswered.filter(a=>a===null).length;
+  const correct=simScore;
+  const circ=2*Math.PI*50;
+  setTimeout(()=>{
+    const dc=document.getElementById('sim-donut-correct');
+    const dw=document.getElementById('sim-donut-wrong');
+    const cDash=circ*(correct/total);
+    const wDash=circ*(wrong/total);
+    if(dc)dc.style.strokeDasharray=`${cDash} ${circ}`;
+    if(dw){
+      dw.style.strokeDasharray=`${wDash} ${circ}`;
+      dw.style.transform=`rotate(${(correct/total)*360-90}deg)`;
+      dw.style.transformOrigin='60px 60px';
+    }
+    const pt=document.getElementById('sim-donut-pct');
+    if(pt)pt.textContent=`${pct}%`;
+  },150);
+  const lc=document.getElementById('sim-leg-correct');
+  const lw=document.getElementById('sim-leg-wrong');
+  const ls=document.getElementById('sim-leg-skip');
+  if(lc)lc.textContent=`Correct: ${correct}`;
+  if(lw)lw.textContent=`Incorrect: ${wrong}`;
+  if(ls)ls.textContent=`Skipped: ${skipped}`;
+  const barChart=document.getElementById('sim-bar-chart');
+  if(barChart){
+    barChart.innerHTML='';
+    const groups=[
+      {label:'Section 1',qs:Array.from({length:9},(_,i)=>i)},
+      {label:'Section 2',qs:Array.from({length:9},(_,i)=>i+9)},
+      {label:'Section 3',qs:Array.from({length:8},(_,i)=>i+18)},
+      {label:'Section 4',qs:Array.from({length:9},(_,i)=>i+26)},
+    ];
+    groups.forEach(g=>{
+      const valid=g.qs.filter(i=>i<simQ.length);
+      if(!valid.length)return;
+      const gc=valid.filter(i=>simAnswered[i]===simQ[i].ans).length;
+      const gw=valid.filter(i=>simAnswered[i]!==null&&simAnswered[i]!==simQ[i].ans).length;
+      const cp=Math.round(gc/valid.length*100);
+      const wp=Math.round(gw/valid.length*100);
+      barChart.innerHTML+=`<div class="sim-bar-row"><div class="sim-bar-label"><span>${g.label}</span><span>${gc}/${valid.length} correct</span></div><div class="sim-bar-track"><div class="sim-bar-seg-c" style="width:${cp}%"></div><div class="sim-bar-seg-w" style="width:${wp}%"></div></div></div>`;
+    });
+  }
+  const strip=document.getElementById('sim-q-strip');
+  if(strip){
+    strip.innerHTML='';
+    simQ.forEach((q,i)=>{
+      const chosen=simAnswered[i];
+      const cls=chosen===null?'s':chosen===q.ans?'c':'w';
+      const dot=document.createElement('div');
+      dot.className=`sim-strip-dot ${cls}`;
+      dot.textContent=i+1;
+      dot.title=`Q${i+1}: ${cls==='c'?'Correct':cls==='w'?'Wrong':'Skipped'}`;
+      strip.appendChild(dot);
+    });
+  }
+}
+function resetSim(){
+  document.getElementById('sim-start').style.display='block';
+  document.getElementById('sim-result').style.display='none';
+  document.getElementById('sim-quiz').style.display='none';
+}
+</script>
+
+<!-- ══ ADSENSE BOTTOM LEADERBOARD ══ Highest RPM slot ══ -->
+<div style="padding:16px;text-align:center;border-top:1px solid #dde3ee;background:#f4f6fb;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE BOTTOM ══ -->
+
+</div>
+<div class="side-panel panel-right">
+  <div class="side-panel-inner">
+    <!-- ADSENSE SKYSCRAPER — goes live after approval -->
+    <div class="adsense-sky">
+      <div class="panel-label">Advertisement</div>
+      <div id="ad-right-1"></div>
+<div id="ad-right-2"></div>
+<div id="ad-right-3"></div>
+<!-- AdSense skyscraper -->
+<ins class="adsbygoogle"
+     style="display:block;width:160px;height:600px;"
+     data-ad-client="ca-pub-PENDING"
+     data-ad-slot="SLOT-SKY-PENDING"
+     data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<!-- end AdSense sky -->
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ AD: BOTTOM LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0;">
+  <div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: BOTTOM LEADERBOARD ══ -->
+<!-- AdSense bottom leaderboard -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:728px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-BOTTOM-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});
+// Mobile nav back button
+(function(){
+  const hist=[];
+  window.mobileGoBack=function(){
+    if(hist.length>1){hist.pop();var prev=hist[hist.length-1];_navToM(prev,false);}
+    else{_navToM('home',false);}
+  };
+  function _navToM(k,push){
+    if(push===undefined||push)hist.push(k);
+    var titleEl=document.getElementById('mobileNavTitle');
+    if(titleEl){
+      var btn=document.querySelector('.main-tab.active,.topnav-tab.active');
+      titleEl.textContent=btn?btn.textContent.trim():(k==='home'?'Home':k.toUpperCase());
+    }
+    if(typeof go==='function')go(k);
+    else if(typeof showMainSection==='function')showMainSection(k);
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    hist.push('home');
+    document.querySelectorAll('[onclick]').forEach(function(el){
+      var oc=el.getAttribute('onclick')||'';
+      var m=oc.match(/(?:go|showMainSection)\(['"](\w+)['"]/);
+      if(m){el.addEventListener('click',function(){
+        hist.push(m[1]);
+        var t=document.getElementById('mobileNavTitle');
+        if(t)t.textContent=el.textContent.trim().substring(0,24);
+      });}
+    });
+  });
+})();
+
+</script>
+</div>
+<!-- end AdSense bottom -->
+
+<script src="../portal-shell.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+CBSEMOCK PORTAL — STRUCTURAL HARD AUDIT
+Audit date: 03 November 2026
+Audited package: CBSEMOCK_Fresh_GitHub_Repository_Only_6_Menu_Items.zip
+
+SCOPE
+- 313 HTML pages scanned across the repository.
+- 386 total files included in the package before this report was added.
+- Root navigation, local anchor destinations, responsive viewport metadata, shared navigation/ad loaders, and the Class X Computer Applications mock-paper renderer were checked.
+
+FIXES APPLIED
+1. Class X Computer Applications Mock Tests (Code 165)
+   - Fixed the question/answer renderer so escaped HTML examples are displayed as plain text.
+   - HTML examples such as <a href="..."> can no longer become live clickable links inside question or answer content.
+   - Question text, options, and answers are escaped before being inserted into the page.
+2. Repaired the broken Practice navigation link on resources/english-comm-x.html. It now points to the existing Class X English mock-paper page.
+3. Added missing responsive viewport metadata to resources/biology-xii.html and resources/comp-app-x.html.
+
+STRUCTURAL AUDIT RESULTS
+- Main navigation: exactly 6 requested menu items; all 6 destination files exist.
+- Shared Back / Main Home navigation: portal-shell.js is included on all 312 non-root HTML pages. The root index is the home page and does not need a back-to-home bar.
+- Ad loading: ads.js and portal-shell.js are included on all 312 non-root HTML pages; the root index retains its own ad structure.
+- Local anchor destinations: no broken relative anchor destinations found after repairs.
+- Responsive viewport metadata: present on all 313 HTML pages after repairs.
+- Page titles: present on all 313 HTML pages.
+- Class X paper question/answer renderer: markup escaping safeguard added.
+
+IMPORTANT LIMITATIONS
+- This is a repository-wide structural and source-code audit. It verifies file destinations, shared navigation/ad loader presence, metadata, and the identified hyperlink-rendering defect.
+- It is not a guarantee that every page has been visually inspected at every screen size or that every interactive control in every subject lab has been exhaustively tested manually.
+- Ad slots are configured as placeholders until the publisher ID / ad settings and actual ad units are configured. Presence of the ad loader and slots does not mean live ads are serving.
+- A final live GitHub Pages deployment check is still required after uploading this package, because deployment paths, hosting configuration, and third-party ad approval are outside this local repository audit.

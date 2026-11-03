@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08131f">
+<title>CBSEMOCK | Biology Research Studio — Microscope Skills Lab</title>
+<style>
+:root{--bg:#08131f;--panel:#102235;--panel2:#142b40;--line:#29465d;--text:#eaf4fb;--muted:#9eb4c7;--cyan:#46d7df;--green:#6ee0ae;--amber:#ffc978;--red:#ff8d8d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#123047 0,transparent 36%),var(--bg);color:var(--text);font:14px/1.55 Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+header.top{position:sticky;top:0;z-index:20;background:#08131fee;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.topin{max-width:1540px;margin:auto;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:11px}.logo{width:39px;height:39px;border-radius:11px;background:#12374a;display:grid;place-items:center;color:var(--cyan);font-size:22px}.brand b{display:block;font-size:12px;letter-spacing:.8px}.brand small{display:block;color:var(--muted);font-size:10px}.status{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#102235;color:#c0d7e5;border-radius:30px;padding:5px 9px;font-size:9px;font-weight:850;letter-spacing:.6px}
+.shell{max-width:1540px;margin:auto;padding:20px 22px}.hero{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:7px 2px 18px}.eyebrow{color:var(--cyan);font-size:10px;font-weight:900;letter-spacing:1.7px}.hero h1{font-size:clamp(26px,3vw,38px);line-height:1.12;margin:7px 0}.sub{max-width:850px;color:#a9bfd0;margin:0;font-size:13px}.heroactions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #2c6475;background:#123448;color:var(--text);border-radius:9px;padding:9px 12px;font:inherit;font-size:11px;font-weight:850;cursor:pointer}.btn.primary{background:linear-gradient(100deg,#137b8b,#1c9c8b);border-color:#46d7df}.btn.ghost{background:#102235;border-color:var(--line)}.btn:hover{filter:brightness(1.16)}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.layout{display:grid;grid-template-columns:285px minmax(430px,1fr) 300px;gap:14px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:13px;box-shadow:0 12px 28px #0002}.ph{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px;background:#122a3e;border-bottom:1px solid var(--line)}.ph h2{font-size:10px;letter-spacing:1px;margin:0;color:#dcecf6}.ph small{font-size:9px;color:#7fa8bd;font-weight:900;letter-spacing:.8px}.pb{padding:13px}.hint{color:var(--muted);font-size:11px;margin:0 0 12px}.sectionlabel{font-size:9px;color:#7fa8bd;font-weight:900;letter-spacing:1.2px;margin:5px 0 9px}.field{display:block;color:#c4d8e5;font-size:11px;font-weight:750;margin:10px 0}.field select,.field input,.field textarea{display:block;width:100%;margin-top:5px;background:#0b1b29;border:1px solid #35546a;color:var(--text);border-radius:8px;padding:9px;font:inherit;font-size:12px}.field input[type=range]{padding:0;accent-color:var(--cyan)}.field output{float:right;color:var(--cyan);font-variant-numeric:tabular-nums}.smallnote{font-size:10px;color:var(--muted)}.metricgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.metric{background:#0d1e2d;border:1px solid var(--line);border-radius:10px;padding:10px}.metric strong{display:block;color:var(--cyan);font-size:20px;font-variant-numeric:tabular-nums}.metric span{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.8px}.workspace{padding:13px;background:radial-gradient(ellipse at 50% 20%,#183c50,#091a28 72%);border:1px solid #294960;border-radius:12px;min-height:355px}.scenehead{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}.scenehead b{font-size:11px}.scenehead span{font-size:9px;color:var(--muted)}.microscope{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}.scope{width:150px;height:245px;position:relative;margin:auto}.base{position:absolute;bottom:8px;left:20px;width:112px;height:17px;background:linear-gradient(90deg,#526d7e,#9ab5c4,#344f60);border-radius:8px}.arm{position:absolute;bottom:19px;left:39px;width:82px;height:155px;border:13px solid #68899b;border-left-color:#3d6175;border-bottom:0;border-radius:48px 45px 0 0;transform:rotate(-8deg)}.foot{position:absolute;bottom:22px;left:28px;width:86px;height:22px;background:#426477;border-radius:6px}.tube{position:absolute;top:17px;left:59px;width:28px;height:95px;background:linear-gradient(90deg,#526d7e,#b0c7d2,#476778);border-radius:7px;transform:rotate(-18deg)}.eyepiece{position:absolute;top:4px;left:48px;width:48px;height:23px;background:#91aebb;border:4px solid #476778;border-radius:6px;transform:rotate(-18deg)}.nose{position:absolute;top:103px;left:79px;width:48px;height:15px;background:#8ba8b8;border-radius:5px;transform:rotate(35deg)}.objective{position:absolute;top:111px;left:108px;width:13px;height:45px;background:#d1dce0;border:3px solid #526f80;border-radius:4px;transform:rotate(24deg);transform-origin:top}.stage{position:absolute;top:157px;left:29px;width:98px;height:9px;background:#aec3ce;border-radius:4px}.slide{position:absolute;top:151px;left:48px;width:67px;height:5px;background:#d8f1f5;border-radius:3px}.clip{position:absolute;top:149px;left:27px;width:16px;height:12px;border:3px solid #90aab6;border-bottom:0;border-radius:4px}.focuswheel{position:absolute;top:137px;left:17px;width:27px;height:27px;border-radius:50%;background:repeating-conic-gradient(#9cb3bf 0 12deg,#4f6d7e 12deg 24deg);border:4px solid #304e61}
+.viewbox{background:#07131d;border:1px solid #477083;border-radius:50%;width:min(100%,330px);aspect-ratio:1;overflow:hidden;margin:auto;position:relative;box-shadow:inset 0 0 28px #000b,0 0 0 5px #17374a}.viewbox svg{width:100%;height:100%;display:block;transition:transform .35s,filter .35s}.viewlabel{position:absolute;left:10px;top:9px;background:#08131fbd;border:1px solid #35566a;border-radius:20px;padding:4px 8px;font-size:9px;color:#cce8f2}.crosshair{position:absolute;inset:50%;width:1px;height:1px}.crosshair:before,.crosshair:after{content:"";position:absolute;background:#ffffff55}.crosshair:before{width:1px;height:80px;left:0;top:-40px}.crosshair:after{height:1px;width:80px;top:0;left:-40px}.workspacefoot{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:9px;color:var(--muted);font-size:9px}.tabs{display:flex;gap:5px;padding:9px 11px;border-bottom:1px solid var(--line);background:#0d1d2c;overflow:auto}.tab{white-space:nowrap;border:1px solid transparent;background:transparent;color:#9eb4c7;padding:8px 10px;border-radius:8px;font-size:10px;font-weight:900;cursor:pointer}.tab.active{background:#12404c;border-color:#267c87;color:#e9ffff}.view{display:none;padding:13px}.view.active{display:block}.info{background:#0d1e2d;border:1px solid var(--line);border-radius:10px;padding:11px;margin:9px 0;color:#c5d8e4;font-size:11px}.info b{color:#eaf4fb}.ad{min-height:80px;border:1px dashed #46d7df;border-radius:11px;background:#102b3e;color:#8eacbd;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:9px;letter-spacing:1px;font-weight:900;margin:12px 0}
+.table{width:100%;border-collapse:collapse;font-size:10px}.table th,.table td{border-bottom:1px solid var(--line);padding:8px;text-align:left}.table th{color:#80a9bd;font-size:9px;text-transform:uppercase}.table td{color:#d4e5ee}.progress{height:7px;background:#20384a;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--green));transition:width .3s}.challenge{display:grid;grid-template-columns:1fr 1fr;gap:8px}.matchitem,.matchslot{border:1px solid #35566a;border-radius:9px;padding:9px;background:#0d1e2d;color:#c8dce7;font-size:10px;cursor:pointer;text-align:left}.matchitem.selected{border-color:var(--amber);box-shadow:0 0 0 2px #ffc97833}.matchitem.done,.matchslot.correct{border-color:#348c70;background:#10382f;color:#a8f0cf}.matchslot{display:block;width:100%;margin:5px 0}.quizopt{width:100%;text-align:left;background:#0d1e2d;color:#d7e7ef;border:1px solid #35566a;border-radius:9px;padding:10px;margin:5px 0;font-size:11px;cursor:pointer}.quizopt.correct{border-color:#45bd8c;background:#10382f}.quizopt.wrong{border-color:#d87979;background:#3a2028}.feedback{background:#0d1e2d;border:1px solid var(--line);border-radius:9px;padding:9px;font-size:10px;color:#b9d2df;margin-top:8px;min-height:35px}.rightcol{display:flex;flex-direction:column}.rightcol .panel{margin-bottom:12px}.rightcol ol{padding-left:18px;color:#b9d0dd;font-size:10px}.rightcol li{margin:7px 0}.adslot{min-height:90px}
+@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)}.rightcol{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+@media(max-width:760px){.shell{padding:12px}.layout{grid-template-columns:1fr}.rightcol{grid-column:auto;display:block}.hero{display:block}.heroactions{margin-top:12px}.topin{padding:9px 12px}.microscope{grid-template-columns:1fr}.scope{height:190px;transform:scale(.82);transform-origin:top center;margin-bottom:-28px}.viewbox{width:min(100%,280px)}}
+@media print{header,.heroactions,.tabs,.ad,.rightcol,.btn{display:none!important}body{background:#fff;color:#111}.panel,.workspace{break-inside:avoid;background:#fff;color:#111;border:1px solid #bbb}.layout{display:block}.view{display:block!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="topin"><div class="brand"><div class="logo">🔬</div><div><b>CBSEMOCK · BIOLOGY RESEARCH STUDIO</b><small>Virtual biological laboratory · Microscope skills</small></div></div><div class="status"><span class="chip">CLASS IX–X</span><span class="chip">PRACTICAL 01 / 40</span><span class="chip">GOLD STANDARD CANDIDATE</span></div></div></header>
+<main class="shell">
+<section class="hero"><div><div class="eyebrow">INTERACTIVE PRACTICAL · BIOLOGY LAB 01</div><h1>Microscope Skills Lab</h1><p class="sub">Explore a compound light microscope, practise focusing, compare specimen views at different magnifications and record evidence like a laboratory investigator.</p><div class="status" style="margin-top:12px"><span class="chip">Interactive microscope</span><span class="chip">Magnification calculator</span><span class="chip">Observation notebook</span><span class="chip">Practical assessment</span></div></div><div class="heroactions"><button class="btn ghost" id="resetAll">↺ Reset practical</button><button class="btn" id="exportCSV">↓ Export observations</button><button class="btn primary" id="downloadReport">⇩ Practical report</button></div></section>
+<div class="layout">
+<aside>
+<section class="panel"><div class="ph"><h2>MICROSCOPE CONTROL DECK</h2><small>SETUP</small></div><div class="pb">
+<div class="sectionlabel">SPECIMEN & OPTICS</div>
+<label class="field">Specimen<select id="specimen"><option value="onion">Onion epidermal cells</option><option value="cheek">Human cheek cells</option><option value="leaf">Leaf cells with chloroplasts</option><option value="pollen">Pollen grains</option></select></label>
+<label class="field">Eyepiece lens<select id="eyepiece"><option value="10">10×</option><option value="15">15×</option></select></label>
+<label class="field">Objective lens<select id="objective"><option value="4">4× · Scanning</option><option value="10" selected>10× · Low power</option><option value="40">40× · High power</option></select></label>
+<label class="field">Coarse focus <output id="coarseOut">50%</output><input id="coarse" type="range" min="0" max="100" value="50"></label>
+<label class="field">Fine focus <output id="fineOut">50%</output><input id="fine" type="range" min="0" max="100" value="50"></label>
+<label class="field">Illumination <output id="lightOut">70%</output><input id="light" type="range" min="10" max="100" value="70"></label>
+<div class="metricgrid"><div class="metric"><strong id="totalMag">100×</strong><span>Total magnification</span></div><div class="metric"><strong id="fov">1.80 mm</strong><span>Approx. field diameter</span></div></div>
+<div class="info"><b>Formula</b><br>Total magnification = eyepiece magnification × objective magnification.<br><span class="smallnote">Field diameter is a simplified model estimate: 18 mm ÷ objective power.</span></div>
+<div class="controls"><button class="btn primary" id="focusAssist">Auto-focus assist</button><button class="btn ghost" id="recordTrial">Record trial</button></div>
+<div class="feedback" id="setupFeedback" aria-live="polite">Start with the 4× objective, centre the specimen, then refine using fine focus.</div>
+</div></section>
+<section class="panel"><div class="ph"><h2>LEARNING OUTCOMES</h2><small>SUCCESS CRITERIA</small></div><div class="pb"><ul style="padding-left:17px;color:#b9d0dd;font-size:10px;margin:0"><li>Identify the main microscope parts and their functions.</li><li>Calculate total magnification correctly.</li><li>Explain why low power is used first.</li><li>Describe how focus and illumination affect image clarity.</li><li>Record observations using scientific language.</li></ul></div></section>
+</aside>
+<section class="panel"><div class="ph"><h2>EXPERIMENT WORKBENCH</h2><small>LIVE MODEL · SPECIMEN VIEW</small></div>
+<nav class="tabs" role="tablist"><button class="tab active" data-tab="station">01 · Microscope</button><button class="tab" data-tab="analysis">02 · Analysis</button><button class="tab" data-tab="notebook">03 · Notebook</button><button class="tab" data-tab="assessment">04 · Assessment</button></nav>
+<div class="view active" id="station">
+<div class="workspace"><div class="scenehead"><b id="specimenTitle">Onion epidermal cells · simulated view</b><span id="viewStatus">IMAGE NOT YET FOCUSED</span></div>
+<div class="microscope"><div class="scope" aria-label="Illustration of a compound light microscope"><div class="arm"></div><div class="tube"></div><div class="eyepiece"></div><div class="nose"></div><div class="objective"></div><div class="stage"></div><div class="slide"></div><div class="clip"></div><div class="focuswheel"></div><div class="foot"></div><div class="base"></div></div>
+<div><div class="viewbox"><span class="viewlabel" id="viewLabel">10× objective · 100× total</span><svg id="specimenSvg" viewBox="0 0 300 300" role="img" aria-label="Simulated microscope field of view"><defs><clipPath id="circleClip"><circle cx="150" cy="150" r="148"/></clipPath><filter id="blur"><feGaussianBlur stdDeviation="2.8"/></filter></defs><g id="specimenDrawing" clip-path="url(#circleClip)"></g></svg><div class="crosshair"></div></div></div></div>
+<div class="workspacefoot"><span>Simulation only · not a calibrated optical instrument</span><span id="qualityLabel">Focus quality: adjusting</span></div></div>
+<div class="info"><b>How to use the microscope</b><br>1. Select a specimen and begin with the scanning objective. 2. Use coarse focus to bring the image close to focus. 3. Switch to fine focus for sharp detail. 4. Increase objective power only after locating the specimen. Adjust illumination to improve contrast.</div>
+<div class="metricgrid"><div class="metric"><strong id="clarity">—</strong><span>Image clarity</span></div><div class="metric"><strong id="cellsVisible">—</strong><span>Relative structures in view</span></div></div>
+<div class="controls"><button class="btn ghost" id="centreSpecimen">Centre specimen</button><button class="btn ghost" id="lowPower">Return to low power</button></div>
+</div>
+<div class="view" id="analysis">
+<h3 style="margin:2px 0 8px;font-size:14px">Scientific analysis</h3><p class="hint">Use the model to compare how objective power, focus and illumination change what can be observed. Record each controlled trial before drawing a conclusion.</p>
+<div class="metricgrid"><div class="metric"><strong id="analysisMag">100×</strong><span>Calculated magnification</span></div><div class="metric"><strong id="analysisFov">1.80 mm</strong><span>Estimated field diameter</span></div></div>
+<div class="info"><b>Interpretation prompt</b><br>As objective magnification increases, the specimen appears larger, but the field of view becomes smaller and less of the specimen can be seen at once. Higher magnification also requires more careful focusing and suitable illumination.</div>
+<label class="field">Research hypothesis<textarea id="hypothesis" rows="3" placeholder="If I increase objective magnification, then… because…"></textarea></label>
+<label class="field">Evidence-based conclusion<textarea id="conclusion" rows="3" placeholder="The observations support / do not support my hypothesis because…"></textarea></label>
+<div class="info"><b>Investigation design</b><br>Independent variable: objective magnification.<br>Dependent observations: apparent size, field diameter and image clarity.<br>Controlled variables: specimen, eyepiece, illumination and focusing procedure.</div>
+</div>
+<div class="view" id="notebook">
+<h3 style="margin:2px 0 8px;font-size:14px">Observation notebook</h3><p class="hint">Record a trial after adjusting the microscope. Include what changed and what you observed.</p>
+<div style="overflow:auto"><table class="table"><thead><tr><th>Trial</th><th>Specimen</th><th>Objective</th><th>Total mag.</th><th>Field (mm)</th><th>Clarity</th></tr></thead><tbody id="trialRows"><tr><td colspan="6" class="smallnote">No trials recorded yet.</td></tr></tbody></table></div>
+<label class="field">Observation notes<textarea id="notes" rows="5" placeholder="Describe cell shape, arrangement, visible structures and image quality…"></textarea></label>
+<label class="field">What could affect reliability?<textarea id="reliability" rows="3" placeholder="Consider focus, illumination, specimen preparation and measurement limits…"></textarea></label>
+<div class="controls"><button class="btn" id="downloadNotes">Download notebook</button><button class="btn ghost" id="clearTrials">Clear trials</button></div>
+</div>
+<div class="view" id="assessment">
+<h3 style="margin:2px 0 8px;font-size:14px">Practical skills assessment</h3><p class="hint">Complete the matching activity and knowledge questions. Feedback is immediate.</p>
+<div class="info"><b>Challenge A · Match microscope skills</b><br>Select an item, then select its matching function.</div>
+<div class="challenge"><div id="matchItems"></div><div id="matchTargets"></div></div><div class="feedback" id="matchFeedback">Match all three items correctly.</div><div class="progress" style="margin-top:8px"><span id="matchProgress"></span></div>
+<div class="info" style="margin-top:15px"><b>Challenge B · Knowledge check</b></div><div id="quizArea"></div><div class="feedback" id="quizFeedback">Answer all questions to complete the check.</div>
+<div class="metricgrid" style="margin-top:10px"><div class="metric"><strong id="quizScore">0/5</strong><span>Correct answers</span></div><div class="metric"><strong id="completion">0%</strong><span>Practical progress</span></div></div>
+<div class="info"><b>Teacher assessment rubric</b><br>Microscope setup and safe handling (2); focusing sequence (2); magnification calculation (2); scientific observations (2); evidence-based conclusion (2). Total: 10 marks.</div>
+</div>
+</section>
+<aside class="rightcol">
+<section class="panel"><div class="ph"><h2>LIVE ANALYSIS</h2><small>MODEL OUTPUT</small></div><div class="pb"><div class="metricgrid"><div class="metric"><strong id="sideMag">100×</strong><span>Total magnification</span></div><div class="metric"><strong id="sideFocus">—</strong><span>Focus state</span></div></div><div class="sectionlabel" style="margin-top:13px">PRACTICAL COMPLETION</div><div class="progress"><span id="overallProgress"></span></div><p class="smallnote" id="progressText">Complete model run, record trials and assessment.</p></div></section>
+<section class="panel"><div class="ph"><h2>PROCEDURE & SAFETY</h2><small>GOOD PRACTICE</small></div><div class="pb"><ol><li>Carry the microscope with two hands.</li><li>Place it on a stable, level bench.</li><li>Begin with the lowest-power objective.</li><li>Use coarse focus only on low power.</li><li>Use fine focus at high power.</li><li>Do not allow the objective lens to touch the slide.</li></ol><div class="info"><b>Safety note</b><br>This is a digital model. In a real laboratory, handle glass slides carefully, follow teacher instructions and never force the focus controls.</div></div></section>
+<section class="panel"><div class="ph"><h2>CONCEPT COMPANION</h2><small>KEY IDEAS</small></div><div class="pb"><div class="sectionlabel">TOTAL MAGNIFICATION</div><div style="font-size:18px;color:var(--cyan);font-weight:900">Eyepiece × Objective</div><p class="smallnote">Example: 10× eyepiece × 40× objective = 400× total magnification.</p><div class="sectionlabel">FIELD OF VIEW</div><p class="smallnote">The visible circular area generally becomes smaller as objective magnification increases.</p><div class="sectionlabel">FOCUSING</div><p class="smallnote">Coarse adjustment makes large focus changes; fine adjustment makes small, precise changes.</p></div></section>
+<div class="ad adslot">ADVERTISEMENT · SIDEBAR SLOT</div>
+</aside>
+</div>
+<div class="ad">ADVERTISEMENT · RESPONSIVE LEADERBOARD SLOT</div>
+<footer style="text-align:center;color:#70899b;font-size:10px;padding:18px">CBSEMOCK Biology Research Studio · Lab 01 · Educational simulation, not a substitute for supervised practical work.</footer>
+</main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const state={trials:[],matches:new Set(),selected:null,answers:{},modelRun:false,quizComplete:false};
+const specimens={
+ onion:{title:'Onion epidermal cells',kind:'plant',description:'Elongated rectangular cells with distinct cell walls; nucleus may be visible depending on staining.'},
+ cheek:{title:'Human cheek cells',kind:'animal',description:'Irregular, flattened cells with a cell membrane, cytoplasm and a stained nucleus.'},
+ leaf:{title:'Leaf cells with chloroplasts',kind:'leaf',description:'Plant cells with cell walls; chloroplasts are represented as green oval structures.'},
+ pollen:{title:'Pollen grains',kind:'pollen',description:'Small rounded or oval grains with patterned outer walls.'}
+};
+const questions=[
+ {q:'Which objective should normally be used first?',o:['4× scanning objective','40× high-power objective','The objective with the largest number'],a:0,e:'Begin with the lowest-power objective to locate the specimen safely.'},
+ {q:'A 10× eyepiece is used with a 40× objective. Total magnification is:',o:['50×','400×','4×'],a:1,e:'10 × 40 = 400 times total magnification.'},
+ {q:'What generally happens to field of view as objective magnification increases?',o:['It becomes larger','It stays exactly the same','It becomes smaller'],a:2,e:'Higher objective magnification shows a smaller area of the specimen.'},
+ {q:'Which adjustment is used for precise focusing at high power?',o:['Fine adjustment','Coarse adjustment','Stage clip'],a:0,e:'Fine adjustment makes small, precise focus changes.'},
+ {q:'Why should the objective lens not touch the slide?',o:['It changes the specimen colour','It can damage the slide or lens','It increases magnification'],a:1,e:'Contact can break the slide or scratch/damage the objective lens.'}
+];
+function current(){
+ const ey=Number($('eyepiece').value),obj=Number($('objective').value);
+ return {ey,obj,total:ey*obj,fov:18/obj,coarse:Number($('coarse').value),fine:Number($('fine').value),light:Number($('light').value),spec:$('specimen').value};
+}
+function focusQuality(s){const f=100-Math.abs(s.coarse-50)*.9-Math.abs(s.fine-68)*1.25;return Math.max(0,Math.min(100,Math.round(f)));}
+function drawSpecimen(){
+ const s=current(),sp=specimens[s.spec],g=$('specimenDrawing');g.innerHTML='';
+ const ns='http://www.w3.org/2000/svg';
+ const add=(tag,attrs,parent=g)=>{const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));parent.appendChild(e);return e};
+ const bg=add('rect',{x:0,y:0,width:300,height:300,fill:s.spec==='cheek'?'#b8a1bd':s.spec==='pollen'?'#b69a65':'#b6c9a2'});
+ if(sp.kind==='plant'||sp.kind==='leaf'){
+  const cellW=sp.kind==='leaf'?65:94,cellH=sp.kind==='leaf'?75:58;
+  for(let y=-25;y<330;y+=cellH)for(let x=-25;x<330;x+=cellW){
+   add('rect',{x:x+2,y:y+2,width:cellW-5,height:cellH-5,rx:sp.kind==='leaf'?13:5,fill:sp.kind==='leaf'?'#8ba978':'#d9e3c6',stroke:'#526e52','stroke-width':3,opacity:.9});
+   add('ellipse',{cx:x+cellW*.56,cy:y+cellH*.52,rx:sp.kind==='leaf'?8:9,ry:sp.kind==='leaf'?10:7,fill:'#6d5b8e',stroke:'#40365c','stroke-width':2});
+   if(sp.kind==='leaf')for(let i=0;i<5;i++)add('ellipse',{cx:x+12+(i%3)*17,cy:y+13+Math.floor(i/3)*22,rx:5,ry:9,fill:'#277c48',stroke:'#1d5939','stroke-width':1});
+  }
+ }else if(sp.kind==='animal'){
+  for(let y=10;y<310;y+=68)for(let x=5;x<310;x+=72){
+   add('path',{d:`M ${x+5} ${y+30} Q ${x+20} ${y-2} ${x+45} ${y+10} Q ${x+78} ${y+25} ${x+55} ${y+53} Q ${x+25} ${y+75} ${x+5} ${y+30}`,fill:'#e5c7d7',stroke:'#725b82','stroke-width':3});
+   add('ellipse',{cx:x+34,cy:y+30,rx:8,ry:12,fill:'#5e477d'});
+  }
+ }else{
+  for(let y=25;y<310;y+=75)for(let x=25;x<310;x+=75){
+   add('circle',{cx:x,cy:y,r:22,fill:'#e7c875',stroke:'#785e29','stroke-width':4});
+   add('circle',{cx:x,cy:y,r:11,fill:'#c49b46',stroke:'#8d6b2d','stroke-width':2});
+   for(let i=0;i<8;i++){let a=i*Math.PI/4;add('circle',{cx:x+Math.cos(a)*26,cy:y+Math.sin(a)*26,r:3,fill:'#6f582c'});}
+  }
+ }
+ // The view becomes visually more enlarged at higher objective settings.
+ const zoom=s.obj===4?1:s.obj===10?1.35:2.15;
+ const blur=(100-focusQuality(s))/22;
+ g.setAttribute('transform',`translate(150 150) scale(${zoom}) translate(-150 -150)`);
+ g.setAttribute('filter',blur>1.4?'url(#blur)':'none');
+ $('specimenSvg').style.filter=`brightness(${.45+s.light/100*.8})`;
+ $('viewLabel').textContent=`${s.obj}× objective · ${s.total}× total`;
+ $('specimenTitle').textContent=sp.title+' · simulated view';
+ $('viewStatus').textContent=focusQuality(s)>85?'IMAGE IN FOCUS':focusQuality(s)>55?'PARTIALLY FOCUSED':'OUT OF FOCUS';
+ $('qualityLabel').textContent='Focus quality: '+focusQuality(s)+'%';
+ $('clarity').textContent=focusQuality(s)+'%';
+ $('cellsVisible').textContent=(s.obj===4?'Many':s.obj===10?'Several':'Few');
+ $('totalMag').textContent=s.total+'×';$('fov').textContent=s.fov.toFixed(2)+' mm';
+ $('analysisMag').textContent=s.total+'×';$('analysisFov').textContent=s.fov.toFixed(2)+' mm';
+ $('sideMag').textContent=s.total+'×';$('sideFocus').textContent=focusQuality(s)>85?'Sharp':focusQuality(s)>55?'Partial':'Blurred';
+ $('setupFeedback').textContent=focusQuality(s)>85?'Good focusing: the simulated image is clear.': 'Adjust coarse focus towards 50% and fine focus towards 68% to sharpen the image.';
+ updateProgress();
+}
+function updateOutputs(){
+ $('coarseOut').textContent=$('coarse').value+'%';$('fineOut').textContent=$('fine').value+'%';$('lightOut').textContent=$('light').value+'%';
+ drawSpecimen();
+}
+function record(){
+ const s=current(),q=focusQuality(s),sp=specimens[s.spec];
+ state.trials.push({n:state.trials.length+1,spec:sp.title,obj:s.obj,total:s.total,fov:s.fov.toFixed(2),clarity:q,light:s.light});
+ renderTrials();$('setupFeedback').textContent='Trial '+state.trials.length+' recorded. Compare it with your next setting.';
+ updateProgress();
+}
+function renderTrials(){
+ const body=$('trialRows');body.innerHTML='';
+ if(!state.trials.length){body.innerHTML='<tr><td colspan="6" class="smallnote">No trials recorded yet.</td></tr>';return;}
+ state.trials.forEach(t=>{const tr=document.createElement('tr');[t.n,t.spec,t.obj+'×',t.total+'×',t.fov,t.clarity+'%'].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.appendChild(td)});body.appendChild(tr)});
+}
+function updateProgress(){
+ const quizCount=Object.keys(state.answers).length,quizCorrect=Object.entries(state.answers).filter(([i,a])=>a===questions[Number(i)].a).length;
+ const pct=Math.round((state.modelRun?20:0)+(state.trials.length?20:0)+(state.matches.size/3*20)+(quizCount/5*40));
+ $('overallProgress').style.width=pct+'%';$('progressText').textContent=pct+'% complete · '+state.trials.length+' trials · '+state.matches.size+'/3 matches · '+quizCorrect+'/5 correct';
+ $('completion').textContent=pct+'%';$('quizScore').textContent=quizCorrect+'/5';
+}
+function makeAssessment(){
+ const items=[['Prepared slide','Place the specimen securely on the stage'],['Objective lens','Select the magnification on the nosepiece'],['Fine adjustment','Sharpen the image with small focus changes']];
+ const left=$('matchItems'),right=$('matchTargets');
+ items.forEach((it,i)=>{const b=document.createElement('button');b.className='matchitem';b.textContent=it[0];b.dataset.i=i;b.onclick=()=>{state.selected=i;left.querySelectorAll('button').forEach(x=>x.classList.toggle('selected',x===b));$('matchFeedback').textContent='Selected '+it[0]+'. Now choose its function.'};left.appendChild(b)});
+ const order=[2,0,1];
+ order.forEach(i=>{const b=document.createElement('button');b.className='matchslot';b.textContent=items[i][1];b.dataset.answer=i;b.onclick=()=>{if(state.selected===null){$('matchFeedback').textContent='Select an item first.';return;}const chosen=state.selected;if(chosen===i){state.matches.add(i);left.querySelector(`[data-i="${i}"]`).classList.add('done');left.querySelector(`[data-i="${i}"]`).disabled=true;b.classList.add('correct');b.disabled=true;$('matchFeedback').textContent='Correct match: '+items[i][0]+'.';state.selected=null;left.querySelectorAll('button').forEach(x=>x.classList.remove('selected'));$('matchProgress').style.width=(state.matches.size/3*100)+'%';}else $('matchFeedback').textContent='Not quite. Think about what that component does.';updateProgress()};right.appendChild(b)});
+ questions.forEach((q,i)=>{const wrap=document.createElement('div');wrap.style.margin='12px 0';const title=document.createElement('b');title.style.fontSize='11px';title.textContent=(i+1)+'. '+q.q;wrap.appendChild(title);q.o.forEach((opt,j)=>{const b=document.createElement('button');b.className='quizopt';b.textContent=opt;b.onclick=()=>{state.answers[i]=j;wrap.querySelectorAll('button').forEach((x,k)=>{x.classList.toggle('correct',k===q.a);x.classList.toggle('wrong',k===j&&j!==q.a);x.disabled=true});$('quizFeedback').textContent=q.e;updateProgress()};wrap.appendChild(b)});$('quizArea').appendChild(wrap)});
+}
+function download(name,text,mime='text/plain'){
+ const blob=new Blob([text],{type:mime}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function reportText(){
+ const s=current(),score=Object.entries(state.answers).filter(([i,a])=>a===questions[Number(i)].a).length;
+ return `CBSEMOCK BIOLOGY RESEARCH STUDIO\nMICROSCOPE SKILLS LAB — PRACTICAL REPORT\n\nLearning objective\nUse a compound microscope model to explore magnification and focusing.\n\nCurrent setup\nSpecimen: ${specimens[s.spec].title}\nEyepiece: ${s.ey}×\nObjective: ${s.obj}×\nTotal magnification: ${s.total}×\nEstimated field diameter: ${s.fov.toFixed(2)} mm\nFocus quality: ${focusQuality(s)}%\n\nHypothesis\n${$('hypothesis').value||'Not entered'}\n\nObservation trials\n${state.trials.length?state.trials.map(t=>`Trial ${t.n}: ${t.spec}; objective ${t.obj}×; total ${t.total}×; field ${t.fov} mm; clarity ${t.clarity}%; illumination ${t.light}%.`).join('\n'):'No trials recorded.'}\n\nObservation notes\n${$('notes').value||'Not entered'}\n\nReliability considerations\n${$('reliability').value||'Not entered'}\n\nConclusion\n${$('conclusion').value||'Not entered'}\n\nAssessment\nMatching: ${state.matches.size}/3\nKnowledge check: ${score}/5\n\nScientific reminder\nTotal magnification = eyepiece magnification × objective magnification.\nField diameter in this simulation is estimated using 18 mm ÷ objective power.\nThis is an educational simulation, not a calibrated microscope.`;
+}
+$('specimen').addEventListener('change',updateOutputs);
+['eyepiece','objective','coarse','fine','light'].forEach(id=>$(id).addEventListener('input',updateOutputs));
+$('focusAssist').onclick=()=>{$('coarse').value=50;$('fine').value=68;state.modelRun=true;updateOutputs();$('setupFeedback').textContent='Auto-focus assist applied. In a real practical, use the controls manually and observe each change.'};
+$('runModel')?.addEventListener('click',()=>{state.modelRun=true;updateProgress()});
+$('recordTrial').onclick=()=>{state.modelRun=true;record()};
+$('centreSpecimen').onclick=()=>{$('coarse').value=50;$('fine').value=68;updateOutputs();$('setupFeedback').textContent='Specimen centred and focus optimised in the simulation.'};
+$('lowPower').onclick=()=>{$('objective').value='4';updateOutputs()};
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===b.dataset.tab))});
+$('downloadNotes').onclick=()=>download('Biology_Lab_01_Observation_Notebook.txt',reportText());
+$('downloadReport').onclick=()=>download('CBSEMOCK_Biology_Lab_01_Practical_Report.txt',reportText());
+$('exportCSV').onclick=()=>{const rows=[['Trial','Specimen','Objective','Total magnification','Field diameter mm','Clarity','Illumination'],...state.trials.map(t=>[t.n,t.spec,t.obj+'x',t.total+'x',t.fov,t.clarity+'%',t.light+'%'])];download('Biology_Lab_01_Observations.csv',rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n'),'text/csv')};
+$('clearTrials').onclick=()=>{state.trials=[];renderTrials();updateProgress()};
+$('resetAll').onclick=()=>{if(!confirm('Reset all microscope settings, trials and assessment progress?'))return;state.trials=[];state.matches.clear();state.answers={};state.selected=null;state.modelRun=false;$('specimen').value='onion';$('eyepiece').value='10';$('objective').value='10';$('coarse').value=50;$('fine').value=50;$('light').value=70;$('hypothesis').value='';$('conclusion').value='';$('notes').value='';$('reliability').value='';$('matchItems').innerHTML='';$('matchTargets').innerHTML='';$('quizArea').innerHTML='';$('matchProgress').style.width='0%';$('matchFeedback').textContent='Match all three items correctly.';$('quizFeedback').textContent='Answer all questions to complete the check.';makeAssessment();renderTrials();updateOutputs();$('setupFeedback').textContent='Practical reset. Begin with the 4× objective.'};
+makeAssessment();renderTrials();updateOutputs();
+})();
+</script>
+
+<script src="../../ads.js"></script>
+<script src="../../portal-shell.js"></script>
+</body></html>

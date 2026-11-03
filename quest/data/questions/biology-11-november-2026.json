@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2026-11-biology-11-c11",
+    "session": "2026–27",
+    "month": "November 2026",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "Biology (044)",
+    "title": "Biology — Class 11 November 2026 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202611-044-C11-01",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "The Living World",
+      "topic": "The Living World",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The basic unit of classification is:",
+      "options": {
+        "A": "genus",
+        "B": "family",
+        "C": "species",
+        "D": "order"
+      },
+      "answer": "C",
+      "explanation": "Species is the basic taxonomic category.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "The Living World"
+      ]
+    },
+    {
+      "id": "202611-044-C11-02",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Biological Classification",
+      "topic": "Biological Classification",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The cell wall of fungi is mainly composed of:",
+      "options": {
+        "A": "cellulose",
+        "B": "chitin",
+        "C": "peptidoglycan",
+        "D": "silica"
+      },
+      "answer": "B",
+      "explanation": "Fungal cell walls characteristically contain chitin.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biological Classification"
+      ]
+    },
+    {
+      "id": "202611-044-C11-03",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Plant Kingdom",
+      "topic": "Plant Kingdom",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The dominant phase in bryophytes is the:",
+      "options": {
+        "A": "sporophyte",
+        "B": "gametophyte",
+        "C": "seed",
+        "D": "embryo"
+      },
+      "answer": "B",
+      "explanation": "Bryophytes have a dominant, independent gametophyte.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Plant Kingdom"
+      ]
+    },
+    {
+      "id": "202611-044-C11-04",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Animal Kingdom",
+      "topic": "Animal Kingdom",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Animals with a notochord at some stage belong to:",
+      "options": {
+        "A": "Arthropoda",
+        "B": "Chordata",
+        "C": "Annelida",
+        "D": "Mollusca"
+      },
+      "answer": "B",
+      "explanation": "The notochord is a defining chordate feature.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Animal Kingdom"
+      ]
+    },
+    {
+      "id": "202611-044-C11-05",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Morphology of Flowering Plants",
+      "topic": "Morphology of Flowering Plants",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The arrangement of ovules within the ovary is called:",
+      "options": {
+        "A": "aestivation",
+        "B": "placentation",
+        "C": "venation",
+        "D": "phyllotaxy"
+      },
+      "answer": "B",
+      "explanation": "Placentation describes ovule arrangement in the ovary.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Morphology of Flowering Plants"
+      ]
+    },
+    {
+      "id": "202611-044-C11-06",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Anatomy of Flowering Plants",
+      "topic": "Anatomy of Flowering Plants",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Water and mineral transport in angiosperms occurs mainly through:",
+      "options": {
+        "A": "phloem",
+        "B": "xylem",
+        "C": "cortex",
+        "D": "epidermis"
+      },
+      "answer": "B",
+      "explanation": "Xylem conducts water and dissolved minerals.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Anatomy of Flowering Plants"
+      ]
+    },
+    {
+      "id": "202611-044-C11-07",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Structural Organisation in Animals",
+      "topic": "Structural Organisation in Animals",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "The epithelium lining alveoli is primarily:",
+      "options": {
+        "A": "simple squamous",
+        "B": "stratified cuboidal",
+        "C": "ciliated columnar",
+        "D": "transitional"
+      },
+      "answer": "A",
+      "explanation": "Thin simple squamous epithelium facilitates gas diffusion.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Structural Organisation in Animals"
+      ]
+    },
+    {
+      "id": "202611-044-C11-08",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Cell: The Unit of Life",
+      "topic": "Cell: The Unit of Life",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The plasma membrane is best described by the:",
+      "options": {
+        "A": "fluid mosaic model",
+        "B": "lock-and-key model",
+        "C": "central dogma",
+        "D": "operon model"
+      },
+      "answer": "A",
+      "explanation": "The membrane has a fluid lipid bilayer with embedded proteins.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Cell: The Unit of Life"
+      ]
+    },
+    {
+      "id": "202611-044-C11-09",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Biomolecules",
+      "topic": "Biomolecules",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The monomers of proteins are:",
+      "options": {
+        "A": "nucleotides",
+        "B": "amino acids",
+        "C": "monosaccharides",
+        "D": "fatty acids"
+      },
+      "answer": "B",
+      "explanation": "Proteins are polymers of amino acids.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biomolecules"
+      ]
+    },
+    {
+      "id": "202611-044-C11-10",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Cell Cycle and Cell Division",
+      "topic": "Cell Cycle and Cell Division",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "Crossing over normally occurs during which stage of meiosis I?",
+      "options": {
+        "A": "leptotene",
+        "B": "zygotene",
+        "C": "pachytene",
+        "D": "diakinesis"
+      },
+      "answer": "C",
+      "explanation": "Crossing over occurs in pachytene of prophase I.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Cell Cycle and Cell Division"
+      ]
+    },
+    {
+      "id": "202611-044-C11-11",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Photosynthesis in Higher Plants",
+      "topic": "Photosynthesis in Higher Plants",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The oxygen released during photosynthesis comes from:",
+      "options": {
+        "A": "carbon dioxide",
+        "B": "glucose",
+        "C": "water",
+        "D": "chlorophyll"
+      },
+      "answer": "C",
+      "explanation": "Photolysis of water releases oxygen during the light reactions.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Photosynthesis in Higher Plants"
+      ]
+    },
+    {
+      "id": "202611-044-C11-12",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Respiration in Plants",
+      "topic": "Respiration in Plants",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Glycolysis takes place in the:",
+      "options": {
+        "A": "mitochondrial matrix",
+        "B": "cytoplasm",
+        "C": "chloroplast stroma",
+        "D": "nucleus"
+      },
+      "answer": "B",
+      "explanation": "Glycolysis occurs in the cytosol.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Respiration in Plants"
+      ]
+    },
+    {
+      "id": "202611-044-C11-13",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Plant Growth and Development",
+      "topic": "Plant Growth and Development",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The plant hormone commonly associated with cell elongation is:",
+      "options": {
+        "A": "auxin",
+        "B": "ethylene",
+        "C": "abscisic acid",
+        "D": "gibberellin only"
+      },
+      "answer": "A",
+      "explanation": "Auxins promote cell elongation in many plant tissues.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Plant Growth and Development"
+      ]
+    },
+    {
+      "id": "202611-044-C11-14",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Digestion and Absorption",
+      "topic": "Digestion and Absorption",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The enzyme pepsin acts mainly in the:",
+      "options": {
+        "A": "mouth",
+        "B": "stomach",
+        "C": "small intestine",
+        "D": "large intestine"
+      },
+      "answer": "B",
+      "explanation": "Pepsin is a gastric protease active in acidic conditions.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Digestion and Absorption"
+      ]
+    },
+    {
+      "id": "202611-044-C11-15",
+      "class": 11,
+      "subject": "Biology",
+      "chapter": "Breathing and Exchange of Gases",
+      "topic": "Breathing and Exchange of Gases",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Most oxygen in human blood is transported:",
+      "options": {
+        "A": "dissolved in plasma",
+        "B": "bound to haemoglobin",
+        "C": "as bicarbonate",
+        "D": "inside platelets"
+      },
+      "answer": "B",
+      "explanation": "Most oxygen binds reversibly to haemoglobin in red blood cells.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Breathing and Exchange of Gases"
+      ]
+    }
+  ]
+}

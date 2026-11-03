@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2026-11-science-10-c10",
+    "session": "2026–27",
+    "month": "November 2026",
+    "class": 10,
+    "class_group": "9-10",
+    "subject": "Science (086)",
+    "title": "Science — Class 10 November 2026 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202611-086-C10-01",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Chemical Reactions and Equations",
+      "topic": "Chemical Reactions and Equations",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which observation most directly indicates formation of a gas when zinc reacts with dilute hydrochloric acid?",
+      "options": {
+        "A": "A white precipitate forms",
+        "B": "Bubbles are produced",
+        "C": "The zinc becomes heavier",
+        "D": "The solution freezes"
+      },
+      "answer": "B",
+      "explanation": "Zinc reacts with dilute HCl to release hydrogen gas, seen as effervescence.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Chemical Reactions and Equations"
+      ]
+    },
+    {
+      "id": "202611-086-C10-02",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Chemical Reactions and Equations",
+      "topic": "Chemical Reactions and Equations",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "In the reaction CuO + H2 → Cu + H2O, which substance is reduced?",
+      "options": {
+        "A": "Hydrogen",
+        "B": "Copper(II) oxide",
+        "C": "Water",
+        "D": "Copper"
+      },
+      "answer": "B",
+      "explanation": "CuO loses oxygen and is reduced to copper.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Chemical Reactions and Equations"
+      ]
+    },
+    {
+      "id": "202611-086-C10-03",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Acids, Bases and Salts",
+      "topic": "Acids, Bases and Salts",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which indicator turns red in an acidic solution and blue in a basic solution?",
+      "options": {
+        "A": "Phenolphthalein",
+        "B": "Methyl orange",
+        "C": "Litmus",
+        "D": "Turmeric"
+      },
+      "answer": "C",
+      "explanation": "Litmus is red in acid and blue in base.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Acids, Bases and Salts"
+      ]
+    },
+    {
+      "id": "202611-086-C10-04",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Acids, Bases and Salts",
+      "topic": "Acids, Bases and Salts",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "A solution has pH 3. Its hydrogen ion concentration compared with pH 5 is:",
+      "options": {
+        "A": "10 times greater",
+        "B": "100 times greater",
+        "C": "2 times greater",
+        "D": "100 times smaller"
+      },
+      "answer": "B",
+      "explanation": "Each pH unit represents a tenfold change; two units means 100 times.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Acids, Bases and Salts"
+      ]
+    },
+    {
+      "id": "202611-086-C10-05",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Metals and Non-metals",
+      "topic": "Metals and Non-metals",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which metal is commonly stored under kerosene because it reacts vigorously with air and water?",
+      "options": {
+        "A": "Copper",
+        "B": "Sodium",
+        "C": "Gold",
+        "D": "Iron"
+      },
+      "answer": "B",
+      "explanation": "Sodium is highly reactive and is stored under kerosene to prevent contact with air/moisture.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Metals and Non-metals"
+      ]
+    },
+    {
+      "id": "202611-086-C10-06",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Metals and Non-metals",
+      "topic": "Metals and Non-metals",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "Which method is generally used to extract a highly reactive metal such as sodium from its compound?",
+      "options": {
+        "A": "Heating the ore in air",
+        "B": "Reduction with carbon",
+        "C": "Electrolysis of molten salt",
+        "D": "Roasting with oxygen"
+      },
+      "answer": "C",
+      "explanation": "Highly reactive metals are obtained by electrolytic reduction of molten compounds.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Metals and Non-metals"
+      ]
+    },
+    {
+      "id": "202611-086-C10-07",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Carbon and Its Compounds",
+      "topic": "Carbon and Its Compounds",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "The functional group present in ethanol is:",
+      "options": {
+        "A": "–COOH",
+        "B": "–CHO",
+        "C": "–OH",
+        "D": "–CO–"
+      },
+      "answer": "C",
+      "explanation": "Ethanol is an alcohol containing the hydroxyl group.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Carbon and Its Compounds"
+      ]
+    },
+    {
+      "id": "202611-086-C10-08",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Carbon and Its Compounds",
+      "topic": "Carbon and Its Compounds",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "Which pair represents a homologous series?",
+      "options": {
+        "A": "CH4 and C2H6",
+        "B": "CH4 and C2H4",
+        "C": "C2H6 and C3H4",
+        "D": "C2H2 and C3H8"
+      },
+      "answer": "A",
+      "explanation": "Successive members of an alkane series differ by –CH2–.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Carbon and Its Compounds"
+      ]
+    },
+    {
+      "id": "202611-086-C10-09",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Life Processes",
+      "topic": "Life Processes",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which part of the nephron filters blood under pressure?",
+      "options": {
+        "A": "Collecting duct",
+        "B": "Glomerulus",
+        "C": "Loop of Henle",
+        "D": "Ureter"
+      },
+      "answer": "B",
+      "explanation": "The glomerulus filters blood into Bowman’s capsule.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Life Processes"
+      ]
+    },
+    {
+      "id": "202611-086-C10-10",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Life Processes",
+      "topic": "Life Processes",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "In humans, most absorption of digested food occurs in the:",
+      "options": {
+        "A": "Stomach",
+        "B": "Large intestine",
+        "C": "Small intestine",
+        "D": "Oesophagus"
+      },
+      "answer": "C",
+      "explanation": "The small intestine has villi that provide a large absorptive surface.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Life Processes"
+      ]
+    },
+    {
+      "id": "202611-086-C10-11",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Control and Coordination",
+      "topic": "Control and Coordination",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which part of the brain maintains posture and balance?",
+      "options": {
+        "A": "Cerebrum",
+        "B": "Cerebellum",
+        "C": "Medulla",
+        "D": "Hypothalamus"
+      },
+      "answer": "B",
+      "explanation": "The cerebellum coordinates muscular activity, posture and balance.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Control and Coordination"
+      ]
+    },
+    {
+      "id": "202611-086-C10-12",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Control and Coordination",
+      "topic": "Control and Coordination",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "A plant shoot bends towards light because auxin:",
+      "options": {
+        "A": "Accumulates on illuminated side and stops growth",
+        "B": "Accumulates on shaded side and promotes elongation",
+        "C": "Destroys cells on shaded side",
+        "D": "Moves only into roots"
+      },
+      "answer": "B",
+      "explanation": "Auxin promotes greater cell elongation on the shaded side, bending the shoot towards light.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Control and Coordination"
+      ]
+    },
+    {
+      "id": "202611-086-C10-13",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "How Do Organisms Reproduce?",
+      "topic": "How Do Organisms Reproduce?",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "Which process produces genetically identical offspring in Amoeba?",
+      "options": {
+        "A": "Budding",
+        "B": "Binary fission",
+        "C": "Pollination",
+        "D": "Fertilisation"
+      },
+      "answer": "B",
+      "explanation": "Amoeba commonly reproduces asexually by binary fission.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "How Do Organisms Reproduce?"
+      ]
+    },
+    {
+      "id": "202611-086-C10-14",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Heredity",
+      "topic": "Heredity",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "In a cross Tt × Tt, where T is dominant, what fraction of offspring is expected to be tt?",
+      "options": {
+        "A": "0",
+        "B": "1/4",
+        "C": "1/2",
+        "D": "3/4"
+      },
+      "answer": "B",
+      "explanation": "The genotype ratio is 1 TT : 2 Tt : 1 tt, so one-fourth are tt.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Heredity"
+      ]
+    },
+    {
+      "id": "202611-086-C10-15",
+      "class": 10,
+      "subject": "Science",
+      "chapter": "Light – Reflection and Refraction",
+      "topic": "Light – Reflection and Refraction",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "An object is placed beyond 2F of a convex lens. The image is:",
+      "options": {
+        "A": "Virtual, erect and magnified",
+        "B": "Real, inverted and diminished",
+        "C": "Real, erect and same size",
+        "D": "Virtual, inverted and diminished"
+      },
+      "answer": "B",
+      "explanation": "For an object beyond 2F, a convex lens forms a real, inverted, diminished image between F and 2F.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Light – Reflection and Refraction"
+      ]
+    }
+  ]
+}

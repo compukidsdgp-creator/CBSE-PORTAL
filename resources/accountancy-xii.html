@@ -1,0 +1,2135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accountancy XII — CBSE Mock</title>
+<style>
+:root{
+  --navy:#0d1b2a;--teal:#00b4d8;--orange:#f77f00;--purple:#7b2d8b;
+  --red:#e63946;--green:#2d6a4f;--blue:#1d3557;--lgray:#f4f6fb;
+  --border:#dde3ee;--text:#1a1a2e;--gold:#ffd166;--pink:#ef476f;
+  --mint:#06d6a0;--coral:#ff6b6b;
+  --subj1:#c62828;--subj2:#e53935;--subj3:#ef9a9a;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --lgray:#1a1c20;--text:#e4e0d8;--border:#3a3f4a;--navy:#3a5a8a;
+  --teal:#00c8f0;--gold:#ffd166;--mint:#00e8b0;--coral:#ff8888;
+  --pink:#ff6b9d;--orange:#ff9933;
+  color-scheme:dark
+}}
+:root[data-theme=dark]{
+  --lgray:#1a1c20;--text:#e4e0d8;--border:#3a3f4a;--navy:#3a5a8a;
+  --teal:#00c8f0;--gold:#ffd166;--mint:#00e8b0;--coral:#ff8888;
+  --pink:#ff6b9d;--orange:#ff9933;
+  color-scheme:dark
+}
+.theme-btn{background:rgba(255,255,255,.15);border:none;color:#fff;border-radius:6px;padding:.3rem .7rem;cursor:pointer;font-size:.78rem;font-weight:600;margin-left:.4rem;transition:.2s}.theme-btn:hover{background:rgba(255,255,255,.28)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--lgray);color:var(--text);min-height:100vh}
+a{color:var(--teal);text-decoration:none}
+.topnav{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,var(--subj1),var(--subj2));display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.2rem;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.topnav .logo{color:#fff;font-weight:800;font-size:1.05rem;letter-spacing:.5px;cursor:pointer}
+.topnav .logo span{color:var(--gold)}
+.nav-right{display:flex;gap:.5rem;align-items:center}
+.nav-btn{background:rgba(255,255,255,.15);border:none;color:#fff;padding:.35rem .75rem;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:600;transition:.2s}
+.nav-btn:hover{background:rgba(255,255,255,.3)}
+.nav-user{color:#fff;font-size:.8rem;opacity:.85;cursor:pointer}
+.xp-bar-wrap{position:sticky;top:52px;z-index:99;background:var(--subj1);padding:.3rem 1.2rem;display:flex;align-items:center;gap:.8rem}
+.xp-level-badge{background:var(--gold);color:var(--navy);font-size:.7rem;font-weight:800;padding:.2rem .55rem;border-radius:20px;white-space:nowrap}
+.xp-bar-outer{flex:1;height:8px;background:rgba(255,255,255,.2);border-radius:4px;overflow:hidden}
+.xp-bar-inner{height:100%;background:linear-gradient(90deg,var(--gold),var(--mint));border-radius:4px;transition:width .5s}
+.xp-label{color:#fff;font-size:.7rem;opacity:.85;white-space:nowrap}
+
+
+
+.hero{background:linear-gradient(135deg,var(--subj1) 0%,var(--subj2) 50%,var(--subj3) 100%);color:#fff;padding:2.5rem 1.5rem;text-align:center}
+.hero h1{font-size:2rem;font-weight:800;margin-bottom:.4rem}.hero p{opacity:.88;font-size:1rem;margin-bottom:1rem}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.hero-badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);color:#fff;padding:.3rem .8rem;border-radius:20px;font-size:.78rem;font-weight:600}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;padding:1.2rem}
+.card{background:#fff;border-radius:12px;padding:1rem;cursor:pointer;border:2px solid var(--border);transition:.2s;text-align:center}
+.card:hover{border-color:var(--subj2);transform:translateY(-2px);box-shadow:0 4px 16px rgba(55,71,79,.15)}
+.card.c1{border-top:4px solid var(--subj1)}.card.c2{border-top:4px solid var(--teal)}
+.card.c3{border-top:4px solid var(--orange)}.card.c4{border-top:4px solid var(--purple)}
+.card.c5{border-top:4px solid var(--green)}.card.topic-card{border-top:4px solid var(--subj3)}
+.card .c-icon{font-size:2rem;margin-bottom:.4rem}.card .c-title{font-weight:700;font-size:.88rem;color:var(--text)}.card .c-sub{font-size:.74rem;color:#888;margin-top:.2rem}
+.sec{display:none;padding:1rem}.sec.active{display:block}
+.sec-title{font-size:1.4rem;font-weight:800;color:var(--subj1);margin-bottom:.2rem}
+.sec-sub{color:#666;font-size:.88rem;margin-bottom:1.2rem}
+.remember{background:#eceff1;border-left:4px solid var(--subj2);padding:.9rem 1.1rem;border-radius:8px;margin:.9rem 0;font-size:.88rem}
+.remember strong{color:var(--subj1)}
+.formula-box{background:#fce4ec;border-left:4px solid var(--red);padding:.9rem 1.1rem;border-radius:8px;margin:.9rem 0}
+.formula-box .fb-title{font-weight:700;color:var(--red);font-size:.82rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.4rem}
+.worked{background:#e8f5e9;border-left:4px solid var(--green);padding:.9rem 1.1rem;border-radius:8px;margin:.9rem 0}
+.worked .w-title{font-weight:700;color:var(--green);font-size:.82rem;text-transform:uppercase;margin-bottom:.4rem}
+.activity{background:#f3e5f5;border-left:4px solid var(--purple);padding:.9rem 1.1rem;border-radius:8px;margin:.9rem 0}
+.activity .a-title{font-weight:700;color:var(--purple);font-size:.82rem;text-transform:uppercase;margin-bottom:.4rem}
+.chip-row{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.chip{display:inline-block;padding:.25rem .65rem;border-radius:20px;font-size:.74rem;font-weight:600}
+.chip.teal{background:#e0f7fa;color:#00838f}.chip.orange{background:#fff3e0;color:#e65100}
+.chip.purple{background:#f3e5f5;color:#6a1b9a}.chip.green{background:#e8f5e9;color:#2e7d32}
+.chip.red{background:#ffebee;color:#c62828}.chip.blue{background:#e3f2fd;color:#1565c0}
+.chip.navy{background:#e8eaf6;color:#283593}.chip.gold{background:#fff8e1;color:#f57f17}
+.chip.grey{background:#eceff1;color:#37474f}
+.vs-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;margin:.9rem 0;border-radius:10px;overflow:hidden}
+.vs-col{background:#f8f9fa;padding:.9rem;font-size:.84rem}
+.vs-col h4{font-weight:700;margin-bottom:.5rem;font-size:.85rem}
+.vs-col ul{padding-left:1.2rem}.vs-col li{margin-bottom:.25rem}
+.vs-mid{background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;writing-mode:vertical-rl;padding:.6rem .4rem;letter-spacing:1px}
+.metric-row{display:flex;flex-wrap:wrap;gap:.8rem;margin:.9rem 0}
+.metric-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:.8rem 1.1rem;text-align:center;flex:1;min-width:120px}
+.metric-card .mv{font-size:1.6rem;font-weight:800;color:var(--subj1)}.metric-card .ml{font-size:.75rem;color:#888;margin-top:.2rem}
+.hi-band{display:flex;flex-wrap:wrap;gap:0;border-radius:10px;overflow:hidden;margin:.9rem 0}
+.hi-cell{flex:1;min-width:120px;padding:.8rem;text-align:center;background:var(--subj1);color:#fff}
+.hi-cell:nth-child(2){background:var(--subj2)}.hi-cell:nth-child(3){background:var(--subj3)}.hi-cell:nth-child(4){background:var(--teal)}
+.hi-cell .hv{font-size:1.3rem;font-weight:800}.hi-cell .hl{font-size:.72rem;opacity:.85;margin-top:.15rem}
+.svg-wrap{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1rem;margin:.9rem 0;text-align:center;overflow-x:auto}
+.comp-table{width:100%;border-collapse:collapse;margin:.9rem 0;font-size:.83rem}
+.comp-table th{background:var(--navy);color:#fff;padding:.55rem .8rem;text-align:left}
+.comp-table td{padding:.5rem .8rem;border-bottom:1px solid var(--border)}
+.comp-table tr:nth-child(even) td{background:#f8f9fa}
+.stem-table{width:100%;border-collapse:collapse;margin:.9rem 0;font-size:.83rem}
+.stem-table th{background:var(--purple);color:#fff;padding:.55rem .8rem;text-align:left}
+.stem-table td{padding:.5rem .8rem;border-bottom:1px solid var(--border)}
+.stem-table tr:nth-child(even) td{background:#f8f9fa}
+.def-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.8rem;margin:.9rem 0}
+.def-card{background:#fff;border:1px solid var(--border);border-top:3px solid var(--teal);border-radius:8px;padding:.8rem}
+.def-card .dc-icon{font-size:1.5rem;margin-bottom:.3rem}.def-card .dc-title{font-weight:700;font-size:.85rem;color:var(--text);margin-bottom:.25rem}.def-card .dc-body{font-size:.78rem;color:#555}
+.info-row{display:flex;flex-wrap:wrap;gap:.8rem;margin:.9rem 0}
+.info-box{background:#fff;border:1px solid var(--border);border-radius:8px;padding:.8rem;flex:1;min-width:160px;font-size:.83rem}
+.info-box strong{display:block;color:var(--subj1);font-size:.8rem;margin-bottom:.3rem}
+.pipeline{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem;margin:.9rem 0}
+.pipe-step{background:var(--subj1);color:#fff;padding:.5rem .9rem;border-radius:8px;font-size:.8rem;font-weight:600;text-align:center}
+.pipe-arrow{color:var(--subj2);font-size:1.1rem;font-weight:700}
+.practice-paper{background:#fff;border:2px solid var(--border);border-radius:12px;overflow:hidden;margin:.9rem 0}
+.pp-header{background:var(--subj1);color:#fff;padding:.9rem 1.2rem}
+.pp-header h3{font-size:1rem;font-weight:700}.pp-header p{font-size:.78rem;opacity:.85;margin-top:.2rem}
+.pp-section{padding:.8rem 1.2rem;border-bottom:1px solid var(--border)}
+.pp-section h4{font-size:.82rem;font-weight:700;color:var(--subj1);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.6rem}
+.pp-q{margin-bottom:.7rem;font-size:.85rem}.pp-q .q-num{font-weight:700;color:var(--subj1)}
+.marks{display:inline-block;background:var(--subj1);color:#fff;font-size:.68rem;font-weight:700;padding:.1rem .4rem;border-radius:4px;margin-left:.4rem}
+.badge-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:.9rem 0}
+.badge-chip{display:flex;align-items:center;gap:.4rem;background:#fff;border:2px solid var(--border);border-radius:20px;padding:.35rem .8rem;font-size:.78rem;font-weight:600;transition:.2s}
+.badge-chip.earned{border-color:var(--gold);background:#fff8e1;color:var(--text)}.badge-chip.locked{opacity:.45}
+.badge-chip .b-icon{font-size:1rem}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;align-items:center;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:14px;padding:2rem;max-width:380px;width:90%;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.25)}
+.modal-box h2{color:var(--subj1);font-size:1.2rem;margin-bottom:.5rem}
+.modal-box input{width:100%;border:2px solid var(--border);border-radius:8px;padding:.6rem .9rem;font-size:.95rem;margin:.8rem 0;outline:none}
+.modal-box input:focus{border-color:var(--subj2)}
+.modal-btn{background:var(--subj1);color:#fff;border:none;padding:.65rem 1.4rem;border-radius:8px;font-size:.9rem;font-weight:700;cursor:pointer;width:100%}
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--navy);color:#fff;padding:.65rem 1.4rem;border-radius:20px;font-size:.85rem;font-weight:600;z-index:300;transition:transform .3s}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.xp-pop{position:fixed;top:120px;right:1.5rem;background:var(--gold);color:var(--navy);padding:.5rem 1rem;border-radius:20px;font-weight:800;font-size:.85rem;z-index:300;animation:popUp .8s forwards}
+@keyframes popUp{0%{opacity:0;transform:translateY(10px)}20%{opacity:1;transform:translateY(0)}80%{opacity:1}100%{opacity:0;transform:translateY(-20px)}}
+#examView{display:none;padding:1rem}#examView.active{display:block}
+.exam-modes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.8rem;margin:1rem 0}
+.exam-mode-card{background:#fff;border:2px solid var(--border);border-radius:12px;padding:1rem;cursor:pointer;transition:.2s;text-align:center}
+.exam-mode-card:hover,.exam-mode-card.selected{border-color:var(--subj1);background:#eceff1}
+.exam-mode-card h3{color:var(--subj1);font-size:.9rem;font-weight:700}.exam-mode-card p{font-size:.75rem;color:#888;margin-top:.3rem}
+.exam-toolbar{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;background:#fff;padding:.7rem 1rem;border-radius:10px;margin-bottom:.8rem;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.exam-timer{font-size:1.1rem;font-weight:800;color:var(--subj1);min-width:70px}.exam-timer.warn{color:var(--red)}
+.exam-progress{font-size:.8rem;color:#666}
+.exam-actions{display:flex;gap:.5rem;margin-left:auto}
+.exam-btn{padding:.4rem .85rem;border-radius:7px;border:none;font-size:.8rem;font-weight:600;cursor:pointer}
+.exam-btn.primary{background:var(--subj1);color:#fff}.exam-btn.secondary{background:var(--border);color:var(--text)}.exam-btn.danger{background:var(--red);color:#fff}
+.question-card{background:#fff;border-radius:12px;padding:1.2rem;margin-bottom:.8rem;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.q-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem}
+.q-num-badge{background:var(--subj1);color:#fff;padding:.25rem .65rem;border-radius:6px;font-size:.78rem;font-weight:700}
+.q-marks-badge{background:var(--orange);color:#fff;padding:.25rem .55rem;border-radius:6px;font-size:.72rem;font-weight:700}
+.q-text{font-size:.9rem;font-weight:500;margin-bottom:.9rem;line-height:1.5}
+.mcq-opts{display:grid;gap:.5rem}
+.mcq-opt{display:flex;align-items:center;gap:.7rem;padding:.6rem .9rem;border-radius:8px;border:2px solid var(--border);cursor:pointer;transition:.2s;font-size:.85rem}
+.mcq-opt:hover{border-color:var(--subj2);background:#eceff1}.mcq-opt.selected{border-color:var(--subj1);background:#eceff1}
+.mcq-opt.correct{border-color:var(--green);background:#e8f5e9}.mcq-opt.wrong{border-color:var(--red);background:#ffebee}
+.opt-letter{width:24px;height:24px;border-radius:50%;background:var(--lgray);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0}
+.exam-palette{display:flex;flex-wrap:wrap;gap:.3rem;margin:.8rem 0}
+.palette-btn{width:30px;height:30px;border-radius:6px;border:none;cursor:pointer;font-size:.75rem;font-weight:700;background:var(--border);color:var(--text)}
+.palette-btn.answered{background:var(--subj1);color:#fff}.palette-btn.reviewed{background:var(--orange);color:#fff}.palette-btn.current{outline:2px solid var(--navy);outline-offset:2px}
+.dashboard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.8rem;margin:1rem 0}
+.dash-card{background:#fff;border-radius:10px;padding:.9rem;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.dash-card .dv{font-size:1.8rem;font-weight:800;color:var(--subj1)}.dash-card .dl{font-size:.75rem;color:#888;margin-top:.2rem}
+.result-q{background:#fff;border-radius:8px;padding:.9rem;margin-bottom:.6rem;font-size:.84rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.result-q .rq-q{font-weight:500;margin-bottom:.5rem}.result-q .rq-status{font-weight:700;font-size:.78rem}
+.rq-correct{color:var(--green)}.rq-wrong{color:var(--red)}.rq-skip{color:#999}
+/* Ledger/journal styling */
+.journal-entry{font-family:'Courier New',monospace;background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem;font-size:.8rem;margin:.9rem 0;overflow-x:auto}
+.journal-entry .je-head{font-weight:700;border-bottom:2px solid var(--subj1);padding-bottom:.4rem;margin-bottom:.5rem;font-family:'Segoe UI',sans-serif;font-size:.82rem;color:var(--subj1)}
+.journal-entry table{width:100%;border-collapse:collapse}
+.journal-entry td{padding:.25rem .5rem;vertical-align:top}
+.journal-entry .dr{color:#1565c0;font-weight:600}.journal-entry .cr{color:#2e7d32;font-weight:600;padding-left:2rem}
+.journal-entry .amt{text-align:right;min-width:80px}
+@media(max-width:600px){.hero h1{font-size:1.4rem}.cards-grid{grid-template-columns:repeat(2,1fr)}.vs-grid{grid-template-columns:1fr}.vs-mid{writing-mode:horizontal-tb;padding:.4rem}}
+
+.formula-box{background:linear-gradient(135deg,#ffebee,#ef9a9a);border-left:4px solid #c62828;border-radius:10px;padding:14px 16px;margin:12px 0}
+.formula-box h4{color:#b71c1c;margin-bottom:10px;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+.formula-box .f{font-family:monospace;background:#fff;border-radius:6px;padding:8px 12px;margin:4px 0;font-size:.88rem;color:#c62828;border:1px solid rgba(198,40,40,.15)}
+.def-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:12px 0}
+.def-card{background:var(--lgray);border-radius:10px;padding:14px;border-left:3px solid var(--subj2)}
+.term{font-weight:700;font-size:.85rem;color:var(--subj2);margin-bottom:4px}
+.defn{font-size:.82rem;line-height:1.5;color:var(--text)}
+.worked{background:linear-gradient(135deg,#fff3e0,#ffcc80);border-left:4px solid #e65100;border-radius:10px;padding:14px 16px;margin:12px 0}
+.worked h4{font-size:.88rem;font-weight:700;color:#bf360c;margin-bottom:8px}
+.worked .step{display:flex;gap:10px;margin-bottom:8px;font-size:.86rem}
+.sn{background:#e65100;color:#fff;border-radius:50%;width:22px;height:22px;min-width:22px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700}
+.worked .ans{background:#e64a19;color:#fff;border-radius:6px;padding:10px 14px;margin-top:10px;font-weight:700;font-size:.87rem}
+.sec-title{font-size:1.4rem;font-weight:700;color:var(--subj1);margin-bottom:4px;padding:8px 0}
+.sec-sub{font-size:.85rem;color:var(--subj2);margin-bottom:16px;letter-spacing:.02em}
+.ch-section{background:#fff;border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.main-tabs-wrap{z-index:99;background:var(--subj1);padding:4px 16px 0}
+.tab-row{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;padding-bottom:6px;padding-top:4px;min-width:0}
+.tab-row::-webkit-scrollbar{display:none}
+.tab-row-label{font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;
+  letter-spacing:.08em;padding:4px 2px 0;white-space:nowrap;flex-shrink:0;
+  align-self:center;margin-right:4px}
+.tab-row-2{background:rgba(0,0,0,.18);margin:0 -16px;padding:0 16px}
+.main-tab{background:rgba(255,255,255,.12);border:none;color:rgba(255,255,255,.75);
+  padding:6px 13px;border-radius:20px;cursor:pointer;font-size:.79rem;
+  white-space:nowrap;font-family:var(--font);transition:all .2s;flex-shrink:0}
+.main-tab:hover{background:rgba(255,255,255,.22);color:#fff}
+.main-tab.active{background:var(--teal);color:#fff;font-weight:600}
+.tab-row-2 .main-tab.active{background:var(--gold);color:#111}
+.sim-info{display:flex;flex-direction:row;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem}
+.sim-stat-box{background:var(--lgray);border-radius:12px;padding:18px 24px;text-align:center;min-width:80px}
+.sim-num{font-size:1.8rem;font-weight:800;color:var(--subj1)}
+.sim-header{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;font-weight:600;margin-bottom:8px;padding:8px 0}
+.sim-q-text{font-size:.97rem;line-height:1.7;margin-bottom:12px;font-weight:500;padding:12px 0}
+.sim-opts{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.sim-opt{background:var(--lgray);border:2px solid var(--border);border-radius:8px;padding:10px 16px;text-align:left;cursor:pointer;font-size:.9rem;font-family:var(--font);transition:all .2s}
+.sim-opt:hover:not(:disabled){border-color:var(--subj2);background:#e8f5e9}
+.sim-correct{border-color:var(--mint)!important;background:#f0fff4!important;color:#1a7a4a!important}
+.sim-wrong{border-color:var(--coral)!important;background:#fff5f5!important;color:var(--coral)!important}
+.sim-feedback{border-radius:8px;padding:10px 14px;font-size:.87rem;margin-bottom:10px;line-height:1.6}
+.sim-fb-correct{background:#f0fff4;border-left:4px solid var(--mint)}
+.sim-fb-wrong{background:#fff5f5;border-left:4px solid var(--coral)}
+.sim-next-btn{display:inline-flex;align-items:center;gap:8px;background:var(--subj1);color:#fff;border:none;border-radius:24px;padding:12px 28px;font-size:.92rem;font-weight:600;cursor:pointer;font-family:var(--font);transition:all .25s;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.sim-next-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.sim-next-arrow{font-size:1.1rem;transition:transform .2s}
+.sim-next-btn:hover .sim-next-arrow{transform:translateX(4px)}
+.sim-live-donut-wrap{display:flex;align-items:center;gap:14px;padding:10px 0 4px;margin-bottom:6px}
+.sim-live-legend{display:flex;flex-direction:column;gap:5px;font-size:.8rem}
+.sim-live-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.sim-live-dot.c{background:var(--mint)}.sim-live-dot.w{background:var(--coral)}.sim-live-dot.s{background:var(--border)}
+.sim-result-box{background:var(--lgray);border-radius:16px;padding:24px;text-align:center}
+.sim-result-score{font-size:2.2rem;font-weight:900;color:var(--subj1);margin-bottom:4px}
+.sim-result-grade{font-size:1.4rem;font-weight:700;margin-bottom:8px}
+.sim-result-msg{font-size:.95rem;margin-bottom:20px;color:var(--text);opacity:.8}
+.sim-dash{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;margin:20px 0;text-align:left}
+.sim-donut-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+.sim-donut-legend{display:flex;flex-direction:column;gap:6px}
+.sim-legend-row{display:flex;align-items:center;gap:8px;font-size:.82rem}
+.sim-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.sim-bars-wrap{flex:1;min-width:200px}
+.sim-bars-title{font-weight:700;font-size:.88rem;margin-bottom:10px;color:var(--subj1)}
+.sim-bar-row{margin-bottom:12px}
+.sim-bar-label{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px}
+.sim-bar-track{height:12px;background:var(--border);border-radius:6px;overflow:hidden;display:flex}
+.sim-bar-seg-c{height:100%;background:var(--mint);transition:width .8s ease}
+.sim-bar-seg-w{height:100%;background:var(--coral);transition:width .8s ease .1s}
+.sim-review-title{font-weight:700;font-size:.88rem;margin:16px 0 8px;color:var(--subj1)}
+#sim-q-strip{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.sim-strip-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;cursor:default}
+.sim-strip-dot.c{background:#d4f7e0;color:#1a7a4a}
+.sim-strip-dot.w{background:#ffd6d6;color:#b71c1c}
+.sim-strip-dot.s{background:var(--border);color:var(--text)}
+@media(max-width:640px){.sim-dash{flex-direction:column;align-items:center}.sim-bars-wrap{width:100%}}
+.btn-start{display:block;margin:1.5rem auto;background:var(--subj1);color:#fff;border:none;border-radius:24px;padding:14px 36px;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:var(--font);transition:all .25s;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.btn-start:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(0,0,0,.28)}
+
+.qbank{display:flex;flex-direction:column;gap:10px;margin:12px 0}
+.qitem{background:#fff;border-radius:8px;padding:12px 14px;border-left:4px solid var(--subj2);font-size:.85rem;line-height:1.6;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+@media(prefers-color-scheme:dark){.qitem{background:#242830;border-left-color:var(--teal)}}
+:root[data-theme=dark] .qitem{background:#242830;border-left-color:var(--teal)}
+.qtag{display:inline-block;background:var(--subj1);color:#fff;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:5px;letter-spacing:.03em}
+.case-block{background:linear-gradient(135deg,#ffebee,#ffcdd2);border-left:4px solid var(--subj2);border-radius:8px;padding:14px;margin:12px 0}
+@media(prefers-color-scheme:dark){.case-block{background:linear-gradient(135deg,#1a0a0a,#2d0f0f)}}
+:root[data-theme=dark] .case-block{background:linear-gradient(135deg,#1a0a0a,#2d0f0f)}
+.case-block p{font-size:.86rem;line-height:1.6;margin-bottom:10px;color:var(--text)}
+
+/* ── MISTAKE BANK ── */
+.mistake-card{background:#fff;border-radius:10px;border:1px solid var(--border);border-left:4px solid var(--red);padding:16px;margin-bottom:12px}
+@media(prefers-color-scheme:dark){.mistake-card{background:#242830;border-color:#3a3f4a;border-left-color:var(--coral)}}
+:root[data-theme=dark] .mistake-card{background:#242830;border-left-color:var(--coral)}
+.mistake-card h4{color:var(--red);font-size:.88rem;margin-bottom:8px}
+@media(prefers-color-scheme:dark){.mistake-card h4{color:var(--coral)}}
+:root[data-theme=dark] .mistake-card h4{color:var(--coral)}
+.mistake-wrong{background:#fff5f5;border-radius:6px;padding:8px 12px;font-size:.83rem;color:var(--red);margin:6px 0;font-family:var(--mono)}
+@media(prefers-color-scheme:dark){.mistake-wrong{background:#2a1515;color:var(--coral)}}
+:root[data-theme=dark] .mistake-wrong{background:#2a1515}
+.mistake-right{background:#f0fff4;border-radius:6px;padding:8px 12px;font-size:.83rem;color:var(--green);margin:6px 0;font-family:var(--mono)}
+@media(prefers-color-scheme:dark){.mistake-right{background:#0a1f14;color:var(--mint)}}
+:root[data-theme=dark] .mistake-right{background:#0a1f14}
+/* ── EXAMINER'S EYE ── */
+.tip-card{background:#fff;border-radius:10px;border:1px solid var(--border);border-left:4px solid var(--purple);padding:16px;margin-bottom:12px}
+@media(prefers-color-scheme:dark){.tip-card{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .tip-card{background:#242830}
+.tip-card h4{color:var(--purple);font-size:.88rem;margin-bottom:8px;display:flex;gap:6px;align-items:center}
+/* ── HIGH PROBABILITY ── */
+.hotq{background:linear-gradient(135deg,#fff3e0,#ffe0b2);border-radius:10px;padding:14px;margin-bottom:10px;border-left:4px solid var(--orange)}
+@media(prefers-color-scheme:dark){.hotq{background:linear-gradient(135deg,#2a1800,#1e1200)}}
+:root[data-theme=dark] .hotq{background:linear-gradient(135deg,#2a1800,#1e1200)}
+.hotq .heat{float:right;font-size:.8rem;font-weight:700;color:var(--orange)}
+/* ── LAST MINUTE ── */
+.lm-block{background:#fff;border-radius:12px;border:1px solid var(--border);padding:20px;margin-bottom:16px}
+@media(prefers-color-scheme:dark){.lm-block{background:#242830;border-color:#3a3f4a}}
+:root[data-theme=dark] .lm-block{background:#242830}
+.lm-list{list-style:none;padding:0}
+.lm-list li{padding:6px 0;border-bottom:1px solid var(--border);font-size:.86rem;display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+.lm-list li::before{content:'✓';color:var(--mint);font-weight:700;flex-shrink:0;margin-top:2px}
+
+
+/* ══ DESKTOP SIDE PANELS ══ */
+.portal-layout{display:block;padding-top:0}
+.side-panel{display:none}
+@media(min-width:1200px){
+  .portal-layout{display:grid;grid-template-columns:160px 1fr 160px;gap:0;align-items:start}
+  .side-panel{display:flex;flex-direction:column;gap:16px;padding:12px 8px;position:sticky;top:130px;height:calc(100vh - 130px);overflow-y:auto;scrollbar-width:none;z-index:1;overflow-x:hidden}
+  .side-panel::-webkit-scrollbar{display:none}
+  .main-content-wrap{min-width:0;position:relative;z-index:2}
+}
+/* Left panel — local vendor */
+.panel-left{background:#f8f9ff;border-right:1px solid #e8ecf4}
+/* Right panel — adsense */
+.panel-right{background:#f8f9ff;border-left:1px solid #e8ecf4}
+/* Vendor skyscraper card */
+/* AdSense skyscraper container */
+.adsense-sky{width:140px;text-align:center}
+.adsense-sky 
+/* ── MOBILE NAV BAR ── */
+.mobile-nav-bar{display:none}
+@media(max-width:768px){
+  .mobile-nav-bar{
+    display:flex;align-items:center;gap:8px;
+    background:var(--subj1,#1a237e);padding:7px 12px;
+    position:sticky;top:0;z-index:300;
+    border-bottom:2px solid var(--teal,#00b4d8);
+  }
+  .mobile-nav-bar a,.mobile-nav-bar button{
+    background:rgba(255,255,255,.15);border:none;color:#fff;
+    padding:5px 12px;border-radius:20px;font-size:.8rem;
+    font-weight:600;cursor:pointer;text-decoration:none;
+    font-family:inherit;white-space:nowrap;
+  }
+  .mobile-nav-bar a:hover,.mobile-nav-bar button:hover{background:rgba(255,255,255,.28)}
+  .mobile-nav-bar .mnb-title{flex:1;color:#fff;font-size:.85rem;font-weight:700;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topnav,.site-header{display:none !important}
+
+}
+
+html{scroll-padding-top:130px}
+section{scroll-margin-top:130px}
+</style>
+    <script src="../ads.js" defer></script>
+  <!-- AdSense: replace ca-pub-PENDING with Publisher ID after approval -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-PENDING" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Mobile nav bar -->
+<div class="mobile-nav-bar" id="mobileNavBar">
+  <a href="../index.html">🏠 Home</a>
+  <button onclick="mobileGoBack()">← Back</button>
+  <span class="mnb-title" id="mobileNavTitle">Menu</span>
+</div>
+
+<div class="modal-overlay" id="nameModal">
+  <div class="modal-box">
+    <div style="font-size:3rem">📒</div>
+    <h2>Welcome to Accountancy XII!</h2>
+    <p style="font-size:.85rem;color:#666;margin:.4rem 0">Enter your name to track your progress</p>
+    <input type="text" id="nameInput" placeholder="Your name..." maxlength="30">
+    <button class="modal-btn" onclick="saveName()">Start Learning 🚀</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<nav class="topnav">
+  <div class="logo" onclick="go('home')">CBSE<span>Mock</span> · Accountancy XII 📒</div>
+  <div class="nav-right">
+    <span class="nav-user" id="navUser" onclick="showNameModal()">👤 Student</span>
+    <button class="nav-btn" onclick="go('exam')">📝 Exam</button>
+    <button class="nav-btn" onclick="go('dash')">📊 Dashboard</button>
+  </div>
+</nav>
+<div class="xp-bar-wrap">
+  <div class="xp-level-badge" id="xpLevel">Lv 1</div>
+  <div class="xp-bar-outer"><div class="xp-bar-inner" id="xpBar" style="width:0%"></div></div>
+  <div class="xp-label" id="xpLabel">0 / 100 XP</div>
+  <div class="xp-label" id="streakLabel">🔥 0</div>
+</div>
+<div class="portal-layout">
+<div class="side-panel panel-left">
+  <div id="ad-left-1"></div>
+  <div id="ad-left-2"></div>
+  <div id="ad-left-3"></div>
+</div>
+<div class="main-content-wrap">
+<div class="main-tabs-wrap">
+  <!-- ROW 1: Home + Subject Tabs -->
+  <div class="tab-row" id="mainTabs">
+    <button class="main-tab active" onclick="go('home')">🏠 Home</button>
+    <button class="main-tab" onclick="go('p1')">🤝 Partnership Basics</button>
+    <button class="main-tab" onclick="go('p2')">➕ Admission</button>
+    <button class="main-tab" onclick="go('p3')">💀 Retirement/Death</button>
+    <button class="main-tab" onclick="go('p4')">📉 Dissolution</button>
+    <button class="main-tab" onclick="go('p5')">📋 Accounts Summary</button>
+    <button class="main-tab" onclick="go('c1')">📈 Share Capital</button>
+    <button class="main-tab" onclick="go('c2')">💳 Debentures</button>
+    <button class="main-tab" onclick="go('f1')">📊 Ratio Analysis</button>
+    <button class="main-tab" onclick="go('f2')">💸 Cash Flow</button>
+  </div>
+  <!-- ROW 2: Study Tools -->
+  <div class="tab-row tab-row-2" id="toolTabs">
+    <button class="main-tab" onclick="go('pyq')">📜 PYQ Bank</button>
+    <button class="main-tab" onclick="go('mistakes')">❌ Mistake Bank</button>
+    <button class="main-tab" onclick="go('examiner')">👁️ Examiner's Eye</button>
+    <button class="main-tab" onclick="go('highprob')">🔥 High-Prob Qs</button>
+    <button class="main-tab" onclick="go('lastmin')">⏱️ Last-Minute Rev</button>
+    <button class="main-tab" onclick="go('pp')">📝 Practice Papers</button>
+    <button class="main-tab" onclick="go('sim')">🎯 Exam Simulator</button>
+    <button class="main-tab" onclick="go('dash')">📊 Dashboard</button>
+  </div>
+</div><!-- HOME -->
+<div class="sec active" id="sec-home">
+<!-- ══ AD: TOP LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:4px 0 2px;">
+  <div id="ad-leader-top" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: TOP LEADERBOARD ══ -->
+
+  <div class="hero">
+    <div style="font-size:3.5rem;margin-bottom:.4rem">📒</div>
+    <h1>Accountancy Class XII</h1>
+    <p>Partnership · Company Accounts · Financial Statements · CBSE Board 2025-26</p>
+    <div class="hero-badges">
+      <div class="hero-badge">📚 2 Parts · 10 Topics</div>
+      <div class="hero-badge">💼 CBSE Board 2025-26</div>
+      <div class="hero-badge">🎯 80 Marks Theory</div>
+      <div class="hero-badge">⏱️ 3 Hours Duration</div>
+    </div>
+  </div>
+  <div style="padding:1rem">
+    <div class="remember">
+      <strong>📋 Marks Distribution:</strong> Part A (~60M): NPO (10M), Partnership — Goodwill (10M), Admission (15M), Retirement &amp; Death (10M), Dissolution (10M), Company Shares &amp; Debentures (15M). Part B (~20M): Financial Statements Analysis — Ratio Analysis (12M), Cash Flow Statement (8M).
+    </div>
+    <div class="metric-row">
+      <div class="metric-card"><div class="mv">60</div><div class="ml">Part A Marks</div></div>
+      <div class="metric-card"><div class="mv">20</div><div class="ml">Part B Marks</div></div>
+      <div class="metric-card"><div class="mv">20</div><div class="ml">Internal Assess.</div></div>
+      <div class="metric-card"><div class="mv">3h</div><div class="ml">Duration</div></div>
+    </div>
+    <h3 style="font-size:1rem;font-weight:700;color:var(--subj1);margin:.8rem 0 .6rem">📖 Topics</h3>
+    <div class="cards-grid">
+      <div class="card c1" onclick="go('p1')"><div class="c-icon">🤝</div><div class="c-title">NPO Accounts</div><div class="c-sub">Receipts &amp; Payments, Income &amp; Expenditure</div></div>
+      <div class="card c2" onclick="go('p2')"><div class="c-icon">✨</div><div class="c-title">Goodwill</div><div class="c-sub">Valuation methods</div></div>
+      <div class="card c3" onclick="go('p3')"><div class="c-icon">➕</div><div class="c-title">Admission</div><div class="c-sub">New ratio, Goodwill, Revaluation</div></div>
+      <div class="card c4" onclick="go('p4')"><div class="c-icon">🔚</div><div class="c-title">Retirement &amp; Death</div><div class="c-sub">Gain ratio, Executor's account</div></div>
+      <div class="card c5" onclick="go('p5')"><div class="c-icon">🔓</div><div class="c-title">Dissolution</div><div class="c-sub">Realisation account, Garner vs Murray</div></div>
+      <div class="card c1" onclick="go('c1')"><div class="c-icon">📈</div><div class="c-title">Company: Shares</div><div class="c-sub">Issue, Forfeiture, Reissue</div></div>
+      <div class="card c2" onclick="go('c2')"><div class="c-icon">📜</div><div class="c-title">Debentures</div><div class="c-sub">Issue, Redemption</div></div>
+      <div class="card c3" onclick="go('f1')"><div class="c-icon">📊</div><div class="c-title">Ratio Analysis</div><div class="c-sub">Liquidity, Solvency, Profitability</div></div>
+      <div class="card topic-card" onclick="go('f2')"><div class="c-icon">💧</div><div class="c-title">Cash Flow Statement</div><div class="c-sub">Operating, Investing, Financing</div></div>
+    </div>
+    <h3 style="font-size:1rem;font-weight:700;color:var(--subj1);margin:1rem 0 .5rem">🏆 Badges</h3>
+    <div id="badgeRowHome" class="badge-row"></div>
+    <div class="activity">
+      <div class="a-title">🚀 Quick Start</div>
+      <button class="modal-btn" style="margin-top:.5rem" onclick="resumeLearning()">Resume Learning →</button>
+    </div>
+  </div>
+
+<!-- ══ AD: INLINE 1 ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0 4px;">
+  <div id="ad-inline-1" style="width:100%;max-width:580px;"></div>
+</div>
+<!-- ══ END AD: INLINE 1 ══ -->
+<!-- AdSense inline unit -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:580px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-MID-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+<!-- end AdSense inline -->
+</div>
+
+<!-- NPO -->
+<div class="sec" id="sec-p1">
+  <div class="sec-title">🤝 Partnership — Fundamentals</div>
+  <div class="sec-sub">Partnership Deed · Capital Accounts · Profit Sharing · Goodwill</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Partnership</div><div class="defn">Business carried on by two or more persons called partners, governed by Partnership Act 1932. Features: agreement, lawful business, profit motive, mutual agency. Max 50 partners (Companies Act 2013).</div></div>
+      <div class="def-card"><div class="term">Partnership Deed</div><div class="defn">Written agreement specifying: profit-sharing ratio, interest on capital/drawings/loans, salary/commission to partners, rules on admission/retirement/dissolution. In absence of deed: no interest on capital, no salary, equal profit sharing, 6% interest on loans.</div></div>
+      <div class="def-card"><div class="term">Goodwill</div><div class="defn">Excess earning capacity. Valued on: Average Profit Method (AP × years), Super Profit Method (SP × years), Capitalisation Method. Super Profit = Actual Profit - Normal Profit. Normal Profit = Capital employed × Normal Rate/100.</div></div>
+      <div class="def-card"><div class="term">Capital Accounts</div><div class="defn">Fixed: capital remains constant; all adjustments through Current Account. Fluctuating: single account for capital + all adjustments (interest, salary, drawings, share of profit).</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Key Formulae — Partnership Basics</h4>
+      <div class="f">Average Profit = Total Profits (adjusted) / Number of Years</div>
+      <div class="f">Goodwill (AP Method) = Average Profit × Years of Purchase</div>
+      <div class="f">Super Profit = Average Profit - Normal Profit</div>
+      <div class="f">Normal Profit = Capital Employed × Normal Rate of Return / 100</div>
+      <div class="f">Goodwill (SP Method) = Super Profit × Years of Purchase</div>
+      <div class="f">Goodwill (Capitalisation) = Super Profit × (100 / Normal Rate)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — Goodwill Calculation (Board 2023, 4M)</h4>
+      <p><strong>Q:</strong> Average profits = Rs 60,000. Capital employed = Rs 3,00,000. Normal rate = 10%. Find goodwill at 3 years purchase by super profit method.</p>
+      <div class="step"><div class="sn">1</div><div>Normal Profit = 3,00,000 × 10/100 = Rs 30,000</div></div>
+      <div class="step"><div class="sn">2</div><div>Super Profit = 60,000 - 30,000 = Rs 30,000</div></div>
+      <div class="step"><div class="sn">3</div><div>Goodwill = 30,000 × 3 = Rs 90,000</div></div>
+      <div class="ans">✅ Goodwill = Rs 90,000</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Partnership Fundamentals</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> In absence of a partnership deed, interest on capital is:<br><em>(A) 6% p.a. (B) 12% p.a. (C) Nil (D) 5% p.a.</em><br><strong>Ans: (C) Nil</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Maximum number of partners allowed in a partnership firm:<br><em>(A) 10 (B) 20 (C) 50 (D) Unlimited</em><br><strong>Ans: (C) 50</strong> (as per Companies Act 2013)</div>
+      <div class="qitem"><span class="qtag">MCQ 3</span> Goodwill by Capitalisation of Super Profit = Super Profit × (100 / Normal Rate). If SP = Rs 20,000 and NR = 10%, goodwill is:<br><em>(A) Rs 2,00,000 (B) Rs 2,000 (C) Rs 20,000 (D) Rs 1,00,000</em><br><strong>Ans: (A) Rs 2,00,000</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> In absence of a partnership deed, interest on loan from a partner is 6% p.a.<br>
+        <strong>R:</strong> The Indian Partnership Act 1932 prescribes 6% p.a. as the default interest rate on partner's loan to the firm.<br>
+        <strong>Ans: (A)</strong> Both correct; R correctly explains A.
+      </div>
+      <div class="case-block">
+        <p><strong>Case:</strong> A, B and C are partners sharing profits in the ratio 2:2:1. Their average profits are Rs 75,000 and normal profits for similar businesses are Rs 45,000. The total capital of the firm is Rs 3,00,000 and the normal rate of return is 15%. They agree to value goodwill at 3 years' purchase of super profit.</p>
+        <div class="qbank">
+          <div class="qitem"><span class="qtag">Q1 (1M)</span> Normal Profit = ? <strong>Ans:</strong> Rs 3,00,000 × 15/100 = Rs 45,000.</div>
+          <div class="qitem"><span class="qtag">Q2 (1M)</span> Super Profit = ? <strong>Ans:</strong> Rs 75,000 − Rs 45,000 = Rs 30,000.</div>
+          <div class="qitem"><span class="qtag">Q3 (2M)</span> Goodwill = ? How is it shared? <strong>Ans:</strong> Goodwill = Rs 30,000 × 3 = Rs 90,000. A gets Rs 36,000; B Rs 36,000; C Rs 18,000 — in PSR 2:2:1.</div>
+        </div>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> Distinguish between Fixed and Fluctuating Capital Accounts.<br><strong>Ans:</strong> Under the Fixed Capital method, each partner has two accounts — Capital Account (remains constant) and Current Account (records salary, interest on capital, drawings, share of profit). The capital account changes only when a fresh introduction or permanent withdrawal of capital is made. Under the Fluctuating Capital method, there is only one account per partner. All adjustments (IOC, salary, commission, drawings, share of profit/loss) are made directly to the capital account, causing it to fluctuate every year. The Partnership Deed specifies which method to follow.</div>
+      <div class="qitem"><span class="qtag">LA (6M)</span> Explain the three methods of valuing goodwill with one numerical example each.<br><strong>Ans:</strong> <strong>1. Average Profit Method:</strong> Goodwill = Average Profit × Years of Purchase. If average profits = Rs 50,000 and YOP = 3, Goodwill = Rs 1,50,000. <strong>2. Super Profit Method:</strong> Super Profit = Average Profit − Normal Profit. Goodwill = SP × YOP. If AP = Rs 60,000, NP = Rs 40,000, YOP = 3: SP = Rs 20,000; Goodwill = Rs 60,000. <strong>3. Capitalisation of Super Profit:</strong> Goodwill = SP × (100/Normal Rate). If SP = Rs 20,000, NR = 10%: Goodwill = Rs 2,00,000. This method capitalises the stream of super profits at the normal rate, treating them as if they were perpetual annuity.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="sec-p2">
+  <div class="sec-title">➕ Partnership — Admission of Partner</div>
+  <div class="sec-sub">New Ratio · Sacrificing Ratio · Goodwill Treatment · Revaluation · Capital Adjustment</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Sacrificing Ratio</div><div class="defn">Old ratio - New ratio. The share sacrificed by old partners to give to the new partner. Compensated by goodwill brought in by new partner.</div></div>
+      <div class="def-card"><div class="term">Goodwill Treatment (Admission)</div><div class="defn">Premium method: new partner brings cash for goodwill; old partners credited in sacrificing ratio. Hidden goodwill: when new partner's share of total capital differs from amount brought in → calculate total capital → goodwill = excess capital - total capital brought in.</div></div>
+      <div class="def-card"><div class="term">Revaluation Account</div><div class="defn">Profit/Loss on revaluation of assets and liabilities at time of admission. Credited to old partners in old ratio before new partner joins. Gain = credit side > debit side.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Admission Formulae</h4>
+      <div class="f">Sacrificing Ratio = Old Ratio - New Ratio</div>
+      <div class="f">Goodwill credit = New Partner's share of goodwill; distributed to old partners in SR</div>
+      <div class="f">New Ratio = Old Ratio - Sacrifice (if sacrifice is equal to new share of each)</div>
+      <div class="f">Hidden Goodwill = Total Firm Capital (from new partner's capital) - Actual Capital</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — Sacrificing Ratio (Board 2022, 4M)</h4>
+      <p><strong>Q:</strong> A:B share profits 3:2. C admitted for 1/4 share; A and B sacrifice equally. Find new ratio.</p>
+      <div class="step"><div class="sn">1</div><div>C's share = 1/4. Remaining = 3/4 for A and B. A and B sacrifice equally: each gives 1/8 to C.</div></div>
+      <div class="step"><div class="sn">2</div><div>A new = 3/5 - 1/8 = 24/40 - 5/40 = 19/40. B new = 2/5 - 1/8 = 16/40 - 5/40 = 11/40.</div></div>
+      <div class="step"><div class="sn">3</div><div>New ratio A:B:C = 19:11:10. Sacrificing ratio A:B = 1:1.</div></div>
+      <div class="ans">✅ New ratio = 19:11:10; Sacrificing ratio = 1:1.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Admission of Partner</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> On admission, goodwill brought by the new partner in cash is credited to:<br><em>(A) New partner's capital (B) Old partners' capitals in sacrificing ratio (C) General reserve (D) P&amp;L account</em><br><strong>Ans: (B) Old partners' capitals in sacrificing ratio</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> X:Y = 3:2. Z admitted for 1/5 share. If X and Y sacrifice in ratio 2:1, X's new share is:<br><em>(A) 3/5 (B) 7/15 (C) 13/30 (D) 2/5</em><br><strong>Ans: (C)</strong> Z's share = 1/5. Sacrifice by X = 2/3×1/5 = 2/15; by Y = 1/15. X new = 3/5 − 2/15 = 9/15 − 2/15 = 7/15. <em>(Correct: 7/15 — option B)</em></div>
+      <div class="qitem"><span class="qtag">MCQ 3</span> Revaluation profit on admission is credited to:<br><em>(A) New partner in new ratio (B) Old partners in old ratio (C) All partners equally (D) Firm's reserve</em><br><strong>Ans: (B) Old partners in old ratio</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> On admission, the existing partners' capital accounts are credited with their share of the revaluation profit before the new partner joins.<br>
+        <strong>R:</strong> The revaluation profit/loss arises from changes in asset/liability values that occurred during the old partnership period, so it belongs to old partners only.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+      <div class="case-block">
+        <p><strong>Case:</strong> P and Q are partners sharing profits 3:2. R is admitted for 1/4 share. Goodwill of the firm is valued at Rs 80,000. R brings Rs 20,000 for goodwill in cash. The firm's assets are revalued: Land increases by Rs 10,000; Debtors decrease by Rs 2,000.</p>
+        <div class="qbank">
+          <div class="qitem"><span class="qtag">Q1 (1M)</span> R's goodwill = ? <strong>Ans:</strong> 1/4 × Rs 80,000 = Rs 20,000 ✓ (matches amount brought).</div>
+          <div class="qitem"><span class="qtag">Q2 (1M)</span> Sacrificing ratio P:Q = ? <strong>Ans:</strong> If equal sacrifice: P:Q = 1:1 (each gives 1/8 to R). Actual old ratio 3:2, so SR = 3:2 unless specified otherwise.</div>
+          <div class="qitem"><span class="qtag">Q3 (2M)</span> Net Revaluation profit and its distribution? <strong>Ans:</strong> Net revaluation = Rs 10,000 − Rs 2,000 = Rs 8,000 profit. P gets 3/5 × 8,000 = Rs 4,800; Q gets 2/5 × 8,000 = Rs 3,200. Credited to P's and Q's capital accounts.</div>
+        </div>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> What is the significance of Revaluation Account at the time of admission?<br><strong>Ans:</strong> The Revaluation Account is a temporary account opened at the time of admission (or retirement/dissolution) to record any increase or decrease in the value of assets and liabilities. It ensures that the profit or loss arising from changes in the fair value of assets (e.g., land appreciation, bad debts provision) is credited or charged to old partners in the old profit-sharing ratio — because these changes occurred during their tenure. The new partner should not benefit from or bear changes that arose before joining. After recording, the account is closed and its balance is transferred to the old partners' capital accounts.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="sec-p3">
+  <div class="sec-title">🚪 Partnership — Retirement &amp; Death</div>
+  <div class="sec-sub">Gaining Ratio · Goodwill · Revaluation · Settlement of Outgoing Partner's Account</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Gaining Ratio</div><div class="defn">New ratio - Old ratio. The extra share gained by continuing partners from retiring partner. Used to determine how goodwill is debited from continuing partners.</div></div>
+      <div class="def-card"><div class="term">Retirement Treatment</div><div class="defn">Goodwill: debited to continuing partners in gaining ratio, credited to retiring partner's account. Revaluation: profit/loss distributed in old ratio. Capital: settled by loan account if not paid immediately.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Retirement Formulae</h4>
+      <div class="f">Gaining Ratio = New Ratio - Old Ratio</div>
+      <div class="f">Goodwill due to retiring partner = Retiring partner's share in firm's goodwill</div>
+      <div class="f">Debit continuing partners in gaining ratio; credit retiring partner</div>
+      <div class="f">On death: interest on capital for period = Capital × Rate × Months/12 × 1/100</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — Gaining Ratio (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> A:B:C = 2:2:1. C retires. A and B take C's share equally. Find new and gaining ratio.</p>
+      <div class="step"><div class="sn">1</div><div>C's share = 1/5. A and B take equally: each gets 1/10.</div></div>
+      <div class="step"><div class="sn">2</div><div>A new = 2/5 + 1/10 = 4/10 + 1/10 = 5/10 = 1/2. B new = 2/5 + 1/10 = 5/10 = 1/2.</div></div>
+      <div class="step"><div class="sn">3</div><div>Gaining ratio = New - Old = A: 1/2 - 2/5 = 1/10; B: 1/2 - 2/5 = 1/10. Gaining ratio A:B = 1:1.</div></div>
+      <div class="ans">✅ New ratio A:B = 1:1. Gaining ratio = 1:1.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Retirement &amp; Death</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Gaining Ratio = :<br><em>(A) Old Ratio − New Ratio (B) New Ratio − Old Ratio (C) Sacrifice + New Ratio (D) Old Ratio + New Ratio</em><br><strong>Ans: (B) New Ratio − Old Ratio</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> On retirement, goodwill of the retiring partner is debited to:<br><em>(A) All partners in old ratio (B) Continuing partners in gaining ratio (C) Retiring partner's account (D) General reserve</em><br><strong>Ans: (B) Continuing partners in gaining ratio</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> On death of a partner, profit up to the date of death is credited to the deceased partner's capital account.<br>
+        <strong>R:</strong> The deceased partner's executor is entitled to a share of profits earned during the period the partner was alive.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+      <div class="case-block">
+        <p><strong>Case:</strong> A, B, C share profits 4:3:2. B retires. A and C agree to take B's share in the ratio 2:1. Firm's goodwill = Rs 45,000. B's capital after revaluation = Rs 1,20,000.</p>
+        <div class="qbank">
+          <div class="qitem"><span class="qtag">Q1 (1M)</span> B's share of goodwill = ? <strong>Ans:</strong> 3/9 × Rs 45,000 = Rs 15,000.</div>
+          <div class="qitem"><span class="qtag">Q2 (1M)</span> Gaining ratio A:C = ? <strong>Ans:</strong> A gains 2/3 of B's 3/9 = 2/9; C gains 1/3 of 3/9 = 1/9. Gaining ratio = 2:1.</div>
+          <div class="qitem"><span class="qtag">Q3 (2M)</span> Journal entry for goodwill on B's retirement. <strong>Ans:</strong> A's Capital A/c Dr 10,000; C's Capital A/c Dr 5,000; B's Capital A/c Cr 15,000. (In gaining ratio 2:1)</div>
+        </div>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> Distinguish between Sacrificing Ratio and Gaining Ratio.<br><strong>Ans:</strong> <strong>Sacrificing Ratio</strong> is calculated when a new partner is admitted. It is the share given up by old partners in favour of the new partner (Old Ratio − New Ratio). Goodwill brought by the new partner is distributed to old partners in the sacrificing ratio. <strong>Gaining Ratio</strong> is calculated when a partner retires or dies. It represents the additional share gained by continuing partners from the retiring partner (New Ratio − Old Ratio). The continuing partners compensate the retiring partner for goodwill in the gaining ratio by debiting their capital accounts. In both cases, ratios determine how goodwill is allocated to reflect the economic reality of who benefits or sacrifices share.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="sec-p4">
+  <div class="sec-title">💥 Partnership — Dissolution</div>
+  <div class="sec-sub">Realisation Account · Piecemeal Distribution · Court Dissolution · Garner vs Murray</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Realisation Account</div><div class="defn">Temporary account opened at dissolution. All assets (except cash/bank, fictitious assets) transferred at book value; all liabilities (except partners' loan, capital) transferred. Assets realised: Dr Buyers/Cash, Cr Realisation. Settlement: profit/loss to partners in P&amp;L ratio.</div></div>
+      <div class="def-card"><div class="term">Settlement Order</div><div class="defn">Priority: External liabilities first → partners' loans → partners' capital. Partners share profit/loss from Realisation in profit-sharing ratio.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Dissolution Journal Entries</h4>
+      <div class="f">All assets (Dr Realisation; Cr Assets) — transferred to realisation</div>
+      <div class="f">All liabilities (Dr Liabilities; Cr Realisation) — transferred to realisation</div>
+      <div class="f">Asset realised (Dr Cash; Cr Realisation) — actual sale proceeds</div>
+      <div class="f">Liabilities paid (Dr Realisation; Cr Cash) — settlement at agreed amounts</div>
+      <div class="f">Realisation profit → credit partners; loss → debit partners in P&amp;L ratio</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — Realisation Account (Board 2022, 6M)</h4>
+      <p><strong>Q:</strong> Assets: Machinery 50,000 (sold for 45,000); Debtors 20,000 (realised 18,000). Liabilities: Creditors 15,000 (settled for 14,000). P&amp;L ratio 3:2. Find realisation profit/loss.</p>
+      <div class="step"><div class="sn">1</div><div>Realisation Dr: Machinery 50,000 + Debtors 20,000 = 70,000 (assets). Creditors settled 14,000.</div></div>
+      <div class="step"><div class="sn">2</div><div>Realisation Cr: Creditors transferred 15,000; Cash from assets 45,000 + 18,000 = 63,000. Total Cr = 78,000.</div></div>
+      <div class="step"><div class="sn">3</div><div>Realisation total Dr = 70,000 + 14,000 = 84,000; Cr = 78,000. Loss = 6,000. A: 3,600; B: 2,400.</div></div>
+      <div class="ans">✅ Realisation Loss = Rs 6,000. A bears Rs 3,600; B bears Rs 2,400.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Dissolution</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Realisation Account is credited with:<br><em>(A) Assets taken over at book value (B) Liabilities paid (C) Amount received by selling assets (D) Partners' capitals</em><br><strong>Ans: (C) Amount received by selling assets</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Garner vs Murray rule applies when:<br><em>(A) A partner retires (B) A partner is insolvent and cannot contribute to deficiency (C) A new partner joins (D) Goodwill is negative</em><br><strong>Ans: (B) A partner is insolvent and cannot contribute to deficiency</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Realisation Account is prepared at the time of dissolution of a firm.<br>
+        <strong>R:</strong> Realisation Account collects all assets and liabilities for the purpose of converting them into cash during dissolution.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+      <div class="case-block">
+        <p><strong>Case:</strong> Firm of X and Y dissolved. Sundry Assets (Book Value) Rs 2,00,000 sold for Rs 1,60,000. Sundry Creditors Rs 50,000 paid off for Rs 45,000. Dissolution expenses Rs 3,000 paid by X. Partners' capitals: X Rs 80,000; Y Rs 60,000. PSR 3:2.</p>
+        <div class="qbank">
+          <div class="qitem"><span class="qtag">Q1 (1M)</span> Realisation Account — Dr total = ? <strong>Ans:</strong> Sundry Assets Rs 2,00,000 + Sundry Creditors Rs 50,000 (for closure) = Rs 2,50,000 Dr.</div>
+          <div class="qitem"><span class="qtag">Q2 (2M)</span> Profit or Loss on Realisation? <strong>Ans:</strong> Dr side: Assets 2,00,000 + Dissolution Expenses 3,000 = 2,03,000. Cr side: Cash from assets 1,60,000 + Creditors settled 45,000 = 2,05,000. Wait — standard format: Dr Assets 2,00,000; Cr Cash 1,60,000; Cr Loss 40,000. Creditor settlement: Dr Creditors 50,000; Cr Cash 45,000; Cr Realisation (gain) 5,000. Net loss on realisation = 40,000 − 5,000 + 3,000 = Rs 38,000.</div>
+          <div class="qitem"><span class="qtag">Q3 (1M)</span> Loss shared X:Y = ? <strong>Ans:</strong> X bears 3/5 × 38,000 = Rs 22,800; Y bears 2/5 × 38,000 = Rs 15,200.</div>
+        </div>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> What is the Realisation Account? State four items credited to it.<br><strong>Ans:</strong> The Realisation Account is a temporary account prepared at the time of dissolution of a firm. Its purpose is to collect all assets and liabilities of the firm to determine the profit or loss on winding up. <strong>Items credited to Realisation Account:</strong> (1) Cash/Bank received on sale of assets. (2) Amounts received from debtors. (3) Liabilities taken over by a partner (saves cash — reduces what firm must pay). (4) Assets taken over by a partner at agreed value. The balance of the account is the profit (Cr balance) or loss (Dr balance) on realisation, shared between partners in profit-sharing ratio.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="sec-p5">
+  <div class="sec-title">📋 Partnership — Accounts Summary</div>
+  <div class="sec-sub">P&amp;L Appropriation Account · Partners' Capital Account · Balance Sheet</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">P&amp;L Appropriation Account</div><div class="defn">Shows distribution of net profit among partners. Dr side: interest on capital, partner salary/commission, transfer to reserves. Cr side: net profit brought from P&amp;L. Balance = divisible profit → shared in PSR.</div></div>
+      <div class="def-card"><div class="term">Partners' Current Account</div><div class="defn">Used only when capitals are fixed. Dr: drawings, interest on drawings. Cr: share of profit, interest on capital, salary/commission. If it goes into debit balance, that partner owes the firm.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Appropriation Format</h4>
+      <div class="f">P&amp;L Appropriation: Cr Net Profit; Dr Interest on Capital, Salary, Commission, Reserves</div>
+      <div class="f">Divisible Profit = Net Profit - IOC - Salary - Commission - Transfer to General Reserve</div>
+      <div class="f">Interest on Drawings = Drawings × Rate × Time/12 (simple interest approximation)</div>
+      <div class="f">IOC (Interest on Capital) = Capital × Rate × Time (if partner joins mid-year, adjust months)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — P&amp;L Appropriation (Board 2023, 6M)</h4>
+      <p><strong>Q:</strong> Net Profit Rs 1,00,000. A's Capital Rs 2,00,000; B's Capital Rs 1,00,000. IOC 8%. A's salary Rs 10,000. PSR 3:2. Prepare P&amp;L Appropriation Account.</p>
+      <div class="step"><div class="sn">1</div><div>IOC: A = 2,00,000 × 8% = 16,000; B = 1,00,000 × 8% = 8,000. Total IOC = 24,000.</div></div>
+      <div class="step"><div class="sn">2</div><div>Salary A = 10,000. Total deductions = 24,000 + 10,000 = 34,000. Divisible profit = 1,00,000 - 34,000 = 66,000.</div></div>
+      <div class="step"><div class="sn">3</div><div>A's share = 66,000 × 3/5 = 39,600; B's = 26,400. A total = 16,000 + 10,000 + 39,600 = 65,600. B total = 8,000 + 26,400 = 34,400.</div></div>
+      <div class="ans">✅ A receives Rs 65,600; B receives Rs 34,400.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Appropriation &amp; Capital Accounts</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Interest on Drawings is charged to partners because:<br><em>(A) It increases firm's profit (B) It is a gain for the firm for funds used by partners (C) It is mandatory (D) It reduces partners' salaries</em><br><strong>Ans: (B)</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> If P&amp;L Appropriation Cr side > Dr side, the balance represents:<br><em>(A) Net loss (B) Divisible profit (C) Goodwill (D) Capital contribution</em><br><strong>Ans: (B) Divisible profit</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Interest on Capital is debited to the P&amp;L Appropriation Account.<br>
+        <strong>R:</strong> Interest on capital is an appropriation of profit — it is not a charge on profit but a distribution of it, and thus appears in the Appropriation Account, not the P&amp;L Account.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> Why is a P&amp;L Appropriation Account prepared in a partnership?<br><strong>Ans:</strong> A P&amp;L Appropriation Account is prepared to show how the net profit of the firm is distributed among the partners after making mandatory adjustments. It begins with the net profit (or loss) transferred from the P&amp;L Account on the credit side. The debit side records: interest on capital (reward to partners for capital contributed), partners' salaries and commissions (where provided in the deed), and transfer to reserves. The remaining balance is the divisible profit, shared among partners in the profit-sharing ratio. It ensures transparent and systematic appropriation as per the terms of the partnership deed.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="sec-c1">
+  <div class="sec-title">🏢 Company Accounts — Share Capital</div>
+  <div class="sec-sub">Types of Shares · Issue at Par/Premium/Discount · Calls in Arrears · Forfeiture &amp; Reissue</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Share Capital</div><div class="defn">Authorised (registered) > Issued > Subscribed > Called-up > Paid-up. Equity shares: voting rights, variable dividend. Preference shares: fixed dividend, priority over equity on dividend and capital repayment.</div></div>
+      <div class="def-card"><div class="term">Issue of Shares</div><div class="defn">At par: issue price = nominal value. At premium: issue price > NV; Sec 52 says premium goes to Securities Premium Reserve. At discount (only when Sec 53 conditions met, very rare): Dr Discount on Issue of Shares.</div></div>
+      <div class="def-card"><div class="term">Forfeiture &amp; Reissue</div><div class="defn">Forfeiture: shares cancelled for non-payment of calls. On forfeiture: Dr Share Capital (called amount), Cr Calls in Arrears, Cr Share Forfeiture A/c. Reissue: Dr Bank (issue price), Dr Share Forfeiture, Cr Share Capital (NV). Surplus in Share Forfeiture → Capital Reserve.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Share Capital Entries</h4>
+      <div class="f">On Application: Bank Dr; Share Application Cr</div>
+      <div class="f">On Allotment: Share Allotment Dr; Share Capital Cr; Securities Premium Cr (if premium)</div>
+      <div class="f">On Forfeiture: Share Capital Dr (called up); Calls in Arrears Cr; Share Forfeiture Cr</div>
+      <div class="f">On Reissue: Bank Dr; Share Forfeiture Dr; Share Capital Cr</div>
+      <div class="f">Capital Reserve = Share Forfeiture credited - Share Forfeiture used (max NV - discount on reissue)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — Forfeiture &amp; Reissue (Board 2022, 6M)</h4>
+      <p><strong>Q:</strong> 500 shares of Rs 10 each (Rs 2 premium) issued. Rs 5 on application, Rs 4 on allotment (incl premium), Rs 3 final call. Ram (100 shares) failed to pay final call. Shares forfeited and reissued at Rs 7.</p>
+      <div class="step"><div class="sn">1</div><div>Forfeiture: Share Capital Dr 1,000 (100 × Rs 10); Securities Premium Dr 200 (100 × Rs 2); Calls in Arrears Cr 300 (100 × Rs 3); Share Forfeiture Cr 900.</div></div>
+      <div class="step"><div class="sn">2</div><div>Reissue at Rs 7: Bank Dr 700 (100 × 7); Share Forfeiture Dr 300; Share Capital Cr 1,000.</div></div>
+      <div class="step"><div class="sn">3</div><div>Capital Reserve = Share Forfeiture balance = 900 - 300 = Rs 600.</div></div>
+      <div class="ans">✅ Capital Reserve = Rs 600. Share Forfeiture Account closed to Capital Reserve.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Share Capital</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Securities Premium Reserve can be used for:<br><em>(A) Paying dividends (B) Writing off preliminary expenses (C) Paying partner's salary (D) All of the above</em><br><strong>Ans: (B) Writing off preliminary expenses</strong> (and other specific uses u/s 52)</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> On forfeiture of shares, the Share Forfeiture Account is credited with:<br><em>(A) Face value of forfeited shares (B) Called-up amount already received (C) Premium on shares (D) Market value</em><br><strong>Ans: (B) Called-up amount already received</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 3</span> Minimum subscription must be received within __ days of issue of prospectus:<br><em>(A) 30 days (B) 60 days (C) 120 days (D) 90 days</em><br><strong>Ans: (C) 120 days</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> A company cannot issue shares at a discount under Section 53 of the Companies Act 2013.<br>
+        <strong>R:</strong> Shares are a permanent source of capital, and issuing them at a discount would mean the company is permanently reducing its equity base below the face value, which is not permissible as a general rule.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+      <div class="case-block">
+        <p><strong>Case:</strong> ZED Ltd. issued 10,000 equity shares of Rs 10 each at a premium of Rs 2. Payable: Rs 4 on application, Rs 5 on allotment (including Rs 2 premium), Rs 3 on call. All shares were subscribed and money received. 200 shares held by Mohan were forfeited for non-payment of call money. These shares were reissued to Sohan at Rs 8 per share, fully paid up.</p>
+        <div class="qbank">
+          <div class="qitem"><span class="qtag">Q1 (1M)</span> Share Forfeiture Account credited on forfeiture = ? <strong>Ans:</strong> Amount received before forfeiture = 200 × (4+5) = Rs 1,800. Share Forfeiture Cr = Rs 1,800.</div>
+          <div class="qitem"><span class="qtag">Q2 (1M)</span> Discount on reissue per share = ? <strong>Ans:</strong> NV = Rs 10; reissued at Rs 8; discount = Rs 2 per share. Max allowed = called up = Rs 10. OK.</div>
+          <div class="qitem"><span class="qtag">Q3 (2M)</span> Capital Reserve on reissue = ? <strong>Ans:</strong> Share Forfeiture = Rs 1,800 (for 200 shares). Used for discount on reissue = 200 × 2 = Rs 400. Capital Reserve = Rs 1,800 − Rs 400 = Rs 1,400.</div>
+        </div>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> Distinguish between Subscribed Capital and Called-up Capital.<br><strong>Ans:</strong> <strong>Subscribed Capital</strong> is the portion of Issued Capital for which applications have been received from the public and shares have been allotted. It can be equal to or less than the Issued Capital. <strong>Called-up Capital</strong> is the portion of the Subscribed Capital that the company has actually demanded (called up) from shareholders. Companies do not always demand the full face value at once — they call it in instalments (application, allotment, calls). Called-up ≤ Subscribed. <strong>Paid-up Capital</strong> is the amount actually received against the called-up capital (excluding calls in arrears).</div>
+      <div class="qitem"><span class="qtag">LA (6M)</span> A company forfeits 500 shares of Rs 10 each issued at a premium of Rs 3 for non-payment of final call of Rs 4. Amount received on application and allotment = Rs 9 per share (including premium). 400 shares reissued at Rs 7 each. Show Share Forfeiture Account and calculate Capital Reserve.<br><strong>Ans:</strong> Forfeiture: Share Capital Dr 5,000; Securities Premium Dr 1,500 (if not credited separately); Calls in Arrears Cr 2,000 (500×4); Share Forfeiture Cr 4,500 (500×9 received). Reissue (400 shares at Rs 7): Bank Dr 2,800; Share Forfeiture Dr 1,200 (400×3 discount); Share Capital Cr 4,000. Share Forfeiture balance remaining: 500 shares had Rs 4,500; used for 400 shares Rs 1,200. Balance = 4,500 − 1,200 = Rs 3,300 → transferred to Capital Reserve. Capital Reserve = Rs 3,300.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="sec-c2">
+  <div class="sec-title">📄 Company Accounts — Debentures</div>
+  <div class="sec-sub">Issue of Debentures · Redemption · Interest · Conversion</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Debentures</div><div class="defn">Debt instrument issued by company, carries fixed interest (charge on profit). Debenture holders = creditors. Types: Secured/Unsecured; Redeemable/Irredeemable; Convertible/Non-Convertible.</div></div>
+      <div class="def-card"><div class="term">Issue of Debentures</div><div class="defn">At par, premium, or discount. If issued at discount: Dr Discount on Debentures (written off over life). Redemption Premium: Dr Loss on Redemption, Cr Premium on Redemption (liability). Interest on Debentures = deductible for tax (unlike dividend).</div></div>
+      <div class="def-card"><div class="term">Redemption</div><div class="defn">By purchase in open market, by conversion to shares, or at par/premium. DRR (Debenture Redemption Reserve) and DRI (Debenture Redemption Investment) required. Now Companies (Amendment) 2019: Listed companies no longer need DRR for publicly issued debentures.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Debenture Key Entries</h4>
+      <div class="f">Issue at discount: Bank Dr; Disc on Debentures Dr; Debentures Cr</div>
+      <div class="f">Interest due: Deb Interest Dr; Deb Holders Cr (then Bank Dr; Deb Holders Cr)</div>
+      <div class="f">TDS on interest: Deb Interest Dr; TDS Payable Cr; Deb Holders Cr (net)</div>
+      <div class="f">Redemption at premium: Deb Dr; Prem on Redemption Dr; Bank Cr (full amount)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — Debenture Issue (Board 2023, 4M)</h4>
+      <p><strong>Q:</strong> Company issues 1,000 debentures of Rs 100 each at 5% discount, redeemable at 5% premium. Pass entries.</p>
+      <div class="step"><div class="sn">1</div><div>Bank Dr 95,000; Discount on Deb Dr 5,000; Loss on Redemption Dr 5,000; 10% Deb Cr 1,00,000; Prem on Redemption Cr 5,000.</div></div>
+      <div class="step"><div class="sn">2</div><div>Discount of Rs 5,000 written off over the life of debentures (P&amp;L Dr, Discount on Deb Cr each year).</div></div>
+      <div class="step"><div class="sn">3</div><div>On redemption: 10% Deb Dr 1,00,000; Prem on Redemption Dr 5,000; Bank Cr 1,05,000.</div></div>
+      <div class="ans">✅ Issue at discount: raise Rs 95,000 but repay Rs 1,05,000 — total loss = Rs 10,000 spread over life.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Debentures</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Interest on Debentures is a:<br><em>(A) Appropriation of profit (B) Charge on profit (C) Dividend (D) Reserve</em><br><strong>Ans: (B) Charge on profit</strong> — paid even if company makes loss</div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Debentures issued as collateral security means:<br><em>(A) Issued for cash (B) Issued as secondary security against a loan (C) Issued at premium (D) Issued at discount</em><br><strong>Ans: (B)</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Discount on issue of Debentures is written off from Securities Premium Reserve first.<br>
+        <strong>R:</strong> Securities Premium Reserve can be used to write off the discount on issue of debentures as per Section 52 of the Companies Act 2013.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> Distinguish between shares and debentures.<br><strong>Ans:</strong> <strong>Shares:</strong> Represent ownership in the company. Shareholders are members. Dividend is paid from profits — variable and uncertain. No interest if loss. Shares cannot be bought back freely (subject to buyback regulations). Shareholders can vote at meetings. <strong>Debentures:</strong> Represent a loan to the company. Debenture holders are creditors. Interest is paid at a fixed rate regardless of profit/loss — it is a charge on profit. Debentures must be repaid (redeemable) unless irredeemable. Debenture holders have no voting rights but have priority on assets in winding up (if secured).</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="sec-f1">
+  <div class="sec-title">📊 Financial Statements — Analysis</div>
+  <div class="sec-sub">Comparative &amp; Common Size Statements · Trend Analysis</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Comparative Statements</div><div class="defn">Shows two or more years' data side by side. Columns: Current Year, Previous Year, Absolute Change (CY-PY), % Change ((Absolute/PY) × 100). Helps spot trends in items like revenue, expenses, assets.</div></div>
+      <div class="def-card"><div class="term">Common Size Statements</div><div class="defn">Each item expressed as % of base figure. Income Statement: base = Net Sales. Balance Sheet: base = Total Assets (or Total Capital Employed). Enables comparison across different-size firms.</div></div>
+      <div class="def-card"><div class="term">Ratio Analysis</div><div class="defn">Liquidity: Current Ratio = CA/CL; Quick Ratio = (CA-Inventory-Prepaid)/CL. Solvency: Debt-Equity = Debt/Equity; Interest Coverage = EBIT/Interest. Profitability: GP Ratio = GP/Net Sales × 100; NP Ratio = NP/Net Sales × 100.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Important Ratios</h4>
+      <div class="f">Current Ratio = Current Assets / Current Liabilities (ideal: 2:1)</div>
+      <div class="f">Quick Ratio = (CA - Inventory - Prepaid) / CL (ideal: 1:1)</div>
+      <div class="f">Debt-Equity Ratio = Long-term Debt / Shareholders' Funds</div>
+      <div class="f">GP Ratio = Gross Profit / Net Sales × 100</div>
+      <div class="f">NP Ratio = Net Profit after Tax / Net Sales × 100</div>
+      <div class="f">Return on Equity = Net Profit after Tax / Shareholders' Equity × 100</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — Ratio Calculation (Board 2023, 3M)</h4>
+      <p><strong>Q:</strong> CA = 3,00,000; CL = 1,50,000; Inventory = 80,000. Find Current Ratio and Quick Ratio.</p>
+      <div class="step"><div class="sn">1</div><div>Current Ratio = CA/CL = 3,00,000/1,50,000 = 2:1. Comment: exactly at ideal level.</div></div>
+      <div class="step"><div class="sn">2</div><div>Quick Assets = CA - Inventory = 3,00,000 - 80,000 = 2,20,000.</div></div>
+      <div class="step"><div class="sn">3</div><div>Quick Ratio = 2,20,000/1,50,000 = 1.47:1. Comment: above ideal (1:1), firm is liquid.</div></div>
+      <div class="ans">✅ Current Ratio = 2:1. Quick Ratio = 1.47:1. Both indicate good short-term liquidity.</div>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Ratio Analysis</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Quick Ratio is also called:<br><em>(A) Current Ratio (B) Liquid Ratio / Acid Test Ratio (C) Debt Equity Ratio (D) Working Capital Ratio</em><br><strong>Ans: (B) Liquid Ratio / Acid Test Ratio</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> If Current Assets = Rs 3,00,000 and Current Liabilities = Rs 1,50,000, Current Ratio = :<br><em>(A) 1:2 (B) 2:1 (C) 1:1 (D) 3:1</em><br><strong>Ans: (B) 2:1</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 3</span> Debt-Equity Ratio measures:<br><em>(A) Profitability (B) Liquidity (C) Long-term solvency (D) Activity</em><br><strong>Ans: (C) Long-term solvency</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Higher Inventory Turnover Ratio indicates efficient inventory management.<br>
+        <strong>R:</strong> A higher ratio means the firm converts inventory into sales more rapidly, implying less capital is tied up in stock and risk of obsolescence is lower.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+      <div class="case-block">
+        <p><strong>Case:</strong> Balance Sheet data — Current Assets Rs 4,00,000 (Inventory Rs 1,50,000; Debtors Rs 1,50,000; Cash Rs 1,00,000); Current Liabilities Rs 2,00,000; Net Sales Rs 12,00,000; Cost of Goods Sold Rs 9,00,000.</p>
+        <div class="qbank">
+          <div class="qitem"><span class="qtag">Q1 (1M)</span> Current Ratio = ? <strong>Ans:</strong> 4,00,000 / 2,00,000 = 2:1.</div>
+          <div class="qitem"><span class="qtag">Q2 (1M)</span> Quick Ratio = ? <strong>Ans:</strong> (4,00,000 − 1,50,000) / 2,00,000 = 2,50,000/2,00,000 = 1.25:1.</div>
+          <div class="qitem"><span class="qtag">Q3 (2M)</span> Inventory Turnover Ratio = ? Comment. <strong>Ans:</strong> ITR = COGS / Average Inventory. If avg inventory = Rs 1,50,000: ITR = 9,00,000/1,50,000 = 6 times. Inventory is converted to sales 6 times a year — efficient stock management.</div>
+        </div>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> What is Gross Profit Ratio? How is it significant?<br><strong>Ans:</strong> Gross Profit Ratio = (Gross Profit / Net Sales) × 100. It shows the percentage of revenue remaining after deducting the cost of goods sold. A higher GP ratio indicates efficient production/purchase at lower cost and adequate pricing. It enables comparison across years or with industry benchmarks. If GP ratio is falling, it may signal rising cost of goods sold, inefficient production, or price competition. It is a key profitability ratio used by management to assess core operating efficiency before considering operating expenses.</div>
+      <div class="qitem"><span class="qtag">LA (6M)</span> Calculate any four ratios from the following data and comment on the firm's financial health: Equity Share Capital Rs 5,00,000; General Reserve Rs 1,00,000; 10% Debentures Rs 2,00,000; Fixed Assets Rs 5,00,000; Current Assets Rs 4,00,000 (Inventory Rs 1,20,000; Debtors Rs 1,80,000; Cash Rs 1,00,000); Current Liabilities Rs 1,00,000; Net Profit Rs 1,20,000; Net Sales Rs 8,00,000.<br><strong>Ans:</strong> (1) <strong>Current Ratio</strong> = 4,00,000/1,00,000 = 4:1 — very high liquidity. (2) <strong>Quick Ratio</strong> = (4,00,000−1,20,000)/1,00,000 = 2.8:1 — excellent short-term solvency. (3) <strong>Net Profit Ratio</strong> = 1,20,000/8,00,000 × 100 = 15% — healthy profitability. (4) <strong>Debt-Equity Ratio</strong> = 2,00,000 / (5,00,000+1,00,000) = 2,00,000/6,00,000 = 0.33:1 — low leverage, financially sound. Overall: The firm is highly liquid, profitable and has minimal debt — good financial health, though excess current assets may indicate underutilisation.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec" id="sec-f2">
+  <div class="sec-title">💵 Cash Flow Statement</div>
+  <div class="sec-sub">Operating · Investing · Financing Activities · Indirect Method</div>
+  <div class="ch-section">
+    <h2>📖 Core Theory</h2>
+    <div class="def-grid">
+      <div class="def-card"><div class="term">Operating Activities</div><div class="defn">Day-to-day business operations. Indirect method: Start with Net Profit before tax; add non-cash charges (depreciation, amortisation); adjust for changes in working capital (increase in CA = outflow; increase in CL = inflow); subtract taxes paid.</div></div>
+      <div class="def-card"><div class="term">Investing Activities</div><div class="defn">Purchase/sale of long-term assets. Purchase of fixed assets, investments: cash outflow. Sale of fixed assets, investments, interest received, dividend received: cash inflow.</div></div>
+      <div class="def-card"><div class="term">Financing Activities</div><div class="defn">Transactions with providers of finance. Issue of shares, debentures, long-term loans: inflow. Redemption of debentures/preference shares, repayment of loans, dividend paid, interest paid: outflow.</div></div>
+    </div>
+    <div class="formula-box">
+      <h4>🔑 Cash Flow — Key Rules</h4>
+      <div class="f">Depreciation: add back to NP (non-cash charge — no actual cash outflow)</div>
+      <div class="f">Increase in Current Asset = outflow; Decrease in CA = inflow</div>
+      <div class="f">Increase in Current Liability = inflow; Decrease in CL = outflow</div>
+      <div class="f">Opening cash + Net cash from all 3 activities = Closing cash (verification)</div>
+      <div class="f">Dividend paid = under Financing; Dividend received = under Investing (AS 3)</div>
+    </div>
+  </div>
+  <div class="ch-section">
+    <h2>✏️ Worked Examples</h2>
+    <div class="worked">
+      <h4>Example — Operating Activities (Board 2022, 6M)</h4>
+      <p><strong>Q:</strong> NP before tax = 80,000; Depreciation = 12,000; Increase in Debtors = 10,000; Decrease in Creditors = 5,000; Tax paid = 20,000. Find CFO.</p>
+      <div class="step"><div class="sn">1</div><div>Start: NP 80,000 + Depreciation 12,000 = 92,000 (adjusted for non-cash items)</div></div>
+      <div class="step"><div class="sn">2</div><div>WC: Debtors increased → outflow -10,000; Creditors decreased → outflow -5,000. Total WC = -15,000.</div></div>
+      <div class="step"><div class="sn">3</div><div>CFO = 92,000 - 15,000 - 20,000 (tax) = Rs 57,000</div></div>
+      <div class="ans">✅ Cash Flow from Operating Activities = Rs 57,000.</div>
+    </div>
+  </div>
+</div>
+
+
+<section id="sec-p1">
+<h2 class="sec-title">📒 Part I: Accounting Not-for-Profit & Partnership</h2>
+<p class="sec-sub">Chapters 1–4 — Foundation of Partnership Accounts</p>
+<div class="ch-section">
+  <div class="def-grid">
+    <div class="def-card"><strong>Not-for-Profit Organisation</strong><p>Entity working for social/charitable purpose; surplus not distributed. Examples: clubs, hospitals, NGOs.</p></div>
+    <div class="def-card"><strong>Receipts &amp; Payments Account</strong><p>Summary of cash receipts and payments (real accounts). Starts with opening cash balance.</p></div>
+    <div class="def-card"><strong>Income &amp; Expenditure Account</strong><p>Nominal account showing surplus/deficit for the year. Prepared on accrual basis.</p></div>
+    <div class="def-card"><strong>Partnership</strong><p>Business owned by 2 or more persons sharing profits/losses as per agreed ratio. Governed by Partnership Act, 1932.</p></div>
+    <div class="def-card"><strong>Goodwill</strong><p>Excess earning capacity. Methods: Average Profit, Super Profit, Capitalisation. Premium for goodwill adjusted through Partners' Capital Accounts.</p></div>
+    <div class="def-card"><strong>Sacrificing Ratio</strong><p>Old ratio − New ratio. Used when a new partner is admitted. Gaining partner compensates sacrificing partner.</p></div>
+  </div>
+  <div class="formula-box">
+    <h4>🔑 Key Formulas</h4>
+    <ul>
+      <li>Goodwill (Avg Profit) = Average Profit × Number of Years' Purchase</li>
+      <li>Super Profit = Average Profit − Normal Profit</li>
+      <li>Normal Profit = Capital Employed × Normal Rate of Return / 100</li>
+      <li>Goodwill (Capitalisation) = Super Profit × 100 / Normal Rate of Return</li>
+      <li>New Ratio = Old Ratio − Sacrificing Ratio</li>
+      <li>Gaining Ratio = New Ratio − Old Ratio</li>
+      <li>New Partner's Share = Profit ratio × Old ratio of other partners</li>
+    </ul>
+  </div>
+  <div class="worked">
+    <div class="worked-title">📝 Worked Example — Admission of Partner</div>
+    <div class="step"><span class="sn">Q.</span><span class="ans">A and B share profits 3:2. C admitted for 1/5 share. Calculate new ratio and sacrificing ratio.</span></div>
+    <div class="step"><span class="sn">Step 1</span><span class="ans">Remaining share for A &amp; B = 1 − 1/5 = 4/5</span></div>
+    <div class="step"><span class="sn">Step 2</span><span class="ans">A's new share = 3/5 × 4/5 = 12/25; B's new share = 2/5 × 4/5 = 8/25; C = 5/25</span></div>
+    <div class="step"><span class="sn">Step 3</span><span class="ans">Sacrificing: A = 3/5 − 12/25 = 15/25 − 12/25 = 3/25; B = 2/5 − 8/25 = 10/25 − 8/25 = 2/25</span></div>
+    <div class="step"><span class="sn">Result</span><span class="ans">New ratio A:B:C = 12:8:5; Sacrificing ratio A:B = 3:2</span></div>
+  </div>
+  <details class="activity"><summary>📌 Retirement/Death of Partner — Key Points</summary>
+    <ul>
+      <li>Gaining Ratio = New Ratio − Old Ratio (gaining partners compensate retiring partner)</li>
+      <li>Goodwill of retiring partner = His share × Total goodwill</li>
+      <li>Revaluation A/c: Increase in assets/decrease in liabilities → profit (credited to all partners)</li>
+      <li>Executors A/c opened on death; outstanding amount transferred</li>
+      <li>Joint Life Policy: Amount received distributed in old ratio</li>
+    </ul>
+  </details>
+</div>
+</section>
+
+<section id="sec-p2">
+<h2 class="sec-title">📒 Part II: Dissolution of Partnership</h2>
+<p class="sec-sub">Chapter 5 — Dissolution, Garner vs Murray, Piecemeal Distribution</p>
+<div class="ch-section">
+  <div class="def-grid">
+    <div class="def-card"><strong>Dissolution of Firm</strong><p>Complete breakdown of partnership — all accounts closed. Realisation A/c prepared to determine profit/loss on realisation.</p></div>
+    <div class="def-card"><strong>Realisation Account</strong><p>Temporary A/c. All assets (except cash/bank) debited; all outside liabilities credited. Profit/loss shared in old ratio.</p></div>
+    <div class="def-card"><strong>Garner vs Murray Rule</strong><p>If a partner is insolvent, his/her deficiency is borne by other solvent partners in their LAST AGREED CAPITAL RATIO (not profit ratio).</p></div>
+  </div>
+  <div class="formula-box">
+    <h4>🔑 Dissolution Journal Entries</h4>
+    <ul>
+      <li>Assets transferred: Realisation A/c Dr / To Assets A/c</li>
+      <li>Liabilities transferred: Liabilities A/c Dr / To Realisation A/c</li>
+      <li>Assets sold: Cash/Bank A/c Dr / To Realisation A/c</li>
+      <li>Liabilities paid: Realisation A/c Dr / To Cash/Bank A/c</li>
+      <li>Realisation profit/loss: Partners' Capital A/c (if loss) / To Realisation A/c</li>
+    </ul>
+  </div>
+  <div class="worked">
+    <div class="worked-title">📝 Realisation Account Example</div>
+    <div class="step"><span class="sn">Q.</span><span class="ans">A, B, C dissolve firm. Assets realised Rs 90,000 (Book value Rs 1,00,000). Outstanding expenses paid Rs 5,000.</span></div>
+    <div class="step"><span class="sn">Loss on Realisation</span><span class="ans">Rs 1,00,000 − Rs 90,000 + Rs 5,000 = Rs 15,000 (shared equally if ratio is 1:1:1 = Rs 5,000 each)</span></div>
+  </div>
+</div>
+</section>
+
+<section id="sec-p3">
+<h2 class="sec-title">📒 Part III: Company Accounts — Share Capital</h2>
+<p class="sec-sub">Chapters 6–7 — Issue and Forfeiture of Shares</p>
+<div class="ch-section">
+  <div class="def-grid">
+    <div class="def-card"><strong>Share Capital</strong><p>Total capital of a company divided into shares. Types: Authorised, Issued, Subscribed, Called-up, Paid-up.</p></div>
+    <div class="def-card"><strong>Issue at Premium</strong><p>Share issued above face value. Premium credited to Securities Premium Reserve A/c (can be used for issue of bonus shares, writing off preliminary expenses).</p></div>
+    <div class="def-card"><strong>Forfeiture</strong><p>Cancellation of shares for non-payment of calls. Forfeited shares A/c credited with amount received. Reissued shares may be at discount (max = forfeited amount).</p></div>
+    <div class="def-card"><strong>Debentures</strong><p>Debt instruments. Issued at par/premium/discount. Redeemed at par/premium. Interest is charged to P&amp;L. Debenture Redemption Reserve mandatory in certain cases.</p></div>
+  </div>
+  <div class="formula-box">
+    <h4>🔑 Forfeiture &amp; Reissue Entries</h4>
+    <ul>
+      <li>Forfeiture: Share Capital A/c Dr (called-up) / To Calls-in-Arrears / To Forfeited Shares A/c</li>
+      <li>Reissue: Bank A/c Dr / Forfeited Shares A/c Dr / To Share Capital A/c</li>
+      <li>Profit on reissue → Capital Reserve A/c</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="sec-p4">
+<h2 class="sec-title">📒 Part IV: Financial Statements of Companies</h2>
+<p class="sec-sub">Chapters 8–9 — Balance Sheet, P&L, Cash Flow</p>
+<div class="ch-section">
+  <div class="def-grid">
+    <div class="def-card"><strong>Balance Sheet</strong><p>Statement of financial position showing assets and liabilities as per Schedule III of Companies Act. Vertical format.</p></div>
+    <div class="def-card"><strong>P&amp;L Statement</strong><p>Revenue and expenses for the year. Shows Gross Profit → Net Profit. Appropriations: Dividend, Transfer to Reserves.</p></div>
+    <div class="def-card"><strong>Cash Flow Statement</strong><p>Shows movement of cash. Three activities: Operating, Investing, Financing. Prepared as per AS-3 (Indirect/Direct method).</p></div>
+  </div>
+  <div class="formula-box">
+    <h4>🔑 Cash Flow — Indirect Method</h4>
+    <ul>
+      <li>Start with Net Profit before tax</li>
+      <li>Add: Non-cash charges (depreciation, amortisation), Losses on sale of assets</li>
+      <li>Less: Gains on sale of assets, Non-operating income</li>
+      <li>Adjust Working Capital changes: Increase in CA = outflow; Increase in CL = inflow</li>
+      <li>Less: Tax paid → Net Cash from Operating Activities</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="sec-p5">
+<h2 class="sec-title">📒 Part V: Analysis of Financial Statements</h2>
+<p class="sec-sub">Chapters 10–12 — Ratio Analysis, Comparative Statements</p>
+<div class="ch-section">
+  <div class="def-grid">
+    <div class="def-card"><strong>Liquidity Ratios</strong><p>Current Ratio = Current Assets / Current Liabilities (ideal 2:1). Quick Ratio = Quick Assets / CL (ideal 1:1).</p></div>
+    <div class="def-card"><strong>Solvency Ratios</strong><p>Debt-Equity Ratio = Long-term Debt / Shareholders' Funds. Proprietary Ratio = Proprietors' Funds / Total Assets.</p></div>
+    <div class="def-card"><strong>Activity Ratios</strong><p>Inventory Turnover = COGS / Avg Inventory. Debtors Turnover = Net Credit Sales / Avg Debtors. Trade Receivables Turnover ratio.</p></div>
+    <div class="def-card"><strong>Profitability Ratios</strong><p>Gross Profit Ratio = GP/Net Sales × 100. Net Profit Ratio = NP/Net Sales × 100. Return on Investment = NP/Capital Employed × 100.</p></div>
+  </div>
+  <div class="formula-box">
+    <h4>🔑 Key Ratios at a Glance</h4>
+    <ul>
+      <li>Current Ratio = CA/CL [Ideal: 2:1]</li>
+      <li>Quick/Acid Test = (CA − Inventory − Prepaid) / CL [Ideal: 1:1]</li>
+      <li>D/E Ratio = Total Debt / Shareholders' Equity</li>
+      <li>GP Ratio = (GP / Net Sales) × 100</li>
+      <li>NP Ratio = (NP after tax / Net Sales) × 100</li>
+      <li>EPS = Net Profit available to equity shareholders / No. of equity shares</li>
+      <li>P/E Ratio = Market Price per share / EPS</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="sec-c1">
+<h2 class="sec-title">📊 Comprehensive Problems I — Partnership</h2>
+<p class="sec-sub">Advanced numericals: Admission, Retirement, Death, Dissolution</p>
+<div class="ch-section">
+  <div class="worked">
+    <div class="worked-title">📝 Problem 1 — Admission + Revaluation</div>
+    <div class="step"><span class="sn">Q.</span><span class="ans">X and Y are partners (3:2). Z admitted for 1/4 share. Goodwill of firm Rs 40,000. Revaluation: Stock up by Rs 5,000; Creditors to be written down by Rs 2,000. Find: Journal entries.</span></div>
+    <div class="step"><span class="sn">Goodwill</span><span class="ans">Z's share of goodwill = 1/4 × 40,000 = Rs 10,000. Dr Z's Capital; Cr X's Capital (3/5 × 10,000 = Rs 6,000) and Y's Capital (2/5 × 10,000 = Rs 4,000) [sacrificing ratio = old ratio = 3:2]</span></div>
+    <div class="step"><span class="sn">Revaluation</span><span class="ans">Dr Stock A/c Rs 5,000; Dr Creditors A/c Rs 2,000 / To Revaluation A/c Rs 7,000. Revaluation profit Rs 7,000 distributed X:Y = 3:2 → X gets Rs 4,200; Y gets Rs 2,800.</span></div>
+  </div>
+  <div class="worked">
+    <div class="worked-title">📝 Problem 2 — Dissolution with Garner vs Murray</div>
+    <div class="step"><span class="sn">Q.</span><span class="ans">A, B, C share profits 2:2:1. Capitals: A = Rs 20,000; B = Rs 15,000; C = Rs (−5,000) [insolvent]. Loss on Realisation = Rs 10,000. Apply Garner vs Murray.</span></div>
+    <div class="step"><span class="sn">Loss sharing</span><span class="ans">Each bears Rs 2,000 (2:2:1). C cannot pay his Rs 2,000 deficiency. C's capital after loss = −7,000 → deficiency Rs 7,000.</span></div>
+    <div class="step"><span class="sn">Garner vs Murray</span><span class="ans">A:B share C's deficiency in last agreed CAPITAL ratio 20:15 = 4:3. A bears Rs 4,000; B bears Rs 3,000.</span></div>
+  </div>
+</div>
+</section>
+
+<section id="sec-c2">
+<h2 class="sec-title">📊 Comprehensive Problems II — Company Accounts</h2>
+<p class="sec-sub">Share capital, debentures, financial statement analysis</p>
+<div class="ch-section">
+  <div class="worked">
+    <div class="worked-title">📝 Problem — Forfeiture and Reissue</div>
+    <div class="step"><span class="sn">Q.</span><span class="ans">500 shares of Rs 10 each (Rs 3 premium, total Rs 13) were forfeited for non-payment of 2nd call of Rs 4/share. Rs 8 already received. 300 shares reissued at Rs 6/share as fully paid.</span></div>
+    <div class="step"><span class="sn">Forfeiture Entry</span><span class="ans">Share Capital Dr 5,000 (500×10) + Sec. Premium Dr 1,500 (500×3) / To Share Allotment (due); To Calls in Arrears 2,000 (500×4); To Forfeited Shares 4,000 (500×8)</span></div>
+    <div class="step"><span class="sn">Reissue Entry</span><span class="ans">Bank Dr 1,800 (300×6); Forfeited Shares Dr 1,200 (300×4) / To Share Capital 3,000 (300×10)</span></div>
+    <div class="step"><span class="sn">Capital Reserve</span><span class="ans">Forfeited Shares balance = 4,000 − 1,200 used = 2,800 → Capital Reserve Rs 2,800 for reissued shares</span></div>
+  </div>
+  <div class="worked">
+    <div class="worked-title">📝 Cash Flow — Key Adjustments</div>
+    <div class="step"><span class="sn">Purchase of Machinery</span><span class="ans">Outflow under Investing Activities. If financed by loan → show both: purchase outflow + loan inflow (Financing)</span></div>
+    <div class="step"><span class="sn">Dividend Paid</span><span class="ans">Under Financing Activities (companies). Under Operating Activities for financial companies.</span></div>
+    <div class="step"><span class="sn">Tax Paid</span><span class="ans">Operating activity. Deduct from operating profit as last step before arriving at net cash from ops.</span></div>
+  </div>
+</div>
+</section>
+
+<section id="sec-f1">
+<h2 class="sec-title">📂 Formula Bank I — Partnership</h2>
+<p class="sec-sub">All formulas for Part I &amp; II — quick reference</p>
+<div class="ch-section">
+  <div class="formula-box">
+    <h4>Partnership — Complete Formula Reference</h4>
+    <ul>
+      <li><strong>Average Profit</strong> = Total profits of past years / No. of years</li>
+      <li><strong>Weighted Average Profit</strong> = ΣProfit × Weight / ΣWeights</li>
+      <li><strong>Goodwill (Avg Profit)</strong> = Avg Profit × Years' Purchase</li>
+      <li><strong>Super Profit</strong> = Avg Profit − Normal Profit</li>
+      <li><strong>Normal Profit</strong> = Capital Employed × NRR / 100</li>
+      <li><strong>Goodwill (Super Profit)</strong> = Super Profit × Years' Purchase</li>
+      <li><strong>Goodwill (Capitalisation)</strong> = Super Profit × 100 / NRR</li>
+      <li><strong>New Partner's ratio</strong> = Remaining share × (old ratio fraction)</li>
+      <li><strong>Sacrificing Ratio</strong> = Old Ratio − New Ratio</li>
+      <li><strong>Gaining Ratio</strong> = New Ratio − Old Ratio</li>
+      <li><strong>Realisation Profit/Loss</strong> = Assets realised − (Book value + Expenses)</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="sec-f2">
+<h2 class="sec-title">📂 Formula Bank II — Company Accounts &amp; Analysis</h2>
+<p class="sec-sub">Share capital, debentures, ratios — complete reference</p>
+<div class="ch-section">
+  <div class="formula-box">
+    <h4>Company Accounts — Ratios</h4>
+    <ul>
+      <li><strong>Current Ratio</strong> = Current Assets / Current Liabilities [Ideal: 2:1]</li>
+      <li><strong>Quick Ratio</strong> = (CA − Inventory − Prepaid) / CL [Ideal: 1:1]</li>
+      <li><strong>D/E Ratio</strong> = Long-term Debt / Shareholders' Funds</li>
+      <li><strong>Total Assets to Debt</strong> = Total Assets / Long-term Debt</li>
+      <li><strong>Proprietary Ratio</strong> = Shareholders' Funds / Total Assets</li>
+      <li><strong>Interest Coverage</strong> = EBIT / Interest on Debt</li>
+      <li><strong>Inventory Turnover</strong> = COGS / Avg Inventory (or Net Sales / Avg Inventory)</li>
+      <li><strong>Debtors Turnover</strong> = Net Credit Sales / Avg Debtors</li>
+      <li><strong>GP Ratio</strong> = GP / Net Sales × 100</li>
+      <li><strong>NP Ratio</strong> = NP / Net Sales × 100</li>
+      <li><strong>Return on Investment</strong> = (NP + Interest) / Capital Employed × 100</li>
+      <li><strong>EPS</strong> = Net Profit for Equity / No. of Equity Shares</li>
+      <li><strong>Book Value per Share</strong> = Net Worth / No. of Shares</li>
+      <li><strong>DRR</strong> = 25% of face value of debentures to be redeemed [as per Companies Act]</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="sec-pp">
+<h2 class="sec-title">📝 Practice Papers</h2>
+<p class="sec-sub">Full-length 80-mark board-pattern papers &middot; Accountancy XII</p>
+<div class="pp-tabs">
+  <button class="pp-tab-btn active" onclick="showPP(1,this)">Paper 1</button>
+  <button class="pp-tab-btn" onclick="showPP(2,this)">Paper 2</button>
+  <button class="pp-tab-btn" onclick="showPP(3,this)">Paper 3</button>
+</div>
+<div id="pp1" class="pp-content active"><div class="practice-paper">
+  <div class="pp-header"><h3>ACCOUNTANCY XII — PRACTICE PAPER 1</h3><p style="font-size:.8rem">Time: 3 Hours | Max Marks: 80 | CBSE 2024-25</p></div>
+  <div class="pp-section-title">SECTION A — Part I: Not-for-Profit &amp; Partnership (36 Marks)</div>
+  <div class="pp-q">Q1. (i) Distinguish between Receipts &amp; Payments A/c and Income &amp; Expenditure A/c. [4M] (ii) From the given R&P A/c, prepare I&amp;E A/c for a club. [6M]</div>
+  <div class="pp-q">Q2. A and B are partners sharing profits 3:2. C is admitted for 1/5 share. Premium for goodwill Rs 30,000 is brought by C. Record journal entries. [6M]</div>
+  <div class="pp-q">Q3. X, Y, Z share profits 2:1:1. Z retires. Goodwill Rs 60,000. Revaluation: assets up Rs 8,000. Outstanding salary Rs 2,000 to be provided. Prepare Revaluation A/c and Partners' Capital A/c. [8M]</div>
+  <div class="pp-q">Q4. Dissolution: A, B, C dissolve. Realisation A/c prepared — assets realised Rs 1,20,000 (BV Rs 1,00,000); creditors Rs 40,000 paid at Rs 38,000; expenses Rs 2,000. Profit shared 2:2:1. [8M]</div>
+  <div class="pp-q">Q5. MCQs (4×1): (i) Sacrificing ratio formula (ii) Gaining ratio formula (iii) Capital reserve on reissue (iv) DRR requirement [4M]</div>
+  <div class="pp-section-title">SECTION B — Part II: Company Accounts (44 Marks)</div>
+  <div class="pp-q">Q6. A company issued 10,000 shares of Rs 10 each at Rs 12 (Rs 2 premium). Applications received for 15,000. Pro-rata allotment. Show journal entries and BRS. [8M]</div>
+  <div class="pp-q">Q7. 500 shares forfeited for non-payment of allotment Rs 3 and final call Rs 2 (face value Rs 10, premium Rs 2). 400 shares reissued at Rs 9. Record entries and capital reserve. [6M]</div>
+  <div class="pp-q">Q8. Debentures: Company issued 1,000, 12% debentures of Rs 100 each at 5% discount, redeemable at par. Show issue entries and calculate annual interest. [4M]</div>
+  <div class="pp-q">Q9. From given Balance Sheet, prepare Comparative B/S and Common Size B/S. Calculate two liquidity ratios. [10M]</div>
+  <div class="pp-q">Q10. Cash Flow Statement: Given B/S for two years, prepare Cash Flow Statement. [10M]</div>
+  <div class="pp-q">Q11. Calculate: GP Ratio, NP Ratio, Inventory Turnover, Current Ratio, D/E Ratio from given data. [6M]</div>
+</div></div>
+<div id="pp2" class="pp-content"><div class="practice-paper">
+  <div class="pp-header"><h3>ACCOUNTANCY XII — PRACTICE PAPER 2</h3><p style="font-size:.8rem">Different chapter emphasis — full 80 marks</p></div>
+  <div class="pp-section-title">PART I: PARTNERSHIPS (36M)</div>
+  <div class="pp-q">Q1. Prepare Income &amp; Expenditure Account for a sports club from given Receipts &amp; Payments A/c. Additional info: subscriptions in arrears Rs 3,000; rent outstanding Rs 1,500. [10M]</div>
+  <div class="pp-q">Q2. Admission — New ratio, Sacrificing ratio, Hidden goodwill calculation. [6M]</div>
+  <div class="pp-q">Q3. Death of partner — executor's account, JLP treatment. [8M]</div>
+  <div class="pp-q">Q4. Piecemeal distribution on dissolution. [8M]</div>
+  <div class="pp-q">Q5. MCQs — 4 questions on partnership fundamentals. [4M]</div>
+  <div class="pp-section-title">PART II: COMPANY ACCOUNTS (44M)</div>
+  <div class="pp-q">Q6. Over-subscription handling — Pro-rata allotment journal entries + excess refund. [8M]</div>
+  <div class="pp-q">Q7. Right issue and bonus issue journal entries. [6M]</div>
+  <div class="pp-q">Q8. Redemption of debentures — out of profits + creation of DRR. [4M]</div>
+  <div class="pp-q">Q9. Comparative P&amp;L statement analysis — Calculate % change, interpret trends. [8M]</div>
+  <div class="pp-q">Q10. Cash Flow from Operating Activities — Indirect Method detailed. [8M]</div>
+  <div class="pp-q">Q11. Ratio analysis — 6 ratios with interpretation. [10M]</div>
+</div></div>
+<div id="pp3" class="pp-content"><div class="practice-paper">
+  <div class="pp-header"><h3>ACCOUNTANCY XII — PRACTICE PAPER 3 (Challenge)</h3><p style="font-size:.8rem">Pre-Board level — application and analysis</p></div>
+  <div class="pp-q">Q1. Amalgamation of firms — complete realisation and new firm's opening entry. [10M]</div>
+  <div class="pp-q">Q2. Conversion of partnership to company — treatment of goodwill and capitals. [8M]</div>
+  <div class="pp-q">Q3. Issue of shares for consideration other than cash — plant machinery taken over + vendor payment. [6M]</div>
+  <div class="pp-q">Q4. Advanced ratio analysis: Calculate and interpret Debt Service Coverage Ratio, Return on Equity, Price/Earnings Ratio. Limitations of ratio analysis. [8M]</div>
+  <div class="pp-q">Q5. Comprehensive Cash Flow Statement — full balance sheets given for both years. [10M]</div>
+  <div class="pp-q">Q6. MCQ-based passage question (4×1): Case study on a company's financial position. [4M]</div>
+  <div class="pp-q">Q7. Error correction in final accounts — adjust trading account, P&amp;L and B/S. [6M]</div>
+  <div class="pp-q">Q8. Comparison question: Why is Cash Flow Statement more important than Fund Flow Statement? [4M]</div>
+  <div class="pp-q">Q9. Application question: A firm has CR = 2.5, QR = 0.8. Analyse what this means and suggest corrective actions. [4M]</div>
+</div></div>
+</section>
+
+<section id="sec-pyq">
+
+<div class="sec-title">📜 PYQ Bank <span class="badge">CBSE 2022–2024</span></div>
+<div class="pyq-filter">
+  <button class="pyq-chip" data-cat="all" onclick="filterPYQ('all',this)" style="background:var(--subj1);color:#fff">All</button>
+  <button class="pyq-chip" onclick="filterPYQ('part',this)" data-cat="part">Partnership</button>
+  <button class="pyq-chip" onclick="filterPYQ('comp',this)" data-cat="comp">Company Accounts</button>
+  <button class="pyq-chip" onclick="filterPYQ('fs',this)" data-cat="fs">Financial Statements</button>
+</div>
+
+<div class="pyq-card" data-cat="part">
+  <div class="pyq-meta">
+    <span class="pyq-tag pyq-year">2024</span>
+    <span class="pyq-tag pyq-marks">6 Marks</span>
+    <span class="pyq-tag pyq-ch">Goodwill Valuation</span>
+  </div>
+  <b>Calculate goodwill of a firm using the Capitalisation Method given: Average profit = ₹60,000, Normal Rate of Return = 15%, Capital employed = ₹3,00,000.</b>
+  <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+  <div class="pyq-ans">
+    <b>Step 1:</b> Normal Profit = Capital Employed × NRR/100 = 3,00,000 × 15/100 = ₹45,000<br><br>
+    <b>Step 2:</b> Super Profit = Average Profit − Normal Profit = 60,000 − 45,000 = ₹15,000<br><br>
+    <b>Step 3 (Capitalisation of Super Profit):</b><br>
+    Goodwill = Super Profit × 100/NRR = 15,000 × 100/15 = <b>₹1,00,000</b><br><br>
+    <i>Alternative: Capitalisation of Average Profit → Goodwill = 60,000 × 100/15 − 3,00,000 = 4,00,000 − 3,00,000 = ₹1,00,000</i>
+  </div>
+</div>
+
+<div class="pyq-card" data-cat="part">
+  <div class="pyq-meta">
+    <span class="pyq-tag pyq-year">2023</span>
+    <span class="pyq-tag pyq-marks">6 Marks</span>
+    <span class="pyq-tag pyq-ch">Admission of Partner</span>
+  </div>
+  <b>A and B are partners sharing profits in 3:2. C is admitted for 1/5 share. A and B agree to sacrifice equally. Calculate new profit sharing ratio and sacrificing ratio.</b>
+  <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+  <div class="pyq-ans">
+    C's share = 1/5 (given)<br>
+    Equal sacrifice → A sacrifices 1/10, B sacrifices 1/10<br><br>
+    A's new share = 3/5 − 1/10 = 6/10 − 1/10 = <b>5/10</b><br>
+    B's new share = 2/5 − 1/10 = 4/10 − 1/10 = <b>3/10</b><br>
+    C's share = 1/5 = <b>2/10</b><br><br>
+    <b>New ratio: A:B:C = 5:3:2</b><br>
+    <b>Sacrificing ratio: A:B = 1:1</b><br><br>
+    Verification: 5/10 + 3/10 + 2/10 = 10/10 ✓
+  </div>
+</div>
+
+<div class="pyq-card" data-cat="comp">
+  <div class="pyq-meta">
+    <span class="pyq-tag pyq-year">2024</span>
+    <span class="pyq-tag pyq-marks">6 Marks</span>
+    <span class="pyq-tag pyq-ch">Issue of Shares</span>
+  </div>
+  <b>A company issued 50,000 shares of ₹10 each at a premium of ₹2 per share. All amounts due were received. Pass journal entries for issue of shares applied = allotted (no over/under subscription).</b>
+  <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+  <div class="pyq-ans">
+    (i) On Application: Bank A/c Dr. 6,00,000 | To Share Application A/c 6,00,000<br>
+    (Application money: ₹10+₹2 = ₹12/share if full amount on application; or adjust per call schedule)<br><br>
+    Assuming: Application ₹3, Allotment ₹5 (incl. premium ₹2), First call ₹2, Final call ₹2<br><br>
+    (i) Bank Dr. 1,50,000 | To Share Application A/c 1,50,000 (₹3 × 50,000)<br>
+    (ii) Share Application Dr. 1,50,000 | To Share Capital A/c 1,50,000<br>
+    (iii) Share Allotment Dr. 3,50,000 | To Share Capital A/c 2,50,000; To Securities Premium A/c 1,00,000<br>
+    (iv) Bank Dr. 3,50,000 | To Share Allotment A/c 3,50,000
+  </div>
+</div>
+
+<div class="pyq-card" data-cat="fs">
+  <div class="pyq-meta">
+    <span class="pyq-tag pyq-year">2023</span>
+    <span class="pyq-tag pyq-marks">8 Marks</span>
+    <span class="pyq-tag pyq-ch">Analysis of Financial Statements</span>
+  </div>
+  <b>From the following data, calculate Current Ratio and Quick Ratio: Current Assets = ₹4,50,000; Inventory = ₹1,50,000; Prepaid Expenses = ₹20,000; Current Liabilities = ₹2,00,000.</b>
+  <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+  <div class="pyq-ans">
+    <b>Current Ratio = Current Assets / Current Liabilities</b><br>
+    = 4,50,000 / 2,00,000 = <b>2.25 : 1</b> (Ideal: 2:1)<br><br>
+    <b>Quick Ratio = Quick Assets / Current Liabilities</b><br>
+    Quick Assets = Current Assets − Inventory − Prepaid Expenses<br>
+    = 4,50,000 − 1,50,000 − 20,000 = ₹2,80,000<br>
+    Quick Ratio = 2,80,000 / 2,00,000 = <b>1.4 : 1</b> (Ideal: 1:1)<br><br>
+    <i>Both ratios are above ideal — company has healthy liquidity position.</i>
+  </div>
+</div>
+
+<div class="pyq-card" data-cat="fs">
+  <div class="pyq-meta">
+    <span class="pyq-tag pyq-year">2024</span>
+    <span class="pyq-tag pyq-marks">8 Marks</span>
+    <span class="pyq-tag pyq-ch">Cash Flow Statement</span>
+  </div>
+  <b>Under which activity (Operating/Investing/Financing) would you classify: (a) Purchase of machinery (b) Dividend paid (c) Sale of investments (d) Cash from customers?</b>
+  <button class="pyq-ans-btn" onclick="toggleAns(this)">Show Answer ▼</button>
+  <div class="pyq-ans">
+    (a) Purchase of machinery → <b>Investing Activity</b> (acquisition of long-term asset)<br>
+    (b) Dividend paid → <b>Financing Activity</b> (return to shareholders; Finance company: Operating)<br>
+    (c) Sale of investments → <b>Investing Activity</b> (disposal of long-term investment)<br>
+    (d) Cash from customers → <b>Operating Activity</b> (primary business activity)<br><br>
+    <b>Key rule:</b> Operating = core business | Investing = long-term assets/investments | Financing = raising/repaying capital + dividends/interest
+  </div>
+</div>
+
+</section>
+<section id="sec-mistakes">
+
+<div class="sec-title">⚠️ Mistake Bank <span class="badge">Common Errors</span></div>
+
+<div class="mistake-card">
+  <h4>Sacrificing Ratio vs Gaining Ratio Confusion</h4>
+  <p>Students calculate sacrificing ratio at retirement and gaining ratio at admission — exactly backwards.</p>
+  <div class="mistake-wrong">❌ WRONG: Calculating sacrificing ratio when a partner retires from the firm.</div>
+  <div class="mistake-right">✅ CORRECT: Sacrificing Ratio = Old Ratio − New Ratio (used at ADMISSION — existing partners sacrifice share for incoming partner). Gaining Ratio = New Ratio − Old Ratio (used at RETIREMENT/DEATH — remaining partners gain the outgoing partner's share).</div>
+</div>
+
+<div class="mistake-card">
+  <h4>Goodwill — Wrong Treatment on Admission</h4>
+  <p>Students debit Goodwill Account instead of treating it through partners' capitals.</p>
+  <div class="mistake-wrong">❌ WRONG: Goodwill A/c Dr. | To New Partner's Capital A/c (when new partner brings goodwill in cash)</div>
+  <div class="mistake-right">✅ CORRECT: When goodwill brought in cash: Cash/Bank Dr. | To New Partner's Capital. Then share premium distributed to sacrificing partners: New Partner's Capital Dr. | To Sacrificing Partners' Capital (in sacrificing ratio). Never open Goodwill A/c if not told to.</div>
+</div>
+
+<div class="mistake-card">
+  <h4>Securities Premium — Wrong Use</h4>
+  <p>Students use Securities Premium for purposes not allowed under the Companies Act.</p>
+  <div class="mistake-wrong">❌ WRONG: "Securities Premium can be used to pay dividends to shareholders."</div>
+  <div class="mistake-right">✅ CORRECT: Securities Premium can ONLY be used for: (1) Issue of fully paid bonus shares, (2) Writing off preliminary/share issue expenses, (3) Writing off discount on issue of debentures, (4) Buy-back of own shares. Cannot be used for dividends or business losses.</div>
+</div>
+
+<div class="mistake-card">
+  <h4>Current Ratio — Including Wrong Items</h4>
+  <p>Students include non-current items in Current Assets for ratio calculation.</p>
+  <div class="mistake-wrong">❌ WRONG: Including long-term investments and goodwill in Current Assets for Current Ratio.</div>
+  <div class="mistake-right">✅ CORRECT: Current Assets = Cash + Bank + Debtors + Inventory + Prepaid expenses + Marketable securities (short-term). Long-term investments, fixed assets, and goodwill are NOT current assets. Quick Assets = Current Assets − Inventory − Prepaid Expenses.</div>
+</div>
+
+<div class="mistake-card">
+  <h4>Cash Flow: Misclassifying Activities</h4>
+  <p>Students place dividend/interest in wrong activity category.</p>
+  <div class="mistake-wrong">❌ WRONG: "Dividend received is a financing activity" or "Interest paid is an operating activity for a manufacturing company."</div>
+  <div class="mistake-right">✅ CORRECT: For non-finance companies: Interest paid = Financing Activity | Interest received, Dividend received = Investing Activity | Dividend paid = Financing Activity. Operating activities relate to core revenue-generating activities only.</div>
+</div>
+
+<div class="mistake-card">
+  <h4>Revaluation Account vs Memorandum Revaluation</h4>
+  <p>Students use Memorandum Revaluation when full revaluation is required.</p>
+  <div class="mistake-wrong">❌ WRONG: Using Memorandum Revaluation when assets and liabilities are actually to be restated in the books.</div>
+  <div class="mistake-right">✅ CORRECT: Revaluation Account = Assets/liabilities are actually revalued in the books (permanent change shown in Balance Sheet). Memorandum Revaluation = Only for profit/loss distribution among partners; book values NOT changed. Use Revaluation when books are to reflect new values.</div>
+</div>
+
+<div class="mistake-card">
+  <h4>Partner's Loan vs Partner's Capital — Interest</h4>
+  <p>Students forget when interest on loan is allowed vs not.</p>
+  <div class="mistake-wrong">❌ WRONG: "Interest on partner's capital is charged even when there is no profit."</div>
+  <div class="mistake-right">✅ CORRECT: Interest on Capital = allowed only from profits (not charged in case of loss, unless deed specifies otherwise). Interest on Loan = always charged as an expense (Profit and Loss A/c), even in case of loss, because loan is not capital.</div>
+</div>
+
+<div class="mistake-card">
+  <h4>Debenture Redemption — Wrong Sinking Fund Entry</h4>
+  <p>Students confuse DRR (Debenture Redemption Reserve) requirement.</p>
+  <div class="mistake-wrong">❌ WRONG: "DRR must be created equal to 100% of debentures outstanding."</div>
+  <div class="mistake-right">✅ CORRECT: As per SEBI guidelines (as of syllabus), DRR is required to be created for privately placed debentures. Fully listed debentures through public issue: no DRR requirement. Amount and rules differ by category. Always check current CBSE guidelines before answering.</div>
+</div>
+
+</section>
+
+<!-- ══ ADSENSE MID-CONTENT ══ Auto responsive · goes live after approval ══ -->
+<div style="margin:8px 0;text-align:center;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE MID ══ -->
+<section id="sec-examiner">
+
+<div class="sec-title">🎯 Examiner's Eye <span class="badge">Scoring Tips</span></div>
+
+<div class="tip-card">
+  <h4>🎯 Tip 1 — Ratios and Journal Entries in Admission/Retirement: Verify First</h4>
+  <p>Before writing journal entries, calculate and verify all ratios: new profit-sharing ratio, sacrificing/gaining ratio, goodwill amount. A ratio error propagates through all subsequent entries. Show the ratio calculation as a separate step before the journal entries — examiners award marks for the calculation even if entries have minor errors.</p>
+</div>
+
+<div class="tip-card">
+  <h4>🎯 Tip 2 — Journal Entries: Narration is Mandatory</h4>
+  <p>Every journal entry in Accountancy must have a brief narration "(Being...)". Missing narrations cost 0.5 marks per entry. Keep narrations short: "Being goodwill brought in by C, distributed in sacrificing ratio." Don't skip this under time pressure.</p>
+</div>
+
+<div class="tip-card">
+  <h4>🎯 Tip 3 — Financial Statement Analysis: Ideal Ratios Matter</h4>
+  <p>After calculating a ratio, always state the ideal standard and interpret: "Current Ratio = 2.25:1; Ideal = 2:1; the company has adequate liquidity." This interpretation line earns 1 mark in 4-mark ratio questions. Raw calculation without interpretation is incomplete.</p>
+</div>
+
+<div class="tip-card">
+  <h4>🎯 Tip 4 — Cash Flow: Start with Net Profit, Not Revenue</h4>
+  <p>For Operating Activities (Indirect Method), start with Net Profit Before Tax, then add back non-cash items (depreciation, goodwill amortisation), then adjust working capital changes. Many students start with Cash Sales — that's the Direct Method. Know which method is required in the question.</p>
+</div>
+
+<div class="tip-card">
+  <h4>🎯 Tip 5 — Share Issue: Follow the Call-by-Call Entry Sequence</h4>
+  <p>For share issue questions, write entries in strict sequence: Application → Transfer to Capital → Allotment called → Allotment received → First Call → Final Call. Skipping a step or combining entries incorrectly loses marks. Write each step even if no adjustment is needed (write the straightforward entry).</p>
+</div>
+
+<div class="tip-card">
+  <h4>🎯 Tip 6 — Goodwill Valuation: State the Method</h4>
+  <p>Before starting goodwill calculation, name the method: "Using Average Profit Method / Super Profit Method / Capitalisation Method." Then show the formula. Named method + formula + calculation = 3 separate mark-points. Don't jump to numbers without naming the approach.</p>
+</div>
+
+<div class="tip-card">
+  <h4>🎯 Tip 7 — Revaluation Account: List All Items Systematically</h4>
+  <p>When drawing the Revaluation Account, list: Profit side = appreciation in assets, decrease in liabilities. Loss side = depreciation in assets, increase in liabilities. A systematic list prevents missing items. Then compute net revaluation profit/loss and distribute in old profit-sharing ratio.</p>
+</div>
+
+<div class="tip-card">
+  <h4>🎯 Tip 8 — Debentures vs Shares: State the Key Difference</h4>
+  <p>Questions asking to "distinguish between shares and debentures" expect at least 5 basis points. Always include: ownership vs creditor, dividend vs interest, risk, voting rights, and treatment in liquidation. A table format (5 rows × 2 columns) scores full marks and takes less time to write.</p>
+</div>
+
+</section>
+<section id="sec-highprob">
+
+<div class="sec-title">🔥 High-Probability Questions <span class="badge">Exam Forecast</span></div>
+
+<div class="hotq">
+  <span class="heat">🔥🔥🔥 VERY HIGH</span>
+  <b>Admission of Partner — Full Working (8 Marks)</b>
+  <p>A complete admission problem (new ratio, sacrificing ratio, goodwill treatment, revaluation account, capital accounts, revised balance sheet) appears in EVERY CBSE Accountancy paper. This single question carries 8 marks. Practice the complete sequence: ratios → goodwill entries → revaluation entries → capital adjustments → balance sheet.</p>
+</div>
+
+<div class="hotq">
+  <span class="heat">🔥🔥🔥 VERY HIGH</span>
+  <b>Cash Flow Statement — Indirect Method (8 Marks)</b>
+  <p>Preparing a Cash Flow Statement from comparative balance sheets and additional information appears in nearly every paper. Know the three-section format: Operating, Investing, Financing. Know which items are added back (depreciation) vs deducted (gains) from Net Profit for operating activities.</p>
+</div>
+
+<div class="hotq">
+  <span class="heat">🔥🔥🔥 VERY HIGH</span>
+  <b>Issue of Shares / Debentures with Full Journal Entries (8 Marks)</b>
+  <p>Issue of shares at premium with pro-rata allotment (over-subscription), or issue of debentures with redemption conditions, appears in every paper. Know entries for application, allotment (with premium), calls, and forfeiture + reissue if asked. Pro-rata calculation is frequently tested.</p>
+</div>
+
+<div class="hotq">
+  <span class="heat">🔥🔥 HIGH</span>
+  <b>Goodwill Valuation — All Three Methods (4–6 Marks)</b>
+  <p>Calculating goodwill using Average Profit, Super Profit, and Capitalisation methods — either one given or all three asked. Know all three methods and when each gives different results. Super Profit capitalisation and Average Profit capitalisation are the most tested variants.</p>
+</div>
+
+<div class="hotq">
+  <span class="heat">🔥🔥 HIGH</span>
+  <b>Ratio Analysis — Liquidity and Solvency Ratios (4–6 Marks)</b>
+  <p>Current Ratio, Quick Ratio, Debt-Equity Ratio, Proprietary Ratio, and Working Capital Turnover Ratio appear in pairs or as a set. Know formulas, ideal standards, and interpretation. Calculating ratios from a given Balance Sheet extract with additional information is the standard format.</p>
+</div>
+
+<div class="hotq">
+  <span class="heat">🔥🔥 HIGH</span>
+  <b>Dissolution of Partnership Firm — Realization Account (6 Marks)</b>
+  <p>Realisation Account, Bank Account, and Partners' Capital Accounts for dissolution of a firm is tested alternately with admission/retirement. Know what goes on debit vs credit side of Realisation Account. Realization expenses, outside liabilities, and partner's assets settlement are common traps.</p>
+</div>
+
+<div class="hotq">
+  <span class="heat">🔥 MODERATE-HIGH</span>
+  <b>Retirement of Partner — Gaining Ratio and Goodwill (6 Marks)</b>
+  <p>Gaining ratio calculation, goodwill adjustment at retirement, revaluation account, and settlement of retiring partner's loan appear every alternate year. Key distinction from admission: gaining ratio (not sacrificing) is used, and remaining partners pay goodwill to retiring partner.</p>
+</div>
+
+<div class="hotq">
+  <span class="heat">🔥 MODERATE-HIGH</span>
+  <b>Financial Statements of Companies — P&L and Balance Sheet (8 Marks)</b>
+  <p>Preparing Statement of Profit & Loss and Balance Sheet from trial balance with adjustments (depreciation, closing stock, outstanding expenses, accrued income, provision for tax) appears every other year. Format compliance (Schedule III) and correct classification are specifically marked.</p>
+</div>
+
+</section>
+<section id="sec-lastmin">
+
+<div class="sec-title">⚡ Last-Minute Revision <span class="badge">Quick Recall</span></div>
+
+<div class="lm-block">
+  <b>📌 Partnership — Key Formulas and Rules</b>
+  <ul class="lm-list">
+    <li>Sacrificing Ratio = Old Ratio − New Ratio (at Admission)</li>
+    <li>Gaining Ratio = New Ratio − Old Ratio (at Retirement)</li>
+    <li>Goodwill (Super Profit) = Super Profit × Number of Years Purchase</li>
+    <li>Super Profit = Average Profit − Normal Profit</li>
+    <li>Normal Profit = Capital Employed × Normal Rate of Return/100</li>
+    <li>Goodwill (Capitalisation) = Super Profit × 100/NRR</li>
+    <li>Interest on Capital = Capital × Rate/100 (only from profits)</li>
+    <li>Interest on Loan = always charged (P&amp;L, even in loss)</li>
+  </ul>
+</div>
+
+<div class="lm-block">
+  <b>📌 Company Accounts — Share Issue</b>
+  <ul class="lm-list">
+    <li>Issue price: At par (face value) | At premium (above FV) | At discount (not allowed now)</li>
+    <li>Securities Premium = credit to Securities Premium Reserve A/c</li>
+    <li>Forfeiture: Share Capital Dr. | Securities Premium (if any) Dr. | To Share Allotment / Calls Dr. | To Forfeited Shares A/c</li>
+    <li>Reissue of forfeited shares: Bank Dr. | Forfeited Shares A/c Dr. | To Share Capital | Capital Reserve = remaining forfeiture credit</li>
+  </ul>
+</div>
+
+<div class="lm-block">
+  <b>📌 Financial Statement Analysis</b>
+  <ul class="lm-list">
+    <li>Current Ratio = CA / CL (Ideal: 2:1)</li>
+    <li>Quick/Liquid Ratio = Quick Assets / CL (Ideal: 1:1) | Quick Assets = CA − Inventory − Prepaid</li>
+    <li>Debt-Equity Ratio = Long-term Debt / Shareholders' Equity (Ideal: 2:1)</li>
+    <li>Proprietary Ratio = Shareholders' Funds / Total Assets</li>
+    <li>Gross Profit Ratio = Gross Profit / Net Sales × 100</li>
+    <li>Net Profit Ratio = Net Profit / Net Sales × 100</li>
+    <li>Inventory Turnover = COGS / Average Inventory</li>
+  </ul>
+</div>
+
+<div class="lm-block">
+  <b>📌 Cash Flow Statement</b>
+  <ul class="lm-list">
+    <li>Operating: Core business (cash from operations, tax paid)</li>
+    <li>Investing: Purchase/sale of fixed assets and long-term investments</li>
+    <li>Financing: Issue of shares/debentures, repayment, dividends/interest paid</li>
+    <li>Add to Operating Profit: Depreciation, Loss on sale, Decrease in CA, Increase in CL</li>
+    <li>Deduct: Gain on sale, Increase in CA, Decrease in CL</li>
+    <li>Net increase in cash = Operating + Investing + Financing activities</li>
+  </ul>
+</div>
+
+</section>
+<section id="sec-sim">
+  <div class="sec-title">🎮 Exam Simulator</div>
+  <div class="sec-sub">MCQ drill — 35 questions, timed, auto-scored with visual score dashboard</div>
+  <div id="sim-start">
+    <div class="sim-info">
+      <div class="sim-stat-box"><div class="sim-num">35</div><div>Questions</div></div>
+      <div class="sim-stat-box"><div class="sim-num">35</div><div>Minutes</div></div>
+      <div class="sim-stat-box"><div class="sim-num">10 Units</div><div>Chapters</div></div>
+    </div>
+    <button class="btn-start" onclick="startSim()">Start Simulator ▶</button>
+  </div>
+  <div id="sim-quiz" style="display:none">
+    <div class="sim-header">
+      <span id="sim-q-num">Q 1/35</span>
+      <span id="sim-timer">⏱ 35:00</span>
+      <span id="sim-score-live">Score: 0</span>
+    </div>
+    <div class="sim-live-donut-wrap">
+      <svg id="sim-live-donut" viewBox="0 0 120 120" width="90" height="90">
+        <circle cx="60" cy="60" r="50" fill="none" stroke="var(--border)" stroke-width="16"/>
+        <circle id="sldc" cx="60" cy="60" r="50" fill="none" stroke="var(--mint)" stroke-width="16" stroke-linecap="butt" stroke-dasharray="0 314" stroke-dashoffset="0" style="transition:stroke-dasharray .5s ease;transform:rotate(-90deg);transform-origin:60px 60px"/>
+        <circle id="sldw" cx="60" cy="60" r="50" fill="none" stroke="var(--coral)" stroke-width="16" stroke-linecap="butt" stroke-dasharray="0 314" stroke-dashoffset="0" style="transition:stroke-dasharray .5s ease .15s;transform:rotate(-90deg);transform-origin:60px 60px"/>
+        <text x="60" y="57" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)" id="sld-pct">0%</text>
+        <text x="60" y="71" text-anchor="middle" font-size="8" fill="var(--text)" opacity=".55">live</text>
+      </svg>
+      <div class="sim-live-legend">
+        <span class="sim-live-dot c"></span><span id="sld-c">0 ✓</span>
+        <span class="sim-live-dot w"></span><span id="sld-w">0 ✗</span>
+        <span class="sim-live-dot s"></span><span id="sld-s">35 left</span>
+      </div>
+    </div>
+    <div id="sim-q-text" class="sim-q-text"></div>
+    <div id="sim-opts" class="sim-opts"></div>
+    <div id="sim-feedback" class="sim-feedback" style="display:none"></div>
+    <button id="sim-next-btn" class="sim-next-btn" onclick="nextSimQ()" style="display:none">
+      <span class="sim-next-label">Next Question</span>
+      <span class="sim-next-arrow">→</span>
+    </button>
+  </div>
+  <div id="sim-result" style="display:none">
+    <div class="sim-result-box">
+      <div class="sim-result-score" id="sim-final-score"></div>
+      <div class="sim-result-grade" id="sim-final-grade"></div>
+      <div class="sim-result-msg" id="sim-final-msg"></div>
+      <div class="sim-dash">
+        <div class="sim-donut-wrap">
+          <svg viewBox="0 0 120 120" width="130" height="130">
+            <circle cx="60" cy="60" r="50" fill="none" stroke="var(--border)" stroke-width="16"/>
+            <circle id="sim-donut-correct" cx="60" cy="60" r="50" fill="none" stroke="var(--mint)" stroke-width="16" stroke-linecap="butt" stroke-dasharray="0 314" stroke-dashoffset="0" style="transition:stroke-dasharray .8s ease;transform:rotate(-90deg);transform-origin:60px 60px"/>
+            <circle id="sim-donut-wrong" cx="60" cy="60" r="50" fill="none" stroke="var(--coral)" stroke-width="16" stroke-linecap="butt" stroke-dasharray="0 314" stroke-dashoffset="0" style="transition:stroke-dasharray .8s ease .2s;transform:rotate(-90deg);transform-origin:60px 60px"/>
+            <text id="sim-donut-pct" x="60" y="57" text-anchor="middle" font-size="16" font-weight="700" fill="var(--text)">0%</text>
+            <text x="60" y="72" text-anchor="middle" font-size="8" fill="var(--text)" opacity=".5">score</text>
+          </svg>
+          <div class="sim-donut-legend">
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--mint)"></span><span id="sim-leg-correct">Correct: 0</span></div>
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--coral)"></span><span id="sim-leg-wrong">Incorrect: 0</span></div>
+            <div class="sim-legend-row"><span class="sim-dot" style="background:var(--border)"></span><span id="sim-leg-skip">Skipped: 0</span></div>
+          </div>
+        </div>
+        <div class="sim-bars-wrap">
+          <div class="sim-bars-title">Topic Breakdown</div>
+          <div id="sim-bar-chart"></div>
+        </div>
+      </div>
+      <div class="sim-review-title">Question Review</div>
+      <div id="sim-q-strip"></div>
+      <button class="btn-start" onclick="resetSim()" style="margin-top:1.5rem">Try Again ↺</button>
+    </div>
+  </div>
+</section>
+<div id="examView">
+  <div style="padding:1rem">
+    <div class="sec-title">📝 Exam Simulator</div>
+    <div class="sec-sub">Test yourself under real exam conditions</div>
+    <div id="examSetup">
+      <div class="exam-modes-grid" id="examModesGrid"></div>
+      <button class="modal-btn" style="margin-top:1rem;max-width:280px" onclick="startExam()">Start Exam →</button>
+    </div>
+    <div id="examActive" style="display:none">
+      <div class="exam-toolbar">
+        <div class="exam-timer" id="examTimer">60:00</div>
+        <div class="exam-progress" id="examProgress">Q 1 of 20</div>
+        <div class="exam-actions">
+          <button class="exam-btn secondary" onclick="prevQ()">◀ Prev</button>
+          <button class="exam-btn secondary" onclick="nextQ()">Next ▶</button>
+          <button class="exam-btn danger" onclick="submitExam()">Submit</button>
+        </div>
+      </div>
+      <div class="exam-palette" id="examPalette"></div>
+      <div id="examQArea"></div>
+    </div>
+    <div id="examResult" style="display:none">
+      <div class="dashboard-grid" id="resultSummary"></div>
+      <h3 style="margin:1rem 0 .5rem;font-size:.95rem;color:var(--subj1)">Question Review</h3>
+      <div id="resultQList"></div>
+      <button class="modal-btn" style="max-width:200px;margin-top:1rem" onclick="resetExam()">Try Again</button>
+    </div>
+  </div>
+
+  <div class="ch-section">
+    <h3>📝 Practice Questions — Cash Flow Statement</h3>
+    <div class="qbank">
+      <div class="qitem"><span class="qtag">MCQ 1</span> Under Indirect Method, Net Profit is adjusted for:<br><em>(A) Cash receipts only (B) Non-cash items and working capital changes (C) Capital expenditures (D) Dividend paid</em><br><strong>Ans: (B) Non-cash items and working capital changes</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 2</span> Purchase of Fixed Assets is classified under:<br><em>(A) Operating Activities (B) Financing Activities (C) Investing Activities (D) None of the above</em><br><strong>Ans: (C) Investing Activities</strong></div>
+      <div class="qitem"><span class="qtag">MCQ 3</span> Dividend paid by a finance company (non-banking finance) is classified as:<br><em>(A) Operating (B) Investing (C) Financing (D) Depends on management</em><br><strong>Ans: (C) Financing Activities</strong></div>
+      <div class="qitem"><span class="qtag">A-R</span>
+        <strong>A:</strong> Depreciation is added back to net profit while calculating cash from operating activities under indirect method.<br>
+        <strong>R:</strong> Depreciation is a non-cash charge — it reduces accounting profit but does not involve any outflow of cash, so it must be added back to derive actual cash profit.<br>
+        <strong>Ans: (A)</strong>
+      </div>
+      <div class="case-block">
+        <p><strong>Case:</strong> Net Profit Rs 80,000. Depreciation Rs 15,000. Increase in Debtors Rs 10,000. Decrease in Creditors Rs 5,000. Increase in Inventory Rs 8,000. Taxes paid Rs 12,000.</p>
+        <div class="qbank">
+          <div class="qitem"><span class="qtag">Q1 (1M)</span> Are non-cash adjustments needed? <strong>Ans:</strong> Yes — under indirect method, add back depreciation (non-cash) to net profit.</div>
+          <div class="qitem"><span class="qtag">Q2 (3M)</span> Calculate Cash from Operating Activities.<br><strong>Ans:</strong> Net Profit 80,000; Add Depreciation 15,000 = 95,000. Less: Increase in Debtors (10,000); Less: Increase in Inventory (8,000); Less: Decrease in Creditors (5,000) = 72,000. Less: Tax paid (12,000). Net Cash from Operating Activities = Rs 60,000.</div>
+        </div>
+      </div>
+      <div class="qitem"><span class="qtag">SA (3M)</span> Distinguish between Investing and Financing Activities with two examples each.<br><strong>Ans:</strong> <strong>Investing Activities</strong> relate to acquisition and disposal of long-term assets (fixed assets, long-term investments). Examples: (1) Purchase of Plant and Machinery — cash outflow; (2) Sale of Investments — cash inflow. These determine the firm's long-term asset base and investment decisions. <strong>Financing Activities</strong> relate to changes in the firm's capital structure — equity and debt. Examples: (1) Issue of Shares — cash inflow; (2) Repayment of Bank Loan — cash outflow. These show how the firm raised and repaid long-term funds. The distinction matters for analysing where the firm spends and how it funds itself.</div>
+      <div class="qitem"><span class="qtag">LA (6M)</span> State the objectives and limitations of a Cash Flow Statement.<br><strong>Ans:</strong> <strong>Objectives:</strong> (1) Shows the actual inflow and outflow of cash over the period — not affected by accounting estimates. (2) Helps assess the firm's ability to generate cash to meet obligations. (3) Useful for comparing liquidity across companies regardless of accounting policies. (4) Enables planning for short-term cash requirements. (5) Shows the sources and uses of cash under three heads — operating, investing and financing. <strong>Limitations:</strong> (1) Non-cash transactions (barter, depreciation) do not appear — incomplete picture. (2) A cash-rich firm may still be unprofitable; high operating cash may mask poor profitability. (3) Easily manipulated (delaying payments, accelerating receipts at period-end). (4) Does not show the overall financial strength; must be read with Balance Sheet and P&amp;L. (5) Historical — does not predict future cash flows.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- DASHBOARD -->
+<div class="sec" id="sec-dash">
+  <div style="padding:1rem">
+    <div class="sec-title">📊 Your Dashboard</div>
+    <div class="sec-sub">Track your progress and achievements</div>
+    <div class="dashboard-grid" id="dashGrid"></div>
+    <h3 style="margin:1rem 0 .5rem;font-size:.95rem;color:var(--subj1)">🏆 Badges</h3>
+    <div id="badgeRowDash" class="badge-row"></div>
+  </div>
+</div>
+<script>
+const LEVELS=[
+  {name:'Accounts Novice',min:0},{name:'Journal Beginner',min:100},
+  {name:'Ledger Learner',min:250},{name:'Ratio Reader',min:450},
+  {name:'Partnership Pro',min:700},{name:'Company Scholar',min:1000},
+  {name:'Accounts Expert',min:1400},{name:'Accounts Champion',min:2000}
+];
+const ALL_BADGES=[
+  {id:'first_visit',name:'First Entry',icon:'📒',desc:'Visited first topic'},
+  {id:'streak3',name:'3-Day Streak',icon:'🔥',desc:'3 consecutive days'},
+  {id:'streak7',name:'Week Warrior',icon:'⚡',desc:'7 consecutive days'},
+  {id:'xp500',name:'XP 500',icon:'🌟',desc:'Earned 500 XP'},
+  {id:'xp1000',name:'XP 1000',icon:'💫',desc:'Earned 1000 XP'},
+  {id:'exam_done',name:'Exam Taker',icon:'📝',desc:'Completed a mock exam'},
+  {id:'perfect_score',name:'Perfect Score',icon:'🏆',desc:'100% in an exam'},
+  {id:'all_partnership',name:'Partnership Pro',icon:'🤝',desc:'Completed all Partnership topics'},
+  {id:'all_company',name:'Company Expert',icon:'🏢',desc:'Completed Company Accounts topics'},
+  {id:'ratio_done',name:'Ratio Master',icon:'📊',desc:'Mastered Ratio Analysis'},
+  {id:'cashflow_done',name:'CFS Expert',icon:'💧',desc:'Mastered Cash Flow Statement'}
+];
+const GS_KEY='ck_acc12_gs';
+function getGS(){try{const d=localStorage.getItem(GS_KEY);return d?JSON.parse(d):{xp:0,streak:0,lastDate:null,badges:[],visited:{},name:''}}catch{return{xp:0,streak:0,lastDate:null,badges:[],visited:{},name:''}}}
+function saveGS(gs){try{localStorage.setItem(GS_KEY,JSON.stringify(gs))}catch{}}
+function getLevel(xp){let lv=0;for(let i=0;i<LEVELS.length;i++)if(xp>=LEVELS[i].min)lv=i;return lv}
+function getLevelProgress(xp){const lv=getLevel(xp);const cur=LEVELS[lv].min;const next=LEVELS[lv+1]?LEVELS[lv+1].min:cur+500;return{pct:Math.min(100,Math.round((xp-cur)/(next-cur)*100)),lv,name:LEVELS[lv].name,next,cur}}
+function updateXPBar(gs){const {pct,lv,name}=getLevelProgress(gs.xp);document.getElementById('xpBar').style.width=pct+'%';document.getElementById('xpLevel').textContent='Lv '+(lv+1)+' · '+name;document.getElementById('xpLabel').textContent=gs.xp+' XP · '+pct+'% to next'}
+function addXP(amount){const gs=getGS();gs.xp=(gs.xp||0)+amount;saveGS(gs);updateXPBar(gs);showXPPop('+'+amount+' XP');checkBadges(gs)}
+function showXPPop(text){const d=document.createElement('div');d.className='xp-pop';d.textContent=text;document.body.appendChild(d);setTimeout(()=>d.remove(),1000)}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+function updateStreak(){const gs=getGS();const today=new Date().toDateString();if(gs.lastDate===today)return;if(gs.lastDate===new Date(Date.now()-86400000).toDateString())gs.streak=(gs.streak||0)+1;else gs.streak=1;gs.lastDate=today;saveGS(gs);document.getElementById('streakLabel').textContent='🔥 '+gs.streak}
+function recordTopicVisit(key){const gs=getGS();if(!gs.visited[key]){gs.visited[key]=true;saveGS(gs);addXP(30);checkBadges(gs)}}
+function checkBadges(gs){const earned=gs.badges||[];const add=(id)=>{if(!earned.includes(id)){earned.push(id);gs.badges=earned;saveGS(gs);const b=ALL_BADGES.find(x=>x.id===id);showToast('🏅 Badge: '+b.name+'!');}};
+if(Object.keys(gs.visited||{}).length>=1)add('first_visit');
+if((gs.streak||0)>=3)add('streak3');if((gs.streak||0)>=7)add('streak7');
+if((gs.xp||0)>=500)add('xp500');if((gs.xp||0)>=1000)add('xp1000');
+const pship=['p1','p2','p3','p4','p5'];if(pship.every(k=>gs.visited&&gs.visited[k]))add('all_partnership');
+const comp=['c1','c2'];if(comp.every(k=>gs.visited&&gs.visited[k]))add('all_company');
+if(gs.visited&&gs.visited['f1'])add('ratio_done');
+if(gs.visited&&gs.visited['f2'])add('cashflow_done');}
+function renderBadgesRow(){const gs=getGS();const earned=gs.badges||[];['badgeRowHome','badgeRowDash'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.innerHTML=ALL_BADGES.map(b=>`<div class="badge-chip ${earned.includes(b.id)?'earned':'locked'}"><span class="b-icon">${b.icon}</span>${b.name}</div>`).join('')})}
+function showNameModal(){document.getElementById('nameModal').classList.add('open')}
+function saveName(){const n=document.getElementById('nameInput').value.trim();if(!n)return;const gs=getGS();gs.name=n;saveGS(gs);document.getElementById('navUser').textContent='👤 '+n;document.getElementById('nameModal').classList.remove('open');showToast('Welcome, '+n+'! 🎉')}
+
+const MAP={home:'sec-home',p1:'sec-p1',p2:'sec-p2',p3:'sec-p3',p4:'sec-p4',p5:'sec-p5',c1:'sec-c1',c2:'sec-c2',f1:'sec-f1',f2:'sec-f2',pp:'sec-pp',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',sim:'sec-sim',dash:'sec-dash'};
+let curKey="home";
+const ALL_SECS=Object.values(MAP);
+const TOPIC_LABELS={p1:'NPO',p2:'Goodwill',p3:'Admission',p4:'Retirement & Death',p5:'Dissolution',c1:'Company Shares',c2:'Debentures',f1:'Ratio Analysis',f2:'Cash Flow Statement'};
+const ALL_TOPIC_KEYS=Object.keys(TOPIC_LABELS);
+const tabMap={home:0,p1:1,p2:2,p3:3,p4:4,p5:5,c1:6,c2:7,f1:8,f2:9,exam:10,dash:11};
+
+function showMainSection(k){
+  ALL_SECS.forEach(id=>{const el=document.getElementById(id);if(el){el.classList.remove('active');el.style.display='none'}});
+  const examEl=document.getElementById('examView');if(examEl){examEl.style.display='none';examEl.classList.remove('active')}
+  const target=MAP[k]||'sec-home';const el=document.getElementById(target);
+  if(el){el.classList.add('active');el.style.display='block';const _tb=document.querySelector('.main-tabs-wrap');const _bh=_tb?_tb.getBoundingClientRect().bottom+8:138;window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-_bh),behavior:'smooth'});}
+  const tabs=document.querySelectorAll('.main-tab');tabs.forEach((t,i)=>{t.classList.toggle('active',i===(tabMap[k]||0))});
+  if(ALL_TOPIC_KEYS.includes(k))recordTopicVisit(k);
+}
+function go(k){showMainSection(k)}
+function resumeLearning(){const gs=getGS();const visited=Object.keys(gs.visited||{});const next=ALL_TOPIC_KEYS.find(k=>!visited.includes(k))||ALL_TOPIC_KEYS[0];go(next)}
+
+const EXAM_QS={
+  p2:[
+    {q:'Goodwill is calculated under Super Profit Method as:',opts:['Average Profit × Years Purchase','Super Profit × Years Purchase','Capital Employed × NRR','Super Profit / NRR × 100'],ci:1,type:'mcq',marks:1},
+    {q:'Super Profit = Average Profit − Normal Profit. If Average Profit = ₹80,000, Capital = ₹5,00,000, NRR = 12%, Super Profit is:',opts:['₹20,000','₹60,000','₹80,000','₹1,40,000'],ci:0,type:'mcq',marks:1}
+  ],
+  p3:[
+    {q:'Gaining Ratio is calculated at the time of:',opts:['Admission','Retirement','Dissolution','Change in PSR'],ci:1,type:'mcq',marks:1},
+    {q:'On admission of a new partner, goodwill is credited to old partners in:',opts:['New Ratio','Old Ratio','Sacrificing Ratio','Gaining Ratio'],ci:2,type:'mcq',marks:1},
+    {q:'A and B share profits 3:2. C is admitted for 1/5 share. If new ratio is 3:2:1, sacrificing ratio is:',opts:['3:2','1:1','2:1','Equal'],ci:1,type:'mcq',marks:1}
+  ],
+  p5:[
+    {q:'Realisation Account is prepared at the time of:',opts:['Admission','Retirement','Dissolution','Change in PSR'],ci:2,type:'mcq',marks:1},
+    {q:'Under Garner vs Murray rule, deficiency of insolvent partner is borne by solvent partners in their:',opts:['Profit Sharing Ratio','Capital Ratio','Equal Ratio','New Ratio'],ci:1,type:'mcq',marks:1}
+  ],
+  c1:[
+    {q:'When shares are issued at premium, the premium amount is credited to:',opts:['Share Capital Account','General Reserve','Securities Premium Reserve','Capital Reserve'],ci:2,type:'mcq',marks:1},
+    {q:'On forfeiture of shares, Share Capital A/c is debited with:',opts:['Called up amount × shares forfeited','Paid up amount','Face value only','Issue price'],ci:0,type:'mcq',marks:1},
+    {q:'Maximum discount allowed on reissue of forfeited shares is:',opts:['10% of face value','Amount forfeited per share','5% of face value','Discount at which originally issued'],ci:1,type:'mcq',marks:1}
+  ],
+  f1:[
+    {q:'Quick Ratio is also known as:',opts:['Current Ratio','Liquid Ratio','Debt Ratio','Activity Ratio'],ci:1,type:'mcq',marks:1},
+    {q:'The ideal Current Ratio is:',opts:['1:1','2:1','3:1','0.5:1'],ci:1,type:'mcq',marks:1},
+    {q:'Return on Investment (ROI) is calculated using:',opts:['Net Profit After Tax / Net Revenue × 100','Net Profit Before Interest & Tax / Capital Employed × 100','Gross Profit / Net Revenue × 100','Net Profit / Shareholders Funds × 100'],ci:1,type:'mcq',marks:1}
+  ],
+  f2:[
+    {q:'Purchase of machinery is classified as:',opts:['Operating Activity','Investing Activity','Financing Activity','None'],ci:1,type:'mcq',marks:1},
+    {q:'Under Indirect Method, depreciation is:',opts:['Added back to Net Profit','Deducted from Net Profit','Ignored','Separately disclosed'],ci:0,type:'mcq',marks:1},
+    {q:'Dividend paid by a company is classified as:',opts:['Operating Activity','Investing Activity','Financing Activity','Either Operating or Financing'],ci:2,type:'mcq',marks:1}
+  ]
+};
+const EXAM_MODES={
+  full:{label:'Full Mock',mins:90,marks:40,topics:['p2','p3','p5','c1','f1','f2']},
+  partnership:{label:'Partnership Test',mins:45,marks:20,topics:['p2','p3','p5']},
+  company:{label:'Company Test',mins:30,marks:15,topics:['c1','f1','f2']},
+  quick:{label:'Quick Quiz',mins:20,marks:10,topics:['f1','f2']}
+};
+
+let curMode=null,curQs=[],curIdx=0,answers={},reviewed={},timerInterval=null,timeLeft=0;
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function buildExamModes(){
+  const g=document.getElementById('examModesGrid');if(!g)return;
+  g.innerHTML=Object.entries(EXAM_MODES).map(([k,m])=>`<div class="exam-mode-card" id="emode_${k}" onclick="selectMode('${k}')"><h3>${m.label}</h3><p>${m.mins} mins · ~${m.marks} marks</p></div>`).join('');
+  selectMode('full');
+}
+function selectMode(k){curMode=k;document.querySelectorAll('.exam-mode-card').forEach(c=>c.classList.remove('selected'));const el=document.getElementById('emode_'+k);if(el)el.classList.add('selected')}
+function startExam(){
+  if(!curMode)return;
+  const mode=EXAM_MODES[curMode];
+  curQs=[];mode.topics.forEach(t=>{if(EXAM_QS[t])curQs=curQs.concat(EXAM_QS[t].map(q=>({...q,topic:t})))});
+  curIdx=0;answers={};reviewed={};
+  document.getElementById('examSetup').style.display='none';
+  document.getElementById('examResult').style.display='none';
+  document.getElementById('examActive').style.display='block';
+  timeLeft=mode.mins*60;renderPalette();renderQuestion();startTimer();
+}
+function startTimer(){clearInterval(timerInterval);timerInterval=setInterval(()=>{timeLeft--;updateTimerDisplay();if(timeLeft<=0){clearInterval(timerInterval);submitExam();}},1000)}
+function updateTimerDisplay(){const m=Math.floor(timeLeft/60),s=timeLeft%60;const el=document.getElementById('examTimer');if(el){el.textContent=m+':'+(s<10?'0':'')+s;el.classList.toggle('warn',timeLeft<300)}}
+function renderPalette(){const p=document.getElementById('examPalette');if(!p)return;p.innerHTML=curQs.map((q,i)=>`<button class="palette-btn ${answers[i]!==undefined?'answered':''} ${reviewed[i]?'reviewed':''} ${i===curIdx?'current':''}" onclick="goQ(${i})">${i+1}</button>`).join('')}
+function renderQuestion(){
+  const q=curQs[curIdx];if(!q)return;
+  document.getElementById('examProgress').textContent='Q '+(curIdx+1)+' of '+curQs.length;
+  const a=document.getElementById('examQArea');
+  let optsHtml=q.opts.map((o,i)=>`<div class="mcq-opt ${answers[curIdx]===i?'selected':''}" onclick="selectOpt(${i})"><div class="opt-letter">${String.fromCharCode(65+i)}</div>${escHtml(o)}</div>`).join('');
+  a.innerHTML=`<div class="question-card"><div class="q-header"><span class="q-num-badge">Q ${curIdx+1}</span><span class="q-marks-badge">${q.marks} mark</span></div><div class="q-text">${escHtml(q.q)}</div><div class="mcq-opts">${optsHtml}</div><button class="exam-btn secondary" style="margin-top:.8rem" onclick="markReview()">📌 Mark for Review</button></div>`;
+  renderPalette();
+}
+function selectOpt(i){answers[curIdx]=i;renderQuestion()}
+function goQ(i){curIdx=i;renderQuestion()}
+function nextQ(){if(curIdx<curQs.length-1){curIdx++;renderQuestion()}}
+function prevQ(){if(curIdx>0){curIdx--;renderQuestion()}}
+function markReview(){reviewed[curIdx]=!reviewed[curIdx];renderPalette()}
+function submitExam(){
+  clearInterval(timerInterval);
+  let correct=0,attempted=0;
+  curQs.forEach((q,i)=>{if(answers[i]!==undefined)attempted++;if(answers[i]===q.ci)correct++;});
+  const score=Math.round(correct/curQs.length*100);
+  addXP(correct*20+10);
+  const gs=getGS();gs.badges=gs.badges||[];
+  if(!gs.badges.includes('exam_done')){gs.badges.push('exam_done');saveGS(gs);showToast('🏅 Badge: Exam Taker!')}
+  if(score===100&&!gs.badges.includes('perfect_score')){gs.badges.push('perfect_score');saveGS(gs);showToast('🏅 Badge: Perfect Score!')}
+  document.getElementById('examActive').style.display='none';
+  const sum=document.getElementById('resultSummary');
+  sum.innerHTML=`<div class="dash-card"><div class="dv">${correct}</div><div class="dl">Correct</div></div><div class="dash-card"><div class="dv">${curQs.length-correct}</div><div class="dl">Wrong</div></div><div class="dash-card"><div class="dv">${curQs.length-attempted}</div><div class="dl">Skipped</div></div><div class="dash-card"><div class="dv">${score}%</div><div class="dl">Score</div></div>`;
+  const rl=document.getElementById('resultQList');
+  rl.innerHTML=curQs.map((q,i)=>{const ua=answers[i];const corr=ua===q.ci;const skip=ua===undefined;return`<div class="result-q"><div class="rq-q">${i+1}. ${escHtml(q.q)}</div><div class="rq-status ${corr?'rq-correct':skip?'rq-skip':'rq-wrong'}">${corr?'✓ Correct':skip?'— Skipped':'✗ Wrong'}${!corr&&!skip?` (Your: ${q.opts[ua]} | Correct: ${q.opts[q.ci]})`:''}</div></div>`}).join('');
+  document.getElementById('examResult').style.display='block';
+}
+function resetExam(){document.getElementById('examResult').style.display='none';document.getElementById('examSetup').style.display='block';buildExamModes()}
+function buildDashboard(){
+  const gs=getGS();const g=document.getElementById('dashGrid');if(!g)return;
+  const visited=Object.keys(gs.visited||{}).length;const total=ALL_TOPIC_KEYS.length;
+  g.innerHTML=`<div class="dash-card"><div class="dv">${gs.xp||0}</div><div class="dl">Total XP</div></div><div class="dash-card"><div class="dv">${gs.streak||0}</div><div class="dl">Day Streak</div></div><div class="dash-card"><div class="dv">${visited}</div><div class="dl">Topics Done</div></div><div class="dash-card"><div class="dv">${total-visited}</div><div class="dl">Remaining</div></div><div class="dash-card"><div class="dv">${LEVELS[getLevel(gs.xp||0)].name}</div><div class="dl">Current Level</div></div>`;
+  renderBadgesRow();
+}
+window.addEventListener('DOMContentLoaded',()=>{
+  updateStreak();const gs=getGS();updateXPBar(gs);
+  if(gs.name)document.getElementById('navUser').textContent='👤 '+gs.name;
+  document.getElementById('streakLabel').textContent='🔥 '+(gs.streak||0);
+  renderBadgesRow();buildExamModes();buildDashboard();showMainSection('home');
+  if(!gs.name)showNameModal();
+});
+
+function toggleTheme(){const r=document.documentElement,b=document.getElementById('themeBtn'),cur=r.getAttribute('data-theme');if(cur==='dark'){r.setAttribute('data-theme','light');if(b){b.textContent='🌙 Dark';}localStorage.setItem('theme','light');}else{r.setAttribute('data-theme','dark');if(b){b.textContent='☀️ Light';}localStorage.setItem('theme','dark');}}
+(function(){const t=localStorage.getItem('theme');const r=document.documentElement;const b=document.getElementById('themeBtn');if(t){r.setAttribute('data-theme',t);if(b){b.textContent=t==='dark'?'☀️ Light':'🌙 Dark';}}})();
+
+const SIM_BANK = [
+  {q:"The concept of 'sustainable development' aims to meet the needs of the present without compromising the ability of __ generations to meet their own needs.",opts:["past","future","current","affluent"],ans:1,exp:"Sustainable development (Brundtland Commission, 1987): meeting present needs without compromising future generations' ability to meet theirs."},
+  {q:"Which of the following is a primary sector activity?",opts:["Banking","Fishing","Manufacturing","Retail Trade"],ans:1,exp:"Primary sector involves extraction/production from nature: agriculture, fishing, mining, forestry. Manufacturing is secondary; banking/retail are tertiary."},
+  {q:"GDP stands for:",opts:["Gross Domestic Product","General Development Plan","Gross Deficit Parameter","Government Development Programme"],ans:0,exp:"GDP = Gross Domestic Product — total monetary value of all goods and services produced within a country's borders in a specific time period."},
+  {q:"The French Revolution began in the year:",opts:["1776","1789","1804","1815"],ans:1,exp:"The French Revolution began in 1789 with the storming of the Bastille on 14 July 1789, marking the end of the ancien régime."},
+  {q:"Which gas is responsible for the greenhouse effect?",opts:["Oxygen","Nitrogen","Carbon Dioxide","Hydrogen"],ans:2,exp:"CO₂ (and other greenhouse gases) trap heat radiation from Earth's surface, causing the greenhouse effect and global warming."},
+  {q:"Democracy is a system of government in which power is vested in:",opts:["A king","The military","The people","A prime minister"],ans:2,exp:"Democracy (Greek: demos = people, kratos = power) is government by the people, directly or through elected representatives."},
+  {q:"The chemical formula for water is:",opts:["H₂O₂","HO","H₂O","H₃O"],ans:2,exp:"Water is H₂O — two hydrogen atoms covalently bonded to one oxygen atom. H₂O₂ is hydrogen peroxide, a different compound."},
+  {q:"Which planet is known as the 'Red Planet'?",opts:["Venus","Jupiter","Mars","Saturn"],ans:2,exp:"Mars appears red due to iron oxide (rust) on its surface. It's the fourth planet from the Sun and has two moons: Phobos and Deimos."},
+  {q:"The speed of light in vacuum is approximately:",opts:["3×10⁶ m/s","3×10⁸ m/s","3×10¹⁰ m/s","3×10⁴ m/s"],ans:1,exp:"Speed of light c ≈ 3×10⁸ m/s (exactly 299,792,458 m/s). It is the universal speed limit — nothing with mass can reach or exceed it."},
+  {q:"Photosynthesis produces:",opts:["CO₂ and water","Glucose and oxygen","Glucose and CO₂","Water and nitrogen"],ans:1,exp:"Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ (glucose) + 6O₂. Chlorophyll absorbs light energy for this reaction."},
+  {q:"Which of the following is NOT a fundamental right in India?",opts:["Right to Equality","Right to Property","Right to Freedom","Right against Exploitation"],ans:1,exp:"Right to Property was removed as a fundamental right by the 44th Amendment (1978) and is now only a legal right under Article 300A."},
+  {q:"The Harappan civilisation flourished around:",opts:["5000–4000 BCE","2600–1900 BCE","1000–500 BCE","3500–3000 BCE"],ans:1,exp:"The Indus Valley Civilisation (Harappan) flourished approximately 2600–1900 BCE, with major cities at Mohenjo-daro and Harappa."},
+  {q:"Which organelle is called the 'powerhouse of the cell'?",opts:["Nucleus","Ribosome","Mitochondria","Chloroplast"],ans:2,exp:"Mitochondria produce ATP (energy currency) through cellular respiration. They have their own DNA and are believed to be of endosymbiotic origin."},
+  {q:"The law of demand states that as price increases, quantity demanded:",opts:["Increases","Decreases","Remains the same","First increases then decreases"],ans:1,exp:"Law of demand: inverse relationship between price and quantity demanded, ceteris paribus. As price rises, demand falls (and vice versa)."},
+  {q:"Which type of government has a federal structure?",opts:["Unitary","Federal","Both A and B","Neither"],ans:1,exp:"A federal government divides power between central and state governments (e.g., India, USA). A unitary government concentrates power at the centre (e.g., UK, France)."},
+  {q:"The process by which plants lose water through their leaves is called:",opts:["Photosynthesis","Transpiration","Respiration","Excretion"],ans:1,exp:"Transpiration is the evaporation of water from plant surfaces (mainly leaves through stomata). It drives the uptake of water and minerals from roots."},
+  {q:"The SI unit of force is:",opts:["Watt","Joule","Newton","Pascal"],ans:2,exp:"Force is measured in Newtons (N). 1 N = force needed to accelerate 1 kg by 1 m/s². Named after Sir Isaac Newton."},
+  {q:"Which acid is present in the human stomach?",opts:["Sulphuric acid","Nitric acid","Hydrochloric acid","Acetic acid"],ans:2,exp:"The stomach produces HCl (hydrochloric acid, pH 1.5–2) to aid protein digestion and kill bacteria. Pepsin (enzyme) works best in this acidic environment."},
+  {q:"Universal Adult Franchise means the right to vote is given to:",opts:["All adults regardless of caste, religion, gender","Only literate adults","Only taxpayers","Only educated citizens"],ans:0,exp:"Universal Adult Franchise: all citizens above 18 years can vote regardless of caste, class, religion, gender, or education. India adopted this in its first election (1952)."},
+  {q:"The 'Dandi March' was related to which freedom movement event?",opts:["Non-Cooperation Movement","Civil Disobedience Movement","Quit India Movement","Champaran Satyagraha"],ans:1,exp:"Gandhi led the Salt March (Dandi March) in March 1930, walking 385 km to Dandi to make salt — launching the Civil Disobedience Movement."},
+  {q:"Which of the following is a renewable source of energy?",opts:["Coal","Petroleum","Solar energy","Natural gas"],ans:2,exp:"Solar energy is renewable — it is continuously replenished by the Sun. Coal, petroleum and natural gas are fossil fuels that are non-renewable."},
+  {q:"The chromosome number in human somatic cells is:",opts:["23","46","44","48"],ans:1,exp:"Human somatic (body) cells have 46 chromosomes (23 pairs). Gametes (egg/sperm) have 23 chromosomes each (haploid). After fertilisation, 46 is restored."},
+  {q:"Inflation means:",opts:["Fall in the general price level","Rise in the general price level","Rise in GDP","Fall in unemployment"],ans:1,exp:"Inflation is a sustained rise in the general price level. It means money's purchasing power decreases over time. Measured by the Consumer Price Index (CPI)."},
+  {q:"The Preamble to the Indian Constitution begins with:",opts:["We the People of India","We, the Citizens of India","We, the Representatives of India","We, the Leaders of India"],ans:0,exp:"The Preamble begins: 'WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a...' — asserting popular sovereignty."},
+  {q:"Which element has the atomic number 6?",opts:["Nitrogen","Oxygen","Carbon","Boron"],ans:2,exp:"Carbon (C) has atomic number 6 — 6 protons and 6 electrons. Carbon forms the basis of organic chemistry and all life on Earth."},
+  {q:"What does 'GDP per capita' measure?",opts:["Total GDP of a country","Average income per person","Total exports of a country","Government revenue"],ans:1,exp:"GDP per capita = GDP ÷ Population. It measures average economic output per person — used to compare living standards between countries."},
+  {q:"Which layer of the atmosphere protects us from harmful UV radiation?",opts:["Troposphere","Stratosphere (ozone layer)","Mesosphere","Thermosphere"],ans:1,exp:"The ozone layer in the stratosphere (15–35 km altitude) absorbs 97–99% of the Sun's UV-B and UV-C radiation, protecting life on Earth."},
+  {q:"Newton's third law of motion states that every action has an equal and opposite:",opts:["Force","Reaction","Momentum","Acceleration"],ans:1,exp:"Newton's 3rd Law: For every action, there is an equal and opposite reaction. Forces always occur in pairs — action-reaction forces act on different bodies."},
+  {q:"The term 'secular' in the Indian Constitution means:",opts:["India has a state religion","All religions are banned","India treats all religions equally","Only Hinduism is promoted"],ans:2,exp:"Secular India (42nd Amendment, 1976) means: no state religion, equal respect for all religions, no discrimination on religious grounds."},
+  {q:"Acid rain is primarily caused by:",opts:["CO₂ and CO","SO₂ and NOₓ","O₃ and CFCs","H₂O and CH₄"],ans:1,exp:"Acid rain forms when SO₂ (sulphur dioxide) and NOₓ (nitrogen oxides) from burning fossil fuels dissolve in rainwater forming H₂SO₄ and HNO₃."},
+  {q:"The function of the kidney is to:",opts:["Produce insulin","Filter blood and remove waste","Produce bile","Pump blood"],ans:1,exp:"Kidneys filter blood (150 L/day), removing urea, excess salts and water as urine. They also regulate blood pressure, pH and red blood cell production."},
+  {q:"Which economic system allows for private ownership and market prices?",opts:["Socialism","Communism","Mixed economy","Capitalism"],ans:3,exp:"Capitalism features private ownership of means of production, free market prices and profit motive. Mixed economy combines elements of capitalism and socialism."},
+  {q:"The chemical process of rusting involves:",opts:["Iron reacting with nitrogen","Iron reacting with oxygen and water","Iron reacting with carbon dioxide","Iron reacting with hydrogen"],ans:1,exp:"Rusting: Iron + Oxygen + Water → Iron oxide (Fe₂O₃). It is an electrochemical process requiring both O₂ and H₂O. Galvanising (zinc coating) prevents rusting."},
+  {q:"The term 'federalism' refers to:",opts:["Rule by a dictator","Division of power between central and state governments","Single central government","Military rule"],ans:1,exp:"Federalism divides powers between national (central) and subnational (state) governments, each having authority in their respective domains."},
+  {q:"Which of the following statements about natural selection is correct?",opts:["All individuals in a species are identical","Organisms best adapted to environment survive and reproduce more","Evolution happens in individual organisms","All traits acquired in lifetime are inherited"],ans:1,exp:"Darwin's natural selection: individuals with advantageous traits survive and reproduce more, passing those traits to offspring — 'survival of the fittest.'"}
+];
+let simQ = [];
+let simIdx = 0;
+let simScore = 0;
+let simTimer = null;
+let simTimeLeft = 2100;
+let simAnswered = [];
+
+function startSim(){
+  simQ = [...SIM_BANK].sort(()=>Math.random()-0.5).slice(0,35);
+  simIdx=0;simScore=0;simTimeLeft=2100;
+  simAnswered=new Array(35).fill(null);
+  const dc=document.getElementById('sldc'),dw=document.getElementById('sldw');
+  if(dc)dc.style.strokeDasharray='0 314';
+  if(dw){dw.style.strokeDasharray='0 314';dw.style.transform='rotate(-90deg)';}
+  const pt=document.getElementById('sld-pct');if(pt)pt.textContent='0%';
+  const ec=document.getElementById('sld-c'),ew=document.getElementById('sld-w'),es=document.getElementById('sld-s');
+  if(ec)ec.textContent='0 ✓';if(ew)ew.textContent='0 ✗';if(es)es.textContent='35 left';
+  document.getElementById('sim-start').style.display='none';
+  document.getElementById('sim-result').style.display='none';
+  document.getElementById('sim-quiz').style.display='block';
+  renderSimQ();
+  simTimer=setInterval(tickSim,1000);
+}
+function tickSim(){
+  simTimeLeft--;
+  const m=Math.floor(simTimeLeft/60).toString().padStart(2,'0');
+  const s=(simTimeLeft%60).toString().padStart(2,'0');
+  const el=document.getElementById('sim-timer');
+  if(el)el.textContent='⏱ '+m+':'+s;
+  if(simTimeLeft<=0){clearInterval(simTimer);endSim();}
+}
+function renderSimQ(){
+  if(simIdx>=simQ.length){clearInterval(simTimer);endSim();return;}
+  const q=simQ[simIdx];
+  document.getElementById('sim-q-num').textContent='Q '+(simIdx+1)+'/35';
+  document.getElementById('sim-q-text').textContent=q.q;
+  document.getElementById('sim-feedback').style.display='none';
+  document.getElementById('sim-next-btn').style.display='none';
+  const opts=document.getElementById('sim-opts');
+  opts.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const btn=document.createElement('button');
+    btn.className='sim-opt';
+    btn.textContent=String.fromCharCode(65+i)+'. '+o;
+    btn.onclick=()=>answerSim(i,btn,q);
+    opts.appendChild(btn);
+  });
+}
+function updateLiveDonut(){
+  const total=35;
+  const correct=simAnswered.filter((a,i)=>a!==null&&a===simQ[i].ans).length;
+  const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;
+  const circ=2*Math.PI*50;
+  const cDash=circ*(correct/total);
+  const wDash=circ*(wrong/total);
+  const dc=document.getElementById('sldc');
+  const dw=document.getElementById('sldw');
+  const answered=simAnswered.filter(a=>a!==null).length;
+  const pct=answered?Math.round(correct/answered*100):0;
+  if(dc)dc.style.strokeDasharray=`${cDash} ${circ}`;
+  if(dw){
+    dw.style.strokeDasharray=`${wDash} ${circ}`;
+    dw.style.transform=`rotate(${(correct/total)*360-90}deg)`;
+    dw.style.transformOrigin='60px 60px';
+  }
+  const pt=document.getElementById('sld-pct');
+  if(pt)pt.textContent=`${pct}%`;
+  const ec=document.getElementById('sld-c');
+  const ew=document.getElementById('sld-w');
+  const es=document.getElementById('sld-s');
+  if(ec)ec.textContent=correct+' ✓';
+  if(ew)ew.textContent=wrong+' ✗';
+  if(es)es.textContent=(total-simIdx-1)+' left';
+}
+function answerSim(chosen,btn,q){
+  document.querySelectorAll('.sim-opt').forEach(b=>b.disabled=true);
+  const correct=chosen===q.ans;
+  if(correct){simScore++;btn.classList.add('sim-correct');}
+  else{btn.classList.add('sim-wrong');document.querySelectorAll('.sim-opt')[q.ans].classList.add('sim-correct');}
+  document.getElementById('sim-score-live').textContent='Score: '+simScore;
+  const fb=document.getElementById('sim-feedback');
+  fb.innerHTML=(correct?'✅ <strong>Correct!</strong> ':'❌ <strong>Incorrect.</strong> ')+q.exp;
+  fb.style.display='block';
+  fb.className='sim-feedback '+(correct?'sim-fb-correct':'sim-fb-wrong');
+  simAnswered[simIdx]=chosen;
+  updateLiveDonut();
+  document.getElementById('sim-next-btn').style.display='inline-flex';
+}
+function nextSimQ(){
+  simIdx++;
+  if(simIdx>=simQ.length){clearInterval(simTimer);endSim();}
+  else{renderSimQ();}
+}
+function endSim(){
+  clearInterval(simTimer);
+  document.getElementById('sim-quiz').style.display='none';
+  document.getElementById('sim-result').style.display='block';
+  const total=35;
+  const pct=Math.round(simScore/total*100);
+  let grade='F',msg='Keep practising. Review the concepts.';
+  if(pct>=90){grade='A+';msg='Outstanding! Board topper material! 🏆';}
+  else if(pct>=75){grade='A';msg='Excellent! You are well-prepared.';}
+  else if(pct>=60){grade='B';msg='Good effort. Review weak areas.';}
+  else if(pct>=40){grade='C';msg='Needs work. Go through chapter notes.';}
+  document.getElementById('sim-final-score').textContent=`${simScore}/${total} (${pct}%)`;
+  document.getElementById('sim-final-grade').textContent=`Grade: ${grade}`;
+  document.getElementById('sim-final-msg').textContent=msg;
+  const wrong=simAnswered.filter((a,i)=>a!==null&&a!==simQ[i].ans).length;
+  const skipped=simAnswered.filter(a=>a===null).length;
+  const correct=simScore;
+  const circ=2*Math.PI*50;
+  setTimeout(()=>{
+    const dc=document.getElementById('sim-donut-correct');
+    const dw=document.getElementById('sim-donut-wrong');
+    const cDash=circ*(correct/total);
+    const wDash=circ*(wrong/total);
+    if(dc)dc.style.strokeDasharray=`${cDash} ${circ}`;
+    if(dw){
+      dw.style.strokeDasharray=`${wDash} ${circ}`;
+      dw.style.transform=`rotate(${(correct/total)*360-90}deg)`;
+      dw.style.transformOrigin='60px 60px';
+    }
+    const pt=document.getElementById('sim-donut-pct');
+    if(pt)pt.textContent=`${pct}%`;
+  },150);
+  const lc=document.getElementById('sim-leg-correct');
+  const lw=document.getElementById('sim-leg-wrong');
+  const ls=document.getElementById('sim-leg-skip');
+  if(lc)lc.textContent=`Correct: ${correct}`;
+  if(lw)lw.textContent=`Incorrect: ${wrong}`;
+  if(ls)ls.textContent=`Skipped: ${skipped}`;
+  const barChart=document.getElementById('sim-bar-chart');
+  if(barChart){
+    barChart.innerHTML='';
+    const groups=[
+      {label:'Section 1',qs:Array.from({length:9},(_,i)=>i)},
+      {label:'Section 2',qs:Array.from({length:9},(_,i)=>i+9)},
+      {label:'Section 3',qs:Array.from({length:8},(_,i)=>i+18)},
+      {label:'Section 4',qs:Array.from({length:9},(_,i)=>i+26)},
+    ];
+    groups.forEach(g=>{
+      const valid=g.qs.filter(i=>i<simQ.length);
+      if(!valid.length)return;
+      const gc=valid.filter(i=>simAnswered[i]===simQ[i].ans).length;
+      const gw=valid.filter(i=>simAnswered[i]!==null&&simAnswered[i]!==simQ[i].ans).length;
+      const cp=Math.round(gc/valid.length*100);
+      const wp=Math.round(gw/valid.length*100);
+      barChart.innerHTML+=`<div class="sim-bar-row"><div class="sim-bar-label"><span>${g.label}</span><span>${gc}/${valid.length} correct</span></div><div class="sim-bar-track"><div class="sim-bar-seg-c" style="width:${cp}%"></div><div class="sim-bar-seg-w" style="width:${wp}%"></div></div></div>`;
+    });
+  }
+  const strip=document.getElementById('sim-q-strip');
+  if(strip){
+    strip.innerHTML='';
+    simQ.forEach((q,i)=>{
+      const chosen=simAnswered[i];
+      const cls=chosen===null?'s':chosen===q.ans?'c':'w';
+      const dot=document.createElement('div');
+      dot.className=`sim-strip-dot ${cls}`;
+      dot.textContent=i+1;
+      dot.title=`Q${i+1}: ${cls==='c'?'Correct':cls==='w'?'Wrong':'Skipped'}`;
+      strip.appendChild(dot);
+    });
+  }
+}
+function resetSim(){
+  document.getElementById('sim-start').style.display='block';
+  document.getElementById('sim-result').style.display='none';
+  document.getElementById('sim-quiz').style.display='none';
+}
+
+function filterPYQ(cat,btn){
+  document.querySelectorAll('.pyq-chip').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pyq-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
+  });
+}
+function toggleAns(btn){
+  const ans=btn.nextElementSibling;
+  if(!ans)return;
+  if(ans.style.display==='block'){
+    ans.style.display='none';
+    btn.textContent='Show Answer ▼';
+  } else {
+    ans.style.display='block';
+    btn.textContent='Hide Answer ▲';
+    if(typeof awardXP==='function')awardXP(5,'📜 PYQ reviewed!');
+  }
+}
+
+</script>
+
+<!-- ══ ADSENSE BOTTOM LEADERBOARD ══ Highest RPM slot ══ -->
+<div style="padding:16px;text-align:center;border-top:1px solid #dde3ee;background:#f4f6fb;">
+  <div style="font-size:.6rem;color:#bbb;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Advertisement</div>
+</div>
+<!-- ══ END ADSENSE BOTTOM ══ -->
+
+</div>
+<div class="side-panel panel-right">
+  <div class="side-panel-inner">
+    <!-- ADSENSE SKYSCRAPER — goes live after approval -->
+    <div class="adsense-sky">
+      <div class="panel-label">Advertisement</div>
+      <div id="ad-right-1"></div>
+<div id="ad-right-2"></div>
+<div id="ad-right-3"></div>
+<!-- AdSense skyscraper -->
+<ins class="adsbygoogle"
+     style="display:block;width:160px;height:600px;"
+     data-ad-client="ca-pub-PENDING"
+     data-ad-slot="SLOT-SKY-PENDING"
+     data-ad-format="auto"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<!-- end AdSense sky -->
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ AD: BOTTOM LEADERBOARD ══ -->
+<div style="display:flex;justify-content:center;padding:12px 0;">
+  <div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div>
+</div>
+<!-- ══ END AD: BOTTOM LEADERBOARD ══ -->
+<!-- AdSense bottom leaderboard -->
+<div style="display:flex;justify-content:center;padding:8px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-width:728px;height:90px;"
+       data-ad-client="ca-pub-PENDING"
+       data-ad-slot="SLOT-BOTTOM-PENDING"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});
+// Mobile nav back button
+(function(){
+  const hist=[];
+  window.mobileGoBack=function(){
+    if(hist.length>1){hist.pop();var prev=hist[hist.length-1];_navToM(prev,false);}
+    else{_navToM('home',false);}
+  };
+  function _navToM(k,push){
+    if(push===undefined||push)hist.push(k);
+    var titleEl=document.getElementById('mobileNavTitle');
+    if(titleEl){
+      var btn=document.querySelector('.main-tab.active,.topnav-tab.active');
+      titleEl.textContent=btn?btn.textContent.trim():(k==='home'?'Home':k.toUpperCase());
+    }
+    if(typeof go==='function')go(k);
+    else if(typeof showMainSection==='function')showMainSection(k);
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    hist.push('home');
+    document.querySelectorAll('[onclick]').forEach(function(el){
+      var oc=el.getAttribute('onclick')||'';
+      var m=oc.match(/(?:go|showMainSection)\(['"](\w+)['"]/);
+      if(m){el.addEventListener('click',function(){
+        hist.push(m[1]);
+        var t=document.getElementById('mobileNavTitle');
+        if(t)t.textContent=el.textContent.trim().substring(0,24);
+      });}
+    });
+  });
+})();
+
+
+function showPP(n,btn){document.querySelectorAll('.pp-content').forEach(d=>d.classList.remove('active'));document.querySelectorAll('.pp-tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('pp'+n).classList.add('active');btn.classList.add('active');}
+</script>
+</div>
+<!-- end AdSense bottom -->
+
+<script src="../portal-shell.js"></script>
+</body>
+</html>
