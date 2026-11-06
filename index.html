@@ -13,6 +13,24 @@
   .ad-main-col{grid-column:1;}
 }
 .ad-inline-wrap{padding:10px 0;text-align:center;}
+
+/* ── Floating News Button ── */
+.news-fab{
+  position:fixed;bottom:24px;right:20px;z-index:999;
+  display:flex;align-items:center;gap:6px;
+  background:var(--gold,#f5a623);color:#1a1a2e;
+  border:none;border-radius:28px;
+  padding:10px 16px 10px 12px;
+  font-size:.82rem;font-weight:700;
+  box-shadow:0 4px 16px rgba(0,0,0,.35);
+  text-decoration:none;cursor:pointer;
+  animation:fab-pulse 2.8s ease-in-out infinite;
+}
+.news-fab:hover{background:#ffc94d;transform:scale(1.05);}
+@keyframes fab-pulse{
+  0%,100%{box-shadow:0 4px 16px rgba(0,0,0,.35);}
+  50%{box-shadow:0 4px 24px rgba(245,166,35,.6);}
+}
 </style>  <title>CBSE Board Exam Hub | Class X & XII Free Mock Tests</title>
   <meta name="description" content="Free CBSE board exam preparation for Class 10 and Class 12. Mock tests, previous year papers and practice questions for all subjects — Maths, Science, English,">
   <meta name="keywords" content="CBSE, CBSE board exam preparation, Board, Exam, Hub, Class, XII, Free, Mock, Tests, mock tests, practice papers">
@@ -307,13 +325,13 @@ footer strong{color:var(--text);}
 <nav class="nav-strip">
   <div class="nav-strip-inner" id="homeNavStrip">
     <a class="nav-chip" href="study-zone/classes-9-10.html">Class IX-X Study Notes</a>
+    <a class="nav-chip" href="news.html">📰 News &amp; Updates</a>
     <a class="nav-chip" href="mock-zone/classes-9-10.html">Class IX-X Mock Papers</a>
     <a class="nav-chip" href="study-zone/classes-11-12.html">Class XI-XII Study Notes</a>
     <a class="nav-chip" href="mock-zone/classes-11-12.html">Class XI-XII Mock Papers</a>
     <a class="nav-chip" href="virtual-labs/index.html">Virtual LAB</a>
     <a class="nav-chip" href="quest/index.html">Monthly Quest</a>
     <a class="nav-chip" href="weekly-focus/">Weekly Focus</a>
-    <a class="nav-chip" href="news.html">📰 News &amp; Updates</a>
   </div>
 </nav>
 
@@ -1462,4 +1480,5 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   }
 })();
 </script>
+<a class="news-fab" href="news.html">📰 News &amp; Updates</a>
 </body></html>
