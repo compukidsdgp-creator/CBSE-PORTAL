@@ -244,7 +244,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-h
 .step-text{font-size:.85rem;line-height:1.65;color:var(--muted);margin-top:6px;}
 .step-text strong{color:var(--text);display:block;margin-bottom:2px;}
 
-.theme-btn{position:fixed;bottom:24px;left:16px;background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:50%;width:48px;height:48px;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.3);z-index:999;}
+.theme-btn{position:fixed;bottom:28px;left:16px;background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:50%;width:48px;height:48px;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.3);z-index:999;}
 
 footer{text-align:center;padding:32px 20px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--border);}
 footer strong{color:var(--text);}
@@ -1484,6 +1484,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   var fbSVG='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M29 16C29 8.82 23.18 3 16 3S3 8.82 3 16c0 6.49 4.75 11.87 10.97 12.84V19.7H10.4V16h3.57v-3.1c0-3.52 2.1-5.47 5.31-5.47 1.54 0 3.14.28 3.14.28v3.46h-1.77c-1.74 0-2.28 1.08-2.28 2.19V16h3.89l-.62 3.7h-3.27v9.14C24.25 27.87 29 22.49 29 16z"/></svg>';
   var wrap=document.createElement('div');
   wrap.className='share-fab-wrap';
+  wrap.style.cssText='position:fixed!important;bottom:28px!important;right:16px!important;left:auto!important;z-index:9999;display:flex;flex-direction:column;gap:10px;align-items:center;';
   wrap.innerHTML='<a class="share-fab news" href="news.html">📰<span class="fab-tooltip">News</span></a>'
     +'<a class="share-fab wa" href="https://wa.me/?text='+t+'%20'+url+'" target="_blank" rel="noopener">'+waSVG+'<span class="fab-tooltip">WhatsApp</span></a>'
     +'<a class="share-fab fb" href="https://www.facebook.com/sharer/sharer.php?u='+url+'" target="_blank" rel="noopener">'+fbSVG+'<span class="fab-tooltip">Facebook</span></a>';
