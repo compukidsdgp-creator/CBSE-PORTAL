@@ -241,6 +241,10 @@ footer strong{color:var(--text);}
 .zone-launch-go{font-size:.74rem;font-weight:800;color:#ffe4a0;letter-spacing:.05em;margin-top:auto;padding-top:15px;z-index:1}
 @media(max-width:900px){.zone-launch-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:520px){.zone-launch{padding:0 14px;margin:20px auto}.zone-launch-grid{gap:12px}.zone-launch-card{min-height:175px;padding:18px 14px}.zone-launch-title{font-size:1.12rem}.zone-launch-desc{font-size:.72rem}}
+/* ── NAV STRIP SCROLL HINT ── */
+.nav-strip{position:relative;}
+.nav-strip::after{content:'';position:absolute;top:0;right:0;bottom:0;width:48px;background:linear-gradient(to right,transparent,rgba(0,0,0,.45));pointer-events:none;z-index:10;transition:opacity .3s;}
+.nav-strip.at-end::after{opacity:0;}
 </style>
 
 <section class="hero">
@@ -301,7 +305,7 @@ footer strong{color:var(--text);}
 </section>
 
 <nav class="nav-strip">
-  <div class="nav-strip-inner">
+  <div class="nav-strip-inner" id="homeNavStrip">
     <a class="nav-chip" href="study-zone/classes-9-10.html">Class IX-X Study Notes</a>
     <a class="nav-chip" href="mock-zone/classes-9-10.html">Class IX-X Mock Papers</a>
     <a class="nav-chip" href="study-zone/classes-11-12.html">Class XI-XII Study Notes</a>
@@ -1437,4 +1441,24 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
      data-full-width-responsive="true"></ins>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 <!-- end AdSense -->
+<script>
+/* ── Home nav strip bounce hint ── */
+(function(){
+  var strip = document.getElementById('homeNavStrip');
+  var wrap  = strip && strip.closest('.nav-strip');
+  if(!strip || !wrap) return;
+  strip.addEventListener('scroll', function(){
+    var atEnd = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4;
+    wrap.classList.toggle('at-end', atEnd);
+  }, {passive:true});
+  if(strip.scrollWidth > strip.clientWidth + 10){
+    setTimeout(function(){
+      strip.scrollTo({left:100, behavior:'smooth'});
+      setTimeout(function(){
+        strip.scrollTo({left:0, behavior:'smooth'});
+      }, 700);
+    }, 800);
+  }
+})();
+</script>
 </body></html>
