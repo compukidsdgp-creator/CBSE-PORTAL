@@ -16,12 +16,15 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);padding:0 16px 40px}
+.news-nav{display:flex;flex-wrap:wrap;gap:9px;align-items:center;padding:12px max(0px,calc((100% - 1050px)/2));margin:0 -16px 18px;background:#142b4f;border-bottom:2px solid var(--gold)}
+.news-nav a{color:#fff;text-decoration:none;font-size:.84rem;font-weight:650;padding:7px 11px;border-radius:7px}
+.news-nav a:hover,.news-nav a[aria-current="page"]{background:#c9a227;color:#142b4f}
 .news-header{
   background:var(--navy);color:#fff;padding:18px 20px;
   border-radius:0 0 12px 12px;margin-bottom:24px;
   display:flex;align-items:center;gap:12px;
 }
-.news-header h2{font-size:1.1rem;flex:1}
+.news-header h1{font-size:1.1rem;flex:1;margin:0}
 .news-updated{font-size:.72rem;color:#94a3b8}
 .news-item{
   background:var(--card);border:1px solid var(--border);
@@ -38,11 +41,77 @@ body{background:var(--bg);color:var(--text);padding:0 16px 40px}
 .news-meta{font-size:.75rem;color:var(--muted)}
 .news-footer{text-align:center;font-size:.75rem;color:var(--muted);margin-top:20px}
 </style>
+<link rel="canonical" href="https://cbsemock.org.in/news.html">
+<meta name="description" content="Latest CBSE board exam news, official notifications, datesheet updates and education announcements for students.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="CBSE Board Exam Hub">
+<meta name="keywords" content="CBSE, CBSE board exam preparation, News, Updates, mock tests, practice papers">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CBSE Board Exam Hub">
+<meta property="og:url" content="https://cbsemock.org.in/news.html">
+<meta property="og:title" content="CBSE News &amp; Updates">
+<meta property="og:description" content="Latest CBSE board exam news, official notifications, datesheet updates and education announcements for students.">
+<meta property="og:image" content="https://cbsemock.org.in/og-image.jpg">
+<meta property="og:image:alt" content="CBSE Board Exam Hub — CBSE study resources and mock tests">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CBSE News &amp; Updates">
+<meta name="twitter:description" content="Latest CBSE board exam news, official notifications, datesheet updates and education announcements for students.">
+<meta name="twitter:image" content="https://cbsemock.org.in/og-image.jpg">
+<meta name="theme-color" content="#17345f">
+<!-- CBSEMOCK SEO STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "CBSE News & Updates",
+  "description": "Latest CBSE board exam news, official notifications, datesheet updates and education announcements for students.",
+  "url": "https://cbsemock.org.in/news.html",
+  "inLanguage": "en-IN",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "CBSE Board Exam Hub",
+    "url": "https://cbsemock.org.in/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CBSE Board Exam Hub",
+    "url": "https://cbsemock.org.in/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://cbsemock.org.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CBSE News & Updates",
+      "item": "https://cbsemock.org.in/news.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<nav class="news-nav" aria-label="Main navigation">
+  <a href="/">⌂ Home</a>
+  <a href="/news.html" aria-current="page">📰 News &amp; Updates</a>
+  <a href="/mock-zone/">Mock Zone</a>
+  <a href="/study-zone/">Study Zone</a>
+  <a href="/virtual-labs/">Virtual Labs</a>
+</nav>
 <div class="news-header">
   <div>
-    <h2>📰 CBSE News &amp; Updates</h2>
+    <h1>📰 CBSE News &amp; Updates</h1>
     <div class="news-updated">Auto-updated: 05 Nov 2026, 11:58 UTC · 15 items</div>
   </div>
 </div>
@@ -122,7 +191,7 @@ body{background:var(--bg);color:var(--text);padding:0 16px 40px}
   <div class="news-meta">Google News · Thu, 05 Nov 2026</div>
 </article>
 <div class="news-footer">
-  Powered by Google News RSS · cbsemock.org.in<br>
+  Curated CBSE updates from Google News RSS · cbsemock.org.in<br>
   <a href="/" style="color:var(--teal)">← Back to Portal</a>
 </div>
 </body>

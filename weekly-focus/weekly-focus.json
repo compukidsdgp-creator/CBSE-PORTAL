@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "week": 45,
+    "month": "Nov 2026",
+    "subject": "Chemistry",
+    "class": "Class 12",
+    "chapter": "Chapter 7",
+    "emoji": "⚗️",
+    "read_time": "8 min interactive read",
+    "stats": "3 concepts · 4 quiz questions"
+  },
+
+  "hero": {
+    "title": "Le Chatelier's Principle — Why Equilibrium Always Fights Back",
+    "hook": "Why does a fizzy drink go flat faster on a hot day? The answer is one of the most powerful ideas in Chemistry — and it shows up in your board exam every single year."
+  },
+
+  "hook_section": {
+    "scenario_icon": "🥤",
+    "scenario": "You open two identical cans of cola. One is ice-cold, one is warm from your bag. The warm one fizzes violently and goes flat in minutes. The cold one stays bubbly for much longer. Why? Both cans had the same amount of CO₂ under the same pressure. What is temperature doing to those bubbles?",
+    "bridge": "This isn't just a fizzy drink puzzle. The same principle explains why car engines knock, why fertiliser factories use specific pressures, and why our blood carries oxygen the way it does.",
+    "punchline": "It all comes down to one rule: a system at equilibrium will always resist change."
+  },
+
+  "concept_section": {
+    "analogy_icon": "🎯",
+    "analogy": "Imagine a tug-of-war match where both teams are perfectly balanced — nobody moves. That's chemical equilibrium. Now push one team forward. What do they do? They pull harder to get back to balance. Le Chatelier's Principle is exactly that push-and-pull.",
+    "principle": "Le Chatelier's Principle: \"If a system at equilibrium is subjected to a change in concentration, temperature, or pressure, the equilibrium shifts in the direction that tends to reduce the effect of that change.\"",
+    "reveal_prompt": "Tap each disturbance to see what the system does 👇",
+    "reveals": [
+      {
+        "question": "🧪 What if I add more reactant?",
+        "answer": "Equilibrium shifts <strong>forward</strong> (right) — the system tries to consume the extra reactant by making more product."
+      },
+      {
+        "question": "🌡️ What if I increase temperature?",
+        "answer": "If the forward reaction is <strong>exothermic</strong> (gives off heat), increasing temperature shifts equilibrium <strong>backward</strong> — the system absorbs the extra heat. If the forward reaction is endothermic, it shifts forward."
+      },
+      {
+        "question": "⬆️ What if I increase pressure?",
+        "answer": "Equilibrium shifts toward the side with <strong>fewer moles of gas</strong> — fewer molecules means less pressure, reducing the disturbance."
+      },
+      {
+        "question": "🔩 What if I add a catalyst?",
+        "answer": "<strong>No shift in equilibrium position.</strong> A catalyst speeds up both forward and reverse reactions equally — it helps you reach equilibrium faster but doesn't change where the balance point is."
+      }
+    ]
+  },
+
+  "keypoints_section": {
+    "points": [
+      "Increasing <b>reactant concentration</b> → shift forward (more product)",
+      "Increasing <b>temperature</b> → favours the endothermic direction",
+      "Increasing <b>pressure</b> → shift toward side with fewer moles of gas",
+      "<b>Catalyst</b> → reaches equilibrium faster, does NOT shift the position",
+      "<b>Haber Process</b> (N₂ + 3H₂ ⇌ 2NH₃): high pressure → more NH₃; but high temperature reduces yield (exothermic reaction) — so 450°C compromise is used"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Explain the effect of increasing pressure on the Haber Process" },
+      { "marks": "2M", "question": "State Le Chatelier's Principle and give one application" },
+      { "marks": "1M", "question": "Does adding a catalyst change the equilibrium constant? Give reason" }
+    ]
+  },
+
+  "quiz": [
+    {
+      "q": "In the reaction N₂ + 3H₂ ⇌ 2NH₃ (exothermic), what happens when pressure is increased?",
+      "opts": [
+        "Equilibrium shifts backward — more N₂ and H₂",
+        "Equilibrium shifts forward — more NH₃ produced",
+        "No change — pressure does not affect gas equilibria",
+        "Equilibrium constant Kc increases"
+      ],
+      "ans": 1,
+      "exp": "Left side has 4 mol gas (1+3), right side has 2 mol. Higher pressure favours fewer moles, so shifts forward, giving more NH₃."
+    },
+    {
+      "q": "A catalyst is added to a system at equilibrium. What changes?",
+      "opts": [
+        "The equilibrium position shifts forward",
+        "The equilibrium position shifts backward",
+        "Equilibrium is reached faster but position does not change",
+        "The value of Kc increases"
+      ],
+      "ans": 2,
+      "exp": "A catalyst lowers activation energy for BOTH directions equally. It speeds up reaching equilibrium but cannot change where the balance point lies."
+    },
+    {
+      "q": "For an endothermic reaction at equilibrium, increasing temperature will:",
+      "opts": [
+        "Shift equilibrium backward",
+        "Shift equilibrium forward",
+        "Have no effect on equilibrium",
+        "Decrease the rate of reaction"
+      ],
+      "ans": 1,
+      "exp": "An endothermic reaction absorbs heat. Increasing temperature is like adding heat — the system absorbs it by shifting forward."
+    },
+    {
+      "q": "CO₂(g) + H₂O(l) ⇌ H₂CO₃(aq). Why does removing the bottle cap make the drink go flat?",
+      "opts": [
+        "Temperature increases when opened",
+        "Pressure decreases — equilibrium shifts to produce more CO₂ gas",
+        "The catalyst (bottle) is removed",
+        "Concentration of H₂O decreases"
+      ],
+      "ans": 1,
+      "exp": "CO₂ was dissolved under high pressure (sealed bottle). Opening reduces pressure, so the system shifts to relieve pressure by releasing CO₂ as gas."
+    }
+  ],
+
+  "flipcards": [
+    { "front": "What does Le Chatelier's Principle state?", "back": "A system at equilibrium shifts to reduce any applied disturbance" },
+    { "front": "Effect of catalyst on equilibrium position?", "back": "NO change in position — only speeds up reaching equilibrium" },
+    { "front": "In Haber Process, why use 450°C not higher?", "back": "Reaction is exothermic — high temp reduces NH₃ yield; 450°C is a rate-yield compromise" },
+    { "front": "Pressure increase shifts equilibrium toward...?", "back": "The side with FEWER moles of gas" },
+    { "front": "Adding more reactant shifts equilibrium...?", "back": "Forward (right) — to consume the extra reactant" },
+    { "front": "Why does fizzy drink go flat faster when warm?", "back": "Higher temp favours endothermic reverse reaction — CO₂ escapes from solution" }
+  ],
+
+  "archive": [
+    { "emoji": "📐", "title": "Integration by Parts", "meta": "Week 44 · Mathematics · Class 12" },
+    { "emoji": "🧬", "title": "DNA Replication",        "meta": "Week 43 · Biology · Class 12" },
+    { "emoji": "⚡", "title": "Kirchhoff's Laws",        "meta": "Week 42 · Physics · Class 12" },
+    { "emoji": "📊", "title": "Marketing Mix (4Ps)",     "meta": "Week 41 · Business Studies" }
+  ],
+
+  "upcoming": [
+    { "week": "W46", "title": "Photoelectric Effect", "subject": "Physics" },
+    { "week": "W47", "title": "Demand Elasticity",    "subject": "Economics" },
+    { "week": "W48", "title": "Determinants",         "subject": "Mathematics" },
+    { "week": "W49", "title": "Plant Hormones",       "subject": "Biology" }
+  ]
+}

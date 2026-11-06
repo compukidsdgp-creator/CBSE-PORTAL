@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Internal application data is not a search landing page.
+Disallow: /quest/data/
+
+Sitemap: https://cbsemock.org.in/sitemap.xml

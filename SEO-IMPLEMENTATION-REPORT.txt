@@ -1,0 +1,65 @@
+CBSEMOCK SEO IMPLEMENTATION REPORT
+==================================
+
+Primary domain: https://cbsemock.org.in
+Implementation package: CBSE-PORTAL-SEO-UPDATED.zip
+Date: 06 November 2026
+
+COMPLETED IN THE SOURCE PACKAGE
+-------------------------------
+1. Audited and updated all 313 HTML pages.
+2. Added/standardised page titles, unique meta descriptions, canonical URLs,
+   robots directives, Open Graph metadata, Twitter card metadata, theme color,
+   page-specific JSON-LD and breadcrumb structured data.
+3. Replaced all occurrences of the YOUR-DOMAIN.com placeholder in site text
+   sources with the confirmed cbsemock.org.in domain.
+4. Added a visible H1 to pages that had no static H1, and corrected several
+   multi-H1 page structures where section headings were being marked as H1.
+5. Repaired missing document/head wrappers on two resource pages so their
+   metadata is validly placed in the document head.
+6. Added News & Updates to the homepage navigation, shared portal navigation,
+   Quest navigation and the News page itself.
+7. Updated the News page generator to preserve canonical, social metadata,
+   structured data and navigation after automated daily refreshes.
+8. Updated automated news search topics to focus on the 2026-27 session and
+   2027 board examinations.
+9. Added CNAME for cbsemock.org.in.
+10. Added robots.txt with a sitemap declaration.
+11. Rebuilt sitemap.xml recursively from canonical, indexable HTML pages.
+12. Marked two unlinked duplicate Physics XII resource builds noindex and
+    canonicalized them to the maintained resources/physics-xii.html page.
+13. Kept Google Analytics disabled, as selected.
+
+VALIDATION RESULTS
+------------------
+- HTML pages inspected: 313
+- Pages with title: 313
+- Pages with meta description: 313
+- Pages with canonical URL: 313
+- Pages with Open Graph title/description/URL/image: 313
+- Pages with Twitter card/title/description/image: 313
+- Pages with JSON-LD SEO structured data: 313
+- Pages with a static H1: 313
+- Remaining YOUR-DOMAIN.com placeholders in text sources: 0
+- Duplicate canonical tags: 0
+- JSON-LD parse errors in page metadata: 0
+- XML sitemap parse: passed
+- Sitemap canonical URLs: 311
+- noindex duplicate Physics pages excluded from sitemap: 2
+- News generator render smoke test: passed
+- Python automation syntax checks: passed
+- portal-shell.js syntax check: passed
+
+REMAINING ACCOUNT-OWNER ACTIONS
+-------------------------------
+The ZIP cannot change registrar DNS or GitHub repository settings. Complete
+these actions using SEO-DEPLOYMENT-GUIDE.txt:
+
+- Configure apex DNS A records and recommended AAAA records.
+- Optionally configure www as a CNAME to the GitHub Pages account host.
+- In GitHub Settings -> Pages, set cbsemock.org.in as the custom domain.
+- Wait for DNS verification and enable Enforce HTTPS.
+- Verify the site in Google Search Console and submit sitemap.xml.
+
+Google controls crawling, indexing and rankings. A sitemap submission or
+structured data does not guarantee indexing or a particular search position.

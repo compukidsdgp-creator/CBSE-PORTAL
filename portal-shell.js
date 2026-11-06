@@ -9,7 +9,7 @@
     const bar=document.createElement('nav');
     bar.className='portal-backbar';
     bar.setAttribute('aria-label','Portal navigation');
-    bar.innerHTML='<span class="portal-brand">CBSEMOCK</span><button type="button" id="portal-back">← Back</button><a href="'+homeUrl+'">⌂ Main Home</a>';
+    bar.innerHTML='<span class="portal-brand">CBSEMOCK</span><button type="button" id="portal-back">← Back</button><a href="'+homeUrl+'">⌂ Main Home</a><a href="'+new URL("news.html",rootUrl).href+'" aria-label="CBSE News and Updates">📰 News</a><a href="'+new URL("weekly-focus/weekly-focus-prod.html",rootUrl).href+'" aria-label="Weekly Focus">🎯 Weekly Focus</a>';
     body.insertBefore(bar,body.firstChild);
     bar.querySelector('#portal-back').addEventListener('click',function(){
       if(document.referrer && new URL(document.referrer).origin===location.origin && history.length>1) history.back();
