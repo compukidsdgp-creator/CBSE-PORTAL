@@ -101,7 +101,24 @@
 </script>
 <style>h1.hname{margin:0;}</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
+<style>
+/* ── VENDOR AD LAYOUT (injected) ── */
+.pp-layout{display:block}
+.pp-side{display:none}
+@media(min-width:1200px){
+  .pp-layout{display:grid;grid-template-columns:160px 1fr 160px;gap:0;align-items:start}
+  .pp-side{display:flex;flex-direction:column;gap:12px;padding:12px 8px;position:sticky;top:80px;max-height:calc(100vh - 90px);overflow-y:auto;scrollbar-width:none}
+  .pp-side::-webkit-scrollbar{display:none}
+  .pp-main{min-width:0}
+}
+.pp-side-left{background:#f8f9ff;border-right:1px solid #e8ecf4}
+.pp-side-right{background:#f8f9ff;border-left:1px solid #e8ecf4}
+.pp-leader{display:flex;justify-content:center;padding:10px 0}
+</style>
 </head><body>
+<!-- Vendor: Top Leaderboard -->
+<div class="pp-leader"><div id="ad-leader-top" style="width:100%;max-width:728px;"></div></div>
+
 <div style="position:fixed;top:12px;left:12px;z-index:9999;">
   <a href="index.html"
      style="display:inline-flex;align-items:center;gap:6px;background:#1a3a6b;color:#c9a227;
@@ -156,6 +173,13 @@ main{padding:20px max(20px,env(safe-area-inset-left,0px));max-width:980px;margin
 footer{text-align:center;padding:24px;font-size:.75rem;color:var(--sub);border-top:1px solid var(--border);margin-top:20px;}
 @media(max-width:500px){.opts{grid-template-columns:1fr;}.hname{font-size:1rem;}}
 </style>
+<div class="pp-layout">
+<div class="pp-side pp-side-left">
+  <div id="ad-left-1"></div>
+  <div id="ad-left-2"></div>
+  <div id="ad-left-3"></div>
+</div>
+<div class="pp-main">
 <header>
   <div class="hrow">
     <div class="htitle">
@@ -170,6 +194,16 @@ footer{text-align:center;padding:24px;font-size:.75rem;color:var(--sub);border-t
 </header>
 <div class="tabs" id="tabs"></div>
 <main id="main"></main>
+<!-- Vendor: Inline ads -->
+  <div id="ad-inline-1" style="display:flex;justify-content:center;padding:8px 0;"></div>
+  <div id="ad-inline-2" style="display:flex;justify-content:center;padding:8px 0;"></div>
+</div><!-- /pp-main -->
+<div class="pp-side pp-side-right">
+  <div id="ad-right-1"></div>
+  <div id="ad-right-2"></div>
+  <div id="ad-right-3"></div>
+</div>
+</div><!-- /pp-layout -->
 <footer>Chemistry (043) · Class XII · CBSE 2026-27 · Based on official SQP pattern</footer>
 <script>
 const SEC_A = [
@@ -295,6 +329,9 @@ function toggleTheme(){const r=document.documentElement;const cur=r.getAttribute
     'https://www.facebook.com/sharer/sharer.php?u=' + url;
 })();
 </script>
+
+<!-- Vendor: Bottom Leaderboard -->
+<div class="pp-leader"><div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div></div>
 
 <script src="ads.js"></script>
 <script src="portal-shell.js"></script>
