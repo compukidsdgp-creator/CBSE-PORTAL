@@ -5,6 +5,13 @@
   const body=document.body;
   if(!body)return;
 
+  // Inject portal-zones.css once if not already loaded
+  if(!document.querySelector('link[href*="portal-zones"]')){
+    const lnk=document.createElement('link');
+    lnk.rel='stylesheet';lnk.href=new URL('portal-zones.css',rootUrl).href;
+    document.head.appendChild(lnk);
+  }
+
   if(!document.querySelector('.portal-backbar')){
     const bar=document.createElement('nav');
     bar.className='portal-backbar';
