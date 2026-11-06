@@ -1771,7 +1771,7 @@ function renderBadgesRow(){const gs=getGS();const earned=gs.badges||[];['badgeRo
 function showNameModal(){document.getElementById('nameModal').classList.add('open')}
 function saveName(){const n=document.getElementById('nameInput').value.trim();if(!n)return;const gs=getGS();gs.name=n;saveGS(gs);document.getElementById('navUser').textContent='👤 '+n;document.getElementById('nameModal').classList.remove('open');showToast('Welcome, '+n+'! 🎉')}
 
-const MAP={home:'sec-home',m1:'sec-m1',m2:'sec-m2',m3:'sec-m3',m4:'sec-m4',ma1:'sec-ma1',ma2:'sec-ma2',ma3:'sec-ma3',ma4:'sec-ma4',ma5:'sec-ma5',pp:'sec-pp',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',sim:'sec-sim',dash:'sec-dash'};
+const MAP={home:'sec-home',m1:'sec-m1',m2:'sec-m2',m3:'sec-m3',m4:'sec-m4',ma1:'sec-ma1',ma2:'sec-ma2',ma3:'sec-ma3',ma4:'sec-ma4',ma5:'sec-ma5',pp:'sec-pp',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',sim:'sec-sim',exam:'sec-sim',dash:'sec-dash'};
 let curKey="home";
 const ALL_SECS=Object.values(MAP);
 const TOPIC_LABELS={m1:'Micro: Introduction',m2:'Consumer Behaviour',m3:'Production & Costs',m4:'Market Forms',ma1:'National Income',ma2:'Money & Banking',ma3:'Income Determination',ma4:'Govt Budget',ma5:'Balance of Payments'};
