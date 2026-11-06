@@ -313,6 +313,7 @@ footer strong{color:var(--text);}
     <a class="nav-chip" href="virtual-labs/index.html">Virtual LAB</a>
     <a class="nav-chip" href="quest/index.html">Monthly Quest</a>
     <a class="nav-chip" href="weekly-focus/">Weekly Focus</a>
+    <a class="nav-chip" href="news.html">📰 News &amp; Updates</a>
   </div>
 </nav>
 
@@ -1453,7 +1454,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   }, {passive:true});
   if(strip.scrollWidth > strip.clientWidth + 10){
     setTimeout(function(){
-      strip.scrollTo({left:220, behavior:'smooth'});
+      strip.scrollTo({left:strip.scrollWidth, behavior:'smooth'});
       setTimeout(function(){
         strip.scrollTo({left:0, behavior:'smooth'});
       }, 1800);

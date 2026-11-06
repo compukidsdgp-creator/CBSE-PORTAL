@@ -513,7 +513,7 @@ loadPaper(0);
     // One-time bounce nudge: scroll right 80px then back
     if(row.scrollWidth > row.clientWidth + 10){
       setTimeout(function(){
-        row.scrollTo({left:220, behavior:'smooth'});
+        row.scrollTo({left:row.scrollWidth, behavior:'smooth'});
         setTimeout(function(){
           row.scrollTo({left:0, behavior:'smooth'});
         }, 1800);
