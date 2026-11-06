@@ -1543,10 +1543,10 @@ function showPP(n,btn){document.querySelectorAll('.pp-content').forEach(d=>d.cla
     // One-time bounce nudge: scroll right 80px then back
     if(row.scrollWidth > row.clientWidth + 10){
       setTimeout(function(){
-        row.scrollTo({left:80, behavior:'smooth'});
+        row.scrollTo({left:220, behavior:'smooth'});
         setTimeout(function(){
           row.scrollTo({left:0, behavior:'smooth'});
-        }, 700);
+        }, 1800);
       }, 800);
     }
   }
