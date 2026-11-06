@@ -45,13 +45,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
+      - name: Refresh Weekly Focus SEO from current lesson
+        run: python3 update_weekly_focus_seo.py
       - name: Regenerate sitemap.xml
         run: python3 gen_sitemap.py
       - name: Commit sitemap.xml
         run: |
           git config user.name  "cbse-bot"
           git config user.email "bot@cbsemock.org.in"
-          git add sitemap.xml
+          git add sitemap.xml weekly-focus/weekly-focus-prod.html
           git diff --cached --quiet || git commit -m "chore: sitemap update $(date -u +%Y-%m-%d)" && git push
 
   # ── 3. Auto-stats update ─────────────────────────────────────────────────────

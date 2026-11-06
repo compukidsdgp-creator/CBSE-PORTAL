@@ -1,0 +1,63 @@
+CBSEMOCK SEO + CUSTOM DOMAIN DEPLOYMENT
+=======================================
+
+Primary domain
+--------------
+https://cbsemock.org.in
+The root/apex domain is the preferred canonical host. All generated canonical
+URLs, Open Graph URLs and sitemap URLs use HTTPS on this domain.
+
+Files added/updated
+-------------------
+- CNAME: binds the GitHub Pages site to cbsemock.org.in.
+- robots.txt: permits crawling of public pages and points crawlers to sitemap.xml.
+- sitemap.xml: generated from public, indexable HTML pages recursively.
+- gen_sitemap.py: skips pages marked noindex and backup/draft files.
+- All HTML pages: unique canonical URLs, descriptions, title/social metadata,
+  robots directives, theme color and JSON-LD page/breadcrumb structured data.
+- News & Updates: linked from the homepage and shared page navigation; the
+  generated daily news page keeps its SEO metadata and navigation.
+- fetch_news.py: updated to search for 2026/2027 CBSE updates so scheduled news
+  refreshes do not continue querying only 2025 topics.
+
+GitHub Pages / DNS actions (account-owner action required)
+----------------------------------------------------------
+1. In the domain registrar DNS panel, create these apex A records:
+   @  A  185.199.108.153
+   @  A  185.199.109.153
+   @  A  185.199.110.153
+   @  A  185.199.111.153
+
+2. Recommended IPv6 AAAA records for the apex:
+   @  AAAA  2606:50c0:8000::153
+   @  AAAA  2606:50c0:8001::153
+   @  AAAA  2606:50c0:8002::153
+   @  AAAA  2606:50c0:8003::153
+
+3. Optional www alias:
+   www  CNAME  compukidsdgp-creator.github.io
+   Confirm the GitHub Pages owner/target in repository settings before saving
+   if the repository owner or Pages setup changes.
+
+4. In GitHub repository Settings -> Pages, set the custom domain to
+   cbsemock.org.in. Wait for DNS verification, then enable Enforce HTTPS.
+   Keep the CNAME file in the published repository root.
+
+5. In Google Search Console, add https://cbsemock.org.in/ as a Domain or URL
+   prefix property, complete the requested verification, and submit:
+   https://cbsemock.org.in/sitemap.xml
+
+6. Request indexing for the homepage, News page and priority subject landing
+   pages. Google controls crawl timing and indexing; sitemap submission does
+   not guarantee inclusion or ranking.
+
+Analytics
+---------
+Google Analytics remains intentionally unconfigured, per the selected plan.
+No GA4 measurement ID or tracking code has been activated.
+
+Important
+---------
+DNS and GitHub Pages settings cannot be changed by a repository ZIP. The
+CNAME/robots/sitemap and source changes are prepared in this package, but the
+domain will become live only after the account-owner DNS and Pages steps above.

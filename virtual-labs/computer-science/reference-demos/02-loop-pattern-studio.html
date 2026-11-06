@@ -1,6 +1,83 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CBSEMOCK | Loop Pattern Studio</title><style>
 :root{--bg:#070d1c;--panel:#101a30;--panel2:#14213b;--line:#263957;--text:#eef5ff;--muted:#9db0ca;--cyan:#43d9f5;--violet:#a78bfa;--green:#4ade80;--amber:#fbbf24;--pink:#fb7185}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#16284c 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,Segoe UI,sans-serif}.shell{max-width:1240px;margin:auto;padding:24px}.top,.head,.row,.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.08em}.mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--violet));color:#07101e}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.16em}.pill,.tag{border:1px solid var(--line);border-radius:999px;padding:5px 10px;color:#b8c9e2;font-size:11px}.head{margin:30px 0 20px;align-items:flex-end}.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}h1{font-size:clamp(30px,5vw,48px);line-height:1.05;margin:8px 0}h2{font-size:17px;margin:0 0 12px}.sub,.muted{color:var(--muted)}.layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(270px,.8fr);gap:18px}.panel{background:linear-gradient(155deg,#121e35,#0c1528);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 18px 60px #0003}.workarea{background:radial-gradient(ellipse at center,#172a4a,#091326 72%);border:1px solid #294668;border-radius:16px;min-height:330px;padding:16px;overflow:hidden}.workhead{display:flex;justify-content:space-between;color:#b9cde8;font-size:12px;margin-bottom:14px}.stage{min-height:250px;display:grid;place-items:center}.status{margin-top:10px;padding:10px 12px;border-radius:10px;background:#14243d;color:#c6d8ef;font-size:13px}.btn,select,input,textarea{font:inherit}.btn{background:#172843;border:1px solid #365071;color:var(--text);padding:9px 13px;border-radius:10px;cursor:pointer}.btn:hover,.btn.active{border-color:var(--cyan);background:#15364a}.primary{background:linear-gradient(100deg,#087f9b,#5b43b5);border:0}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.control{margin:14px 0;padding:12px;border:1px solid var(--line);border-radius:12px;background:#0b1528}.control label{display:flex;justify-content:space-between;margin-bottom:7px;font-size:13px}.range{width:100%;accent-color:var(--cyan)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card{background:#0b162a;border:1px solid var(--line);border-radius:14px;padding:14px}.output{background:#050b16;border:1px solid #233b59;border-radius:12px;padding:14px;min-height:74px;color:#b7f7d1;font-family:ui-monospace,monospace;white-space:pre-wrap;overflow:auto}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{padding:9px;border-bottom:1px solid #263957;text-align:center}.table th{color:#9db0ca}.table tr.active{background:#153c50;color:#fff;box-shadow:inset 3px 0 var(--cyan)}.tagrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.palette{display:flex;gap:8px;flex-wrap:wrap}.gate{cursor:grab;user-select:none;border:1px solid #466184;background:#172943;border-radius:12px;padding:10px 14px;font-weight:800;color:#d9eaff}.gate:active{cursor:grabbing}.dropzone{border:2px dashed #426184;border-radius:16px;min-height:118px;display:grid;place-items:center;padding:14px;text-align:center;background:#0a1629}.dropzone.over{border-color:var(--cyan);background:#12334a}.gateShape{display:inline-grid;place-items:center;min-width:110px;padding:18px 22px;background:linear-gradient(135deg,#183e5c,#34285c);border:2px solid var(--cyan);border-radius:45% 14px 14px 45%;font-size:20px;font-weight:900;box-shadow:0 0 30px #43d9f533}.bit{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#132944;border:1px solid #355274;font-weight:900}.bit.on{background:#12543d;border-color:var(--green);color:#b8ffd4}.wire{height:3px;background:linear-gradient(90deg,var(--cyan),var(--violet));flex:1;position:relative;min-width:30px}.wire:after{content:'';position:absolute;right:0;top:-4px;border:5px solid transparent;border-left-color:var(--violet)}.circuit{display:flex;align-items:center;gap:12px;width:min(100%,650px);padding:18px;background:#0a1426;border:1px solid #294362;border-radius:16px}.inputs{display:grid;gap:9px}.inputrow{display:flex;align-items:center;gap:8px}.small{font-size:12px;color:var(--muted)}.pattern{font:16px/1.65 ui-monospace,monospace;color:#a7f3d0}.listcell{display:inline-grid;gap:4px;text-align:center;margin:5px}.listcell b{padding:12px 16px;border:1px solid #3b6085;border-radius:10px;background:#17304c;min-width:48px}.listcell small{color:#8fa8c8}.listcell.active b{border-color:var(--amber);background:#4a3515;color:#fff}.steps{display:grid;gap:9px}.step{padding:10px;border:1px solid var(--line);border-radius:10px;color:#b5c7df;font-size:13px}.step.active{border-color:var(--cyan);background:#12334a}.footer{text-align:center;color:#6f86a6;font-size:11px;padding:24px}@media(max-width:850px){.layout{grid-template-columns:1fr}.head{align-items:flex-start;flex-direction:column}.shell{padding:14px}.panel{padding:15px}}@media(prefers-reduced-motion:no-preference){.pulse{animation:pulse 1.8s infinite}.flowdot{animation:travel 2.8s linear infinite}@keyframes pulse{50%{filter:drop-shadow(0 0 12px #43d9f5)}}@keyframes travel{0%{transform:translateX(0)}100%{transform:translateX(180px)}}}
-</style></head><body><main class="shell"><div class="top"><div class="brand"><span class="mark">C</span><span>CBSEMOCK<small>INTERACTIVE VIRTUAL LABS · V7</small></span></div><span class="pill">CLASS XI · PYTHON</span></div><header class="head"><div><div class="eyebrow">Reference experiment 02 · Iteration</div><h1>Loop Pattern Studio</h1><p class="sub">Change loop limits, generate patterns and trace each iteration.</p></div><span class="pill">ITERATE · TRACE · GENERATE</span></header><div class="layout"><section class="panel"><h2>01 / Configure your loop</h2><div class="workarea"><div class="workhead"><b>Animated iteration engine · main learning area</b><span id="state">READY</span></div><div class="stage"><svg viewBox="0 0 720 245" width="100%" role="img" aria-label="Loop cycle showing initialise, condition, body, update and repeat"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="#43d9f5"/></marker></defs><path d="M160 78H550Q610 78 610 125Q610 172 550 172H160Q100 172 100 125Q100 78 160 78" fill="none" stroke="#315578" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arr)"/><g fill="#142c49" stroke="#43d9f5" stroke-width="2"><rect x="34" y="98" width="112" height="54" rx="12"/><rect x="178" y="98" width="112" height="54" rx="12"/><rect x="322" y="98" width="112" height="54" rx="12"/><rect x="466" y="98" width="112" height="54" rx="12"/></g><g fill="#e8f4ff" font-size="15" text-anchor="middle" font-weight="700"><text x="90" y="130">INIT</text><text x="234" y="130">TEST</text><text x="378" y="130">BODY</text><text x="522" y="130">UPDATE</text></g><circle id="runner" cx="90" cy="78" r="9" fill="#fbbf24"><animateMotion dur="6s" repeatCount="indefinite" path="M0 0H460Q520 0 520 47Q520 94 460 94H0Q-60 94 -60 47Q-60 0 0 0"/></circle><text x="360" y="222" text-anchor="middle" fill="#9db0ca" font-size="12">Condition true → execute body → update variable → test again</text></svg></div><div class="status" id="trace">The loop is ready. Change the controls and run the simulation.</div></div><div class="grid2"><div class="control"><label><span>Number of rows / iterations</span><strong id="nVal">5</strong></label><input class="range" id="n" type="range" min="1" max="12" value="5"></div><div class="control"><label><span>Start value</span><strong id="startVal">1</strong></label><input class="range" id="start" type="range" min="0" max="5" value="1"></div></div><div class="grid2"><div class="control"><label><span>Step size</span><strong id="stepVal">1</strong></label><input class="range" id="step" type="range" min="1" max="3" value="1"></div><div class="control"><label><span>Pattern type</span></label><select id="pattern" class="btn" style="width:100%"><option value="triangle">Star triangle</option><option value="inverted">Inverted triangle</option><option value="number">Number triangle</option><option value="pyramid">Star pyramid</option><option value="multiplication">Multiplication table</option></select></div></div><div class="controls"><button class="btn primary" id="run">▶ Run loop</button><button class="btn" id="next">Next iteration →</button><button class="btn" id="reset">↻ Reset</button></div><h2>02 / Generated output</h2><div class="output pattern" id="output">*
+</style><link rel="canonical" href="https://cbsemock.org.in/virtual-labs/computer-science/reference-demos/02-loop-pattern-studio.html">
+<meta name="description" content="Adjust loop counters and limits, trace iterations and generate Python pattern outputs in this interactive Computer Science reference lab.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="CBSE Board Exam Hub">
+<meta name="keywords" content="CBSE, CBSE board exam preparation, CBSEMOCK, Loop, Pattern, Studio, mock tests, practice papers">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CBSE Board Exam Hub">
+<meta property="og:url" content="https://cbsemock.org.in/virtual-labs/computer-science/reference-demos/02-loop-pattern-studio.html">
+<meta property="og:title" content="CBSEMOCK | Loop Pattern Studio">
+<meta property="og:description" content="Adjust loop counters and limits, trace iterations and generate Python pattern outputs in this interactive Computer Science reference lab.">
+<meta property="og:image" content="https://cbsemock.org.in/og-image.jpg">
+<meta property="og:image:alt" content="CBSE Board Exam Hub — CBSE study resources and mock tests">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CBSEMOCK | Loop Pattern Studio">
+<meta name="twitter:description" content="Adjust loop counters and limits, trace iterations and generate Python pattern outputs in this interactive Computer Science reference lab.">
+<meta name="twitter:image" content="https://cbsemock.org.in/og-image.jpg">
+<meta name="theme-color" content="#17345f">
+<!-- CBSEMOCK SEO STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "CBSEMOCK | Loop Pattern Studio",
+  "description": "Adjust loop counters and limits, trace iterations and generate Python pattern outputs in this interactive Computer Science reference lab.",
+  "url": "https://cbsemock.org.in/virtual-labs/computer-science/reference-demos/02-loop-pattern-studio.html",
+  "inLanguage": "en-IN",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "CBSE Board Exam Hub",
+    "url": "https://cbsemock.org.in/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CBSE Board Exam Hub",
+    "url": "https://cbsemock.org.in/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://cbsemock.org.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Virtual Labs",
+      "item": "https://cbsemock.org.in/virtual-labs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Computer Science",
+      "item": "https://cbsemock.org.in/virtual-labs/computer-science/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Reference Demos",
+      "item": "https://cbsemock.org.in/virtual-labs/computer-science/reference-demos/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "CBSEMOCK | Loop Pattern Studio",
+      "item": "https://cbsemock.org.in/virtual-labs/computer-science/reference-demos/02-loop-pattern-studio.html"
+    }
+  ]
+}
+</script>
+</head><body><main class="shell"><div class="top"><div class="brand"><span class="mark">C</span><span>CBSEMOCK<small>INTERACTIVE VIRTUAL LABS · V7</small></span></div><span class="pill">CLASS XI · PYTHON</span></div><header class="head"><div><div class="eyebrow">Reference experiment 02 · Iteration</div><h1>Loop Pattern Studio</h1><p class="sub">Change loop limits, generate patterns and trace each iteration.</p></div><span class="pill">ITERATE · TRACE · GENERATE</span></header><div class="layout"><section class="panel"><h2>01 / Configure your loop</h2><div class="workarea"><div class="workhead"><b>Animated iteration engine · main learning area</b><span id="state">READY</span></div><div class="stage"><svg viewBox="0 0 720 245" width="100%" role="img" aria-label="Loop cycle showing initialise, condition, body, update and repeat"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="#43d9f5"/></marker></defs><path d="M160 78H550Q610 78 610 125Q610 172 550 172H160Q100 172 100 125Q100 78 160 78" fill="none" stroke="#315578" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arr)"/><g fill="#142c49" stroke="#43d9f5" stroke-width="2"><rect x="34" y="98" width="112" height="54" rx="12"/><rect x="178" y="98" width="112" height="54" rx="12"/><rect x="322" y="98" width="112" height="54" rx="12"/><rect x="466" y="98" width="112" height="54" rx="12"/></g><g fill="#e8f4ff" font-size="15" text-anchor="middle" font-weight="700"><text x="90" y="130">INIT</text><text x="234" y="130">TEST</text><text x="378" y="130">BODY</text><text x="522" y="130">UPDATE</text></g><circle id="runner" cx="90" cy="78" r="9" fill="#fbbf24"><animateMotion dur="6s" repeatCount="indefinite" path="M0 0H460Q520 0 520 47Q520 94 460 94H0Q-60 94 -60 47Q-60 0 0 0"/></circle><text x="360" y="222" text-anchor="middle" fill="#9db0ca" font-size="12">Condition true → execute body → update variable → test again</text></svg></div><div class="status" id="trace">The loop is ready. Change the controls and run the simulation.</div></div><div class="grid2"><div class="control"><label><span>Number of rows / iterations</span><strong id="nVal">5</strong></label><input class="range" id="n" type="range" min="1" max="12" value="5"></div><div class="control"><label><span>Start value</span><strong id="startVal">1</strong></label><input class="range" id="start" type="range" min="0" max="5" value="1"></div></div><div class="grid2"><div class="control"><label><span>Step size</span><strong id="stepVal">1</strong></label><input class="range" id="step" type="range" min="1" max="3" value="1"></div><div class="control"><label><span>Pattern type</span></label><select id="pattern" class="btn" style="width:100%"><option value="triangle">Star triangle</option><option value="inverted">Inverted triangle</option><option value="number">Number triangle</option><option value="pyramid">Star pyramid</option><option value="multiplication">Multiplication table</option></select></div></div><div class="controls"><button class="btn primary" id="run">▶ Run loop</button><button class="btn" id="next">Next iteration →</button><button class="btn" id="reset">↻ Reset</button></div><h2>02 / Generated output</h2><div class="output pattern" id="output">*
 * *
 * * *
 * * * *

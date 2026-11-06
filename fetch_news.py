@@ -27,11 +27,11 @@ from datetime import datetime, timezone
 
 # ── Config ────────────────────────────────────────────────────────────────────
 QUERIES = [
-    "CBSE board exam 2025",
-    "CBSE date sheet 2025",
-    "CBSE syllabus reduced",
-    "CBSE result Class 10 12",
-    "CBSE circular notification",
+    "CBSE board exam 2027",
+    "CBSE date sheet 2027",
+    "CBSE curriculum and syllabus 2026-27",
+    "CBSE Class 10 Class 12 result 2026",
+    "CBSE circular notification 2026",
 ]
 MAX_ITEMS = 15
 OUT_PATH = os.path.join(os.path.dirname(__file__), "news.html")
@@ -89,7 +89,23 @@ def build_html(items: list[dict]) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CBSE News & Updates</title>
+<title>CBSE News &amp; Updates 2026-27 | Board Exam Notifications</title>
+<meta name="description" content="Latest CBSE board exam news, official notifications, 2027 datesheet updates, syllabus announcements and education updates for Class 10 and Class 12 students.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://cbsemock.org.in/news.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CBSE Board Exam Hub">
+<meta property="og:title" content="CBSE News &amp; Updates 2026-27">
+<meta property="og:description" content="Latest CBSE board exam news, official notifications, datesheet updates and education announcements.">
+<meta property="og:url" content="https://cbsemock.org.in/news.html">
+<meta property="og:image" content="https://cbsemock.org.in/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CBSE News &amp; Updates 2026-27">
+<meta name="twitter:description" content="Latest CBSE board exam news and official notifications.">
+<meta name="twitter:image" content="https://cbsemock.org.in/og-image.jpg">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"CollectionPage","name":"CBSE News & Updates","description":"Latest CBSE board exam news, official notifications, datesheet updates and education announcements.","url":"https://cbsemock.org.in/news.html","isPartOf":{{"@type":"WebSite","name":"CBSE Board Exam Hub","url":"https://cbsemock.org.in/"}}}}
+</script>
 <style>
 :root{{
   --navy:#0d1b2a;--teal:#00b4d8;--gold:#c9a227;
@@ -102,12 +118,15 @@ def build_html(items: list[dict]) -> str:
 }}
 *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
 body{{background:var(--bg);color:var(--text);padding:0 16px 40px}}
+.news-nav{{display:flex;flex-wrap:wrap;gap:9px;align-items:center;padding:12px 16px;margin:0 -16px 18px;background:#142b4f;border-bottom:2px solid var(--gold)}}
+.news-nav a{{color:#fff;text-decoration:none;font-size:.84rem;font-weight:650;padding:7px 11px;border-radius:7px}}
+.news-nav a:hover,.news-nav a[aria-current="page"]{{background:#c9a227;color:#142b4f}}
 .news-header{{
   background:var(--navy);color:#fff;padding:18px 20px;
   border-radius:0 0 12px 12px;margin-bottom:24px;
   display:flex;align-items:center;gap:12px;
 }}
-.news-header h2{{font-size:1.1rem;flex:1}}
+.news-header h1{{font-size:1.1rem;flex:1}}
 .news-updated{{font-size:.72rem;color:#94a3b8}}
 .news-item{{
   background:var(--card);border:1px solid var(--border);
@@ -126,9 +145,16 @@ body{{background:var(--bg);color:var(--text);padding:0 16px 40px}}
 </style>
 </head>
 <body>
+<nav class="news-nav" aria-label="Main navigation">
+  <a href="/">⌂ Home</a>
+  <a href="/news.html" aria-current="page">📰 News &amp; Updates</a>
+  <a href="/mock-zone/">Mock Zone</a>
+  <a href="/study-zone/">Study Zone</a>
+  <a href="/virtual-labs/">Virtual Labs</a>
+</nav>
 <div class="news-header">
   <div>
-    <h2>📰 CBSE News &amp; Updates</h2>
+    <h1>📰 CBSE News &amp; Updates</h1>
     <div class="news-updated">Auto-updated: {now} · {count} items</div>
   </div>
 </div>

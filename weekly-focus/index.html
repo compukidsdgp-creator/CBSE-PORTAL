@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Focus: Le Chatelier&#x27;s Principle — Why Equilibrium Always Fights Back | Class 12 Chemistry | CBSEMock</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,500;0,600;1,500&display=swap">
+<style>
+:root{--bg:#f0eff5;--bg2:#ffffff;--bg3:#e8e7f0;--fg:#18172a;--fg2:#4a4866;--fg3:#9896b8;--border:#dddbe8;--accent:#5b3fdb;--accent2:#e8450a;--accent3:#0a9b6e;--accent-bg:#f0eeff;--gold:#d4820a;--gold-bg:#fef6e4;--r:16px;--shadow:0 2px 16px #18172a0d,0 1px 4px #18172a08;}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#100f1e;--bg2:#1a1930;--bg3:#221f38;--fg:#eceaf8;--fg2:#a09ec8;--fg3:#5a5880;--border:#2e2b4a;--accent:#8b72f5;--accent2:#f06535;--accent3:#2bd4a0;--accent-bg:#1e1a3a;--gold:#f0a830;--gold-bg:#2a2010;--shadow:0 2px 16px #0006,0 1px 4px #0004;color-scheme:dark;}}
+:root[data-theme="dark"]{--bg:#100f1e;--bg2:#1a1930;--bg3:#221f38;--fg:#eceaf8;--fg2:#a09ec8;--fg3:#5a5880;--border:#2e2b4a;--accent:#8b72f5;--accent2:#f06535;--accent3:#2bd4a0;--accent-bg:#1e1a3a;--gold:#f0a830;--gold-bg:#2a2010;--shadow:0 2px 16px #0006,0 1px 4px #0004;color-scheme:dark;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Outfit',sans-serif;font-size:15px;line-height:1.65;padding:0 16px 60px;}
+.topnav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border);}
+.topnav .brand{font-size:13px;font-weight:800;color:var(--fg3);letter-spacing:.5px}
+.week-pill{background:var(--accent);color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:20px;text-transform:uppercase;}
+.progress-wrap{margin:0 -16px;background:var(--bg3);height:5px;}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .4s ease;}
+.hero{background:linear-gradient(135deg,#2d1f7a 0%,#4c35c8 50%,#7b2fb5 100%);margin:0 -16px;padding:48px 24px 56px;position:relative;overflow:hidden;color:#fff;}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 90% 0%,#ffffff15 0%,transparent 55%),radial-gradient(ellipse at 10% 100%,#9b6fff22 0%,transparent 50%);pointer-events:none;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:#ffffff18;border:1px solid #ffffff28;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:700;letter-spacing:.5px;color:#cfc8ff;margin-bottom:20px;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(1.5rem,5vw,2.3rem);font-weight:600;line-height:1.2;margin-bottom:14px;position:relative;z-index:1;}
+.hero-hook{font-size:clamp(13px,2vw,15px);color:#c8c0f8;line-height:1.6;max-width:580px;margin-bottom:24px;position:relative;z-index:1;}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:1;}
+.hchip{background:#ffffff15;border:1px solid #ffffff25;border-radius:20px;padding:5px 14px;font-size:12px;font-weight:600;color:#e0dcff;}
+.hero-art{position:absolute;right:24px;top:50%;transform:translateY(-50%);font-size:clamp(60px,12vw,110px);opacity:.12;line-height:1;z-index:0;}
+.sections{max-width:720px;margin:0 auto;padding-top:32px;}
+.section-block{margin-bottom:12px;}
+.section-trigger{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:border-color .2s,box-shadow .2s;box-shadow:var(--shadow);text-align:left;}
+.section-trigger:hover{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg)}
+.section-trigger.done{border-color:var(--accent3)}
+.section-trigger.active{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg);border-radius:var(--r) var(--r) 0 0;margin-bottom:0;}
+.step-num{width:36px;height:36px;border-radius:50%;flex-shrink:0;background:var(--bg3);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--fg3);transition:.2s;}
+.section-trigger.active .step-num,.section-trigger.done .step-num{background:var(--accent);border-color:var(--accent);color:#fff;}
+.section-trigger.done .step-num{background:var(--accent3);border-color:var(--accent3);}
+.step-label{flex:1;min-width:0;}
+.step-title{font-size:14px;font-weight:700;color:var(--fg)}
+.step-sub{font-size:12px;color:var(--fg3);margin-top:1px}
+.step-arrow{font-size:18px;color:var(--fg3);transition:transform .25s;flex-shrink:0}
+.section-trigger.active .step-arrow{transform:rotate(90deg);color:var(--accent)}
+.section-trigger.done .step-arrow{color:var(--accent3)}
+.section-body{background:var(--bg2);border:1px solid var(--accent);border-top:none;border-radius:0 0 var(--r) var(--r);padding:0 20px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s;}
+.section-body.open{max-height:1400px;padding:20px 20px 24px;}
+.hook-card{background:linear-gradient(135deg,var(--gold-bg),var(--bg3));border:1px solid var(--gold);border-radius:12px;padding:18px;margin-bottom:16px;display:flex;gap:12px;align-items:flex-start;}
+.hook-icon{font-size:28px;flex-shrink:0;margin-top:2px}
+.hook-text{font-size:14px;color:var(--fg);line-height:1.6}
+.hook-text b{color:var(--gold)}
+.bridge-text{font-size:14px;color:var(--fg2);margin-bottom:12px;line-height:1.7}
+.punchline{font-size:14px;font-weight:700;color:var(--fg)}
+.analogy{background:var(--accent-bg);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 18px;margin:16px 0;}
+.analogy .a-label{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.analogy p{font-size:14px;color:var(--fg2);line-height:1.6}
+.principle-text{font-size:14px;color:var(--fg);margin:14px 0;line-height:1.6}
+.reveal-prompt{font-size:13px;font-weight:700;color:var(--fg);margin-bottom:8px}
+.reveal-row{margin:8px 0;}
+.reveal-btn{width:100%;background:var(--bg3);border:1px dashed var(--border);border-radius:10px;padding:12px 16px;cursor:pointer;font-size:13px;font-weight:600;color:var(--fg2);display:flex;justify-content:space-between;align-items:center;transition:.15s;text-align:left;}
+.reveal-btn:hover{border-color:var(--accent);color:var(--accent)}
+.reveal-content{display:none;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;font-size:13px;color:var(--fg2);line-height:1.65;}
+.reveal-content.show{display:block}
+.kp-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.kp-item{display:flex;gap:10px;align-items:flex-start;background:var(--bg3);border-radius:10px;padding:11px 14px;}
+.kp-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px}
+.kp-text{font-size:13px;color:var(--fg);line-height:1.55}
+.exam-card{background:linear-gradient(135deg,#2d1f7a18,#4c35c818);border:1px solid var(--accent);border-radius:12px;padding:16px 18px;margin-top:14px;}
+.exam-label{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.exam-items{display:flex;flex-direction:column;gap:7px}
+.exam-row{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--fg2)}
+.exam-mark{background:var(--accent);color:#fff;border-radius:4px;padding:1px 7px;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px}
+.quiz-wrap{padding-top:4px}
+.q-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.q-num{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--fg3)}
+.q-score{font-size:13px;font-weight:700;color:var(--accent)}
+.q-text{font-size:14px;font-weight:600;color:var(--fg);line-height:1.5;margin-bottom:12px}
+.q-opts{display:flex;flex-direction:column;gap:7px}
+.q-opt{background:var(--bg3);border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--fg2);cursor:pointer;transition:.15s;text-align:left;display:flex;gap:10px;align-items:center;width:100%;}
+.q-opt:hover:not(:disabled){border-color:var(--accent);background:var(--accent-bg);color:var(--fg)}
+.q-opt.correct{border-color:var(--accent3);background:#0a9b6e18;color:var(--fg)}
+.q-opt.wrong{border-color:var(--accent2);background:#e8450a18;color:var(--fg)}
+.q-opt:disabled{cursor:default}
+.opt-letter{width:22px;height:22px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;color:var(--fg3)}
+.q-opt.correct .opt-letter{background:var(--accent3);color:#fff}
+.q-opt.wrong .opt-letter{background:var(--accent2);color:#fff}
+.q-explain{background:var(--bg3);border-radius:10px;padding:12px 14px;font-size:12px;color:var(--fg2);line-height:1.6;margin-top:8px;display:none;}
+.q-explain.show{display:block}
+.quiz-result{text-align:center;padding:24px 16px;display:none;}
+.quiz-result.show{display:block}
+.result-score{font-size:clamp(2rem,8vw,3rem);font-weight:900;color:var(--accent);line-height:1}
+.result-msg{font-size:14px;color:var(--fg2);margin-top:8px}
+.retry-btn{margin-top:16px;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:11px 24px;font-size:13px;font-weight:800;cursor:pointer;}
+.memory-intro{font-size:13px;color:var(--fg2);margin-bottom:14px;line-height:1.55}
+.flip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.flip-card{perspective:600px;cursor:pointer;height:80px}
+.flip-inner{position:relative;width:100%;height:100%;transition:transform .4s;transform-style:preserve-3d;}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-face{position:absolute;inset:0;border-radius:10px;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;padding:8px;text-align:center;font-size:12px;line-height:1.4;}
+.flip-front{background:var(--accent);color:#fff;font-weight:800;font-size:13px;}
+.flip-back{background:var(--bg3);border:1px solid var(--border);color:var(--fg);transform:rotateY(180deg);font-weight:600;}
+.btn-next{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:10px 20px;font-size:13px;font-weight:700;cursor:pointer;margin-top:16px;}
+.bottom-strip{max-width:720px;margin:28px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:500px){.bottom-strip{grid-template-columns:1fr}}
+.strip-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);}
+.strip-card h4{font-size:13px;font-weight:800;color:var(--fg);margin-bottom:12px}
+.arc-row{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border)}
+.arc-row:last-child{border-bottom:none}
+.arc-icon{font-size:20px;flex-shrink:0}
+.arc-title{font-size:12px;font-weight:700;color:var(--fg);line-height:1.3}
+.arc-sub{font-size:11px;color:var(--fg3);margin-top:2px}
+.upcoming-row{display:flex;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px}
+.upcoming-row:last-child{border-bottom:none}
+.up-week{background:var(--bg3);border-radius:6px;padding:2px 7px;font-size:11px;font-weight:800;color:var(--fg3);flex-shrink:0}
+.up-text{color:var(--fg2)}
+.up-sub{font-weight:700;color:var(--accent)}
+.error-box{max-width:720px;margin:40px auto;background:var(--bg2);border:1px solid var(--accent2);border-radius:var(--r);padding:28px;text-align:center;}
+.error-box h2{color:var(--accent2);margin-bottom:8px}
+.error-box p{color:var(--fg2);font-size:14px}
+</style>
+<meta name="description" content="Study Le Chatelier&#x27;s Principle — Why Equilibrium Always Fights Back in this interactive CBSE Class 12 Chemistry Weekly Focus lesson. Explore clear explanations, key revision points, board-style questions and an interactive quiz.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://cbsemock.org.in/weekly-focus/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weekly Focus: Le Chatelier&#x27;s Principle — Why Equilibrium Always Fights Back | Class 12 Chemistry | CBSEMock">
+<meta property="og:description" content="Study Le Chatelier&#x27;s Principle — Why Equilibrium Always Fights Back in this interactive CBSE Class 12 Chemistry Weekly Focus lesson. Explore clear explanations, key revision points, board-style questions and an interactive quiz.">
+<meta property="og:url" content="https://cbsemock.org.in/weekly-focus/weekly-focus-prod.html">
+<meta property="og:site_name" content="CBSEMock">
+<meta property="og:image" content="https://cbsemock.org.in/og-image.jpg">
+<meta property="og:image:alt" content="CBSEMock Weekly Focus — interactive weekly board exam learning">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Weekly Focus: Le Chatelier&#x27;s Principle — Why Equilibrium Always Fights Back | Class 12 Chemistry | CBSEMock">
+<meta name="twitter:description" content="Study Le Chatelier&#x27;s Principle — Why Equilibrium Always Fights Back in this interactive CBSE Class 12 Chemistry Weekly Focus lesson. Explore clear explanations, key revision points, board-style questions and an interactive quiz.">
+<meta name="twitter:image" content="https://cbsemock.org.in/og-image.jpg">
+<meta name="theme-color" content="#5b3fdb">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cbsemock.org.in/weekly-focus/weekly-focus-prod.html#webpage",
+      "url": "https://cbsemock.org.in/weekly-focus/weekly-focus-prod.html",
+      "name": "Weekly Focus: Le Chatelier's Principle — Why Equilibrium Always Fights Back | Class 12 Chemistry | CBSEMock",
+      "description": "Study Le Chatelier's Principle — Why Equilibrium Always Fights Back in this interactive CBSE Class 12 Chemistry Weekly Focus lesson. Explore clear explanations, key revision points, board-style questions and an interactive quiz.",
+      "isPartOf": {
+        "@id": "https://cbsemock.org.in/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://cbsemock.org.in/weekly-focus/weekly-focus-prod.html#breadcrumb"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://cbsemock.org.in/weekly-focus/weekly-focus-prod.html#learning-resource",
+      "name": "CBSE Weekly Focus",
+      "description": "Study Le Chatelier's Principle — Why Equilibrium Always Fights Back in this interactive CBSE Class 12 Chemistry Weekly Focus lesson. Explore clear explanations, key revision points, board-style questions and an interactive quiz.",
+      "learningResourceType": [
+        "Interactive lesson",
+        "Revision resource",
+        "Practice quiz"
+      ],
+      "educationalLevel": [
+        "Secondary education",
+        "Senior secondary education"
+      ],
+      "inLanguage": "en-IN",
+      "isAccessibleForFree": true,
+      "provider": {
+        "@type": "Organization",
+        "name": "CBSEMock",
+        "url": "https://cbsemock.org.in/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://cbsemock.org.in/weekly-focus/weekly-focus-prod.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cbsemock.org.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Weekly Focus",
+          "item": "https://cbsemock.org.in/weekly-focus/weekly-focus-prod.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+<div class="topnav">
+  <span class="brand">CBSEMOCK &middot; WEEKLY FOCUS</span>
+  <a href="../index.html" aria-label="Return to CBSEMock home">⌂ Main Home</a>
+  <span class="week-pill" id="weekPill">Loading...</span>
+</div>
+<div class="progress-wrap"><div class="progress-bar" id="progBar"></div></div>
+<noscript><main class="seo-fallback"><h1>CBSE Weekly Focus: Le Chatelier&#x27;s Principle — Why Equilibrium Always Fights Back</h1><p>Why does a fizzy drink go flat faster on a hot day? The answer is one of the most powerful ideas in Chemistry — and it shows up in your board exam every single year.</p><p>This week's focus is Class 12 Chemistry, Chapter 7. The lesson includes concept explanations, exam-focused revision points, board-style questions and an interactive quiz.</p></main></noscript>
+<div id="heroSection"></div>
+<div class="sections" id="sectionsWrap"></div>
+<div class="bottom-strip" id="bottomStrip"></div>
+
+<script>
+/* ======================================================
+   WEEKLY CONTENT — edit this object each week
+   OR keep weekly-focus.json beside this file (GitHub Pages)
+   ====================================================== */
+var INLINE_DATA = {"meta":{"week":45,"month":"Nov 2026","subject":"Chemistry","class":"Class 12","chapter":"Chapter 7","emoji":"⚗️","read_time":"8 min interactive read","stats":"3 concepts · 4 quiz questions"},"hero":{"title":"Le Chatelier's Principle — Why Equilibrium Always Fights Back","hook":"Why does a fizzy drink go flat faster on a hot day? The answer is one of the most powerful ideas in Chemistry — and it shows up in your board exam every single year."},"hook_section":{"scenario_icon":"🥤","scenario":"You open two identical cans of cola. One is ice-cold, one is warm from your bag. The warm one fizzes violently and goes flat in minutes. The cold one stays bubbly for much longer. Why? Both cans had the same amount of CO2 under the same pressure. What is temperature doing to those bubbles?","bridge":"This isn't just a fizzy drink puzzle. The same principle explains why car engines knock, why fertiliser factories use specific pressures, and why our blood carries oxygen the way it does.","punchline":"It all comes down to one rule: a system at equilibrium will always resist change."},"concept_section":{"analogy_icon":"🎯","analogy":"Imagine a tug-of-war match where both teams are perfectly balanced — nobody moves. That's chemical equilibrium. Now push one team forward. What do they do? They pull harder to get back to balance. Le Chatelier's Principle is exactly that push-and-pull.","principle":"Le Chatelier's Principle: If a system at equilibrium is subjected to a change in concentration, temperature, or pressure, the equilibrium shifts in the direction that tends to reduce the effect of that change.","reveal_prompt":"Tap each disturbance to see what the system does","reveals":[{"question":"🧪 What if I add more reactant?","answer":"Equilibrium shifts <strong>forward</strong> (right) — the system tries to consume the extra reactant by making more product."},{"question":"🌡️ What if I increase temperature?","answer":"If the forward reaction is <strong>exothermic</strong> (gives off heat), increasing temperature shifts equilibrium <strong>backward</strong> — the system absorbs the extra heat. If the forward reaction is endothermic, it shifts forward."},{"question":"⬆️ What if I increase pressure?","answer":"Equilibrium shifts toward the side with <strong>fewer moles of gas</strong> — fewer molecules means less pressure, reducing the disturbance."},{"question":"🔩 What if I add a catalyst?","answer":"<strong>No shift in equilibrium position.</strong> A catalyst speeds up both forward and reverse reactions equally — it helps you reach equilibrium faster but doesn't change where the balance point is."}]},"keypoints_section":{"points":["Increasing <b>reactant concentration</b> → shift forward (more product)","Increasing <b>temperature</b> → favours the endothermic direction","Increasing <b>pressure</b> → shift toward side with fewer moles of gas","<b>Catalyst</b> → reaches equilibrium faster, does NOT shift the position","<b>Haber Process</b> (N₂ + 3H₂ ⇌ 2NH₃): high pressure → more NH₃; but high temperature reduces yield (exothermic reaction) — so 450°C compromise is used"],"exam_questions":[{"marks":"3M","question":"Explain the effect of increasing pressure on the Haber Process"},{"marks":"2M","question":"State Le Chatelier's Principle and give one application"},{"marks":"1M","question":"Does adding a catalyst change the equilibrium constant? Give reason"}]},"quiz":[{"q":"In the reaction N₂ + 3H₂ ⇌ 2NH₃ (exothermic), what happens when pressure is increased?","opts":["Equilibrium shifts backward — more N₂ and H₂","Equilibrium shifts forward — more NH₃ produced","No change — pressure does not affect gas equilibria","Equilibrium constant Kc increases"],"ans":1,"exp":"Left side has 4 mol gas (1+3), right side has 2 mol. Higher pressure favours fewer moles, so shifts forward, giving more NH₃."},{"q":"A catalyst is added to a system at equilibrium. What changes?","opts":["The equilibrium position shifts forward","The equilibrium position shifts backward","Equilibrium is reached faster but position does not change","The value of Kc increases"],"ans":2,"exp":"A catalyst lowers activation energy for BOTH directions equally. It speeds up reaching equilibrium but cannot change where the balance point lies."},{"q":"For an endothermic reaction at equilibrium, increasing temperature will:","opts":["Shift equilibrium backward","Shift equilibrium forward","Have no effect on equilibrium","Decrease the rate of reaction"],"ans":1,"exp":"An endothermic reaction absorbs heat. Increasing temperature is like adding heat — the system absorbs it by shifting forward."},{"q":"CO₂(g) + H₂O(l) ⇌ H₂CO₃(aq). Why does removing the bottle cap make the drink go flat?","opts":["Temperature increases when opened","Pressure decreases — equilibrium shifts to produce more CO₂ gas","The catalyst (bottle) is removed","Concentration of H₂O decreases"],"ans":1,"exp":"CO₂ was dissolved under high pressure (sealed bottle). Opening reduces pressure, so the system shifts to relieve pressure by releasing CO₂ as gas."}],"flipcards":[{"front":"What does Le Chatelier's Principle state?","back":"A system at equilibrium shifts to reduce any applied disturbance"},{"front":"Effect of catalyst on equilibrium position?","back":"NO change in position — only speeds up reaching equilibrium"},{"front":"In Haber Process, why use 450°C not higher?","back":"Reaction is exothermic — high temp reduces NH3 yield; 450°C is a rate-yield compromise"},{"front":"Pressure increase shifts equilibrium toward...?","back":"The side with FEWER moles of gas"},{"front":"Adding more reactant shifts equilibrium...?","back":"Forward (right) — to consume the extra reactant"},{"front":"Why does fizzy drink go flat faster when warm?","back":"Higher temp favours endothermic reverse reaction — CO₂ escapes from solution"}],"archive":[{"emoji":"📐","title":"Integration by Parts","meta":"Week 44 · Mathematics · Class 12"},{"emoji":"🧬","title":"DNA Replication","meta":"Week 43 · Biology · Class 12"},{"emoji":"⚡","title":"Kirchhoff's Laws","meta":"Week 42 · Physics · Class 12"},{"emoji":"📊","title":"Marketing Mix (4Ps)","meta":"Week 41 · Business Studies"}],"upcoming":[{"week":"W46","title":"Photoelectric Effect","subject":"Physics"},{"week":"W47","title":"Demand Elasticity","subject":"Economics"},{"week":"W48","title":"Determinants","subject":"Mathematics"},{"week":"W49","title":"Plant Hormones","subject":"Biology"}]};
+
+var TOTAL = 5;
+var completed = {};
+var DATA = null;
+var qIndex = 0, score = 0, answered = false;
+
+/* Try fetch() first (GitHub Pages / HTTP server).
+   If blocked (file:// protocol), fall back to inline data. */
+(function(){
+  if(typeof fetch === 'undefined'){
+    DATA = INLINE_DATA; renderPage(); return;
+  }
+  fetch('weekly-focus.json')
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(data){ DATA=data; renderPage(); })
+    .catch(function(){ DATA=INLINE_DATA; renderPage(); });
+})();
+
+function renderPage(){
+  var d=DATA, m=d.meta;
+  document.getElementById('weekPill').textContent='Week '+m.week+' · '+m.month;
+  document.title='Weekly Focus — '+d.hero.title.substring(0,50);
+
+  document.getElementById('heroSection').innerHTML=
+    '<div class="hero">'+
+    '<div class="hero-art">'+m.emoji+'</div>'+
+    '<div class="hero-eyebrow">'+m.emoji+' '+m.subject+' · '+m.class+' · '+m.chapter+'</div>'+
+    '<h1>'+d.hero.title+'</h1>'+
+    '<p class="hero-hook">'+d.hero.hook+'</p>'+
+    '<div class="hero-chips">'+
+    '<span class="hchip">&#9201; '+m.read_time+'</span>'+
+    '<span class="hchip">&#127919; '+m.stats+'</span>'+
+    '<span class="hchip">&#128203; Board exam tips included</span>'+
+    '</div></div>';
+
+  document.getElementById('sectionsWrap').innerHTML=
+    mkSection(1,'🤔 Start with a Question','A mystery that will make you think',mkHook())+
+    mkSection(2,'💡 The Core Concept','Understand what is really happening',mkConcept())+
+    mkSection(3,'📌 Board Exam Key Points','What CBSE specifically tests every year',mkKeyPoints())+
+    mkSection(4,'⚡ Quick Quiz — Test Yourself',d.quiz.length+' questions · instant feedback',mkQuizShell())+
+    mkSection(5,'🃏 Memory Flip Cards','Flip to test your recall before you go',mkFlipCards());
+
+  document.getElementById('body1').classList.add('open');
+  document.getElementById('trig1').classList.add('active');
+  document.getElementById('bottomStrip').innerHTML=mkArchive()+mkUpcoming();
+  initQuiz();
+}
+
+function mkSection(n,title,sub,body){
+  return '<div class="section-block">'+
+    '<button class="section-trigger" onclick="toggleSection(this,'+n+')" id="trig'+n+'">'+
+    '<div class="step-num">'+n+'</div>'+
+    '<div class="step-label"><div class="step-title">'+title+'</div><div class="step-sub">'+sub+'</div></div>'+
+    '<span class="step-arrow">&#8250;</span></button>'+
+    '<div class="section-body" id="body'+n+'">'+body+'</div></div>';
+}
+
+function mkHook(){
+  var h=DATA.hook_section;
+  return '<div class="hook-card"><div class="hook-icon">'+h.scenario_icon+'</div>'+
+    '<div class="hook-text"><b>Think about this:</b> '+h.scenario+'</div></div>'+
+    '<p class="bridge-text">'+h.bridge+'</p>'+
+    '<p class="punchline">'+h.punchline+'</p>'+
+    '<button class="btn-next" onclick="nextSection(2)">Got it — show me the concept →</button>';
+}
+
+function mkConcept(){
+  var c=DATA.concept_section;
+  var reveals=c.reveals.map(function(r){
+    return '<div class="reveal-row">'+
+      '<button class="reveal-btn" onclick="revealToggle(this)"><span>'+r.question+'</span><span>+</span></button>'+
+      '<div class="reveal-content">'+r.answer+'</div></div>';
+  }).join('');
+  return '<div class="analogy"><div class="a-label">'+c.analogy_icon+' The Analogy</div><p>'+c.analogy+'</p></div>'+
+    '<p class="principle-text">'+c.principle+'</p>'+
+    '<p class="reveal-prompt">'+c.reveal_prompt+'</p>'+reveals+
+    '<button class="btn-next" onclick="nextSection(3)">I understand — show me key points →</button>';
+}
+
+function mkKeyPoints(){
+  var kp=DATA.keypoints_section;
+  var pts=kp.points.map(function(p){
+    return '<li class="kp-item"><div class="kp-dot"></div><div class="kp-text">'+p+'</div></li>';
+  }).join('');
+  var eqs=kp.exam_questions.map(function(e){
+    return '<div class="exam-row"><span class="exam-mark">'+e.marks+'</span>'+e.question+'</div>';
+  }).join('');
+  return '<ul class="kp-list">'+pts+'</ul>'+
+    '<div class="exam-card"><div class="exam-label">&#128203; Likely Exam Questions</div>'+
+    '<div class="exam-items">'+eqs+'</div></div>'+
+    '<button class="btn-next" onclick="nextSection(4)">Ready for the quiz →</button>';
+}
+
+function mkQuizShell(){
+  return '<div class="quiz-wrap" id="quizWrap">'+
+    '<div class="q-header"><span class="q-num" id="qNum">Question 1 of '+DATA.quiz.length+'</span>'+
+    '<span class="q-score" id="qScore">Score: 0</span></div>'+
+    '<div id="quizContainer"></div></div>'+
+    '<div class="quiz-result" id="quizResult">'+
+    '<div class="result-score" id="resultScore">0/'+DATA.quiz.length+'</div>'+
+    '<div class="result-msg" id="resultMsg"></div>'+
+    '<button class="retry-btn" onclick="initQuiz()">&#x21A9; Try again</button></div>';
+}
+
+function mkFlipCards(){
+  var cards=DATA.flipcards.map(function(fc){
+    return '<div class="flip-card" onclick="this.classList.toggle(\'flipped\')">'+
+      '<div class="flip-inner">'+
+      '<div class="flip-face flip-front">'+fc.front+'</div>'+
+      '<div class="flip-face flip-back">'+fc.back+'</div>'+
+      '</div></div>';
+  }).join('');
+  return '<p class="memory-intro">Read the front, recall the answer in your head, then flip to check.</p>'+
+    '<div class="flip-grid">'+cards+'</div>';
+}
+
+function mkArchive(){
+  var rows=DATA.archive.map(function(a){
+    return '<div class="arc-row"><div class="arc-icon">'+a.emoji+'</div>'+
+      '<div><div class="arc-title">'+a.title+'</div><div class="arc-sub">'+a.meta+'</div></div></div>';
+  }).join('');
+  return '<div class="strip-card"><h4>&#128218; Previous Focus Areas</h4>'+rows+'</div>';
+}
+
+function mkUpcoming(){
+  var rows=DATA.upcoming.map(function(u){
+    return '<div class="upcoming-row"><span class="up-week">'+u.week+'</span>'+
+      '<div class="up-text"><span class="up-sub">'+u.title+'</span> · '+u.subject+'</div></div>';
+  }).join('');
+  return '<div class="strip-card"><h4>&#128467; Coming Up Next</h4>'+rows+
+    '<div style="margin-top:14px;border-top:1px solid var(--border);padding-top:10px;font-size:12px;color:var(--fg2)">'+
+    '&#128233; New focus every <b>Monday</b> — follow on Telegram</div></div>';
+}
+
+function toggleSection(btn,n){
+  var body=document.getElementById('body'+n);
+  var isOpen=body.classList.contains('open');
+  for(var i=1;i<=TOTAL;i++){
+    document.getElementById('body'+i).classList.remove('open');
+    document.getElementById('trig'+i).classList.remove('active');
+  }
+  if(!isOpen){body.classList.add('open');btn.classList.add('active');updateProgress();}
+}
+
+function nextSection(n){
+  completed[n-1]=true;
+  document.getElementById('trig'+(n-1)).classList.add('done');
+  document.getElementById('trig'+(n-1)).classList.remove('active');
+  document.getElementById('body'+(n-1)).classList.remove('open');
+  document.getElementById('trig'+n).classList.add('active');
+  document.getElementById('body'+n).classList.add('open');
+  document.getElementById('trig'+n).scrollIntoView({behavior:'smooth',block:'start'});
+  if(n===4) initQuiz();
+  updateProgress();
+}
+
+function updateProgress(){
+  var count=Object.keys(completed).length;
+  document.getElementById('progBar').style.width=Math.round((count/TOTAL)*100)+'%';
+}
+
+function revealToggle(btn){
+  var content=btn.nextElementSibling;
+  var isOpen=content.classList.contains('show');
+  content.classList.toggle('show');
+  btn.children[1].textContent=isOpen?'+':'−';
+}
+
+function initQuiz(){
+  qIndex=0;score=0;answered=false;
+  var wrap=document.getElementById('quizWrap');
+  var result=document.getElementById('quizResult');
+  if(wrap) wrap.style.display='block';
+  if(result) result.classList.remove('show');
+  renderQ();
+}
+
+function renderQ(){
+  var q=DATA.quiz[qIndex];
+  var el=document.getElementById('quizContainer');
+  if(!q||!el) return;
+  document.getElementById('qNum').textContent='Question '+(qIndex+1)+' of '+DATA.quiz.length;
+  document.getElementById('qScore').textContent='Score: '+score;
+  var letters=['A','B','C','D'];
+  var opts=q.opts.map(function(o,i){
+    return '<button class="q-opt" onclick="checkAns(this,'+i+')">'+
+      '<span class="opt-letter">'+letters[i]+'</span>'+o+'</button>';
+  }).join('');
+  el.innerHTML='<div><div class="q-text">'+q.q+'</div><div class="q-opts">'+opts+'</div>'+
+    '<div class="q-explain" id="qExp"></div></div>';
+  answered=false;
+}
+
+function checkAns(btn,idx){
+  if(answered) return;
+  answered=true;
+  var q=DATA.quiz[qIndex];
+  var opts=btn.closest('.q-opts').querySelectorAll('.q-opt');
+  for(var i=0;i<opts.length;i++) opts[i].disabled=true;
+  if(idx===q.ans){btn.classList.add('correct');score++;}
+  else{btn.classList.add('wrong');opts[q.ans].classList.add('correct');}
+  var exp=document.getElementById('qExp');
+  if(exp){
+    exp.innerHTML='<strong>'+(idx===q.ans?'✅ Correct!':'❌ Not quite.')+'</strong> '+q.exp;
+    exp.classList.add('show');
+  }
+  document.getElementById('qScore').textContent='Score: '+score;
+  setTimeout(function(){
+    qIndex++;
+    if(qIndex<DATA.quiz.length) renderQ(); else showResult();
+  },2200);
+}
+
+function showResult(){
+  var wrap=document.getElementById('quizWrap');
+  var res=document.getElementById('quizResult');
+  if(wrap) wrap.style.display='none';
+  if(!res) return;
+  res.classList.add('show');
+  document.getElementById('resultScore').textContent=score+'/'+DATA.quiz.length;
+  var msgs=['Keep going - re-read the concept section!','Good start! Review the key points once more',
+    'Great work! You have got this concept','Excellent! Almost there','Perfect score! You are exam-ready!'];
+  document.getElementById('resultMsg').textContent=msgs[Math.min(score,msgs.length-1)];
+  completed[4]=true;
+  var t4=document.getElementById('trig4');
+  if(t4) t4.classList.add('done');
+  updateProgress();
+}
+</script>
+</body>
+</html>
