@@ -584,24 +584,20 @@ function renderPaper(p,idx){
 
   // Q8-13 short/long
   let qNum=8;
-  p.shorts.forEach(group=>{
-    group.forEach(q=>{
+  p.shorts.forEach(q=>{
       const qid=id(qNum,'short');
       h+=`<div class="question"><div class="q-header"><span class="q-num">Q${qNum}</span><span class="q-marks">${q.marks}M</span></div>
         <div class="q-text">${q.q}</div>
         ${ansBtn(qid)}<div class="answer" id="${qid}"><p>${q.ans}</p></div></div>`;
       qNum++;
-    });
   });
 
-  p.longs.forEach(group=>{
-    group.forEach(q=>{
+  p.longs.forEach(q=>{
       const qid=id(qNum,'long');
       h+=`<div class="question"><div class="q-header"><span class="q-num">Q${qNum}</span><span class="q-marks">${q.marks}M</span></div>
         <div class="q-text">${q.q}</div>
         ${ansBtn(qid)}<div class="answer" id="${qid}"><p>${q.ans}</p></div></div>`;
       qNum++;
-    });
   });
 
   h+=`</div>`;
