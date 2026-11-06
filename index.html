@@ -1453,10 +1453,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   }, {passive:true});
   if(strip.scrollWidth > strip.clientWidth + 10){
     setTimeout(function(){
-      strip.scrollTo({left:100, behavior:'smooth'});
+      strip.scrollTo({left:220, behavior:'smooth'});
       setTimeout(function(){
         strip.scrollTo({left:0, behavior:'smooth'});
-      }, 700);
+      }, 1800);
     }, 800);
   }
 })();
