@@ -19,8 +19,8 @@ body{margin:0}
 .zone-desc{font-size:.88rem;line-height:1.6;color:rgba(255,255,255,.82);max-width:290px;z-index:1}
 .zone-action{margin-top:auto;padding-top:22px;font-size:.82rem;font-weight:800;letter-spacing:.04em;color:#ffe6a1;z-index:1}
 .zone-action b{font-size:1.15rem;margin-left:8px}
-.portal-backbar{position:sticky;top:0;z-index:9998;display:flex;align-items:center;gap:10px;padding:9px 16px;background:rgba(15,35,71,.97);border-bottom:2px solid #c9a227;color:#fff;font:600 13px Inter,Arial,sans-serif;box-shadow:0 3px 12px rgba(0,0,0,.12)}
-.portal-backbar a,.portal-backbar button{border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:7px 13px;color:#fff;background:rgba(255,255,255,.08);font:inherit;text-decoration:none;cursor:pointer}
+.portal-backbar{position:sticky;top:0;z-index:9998;display:flex;align-items:center;gap:10px;padding:9px 16px;background:rgba(15,35,71,.97);border-bottom:2px solid #c9a227;color:#fff;font:600 13px Inter,Arial,sans-serif;box-shadow:0 3px 12px rgba(0,0,0,.12);flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.portal-backbar a,.portal-backbar button{border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:7px 13px;color:#fff;background:rgba(255,255,255,.08);font:inherit;text-decoration:none;cursor:pointer;white-space:nowrap;flex-shrink:0}
 .portal-backbar a:hover,.portal-backbar button:hover{background:#c9a227;color:#14294a}
 .portal-backbar .portal-brand{font-weight:800;letter-spacing:.04em;margin-right:auto}
 .portal-ad{width:100%;padding:7px 14px;background:#f3f1ed;text-align:center}

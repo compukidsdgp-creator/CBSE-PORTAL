@@ -187,8 +187,8 @@ body{background:linear-gradient(135deg,#dff3ff 0%,#edf1ff 47%,#f8eaff 100%);colo
 @media(max-width:420px){.quiz-side{grid-template-columns:1fr 1fr}.stats{gap:7px}.stat{padding:10px}.brand-name{font-size:15px}.xp-pill{display:none}}
 
 /* ── Portal top nav bar (injected by portal-shell.js) ── */
-.portal-backbar{position:sticky;top:0;z-index:9998;display:flex;align-items:center;gap:10px;padding:9px 16px;background:rgba(15,35,71,.97);border-bottom:2px solid #c9a227;color:#fff;font:600 13px Inter,Arial,sans-serif;box-shadow:0 3px 12px rgba(0,0,0,.12)}
-.portal-backbar a,.portal-backbar button{border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:7px 13px;color:#fff;background:rgba(255,255,255,.08);font:inherit;text-decoration:none;cursor:pointer;white-space:nowrap}
+.portal-backbar{position:sticky;top:0;z-index:9998;display:flex;align-items:center;gap:10px;padding:9px 16px;background:rgba(15,35,71,.97);border-bottom:2px solid #c9a227;color:#fff;font:600 13px Inter,Arial,sans-serif;box-shadow:0 3px 12px rgba(0,0,0,.12);flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.portal-backbar a,.portal-backbar button{border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:7px 13px;color:#fff;background:rgba(255,255,255,.08);font:inherit;text-decoration:none;cursor:pointer;white-space:nowrap;flex-shrink:0}
 .portal-backbar a:hover,.portal-backbar button:hover{background:#c9a227;color:#14294a}
 .portal-backbar .portal-brand{font-weight:800;letter-spacing:.04em;margin-right:auto}
 @media(max-width:620px){
