@@ -339,26 +339,7 @@ function next(){if(cur<14)loadPaper(cur+1);}
 function toggleTheme(){const r=document.documentElement;r.setAttribute('data-theme',r.getAttribute('data-theme')==='dark'?'light':'dark');}
 loadPaper(0);
 </script>
-<div id="share-strip" style="position:fixed;bottom:20px;right:16px;z-index:9999;display:flex;flex-direction:column;gap:8px;">
-  <a id="wa-share" href="#" target="_blank" rel="noopener"
-     style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
-            background:#25D366;box-shadow:0 2px 8px rgba(0,0,0,.35);text-decoration:none;font-size:22px;"
-     title="Share on WhatsApp">&#128172;</a>
-  <a id="fb-share" href="#" target="_blank" rel="noopener"
-     style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
-            background:#1877F2;box-shadow:0 2px 8px rgba(0,0,0,.35);text-decoration:none;font-size:22px;"
-     title="Share on Facebook">&#128100;</a>
-</div>
-<script>
-(function(){
-  var url = encodeURIComponent(location.href);
-  var title = encodeURIComponent(document.title);
-  document.getElementById('wa-share').href =
-    'https://wa.me/?text=' + title + '%20' + url;
-  document.getElementById('fb-share').href =
-    'https://www.facebook.com/sharer/sharer.php?u=' + url;
-})();
-</script>
+
 <!-- Google AdSense Auto Ads -->
 <ins class="adsbygoogle"
      style="display:block"
