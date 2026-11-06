@@ -25,4 +25,21 @@ body{margin:0}
 .portal-backbar .portal-brand{font-weight:800;letter-spacing:.04em;margin-right:auto}
 .portal-ad{width:100%;padding:7px 14px;background:#f3f1ed;text-align:center}
 .portal-ad-inner{max-width:970px;margin:0 auto}
-@media(max-width:620px){.zone-page{padding:28px 16px 48px}.zone-grid{grid-template-columns:1fr}.zone-card{min-height:190px}.portal-backbar{padding:8px;gap:6px}.portal-backbar a,.portal-backbar button{padding:7px 9px;font-size:12px}.portal-backbar .portal-brand{font-size:11px}}
+@media(max-width:620px){
+  .zone-page{padding:28px 16px 48px}
+  .zone-grid{grid-template-columns:1fr}
+  .zone-card{min-height:190px}
+  .portal-backbar{
+    padding:6px 10px;gap:6px;
+    overflow-x:auto;overflow-y:hidden;
+    flex-wrap:nowrap;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .portal-backbar::-webkit-scrollbar{display:none}
+  .portal-backbar .portal-brand{display:none}
+  .portal-backbar a,.portal-backbar button{
+    padding:6px 10px;font-size:12px;
+    white-space:nowrap;flex-shrink:0;
+  }
+}
