@@ -585,21 +585,20 @@ const SE_Q37B=[
 function pick(arr,offset,n){const o=[];for(let i=0;i<n;i++)o.push(arr[(offset+i)%arr.length]);return o;}
 
 function buildPaper(n){
-  const o=n%5;const o2=n%3;const o3=n%2;
   return{
     q1:SA_Q1[n%SA_Q1.length],q2:SA_Q2[n%SA_Q2.length],q3:SA_Q3[n%SA_Q3.length],
     q4:SA_Q4[n%SA_Q4.length],q5:SA_Q5[n%SA_Q5.length],q6:SA_Q6[n%SA_Q6.length],
     q7:SA_Q7[n%SA_Q7.length],q8:SA_Q8[n%SA_Q8.length],q9:SA_Q9[n%SA_Q9.length],
     q10:SA_Q10[n%SA_Q10.length],q11:SA_Q11[n%SA_Q11.length],q12:SA_Q12[n%SA_Q12.length],
     q13:SA_Q13[n%SA_Q13.length],q14:SA_Q14[n%SA_Q14.length],q15:SA_Q15[n%SA_Q15.length],
-    q16:SA_Q16[0],q17:SA_Q17[0],q18:SA_Q18[0],q19:SA_Q19[0],
-    q20:SA_Q20[0],q21:SA_Q21[0],
-    sb22:SB_Q22[o2],sb23:SB_Q23[o2],sb24:SB_Q24[o2],sb25:SB_Q25[o2],
-    sb26:SB_Q26[o2],sb27:SB_Q27[o2],sb28:SB_Q28[o2],
-    sc29:SC_Q29[o3],sc30a:SC_Q30A_DATA[o3],sc30b:SC_Q30B[o3],
-    sc31:SC_Q31[o],sc32a:SC_Q32A[o3],sc32b:SC_Q32B[o3],
-    sd33:SD_Q33[o3],sd34a:SD_Q34A[o3],sd34b:SD_Q34B[0],
-    se35:SE_Q35[o3],se36:SE_Q36[o3],se37a:SE_Q37A[0],se37b:SE_Q37B[0],
+    q16:SA_Q16[n%SA_Q16.length],q17:SA_Q17[n%SA_Q17.length],q18:SA_Q18[n%SA_Q18.length],q19:SA_Q19[n%SA_Q19.length],
+    q20:SA_Q20[n%SA_Q20.length],q21:SA_Q21[n%SA_Q21.length],
+    sb22:SB_Q22[n%SB_Q22.length],sb23:SB_Q23[n%SB_Q23.length],sb24:SB_Q24[n%SB_Q24.length],sb25:SB_Q25[n%SB_Q25.length],
+    sb26:SB_Q26[n%SB_Q26.length],sb27:SB_Q27[n%SB_Q27.length],sb28:SB_Q28[n%SB_Q28.length],
+    sc29:SC_Q29[n%SC_Q29.length],sc30a:SC_Q30A_DATA[n%SC_Q30A_DATA.length],sc30b:SC_Q30B[n%SC_Q30B.length],
+    sc31:SC_Q31[n%SC_Q31.length],sc32a:SC_Q32A[n%SC_Q32A.length],sc32b:SC_Q32B[n%SC_Q32B.length],
+    sd33:SD_Q33[n%SD_Q33.length],sd34a:SD_Q34A[n%SD_Q34A.length],sd34b:SD_Q34B[n%SD_Q34B.length],
+    se35:SE_Q35[n%SE_Q35.length],se36:SE_Q36[n%SE_Q36.length],se37a:SE_Q37A[n%SE_Q37A.length],se37b:SE_Q37B[n%SE_Q37B.length],
   };
 }
 
