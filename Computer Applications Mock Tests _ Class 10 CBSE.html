@@ -356,9 +356,7 @@ loadPaper(0);
       wrap.classList.toggle('at-end', atEnd);
     }, {passive:true});
     // One-time bounce nudge: scroll right 80px then back
-    var HINT_KEY = 'cbse_tab_hint_' + rowId;
-    if(!sessionStorage.getItem(HINT_KEY) && row.scrollWidth > row.clientWidth + 10){
-      sessionStorage.setItem(HINT_KEY, '1');
+    if(row.scrollWidth > row.clientWidth + 10){
       setTimeout(function(){
         row.scrollTo({left:80, behavior:'smooth'});
         setTimeout(function(){
