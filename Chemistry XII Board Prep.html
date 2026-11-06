@@ -351,26 +351,7 @@ function toggleTheme(){const r=document.documentElement;const cur=r.getAttribute
 (function(){if(window.matchMedia('(prefers-color-scheme:dark)').matches)document.getElementById('themeBtn').textContent='☀️ Light';})();
 </script>
 
-<div id="share-strip" style="position:fixed;bottom:20px;right:16px;z-index:9999;display:flex;flex-direction:column;gap:8px;">
-  <a id="wa-share" href="#" target="_blank" rel="noopener"
-     style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
-            background:#25D366;box-shadow:0 2px 8px rgba(0,0,0,.35);text-decoration:none;font-size:22px;"
-     title="Share on WhatsApp">&#128172;</a>
-  <a id="fb-share" href="#" target="_blank" rel="noopener"
-     style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
-            background:#1877F2;box-shadow:0 2px 8px rgba(0,0,0,.35);text-decoration:none;font-size:22px;"
-     title="Share on Facebook">&#128100;</a>
-</div>
-<script>
-(function(){
-  var url = encodeURIComponent(location.href);
-  var title = encodeURIComponent(document.title);
-  document.getElementById('wa-share').href =
-    'https://wa.me/?text=' + title + '%20' + url;
-  document.getElementById('fb-share').href =
-    'https://www.facebook.com/sharer/sharer.php?u=' + url;
-})();
-</script>
+
 
 <!-- Vendor: Bottom Leaderboard -->
 <div class="pp-leader"><div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div></div>
