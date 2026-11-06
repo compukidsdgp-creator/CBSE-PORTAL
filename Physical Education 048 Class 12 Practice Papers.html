@@ -1,4 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>  <title>Physical Education Class 12 CBSE Practice Papers | Code 048</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* ── TAB BAR SCROLL HINT (injected) ── */
+.tab-scroll-wrap{position:relative;overflow:hidden;}
+.tab-scroll-wrap::after{
+  content:'';position:absolute;top:0;right:0;bottom:0;width:48px;
+  background:linear-gradient(to right,transparent,rgba(0,0,0,.35));
+  pointer-events:none;z-index:10;transition:opacity .3s;
+}
+.tab-scroll-wrap.at-end::after{opacity:0;}
+</style>  <title>Physical Education Class 12 CBSE Practice Papers | Code 048</title>
   <meta name="description" content="Free Physical Education (Code 048) Class 12 CBSE practice papers. Yoga, Sports, Physical Fitness, Training Methods and Exercise Physiology mock tests.">
   <meta name="keywords" content="CBSE, CBSE board exam preparation, Physical, Education, Class, Practice, Papers, Code, 048, mock tests, practice papers">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -134,14 +143,16 @@
 :root[data-theme="dark"]{--bg:#0d1b2e;--card:#1a2a40;--fg:#e2e8f0;--sub:#94a3b8;--border:#2d3f55;--secbg:#162032;--tag:#1e3048;--ans:#f87171;--ansborder:#f87171;color-scheme:dark;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 2rem;}
-header{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff;padding:1.5rem max(16px,env(safe-area-inset-left,0px));margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)));display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+header{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff;padding:1.5rem max(16px,env(safe-area-inset-left,0px));margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)));display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch
+.tabs::-webkit-scrollbar{display:none};gap:1rem;}
 header h1{font-family:'Roboto Slab',serif;font-size:clamp(1.1rem,3vw,1.5rem);}
 header p{font-size:.85rem;opacity:.8;margin-top:.25rem;}
 .hdr-info{display:flex;flex-direction:column;}
 .badge{background:var(--gold);color:#1a2340;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;letter-spacing:.05em;align-self:flex-start;margin-bottom:.4rem;}
 .theme-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:.4rem .9rem;border-radius:.4rem;cursor:pointer;font-size:.85rem;white-space:nowrap;}
 .theme-btn:hover{background:rgba(255,255,255,.25);}
-.tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.2rem 0 .8rem;}
+.tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;gap:.4rem;margin:1.2rem 0 .8rem;}
+.tabs::-webkit-scrollbar{display:none}
 .tab{padding:.45rem 1rem;border-radius:.4rem;border:1px solid var(--border);background:var(--card);color:var(--sub);cursor:pointer;font-size:.82rem;font-weight:500;transition:.15s;}
 .tab:hover{border-color:var(--ans);color:var(--ans);}
 .tab.active{background:var(--ans);color:#fff;border-color:var(--ans);}
@@ -457,4 +468,42 @@ function toggleTheme(){
      data-full-width-responsive="true"></ins>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 <!-- end AdSense -->
+<script>
+/* ── Tab bar bounce hint ── */
+(function(){
+  function initTabHint(rowId){
+    var row = document.getElementById(rowId);
+    if(!row) return;
+    // Wrap in scroll-wrap div if not already wrapped
+    if(!row.parentElement.classList.contains('tab-scroll-wrap')){
+      var wrap = document.createElement('div');
+      wrap.className = 'tab-scroll-wrap';
+      row.parentNode.insertBefore(wrap, row);
+      wrap.appendChild(row);
+    }
+    var wrap = row.parentElement;
+    // Hide fade when scrolled to end
+    row.addEventListener('scroll', function(){
+      var atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+      wrap.classList.toggle('at-end', atEnd);
+    }, {passive:true});
+    // One-time bounce nudge: scroll right 80px then back
+    var HINT_KEY = 'cbse_tab_hint_' + rowId;
+    if(!sessionStorage.getItem(HINT_KEY) && row.scrollWidth > row.clientWidth + 10){
+      sessionStorage.setItem(HINT_KEY, '1');
+      setTimeout(function(){
+        row.scrollTo({left:80, behavior:'smooth'});
+        setTimeout(function(){
+          row.scrollTo({left:0, behavior:'smooth'});
+        }, 700);
+      }, 800);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    initTabHint('mainTabs');   // resource pages
+    initTabHint('toolTabs');   // resource pages second row
+    initTabHint('tabs');       // practice paper pages
+  });
+})();
+</script>
 </body></html>

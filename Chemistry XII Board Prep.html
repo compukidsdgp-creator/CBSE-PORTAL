@@ -1,4 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>  <title>Chemistry Class 12 CBSE Mock Tests | Board Exam Preparation</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* ── TAB BAR SCROLL HINT (injected) ── */
+.tab-scroll-wrap{position:relative;overflow:hidden;}
+.tab-scroll-wrap::after{
+  content:'';position:absolute;top:0;right:0;bottom:0;width:48px;
+  background:linear-gradient(to right,transparent,rgba(0,0,0,.35));
+  pointer-events:none;z-index:10;transition:opacity .3s;
+}
+.tab-scroll-wrap.at-end::after{opacity:0;}
+</style>  <title>Chemistry Class 12 CBSE Mock Tests | Board Exam Preparation</title>
   <meta name="description" content="Free Chemistry Class 12 CBSE mock tests. Covers Solid State, Solutions, Electrochemistry, Chemical Kinetics, Organic Chemistry and more for board exam success.">
   <meta name="keywords" content="CBSE, CBSE board exam preparation, Chemistry, Class, Mock, Tests, Board, Exam, Preparation, mock tests, practice papers">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -136,14 +145,16 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0;}
 header{background:var(--navy2);color:#fff;padding:20px max(24px,env(safe-area-inset-left,0px));position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.4);}
-.hrow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.hrow{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch
+.tabs::-webkit-scrollbar{display:none};gap:12px;}
 .htitle{display:flex;align-items:center;gap:14px;}
 .hbadge{background:var(--gold);color:#1a1a00;font-weight:700;font-size:.7rem;padding:3px 8px;border-radius:4px;letter-spacing:.05em;}
 .hname{font-family:'Roboto Slab',serif;font-size:1.2rem;font-weight:600;}
 .hsub{font-size:.75rem;opacity:.75;margin-top:2px;}
 .hinfo{display:flex;gap:16px;font-size:.75rem;opacity:.85;}
 #themeBtn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:.78rem;}
-.tabs{display:flex;gap:4px;flex-wrap:wrap;padding:14px max(24px,env(safe-area-inset-left,0px));background:var(--navy);position:sticky;top:73px;z-index:40;border-bottom:2px solid var(--gold);}
+.tabs{display:flex;gap:4px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:14px max(24px,env(safe-area-inset-left,0px));background:var(--navy);position:sticky;top:73px;z-index:40;border-bottom:2px solid var(--gold);}
+.tabs::-webkit-scrollbar{display:none}
 .tab{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border:none;padding:7px 14px;border-radius:5px;cursor:pointer;font-size:.78rem;font-weight:500;transition:.2s;}
 .tab:hover{background:rgba(255,255,255,.2);}
 .tab.active{background:var(--gold);color:#1a1a00;font-weight:700;}
@@ -343,4 +354,42 @@ function toggleTheme(){const r=document.documentElement;const cur=r.getAttribute
      data-full-width-responsive="true"></ins>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 <!-- end AdSense -->
+<script>
+/* ── Tab bar bounce hint ── */
+(function(){
+  function initTabHint(rowId){
+    var row = document.getElementById(rowId);
+    if(!row) return;
+    // Wrap in scroll-wrap div if not already wrapped
+    if(!row.parentElement.classList.contains('tab-scroll-wrap')){
+      var wrap = document.createElement('div');
+      wrap.className = 'tab-scroll-wrap';
+      row.parentNode.insertBefore(wrap, row);
+      wrap.appendChild(row);
+    }
+    var wrap = row.parentElement;
+    // Hide fade when scrolled to end
+    row.addEventListener('scroll', function(){
+      var atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+      wrap.classList.toggle('at-end', atEnd);
+    }, {passive:true});
+    // One-time bounce nudge: scroll right 80px then back
+    var HINT_KEY = 'cbse_tab_hint_' + rowId;
+    if(!sessionStorage.getItem(HINT_KEY) && row.scrollWidth > row.clientWidth + 10){
+      sessionStorage.setItem(HINT_KEY, '1');
+      setTimeout(function(){
+        row.scrollTo({left:80, behavior:'smooth'});
+        setTimeout(function(){
+          row.scrollTo({left:0, behavior:'smooth'});
+        }, 700);
+      }, 800);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    initTabHint('mainTabs');   // resource pages
+    initTabHint('toolTabs');   // resource pages second row
+    initTabHint('tabs');       // practice paper pages
+  });
+})();
+</script>
 </body></html>

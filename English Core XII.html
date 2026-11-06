@@ -1,4 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>  <title>English Core Class 12 CBSE Practice Papers | Board Prep</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* ── TAB BAR SCROLL HINT (injected) ── */
+.tab-scroll-wrap{position:relative;overflow:hidden;}
+.tab-scroll-wrap::after{
+  content:'';position:absolute;top:0;right:0;bottom:0;width:48px;
+  background:linear-gradient(to right,transparent,rgba(0,0,0,.35));
+  pointer-events:none;z-index:10;transition:opacity .3s;
+}
+.tab-scroll-wrap.at-end::after{opacity:0;}
+</style>  <title>English Core Class 12 CBSE Practice Papers | Board Prep</title>
   <meta name="description" content="Free English Core Class 12 CBSE practice papers. Flamingo, Vistas, writing skills, grammar and reading comprehension mock tests for board exam preparation.">
   <meta name="keywords" content="CBSE, CBSE board exam preparation, English, Core, Class, Practice, Papers, Board, Prep, mock tests, practice papers">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -165,7 +174,8 @@ body{
   margin-bottom:1.5rem;
 }
 .hdr h1{font-family:'Roboto Slab',serif;font-size:clamp(1.3rem,4vw,1.9rem);line-height:1.2;}
-.hdr .meta{display:flex;flex-wrap:wrap;gap:.5rem .75rem;margin-top:.6rem;font-size:.8rem;opacity:.85;}
+.hdr .meta{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch
+.tabs::-webkit-scrollbar{display:none};gap:.5rem .75rem;margin-top:.6rem;font-size:.8rem;opacity:.85;}
 .badge{background:rgba(255,255,255,.15);padding:.2rem .6rem;border-radius:999px;}
 .gold{color:var(--gold);}
 /* Theme toggle */
@@ -886,4 +896,42 @@ renderPaper(0);
      data-full-width-responsive="true"></ins>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 <!-- end AdSense -->
+<script>
+/* ── Tab bar bounce hint ── */
+(function(){
+  function initTabHint(rowId){
+    var row = document.getElementById(rowId);
+    if(!row) return;
+    // Wrap in scroll-wrap div if not already wrapped
+    if(!row.parentElement.classList.contains('tab-scroll-wrap')){
+      var wrap = document.createElement('div');
+      wrap.className = 'tab-scroll-wrap';
+      row.parentNode.insertBefore(wrap, row);
+      wrap.appendChild(row);
+    }
+    var wrap = row.parentElement;
+    // Hide fade when scrolled to end
+    row.addEventListener('scroll', function(){
+      var atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+      wrap.classList.toggle('at-end', atEnd);
+    }, {passive:true});
+    // One-time bounce nudge: scroll right 80px then back
+    var HINT_KEY = 'cbse_tab_hint_' + rowId;
+    if(!sessionStorage.getItem(HINT_KEY) && row.scrollWidth > row.clientWidth + 10){
+      sessionStorage.setItem(HINT_KEY, '1');
+      setTimeout(function(){
+        row.scrollTo({left:80, behavior:'smooth'});
+        setTimeout(function(){
+          row.scrollTo({left:0, behavior:'smooth'});
+        }, 700);
+      }, 800);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    initTabHint('mainTabs');   // resource pages
+    initTabHint('toolTabs');   // resource pages second row
+    initTabHint('tabs');       // practice paper pages
+  });
+})();
+</script>
 </body></html>

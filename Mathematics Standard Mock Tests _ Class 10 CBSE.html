@@ -1,4 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>  <title>Mathematics Standard Class 10 CBSE Mock Tests | Board Prep</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* ── TAB BAR SCROLL HINT (injected) ── */
+.tab-scroll-wrap{position:relative;overflow:hidden;}
+.tab-scroll-wrap::after{
+  content:'';position:absolute;top:0;right:0;bottom:0;width:48px;
+  background:linear-gradient(to right,transparent,rgba(0,0,0,.35));
+  pointer-events:none;z-index:10;transition:opacity .3s;
+}
+.tab-scroll-wrap.at-end::after{opacity:0;}
+</style>  <title>Mathematics Standard Class 10 CBSE Mock Tests | Board Prep</title>
   <meta name="description" content="Free Mathematics Standard Class 10 CBSE mock tests. Real Numbers, Polynomials, Quadratic Equations, Triangles, Trigonometry, Statistics and Probability practice">
   <meta name="keywords" content="CBSE, CBSE board exam preparation, Mathematics, Standard, Class, Mock, Tests, Board, Prep, mock tests, practice papers">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -140,7 +149,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
 .hdr{background:var(--navy);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3);}
-.hdr-inner{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.hdr-inner{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch
+.tabs::-webkit-scrollbar{display:none};gap:10px;}
 .hdr-title{font-family:'Crimson Pro',serif;font-size:1.35rem;font-weight:700;}
 .hdr-sub{font-size:.75rem;opacity:.75;margin-top:2px;}
 .theme-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 14px;border-radius:20px;cursor:pointer;font-size:.8rem;}
@@ -346,6 +356,44 @@ loadPaper(0);
      data-full-width-responsive="true"></ins>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 <!-- end AdSense -->
+<script>
+/* ── Tab bar bounce hint ── */
+(function(){
+  function initTabHint(rowId){
+    var row = document.getElementById(rowId);
+    if(!row) return;
+    // Wrap in scroll-wrap div if not already wrapped
+    if(!row.parentElement.classList.contains('tab-scroll-wrap')){
+      var wrap = document.createElement('div');
+      wrap.className = 'tab-scroll-wrap';
+      row.parentNode.insertBefore(wrap, row);
+      wrap.appendChild(row);
+    }
+    var wrap = row.parentElement;
+    // Hide fade when scrolled to end
+    row.addEventListener('scroll', function(){
+      var atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+      wrap.classList.toggle('at-end', atEnd);
+    }, {passive:true});
+    // One-time bounce nudge: scroll right 80px then back
+    var HINT_KEY = 'cbse_tab_hint_' + rowId;
+    if(!sessionStorage.getItem(HINT_KEY) && row.scrollWidth > row.clientWidth + 10){
+      sessionStorage.setItem(HINT_KEY, '1');
+      setTimeout(function(){
+        row.scrollTo({left:80, behavior:'smooth'});
+        setTimeout(function(){
+          row.scrollTo({left:0, behavior:'smooth'});
+        }, 700);
+      }, 800);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    initTabHint('mainTabs');   // resource pages
+    initTabHint('toolTabs');   // resource pages second row
+    initTabHint('tabs');       // practice paper pages
+  });
+})();
+</script>
 </body>
 </html>
 

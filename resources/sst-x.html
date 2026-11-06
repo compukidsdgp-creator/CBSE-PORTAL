@@ -300,6 +300,15 @@ h4{font-size:.9rem;font-weight:700;color:#555;margin:.6rem 0 .3rem}
 
 html{scroll-padding-top:130px}
 section{scroll-margin-top:130px}
+
+/* ── TAB BAR SCROLL HINT (injected) ── */
+.tab-scroll-wrap{position:relative;overflow:hidden;}
+.tab-scroll-wrap::after{
+  content:'';position:absolute;top:0;right:0;bottom:0;width:48px;
+  background:linear-gradient(to right,transparent,rgba(0,0,0,.35));
+  pointer-events:none;z-index:10;transition:opacity .3s;
+}
+.tab-scroll-wrap.at-end::after{opacity:0;}
 </style>
     <script src="../ads.js" defer></script>
   <!-- AdSense: replace ca-pub-2810600896966939 with Publisher ID after approval -->
@@ -1705,5 +1714,43 @@ function showPP(n,btn){document.querySelectorAll('.pp-content').forEach(d=>d.cla
 <!-- end AdSense bottom -->
 
 <script src="../portal-shell.js"></script>
+<script>
+/* ── Tab bar bounce hint ── */
+(function(){
+  function initTabHint(rowId){
+    var row = document.getElementById(rowId);
+    if(!row) return;
+    // Wrap in scroll-wrap div if not already wrapped
+    if(!row.parentElement.classList.contains('tab-scroll-wrap')){
+      var wrap = document.createElement('div');
+      wrap.className = 'tab-scroll-wrap';
+      row.parentNode.insertBefore(wrap, row);
+      wrap.appendChild(row);
+    }
+    var wrap = row.parentElement;
+    // Hide fade when scrolled to end
+    row.addEventListener('scroll', function(){
+      var atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+      wrap.classList.toggle('at-end', atEnd);
+    }, {passive:true});
+    // One-time bounce nudge: scroll right 80px then back
+    var HINT_KEY = 'cbse_tab_hint_' + rowId;
+    if(!sessionStorage.getItem(HINT_KEY) && row.scrollWidth > row.clientWidth + 10){
+      sessionStorage.setItem(HINT_KEY, '1');
+      setTimeout(function(){
+        row.scrollTo({left:80, behavior:'smooth'});
+        setTimeout(function(){
+          row.scrollTo({left:0, behavior:'smooth'});
+        }, 700);
+      }, 800);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    initTabHint('mainTabs');   // resource pages
+    initTabHint('toolTabs');   // resource pages second row
+    initTabHint('tabs');       // practice paper pages
+  });
+})();
+</script>
 </body>
 </html>
