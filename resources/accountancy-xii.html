@@ -1764,7 +1764,7 @@ function renderBadgesRow(){const gs=getGS();const earned=gs.badges||[];['badgeRo
 function showNameModal(){document.getElementById('nameModal').classList.add('open')}
 function saveName(){const n=document.getElementById('nameInput').value.trim();if(!n)return;const gs=getGS();gs.name=n;saveGS(gs);document.getElementById('navUser').textContent='👤 '+n;document.getElementById('nameModal').classList.remove('open');showToast('Welcome, '+n+'! 🎉')}
 
-const MAP={home:'sec-home',p1:'sec-p1',p2:'sec-p2',p3:'sec-p3',p4:'sec-p4',p5:'sec-p5',c1:'sec-c1',c2:'sec-c2',f1:'sec-f1',f2:'sec-f2',pp:'sec-pp',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',sim:'sec-sim',dash:'sec-dash'};
+const MAP={home:'sec-home',p1:'sec-p1',p2:'sec-p2',p3:'sec-p3',p4:'sec-p4',p5:'sec-p5',c1:'sec-c1',c2:'sec-c2',f1:'sec-f1',f2:'sec-f2',pp:'sec-pp',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',sim:'sec-sim',exam:'sec-sim',dash:'sec-dash'};
 let curKey="home";
 const ALL_SECS=Object.values(MAP);
 const TOPIC_LABELS={p1:'NPO',p2:'Goodwill',p3:'Admission',p4:'Retirement & Death',p5:'Dissolution',c1:'Company Shares',c2:'Debentures',f1:'Ratio Analysis',f2:'Cash Flow Statement'};
