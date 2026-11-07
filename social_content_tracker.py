@@ -16,6 +16,8 @@ Content types tracked:
   3. notes        — Subject notes pages (Class 9–12, one per day)
   4. practice_10  — Class 10 practice paper (one per day)
   5. practice_12  — Class 12 practice paper (one per day)
+  6. lab          — Virtual lab highlight (daily, 221 labs, rotating)
+  7. weekly_focus — Weekly focus topic (static for 7 days, then advances)
 
 Usage (called by post_telegram.py and post_facebook.py):
   tracker = ContentTracker()
@@ -26,6 +28,7 @@ Usage (called by post_telegram.py and post_facebook.py):
 
 import csv
 import os
+import re
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -87,6 +90,50 @@ PRACTICE_10_PAGES = [
     ("AI Mock Papers — Class 10",                 f"{PORTAL_BASE}/CBSE Class 10 AI Mock Papers.html"),
 ]
 
+def _discover_labs() -> list[tuple[str, str]]:
+    """Auto-discover all virtual lab HTML files and return (title, url) list."""
+    base    = REPO_ROOT / "virtual-labs"
+    portal  = "https://cbsemock.org.in/virtual-labs"
+    labs    = []
+    if not base.exists():
+        return labs
+    for f in sorted(base.rglob("*.html")):
+        if "index" in f.name or "ai-ml" in str(f):
+            continue
+        subject = f.parent.name.replace("-", " ").title()
+        stem    = f.stem
+        name    = re.sub(r"^\d+[-_]?", "", stem).replace("-", " ").replace("_", " ").title()
+        title   = f"{name} — {subject} Lab"
+        url     = f"{portal}/{f.relative_to(base)}"
+        labs.append((title, url))
+    return labs
+
+LAB_PAGES = _discover_labs()
+
+# Weekly focus topics — one per week, rotating
+WEEKLY_FOCUS_TOPICS = [
+    ("Mechanics & Motion",         "Newton's Laws, velocity, acceleration, projectile motion",           "https://cbsemock.org.in/resources/physics-xii.html"),
+    ("Chemical Reactions",         "Types of reactions, balancing equations, redox, electrolysis",        "https://cbsemock.org.in/resources/chemistry-xii.html"),
+    ("Cell Biology",               "Cell structure, division, osmosis, tissues",                          "https://cbsemock.org.in/resources/biology-xii.html"),
+    ("Algebra & Calculus",         "Functions, differentiation, integration, matrices",                   "https://cbsemock.org.in/resources/maths-xii.html"),
+    ("Electricity & Magnetism",    "Current, resistance, Ohm's law, electromagnetic induction",           "https://cbsemock.org.in/resources/physics-xii.html"),
+    ("Organic Chemistry",          "Carbon compounds, hydrocarbons, functional groups, polymers",         "https://cbsemock.org.in/resources/chemistry-xii.html"),
+    ("Genetics & Evolution",       "DNA, Mendel's laws, natural selection, biotechnology",                "https://cbsemock.org.in/resources/biology-xii.html"),
+    ("Statistics & Probability",   "Mean, median, mode, probability, Bayes theorem",                     "https://cbsemock.org.in/resources/maths-xii.html"),
+    ("Thermodynamics",             "Heat, entropy, laws of thermodynamics, specific heat",                "https://cbsemock.org.in/resources/physics-xii.html"),
+    ("Electrochemistry",           "Galvanic cells, Nernst equation, electrolysis, corrosion",            "https://cbsemock.org.in/resources/chemistry-xii.html"),
+    ("Human Physiology",           "Digestion, respiration, circulation, excretion, nervous system",      "https://cbsemock.org.in/resources/biology-xii.html"),
+    ("Coordinate Geometry",        "Lines, circles, conic sections, 3D geometry, vectors",               "https://cbsemock.org.in/resources/maths-xii.html"),
+    ("Optics & Waves",             "Reflection, refraction, lenses, wave optics, interference",           "https://cbsemock.org.in/resources/physics-xii.html"),
+    ("Macroeconomics",             "GDP, inflation, fiscal policy, money supply, banking",                "https://cbsemock.org.in/resources/economics-xii.html"),
+    ("Financial Accounting",       "Journal, ledger, trial balance, final accounts, ratios",              "https://cbsemock.org.in/resources/accountancy-xii.html"),
+    ("Data Structures & Algorithms","Arrays, stacks, queues, sorting, searching, complexity",             "https://cbsemock.org.in/resources/cs-xii.html"),
+    ("Social Science — History",   "Nationalism, colonial era, world wars, independence movement",        "https://cbsemock.org.in/resources/sst-x.html"),
+    ("Environmental Science",      "Ecosystems, biodiversity, pollution, climate change, conservation",   "https://cbsemock.org.in/resources/biology-xii.html"),
+    ("Business Studies",           "Management, marketing, finance, entrepreneurship, HRM",               "https://cbsemock.org.in/resources/business-xii.html"),
+    ("AI & Machine Learning",      "Data types, supervised learning, neural networks, ethics",            "https://cbsemock.org.in/resources/ai-x.html"),
+]
+
 PRACTICE_12_PAGES = [
     ("Physics Board Prep — Class 12",             f"{PORTAL_BASE}/Physics XII Board Prep.html"),
     ("Chemistry Board Prep — Class 12",           f"{PORTAL_BASE}/Chemistry XII Board Prep.html"),
@@ -129,11 +176,19 @@ class ContentTracker:
         for title, url in PRACTICE_12_PAGES:
             self.rows.append({"content_type": "practice_12", "title": title,
                                "url": url, "telegram": "", "facebook": ""})
+        for title, url in LAB_PAGES:
+            self.rows.append({"content_type": "lab", "title": title,
+                               "url": url, "telegram": "", "facebook": ""})
+        for topic, desc, url in WEEKLY_FOCUS_TOPICS:
+            self.rows.append({"content_type": "weekly_focus", "title": topic,
+                               "url": url, "telegram": "", "facebook": ""})
         self.save()
         print(f"[OK] Tracker initialised: {TRACKER_PATH.name}")
         print(f"     {len([r for r in self.rows if r['content_type']=='notes'])} notes")
         print(f"     {len([r for r in self.rows if r['content_type']=='practice_10'])} Class 10 papers")
         print(f"     {len([r for r in self.rows if r['content_type']=='practice_12'])} Class 12 papers")
+        print(f"     {len([r for r in self.rows if r['content_type']=='lab'])} virtual labs")
+        print(f"     {len([r for r in self.rows if r['content_type']=='weekly_focus'])} weekly focus topics")
 
     def _sync_catalogue(self):
         """Add new catalogue items that don't exist in the CSV yet."""
@@ -152,6 +207,16 @@ class ContentTracker:
         for title, url in PRACTICE_12_PAGES:
             if ("practice_12", title) not in existing:
                 self.rows.append({"content_type": "practice_12", "title": title,
+                                   "url": url, "telegram": "", "facebook": ""})
+                added += 1
+        for title, url in LAB_PAGES:
+            if ("lab", title) not in existing:
+                self.rows.append({"content_type": "lab", "title": title,
+                                   "url": url, "telegram": "", "facebook": ""})
+                added += 1
+        for topic, desc, url in WEEKLY_FOCUS_TOPICS:
+            if ("weekly_focus", topic) not in existing:
+                self.rows.append({"content_type": "weekly_focus", "title": topic,
                                    "url": url, "telegram": "", "facebook": ""})
                 added += 1
         if added:
@@ -182,6 +247,41 @@ class ContentTracker:
                 row[platform] = ""
         return rows[0]
 
+    def get_weekly_focus(self, platform: str = "telegram") -> dict | None:
+        """
+        Return current week's focus topic. Same item for 7 days.
+        Advances to the next un-ticked item on week boundary.
+        A tick is set once per week (not daily) — marked on Monday.
+        """
+        rows = self._rows_of_type("weekly_focus")
+        if not rows:
+            return None
+
+        # Find the current in-progress item (ticked within last 7 days)
+        today = datetime.now(timezone.utc)
+        for row in rows:
+            tick = row.get(platform, "").strip()
+            if tick.startswith("✓"):
+                try:
+                    tick_date = datetime.strptime(tick[2:], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                    days_ago  = (today - tick_date).days
+                    if days_ago < 7:
+                        return row   # still within the week
+                except ValueError:
+                    pass
+
+        # No active item — find next un-ticked
+        for row in rows:
+            if not row.get(platform, "").strip():
+                return row
+
+        # All done — reset
+        print(f"[RESET] All weekly_focus topics done on {platform}. Restarting.")
+        for row in self.rows:
+            if row["content_type"] == "weekly_focus":
+                row[platform] = ""
+        return rows[0]
+
     def mark_posted(self, content_type: str, item: dict, platform: str):
         """Mark an item as posted on a platform with a timestamp tick."""
         now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -199,11 +299,11 @@ class ContentTracker:
 
     def stats(self):
         """Print posting stats."""
-        for ctype in ("notes", "practice_10", "practice_12"):
+        for ctype in ("notes", "practice_10", "practice_12", "lab", "weekly_focus"):
             rows = self._rows_of_type(ctype)
             tg_done = sum(1 for r in rows if r.get("telegram", "").strip())
             fb_done = sum(1 for r in rows if r.get("facebook", "").strip())
-            print(f"  {ctype:12s}: {tg_done}/{len(rows)} Telegram  {fb_done}/{len(rows)} Facebook")
+            print(f"  {ctype:14s}: {tg_done}/{len(rows)} Telegram  {fb_done}/{len(rows)} Facebook")
 
 
 if __name__ == "__main__":
