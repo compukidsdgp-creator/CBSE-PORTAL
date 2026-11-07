@@ -106,6 +106,10 @@ def build_html(items: list[dict]) -> str:
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"CollectionPage","name":"CBSE News & Updates","description":"Latest CBSE board exam news, official notifications, datesheet updates and education announcements.","url":"https://cbsemock.org.in/news.html","isPartOf":{{"@type":"WebSite","name":"CBSE Board Exam Hub","url":"https://cbsemock.org.in/"}}}}
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
 <style>
 :root{{
   --navy:#0d1b2a;--teal:#00b4d8;--gold:#c9a227;
@@ -163,6 +167,7 @@ body{{background:var(--bg);color:var(--text);padding:0 16px 40px}}
   Powered by Google News RSS · cbsemock.org.in<br>
   <a href="/" style="color:var(--teal)">← Back to Portal</a>
 </div>
+<script src="portal-shell.js"></script>
 </body>
 </html>"""
 
