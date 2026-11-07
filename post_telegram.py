@@ -297,6 +297,75 @@ def post_practice(tracker, content_type: str, dry_run: bool = False):
     print(f"[OK] {content_type} posted: {item['title']} → msg {result.get('result',{}).get('message_id','n/a')}")
 
 
+# ── 6. Virtual Lab Highlight ──────────────────────────────────────────────────
+def post_lab(tracker, dry_run: bool = False):
+    item = tracker.get_next("lab", "telegram")
+    if not item:
+        print("[SKIP] No lab items in tracker.")
+        return
+
+    # Parse subject from title: "Name — Subject Lab"
+    parts   = item["title"].split(" — ")
+    exp_name = parts[0].strip()
+    subject  = parts[1].replace(" Lab", "").strip() if len(parts) > 1 else "Science"
+    emoji    = subject_emoji(subject)
+
+    text = (
+        f"🧪 <b>Today's Hands-On Highlight</b>\n\n"
+        f"{emoji} <b>{exp_name}</b>\n"
+        f"📋 Subject: {subject}\n\n"
+        f"🔬 What you'll explore:\n"
+        f"• Step-by-step interactive simulation\n"
+        f"• Observe results in real time\n"
+        f"• Understand the concept behind the experiment\n"
+        f"• CBSE board exam relevance explained\n\n"
+        f"🧑‍🔬 Try it yourself — no lab equipment needed!\n\n"
+        f"🔗 <a href='{item['url']}'>Open Virtual Lab →</a>\n\n"
+        f"#VirtualLab #CBSE #{subject.replace(' ','')} #HandsOn #BoardExams2027"
+    )
+    result = tg_send(text, dry_run)
+    if not dry_run:
+        tracker.mark_posted("lab", item, "telegram")
+        tracker.save()
+    print(f"[OK] Lab posted: {exp_name} → msg {result.get('result',{}).get('message_id','n/a')}")
+
+
+# ── 7. Weekly Focus ───────────────────────────────────────────────────────────
+def post_weekly_focus(tracker, dry_run: bool = False):
+    item = tracker.get_weekly_focus("telegram")
+    if not item:
+        print("[SKIP] No weekly focus items.")
+        return
+
+    # Get description from WEEKLY_FOCUS_TOPICS
+    from social_content_tracker import WEEKLY_FOCUS_TOPICS
+    desc = ""
+    for topic, d, url in WEEKLY_FOCUS_TOPICS:
+        if topic == item["title"]:
+            desc = d
+            break
+
+    emoji = subject_emoji(item["title"])
+
+    text = (
+        f"📌 <b>Weekly Focus Area</b>\n\n"
+        f"{emoji} <b>{item['title']}</b>\n\n"
+        f"🎯 This week, master these key concepts:\n"
+        f"<i>{desc}</i>\n\n"
+        f"📅 Dedicate 30 minutes daily to this topic\n"
+        f"📝 Solve 5 questions per concept\n"
+        f"🔄 Revise on Sunday before next week's focus\n\n"
+        f"🔗 <a href='{item['url']}'>Study Resources →</a>\n\n"
+        f"💪 Consistency beats intensity — one week at a time!\n\n"
+        f"#WeeklyFocus #CBSE #BoardExams2027 #StudyPlan #{item['title'].replace(' ','').replace('&','')[:20]}"
+    )
+    result = tg_send(text, dry_run)
+    if not dry_run:
+        tracker.mark_posted("weekly_focus", item, "telegram")
+        tracker.save()
+    print(f"[OK] Weekly focus posted: {item['title']} → msg {result.get('result',{}).get('message_id','n/a')}")
+
+
 # ── Helper: Get Chat ID ───────────────────────────────────────────────────────
 def get_chat_id():
     if not BOT_TOKEN:
@@ -319,7 +388,7 @@ def get_chat_id():
 def main():
     parser = argparse.ArgumentParser(description="CBSE Mock Telegram auto-poster")
     parser.add_argument("--mode", default="morning",
-        choices=["quest","news","notes","practice_10","practice_12","morning","evening","all"])
+        choices=["quest","news","notes","practice_10","practice_12","lab","weekly_focus","morning","evening","all"])
     parser.add_argument("--dry-run",     action="store_true")
     parser.add_argument("--get-chat-id", action="store_true")
     args = parser.parse_args()
@@ -335,9 +404,9 @@ def main():
     print(f"Telegram Poster — mode={args.mode} dry_run={args.dry_run}")
 
     modes = {
-        "morning": ["quest", "notes", "practice_10", "practice_12"],
+        "morning": ["quest", "notes", "practice_10", "practice_12", "lab", "weekly_focus"],
         "evening": ["news"],
-        "all":     ["quest", "news", "notes", "practice_10", "practice_12"],
+        "all":     ["quest", "news", "notes", "practice_10", "practice_12", "lab", "weekly_focus"],
     }
     run_modes = modes.get(args.mode, [args.mode])
 
@@ -353,6 +422,10 @@ def main():
             post_practice(tracker, "practice_10", dry_run=args.dry_run)
         elif m == "practice_12":
             post_practice(tracker, "practice_12", dry_run=args.dry_run)
+        elif m == "lab":
+            post_lab(tracker, dry_run=args.dry_run)
+        elif m == "weekly_focus":
+            post_weekly_focus(tracker, dry_run=args.dry_run)
 
     print("\nDone.")
 
