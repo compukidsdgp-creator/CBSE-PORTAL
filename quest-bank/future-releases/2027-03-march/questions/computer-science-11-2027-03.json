@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-03-computer-science-c11",
+    "session": "2026–27",
+    "month": "March 2027",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "Computer Science (083)",
+    "title": "Computer Science — Class 11 March 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202703-083-C11-01",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Computer Systems",
+      "topic": "Computer Systems",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Computer Systems. which component temporarily stores data and instructions currently being used by the CPU?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Hard disk",
+        "D": "Optical disc"
+      },
+      "answer": "A",
+      "explanation": "RAM is volatile primary memory used by active programs and data.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computer Systems"
+      ]
+    },
+    {
+      "id": "202703-083-C11-02",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Computer Systems",
+      "topic": "Computer Systems",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Computer Systems. which of the following is an example of system software?",
+      "options": {
+        "A": "A spreadsheet",
+        "B": "An operating system",
+        "C": "A presentation",
+        "D": "A web page"
+      },
+      "answer": "B",
+      "explanation": "An operating system manages hardware and provides services to application software.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computer Systems"
+      ]
+    },
+    {
+      "id": "202703-083-C11-03",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Number Systems",
+      "topic": "Number Systems",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Number Systems. what is the decimal equivalent of binary 1011₂?",
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "11",
+        "D": "12"
+      },
+      "answer": "C",
+      "explanation": "1011₂ = 8 + 0 + 2 + 1 = 11.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Number Systems"
+      ]
+    },
+    {
+      "id": "202703-083-C11-04",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Number Systems",
+      "topic": "Number Systems",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Number Systems. how many bits are required to represent one hexadecimal digit?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "8"
+      },
+      "answer": "C",
+      "explanation": "One hexadecimal digit represents 16 values, which require 4 bits.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Number Systems"
+      ]
+    },
+    {
+      "id": "202703-083-C11-05",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Boolean Logic",
+      "topic": "Boolean Logic",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Boolean Logic. which logic gate gives output 1 only when both inputs are 1?",
+      "options": {
+        "A": "OR",
+        "B": "AND",
+        "C": "NOT",
+        "D": "XOR"
+      },
+      "answer": "B",
+      "explanation": "The AND gate outputs 1 only for input combination 1,1.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Boolean Logic"
+      ]
+    },
+    {
+      "id": "202703-083-C11-06",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Boolean Logic",
+      "topic": "Boolean Logic",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Boolean Logic. the output of NOT(0) is:",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "Undefined",
+        "D": "Depends on a clock"
+      },
+      "answer": "B",
+      "explanation": "NOT reverses the input bit; NOT 0 is 1.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Boolean Logic"
+      ]
+    },
+    {
+      "id": "202703-083-C11-07",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Python Basics",
+      "topic": "Python Basics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Python Basics. which is a valid Python identifier?",
+      "options": {
+        "A": "2marks",
+        "B": "total-marks",
+        "C": "total_marks",
+        "D": "class"
+      },
+      "answer": "C",
+      "explanation": "Identifiers cannot start with a digit or contain a hyphen; keywords such as class are reserved.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python Basics"
+      ]
+    },
+    {
+      "id": "202703-083-C11-08",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Python Basics",
+      "topic": "Python Basics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Python Basics. what is the data type of the value 3.0 in Python?",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "str",
+        "D": "bool"
+      },
+      "answer": "B",
+      "explanation": "A numeric literal containing a decimal point is a float.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python Basics"
+      ]
+    },
+    {
+      "id": "202703-083-C11-09",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Python Operators",
+      "topic": "Python Operators",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Python Operators. what is the value of 17 // 5 in Python?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "3.4",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "Floor division returns the quotient rounded down: 17 // 5 is 3.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python Operators"
+      ]
+    },
+    {
+      "id": "202703-083-C11-10",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Conditional Statements",
+      "topic": "Conditional Statements",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Conditional Statements. which keyword introduces an alternative branch after an if block?",
+      "options": {
+        "A": "otherwise",
+        "B": "elseif",
+        "C": "else",
+        "D": "default"
+      },
+      "answer": "C",
+      "explanation": "Python uses else for the alternative branch when the if condition is false.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Conditional Statements"
+      ]
+    },
+    {
+      "id": "202703-083-C11-11",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Loops",
+      "topic": "Loops",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Loops. how many times does range(2, 7, 2) generate a value?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "It generates 2, 4 and 6: three values.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Loops"
+      ]
+    },
+    {
+      "id": "202703-083-C11-12",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Strings",
+      "topic": "Strings",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Strings. what is the result of 'PYTHON'[1:4]?",
+      "options": {
+        "A": "PYT",
+        "B": "YTH",
+        "C": "THO",
+        "D": "YTHO"
+      },
+      "answer": "B",
+      "explanation": "Slicing includes index 1 and stops before index 4, producing YTH.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Strings"
+      ]
+    },
+    {
+      "id": "202703-083-C11-13",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Lists",
+      "topic": "Lists",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Lists. which list method adds one item to the end of a list?",
+      "options": {
+        "A": "insert()",
+        "B": "extend()",
+        "C": "append()",
+        "D": "remove()"
+      },
+      "answer": "C",
+      "explanation": "append(x) adds x as a single element at the end of the list.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Lists"
+      ]
+    },
+    {
+      "id": "202703-083-C11-14",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Functions",
+      "topic": "Functions",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Functions. what does a Python function return if no return statement is executed?",
+      "options": {
+        "A": "0",
+        "B": "False",
+        "C": "None",
+        "D": "An empty string"
+      },
+      "answer": "C",
+      "explanation": "A function without an explicit return value returns None.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Functions"
+      ]
+    },
+    {
+      "id": "202703-083-C11-15",
+      "class": 11,
+      "subject": "Computer Science",
+      "chapter": "Errors and Debugging",
+      "topic": "Errors and Debugging",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Errors and Debugging. which error occurs when a program attempts to use an undefined variable name?",
+      "options": {
+        "A": "SyntaxError",
+        "B": "NameError",
+        "C": "TypeError",
+        "D": "IndexError"
+      },
+      "answer": "B",
+      "explanation": "Python raises NameError when a name is not found in the current scope.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Errors and Debugging"
+      ]
+    }
+  ]
+}

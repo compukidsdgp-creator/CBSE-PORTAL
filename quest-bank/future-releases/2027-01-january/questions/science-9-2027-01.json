@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-01-science-c9",
+    "session": "2026–27",
+    "month": "January 2027",
+    "class": 9,
+    "class_group": "9-10",
+    "subject": "Science (086)",
+    "title": "Science — Class 9 January 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202701-086-C9-01",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Matter in Our Surroundings",
+      "topic": "Matter in Our Surroundings",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Matter in Our Surroundings. which statement best describes diffusion in gases?",
+      "options": {
+        "A": "Particles move from higher to lower concentration due to random motion",
+        "B": "Gas particles stop moving at room temperature",
+        "C": "Only heavier particles diffuse",
+        "D": "Diffusion requires a membrane"
+      },
+      "answer": "A",
+      "explanation": "Gas particles move randomly and spread from a region of higher concentration to lower concentration.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Matter in Our Surroundings"
+      ]
+    },
+    {
+      "id": "202701-086-C9-02",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Matter in Our Surroundings",
+      "topic": "Matter in Our Surroundings",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Matter in Our Surroundings. during melting, the temperature of pure ice at its melting point remains constant because the supplied heat is used to:",
+      "options": {
+        "A": "Increase particle speed",
+        "B": "Overcome forces of attraction",
+        "C": "Increase the mass",
+        "D": "Compress the particles"
+      },
+      "answer": "B",
+      "explanation": "Latent heat is used to change the state by overcoming intermolecular attraction.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Matter in Our Surroundings"
+      ]
+    },
+    {
+      "id": "202701-086-C9-03",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Is Matter Around Us Pure",
+      "topic": "Is Matter Around Us Pure",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Is Matter Around Us Pure. which method is most suitable for separating cream from milk?",
+      "options": {
+        "A": "Filtration",
+        "B": "Sublimation",
+        "C": "Centrifugation",
+        "D": "Evaporation"
+      },
+      "answer": "C",
+      "explanation": "Centrifugation separates components of a mixture based on density.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Is Matter Around Us Pure"
+      ]
+    },
+    {
+      "id": "202701-086-C9-04",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Is Matter Around Us Pure",
+      "topic": "Is Matter Around Us Pure",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Is Matter Around Us Pure. a solution contains 20 g salt in 180 g water. What is its mass percentage of salt?",
+      "options": {
+        "A": "10%",
+        "B": "11.1%",
+        "C": "20%",
+        "D": "90%"
+      },
+      "answer": "A",
+      "explanation": "Mass percentage = 20/(20+180) × 100 = 10%.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Is Matter Around Us Pure"
+      ]
+    },
+    {
+      "id": "202701-086-C9-05",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Atoms and Molecules",
+      "topic": "Atoms and Molecules",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Atoms and Molecules. what is the chemical formula of aluminium oxide?",
+      "options": {
+        "A": "AlO",
+        "B": "Al2O",
+        "C": "AlO3",
+        "D": "Al2O3"
+      },
+      "answer": "D",
+      "explanation": "Aluminium has valency 3 and oxygen has valency 2; criss-crossing gives Al2O3.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Atoms and Molecules"
+      ]
+    },
+    {
+      "id": "202701-086-C9-06",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Atoms and Molecules",
+      "topic": "Atoms and Molecules",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Atoms and Molecules. how many molecules are present in 18 g of water?",
+      "options": {
+        "A": "6.022 × 10^23",
+        "B": "3.011 × 10^23",
+        "C": "1.204 × 10^24",
+        "D": "18 × 10^23"
+      },
+      "answer": "A",
+      "explanation": "18 g water is one mole, containing Avogadro’s number of molecules.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Atoms and Molecules"
+      ]
+    },
+    {
+      "id": "202701-086-C9-07",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Structure of the Atom",
+      "topic": "Structure of the Atom",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Structure of the Atom. which subatomic particle has no electric charge?",
+      "options": {
+        "A": "Proton",
+        "B": "Electron",
+        "C": "Neutron",
+        "D": "Positron"
+      },
+      "answer": "C",
+      "explanation": "A neutron is electrically neutral.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Structure of the Atom"
+      ]
+    },
+    {
+      "id": "202701-086-C9-08",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Structure of the Atom",
+      "topic": "Structure of the Atom",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Structure of the Atom. an atom has atomic number 17 and mass number 35. Number of neutrons is:",
+      "options": {
+        "A": "17",
+        "B": "18",
+        "C": "35",
+        "D": "52"
+      },
+      "answer": "B",
+      "explanation": "Neutrons = mass number − atomic number = 35 − 17 = 18.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Structure of the Atom"
+      ]
+    },
+    {
+      "id": "202701-086-C9-09",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "The Fundamental Unit of Life",
+      "topic": "The Fundamental Unit of Life",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing The Fundamental Unit of Life. which cell organelle is the main site of aerobic respiration?",
+      "options": {
+        "A": "Ribosome",
+        "B": "Mitochondrion",
+        "C": "Golgi apparatus",
+        "D": "Vacuole"
+      },
+      "answer": "B",
+      "explanation": "Mitochondria release usable energy through aerobic cellular respiration.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "The Fundamental Unit of Life"
+      ]
+    },
+    {
+      "id": "202701-086-C9-10",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "The Fundamental Unit of Life",
+      "topic": "The Fundamental Unit of Life",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing The Fundamental Unit of Life. a plant cell placed in a concentrated salt solution shrinks away from its cell wall. This is:",
+      "options": {
+        "A": "Diffusion",
+        "B": "Plasmolysis",
+        "C": "Endocytosis",
+        "D": "Osmosis into the cell"
+      },
+      "answer": "B",
+      "explanation": "Water leaves the cell by osmosis, causing the protoplast to shrink.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "The Fundamental Unit of Life"
+      ]
+    },
+    {
+      "id": "202701-086-C9-11",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Tissues",
+      "topic": "Tissues",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Tissues. which plant tissue transports water and minerals from roots?",
+      "options": {
+        "A": "Phloem",
+        "B": "Epidermis",
+        "C": "Xylem",
+        "D": "Parenchyma"
+      },
+      "answer": "C",
+      "explanation": "Xylem conducts water and dissolved minerals, mainly upward.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Tissues"
+      ]
+    },
+    {
+      "id": "202701-086-C9-12",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Tissues",
+      "topic": "Tissues",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Tissues. which feature makes cardiac muscle suitable for continuous rhythmic activity?",
+      "options": {
+        "A": "Voluntary control",
+        "B": "Branched fibres with intercalated discs",
+        "C": "No mitochondria",
+        "D": "Complete absence of striations"
+      },
+      "answer": "B",
+      "explanation": "Intercalated discs connect cardiac cells and support coordinated contraction.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Tissues"
+      ]
+    },
+    {
+      "id": "202701-086-C9-13",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Motion",
+      "topic": "Motion",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Motion. the slope of a distance-time graph represents:",
+      "options": {
+        "A": "Acceleration",
+        "B": "Speed",
+        "C": "Displacement",
+        "D": "Force"
+      },
+      "answer": "B",
+      "explanation": "Distance travelled per unit time is speed; it is the graph’s slope.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Motion"
+      ]
+    },
+    {
+      "id": "202701-086-C9-14",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Force and Laws of Motion",
+      "topic": "Force and Laws of Motion",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Force and Laws of Motion. a 2 kg object accelerates at 3 m/s². The net force is:",
+      "options": {
+        "A": "1.5 N",
+        "B": "5 N",
+        "C": "6 N",
+        "D": "9 N"
+      },
+      "answer": "C",
+      "explanation": "Newton’s second law: F = ma = 2 × 3 = 6 N.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Force and Laws of Motion"
+      ]
+    },
+    {
+      "id": "202701-086-C9-15",
+      "class": 9,
+      "subject": "Science",
+      "chapter": "Gravitation",
+      "topic": "Gravitation",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Gravitation. if the distance between two masses is doubled, their gravitational force becomes:",
+      "options": {
+        "A": "Twice",
+        "B": "Half",
+        "C": "One-fourth",
+        "D": "Four times"
+      },
+      "answer": "C",
+      "explanation": "Gravitational force varies inversely with the square of distance.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Gravitation"
+      ]
+    }
+  ]
+}

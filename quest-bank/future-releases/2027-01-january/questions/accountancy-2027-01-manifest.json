@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2027-01-accountancy",
+    "class_group": "11-12",
+    "subject": "Accountancy (055)",
+    "month": "January 2027",
+    "title": "Accountancy — January 2027 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 11,
+        "file": "questions/accountancy-11-2027-01.json",
+        "question_count": 15
+      },
+      {
+        "class": 12,
+        "file": "questions/accountancy-12-2027-01.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

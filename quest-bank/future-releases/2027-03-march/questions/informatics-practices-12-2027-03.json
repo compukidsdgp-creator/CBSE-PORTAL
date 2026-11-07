@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-03-informatics-practices-c12",
+    "session": "2026–27",
+    "month": "March 2027",
+    "class": 12,
+    "class_group": "11-12",
+    "subject": "Informatics Practices (065)",
+    "title": "Informatics Practices — Class 12 March 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "chapter": "Database Concepts",
+      "topic": "Database Concepts",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Database Concepts. which SQL command is used to retrieve records from a table?",
+      "options": {
+        "A": "SELECT",
+        "B": "UPDATE",
+        "C": "DELETE",
+        "D": "ALTER"
+      },
+      "answer": "A",
+      "explanation": "SELECT retrieves rows from one or more database tables.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Database Concepts"
+      ],
+      "id": "202703-065-C12-01",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "SQL",
+      "topic": "SQL",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing SQL. which clause filters rows before grouping?",
+      "options": {
+        "A": "WHERE",
+        "B": "HAVING",
+        "C": "ORDER BY",
+        "D": "DISTINCT"
+      },
+      "answer": "A",
+      "explanation": "WHERE filters individual rows before GROUP BY is applied.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "SQL"
+      ],
+      "id": "202703-065-C12-02",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "SQL",
+      "topic": "SQL",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing SQL. which SQL function returns the number of rows?",
+      "options": {
+        "A": "COUNT()",
+        "B": "SUM()",
+        "C": "AVG()",
+        "D": "ROUND()"
+      },
+      "answer": "A",
+      "explanation": "COUNT() returns the number of rows or non-NULL values, depending on its argument.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "SQL"
+      ],
+      "id": "202703-065-C12-03",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Data Handling",
+      "topic": "Data Handling",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Data Handling. in a Pandas DataFrame, which attribute gives the number of rows and columns?",
+      "options": {
+        "A": "shape",
+        "B": "size",
+        "C": "ndim",
+        "D": "columns"
+      },
+      "answer": "A",
+      "explanation": "The shape attribute returns a tuple containing row and column counts.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Handling"
+      ],
+      "id": "202703-065-C12-04",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Data Handling",
+      "topic": "Data Handling",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Data Handling. which Pandas method displays the first five rows by default?",
+      "options": {
+        "A": "head()",
+        "B": "tail()",
+        "C": "describe()",
+        "D": "info()"
+      },
+      "answer": "A",
+      "explanation": "head() displays the first five rows unless another number is supplied.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Handling"
+      ],
+      "id": "202703-065-C12-05",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Data Handling",
+      "topic": "Data Handling",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Data Handling. which method is commonly used to identify missing values in a DataFrame?",
+      "options": {
+        "A": "isnull()",
+        "B": "sort_values()",
+        "C": "rename()",
+        "D": "drop_duplicates()"
+      },
+      "answer": "A",
+      "explanation": "isnull() marks missing entries as True.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Handling"
+      ],
+      "id": "202703-065-C12-06",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Data Visualisation",
+      "topic": "Data Visualisation",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Data Visualisation. which chart is most suitable for showing a trend over time?",
+      "options": {
+        "A": "Line chart",
+        "B": "Pie chart",
+        "C": "Histogram",
+        "D": "Box plot"
+      },
+      "answer": "A",
+      "explanation": "A line chart makes changes over ordered time intervals easy to see.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Visualisation"
+      ],
+      "id": "202703-065-C12-07",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Data Visualisation",
+      "topic": "Data Visualisation",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Data Visualisation. which Matplotlib function displays a chart?",
+      "options": {
+        "A": "show()",
+        "B": "read()",
+        "C": "plotly()",
+        "D": "render()"
+      },
+      "answer": "A",
+      "explanation": "pyplot.show() displays the current figure.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Visualisation"
+      ],
+      "id": "202703-065-C12-08",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Computer Networks",
+      "topic": "Computer Networks",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Computer Networks. which protocol provides secure web communication?",
+      "options": {
+        "A": "HTTPS",
+        "B": "FTP",
+        "C": "HTTP",
+        "D": "Telnet"
+      },
+      "answer": "A",
+      "explanation": "HTTPS uses TLS to protect communication between browser and server.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computer Networks"
+      ],
+      "id": "202703-065-C12-09",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Computer Networks",
+      "topic": "Computer Networks",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Computer Networks. which device forwards packets between different networks?",
+      "options": {
+        "A": "Router",
+        "B": "Repeater",
+        "C": "Hub",
+        "D": "Keyboard"
+      },
+      "answer": "A",
+      "explanation": "A router forwards packets between networks using IP addressing.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computer Networks"
+      ],
+      "id": "202703-065-C12-10",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Societal Impacts",
+      "topic": "Societal Impacts",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Societal Impacts. which practice best protects personal data online?",
+      "options": {
+        "A": "Use strong unique passwords and MFA",
+        "B": "Share OTPs with callers",
+        "C": "Reuse one password",
+        "D": "Publish account details"
+      },
+      "answer": "A",
+      "explanation": "Unique passwords and multi-factor authentication reduce account compromise risk.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Societal Impacts"
+      ],
+      "id": "202703-065-C12-11",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Database Concepts",
+      "topic": "Database Concepts",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Database Concepts. a primary key must be:",
+      "options": {
+        "A": "Unique and non-null",
+        "B": "Repeated in every row",
+        "C": "A paragraph",
+        "D": "Optional in every table"
+      },
+      "answer": "A",
+      "explanation": "A primary key uniquely identifies each record and cannot be NULL.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Database Concepts"
+      ],
+      "id": "202703-065-C12-12",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "SQL",
+      "topic": "SQL",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing SQL. which clause sorts query results?",
+      "options": {
+        "A": "ORDER BY",
+        "B": "GROUP BY",
+        "C": "WHERE",
+        "D": "JOIN"
+      },
+      "answer": "A",
+      "explanation": "ORDER BY sorts the result set by one or more columns.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "SQL"
+      ],
+      "id": "202703-065-C12-13",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Data Handling",
+      "topic": "Data Handling",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Data Handling. which Pandas method gives summary statistics for numeric columns?",
+      "options": {
+        "A": "describe()",
+        "B": "head()",
+        "C": "loc()",
+        "D": "merge()"
+      },
+      "answer": "A",
+      "explanation": "describe() reports count, mean, standard deviation and related statistics.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Handling"
+      ],
+      "id": "202703-065-C12-14",
+      "class": 12,
+      "subject": "Informatics Practices"
+    },
+    {
+      "chapter": "Data Handling",
+      "topic": "Data Handling",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Data Handling. which operation combines DataFrames using a common key?",
+      "options": {
+        "A": "merge()",
+        "B": "append_text()",
+        "C": "plot()",
+        "D": "isna()"
+      },
+      "answer": "A",
+      "explanation": "merge() performs database-style joins using one or more keys.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Handling"
+      ],
+      "id": "202703-065-C12-15",
+      "class": 12,
+      "subject": "Informatics Practices"
+    }
+  ]
+}

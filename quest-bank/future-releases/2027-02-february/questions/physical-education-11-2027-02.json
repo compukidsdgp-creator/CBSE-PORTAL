@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-02-physical-education-c11",
+    "session": "2026–27",
+    "month": "February 2027",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "Physical Education (048)",
+    "title": "Physical Education — Class 11 February 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "chapter": "Anatomy",
+      "topic": "Anatomy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Anatomy. which chamber pumps oxygenated blood into the aorta?",
+      "options": {
+        "A": "Left ventricle",
+        "B": "Right ventricle",
+        "C": "Right atrium",
+        "D": "Left atrium"
+      },
+      "answer": "A",
+      "explanation": "The left ventricle pumps oxygenated blood into systemic circulation.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Anatomy"
+      ],
+      "id": "202702-048-C11-01",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Physiology",
+      "topic": "Physiology",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Physiology. the primary function of haemoglobin is to:",
+      "options": {
+        "A": "Transport oxygen",
+        "B": "Digest fats",
+        "C": "Produce hormones",
+        "D": "Store calcium"
+      },
+      "answer": "A",
+      "explanation": "Haemoglobin in red blood cells binds and transports oxygen.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Physiology"
+      ],
+      "id": "202702-048-C11-02",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Training",
+      "topic": "Training",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Training. progressive overload means:",
+      "options": {
+        "A": "Gradually increasing training demand",
+        "B": "Avoiding all exercise",
+        "C": "Repeating only warm-ups",
+        "D": "Reducing load every session"
+      },
+      "answer": "A",
+      "explanation": "Progressive overload applies a gradual increase in training stress.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Training"
+      ],
+      "id": "202702-048-C11-03",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Training",
+      "topic": "Training",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Training. the FITT principle stands for:",
+      "options": {
+        "A": "Frequency, Intensity, Time, Type",
+        "B": "Force, Interval, Tempo, Test",
+        "C": "Flexibility, Injury, Training, Tactics",
+        "D": "Fitness, Intention, Target, Trial"
+      },
+      "answer": "A",
+      "explanation": "FITT is a framework for planning exercise programmes.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Training"
+      ],
+      "id": "202702-048-C11-04",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Yoga",
+      "topic": "Yoga",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Yoga. which practice is primarily a breathing technique?",
+      "options": {
+        "A": "Pranayama",
+        "B": "Dharana",
+        "C": "Yama",
+        "D": "Niyama"
+      },
+      "answer": "A",
+      "explanation": "Pranayama refers to regulation of breath.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Yoga"
+      ],
+      "id": "202702-048-C11-05",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Sports Psychology",
+      "topic": "Sports Psychology",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Sports Psychology. intrinsic motivation comes from:",
+      "options": {
+        "A": "Internal satisfaction",
+        "B": "Only cash rewards",
+        "C": "Fear of punishment",
+        "D": "External ranking alone"
+      },
+      "answer": "A",
+      "explanation": "Intrinsic motivation arises from interest or enjoyment in the activity.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Sports Psychology"
+      ],
+      "id": "202702-048-C11-06",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Biomechanics",
+      "topic": "Biomechanics",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Biomechanics. the ability to maintain body position is called:",
+      "options": {
+        "A": "Balance",
+        "B": "Agility",
+        "C": "Speed",
+        "D": "Reaction time"
+      },
+      "answer": "A",
+      "explanation": "Balance is the ability to maintain stability.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biomechanics"
+      ],
+      "id": "202702-048-C11-07",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Sports Injuries",
+      "topic": "Sports Injuries",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Sports Injuries. the immediate first-aid approach for a minor acute sprain commonly includes:",
+      "options": {
+        "A": "Protection and appropriate rest/ice/compression/elevation",
+        "B": "Forceful massage",
+        "C": "Immediate maximal exercise",
+        "D": "Ignoring swelling"
+      },
+      "answer": "A",
+      "explanation": "Protecting the injury and managing swelling are appropriate early steps; serious injuries need assessment.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Sports Injuries"
+      ],
+      "id": "202702-048-C11-08",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Nutrition",
+      "topic": "Nutrition",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Nutrition. which nutrient is the body’s main quick energy source?",
+      "options": {
+        "A": "Carbohydrate",
+        "B": "Vitamin C",
+        "C": "Water",
+        "D": "Mineral salts"
+      },
+      "answer": "A",
+      "explanation": "Carbohydrates are a major readily available energy source.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Nutrition"
+      ],
+      "id": "202702-048-C11-09",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Fitness Testing",
+      "topic": "Fitness Testing",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Fitness Testing. a sit-and-reach test mainly assesses:",
+      "options": {
+        "A": "Flexibility",
+        "B": "Explosive strength",
+        "C": "Reaction time",
+        "D": "Cardiovascular endurance"
+      },
+      "answer": "A",
+      "explanation": "The test estimates flexibility of the lower back and hamstrings.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Fitness Testing"
+      ],
+      "id": "202702-048-C11-10",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Training",
+      "topic": "Training",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Training. a warm-up is intended to:",
+      "options": {
+        "A": "Prepare the body gradually for activity",
+        "B": "Cause immediate fatigue",
+        "C": "Replace the main session",
+        "D": "Lower muscle temperature"
+      },
+      "answer": "A",
+      "explanation": "A warm-up raises readiness and prepares muscles and cardiovascular function.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Training"
+      ],
+      "id": "202702-048-C11-11",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Sports Psychology",
+      "topic": "Sports Psychology",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Sports Psychology. arousal that is too high may:",
+      "options": {
+        "A": "Impair performance and decision-making",
+        "B": "Guarantee a personal best",
+        "C": "Remove all anxiety",
+        "D": "Improve every skill"
+      },
+      "answer": "A",
+      "explanation": "Excessive arousal can reduce concentration and coordination.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Sports Psychology"
+      ],
+      "id": "202702-048-C11-12",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Biomechanics",
+      "topic": "Biomechanics",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Biomechanics. a third-class lever has the:",
+      "options": {
+        "A": "Effort between fulcrum and load",
+        "B": "Load between fulcrum and effort",
+        "C": "Fulcrum between load and effort",
+        "D": "No fulcrum"
+      },
+      "answer": "A",
+      "explanation": "In a third-class lever, effort is applied between fulcrum and resistance.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biomechanics"
+      ],
+      "id": "202702-048-C11-13",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Sports Management",
+      "topic": "Sports Management",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Sports Management. a round-robin tournament ensures that:",
+      "options": {
+        "A": "Each team plays every other team",
+        "B": "Only top two teams play",
+        "C": "Teams are eliminated after one loss",
+        "D": "No fixture is required"
+      },
+      "answer": "A",
+      "explanation": "In a single round-robin, each participant meets every other participant once.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Sports Management"
+      ],
+      "id": "202702-048-C11-14",
+      "class": 11,
+      "subject": "Physical Education"
+    },
+    {
+      "chapter": "Health",
+      "topic": "Health",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Health. hydration is important because water helps:",
+      "options": {
+        "A": "Regulate temperature and support body functions",
+        "B": "Replace all nutrients",
+        "C": "Build bone directly",
+        "D": "Stop the need for rest"
+      },
+      "answer": "A",
+      "explanation": "Water supports thermoregulation, transport and normal physiological processes.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Health"
+      ],
+      "id": "202702-048-C11-15",
+      "class": 11,
+      "subject": "Physical Education"
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-04-social-science-c9",
+    "session": "2026–27",
+    "month": "April 2027",
+    "class": 9,
+    "class_group": "9-10",
+    "subject": "Social Science (087)",
+    "title": "Social Science — Class 9 April 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202704-087-C9-01",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "The French Revolution",
+      "topic": "The French Revolution",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing The French Revolution. which estate in pre-revolutionary France paid most of the taxes?",
+      "options": {
+        "A": "First Estate",
+        "B": "Second Estate",
+        "C": "Third Estate",
+        "D": "Royal family only"
+      },
+      "answer": "C",
+      "explanation": "The Third Estate included commoners and bore much of the tax burden.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "The French Revolution"
+      ]
+    },
+    {
+      "id": "202704-087-C9-02",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "The French Revolution",
+      "topic": "The French Revolution",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing The French Revolution. the Tennis Court Oath was taken to demand:",
+      "options": {
+        "A": "Restoration of feudal dues",
+        "B": "A constitution for France",
+        "C": "War against Austria",
+        "D": "A return to absolute monarchy"
+      },
+      "answer": "B",
+      "explanation": "Representatives pledged not to separate until a constitution was established.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "The French Revolution"
+      ]
+    },
+    {
+      "id": "202704-087-C9-03",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Socialism in Europe and the Russian Revolution",
+      "topic": "Socialism in Europe and the Russian Revolution",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Socialism in Europe and the Russian Revolution. the Bolshevik Party was led by:",
+      "options": {
+        "A": "Stalin",
+        "B": "Lenin",
+        "C": "Kerensky",
+        "D": "Nicholas II"
+      },
+      "answer": "B",
+      "explanation": "Lenin led the Bolsheviks during the 1917 Russian Revolution.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Socialism in Europe and the Russian Revolution"
+      ]
+    },
+    {
+      "id": "202704-087-C9-04",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Nazism and the Rise of Hitler",
+      "topic": "Nazism and the Rise of Hitler",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Nazism and the Rise of Hitler. the Enabling Act of 1933 allowed Hitler to:",
+      "options": {
+        "A": "Hold a referendum every month",
+        "B": "Rule without parliamentary approval",
+        "C": "Abolish the army",
+        "D": "Restore the Weimar constitution"
+      },
+      "answer": "B",
+      "explanation": "The Act gave Hitler’s government power to pass laws without parliament.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Nazism and the Rise of Hitler"
+      ]
+    },
+    {
+      "id": "202704-087-C9-05",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "India – Size and Location",
+      "topic": "India – Size and Location",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing India – Size and Location. the Standard Meridian of India is:",
+      "options": {
+        "A": "68°7′ E",
+        "B": "82°30′ E",
+        "C": "90° E",
+        "D": "97°25′ E"
+      },
+      "answer": "B",
+      "explanation": "India uses 82°30′ E as its standard meridian.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "India – Size and Location"
+      ]
+    },
+    {
+      "id": "202704-087-C9-06",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Physical Features of India",
+      "topic": "Physical Features of India",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Physical Features of India. the Himalayas are an example of:",
+      "options": {
+        "A": "Block mountains",
+        "B": "Volcanic mountains",
+        "C": "Young fold mountains",
+        "D": "Residual mountains"
+      },
+      "answer": "C",
+      "explanation": "The Himalayas are geologically young fold mountains.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Physical Features of India"
+      ]
+    },
+    {
+      "id": "202704-087-C9-07",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Drainage",
+      "topic": "Drainage",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Drainage. which river is an example of a river flowing through a rift valley?",
+      "options": {
+        "A": "Ganga",
+        "B": "Yamuna",
+        "C": "Narmada",
+        "D": "Brahmaputra"
+      },
+      "answer": "C",
+      "explanation": "The Narmada flows westward through a rift valley.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Drainage"
+      ]
+    },
+    {
+      "id": "202704-087-C9-08",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Climate",
+      "topic": "Climate",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Climate. the southwest monsoon normally reaches Kerala in:",
+      "options": {
+        "A": "Early June",
+        "B": "Late August",
+        "C": "October",
+        "D": "January"
+      },
+      "answer": "A",
+      "explanation": "The southwest monsoon usually arrives over Kerala around the beginning of June.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Climate"
+      ]
+    },
+    {
+      "id": "202704-087-C9-09",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Natural Vegetation and Wildlife",
+      "topic": "Natural Vegetation and Wildlife",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Natural Vegetation and Wildlife. tropical evergreen forests are generally found in areas with:",
+      "options": {
+        "A": "Very low rainfall",
+        "B": "Heavy rainfall throughout the year",
+        "C": "Long dry winters only",
+        "D": "Permafrost"
+      },
+      "answer": "B",
+      "explanation": "High rainfall and warmth support dense evergreen vegetation.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Natural Vegetation and Wildlife"
+      ]
+    },
+    {
+      "id": "202704-087-C9-10",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Population",
+      "topic": "Population",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Population. the number of persons living per unit area is called:",
+      "options": {
+        "A": "Birth rate",
+        "B": "Population density",
+        "C": "Sex ratio",
+        "D": "Literacy rate"
+      },
+      "answer": "B",
+      "explanation": "Population density is commonly expressed as persons per square kilometre.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Population"
+      ]
+    },
+    {
+      "id": "202704-087-C9-11",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "What is Democracy?",
+      "topic": "What is Democracy?",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing What is Democracy?. which feature is essential to democracy?",
+      "options": {
+        "A": "Rulers inherit power",
+        "B": "People elect their representatives",
+        "C": "Only one party may contest",
+        "D": "No public accountability"
+      },
+      "answer": "B",
+      "explanation": "Democracy rests on rulers being elected by the people.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "What is Democracy?"
+      ]
+    },
+    {
+      "id": "202704-087-C9-12",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Constitutional Design",
+      "topic": "Constitutional Design",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Constitutional Design. apartheid was a system of:",
+      "options": {
+        "A": "Economic planning",
+        "B": "Racial discrimination",
+        "C": "Universal adult franchise",
+        "D": "Land redistribution"
+      },
+      "answer": "B",
+      "explanation": "Apartheid enforced racial segregation and discrimination in South Africa.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Constitutional Design"
+      ]
+    },
+    {
+      "id": "202704-087-C9-13",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Electoral Politics",
+      "topic": "Electoral Politics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Electoral Politics. in India, elections to the Lok Sabha are generally held every:",
+      "options": {
+        "A": "Two years",
+        "B": "Three years",
+        "C": "Five years",
+        "D": "Six years"
+      },
+      "answer": "C",
+      "explanation": "The normal term of the Lok Sabha is five years unless dissolved earlier.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electoral Politics"
+      ]
+    },
+    {
+      "id": "202704-087-C9-14",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "People as Resource",
+      "topic": "People as Resource",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing People as Resource. investment in education and health helps create:",
+      "options": {
+        "A": "Physical capital only",
+        "B": "Human capital",
+        "C": "Natural resources",
+        "D": "Foreign trade"
+      },
+      "answer": "B",
+      "explanation": "Education and health improve people’s skills, productivity and capabilities.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "People as Resource"
+      ]
+    },
+    {
+      "id": "202704-087-C9-15",
+      "class": 9,
+      "subject": "Social Science",
+      "chapter": "Poverty as a Challenge",
+      "topic": "Poverty as a Challenge",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Poverty as a Challenge. the poverty line is used primarily to estimate:",
+      "options": {
+        "A": "Income inequality only",
+        "B": "Minimum consumption/income needed for basic needs",
+        "C": "GDP growth",
+        "D": "Population growth"
+      },
+      "answer": "B",
+      "explanation": "The poverty line identifies a minimum level needed to meet basic requirements.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Poverty as a Challenge"
+      ]
+    }
+  ]
+}

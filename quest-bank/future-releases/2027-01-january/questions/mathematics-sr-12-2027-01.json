@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-01-mathematics-sr-c12",
+    "session": "2026–27",
+    "month": "January 2027",
+    "class": 12,
+    "class_group": "11-12",
+    "subject": "Mathematics (041)",
+    "title": "Mathematics — Class 12 January 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202701-041-C12-01",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Relations & Functions",
+      "topic": "Relations & Functions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Relations & Functions. a function f:A→B is one-one if:",
+      "options": {
+        "A": "every element of B has a preimage",
+        "B": "distinct elements of A have distinct images",
+        "C": "its domain equals its range",
+        "D": "f(a)=f(b) for all a,b"
+      },
+      "answer": "B",
+      "explanation": "Injectivity means f(a)=f(b) implies a=b.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Relations & Functions"
+      ]
+    },
+    {
+      "id": "202701-041-C12-02",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Inverse Trigonometric Functions",
+      "topic": "Inverse Trigonometric Functions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Inverse Trigonometric Functions. the principal value range of sin⁻¹x is:",
+      "options": {
+        "A": "[0,π]",
+        "B": "[−π/2,π/2]",
+        "C": "[−π,π]",
+        "D": "[0,2π]"
+      },
+      "answer": "B",
+      "explanation": "The principal branch of inverse sine is [−π/2,π/2].",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Inverse Trigonometric Functions"
+      ]
+    },
+    {
+      "id": "202701-041-C12-03",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Matrices",
+      "topic": "Matrices",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Matrices. if A is a 2×3 matrix and B is a 3×4 matrix, the order of AB is:",
+      "options": {
+        "A": "2×4",
+        "B": "3×3",
+        "C": "4×2",
+        "D": "2×3"
+      },
+      "answer": "A",
+      "explanation": "The inner dimensions match and the product has the outer dimensions 2×4.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Matrices"
+      ]
+    },
+    {
+      "id": "202701-041-C12-04",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Determinants",
+      "topic": "Determinants",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Determinants. if two rows of a determinant are interchanged, its value:",
+      "options": {
+        "A": "remains same",
+        "B": "changes sign",
+        "C": "becomes zero always",
+        "D": "is squared"
+      },
+      "answer": "B",
+      "explanation": "Interchanging two rows changes the sign of a determinant.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Determinants"
+      ]
+    },
+    {
+      "id": "202701-041-C12-05",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Continuity & Differentiability",
+      "topic": "Continuity & Differentiability",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Continuity & Differentiability. the derivative of sin x with respect to x is:",
+      "options": {
+        "A": "−sin x",
+        "B": "cos x",
+        "C": "tan x",
+        "D": "−cos x"
+      },
+      "answer": "B",
+      "explanation": "d(sin x)/dx=cos x.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Continuity & Differentiability"
+      ]
+    },
+    {
+      "id": "202701-041-C12-06",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Applications of Derivatives",
+      "topic": "Applications of Derivatives",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Applications of Derivatives. a differentiable function has a local extremum at an interior point where its derivative is:",
+      "options": {
+        "A": "necessarily 1",
+        "B": "necessarily zero",
+        "C": "necessarily undefined",
+        "D": "always positive"
+      },
+      "answer": "B",
+      "explanation": "Fermat's theorem gives f'(c)=0 at an interior local extremum, when differentiable.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Applications of Derivatives"
+      ]
+    },
+    {
+      "id": "202701-041-C12-07",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Integrals",
+      "topic": "Integrals",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Integrals. the integral of 1/x with respect to x, for x≠0, is:",
+      "options": {
+        "A": "x²/2+C",
+        "B": "ln|x|+C",
+        "C": "eˣ+C",
+        "D": "1/x²+C"
+      },
+      "answer": "B",
+      "explanation": "The standard antiderivative is ln|x|+C.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Integrals"
+      ]
+    },
+    {
+      "id": "202701-041-C12-08",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Applications of Integrals",
+      "topic": "Applications of Integrals",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Applications of Integrals. the area under y=f(x) above the x-axis from a to b is:",
+      "options": {
+        "A": "∫ᵃᵇ f(x)dx",
+        "B": "f(b)−f(a)",
+        "C": "f'(b)−f'(a)",
+        "D": "∫ᵃᵇ f'(x)dx"
+      },
+      "answer": "A",
+      "explanation": "For non-negative f, the definite integral gives the area.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Applications of Integrals"
+      ]
+    },
+    {
+      "id": "202701-041-C12-09",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Differential Equations",
+      "topic": "Differential Equations",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Differential Equations. the order of d²y/dx² + 3dy/dx + y=0 is:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "0"
+      },
+      "answer": "B",
+      "explanation": "The highest derivative is the second derivative.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Differential Equations"
+      ]
+    },
+    {
+      "id": "202701-041-C12-10",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Vectors",
+      "topic": "Vectors",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Vectors. the dot product of two perpendicular non-zero vectors is:",
+      "options": {
+        "A": "1",
+        "B": "−1",
+        "C": "0",
+        "D": "their product of magnitudes"
+      },
+      "answer": "C",
+      "explanation": "a·b=|a||b|cos90°=0.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Vectors"
+      ]
+    },
+    {
+      "id": "202701-041-C12-11",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Three-Dimensional Geometry",
+      "topic": "Three-Dimensional Geometry",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Three-Dimensional Geometry. the direction cosines l,m,n of a line satisfy:",
+      "options": {
+        "A": "l+m+n=1",
+        "B": "l²+m²+n²=1",
+        "C": "lm+mn+nl=1",
+        "D": "lmn=1"
+      },
+      "answer": "B",
+      "explanation": "Direction cosines satisfy the unit-sphere identity.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Three-Dimensional Geometry"
+      ]
+    },
+    {
+      "id": "202701-041-C12-12",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Linear Programming",
+      "topic": "Linear Programming",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Linear Programming. the feasible region in a linear programming problem is determined by:",
+      "options": {
+        "A": "objective function only",
+        "B": "constraints and non-negativity conditions",
+        "C": "the maximum value only",
+        "D": "the gradient alone"
+      },
+      "answer": "B",
+      "explanation": "The feasible region is the intersection of all constraint half-planes and non-negativity conditions.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Linear Programming"
+      ]
+    },
+    {
+      "id": "202701-041-C12-13",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "topic": "Probability",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Probability. for independent events A and B:",
+      "options": {
+        "A": "P(A∩B)=P(A)+P(B)",
+        "B": "P(A∩B)=P(A)P(B)",
+        "C": "P(A|B)=0",
+        "D": "P(A∪B)=0"
+      },
+      "answer": "B",
+      "explanation": "Independence gives the product rule.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Probability"
+      ]
+    },
+    {
+      "id": "202701-041-C12-14",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Matrices",
+      "topic": "Matrices",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Matrices. a square matrix A is invertible if and only if:",
+      "options": {
+        "A": "det(A)=0",
+        "B": "det(A)≠0",
+        "C": "all entries are positive",
+        "D": "A is diagonal"
+      },
+      "answer": "B",
+      "explanation": "A square matrix is non-singular precisely when its determinant is non-zero.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Matrices"
+      ]
+    },
+    {
+      "id": "202701-041-C12-15",
+      "class": 12,
+      "subject": "Mathematics",
+      "chapter": "Continuity & Differentiability",
+      "topic": "Continuity & Differentiability",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 12 learner is reviewing Continuity & Differentiability. the function f(x)=|x| is not differentiable at:",
+      "options": {
+        "A": "x=−1",
+        "B": "x=0",
+        "C": "x=1",
+        "D": "all real x"
+      },
+      "answer": "B",
+      "explanation": "The left and right derivatives at zero differ.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Continuity & Differentiability"
+      ]
+    }
+  ]
+}

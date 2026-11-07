@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2026-12-bengali-c11",
+    "session": "2026–27",
+    "month": "December 2026",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "Bengali",
+    "title": "Bengali — Class 11 December 2026 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "chapter": "ব্যাকরণ",
+      "topic": "ব্যাকরণ",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing ব্যাকরণ. “অম্লান” শব্দের বিপরীতার্থক শব্দ কোনটি?",
+      "options": {
+        "A": "ম্লান",
+        "B": "উজ্জ্বল",
+        "C": "নির্মল",
+        "D": "প্রসন্ন"
+      },
+      "answer": "A",
+      "explanation": "“অম্লান”-এর বিপরীতার্থক শব্দ “ম্লান”।",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "ব্যাকরণ"
+      ],
+      "id": "202612-BEN-C11-01",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "ব্যাকরণ",
+      "topic": "ব্যাকরণ",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing ব্যাকরণ. “নীল আকাশ” পদবন্ধে “নীল” কোন পদ?",
+      "options": {
+        "A": "বিশেষণ",
+        "B": "বিশেষ্য",
+        "C": "সর্বনাম",
+        "D": "ক্রিয়া"
+      },
+      "answer": "A",
+      "explanation": "“নীল” আকাশের গুণ প্রকাশ করছে, তাই এটি বিশেষণ।",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "ব্যাকরণ"
+      ],
+      "id": "202612-BEN-C11-02",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "ব্যাকরণ",
+      "topic": "ব্যাকরণ",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing ব্যাকরণ. “সে বই পড়ে” বাক্যে ক্রিয়াপদ কোনটি?",
+      "options": {
+        "A": "পড়ে",
+        "B": "সে",
+        "C": "বই",
+        "D": "কোনোটিই নয়"
+      },
+      "answer": "A",
+      "explanation": "“পড়ে” কাজ বোঝাচ্ছে, তাই এটি ক্রিয়াপদ।",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "ব্যাকরণ"
+      ],
+      "id": "202612-BEN-C11-03",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "সাহিত্য",
+      "topic": "সাহিত্য",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing সাহিত্য. কবিতার মূল ভাবকে কী বলা হয়?",
+      "options": {
+        "A": "ভাববস্তু",
+        "B": "ছন্দ",
+        "C": "অলংকার",
+        "D": "উপসর্গ"
+      },
+      "answer": "A",
+      "explanation": "কবিতার কেন্দ্রীয় বক্তব্য বা অনুভূতিই ভাববস্তু।",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "সাহিত্য"
+      ],
+      "id": "202612-BEN-C11-04",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "ভাষা",
+      "topic": "ভাষা",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing ভাষা. সমার্থক শব্দ বলতে বোঝায়:",
+      "options": {
+        "A": "একই বা কাছাকাছি অর্থের শব্দ",
+        "B": "বিপরীত অর্থের শব্দ",
+        "C": "শুধু বিদেশি শব্দ",
+        "D": "শব্দের ধ্বনি"
+      },
+      "answer": "A",
+      "explanation": "সমার্থক শব্দের অর্থ একই বা প্রায় কাছাকাছি।",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "ভাষা"
+      ],
+      "id": "202612-BEN-C11-05",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "ব্যাকরণ",
+      "topic": "ব্যাকরণ",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing ব্যাকরণ. “অসৎ” শব্দে উপসর্গ কোনটি?",
+      "options": {
+        "A": "অ-",
+        "B": "সৎ",
+        "C": "ৎ",
+        "D": "কোনোটিই নয়"
+      },
+      "answer": "A",
+      "explanation": "“অ-” উপসর্গটি নিষেধ বা বিপরীত অর্থ প্রকাশ করছে।",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "ব্যাকরণ"
+      ],
+      "id": "202612-BEN-C11-06",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "রচনা",
+      "topic": "রচনা",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing রচনা. প্রতিবেদনের ভাষা হওয়া উচিত:",
+      "options": {
+        "A": "তথ্যনির্ভর ও স্পষ্ট",
+        "B": "অতিরঞ্জিত ও অস্পষ্ট",
+        "C": "শুধু আবেগপূর্ণ",
+        "D": "সম্পূর্ণ কথ্য"
+      },
+      "answer": "A",
+      "explanation": "প্রতিবেদনে নিরপেক্ষ, স্পষ্ট ও তথ্যভিত্তিক ভাষা ব্যবহার করা হয়।",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "রচনা"
+      ],
+      "id": "202612-BEN-C11-07",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "পাঠ-বোঝা",
+      "topic": "পাঠ-বোঝা",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing পাঠ-বোঝা. অনুচ্ছেদের কেন্দ্রীয় বক্তব্য খুঁজতে প্রথমে কী দেখা উচিত?",
+      "options": {
+        "A": "মূল ভাব ও সহায়ক তথ্য",
+        "B": "শুধু শেষ শব্দ",
+        "C": "শুধু যতিচিহ্ন",
+        "D": "শুধু বাক্যের দৈর্ঘ্য"
+      },
+      "answer": "A",
+      "explanation": "মূল ভাব ও তার পক্ষে দেওয়া তথ্য থেকে কেন্দ্রীয় বক্তব্য বোঝা যায়।",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "পাঠ-বোঝা"
+      ],
+      "id": "202612-BEN-C11-08",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "অলংকার",
+      "topic": "অলংকার",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing অলংকার. একটি বস্তুকে অন্য বস্তুর সঙ্গে সরাসরি এক করে দেখানো হলে তা কী?",
+      "options": {
+        "A": "রূপক",
+        "B": "উপমা",
+        "C": "অনুপ্রাস",
+        "D": "যমক"
+      },
+      "answer": "A",
+      "explanation": "রূপকে সরাসরি অভিন্নতা কল্পনা করা হয়; উপমায় তুলনাসূচক শব্দ থাকে।",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "অলংকার"
+      ],
+      "id": "202612-BEN-C11-09",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "ব্যাকরণ",
+      "topic": "ব্যাকরণ",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing ব্যাকরণ. “মানুষ” শব্দটি কোন পদ?",
+      "options": {
+        "A": "বিশেষ্য",
+        "B": "বিশেষণ",
+        "C": "অব্যয়",
+        "D": "ক্রিয়া"
+      },
+      "answer": "A",
+      "explanation": "“মানুষ” ব্যক্তি বা জাতিকে নির্দেশ করে, তাই বিশেষ্য।",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "ব্যাকরণ"
+      ],
+      "id": "202612-BEN-C11-10",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "সাহিত্য",
+      "topic": "সাহিত্য",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing সাহিত্য. গল্পের ঘটনাপ্রবাহকে কী বলা হয়?",
+      "options": {
+        "A": "কাহিনি",
+        "B": "ছন্দ",
+        "C": "উপসর্গ",
+        "D": "বাগধারা"
+      },
+      "answer": "A",
+      "explanation": "গল্পে ঘটনাগুলির ধারাবাহিক বিন্যাস কাহিনি।",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "সাহিত্য"
+      ],
+      "id": "202612-BEN-C11-11",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "ব্যাকরণ",
+      "topic": "ব্যাকরণ",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing ব্যাকরণ. “যে পরিশ্রম করে, সে সফল হয়”—এখানে “যে” কী?",
+      "options": {
+        "A": "সর্বনাম",
+        "B": "ক্রিয়া",
+        "C": "বিশেষণ",
+        "D": "অব্যয়"
+      },
+      "answer": "A",
+      "explanation": "“যে” ব্যক্তি নির্দেশ করছে, তাই এটি সর্বনাম।",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "ব্যাকরণ"
+      ],
+      "id": "202612-BEN-C11-12",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "রচনা",
+      "topic": "রচনা",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing রচনা. আবেদনপত্রে বিষয়ের উল্লেখ কোথায় থাকে?",
+      "options": {
+        "A": "বিষয় লাইনে",
+        "B": "স্বাক্ষরের পরে",
+        "C": "ঠিকানার আগে নয়",
+        "D": "কেবল খামের উপর"
+      },
+      "answer": "A",
+      "explanation": "আবেদনপত্রে বিষয় লাইন পাঠককে আবেদনের উদ্দেশ্য জানায়।",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "রচনা"
+      ],
+      "id": "202612-BEN-C11-13",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "ভাষা",
+      "topic": "ভাষা",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing ভাষা. বাগধারা ব্যবহারের প্রধান উদ্দেশ্য কী?",
+      "options": {
+        "A": "সংক্ষিপ্ত ও তাৎপর্যপূর্ণভাবে ভাব প্রকাশ",
+        "B": "শব্দের সংখ্যা বাড়ানো",
+        "C": "ব্যাকরণ বাদ দেওয়া",
+        "D": "অর্থ গোপন করা"
+      },
+      "answer": "A",
+      "explanation": "বাগধারা প্রচলিত রূপকে ব্যবহার করে ভাবকে সংক্ষিপ্ত ও প্রাণবন্ত করে।",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "ভাষা"
+      ],
+      "id": "202612-BEN-C11-14",
+      "class": 11,
+      "subject": "Bengali"
+    },
+    {
+      "chapter": "পাঠ-বোঝা",
+      "topic": "পাঠ-বোঝা",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing পাঠ-বোঝা. লেখকের মনোভাব নির্ণয়ে কোনটি সবচেয়ে সহায়ক?",
+      "options": {
+        "A": "শব্দচয়ন ও বক্তব্যের ভঙ্গি",
+        "B": "পৃষ্ঠা সংখ্যা",
+        "C": "মুদ্রণের রং",
+        "D": "অনুচ্ছেদের সংখ্যা"
+      },
+      "answer": "A",
+      "explanation": "শব্দচয়ন ও বক্তব্যের ভঙ্গি লেখকের মনোভাব প্রকাশ করে।",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "পাঠ-বোঝা"
+      ],
+      "id": "202612-BEN-C11-15",
+      "class": 11,
+      "subject": "Bengali"
+    }
+  ]
+}

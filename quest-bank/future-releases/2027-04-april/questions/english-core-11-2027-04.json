@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-04-english-core-c11",
+    "session": "2026–27",
+    "month": "April 2027",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "English Core (301)",
+    "title": "English Core — Class 11 April 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "chapter": "Reading Comprehension",
+      "topic": "Reading Comprehension",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Reading Comprehension. a writer uses a contrast between two characters mainly to:",
+      "options": {
+        "A": "Highlight their differing qualities",
+        "B": "Show identical behaviour",
+        "C": "Remove the central conflict",
+        "D": "Avoid developing a theme"
+      },
+      "answer": "A",
+      "explanation": "Contrast can reveal character traits and sharpen a central conflict.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading Comprehension"
+      ],
+      "id": "202704-301-C11-01",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Reading Comprehension",
+      "topic": "Reading Comprehension",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Reading Comprehension. the tone of a passage is best identified through its:",
+      "options": {
+        "A": "Word choice and attitude",
+        "B": "Number of paragraphs",
+        "C": "Font size",
+        "D": "Page number"
+      },
+      "answer": "A",
+      "explanation": "Tone is conveyed through diction, imagery and the writer’s attitude.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading Comprehension"
+      ],
+      "id": "202704-301-C11-02",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Writing Skills",
+      "topic": "Writing Skills",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Writing Skills. a formal invitation should primarily use:",
+      "options": {
+        "A": "Clear and courteous language",
+        "B": "Slang and abbreviations",
+        "C": "Unrelated anecdotes",
+        "D": "Unverified claims"
+      },
+      "answer": "A",
+      "explanation": "Formal invitations use concise, polite and relevant information.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing Skills"
+      ],
+      "id": "202704-301-C11-03",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Writing Skills",
+      "topic": "Writing Skills",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Writing Skills. in a report, the findings section should present:",
+      "options": {
+        "A": "Observed results and evidence",
+        "B": "Personal rumours",
+        "C": "Only the title",
+        "D": "Unrelated quotations"
+      },
+      "answer": "A",
+      "explanation": "Findings communicate the evidence gathered during the investigation.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing Skills"
+      ],
+      "id": "202704-301-C11-04",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Grammar",
+      "topic": "Grammar",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Grammar. choose the correct form: “Neither of the answers ___ correct.”",
+      "options": {
+        "A": "is",
+        "B": "are",
+        "C": "were",
+        "D": "be"
+      },
+      "answer": "A",
+      "explanation": "Neither is treated as singular in standard formal usage.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar"
+      ],
+      "id": "202704-301-C11-05",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Grammar",
+      "topic": "Grammar",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Grammar. identify the passive form of “The committee approved the plan.”",
+      "options": {
+        "A": "The plan was approved by the committee.",
+        "B": "The plan approved the committee.",
+        "C": "The committee was approved.",
+        "D": "The plan has approving."
+      },
+      "answer": "A",
+      "explanation": "The object becomes the subject and the verb takes the passive form.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar"
+      ],
+      "id": "202704-301-C11-06",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Literary Devices",
+      "topic": "Literary Devices",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Literary Devices. a comparison using “like” or “as” is a:",
+      "options": {
+        "A": "Simile",
+        "B": "Metaphor",
+        "C": "Irony",
+        "D": "Oxymoron"
+      },
+      "answer": "A",
+      "explanation": "A simile makes an explicit comparison using like or as.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Devices"
+      ],
+      "id": "202704-301-C11-07",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Literary Devices",
+      "topic": "Literary Devices",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Literary Devices. a recurring image or idea in a literary work is a:",
+      "options": {
+        "A": "Motif",
+        "B": "Footnote",
+        "C": "Caption",
+        "D": "Appendix"
+      },
+      "answer": "A",
+      "explanation": "A motif is a recurring element that contributes to meaning.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Devices"
+      ],
+      "id": "202704-301-C11-08",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Poetry",
+      "topic": "Poetry",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Poetry. enjambment occurs when:",
+      "options": {
+        "A": "A sentence continues beyond a line break",
+        "B": "Every line rhymes",
+        "C": "A poem has one stanza",
+        "D": "The speaker changes gender"
+      },
+      "answer": "A",
+      "explanation": "Enjambment carries syntax or sense across a line ending.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Poetry"
+      ],
+      "id": "202704-301-C11-09",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Literature",
+      "topic": "Literature",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Literature. a narrator who knows the thoughts of several characters is usually:",
+      "options": {
+        "A": "Omniscient",
+        "B": "Unreliable by definition",
+        "C": "First-person limited",
+        "D": "An audience member"
+      },
+      "answer": "A",
+      "explanation": "An omniscient narrator can access multiple characters’ thoughts.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literature"
+      ],
+      "id": "202704-301-C11-10",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Reading Comprehension",
+      "topic": "Reading Comprehension",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Reading Comprehension. an inference is a conclusion drawn from:",
+      "options": {
+        "A": "Clues and evidence in the text",
+        "B": "The reader’s name",
+        "C": "The page colour",
+        "D": "The publication price"
+      },
+      "answer": "A",
+      "explanation": "Inference combines textual clues with reasoned interpretation.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading Comprehension"
+      ],
+      "id": "202704-301-C11-11",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Writing Skills",
+      "topic": "Writing Skills",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Writing Skills. a thesis statement should:",
+      "options": {
+        "A": "State the central argument",
+        "B": "List every source in full",
+        "C": "Replace the conclusion",
+        "D": "Introduce unrelated facts"
+      },
+      "answer": "A",
+      "explanation": "A thesis clearly expresses the main claim the writing will develop.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing Skills"
+      ],
+      "id": "202704-301-C11-12",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Grammar",
+      "topic": "Grammar",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Grammar. which sentence uses a defining relative clause correctly?",
+      "options": {
+        "A": "The student who won the prize thanked her teacher.",
+        "B": "The student, who won the prize thanked her teacher.",
+        "C": "The student who won the prize, thanked her teacher.",
+        "D": "The student won who the prize."
+      },
+      "answer": "A",
+      "explanation": "A defining relative clause identifies which student is meant and is not set off by commas.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar"
+      ],
+      "id": "202704-301-C11-13",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Literature",
+      "topic": "Literature",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Literature. the central message explored by a literary work is its:",
+      "options": {
+        "A": "Theme",
+        "B": "Setting",
+        "C": "Rhyme scheme",
+        "D": "Stage direction"
+      },
+      "answer": "A",
+      "explanation": "Theme is the underlying idea or message developed through the work.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literature"
+      ],
+      "id": "202704-301-C11-14",
+      "class": 11,
+      "subject": "English Core"
+    },
+    {
+      "chapter": "Writing Skills",
+      "topic": "Writing Skills",
+      "question": "April challenge: During concept consolidation, a Class 11 learner is reviewing Writing Skills. a coherent paragraph should have:",
+      "options": {
+        "A": "A clear main idea and logically linked support",
+        "B": "Unrelated sentences",
+        "C": "Only quotations",
+        "D": "No transitions or focus"
+      },
+      "answer": "A",
+      "explanation": "Coherence comes from unity, logical sequencing and appropriate links.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing Skills"
+      ],
+      "id": "202704-301-C11-15",
+      "class": 11,
+      "subject": "English Core"
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-04-english-communicative-c10",
+    "session": "2026–27",
+    "month": "April 2027",
+    "class": 10,
+    "class_group": "9-10",
+    "subject": "English Communicative (101)",
+    "title": "English Communicative — Class 10 April 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202704-101-C10-01",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Reading – Factual Passage",
+      "topic": "Reading – Factual Passage",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Reading – Factual Passage. which detail should be used when answering a factual question from a passage?",
+      "options": {
+        "A": "A guess based on the title",
+        "B": "Information explicitly stated in the passage",
+        "C": "An unrelated personal example",
+        "D": "A detail from another book"
+      },
+      "answer": "B",
+      "explanation": "Factual questions require evidence stated in the given passage.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading – Factual Passage"
+      ]
+    },
+    {
+      "id": "202704-101-C10-02",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Reading – Vocabulary",
+      "topic": "Reading – Vocabulary",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Reading – Vocabulary. the word “resilient” most nearly means:",
+      "options": {
+        "A": "Easily discouraged",
+        "B": "Able to recover from difficulty",
+        "C": "Uninterested",
+        "D": "Unchanging in appearance"
+      },
+      "answer": "B",
+      "explanation": "Resilient describes the ability to recover or adapt after adversity.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading – Vocabulary"
+      ]
+    },
+    {
+      "id": "202704-101-C10-03",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Grammar – Tenses",
+      "topic": "Grammar – Tenses",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Grammar – Tenses. choose the correct option: “They ____ for the bus since 8 a.m.”",
+      "options": {
+        "A": "wait",
+        "B": "are waiting",
+        "C": "have been waiting",
+        "D": "waited tomorrow"
+      },
+      "answer": "C",
+      "explanation": "Present perfect continuous describes an activity continuing from the past until now.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Tenses"
+      ]
+    },
+    {
+      "id": "202704-101-C10-04",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Grammar – Clauses",
+      "topic": "Grammar – Clauses",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Grammar – Clauses. identify the subordinate clause: “I stayed indoors because it was raining.”",
+      "options": {
+        "A": "I stayed indoors",
+        "B": "because it was raining",
+        "C": "it was",
+        "D": "stayed indoors"
+      },
+      "answer": "B",
+      "explanation": "The because-clause depends on the main clause and gives the reason.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Clauses"
+      ]
+    },
+    {
+      "id": "202704-101-C10-05",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Grammar – Editing",
+      "topic": "Grammar – Editing",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Grammar – Editing. choose the correction: “Each of the players have a kit.”",
+      "options": {
+        "A": "Each of the players has a kit.",
+        "B": "Each of the players are a kit.",
+        "C": "Each players has a kit.",
+        "D": "Each of players have kits."
+      },
+      "answer": "A",
+      "explanation": "“Each” is singular and takes “has”.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Editing"
+      ]
+    },
+    {
+      "id": "202704-101-C10-06",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Writing – Article",
+      "topic": "Writing – Article",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Writing – Article. an effective article introduction should:",
+      "options": {
+        "A": "Introduce the topic and engage the reader",
+        "B": "Give the full bibliography",
+        "C": "Begin with an unrelated conclusion",
+        "D": "Avoid stating the issue"
+      },
+      "answer": "A",
+      "explanation": "An introduction establishes the subject and gives readers a reason to continue.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing – Article"
+      ]
+    },
+    {
+      "id": "202704-101-C10-07",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Writing – Speech",
+      "topic": "Writing – Speech",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Writing – Speech. a speech to students about digital safety should normally include:",
+      "options": {
+        "A": "A greeting, clear points and a suitable closing",
+        "B": "Only a list of URLs",
+        "C": "Unverified statistics",
+        "D": "No audience awareness"
+      },
+      "answer": "A",
+      "explanation": "A speech is audience-focused and follows a clear opening, body and conclusion.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing – Speech"
+      ]
+    },
+    {
+      "id": "202704-101-C10-08",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Literature – Prose",
+      "topic": "Literature – Prose",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Literature – Prose. a theme in a literary text is best described as:",
+      "options": {
+        "A": "A repeated punctuation mark",
+        "B": "A central idea explored through the text",
+        "C": "The author’s address",
+        "D": "The number of chapters"
+      },
+      "answer": "B",
+      "explanation": "Theme is the underlying idea or concern developed by the work.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literature – Prose"
+      ]
+    },
+    {
+      "id": "202704-101-C10-09",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Literature – Poetry",
+      "topic": "Literature – Poetry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Literature – Poetry. a group of lines in a poem is called a:",
+      "options": {
+        "A": "Paragraph",
+        "B": "Stanza",
+        "C": "Chapter",
+        "D": "Scene"
+      },
+      "answer": "B",
+      "explanation": "A stanza is a grouped set of poetic lines.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literature – Poetry"
+      ]
+    },
+    {
+      "id": "202704-101-C10-10",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Literature – Poetry",
+      "topic": "Literature – Poetry",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Literature – Poetry. a contrast between expectation and reality may create:",
+      "options": {
+        "A": "Irony",
+        "B": "Alliteration",
+        "C": "Rhyme only",
+        "D": "A simile"
+      },
+      "answer": "A",
+      "explanation": "Irony often arises when the outcome differs from what is expected.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literature – Poetry"
+      ]
+    },
+    {
+      "id": "202704-101-C10-11",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Vocabulary",
+      "topic": "Vocabulary",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Vocabulary. choose the synonym of “benevolent”.",
+      "options": {
+        "A": "Cruel",
+        "B": "Kind",
+        "C": "Careless",
+        "D": "Proud"
+      },
+      "answer": "B",
+      "explanation": "Benevolent means well-meaning and kind.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Vocabulary"
+      ]
+    },
+    {
+      "id": "202704-101-C10-12",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Grammar – Determiners",
+      "topic": "Grammar – Determiners",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Grammar – Determiners. choose the correct phrase: “There are ____ chairs for everyone.”",
+      "options": {
+        "A": "enough",
+        "B": "much",
+        "C": "little",
+        "D": "any of"
+      },
+      "answer": "A",
+      "explanation": "Enough is used with plural countable nouns to indicate sufficiency.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Determiners"
+      ]
+    },
+    {
+      "id": "202704-101-C10-13",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Grammar – Passive Voice",
+      "topic": "Grammar – Passive Voice",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Grammar – Passive Voice. choose the passive form: “The committee approved the plan.”",
+      "options": {
+        "A": "The plan approved the committee.",
+        "B": "The plan was approved by the committee.",
+        "C": "The plan is approving by committee.",
+        "D": "The committee was approved by the plan."
+      },
+      "answer": "B",
+      "explanation": "Past simple active changes to was/were + past participle in passive voice.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Passive Voice"
+      ]
+    },
+    {
+      "id": "202704-101-C10-14",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Writing – Email",
+      "topic": "Writing – Email",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Writing – Email. a formal email subject line should be:",
+      "options": {
+        "A": "Blank or vague",
+        "B": "Brief and specific",
+        "C": "A complete paragraph",
+        "D": "Written only in capital letters"
+      },
+      "answer": "B",
+      "explanation": "A concise subject helps the recipient understand the purpose.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing – Email"
+      ]
+    },
+    {
+      "id": "202704-101-C10-15",
+      "class": 10,
+      "subject": "English Communicative",
+      "chapter": "Comprehension – Evaluation",
+      "topic": "Comprehension – Evaluation",
+      "type": "MCQ",
+      "difficulty": "Challenging",
+      "question": "April challenge: During concept consolidation, a Class 10 learner is reviewing Comprehension – Evaluation. which response best evaluates an author’s argument?",
+      "options": {
+        "A": "It is good because I agree",
+        "B": "It considers the claim, evidence and reasoning",
+        "C": "It repeats the title",
+        "D": "It judges the author’s appearance"
+      },
+      "answer": "B",
+      "explanation": "Evaluation examines the quality of claims and supporting evidence.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Comprehension – Evaluation"
+      ]
+    }
+  ]
+}

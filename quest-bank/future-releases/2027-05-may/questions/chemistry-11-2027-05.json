@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-05-chemistry-c11",
+    "session": "2026–27",
+    "month": "May 2027",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "Chemistry (043)",
+    "title": "Chemistry — Class 11 May 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202705-043-C11-01",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Some Basic Concepts of Chemistry",
+      "topic": "Some Basic Concepts of Chemistry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Some Basic Concepts of Chemistry. one mole of any substance contains approximately:",
+      "options": {
+        "A": "6.022×10²³ entities",
+        "B": "3.011×10²³ entities",
+        "C": "1.00×10²³ entities",
+        "D": "9.81×10²³ entities"
+      },
+      "answer": "A",
+      "explanation": "Avogadro constant is approximately 6.022×10²³ mol⁻¹.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Some Basic Concepts of Chemistry"
+      ]
+    },
+    {
+      "id": "202705-043-C11-02",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Structure of Atom",
+      "topic": "Structure of Atom",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Structure of Atom. the maximum number of electrons in the n=3 shell is:",
+      "options": {
+        "A": "8",
+        "B": "18",
+        "C": "32",
+        "D": "9"
+      },
+      "answer": "B",
+      "explanation": "Maximum electrons=2n²=2×9=18.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Structure of Atom"
+      ]
+    },
+    {
+      "id": "202705-043-C11-03",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Classification of Elements",
+      "topic": "Classification of Elements",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Classification of Elements. across a period from left to right, atomic radius generally:",
+      "options": {
+        "A": "increases",
+        "B": "decreases",
+        "C": "remains constant",
+        "D": "first doubles"
+      },
+      "answer": "B",
+      "explanation": "Increasing effective nuclear charge generally contracts atomic size across a period.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Classification of Elements"
+      ]
+    },
+    {
+      "id": "202705-043-C11-04",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Chemical Bonding",
+      "topic": "Chemical Bonding",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Chemical Bonding. the shape of a methane molecule is:",
+      "options": {
+        "A": "linear",
+        "B": "trigonal planar",
+        "C": "tetrahedral",
+        "D": "square planar"
+      },
+      "answer": "C",
+      "explanation": "Four bond pairs around carbon arrange tetrahedrally.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Chemical Bonding"
+      ]
+    },
+    {
+      "id": "202705-043-C11-05",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Chemical Bonding",
+      "topic": "Chemical Bonding",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Chemical Bonding. the hybridisation of carbon in ethyne is:",
+      "options": {
+        "A": "sp",
+        "B": "sp²",
+        "C": "sp³",
+        "D": "dsp²"
+      },
+      "answer": "A",
+      "explanation": "Each carbon in ethyne has two electron domains and is sp hybridised.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Chemical Bonding"
+      ]
+    },
+    {
+      "id": "202705-043-C11-06",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "States of Matter",
+      "topic": "States of Matter",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing States of Matter. for an ideal gas, the equation of state is:",
+      "options": {
+        "A": "PV=nRT",
+        "B": "P/T=nRV",
+        "C": "P=nRTV",
+        "D": "PV=RT/n"
+      },
+      "answer": "A",
+      "explanation": "The ideal gas equation is PV=nRT.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "States of Matter"
+      ]
+    },
+    {
+      "id": "202705-043-C11-07",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Thermodynamics",
+      "topic": "Thermodynamics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Thermodynamics. at constant pressure, heat exchanged by a system equals change in:",
+      "options": {
+        "A": "internal energy",
+        "B": "enthalpy",
+        "C": "entropy only",
+        "D": "Gibbs energy"
+      },
+      "answer": "B",
+      "explanation": "At constant pressure, qp=ΔH for the process.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Thermodynamics"
+      ]
+    },
+    {
+      "id": "202705-043-C11-08",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Equilibrium",
+      "topic": "Equilibrium",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Equilibrium. for a reaction at equilibrium, the forward and reverse reaction rates are:",
+      "options": {
+        "A": "both zero",
+        "B": "equal",
+        "C": "always unequal",
+        "D": "infinite"
+      },
+      "answer": "B",
+      "explanation": "Dynamic equilibrium has equal forward and reverse rates.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Equilibrium"
+      ]
+    },
+    {
+      "id": "202705-043-C11-09",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Redox Reactions",
+      "topic": "Redox Reactions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Redox Reactions. oxidation is defined as:",
+      "options": {
+        "A": "gain of electrons",
+        "B": "loss of electrons",
+        "C": "gain of neutrons",
+        "D": "loss of protons only"
+      },
+      "answer": "B",
+      "explanation": "Oxidation involves loss of electrons or increase in oxidation number.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Redox Reactions"
+      ]
+    },
+    {
+      "id": "202705-043-C11-10",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Hydrogen",
+      "topic": "Hydrogen",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Hydrogen. the oxidation state of oxygen in H2O2 is:",
+      "options": {
+        "A": "−2",
+        "B": "−1",
+        "C": "0",
+        "D": "+1"
+      },
+      "answer": "B",
+      "explanation": "Peroxides contain oxygen in the −1 oxidation state.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Hydrogen"
+      ]
+    },
+    {
+      "id": "202705-043-C11-11",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "s-Block Elements",
+      "topic": "s-Block Elements",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing s-Block Elements. which alkali metal is stored under kerosene due to high reactivity?",
+      "options": {
+        "A": "sodium",
+        "B": "gold",
+        "C": "copper",
+        "D": "mercury"
+      },
+      "answer": "A",
+      "explanation": "Sodium reacts vigorously with air and moisture and is stored under kerosene.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "s-Block Elements"
+      ]
+    },
+    {
+      "id": "202705-043-C11-12",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "p-Block Elements",
+      "topic": "p-Block Elements",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing p-Block Elements. the strongest hydrogen bonding among hydrogen halides is shown by:",
+      "options": {
+        "A": "HCl",
+        "B": "HBr",
+        "C": "HI",
+        "D": "HF"
+      },
+      "answer": "D",
+      "explanation": "Fluorine's small size and high electronegativity enable strong hydrogen bonding.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "p-Block Elements"
+      ]
+    },
+    {
+      "id": "202705-043-C11-13",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Organic Chemistry: Basic Principles",
+      "topic": "Organic Chemistry: Basic Principles",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Organic Chemistry: Basic Principles. the functional group in aldehydes is:",
+      "options": {
+        "A": "−OH",
+        "B": "−CHO",
+        "C": "−COOH",
+        "D": "−O−"
+      },
+      "answer": "B",
+      "explanation": "Aldehydes contain the terminal −CHO group.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Organic Chemistry: Basic Principles"
+      ]
+    },
+    {
+      "id": "202705-043-C11-14",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Hydrocarbons",
+      "topic": "Hydrocarbons",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Hydrocarbons. the general formula of an open-chain alkane is:",
+      "options": {
+        "A": "CnH2n",
+        "B": "CnH2n+2",
+        "C": "CnH2n−2",
+        "D": "CnHn"
+      },
+      "answer": "B",
+      "explanation": "A saturated acyclic hydrocarbon has formula CnH2n+2.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Hydrocarbons"
+      ]
+    },
+    {
+      "id": "202705-043-C11-15",
+      "class": 11,
+      "subject": "Chemistry",
+      "chapter": "Environmental Chemistry",
+      "topic": "Environmental Chemistry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 11 learner is reviewing Environmental Chemistry. acid rain is mainly associated with atmospheric oxides of:",
+      "options": {
+        "A": "sulphur and nitrogen",
+        "B": "carbon and hydrogen",
+        "C": "helium and neon",
+        "D": "sodium and potassium"
+      },
+      "answer": "A",
+      "explanation": "SOx and NOx form acids in atmospheric moisture.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Environmental Chemistry"
+      ]
+    }
+  ]
+}

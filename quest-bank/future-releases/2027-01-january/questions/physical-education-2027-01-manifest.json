@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2027-01-physical-education",
+    "class_group": "11-12",
+    "subject": "Physical Education (048)",
+    "month": "January 2027",
+    "title": "Physical Education — January 2027 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 11,
+        "file": "questions/physical-education-11-2027-01.json",
+        "question_count": 15
+      },
+      {
+        "class": 12,
+        "file": "questions/physical-education-12-2027-01.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

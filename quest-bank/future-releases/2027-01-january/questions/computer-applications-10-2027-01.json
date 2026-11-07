@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-01-computer-applications-c10",
+    "session": "2026–27",
+    "month": "January 2027",
+    "class": 10,
+    "class_group": "9-10",
+    "subject": "Computer Applications (165)",
+    "title": "Computer Applications — Class 10 January 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202701-165-C10-01",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Networking – Basics",
+      "topic": "Networking – Basics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Networking – Basics. a computer network is best described as:",
+      "options": {
+        "A": "A single computer with no connections",
+        "B": "Interconnected devices that share data and resources",
+        "C": "A type of printer",
+        "D": "A programming language"
+      },
+      "answer": "B",
+      "explanation": "A network connects devices to communicate and share resources.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Networking – Basics"
+      ]
+    },
+    {
+      "id": "202701-165-C10-02",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Networking – Topologies",
+      "topic": "Networking – Topologies",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Networking – Topologies. in a star topology, all devices connect to a central:",
+      "options": {
+        "A": "Ring cable",
+        "B": "Hub or switch",
+        "C": "Terminator",
+        "D": "Modem line only"
+      },
+      "answer": "B",
+      "explanation": "Star networks use a central connecting device.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Networking – Topologies"
+      ]
+    },
+    {
+      "id": "202701-165-C10-03",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Internet Services",
+      "topic": "Internet Services",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Internet Services. which protocol is commonly used to transfer web pages securely?",
+      "options": {
+        "A": "HTTP only",
+        "B": "HTTPS",
+        "C": "FTP only",
+        "D": "SMTP"
+      },
+      "answer": "B",
+      "explanation": "HTTPS uses TLS to protect communication between browser and web server.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Internet Services"
+      ]
+    },
+    {
+      "id": "202701-165-C10-04",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Cyber Safety",
+      "topic": "Cyber Safety",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Cyber Safety. a message that impersonates a trusted organisation to steal passwords is an example of:",
+      "options": {
+        "A": "Phishing",
+        "B": "Defragmentation",
+        "C": "Compression",
+        "D": "Rendering"
+      },
+      "answer": "A",
+      "explanation": "Phishing tricks users into revealing sensitive information.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Cyber Safety"
+      ]
+    },
+    {
+      "id": "202701-165-C10-05",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "HTML – Structure",
+      "topic": "HTML – Structure",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing HTML – Structure. which HTML element contains the visible page content?",
+      "options": {
+        "A": "head",
+        "B": "body",
+        "C": "title",
+        "D": "meta"
+      },
+      "answer": "B",
+      "explanation": "Content displayed in the browser is placed inside the body element.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "HTML – Structure"
+      ]
+    },
+    {
+      "id": "202701-165-C10-06",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "HTML – Hyperlinks",
+      "topic": "HTML – Hyperlinks",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing HTML – Hyperlinks. which tag creates a hyperlink?",
+      "options": {
+        "A": "<img>",
+        "B": "<a>",
+        "C": "<p>",
+        "D": "<table>"
+      },
+      "answer": "B",
+      "explanation": "The anchor element <a> creates a hyperlink using its href attribute.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "HTML – Hyperlinks"
+      ]
+    },
+    {
+      "id": "202701-165-C10-07",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "HTML – Tables",
+      "topic": "HTML – Tables",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing HTML – Tables. which HTML element defines a table row?",
+      "options": {
+        "A": "<td>",
+        "B": "<tr>",
+        "C": "<th>",
+        "D": "<caption>"
+      },
+      "answer": "B",
+      "explanation": "The <tr> element groups cells into a table row.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "HTML – Tables"
+      ]
+    },
+    {
+      "id": "202701-165-C10-08",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "CSS – Basics",
+      "topic": "CSS – Basics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing CSS – Basics. cSS is primarily used to:",
+      "options": {
+        "A": "Store database records",
+        "B": "Style and lay out web pages",
+        "C": "Send email",
+        "D": "Compile Python"
+      },
+      "answer": "B",
+      "explanation": "CSS controls presentation such as colours, spacing and layout.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "CSS – Basics"
+      ]
+    },
+    {
+      "id": "202701-165-C10-09",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Python – Data Types",
+      "topic": "Python – Data Types",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Python – Data Types. what is the type of the value 3.5 in Python?",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "str",
+        "D": "bool"
+      },
+      "answer": "B",
+      "explanation": "A numeric value with a decimal point is a float.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python – Data Types"
+      ]
+    },
+    {
+      "id": "202701-165-C10-10",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Python – Operators",
+      "topic": "Python – Operators",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Python – Operators. what is the output of 17 // 5 in Python?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "3.4",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "Floor division returns the integer quotient: 17//5 = 3.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python – Operators"
+      ]
+    },
+    {
+      "id": "202701-165-C10-11",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Python – Conditional Statements",
+      "topic": "Python – Conditional Statements",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Python – Conditional Statements. which keyword begins an alternative branch after an if condition?",
+      "options": {
+        "A": "then",
+        "B": "elif",
+        "C": "switch",
+        "D": "case"
+      },
+      "answer": "B",
+      "explanation": "Python uses elif for an additional conditional branch.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python – Conditional Statements"
+      ]
+    },
+    {
+      "id": "202701-165-C10-12",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Python – Loops",
+      "topic": "Python – Loops",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Python – Loops. how many times does `for i in range(2, 6)` execute?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "B",
+      "explanation": "range(2,6) generates 2, 3, 4 and 5: four iterations.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python – Loops"
+      ]
+    },
+    {
+      "id": "202701-165-C10-13",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Database Concepts",
+      "topic": "Database Concepts",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Database Concepts. a primary key in a table must:",
+      "options": {
+        "A": "Contain duplicate values",
+        "B": "Uniquely identify each record",
+        "C": "Always be a text field",
+        "D": "Be left blank"
+      },
+      "answer": "B",
+      "explanation": "A primary key uniquely identifies each row and cannot be null.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Database Concepts"
+      ]
+    },
+    {
+      "id": "202701-165-C10-14",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "SQL – Queries",
+      "topic": "SQL – Queries",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing SQL – Queries. which SQL query selects students scoring at least 80?",
+      "options": {
+        "A": "SELECT * FROM Student WHERE Marks >= 80;",
+        "B": "SELECT Student IF Marks >= 80;",
+        "C": "GET Student WHERE Marks > 80;",
+        "D": "SHOW Student HAVING Marks >= 80;"
+      },
+      "answer": "A",
+      "explanation": "SELECT retrieves rows and WHERE filters them using a condition.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "SQL – Queries"
+      ]
+    },
+    {
+      "id": "202701-165-C10-15",
+      "class": 10,
+      "subject": "Computer Applications",
+      "chapter": "Digital Citizenship",
+      "topic": "Digital Citizenship",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 10 learner is reviewing Digital Citizenship. which action best protects an online account?",
+      "options": {
+        "A": "Reuse one simple password",
+        "B": "Share OTP with a caller",
+        "C": "Use a unique strong password and multi-factor authentication",
+        "D": "Disable all security updates"
+      },
+      "answer": "C",
+      "explanation": "Unique passwords and MFA reduce the risk of account compromise.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Digital Citizenship"
+      ]
+    }
+  ]
+}

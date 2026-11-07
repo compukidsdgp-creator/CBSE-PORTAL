@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-03-business-studies-c12",
+    "session": "2026–27",
+    "month": "March 2027",
+    "class": 12,
+    "class_group": "11-12",
+    "subject": "Business Studies (054)",
+    "title": "Business Studies — Class 12 March 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "chapter": "Nature of Management",
+      "topic": "Nature of Management",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Nature of Management. management is considered a process because it involves:",
+      "options": {
+        "A": "A series of interrelated functions",
+        "B": "Only one decision",
+        "C": "Only financial transactions",
+        "D": "No coordination"
+      },
+      "answer": "A",
+      "explanation": "Planning, organising, staffing, directing and controlling are interrelated functions.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Nature of Management"
+      ],
+      "id": "202703-054-C12-01",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Principles of Management",
+      "topic": "Principles of Management",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Principles of Management. unity of command means an employee should receive orders from:",
+      "options": {
+        "A": "One superior",
+        "B": "Every department head",
+        "C": "Customers only",
+        "D": "No manager"
+      },
+      "answer": "A",
+      "explanation": "Unity of command reduces conflicting instructions by specifying one reporting superior.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Principles of Management"
+      ],
+      "id": "202703-054-C12-02",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Planning",
+      "topic": "Planning",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Planning. a plan is a:",
+      "options": {
+        "A": "Predetermined course of action",
+        "B": "Record of past sales only",
+        "C": "Legal penalty",
+        "D": "Random activity"
+      },
+      "answer": "A",
+      "explanation": "Planning decides in advance what is to be done and how.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Planning"
+      ],
+      "id": "202703-054-C12-03",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Organising",
+      "topic": "Organising",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Organising. delegation involves:",
+      "options": {
+        "A": "Assignment of responsibility with authority and accountability",
+        "B": "Removal of all supervision",
+        "C": "Transfer of ownership",
+        "D": "Avoiding objectives"
+      },
+      "answer": "A",
+      "explanation": "Delegation assigns duties and authority while the superior remains accountable.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Organising"
+      ],
+      "id": "202703-054-C12-04",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Staffing",
+      "topic": "Staffing",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Staffing. recruitment is the process of:",
+      "options": {
+        "A": "Searching for and attracting prospective employees",
+        "B": "Training only selected staff",
+        "C": "Fixing product prices",
+        "D": "Auditing accounts"
+      },
+      "answer": "A",
+      "explanation": "Recruitment creates a pool of candidates for selection.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Staffing"
+      ],
+      "id": "202703-054-C12-05",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Directing",
+      "topic": "Directing",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Directing. motivation refers to:",
+      "options": {
+        "A": "Stimulating people to act towards goals",
+        "B": "Preparing a balance sheet",
+        "C": "Designing a product",
+        "D": "Setting tax rates"
+      },
+      "answer": "A",
+      "explanation": "Motivation energises and directs behaviour towards organisational objectives.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Directing"
+      ],
+      "id": "202703-054-C12-06",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Controlling",
+      "topic": "Controlling",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Controlling. the first step in the controlling process is to:",
+      "options": {
+        "A": "Set performance standards",
+        "B": "Take corrective action",
+        "C": "Compare results",
+        "D": "Measure performance"
+      },
+      "answer": "A",
+      "explanation": "Standards provide the benchmark against which actual performance is measured.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Controlling"
+      ],
+      "id": "202703-054-C12-07",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Financial Management",
+      "topic": "Financial Management",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Financial Management. the primary objective of financial management is generally:",
+      "options": {
+        "A": "Maximisation of shareholders’ wealth",
+        "B": "Maximisation of office size",
+        "C": "Elimination of all risk",
+        "D": "Avoidance of investment"
+      },
+      "answer": "A",
+      "explanation": "Financial decisions aim to maximise shareholder wealth while considering risk and return.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Financial Management"
+      ],
+      "id": "202703-054-C12-08",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Marketing",
+      "topic": "Marketing",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Marketing. a brand helps a business to:",
+      "options": {
+        "A": "Identify and differentiate its product",
+        "B": "Eliminate quality control",
+        "C": "Avoid customers",
+        "D": "Replace distribution"
+      },
+      "answer": "A",
+      "explanation": "Branding distinguishes a product and supports recognition and loyalty.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Marketing"
+      ],
+      "id": "202703-054-C12-09",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Consumer Protection",
+      "topic": "Consumer Protection",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Consumer Protection. a consumer has the right to be informed about:",
+      "options": {
+        "A": "Quality, quantity, price and relevant product details",
+        "B": "Only the seller’s profit",
+        "C": "The factory’s private passwords",
+        "D": "Unrelated market rumours"
+      },
+      "answer": "A",
+      "explanation": "The right to information enables informed purchase decisions.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Consumer Protection"
+      ],
+      "id": "202703-054-C12-10",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Business Environment",
+      "topic": "Business Environment",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Business Environment. liberalisation means:",
+      "options": {
+        "A": "Removal or reduction of unnecessary government restrictions",
+        "B": "Complete ban on trade",
+        "C": "Nationalisation of every firm",
+        "D": "Ending all competition"
+      },
+      "answer": "A",
+      "explanation": "Liberalisation reduces regulatory barriers and restrictions on economic activity.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Business Environment"
+      ],
+      "id": "202703-054-C12-11",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Entrepreneurship",
+      "topic": "Entrepreneurship",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Entrepreneurship. an entrepreneur primarily:",
+      "options": {
+        "A": "Identifies opportunities and organises resources under risk",
+        "B": "Avoids all decisions",
+        "C": "Only records attendance",
+        "D": "Sets public examination papers"
+      },
+      "answer": "A",
+      "explanation": "Entrepreneurs identify opportunities, innovate and coordinate resources while bearing risk.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Entrepreneurship"
+      ],
+      "id": "202703-054-C12-12",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Marketing",
+      "topic": "Marketing",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Marketing. the marketing mix traditionally includes:",
+      "options": {
+        "A": "Product, Price, Place and Promotion",
+        "B": "People, Profit, Policy and Power",
+        "C": "Plan, Process, Profit and Payroll",
+        "D": "Price, Payroll, Purchase and Patent"
+      },
+      "answer": "A",
+      "explanation": "The 4Ps are product, price, place and promotion.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Marketing"
+      ],
+      "id": "202703-054-C12-13",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Financial Markets",
+      "topic": "Financial Markets",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Financial Markets. the primary market deals with:",
+      "options": {
+        "A": "Issue of new securities",
+        "B": "Trading only in existing securities",
+        "C": "Retail goods",
+        "D": "Foreign tourism"
+      },
+      "answer": "A",
+      "explanation": "New securities are issued to investors in the primary market.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Financial Markets"
+      ],
+      "id": "202703-054-C12-14",
+      "class": 12,
+      "subject": "Business Studies"
+    },
+    {
+      "chapter": "Management",
+      "topic": "Management",
+      "question": "March challenge: During board-exam readiness, a Class 12 learner is reviewing Management. coordination is important because it:",
+      "options": {
+        "A": "Integrates group efforts towards common objectives",
+        "B": "Replaces all management functions",
+        "C": "Removes the need for communication",
+        "D": "Prevents specialisation"
+      },
+      "answer": "A",
+      "explanation": "Coordination harmonises individual and departmental efforts.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Management"
+      ],
+      "id": "202703-054-C12-15",
+      "class": 12,
+      "subject": "Business Studies"
+    }
+  ]
+}

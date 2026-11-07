@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2027-01-mathematics-basic",
+    "class_group": "9-10",
+    "subject": "Mathematics Basic (241)",
+    "month": "January 2027",
+    "title": "Mathematics Basic — January 2027 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 10,
+        "file": "questions/mathematics-basic-10-2027-01.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

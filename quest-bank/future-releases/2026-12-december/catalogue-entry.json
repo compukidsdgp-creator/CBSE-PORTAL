@@ -1,0 +1,162 @@
+{
+  "session": "2026–27",
+  "release": "QUEST-RELEASE-2026-12-FUTURE-DRAFT",
+  "month": "December 2026",
+  "status": "draft",
+  "quests": [
+    {
+      "id": "quest-release-2026-12-science",
+      "class_group": "9-10",
+      "subject": "Science (086)",
+      "month": "December 2026",
+      "manifest": "questions/science-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-maths-standard",
+      "class_group": "9-10",
+      "subject": "Mathematics Standard (041)",
+      "month": "December 2026",
+      "manifest": "questions/maths-standard-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-social-science",
+      "class_group": "9-10",
+      "subject": "Social Science (087)",
+      "month": "December 2026",
+      "manifest": "questions/social-science-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-english-language-literature",
+      "class_group": "9-10",
+      "subject": "English Language & Literature (184)",
+      "month": "December 2026",
+      "manifest": "questions/english-language-literature-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-english-communicative",
+      "class_group": "9-10",
+      "subject": "English Communicative (101)",
+      "month": "December 2026",
+      "manifest": "questions/english-communicative-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-hindi-a",
+      "class_group": "9-10",
+      "subject": "Hindi Course A (002)",
+      "month": "December 2026",
+      "manifest": "questions/hindi-a-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-mathematics-basic",
+      "class_group": "9-10",
+      "subject": "Mathematics Basic (241)",
+      "month": "December 2026",
+      "manifest": "questions/mathematics-basic-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-computer-applications",
+      "class_group": "9-10",
+      "subject": "Computer Applications (165)",
+      "month": "December 2026",
+      "manifest": "questions/computer-applications-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-ct-ai",
+      "class_group": "9-10",
+      "subject": "Computational Thinking & AI (CT & AI)",
+      "month": "December 2026",
+      "manifest": "questions/ct-ai-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-physics",
+      "class_group": "11-12",
+      "subject": "Physics (042)",
+      "month": "December 2026",
+      "manifest": "questions/physics-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-chemistry",
+      "class_group": "11-12",
+      "subject": "Chemistry (043)",
+      "month": "December 2026",
+      "manifest": "questions/chemistry-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-biology",
+      "class_group": "11-12",
+      "subject": "Biology (044)",
+      "month": "December 2026",
+      "manifest": "questions/biology-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-mathematics-sr",
+      "class_group": "11-12",
+      "subject": "Mathematics (041)",
+      "month": "December 2026",
+      "manifest": "questions/mathematics-sr-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-computer-science",
+      "class_group": "11-12",
+      "subject": "Computer Science (083)",
+      "month": "December 2026",
+      "manifest": "questions/computer-science-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-informatics-practices",
+      "class_group": "11-12",
+      "subject": "Informatics Practices (065)",
+      "month": "December 2026",
+      "manifest": "questions/informatics-practices-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-english-core",
+      "class_group": "11-12",
+      "subject": "English Core (301)",
+      "month": "December 2026",
+      "manifest": "questions/english-core-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-english-elective",
+      "class_group": "11-12",
+      "subject": "English Elective (001)",
+      "month": "December 2026",
+      "manifest": "questions/english-elective-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-physical-education",
+      "class_group": "11-12",
+      "subject": "Physical Education (048)",
+      "month": "December 2026",
+      "manifest": "questions/physical-education-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-bengali",
+      "class_group": "11-12",
+      "subject": "Bengali",
+      "month": "December 2026",
+      "manifest": "questions/bengali-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-economics",
+      "class_group": "11-12",
+      "subject": "Economics (030)",
+      "month": "December 2026",
+      "manifest": "questions/economics-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-accountancy",
+      "class_group": "11-12",
+      "subject": "Accountancy (055)",
+      "month": "December 2026",
+      "manifest": "questions/accountancy-2026-12-manifest.json"
+    },
+    {
+      "id": "quest-release-2026-12-business-studies",
+      "class_group": "11-12",
+      "subject": "Business Studies (054)",
+      "month": "December 2026",
+      "manifest": "questions/business-studies-2026-12-manifest.json"
+    }
+  ]
+}

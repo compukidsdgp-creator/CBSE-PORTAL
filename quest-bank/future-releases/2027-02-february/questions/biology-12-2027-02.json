@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-02-biology-c12",
+    "session": "2026–27",
+    "month": "February 2027",
+    "class": 12,
+    "class_group": "11-12",
+    "subject": "Biology (044)",
+    "title": "Biology — Class 12 February 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202702-044-C12-01",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "topic": "Sexual Reproduction in Flowering Plants",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Sexual Reproduction in Flowering Plants. the transfer of pollen grains from anther to stigma is called:",
+      "options": {
+        "A": "fertilisation",
+        "B": "pollination",
+        "C": "germination",
+        "D": "embryogenesis"
+      },
+      "answer": "B",
+      "explanation": "Pollination is pollen transfer to the stigma.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Sexual Reproduction in Flowering Plants"
+      ]
+    },
+    {
+      "id": "202702-044-C12-02",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "topic": "Sexual Reproduction in Flowering Plants",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Sexual Reproduction in Flowering Plants. a typical angiosperm embryo sac is:",
+      "options": {
+        "A": "4-celled, 4-nucleate",
+        "B": "7-celled, 8-nucleate",
+        "C": "8-celled, 7-nucleate",
+        "D": "2-celled, 2-nucleate"
+      },
+      "answer": "B",
+      "explanation": "The mature embryo sac is typically 7-celled and 8-nucleate.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Sexual Reproduction in Flowering Plants"
+      ]
+    },
+    {
+      "id": "202702-044-C12-03",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Human Reproduction",
+      "topic": "Human Reproduction",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Human Reproduction. in humans, fertilisation normally occurs in the:",
+      "options": {
+        "A": "uterus",
+        "B": "vagina",
+        "C": "ampullary-isthmic junction of oviduct",
+        "D": "cervix"
+      },
+      "answer": "C",
+      "explanation": "Fertilisation commonly occurs at the ampullary-isthmic junction.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Human Reproduction"
+      ]
+    },
+    {
+      "id": "202702-044-C12-04",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Reproductive Health",
+      "topic": "Reproductive Health",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Reproductive Health. copper-releasing IUDs primarily:",
+      "options": {
+        "A": "suppress ovulation permanently",
+        "B": "increase phagocytosis of sperms and reduce sperm motility",
+        "C": "act as antibiotics",
+        "D": "prevent menstruation"
+      },
+      "answer": "B",
+      "explanation": "Copper ions impair sperm motility and fertilising capacity; IUDs enhance local phagocytosis.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reproductive Health"
+      ]
+    },
+    {
+      "id": "202702-044-C12-05",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Principles of Inheritance",
+      "topic": "Principles of Inheritance",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Principles of Inheritance. a test cross is performed by crossing an individual with:",
+      "options": {
+        "A": "homozygous dominant",
+        "B": "heterozygous",
+        "C": "homozygous recessive",
+        "D": "another F1 hybrid"
+      },
+      "answer": "C",
+      "explanation": "A homozygous recessive tester reveals the genotype of a dominant-phenotype individual.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Principles of Inheritance"
+      ]
+    },
+    {
+      "id": "202702-044-C12-06",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "topic": "Molecular Basis of Inheritance",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Molecular Basis of Inheritance. the enzyme that synthesises RNA using a DNA template is:",
+      "options": {
+        "A": "DNA ligase",
+        "B": "RNA polymerase",
+        "C": "DNA helicase",
+        "D": "amylase"
+      },
+      "answer": "B",
+      "explanation": "RNA polymerase catalyses transcription.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Molecular Basis of Inheritance"
+      ]
+    },
+    {
+      "id": "202702-044-C12-07",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "topic": "Molecular Basis of Inheritance",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Molecular Basis of Inheritance. in DNA, adenine pairs with:",
+      "options": {
+        "A": "guanine",
+        "B": "cytosine",
+        "C": "thymine",
+        "D": "uracil"
+      },
+      "answer": "C",
+      "explanation": "Adenine pairs with thymine through two hydrogen bonds.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Molecular Basis of Inheritance"
+      ]
+    },
+    {
+      "id": "202702-044-C12-08",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Evolution",
+      "topic": "Evolution",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Evolution. the wings of a butterfly and a bird are examples of:",
+      "options": {
+        "A": "homologous organs",
+        "B": "analogous organs",
+        "C": "vestigial organs",
+        "D": "same embryonic structure"
+      },
+      "answer": "B",
+      "explanation": "They perform flight but have different evolutionary origins and structural plans.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Evolution"
+      ]
+    },
+    {
+      "id": "202702-044-C12-09",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Human Health & Disease",
+      "topic": "Human Health & Disease",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Human Health & Disease. antibodies are secreted mainly by:",
+      "options": {
+        "A": "plasma cells",
+        "B": "red blood cells",
+        "C": "platelets",
+        "D": "neurons"
+      },
+      "answer": "A",
+      "explanation": "Activated B lymphocytes differentiate into antibody-secreting plasma cells.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Human Health & Disease"
+      ]
+    },
+    {
+      "id": "202702-044-C12-10",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Microbes in Human Welfare",
+      "topic": "Microbes in Human Welfare",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Microbes in Human Welfare. the microbe commonly used in curd formation is:",
+      "options": {
+        "A": "Lactobacillus",
+        "B": "Rhizobium",
+        "C": "Plasmodium",
+        "D": "Methanobacterium"
+      },
+      "answer": "A",
+      "explanation": "Lactic acid bacteria such as Lactobacillus convert milk lactose to lactic acid.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Microbes in Human Welfare"
+      ]
+    },
+    {
+      "id": "202702-044-C12-11",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Biotechnology: Principles & Processes",
+      "topic": "Biotechnology: Principles & Processes",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Biotechnology: Principles & Processes. restriction endonucleases recognise:",
+      "options": {
+        "A": "random amino acid sequences",
+        "B": "specific DNA recognition sequences",
+        "C": "lipid bilayers",
+        "D": "RNA caps only"
+      },
+      "answer": "B",
+      "explanation": "Restriction enzymes cut DNA at specific recognition sites.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biotechnology: Principles & Processes"
+      ]
+    },
+    {
+      "id": "202702-044-C12-12",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Biotechnology & Its Applications",
+      "topic": "Biotechnology & Its Applications",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Biotechnology & Its Applications. bt cotton is engineered to resist certain insect pests using genes from:",
+      "options": {
+        "A": "Bacillus thuringiensis",
+        "B": "E. coli",
+        "C": "Rhizobium",
+        "D": "yeast"
+      },
+      "answer": "A",
+      "explanation": "Bt genes from Bacillus thuringiensis encode insecticidal proteins.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biotechnology & Its Applications"
+      ]
+    },
+    {
+      "id": "202702-044-C12-13",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Organisms & Populations",
+      "topic": "Organisms & Populations",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Organisms & Populations. the interaction in which both species benefit is:",
+      "options": {
+        "A": "competition",
+        "B": "mutualism",
+        "C": "parasitism",
+        "D": "predation"
+      },
+      "answer": "B",
+      "explanation": "Mutualism benefits both interacting species.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Organisms & Populations"
+      ]
+    },
+    {
+      "id": "202702-044-C12-14",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Ecosystem",
+      "topic": "Ecosystem",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Ecosystem. the pyramid of energy in an ecosystem is always:",
+      "options": {
+        "A": "inverted",
+        "B": "upright",
+        "C": "spindle-shaped",
+        "D": "absent"
+      },
+      "answer": "B",
+      "explanation": "Energy decreases at successive trophic levels, so the energy pyramid is upright.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Ecosystem"
+      ]
+    },
+    {
+      "id": "202702-044-C12-15",
+      "class": 12,
+      "subject": "Biology",
+      "chapter": "Biodiversity & Conservation",
+      "topic": "Biodiversity & Conservation",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Biodiversity & Conservation. an endemic species is one that:",
+      "options": {
+        "A": "occurs naturally only in a particular region",
+        "B": "is found on every continent",
+        "C": "has become extinct",
+        "D": "is always domesticated"
+      },
+      "answer": "A",
+      "explanation": "Endemic species have a restricted natural geographical distribution.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biodiversity & Conservation"
+      ]
+    }
+  ]
+}
