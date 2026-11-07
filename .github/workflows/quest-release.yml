@@ -1,0 +1,43 @@
+name: Monthly Quest Release
+
+on:
+  schedule:
+    # 1st of every month at 01:00 UTC (6:30 AM IST)
+    - cron: '0 1 1 * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Force a specific month (YYYY-MM). Leave blank for current month.'
+        required: false
+        default: ''
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Quest release script
+        run: |
+          if [ -n "${{ github.event.inputs.month }}" ]; then
+            python3 quest_monthly_release.py --month "${{ github.event.inputs.month }}"
+          else
+            python3 quest_monthly_release.py
+          fi
+
+      - name: Commit and push published quest data
+        run: |
+          git config user.name  "quest-release-bot"
+          git config user.email "bot@cbsemock.org.in"
+          git add quest/data/
+          git diff --cached --quiet && echo "Nothing to commit — quest data already up to date." || \
+          (git commit -m "chore: quest release $(python3 -c \"from datetime import datetime; print(datetime.utcnow().strftime('%B %Y'))\")" && git push)
