@@ -1,0 +1,4802 @@
+[
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-01",
+    "answer": "A",
+    "explanation": "Gas particles move randomly and spread from a region of higher concentration to lower concentration."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-02",
+    "answer": "B",
+    "explanation": "Latent heat is used to change the state by overcoming intermolecular attraction."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-03",
+    "answer": "C",
+    "explanation": "Centrifugation separates components of a mixture based on density."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-04",
+    "answer": "A",
+    "explanation": "Mass percentage = 20/(20+180) × 100 = 10%."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-05",
+    "answer": "D",
+    "explanation": "Aluminium has valency 3 and oxygen has valency 2; criss-crossing gives Al2O3."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-06",
+    "answer": "A",
+    "explanation": "18 g water is one mole, containing Avogadro’s number of molecules."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-07",
+    "answer": "C",
+    "explanation": "A neutron is electrically neutral."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-08",
+    "answer": "B",
+    "explanation": "Neutrons = mass number − atomic number = 35 − 17 = 18."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-09",
+    "answer": "B",
+    "explanation": "Mitochondria release usable energy through aerobic cellular respiration."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-10",
+    "answer": "B",
+    "explanation": "Water leaves the cell by osmosis, causing the protoplast to shrink."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-11",
+    "answer": "C",
+    "explanation": "Xylem conducts water and dissolved minerals, mainly upward."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-12",
+    "answer": "B",
+    "explanation": "Intercalated discs connect cardiac cells and support coordinated contraction."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-13",
+    "answer": "B",
+    "explanation": "Distance travelled per unit time is speed; it is the graph’s slope."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-14",
+    "answer": "C",
+    "explanation": "Newton’s second law: F = ma = 2 × 3 = 6 N."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 9,
+    "question_id": "202705-086-C9-15",
+    "answer": "C",
+    "explanation": "Gravitational force varies inversely with the square of distance."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-01",
+    "answer": "B",
+    "explanation": "Zinc reacts with dilute HCl to release hydrogen gas, seen as effervescence."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-02",
+    "answer": "B",
+    "explanation": "CuO loses oxygen and is reduced to copper."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-03",
+    "answer": "C",
+    "explanation": "Litmus is red in acid and blue in base."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-04",
+    "answer": "B",
+    "explanation": "Each pH unit represents a tenfold change; two units means 100 times."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-05",
+    "answer": "B",
+    "explanation": "Sodium is highly reactive and is stored under kerosene to prevent contact with air/moisture."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-06",
+    "answer": "C",
+    "explanation": "Highly reactive metals are obtained by electrolytic reduction of molten compounds."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-07",
+    "answer": "C",
+    "explanation": "Ethanol is an alcohol containing the hydroxyl group."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-08",
+    "answer": "A",
+    "explanation": "Successive members of an alkane series differ by –CH2–."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-09",
+    "answer": "B",
+    "explanation": "The glomerulus filters blood into Bowman’s capsule."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-10",
+    "answer": "C",
+    "explanation": "The small intestine has villi that provide a large absorptive surface."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-11",
+    "answer": "B",
+    "explanation": "The cerebellum coordinates muscular activity, posture and balance."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-12",
+    "answer": "B",
+    "explanation": "Auxin promotes greater cell elongation on the shaded side, bending the shoot towards light."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-13",
+    "answer": "B",
+    "explanation": "Amoeba commonly reproduces asexually by binary fission."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-14",
+    "answer": "B",
+    "explanation": "The genotype ratio is 1 TT : 2 Tt : 1 tt, so one-fourth are tt."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Science (086)",
+    "class": 10,
+    "question_id": "202705-086-C10-15",
+    "answer": "B",
+    "explanation": "For an object beyond 2F, a convex lens forms a real, inverted, diminished image between F and 2F."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-01",
+    "answer": "C",
+    "explanation": "√3 cannot be expressed as a ratio of two integers."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-02",
+    "answer": "A",
+    "explanation": "125 = 5³, so the fraction has a terminating decimal expansion."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-03",
+    "answer": "C",
+    "explanation": "The highest power of x with a non-zero coefficient is 3."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-04",
+    "answer": "C",
+    "explanation": "Substitute x=2: 4 + 2k − 6 = 0, so 2k=2 and k=1."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-05",
+    "answer": "B",
+    "explanation": "Its x-coordinate is zero, so it lies on the y-axis."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-06",
+    "answer": "B",
+    "explanation": "2 + 3 = 5."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-07",
+    "answer": "B",
+    "explanation": "Alternate interior angles are equal when the lines are parallel."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-08",
+    "answer": "B",
+    "explanation": "SAS congruence requires two sides and the included angle to match."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-09",
+    "answer": "C",
+    "explanation": "A quadrilateral can be divided into two triangles; total = 2 × 180°."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-10",
+    "answer": "B",
+    "explanation": "They have the same base and height, so their areas are equal."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-11",
+    "answer": "A",
+    "explanation": "A perpendicular from the centre to a chord bisects the chord."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-12",
+    "answer": "B",
+    "explanation": "s = (5+6+7)/2 = 9 cm."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-13",
+    "answer": "C",
+    "explanation": "Volume = side³ = 3³ = 27 cm³."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-14",
+    "answer": "B",
+    "explanation": "Mean = (4+6+8+10)/4 = 7."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 9,
+    "question_id": "202705-041-C9-15",
+    "answer": "C",
+    "explanation": "Even outcomes are 2, 4, 6: three of six equally likely outcomes."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-01",
+    "answer": "B",
+    "explanation": "Euclid’s algorithm gives 404 = 4×96 + 20; 96 = 4×20 + 16; 20 = 1×16 + 4; 16 = 4×4."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-02",
+    "answer": "B",
+    "explanation": "For ax²+bx+c, sum of zeroes = −b/a = 7."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-03",
+    "answer": "C",
+    "explanation": "The second equation is twice the first, so both represent the same line."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-04",
+    "answer": "B",
+    "explanation": "D = b² − 4ac = 36 − 36 = 0."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-05",
+    "answer": "B",
+    "explanation": "a=3, d=4; a10 = 3 + 9×4 = 39."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-06",
+    "answer": "B",
+    "explanation": "Areas of similar triangles are in the square of corresponding side ratio."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-07",
+    "answer": "B",
+    "explanation": "Distance = √(6²+8²) = √100 = 10."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-08",
+    "answer": "B",
+    "explanation": "Standard trigonometric value: sin 30° = 1/2."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-09",
+    "answer": "B",
+    "explanation": "For fixed height, tan θ = height/distance; a larger angle means a smaller distance."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-10",
+    "answer": "B",
+    "explanation": "The radius drawn to the point of contact is perpendicular to the tangent."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-11",
+    "answer": "B",
+    "explanation": "Sector area = 90/360 × πr² = 1/4 × 616 = 154 cm²."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-12",
+    "answer": "C",
+    "explanation": "Volume = πr²h = π×9×5 = 45π cm³."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-13",
+    "answer": "B",
+    "explanation": "Class mark is the midpoint: (20+30)/2 = 25."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-14",
+    "answer": "C",
+    "explanation": "There are four aces among 52 cards; 4/52 = 1/13."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Standard (041)",
+    "class": 10,
+    "question_id": "202705-041-C10-15",
+    "answer": "B",
+    "explanation": "Let breadth b; b(b+2)=48 gives b²+2b−48=0, so b=6 (positive root)."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-01",
+    "answer": "C",
+    "explanation": "The Third Estate included commoners and bore much of the tax burden."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-02",
+    "answer": "B",
+    "explanation": "Representatives pledged not to separate until a constitution was established."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-03",
+    "answer": "B",
+    "explanation": "Lenin led the Bolsheviks during the 1917 Russian Revolution."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-04",
+    "answer": "B",
+    "explanation": "The Act gave Hitler’s government power to pass laws without parliament."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-05",
+    "answer": "B",
+    "explanation": "India uses 82°30′ E as its standard meridian."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-06",
+    "answer": "C",
+    "explanation": "The Himalayas are geologically young fold mountains."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-07",
+    "answer": "C",
+    "explanation": "The Narmada flows westward through a rift valley."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-08",
+    "answer": "A",
+    "explanation": "The southwest monsoon usually arrives over Kerala around the beginning of June."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-09",
+    "answer": "B",
+    "explanation": "High rainfall and warmth support dense evergreen vegetation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-10",
+    "answer": "B",
+    "explanation": "Population density is commonly expressed as persons per square kilometre."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-11",
+    "answer": "B",
+    "explanation": "Democracy rests on rulers being elected by the people."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-12",
+    "answer": "B",
+    "explanation": "Apartheid enforced racial segregation and discrimination in South Africa."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-13",
+    "answer": "C",
+    "explanation": "The normal term of the Lok Sabha is five years unless dissolved earlier."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-14",
+    "answer": "B",
+    "explanation": "Education and health improve people’s skills, productivity and capabilities."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 9,
+    "question_id": "202705-087-C9-15",
+    "answer": "B",
+    "explanation": "The poverty line identifies a minimum level needed to meet basic requirements."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-01",
+    "answer": "B",
+    "explanation": "Bismarck used a policy of military strength and diplomacy to unify Germany."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-02",
+    "answer": "B",
+    "explanation": "The violent incident at Chauri Chaura in 1922 led Gandhi to withdraw the movement."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-03",
+    "answer": "B",
+    "explanation": "Silk Routes linked Asian regions with Europe and North Africa through trade and cultural exchange."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-04",
+    "answer": "B",
+    "explanation": "Gutenberg developed a movable-type printing press in Europe in the fifteenth century."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-05",
+    "answer": "B",
+    "explanation": "Black soil retains moisture and is well suited to cotton."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-06",
+    "answer": "B",
+    "explanation": "Endemic species are restricted to a specific region."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-07",
+    "answer": "B",
+    "explanation": "Harvesting stores rainwater and helps replenish groundwater."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-08",
+    "answer": "B",
+    "explanation": "Rabi crops such as wheat are sown in winter and harvested in spring."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-09",
+    "answer": "C",
+    "explanation": "Solar energy is renewable and classed as a non-conventional source."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-10",
+    "answer": "B",
+    "explanation": "Iron and steel provide essential inputs for machinery, construction and other industries."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-11",
+    "answer": "B",
+    "explanation": "Horizontal power sharing distributes authority among organs at the same level."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-12",
+    "answer": "C",
+    "explanation": "Defence is a Union subject."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-13",
+    "answer": "B",
+    "explanation": "Communalism uses religious identity to promote political dominance or division."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-14",
+    "answer": "B",
+    "explanation": "Political parties nominate candidates, contest elections and organise government."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Social Science (087)",
+    "class": 10,
+    "question_id": "202705-087-C10-15",
+    "answer": "B",
+    "explanation": "Development also depends on quality of life and how income is distributed."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-01",
+    "answer": "B",
+    "explanation": "The central idea is the main message developed across the passage."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-02",
+    "answer": "B",
+    "explanation": "Mitigate means to make something less severe."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-03",
+    "answer": "B",
+    "explanation": "A singular third-person subject takes “goes” in the simple present."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-04",
+    "answer": "B",
+    "explanation": "Must expresses strong obligation or necessity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-05",
+    "answer": "B",
+    "explanation": "The subject is singular “list”; the phrase “of items” does not change its number."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-06",
+    "answer": "A",
+    "explanation": "Description is strengthened by specific details and coherent organisation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-07",
+    "answer": "B",
+    "explanation": "Diary entries usually express the writer’s personal experiences and feelings."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-08",
+    "answer": "B",
+    "explanation": "Character traits should be inferred from textual evidence."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-09",
+    "answer": "B",
+    "explanation": "A simile explicitly compares two things using like or as."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-10",
+    "answer": "B",
+    "explanation": "Alliteration is repetition of initial consonant sounds."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-11",
+    "answer": "C",
+    "explanation": "Abundant means plentiful, the opposite of scarce."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-12",
+    "answer": "C",
+    "explanation": "Milk is uncountable; “a little” refers to a small amount."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-13",
+    "answer": "B",
+    "explanation": "With a past reporting verb, present “am” normally backshifts to “was”."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-14",
+    "answer": "B",
+    "explanation": "Repeated clock-checking before an important event suggests anticipation or nervousness."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 9,
+    "question_id": "202705-184-C9-15",
+    "answer": "B",
+    "explanation": "A formal complaint should state facts, impact and the remedy sought."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-01",
+    "answer": "B",
+    "explanation": "An inference is a reasoned conclusion based on evidence and prior understanding."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-02",
+    "answer": "B",
+    "explanation": "Feasible means possible or practical to do."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-03",
+    "answer": "C",
+    "explanation": "Future perfect describes an action completed before a specified future time."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-04",
+    "answer": "A",
+    "explanation": "Should have expresses an expected action that was not done."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-05",
+    "answer": "B",
+    "explanation": "Present perfect generally backshifts to past perfect after a past reporting verb."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-06",
+    "answer": "B",
+    "explanation": "With neither…nor, the verb agrees with the nearer subject, “students”."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-07",
+    "answer": "B",
+    "explanation": "An analytical paragraph selects and interprets significant patterns in the data."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-08",
+    "answer": "A",
+    "explanation": "A civic complaint should be clear, respectful and evidence-based."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-09",
+    "answer": "B",
+    "explanation": "Lencho writes to God because he firmly believes help will come."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-10",
+    "answer": "B",
+    "explanation": "The falling snow from the hemlock tree changes the poet’s mood."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-11",
+    "answer": "B",
+    "explanation": "The vet restores Tricki’s health through controlled feeding and activity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-12",
+    "answer": "B",
+    "explanation": "Anil’s trust and the possibility of learning prompt Hari’s return."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-13",
+    "answer": "A",
+    "explanation": "The wind is given the human action of whispering."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-14",
+    "answer": "B",
+    "explanation": "Reluctant means not willing or hesitant to act."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Language & Literature (184)",
+    "class": 10,
+    "question_id": "202705-184-C10-15",
+    "answer": "B",
+    "explanation": "A focused answer makes a clear claim and supports it with relevant evidence."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-01",
+    "answer": "B",
+    "explanation": "Factual questions require evidence stated in the given passage."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-02",
+    "answer": "B",
+    "explanation": "Resilient describes the ability to recover or adapt after adversity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-03",
+    "answer": "C",
+    "explanation": "Present perfect continuous describes an activity continuing from the past until now."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-04",
+    "answer": "B",
+    "explanation": "The because-clause depends on the main clause and gives the reason."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-05",
+    "answer": "A",
+    "explanation": "“Each” is singular and takes “has”."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-06",
+    "answer": "A",
+    "explanation": "An introduction establishes the subject and gives readers a reason to continue."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-07",
+    "answer": "A",
+    "explanation": "A speech is audience-focused and follows a clear opening, body and conclusion."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-08",
+    "answer": "B",
+    "explanation": "Theme is the underlying idea or concern developed by the work."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-09",
+    "answer": "B",
+    "explanation": "A stanza is a grouped set of poetic lines."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-10",
+    "answer": "A",
+    "explanation": "Irony often arises when the outcome differs from what is expected."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-11",
+    "answer": "B",
+    "explanation": "Benevolent means well-meaning and kind."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-12",
+    "answer": "A",
+    "explanation": "Enough is used with plural countable nouns to indicate sufficiency."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-13",
+    "answer": "B",
+    "explanation": "Past simple active changes to was/were + past participle in passive voice."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-14",
+    "answer": "B",
+    "explanation": "A concise subject helps the recipient understand the purpose."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Communicative (101)",
+    "class": 10,
+    "question_id": "202705-101-C10-15",
+    "answer": "B",
+    "explanation": "Evaluation examines the quality of claims and supporting evidence."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-01",
+    "answer": "B",
+    "explanation": "मुख्य भाव पूरे अनुच्छेद में विकसित विचार को समझकर निर्धारित किया जाता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-02",
+    "answer": "C",
+    "explanation": "“सुंदर” फूल की विशेषता बताता है, इसलिए विशेषण है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-03",
+    "answer": "C",
+    "explanation": "ईमानदारी एक गुण/भाव का नाम है, इसलिए भाववाचक संज्ञा है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-04",
+    "answer": "D",
+    "explanation": "“वे” संज्ञा के स्थान पर प्रयुक्त सर्वनाम है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-05",
+    "answer": "C",
+    "explanation": "“खेल रहे हैं” क्रिया समूह है जो कार्य और काल बताता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-06",
+    "answer": "B",
+    "explanation": "“अनु” उपसर्ग “शासन” शब्द से पहले जुड़ा है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-07",
+    "answer": "B",
+    "explanation": "“मित्र” में “ता” प्रत्यय जुड़कर भाववाचक शब्द बनाता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-08",
+    "answer": "B",
+    "explanation": "अनुच्छेद में विचार तार्किक क्रम में जुड़े होने चाहिए।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-09",
+    "answer": "B",
+    "explanation": "औपचारिक पत्र में विनम्र और स्पष्ट भाषा अपेक्षित है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-10",
+    "answer": "B",
+    "explanation": "एक ही वर्ण या ध्वनि की आवृत्ति अनुप्रास अलंकार कहलाती है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-11",
+    "answer": "B",
+    "explanation": "पात्र के गुण उसके कार्यों और संवादों से स्पष्ट होते हैं।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-12",
+    "answer": "B",
+    "explanation": "परिश्रम का अर्थ मेहनत या श्रम है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-13",
+    "answer": "C",
+    "explanation": "अवनति, उन्नति का विपरीत अर्थ देता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-14",
+    "answer": "B",
+    "explanation": "यह मुहावरा अत्यंत प्रिय व्यक्ति के लिए प्रयुक्त होता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 9,
+    "question_id": "202705-002-C9-15",
+    "answer": "B",
+    "explanation": "व्याख्या में प्रसंग, भाव और पाठ के प्रमाण का उपयोग होना चाहिए।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-01",
+    "answer": "B",
+    "explanation": "लेखक का उद्देश्य उसके केंद्रीय विचार और तर्क से स्पष्ट होता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-02",
+    "answer": "B",
+    "explanation": "यह खिलाड़ी की विशेषता बताता है, इसलिए विशेषण पदबंध है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-03",
+    "answer": "B",
+    "explanation": "दो स्वतंत्र उपवाक्य “और” से जुड़े हैं, इसलिए संयुक्त वाक्य है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-04",
+    "answer": "B",
+    "explanation": "कर्म को प्रधान बनाकर “द्वारा” और क्रिया का कर्मवाच्य रूप प्रयोग होता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-05",
+    "answer": "B",
+    "explanation": "चरण को सीधे कमल कहा गया है; उपमेय और उपमान का अभेद रूपक है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-06",
+    "answer": "B",
+    "explanation": "राजा का पुत्र संबंध बताता है; यह तत्पुरुष समास है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-07",
+    "answer": "B",
+    "explanation": "शिकायत का विषय और संदर्भ स्पष्ट होने से पत्र उद्देश्यपूर्ण बनता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-08",
+    "answer": "B",
+    "explanation": "विज्ञापन कम शब्दों में स्पष्ट और आकर्षक सूचना देता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-09",
+    "answer": "A",
+    "explanation": "शीर्षक अनुच्छेद के केंद्रीय विषय का संकेत देता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-10",
+    "answer": "B",
+    "explanation": "कथावाचक का दृष्टिकोण सूचना और घटनाओं की प्रस्तुति को निर्धारित करता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-11",
+    "answer": "A",
+    "explanation": "मानवीकरण में निर्जीव या अमानवीय वस्तु को मानवीय गुण दिए जाते हैं।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-12",
+    "answer": "B",
+    "explanation": "दुर्लभ का अर्थ है जो सहजता से उपलब्ध न हो।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-13",
+    "answer": "B",
+    "explanation": "“मुझे पुस्तक चाहिए” मानक और व्याकरणसम्मत प्रयोग है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-14",
+    "answer": "B",
+    "explanation": "यह मुहावरा किसी को कड़ी शिकस्त देने के अर्थ में आता है।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Hindi Course A (002)",
+    "class": 10,
+    "question_id": "202705-002-C10-15",
+    "answer": "B",
+    "explanation": "केंद्रीय भाव की व्याख्या पाठ के बिंबों और पंक्तियों से समर्थित होनी चाहिए।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-01",
+    "answer": "B",
+    "explanation": "60 = 2×2×3×5 = 2²×3×5."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-02",
+    "answer": "C",
+    "explanation": "Set x−5=0; x=5."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-03",
+    "answer": "B",
+    "explanation": "Substitute x=3: 3+y=8, so y=5."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-04",
+    "answer": "B",
+    "explanation": "x²=9 gives x=±3."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-05",
+    "answer": "B",
+    "explanation": "Each term increases by 3."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-06",
+    "answer": "B",
+    "explanation": "By Pythagoras, hypotenuse = √(36+64)=10 cm."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-07",
+    "answer": "B",
+    "explanation": "Midpoint = ((2+6)/2,(4+8)/2) = (4,6)."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-08",
+    "answer": "B",
+    "explanation": "Sine is opposite side divided by hypotenuse."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-09",
+    "answer": "B",
+    "explanation": "By Pythagoras, base = √(10²−8²)=6 m."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-10",
+    "answer": "B",
+    "explanation": "An external point has exactly two tangents to a circle."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-11",
+    "answer": "B",
+    "explanation": "Circumference = 2πr = 44 cm."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-12",
+    "answer": "C",
+    "explanation": "TSA = 6a² = 6×4 = 24 cm²."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-13",
+    "answer": "B",
+    "explanation": "The middle value of the ordered five observations is 7."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-14",
+    "answer": "C",
+    "explanation": "There are two equally likely outcomes and one is head."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics Basic (241)",
+    "class": 10,
+    "question_id": "202705-241-C10-15",
+    "answer": "B",
+    "explanation": "The weekly amounts form 10, 15, 20, 25; the fourth week amount is ₹25."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-01",
+    "answer": "B",
+    "explanation": "A network connects devices to communicate and share resources."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-02",
+    "answer": "B",
+    "explanation": "Star networks use a central connecting device."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-03",
+    "answer": "B",
+    "explanation": "HTTPS uses TLS to protect communication between browser and web server."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-04",
+    "answer": "A",
+    "explanation": "Phishing tricks users into revealing sensitive information."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-05",
+    "answer": "B",
+    "explanation": "Content displayed in the browser is placed inside the body element."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-06",
+    "answer": "B",
+    "explanation": "The anchor element <a> creates a hyperlink using its href attribute."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-07",
+    "answer": "B",
+    "explanation": "The <tr> element groups cells into a table row."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-08",
+    "answer": "B",
+    "explanation": "CSS controls presentation such as colours, spacing and layout."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-09",
+    "answer": "B",
+    "explanation": "A numeric value with a decimal point is a float."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-10",
+    "answer": "B",
+    "explanation": "Floor division returns the integer quotient: 17//5 = 3."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-11",
+    "answer": "B",
+    "explanation": "Python uses elif for an additional conditional branch."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-12",
+    "answer": "B",
+    "explanation": "range(2,6) generates 2, 3, 4 and 5: four iterations."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-13",
+    "answer": "B",
+    "explanation": "A primary key uniquely identifies each row and cannot be null."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-14",
+    "answer": "A",
+    "explanation": "SELECT retrieves rows and WHERE filters them using a condition."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Applications (165)",
+    "class": 10,
+    "question_id": "202705-165-C10-15",
+    "answer": "C",
+    "explanation": "Unique passwords and MFA reduce the risk of account compromise."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-01",
+    "answer": "A",
+    "explanation": "Decomposition divides a complex problem into smaller subproblems."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-02",
+    "answer": "A",
+    "explanation": "An algorithm is an ordered set of steps for solving a problem."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-03",
+    "answer": "B",
+    "explanation": "Pattern recognition identifies repeated similarities across problems or data."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-04",
+    "answer": "B",
+    "explanation": "Abstraction simplifies a problem by focusing on important features."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-05",
+    "answer": "B",
+    "explanation": "A diamond represents a decision or condition with branching outcomes."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-06",
+    "answer": "C",
+    "explanation": "The terminator oval marks the beginning or end of a flowchart."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-07",
+    "answer": "B",
+    "explanation": "Structured data is organised in a defined format such as rows and columns."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-08",
+    "answer": "B",
+    "explanation": "Poor-quality or biased data can produce inaccurate or unfair model outputs."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-09",
+    "answer": "B",
+    "explanation": "AI systems perform tasks such as recognising patterns, understanding language or making predictions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-10",
+    "answer": "B",
+    "explanation": "Computer vision enables systems to interpret visual information."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-11",
+    "answer": "A",
+    "explanation": "NLP helps computers process and respond to human language."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-12",
+    "answer": "A",
+    "explanation": "Supervised learning uses examples paired with known target labels or values."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-13",
+    "answer": "B",
+    "explanation": "Unsupervised learning discovers patterns or groups in unlabelled data."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-14",
+    "answer": "B",
+    "explanation": "Biased training data can lead a model to reproduce unfair patterns."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "class": 9,
+    "question_id": "202705-CTAI-C9-15",
+    "answer": "B",
+    "explanation": "Responsible use includes verification, transparency and privacy protection."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-01",
+    "answer": "A",
+    "explanation": "Force=mass×acceleration, so [M][LT⁻²]=[MLT⁻²]."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-02",
+    "answer": "B",
+    "explanation": "The rate of change of displacement is velocity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-03",
+    "answer": "B",
+    "explanation": "R=u²sin2θ/g is maximum when sin2θ=1, i.e. θ=45°."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-04",
+    "answer": "C",
+    "explanation": "F=ma=5×2=10 N."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-05",
+    "answer": "C",
+    "explanation": "W=Fs cos90°=0."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-06",
+    "answer": "A",
+    "explanation": "Torque is force×perpendicular distance, measured in N m."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-07",
+    "answer": "C",
+    "explanation": "At r=2R from Earth's centre, g'=g(R/2R)²=g/4."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-08",
+    "answer": "A",
+    "explanation": "Young's modulus measures longitudinal stiffness."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-09",
+    "answer": "A",
+    "explanation": "Hydrostatic pressure difference is ΔP=ρgh."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-10",
+    "answer": "A",
+    "explanation": "Q=mcΔT when no phase change occurs."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-11",
+    "answer": "C",
+    "explanation": "Internal energy of an ideal gas depends only on temperature."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-12",
+    "answer": "B",
+    "explanation": "Equipartition gives 3 degrees of translational freedom: 3kT/2."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-13",
+    "answer": "C",
+    "explanation": "a=−ω²x, directed towards the mean position."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-14",
+    "answer": "A",
+    "explanation": "v=fλ."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 11,
+    "question_id": "202705-042-C11-15",
+    "answer": "B",
+    "explanation": "Leading zeros are not significant; trailing zero after decimal is significant: 4,5,0."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-01",
+    "answer": "A",
+    "explanation": "Coulomb force varies inversely as the square of separation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-02",
+    "answer": "A",
+    "explanation": "Electric flux is E·A, giving N m² C⁻¹."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-03",
+    "answer": "C",
+    "explanation": "W=qV=2×12=24 J."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-04",
+    "answer": "B",
+    "explanation": "The dielectric increases capacitance by the factor K."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-05",
+    "answer": "B",
+    "explanation": "Ohm's law gives I=V/R; doubling R halves I."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-06",
+    "answer": "B",
+    "explanation": "For a given material, drift velocity is proportional to the applied electric field."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-07",
+    "answer": "B",
+    "explanation": "F=qvB sinθ; for θ=0°, force is zero."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-08",
+    "answer": "A",
+    "explanation": "Magnetic flux density is measured in tesla."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-09",
+    "answer": "C",
+    "explanation": "Diamagnetic substances develop magnetisation opposing the applied field."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-10",
+    "answer": "C",
+    "explanation": "The induced current opposes the change producing it, consistent with energy conservation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-11",
+    "answer": "C",
+    "explanation": "For sinusoidal current, Irms=I₀/√2."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-12",
+    "answer": "D",
+    "explanation": "Gamma rays occupy the highest-frequency region of the electromagnetic spectrum."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-13",
+    "answer": "B",
+    "explanation": "P=1/f with f in metres, so P=+2 dioptres."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-14",
+    "answer": "C",
+    "explanation": "β=λD/d; increasing D increases fringe width."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physics (042)",
+    "class": 12,
+    "question_id": "202705-042-C12-15",
+    "answer": "B",
+    "explanation": "Forward bias reduces the depletion barrier and permits significant current."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-01",
+    "answer": "A",
+    "explanation": "Avogadro constant is approximately 6.022×10²³ mol⁻¹."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-02",
+    "answer": "B",
+    "explanation": "Maximum electrons=2n²=2×9=18."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-03",
+    "answer": "B",
+    "explanation": "Increasing effective nuclear charge generally contracts atomic size across a period."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-04",
+    "answer": "C",
+    "explanation": "Four bond pairs around carbon arrange tetrahedrally."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-05",
+    "answer": "A",
+    "explanation": "Each carbon in ethyne has two electron domains and is sp hybridised."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-06",
+    "answer": "A",
+    "explanation": "The ideal gas equation is PV=nRT."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-07",
+    "answer": "B",
+    "explanation": "At constant pressure, qp=ΔH for the process."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-08",
+    "answer": "B",
+    "explanation": "Dynamic equilibrium has equal forward and reverse rates."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-09",
+    "answer": "B",
+    "explanation": "Oxidation involves loss of electrons or increase in oxidation number."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-10",
+    "answer": "B",
+    "explanation": "Peroxides contain oxygen in the −1 oxidation state."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-11",
+    "answer": "A",
+    "explanation": "Sodium reacts vigorously with air and moisture and is stored under kerosene."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-12",
+    "answer": "D",
+    "explanation": "Fluorine's small size and high electronegativity enable strong hydrogen bonding."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-13",
+    "answer": "B",
+    "explanation": "Aldehydes contain the terminal −CHO group."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-14",
+    "answer": "B",
+    "explanation": "A saturated acyclic hydrocarbon has formula CnH2n+2."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 11,
+    "question_id": "202705-043-C11-15",
+    "answer": "A",
+    "explanation": "SOx and NOx form acids in atmospheric moisture."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-01",
+    "answer": "B",
+    "explanation": "Molality uses mass of solvent in kilograms."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-02",
+    "answer": "A",
+    "explanation": "Partial vapour pressure equals mole fraction times pure-component vapour pressure."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-03",
+    "answer": "A",
+    "explanation": "Molar conductivity is conductivity multiplied by volume per mole."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-04",
+    "answer": "B",
+    "explanation": "Reduction occurs at the cathode in every electrochemical cell."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-05",
+    "answer": "B",
+    "explanation": "The first-order rate constant has dimensions of inverse time."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-06",
+    "answer": "B",
+    "explanation": "A catalyst provides an alternative pathway with lower activation energy."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-07",
+    "answer": "B",
+    "explanation": "The energies of ns and (n−1)d orbitals are close."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-08",
+    "answer": "C",
+    "explanation": "Six NH3 ligands are directly bonded to cobalt."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-09",
+    "answer": "A",
+    "explanation": "Tertiary carbocations are relatively stabilised, favouring SN1 conditions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-10",
+    "answer": "A",
+    "explanation": "The phenoxide conjugate base is stabilised by delocalisation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-11",
+    "answer": "B",
+    "explanation": "Aldehydes reduce the diamminesilver(I) complex to metallic silver."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-12",
+    "answer": "B",
+    "explanation": "Resonance delocalisation makes the nitrogen lone pair less available for protonation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-13",
+    "answer": "B",
+    "explanation": "A peptide bond is an amide linkage between amino acids."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-14",
+    "answer": "B",
+    "explanation": "DNA contains 2-deoxyribose."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Chemistry (043)",
+    "class": 12,
+    "question_id": "202705-043-C12-15",
+    "answer": "A",
+    "explanation": "Six CN− ligands contribute −6; overall charge −4, so Fe is +2."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-01",
+    "answer": "C",
+    "explanation": "Species is the basic taxonomic category."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-02",
+    "answer": "B",
+    "explanation": "Fungal cell walls characteristically contain chitin."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-03",
+    "answer": "B",
+    "explanation": "Bryophytes have a dominant, independent gametophyte."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-04",
+    "answer": "B",
+    "explanation": "The notochord is a defining chordate feature."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-05",
+    "answer": "B",
+    "explanation": "Placentation describes ovule arrangement in the ovary."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-06",
+    "answer": "B",
+    "explanation": "Xylem conducts water and dissolved minerals."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-07",
+    "answer": "A",
+    "explanation": "Thin simple squamous epithelium facilitates gas diffusion."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-08",
+    "answer": "A",
+    "explanation": "The membrane has a fluid lipid bilayer with embedded proteins."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-09",
+    "answer": "B",
+    "explanation": "Proteins are polymers of amino acids."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-10",
+    "answer": "C",
+    "explanation": "Crossing over occurs in pachytene of prophase I."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-11",
+    "answer": "C",
+    "explanation": "Photolysis of water releases oxygen during the light reactions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-12",
+    "answer": "B",
+    "explanation": "Glycolysis occurs in the cytosol."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-13",
+    "answer": "A",
+    "explanation": "Auxins promote cell elongation in many plant tissues."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-14",
+    "answer": "B",
+    "explanation": "Pepsin is a gastric protease active in acidic conditions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 11,
+    "question_id": "202705-044-C11-15",
+    "answer": "B",
+    "explanation": "Most oxygen binds reversibly to haemoglobin in red blood cells."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-01",
+    "answer": "B",
+    "explanation": "Pollination is pollen transfer to the stigma."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-02",
+    "answer": "B",
+    "explanation": "The mature embryo sac is typically 7-celled and 8-nucleate."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-03",
+    "answer": "C",
+    "explanation": "Fertilisation commonly occurs at the ampullary-isthmic junction."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-04",
+    "answer": "B",
+    "explanation": "Copper ions impair sperm motility and fertilising capacity; IUDs enhance local phagocytosis."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-05",
+    "answer": "C",
+    "explanation": "A homozygous recessive tester reveals the genotype of a dominant-phenotype individual."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-06",
+    "answer": "B",
+    "explanation": "RNA polymerase catalyses transcription."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-07",
+    "answer": "C",
+    "explanation": "Adenine pairs with thymine through two hydrogen bonds."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-08",
+    "answer": "B",
+    "explanation": "They perform flight but have different evolutionary origins and structural plans."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-09",
+    "answer": "A",
+    "explanation": "Activated B lymphocytes differentiate into antibody-secreting plasma cells."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-10",
+    "answer": "A",
+    "explanation": "Lactic acid bacteria such as Lactobacillus convert milk lactose to lactic acid."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-11",
+    "answer": "B",
+    "explanation": "Restriction enzymes cut DNA at specific recognition sites."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-12",
+    "answer": "A",
+    "explanation": "Bt genes from Bacillus thuringiensis encode insecticidal proteins."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-13",
+    "answer": "B",
+    "explanation": "Mutualism benefits both interacting species."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-14",
+    "answer": "B",
+    "explanation": "Energy decreases at successive trophic levels, so the energy pyramid is upright."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Biology (044)",
+    "class": 12,
+    "question_id": "202705-044-C12-15",
+    "answer": "A",
+    "explanation": "Endemic species have a restricted natural geographical distribution."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-01",
+    "answer": "B",
+    "explanation": "The intersection contains elements common to both sets."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-02",
+    "answer": "B",
+    "explanation": "The radicand must be non-negative: x−2≥0."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-03",
+    "answer": "B",
+    "explanation": "This is the fundamental Pythagorean identity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-04",
+    "answer": "B",
+    "explanation": "The imaginary unit is defined by i²=−1."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-05",
+    "answer": "A",
+    "explanation": "Subtracting 3 from both sides gives x>4."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-06",
+    "answer": "B",
+    "explanation": "The number of permutations is 3!=6."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-07",
+    "answer": "B",
+    "explanation": "The x² coefficient is ⁴C₂=6."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-08",
+    "answer": "A",
+    "explanation": "The nth AP term is a+(n−1)d."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-09",
+    "answer": "A",
+    "explanation": "A horizontal line has zero change in y, hence slope zero."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-10",
+    "answer": "A",
+    "explanation": "A circle is the limiting ellipse with eccentricity zero."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-11",
+    "answer": "B",
+    "explanation": "Distance=√(1²+2²+2²)=3."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-12",
+    "answer": "B",
+    "explanation": "Using the power rule, d(x²)/dx=2x."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-13",
+    "answer": "B",
+    "explanation": "Mean=(2+4+6+8)/4=5."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-14",
+    "answer": "A",
+    "explanation": "An impossible event has probability zero."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 11,
+    "question_id": "202705-041-C11-15",
+    "answer": "A",
+    "explanation": "The inductive step establishes P(k)⇒P(k+1)."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-01",
+    "answer": "B",
+    "explanation": "Injectivity means f(a)=f(b) implies a=b."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-02",
+    "answer": "B",
+    "explanation": "The principal branch of inverse sine is [−π/2,π/2]."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-03",
+    "answer": "A",
+    "explanation": "The inner dimensions match and the product has the outer dimensions 2×4."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-04",
+    "answer": "B",
+    "explanation": "Interchanging two rows changes the sign of a determinant."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-05",
+    "answer": "B",
+    "explanation": "d(sin x)/dx=cos x."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-06",
+    "answer": "B",
+    "explanation": "Fermat's theorem gives f'(c)=0 at an interior local extremum, when differentiable."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-07",
+    "answer": "B",
+    "explanation": "The standard antiderivative is ln|x|+C."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-08",
+    "answer": "A",
+    "explanation": "For non-negative f, the definite integral gives the area."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-09",
+    "answer": "B",
+    "explanation": "The highest derivative is the second derivative."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-10",
+    "answer": "C",
+    "explanation": "a·b=|a||b|cos90°=0."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-11",
+    "answer": "B",
+    "explanation": "Direction cosines satisfy the unit-sphere identity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-12",
+    "answer": "B",
+    "explanation": "The feasible region is the intersection of all constraint half-planes and non-negativity conditions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-13",
+    "answer": "B",
+    "explanation": "Independence gives the product rule."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-14",
+    "answer": "B",
+    "explanation": "A square matrix is non-singular precisely when its determinant is non-zero."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Mathematics (041)",
+    "class": 12,
+    "question_id": "202705-041-C12-15",
+    "answer": "B",
+    "explanation": "The left and right derivatives at zero differ."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-01",
+    "answer": "A",
+    "explanation": "RAM is volatile primary memory used by active programs and data."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-02",
+    "answer": "B",
+    "explanation": "An operating system manages hardware and provides services to application software."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-03",
+    "answer": "C",
+    "explanation": "1011₂ = 8 + 0 + 2 + 1 = 11."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-04",
+    "answer": "C",
+    "explanation": "One hexadecimal digit represents 16 values, which require 4 bits."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-05",
+    "answer": "B",
+    "explanation": "The AND gate outputs 1 only for input combination 1,1."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-06",
+    "answer": "B",
+    "explanation": "NOT reverses the input bit; NOT 0 is 1."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-07",
+    "answer": "C",
+    "explanation": "Identifiers cannot start with a digit or contain a hyphen; keywords such as class are reserved."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-08",
+    "answer": "B",
+    "explanation": "A numeric literal containing a decimal point is a float."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-09",
+    "answer": "B",
+    "explanation": "Floor division returns the quotient rounded down: 17 // 5 is 3."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-10",
+    "answer": "C",
+    "explanation": "Python uses else for the alternative branch when the if condition is false."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-11",
+    "answer": "B",
+    "explanation": "It generates 2, 4 and 6: three values."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-12",
+    "answer": "B",
+    "explanation": "Slicing includes index 1 and stops before index 4, producing YTH."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-13",
+    "answer": "C",
+    "explanation": "append(x) adds x as a single element at the end of the list."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-14",
+    "answer": "C",
+    "explanation": "A function without an explicit return value returns None."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 11,
+    "question_id": "202705-083-C11-15",
+    "answer": "B",
+    "explanation": "Python raises NameError when a name is not found in the current scope."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-01",
+    "answer": "B",
+    "explanation": "Python function definitions begin with the def keyword."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-02",
+    "answer": "B",
+    "explanation": "return ends the function call and passes a value back to the caller."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-03",
+    "answer": "C",
+    "explanation": "A dictionary maps unique keys to associated values."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-04",
+    "answer": "C",
+    "explanation": "The key 'B' maps to the value 20."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-05",
+    "answer": "B",
+    "explanation": "A stack follows Last In, First Out."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-06",
+    "answer": "B",
+    "explanation": "The pop operation removes and returns the top item."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-07",
+    "answer": "C",
+    "explanation": "The r mode opens an existing file for reading."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-08",
+    "answer": "A",
+    "explanation": "read() returns the remaining file content as a string."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-09",
+    "answer": "B",
+    "explanation": "tell() reports the current stream position."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-10",
+    "answer": "B",
+    "explanation": "SELECT is used to query data from one or more tables."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-11",
+    "answer": "C",
+    "explanation": "WHERE filters individual rows before grouping and aggregation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-12",
+    "answer": "C",
+    "explanation": "COUNT() returns the number of rows or non-NULL values, depending on its argument."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-13",
+    "answer": "B",
+    "explanation": "A router forwards packets between networks using network-layer addressing."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-14",
+    "answer": "C",
+    "explanation": "HTTPS uses HTTP over an encrypted TLS connection."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Computer Science (083)",
+    "class": 12,
+    "question_id": "202705-083-C12-15",
+    "answer": "C",
+    "explanation": "Multi-factor authentication adds a second verification factor beyond the password."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-01",
+    "answer": "A",
+    "explanation": "SELECT retrieves rows from one or more database tables."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-02",
+    "answer": "A",
+    "explanation": "WHERE filters individual rows before GROUP BY is applied."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-03",
+    "answer": "A",
+    "explanation": "COUNT() returns the number of rows or non-NULL values, depending on its argument."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-04",
+    "answer": "A",
+    "explanation": "The shape attribute returns a tuple containing row and column counts."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-05",
+    "answer": "A",
+    "explanation": "head() displays the first five rows unless another number is supplied."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-06",
+    "answer": "A",
+    "explanation": "isnull() marks missing entries as True."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-07",
+    "answer": "A",
+    "explanation": "A line chart makes changes over ordered time intervals easy to see."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-08",
+    "answer": "A",
+    "explanation": "pyplot.show() displays the current figure."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-09",
+    "answer": "A",
+    "explanation": "HTTPS uses TLS to protect communication between browser and server."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-10",
+    "answer": "A",
+    "explanation": "A router forwards packets between networks using IP addressing."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-11",
+    "answer": "A",
+    "explanation": "Unique passwords and multi-factor authentication reduce account compromise risk."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-12",
+    "answer": "A",
+    "explanation": "A primary key uniquely identifies each record and cannot be NULL."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-13",
+    "answer": "A",
+    "explanation": "ORDER BY sorts the result set by one or more columns."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-14",
+    "answer": "A",
+    "explanation": "describe() reports count, mean, standard deviation and related statistics."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 11,
+    "question_id": "202705-065-C11-15",
+    "answer": "A",
+    "explanation": "merge() performs database-style joins using one or more keys."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-01",
+    "answer": "A",
+    "explanation": "SELECT retrieves rows from one or more database tables."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-02",
+    "answer": "A",
+    "explanation": "WHERE filters individual rows before GROUP BY is applied."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-03",
+    "answer": "A",
+    "explanation": "COUNT() returns the number of rows or non-NULL values, depending on its argument."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-04",
+    "answer": "A",
+    "explanation": "The shape attribute returns a tuple containing row and column counts."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-05",
+    "answer": "A",
+    "explanation": "head() displays the first five rows unless another number is supplied."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-06",
+    "answer": "A",
+    "explanation": "isnull() marks missing entries as True."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-07",
+    "answer": "A",
+    "explanation": "A line chart makes changes over ordered time intervals easy to see."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-08",
+    "answer": "A",
+    "explanation": "pyplot.show() displays the current figure."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-09",
+    "answer": "A",
+    "explanation": "HTTPS uses TLS to protect communication between browser and server."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-10",
+    "answer": "A",
+    "explanation": "A router forwards packets between networks using IP addressing."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-11",
+    "answer": "A",
+    "explanation": "Unique passwords and multi-factor authentication reduce account compromise risk."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-12",
+    "answer": "A",
+    "explanation": "A primary key uniquely identifies each record and cannot be NULL."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-13",
+    "answer": "A",
+    "explanation": "ORDER BY sorts the result set by one or more columns."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-14",
+    "answer": "A",
+    "explanation": "describe() reports count, mean, standard deviation and related statistics."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Informatics Practices (065)",
+    "class": 12,
+    "question_id": "202705-065-C12-15",
+    "answer": "A",
+    "explanation": "merge() performs database-style joins using one or more keys."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-01",
+    "answer": "A",
+    "explanation": "Contrast can reveal character traits and sharpen a central conflict."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-02",
+    "answer": "A",
+    "explanation": "Tone is conveyed through diction, imagery and the writer’s attitude."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-03",
+    "answer": "A",
+    "explanation": "Formal invitations use concise, polite and relevant information."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-04",
+    "answer": "A",
+    "explanation": "Findings communicate the evidence gathered during the investigation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-05",
+    "answer": "A",
+    "explanation": "Neither is treated as singular in standard formal usage."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-06",
+    "answer": "A",
+    "explanation": "The object becomes the subject and the verb takes the passive form."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-07",
+    "answer": "A",
+    "explanation": "A simile makes an explicit comparison using like or as."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-08",
+    "answer": "A",
+    "explanation": "A motif is a recurring element that contributes to meaning."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-09",
+    "answer": "A",
+    "explanation": "Enjambment carries syntax or sense across a line ending."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-10",
+    "answer": "A",
+    "explanation": "An omniscient narrator can access multiple characters’ thoughts."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-11",
+    "answer": "A",
+    "explanation": "Inference combines textual clues with reasoned interpretation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-12",
+    "answer": "A",
+    "explanation": "A thesis clearly expresses the main claim the writing will develop."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-13",
+    "answer": "A",
+    "explanation": "A defining relative clause identifies which student is meant and is not set off by commas."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-14",
+    "answer": "A",
+    "explanation": "Theme is the underlying idea or message developed through the work."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 11,
+    "question_id": "202705-301-C11-15",
+    "answer": "A",
+    "explanation": "Coherence comes from unity, logical sequencing and appropriate links."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-01",
+    "answer": "A",
+    "explanation": "Contrast can reveal character traits and sharpen a central conflict."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-02",
+    "answer": "A",
+    "explanation": "Tone is conveyed through diction, imagery and the writer’s attitude."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-03",
+    "answer": "A",
+    "explanation": "Formal invitations use concise, polite and relevant information."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-04",
+    "answer": "A",
+    "explanation": "Findings communicate the evidence gathered during the investigation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-05",
+    "answer": "A",
+    "explanation": "Neither is treated as singular in standard formal usage."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-06",
+    "answer": "A",
+    "explanation": "The object becomes the subject and the verb takes the passive form."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-07",
+    "answer": "A",
+    "explanation": "A simile makes an explicit comparison using like or as."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-08",
+    "answer": "A",
+    "explanation": "A motif is a recurring element that contributes to meaning."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-09",
+    "answer": "A",
+    "explanation": "Enjambment carries syntax or sense across a line ending."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-10",
+    "answer": "A",
+    "explanation": "An omniscient narrator can access multiple characters’ thoughts."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-11",
+    "answer": "A",
+    "explanation": "Inference combines textual clues with reasoned interpretation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-12",
+    "answer": "A",
+    "explanation": "A thesis clearly expresses the main claim the writing will develop."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-13",
+    "answer": "A",
+    "explanation": "A defining relative clause identifies which student is meant and is not set off by commas."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-14",
+    "answer": "A",
+    "explanation": "Theme is the underlying idea or message developed through the work."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Core (301)",
+    "class": 12,
+    "question_id": "202705-301-C12-15",
+    "answer": "A",
+    "explanation": "Coherence comes from unity, logical sequencing and appropriate links."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-01",
+    "answer": "A",
+    "explanation": "A dramatic monologue presents one speaker whose words reveal character."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-02",
+    "answer": "A",
+    "explanation": "Readers must question the narrator’s credibility or interpretation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-03",
+    "answer": "A",
+    "explanation": "A caesura creates a pause within a poetic line."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-04",
+    "answer": "A",
+    "explanation": "Situational irony involves an unexpected reversal of circumstances."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-05",
+    "answer": "A",
+    "explanation": "A soliloquy reveals a character’s inner thoughts."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-06",
+    "answer": "A",
+    "explanation": "A framing story provides a structure for one or more embedded narratives."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-07",
+    "answer": "A",
+    "explanation": "Close reading examines diction, syntax, imagery, structure and effects."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-08",
+    "answer": "A",
+    "explanation": "The volta signals a shift in perspective, argument or emotion."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-09",
+    "answer": "A",
+    "explanation": "It allows a character’s perspective to colour third-person narration."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-10",
+    "answer": "A",
+    "explanation": "The audience’s greater knowledge creates tension or meaning."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-11",
+    "answer": "A",
+    "explanation": "An oxymoron places contradictory terms together for effect."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-12",
+    "answer": "A",
+    "explanation": "Analepsis is a retrospective narrative shift."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-13",
+    "answer": "A",
+    "explanation": "A symbol carries additional associations or abstract significance."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-14",
+    "answer": "A",
+    "explanation": "Assonance repeats vowel sounds within nearby words."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 11,
+    "question_id": "202705-001-C11-15",
+    "answer": "A",
+    "explanation": "Postcolonial criticism studies how colonial power shapes culture, identity and representation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-01",
+    "answer": "A",
+    "explanation": "A dramatic monologue presents one speaker whose words reveal character."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-02",
+    "answer": "A",
+    "explanation": "Readers must question the narrator’s credibility or interpretation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-03",
+    "answer": "A",
+    "explanation": "A caesura creates a pause within a poetic line."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-04",
+    "answer": "A",
+    "explanation": "Situational irony involves an unexpected reversal of circumstances."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-05",
+    "answer": "A",
+    "explanation": "A soliloquy reveals a character’s inner thoughts."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-06",
+    "answer": "A",
+    "explanation": "A framing story provides a structure for one or more embedded narratives."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-07",
+    "answer": "A",
+    "explanation": "Close reading examines diction, syntax, imagery, structure and effects."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-08",
+    "answer": "A",
+    "explanation": "The volta signals a shift in perspective, argument or emotion."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-09",
+    "answer": "A",
+    "explanation": "It allows a character’s perspective to colour third-person narration."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-10",
+    "answer": "A",
+    "explanation": "The audience’s greater knowledge creates tension or meaning."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-11",
+    "answer": "A",
+    "explanation": "An oxymoron places contradictory terms together for effect."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-12",
+    "answer": "A",
+    "explanation": "Analepsis is a retrospective narrative shift."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-13",
+    "answer": "A",
+    "explanation": "A symbol carries additional associations or abstract significance."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-14",
+    "answer": "A",
+    "explanation": "Assonance repeats vowel sounds within nearby words."
+  },
+  {
+    "month": "May 2027",
+    "subject": "English Elective (001)",
+    "class": 12,
+    "question_id": "202705-001-C12-15",
+    "answer": "A",
+    "explanation": "Postcolonial criticism studies how colonial power shapes culture, identity and representation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-01",
+    "answer": "A",
+    "explanation": "The left ventricle pumps oxygenated blood into systemic circulation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-02",
+    "answer": "A",
+    "explanation": "Haemoglobin in red blood cells binds and transports oxygen."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-03",
+    "answer": "A",
+    "explanation": "Progressive overload applies a gradual increase in training stress."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-04",
+    "answer": "A",
+    "explanation": "FITT is a framework for planning exercise programmes."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-05",
+    "answer": "A",
+    "explanation": "Pranayama refers to regulation of breath."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-06",
+    "answer": "A",
+    "explanation": "Intrinsic motivation arises from interest or enjoyment in the activity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-07",
+    "answer": "A",
+    "explanation": "Balance is the ability to maintain stability."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-08",
+    "answer": "A",
+    "explanation": "Protecting the injury and managing swelling are appropriate early steps; serious injuries need assessment."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-09",
+    "answer": "A",
+    "explanation": "Carbohydrates are a major readily available energy source."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-10",
+    "answer": "A",
+    "explanation": "The test estimates flexibility of the lower back and hamstrings."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-11",
+    "answer": "A",
+    "explanation": "A warm-up raises readiness and prepares muscles and cardiovascular function."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-12",
+    "answer": "A",
+    "explanation": "Excessive arousal can reduce concentration and coordination."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-13",
+    "answer": "A",
+    "explanation": "In a third-class lever, effort is applied between fulcrum and resistance."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-14",
+    "answer": "A",
+    "explanation": "In a single round-robin, each participant meets every other participant once."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 11,
+    "question_id": "202705-048-C11-15",
+    "answer": "A",
+    "explanation": "Water supports thermoregulation, transport and normal physiological processes."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-01",
+    "answer": "A",
+    "explanation": "The left ventricle pumps oxygenated blood into systemic circulation."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-02",
+    "answer": "A",
+    "explanation": "Haemoglobin in red blood cells binds and transports oxygen."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-03",
+    "answer": "A",
+    "explanation": "Progressive overload applies a gradual increase in training stress."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-04",
+    "answer": "A",
+    "explanation": "FITT is a framework for planning exercise programmes."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-05",
+    "answer": "A",
+    "explanation": "Pranayama refers to regulation of breath."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-06",
+    "answer": "A",
+    "explanation": "Intrinsic motivation arises from interest or enjoyment in the activity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-07",
+    "answer": "A",
+    "explanation": "Balance is the ability to maintain stability."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-08",
+    "answer": "A",
+    "explanation": "Protecting the injury and managing swelling are appropriate early steps; serious injuries need assessment."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-09",
+    "answer": "A",
+    "explanation": "Carbohydrates are a major readily available energy source."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-10",
+    "answer": "A",
+    "explanation": "The test estimates flexibility of the lower back and hamstrings."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-11",
+    "answer": "A",
+    "explanation": "A warm-up raises readiness and prepares muscles and cardiovascular function."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-12",
+    "answer": "A",
+    "explanation": "Excessive arousal can reduce concentration and coordination."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-13",
+    "answer": "A",
+    "explanation": "In a third-class lever, effort is applied between fulcrum and resistance."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-14",
+    "answer": "A",
+    "explanation": "In a single round-robin, each participant meets every other participant once."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Physical Education (048)",
+    "class": 12,
+    "question_id": "202705-048-C12-15",
+    "answer": "A",
+    "explanation": "Water supports thermoregulation, transport and normal physiological processes."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-01",
+    "answer": "A",
+    "explanation": "“অম্লান”-এর বিপরীতার্থক শব্দ “ম্লান”।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-02",
+    "answer": "A",
+    "explanation": "“নীল” আকাশের গুণ প্রকাশ করছে, তাই এটি বিশেষণ।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-03",
+    "answer": "A",
+    "explanation": "“পড়ে” কাজ বোঝাচ্ছে, তাই এটি ক্রিয়াপদ।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-04",
+    "answer": "A",
+    "explanation": "কবিতার কেন্দ্রীয় বক্তব্য বা অনুভূতিই ভাববস্তু।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-05",
+    "answer": "A",
+    "explanation": "সমার্থক শব্দের অর্থ একই বা প্রায় কাছাকাছি।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-06",
+    "answer": "A",
+    "explanation": "“অ-” উপসর্গটি নিষেধ বা বিপরীত অর্থ প্রকাশ করছে।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-07",
+    "answer": "A",
+    "explanation": "প্রতিবেদনে নিরপেক্ষ, স্পষ্ট ও তথ্যভিত্তিক ভাষা ব্যবহার করা হয়।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-08",
+    "answer": "A",
+    "explanation": "মূল ভাব ও তার পক্ষে দেওয়া তথ্য থেকে কেন্দ্রীয় বক্তব্য বোঝা যায়।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-09",
+    "answer": "A",
+    "explanation": "রূপকে সরাসরি অভিন্নতা কল্পনা করা হয়; উপমায় তুলনাসূচক শব্দ থাকে।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-10",
+    "answer": "A",
+    "explanation": "“মানুষ” ব্যক্তি বা জাতিকে নির্দেশ করে, তাই বিশেষ্য।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-11",
+    "answer": "A",
+    "explanation": "গল্পে ঘটনাগুলির ধারাবাহিক বিন্যাস কাহিনি।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-12",
+    "answer": "A",
+    "explanation": "“যে” ব্যক্তি নির্দেশ করছে, তাই এটি সর্বনাম।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-13",
+    "answer": "A",
+    "explanation": "আবেদনপত্রে বিষয় লাইন পাঠককে আবেদনের উদ্দেশ্য জানায়।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-14",
+    "answer": "A",
+    "explanation": "বাগধারা প্রচলিত রূপকে ব্যবহার করে ভাবকে সংক্ষিপ্ত ও প্রাণবন্ত করে।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 11,
+    "question_id": "202705-BEN-C11-15",
+    "answer": "A",
+    "explanation": "শব্দচয়ন ও বক্তব্যের ভঙ্গি লেখকের মনোভাব প্রকাশ করে।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-01",
+    "answer": "A",
+    "explanation": "“অম্লান”-এর বিপরীতার্থক শব্দ “ম্লান”।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-02",
+    "answer": "A",
+    "explanation": "“নীল” আকাশের গুণ প্রকাশ করছে, তাই এটি বিশেষণ।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-03",
+    "answer": "A",
+    "explanation": "“পড়ে” কাজ বোঝাচ্ছে, তাই এটি ক্রিয়াপদ।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-04",
+    "answer": "A",
+    "explanation": "কবিতার কেন্দ্রীয় বক্তব্য বা অনুভূতিই ভাববস্তু।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-05",
+    "answer": "A",
+    "explanation": "সমার্থক শব্দের অর্থ একই বা প্রায় কাছাকাছি।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-06",
+    "answer": "A",
+    "explanation": "“অ-” উপসর্গটি নিষেধ বা বিপরীত অর্থ প্রকাশ করছে।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-07",
+    "answer": "A",
+    "explanation": "প্রতিবেদনে নিরপেক্ষ, স্পষ্ট ও তথ্যভিত্তিক ভাষা ব্যবহার করা হয়।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-08",
+    "answer": "A",
+    "explanation": "মূল ভাব ও তার পক্ষে দেওয়া তথ্য থেকে কেন্দ্রীয় বক্তব্য বোঝা যায়।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-09",
+    "answer": "A",
+    "explanation": "রূপকে সরাসরি অভিন্নতা কল্পনা করা হয়; উপমায় তুলনাসূচক শব্দ থাকে।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-10",
+    "answer": "A",
+    "explanation": "“মানুষ” ব্যক্তি বা জাতিকে নির্দেশ করে, তাই বিশেষ্য।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-11",
+    "answer": "A",
+    "explanation": "গল্পে ঘটনাগুলির ধারাবাহিক বিন্যাস কাহিনি।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-12",
+    "answer": "A",
+    "explanation": "“যে” ব্যক্তি নির্দেশ করছে, তাই এটি সর্বনাম।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-13",
+    "answer": "A",
+    "explanation": "আবেদনপত্রে বিষয় লাইন পাঠককে আবেদনের উদ্দেশ্য জানায়।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-14",
+    "answer": "A",
+    "explanation": "বাগধারা প্রচলিত রূপকে ব্যবহার করে ভাবকে সংক্ষিপ্ত ও প্রাণবন্ত করে।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Bengali",
+    "class": 12,
+    "question_id": "202705-BEN-C12-15",
+    "answer": "A",
+    "explanation": "শব্দচয়ন ও বক্তব্যের ভঙ্গি লেখকের মনোভাব প্রকাশ করে।"
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-01",
+    "answer": "A",
+    "explanation": "The law of demand describes an inverse relationship between price and quantity demanded, ceteris paribus."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-02",
+    "answer": "A",
+    "explanation": "The mean is the total of observations divided by their count."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-03",
+    "answer": "A",
+    "explanation": "A change in the commodity’s own price causes movement along a given demand curve."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-04",
+    "answer": "A",
+    "explanation": "GDP measures final production within the domestic territory over a period."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-05",
+    "answer": "A",
+    "explanation": "Central banks manage monetary policy and provide banking services to government."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-06",
+    "answer": "A",
+    "explanation": "The median divides ordered observations into two equal halves."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-07",
+    "answer": "A",
+    "explanation": "Quantity demanded does not change with price, so the curve is vertical."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-08",
+    "answer": "A",
+    "explanation": "Inflation is a sustained increase in the general price level."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-09",
+    "answer": "A",
+    "explanation": "Intermediate goods are embodied in final goods and are not counted separately."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-10",
+    "answer": "A",
+    "explanation": "Fiscal deficit measures the government’s borrowing requirement."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-11",
+    "answer": "A",
+    "explanation": "A firm accepts the market-determined price in perfect competition."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-12",
+    "answer": "A",
+    "explanation": "Positive correlation means higher values of one variable tend to accompany higher values of the other."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-13",
+    "answer": "A",
+    "explanation": "The current account includes trade, services, primary income and current transfers."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-14",
+    "answer": "A",
+    "explanation": "At each price, producers are willing to supply a larger quantity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 11,
+    "question_id": "202705-030-C11-15",
+    "answer": "A",
+    "explanation": "A higher policy rate can tighten monetary conditions and moderate inflationary pressure."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-01",
+    "answer": "A",
+    "explanation": "The law of demand describes an inverse relationship between price and quantity demanded, ceteris paribus."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-02",
+    "answer": "A",
+    "explanation": "The mean is the total of observations divided by their count."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-03",
+    "answer": "A",
+    "explanation": "A change in the commodity’s own price causes movement along a given demand curve."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-04",
+    "answer": "A",
+    "explanation": "GDP measures final production within the domestic territory over a period."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-05",
+    "answer": "A",
+    "explanation": "Central banks manage monetary policy and provide banking services to government."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-06",
+    "answer": "A",
+    "explanation": "The median divides ordered observations into two equal halves."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-07",
+    "answer": "A",
+    "explanation": "Quantity demanded does not change with price, so the curve is vertical."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-08",
+    "answer": "A",
+    "explanation": "Inflation is a sustained increase in the general price level."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-09",
+    "answer": "A",
+    "explanation": "Intermediate goods are embodied in final goods and are not counted separately."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-10",
+    "answer": "A",
+    "explanation": "Fiscal deficit measures the government’s borrowing requirement."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-11",
+    "answer": "A",
+    "explanation": "A firm accepts the market-determined price in perfect competition."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-12",
+    "answer": "A",
+    "explanation": "Positive correlation means higher values of one variable tend to accompany higher values of the other."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-13",
+    "answer": "A",
+    "explanation": "The current account includes trade, services, primary income and current transfers."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-14",
+    "answer": "A",
+    "explanation": "At each price, producers are willing to supply a larger quantity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Economics (030)",
+    "class": 12,
+    "question_id": "202705-030-C12-15",
+    "answer": "A",
+    "explanation": "A higher policy rate can tighten monetary conditions and moderate inflationary pressure."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-01",
+    "answer": "A",
+    "explanation": "Capital = Assets − Liabilities = ₹5,00,000 − ₹1,80,000 = ₹3,20,000."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-02",
+    "answer": "A",
+    "explanation": "Purchases are debited and the supplier is credited for a credit purchase."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-03",
+    "answer": "A",
+    "explanation": "Depreciation systematically allocates an asset’s depreciable amount over useful life."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-04",
+    "answer": "A",
+    "explanation": "The cash book is reduced when issued; the bank has not yet recorded the payment."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-05",
+    "answer": "A",
+    "explanation": "A trial balance checks the equality of ledger debit and credit totals, though it cannot detect every error."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-06",
+    "answer": "A",
+    "explanation": "FIFO assumes the earliest acquired units are issued first."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-07",
+    "answer": "A",
+    "explanation": "Outstanding salary is an accrued expense and a liability."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-08",
+    "answer": "A",
+    "explanation": "A suspense account temporarily records an unexplained difference pending correction."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-09",
+    "answer": "A",
+    "explanation": "The Partnership Act default is equal sharing of profits and losses."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-10",
+    "answer": "A",
+    "explanation": "Acquisition of a long-term asset is an investing cash flow."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-11",
+    "answer": "A",
+    "explanation": "The current ratio measures short-term liquidity using current assets and liabilities."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-12",
+    "answer": "A",
+    "explanation": "Securities premium is a capital reserve presented within equity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-13",
+    "answer": "A",
+    "explanation": "Advance subscription relates to a future period and is a liability at year-end."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-14",
+    "answer": "A",
+    "explanation": "Goodwill reflects benefits from reputation, customer relationships and expected excess earnings."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 11,
+    "question_id": "202705-055-C11-15",
+    "answer": "A",
+    "explanation": "The provision recognises the estimated portion of receivables that may not be collected."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-01",
+    "answer": "A",
+    "explanation": "Capital = Assets − Liabilities = ₹5,00,000 − ₹1,80,000 = ₹3,20,000."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-02",
+    "answer": "A",
+    "explanation": "Purchases are debited and the supplier is credited for a credit purchase."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-03",
+    "answer": "A",
+    "explanation": "Depreciation systematically allocates an asset’s depreciable amount over useful life."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-04",
+    "answer": "A",
+    "explanation": "The cash book is reduced when issued; the bank has not yet recorded the payment."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-05",
+    "answer": "A",
+    "explanation": "A trial balance checks the equality of ledger debit and credit totals, though it cannot detect every error."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-06",
+    "answer": "A",
+    "explanation": "FIFO assumes the earliest acquired units are issued first."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-07",
+    "answer": "A",
+    "explanation": "Outstanding salary is an accrued expense and a liability."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-08",
+    "answer": "A",
+    "explanation": "A suspense account temporarily records an unexplained difference pending correction."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-09",
+    "answer": "A",
+    "explanation": "The Partnership Act default is equal sharing of profits and losses."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-10",
+    "answer": "A",
+    "explanation": "Acquisition of a long-term asset is an investing cash flow."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-11",
+    "answer": "A",
+    "explanation": "The current ratio measures short-term liquidity using current assets and liabilities."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-12",
+    "answer": "A",
+    "explanation": "Securities premium is a capital reserve presented within equity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-13",
+    "answer": "A",
+    "explanation": "Advance subscription relates to a future period and is a liability at year-end."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-14",
+    "answer": "A",
+    "explanation": "Goodwill reflects benefits from reputation, customer relationships and expected excess earnings."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Accountancy (055)",
+    "class": 12,
+    "question_id": "202705-055-C12-15",
+    "answer": "A",
+    "explanation": "The provision recognises the estimated portion of receivables that may not be collected."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-01",
+    "answer": "A",
+    "explanation": "Planning, organising, staffing, directing and controlling are interrelated functions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-02",
+    "answer": "A",
+    "explanation": "Unity of command reduces conflicting instructions by specifying one reporting superior."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-03",
+    "answer": "A",
+    "explanation": "Planning decides in advance what is to be done and how."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-04",
+    "answer": "A",
+    "explanation": "Delegation assigns duties and authority while the superior remains accountable."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-05",
+    "answer": "A",
+    "explanation": "Recruitment creates a pool of candidates for selection."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-06",
+    "answer": "A",
+    "explanation": "Motivation energises and directs behaviour towards organisational objectives."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-07",
+    "answer": "A",
+    "explanation": "Standards provide the benchmark against which actual performance is measured."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-08",
+    "answer": "A",
+    "explanation": "Financial decisions aim to maximise shareholder wealth while considering risk and return."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-09",
+    "answer": "A",
+    "explanation": "Branding distinguishes a product and supports recognition and loyalty."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-10",
+    "answer": "A",
+    "explanation": "The right to information enables informed purchase decisions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-11",
+    "answer": "A",
+    "explanation": "Liberalisation reduces regulatory barriers and restrictions on economic activity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-12",
+    "answer": "A",
+    "explanation": "Entrepreneurs identify opportunities, innovate and coordinate resources while bearing risk."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-13",
+    "answer": "A",
+    "explanation": "The 4Ps are product, price, place and promotion."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-14",
+    "answer": "A",
+    "explanation": "New securities are issued to investors in the primary market."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 11,
+    "question_id": "202705-054-C11-15",
+    "answer": "A",
+    "explanation": "Coordination harmonises individual and departmental efforts."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-01",
+    "answer": "A",
+    "explanation": "Planning, organising, staffing, directing and controlling are interrelated functions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-02",
+    "answer": "A",
+    "explanation": "Unity of command reduces conflicting instructions by specifying one reporting superior."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-03",
+    "answer": "A",
+    "explanation": "Planning decides in advance what is to be done and how."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-04",
+    "answer": "A",
+    "explanation": "Delegation assigns duties and authority while the superior remains accountable."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-05",
+    "answer": "A",
+    "explanation": "Recruitment creates a pool of candidates for selection."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-06",
+    "answer": "A",
+    "explanation": "Motivation energises and directs behaviour towards organisational objectives."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-07",
+    "answer": "A",
+    "explanation": "Standards provide the benchmark against which actual performance is measured."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-08",
+    "answer": "A",
+    "explanation": "Financial decisions aim to maximise shareholder wealth while considering risk and return."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-09",
+    "answer": "A",
+    "explanation": "Branding distinguishes a product and supports recognition and loyalty."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-10",
+    "answer": "A",
+    "explanation": "The right to information enables informed purchase decisions."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-11",
+    "answer": "A",
+    "explanation": "Liberalisation reduces regulatory barriers and restrictions on economic activity."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-12",
+    "answer": "A",
+    "explanation": "Entrepreneurs identify opportunities, innovate and coordinate resources while bearing risk."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-13",
+    "answer": "A",
+    "explanation": "The 4Ps are product, price, place and promotion."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-14",
+    "answer": "A",
+    "explanation": "New securities are issued to investors in the primary market."
+  },
+  {
+    "month": "May 2027",
+    "subject": "Business Studies (054)",
+    "class": 12,
+    "question_id": "202705-054-C12-15",
+    "answer": "A",
+    "explanation": "Coordination harmonises individual and departmental efforts."
+  }
+]

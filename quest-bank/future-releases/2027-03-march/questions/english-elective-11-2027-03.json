@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-03-english-elective-c11",
+    "session": "2026–27",
+    "month": "March 2027",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "English Elective (001)",
+    "title": "English Elective — Class 11 March 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "chapter": "Literary Analysis",
+      "topic": "Literary Analysis",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Literary Analysis. a dramatic monologue is characterised by:",
+      "options": {
+        "A": "A single speaker addressing a silent listener",
+        "B": "A chorus narrating every event",
+        "C": "Only stage directions",
+        "D": "A dialogue with no speaker"
+      },
+      "answer": "A",
+      "explanation": "A dramatic monologue presents one speaker whose words reveal character.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Analysis"
+      ],
+      "id": "202703-001-C11-01",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Literary Analysis",
+      "topic": "Literary Analysis",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Literary Analysis. an unreliable narrator is one whose account:",
+      "options": {
+        "A": "May be distorted or incomplete",
+        "B": "Is always omniscient",
+        "C": "Contains no viewpoint",
+        "D": "Is written only in verse"
+      },
+      "answer": "A",
+      "explanation": "Readers must question the narrator’s credibility or interpretation.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Analysis"
+      ],
+      "id": "202703-001-C11-02",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Poetry",
+      "topic": "Poetry",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Poetry. a caesura is:",
+      "options": {
+        "A": "A pause within a line of poetry",
+        "B": "A repeated end rhyme",
+        "C": "A type of stanza",
+        "D": "A long narrative poem"
+      },
+      "answer": "A",
+      "explanation": "A caesura creates a pause within a poetic line.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Poetry"
+      ],
+      "id": "202703-001-C11-03",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Literary Terms",
+      "topic": "Literary Terms",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Literary Terms. situational irony occurs when:",
+      "options": {
+        "A": "The outcome differs sharply from expectation",
+        "B": "A character repeats a phrase",
+        "C": "The setting is described",
+        "D": "A poem has regular metre"
+      },
+      "answer": "A",
+      "explanation": "Situational irony involves an unexpected reversal of circumstances.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Terms"
+      ],
+      "id": "202703-001-C11-04",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Drama",
+      "topic": "Drama",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Drama. a soliloquy allows a character to:",
+      "options": {
+        "A": "Express thoughts while alone on stage",
+        "B": "Address the audience as a chorus",
+        "C": "Describe only the setting",
+        "D": "End every scene"
+      },
+      "answer": "A",
+      "explanation": "A soliloquy reveals a character’s inner thoughts.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Drama"
+      ],
+      "id": "202703-001-C11-05",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Narrative",
+      "topic": "Narrative",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Narrative. a frame narrative is:",
+      "options": {
+        "A": "A story that encloses another story",
+        "B": "A story told only in dialogue",
+        "C": "A poem without imagery",
+        "D": "A list of characters"
+      },
+      "answer": "A",
+      "explanation": "A framing story provides a structure for one or more embedded narratives.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Narrative"
+      ],
+      "id": "202703-001-C11-06",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Literary Criticism",
+      "topic": "Literary Criticism",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Literary Criticism. close reading focuses on:",
+      "options": {
+        "A": "Detailed analysis of language and form",
+        "B": "The author’s income",
+        "C": "The book’s cover price",
+        "D": "Only the publication date"
+      },
+      "answer": "A",
+      "explanation": "Close reading examines diction, syntax, imagery, structure and effects.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Criticism"
+      ],
+      "id": "202703-001-C11-07",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Poetry",
+      "topic": "Poetry",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Poetry. a volta in a sonnet marks:",
+      "options": {
+        "A": "A turn in thought or argument",
+        "B": "The title page",
+        "C": "The final footnote",
+        "D": "A repeated refrain only"
+      },
+      "answer": "A",
+      "explanation": "The volta signals a shift in perspective, argument or emotion.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Poetry"
+      ],
+      "id": "202703-001-C11-08",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Literary Analysis",
+      "topic": "Literary Analysis",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Literary Analysis. free indirect discourse blends:",
+      "options": {
+        "A": "Third-person narration with a character’s idiom or thoughts",
+        "B": "Two unrelated plots",
+        "C": "Stage directions and footnotes",
+        "D": "A poem and a bibliography"
+      },
+      "answer": "A",
+      "explanation": "It allows a character’s perspective to colour third-person narration.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Analysis"
+      ],
+      "id": "202703-001-C11-09",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Drama",
+      "topic": "Drama",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Drama. dramatic irony occurs when:",
+      "options": {
+        "A": "The audience knows something a character does not",
+        "B": "No one knows the setting",
+        "C": "A character speaks in rhyme",
+        "D": "The plot has no conflict"
+      },
+      "answer": "A",
+      "explanation": "The audience’s greater knowledge creates tension or meaning.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Drama"
+      ],
+      "id": "202703-001-C11-10",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Literary Terms",
+      "topic": "Literary Terms",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Literary Terms. an oxymoron combines:",
+      "options": {
+        "A": "Apparently contradictory terms",
+        "B": "Two identical synonyms",
+        "C": "A title and subtitle",
+        "D": "Two unrelated scenes"
+      },
+      "answer": "A",
+      "explanation": "An oxymoron places contradictory terms together for effect.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Terms"
+      ],
+      "id": "202703-001-C11-11",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Narrative",
+      "topic": "Narrative",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Narrative. analepsis refers to:",
+      "options": {
+        "A": "A flashback to an earlier event",
+        "B": "A prediction of the future",
+        "C": "A change of narrator",
+        "D": "A description of scenery"
+      },
+      "answer": "A",
+      "explanation": "Analepsis is a retrospective narrative shift.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Narrative"
+      ],
+      "id": "202703-001-C11-12",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Literary Analysis",
+      "topic": "Literary Analysis",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Literary Analysis. a symbol in literature is an element that:",
+      "options": {
+        "A": "Suggests meaning beyond its literal role",
+        "B": "Always represents a real person",
+        "C": "Has no relation to theme",
+        "D": "Appears only in titles"
+      },
+      "answer": "A",
+      "explanation": "A symbol carries additional associations or abstract significance.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Analysis"
+      ],
+      "id": "202703-001-C11-13",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Poetry",
+      "topic": "Poetry",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Poetry. assonance is the repetition of:",
+      "options": {
+        "A": "Vowel sounds",
+        "B": "Initial consonant sounds",
+        "C": "Whole words",
+        "D": "End punctuation"
+      },
+      "answer": "A",
+      "explanation": "Assonance repeats vowel sounds within nearby words.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Poetry"
+      ],
+      "id": "202703-001-C11-14",
+      "class": 11,
+      "subject": "English Elective"
+    },
+    {
+      "chapter": "Literary Criticism",
+      "topic": "Literary Criticism",
+      "question": "March challenge: During board-exam readiness, a Class 11 learner is reviewing Literary Criticism. a postcolonial reading often examines:",
+      "options": {
+        "A": "Power, identity and colonial legacies",
+        "B": "Only rhyme and metre",
+        "C": "The author’s handwriting",
+        "D": "Printing technology alone"
+      },
+      "answer": "A",
+      "explanation": "Postcolonial criticism studies how colonial power shapes culture, identity and representation.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literary Criticism"
+      ],
+      "id": "202703-001-C11-15",
+      "class": 11,
+      "subject": "English Elective"
+    }
+  ]
+}

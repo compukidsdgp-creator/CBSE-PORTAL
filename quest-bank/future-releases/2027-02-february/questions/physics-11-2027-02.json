@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-02-physics-c11",
+    "session": "2026–27",
+    "month": "February 2027",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "Physics (042)",
+    "title": "Physics — Class 11 February 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202702-042-C11-01",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Units & Measurements",
+      "topic": "Units & Measurements",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Units & Measurements. the dimensional formula of force is:",
+      "options": {
+        "A": "[MLT⁻²]",
+        "B": "[ML²T⁻²]",
+        "C": "[ML⁻¹T⁻²]",
+        "D": "[M⁰LT⁻¹]"
+      },
+      "answer": "A",
+      "explanation": "Force=mass×acceleration, so [M][LT⁻²]=[MLT⁻²].",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Units & Measurements"
+      ]
+    },
+    {
+      "id": "202702-042-C11-02",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Motion in a Straight Line",
+      "topic": "Motion in a Straight Line",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Motion in a Straight Line. the slope of a displacement-time graph represents:",
+      "options": {
+        "A": "acceleration",
+        "B": "velocity",
+        "C": "force",
+        "D": "momentum"
+      },
+      "answer": "B",
+      "explanation": "The rate of change of displacement is velocity.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Motion in a Straight Line"
+      ]
+    },
+    {
+      "id": "202702-042-C11-03",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Motion in a Plane",
+      "topic": "Motion in a Plane",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Motion in a Plane. for a projectile launched and landing at the same height, maximum range occurs at:",
+      "options": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "90°"
+      },
+      "answer": "B",
+      "explanation": "R=u²sin2θ/g is maximum when sin2θ=1, i.e. θ=45°.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Motion in a Plane"
+      ]
+    },
+    {
+      "id": "202702-042-C11-04",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Laws of Motion",
+      "topic": "Laws of Motion",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Laws of Motion. a 5 kg body accelerates at 2 m s⁻². Net force is:",
+      "options": {
+        "A": "2.5 N",
+        "B": "7 N",
+        "C": "10 N",
+        "D": "25 N"
+      },
+      "answer": "C",
+      "explanation": "F=ma=5×2=10 N.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Laws of Motion"
+      ]
+    },
+    {
+      "id": "202702-042-C11-05",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Work, Energy & Power",
+      "topic": "Work, Energy & Power",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Work, Energy & Power. work done by a constant force perpendicular to displacement is:",
+      "options": {
+        "A": "positive",
+        "B": "negative",
+        "C": "zero",
+        "D": "maximum"
+      },
+      "answer": "C",
+      "explanation": "W=Fs cos90°=0.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Work, Energy & Power"
+      ]
+    },
+    {
+      "id": "202702-042-C11-06",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "System of Particles & Rotational Motion",
+      "topic": "System of Particles & Rotational Motion",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing System of Particles & Rotational Motion. the SI unit of torque is:",
+      "options": {
+        "A": "N m",
+        "B": "N/m",
+        "C": "kg m s⁻¹",
+        "D": "J s"
+      },
+      "answer": "A",
+      "explanation": "Torque is force×perpendicular distance, measured in N m.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "System of Particles & Rotational Motion"
+      ]
+    },
+    {
+      "id": "202702-042-C11-07",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Gravitation",
+      "topic": "Gravitation",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Gravitation. the acceleration due to gravity at a height equal to Earth's radius above its surface is approximately:",
+      "options": {
+        "A": "g",
+        "B": "g/2",
+        "C": "g/4",
+        "D": "2g"
+      },
+      "answer": "C",
+      "explanation": "At r=2R from Earth's centre, g'=g(R/2R)²=g/4.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Gravitation"
+      ]
+    },
+    {
+      "id": "202702-042-C11-08",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Mechanical Properties of Solids",
+      "topic": "Mechanical Properties of Solids",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Mechanical Properties of Solids. young's modulus is the ratio of:",
+      "options": {
+        "A": "longitudinal stress to longitudinal strain",
+        "B": "force to area only",
+        "C": "volume stress to volume strain",
+        "D": "shear stress to density"
+      },
+      "answer": "A",
+      "explanation": "Young's modulus measures longitudinal stiffness.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Mechanical Properties of Solids"
+      ]
+    },
+    {
+      "id": "202702-042-C11-09",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Mechanical Properties of Fluids",
+      "topic": "Mechanical Properties of Fluids",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Mechanical Properties of Fluids. the pressure difference across a depth h in a liquid of density ρ is:",
+      "options": {
+        "A": "ρgh",
+        "B": "ρg/h",
+        "C": "gh/ρ",
+        "D": "ρh/g"
+      },
+      "answer": "A",
+      "explanation": "Hydrostatic pressure difference is ΔP=ρgh.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Mechanical Properties of Fluids"
+      ]
+    },
+    {
+      "id": "202702-042-C11-10",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Thermal Properties of Matter",
+      "topic": "Thermal Properties of Matter",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Thermal Properties of Matter. heat required to raise temperature of mass m by ΔT is:",
+      "options": {
+        "A": "mcΔT",
+        "B": "mL",
+        "C": "c/mΔT",
+        "D": "mΔT/c"
+      },
+      "answer": "A",
+      "explanation": "Q=mcΔT when no phase change occurs.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Thermal Properties of Matter"
+      ]
+    },
+    {
+      "id": "202702-042-C11-11",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Thermodynamics",
+      "topic": "Thermodynamics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Thermodynamics. for an ideal gas in an isothermal process, the change in internal energy is:",
+      "options": {
+        "A": "positive",
+        "B": "negative",
+        "C": "zero",
+        "D": "infinite"
+      },
+      "answer": "C",
+      "explanation": "Internal energy of an ideal gas depends only on temperature.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Thermodynamics"
+      ]
+    },
+    {
+      "id": "202702-042-C11-12",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Kinetic Theory",
+      "topic": "Kinetic Theory",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Kinetic Theory. the average translational kinetic energy per molecule of an ideal gas is:",
+      "options": {
+        "A": "kT",
+        "B": "3kT/2",
+        "C": "5kT/2",
+        "D": "3kT"
+      },
+      "answer": "B",
+      "explanation": "Equipartition gives 3 degrees of translational freedom: 3kT/2.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Kinetic Theory"
+      ]
+    },
+    {
+      "id": "202702-042-C11-13",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Oscillations",
+      "topic": "Oscillations",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Oscillations. in simple harmonic motion, acceleration is:",
+      "options": {
+        "A": "constant",
+        "B": "proportional to displacement and same direction",
+        "C": "proportional to displacement and opposite direction",
+        "D": "zero always"
+      },
+      "answer": "C",
+      "explanation": "a=−ω²x, directed towards the mean position.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Oscillations"
+      ]
+    },
+    {
+      "id": "202702-042-C11-14",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Waves",
+      "topic": "Waves",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Waves. the speed of a wave is the product of:",
+      "options": {
+        "A": "frequency and wavelength",
+        "B": "frequency and amplitude",
+        "C": "period and amplitude",
+        "D": "wavelength and period"
+      },
+      "answer": "A",
+      "explanation": "v=fλ.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Waves"
+      ]
+    },
+    {
+      "id": "202702-042-C11-15",
+      "class": 11,
+      "subject": "Physics",
+      "chapter": "Units & Measurements",
+      "topic": "Units & Measurements",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 11 learner is reviewing Units & Measurements. the number of significant figures in 0.00450 is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "Leading zeros are not significant; trailing zero after decimal is significant: 4,5,0.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Units & Measurements"
+      ]
+    }
+  ]
+}

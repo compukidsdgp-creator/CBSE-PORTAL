@@ -1,0 +1,162 @@
+{
+  "session": "2026–27",
+  "release": "QUEST-RELEASE-2027-02-FUTURE-DRAFT",
+  "month": "February 2027",
+  "status": "draft",
+  "quests": [
+    {
+      "id": "quest-release-2027-02-science",
+      "class_group": "9-10",
+      "subject": "Science (086)",
+      "month": "February 2027",
+      "manifest": "questions/science-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-maths-standard",
+      "class_group": "9-10",
+      "subject": "Mathematics Standard (041)",
+      "month": "February 2027",
+      "manifest": "questions/maths-standard-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-social-science",
+      "class_group": "9-10",
+      "subject": "Social Science (087)",
+      "month": "February 2027",
+      "manifest": "questions/social-science-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-english-language-literature",
+      "class_group": "9-10",
+      "subject": "English Language & Literature (184)",
+      "month": "February 2027",
+      "manifest": "questions/english-language-literature-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-english-communicative",
+      "class_group": "9-10",
+      "subject": "English Communicative (101)",
+      "month": "February 2027",
+      "manifest": "questions/english-communicative-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-hindi-a",
+      "class_group": "9-10",
+      "subject": "Hindi Course A (002)",
+      "month": "February 2027",
+      "manifest": "questions/hindi-a-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-mathematics-basic",
+      "class_group": "9-10",
+      "subject": "Mathematics Basic (241)",
+      "month": "February 2027",
+      "manifest": "questions/mathematics-basic-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-computer-applications",
+      "class_group": "9-10",
+      "subject": "Computer Applications (165)",
+      "month": "February 2027",
+      "manifest": "questions/computer-applications-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-ct-ai",
+      "class_group": "9-10",
+      "subject": "Computational Thinking & AI (CT & AI)",
+      "month": "February 2027",
+      "manifest": "questions/ct-ai-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-physics",
+      "class_group": "11-12",
+      "subject": "Physics (042)",
+      "month": "February 2027",
+      "manifest": "questions/physics-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-chemistry",
+      "class_group": "11-12",
+      "subject": "Chemistry (043)",
+      "month": "February 2027",
+      "manifest": "questions/chemistry-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-biology",
+      "class_group": "11-12",
+      "subject": "Biology (044)",
+      "month": "February 2027",
+      "manifest": "questions/biology-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-mathematics-sr",
+      "class_group": "11-12",
+      "subject": "Mathematics (041)",
+      "month": "February 2027",
+      "manifest": "questions/mathematics-sr-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-computer-science",
+      "class_group": "11-12",
+      "subject": "Computer Science (083)",
+      "month": "February 2027",
+      "manifest": "questions/computer-science-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-informatics-practices",
+      "class_group": "11-12",
+      "subject": "Informatics Practices (065)",
+      "month": "February 2027",
+      "manifest": "questions/informatics-practices-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-english-core",
+      "class_group": "11-12",
+      "subject": "English Core (301)",
+      "month": "February 2027",
+      "manifest": "questions/english-core-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-english-elective",
+      "class_group": "11-12",
+      "subject": "English Elective (001)",
+      "month": "February 2027",
+      "manifest": "questions/english-elective-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-physical-education",
+      "class_group": "11-12",
+      "subject": "Physical Education (048)",
+      "month": "February 2027",
+      "manifest": "questions/physical-education-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-bengali",
+      "class_group": "11-12",
+      "subject": "Bengali",
+      "month": "February 2027",
+      "manifest": "questions/bengali-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-economics",
+      "class_group": "11-12",
+      "subject": "Economics (030)",
+      "month": "February 2027",
+      "manifest": "questions/economics-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-accountancy",
+      "class_group": "11-12",
+      "subject": "Accountancy (055)",
+      "month": "February 2027",
+      "manifest": "questions/accountancy-2027-02-manifest.json"
+    },
+    {
+      "id": "quest-release-2027-02-business-studies",
+      "class_group": "11-12",
+      "subject": "Business Studies (054)",
+      "month": "February 2027",
+      "manifest": "questions/business-studies-2027-02-manifest.json"
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-03-maths-standard-c10",
+    "session": "2026–27",
+    "month": "March 2027",
+    "class": 10,
+    "class_group": "9-10",
+    "subject": "Mathematics Standard (041)",
+    "title": "Mathematics Standard — Class 10 March 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202703-041-C10-01",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Real Numbers",
+      "topic": "Real Numbers",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Real Numbers. the HCF of 96 and 404 is:",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "8",
+        "D": "12"
+      },
+      "answer": "B",
+      "explanation": "Euclid’s algorithm gives 404 = 4×96 + 20; 96 = 4×20 + 16; 20 = 1×16 + 4; 16 = 4×4.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Real Numbers"
+      ]
+    },
+    {
+      "id": "202703-041-C10-02",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Polynomials",
+      "topic": "Polynomials",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Polynomials. if α and β are zeroes of x² − 7x + 10, then α + β is:",
+      "options": {
+        "A": "−7",
+        "B": "7",
+        "C": "10",
+        "D": "−10"
+      },
+      "answer": "B",
+      "explanation": "For ax²+bx+c, sum of zeroes = −b/a = 7.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Polynomials"
+      ]
+    },
+    {
+      "id": "202703-041-C10-03",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Pair of Linear Equations",
+      "topic": "Pair of Linear Equations",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Pair of Linear Equations. the pair 2x + 3y = 5 and 4x + 6y = 10 has:",
+      "options": {
+        "A": "Unique solution",
+        "B": "No solution",
+        "C": "Infinitely many solutions",
+        "D": "Exactly two solutions"
+      },
+      "answer": "C",
+      "explanation": "The second equation is twice the first, so both represent the same line.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Pair of Linear Equations"
+      ]
+    },
+    {
+      "id": "202703-041-C10-04",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Quadratic Equations",
+      "topic": "Quadratic Equations",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Quadratic Equations. the discriminant of x² − 6x + 9 = 0 is:",
+      "options": {
+        "A": "36",
+        "B": "0",
+        "C": "−36",
+        "D": "9"
+      },
+      "answer": "B",
+      "explanation": "D = b² − 4ac = 36 − 36 = 0.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Quadratic Equations"
+      ]
+    },
+    {
+      "id": "202703-041-C10-05",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Arithmetic Progressions",
+      "topic": "Arithmetic Progressions",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Arithmetic Progressions. the 10th term of the AP 3, 7, 11, … is:",
+      "options": {
+        "A": "35",
+        "B": "39",
+        "C": "43",
+        "D": "47"
+      },
+      "answer": "B",
+      "explanation": "a=3, d=4; a10 = 3 + 9×4 = 39.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Arithmetic Progressions"
+      ]
+    },
+    {
+      "id": "202703-041-C10-06",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Triangles",
+      "topic": "Triangles",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Triangles. if two similar triangles have corresponding side ratio 2:3, their area ratio is:",
+      "options": {
+        "A": "2:3",
+        "B": "4:9",
+        "C": "8:27",
+        "D": "3:2"
+      },
+      "answer": "B",
+      "explanation": "Areas of similar triangles are in the square of corresponding side ratio.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Triangles"
+      ]
+    },
+    {
+      "id": "202703-041-C10-07",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Coordinate Geometry",
+      "topic": "Coordinate Geometry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Coordinate Geometry. distance between (0,0) and (6,8) is:",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "14"
+      },
+      "answer": "B",
+      "explanation": "Distance = √(6²+8²) = √100 = 10.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Coordinate Geometry"
+      ]
+    },
+    {
+      "id": "202703-041-C10-08",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Introduction to Trigonometry",
+      "topic": "Introduction to Trigonometry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Introduction to Trigonometry. the value of sin 30° is:",
+      "options": {
+        "A": "0",
+        "B": "1/2",
+        "C": "√3/2",
+        "D": "1"
+      },
+      "answer": "B",
+      "explanation": "Standard trigonometric value: sin 30° = 1/2.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Introduction to Trigonometry"
+      ]
+    },
+    {
+      "id": "202703-041-C10-09",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Some Applications of Trigonometry",
+      "topic": "Some Applications of Trigonometry",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Some Applications of Trigonometry. the angle of elevation to the top of a tower increases while the observer moves closer. The tower height is unchanged. The horizontal distance:",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Remains same",
+        "D": "Becomes zero immediately"
+      },
+      "answer": "B",
+      "explanation": "For fixed height, tan θ = height/distance; a larger angle means a smaller distance.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Some Applications of Trigonometry"
+      ]
+    },
+    {
+      "id": "202703-041-C10-10",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Circles",
+      "topic": "Circles",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Circles. a tangent to a circle is perpendicular to the radius at the:",
+      "options": {
+        "A": "Centre",
+        "B": "Point of contact",
+        "C": "Any point on tangent",
+        "D": "Chord midpoint"
+      },
+      "answer": "B",
+      "explanation": "The radius drawn to the point of contact is perpendicular to the tangent.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Circles"
+      ]
+    },
+    {
+      "id": "202703-041-C10-11",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Areas Related to Circles",
+      "topic": "Areas Related to Circles",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Areas Related to Circles. area of a 90° sector of a circle of radius 14 cm (π=22/7) is:",
+      "options": {
+        "A": "77 cm²",
+        "B": "154 cm²",
+        "C": "308 cm²",
+        "D": "616 cm²"
+      },
+      "answer": "B",
+      "explanation": "Sector area = 90/360 × πr² = 1/4 × 616 = 154 cm².",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Areas Related to Circles"
+      ]
+    },
+    {
+      "id": "202703-041-C10-12",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Surface Areas and Volumes",
+      "topic": "Surface Areas and Volumes",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Surface Areas and Volumes. a cylinder has radius 3 cm and height 5 cm. Its volume is:",
+      "options": {
+        "A": "15π cm³",
+        "B": "30π cm³",
+        "C": "45π cm³",
+        "D": "90π cm³"
+      },
+      "answer": "C",
+      "explanation": "Volume = πr²h = π×9×5 = 45π cm³.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Surface Areas and Volumes"
+      ]
+    },
+    {
+      "id": "202703-041-C10-13",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Statistics",
+      "topic": "Statistics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Statistics. for a frequency distribution, the class mark of 20–30 is:",
+      "options": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "50"
+      },
+      "answer": "B",
+      "explanation": "Class mark is the midpoint: (20+30)/2 = 25.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Statistics"
+      ]
+    },
+    {
+      "id": "202703-041-C10-14",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Probability",
+      "topic": "Probability",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Probability. a card is drawn from a well-shuffled deck of 52 cards. Probability of drawing an ace is:",
+      "options": {
+        "A": "1/52",
+        "B": "1/26",
+        "C": "1/13",
+        "D": "4/13"
+      },
+      "answer": "C",
+      "explanation": "There are four aces among 52 cards; 4/52 = 1/13.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Probability"
+      ]
+    },
+    {
+      "id": "202703-041-C10-15",
+      "class": 10,
+      "subject": "Mathematics Standard",
+      "chapter": "Applications of Quadratic Equations",
+      "topic": "Applications of Quadratic Equations",
+      "type": "MCQ",
+      "difficulty": "Challenging",
+      "question": "March challenge: During board-exam readiness, a Class 10 learner is reviewing Applications of Quadratic Equations. a rectangle has area 48 cm² and length 2 cm more than breadth. Its breadth is:",
+      "options": {
+        "A": "4 cm",
+        "B": "6 cm",
+        "C": "8 cm",
+        "D": "10 cm"
+      },
+      "answer": "B",
+      "explanation": "Let breadth b; b(b+2)=48 gives b²+2b−48=0, so b=6 (positive root).",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Applications of Quadratic Equations"
+      ]
+    }
+  ]
+}

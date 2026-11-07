@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2026-12-mathematics-sr-c11",
+    "session": "2026–27",
+    "month": "December 2026",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "Mathematics (041)",
+    "title": "Mathematics — Class 11 December 2026 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202612-041-C11-01",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Sets",
+      "topic": "Sets",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Sets. if A={1,2,3} and B={3,4}, then A∩B is:",
+      "options": {
+        "A": "{1,2}",
+        "B": "{3}",
+        "C": "{1,2,3,4}",
+        "D": "∅"
+      },
+      "answer": "B",
+      "explanation": "The intersection contains elements common to both sets.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Sets"
+      ]
+    },
+    {
+      "id": "202612-041-C11-02",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Relations & Functions",
+      "topic": "Relations & Functions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Relations & Functions. the domain of f(x)=√(x−2) over real numbers is:",
+      "options": {
+        "A": "x≤2",
+        "B": "x≥2",
+        "C": "all real x",
+        "D": "x>0"
+      },
+      "answer": "B",
+      "explanation": "The radicand must be non-negative: x−2≥0.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Relations & Functions"
+      ]
+    },
+    {
+      "id": "202612-041-C11-03",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Trigonometric Functions",
+      "topic": "Trigonometric Functions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Trigonometric Functions. the value of sin²θ+cos²θ is:",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "tanθ"
+      },
+      "answer": "B",
+      "explanation": "This is the fundamental Pythagorean identity.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Trigonometric Functions"
+      ]
+    },
+    {
+      "id": "202612-041-C11-04",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Complex Numbers",
+      "topic": "Complex Numbers",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Complex Numbers. the value of i² is:",
+      "options": {
+        "A": "1",
+        "B": "−1",
+        "C": "i",
+        "D": "−i"
+      },
+      "answer": "B",
+      "explanation": "The imaginary unit is defined by i²=−1.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Complex Numbers"
+      ]
+    },
+    {
+      "id": "202612-041-C11-05",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Linear Inequalities",
+      "topic": "Linear Inequalities",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Linear Inequalities. the solution of x+3>7 is:",
+      "options": {
+        "A": "x>4",
+        "B": "x<4",
+        "C": "x>10",
+        "D": "x<10"
+      },
+      "answer": "A",
+      "explanation": "Subtracting 3 from both sides gives x>4.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Linear Inequalities"
+      ]
+    },
+    {
+      "id": "202612-041-C11-06",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Permutations & Combinations",
+      "topic": "Permutations & Combinations",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Permutations & Combinations. the number of ways to arrange 3 distinct books on a shelf is:",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "27"
+      },
+      "answer": "B",
+      "explanation": "The number of permutations is 3!=6.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Permutations & Combinations"
+      ]
+    },
+    {
+      "id": "202612-041-C11-07",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Binomial Theorem",
+      "topic": "Binomial Theorem",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Binomial Theorem. the coefficient of x² in (1+x)⁴ is:",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "12"
+      },
+      "answer": "B",
+      "explanation": "The x² coefficient is ⁴C₂=6.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Binomial Theorem"
+      ]
+    },
+    {
+      "id": "202612-041-C11-08",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Sequences & Series",
+      "topic": "Sequences & Series",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Sequences & Series. the nth term of an arithmetic progression with first term a and common difference d is:",
+      "options": {
+        "A": "a+(n−1)d",
+        "B": "arⁿ",
+        "C": "a+nd²",
+        "D": "n(a+d)"
+      },
+      "answer": "A",
+      "explanation": "The nth AP term is a+(n−1)d.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Sequences & Series"
+      ]
+    },
+    {
+      "id": "202612-041-C11-09",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Straight Lines",
+      "topic": "Straight Lines",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Straight Lines. the slope of a line parallel to the x-axis is:",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "undefined",
+        "D": "−1"
+      },
+      "answer": "A",
+      "explanation": "A horizontal line has zero change in y, hence slope zero.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Straight Lines"
+      ]
+    },
+    {
+      "id": "202612-041-C11-10",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Conic Sections",
+      "topic": "Conic Sections",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Conic Sections. the eccentricity of a circle is:",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "less than 1 but non-zero",
+        "D": "greater than 1"
+      },
+      "answer": "A",
+      "explanation": "A circle is the limiting ellipse with eccentricity zero.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Conic Sections"
+      ]
+    },
+    {
+      "id": "202612-041-C11-11",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Introduction to 3D Geometry",
+      "topic": "Introduction to 3D Geometry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Introduction to 3D Geometry. the distance between (0,0,0) and (1,2,2) is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "√5"
+      },
+      "answer": "B",
+      "explanation": "Distance=√(1²+2²+2²)=3.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Introduction to 3D Geometry"
+      ]
+    },
+    {
+      "id": "202612-041-C11-12",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Limits & Derivatives",
+      "topic": "Limits & Derivatives",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Limits & Derivatives. the derivative of x² with respect to x is:",
+      "options": {
+        "A": "x",
+        "B": "2x",
+        "C": "x³/3",
+        "D": "2"
+      },
+      "answer": "B",
+      "explanation": "Using the power rule, d(x²)/dx=2x.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Limits & Derivatives"
+      ]
+    },
+    {
+      "id": "202612-041-C11-13",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Statistics",
+      "topic": "Statistics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Statistics. the arithmetic mean of 2, 4, 6 and 8 is:",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "20"
+      },
+      "answer": "B",
+      "explanation": "Mean=(2+4+6+8)/4=5.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Statistics"
+      ]
+    },
+    {
+      "id": "202612-041-C11-14",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Probability",
+      "topic": "Probability",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Probability. the probability of an impossible event is:",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "1/2",
+        "D": "−1"
+      },
+      "answer": "A",
+      "explanation": "An impossible event has probability zero.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Probability"
+      ]
+    },
+    {
+      "id": "202612-041-C11-15",
+      "class": 11,
+      "subject": "Mathematics",
+      "chapter": "Principle of Mathematical Induction",
+      "topic": "Principle of Mathematical Induction",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "December challenge: During winter revision and annual assessment planning, a Class 11 learner is reviewing Principle of Mathematical Induction. in mathematical induction, after the base case one proves:",
+      "options": {
+        "A": "P(n) implies P(n+1)",
+        "B": "P(n+1) implies P(1) only",
+        "C": "P(n) is false",
+        "D": "the result for real n"
+      },
+      "answer": "A",
+      "explanation": "The inductive step establishes P(k)⇒P(k+1).",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Principle of Mathematical Induction"
+      ]
+    }
+  ]
+}

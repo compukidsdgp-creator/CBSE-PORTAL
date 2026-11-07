@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2027-01-english-communicative",
+    "class_group": "9-10",
+    "subject": "English Communicative (101)",
+    "month": "January 2027",
+    "title": "English Communicative — January 2027 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 10,
+        "file": "questions/english-communicative-10-2027-01.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2027-03-bengali",
+    "class_group": "11-12",
+    "subject": "Bengali",
+    "month": "March 2027",
+    "title": "Bengali — March 2027 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 11,
+        "file": "questions/bengali-11-2027-03.json",
+        "question_count": 15
+      },
+      {
+        "class": 12,
+        "file": "questions/bengali-12-2027-03.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

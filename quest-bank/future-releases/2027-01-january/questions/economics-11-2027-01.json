@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-01-economics-c11",
+    "session": "2026–27",
+    "month": "January 2027",
+    "class": 11,
+    "class_group": "11-12",
+    "subject": "Economics (030)",
+    "title": "Economics — Class 11 January 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "chapter": "Microeconomics",
+      "topic": "Microeconomics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Microeconomics. according to the law of demand, other things equal, when price rises quantity demanded generally:",
+      "options": {
+        "A": "Falls",
+        "B": "Rises",
+        "C": "Remains fixed always",
+        "D": "Becomes zero"
+      },
+      "answer": "A",
+      "explanation": "The law of demand describes an inverse relationship between price and quantity demanded, ceteris paribus.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Microeconomics"
+      ],
+      "id": "202701-030-C11-01",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Statistics",
+      "topic": "Statistics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Statistics. the arithmetic mean is calculated by:",
+      "options": {
+        "A": "Sum of observations divided by number of observations",
+        "B": "Largest minus smallest value",
+        "C": "Middle observation only",
+        "D": "Most frequent observation"
+      },
+      "answer": "A",
+      "explanation": "The mean is the total of observations divided by their count.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Statistics"
+      ],
+      "id": "202701-030-C11-02",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Microeconomics",
+      "topic": "Microeconomics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Microeconomics. a movement along a demand curve is caused by a change in:",
+      "options": {
+        "A": "Own price of the commodity",
+        "B": "Consumer income only",
+        "C": "Taste only",
+        "D": "Population only"
+      },
+      "answer": "A",
+      "explanation": "A change in the commodity’s own price causes movement along a given demand curve.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Microeconomics"
+      ],
+      "id": "202701-030-C11-03",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Macroeconomics",
+      "topic": "Macroeconomics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Macroeconomics. gDP at market prices measures:",
+      "options": {
+        "A": "Value of final goods and services produced within domestic territory",
+        "B": "Only exports",
+        "C": "Only government spending",
+        "D": "All intermediate sales added repeatedly"
+      },
+      "answer": "A",
+      "explanation": "GDP measures final production within the domestic territory over a period.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Macroeconomics"
+      ],
+      "id": "202701-030-C11-04",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Money and Banking",
+      "topic": "Money and Banking",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Money and Banking. the central bank generally acts as:",
+      "options": {
+        "A": "Banker to the government and regulator of monetary policy",
+        "B": "A household retailer",
+        "C": "A stock exchange",
+        "D": "A private insurer"
+      },
+      "answer": "A",
+      "explanation": "Central banks manage monetary policy and provide banking services to government.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Money and Banking"
+      ],
+      "id": "202701-030-C11-05",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Statistics",
+      "topic": "Statistics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Statistics. the median is the:",
+      "options": {
+        "A": "Middle value in ordered data",
+        "B": "Most frequent value",
+        "C": "Sum of values",
+        "D": "Difference between extremes"
+      },
+      "answer": "A",
+      "explanation": "The median divides ordered observations into two equal halves.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Statistics"
+      ],
+      "id": "202701-030-C11-06",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Microeconomics",
+      "topic": "Microeconomics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Microeconomics. a perfectly inelastic demand curve is:",
+      "options": {
+        "A": "Vertical",
+        "B": "Horizontal",
+        "C": "U-shaped",
+        "D": "Downward sloping at 45 degrees"
+      },
+      "answer": "A",
+      "explanation": "Quantity demanded does not change with price, so the curve is vertical.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Microeconomics"
+      ],
+      "id": "202701-030-C11-07",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Macroeconomics",
+      "topic": "Macroeconomics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Macroeconomics. inflation refers to:",
+      "options": {
+        "A": "A sustained rise in the general price level",
+        "B": "A fall in all prices",
+        "C": "A rise in one product price only",
+        "D": "An increase in output alone"
+      },
+      "answer": "A",
+      "explanation": "Inflation is a sustained increase in the general price level.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Macroeconomics"
+      ],
+      "id": "202701-030-C11-08",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "National Income",
+      "topic": "National Income",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing National Income. which is excluded from current GDP to avoid double counting?",
+      "options": {
+        "A": "Intermediate goods",
+        "B": "Final goods",
+        "C": "Newly produced services",
+        "D": "New capital goods"
+      },
+      "answer": "A",
+      "explanation": "Intermediate goods are embodied in final goods and are not counted separately.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "National Income"
+      ],
+      "id": "202701-030-C11-09",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Government Budget",
+      "topic": "Government Budget",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Government Budget. a fiscal deficit occurs when:",
+      "options": {
+        "A": "Total expenditure exceeds total receipts excluding borrowings",
+        "B": "Revenue receipts exceed revenue expenditure",
+        "C": "Exports exceed imports",
+        "D": "Tax revenue equals spending"
+      },
+      "answer": "A",
+      "explanation": "Fiscal deficit measures the government’s borrowing requirement.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Government Budget"
+      ],
+      "id": "202701-030-C11-10",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Market Forms",
+      "topic": "Market Forms",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Market Forms. under perfect competition, an individual firm is generally a:",
+      "options": {
+        "A": "Price taker",
+        "B": "Price maker",
+        "C": "Monopoly supplier",
+        "D": "Regulator"
+      },
+      "answer": "A",
+      "explanation": "A firm accepts the market-determined price in perfect competition.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Market Forms"
+      ],
+      "id": "202701-030-C11-11",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Statistics",
+      "topic": "Statistics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Statistics. a positive correlation indicates that two variables tend to:",
+      "options": {
+        "A": "Move in the same direction",
+        "B": "Move in opposite directions",
+        "C": "Have no association",
+        "D": "Remain constant"
+      },
+      "answer": "A",
+      "explanation": "Positive correlation means higher values of one variable tend to accompany higher values of the other.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Statistics"
+      ],
+      "id": "202701-030-C11-12",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Balance of Payments",
+      "topic": "Balance of Payments",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Balance of Payments. the current account records transactions involving:",
+      "options": {
+        "A": "Goods, services, income and current transfers",
+        "B": "Only purchase of land",
+        "C": "Only central bank reserves",
+        "D": "Only domestic taxes"
+      },
+      "answer": "A",
+      "explanation": "The current account includes trade, services, primary income and current transfers.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Balance of Payments"
+      ],
+      "id": "202701-030-C11-13",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Demand and Supply",
+      "topic": "Demand and Supply",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Demand and Supply. a rightward shift of the supply curve generally indicates:",
+      "options": {
+        "A": "An increase in supply",
+        "B": "A decrease in supply",
+        "C": "A fall in demand",
+        "D": "A rise in consumer preference"
+      },
+      "answer": "A",
+      "explanation": "At each price, producers are willing to supply a larger quantity.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Demand and Supply"
+      ],
+      "id": "202701-030-C11-14",
+      "class": 11,
+      "subject": "Economics"
+    },
+    {
+      "chapter": "Macroeconomics",
+      "topic": "Macroeconomics",
+      "question": "January challenge: During new-year competency practice, a Class 11 learner is reviewing Macroeconomics. a rise in the repo rate is generally intended to:",
+      "options": {
+        "A": "Make borrowing costlier and moderate demand",
+        "B": "Make all loans interest-free",
+        "C": "Increase money supply without limit",
+        "D": "Remove the need for banks"
+      },
+      "answer": "A",
+      "explanation": "A higher policy rate can tighten monetary conditions and moderate inflationary pressure.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Macroeconomics"
+      ],
+      "id": "202701-030-C11-15",
+      "class": 11,
+      "subject": "Economics"
+    }
+  ]
+}

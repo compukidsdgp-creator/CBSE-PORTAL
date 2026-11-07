@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2027-02-ct-ai",
+    "class_group": "9-10",
+    "subject": "Computational Thinking & AI (CT & AI)",
+    "month": "February 2027",
+    "title": "Computational Thinking & AI — February 2027 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 9,
+        "file": "questions/ct-ai-9-2027-02.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-05-chemistry-c12",
+    "session": "2026–27",
+    "month": "May 2027",
+    "class": 12,
+    "class_group": "11-12",
+    "subject": "Chemistry (043)",
+    "title": "Chemistry — Class 12 May 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202705-043-C12-01",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Solutions",
+      "topic": "Solutions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Solutions. molality is defined as moles of solute per:",
+      "options": {
+        "A": "litre of solution",
+        "B": "kilogram of solvent",
+        "C": "kilogram of solution",
+        "D": "litre of solvent"
+      },
+      "answer": "B",
+      "explanation": "Molality uses mass of solvent in kilograms.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Solutions"
+      ]
+    },
+    {
+      "id": "202705-043-C12-02",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Solutions",
+      "topic": "Solutions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Solutions. for an ideal solution, Raoult's law for component A is:",
+      "options": {
+        "A": "pA=xA pA°",
+        "B": "pA=pA°/xA",
+        "C": "pA=xB pB°",
+        "D": "pA=pA°+xA"
+      },
+      "answer": "A",
+      "explanation": "Partial vapour pressure equals mole fraction times pure-component vapour pressure.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Solutions"
+      ]
+    },
+    {
+      "id": "202705-043-C12-03",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Electrochemistry",
+      "topic": "Electrochemistry",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Electrochemistry. the SI unit of molar conductivity is:",
+      "options": {
+        "A": "S m² mol⁻¹",
+        "B": "S m⁻¹",
+        "C": "Ω m",
+        "D": "S mol m⁻²"
+      },
+      "answer": "A",
+      "explanation": "Molar conductivity is conductivity multiplied by volume per mole.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electrochemistry"
+      ]
+    },
+    {
+      "id": "202705-043-C12-04",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Electrochemistry",
+      "topic": "Electrochemistry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Electrochemistry. at the cathode of a galvanic cell, the process is:",
+      "options": {
+        "A": "oxidation",
+        "B": "reduction",
+        "C": "neutralisation",
+        "D": "precipitation only"
+      },
+      "answer": "B",
+      "explanation": "Reduction occurs at the cathode in every electrochemical cell.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electrochemistry"
+      ]
+    },
+    {
+      "id": "202705-043-C12-05",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Chemical Kinetics",
+      "topic": "Chemical Kinetics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Chemical Kinetics. for a first-order reaction, the unit of rate constant is:",
+      "options": {
+        "A": "mol L⁻¹ s⁻¹",
+        "B": "s⁻¹",
+        "C": "L mol⁻¹ s⁻¹",
+        "D": "mol² L⁻² s⁻¹"
+      },
+      "answer": "B",
+      "explanation": "The first-order rate constant has dimensions of inverse time.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Chemical Kinetics"
+      ]
+    },
+    {
+      "id": "202705-043-C12-06",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Chemical Kinetics",
+      "topic": "Chemical Kinetics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Chemical Kinetics. a catalyst increases reaction rate mainly by:",
+      "options": {
+        "A": "increasing ΔH",
+        "B": "lowering activation energy",
+        "C": "changing equilibrium constant",
+        "D": "raising product energy"
+      },
+      "answer": "B",
+      "explanation": "A catalyst provides an alternative pathway with lower activation energy.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Chemical Kinetics"
+      ]
+    },
+    {
+      "id": "202705-043-C12-07",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "d- and f-Block Elements",
+      "topic": "d- and f-Block Elements",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing d- and f-Block Elements. transition elements often show variable oxidation states because:",
+      "options": {
+        "A": "only p orbitals participate",
+        "B": "ns and (n−1)d electrons have comparable energies",
+        "C": "they have filled shells",
+        "D": "they are all non-metals"
+      },
+      "answer": "B",
+      "explanation": "The energies of ns and (n−1)d orbitals are close.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "d- and f-Block Elements"
+      ]
+    },
+    {
+      "id": "202705-043-C12-08",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Coordination Compounds",
+      "topic": "Coordination Compounds",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Coordination Compounds. the coordination number of cobalt in [Co(NH3)6]Cl3 is:",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "6",
+        "D": "9"
+      },
+      "answer": "C",
+      "explanation": "Six NH3 ligands are directly bonded to cobalt.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Coordination Compounds"
+      ]
+    },
+    {
+      "id": "202705-043-C12-09",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Haloalkanes and Haloarenes",
+      "topic": "Haloalkanes and Haloarenes",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Haloalkanes and Haloarenes. the mechanism favoured by a tertiary alkyl halide in a polar protic solvent is often:",
+      "options": {
+        "A": "SN1",
+        "B": "SN2",
+        "C": "free-radical addition",
+        "D": "electrophilic substitution"
+      },
+      "answer": "A",
+      "explanation": "Tertiary carbocations are relatively stabilised, favouring SN1 conditions.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Haloalkanes and Haloarenes"
+      ]
+    },
+    {
+      "id": "202705-043-C12-10",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Alcohols, Phenols and Ethers",
+      "topic": "Alcohols, Phenols and Ethers",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Alcohols, Phenols and Ethers. phenol is more acidic than ethanol mainly because:",
+      "options": {
+        "A": "phenoxide ion is resonance stabilised",
+        "B": "ethoxide ion is aromatic",
+        "C": "phenol has no O-H bond",
+        "D": "ethanol is ionic"
+      },
+      "answer": "A",
+      "explanation": "The phenoxide conjugate base is stabilised by delocalisation.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Alcohols, Phenols and Ethers"
+      ]
+    },
+    {
+      "id": "202705-043-C12-11",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+      "topic": "Aldehydes, Ketones and Carboxylic Acids",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Aldehydes, Ketones and Carboxylic Acids. tollens' reagent gives a silver mirror with most:",
+      "options": {
+        "A": "ketones",
+        "B": "aldehydes",
+        "C": "ethers",
+        "D": "alkanes"
+      },
+      "answer": "B",
+      "explanation": "Aldehydes reduce the diamminesilver(I) complex to metallic silver.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Aldehydes, Ketones and Carboxylic Acids"
+      ]
+    },
+    {
+      "id": "202705-043-C12-12",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Amines",
+      "topic": "Amines",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Amines. aniline is less basic than ammonia because:",
+      "options": {
+        "A": "nitrogen has no lone pair",
+        "B": "lone pair is delocalised into the benzene ring",
+        "C": "aniline is ionic",
+        "D": "benzene is strongly basic"
+      },
+      "answer": "B",
+      "explanation": "Resonance delocalisation makes the nitrogen lone pair less available for protonation.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Amines"
+      ]
+    },
+    {
+      "id": "202705-043-C12-13",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Biomolecules",
+      "topic": "Biomolecules",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Biomolecules. the linkage joining two amino acids in a protein is:",
+      "options": {
+        "A": "glycosidic",
+        "B": "peptide",
+        "C": "phosphodiester",
+        "D": "ester"
+      },
+      "answer": "B",
+      "explanation": "A peptide bond is an amide linkage between amino acids.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biomolecules"
+      ]
+    },
+    {
+      "id": "202705-043-C12-14",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Biomolecules",
+      "topic": "Biomolecules",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Biomolecules. the sugar present in DNA is:",
+      "options": {
+        "A": "ribose",
+        "B": "deoxyribose",
+        "C": "glucose",
+        "D": "fructose"
+      },
+      "answer": "B",
+      "explanation": "DNA contains 2-deoxyribose.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Biomolecules"
+      ]
+    },
+    {
+      "id": "202705-043-C12-15",
+      "class": 12,
+      "subject": "Chemistry",
+      "chapter": "Coordination Compounds",
+      "topic": "Coordination Compounds",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "May challenge: During summer bridge and next-session readiness, a Class 12 learner is reviewing Coordination Compounds. the oxidation state of iron in [Fe(CN)6]4− is:",
+      "options": {
+        "A": "+2",
+        "B": "+3",
+        "C": "+4",
+        "D": "0"
+      },
+      "answer": "A",
+      "explanation": "Six CN− ligands contribute −6; overall charge −4, so Fe is +2.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Coordination Compounds"
+      ]
+    }
+  ]
+}

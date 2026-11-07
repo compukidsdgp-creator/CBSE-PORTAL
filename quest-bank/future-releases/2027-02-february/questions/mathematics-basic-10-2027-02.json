@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-02-mathematics-basic-c10",
+    "session": "2026–27",
+    "month": "February 2027",
+    "class": 10,
+    "class_group": "9-10",
+    "subject": "Mathematics Basic (241)",
+    "title": "Mathematics Basic — Class 10 February 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202702-241-C10-01",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Real Numbers",
+      "topic": "Real Numbers",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Real Numbers. which is the prime factorisation of 60?",
+      "options": {
+        "A": "2×3×10",
+        "B": "2²×3×5",
+        "C": "2×3²×5",
+        "D": "2²×15"
+      },
+      "answer": "B",
+      "explanation": "60 = 2×2×3×5 = 2²×3×5.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Real Numbers"
+      ]
+    },
+    {
+      "id": "202702-241-C10-02",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Polynomials",
+      "topic": "Polynomials",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Polynomials. the zero of p(x)=x−5 is:",
+      "options": {
+        "A": "−5",
+        "B": "0",
+        "C": "5",
+        "D": "1"
+      },
+      "answer": "C",
+      "explanation": "Set x−5=0; x=5.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Polynomials"
+      ]
+    },
+    {
+      "id": "202702-241-C10-03",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Pair of Linear Equations",
+      "topic": "Pair of Linear Equations",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Pair of Linear Equations. if x+y=8 and x=3, then y is:",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "8",
+        "D": "11"
+      },
+      "answer": "B",
+      "explanation": "Substitute x=3: 3+y=8, so y=5.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Pair of Linear Equations"
+      ]
+    },
+    {
+      "id": "202702-241-C10-04",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Quadratic Equations",
+      "topic": "Quadratic Equations",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Quadratic Equations. which is a root of x²−9=0?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "x²=9 gives x=±3.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Quadratic Equations"
+      ]
+    },
+    {
+      "id": "202702-241-C10-05",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Arithmetic Progressions",
+      "topic": "Arithmetic Progressions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Arithmetic Progressions. the common difference of 5, 8, 11, 14, … is:",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "Each term increases by 3.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Arithmetic Progressions"
+      ]
+    },
+    {
+      "id": "202702-241-C10-06",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Triangles",
+      "topic": "Triangles",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Triangles. a right triangle has legs 6 cm and 8 cm. Its hypotenuse is:",
+      "options": {
+        "A": "9 cm",
+        "B": "10 cm",
+        "C": "12 cm",
+        "D": "14 cm"
+      },
+      "answer": "B",
+      "explanation": "By Pythagoras, hypotenuse = √(36+64)=10 cm.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Triangles"
+      ]
+    },
+    {
+      "id": "202702-241-C10-07",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Coordinate Geometry",
+      "topic": "Coordinate Geometry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Coordinate Geometry. the midpoint of (2,4) and (6,8) is:",
+      "options": {
+        "A": "(3,5)",
+        "B": "(4,6)",
+        "C": "(6,4)",
+        "D": "(8,12)"
+      },
+      "answer": "B",
+      "explanation": "Midpoint = ((2+6)/2,(4+8)/2) = (4,6).",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Coordinate Geometry"
+      ]
+    },
+    {
+      "id": "202702-241-C10-08",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Introduction to Trigonometry",
+      "topic": "Introduction to Trigonometry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Introduction to Trigonometry. in a right triangle, sin θ is:",
+      "options": {
+        "A": "Adjacent/Hypotenuse",
+        "B": "Opposite/Hypotenuse",
+        "C": "Opposite/Adjacent",
+        "D": "Hypotenuse/Opposite"
+      },
+      "answer": "B",
+      "explanation": "Sine is opposite side divided by hypotenuse.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Introduction to Trigonometry"
+      ]
+    },
+    {
+      "id": "202702-241-C10-09",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Applications of Trigonometry",
+      "topic": "Applications of Trigonometry",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Applications of Trigonometry. a 10 m ladder reaches a wall at a height of 8 m. How far is its foot from the wall?",
+      "options": {
+        "A": "4 m",
+        "B": "6 m",
+        "C": "8 m",
+        "D": "9 m"
+      },
+      "answer": "B",
+      "explanation": "By Pythagoras, base = √(10²−8²)=6 m.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Applications of Trigonometry"
+      ]
+    },
+    {
+      "id": "202702-241-C10-10",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Circles",
+      "topic": "Circles",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Circles. how many tangents can be drawn to a circle from a point outside it?",
+      "options": {
+        "A": "One",
+        "B": "Two",
+        "C": "Three",
+        "D": "Infinitely many"
+      },
+      "answer": "B",
+      "explanation": "An external point has exactly two tangents to a circle.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Circles"
+      ]
+    },
+    {
+      "id": "202702-241-C10-11",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Areas Related to Circles",
+      "topic": "Areas Related to Circles",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Areas Related to Circles. circumference of a circle of radius 7 cm (π=22/7) is:",
+      "options": {
+        "A": "22 cm",
+        "B": "44 cm",
+        "C": "49 cm",
+        "D": "154 cm"
+      },
+      "answer": "B",
+      "explanation": "Circumference = 2πr = 44 cm.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Areas Related to Circles"
+      ]
+    },
+    {
+      "id": "202702-241-C10-12",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Surface Areas and Volumes",
+      "topic": "Surface Areas and Volumes",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Surface Areas and Volumes. total surface area of a cube of side 2 cm is:",
+      "options": {
+        "A": "8 cm²",
+        "B": "16 cm²",
+        "C": "24 cm²",
+        "D": "32 cm²"
+      },
+      "answer": "C",
+      "explanation": "TSA = 6a² = 6×4 = 24 cm².",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Surface Areas and Volumes"
+      ]
+    },
+    {
+      "id": "202702-241-C10-13",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Statistics",
+      "topic": "Statistics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Statistics. the median of 2, 4, 7, 9, 10 is:",
+      "options": {
+        "A": "4",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "B",
+      "explanation": "The middle value of the ordered five observations is 7.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Statistics"
+      ]
+    },
+    {
+      "id": "202702-241-C10-14",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Probability",
+      "topic": "Probability",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Probability. a coin is tossed once. Probability of getting a head is:",
+      "options": {
+        "A": "0",
+        "B": "1/4",
+        "C": "1/2",
+        "D": "1"
+      },
+      "answer": "C",
+      "explanation": "There are two equally likely outcomes and one is head.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Probability"
+      ]
+    },
+    {
+      "id": "202702-241-C10-15",
+      "class": 10,
+      "subject": "Mathematics Basic",
+      "chapter": "Applications of Arithmetic Progressions",
+      "topic": "Applications of Arithmetic Progressions",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 10 learner is reviewing Applications of Arithmetic Progressions. a student saves ₹10 in week 1 and increases savings by ₹5 each week. Savings in week 4 are:",
+      "options": {
+        "A": "₹20",
+        "B": "₹25",
+        "C": "₹30",
+        "D": "₹35"
+      },
+      "answer": "B",
+      "explanation": "The weekly amounts form 10, 15, 20, 25; the fourth week amount is ₹25.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Applications of Arithmetic Progressions"
+      ]
+    }
+  ]
+}

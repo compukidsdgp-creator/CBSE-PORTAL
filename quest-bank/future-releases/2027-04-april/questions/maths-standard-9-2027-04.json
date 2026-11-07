@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-04-maths-standard-c9",
+    "session": "2026–27",
+    "month": "April 2027",
+    "class": 9,
+    "class_group": "9-10",
+    "subject": "Mathematics Standard (041)",
+    "title": "Mathematics Standard — Class 9 April 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202704-041-C9-01",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Number Systems",
+      "topic": "Number Systems",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Number Systems. which of the following is irrational?",
+      "options": {
+        "A": "0.25",
+        "B": "√49",
+        "C": "√3",
+        "D": "22/7"
+      },
+      "answer": "C",
+      "explanation": "√3 cannot be expressed as a ratio of two integers.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Number Systems"
+      ]
+    },
+    {
+      "id": "202704-041-C9-02",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Number Systems",
+      "topic": "Number Systems",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Number Systems. the decimal expansion of 13/125 is:",
+      "options": {
+        "A": "Terminating",
+        "B": "Non-terminating recurring",
+        "C": "Non-terminating non-recurring",
+        "D": "An integer"
+      },
+      "answer": "A",
+      "explanation": "125 = 5³, so the fraction has a terminating decimal expansion.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Number Systems"
+      ]
+    },
+    {
+      "id": "202704-041-C9-03",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Polynomials",
+      "topic": "Polynomials",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Polynomials. the degree of 5x³ − 2x + 7 is:",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "5"
+      },
+      "answer": "C",
+      "explanation": "The highest power of x with a non-zero coefficient is 3.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Polynomials"
+      ]
+    },
+    {
+      "id": "202704-041-C9-04",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Polynomials",
+      "topic": "Polynomials",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Polynomials. if x = 2 is a zero of p(x) = x² + kx − 6, then k equals:",
+      "options": {
+        "A": "−1",
+        "B": "0",
+        "C": "1",
+        "D": "2"
+      },
+      "answer": "C",
+      "explanation": "Substitute x=2: 4 + 2k − 6 = 0, so 2k=2 and k=1.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Polynomials"
+      ]
+    },
+    {
+      "id": "202704-041-C9-05",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Coordinate Geometry",
+      "topic": "Coordinate Geometry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Coordinate Geometry. the point (0, −4) lies on the:",
+      "options": {
+        "A": "x-axis",
+        "B": "y-axis",
+        "C": "Origin",
+        "D": "First quadrant"
+      },
+      "answer": "B",
+      "explanation": "Its x-coordinate is zero, so it lies on the y-axis.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Coordinate Geometry"
+      ]
+    },
+    {
+      "id": "202704-041-C9-06",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Linear Equations in Two Variables",
+      "topic": "Linear Equations in Two Variables",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Linear Equations in Two Variables. which ordered pair satisfies x + y = 5?",
+      "options": {
+        "A": "(1, 3)",
+        "B": "(2, 3)",
+        "C": "(4, 2)",
+        "D": "(5, 1)"
+      },
+      "answer": "B",
+      "explanation": "2 + 3 = 5.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Linear Equations in Two Variables"
+      ]
+    },
+    {
+      "id": "202704-041-C9-07",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Lines and Angles",
+      "topic": "Lines and Angles",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Lines and Angles. if two parallel lines are cut by a transversal, alternate interior angles are:",
+      "options": {
+        "A": "Supplementary",
+        "B": "Equal",
+        "C": "Always acute",
+        "D": "Always right angles"
+      },
+      "answer": "B",
+      "explanation": "Alternate interior angles are equal when the lines are parallel.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Lines and Angles"
+      ]
+    },
+    {
+      "id": "202704-041-C9-08",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Triangles",
+      "topic": "Triangles",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Triangles. two triangles are congruent by SAS when:",
+      "options": {
+        "A": "All corresponding angles are equal",
+        "B": "Two corresponding sides and included angle are equal",
+        "C": "Three sides are proportional",
+        "D": "One side and one angle are equal"
+      },
+      "answer": "B",
+      "explanation": "SAS congruence requires two sides and the included angle to match.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Triangles"
+      ]
+    },
+    {
+      "id": "202704-041-C9-09",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Quadrilaterals",
+      "topic": "Quadrilaterals",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Quadrilaterals. the sum of interior angles of a quadrilateral is:",
+      "options": {
+        "A": "180°",
+        "B": "270°",
+        "C": "360°",
+        "D": "540°"
+      },
+      "answer": "C",
+      "explanation": "A quadrilateral can be divided into two triangles; total = 2 × 180°.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Quadrilaterals"
+      ]
+    },
+    {
+      "id": "202704-041-C9-10",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Areas of Parallelograms and Triangles",
+      "topic": "Areas of Parallelograms and Triangles",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Areas of Parallelograms and Triangles. parallelograms on the same base and between the same parallels have:",
+      "options": {
+        "A": "Equal perimeters",
+        "B": "Equal areas",
+        "C": "Equal diagonals",
+        "D": "Equal angles"
+      },
+      "answer": "B",
+      "explanation": "They have the same base and height, so their areas are equal.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Areas of Parallelograms and Triangles"
+      ]
+    },
+    {
+      "id": "202704-041-C9-11",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Circles",
+      "topic": "Circles",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Circles. the perpendicular from the centre of a circle to a chord:",
+      "options": {
+        "A": "Bisects the chord",
+        "B": "Doubles the chord",
+        "C": "Is parallel to the chord",
+        "D": "Touches the circle"
+      },
+      "answer": "A",
+      "explanation": "A perpendicular from the centre to a chord bisects the chord.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Circles"
+      ]
+    },
+    {
+      "id": "202704-041-C9-12",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Heron’s Formula",
+      "topic": "Heron’s Formula",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Heron’s Formula. the semi-perimeter of a triangle with sides 5 cm, 6 cm and 7 cm is:",
+      "options": {
+        "A": "8 cm",
+        "B": "9 cm",
+        "C": "18 cm",
+        "D": "10 cm"
+      },
+      "answer": "B",
+      "explanation": "s = (5+6+7)/2 = 9 cm.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Heron’s Formula"
+      ]
+    },
+    {
+      "id": "202704-041-C9-13",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Surface Areas and Volumes",
+      "topic": "Surface Areas and Volumes",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Surface Areas and Volumes. the volume of a cube of side 3 cm is:",
+      "options": {
+        "A": "9 cm³",
+        "B": "18 cm³",
+        "C": "27 cm³",
+        "D": "36 cm³"
+      },
+      "answer": "C",
+      "explanation": "Volume = side³ = 3³ = 27 cm³.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Surface Areas and Volumes"
+      ]
+    },
+    {
+      "id": "202704-041-C9-14",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Statistics",
+      "topic": "Statistics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Statistics. the mean of 4, 6, 8 and 10 is:",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "B",
+      "explanation": "Mean = (4+6+8+10)/4 = 7.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Statistics"
+      ]
+    },
+    {
+      "id": "202704-041-C9-15",
+      "class": 9,
+      "subject": "Mathematics Standard",
+      "chapter": "Probability",
+      "topic": "Probability",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 9 learner is reviewing Probability. a fair die is rolled once. Probability of getting an even number is:",
+      "options": {
+        "A": "1/6",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "2/3"
+      },
+      "answer": "C",
+      "explanation": "Even outcomes are 2, 4, 6: three of six equally likely outcomes.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Probability"
+      ]
+    }
+  ]
+}

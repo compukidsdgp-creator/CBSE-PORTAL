@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2027-04-english-language-literature",
+    "class_group": "9-10",
+    "subject": "English Language & Literature (184)",
+    "month": "April 2027",
+    "title": "English Language & Literature — April 2027 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 9,
+        "file": "questions/english-language-literature-9-2027-04.json",
+        "question_count": 15
+      },
+      {
+        "class": 10,
+        "file": "questions/english-language-literature-10-2027-04.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

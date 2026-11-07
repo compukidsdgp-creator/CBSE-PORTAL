@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-02-accountancy-c12",
+    "session": "2026–27",
+    "month": "February 2027",
+    "class": 12,
+    "class_group": "11-12",
+    "subject": "Accountancy (055)",
+    "title": "Accountancy — Class 12 February 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "chapter": "Accounting Equation",
+      "topic": "Accounting Equation",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Accounting Equation. if assets are ₹5,00,000 and liabilities are ₹1,80,000, capital equals:",
+      "options": {
+        "A": "₹3,20,000",
+        "B": "₹6,80,000",
+        "C": "₹1,80,000",
+        "D": "₹5,00,000"
+      },
+      "answer": "A",
+      "explanation": "Capital = Assets − Liabilities = ₹5,00,000 − ₹1,80,000 = ₹3,20,000.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Accounting Equation"
+      ],
+      "id": "202702-055-C12-01",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Journal",
+      "topic": "Journal",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Journal. a credit purchase of goods is recorded by:",
+      "options": {
+        "A": "Purchases A/c Dr. To Supplier A/c",
+        "B": "Supplier A/c Dr. To Purchases A/c",
+        "C": "Cash A/c Dr. To Sales A/c",
+        "D": "Sales A/c Dr. To Cash A/c"
+      },
+      "answer": "A",
+      "explanation": "Purchases are debited and the supplier is credited for a credit purchase.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Journal"
+      ],
+      "id": "202702-055-C12-02",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Depreciation",
+      "topic": "Depreciation",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Depreciation. depreciation is charged to:",
+      "options": {
+        "A": "Allocate depreciable cost over useful life",
+        "B": "Record market appreciation",
+        "C": "Increase asset cost",
+        "D": "Create cash automatically"
+      },
+      "answer": "A",
+      "explanation": "Depreciation systematically allocates an asset’s depreciable amount over useful life.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Depreciation"
+      ],
+      "id": "202702-055-C12-03",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Bank Reconciliation",
+      "topic": "Bank Reconciliation",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Bank Reconciliation. an unpresented cheque issued by the business usually causes the bank statement balance to be:",
+      "options": {
+        "A": "Higher than the cash book balance",
+        "B": "Lower than the cash book balance",
+        "C": "Always equal",
+        "D": "Negative"
+      },
+      "answer": "A",
+      "explanation": "The cash book is reduced when issued; the bank has not yet recorded the payment.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Bank Reconciliation"
+      ],
+      "id": "202702-055-C12-04",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Trial Balance",
+      "topic": "Trial Balance",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Trial Balance. a trial balance is prepared mainly to check:",
+      "options": {
+        "A": "Arithmetical equality of debit and credit balances",
+        "B": "Profitability only",
+        "C": "Market value of assets",
+        "D": "Cash flow only"
+      },
+      "answer": "A",
+      "explanation": "A trial balance checks the equality of ledger debit and credit totals, though it cannot detect every error.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Trial Balance"
+      ],
+      "id": "202702-055-C12-05",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Inventory",
+      "topic": "Inventory",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Inventory. under FIFO, issues are priced using:",
+      "options": {
+        "A": "Oldest available inventory costs first",
+        "B": "Newest costs first",
+        "C": "Average selling price",
+        "D": "Replacement cost only"
+      },
+      "answer": "A",
+      "explanation": "FIFO assumes the earliest acquired units are issued first.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Inventory"
+      ],
+      "id": "202702-055-C12-06",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Financial Statements",
+      "topic": "Financial Statements",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Financial Statements. outstanding salary at year-end is treated as:",
+      "options": {
+        "A": "Expense and current liability",
+        "B": "Income and asset",
+        "C": "Drawings",
+        "D": "Capital receipt"
+      },
+      "answer": "A",
+      "explanation": "Outstanding salary is an accrued expense and a liability.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Financial Statements"
+      ],
+      "id": "202702-055-C12-07",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Rectification",
+      "topic": "Rectification",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Rectification. a suspense account may be opened when:",
+      "options": {
+        "A": "Trial balance totals disagree and the difference is temporarily placed",
+        "B": "All entries are correct",
+        "C": "Cash is deposited",
+        "D": "A fixed asset is purchased"
+      },
+      "answer": "A",
+      "explanation": "A suspense account temporarily records an unexplained difference pending correction.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Rectification"
+      ],
+      "id": "202702-055-C12-08",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Partnership",
+      "topic": "Partnership",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Partnership. in the absence of an agreement, partners share profits:",
+      "options": {
+        "A": "Equally",
+        "B": "In capital ratio always",
+        "C": "According to age",
+        "D": "According to working hours"
+      },
+      "answer": "A",
+      "explanation": "The Partnership Act default is equal sharing of profits and losses.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Partnership"
+      ],
+      "id": "202702-055-C12-09",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Cash Flow",
+      "topic": "Cash Flow",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Cash Flow. purchase of machinery for cash is classified as:",
+      "options": {
+        "A": "Investing activity",
+        "B": "Operating activity",
+        "C": "Financing activity",
+        "D": "Non-cash activity"
+      },
+      "answer": "A",
+      "explanation": "Acquisition of a long-term asset is an investing cash flow.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Cash Flow"
+      ],
+      "id": "202702-055-C12-10",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Ratio Analysis",
+      "topic": "Ratio Analysis",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Ratio Analysis. current ratio is calculated as:",
+      "options": {
+        "A": "Current assets ÷ Current liabilities",
+        "B": "Current liabilities ÷ Current assets",
+        "C": "Net profit ÷ Sales",
+        "D": "Debt ÷ Equity"
+      },
+      "answer": "A",
+      "explanation": "The current ratio measures short-term liquidity using current assets and liabilities.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Ratio Analysis"
+      ],
+      "id": "202702-055-C12-11",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Company Accounts",
+      "topic": "Company Accounts",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Company Accounts. securities premium is generally shown under:",
+      "options": {
+        "A": "Other equity / reserves and surplus",
+        "B": "Current liabilities",
+        "C": "Inventory",
+        "D": "Trade receivables"
+      },
+      "answer": "A",
+      "explanation": "Securities premium is a capital reserve presented within equity.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Company Accounts"
+      ],
+      "id": "202702-055-C12-12",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Not-for-Profit",
+      "topic": "Not-for-Profit",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Not-for-Profit. subscription received in advance is:",
+      "options": {
+        "A": "A liability",
+        "B": "An expense",
+        "C": "A fixed asset",
+        "D": "A capital loss"
+      },
+      "answer": "A",
+      "explanation": "Advance subscription relates to a future period and is a liability at year-end.",
+      "difficulty": "Easy",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Not-for-Profit"
+      ],
+      "id": "202702-055-C12-13",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Partnership",
+      "topic": "Partnership",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Partnership. goodwill is an intangible asset representing:",
+      "options": {
+        "A": "Reputation and earning capacity",
+        "B": "Physical inventory",
+        "C": "Cash in hand",
+        "D": "A current liability"
+      },
+      "answer": "A",
+      "explanation": "Goodwill reflects benefits from reputation, customer relationships and expected excess earnings.",
+      "difficulty": "Moderate",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Partnership"
+      ],
+      "id": "202702-055-C12-14",
+      "class": 12,
+      "subject": "Accountancy"
+    },
+    {
+      "chapter": "Financial Statements",
+      "topic": "Financial Statements",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Financial Statements. a provision for doubtful debts is created to:",
+      "options": {
+        "A": "Recognise expected credit losses on receivables",
+        "B": "Increase sales",
+        "C": "Record owner drawings",
+        "D": "Revalue inventory upward"
+      },
+      "answer": "A",
+      "explanation": "The provision recognises the estimated portion of receivables that may not be collected.",
+      "difficulty": "Application",
+      "type": "MCQ",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Financial Statements"
+      ],
+      "id": "202702-055-C12-15",
+      "class": 12,
+      "subject": "Accountancy"
+    }
+  ]
+}

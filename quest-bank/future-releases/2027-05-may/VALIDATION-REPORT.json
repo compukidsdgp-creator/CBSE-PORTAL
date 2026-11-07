@@ -1,0 +1,18 @@
+{
+  "release": "May 2027",
+  "status": "DRAFT — academic review required",
+  "subject_streams": 22,
+  "class_specific_banks": 40,
+  "questions": 600,
+  "expected_banks": 40,
+  "expected_questions": 600,
+  "missing_banks": [],
+  "checks": {
+    "catalogue_subject_count_is_22": true,
+    "class_bank_count_is_40": true,
+    "all_banks_have_15_questions": true,
+    "answer_key_rows_match_questions": true,
+    "pass_mark_90": true
+  },
+  "note": "Question content is prepared as draft material and requires subject-teacher verification against the applicable CBSE 2026–27 syllabus before publication. Monthly contextual framing is applied to the November source bank where a subject bank already exists; these are not a substitute for a fresh independently authored question bank."
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-01-english-language-literature-c9",
+    "session": "2026–27",
+    "month": "January 2027",
+    "class": 9,
+    "class_group": "9-10",
+    "subject": "English Language & Literature (184)",
+    "title": "English Language & Literature — Class 9 January 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202701-184-C9-01",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Reading Comprehension",
+      "topic": "Reading Comprehension",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Reading Comprehension. in an unseen passage, the central idea is best identified by:",
+      "options": {
+        "A": "Selecting the longest sentence",
+        "B": "Finding the main point supported by the passage",
+        "C": "Counting unfamiliar words",
+        "D": "Reading only the final line"
+      },
+      "answer": "B",
+      "explanation": "The central idea is the main message developed across the passage.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading Comprehension"
+      ]
+    },
+    {
+      "id": "202701-184-C9-02",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Reading Comprehension",
+      "topic": "Reading Comprehension",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Reading Comprehension. if a passage says a measure “mitigated” a problem, mitigated most nearly means:",
+      "options": {
+        "A": "Worsened",
+        "B": "Reduced",
+        "C": "Ignored",
+        "D": "Predicted"
+      },
+      "answer": "B",
+      "explanation": "Mitigate means to make something less severe.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading Comprehension"
+      ]
+    },
+    {
+      "id": "202701-184-C9-03",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Tenses",
+      "topic": "Grammar – Tenses",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Grammar – Tenses. choose the correct verb: “She ____ to school every day.”",
+      "options": {
+        "A": "go",
+        "B": "goes",
+        "C": "going",
+        "D": "gone"
+      },
+      "answer": "B",
+      "explanation": "A singular third-person subject takes “goes” in the simple present.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Tenses"
+      ]
+    },
+    {
+      "id": "202701-184-C9-04",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Modals",
+      "topic": "Grammar – Modals",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Grammar – Modals. “You ____ wear a helmet while riding a motorcycle.”",
+      "options": {
+        "A": "might",
+        "B": "must",
+        "C": "would",
+        "D": "could"
+      },
+      "answer": "B",
+      "explanation": "Must expresses strong obligation or necessity.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Modals"
+      ]
+    },
+    {
+      "id": "202701-184-C9-05",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Subject Verb Agreement",
+      "topic": "Grammar – Subject Verb Agreement",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Grammar – Subject Verb Agreement. choose the correct sentence.",
+      "options": {
+        "A": "The list of items are long.",
+        "B": "The list of items is long.",
+        "C": "The list of items were long.",
+        "D": "The list of items have long."
+      },
+      "answer": "B",
+      "explanation": "The subject is singular “list”; the phrase “of items” does not change its number.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Subject Verb Agreement"
+      ]
+    },
+    {
+      "id": "202701-184-C9-06",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Writing – Descriptive Paragraph",
+      "topic": "Writing – Descriptive Paragraph",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Writing – Descriptive Paragraph. a descriptive paragraph should primarily use:",
+      "options": {
+        "A": "Relevant sensory details and precise language",
+        "B": "Unrelated facts",
+        "C": "Only rhetorical questions",
+        "D": "A list without transitions"
+      },
+      "answer": "A",
+      "explanation": "Description is strengthened by specific details and coherent organisation.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing – Descriptive Paragraph"
+      ]
+    },
+    {
+      "id": "202701-184-C9-07",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Writing – Diary Entry",
+      "topic": "Writing – Diary Entry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Writing – Diary Entry. which feature is most appropriate for a diary entry?",
+      "options": {
+        "A": "Formal legal language",
+        "B": "Personal reflection in first person",
+        "C": "A bibliography only",
+        "D": "Third-person news reporting"
+      },
+      "answer": "B",
+      "explanation": "Diary entries usually express the writer’s personal experiences and feelings.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing – Diary Entry"
+      ]
+    },
+    {
+      "id": "202701-184-C9-08",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Literature – Prose",
+      "topic": "Literature – Prose",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Literature – Prose. when analysing a character, the strongest evidence is:",
+      "options": {
+        "A": "The character’s name",
+        "B": "Actions, dialogue and choices in the text",
+        "C": "The page number",
+        "D": "The book cover"
+      },
+      "answer": "B",
+      "explanation": "Character traits should be inferred from textual evidence.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literature – Prose"
+      ]
+    },
+    {
+      "id": "202701-184-C9-09",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Literature – Poetry",
+      "topic": "Literature – Poetry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Literature – Poetry. a comparison using “like” or “as” is a:",
+      "options": {
+        "A": "Metaphor",
+        "B": "Simile",
+        "C": "Personification",
+        "D": "Alliteration"
+      },
+      "answer": "B",
+      "explanation": "A simile explicitly compares two things using like or as.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literature – Poetry"
+      ]
+    },
+    {
+      "id": "202701-184-C9-10",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Literature – Poetry",
+      "topic": "Literature – Poetry",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Literature – Poetry. repeated initial consonant sounds in nearby words are called:",
+      "options": {
+        "A": "Assonance",
+        "B": "Alliteration",
+        "C": "Hyperbole",
+        "D": "Irony"
+      },
+      "answer": "B",
+      "explanation": "Alliteration is repetition of initial consonant sounds.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Literature – Poetry"
+      ]
+    },
+    {
+      "id": "202701-184-C9-11",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Vocabulary in Context",
+      "topic": "Vocabulary in Context",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Vocabulary in Context. the antonym of “scarce” is:",
+      "options": {
+        "A": "Rare",
+        "B": "Limited",
+        "C": "Abundant",
+        "D": "Insufficient"
+      },
+      "answer": "C",
+      "explanation": "Abundant means plentiful, the opposite of scarce.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Vocabulary in Context"
+      ]
+    },
+    {
+      "id": "202701-184-C9-12",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Determiners",
+      "topic": "Grammar – Determiners",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Grammar – Determiners. choose the correct determiner: “There is ____ milk left, enough for one cup.”",
+      "options": {
+        "A": "few",
+        "B": "a few",
+        "C": "a little",
+        "D": "many"
+      },
+      "answer": "C",
+      "explanation": "Milk is uncountable; “a little” refers to a small amount.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Determiners"
+      ]
+    },
+    {
+      "id": "202701-184-C9-13",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Grammar – Reported Speech",
+      "topic": "Grammar – Reported Speech",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Grammar – Reported Speech. direct: He said, “I am tired.” Choose the correct reported form.",
+      "options": {
+        "A": "He said that he is tired.",
+        "B": "He said that he was tired.",
+        "C": "He says that I was tired.",
+        "D": "He told that he tired."
+      },
+      "answer": "B",
+      "explanation": "With a past reporting verb, present “am” normally backshifts to “was”.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Grammar – Reported Speech"
+      ]
+    },
+    {
+      "id": "202701-184-C9-14",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Reading – Inference",
+      "topic": "Reading – Inference",
+      "type": "MCQ",
+      "difficulty": "Challenging",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Reading – Inference. a character repeatedly checks the clock before an interview. The most reasonable inference is that the character is:",
+      "options": {
+        "A": "Bored with time",
+        "B": "Anxious or eager about the interview",
+        "C": "Unable to read",
+        "D": "Unaware of the interview"
+      },
+      "answer": "B",
+      "explanation": "Repeated clock-checking before an important event suggests anticipation or nervousness.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Reading – Inference"
+      ]
+    },
+    {
+      "id": "202701-184-C9-15",
+      "class": 9,
+      "subject": "English Language & Literature",
+      "chapter": "Writing – Formal Letter",
+      "topic": "Writing – Formal Letter",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "January challenge: During new-year competency practice, a Class 9 learner is reviewing Writing – Formal Letter. which is essential in a formal letter of complaint?",
+      "options": {
+        "A": "Insults",
+        "B": "Clear description of the issue and a reasonable requested action",
+        "C": "Unrelated personal stories",
+        "D": "Slang and emojis"
+      },
+      "answer": "B",
+      "explanation": "A formal complaint should state facts, impact and the remedy sought.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Writing – Formal Letter"
+      ]
+    }
+  ]
+}

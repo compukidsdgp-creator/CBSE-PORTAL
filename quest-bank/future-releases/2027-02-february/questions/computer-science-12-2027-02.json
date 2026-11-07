@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-02-computer-science-c12",
+    "session": "2026–27",
+    "month": "February 2027",
+    "class": 12,
+    "class_group": "11-12",
+    "subject": "Computer Science (083)",
+    "title": "Computer Science — Class 12 February 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202702-083-C12-01",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Python Functions",
+      "topic": "Python Functions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Python Functions. which statement correctly defines a function named calculate?",
+      "options": {
+        "A": "function calculate():",
+        "B": "def calculate():",
+        "C": "define calculate():",
+        "D": "fun calculate():"
+      },
+      "answer": "B",
+      "explanation": "Python function definitions begin with the def keyword.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python Functions"
+      ]
+    },
+    {
+      "id": "202702-083-C12-02",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Python Functions",
+      "topic": "Python Functions",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Python Functions. what is the main purpose of a return statement in a function?",
+      "options": {
+        "A": "To display text automatically",
+        "B": "To send a result back to the caller",
+        "C": "To repeat the function",
+        "D": "To import a module"
+      },
+      "answer": "B",
+      "explanation": "return ends the function call and passes a value back to the caller.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Python Functions"
+      ]
+    },
+    {
+      "id": "202702-083-C12-03",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Data Structures",
+      "topic": "Data Structures",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Data Structures. which Python data structure stores key-value pairs?",
+      "options": {
+        "A": "Tuple",
+        "B": "List",
+        "C": "Dictionary",
+        "D": "String"
+      },
+      "answer": "C",
+      "explanation": "A dictionary maps unique keys to associated values.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Structures"
+      ]
+    },
+    {
+      "id": "202702-083-C12-04",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Data Structures",
+      "topic": "Data Structures",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Data Structures. given d = {'A': 10, 'B': 20}, what is d['B']?",
+      "options": {
+        "A": "A",
+        "B": "10",
+        "C": "20",
+        "D": "'B'"
+      },
+      "answer": "C",
+      "explanation": "The key 'B' maps to the value 20.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Data Structures"
+      ]
+    },
+    {
+      "id": "202702-083-C12-05",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Stacks",
+      "topic": "Stacks",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Stacks. which principle is followed by a stack?",
+      "options": {
+        "A": "FIFO",
+        "B": "LIFO",
+        "C": "Random access only",
+        "D": "Priority order"
+      },
+      "answer": "B",
+      "explanation": "A stack follows Last In, First Out.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Stacks"
+      ]
+    },
+    {
+      "id": "202702-083-C12-06",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Stacks",
+      "topic": "Stacks",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Stacks. which operation removes the top element from a stack?",
+      "options": {
+        "A": "push",
+        "B": "pop",
+        "C": "peek",
+        "D": "append-left"
+      },
+      "answer": "B",
+      "explanation": "The pop operation removes and returns the top item.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Stacks"
+      ]
+    },
+    {
+      "id": "202702-083-C12-07",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "File Handling",
+      "topic": "File Handling",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing File Handling. which file mode opens a text file for reading?",
+      "options": {
+        "A": "'w'",
+        "B": "'a'",
+        "C": "'r'",
+        "D": "'x'"
+      },
+      "answer": "C",
+      "explanation": "The r mode opens an existing file for reading.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "File Handling"
+      ]
+    },
+    {
+      "id": "202702-083-C12-08",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "File Handling",
+      "topic": "File Handling",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing File Handling. which method reads the entire remaining content of a text file as one string?",
+      "options": {
+        "A": "read()",
+        "B": "readline()",
+        "C": "write()",
+        "D": "seek()"
+      },
+      "answer": "A",
+      "explanation": "read() returns the remaining file content as a string.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "File Handling"
+      ]
+    },
+    {
+      "id": "202702-083-C12-09",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "File Handling",
+      "topic": "File Handling",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing File Handling. which file method returns the current position of the file pointer?",
+      "options": {
+        "A": "seek()",
+        "B": "tell()",
+        "C": "close()",
+        "D": "flush()"
+      },
+      "answer": "B",
+      "explanation": "tell() reports the current stream position.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "File Handling"
+      ]
+    },
+    {
+      "id": "202702-083-C12-10",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "SQL",
+      "topic": "SQL",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing SQL. which SQL command retrieves rows from a table?",
+      "options": {
+        "A": "UPDATE",
+        "B": "SELECT",
+        "C": "ALTER",
+        "D": "DROP"
+      },
+      "answer": "B",
+      "explanation": "SELECT is used to query data from one or more tables.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "SQL"
+      ]
+    },
+    {
+      "id": "202702-083-C12-11",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "SQL",
+      "topic": "SQL",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing SQL. which clause is used to filter rows before grouping?",
+      "options": {
+        "A": "ORDER BY",
+        "B": "HAVING",
+        "C": "WHERE",
+        "D": "GROUP BY"
+      },
+      "answer": "C",
+      "explanation": "WHERE filters individual rows before grouping and aggregation.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "SQL"
+      ]
+    },
+    {
+      "id": "202702-083-C12-12",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "SQL",
+      "topic": "SQL",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing SQL. which aggregate function counts rows?",
+      "options": {
+        "A": "SUM()",
+        "B": "AVG()",
+        "C": "COUNT()",
+        "D": "MAX()"
+      },
+      "answer": "C",
+      "explanation": "COUNT() returns the number of rows or non-NULL values, depending on its argument.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "SQL"
+      ]
+    },
+    {
+      "id": "202702-083-C12-13",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Computer Networks",
+      "topic": "Computer Networks",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Computer Networks. which device forwards packets between different networks?",
+      "options": {
+        "A": "Hub",
+        "B": "Router",
+        "C": "Repeater",
+        "D": "NIC"
+      },
+      "answer": "B",
+      "explanation": "A router forwards packets between networks using network-layer addressing.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computer Networks"
+      ]
+    },
+    {
+      "id": "202702-083-C12-14",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Computer Networks",
+      "topic": "Computer Networks",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Computer Networks. which protocol is primarily used to transfer web pages securely?",
+      "options": {
+        "A": "HTTP",
+        "B": "FTP",
+        "C": "HTTPS",
+        "D": "SMTP"
+      },
+      "answer": "C",
+      "explanation": "HTTPS uses HTTP over an encrypted TLS connection.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Computer Networks"
+      ]
+    },
+    {
+      "id": "202702-083-C12-15",
+      "class": 12,
+      "subject": "Computer Science",
+      "chapter": "Cyber Safety",
+      "topic": "Cyber Safety",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "February challenge: During pre-board application practice, a Class 12 learner is reviewing Cyber Safety. which practice best protects an account against password theft?",
+      "options": {
+        "A": "Reuse one password everywhere",
+        "B": "Share passwords with classmates",
+        "C": "Enable multi-factor authentication",
+        "D": "Store passwords in a public document"
+      },
+      "answer": "C",
+      "explanation": "Multi-factor authentication adds a second verification factor beyond the password.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Cyber Safety"
+      ]
+    }
+  ]
+}

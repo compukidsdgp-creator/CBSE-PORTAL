@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.1",
+  "quest_group": {
+    "id": "quest-release-2027-02-computer-applications",
+    "class_group": "9-10",
+    "subject": "Computer Applications (165)",
+    "month": "February 2027",
+    "title": "Computer Applications — February 2027 Quest",
+    "question_count_per_class": 15,
+    "class_sets": [
+      {
+        "class": 10,
+        "file": "questions/computer-applications-10-2027-02.json",
+        "question_count": 15
+      }
+    ],
+    "status": "draft"
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": "1.1",
+  "quest": {
+    "id": "quest-release-2027-04-physics-c12",
+    "session": "2026–27",
+    "month": "April 2027",
+    "class": 12,
+    "class_group": "11-12",
+    "subject": "Physics (042)",
+    "title": "Physics — Class 12 April 2027 Quest",
+    "type": "Monthly Quest",
+    "duration_minutes": 15,
+    "pass_mark": 90,
+    "status": "draft",
+    "published_at": ""
+  },
+  "questions": [
+    {
+      "id": "202704-042-C12-01",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Electric Charges & Fields",
+      "topic": "Electric Charges & Fields",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Electric Charges & Fields. two point charges are separated by distance r. If the separation is doubled, the electrostatic force becomes:",
+      "options": {
+        "A": "F/4",
+        "B": "F/2",
+        "C": "2F",
+        "D": "4F"
+      },
+      "answer": "A",
+      "explanation": "Coulomb force varies inversely as the square of separation.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electric Charges & Fields"
+      ]
+    },
+    {
+      "id": "202704-042-C12-02",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Electric Charges & Fields",
+      "topic": "Electric Charges & Fields",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Electric Charges & Fields. the SI unit of electric flux is:",
+      "options": {
+        "A": "N m² C⁻¹",
+        "B": "N C⁻¹",
+        "C": "C m⁻²",
+        "D": "V m⁻¹"
+      },
+      "answer": "A",
+      "explanation": "Electric flux is E·A, giving N m² C⁻¹.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electric Charges & Fields"
+      ]
+    },
+    {
+      "id": "202704-042-C12-03",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Electrostatic Potential & Capacitance",
+      "topic": "Electrostatic Potential & Capacitance",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Electrostatic Potential & Capacitance. the potential difference between two points is 12 V. Work done in moving 2 C between them is:",
+      "options": {
+        "A": "6 J",
+        "B": "10 J",
+        "C": "24 J",
+        "D": "36 J"
+      },
+      "answer": "C",
+      "explanation": "W=qV=2×12=24 J.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electrostatic Potential & Capacitance"
+      ]
+    },
+    {
+      "id": "202704-042-C12-04",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Electrostatic Potential & Capacitance",
+      "topic": "Electrostatic Potential & Capacitance",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Electrostatic Potential & Capacitance. a parallel-plate capacitor is completely filled with a dielectric of constant K. Its capacitance becomes:",
+      "options": {
+        "A": "C/K",
+        "B": "KC",
+        "C": "C+K",
+        "D": "unchanged"
+      },
+      "answer": "B",
+      "explanation": "The dielectric increases capacitance by the factor K.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electrostatic Potential & Capacitance"
+      ]
+    },
+    {
+      "id": "202704-042-C12-05",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Current Electricity",
+      "topic": "Current Electricity",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Current Electricity. a wire's resistance is doubled while its potential difference remains constant. The current becomes:",
+      "options": {
+        "A": "double",
+        "B": "half",
+        "C": "four times",
+        "D": "unchanged"
+      },
+      "answer": "B",
+      "explanation": "Ohm's law gives I=V/R; doubling R halves I.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Current Electricity"
+      ]
+    },
+    {
+      "id": "202704-042-C12-06",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Current Electricity",
+      "topic": "Current Electricity",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Current Electricity. the drift speed of electrons in a metallic conductor is directly proportional to:",
+      "options": {
+        "A": "resistivity",
+        "B": "electric field",
+        "C": "wire length only",
+        "D": "temperature only"
+      },
+      "answer": "B",
+      "explanation": "For a given material, drift velocity is proportional to the applied electric field.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Current Electricity"
+      ]
+    },
+    {
+      "id": "202704-042-C12-07",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Moving Charges & Magnetism",
+      "topic": "Moving Charges & Magnetism",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Moving Charges & Magnetism. a charged particle enters a uniform magnetic field parallel to the field. The magnetic force is:",
+      "options": {
+        "A": "qvB",
+        "B": "zero",
+        "C": "qB/v",
+        "D": "maximum"
+      },
+      "answer": "B",
+      "explanation": "F=qvB sinθ; for θ=0°, force is zero.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Moving Charges & Magnetism"
+      ]
+    },
+    {
+      "id": "202704-042-C12-08",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Moving Charges & Magnetism",
+      "topic": "Moving Charges & Magnetism",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Moving Charges & Magnetism. the SI unit of magnetic field is:",
+      "options": {
+        "A": "tesla",
+        "B": "weber",
+        "C": "henry",
+        "D": "farad"
+      },
+      "answer": "A",
+      "explanation": "Magnetic flux density is measured in tesla.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Moving Charges & Magnetism"
+      ]
+    },
+    {
+      "id": "202704-042-C12-09",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Magnetism & Matter",
+      "topic": "Magnetism & Matter",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Magnetism & Matter. a material weakly repelled by a magnetic field is:",
+      "options": {
+        "A": "paramagnetic",
+        "B": "ferromagnetic",
+        "C": "diamagnetic",
+        "D": "ferrimagnetic"
+      },
+      "answer": "C",
+      "explanation": "Diamagnetic substances develop magnetisation opposing the applied field.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Magnetism & Matter"
+      ]
+    },
+    {
+      "id": "202704-042-C12-10",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Electromagnetic Induction",
+      "topic": "Electromagnetic Induction",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Electromagnetic Induction. lenz's law is a consequence of conservation of:",
+      "options": {
+        "A": "charge",
+        "B": "mass",
+        "C": "energy",
+        "D": "momentum"
+      },
+      "answer": "C",
+      "explanation": "The induced current opposes the change producing it, consistent with energy conservation.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electromagnetic Induction"
+      ]
+    },
+    {
+      "id": "202704-042-C12-11",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Alternating Current",
+      "topic": "Alternating Current",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Alternating Current. the rms value of a sinusoidal current with peak value I₀ is:",
+      "options": {
+        "A": "I₀",
+        "B": "I₀/2",
+        "C": "I₀/√2",
+        "D": "√2 I₀"
+      },
+      "answer": "C",
+      "explanation": "For sinusoidal current, Irms=I₀/√2.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Alternating Current"
+      ]
+    },
+    {
+      "id": "202704-042-C12-12",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Electromagnetic Waves",
+      "topic": "Electromagnetic Waves",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Electromagnetic Waves. which electromagnetic radiation has the highest frequency?",
+      "options": {
+        "A": "Microwaves",
+        "B": "Infrared",
+        "C": "Ultraviolet",
+        "D": "Gamma rays"
+      },
+      "answer": "D",
+      "explanation": "Gamma rays occupy the highest-frequency region of the electromagnetic spectrum.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Electromagnetic Waves"
+      ]
+    },
+    {
+      "id": "202704-042-C12-13",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Ray Optics",
+      "topic": "Ray Optics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Ray Optics. the power of a converging lens of focal length 0.5 m is:",
+      "options": {
+        "A": "+0.5 D",
+        "B": "+2 D",
+        "C": "−2 D",
+        "D": "+5 D"
+      },
+      "answer": "B",
+      "explanation": "P=1/f with f in metres, so P=+2 dioptres.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Ray Optics"
+      ]
+    },
+    {
+      "id": "202704-042-C12-14",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Wave Optics",
+      "topic": "Wave Optics",
+      "type": "MCQ",
+      "difficulty": "Moderate",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Wave Optics. in Young's double-slit experiment, fringe width increases when:",
+      "options": {
+        "A": "wavelength decreases",
+        "B": "slit separation increases",
+        "C": "screen distance increases",
+        "D": "both slits are closed"
+      },
+      "answer": "C",
+      "explanation": "β=λD/d; increasing D increases fringe width.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Wave Optics"
+      ]
+    },
+    {
+      "id": "202704-042-C12-15",
+      "class": 12,
+      "subject": "Physics",
+      "chapter": "Semiconductor Electronics",
+      "topic": "Semiconductor Electronics",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "question": "April challenge: During concept consolidation, a Class 12 learner is reviewing Semiconductor Electronics. a p-n junction diode conducts readily when it is:",
+      "options": {
+        "A": "reverse biased",
+        "B": "forward biased",
+        "C": "unbiased only",
+        "D": "cooled to 0 K"
+      },
+      "answer": "B",
+      "explanation": "Forward bias reduces the depletion barrier and permits significant current.",
+      "marks": 1,
+      "time_seconds": 45,
+      "passage_id": "",
+      "passage": "",
+      "image_url": "",
+      "tags": [
+        "Semiconductor Electronics"
+      ]
+    }
+  ]
+}
