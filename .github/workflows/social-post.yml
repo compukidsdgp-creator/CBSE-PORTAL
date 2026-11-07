@@ -40,9 +40,11 @@ jobs:
           if [ -n "${{ github.event.inputs.mode }}" ]; then
             echo "mode=${{ github.event.inputs.mode }}" >> $GITHUB_OUTPUT
           elif [ "$(date -u +%H)" -lt "06" ]; then
-            echo "mode=quest" >> $GITHUB_OUTPUT
+            # Morning run (1:30 UTC = 7 AM IST): quest + notes + practice papers
+            echo "mode=morning" >> $GITHUB_OUTPUT
           else
-            echo "mode=news" >> $GITHUB_OUTPUT
+            # Evening run (12:30 UTC = 6 PM IST): news only
+            echo "mode=evening" >> $GITHUB_OUTPUT
           fi
 
       - name: Post to Facebook
@@ -61,6 +63,14 @@ jobs:
           else
             python3 post_facebook.py --mode "$MODE"
           fi
+
+      - name: Commit tracker CSV updates
+        run: |
+          git config user.name  "social-post-bot"
+          git config user.email "bot@cbsemock.org.in"
+          git add social-posting-tracker.csv 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "chore: update social posting tracker [skip ci]"
+          git push || true
 
       - name: Post to Telegram
         if: >
