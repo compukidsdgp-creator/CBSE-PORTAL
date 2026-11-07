@@ -37,8 +37,19 @@ jobs:
       - name: Determine post mode from schedule
         id: mode
         run: |
-          if [ -n "${{ github.event.inputs.mode }}" ]; then
-            echo "mode=${{ github.event.inputs.mode }}" >> $GITHUB_OUTPUT
+          VALID_MODES="morning evening quest news notes practice_10 practice_12 lab weekly_focus all"
+          INPUT_MODE="${{ github.event.inputs.mode }}"
+
+          if [ -n "$INPUT_MODE" ]; then
+            # Validate the input mode
+            if echo "$VALID_MODES" | grep -qw "$INPUT_MODE"; then
+              echo "mode=$INPUT_MODE" >> $GITHUB_OUTPUT
+            else
+              echo "❌ Invalid mode: '$INPUT_MODE'"
+              echo "   Valid modes: $VALID_MODES"
+              echo "   NOTE: 'both' is no longer valid — use 'morning' or 'evening'"
+              exit 1
+            fi
           elif [ "$(date -u +%H)" -lt "06" ]; then
             # Morning run (1:30 UTC = 7 AM IST): quest + notes + practice papers
             echo "mode=morning" >> $GITHUB_OUTPUT
