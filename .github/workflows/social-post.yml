@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'What to post: quest, news, or both'
+        description: 'What to post: morning, evening, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all'
         required: false
-        default: 'both'
+        default: 'morning'
       platform:
         description: 'Platform: facebook, telegram, or both'
         required: false
