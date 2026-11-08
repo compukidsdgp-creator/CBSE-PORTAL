@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 49, "month": "Dec 2026", "subject": "Biology", "class": "Class 12", "chapter": "Chapter 15", "emoji": "🌱", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Plant Hormones — The Chemical Messengers Running Your Garden", "hook": "A sunflower always faces the sun. A seed sprouts upward even if planted upside-down. Cut fruit ripens faster next to ripe bananas. Plants have no brain, no nerves — yet they respond, grow, and communicate. How? Through five chemical hormones that coordinate everything." },
+  "hook_section": {
+    "scenario_icon": "🌻",
+    "scenario": "Place a seedling on its side in the dark. Within hours, the shoot curves upward and the root curves downward — without any light cue. The plant somehow knows which way is up. Place unripe bananas in a closed bag with one ripe banana — they ripen in days. A plant on a window ledge bends toward the glass. All of this is controlled by chemicals, not consciousness.",
+    "bridge": "Plant hormones (phytohormones) are produced in tiny amounts but have enormous effects — controlling growth, flowering, ripening, dormancy, and stress responses. They're one of the highest-scoring topics in Class 12 Biology boards.",
+    "punchline": "Five hormones — Auxin, Gibberellin, Cytokinin, Abscisic Acid, Ethylene — each with a distinct role and exam-favourite example."
+  },
+  "concept_section": {
+    "analogy_icon": "📮",
+    "analogy": "Think of plant hormones like a postal system. Each hormone is a letter carrying a specific instruction. Auxin says 'grow here', cytokinin says 'divide now', ABA says 'close the doors (stomata)', ethylene says 'it's time to ripen'. The cell that receives the letter follows its instruction — even though no brain sent it.",
+    "principle": "Five major plant hormones: (1) Auxin — phototropism, apical dominance; (2) Gibberellin — stem elongation, seed germination; (3) Cytokinin — cell division, delay of senescence; (4) ABA — stress response, stomatal closure; (5) Ethylene — fruit ripening, leaf fall.",
+    "reveal_prompt": "Tap each hormone to learn its role 👇",
+    "reveals": [
+      { "question": "🌿 Auxin — where, what?", "answer": "Produced at shoot tips (apical meristem). Causes cell elongation. Higher concentration on shaded side → shoot bends toward light (phototropism). High concentration inhibits lateral bud growth (apical dominance)." },
+      { "question": "🌾 Gibberellin — where, what?", "answer": "Promotes stem elongation (bolting), seed germination, and fruit development without fertilisation (parthenocarpy). Used commercially to increase grape size." },
+      { "question": "🌀 Cytokinin — where, what?", "answer": "Promotes cell division (cytokinesis). Delays leaf senescence (keeps leaves green). Works with auxin to control growth — ratio determines root/shoot balance." },
+      { "question": "🍂 ABA & Ethylene?", "answer": "ABA = 'stress hormone' — causes stomatal closure during drought, promotes seed dormancy. Ethylene = gaseous hormone — promotes fruit ripening (why one ripe fruit speeds up others), causes leaf and flower abscission." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Auxin</b>: phototropism (bends toward light), geotropism (roots grow down), apical dominance",
+      "<b>Gibberellin</b>: stem elongation, seed germination, parthenocarpy (seedless fruit)",
+      "<b>Cytokinin</b>: cell division, delays ageing, promotes lateral bud growth (opposes auxin)",
+      "<b>ABA</b>: closes stomata in drought, promotes dormancy — the 'stress hormone'",
+      "<b>Ethylene</b>: only gaseous hormone; ripening, abscission (leaf/fruit fall), senescence"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Name the plant hormone responsible for each: (a) phototropism (b) fruit ripening (c) stomatal closure during drought" },
+      { "marks": "2M", "question": "What is apical dominance? Which hormone causes it and how?" },
+      { "marks": "1M", "question": "Which plant hormone is used to break seed dormancy?" }
+    ]
+  },
+  "quiz": [
+    { "q": "A fruit seller places unripe mangoes with ripe ones to speed ripening. This is due to:", "opts": ["Auxin", "Cytokinin", "Ethylene", "Gibberellin"], "ans": 2, "exp": "Ethylene is a gaseous hormone released by ripe fruits. It promotes ripening in nearby fruits — why keeping one ripe fruit accelerates others." },
+    { "q": "Apical dominance — suppression of lateral buds — is caused by:", "opts": ["High gibberellin", "High auxin from shoot tip", "Low cytokinin", "High ABA"], "ans": 1, "exp": "Auxin produced at the shoot tip moves downward and inhibits lateral bud growth. Removing the tip (pruning) allows buds to grow — that's why pruning makes plants bushy." },
+    { "q": "Which hormone causes stomatal closure during water stress?", "opts": ["Auxin", "Ethylene", "Cytokinin", "Abscisic acid"], "ans": 3, "exp": "ABA is called the stress hormone. During drought, ABA triggers guard cells to close stomata, reducing water loss through transpiration." },
+    { "q": "Seedless grapes are produced commercially using:", "opts": ["Auxin", "Gibberellin", "Cytokinin", "Ethylene"], "ans": 1, "exp": "Gibberellin promotes parthenocarpy — fruit development without fertilisation. Spraying grapes with gibberellin produces larger, seedless fruit." }
+  ],
+  "flipcards": [
+    { "front": "Which hormone controls phototropism?", "back": "Auxin — higher concentration on shaded side causes that side to elongate, bending shoot toward light" },
+    { "front": "Which is the only gaseous plant hormone?", "back": "Ethylene — promotes fruit ripening, leaf and fruit abscission" },
+    { "front": "What is parthenocarpy?", "back": "Development of fruit without fertilisation — commercially induced using gibberellin" },
+    { "front": "Which hormone delays leaf senescence?", "back": "Cytokinin — keeps leaves green and metabolically active" },
+    { "front": "What does ABA do during drought?", "back": "Causes stomatal closure to reduce water loss through transpiration" },
+    { "front": "What is apical dominance?", "back": "Suppression of lateral buds by auxin produced at the shoot tip. Pruning removes the source, allowing bushy growth." }
+  ],
+  "archive": [
+    { "emoji": "📐", "title": "Determinants & Matrices", "meta": "Week 48 · Mathematics · Class 12" },
+    { "emoji": "📊", "title": "Demand Elasticity", "meta": "Week 47 · Economics · Class 12" },
+    { "emoji": "💡", "title": "Photoelectric Effect", "meta": "Week 46 · Physics · Class 12" },
+    { "emoji": "⚗️", "title": "Le Chatelier's Principle", "meta": "Week 45 · Chemistry · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W50", "title": "Python Functions & Recursion", "subject": "Computer Science" },
+    { "week": "W51", "title": "Electricity — Ohm's Law", "subject": "Science Class 10" },
+    { "week": "W52", "title": "Trigonometry Applications", "subject": "Maths Class 10" },
+    { "week": "W01", "title": "Magnetism & Electromagnetic Induction", "subject": "Physics Class 12" }
+  ]
+}

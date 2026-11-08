@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 5, "month": "Feb 2027", "subject": "Biology", "class": "Class 12", "chapter": "Chapter 1", "emoji": "🧬", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Reproduction in Organisms — Life's Greatest Strategy", "hook": "Every organism alive today is here because its ancestors successfully reproduced. Reproduction is so fundamental that evolution has built two entirely different strategies for it — asexual and sexual — each with its own advantages. Understanding why both exist tells you something profound about survival." },
+  "hook_section": {
+    "scenario_icon": "🌿",
+    "scenario": "A starfish is cut in half. Both halves regenerate into complete starfish. A hydra grows a bud that breaks off and becomes a new organism. A strawberry plant sends out runners that root and grow new plants. All this — with zero involvement from another organism. That's asexual reproduction: fast, efficient, identical copies. So why do so many organisms bother with the complicated, expensive process of sexual reproduction?",
+    "bridge": "The answer is genetic variation. Sexual reproduction mixes genes from two parents, producing offspring that are different from both parents and from each other. Variation is raw material for evolution. Chapter 1 of Class 12 Biology covers both strategies — their mechanisms, examples, and biological significance.",
+    "punchline": "Asexual = fast, identical offspring. Sexual = genetic variation, slower, needs two parents. Both are survival strategies — which is 'better' depends on the environment."
+  },
+  "concept_section": {
+    "analogy_icon": "🔄",
+    "analogy": "Asexual reproduction is like photocopying a document — fast and identical, but if the original has an error, every copy has the same error. Sexual reproduction is like mixing two books — takes more effort, but the result is unique and might have better ideas from both sources. Stability vs. adaptability: that's the trade-off.",
+    "principle": "Asexual reproduction types: binary fission (Amoeba, Bacteria), budding (Hydra, Yeast), fragmentation (Spirogyra), regeneration (Planaria, Starfish), spore formation (Rhizopus), vegetative propagation (plants). Sexual reproduction requires gamete formation (gametogenesis) and fusion (fertilisation) → zygote → new organism.",
+    "reveal_prompt": "Tap each category to explore it 👇",
+    "reveals": [
+      { "question": "🔵 Asexual reproduction — key types?", "answer": "Binary fission: nucleus divides → two cells (Amoeba — irregular; Leishmania — longitudinal; Plasmodium — multiple fission). Budding: outgrowth becomes new organism (Hydra, Yeast). Fragmentation: body breaks into pieces, each regenerates (Spirogyra, starfish). Vegetative propagation: runners (strawberry), tubers (potato), rhizomes (ginger)." },
+      { "question": "🌸 Sexual reproduction stages?", "answer": "Three phases: Pre-fertilisation (gamete formation + transfer), Fertilisation (gamete fusion → zygote), Post-fertilisation (zygote → embryo → new organism). Gametes are haploid (n); zygote is diploid (2n). External fertilisation (fish, frog) vs Internal fertilisation (birds, mammals)." },
+      { "question": "🔄 Parthenogenesis?", "answer": "Development of egg without fertilisation. Examples: honeybee drones (males from unfertilised eggs), aphids, Komodo dragons under isolated conditions. Important to distinguish from normal asexual reproduction — it still involves an egg (not mitosis of a vegetative cell)." },
+      { "question": "🌿 Vegetative propagation in plants?", "answer": "Natural: runners (stolons) in strawberry, bulbs in onion, rhizomes in ginger, tubers in potato, leaves in Bryophyllum. Artificial: cutting (rose, sugarcane), grafting (mango), layering, tissue culture. Genetically identical to parent — a form of cloning." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Asexual reproduction</b>: single parent, identical offspring (clones), faster than sexual",
+      "<b>Sexual reproduction</b>: two parents (usually), genetic variation, requires gametogenesis + fertilisation",
+      "<b>Juvenility period</b>: organisms must reach sexual maturity before reproduction — varies widely",
+      "<b>Oestrus cycle</b> (non-primate mammals) vs <b>Menstrual cycle</b> (primates including humans)",
+      "<b>Parthenogenesis</b>: egg develops without fertilisation — common in bees, wasps, aphids"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "List any four types of asexual reproduction with one example each. Why do organisms that can reproduce asexually still use sexual reproduction sometimes?" },
+      { "marks": "2M", "question": "What is parthenogenesis? Give two examples from animals." },
+      { "marks": "1M", "question": "What is the ploidy of a zygote? How is it formed?" }
+    ]
+  },
+  "quiz": [
+    { "q": "Asexual reproduction in Plasmodium (malarial parasite) is by:", "opts": ["Binary fission", "Budding", "Multiple fission", "Fragmentation"], "ans": 2, "exp": "Plasmodium undergoes multiple fission — the nucleus divides multiple times, then cytoplasm divides around each nucleus simultaneously, producing many daughter cells at once (more efficient than binary fission)." },
+    { "q": "Parthenogenesis produces:", "opts": ["Diploid offspring from two parents", "Offspring from unfertilised egg", "Offspring by binary fission", "Clones by vegetative propagation"], "ans": 1, "exp": "Parthenogenesis = development of an egg without fertilisation. Examples: honeybee drones (haploid males), aphids. It is a form of sexual reproduction (involves gamete) but without fertilisation." },
+    { "q": "Ginger reproduces vegetatively through:", "opts": ["Runners", "Bulbs", "Rhizomes", "Tubers"], "ans": 2, "exp": "Ginger reproduces via underground stem modifications called rhizomes. Potato uses tubers, onion uses bulbs, and strawberry uses runners (stolons)." },
+    { "q": "The juvenile phase in organisms is the period:", "opts": ["After sexual maturity", "Before sexual maturity", "Of active reproduction", "Of dormancy"], "ans": 1, "exp": "Juvenile/vegetative phase is the period from birth to sexual maturity when the organism grows but cannot reproduce sexually. Length varies greatly — few days (insects) to years (elephants)." }
+  ],
+  "flipcards": [
+    { "front": "Name 4 types of asexual reproduction", "back": "Binary fission, Budding, Fragmentation, Sporulation (also: regeneration, vegetative propagation)" },
+    { "front": "What is parthenogenesis?", "back": "Development of an egg into a new organism without fertilisation. Examples: honeybee drones, aphids" },
+    { "front": "External vs internal fertilisation?", "back": "External: gametes released outside body, fusion in water (fish, frog). Internal: fusion inside female's body (reptiles, birds, mammals)." },
+    { "front": "What is vegetative propagation?", "back": "A type of asexual reproduction in plants where vegetative parts (root, stem, leaf) develop into new plants" },
+    { "front": "What is the ploidy of a gamete?", "back": "Haploid (n) — gametes formed by meiosis. Zygote (after fertilisation) is diploid (2n)." },
+    { "front": "Example of fragmentation in reproduction?", "back": "Spirogyra (algae) — filament breaks into fragments, each grows into new filament. Also Planaria (flatworm)." }
+  ],
+  "archive": [
+    { "emoji": "🎲", "title": "Probability", "meta": "Week 4 · Mathematics · Class 10" },
+    { "emoji": "🔭", "title": "Light — Reflection & Refraction", "meta": "Week 3 · Science · Class 10" },
+    { "emoji": "🧪", "title": "Haloalkanes & Haloarenes", "meta": "Week 2 · Chemistry · Class 12" },
+    { "emoji": "🔋", "title": "Electromagnetic Induction", "meta": "Week 1 · Physics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W06", "title": "National Income", "subject": "Economics Class 12" },
+    { "week": "W07", "title": "Carbon & Its Compounds", "subject": "Science Class 10" },
+    { "week": "W08", "title": "Coordinate Geometry", "subject": "Mathematics Class 10" },
+    { "week": "W09", "title": "File Handling in Python", "subject": "CS Class 12" }
+  ]
+}

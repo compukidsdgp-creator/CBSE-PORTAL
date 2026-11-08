@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 16, "month": "Apr 2027", "subject": "Physics", "class": "Class 12", "chapter": "Chapter 1", "emoji": "⚡", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Electrostatics — The Force That Holds Atoms Together", "hook": "Everything you touch, see, and use is held together by electrostatic forces. The atoms in your body are bound by the attraction between positive protons and negative electrons. Lightning is electrostatic discharge. Photocopiers, air purifiers, inkjet printers — all use electrostatic principles. And in Class 12 Physics boards, electrostatics is worth 8–10 marks." },
+  "hook_section": {
+    "scenario_icon": "⚡",
+    "scenario": "Rub a glass rod with silk — the rod becomes positively charged. Bring it near small bits of paper — the papers are attracted (electrostatic induction). Bring two positively-charged rods near each other — they repel. These simple observations hide profound physics: charges create electric fields that extend through space and exert forces on other charges, even without touching.",
+    "bridge": "Chapter 1 covers Coulomb's Law, electric field (E), field lines, electric potential (V), potential energy, Gauss's Law, capacitors and their combinations. These concepts build on each other — master Coulomb's Law first, then field, then potential, then Gauss, then capacitors.",
+    "punchline": "Coulomb's Law: F = kq₁q₂/r². Electric field E = F/q. Electric potential V = kq/r. These three define electrostatics at the fundamental level."
+  },
+  "concept_section": {
+    "analogy_icon": "🌐",
+    "analogy": "An electric charge is like a person with an invisible 'personal space' — the electric field. Everyone in that space feels a push (repulsion from same charge) or pull (attraction from opposite charge). The closer you are to the person, the stronger the feeling. The electric potential is like the temperature at a point in a room with a heater — it doesn't depend on who is there, just on the position.",
+    "principle": "Coulomb's Law: F = (1/4πε₀) × q₁q₂/r² = kq₁q₂/r². Electric field: E = F/q₀ = kq/r² (direction: away from +q, toward −q). Electric potential: V = kq/r. Relationship: E = −dV/dr. Gauss's Law: ∮E·dA = Q_enclosed/ε₀.",
+    "reveal_prompt": "Tap each concept to explore 👇",
+    "reveals": [
+      { "question": "🌊 Electric field lines — rules?", "answer": "Start from +ve charge, end at −ve charge (or infinity). Never intersect (would mean two directions at one point). Denser lines = stronger field. Perpendicular to equipotential surfaces. Uniform field: parallel, equally-spaced lines (between parallel plates). Electric field inside a conductor = 0." },
+      { "question": "⚡ Electric potential and potential energy?", "answer": "V = kq/r (potential due to point charge). V is scalar (can add/subtract). Potential difference = work done per unit charge: W = q × V. Potential energy U = qV = kq₁q₂/r. Equipotential surface: V = constant; no work done moving charge on it; always perpendicular to E field lines." },
+      { "question": "📏 Gauss's Law applications?", "answer": "∮E·dA = Q_enc/ε₀. Used to find E for symmetric charge distributions: (1) Infinite line charge: E = λ/2πε₀r (radially outward). (2) Infinite plane: E = σ/2ε₀ (uniform). (3) Spherical shell: E=0 inside, E = kQ/r² outside (like point charge). (4) Solid sphere: E = kQr/R³ inside (increases with r)." },
+      { "question": "🔵 Capacitors?", "answer": "Capacitance C = Q/V. Parallel plate: C = ε₀A/d. With dielectric: C = Kε₀A/d (K = dielectric constant). Combination: Series: 1/C = 1/C₁+1/C₂. Parallel: C = C₁+C₂. Energy stored: U = ½CV² = ½QV = Q²/2C. Capacitor stores charge (and energy) — like a rechargeable spring." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Coulomb's Law</b>: F = kq₁q₂/r² (k = 9×10⁹ Nm²/C²); inverse square law like gravity",
+      "<b>Electric field</b>: E = F/q = kq/r²; lines from +, toward −; inside conductor E = 0",
+      "<b>Electric potential</b>: V = kq/r (scalar); E = −dV/dr",
+      "<b>Gauss's Law</b>: ∮E·dA = Q_enc/ε₀; used for symmetric geometries",
+      "<b>Capacitance</b>: C = ε₀A/d (parallel plate); energy U = ½CV²"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Three capacitors of capacitances 2μF, 3μF, and 6μF are connected in series. Find the equivalent capacitance and the total charge when connected to a 10V battery." },
+      { "marks": "2M", "question": "State Gauss's Law. Use it to find the electric field due to an infinite plane sheet of charge." },
+      { "marks": "1M", "question": "What is an equipotential surface? Can two equipotential surfaces intersect?" }
+    ]
+  },
+  "quiz": [
+    { "q": "Electric field inside a hollow conducting sphere is:", "opts": ["Equal to external field", "Zero", "Proportional to radius", "Infinite"], "ans": 1, "exp": "By Gauss's Law, any closed surface inside a hollow conductor encloses zero charge → E = 0 inside. All charge resides on the outer surface. This is electrostatic shielding — used in Faraday cages." },
+    { "q": "Three capacitors 2μF, 4μF, 6μF in parallel. Equivalent capacitance =", "opts": ["12/11 μF", "1.09 μF", "12 μF", "24 μF"], "ans": 2, "exp": "Parallel: C = C₁ + C₂ + C₃ = 2 + 4 + 6 = 12 μF. In parallel, capacitances add directly (like resistors in series)." },
+    { "q": "Energy stored in a capacitor of capacitance C charged to voltage V is:", "opts": ["CV", "½CV", "½CV²", "CV²"], "ans": 2, "exp": "Energy U = ½CV² = ½QV = Q²/2C. All three are equivalent expressions. The ½ factor appears because charge builds up gradually — average voltage during charging is V/2." },
+    { "q": "Equipotential surfaces are always:", "opts": ["Parallel to electric field lines", "Perpendicular to electric field lines", "At 45° to field lines", "Curved surfaces only"], "ans": 1, "exp": "Equipotential surfaces are always perpendicular to electric field lines. If they were not, a component of E would lie along the surface, meaning work would be done to move charge on it — contradicting the definition of equipotential." }
+  ],
+  "flipcards": [
+    { "front": "Coulomb's Law formula?", "back": "F = kq₁q₂/r² where k = 1/4πε₀ = 9×10⁹ Nm²/C²" },
+    { "front": "Electric field vs Electric potential relationship?", "back": "E = −dV/dr (field is negative gradient of potential). E points from high V to low V." },
+    { "front": "Capacitors in series — equivalent formula?", "back": "1/C = 1/C₁ + 1/C₂ + 1/C₃ (like resistors in parallel)" },
+    { "front": "What does inserting a dielectric do to capacitance?", "back": "Increases capacitance by factor K (dielectric constant). C = Kε₀A/d. Dielectric reduces electric field inside." },
+    { "front": "State Gauss's Law?", "back": "Total electric flux through any closed surface = total enclosed charge / ε₀: ∮E·dA = Q_enc/ε₀" },
+    { "front": "What is electrostatic shielding?", "back": "E = 0 inside a conductor — protects contents from external electric fields. Basis of Faraday cage." }
+  ],
+  "archive": [
+    { "emoji": "🧬", "title": "Genetics & Inheritance", "meta": "Week 15 · Biology · Class 12" },
+    { "emoji": "🏦", "title": "Money & Banking", "meta": "Week 14 · Economics · Class 12" },
+    { "emoji": "📐", "title": "Triangles & Similarity", "meta": "Week 13 · Mathematics · Class 10" },
+    { "emoji": "🧫", "title": "Chemical Reactions & Equations", "meta": "Week 12 · Science · Class 10" }
+  ],
+  "upcoming": [
+    { "week": "W17", "title": "Databases & SQL", "subject": "CS Class 12" },
+    { "week": "W18", "title": "Acids, Bases & Salts", "subject": "Science Class 10" },
+    { "week": "W19", "title": "Arithmetic Progressions", "subject": "Mathematics Class 10" },
+    { "week": "W20", "title": "Biodiversity & Conservation", "subject": "Biology Class 12" }
+  ]
+}

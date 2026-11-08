@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 2, "month": "Jan 2027", "subject": "Chemistry", "class": "Class 12", "chapter": "Chapter 10", "emoji": "🧪", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Haloalkanes & Haloarenes — Organic Chemistry's Reactive Stars", "hook": "Replace one hydrogen in a hydrocarbon with a halogen (F, Cl, Br, I) and you get a haloalkane — one of the most reactive and useful organic compound classes. From PVC pipes to anaesthetics to pesticides, haloalkanes are everywhere. And they're worth 5–6 marks in your boards." },
+  "hook_section": {
+    "scenario_icon": "🔬",
+    "scenario": "Chloroform (CHCl₃) was used as an early anaesthetic. DDT (a chlorinated compound) wiped out malaria-carrying mosquitoes. Freons (chlorofluorocarbons) became the go-to refrigerants — until we discovered they were destroying the ozone layer. The same reactive C–X bond that makes haloalkanes useful also makes them dangerous. Understanding why requires knowing their reactions.",
+    "bridge": "Haloalkanes undergo two key reaction types: Nucleophilic Substitution (SN1 and SN2) and Elimination. The mechanism depends on the structure of the haloalkane and the nature of the reagent. This is the core of Chapter 10.",
+    "punchline": "The C–X bond is polar (C⁺–X⁻). Nucleophiles attack the electron-deficient carbon. That's the key to all their reactions."
+  },
+  "concept_section": {
+    "analogy_icon": "🎯",
+    "analogy": "Think of a haloalkane as a lock (the carbon with halogen) and nucleophiles as keys. In SN2, the key goes in the back while the old occupant leaves from the front — one step, inversion. In SN1, the occupant leaves first, creating an open door (carbocation), and then any key can enter — two steps, racemisation. The structure of the lock determines which mechanism dominates.",
+    "principle": "SN2: one step, bimolecular, back-side attack, inversion of configuration. Favoured by primary haloalkanes + strong nucleophiles. SN1: two steps, unimolecular, carbocation intermediate, racemisation. Favoured by tertiary haloalkanes + weak nucleophiles/polar solvents.",
+    "reveal_prompt": "Tap each reaction type to explore 👇",
+    "reveals": [
+      { "question": "🔄 SN2 vs SN1 — when does each occur?", "answer": "SN2: primary haloalkane + strong nucleophile (OH⁻, CN⁻) + polar aprotic solvent → one step, inversion. SN1: tertiary haloalkane + weak nucleophile + polar protic solvent → two steps, carbocation intermediate, racemisation." },
+      { "question": "🌿 Elimination reaction?", "answer": "Haloalkane + strong base (KOH/alcohol) → alkene (Zaitsev's rule: more substituted alkene preferred). Competes with substitution. High temperature favours elimination; low temperature favours substitution." },
+      { "question": "🌀 Optical isomerism in haloalkanes?", "answer": "If the carbon bearing the halogen has 4 different groups → chiral centre → enantiomers possible. SN2 gives inversion (Walden inversion). SN1 gives racemic mixture (equal R and S). Key exam topic." },
+      { "question": "🌍 Haloarenes — reactivity difference?", "answer": "Halogen attached to benzene ring (haloarenes like chlorobenzene) is much less reactive than haloalkanes. The C–X bond has partial double bond character (resonance) — shorter and stronger. Nucleophilic substitution is very difficult for haloarenes." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>C–X bond polarity</b>: C⁺–X⁻ makes carbon susceptible to nucleophilic attack",
+      "<b>SN2</b>: primary substrate, strong nucleophile, one step, inversion of configuration",
+      "<b>SN1</b>: tertiary substrate, two steps, carbocation intermediate, racemisation",
+      "<b>Elimination</b>: strong base + haloalkane → alkene; Zaitsev's rule (more substituted product)",
+      "<b>Haloarenes</b>: less reactive due to resonance; C–Cl bond shorter/stronger than in haloalkanes"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Explain SN1 and SN2 mechanisms with one example each. Why is tertiary haloalkane more reactive in SN1 but less reactive in SN2 compared to primary?" },
+      { "marks": "2M", "question": "Why is chlorobenzene less reactive than chloromethane towards nucleophilic substitution?" },
+      { "marks": "1M", "question": "What is Walden inversion?" }
+    ]
+  },
+  "quiz": [
+    { "q": "Which substrate undergoes SN2 reaction most readily?", "opts": ["Tertiary haloalkane", "Secondary haloalkane", "Primary haloalkane", "Haloarene"], "ans": 2, "exp": "SN2 requires back-side attack. Primary haloalkanes have least steric hindrance — the nucleophile can approach easily. Tertiary haloalkanes are too bulky for SN2." },
+    { "q": "SN1 reaction proceeds through which intermediate?", "opts": ["Free radical", "Carbanion", "Carbocation", "Transition state"], "ans": 2, "exp": "In SN1, the leaving group departs first (step 1) forming a carbocation intermediate. The nucleophile then attacks the carbocation (step 2). Tertiary carbocations are most stable (most substituted)." },
+    { "q": "Chlorobenzene on reaction with NaOH at 300°C gives:", "opts": ["Benzene", "Phenol", "Aniline", "Chlorocyclohexane"], "ans": 1, "exp": "Chlorobenzene reacts with NaOH at high temperature and pressure to give phenol (C₆H₅OH). This requires forcing conditions because C–Cl bond in chlorobenzene has partial double bond character." },
+    { "q": "What is formed when CH₃CH₂Cl reacts with KOH in alcohol?", "opts": ["CH₃CH₂OH", "CH₂=CH₂", "CH₃CH₃", "CH₃CH₂OCH₂CH₃"], "ans": 1, "exp": "KOH in alcohol acts as a strong base and promotes elimination (not substitution). The product is ethene (CH₂=CH₂). KOH in water promotes substitution to give alcohol." }
+  ],
+  "flipcards": [
+    { "front": "What is the IUPAC name of CHCl₃?", "back": "Trichloromethane (common name: chloroform)" },
+    { "front": "SN2 — which configuration does the product have?", "back": "Inverted configuration (Walden inversion) — attack occurs from opposite side to leaving group" },
+    { "front": "Why are haloarenes less reactive than haloalkanes?", "back": "Resonance between halogen lone pair and benzene ring gives C–X bond partial double bond character — shorter and stronger" },
+    { "front": "Zaitsev's rule in elimination?", "back": "More substituted (more stable) alkene is the major product" },
+    { "front": "SN1 gives what type of mixture?", "back": "Racemic mixture (equal amounts of R and S enantiomers) — carbocation is planar, attack from both sides equally likely" },
+    { "front": "Which solvent favours SN1? SN2?", "back": "SN1: polar protic (water, alcohol). SN2: polar aprotic (acetone, DMSO)" }
+  ],
+  "archive": [
+    { "emoji": "🔋", "title": "Electromagnetic Induction", "meta": "Week 1 · Physics · Class 12" },
+    { "emoji": "📏", "title": "Heights & Distances", "meta": "Week 52 · Mathematics · Class 10" },
+    { "emoji": "⚡", "title": "Electricity — Ohm's Law", "meta": "Week 51 · Science · Class 10" },
+    { "emoji": "🐍", "title": "Python Functions & Recursion", "meta": "Week 50 · CS · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W03", "title": "Light — Reflection & Refraction", "subject": "Science Class 10" },
+    { "week": "W04", "title": "Probability", "subject": "Mathematics Class 10" },
+    { "week": "W05", "title": "Reproduction in Organisms", "subject": "Biology Class 12" },
+    { "week": "W06", "title": "National Income", "subject": "Economics Class 12" }
+  ]
+}

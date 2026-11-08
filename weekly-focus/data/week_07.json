@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 7, "month": "Feb 2027", "subject": "Science", "class": "Class 10", "chapter": "Chapter 4", "emoji": "⚗️", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Carbon & Its Compounds — Chemistry of Life", "hook": "Carbon is the most versatile element in the universe. It forms the backbone of every protein, every DNA molecule, every fat in your body. It makes up coal, diamonds, petrol, plastic, medicine, and food — all because of one property: carbon bonds with itself and other elements in almost limitless combinations." },
+  "hook_section": {
+    "scenario_icon": "💎",
+    "scenario": "Diamond and graphite are both made of pure carbon. Diamond is the hardest natural material, used to cut glass. Graphite is soft enough to write with and conducts electricity. Same element, completely different properties — because of different bonding arrangements. Carbon's ability to form different structures (allotropes) and bond with itself in long chains (catenation) is what makes organic chemistry possible.",
+    "bridge": "Chapter 4 covers covalent bonding in carbon, homologous series (alkanes, alkenes, alkynes, alcohols, carboxylic acids), functional groups, and chemical properties (combustion, substitution, addition, oxidation). Nomenclature and reactions are the most tested parts.",
+    "punchline": "Carbon is tetravalent (4 bonds). It forms single (alkanes), double (alkenes), and triple (alkynes) bonds. The functional group determines the compound's chemical properties."
+  },
+  "concept_section": {
+    "analogy_icon": "🔗",
+    "analogy": "Think of carbon as a Lego brick with exactly 4 connection points. It can connect to 4 other atoms, or form double/triple connections. String carbon bricks in a line and you get an alkane chain. Leave some connection points open as double bonds — now you have an alkene (more reactive). The attachment on the last brick (the functional group: OH, COOH, etc.) decides the personality of the whole molecule.",
+    "principle": "Homologous series: alkanes (CₙH₂ₙ₊₂, saturated), alkenes (CₙH₂ₙ, one double bond), alkynes (CₙH₂ₙ₋₂, one triple bond). Functional groups: −OH (alcohol), −COOH (carboxylic acid), −CHO (aldehyde), −CO− (ketone). IUPAC naming: prefix (carbon count) + suffix (functional group).",
+    "reveal_prompt": "Tap each functional group to explore it 👇",
+    "reveals": [
+      { "question": "🍶 Alcohols?", "answer": "Functional group: −OH. Ethanol (C₂H₅OH) is the alcohol in beverages. Properties: forms ester with acids, can be oxidised to carboxylic acid, dehydrated to alkene. CH₃OH = methanol (toxic). Ethanol + acetic acid → ethyl acetate (sweet smell) + water [esterification]." },
+      { "question": "🍋 Carboxylic acids?", "answer": "Functional group: −COOH. Acetic acid (CH₃COOH) in vinegar. Reacts with alcohol → ester + water (esterification). Reacts with Na₂CO₃ → salt + CO₂ + water. Weak acids — partially ionise in water. First CBSE question answer: 'gives effervescence with Na₂CO₃'." },
+      { "question": "🔥 Combustion of carbon compounds?", "answer": "Complete combustion (excess O₂): CₙHₘ + O₂ → CO₂ + H₂O + heat. Blue flame, complete burning. Incomplete combustion (limited O₂): → CO + soot (C). Yellow/sooty flame. LPG and natural gas burn completely in correct stove air supply. Coal burns with soot in open." },
+      { "question": "🌊 Addition vs Substitution?", "answer": "Addition: alkenes + H₂ (or Br₂, HCl) → product with nothing removed. CH₂=CH₂ + H₂ → CH₃CH₃. Used to test for alkenes (Br₂ water decolourises). Substitution: alkanes + Cl₂ (sunlight) → chloroalkane + HCl. CH₄ + Cl₂ → CH₃Cl + HCl." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Catenation</b>: carbon's ability to bond with itself in long chains — unique to carbon",
+      "<b>Tetravalency</b>: carbon forms 4 bonds; can be single, double, or triple",
+      "<b>Homologous series</b>: differ by −CH₂−; same functional group; similar chemical properties",
+      "<b>Saturated</b> (alkanes): single bonds only; substitution reactions. <b>Unsaturated</b> (alkenes/alkynes): addition reactions",
+      "<b>Esterification</b>: acid + alcohol → ester + water (sweet smell, used in perfumes)"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "What happens when ethanol reacts with (a) sodium (b) acetic acid (c) acidified potassium dichromate? Give equations." },
+      { "marks": "2M", "question": "Distinguish between saturated and unsaturated hydrocarbons. Give one test to identify each." },
+      { "marks": "1M", "question": "Name the functional group in CH₃COOH and CH₃CH₂OH." }
+    ]
+  },
+  "quiz": [
+    { "q": "Ethanol is oxidised to form:", "opts": ["Ethane", "Ethene", "Acetic acid", "Ether"], "ans": 2, "exp": "Ethanol (CH₃CH₂OH) is oxidised by acidified K₂Cr₂O₇ or alkaline KMnO₄ to acetic acid (CH₃COOH). This is why wine turns into vinegar on exposure to air (oxidation by oxygen with bacteria)." },
+    { "q": "Bromine water test is used to detect:", "opts": ["Alkanes", "Alkenes", "Alcohols", "Carboxylic acids"], "ans": 1, "exp": "Alkenes decolourise bromine water (Br₂ in water) due to addition reaction across the double bond. Alkanes do not react with bromine water in the absence of light — they don't decolourise it." },
+    { "q": "Ethyl acetate (ester) is formed by reaction of:", "opts": ["Ethane + acetic acid", "Ethanol + acetic acid", "Ethanol + HCl", "Methanol + acetic acid"], "ans": 1, "exp": "Esterification: ethanol (CH₃CH₂OH) + acetic acid (CH₃COOH) → ethyl acetate (CH₃COOC₂H₅) + water. Catalyst: conc. H₂SO₄. Product smells sweet — used in nail polish remover and artificial flavours." },
+    { "q": "What is the formula of propane?", "opts": ["C₂H₆", "C₃H₈", "C₃H₆", "C₄H₁₀"], "ans": 1, "exp": "Alkane formula: CₙH₂ₙ₊₂. For propane (n=3): C₃H₂(3)+₂ = C₃H₈. Methane=CH₄, Ethane=C₂H₆, Propane=C₃H₈, Butane=C₄H₁₀." }
+  ],
+  "flipcards": [
+    { "front": "What is catenation?", "back": "Carbon's unique ability to form bonds with other carbon atoms to make long chains, rings, and branched structures" },
+    { "front": "Alkane general formula?", "back": "CₙH₂ₙ₊₂ (saturated, single bonds only)" },
+    { "front": "What reaction do alkenes undergo with Br₂?", "back": "Addition reaction — double bond opens up and adds Br₂. Bromine water gets decolourised." },
+    { "front": "Esterification reaction?", "back": "Alcohol + Carboxylic acid → Ester + Water (with conc. H₂SO₄ catalyst). Products have fruity/sweet smell." },
+    { "front": "COOH group belongs to which family?", "back": "Carboxylic acids (e.g., CH₃COOH = acetic acid/ethanoic acid)" },
+    { "front": "What is the structural difference between diamond and graphite?", "back": "Diamond: each C bonded to 4 others tetrahedrally (rigid, hard). Graphite: each C bonded to 3 others in flat layers (soft, conducts electricity)" }
+  ],
+  "archive": [
+    { "emoji": "📈", "title": "National Income", "meta": "Week 6 · Economics · Class 12" },
+    { "emoji": "🧬", "title": "Reproduction in Organisms", "meta": "Week 5 · Biology · Class 12" },
+    { "emoji": "🎲", "title": "Probability", "meta": "Week 4 · Mathematics · Class 10" },
+    { "emoji": "🔭", "title": "Light — Reflection & Refraction", "meta": "Week 3 · Science · Class 10" }
+  ],
+  "upcoming": [
+    { "week": "W08", "title": "Coordinate Geometry", "subject": "Mathematics Class 10" },
+    { "week": "W09", "title": "File Handling in Python", "subject": "CS Class 12" },
+    { "week": "W10", "title": "Human Reproduction", "subject": "Biology Class 12" },
+    { "week": "W11", "title": "Current Electricity", "subject": "Physics Class 12" }
+  ]
+}

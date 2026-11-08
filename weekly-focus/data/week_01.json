@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 1, "month": "Jan 2027", "subject": "Physics", "class": "Class 12", "chapter": "Chapter 6", "emoji": "🔋", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Electromagnetic Induction — How Every Generator & Motor Works", "hook": "Every time you charge your phone, switch on a fan, or use a transformer, electromagnetic induction is doing the work. Faraday discovered it in 1831 by moving a magnet through a coil. That one experiment powers the entire modern world — and it's worth 5 marks in your boards." },
+  "hook_section": {
+    "scenario_icon": "🔌",
+    "scenario": "Move a bar magnet into a coil of wire — a current appears in the coil even though there's no battery. Pull the magnet out — current flows in the opposite direction. Hold the magnet still — current drops to zero. The current exists only when something changes. What is changing? The magnetic flux through the coil.",
+    "bridge": "This is the principle behind generators (mechanical energy → electricity), transformers (changing voltage), and induction cooktops. Faraday's Law and Lenz's Law together explain both the magnitude and direction of the induced EMF.",
+    "punchline": "EMF is induced when magnetic flux changes. The induced current always opposes the change that caused it."
+  },
+  "concept_section": {
+    "analogy_icon": "🧲",
+    "analogy": "Imagine a lazy river (the coil). Normally it flows steadily. Push a dam in (changing flux) — water rushes to resist the dam. Pull the dam out — water rushes back. The river always reacts against what you do to it. That's Lenz's Law — induced current opposes the change in flux, like a stubborn river.",
+    "principle": "Faraday's Law: EMF = −N × ΔΦ/Δt (N = number of turns, Φ = magnetic flux = B·A·cosθ). Lenz's Law: induced current direction is such that it opposes the change in flux (negative sign in Faraday's Law).",
+    "reveal_prompt": "Tap each concept to explore it 👇",
+    "reveals": [
+      { "question": "🌀 How to increase induced EMF?", "answer": "Increase N (more turns), increase rate of flux change (move magnet faster), use stronger magnet, increase coil area. EMF ∝ N × ΔΦ/Δt." },
+      { "question": "🔄 Lenz's Law in practice?", "answer": "Magnet's N pole entering coil → coil develops N pole facing the magnet (to repel it, opposing entry). Same pole, opposing the motion. This conserves energy — you must do work against this opposition." },
+      { "question": "⚡ What is motional EMF?", "answer": "A conductor of length l moving with velocity v in magnetic field B develops EMF = Bvl (perpendicular motion). This is how generators work — rotating coils in a magnetic field." },
+      { "question": "🔁 AC vs DC generator?", "answer": "AC generator: slip rings → alternating current output. DC generator: commutator → unidirectional (pulsating DC) output. Both use coil rotation in magnetic field." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Magnetic flux</b>: Φ = B·A·cosθ; maximum when B ⊥ plane of coil (θ=0°), zero when B ∥ plane",
+      "<b>Faraday's Law</b>: EMF = −NΔΦ/Δt; magnitude proportional to rate of flux change",
+      "<b>Lenz's Law</b>: induced current opposes the change — consequence of energy conservation",
+      "<b>Motional EMF</b>: EMF = Bvl for a conductor moving perpendicular to field",
+      "<b>Eddy currents</b>: induced in bulk conductors; cause heating (used in induction cooktops, brakes)"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "State Faraday's laws of electromagnetic induction. A coil of 200 turns, area 0.05m² is in a field that changes from 0.1T to 0.5T in 0.02s. Find induced EMF." },
+      { "marks": "2M", "question": "State Lenz's Law. How does it relate to conservation of energy?" },
+      { "marks": "1M", "question": "What is the SI unit of magnetic flux?" }
+    ]
+  },
+  "quiz": [
+    { "q": "A coil of 100 turns has flux changing from 0.02 Wb to 0.06 Wb in 0.4s. Induced EMF is:", "opts": ["0.1V", "10V", "4V", "1V"], "ans": 1, "exp": "EMF = N × ΔΦ/Δt = 100 × (0.06−0.02)/0.4 = 100 × 0.1 = 10V." },
+    { "q": "Lenz's Law is a consequence of:", "opts": ["Newton's Third Law", "Conservation of charge", "Conservation of energy", "Ampere's Law"], "ans": 2, "exp": "Lenz's Law states induced current opposes change in flux. If it aided the change, energy would be created from nothing — violating conservation of energy." },
+    { "q": "A straight conductor of length 0.5m moves at 2m/s perpendicular to a 0.4T field. Induced EMF is:", "opts": ["0.4V", "4V", "0.04V", "1V"], "ans": 0, "exp": "Motional EMF = Bvl = 0.4 × 2 × 0.5 = 0.4V." },
+    { "q": "Eddy currents are used beneficially in:", "opts": ["Electric motors", "Induction furnaces", "Galvanometers", "Capacitors"], "ans": 1, "exp": "Induction furnaces use eddy currents to heat metals without direct contact. The changing magnetic field induces large eddy currents in the metal, generating heat." }
+  ],
+  "flipcards": [
+    { "front": "State Faraday's First Law of EMI", "back": "Whenever the magnetic flux linked with a circuit changes, an EMF is induced in the circuit" },
+    { "front": "Formula for magnetic flux?", "back": "Φ = B·A·cosθ; SI unit = Weber (Wb)" },
+    { "front": "What does Lenz's Law state?", "back": "Induced current direction opposes the change in magnetic flux that caused it" },
+    { "front": "Motional EMF formula?", "back": "EMF = Bvl (B = field, v = velocity, l = conductor length, all mutually perpendicular)" },
+    { "front": "Difference: AC generator vs DC generator?", "back": "AC: slip rings → alternating output. DC: commutator → unidirectional output." },
+    { "front": "What are eddy currents?", "back": "Circulating currents induced in bulk conductors by changing magnetic flux; cause heating" }
+  ],
+  "archive": [
+    { "emoji": "📏", "title": "Heights & Distances", "meta": "Week 52 · Mathematics · Class 10" },
+    { "emoji": "⚡", "title": "Electricity — Ohm's Law", "meta": "Week 51 · Science · Class 10" },
+    { "emoji": "🐍", "title": "Python Functions & Recursion", "meta": "Week 50 · CS · Class 12" },
+    { "emoji": "🌱", "title": "Plant Hormones", "meta": "Week 49 · Biology · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W02", "title": "Haloalkanes & Haloarenes", "subject": "Chemistry Class 12" },
+    { "week": "W03", "title": "Light — Reflection & Refraction", "subject": "Science Class 10" },
+    { "week": "W04", "title": "Probability", "subject": "Mathematics Class 10" },
+    { "week": "W05", "title": "Reproduction in Organisms", "subject": "Biology Class 12" }
+  ]
+}

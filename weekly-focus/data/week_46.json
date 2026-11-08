@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 46, "month": "Nov 2026", "subject": "Physics", "class": "Class 12", "chapter": "Chapter 11", "emoji": "💡", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Photoelectric Effect — When Light Kicks Out Electrons", "hook": "Why does a solar panel stop working if you shine radio waves on it, no matter how bright? The answer shook the foundations of classical physics — and it's a guaranteed 3-mark question in your boards." },
+  "hook_section": {
+    "scenario_icon": "☀️",
+    "scenario": "Cover a metal plate with UV light — electrons fly off instantly. Now switch to bright red light — no electrons at all, no matter how long you wait or how intense the beam. That's bizarre. More energy should mean more electrons. So why does colour matter more than brightness?",
+    "bridge": "Classical physics had no answer. Einstein did — and it won him the Nobel Prize. The photoelectric effect proved that light isn't just a wave. It comes in packets called photons, and each photon either has enough energy to kick an electron out, or it doesn't.",
+    "punchline": "Frequency decides if electrons leave. Intensity decides how many leave."
+  },
+  "concept_section": {
+    "analogy_icon": "🎯",
+    "analogy": "Think of a bouncer at a club. Each photon is a person trying to get in. The bouncer has a minimum entry fee (the work function φ). If your photon can't pay the fee — no entry. Sending a crowd of underpaid photons (high intensity, low frequency) still gets nobody in. But one photon with enough energy gets through immediately.",
+    "principle": "Einstein's Photoelectric Equation: KE_max = hν − φ, where h = Planck's constant, ν = frequency of light, φ = work function of metal.",
+    "reveal_prompt": "Tap each factor to see its effect 👇",
+    "reveals": [
+      { "question": "🔵 What if frequency is below threshold?", "answer": "No photoelectric effect at all — regardless of intensity. The photon simply doesn't have enough energy to overcome the work function." },
+      { "question": "🌊 What if I increase intensity (same frequency)?", "answer": "More photons hit the metal → more electrons are ejected → higher photocurrent. But KE_max of each electron stays the same." },
+      { "question": "⬆️ What if frequency increases?", "answer": "Each photon has more energy → electrons leave with higher KE_max. Stopping potential increases." },
+      { "question": "⚡ What is stopping potential?", "answer": "The reverse voltage needed to stop the most energetic electrons. eV₀ = KE_max = hν − φ. It depends only on frequency, not intensity." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Threshold frequency (ν₀)</b>: minimum frequency for emission; ν₀ = φ/h",
+      "<b>Work function (φ)</b>: minimum energy to eject an electron from the metal surface",
+      "KE_max = hν − φ → increases with frequency, independent of intensity",
+      "<b>Photocurrent</b> increases with intensity (more photons → more electrons)",
+      "<b>Emission is instantaneous</b> — no time lag, confirms particle nature of light"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Derive Einstein's photoelectric equation and explain stopping potential" },
+      { "marks": "2M", "question": "Why does photoelectric effect not occur below threshold frequency?" },
+      { "marks": "1M", "question": "How does stopping potential change when frequency of incident light is doubled?" }
+    ]
+  },
+  "quiz": [
+    { "q": "In the photoelectric effect, increasing the intensity of incident light (above threshold frequency) will:", "opts": ["Increase the KE of emitted electrons", "Increase the stopping potential", "Increase the number of emitted electrons", "Decrease the work function"], "ans": 2, "exp": "Intensity means more photons per second. More photons eject more electrons → higher photocurrent. But each electron's energy depends only on frequency." },
+    { "q": "The stopping potential for a metal is 2V when light of frequency ν is used. If frequency is doubled, stopping potential becomes:", "opts": ["2V", "4V", "More than 4V", "Less than 4V"], "ans": 2, "exp": "eV₀ = hν − φ. Doubling ν doubles hν but φ stays constant, so the new V₀ = (2hν − φ)/e > 2×original V₀." },
+    { "q": "Which of the following proves the particle nature of light?", "opts": ["Interference", "Diffraction", "Photoelectric effect", "Polarisation"], "ans": 2, "exp": "Interference, diffraction and polarisation are wave phenomena. Photoelectric effect — where a single photon ejects one electron — proves light behaves as particles (photons)." },
+    { "q": "The work function of a metal is 2 eV. The threshold frequency is: (h = 6.6×10⁻³⁴ J·s)", "opts": ["4.8 × 10¹⁴ Hz", "3.0 × 10¹⁴ Hz", "6.0 × 10¹⁴ Hz", "1.2 × 10¹⁴ Hz"], "ans": 0, "exp": "ν₀ = φ/h = (2 × 1.6×10⁻¹⁹) / (6.6×10⁻³⁴) ≈ 4.8 × 10¹⁴ Hz." }
+  ],
+  "flipcards": [
+    { "front": "What is the photoelectric effect?", "back": "Emission of electrons from a metal surface when light of sufficient frequency falls on it" },
+    { "front": "What is work function?", "back": "Minimum energy needed to eject an electron from the metal surface; φ = hν₀" },
+    { "front": "Effect of intensity on KE_max?", "back": "No effect — KE_max depends only on frequency, not intensity" },
+    { "front": "What is stopping potential?", "back": "Reverse voltage that stops the fastest electrons; eV₀ = hν − φ" },
+    { "front": "Who explained the photoelectric effect and won a Nobel Prize?", "back": "Albert Einstein, 1921 — using the concept of photons (quanta of light)" },
+    { "front": "What happens below threshold frequency?", "back": "No emission at all, regardless of intensity — photon energy is less than work function" }
+  ],
+  "archive": [
+    { "emoji": "⚗️", "title": "Le Chatelier's Principle", "meta": "Week 45 · Chemistry · Class 12" },
+    { "emoji": "📐", "title": "Integration by Parts", "meta": "Week 44 · Mathematics · Class 12" },
+    { "emoji": "🧬", "title": "DNA Replication", "meta": "Week 43 · Biology · Class 12" },
+    { "emoji": "⚡", "title": "Kirchhoff's Laws", "meta": "Week 42 · Physics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W47", "title": "Demand Elasticity", "subject": "Economics" },
+    { "week": "W48", "title": "Determinants", "subject": "Mathematics" },
+    { "week": "W49", "title": "Plant Hormones", "subject": "Biology" },
+    { "week": "W50", "title": "Python Functions & Recursion", "subject": "Computer Science" }
+  ]
+}

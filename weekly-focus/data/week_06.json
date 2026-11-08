@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 6, "month": "Feb 2027", "subject": "Economics", "class": "Class 12", "chapter": "Chapter 2", "emoji": "📈", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "National Income — Measuring an Entire Economy", "hook": "How do economists measure the total output of an economy with 1.4 billion people, millions of firms, and thousands of products? They use National Income — a set of concepts and methods that capture the value of everything produced in a country in a year. GDP, GNP, NNP — these aren't just abbreviations, they're windows into how a nation is doing." },
+  "hook_section": {
+    "scenario_icon": "🏭",
+    "scenario": "India produces rice, software, cars, movies, and medical services — all in the same year. How do you add rice and software? You can't add tons of grain to lines of code. The solution: measure everything in money (market value). The total value of all final goods and services produced in a country in a year — that's GDP. And how you measure it, adjust it, and interpret it makes all the difference in economics.",
+    "bridge": "National Income accounting is Chapter 2 of Class 12 Macro Economics. It's tested every year with definitional questions and numerical problems. The key is knowing the relationships between GDP, GNP, NNP, NI, PI, and DPI — and when to use which method (income, output, expenditure) to calculate them.",
+    "punchline": "Three methods, same answer: Output Method = Income Method = Expenditure Method. They all measure the same circular flow from different angles."
+  },
+  "concept_section": {
+    "analogy_icon": "🔄",
+    "analogy": "The economy is a circular flow — firms produce goods, pay wages to workers, workers buy goods from firms. National income can be measured at any point in this circle: at production (output method), at payment (income method), or at spending (expenditure method). Like measuring water in a pipe — you can measure flow at the input, the pump, or the output. Same water, different measurement points.",
+    "principle": "GDP at Market Price = C + I + G + (X−M) [Expenditure method]. GNP = GDP + NFIA. NNP = GNP − Depreciation. NNP at Factor Cost = NI = NNP at Market Price − Net Indirect Taxes. NFIA = Net Factor Income from Abroad.",
+    "reveal_prompt": "Tap each concept to master the relationships 👇",
+    "reveals": [
+      { "question": "📊 GDP vs GNP vs NNP?", "answer": "GDP: value of final goods/services produced within country's boundaries (by residents AND non-residents). GNP = GDP + NFIA (includes income earned abroad by nationals, excludes income earned in India by foreigners). NNP = GNP − Depreciation (Net National Product). NNP at Factor Cost = National Income." },
+      { "question": "🔧 Three methods of measurement?", "answer": "Output/Product Method: sum of value added by each firm (avoids double counting). Income Method: sum of factor incomes (wages + rent + interest + profit). Expenditure Method: C + I + G + (X−M). All three give same GDP if measured correctly." },
+      { "question": "💰 From NNP to DPI?", "answer": "NNP at Market Price → minus Net Indirect Taxes → National Income → minus Undistributed profits, Corporate taxes, Social security → plus Transfer payments → Personal Income → minus Direct personal taxes → Disposable Personal Income (DPI)." },
+      { "question": "🌍 Real vs Nominal GDP?", "answer": "Nominal GDP: at current prices (includes inflation). Real GDP: at constant base year prices (removes inflation effect). GDP Deflator = (Nominal GDP / Real GDP) × 100. Real GDP better measures actual growth in output." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>GDP</b>: value of final goods/services within territorial boundaries in a year",
+      "<b>GNP = GDP + NFIA</b>; <b>NNP = GNP − Depreciation</b>; NNP at FC = National Income",
+      "<b>Three methods</b>: Output (value added), Income (factor incomes), Expenditure (C+I+G+NX) — all give same result",
+      "<b>Double counting avoided</b>: by counting only final goods OR by counting only value added",
+      "<b>Real GDP</b>: at constant prices; removes inflation; better measure of actual economic growth"
+    ],
+    "exam_questions": [
+      { "marks": "4M", "question": "Calculate NNP at Market Price from the following: GDP at Market Price = ₹500 crore, Depreciation = ₹20 crore, NFIA = ₹30 crore." },
+      { "marks": "3M", "question": "Explain the Income Method of calculating national income. What are the four factor incomes included?" },
+      { "marks": "1M", "question": "What is the relationship between GDP and GNP?" }
+    ]
+  },
+  "quiz": [
+    { "q": "NNP at Factor Cost is equal to:", "opts": ["GDP at Market Price", "GNP − Depreciation", "National Income", "Both B and C"], "ans": 3, "exp": "NNP at Factor Cost = NNP at Market Price − Net Indirect Taxes = National Income. Also, NNP = GNP − Depreciation. So NNP at FC = GNP − Depreciation − Net Indirect Taxes = National Income." },
+    { "q": "If GDP = ₹1000 cr, NFIA = ₹50 cr, Depreciation = ₹100 cr. NNP at MP =", "opts": ["₹1050 cr", "₹950 cr", "₹900 cr", "₹1000 cr"], "ans": 1, "exp": "NNP at MP = GNP − Depreciation = (GDP + NFIA) − Depreciation = (1000 + 50) − 100 = ₹950 cr." },
+    { "q": "To avoid double counting in GDP, which method is used?", "opts": ["Count all transactions", "Count final goods or value added", "Count only imports", "Count intermediate goods"], "ans": 1, "exp": "Double counting is avoided by counting only FINAL goods (not intermediate ones) in the product method, or by counting only VALUE ADDED at each stage of production." },
+    { "q": "Real GDP differs from Nominal GDP because:", "opts": ["It excludes services", "It is measured at base year prices", "It includes foreign income", "It is always higher"], "ans": 1, "exp": "Real GDP uses constant base-year prices to eliminate the effect of inflation. Nominal GDP uses current prices. When prices rise, nominal GDP rises even if real output doesn't — real GDP shows true growth." }
+  ],
+  "flipcards": [
+    { "front": "Formula: GNP = ?", "back": "GNP = GDP + NFIA (Net Factor Income from Abroad)" },
+    { "front": "What is NFIA?", "back": "Net Factor Income from Abroad = Income earned by nationals abroad − Income earned by foreigners in India" },
+    { "front": "Formula: NNP = ?", "back": "NNP = GNP − Depreciation (Consumption of Fixed Capital)" },
+    { "front": "National Income = ?", "back": "NNP at Factor Cost = NNP at Market Price − Net Indirect Taxes" },
+    { "front": "What is the expenditure method formula?", "back": "GDP = C + I + G + (X − M); C=Consumption, I=Investment, G=Govt spending, X=Exports, M=Imports" },
+    { "front": "What is GDP Deflator?", "back": "GDP Deflator = (Nominal GDP / Real GDP) × 100; measures price level change" }
+  ],
+  "archive": [
+    { "emoji": "🧬", "title": "Reproduction in Organisms", "meta": "Week 5 · Biology · Class 12" },
+    { "emoji": "🎲", "title": "Probability", "meta": "Week 4 · Mathematics · Class 10" },
+    { "emoji": "🔭", "title": "Light — Reflection & Refraction", "meta": "Week 3 · Science · Class 10" },
+    { "emoji": "🧪", "title": "Haloalkanes & Haloarenes", "meta": "Week 2 · Chemistry · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W07", "title": "Carbon & Its Compounds", "subject": "Science Class 10" },
+    { "week": "W08", "title": "Coordinate Geometry", "subject": "Mathematics Class 10" },
+    { "week": "W09", "title": "File Handling in Python", "subject": "CS Class 12" },
+    { "week": "W10", "title": "Human Reproduction", "subject": "Biology Class 12" }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 4, "month": "Jan 2027", "subject": "Mathematics", "class": "Class 10", "chapter": "Chapter 15", "emoji": "🎲", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Probability — From Coin Flips to Board Exam Marks", "hook": "What are the chances? This question is at the heart of everything — from weather forecasts to medical tests to stock markets. Probability is how we measure uncertainty mathematically. And in your boards, it's a guaranteed 4–5 marks, often the easiest to score if you know the vocabulary." },
+  "hook_section": {
+    "scenario_icon": "🎯",
+    "scenario": "You draw a card from a standard deck of 52 cards. What is the probability it's a King? There are 4 Kings out of 52 cards → P(King) = 4/52 = 1/13. What if you want a King or a Heart? You need to avoid double-counting the King of Hearts — that's the addition rule. What if you draw two cards without replacement? Now probabilities change with each draw — that's conditional probability.",
+    "bridge": "Class 10 probability focuses on classical (theoretical) probability. Every problem reduces to: count the favourable outcomes, count the total outcomes, divide. The challenge is in counting carefully.",
+    "punchline": "P(event) = Number of favourable outcomes / Total number of equally likely outcomes. Always between 0 and 1."
+  },
+  "concept_section": {
+    "analogy_icon": "🃏",
+    "analogy": "Think of a probability problem like a lottery. The sample space is all the tickets. The event is the winning tickets. P(event) = winning tickets / all tickets. Now: what are all the tickets? What counts as winning? Answer those two questions and the problem is solved.",
+    "principle": "Key rules: P(A) + P(not A) = 1. P(A or B) = P(A) + P(B) − P(A and B). For mutually exclusive events: P(A or B) = P(A) + P(B). For complementary events: P(A) + P(Ā) = 1.",
+    "reveal_prompt": "Tap each scenario type to practise 👇",
+    "reveals": [
+      { "question": "🃏 Standard deck of cards — key facts?", "answer": "52 cards total: 4 suits (Hearts, Diamonds, Clubs, Spades), 13 cards each. Face cards: J, Q, K (3 per suit = 12 total). Aces: 4. Red cards: 26 (Hearts + Diamonds). Black: 26. No Jokers in problems unless stated." },
+      { "question": "🎲 Dice problems?", "answer": "One die: 6 outcomes (1–6). Two dice: 6×6 = 36 outcomes. Sum=7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6 ways. Doublet (same number): (1,1),(2,2)...(6,6) = 6 ways. P(doublet) = 6/36 = 1/6." },
+      { "question": "🪙 Coins?", "answer": "One coin: 2 outcomes {H,T}. Two coins: 4 outcomes {HH, HT, TH, TT}. Three coins: 8 outcomes. P(at least one head, 3 coins) = 1 − P(all tails) = 1 − 1/8 = 7/8. 'At least' problems are easiest using complementary approach." },
+      { "question": "🔵 Balls in a bag?", "answer": "If bag has r red, b blue, g green balls: total = r+b+g. P(red) = r/(r+b+g). 'Without replacement' means each draw changes the total. 'With replacement' means total stays same for each draw." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Classical probability</b>: P(E) = n(E)/n(S); always lies between 0 and 1 (inclusive)",
+      "<b>Complementary events</b>: P(E) + P(Ē) = 1 — use complement for 'at least' and 'at most' problems",
+      "<b>Mutually exclusive</b>: can't happen together; P(A or B) = P(A) + P(B)",
+      "<b>Deck facts</b>: 52 cards, 4 suits of 13, 12 face cards, 4 aces, 26 red + 26 black",
+      "<b>Two dice</b>: 36 equally likely outcomes; list pairs systematically for counting"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "A bag contains 5 red, 8 white, and 4 green balls. A ball is drawn at random. Find the probability that the ball drawn is (i) red (ii) not green (iii) white or green." },
+      { "marks": "2M", "question": "Two dice are thrown simultaneously. Find the probability of getting a sum of 8." },
+      { "marks": "1M", "question": "A card is drawn from a deck of 52 cards. Find the probability of getting a face card." }
+    ]
+  },
+  "quiz": [
+    { "q": "A card is drawn from 52 cards. P(King of Hearts) =", "opts": ["1/4", "1/13", "1/52", "4/52"], "ans": 2, "exp": "There is exactly 1 King of Hearts in a 52-card deck. P = 1/52. Don't confuse with P(King) = 4/52 = 1/13 or P(Heart) = 13/52 = 1/4." },
+    { "q": "Two coins tossed. P(at least one tail) =", "opts": ["1/4", "1/2", "3/4", "1"], "ans": 2, "exp": "Sample space: {HH, HT, TH, TT} = 4 outcomes. 'At least one tail' excludes only {HH}. P = 3/4. Alternatively: 1 − P(no tail) = 1 − 1/4 = 3/4." },
+    { "q": "P(E) = 0.35. P(not E) =", "opts": ["0.35", "0.65", "1.35", "0"], "ans": 1, "exp": "P(E) + P(not E) = 1 → P(not E) = 1 − 0.35 = 0.65. This is the complementary event rule." },
+    { "q": "Two dice thrown. P(sum = 7) =", "opts": ["1/6", "7/36", "6/36", "5/36"], "ans": 0, "exp": "Pairs summing to 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6 pairs. P = 6/36 = 1/6. Sum 7 is the most likely sum with two dice." }
+  ],
+  "flipcards": [
+    { "front": "What is the probability of an impossible event?", "back": "0 — impossible event has no favourable outcomes" },
+    { "front": "What is the probability of a certain event?", "back": "1 — all outcomes are favourable" },
+    { "front": "How many outcomes when 2 dice are thrown?", "back": "6 × 6 = 36 equally likely outcomes" },
+    { "front": "P(not E) in terms of P(E)?", "back": "P(not E) = 1 − P(E) — complementary events always sum to 1" },
+    { "front": "How many face cards in a standard deck?", "back": "12 face cards — Jack, Queen, King in each of 4 suits" },
+    { "front": "Best approach for 'at least one' problems?", "back": "Use complement: P(at least one) = 1 − P(none)" }
+  ],
+  "archive": [
+    { "emoji": "🔭", "title": "Light — Reflection & Refraction", "meta": "Week 3 · Science · Class 10" },
+    { "emoji": "🧪", "title": "Haloalkanes & Haloarenes", "meta": "Week 2 · Chemistry · Class 12" },
+    { "emoji": "🔋", "title": "Electromagnetic Induction", "meta": "Week 1 · Physics · Class 12" },
+    { "emoji": "📏", "title": "Heights & Distances", "meta": "Week 52 · Mathematics · Class 10" }
+  ],
+  "upcoming": [
+    { "week": "W05", "title": "Reproduction in Organisms", "subject": "Biology Class 12" },
+    { "week": "W06", "title": "National Income", "subject": "Economics Class 12" },
+    { "week": "W07", "title": "Carbon & Its Compounds", "subject": "Science Class 10" },
+    { "week": "W08", "title": "Coordinate Geometry", "subject": "Mathematics Class 10" }
+  ]
+}

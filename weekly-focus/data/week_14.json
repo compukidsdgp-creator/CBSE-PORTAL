@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 14, "month": "Apr 2027", "subject": "Economics", "class": "Class 12", "chapter": "Chapter 3", "emoji": "🏦", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Money & Banking — How Banks Create Money from Nothing", "hook": "Here's something remarkable: banks can create money. Not print it — that's the Reserve Bank's job. But through the credit creation process, every ₹100 deposited can become ₹1000 in the economy. This multiplier effect is how modern economies function. And understanding it is key to understanding monetary policy, inflation, and your Class 12 Macro Economics boards." },
+  "hook_section": {
+    "scenario_icon": "💰",
+    "scenario": "You deposit ₹10,000 in Bank A. Bank A keeps 10% (₹1,000) as reserve and lends ₹9,000 to someone. That person deposits ₹9,000 in Bank B. Bank B keeps ₹900 and lends ₹8,100. This continues. The original ₹10,000 has now created ₹10,000 + ₹9,000 + ₹8,100 + ... = ₹1,00,000 in total deposits. The banking system has created ₹90,000 of new money!",
+    "bridge": "Chapter 3 Macro covers: functions of money, functions of a commercial bank, credit creation, the central bank (RBI) and its functions, instruments of monetary policy (CRR, SLR, Repo Rate, Reverse Repo Rate, Open Market Operations). These are examined with definitions AND numericals.",
+    "punchline": "Credit Multiplier = 1/LRR. If banks keep 10% (LRR=0.1), ₹1 deposit creates ₹10 of total deposits."
+  },
+  "concept_section": {
+    "analogy_icon": "🔄",
+    "analogy": "The banking system is like a photocopier for money, but with a catch. It can only copy a fraction of what you give it. Each copy becomes the original for the next copy, which makes a copy of that... and so on until the copies are too faint to matter. The Legal Reserve Ratio (LRR) is what limits each copy — the higher the LRR, the fewer copies, the smaller the multiplier.",
+    "principle": "Credit Creation: Total Deposits = Initial Deposit / LRR. Credit Multiplier = 1/LRR. LRR = CRR + SLR (Cash Reserve Ratio + Statutory Liquidity Ratio). RBI monetary policy instruments: CRR, SLR, Repo Rate, Reverse Repo Rate, Open Market Operations (OMO), Margin Requirements.",
+    "reveal_prompt": "Tap each concept to explore 👇",
+    "reveals": [
+      { "question": "🏦 Functions of commercial banks?", "answer": "Primary: (1) Accept deposits (current, savings, fixed, recurring); (2) Provide loans and advances. Secondary: (3) Agency functions — pay bills, collect cheques, remittances; (4) Utility functions — safe deposit locker, traveller's cheques, forex. Modern: credit creation (the multiplier process)." },
+      { "question": "🏛️ Functions of Central Bank (RBI)?", "answer": "1. Currency authority (note issue); 2. Banker to government; 3. Banker's bank + lender of last resort; 4. Controller of credit (monetary policy); 5. Exchange management (foreign exchange); 6. Clearing house function. RBI doesn't deal directly with the public — that's commercial banks' role." },
+      { "question": "📊 Monetary Policy Instruments?", "answer": "CRR (Cash Reserve Ratio): % of deposits kept with RBI (non-interest-bearing). SLR (Statutory Liquidity Ratio): % of deposits in liquid assets (gold, government securities). Repo Rate: rate at which commercial banks borrow from RBI. Reverse Repo Rate: rate at which banks deposit excess money with RBI. High CRR/SLR/Repo → less money, reduces inflation." },
+      { "question": "💱 Credit Creation process?", "answer": "LRR = Legal Reserve Ratio (minimum fraction banks must keep). Initial deposit = D₀. Total deposits created = D₀/LRR. Credit multiplier = 1/LRR. Example: D₀=₹1000, LRR=0.2 → Total deposits = 1000/0.2 = ₹5000. New credit created = ₹5000 − ₹1000 = ₹4000." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Credit Multiplier</b>: 1/LRR; total deposits = initial deposit / LRR",
+      "<b>CRR</b>: cash kept with RBI; <b>SLR</b>: liquid assets kept by banks themselves",
+      "<b>Repo Rate</b>: RBI lends to banks; <b>Reverse Repo Rate</b>: banks lend to RBI",
+      "<b>High Repo Rate</b>: loans costly → less borrowing → less money supply → controls inflation",
+      "<b>Open Market Operations</b>: RBI buys/sells government securities to control money supply"
+    ],
+    "exam_questions": [
+      { "marks": "4M", "question": "Commercial banks create credit. With an initial deposit of ₹5,000 and LRR of 20%, calculate the total credit that can be created. Show each stage of the process." },
+      { "marks": "3M", "question": "What is the Repo Rate? How does the RBI use it to control inflation?" },
+      { "marks": "1M", "question": "What is Cash Reserve Ratio (CRR)?" }
+    ]
+  },
+  "quiz": [
+    { "q": "If initial deposit = ₹2000 and LRR = 25%, total deposits created =", "opts": ["₹8000", "₹500", "₹2500", "₹10000"], "ans": 0, "exp": "Total deposits = Initial Deposit / LRR = 2000 / 0.25 = ₹8000. Credit multiplier = 1/0.25 = 4. New credit = ₹8000 − ₹2000 = ₹6000." },
+    { "q": "RBI increases the Repo Rate. This will:", "opts": ["Increase money supply", "Decrease money supply", "Have no effect", "Increase employment"], "ans": 1, "exp": "Higher Repo Rate → commercial banks pay more to borrow from RBI → they charge higher interest on loans → people borrow less → money supply decreases → inflation controlled." },
+    { "q": "SLR stands for:", "opts": ["Standard Liquidity Rate", "Statutory Liquidity Ratio", "Special Lending Rate", "Secondary Loan Reserve"], "ans": 1, "exp": "SLR = Statutory Liquidity Ratio — the minimum % of deposits that commercial banks must maintain in liquid assets (cash, gold, approved securities) with themselves (not with RBI, unlike CRR)." },
+    { "q": "The Central Bank is called the 'banker's bank' because:", "opts": ["It has the largest deposits", "It provides loans to commercial banks", "It is the oldest bank", "It controls all insurance"], "ans": 1, "exp": "RBI is the banker's bank because commercial banks can borrow from RBI (at Repo Rate) when they need funds — just as individuals borrow from commercial banks. RBI is the lender of last resort." }
+  ],
+  "flipcards": [
+    { "front": "Credit multiplier formula?", "back": "Credit Multiplier = 1/LRR; Total Deposits = Initial Deposit / LRR" },
+    { "front": "What is Repo Rate?", "back": "Rate at which RBI lends money to commercial banks. Higher repo rate → more expensive to borrow → money supply decreases" },
+    { "front": "CRR vs SLR?", "back": "CRR: cash deposited with RBI (earns no interest). SLR: liquid assets (cash+gold+securities) kept by bank itself. Both reduce banks' lending capacity." },
+    { "front": "What is Reverse Repo Rate?", "back": "Rate at which commercial banks deposit excess money with RBI. Higher rate → banks prefer to park money with RBI → less available for loans" },
+    { "front": "What is Open Market Operation?", "back": "RBI buys/sells government securities in open market. Buy securities → money flows to banks → money supply increases. Sell securities → reverse." },
+    { "front": "What is LRR?", "back": "Legal Reserve Ratio = minimum fraction of deposits banks must keep as reserve. LRR = CRR + SLR" }
+  ],
+  "archive": [
+    { "emoji": "📐", "title": "Triangles & Similarity", "meta": "Week 13 · Mathematics · Class 10" },
+    { "emoji": "🧫", "title": "Chemical Reactions & Equations", "meta": "Week 12 · Science · Class 10" },
+    { "emoji": "🔌", "title": "Current Electricity", "meta": "Week 11 · Physics · Class 12" },
+    { "emoji": "👶", "title": "Human Reproduction", "meta": "Week 10 · Biology · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W15", "title": "Genetics & Inheritance", "subject": "Biology Class 12" },
+    { "week": "W16", "title": "Electrostatics", "subject": "Physics Class 12" },
+    { "week": "W17", "title": "Databases & SQL", "subject": "CS Class 12" },
+    { "week": "W18", "title": "Acids, Bases & Salts", "subject": "Science Class 10" }
+  ]
+}
