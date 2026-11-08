@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all'
+        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all | Promo: promo_quest, promo_mock, promo_lab, promo_notes'
         required: false
         default: 'morning'
       platform:
@@ -41,7 +41,7 @@ jobs:
       - name: Determine post mode from schedule
         id: mode
         run: |
-          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all"
+          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all promo_quest promo_mock promo_lab promo_notes"
           INPUT_MODE="${{ github.event.inputs.mode }}"
           HOUR_UTC="$(date -u +%H)"
 
@@ -116,7 +116,7 @@ jobs:
             echo "[SKIP] Festival check skipped for mode=$MODE"
           fi
 
-      - name: Post to Telegram (morning / lab / evening)
+      - name: Post to Telegram (morning / lab / evening / promo)
         if: >
           steps.mode.outputs.mode != 'afternoon' &&
           steps.mode.outputs.mode != 'festival' &&
