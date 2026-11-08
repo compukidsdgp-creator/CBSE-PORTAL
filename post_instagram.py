@@ -5,8 +5,15 @@ post_instagram.py — CBSE Mock Instagram Auto-Poster
 Posts daily content to the @cbsemock Instagram Business account
 via the Instagram Graph API (image + caption).
 
-Instagram requires an image URL for every post.
-We use subject-themed background images hosted on a CDN.
+Instagram requires a publicly accessible image URL for every post.
+We serve branded images from the social-images/ folder in this repo
+via GitHub raw URLs (12 design variants per post type, rotated daily).
+
+Image types available (12 variants each):
+  study_notes, practice_papers, virtual_lab, quest_zone,
+  weekly_challenge, exam_tip, python_tip, ai_concept,
+  answer_key, portal_overview
+  plus: branded_poster_01, branded_poster_02
 
 Environment variables (GitHub Secrets):
   INSTAGRAM_ACCOUNT_ID  — IG Business Account ID (17841480792360992)
@@ -39,37 +46,40 @@ PORTAL_URL   = "https://cbsemock.org.in"
 IG_ACCOUNT_ID  = os.environ.get("INSTAGRAM_ACCOUNT_ID", "17841480792360992")
 IG_ACCESS_TOKEN = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
 
-# ── Subject-themed background images (publicly accessible URLs) ───────────────
-# Using Unsplash source for high-quality royalty-free images
-SUBJECT_IMAGES = {
-    "physics":     "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=1080&q=80",
-    "chemistry":   "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1080&q=80",
-    "mathematics": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=1080&q=80",
-    "biology":     "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?w=1080&q=80",
-    "science":     "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=1080&q=80",
-    "computer":    "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1080&q=80",
-    "english":     "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1080&q=80",
-    "hindi":       "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1080&q=80",
-    "social":      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1080&q=80",
-    "economics":   "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1080&q=80",
-    "default":     "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1080&q=80",
-    # Special post images
-    "quest":       "https://images.unsplash.com/photo-1546521343-4eb2c01aa44b?w=1080&q=80",
-    "lab":         "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1080&q=80",
-    "news":        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1080&q=80",
-    "notes":       "https://images.unsplash.com/photo-1517842645767-c639042777db?w=1080&q=80",
-    "mock":        "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1080&q=80",
-}
+# ── Branded image variants (GitHub raw URLs) ──────────────────────────────────
+# 12 design variants per post type, served from social-images/ in this repo.
+# Rotation: pick variant by (day_of_year % 12) so each day a fresh design.
+_GITHUB_RAW = "https://raw.githubusercontent.com/compukidsdgp-creator/CBSE-PORTAL/main/social-images"
 
-def get_image_url(title: str, post_type: str = "") -> str:
-    """Pick the best image URL for a given post."""
-    if post_type in SUBJECT_IMAGES:
-        return SUBJECT_IMAGES[post_type]
-    t = title.lower()
-    for key in SUBJECT_IMAGES:
-        if key in t:
-            return SUBJECT_IMAGES[key]
-    return SUBJECT_IMAGES["default"]
+IMAGE_TYPES = [
+    "study_notes", "practice_papers", "virtual_lab", "quest_zone",
+    "weekly_challenge", "exam_tip", "python_tip", "ai_concept",
+    "answer_key", "portal_overview",
+]
+
+# Build URLs dict: type -> [v01..v12]
+BRANDED_IMAGES: dict[str, list[str]] = {
+    t: [f"{_GITHUB_RAW}/{t}_v{i:02d}.jpg" for i in range(1, 13)]
+    for t in IMAGE_TYPES
+}
+# Single-variant extras
+BRANDED_IMAGES["branded_poster_01"] = [f"{_GITHUB_RAW}/branded_poster_01.jpg"]
+BRANDED_IMAGES["branded_poster_02"] = [f"{_GITHUB_RAW}/branded_poster_02.jpg"]
+
+def _day_variant(n: int = 12) -> int:
+    """Return today's 0-based variant index (wraps over n variants)."""
+    return date.today().timetuple().tm_yday % n
+
+def get_image_url(title: str = "", post_type: str = "study_notes") -> str:
+    """
+    Return a branded image URL.
+    post_type must be one of IMAGE_TYPES (or branded_poster_01/02).
+    Falls back to study_notes if type is unknown.
+    Rotates through 12 variants based on day-of-year.
+    """
+    variants = BRANDED_IMAGES.get(post_type) or BRANDED_IMAGES["study_notes"]
+    idx = _day_variant(len(variants))
+    return variants[idx]
 
 
 # ── Instagram API helpers ─────────────────────────────────────────────────────
@@ -167,7 +177,7 @@ def post_notes(tracker, dry_run=False):
         f"📌 Bookmark cbsemock.org.in for all subjects!\n\n"
         f"#CBSE #StudyNotes #{cls_str.replace(' ','')} #BoardExams2027 #CBSEMock"
     )
-    result = ig_post(caption, get_image_url(item["title"]), dry_run)
+    result = ig_post(caption, get_image_url(post_type="study_notes"), dry_run)
     if not dry_run and result.get("id"):
         tracker.mark_posted("notes", item, "instagram")
         tracker.save()
@@ -192,7 +202,7 @@ def post_practice(tracker, content_type, dry_run=False):
         f"💡 Attempt under exam conditions for best results!\n\n"
         f"#CBSE #Class{cls} #MockTest #PracticePaper #BoardExams2027 #CBSEMock"
     )
-    result = ig_post(caption, get_image_url(item["title"], "mock"), dry_run)
+    result = ig_post(caption, get_image_url(post_type="practice_papers"), dry_run)
     if not dry_run and result.get("id"):
         tracker.mark_posted(content_type, item, "instagram")
         tracker.save()
@@ -218,7 +228,7 @@ def post_lab(tracker, dry_run=False):
         f"🔗 {item['url']}\n\n"
         f"#VirtualLab #CBSE #{subject.replace(' ','')} #HandsOn #BoardExams2027 #CBSEMock"
     )
-    result = ig_post(caption, get_image_url(subject, "lab"), dry_run)
+    result = ig_post(caption, get_image_url(post_type="virtual_lab"), dry_run)
     if not dry_run and result.get("id"):
         tracker.mark_posted("lab", item, "instagram")
         tracker.save()
@@ -241,7 +251,7 @@ def post_promo_quest(dry_run=False):
         f"🔗 {PORTAL_URL}/quest/\n\n"
         "#Quest #CBSE #MCQ #BoardExams2027 #Class10 #Class12 #CBSEMock"
     )
-    ig_post(caption, SUBJECT_IMAGES["quest"], dry_run)
+    ig_post(caption, get_image_url(post_type="quest_zone"), dry_run)
     print("[OK] IG Promo Quest")
 
 
@@ -260,7 +270,7 @@ def post_promo_mock(dry_run=False):
         f"🔗 {PORTAL_URL}\n\n"
         "#MockTest #CBSE #Class10 #Class12 #PracticePaper #BoardExams2027 #CBSEMock"
     )
-    ig_post(caption, SUBJECT_IMAGES["mock"], dry_run)
+    ig_post(caption, get_image_url(post_type="practice_papers"), dry_run)
     print("[OK] IG Promo Mock")
 
 
@@ -280,7 +290,7 @@ def post_promo_lab(dry_run=False):
         f"🔗 {PORTAL_URL}/virtual-labs/\n\n"
         "#VirtualLab #CBSE #Science #Physics #Chemistry #Biology #BoardExams2027 #CBSEMock"
     )
-    ig_post(caption, SUBJECT_IMAGES["lab"], dry_run)
+    ig_post(caption, get_image_url(post_type="virtual_lab"), dry_run)
     print("[OK] IG Promo Lab")
 
 
@@ -300,7 +310,7 @@ def post_promo_notes(dry_run=False):
         f"🔗 {PORTAL_URL}\n\n"
         "#StudyNotes #CBSE #Revision #BoardExams2027 #Class12 #Class10 #CBSEMock"
     )
-    ig_post(caption, SUBJECT_IMAGES["notes"], dry_run)
+    ig_post(caption, get_image_url(post_type="study_notes"), dry_run)
     print("[OK] IG Promo Notes")
 
 
