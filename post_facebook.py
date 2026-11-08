@@ -38,8 +38,25 @@ CATALOGUE_PATH = REPO_ROOT / "quest" / "data" / "catalogue-entry.json"
 FB_API_VERSION = "v27.0"
 FB_API_BASE    = f"https://graph.facebook.com/{FB_API_VERSION}"
 
-PAGE_ID    = os.environ.get("FB_PAGE_ID", "61596243964780")
-PAGE_TOKEN = os.environ.get("FB_PAGE_ACCESS_TOKEN", "")
+PAGE_ID    = os.environ.get("FB_PAGE_ID", "1472735085918141")
+_RAW_TOKEN = os.environ.get("FB_PAGE_ACCESS_TOKEN", "")
+
+def _resolve_page_token(raw_token: str, page_id: str) -> str:
+    """If raw_token is a system user / user token, exchange it for a page token."""
+    if not raw_token:
+        return raw_token
+    try:
+        url = f"{FB_API_BASE}/{page_id}?fields=access_token&access_token={raw_token}"
+        with urllib.request.urlopen(url, timeout=10) as r:
+            data = json.loads(r.read())
+            if "access_token" in data:
+                print("[INFO] Resolved page token from system user token.")
+                return data["access_token"]
+    except Exception as e:
+        print(f"[WARN] Could not resolve page token: {e} — using token as-is.")
+    return raw_token
+
+PAGE_TOKEN = _resolve_page_token(_RAW_TOKEN, PAGE_ID)
 
 NEWS_QUERIES = [
     "CBSE board exam 2027",
