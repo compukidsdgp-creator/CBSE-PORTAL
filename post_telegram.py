@@ -388,7 +388,7 @@ def get_chat_id():
 def main():
     parser = argparse.ArgumentParser(description="CBSE Mock Telegram auto-poster")
     parser.add_argument("--mode", default="morning",
-        choices=["quest","news","notes","practice_10","practice_12","lab","weekly_focus","morning","evening","all"])
+        choices=["quest","news","notes","practice_10","practice_12","lab","weekly_focus","morning","lab_slot","evening","all"])
     parser.add_argument("--dry-run",     action="store_true")
     parser.add_argument("--get-chat-id", action="store_true")
     args = parser.parse_args()
@@ -404,7 +404,8 @@ def main():
     print(f"Telegram Poster — mode={args.mode} dry_run={args.dry_run}")
 
     modes = {
-        "morning": ["quest", "notes", "practice_10", "practice_12", "lab", "weekly_focus"],
+        "morning": ["quest", "notes", "practice_10", "practice_12", "weekly_focus"],
+        "lab_slot": ["lab"],
         "evening": ["news"],
         "all":     ["quest", "news", "notes", "practice_10", "practice_12", "lab", "weekly_focus"],
     }
