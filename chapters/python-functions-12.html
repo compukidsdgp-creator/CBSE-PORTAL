@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Python Functions & Modules MCQ — Class 12 Computer Science CBSE | cbsemock.org.in</title>
+<meta name="description" content="Practice Python Functions & Modules MCQ for Class 12 Computer Science CBSE. 12 questions with answers and explanations.">
+<meta name="keywords" content="class 12 computer science python functions & modules MCQ, CBSE python functions & modules questions">
+<link rel="canonical" href="https://cbsemock.org.in/chapters/python-functions-12.html">
+<meta property="og:title" content="Python Functions & Modules MCQ — Class 12 Computer Science">
+<meta property="og:description" content="Practice Python Functions & Modules MCQ for Class 12 Computer Science CBSE. 12 questions with answers and explanations.">
+<meta property="og:url" content="https://cbsemock.org.in/chapters/python-functions-12.html">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://cbsemock.org.in/"},
+      {"@type":"ListItem","position":2,"name":"Class 12","item":"https://cbsemock.org.in/index.html"},
+      {"@type":"ListItem","position":3,"name":"Computer Science","item":"https://cbsemock.org.in/CBSE%20Class%20XII%20CS%20Mock%20Papers.html"},
+      {"@type":"ListItem","position":4,"name":"Python Functions & Modules","item":"https://cbsemock.org.in/chapters/python-functions-12.html"}
+    ]},
+    {"@type":"EducationalMaterial",
+      "name":"Python Functions & Modules MCQ — Class 12 Computer Science CBSE",
+      "description":"Practice Python Functions & Modules MCQ for Class 12 Computer Science CBSE. 12 questions with answers and explanations.",
+      "url":"https://cbsemock.org.in/chapters/python-functions-12.html",
+      "educationalLevel":"Grade 12",
+      "about":{"@type":"Thing","name":"Python Functions & Modules"},
+      "publisher":{"@type":"Organization","name":"CBSE Mock","url":"https://cbsemock.org.in"}
+    }
+  ]
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#0f2347;--navy2:#1a3a6b;--gold:#ffd54f;--white:#fff;--bg:#f5f7fa;--card:#fff;--text:#1a1a1a;--muted:#666;--correct:#2e7d32;--wrong:#c62828;--border:#dde3ed;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font:15px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);}
+.breadcrumb{background:var(--navy);padding:7px max(16px,env(safe-area-inset-left,0px));font-size:.75rem;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
+.breadcrumb a{color:rgba(255,255,255,.8);text-decoration:none;}
+.breadcrumb a:hover{color:var(--gold);}
+header{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:var(--white);padding:20px max(20px,env(safe-area-inset-left,0px)) 24px;}
+.header-top{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
+.back-btn{color:rgba(255,255,255,.75);text-decoration:none;font-size:.82rem;padding:5px 10px;border:1px solid rgba(255,255,255,.3);border-radius:5px;white-space:nowrap;}
+.back-btn:hover{background:rgba(255,255,255,.1);color:#fff;}
+.chapter-badge{background:var(--gold);color:var(--navy);font-size:.7rem;font-weight:800;padding:3px 10px;border-radius:12px;white-space:nowrap;}
+h1{font-size:clamp(1.3rem,4vw,1.9rem);font-weight:800;line-height:1.2;}
+.subtitle{font-size:.85rem;color:rgba(255,255,255,.75);margin-top:5px;}
+.sibling-nav{background:rgba(0,0,0,.2);padding:10px max(20px,env(safe-area-inset-left,0px));display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:.8rem;}
+.sibling-nav span.label{color:rgba(255,255,255,.55);white-space:nowrap;}
+main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-left,0px)) 60px;}
+.info-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:22px;display:flex;align-items:center;gap:14px;}
+.info-box .stat{text-align:center;padding:0 14px;border-right:1px solid var(--border);}
+.info-box .stat:last-child{border-right:none;}
+.info-box .stat strong{display:block;font-size:1.3rem;color:var(--navy2);}
+.info-box .stat span{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+.quiz-wrap{display:flex;flex-direction:column;gap:14px;}
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.q-head{background:var(--navy);color:#fff;padding:12px 16px;font-size:.8rem;font-weight:700;display:flex;align-items:center;gap:8px;}
+.q-num{background:var(--gold);color:var(--navy);padding:2px 8px;border-radius:10px;font-size:.7rem;}
+.q-body{padding:16px;}
+.q-text{font-size:.95rem;font-weight:600;margin-bottom:12px;line-height:1.5;}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+@media(max-width:520px){.opts{grid-template-columns:1fr;}}
+.opt{cursor:pointer;padding:9px 12px;border:1.5px solid var(--border);border-radius:7px;font-size:.85rem;display:flex;align-items:center;gap:8px;transition:border-color .15s,background .15s;}
+.opt:hover{border-color:var(--navy2);background:#f0f4ff;}
+.opt.correct{border-color:var(--correct);background:#e8f5e9;}
+.opt.wrong{border-color:var(--wrong);background:#ffebee;}
+.opt-label{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--border);font-size:.7rem;font-weight:800;flex-shrink:0;}
+.explanation{display:none;margin-top:12px;padding:12px;background:#f0f4ff;border-left:3px solid var(--navy2);border-radius:0 6px 6px 0;font-size:.83rem;line-height:1.6;}
+.explanation.show{display:block;}
+#score-bar{display:none;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-top:20px;text-align:center;}
+#score-bar h3{font-size:1.1rem;color:var(--navy2);margin-bottom:6px;}
+#score-bar .score-num{font-size:2rem;font-weight:800;color:var(--navy);}
+.btn-submit{display:block;width:100%;margin-top:20px;padding:13px;background:var(--navy);color:#fff;border:none;border-radius:8px;font:700 1rem inherit;cursor:pointer;}
+.btn-submit:hover{background:var(--navy2);}
+.also-study{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-top:24px;}
+.also-study h2{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:10px;}
+.also-study .links{display:flex;flex-wrap:wrap;gap:8px;}
+.also-study .links a{padding:6px 14px;background:#e8edf7;color:var(--navy2);border-radius:16px;text-decoration:none;font-size:.8rem;font-weight:600;border:1px solid var(--border);}
+.also-study .links a:hover{background:var(--navy);color:#fff;}
+footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
+footer a{color:inherit;text-decoration:none;margin:0 6px;}
+footer a:hover{color:var(--gold);}
+</style>
+</head>
+<body>
+<nav class="breadcrumb" aria-label="breadcrumb">
+  <a href="../index.html">🏠 Home</a>
+  <span aria-hidden="true" style="opacity:.5;">›</span>
+  <a href="../index.html#class12">Class 12</a>
+  <span aria-hidden="true" style="opacity:.5;">›</span>
+  <a href="../CBSE%20Class%20XII%20CS%20Mock%20Papers.html">Computer Science</a>
+  <span aria-hidden="true" style="opacity:.5;">›</span>
+  <span aria-current="page" style="color:#fff;font-weight:600;">Python Functions & Modules</span>
+</nav>
+<header>
+  <div class="header-top">
+    <a href="../CBSE%20Class%20XII%20CS%20Mock%20Papers.html" class="back-btn">← Back to Computer Science</a>
+    <span class="chapter-badge">Class 12 · Computer Science</span>
+  </div>
+  <h1>Python Functions & Modules</h1>
+  <p class="subtitle">MCQ Practice · CBSE Board Pattern · Instant Answers & Explanations</p>
+  <nav class="sibling-nav" aria-label="Other chapters">
+    <span class="label">Other chapters:</span>
+    <span style="font-weight:700;color:#ffd54f;">Python Functions & Modules</span>
+<a href="oop-python-12.html" style="color:rgba(255,255,255,.85);text-decoration:none;padding:3px 8px;border-radius:4px;background:rgba(255,255,255,.1);">OOP with Python</a>
+<a href="data-structures-12.html" style="color:rgba(255,255,255,.85);text-decoration:none;padding:3px 8px;border-radius:4px;background:rgba(255,255,255,.1);">Data Structures (Stack & Queue)</a>
+<a href="database-sql-12.html" style="color:rgba(255,255,255,.85);text-decoration:none;padding:3px 8px;border-radius:4px;background:rgba(255,255,255,.1);">Database & SQL</a>
+<a href="networking-12.html" style="color:rgba(255,255,255,.85);text-decoration:none;padding:3px 8px;border-radius:4px;background:rgba(255,255,255,.1);">Networking & Cyber Safety</a>
+  </nav>
+</header>
+<main>
+  <div class="info-box">
+    <div class="stat"><strong>12</strong><span>Questions</span></div>
+    <div class="stat"><strong>MCQ</strong><span>Format</span></div>
+    <div class="stat"><strong>CBSE</strong><span>Pattern</span></div>
+    <div class="stat"><strong>Instant</strong><span>Feedback</span></div>
+  </div>
+  <div class="quiz-wrap" id="quiz"></div>
+  <button class="btn-submit" id="submit-btn" onclick="submitQuiz()">Submit & See Score</button>
+  <div id="score-bar">
+    <h3>Your Score</h3>
+    <div class="score-num" id="score-display"></div>
+    <p style="font-size:.85rem;color:var(--muted);margin-top:6px;">Review the explanations above to strengthen your concepts!</p>
+  </div>
+  <div class="also-study">
+    <h2>Also Study</h2>
+    <div class="links"><a href="oop-python-12.html">OOP with Python</a>
+      <a href="data-structures-12.html">Data Structures (Stack & Queue)</a>
+      <a href="database-sql-12.html">Database & SQL</a>
+      <a href="networking-12.html">Networking & Cyber Safety</a>
+      </div>
+  </div>
+</main>
+<footer>
+  &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
+  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../terms.html">Terms of Use</a> |
+  <a href="../contact.html">Contact</a> |
+  <a href="../disclaimer.html">Disclaimer</a>
+</footer>
+<script>
+const QUESTIONS = [
+  {q:"Which keyword is used to define a function in Python?",opts:["fun", "define", "def", "function"],ans:"C",exp:"Python uses 'def' keyword to define a function: def function_name(parameters):"},
+  {q:"What is the output of: def f(x, y=10): return x+y  \u2192  print(f(5))",opts:["Error", "5", "15", "10"],ans:"C",exp:"y has default value 10. f(5) \u2192 x=5, y=10 \u2192 returns 5+10=15."},
+  {q:"A function that calls itself is called:",opts:["Lambda function", "Recursive function", "Generator", "Decorator"],ans:"B",exp:"Recursion: a function that calls itself with a simpler sub-problem until a base case is reached."},
+  {q:"What does *args in a function definition allow?",opts:["No arguments", "Keyword arguments only", "Variable number of positional arguments", "Exactly 2 arguments"],ans:"C",exp:"*args collects any number of positional arguments into a tuple inside the function."},
+  {q:"The scope of a variable defined inside a function is:",opts:["Global", "Local", "Built-in", "Enclosing"],ans:"B",exp:"Variables defined inside a function have local scope \u2014 they exist only within that function."},
+  {q:"lambda x: x**2 is equivalent to:",opts:["def f(): return x**2", "def f(x): return x**2", "def f(x): x**2", "lambda: x**2"],ans:"B",exp:"Lambda is an anonymous single-expression function. lambda x: x**2 equals def f(x): return x**2."},
+  {q:"Which built-in function returns the number of items in a list?",opts:["size()", "count()", "len()", "num()"],ans:"C",exp:"len(list) returns the number of elements. It works on lists, tuples, strings, dicts, etc."},
+  {q:"What is the output of: print(type(lambda x: x))",opts:["<class 'function'>", "<class 'lambda'>", "<class 'method'>", "Error"],ans:"A",exp:"Lambda functions are of type 'function' in Python, same as regular def functions."},
+  {q:"The 'return' statement in a function:",opts:["Prints a value", "Ends the program", "Sends a value back to the caller", "Loops back to start"],ans:"C",exp:"return exits the function and optionally sends a value back to where the function was called."},
+  {q:"To import only the sqrt function from math module:",opts:["import math.sqrt", "from math import sqrt", "include math.sqrt", "use math(sqrt)"],ans:"B",exp:"from math import sqrt imports only sqrt, so you can use it directly without math.sqrt prefix."},
+  {q:"What is a module in Python?",opts:["A loop structure", "A file containing Python definitions and statements", "A data type", "A class method"],ans:"B",exp:"A module is a .py file containing Python code (functions, classes, variables) that can be imported and reused."},
+  {q:"Global variable inside a function can be modified using:",opts:["local keyword", "global keyword", "extern keyword", "public keyword"],ans:"B",exp:"global x inside a function allows modification of the global variable x. Without it, assignment creates a new local variable."}
+];
+function buildQuiz() {
+  const wrap = document.getElementById('quiz');
+  const labels = ['A','B','C','D'];
+  QUESTIONS.forEach((q,i) => {
+    let optHtml = '';
+    q.opts.forEach((o,j) => {
+      optHtml += `<div class="opt" id="opt-${i}-${j}" onclick="pick(${i},${j})"><span class="opt-label">${labels[j]}</span> ${o}</div>`;
+    });
+    wrap.innerHTML += `<div class="q-card"><div class="q-head"><span class="q-num">Q${i+1}</span> Python Functions & Modules</div><div class="q-body"><p class="q-text">${q.q}</p><div class="opts">${optHtml}</div><div class="explanation" id="exp-${i}">📖 ${q.exp}</div></div></div>`;
+  });
+}
+const answered = {};
+function pick(qi,oi) {
+  if(answered[qi]!==undefined) return;
+  answered[qi]=oi;
+  const labels=['A','B','C','D'];
+  const ci=labels.indexOf(QUESTIONS[qi].ans);
+  for(let j=0;j<4;j++){
+    const el=document.getElementById(`opt-${qi}-${j}`);
+    if(!el) continue;
+    if(j===ci) el.classList.add('correct');
+    else if(j===oi&&j!==ci) el.classList.add('wrong');
+  }
+  document.getElementById(`exp-${qi}`).classList.add('show');
+}
+function submitQuiz() {
+  const labels=['A','B','C','D'];
+  let correct=0;
+  QUESTIONS.forEach((q,i)=>{
+    const ci=labels.indexOf(q.ans);
+    if(answered[i]===ci) correct++;
+    if(answered[i]===undefined){document.getElementById(`opt-${i}-${ci}`).classList.add('correct');document.getElementById(`exp-${i}`).classList.add('show');}
+  });
+  document.getElementById('score-display').textContent=correct+' / '+QUESTIONS.length;
+  const bar=document.getElementById('score-bar');
+  bar.style.display='block';
+  bar.scrollIntoView({behavior:'smooth',block:'nearest'});
+  document.getElementById('submit-btn').disabled=true;
+}
+buildQuiz();
+</script>
+</body>
+</html>
