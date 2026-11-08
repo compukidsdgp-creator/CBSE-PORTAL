@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 10, "month": "Mar 2027", "subject": "Biology", "class": "Class 12", "chapter": "Chapter 3", "emoji": "👶", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Human Reproduction — The Complete Journey", "hook": "Every human alive is the result of one sperm out of hundreds of millions reaching one egg, fertilising it, and that single cell dividing billions of times to become a person. Human reproduction is one of the most detailed, precisely orchestrated biological processes — and one of the most consistently tested topics in Class 12 Biology." },
+  "hook_section": {
+    "scenario_icon": "🔬",
+    "scenario": "The human reproductive process is surprisingly complex: male produces millions of sperm daily via spermatogenesis; female produces one egg per month via oogenesis; the egg is released at ovulation and must be fertilised within 12–24 hours; the sperm must travel from vagina through uterus to fallopian tube within 72 hours; fertilisation occurs in the fallopian tube; implantation takes 6–10 days. Miss any step, and reproduction fails.",
+    "bridge": "Chapter 3 covers the male and female reproductive systems, gametogenesis (spermatogenesis + oogenesis), fertilisation, implantation, placenta, embryonic development, and parturition. Many students confuse spermatogenesis with oogenesis — this week's focus makes it clear.",
+    "punchline": "Spermatogenesis (continuous in males, from puberty). Oogenesis (starts before birth, resumes at puberty, completes only if fertilised). These parallel processes are the most exam-intensive part."
+  },
+  "concept_section": {
+    "analogy_icon": "🏭",
+    "analogy": "Think of spermatogenesis like a factory running 24/7 — continuously producing millions of units (sperm) per day. Oogenesis is like a unique artisan workshop — it starts making a product before the workshop even opens (before birth), pauses production for years, resumes slowly releasing one item per month (ovulation), and only finishes the product if a buyer shows up (fertilisation). Different timelines, different outputs, same purpose.",
+    "principle": "Spermatogenesis: spermatogonia (2n) → primary spermatocyte (2n) → [meiosis I] secondary spermatocytes (n) → [meiosis II] spermatids (n) → spermatozoa. Oogenesis: oogonia (2n) → primary oocyte (2n, arrested in prophase I from foetal life) → [at puberty, meiosis I completes] secondary oocyte (n) + first polar body → [after fertilisation, meiosis II completes] ovum (n) + second polar body.",
+    "reveal_prompt": "Tap each section to explore reproductive biology 👇",
+    "reveals": [
+      { "question": "♂️ Male reproductive system?", "answer": "Testes (in scrotal sac, 2–2.5°C below body temperature for spermatogenesis) → seminiferous tubules (sperm production) → epididymis (maturation and storage) → vas deferens → seminal vesicle + prostate + bulbourethral gland (accessory glands) → urethra. Testosterone produced by Leydig cells." },
+      { "question": "♀️ Female reproductive system?", "answer": "Ovaries (ovum production + oestrogen/progesterone) → fallopian tubes (site of fertilisation) → uterus (implantation, foetal development) → cervix → vagina. Graafian follicle in ovary contains the secondary oocyte. Ovulation = Graafian follicle ruptures, releasing secondary oocyte." },
+      { "question": "🌱 Fertilisation to implantation?", "answer": "Fertilisation: sperm meets secondary oocyte in fallopian tube → triggers meiosis II completion → ovum forms → sperm nucleus + ovum nucleus fuse → zygote (2n). Cleavage: zygote divides → 2 cells → 4 → 8 → morula (16-cell solid ball) → blastocyst (hollow). Implantation: blastocyst embeds in uterine wall (endometrium) 6–10 days after fertilisation." },
+      { "question": "🤱 Placenta and parturition?", "answer": "Placenta: exchange of nutrients, O₂, CO₂ between mother and foetus; produces hCG (detected in pregnancy tests), oestrogen, progesterone. Parturition (childbirth): triggered by oxytocin from posterior pituitary; stimulates uterine contractions; positive feedback loop. Normal gestation period = 9 months (38 weeks)." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Spermatogenesis</b>: continuous in males; spermatogonia → (meiosis) → 4 spermatids → 4 spermatozoa",
+      "<b>Oogenesis</b>: 1 oocyte → 1 ovum + 3 polar bodies; primary oocyte arrested in prophase I from foetal life",
+      "<b>Fertilisation</b>: occurs in fallopian tube; secondary oocyte completes meiosis II only after sperm entry",
+      "<b>Implantation</b>: blastocyst embeds in endometrium; triggers placenta formation",
+      "<b>Placenta</b>: secretes hCG, maintains pregnancy; exchange organ between mother and foetus"
+    ],
+    "exam_questions": [
+      { "marks": "5M", "question": "Draw a labelled diagram of the male reproductive system. Explain the process of spermatogenesis with a diagram." },
+      { "marks": "3M", "question": "Describe the events from fertilisation to implantation in humans." },
+      { "marks": "2M", "question": "What is the difference between spermatogenesis and oogenesis in terms of number of gametes produced?" }
+    ]
+  },
+  "quiz": [
+    { "q": "Fertilisation in humans occurs in the:", "opts": ["Uterus", "Ovary", "Fallopian tube", "Cervix"], "ans": 2, "exp": "Fertilisation takes place in the fallopian tube (oviduct), specifically in the ampullary-isthmic junction. The fertilised egg (zygote) then travels to the uterus for implantation." },
+    { "q": "How many spermatozoa are produced from one primary spermatocyte?", "opts": ["1", "2", "4", "8"], "ans": 2, "exp": "One primary spermatocyte (2n) → meiosis I → 2 secondary spermatocytes (n) → meiosis II → 4 spermatids → 4 spermatozoa. All 4 are functional." },
+    { "q": "The site of testosterone production in the testis is:", "opts": ["Seminiferous tubules", "Leydig cells", "Sertoli cells", "Epididymis"], "ans": 1, "exp": "Testosterone is produced by interstitial cells of Leydig (Leydig cells) located between the seminiferous tubules. Sertoli cells provide nourishment to developing sperms." },
+    { "q": "Human Chorionic Gonadotropin (hCG) is secreted by:", "opts": ["Anterior pituitary", "Corpus luteum", "Placenta", "Ovary"], "ans": 2, "exp": "hCG is secreted by the placenta (trophoblast cells). It maintains the corpus luteum during early pregnancy to keep producing progesterone. hCG in urine is detected by pregnancy tests." }
+  ],
+  "flipcards": [
+    { "front": "Site of fertilisation in humans?", "back": "Fallopian tube (oviduct) — specifically the ampullary region" },
+    { "front": "What is the ploidy of a secondary oocyte?", "back": "Haploid (n) — it has completed meiosis I but meiosis II completes only after fertilisation" },
+    { "front": "What hormone does the placenta produce?", "back": "hCG (human Chorionic Gonadotropin), oestrogen, progesterone, human Placental Lactogen (hPL)" },
+    { "front": "Normal gestation period in humans?", "back": "About 9 months (38 weeks / 266 days from fertilisation; 280 days from last menstrual period)" },
+    { "front": "What is colostrum?", "back": "First milk secreted by mammary glands after childbirth — rich in antibodies (IgA), proteins and nutrients. Essential for newborn immunity." },
+    { "front": "What triggers parturition (childbirth)?", "back": "Oxytocin from posterior pituitary — stimulates uterine contractions. Positive feedback: more contractions → more oxytocin." }
+  ],
+  "archive": [
+    { "emoji": "📁", "title": "File Handling in Python", "meta": "Week 9 · CS · Class 12" },
+    { "emoji": "📐", "title": "Coordinate Geometry", "meta": "Week 8 · Mathematics · Class 10" },
+    { "emoji": "⚗️", "title": "Carbon & Its Compounds", "meta": "Week 7 · Science · Class 10" },
+    { "emoji": "📈", "title": "National Income", "meta": "Week 6 · Economics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W11", "title": "Current Electricity", "subject": "Physics Class 12" },
+    { "week": "W12", "title": "Chemical Reactions & Equations", "subject": "Science Class 10" },
+    { "week": "W13", "title": "Triangles & Similarity", "subject": "Mathematics Class 10" },
+    { "week": "W14", "title": "Money & Banking", "subject": "Economics Class 12" }
+  ]
+}

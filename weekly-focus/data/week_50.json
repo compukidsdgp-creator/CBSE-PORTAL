@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 50, "month": "Dec 2026", "subject": "Computer Science", "class": "Class 12", "chapter": "Chapter 1", "emoji": "🐍", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Python Functions & Recursion — Writing Code That Calls Itself", "hook": "What if a function could solve a problem by calling a smaller version of itself, over and over, until the answer appears? That's recursion — one of the most powerful ideas in programming, and a guaranteed question in your CS board exam." },
+  "hook_section": {
+    "scenario_icon": "🪞",
+    "scenario": "You want to calculate 5! (5 factorial). You could multiply 5×4×3×2×1 manually. Or you could notice that 5! = 5 × 4!, and 4! = 4 × 3!, and so on until you hit 1! = 1. Each step reduces the problem until it's trivially small. That's the recursive idea — break a problem into a smaller version of itself.",
+    "bridge": "Recursion isn't just elegant — it's how computers solve mazes, sort millions of records, and traverse file systems. Understanding it deeply separates students who score 80% from those who score 95% in CS.",
+    "punchline": "Every recursive function needs two things: a base case (stop condition) and a recursive case (calling itself with a smaller input)."
+  },
+  "concept_section": {
+    "analogy_icon": "🪆",
+    "analogy": "Think of Russian nesting dolls (Matryoshka). To find out how many dolls there are, you open the outer one, count 1, then ask 'how many dolls are inside?' — which is the same problem, just smaller. You keep opening until you find a doll with nothing inside (base case). Then you count back up.",
+    "principle": "def factorial(n):\n    if n == 0 or n == 1:  # base case\n        return 1\n    return n * factorial(n - 1)  # recursive case\n\nEach call adds a frame to the call stack. When base case is hit, frames resolve in reverse.",
+    "reveal_prompt": "Tap each concept to explore it 👇",
+    "reveals": [
+      { "question": "📦 What is the call stack?", "answer": "Each function call is added as a 'frame' on the stack. With recursion, frames pile up until the base case is reached, then they resolve one by one in reverse order (LIFO)." },
+      { "question": "🛑 What if there's no base case?", "answer": "Infinite recursion → RecursionError: maximum recursion depth exceeded. Python limits the call stack (default ~1000 calls) to prevent memory overflow." },
+      { "question": "📊 Recursion vs Iteration?", "answer": "Recursion: elegant, matches mathematical definitions, but uses more memory (call stack). Iteration: more memory-efficient, but sometimes harder to read. Both can solve the same problems." },
+      { "question": "🔁 What is a default parameter?", "answer": "def greet(name, msg='Hello'): — 'msg' has a default value. If not passed by caller, Python uses the default. Mutable defaults (lists, dicts) are a common trap — defined ONCE, shared across calls." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Recursion</b>: a function calling itself with a reduced input until a base case stops it",
+      "<b>Base case</b>: mandatory — without it, recursion never ends (stack overflow)",
+      "<b>Call stack</b>: each recursive call adds a frame; resolved LIFO when base case is hit",
+      "<b>Default parameters</b>: defined in function signature; mutable defaults are a common bug trap",
+      "<b>*args and **kwargs</b>: *args = variable positional arguments (tuple); **kwargs = variable keyword arguments (dict)"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Write a recursive Python function to find the sum of digits of a number. Trace it for n=123." },
+      { "marks": "2M", "question": "What is the output? def f(n): return 1 if n<=1 else n+f(n-1) → print(f(4))" },
+      { "marks": "1M", "question": "What error occurs if a recursive function has no base case?" }
+    ]
+  },
+  "quiz": [
+    { "q": "What is the output of: def f(n): return 1 if n==0 else n*f(n-1) → print(f(4))", "opts": ["4", "10", "24", "120"], "ans": 2, "exp": "f(4) = 4×f(3) = 4×3×f(2) = 4×3×2×f(1) = 4×3×2×1×f(0) = 4×3×2×1×1 = 24. This is 4! = 24." },
+    { "q": "A recursive function without a base case will cause:", "opts": ["SyntaxError", "TypeError", "RecursionError", "IndexError"], "ans": 2, "exp": "Without a base case, the function calls itself forever. Python limits recursion depth (~1000) and raises RecursionError: maximum recursion depth exceeded." },
+    { "q": "In *args, the extra positional arguments are stored as a:", "opts": ["List", "Tuple", "Dictionary", "Set"], "ans": 1, "exp": "*args collects extra positional arguments into a tuple (immutable sequence). **kwargs collects keyword arguments into a dict." },
+    { "q": "What is the base case in computing Fibonacci recursively: fib(n) = fib(n-1) + fib(n-2)?", "opts": ["fib(0) = 0, fib(1) = 1", "fib(2) = 2", "fib(n) = n", "There is no base case"], "ans": 0, "exp": "fib(0) = 0 and fib(1) = 1 are the base cases. Without them, the function would recurse infinitely for any input." }
+  ],
+  "flipcards": [
+    { "front": "What are the two essential parts of a recursive function?", "back": "Base case (stop condition) and recursive case (calls itself with smaller input)" },
+    { "front": "What is *args in Python?", "back": "Accepts variable number of positional arguments, stored as a tuple" },
+    { "front": "What error does infinite recursion cause?", "back": "RecursionError: maximum recursion depth exceeded" },
+    { "front": "What is **kwargs?", "back": "Accepts variable number of keyword arguments, stored as a dictionary" },
+    { "front": "What is the call stack?", "back": "Memory structure tracking function calls — each call adds a frame, base case resolves them LIFO" },
+    { "front": "factorial(5) using recursion?", "back": "5×4×3×2×1 = 120 → computed as 5×factorial(4) → ... → 1×factorial(0)=1" }
+  ],
+  "archive": [
+    { "emoji": "🌱", "title": "Plant Hormones", "meta": "Week 49 · Biology · Class 12" },
+    { "emoji": "📐", "title": "Determinants & Matrices", "meta": "Week 48 · Mathematics · Class 12" },
+    { "emoji": "📊", "title": "Demand Elasticity", "meta": "Week 47 · Economics · Class 12" },
+    { "emoji": "💡", "title": "Photoelectric Effect", "meta": "Week 46 · Physics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W51", "title": "Electricity — Ohm's Law & Circuits", "subject": "Science Class 10" },
+    { "week": "W52", "title": "Trigonometry Applications", "subject": "Maths Class 10" },
+    { "week": "W01", "title": "Electromagnetic Induction", "subject": "Physics Class 12" },
+    { "week": "W02", "title": "Organic Chemistry — Reactions", "subject": "Chemistry Class 12" }
+  ]
+}

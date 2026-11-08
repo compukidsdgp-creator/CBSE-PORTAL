@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 52, "month": "Dec 2026", "subject": "Mathematics", "class": "Class 10", "chapter": "Chapter 9", "emoji": "📏", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Heights & Distances — Trigonometry You Can Actually Use", "hook": "How do engineers measure the height of a mountain without climbing it? How did ancient astronomers calculate distances to stars? How do ships navigate without GPS? All of it uses one elegant idea — trigonometry applied to real triangles. And it's worth 4–6 marks in your board exam." },
+  "hook_section": {
+    "scenario_icon": "🏔️",
+    "scenario": "You're standing 100m from the base of a building. You look up at the top — the angle between your line of sight and the ground is 45°. Without measuring the building directly, can you find its height? Yes — tan(45°) = height/100 → height = 100m. That's the entire chapter in one example.",
+    "bridge": "Heights and Distances is Chapter 9 in Class 10 Maths, and it always appears as a word problem in the exam. The trick is correctly identifying the angle of elevation or depression and setting up the right trigonometric ratio.",
+    "punchline": "Angle of elevation (looking up) and angle of depression (looking down) — master these two, and no problem can trip you."
+  },
+  "concept_section": {
+    "analogy_icon": "🔭",
+    "analogy": "Every heights and distances problem is just a right triangle in disguise. You always know one angle and one side, and need to find another side. Your tools are three ratios: sin = opposite/hypotenuse, cos = adjacent/hypotenuse, tan = opposite/adjacent. The choice depends on which sides are involved.",
+    "principle": "Key values: sin30°=½, cos30°=√3/2, tan30°=1/√3 | sin45°=1/√2, cos45°=1/√2, tan45°=1 | sin60°=√3/2, cos60°=½, tan60°=√3. Angle of elevation = angle above horizontal. Angle of depression = angle below horizontal.",
+    "reveal_prompt": "Tap each scenario to practise setting up the equation 👇",
+    "reveals": [
+      { "question": "🏢 Tower problem (single observer)?", "answer": "Observer at distance d, angle of elevation θ. Height h = d × tan θ. Draw the right triangle: observer at one corner, base of tower, top of tower." },
+      { "question": "🌊 Two angles of elevation (same tower, two positions)?", "answer": "Observer moves closer — angle increases. Set up two equations with tan for both positions. Solve simultaneous equations for height and distance." },
+      { "question": "✈️ Angle of depression from a height?", "answer": "Angle of depression from point A to point B = angle of elevation from B to A (alternate interior angles). Always redraw making these equal — most errors come from mixing them up." },
+      { "question": "🗼 Two objects — finding distance between them?", "answer": "Often involves two towers or poles. Draw both right triangles sharing a common horizontal base. Set up equations for both heights, then find the gap between bases." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Angle of elevation</b>: formed at observer's eye looking UP at an object above horizontal",
+      "<b>Angle of depression</b>: formed at observer's eye looking DOWN at an object below horizontal — equals angle of elevation from the lower object (alternate angles)",
+      "<b>Always draw a diagram</b>: label the right angle, angle given, side known, side needed",
+      "tan θ is used most often (involves height and base distance, not hypotenuse)",
+      "Standard angles 30°, 45°, 60° — memorise their exact trig values"
+    ],
+    "exam_questions": [
+      { "marks": "4M", "question": "A 10m tall building casts a shadow 10√3 m long. Find the angle of elevation of the sun" },
+      { "marks": "3M", "question": "From the top of a 15m cliff, the angle of depression of a boat is 30°. Find the distance of boat from the base of cliff" },
+      { "marks": "1M", "question": "The angle of elevation of a tower is 45° at a distance of 50m. What is the height of the tower?" }
+    ]
+  },
+  "quiz": [
+    { "q": "The angle of elevation of the top of a tower from a point 100m away is 30°. Height of tower is:", "opts": ["100√3 m", "100/√3 m", "50 m", "100 m"], "ans": 1, "exp": "tan30° = h/100 → h = 100 × tan30° = 100 × (1/√3) = 100/√3 ≈ 57.7m." },
+    { "q": "From the top of a building, angle of depression of a car is 45°. If building is 50m tall, distance of car from base is:", "opts": ["50√3 m", "50 m", "25 m", "50/√3 m"], "ans": 1, "exp": "Angle of depression = angle of elevation from car = 45°. tan45° = 50/d → d = 50m." },
+    { "q": "The angle of elevation of the sun when a pole 6m tall casts a shadow of 6m is:", "opts": ["30°", "45°", "60°", "90°"], "ans": 1, "exp": "tan θ = height/shadow = 6/6 = 1. tan45° = 1, so θ = 45°." },
+    { "q": "Angle of depression and angle of elevation between two points are equal because:", "opts": ["They are supplementary angles", "They are vertically opposite angles", "They are alternate interior angles", "They are co-interior angles"], "ans": 2, "exp": "The horizontal from the observer and the ground are parallel lines cut by the line of sight. Angle of depression and angle of elevation are alternate interior angles — always equal." }
+  ],
+  "flipcards": [
+    { "front": "What is angle of elevation?", "back": "Angle formed at observer's eye when looking UP at an object — measured from horizontal" },
+    { "front": "tan 60° = ?", "back": "√3 (approximately 1.732)" },
+    { "front": "If angle of depression is 30°, angle of elevation from below is?", "back": "30° — they are equal (alternate interior angles with parallel horizontal lines)" },
+    { "front": "tan 30° = ?", "back": "1/√3 (approximately 0.577)" },
+    { "front": "Tower problem setup: observer 50m away, elevation 45°. Height?", "back": "h = 50 × tan45° = 50 × 1 = 50m" },
+    { "front": "Which trig ratio avoids hypotenuse?", "back": "tan θ = opposite/adjacent — only uses height and base, no hypotenuse needed" }
+  ],
+  "archive": [
+    { "emoji": "⚡", "title": "Electricity — Ohm's Law", "meta": "Week 51 · Science · Class 10" },
+    { "emoji": "🐍", "title": "Python Functions & Recursion", "meta": "Week 50 · Computer Science · Class 12" },
+    { "emoji": "🌱", "title": "Plant Hormones", "meta": "Week 49 · Biology · Class 12" },
+    { "emoji": "📐", "title": "Determinants & Matrices", "meta": "Week 48 · Mathematics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W01", "title": "Electromagnetic Induction", "subject": "Physics Class 12" },
+    { "week": "W02", "title": "Organic Reactions — Haloalkanes", "subject": "Chemistry Class 12" },
+    { "week": "W03", "title": "Light — Reflection & Refraction", "subject": "Science Class 10" },
+    { "week": "W04", "title": "Probability", "subject": "Mathematics Class 10" }
+  ]
+}

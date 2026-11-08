@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 48, "month": "Nov 2026", "subject": "Mathematics", "class": "Class 12", "chapter": "Chapter 4", "emoji": "📐", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Determinants — The Number That Unlocks Every Matrix", "hook": "Every square matrix hides one special number inside it. That number tells you whether a system of equations has a solution, whether a transformation crushes area to zero, and whether a matrix can be inverted. It's called the determinant — and it appears in almost every 5-mark question in Maths boards." },
+  "hook_section": {
+    "scenario_icon": "🔑",
+    "scenario": "You're solving two simultaneous equations: 2x + 3y = 8 and 4x + 6y = 10. Standard substitution gives you a contradiction — no solution. But write the same equations as a matrix and calculate one number. If that number is zero: no unique solution. It's like a master key that tells you everything before you start solving.",
+    "bridge": "Determinants underpin Cramer's Rule, matrix inverses, area of triangles using coordinates, and consistency of systems. They're tested every single year — often in the longest questions.",
+    "punchline": "If det(A) = 0, the matrix has no inverse. If det(A) ≠ 0, you can solve anything."
+  },
+  "concept_section": {
+    "analogy_icon": "🗝️",
+    "analogy": "A matrix is like a machine that transforms space. The determinant is the scaling factor — by how much does the machine stretch or shrink area? A det of 2 doubles area, a det of −1 flips and keeps size, a det of 0 squashes everything flat (no going back — no inverse).",
+    "principle": "For 2×2: det|a b; c d| = ad − bc. For 3×3: expand along any row/column using cofactors. Properties: det(AB) = det(A)·det(B); det(Aᵀ) = det(A); swapping two rows changes sign.",
+    "reveal_prompt": "Tap each property to understand it 👇",
+    "reveals": [
+      { "question": "🔄 What if two rows are identical?", "answer": "det = 0. The rows are linearly dependent — the matrix collapses area to zero. No inverse exists." },
+      { "question": "✖️ What if a row is multiplied by k?", "answer": "det is multiplied by k. So det(kA) for an n×n matrix = kⁿ · det(A)." },
+      { "question": "➕ Row/column operation effect?", "answer": "Adding a multiple of one row to another does NOT change the determinant — useful for simplifying before expanding." },
+      { "question": "🔃 Swapping two rows?", "answer": "det changes sign (multiply by −1). Every swap flips the sign — odd swaps → negative, even swaps → same sign." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>2×2 determinant</b>: ad − bc (cross multiply and subtract)",
+      "<b>3×3 expansion</b>: a₁₁(M₁₁) − a₁₂(M₁₂) + a₁₃(M₁₃) along first row",
+      "<b>Singular matrix</b>: det = 0 → no inverse → system either has no solution or infinite solutions",
+      "<b>Area of triangle</b> with vertices (x₁,y₁),(x₂,y₂),(x₃,y₃) = ½|det of 3×3 matrix with column of 1s|",
+      "<b>Cramer's Rule</b>: x = Dₓ/D, y = Dᵧ/D — only valid when D ≠ 0"
+    ],
+    "exam_questions": [
+      { "marks": "5M", "question": "Using Cramer's Rule solve: x + y + z = 6, 2x − y + 3z = 14, x + 2y − z = 2" },
+      { "marks": "2M", "question": "Find the value of k if the matrix [k, 2; 3, 4] is singular" },
+      { "marks": "1M", "question": "If det(A) = 5, find det(3A) for a 3×3 matrix A" }
+    ]
+  },
+  "quiz": [
+    { "q": "The value of det|2 3; 4 5| is:", "opts": ["−2", "2", "7", "22"], "ans": 0, "exp": "det = (2×5) − (3×4) = 10 − 12 = −2." },
+    { "q": "A 3×3 matrix A has det(A) = 4. What is det(2A)?", "opts": ["8", "12", "32", "64"], "ans": 2, "exp": "det(kA) = kⁿ · det(A) for n×n matrix. det(2A) = 2³ × 4 = 8 × 4 = 32." },
+    { "q": "If two rows of a matrix are identical, its determinant is:", "opts": ["1", "−1", "0", "Undefined"], "ans": 2, "exp": "Identical rows mean the rows are linearly dependent. The determinant is always zero — the matrix is singular." },
+    { "q": "Using Cramer's Rule, we need det(A) ≠ 0 because:", "opts": ["Division by det(A) is needed", "The matrix must be symmetric", "Rows must be identical", "The matrix must be diagonal"], "ans": 0, "exp": "Cramer's Rule gives x = Dₓ/D. If D = det(A) = 0, division is undefined — the system has no unique solution." }
+  ],
+  "flipcards": [
+    { "front": "Formula for 2×2 determinant?", "back": "|a b; c d| = ad − bc" },
+    { "front": "What does det = 0 tell you?", "back": "Matrix is singular — no inverse exists. System has no unique solution." },
+    { "front": "Effect of swapping two rows on det?", "back": "det changes sign (multiplied by −1)" },
+    { "front": "det(kA) for n×n matrix?", "back": "det(kA) = kⁿ · det(A)" },
+    { "front": "Area of triangle using determinant?", "back": "Area = ½ |det of matrix with vertices as rows and 1s in third column|" },
+    { "front": "What is a cofactor expansion?", "back": "Expanding det of 3×3 along a row: alternating + and − signs times 2×2 minors" }
+  ],
+  "archive": [
+    { "emoji": "📊", "title": "Demand Elasticity", "meta": "Week 47 · Economics · Class 12" },
+    { "emoji": "💡", "title": "Photoelectric Effect", "meta": "Week 46 · Physics · Class 12" },
+    { "emoji": "⚗️", "title": "Le Chatelier's Principle", "meta": "Week 45 · Chemistry · Class 12" },
+    { "emoji": "📐", "title": "Integration by Parts", "meta": "Week 44 · Mathematics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W49", "title": "Plant Hormones & Control", "subject": "Biology" },
+    { "week": "W50", "title": "Python Functions & Recursion", "subject": "Computer Science" },
+    { "week": "W51", "title": "Electricity — Ohm's Law", "subject": "Science Class 10" },
+    { "week": "W52", "title": "Trigonometry Applications", "subject": "Maths Class 10" }
+  ]
+}

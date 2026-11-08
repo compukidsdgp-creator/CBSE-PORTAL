@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 9, "month": "Mar 2027", "subject": "Computer Science", "class": "Class 12", "chapter": "Chapter 2", "emoji": "📁", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "File Handling in Python — Storing Data Beyond the Program", "hook": "Every time you close a Python program, all its variables disappear. Files are how programs keep data alive — write today, read tomorrow. File handling is essential for real-world programs: student records, game saves, log files, chat history. And it's a consistent 4–5 mark topic in your CS boards." },
+  "hook_section": {
+    "scenario_icon": "💾",
+    "scenario": "You write a Python program that asks for student names and marks, then calculates averages. You run it, see the results, close it — and all the data is gone. Next day you have to type everything again. File handling solves this: save the student data to a text file, read it back next time. The file persists even after the program closes.",
+    "bridge": "File handling in Python involves three operations: open (create/access the file), read/write (do the actual work), close (save and release). Python's built-in open() function and the with statement handle all of this. Text files and binary files are treated differently.",
+    "punchline": "open(filename, mode) → read/write → close(). Always use with statement — it auto-closes the file even if an error occurs."
+  },
+  "concept_section": {
+    "analogy_icon": "📚",
+    "analogy": "Think of a file like a book. open() is picking up the book. read() is reading pages. write() is writing in it. close() is putting it back on the shelf. The 'mode' is how you open the book: 'r' = read-only (can't write), 'w' = write (blank pages, overwrite existing), 'a' = append (add to end), 'r+' = read AND write.",
+    "principle": "open(file, mode): modes 'r' (read), 'w' (write, creates/overwrites), 'a' (append), 'b' (binary, add to mode: 'rb', 'wb'). read() — whole file as string. readline() — one line. readlines() — list of all lines. write(str) — write string. writelines(list) — write list of strings.",
+    "reveal_prompt": "Tap each operation to see its syntax 👇",
+    "reveals": [
+      { "question": "📖 Reading a file — three ways?", "answer": "f = open('data.txt', 'r')\ncontent = f.read()  # entire file as one string\nf.close()\n\n# Or line by line:\nfor line in f:\n    print(line)\n\n# Or all lines as list:\nlines = f.readlines()  # ['line1\\n', 'line2\\n', ...]" },
+      { "question": "✍️ Writing to a file?", "answer": "with open('data.txt', 'w') as f:\n    f.write('Hello World\\n')  # writes string\n    f.writelines(['line1\\n', 'line2\\n'])  # writes list\n# 'w' creates file if not exists, ERASES if exists\n# Use 'a' to append without erasing" },
+      { "question": "🔄 with statement — why use it?", "answer": "with open('data.txt', 'r') as f:\n    data = f.read()\n# File automatically closed after block, even if error occurs\n# Without 'with': must call f.close() manually\n# If error before f.close() → file stays open → data loss risk" },
+      { "question": "📦 Binary files (pickle)?", "answer": "import pickle\n# Write:\nwith open('data.pkl', 'wb') as f:\n    pickle.dump(my_dict, f)\n# Read:\nwith open('data.pkl', 'rb') as f:\n    data = pickle.load(f)\n# Binary files store Python objects (dicts, lists) exactly as-is" }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>open(file, mode)</b>: 'r' (read), 'w' (write/overwrite), 'a' (append), 'b' (binary mode)",
+      "<b>read()</b>: whole file; <b>readline()</b>: one line; <b>readlines()</b>: list of all lines",
+      "<b>write()</b>: write string; <b>writelines()</b>: write list of strings — doesn't add \\n automatically",
+      "<b>with statement</b>: auto-closes file; always prefer over manual open/close",
+      "<b>pickle module</b>: serialize/deserialize Python objects to binary files (dump/load)"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Write a Python program to count the number of words in a text file 'story.txt' and display the count." },
+      { "marks": "2M", "question": "What is the difference between read(), readline(), and readlines() in Python file handling?" },
+      { "marks": "1M", "question": "What mode should be used to open a file for appending data without erasing existing content?" }
+    ]
+  },
+  "quiz": [
+    { "q": "Which mode opens a file for appending without erasing existing content?", "opts": ["'w'", "'r'", "'a'", "'x'"], "ans": 2, "exp": "'a' (append mode) opens file and positions pointer at the end. New data is added after existing content. 'w' would erase the file first. 'r' is read-only." },
+    { "q": "f.readlines() returns:", "opts": ["A string with the entire file", "A list of all lines", "One line at a time", "Number of lines"], "ans": 1, "exp": "readlines() reads all lines and returns them as a list of strings, where each string ends with '\\n'. Example: ['line1\\n', 'line2\\n', 'line3']. Useful for iterating over all lines." },
+    { "q": "What is the advantage of using 'with' statement with file operations?", "opts": ["Faster reading speed", "Auto closes file even if error occurs", "Allows writing to read-only files", "Increases file size"], "ans": 1, "exp": "The 'with' statement uses context managers — it guarantees file.close() is called even if an exception occurs inside the block. This prevents file corruption and resource leaks." },
+    { "q": "To store a Python dictionary to a file, the best module is:", "opts": ["os", "sys", "pickle", "math"], "ans": 2, "exp": "pickle module serialises Python objects (dicts, lists, classes) to binary format. pickle.dump() writes to file, pickle.load() reads back. The file must be opened in binary mode ('wb'/'rb')." }
+  ],
+  "flipcards": [
+    { "front": "What does 'w' mode do when file already exists?", "back": "Erases existing content and starts fresh — use 'a' if you want to keep existing data" },
+    { "front": "read() vs readline() difference?", "back": "read() = entire file as one string. readline() = one line at a time (use in loop for large files)" },
+    { "front": "How to open a binary file for writing?", "back": "open('filename', 'wb') — 'b' for binary, 'w' for write mode" },
+    { "front": "pickle.dump() and pickle.load()?", "back": "dump(obj, file) = write Python object to file. load(file) = read Python object from file." },
+    { "front": "What does tell() method return?", "back": "Current position of file pointer (number of bytes from start)" },
+    { "front": "What does seek(0) do?", "back": "Moves file pointer back to the beginning of the file" }
+  ],
+  "archive": [
+    { "emoji": "📐", "title": "Coordinate Geometry", "meta": "Week 8 · Mathematics · Class 10" },
+    { "emoji": "⚗️", "title": "Carbon & Its Compounds", "meta": "Week 7 · Science · Class 10" },
+    { "emoji": "📈", "title": "National Income", "meta": "Week 6 · Economics · Class 12" },
+    { "emoji": "🧬", "title": "Reproduction in Organisms", "meta": "Week 5 · Biology · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W10", "title": "Human Reproduction", "subject": "Biology Class 12" },
+    { "week": "W11", "title": "Current Electricity", "subject": "Physics Class 12" },
+    { "week": "W12", "title": "Chemical Reactions & Equations", "subject": "Science Class 10" },
+    { "week": "W13", "title": "Triangles & Similarity", "subject": "Mathematics Class 10" }
+  ]
+}

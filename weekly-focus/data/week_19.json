@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 19, "month": "May 2027", "subject": "Mathematics", "class": "Class 10", "chapter": "Chapter 5", "emoji": "🔢", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Arithmetic Progressions — The Pattern That's Everywhere", "hook": "5, 10, 15, 20, 25... Your salary increasing by ₹5000 each year. A pile of logs where each row has one fewer log. The hours you study increasing by 30 minutes each day leading to exams. All of these are arithmetic progressions — sequences with a constant difference. And recognising them is the key to solving a whole class of problems in just seconds." },
+  "hook_section": {
+    "scenario_icon": "📊",
+    "scenario": "Riya saves ₹100 in January, ₹150 in February, ₹200 in March... She wants to know how much she'll have saved by December. Without formulas, you'd add up 12 numbers. With the AP sum formula: S = n/2 × (2a + (n−1)d), where n=12, a=100, d=50 → S = 6 × (200 + 550) = 6 × 750 = ₹4500. One formula, one calculation, correct answer.",
+    "bridge": "Chapter 5 covers the definition of AP, the nth term formula, the sum of n terms formula, arithmetic mean, and applications to real-life word problems. AP problems in boards typically give 2 of the 4 values (a, d, n, aₙ) and ask for the remaining ones, or give S and ask for terms.",
+    "punchline": "nth term: aₙ = a + (n−1)d. Sum of n terms: Sₙ = n/2[2a + (n−1)d] = n/2[a + l] (where l = last term). Learn both — boards use both."
+  },
+  "concept_section": {
+    "analogy_icon": "📏",
+    "analogy": "An AP is like a staircase where every step has the same height. The common difference d is the step height. The first step level is a (first term). The nth step level is aₙ = a + (n−1)d — you've climbed n−1 steps from the first. The total height from bottom to step n is the sum. The staircase can go up (d > 0), down (d < 0), or be flat (d = 0, constant sequence).",
+    "principle": "For AP: a, a+d, a+2d, ... with first term a, common difference d. nth term: aₙ = a + (n−1)d. Sum of n terms: Sₙ = n/2[2a + (n−1)d]. Note: d = aₙ − aₙ₋₁ (constant). For 3 terms in AP: a−d, a, a+d. For 4 terms: a−3d, a−d, a+d, a+3d.",
+    "reveal_prompt": "Tap each type of problem to practise 👇",
+    "reveals": [
+      { "question": "🔵 Finding nth term?", "answer": "Given: a=3, d=4, find 10th term. aₙ = a + (n−1)d = 3 + 9×4 = 3 + 36 = 39. OR: given a=5, a₁₀=50, find d. 50 = 5 + 9d → 9d = 45 → d = 5. Strategy: identify what's given, substitute in aₙ formula, solve." },
+      { "question": "📊 Sum of n terms?", "answer": "Given: a=2, d=3, find S₁₅. S₁₅ = 15/2 × [2×2 + 14×3] = 15/2 × [4+42] = 15/2 × 46 = 15 × 23 = 345. OR if last term known: Sₙ = n/2 × (first + last). Check: S₁ = a₁, S₂ − S₁ = a₂, Sₙ − Sₙ₋₁ = aₙ." },
+      { "question": "🔄 Three terms in AP trick?", "answer": "If sum of 3 terms is given, let them be: a−d, a, a+d. Sum = 3a. Product may also be given. This simplifies calculations. Example: 'Three numbers in AP have sum 24 and product 480' → 3a = 24 → a = 8 → (8−d)(8)(8+d) = 480 → 64−d² = 60 → d² = 4 → d = ±2." },
+      { "question": "📐 Word problems — the approach?", "answer": "Step 1: Identify if problem describes an AP (constant addition). Step 2: Find a (first term) and d (common difference) from the description. Step 3: Identify what is asked (aₙ or Sₙ). Step 4: Apply the right formula. Watch for: 'every year increases by' = d; 'after n years' = n; 'total' = S." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>AP condition</b>: aₙ − aₙ₋₁ = constant (common difference d) for all n > 1",
+      "<b>nth term</b>: aₙ = a + (n−1)d; can also find n if aₙ is given",
+      "<b>Sum formula</b>: Sₙ = n/2 × [2a + (n−1)d] = n/2 × (a + l); where l = last term",
+      "<b>Three terms in AP</b>: use a−d, a, a+d to simplify when sum is given",
+      "<b>aₙ = Sₙ − Sₙ₋₁</b>: use when only sum formula is given to find specific terms"
+    ],
+    "exam_questions": [
+      { "marks": "4M", "question": "The sum of first n terms of an AP is 4n − n². Find the first term, common difference, and the 10th term. Also find which term of the AP is first to become negative." },
+      { "marks": "3M", "question": "Find the sum of all odd numbers between 100 and 200." },
+      { "marks": "2M", "question": "The 5th and 15th terms of an AP are 13 and 43 respectively. Find the AP." }
+    ]
+  },
+  "quiz": [
+    { "q": "The 10th term of AP: 3, 7, 11, 15, ... is:", "opts": ["39", "43", "35", "47"], "ans": 0, "exp": "a=3, d=4. a₁₀ = a + 9d = 3 + 36 = 39." },
+    { "q": "Sum of first 20 terms of AP: 1, 3, 5, 7, ... is:", "opts": ["380", "400", "420", "440"], "ans": 1, "exp": "a=1, d=2, n=20. S₂₀ = 20/2 × [2×1 + 19×2] = 10 × [2+38] = 10 × 40 = 400. (Sum of first n odd numbers = n².)" },
+    { "q": "Three numbers in AP have sum 15 and product 80. The numbers are:", "opts": ["2, 5, 8", "1, 5, 9", "3, 5, 7", "4, 5, 6"], "ans": 0, "exp": "Let a−d, a, a+d. Sum = 3a = 15 → a = 5. Product = (5−d)(5)(5+d) = 5(25−d²) = 80 → 25−d² = 16 → d² = 9 → d = 3. Numbers: 2, 5, 8." },
+    { "q": "If 5th term of AP is 20 and 10th term is 35, find d:", "opts": ["3", "5", "7", "2"], "ans": 0, "exp": "a₅ = a + 4d = 20; a₁₀ = a + 9d = 35. Subtracting: 5d = 15 → d = 3." }
+  ],
+  "flipcards": [
+    { "front": "nth term formula for AP?", "back": "aₙ = a + (n−1)d (a = first term, d = common difference, n = term number)" },
+    { "front": "Sum of n terms of AP?", "back": "Sₙ = n/2 × [2a + (n−1)d] = n/2 × (first term + last term)" },
+    { "front": "How to find the common difference?", "back": "d = any term − previous term = (aₙ − a₁)/(n−1)" },
+    { "front": "If Sₙ = 3n² + 2n, find nth term?", "back": "aₙ = Sₙ − Sₙ₋₁ = [3n² + 2n] − [3(n−1)² + 2(n−1)] = 6n − 1" },
+    { "front": "Three numbers in AP: substitute as?", "back": "a−d, a, a+d (simplifies sum: 3a; product: a(a²−d²))" },
+    { "front": "Sum of natural numbers 1+2+3+...+n?", "back": "n(n+1)/2 — this is an AP with a=1, d=1" }
+  ],
+  "archive": [
+    { "emoji": "🧪", "title": "Acids, Bases & Salts", "meta": "Week 18 · Science · Class 10" },
+    { "emoji": "🗄️", "title": "Databases & SQL", "meta": "Week 17 · CS · Class 12" },
+    { "emoji": "⚡", "title": "Electrostatics", "meta": "Week 16 · Physics · Class 12" },
+    { "emoji": "🧬", "title": "Genetics & Inheritance", "meta": "Week 15 · Biology · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W20", "title": "Biodiversity & Conservation", "subject": "Biology Class 12" },
+    { "week": "W21", "title": "Polymers & Biomolecules", "subject": "Chemistry Class 12" },
+    { "week": "W22", "title": "Quadratic Equations", "subject": "Mathematics Class 10" },
+    { "week": "W23", "title": "Semiconductor Devices", "subject": "Physics Class 12" }
+  ]
+}

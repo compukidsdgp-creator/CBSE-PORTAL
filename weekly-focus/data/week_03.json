@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 3, "month": "Jan 2027", "subject": "Science", "class": "Class 10", "chapter": "Chapter 10", "emoji": "🔭", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Light — Reflection & Refraction Made Crystal Clear", "hook": "Why does a straw in water look bent? Why do you see your reflection in a still pond? Why do glasses correct vision? All of it comes down to two fundamental behaviors of light — reflection and refraction. These 7–8 marks in your boards explain everything from mirrors to telescopes to the human eye." },
+  "hook_section": {
+    "scenario_icon": "💡",
+    "scenario": "Hold a spoon and look at the concave side — you see an inverted, magnified face. Turn it around and look at the convex side — right-side up, smaller. Same spoon, two curved surfaces, two completely different images. The difference? Curved mirrors form images in predictable ways based on where the object is placed relative to the focal point.",
+    "bridge": "Reflection (light bouncing off surfaces) and Refraction (light bending as it enters a new medium) are the two pillars of this chapter. Mirrors use reflection. Lenses use refraction. The mirror formula, lens formula, and magnification connect them mathematically.",
+    "punchline": "Mirror formula: 1/v + 1/u = 1/f. Lens formula: 1/v − 1/u = 1/f. Sign convention (New Cartesian): distances in direction of incident light are positive."
+  },
+  "concept_section": {
+    "analogy_icon": "🔄",
+    "analogy": "Think of light rays as arrows fired at a surface. For reflection, angle in = angle out (like a billiard ball bounce). For refraction, the arrow bends as it crosses from one medium to another — like a person running from firm ground into water. They slow down and change direction at the boundary.",
+    "principle": "Snell's Law: n₁sin θ₁ = n₂sin θ₂. Refractive index n = speed of light in vacuum / speed in medium = c/v. Denser medium → slower speed → ray bends toward normal. Rarer medium → faster → ray bends away from normal.",
+    "reveal_prompt": "Tap each type to explore image formation 👇",
+    "reveals": [
+      { "question": "🔄 Concave mirror — image types?", "answer": "Object beyond C: real, inverted, diminished. At C: real, inverted, same size. Between C and F: real, inverted, magnified. At F: image at infinity. Between F and P: virtual, erect, magnified. Used in: torches, vehicles, shaving mirrors." },
+      { "question": "🌐 Convex mirror — image types?", "answer": "Always virtual, erect, diminished — regardless of object position. Image always between P and F behind the mirror. Used in: rear-view mirrors, security mirrors — wider field of view." },
+      { "question": "🔵 Convex lens — image types?", "answer": "Object beyond 2F: real, inverted, diminished. At 2F: real, inverted, same size. Between 2F and F: real, inverted, magnified. At F: image at infinity. Between F and O: virtual, erect, magnified. Used in: cameras, telescopes, eyes." },
+      { "question": "🌈 Refraction effects?", "answer": "Apparent depth (objects in water look shallower): n = real depth / apparent depth. Total internal reflection: when angle of incidence exceeds critical angle in denser medium — basis of optical fibres, mirages, sparkling of diamonds." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Mirror formula</b>: 1/f = 1/v + 1/u; focal length f = R/2 (R = radius of curvature)",
+      "<b>Lens formula</b>: 1/f = 1/v − 1/u; Power P = 1/f (in metres), unit = Dioptre (D)",
+      "<b>Magnification</b>: m = image height/object height = −v/u (mirror); v/u (lens)",
+      "<b>Snell's Law</b>: n₁ sin θ₁ = n₂ sin θ₂; denser medium → ray bends toward normal",
+      "<b>Total Internal Reflection</b>: when light goes from dense to rare medium beyond critical angle"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "An object 4cm high is placed 20cm in front of a concave mirror of focal length 10cm. Find image position, size and nature using mirror formula." },
+      { "marks": "2M", "question": "What is the power of a concave lens of focal length 25cm?" },
+      { "marks": "1M", "question": "Define refractive index. What is its value for glass (approximately)?" }
+    ]
+  },
+  "quiz": [
+    { "q": "An object is placed at 2F from a convex lens. The image formed is:", "opts": ["Virtual, erect, magnified", "Real, inverted, same size", "Real, inverted, diminished", "Virtual, erect, same size"], "ans": 1, "exp": "Object at 2F from convex lens: image forms at 2F on other side, real, inverted, and same size as object. Using lens formula: 1/v − 1/(−2f) = 1/f → v = 2f." },
+    { "q": "A concave mirror is used as a rear-view mirror. This statement is:", "opts": ["True, it gives wider field", "False — convex mirror is used", "True, it gives magnified image", "False — plane mirror is used"], "ans": 1, "exp": "Convex mirror is used as rear-view mirror because it always forms virtual, erect, diminished images and provides a wider field of view compared to plane or concave mirrors." },
+    { "q": "A lens has focal length −0.5m. Its power is:", "opts": ["+2D", "−2D", "+0.5D", "−0.5D"], "ans": 1, "exp": "P = 1/f = 1/(−0.5) = −2D. Negative power means concave (diverging) lens. Negative focal length → diverging lens." },
+    { "q": "Light travels from glass (n=1.5) to air (n=1). At the critical angle, the refracted ray travels:", "opts": ["At 45° to normal", "Along the normal", "Along the glass-air interface", "Back into glass"], "ans": 2, "exp": "At the critical angle, the refracted ray travels along the interface (90° to normal). Beyond this angle, total internal reflection occurs — no refracted ray, all light reflects back into glass." }
+  ],
+  "flipcards": [
+    { "front": "Mirror formula?", "back": "1/v + 1/u = 1/f (New Cartesian sign convention: distances measured from pole, incident direction = positive)" },
+    { "front": "What type of image does a convex mirror always form?", "back": "Virtual, erect, diminished — regardless of object position" },
+    { "front": "Formula for refractive index?", "back": "n = c/v = sin i / sin r = real depth / apparent depth" },
+    { "front": "Power of a lens — formula and unit?", "back": "P = 1/f (f in metres); unit = Dioptre (D). Convex lens: positive. Concave lens: negative." },
+    { "front": "What is total internal reflection?", "back": "When light going from denser to rarer medium hits the boundary at angle > critical angle — all light reflects back, none passes through" },
+    { "front": "Concave lens — what kind of image always forms?", "back": "Virtual, erect, diminished — always, for any object position (same as convex mirror)" }
+  ],
+  "archive": [
+    { "emoji": "🧪", "title": "Haloalkanes & Haloarenes", "meta": "Week 2 · Chemistry · Class 12" },
+    { "emoji": "🔋", "title": "Electromagnetic Induction", "meta": "Week 1 · Physics · Class 12" },
+    { "emoji": "📏", "title": "Heights & Distances", "meta": "Week 52 · Mathematics · Class 10" },
+    { "emoji": "⚡", "title": "Electricity — Ohm's Law", "meta": "Week 51 · Science · Class 10" }
+  ],
+  "upcoming": [
+    { "week": "W04", "title": "Probability", "subject": "Mathematics Class 10" },
+    { "week": "W05", "title": "Reproduction in Organisms", "subject": "Biology Class 12" },
+    { "week": "W06", "title": "National Income", "subject": "Economics Class 12" },
+    { "week": "W07", "title": "Carbon & Its Compounds", "subject": "Science Class 10" }
+  ]
+}

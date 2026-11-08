@@ -1,0 +1,65 @@
+name: Weekly Focus Release
+
+on:
+  schedule:
+    # Every Monday at 00:30 UTC (6:00 AM IST)
+    - cron: '30 0 * * 1'
+  workflow_dispatch:
+    inputs:
+      week:
+        description: 'Force a specific week number (1-52). Leave blank for current ISO week.'
+        required: false
+        default: ''
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Weekly Focus release script
+        run: |
+          if [ -n "${{ github.event.inputs.week }}" ]; then
+            # Override: temporarily set ISO week via environment variable
+            python3 -c "
+import sys, json
+from pathlib import Path
+week = int('${{ github.event.inputs.week }}')
+data_dir = Path('weekly-focus/data')
+src = data_dir / f'week_{week:02d}.json'
+if not src.exists():
+    print(f'[ERROR] week_{week:02d}.json not found')
+    sys.exit(1)
+import shutil
+shutil.copy(src, 'weekly-focus/weekly-focus.json')
+print(f'[OK] Copied week_{week:02d}.json -> weekly-focus/weekly-focus.json')
+"
+          else
+            DRY_RUN=false python3 weekly_focus_release.py
+          fi
+
+      - name: Run SEO update
+        run: python3 update_weekly_focus_seo.py
+        continue-on-error: true
+
+      - name: Commit and push updated weekly focus
+        run: |
+          git config user.name  "weekly-focus-bot"
+          git config user.email "bot@cbsemock.org.in"
+          git add weekly-focus/weekly-focus.json
+          git diff --cached --quiet && \
+            echo "Nothing to commit — weekly focus already up to date." || \
+            git commit -m "chore: weekly focus release $(python3 -c \"
+from datetime import date
+w = date.today().isocalendar()[1]
+print(f'week {w:02d}')
+\")" -m "Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>" && git push

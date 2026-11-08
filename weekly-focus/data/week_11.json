@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 11, "month": "Mar 2027", "subject": "Physics", "class": "Class 12", "chapter": "Chapter 3", "emoji": "🔌", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Current Electricity — From Drift Velocity to Kirchhoff's Laws", "hook": "Current Electricity is the foundation of all electrical engineering. Ohm's Law, Kirchhoff's Laws, Wheatstone Bridge, metre bridge — these concepts connect to every electrical device ever made. It's also one of the highest-scoring chapters in Class 12 Physics boards, often worth 7–8 marks in numericals alone." },
+  "hook_section": {
+    "scenario_icon": "⚡",
+    "scenario": "In a copper wire, there are about 10²³ free electrons per cm³ — but they move in random directions. No net current. Apply a battery: they still move randomly, but now they also drift slightly toward the positive terminal. This tiny drift velocity (~10⁻⁴ m/s, much slower than you'd think) is what creates current. 1 Ampere = 6.25 × 10¹⁸ electrons passing per second.",
+    "bridge": "Current Electricity (Chapter 3) builds on Class 10 electricity. New concepts: drift velocity, Ohm's Law derivation, resistivity and its factors, combination of cells, Kirchhoff's Laws (KCL + KVL), and bridge circuits (Wheatstone, metre bridge). These are tested every year.",
+    "punchline": "I = nAevd (drift velocity formula). Ohm's Law from microscopic picture. Kirchhoff's Laws for complex circuits. These three unlock the whole chapter."
+  },
+  "concept_section": {
+    "analogy_icon": "🌊",
+    "analogy": "Drift velocity is like a river current in a busy sea. Water molecules (electrons) move in all random directions (thermal motion), but the river has a net flow in one direction (drift). The current is not because electrons move fast — it's because there are so many of them and they all drift together, however slowly. I = nAevd shows how even a tiny drift velocity produces large currents.",
+    "principle": "Drift velocity: vd = eEτ/m = J/ne (J = current density, n = electron density, τ = relaxation time). Ohm's Law: V = IR, where R = ρl/A (ρ = resistivity). Kirchhoff's Laws: KCL (sum of currents at junction = 0, charge conservation); KVL (sum of EMF = sum of IR drops in a loop, energy conservation).",
+    "reveal_prompt": "Tap each concept to explore 👇",
+    "reveals": [
+      { "question": "🔵 Drift velocity and current?", "answer": "I = nAevd. n = number of free electrons per unit volume (electron density), A = cross-sectional area, e = electron charge, vd = drift velocity. Drift velocity is very small (~10⁻⁴ m/s) but current is large because n is huge (~10²⁸ /m³ in copper)." },
+      { "question": "🌡️ Resistivity and temperature?", "answer": "R = ρl/A. Resistivity ρ depends on material and temperature. For metals: ρ increases with temperature (more vibrations, more collisions, less drift). For semiconductors: ρ decreases with temperature (more charge carriers freed). Temperature coefficient α: ρT = ρ₀(1+αT)." },
+      { "question": "🔄 Kirchhoff's Laws — application?", "answer": "KCL (Junction rule): ΣI = 0 at any junction. Currents in = currents out. KVL (Loop rule): ΣV = 0 around any closed loop. ΣE = ΣIR. Strategy: assign current directions, write KCL at junctions, write KVL for loops, solve simultaneous equations." },
+      { "question": "⚖️ Wheatstone Bridge?", "answer": "Four resistors P, Q, R, S in a diamond arrangement with galvanometer between midpoints. Balance condition: P/Q = R/S (no current through galvanometer). Metre bridge is a practical Wheatstone bridge: X/R = l/(100−l) where l is balance length on 100cm wire." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Drift velocity</b>: I = nAevd; responsible for electric current in conductors",
+      "<b>Ohm's Law</b>: V = IR; R = ρl/A; ρ for metals increases with temperature",
+      "<b>KCL</b>: sum of currents at junction = 0 (charge conservation)",
+      "<b>KVL</b>: sum of EMF = sum of IR drops in any closed loop (energy conservation)",
+      "<b>Wheatstone balance</b>: P/Q = R/S; metre bridge: X/R = l/(100−l)"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Using Kirchhoff's Laws, find the current through each branch of the circuit with two cells and three resistors (numerical given in exam)." },
+      { "marks": "2M", "question": "Define drift velocity. Derive the relation I = nAevd." },
+      { "marks": "1M", "question": "State Kirchhoff's current law. On what conservation principle is it based?" }
+    ]
+  },
+  "quiz": [
+    { "q": "Kirchhoff's Current Law is based on:", "opts": ["Energy conservation", "Charge conservation", "Mass conservation", "Momentum conservation"], "ans": 1, "exp": "KCL states the sum of currents at a junction is zero — meaning charge doesn't accumulate at a junction. This is conservation of electric charge." },
+    { "q": "In a metre bridge experiment, balance length is 60cm. If R = 10Ω, unknown X =", "opts": ["6Ω", "15Ω", "4Ω", "10Ω"], "ans": 1, "exp": "X/R = l/(100−l) → X/10 = 60/40 = 3/2 → X = 15Ω." },
+    { "q": "Resistivity of a metal increases with temperature because:", "opts": ["Electron density increases", "More lattice vibrations increase collision frequency", "Cross-sectional area decreases", "Length increases"], "ans": 1, "exp": "As temperature rises, metal ions vibrate more. Free electrons collide more frequently with these vibrating ions, reducing drift velocity and increasing resistance/resistivity." },
+    { "q": "Drift velocity of electrons in a conductor is of the order:", "opts": ["10⁸ m/s", "10⁶ m/s", "10⁻⁴ m/s", "10³ m/s"], "ans": 2, "exp": "Drift velocity is surprisingly slow — about 10⁻⁴ m/s (0.1 mm/s). Yet current effects propagate near the speed of light because the electric field propagates through the conductor almost instantly." }
+  ],
+  "flipcards": [
+    { "front": "Formula for drift velocity?", "back": "vd = eEτ/m or I = nAevd (n=electron density, A=area, e=charge, vd=drift velocity)" },
+    { "front": "Resistivity formula?", "back": "R = ρl/A; ρ = resistivity (Ω·m), l = length, A = cross-sectional area" },
+    { "front": "State KVL (Kirchhoff's Voltage Law)?", "back": "The algebraic sum of all EMFs and potential drops in a closed loop = 0 (ΣE = ΣIR)" },
+    { "front": "Wheatstone bridge balance condition?", "back": "P/Q = R/S — when galvanometer reads zero (no current through it)" },
+    { "front": "What is the metre bridge formula?", "back": "X/R = l/(100−l) where l is balance length on 100cm wire" },
+    { "front": "Temperature coefficient of resistance (metals)?", "back": "Positive — resistance increases with temperature. Semiconductors: negative (resistance decreases with temp)" }
+  ],
+  "archive": [
+    { "emoji": "👶", "title": "Human Reproduction", "meta": "Week 10 · Biology · Class 12" },
+    { "emoji": "📁", "title": "File Handling in Python", "meta": "Week 9 · CS · Class 12" },
+    { "emoji": "📐", "title": "Coordinate Geometry", "meta": "Week 8 · Mathematics · Class 10" },
+    { "emoji": "⚗️", "title": "Carbon & Its Compounds", "meta": "Week 7 · Science · Class 10" }
+  ],
+  "upcoming": [
+    { "week": "W12", "title": "Chemical Reactions & Equations", "subject": "Science Class 10" },
+    { "week": "W13", "title": "Triangles & Similarity", "subject": "Mathematics Class 10" },
+    { "week": "W14", "title": "Money & Banking", "subject": "Economics Class 12" },
+    { "week": "W15", "title": "Genetics & Inheritance", "subject": "Biology Class 12" }
+  ]
+}

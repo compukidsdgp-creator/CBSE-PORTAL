@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 18, "month": "May 2027", "subject": "Science", "class": "Class 10", "chapter": "Chapter 2", "emoji": "🧪", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Acids, Bases & Salts — Chemistry You Encounter Every Day", "hook": "The lemon in your juice, the antacid you take for acidity, the baking soda in your cake, the bleaching powder in your water supply — all acids, bases, and salts. Chapter 2 isn't abstract chemistry — it's the chemistry happening in your kitchen, your stomach, and your environment. And it's worth 6–8 marks in boards." },
+  "hook_section": {
+    "scenario_icon": "🍋",
+    "scenario": "Your stomach secretes hydrochloric acid (HCl) to digest food. When too much is produced, you feel acidity. You take an antacid tablet — it contains Mg(OH)₂ or Al(OH)₃, which is a base. Base + acid → salt + water. The pain stops. This neutralisation reaction is happening in your stomach right now, and it's a classic acid-base reaction.",
+    "bridge": "Chapter 2 covers properties of acids and bases, indicators (litmus, methyl orange, phenolphthalein, turmeric), pH scale, neutralisation reactions, reaction of acids with metals/carbonates/bicarbonates, and salts (preparation, properties, uses: NaCl, NaOH, Na₂CO₃, NaHCO₃, bleaching powder, plaster of paris).",
+    "punchline": "Acids: sour taste, turn blue litmus red, pH < 7, release H⁺ in water. Bases: bitter taste, soapy, turn red litmus blue, pH > 7, release OH⁻. pH 7 = neutral."
+  },
+  "concept_section": {
+    "analogy_icon": "⚖️",
+    "analogy": "The pH scale is like a temperature scale for acidity. Just as temperature tells us hot/cold with 0°C as freezing and 100°C as boiling, pH tells us acid/base with 0 as strongest acid, 7 as neutral, 14 as strongest base. Each step on the pH scale is a 10× change — pH 4 is 10 times more acidic than pH 5, and 100 times more acidic than pH 6.",
+    "principle": "pH = −log[H⁺]. pH < 7 = acidic; pH = 7 = neutral; pH > 7 = basic/alkaline. Strong acid + strong base → salt + water (neutralisation). Common salts: NaCl (common salt), NaOH (caustic soda), Na₂CO₃ (washing soda), NaHCO₃ (baking soda), CaOCl₂ (bleaching powder), CaSO₄·½H₂O (plaster of paris).",
+    "reveal_prompt": "Tap each category to explore it 👇",
+    "reveals": [
+      { "question": "🔬 Reactions of acids?", "answer": "With metals: Acid + Metal → Salt + H₂↑. Zn + H₂SO₄ → ZnSO₄ + H₂↑. With metal oxide: Acid + Metal oxide → Salt + Water. CuO + HCl → CuCl₂ + H₂O. With carbonates: Acid + Carbonate → Salt + H₂O + CO₂↑. Na₂CO₃ + HCl → NaCl + H₂O + CO₂↑. With bicarbonates: NaHCO₃ + HCl → NaCl + H₂O + CO₂↑." },
+      { "question": "🌡️ pH and indicators?", "answer": "Litmus: acidic = red, basic = blue, neutral = purple. Methyl orange: acidic = red/orange, basic = yellow. Phenolphthalein: acidic = colourless, basic = pink. Universal indicator: different colours across pH range. pH paper gives rough pH estimate. Olfactory indicators: onion/vanilla smell changes with acid/base." },
+      { "question": "🧂 Important salts and their uses?", "answer": "NaCl: food preservation, raw material for Na, Cl₂, NaOH, Na₂CO₃. NaOH (caustic soda): soap, paper, detergent manufacture. Na₂CO₃·10H₂O (washing soda): cleaning, glass, paper industry, pH of hard water. NaHCO₃ (baking soda): baking (CO₂ makes cake rise), antacid, fire extinguisher. Bleaching powder CaOCl₂: disinfectant, bleaching cotton/linen, water purification." },
+      { "question": "💎 Plaster of Paris and water of crystallisation?", "answer": "Plaster of Paris (PoP): CaSO₄·½H₂O. Made by heating gypsum (CaSO₄·2H₂O) at 100°C. PoP + water → gypsum (sets hard — used in casts for broken bones, construction). Water of crystallisation: water molecules integral to crystal structure. CuSO₄·5H₂O (blue vitriol) is blue when hydrated, white when anhydrous." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Acids</b>: H⁺ in water, pH < 7, blue litmus → red. <b>Bases</b>: OH⁻ in water, pH > 7, red litmus → blue",
+      "<b>Neutralisation</b>: Acid + Base → Salt + Water; exothermic reaction",
+      "<b>pH scale</b>: 0–14; each unit = 10× difference in H⁺ concentration",
+      "<b>NaHCO₃</b>: used in baking, antacids, fire extinguishers; reacts with acid → CO₂",
+      "<b>Plaster of Paris</b>: CaSO₄·½H₂O; absorbs water and hardens (gypsum reform)"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "What happens when: (a) HCl is added to Na₂CO₃ (b) H₂SO₄ is added to zinc (c) NaOH is added to HCl. Write equations for each." },
+      { "marks": "2M", "question": "What is water of crystallisation? Give two examples of salts that contain it." },
+      { "marks": "1M", "question": "What is the pH of pure water at 25°C? What does this indicate?" }
+    ]
+  },
+  "quiz": [
+    { "q": "Baking soda (NaHCO₃) is used in fire extinguishers because:", "opts": ["It smothers fire with water", "It reacts with acid to produce CO₂ which smothers fire", "It is a flammable substance", "It absorbs heat"], "ans": 1, "exp": "NaHCO₃ + acid → CO₂ + water. CO₂ is denser than air and doesn't support combustion — it smothers the fire. Also, the soda-acid extinguisher produces CO₂ when NaHCO₃ reacts with H₂SO₄." },
+    { "q": "Which indicator is colourless in acidic solution and pink in basic solution?", "opts": ["Litmus", "Methyl orange", "Phenolphthalein", "Turmeric"], "ans": 2, "exp": "Phenolphthalein: colourless in acidic/neutral solution, pink/magenta in basic solution. Used to identify if a solution is basic and in titration end-point detection." },
+    { "q": "Plaster of Paris is obtained by heating gypsum at:", "opts": ["25°C", "100°C", "200°C", "500°C"], "ans": 1, "exp": "CaSO₄·2H₂O (gypsum) is heated at 100°C → CaSO₄·½H₂O (plaster of paris) + 1½H₂O. At higher temperatures (>170°C), anhydrous CaSO₄ forms which cannot set again." },
+    { "q": "A solution has pH = 2. This solution is:", "opts": ["Weakly acidic", "Neutral", "Strongly acidic", "Basic"], "ans": 2, "exp": "pH 2 is strongly acidic (pH 7 = neutral, below 7 = acidic). pH 2 means [H⁺] = 10⁻² = 0.01 mol/L — 100 times more acidic than pH 4." }
+  ],
+  "flipcards": [
+    { "front": "What is the pH of pure water?", "back": "pH = 7 (neutral) — equal concentrations of H⁺ and OH⁻ ions" },
+    { "front": "IUPAC name and formula of baking soda?", "back": "Sodium hydrogen carbonate — NaHCO₃" },
+    { "front": "IUPAC name and formula of washing soda?", "back": "Sodium carbonate decahydrate — Na₂CO₃·10H₂O" },
+    { "front": "What colour does phenolphthalein turn in a basic solution?", "back": "Pink/magenta (colourless in acidic/neutral solution)" },
+    { "front": "What is bleaching powder?", "back": "Calcium oxychloride — CaOCl₂; made by passing Cl₂ over dry slaked lime; used for bleaching and disinfection" },
+    { "front": "What is water of crystallisation?", "back": "Fixed number of water molecules part of crystal structure. Example: CuSO₄·5H₂O (blue vitriol) — 5 water molecules per formula unit" }
+  ],
+  "archive": [
+    { "emoji": "🗄️", "title": "Databases & SQL", "meta": "Week 17 · CS · Class 12" },
+    { "emoji": "⚡", "title": "Electrostatics", "meta": "Week 16 · Physics · Class 12" },
+    { "emoji": "🧬", "title": "Genetics & Inheritance", "meta": "Week 15 · Biology · Class 12" },
+    { "emoji": "🏦", "title": "Money & Banking", "meta": "Week 14 · Economics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W19", "title": "Arithmetic Progressions", "subject": "Mathematics Class 10" },
+    { "week": "W20", "title": "Biodiversity & Conservation", "subject": "Biology Class 12" },
+    { "week": "W21", "title": "Polymers & Biomolecules", "subject": "Chemistry Class 12" },
+    { "week": "W22", "title": "Quadratic Equations", "subject": "Mathematics Class 10" }
+  ]
+}

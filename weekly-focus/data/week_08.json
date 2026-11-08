@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 8, "month": "Feb 2027", "subject": "Mathematics", "class": "Class 10", "chapter": "Chapter 7", "emoji": "📐", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Coordinate Geometry — Bridging Algebra and Geometry", "hook": "René Descartes was lying in bed watching a fly move on the ceiling when he had a flash of insight: you can describe any point's position using just two numbers. That idea — the coordinate system — transformed all of mathematics. And in Class 10, it gives you powerful tools to find distances, divide segments, and calculate areas using pure algebra." },
+  "hook_section": {
+    "scenario_icon": "🗺️",
+    "scenario": "Two cities A(2,3) and B(8,7) are marked on a map. What's the straight-line distance between them? Without coordinate geometry, you'd need a ruler and scale drawing. With the distance formula: d = √[(8−2)² + (7−3)²] = √[36+16] = √52 ≈ 7.2 units. The same approach works for finding the midpoint, dividing a line in a ratio, or calculating the area of a triangle from its vertices.",
+    "bridge": "Chapter 7 covers four formulas: Distance Formula, Section Formula, Midpoint Formula, and Area of Triangle. These are tested almost every year in Class 10 boards, usually as 2–4 mark problems with specific coordinates given.",
+    "punchline": "Learn these four formulas cold: Distance Formula, Section Formula (m:n ratio), Midpoint Formula, Area of Triangle. Apply them mechanically — most marks are for correct substitution."
+  },
+  "concept_section": {
+    "analogy_icon": "📍",
+    "analogy": "Think of coordinate geometry as GPS for maths. Every point has an address (x, y). Distance formula = how far apart two addresses are (like Google Maps straight-line distance). Section formula = finding the address of a hotel that is 2/3 of the way from city A to city B. Area formula = how much land is enclosed by three addresses (cities). It's geography, but with algebra.",
+    "principle": "Distance: d = √[(x₂−x₁)² + (y₂−y₁)²]. Midpoint: M = ((x₁+x₂)/2, (y₁+y₂)/2). Section (m:n): P = ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n)). Area of △ = ½|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|.",
+    "reveal_prompt": "Tap each formula to see it applied 👇",
+    "reveals": [
+      { "question": "📏 Distance Formula — application?", "answer": "d = √[(x₂−x₁)² + (y₂−y₁)²]. Used to prove: type of triangle (equilateral if all sides equal; isoceles if 2 sides equal); points are collinear if sum of two shorter distances = longest distance; type of quadrilateral (use all 4 sides + both diagonals)." },
+      { "question": "✂️ Section Formula — m:n division?", "answer": "P divides AB in ratio m:n internally: P = ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n)). Midpoint is special case where m=n=1. For external division: same formula but with minus sign. If P divides AB in ratio k:1, substitute m=k, n=1 to simplify." },
+      { "question": "△ Area of Triangle?", "answer": "Area = ½|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|. If area = 0, points are collinear! This is a useful test for collinearity. Always take absolute value to get positive area." },
+      { "question": "🔵 Types of quadrilateral — coordinate proof?", "answer": "To prove ABCD is a: parallelogram (diagonals bisect each other → midpoints equal); rectangle (parallelogram + diagonals equal); rhombus (all sides equal + diagonals not equal); square (all sides equal + diagonals equal). Calculate all 4 sides AND both diagonals." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Distance</b>: d = √[(x₂−x₁)² + (y₂−y₁)²] — always positive",
+      "<b>Section formula</b>: ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n)) for internal m:n division",
+      "<b>Midpoint</b>: M = ((x₁+x₂)/2, (y₁+y₂)/2) — section formula with m=n=1",
+      "<b>Area of triangle</b>: ½|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|; zero means collinear",
+      "<b>Quadrilateral proof</b>: always compute all 4 sides + both diagonals for complete proof"
+    ],
+    "exam_questions": [
+      { "marks": "4M", "question": "Find the coordinates of a point P that divides the line segment joining A(4,−3) and B(9,7) in the ratio 3:2 internally." },
+      { "marks": "3M", "question": "Find the area of triangle with vertices A(1,2), B(3,0), C(5,4). Hence check if the three points are collinear." },
+      { "marks": "2M", "question": "Find the distance between points P(4,−3) and Q(−2,5)." }
+    ]
+  },
+  "quiz": [
+    { "q": "Distance between (3,4) and (0,0) is:", "opts": ["7", "5", "√7", "25"], "ans": 1, "exp": "d = √[(3−0)² + (4−0)²] = √[9+16] = √25 = 5. This is the classic 3-4-5 right triangle." },
+    { "q": "Midpoint of (2,6) and (8,4) is:", "opts": ["(5,5)", "(6,10)", "(3,2)", "(10,10)"], "ans": 0, "exp": "Midpoint = ((2+8)/2, (6+4)/2) = (10/2, 10/2) = (5,5). Average of x-coordinates and average of y-coordinates." },
+    { "q": "If area of triangle with given vertices is 0, the points are:", "opts": ["On a circle", "Collinear", "On a parabola", "Vertices of equilateral triangle"], "ans": 1, "exp": "Area = 0 means no enclosed space — the three points lie on the same straight line, i.e., they are collinear. This is a quick test for collinearity." },
+    { "q": "Point P divides A(1,2) and B(7,8) in ratio 1:2. P is:", "opts": ["(3,4)", "(4,6)", "(5,6)", "(2,3)"], "ans": 0, "exp": "Section formula: P = ((1×7+2×1)/(1+2), (1×8+2×2)/(1+2)) = ((7+2)/3, (8+4)/3) = (9/3, 12/3) = (3,4)." }
+  ],
+  "flipcards": [
+    { "front": "Distance formula?", "back": "d = √[(x₂−x₁)² + (y₂−y₁)²]" },
+    { "front": "Midpoint formula?", "back": "M = ((x₁+x₂)/2, (y₁+y₂)/2)" },
+    { "front": "Section formula for m:n internal division?", "back": "P = ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n))" },
+    { "front": "Area of triangle with 3 vertices?", "back": "½|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|" },
+    { "front": "If area of triangle = 0, what does that mean?", "back": "The three points are collinear (lie on same line)" },
+    { "front": "To prove ABCD is a rectangle?", "back": "Show: all 4 sides equal (or opposite sides equal) AND both diagonals are equal" }
+  ],
+  "archive": [
+    { "emoji": "⚗️", "title": "Carbon & Its Compounds", "meta": "Week 7 · Science · Class 10" },
+    { "emoji": "📈", "title": "National Income", "meta": "Week 6 · Economics · Class 12" },
+    { "emoji": "🧬", "title": "Reproduction in Organisms", "meta": "Week 5 · Biology · Class 12" },
+    { "emoji": "🎲", "title": "Probability", "meta": "Week 4 · Mathematics · Class 10" }
+  ],
+  "upcoming": [
+    { "week": "W09", "title": "File Handling in Python", "subject": "CS Class 12" },
+    { "week": "W10", "title": "Human Reproduction", "subject": "Biology Class 12" },
+    { "week": "W11", "title": "Current Electricity", "subject": "Physics Class 12" },
+    { "week": "W12", "title": "Chemical Reactions & Equations", "subject": "Science Class 10" }
+  ]
+}

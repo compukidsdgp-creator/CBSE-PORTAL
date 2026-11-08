@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 51, "month": "Dec 2026", "subject": "Science", "class": "Class 10", "chapter": "Chapter 12", "emoji": "⚡", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Electricity — Ohm's Law & Circuits Made Simple", "hook": "Every device you plug in, every bulb that glows, every phone that charges — all of it comes down to three quantities: Voltage, Current, and Resistance. And one elegant law connecting them. Master Ohm's Law and you unlock the entire Electricity chapter." },
+  "hook_section": {
+    "scenario_icon": "🔌",
+    "scenario": "You have a torch with fresh batteries — bright light. Put old, weak batteries in — dim light. Same bulb, same wire, different voltage. The current flowing through the bulb changes with voltage. And the bulb's resistance stays the same. This is Ohm's Law in action — every single day, in every device you own.",
+    "bridge": "Electricity is Class 10 Science's highest-weightage chapter — typically 7–8 marks in the board exam. Ohm's Law, series/parallel circuits, and the heating effect are almost always tested together.",
+    "punchline": "V = IR. This one equation, with its three arrangements, can answer almost every Electricity question."
+  },
+  "concept_section": {
+    "analogy_icon": "💧",
+    "analogy": "Think of electricity like water in a pipe. Voltage is water pressure (pushes water through). Current is how fast water flows. Resistance is how narrow or rough the pipe is. More pressure (V) → more flow (I). Narrower pipe (R) → less flow. That's exactly V = IR.",
+    "principle": "Ohm's Law: V = IR (Voltage = Current × Resistance). Three forms: I = V/R, R = V/I. Series: R_total = R₁+R₂+... | Parallel: 1/R_total = 1/R₁+1/R₂+...",
+    "reveal_prompt": "Tap each circuit type to compare them 👇",
+    "reveals": [
+      { "question": "🔗 Series Circuit — key facts?", "answer": "Same current through all components. Total voltage = sum of individual voltages. Total resistance = R₁+R₂+R₃. If one component fails, the whole circuit breaks (like old Christmas lights)." },
+      { "question": "⚡ Parallel Circuit — key facts?", "answer": "Same voltage across all components. Total current = sum of individual currents. Total resistance is LESS than any single resistance. If one branch fails, others keep working (like home wiring)." },
+      { "question": "🌡️ Heating Effect of Current?", "answer": "Heat produced H = I²Rt (Joule's Law). More current, more resistance, more time → more heat. Used in: electric heater, bulb, iron, toaster. This is why high-current devices need thick wires." },
+      { "question": "💡 Electric Power?", "answer": "P = VI = I²R = V²/R. Unit: Watt (W). A 60W bulb uses 60 joules per second. Energy = P × t (in joules) or in kWh for billing. 1 kWh = 1 unit of electricity." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Ohm's Law</b>: V = IR — valid for metallic conductors at constant temperature",
+      "<b>Series</b>: R_total = R₁+R₂, same current; <b>Parallel</b>: 1/R = 1/R₁+1/R₂, same voltage",
+      "<b>Resistance factors</b>: R ∝ length, R ∝ 1/area, depends on material (ρ); R = ρl/A",
+      "<b>Joule's heating</b>: H = I²Rt — basis of all heating appliances",
+      "<b>Electric power</b>: P = VI; <b>Energy</b> = Pt; 1 kWh = 3.6 × 10⁶ J"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Three resistors 2Ω, 3Ω, 6Ω are connected in parallel. Find (a) total resistance (b) current from 6V battery" },
+      { "marks": "2M", "question": "A wire of resistance 10Ω is stretched to double its length. What is its new resistance?" },
+      { "marks": "1M", "question": "State Ohm's Law and write its mathematical form" }
+    ]
+  },
+  "quiz": [
+    { "q": "Three resistors 6Ω, 3Ω, 2Ω are in parallel. Total resistance is:", "opts": ["11Ω", "1Ω", "5Ω", "3Ω"], "ans": 1, "exp": "1/R = 1/6+1/3+1/2 = 1/6+2/6+3/6 = 6/6 = 1. So R = 1Ω. Parallel resistance is always less than the smallest individual resistance." },
+    { "q": "A wire of resistance R is stretched to twice its length. New resistance is:", "opts": ["R/2", "2R", "4R", "R/4"], "ans": 2, "exp": "R = ρl/A. Doubling length also halves area (same volume). New R = ρ(2l)/(A/2) = 4R." },
+    { "q": "Heating effect of current is used in:", "opts": ["Electric motor", "Electric bell", "Electric iron", "Generator"], "ans": 2, "exp": "Electric iron uses Joule heating (H = I²Rt). Motors and generators convert electrical to mechanical energy; bells use electromagnetic effects." },
+    { "q": "In a series circuit with two bulbs, if one bulb fuses:", "opts": ["Other bulb glows brighter", "Other bulb remains same", "Both bulbs go off", "Circuit resistance decreases"], "ans": 2, "exp": "In series, all components share the same current path. If one breaks, the circuit is open — no current flows anywhere." }
+  ],
+  "flipcards": [
+    { "front": "State Ohm's Law", "back": "V = IR — voltage across a conductor is directly proportional to current through it, at constant temperature" },
+    { "front": "Series vs Parallel — which has higher resistance?", "back": "Series — resistances add up. Parallel — total resistance is less than smallest individual resistance." },
+    { "front": "Formula for Joule's heating?", "back": "H = I²Rt — Heat = current² × resistance × time" },
+    { "front": "What is 1 kWh in joules?", "back": "1 kWh = 3.6 × 10⁶ J (1 unit of electricity)" },
+    { "front": "How does resistance depend on length?", "back": "R ∝ l (directly proportional). Double the length → double the resistance" },
+    { "front": "Why is home wiring done in parallel?", "back": "Each appliance gets full voltage independently; one failure doesn't affect others" }
+  ],
+  "archive": [
+    { "emoji": "🐍", "title": "Python Functions & Recursion", "meta": "Week 50 · Computer Science · Class 12" },
+    { "emoji": "🌱", "title": "Plant Hormones", "meta": "Week 49 · Biology · Class 12" },
+    { "emoji": "📐", "title": "Determinants & Matrices", "meta": "Week 48 · Mathematics · Class 12" },
+    { "emoji": "📊", "title": "Demand Elasticity", "meta": "Week 47 · Economics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W52", "title": "Trigonometry Applications", "subject": "Maths Class 10" },
+    { "week": "W01", "title": "Electromagnetic Induction", "subject": "Physics Class 12" },
+    { "week": "W02", "title": "Organic Reactions", "subject": "Chemistry Class 12" },
+    { "week": "W03", "title": "Light — Reflection & Refraction", "subject": "Science Class 10" }
+  ]
+}

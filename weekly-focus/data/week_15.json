@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 15, "month": "Apr 2027", "subject": "Biology", "class": "Class 12", "chapter": "Chapter 5", "emoji": "🧬", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Principles of Inheritance — Mendel's Laws That Changed Biology", "hook": "Gregor Mendel spent 8 years crossing pea plants in a monastery garden and counting offspring — over 10,000 experiments. His results revealed the hidden rules of inheritance that neither he nor anyone before him had suspected. Those rules — the Law of Segregation and the Law of Independent Assortment — form the foundation of all modern genetics." },
+  "hook_section": {
+    "scenario_icon": "🌱",
+    "scenario": "Cross a pure tall pea plant (TT) with a pure short plant (tt). All offspring in F1 are tall (Tt). Now self-cross F1 plants — you get tall and short in a 3:1 ratio. How did 'short' disappear in F1 and reappear in F2? Because 'tallness' is dominant over 'shortness' — it masks the recessive trait when both are present. Traits are carried by discrete factors (genes) that separate during gamete formation.",
+    "bridge": "Chapter 5 covers Mendel's experiments, laws of inheritance, monohybrid and dihybrid crosses, Punnett squares, incomplete dominance, codominance, multiple allelism (ABO blood groups), and chromosomal disorders (Down syndrome, Turner syndrome, Klinefelter syndrome). These require both understanding and practice with Punnett squares.",
+    "punchline": "Law of Segregation: each organism has two alleles for each gene; they separate during gamete formation, one going to each gamete. This is the most fundamental principle in genetics."
+  },
+  "concept_section": {
+    "analogy_icon": "🃏",
+    "analogy": "Think of genes as cards. Each person carries two cards for each trait (like a hand of pairs). When producing offspring, each parent gives one card from each pair. If you get a red (dominant) card and a blue (recessive) card — the red card's trait shows (heterozygous). Two blue cards = blue trait shows (recessive homozygous). The deck reshuffles at every generation.",
+    "principle": "Mendel's Laws: (1) Law of Dominance: dominant allele expressed over recessive. (2) Law of Segregation: alleles separate during gamete formation, one per gamete. (3) Law of Independent Assortment: genes for different traits assort independently (non-linked genes). Genotype vs Phenotype. Dominant = capital letter, Recessive = small letter.",
+    "reveal_prompt": "Tap each concept to master it 👇",
+    "reveals": [
+      { "question": "🌿 Monohybrid Cross (3:1 ratio)?", "answer": "P: TT × tt → F1: all Tt (tall, dominant). F1 × F1: Tt × Tt → F2: TT:Tt:tt = 1:2:1 (genotype) = 3 tall:1 short (phenotype). The 3:1 phenotypic ratio is Mendel's Law of Segregation in action. Recessive trait reappears in F2 (1/4 = 25%)." },
+      { "question": "🌸 Dihybrid Cross (9:3:3:1)?", "answer": "RRYY × rryy → F1: RrYy. F1 × F1: 16 combinations → 9 R_Y_ : 3 R_yy : 3 rrY_ : 1 rryy = 9:3:3:1 phenotypic ratio. This demonstrates Independent Assortment — R and Y genes sort independently. Only possible if genes are on different chromosomes (non-linked)." },
+      { "question": "🩸 ABO Blood Groups — multiple allelism?", "answer": "Three alleles: Iᴬ, Iᴮ, i. Iᴬ and Iᴮ are codominant; both are dominant over i. Blood groups: AA/Ai = type A; BB/Bi = type B; AB = type AB (both expressed — codominance); ii = type O. Universal donor = O; Universal recipient = AB. This is an example of multiple allelism AND codominance." },
+      { "question": "🧬 Chromosomal disorders?", "answer": "Down syndrome (Trisomy 21): 47 chromosomes, extra chromosome 21, caused by non-disjunction. Turner syndrome (45,X or XO): female with only one X, sterile, underdeveloped. Klinefelter syndrome (47,XXY): male with extra X, sterile, gynecomastia. All caused by errors in chromosome separation during meiosis (non-disjunction)." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Law of Segregation</b>: alleles separate during gamete formation; one allele per gamete",
+      "<b>Law of Independent Assortment</b>: different gene pairs assort independently (non-linked genes)",
+      "<b>Monohybrid ratio</b>: 3:1 (phenotype), 1:2:1 (genotype) in F2",
+      "<b>Dihybrid ratio</b>: 9:3:3:1 (phenotype) in F2",
+      "<b>Codominance</b>: both alleles expressed equally (Iᴬ and Iᴮ in AB blood type)"
+    ],
+    "exam_questions": [
+      { "marks": "5M", "question": "Draw the Punnett square for a cross between two heterozygous round yellow pea plants (RrYy × RrYy). What are the phenotypic and genotypic ratios in the offspring?" },
+      { "marks": "3M", "question": "What is codominance? How is it demonstrated in ABO blood group system?" },
+      { "marks": "2M", "question": "A red-flowered (RR) plant is crossed with white-flowered (rr) plant. F1 produces pink flowers. What is this called? Give F2 ratio." }
+    ]
+  },
+  "quiz": [
+    { "q": "In a dihybrid cross, the F2 phenotypic ratio is:", "opts": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"], "ans": 2, "exp": "Dihybrid cross (RrYy × RrYy) produces F2 ratio of 9:3:3:1 — 9 dominant for both, 3 dominant for first only, 3 dominant for second only, 1 recessive for both. This demonstrates Independent Assortment." },
+    { "q": "A man with blood group AB marries a woman with blood group O. Possible blood groups of children:", "opts": ["A and B only", "O only", "AB only", "A, B, AB and O"], "ans": 0, "exp": "Father: Iᴬ Iᴮ; Mother: ii. Cross: Iᴬi and Iᴮi = children are type A (Iᴬi) or type B (Iᴮi). No child will be AB or O. Only A and B possible." },
+    { "q": "In incomplete dominance, F2 genotypic and phenotypic ratios are:", "opts": ["Both 3:1", "1:2:1 and 3:1", "Both 1:2:1", "9:3:3:1 and 3:1"], "ans": 2, "exp": "In incomplete dominance (e.g., snapdragon flower colour), all three genotypes show different phenotypes. So genotypic ratio 1:2:1 = phenotypic ratio 1:2:1 (unlike complete dominance where 1:2:1 genotype → 3:1 phenotype)." },
+    { "q": "Down syndrome (Trisomy 21) is caused by:", "opts": ["Deletion of chromosome 21", "Non-disjunction of chromosome 21", "Point mutation in chromosome 21", "X-linked recessive gene"], "ans": 1, "exp": "Non-disjunction during meiosis causes both chromosome 21s to go to the same gamete. That gamete (with 2 copies of chr21) + normal gamete (1 copy) = zygote with 3 copies (trisomy 21) → Down syndrome." }
+  ],
+  "flipcards": [
+    { "front": "Mendel's Law of Segregation?", "back": "During gamete formation, the two alleles of each gene separate from each other. Each gamete receives only one allele." },
+    { "front": "Monohybrid F2 ratio?", "back": "Phenotypic: 3:1 (3 dominant : 1 recessive). Genotypic: 1:2:1 (homozygous dominant : heterozygous : homozygous recessive)" },
+    { "front": "What is incomplete dominance?", "back": "Neither allele is completely dominant — heterozygote shows intermediate phenotype (e.g., red × white = pink in snapdragon)" },
+    { "front": "Blood group universal donor and recipient?", "back": "Universal donor: O (ii) — no antigens on RBCs. Universal recipient: AB — no antibodies in plasma." },
+    { "front": "What is non-disjunction?", "back": "Failure of chromosomes to separate during meiosis → gamete with extra or missing chromosome → chromosomal disorders (Down, Turner, Klinefelter)" },
+    { "front": "Klinefelter syndrome karyotype?", "back": "47, XXY — male with extra X chromosome. Phenotypically male but sterile; may show gynecomastia." }
+  ],
+  "archive": [
+    { "emoji": "🏦", "title": "Money & Banking", "meta": "Week 14 · Economics · Class 12" },
+    { "emoji": "📐", "title": "Triangles & Similarity", "meta": "Week 13 · Mathematics · Class 10" },
+    { "emoji": "🧫", "title": "Chemical Reactions & Equations", "meta": "Week 12 · Science · Class 10" },
+    { "emoji": "🔌", "title": "Current Electricity", "meta": "Week 11 · Physics · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W16", "title": "Electrostatics", "subject": "Physics Class 12" },
+    { "week": "W17", "title": "Databases & SQL", "subject": "CS Class 12" },
+    { "week": "W18", "title": "Acids, Bases & Salts", "subject": "Science Class 10" },
+    { "week": "W19", "title": "Arithmetic Progressions", "subject": "Mathematics Class 10" }
+  ]
+}

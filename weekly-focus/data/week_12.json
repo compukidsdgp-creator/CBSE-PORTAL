@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 12, "month": "Mar 2027", "subject": "Science", "class": "Class 10", "chapter": "Chapter 1", "emoji": "🧫", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Chemical Reactions & Equations — Chemistry in Action", "hook": "Iron rusting, wood burning, food cooking, bleaching clothes, medicine working in your body — all of these are chemical reactions. Chapter 1 of Class 10 Science isn't just about balancing equations. It's about understanding what types of changes are happening and why. Every board exam starts here." },
+  "hook_section": {
+    "scenario_icon": "🔥",
+    "scenario": "Drop a piece of magnesium ribbon in hydrochloric acid. Within seconds: vigorous bubbling, the magnesium dissolves, the solution warms up. What happened? A new substance formed (MgCl₂), a gas was released (H₂), energy was released (heat). These observations — new substance, energy change, gas, precipitate — are signs that a chemical reaction occurred.",
+    "bridge": "Chapter 1 covers how to write and balance chemical equations, types of reactions (combination, decomposition, displacement, double displacement, oxidation-reduction), and indicators of chemical change. The 5-6 mark equations question at the end of a paper almost always starts with one of these reaction types.",
+    "punchline": "Balance atoms, not charges — same number of each element on both sides. Types of reactions have tell-tale patterns: learn to identify them from the equation structure."
+  },
+  "concept_section": {
+    "analogy_icon": "🎭",
+    "analogy": "Chemical reactions are like theatrical performances. Combination is a marriage (two become one). Decomposition is a divorce (one splits into two). Displacement is an eviction (a stronger element pushes a weaker one out of a compound). Double displacement is a partner swap (two compounds exchange partners). Oxidation-reduction always happen together — one gains oxygen/loses hydrogen while the other does the opposite.",
+    "principle": "Law of Conservation of Mass: matter is neither created nor destroyed in a chemical reaction. Balanced equations have same atoms of each element on both sides. Symbols of state: (s)=solid, (l)=liquid, (g)=gas, (aq)=aqueous solution.",
+    "reveal_prompt": "Tap each reaction type to identify and memorise 👇",
+    "reveals": [
+      { "question": "🤝 Combination & Decomposition?", "answer": "Combination (Synthesis): A + B → AB. CaO + H₂O → Ca(OH)₂ (exothermic). C + O₂ → CO₂. Decomposition: AB → A + B. 2FeSO₄ → Fe₂O₃ + SO₂ + SO₃ (thermal). 2AgCl → 2Ag + Cl₂ (photochemical — used in photography). 2H₂O → 2H₂ + O₂ (electrolytic)." },
+      { "question": "🔄 Displacement & Double Displacement?", "answer": "Single Displacement: A + BC → AC + B. Fe + CuSO₄ → FeSO₄ + Cu (iron displaces copper — reactivity series). Zn + H₂SO₄ → ZnSO₄ + H₂. Double Displacement (usually precipitate or gas forms): Na₂SO₄ + BaCl₂ → BaSO₄↓ + 2NaCl. HCl + NaOH → NaCl + H₂O (neutralisation)." },
+      { "question": "🔥 Oxidation & Reduction (Redox)?", "answer": "Oxidation: gain of oxygen / loss of hydrogen / loss of electrons. Reduction: loss of oxygen / gain of hydrogen / gain of electrons. OIL RIG: Oxidation Is Loss, Reduction Is Gain (of electrons). Redox: both happen simultaneously. Example: CuO + H₂ → Cu + H₂O (CuO reduced, H₂ oxidised)." },
+      { "question": "🌿 Exothermic vs Endothermic?", "answer": "Exothermic: energy released as heat (temperature rises). Examples: combustion, neutralisation, respiration, quick lime + water. Endothermic: energy absorbed (temperature drops). Examples: decomposition, photosynthesis, dissolving ammonium chloride in water, baking soda + acid." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Balanced equation</b>: atoms conserved on both sides; mass is neither created nor destroyed",
+      "<b>Combination</b>: A+B→AB; <b>Decomposition</b>: AB→A+B (thermal/electrolytic/photochemical)",
+      "<b>Single displacement</b>: A+BC→AC+B (based on reactivity series)",
+      "<b>Double displacement</b>: exchange of ions, often forms precipitate (↓) or gas (↑)",
+      "<b>Redox</b>: oxidation and reduction occur simultaneously; OIL RIG mnemonic"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Balance the equation: Fe₂O₃ + Al → Al₂O₃ + Fe. Identify the type of reaction and which substance is oxidised and which is reduced." },
+      { "marks": "2M", "question": "What is a redox reaction? Give one example with the equation." },
+      { "marks": "1M", "question": "What type of chemical reaction takes place when quicklime is added to water?" }
+    ]
+  },
+  "quiz": [
+    { "q": "2FeSO₄ → Fe₂O₃ + SO₂ + SO₃ is an example of:", "opts": ["Combination reaction", "Displacement reaction", "Decomposition reaction", "Double displacement"], "ans": 2, "exp": "One compound (FeSO₄) breaks down into three products. This is a thermal decomposition reaction — breaking apart by heating. The ↑ symbol would indicate gases evolved." },
+    { "q": "In CuO + H₂ → Cu + H₂O, which is oxidised?", "opts": ["CuO", "H₂", "Cu", "H₂O"], "ans": 1, "exp": "H₂ gains oxygen (H₂ → H₂O) — this is oxidation (OIL = Oxidation Is Loss, here gaining O, which is oxidation). CuO loses oxygen (CuO → Cu) — this is reduction. CuO is the oxidising agent; H₂ is the reducing agent." },
+    { "q": "AgCl decomposes in sunlight to form Ag and Cl₂. This is:", "opts": ["Thermal decomposition", "Electrolytic decomposition", "Photochemical decomposition", "Combination"], "ans": 2, "exp": "Photochemical decomposition is triggered by light (photo = light). AgCl and AgBr decompose in sunlight to form silver. This principle is used in black-and-white photography." },
+    { "q": "What does the symbol (aq) represent in a chemical equation?", "opts": ["Aqueous solution (dissolved in water)", "Atmospheric condition", "Acid quality", "Activated complex"], "ans": 0, "exp": "(aq) = aqueous solution. The states of matter in equations are: (s)=solid, (l)=liquid, (g)=gas, (aq)=dissolved in water. These state symbols provide crucial extra information." }
+  ],
+  "flipcards": [
+    { "front": "What is the law of conservation of mass?", "back": "Mass is neither created nor destroyed in a chemical reaction — total mass of reactants = total mass of products" },
+    { "front": "OIL RIG mnemonic?", "back": "Oxidation Is Loss (of electrons) | Reduction Is Gain (of electrons)" },
+    { "front": "Identify: Zn + CuSO₄ → ZnSO₄ + Cu", "back": "Single displacement reaction — zinc displaces copper (zinc is more reactive than copper in the activity series)" },
+    { "front": "Exothermic vs Endothermic?", "back": "Exothermic: energy released (combustion, neutralisation). Endothermic: energy absorbed (decomposition, photosynthesis)" },
+    { "front": "What is a precipitate?", "back": "An insoluble solid formed during a double displacement reaction (shown by ↓ symbol)" },
+    { "front": "Example of photochemical decomposition?", "back": "2AgCl → 2Ag + Cl₂ (in sunlight). Used in photography — silver deposited where light strikes." }
+  ],
+  "archive": [
+    { "emoji": "🔌", "title": "Current Electricity", "meta": "Week 11 · Physics · Class 12" },
+    { "emoji": "👶", "title": "Human Reproduction", "meta": "Week 10 · Biology · Class 12" },
+    { "emoji": "📁", "title": "File Handling in Python", "meta": "Week 9 · CS · Class 12" },
+    { "emoji": "📐", "title": "Coordinate Geometry", "meta": "Week 8 · Mathematics · Class 10" }
+  ],
+  "upcoming": [
+    { "week": "W13", "title": "Triangles & Similarity", "subject": "Mathematics Class 10" },
+    { "week": "W14", "title": "Money & Banking", "subject": "Economics Class 12" },
+    { "week": "W15", "title": "Genetics & Inheritance", "subject": "Biology Class 12" },
+    { "week": "W16", "title": "Electrostatics", "subject": "Physics Class 12" }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 13, "month": "Apr 2027", "subject": "Mathematics", "class": "Class 10", "chapter": "Chapter 6", "emoji": "📐", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Triangles & Similarity — When Shapes Are 'The Same but Different'", "hook": "The Eiffel Tower is 330 metres tall. An architect draws a 33cm model of it. The model and the real structure are similar figures — same shape, different size. Every angle is identical, every side is proportional. This proportionality is the entire logic of similar triangles, and it shows up in geometry, surveying, map-making, and 5–6 marks in your boards." },
+  "hook_section": {
+    "scenario_icon": "🗼",
+    "scenario": "Two triangles look alike. But are they similar? You need to check only 2 out of 3 conditions — not all 3. If two angles are equal (AA criterion), the triangles are similar and all sides are automatically proportional. This is the key shortcut: AA is enough. You don't need to measure every side.",
+    "bridge": "Chapter 6 covers properties of similar triangles, the three similarity criteria (AA, SSS, SAS), Thales Theorem (Basic Proportionality Theorem), Pythagoras Theorem and its converse, and areas of similar triangles. These are tested in both short and long answer questions.",
+    "punchline": "Corresponding sides of similar triangles are proportional. If △ABC ~ △DEF, then AB/DE = BC/EF = CA/FD = k (scale factor)."
+  },
+  "concept_section": {
+    "analogy_icon": "🔍",
+    "analogy": "Similar triangles are like photographs of the same object — different sizes, but every proportion is maintained. The scale factor k is like the zoom level on a camera. If k = 2, every side in the bigger triangle is exactly twice the corresponding side of the smaller triangle. Areas change as k² — if sides double, area quadruples.",
+    "principle": "Similarity criteria: AA (two angles equal), SSS (all three sides proportional), SAS (two sides proportional + included angle equal). BPT: if a line is drawn parallel to one side of a triangle, it divides the other two sides in the same ratio. Pythagoras: a² + b² = c² (right-angled triangle).",
+    "reveal_prompt": "Tap each theorem to master it 👇",
+    "reveals": [
+      { "question": "📏 Basic Proportionality Theorem (Thales)?", "answer": "If DE ∥ BC in △ABC, then AD/DB = AE/EC. Converse: if AD/DB = AE/EC, then DE ∥ BC. This theorem is tested directly ('prove DE∥BC') and as a step in longer proofs. Mid-Point Theorem is a special case of BPT where D and E are midpoints (ratio = 1:1)." },
+      { "question": "🔵 Three Similarity Criteria?", "answer": "AA (Angle-Angle): two angles equal → triangles similar (most used). SSS (Side-Side-Side): all three ratios equal → similar. SAS (Side-Angle-Side): two sides proportional AND included angle equal → similar. After establishing similarity, write the similarity statement in correct vertex order — marks are lost for wrong correspondence." },
+      { "question": "📊 Areas of Similar Triangles?", "answer": "If △ABC ~ △DEF with scale factor k = AB/DE, then: Area of △ABC / Area of △DEF = (AB/DE)² = k². This is crucial: ratio of AREAS = square of ratio of SIDES. Commonly tested: 'sides in ratio 3:5, ratio of areas = 9:25'." },
+      { "question": "📐 Pythagoras Theorem?", "answer": "In right △ABC (right angle at B): AC² = AB² + BC². Converse: if AC² = AB² + BC², then angle B = 90°. Applications: check if a triangle is right-angled; find hypotenuse; used in BPT proofs. Triple example: 3-4-5, 5-12-13, 8-15-17, 7-24-25." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Similar triangles</b>: same shape, different size; corresponding angles equal, sides proportional",
+      "<b>AA criterion</b>: most used — two angles equal means similar (third angle is automatically equal)",
+      "<b>BPT</b>: line parallel to base divides other two sides proportionally; AD/DB = AE/EC",
+      "<b>Area ratio = (side ratio)²</b>: if sides in ratio k, areas in ratio k²",
+      "<b>Pythagoras Theorem</b>: a² + b² = c²; converse used to identify right angles"
+    ],
+    "exam_questions": [
+      { "marks": "4M", "question": "In △ABC, DE∥BC where D is on AB and E is on AC. If AD=4cm, DB=3cm, AE=5cm, find EC. Also find BC if DE=3cm." },
+      { "marks": "3M", "question": "△ABC ~ △PQR with AB=4cm, PQ=6cm. If area of △ABC = 24cm², find area of △PQR." },
+      { "marks": "2M", "question": "State and prove the converse of Pythagoras Theorem." }
+    ]
+  },
+  "quiz": [
+    { "q": "In △ABC, if DE∥BC with AD=3, DB=5, AE=4.5, then EC =", "opts": ["7.5", "2.7", "6", "9"], "ans": 0, "exp": "By BPT: AD/DB = AE/EC → 3/5 = 4.5/EC → EC = (4.5 × 5)/3 = 22.5/3 = 7.5 cm." },
+    { "q": "If △ABC ~ △PQR with AB:PQ = 3:5, then Area(△ABC):Area(△PQR) =", "opts": ["3:5", "9:25", "√3:√5", "6:10"], "ans": 1, "exp": "Ratio of areas of similar triangles = square of ratio of corresponding sides = (3/5)² = 9/25. So area ratio = 9:25." },
+    { "q": "In a right-angled triangle with hypotenuse 13cm and one leg 5cm, the other leg is:", "opts": ["8cm", "12cm", "10cm", "√194 cm"], "ans": 1, "exp": "By Pythagoras: a² + 5² = 13² → a² = 169 − 25 = 144 → a = 12cm. This is the 5-12-13 Pythagorean triple." },
+    { "q": "The AA similarity criterion states:", "opts": ["All sides are equal", "Two angles of one triangle equal two angles of another", "Two sides are proportional", "All sides are proportional"], "ans": 1, "exp": "AA: if two angles of one triangle are equal to two angles of another, the triangles are similar. The third angle is automatically equal (since sum of angles = 180°)." }
+  ],
+  "flipcards": [
+    { "front": "State Basic Proportionality Theorem", "back": "If a line is drawn parallel to one side of a triangle, it divides the other two sides in the same ratio. AD/DB = AE/EC" },
+    { "front": "If △ABC ~ △DEF with ratio 2:3, area ratio?", "back": "Area ratio = (2:3)² = 4:9" },
+    { "front": "AA similarity criterion?", "back": "If two angles of one triangle are equal to two angles of another triangle, the triangles are similar" },
+    { "front": "Pythagorean triple examples?", "back": "3-4-5, 5-12-13, 8-15-17, 7-24-25 — memorise these for quick checks" },
+    { "front": "What does ~ symbol mean in geometry?", "back": "Similar to — same shape, different size. Corresponding angles equal, sides proportional." },
+    { "front": "Converse of Pythagoras Theorem?", "back": "If a² + b² = c², then the triangle is right-angled (angle opposite to side c = 90°)" }
+  ],
+  "archive": [
+    { "emoji": "🧫", "title": "Chemical Reactions & Equations", "meta": "Week 12 · Science · Class 10" },
+    { "emoji": "🔌", "title": "Current Electricity", "meta": "Week 11 · Physics · Class 12" },
+    { "emoji": "👶", "title": "Human Reproduction", "meta": "Week 10 · Biology · Class 12" },
+    { "emoji": "📁", "title": "File Handling in Python", "meta": "Week 9 · CS · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W14", "title": "Money & Banking", "subject": "Economics Class 12" },
+    { "week": "W15", "title": "Genetics & Inheritance", "subject": "Biology Class 12" },
+    { "week": "W16", "title": "Electrostatics", "subject": "Physics Class 12" },
+    { "week": "W17", "title": "Databases & SQL", "subject": "CS Class 12" }
+  ]
+}

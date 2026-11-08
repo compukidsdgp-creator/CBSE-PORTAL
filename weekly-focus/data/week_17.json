@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 17, "month": "May 2027", "subject": "Computer Science", "class": "Class 12", "chapter": "Chapter 3", "emoji": "🗄️", "read_time": "8 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Databases & SQL — Talking to Data", "hook": "Every time you search something online, buy something from an app, or check your bank balance — a database is working. Databases store, organise and retrieve billions of records in milliseconds. SQL (Structured Query Language) is how you talk to these databases. And in Class 12 CS boards, SQL queries are worth 10–12 marks — the highest single topic in the exam." },
+  "hook_section": {
+    "scenario_icon": "🔍",
+    "scenario": "Your school keeps student data: name, class, marks, attendance, fees. You want to find all students in Class 12 with marks above 80. Without SQL, you'd read thousands of records manually. With SQL: SELECT name FROM students WHERE class=12 AND marks>80; — one line, instant result. That's the power of SQL.",
+    "bridge": "Chapter 3 covers RDBMS concepts (tables, keys, relations), SQL commands (DDL: CREATE/DROP/ALTER; DML: SELECT/INSERT/UPDATE/DELETE; DCL: GRANT/REVOKE), aggregate functions (SUM, AVG, COUNT, MAX, MIN), GROUP BY, HAVING, ORDER BY, and JOIN operations. SQL queries are always tested in the exam.",
+    "punchline": "SQL has four question types in boards: SELECT with conditions (WHERE), aggregate functions (GROUP BY/HAVING), ORDER BY, and table operations (CREATE/INSERT/UPDATE). Master these four."
+  },
+  "concept_section": {
+    "analogy_icon": "📋",
+    "analogy": "A database is like a school register — a table with rows (records = individual students) and columns (fields = name, roll no, marks). SQL is the language of instructions you give to the register keeper. SELECT = tell me specific rows/columns. WHERE = only if certain condition is true. GROUP BY = organise by category and calculate totals. JOIN = combine two registers.",
+    "principle": "SELECT col FROM table WHERE condition ORDER BY col GROUP BY col HAVING condition. DDL: CREATE TABLE t (col datatype), ALTER, DROP. DML: INSERT INTO, UPDATE SET WHERE, DELETE WHERE. Keys: Primary (unique identifier), Foreign (links tables), Candidate (potential primary).",
+    "reveal_prompt": "Tap each SQL category to practise 👇",
+    "reveals": [
+      { "question": "📋 SELECT with WHERE?", "answer": "SELECT Name, Marks FROM Student WHERE Class='XII' AND Marks>75;\nSELECT * FROM Employee WHERE Dept='IT' OR Salary>50000;\nSELECT Name FROM Products WHERE Price BETWEEN 100 AND 500;\nSELECT * FROM Student WHERE Name LIKE 'A%';  -- starts with A\n'%' = any characters; '_' = exactly one character" },
+      { "question": "📊 Aggregate functions?", "answer": "SELECT COUNT(*) FROM Student;  -- count all rows\nSELECT AVG(Marks) FROM Student WHERE Class='XII';\nSELECT MAX(Salary), MIN(Salary) FROM Employee;\nSELECT SUM(Amount) FROM Orders WHERE Month='Jan';\nSELECT Dept, AVG(Salary) FROM Employee GROUP BY Dept HAVING AVG(Salary)>50000;" },
+      { "question": "🔄 ORDER BY and DISTINCT?", "answer": "SELECT Name, Marks FROM Student ORDER BY Marks DESC;  -- highest first\nSELECT Name FROM Student ORDER BY Name ASC;  -- alphabetical\nSELECT DISTINCT City FROM Customer;  -- removes duplicates\nSELECT TOP 3 Name FROM Student ORDER BY Marks DESC;  -- top 3 (MySQL: LIMIT 3)" },
+      { "question": "🔑 DDL and DML commands?", "answer": "CREATE TABLE Student(RollNo INT PRIMARY KEY, Name VARCHAR(20), Marks INT);\nINSERT INTO Student VALUES(1, 'Riya', 95);\nUPDATE Student SET Marks=98 WHERE RollNo=1;\nDELETE FROM Student WHERE Marks<35;\nALTER TABLE Student ADD Address VARCHAR(50);\nDROP TABLE Student;" }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>SELECT...FROM...WHERE</b>: core query structure; WHERE filters rows",
+      "<b>Aggregate functions</b>: COUNT, SUM, AVG, MAX, MIN — work on column values",
+      "<b>GROUP BY</b>: groups rows; <b>HAVING</b>: filters groups (after grouping, like WHERE for groups)",
+      "<b>ORDER BY</b>: sorts results (ASC=ascending/default, DESC=descending)",
+      "<b>Primary Key</b>: unique, not null; <b>Foreign Key</b>: links two tables"
+    ],
+    "exam_questions": [
+      { "marks": "4M", "question": "Given table Employee(EmpID, Name, Dept, Salary, City). Write SQL to: (a) Display all employees in 'IT' department earning more than 50000. (b) Find average salary department-wise. (c) Display names in alphabetical order. (d) Count total employees." },
+      { "marks": "2M", "question": "What is the difference between WHERE and HAVING clause in SQL?" },
+      { "marks": "1M", "question": "What is a Primary Key? Give an example." }
+    ]
+  },
+  "quiz": [
+    { "q": "To display only unique values of City column, use:", "opts": ["SELECT City", "SELECT UNIQUE City", "SELECT DISTINCT City", "SELECT ALL City"], "ans": 2, "exp": "SELECT DISTINCT City FROM TableName removes duplicate city names and shows each city only once. DISTINCT is a keyword that eliminates duplicate values from results." },
+    { "q": "HAVING clause is used with:", "opts": ["WHERE", "GROUP BY", "ORDER BY", "SELECT"], "ans": 1, "exp": "HAVING works with GROUP BY to filter groups based on aggregate conditions. Example: GROUP BY Dept HAVING AVG(Salary)>50000. WHERE filters individual rows (before grouping); HAVING filters groups (after grouping)." },
+    { "q": "To find the second highest salary, the SQL approach is:", "opts": ["SELECT MAX(Salary)", "SELECT MIN(MAX(Salary))", "SELECT MAX(Salary) WHERE Salary < (SELECT MAX(Salary))", "SELECT AVG(Salary)"], "ans": 2, "exp": "SELECT MAX(Salary) FROM Employee WHERE Salary < (SELECT MAX(Salary) FROM Employee). This subquery first finds the maximum, then finds the maximum of salaries below that value = second highest." },
+    { "q": "DELETE FROM Student removes:", "opts": ["The entire table", "Only the structure", "All rows but keeps the table structure", "One row based on condition"], "ans": 2, "exp": "DELETE FROM Student (without WHERE) deletes ALL rows/records but keeps the table structure intact. DROP TABLE Student removes the entire table including structure. TRUNCATE also removes all rows faster." }
+  ],
+  "flipcards": [
+    { "front": "SQL query to find average marks of Class XII students?", "back": "SELECT AVG(Marks) FROM Student WHERE Class='XII';" },
+    { "front": "Difference: WHERE vs HAVING?", "back": "WHERE: filters rows BEFORE grouping. HAVING: filters groups AFTER GROUP BY. Can't use aggregate functions in WHERE." },
+    { "front": "What does LIKE 'A%' mean?", "back": "Pattern matching: % = any sequence of characters. 'A%' = starts with A. '%a%' = contains 'a'. '_a' = any single char followed by 'a'." },
+    { "front": "What is a Foreign Key?", "back": "A column that references the Primary Key of another table — creates a relationship between two tables" },
+    { "front": "SQL to increase all salaries by 10%?", "back": "UPDATE Employee SET Salary = Salary * 1.1;" },
+    { "front": "ORDER BY Marks DESC means?", "back": "Sort by Marks column in descending order (highest first). ASC = ascending (lowest first, also the default)" }
+  ],
+  "archive": [
+    { "emoji": "⚡", "title": "Electrostatics", "meta": "Week 16 · Physics · Class 12" },
+    { "emoji": "🧬", "title": "Genetics & Inheritance", "meta": "Week 15 · Biology · Class 12" },
+    { "emoji": "🏦", "title": "Money & Banking", "meta": "Week 14 · Economics · Class 12" },
+    { "emoji": "📐", "title": "Triangles & Similarity", "meta": "Week 13 · Mathematics · Class 10" }
+  ],
+  "upcoming": [
+    { "week": "W18", "title": "Acids, Bases & Salts", "subject": "Science Class 10" },
+    { "week": "W19", "title": "Arithmetic Progressions", "subject": "Mathematics Class 10" },
+    { "week": "W20", "title": "Biodiversity & Conservation", "subject": "Biology Class 12" },
+    { "week": "W21", "title": "Polymers & Biomolecules", "subject": "Chemistry Class 12" }
+  ]
+}

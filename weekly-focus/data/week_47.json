@@ -1,0 +1,62 @@
+{
+  "meta": { "week": 47, "month": "Nov 2026", "subject": "Economics", "class": "Class 12", "chapter": "Chapter 2", "emoji": "📊", "read_time": "7 min interactive read", "stats": "3 concepts · 4 quiz questions" },
+  "hero": { "title": "Price Elasticity of Demand — Why Petrol Prices Never Stop Traffic", "hook": "Petrol prices double — traffic barely drops. Phone prices drop 20% — sales explode. The same price change, completely different results. Why? The answer is one of the most exam-tested ideas in Economics." },
+  "hook_section": {
+    "scenario_icon": "⛽",
+    "scenario": "In 2022, petrol prices jumped 40% across India. Did people stop commuting? Barely. But when a popular phone brand runs a 20% sale, it sells out in minutes. Why does the same percentage change produce such different buying behaviour?",
+    "bridge": "It comes down to whether a good has substitutes, whether it's a necessity, and what share of income it takes. Economists measure this sensitivity with one number — the Price Elasticity of Demand.",
+    "punchline": "Elasticity tells you HOW MUCH quantity responds to a price change — not just whether it does."
+  },
+  "concept_section": {
+    "analogy_icon": "🧲",
+    "analogy": "Think of demand as a rubber band. Some goods (luxuries, things with many substitutes) stretch a lot — a small price rise sends buyers running. Other goods (petrol, medicines, salt) barely stretch — buyers need them regardless. Elasticity measures how stretchy the band is.",
+    "principle": "PED = % Change in Quantity Demanded ÷ % Change in Price. If |PED| > 1 → Elastic. If |PED| < 1 → Inelastic. If |PED| = 1 → Unitary elastic.",
+    "reveal_prompt": "Tap each type to understand it 👇",
+    "reveals": [
+      { "question": "🔴 Perfectly Inelastic (PED = 0)?", "answer": "Quantity doesn't change at all with price. Example: insulin for a diabetic patient — price irrelevant, they must buy it. Vertical demand curve." },
+      { "question": "🟡 Inelastic (0 < PED < 1)?", "answer": "Quantity changes less than price. Example: petrol, salt, medicines. People buy almost the same amount even if price rises." },
+      { "question": "🟢 Elastic (PED > 1)?", "answer": "Quantity changes more than price. Example: branded clothing, restaurant meals, luxury gadgets. A small price drop causes a big jump in sales." },
+      { "question": "🔵 Perfectly Elastic (PED = ∞)?", "answer": "Any price rise causes demand to drop to zero. Example: a firm in perfect competition — consumers switch to identical competitors instantly. Horizontal demand curve." }
+    ]
+  },
+  "keypoints_section": {
+    "points": [
+      "<b>Necessities</b> are inelastic (petrol, rice, medicines); <b>luxuries</b> are elastic (cars, holidays)",
+      "More substitutes → more elastic (branded tea vs generic tea)",
+      "<b>Proportion of income</b>: expensive items (TV) → more elastic than cheap items (salt)",
+      "<b>Time period</b>: demand is more elastic in the long run (time to find substitutes)",
+      "Revenue rule: elastic demand → lower price increases revenue; inelastic → higher price increases revenue"
+    ],
+    "exam_questions": [
+      { "marks": "3M", "question": "Explain the factors determining price elasticity of demand with examples" },
+      { "marks": "2M", "question": "Using PED formula, calculate elasticity if price rises from ₹10 to ₹12 and quantity falls from 100 to 80 units" },
+      { "marks": "1M", "question": "Draw the demand curve for perfectly elastic demand" }
+    ]
+  },
+  "quiz": [
+    { "q": "If price of a good rises by 10% and quantity demanded falls by 15%, PED is:", "opts": ["-0.67", "-1.5", "1.5", "0.67"], "ans": 1, "exp": "PED = % ΔQd / % ΔP = −15/10 = −1.5. Magnitude is 1.5 > 1, so demand is elastic." },
+    { "q": "Which of the following goods is likely to have inelastic demand?", "opts": ["Designer handbags", "Foreign holidays", "Life-saving medicines", "Luxury cars"], "ans": 2, "exp": "Life-saving medicines are necessities with no substitutes — people buy them regardless of price, making demand highly inelastic." },
+    { "q": "A perfectly elastic demand curve is:", "opts": ["Vertical", "Horizontal", "Downward sloping at 45°", "Upward sloping"], "ans": 1, "exp": "PED = ∞ means any price change causes infinite change in quantity. The demand curve is horizontal — consumers buy any quantity at exactly one price." },
+    { "q": "If a firm lowers price and total revenue increases, demand is:", "opts": ["Inelastic", "Perfectly inelastic", "Elastic", "Unitary elastic"], "ans": 2, "exp": "With elastic demand (PED > 1), a price cut causes a proportionally larger rise in quantity, so total revenue (P×Q) increases." }
+  ],
+  "flipcards": [
+    { "front": "Formula for Price Elasticity of Demand?", "back": "PED = % Change in Quantity Demanded / % Change in Price" },
+    { "front": "PED > 1 means?", "back": "Elastic demand — quantity responds more than price change (luxuries, substitutes)" },
+    { "front": "PED < 1 means?", "back": "Inelastic demand — quantity barely responds (necessities, no substitutes)" },
+    { "front": "What type of curve has PED = 0?", "back": "Perfectly inelastic — vertical demand curve. Same quantity regardless of price." },
+    { "front": "Effect on revenue when price drops and demand is elastic?", "back": "Total revenue increases — quantity rises by more than price falls" },
+    { "front": "Why is demand for salt inelastic?", "back": "Salt is a necessity with no substitutes and takes a tiny share of income" }
+  ],
+  "archive": [
+    { "emoji": "💡", "title": "Photoelectric Effect", "meta": "Week 46 · Physics · Class 12" },
+    { "emoji": "⚗️", "title": "Le Chatelier's Principle", "meta": "Week 45 · Chemistry · Class 12" },
+    { "emoji": "📐", "title": "Integration by Parts", "meta": "Week 44 · Mathematics · Class 12" },
+    { "emoji": "🧬", "title": "DNA Replication", "meta": "Week 43 · Biology · Class 12" }
+  ],
+  "upcoming": [
+    { "week": "W48", "title": "Determinants & Matrices", "subject": "Mathematics" },
+    { "week": "W49", "title": "Plant Hormones", "subject": "Biology" },
+    { "week": "W50", "title": "Python Functions & Recursion", "subject": "Computer Science" },
+    { "week": "W51", "title": "Electricity — Ohm's Law & Circuits", "subject": "Science Class 10" }
+  ]
+}
