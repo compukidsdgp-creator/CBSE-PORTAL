@@ -96,6 +96,23 @@ jobs:
             python3 post_telegram.py --mode "$MODE"
           fi
 
+      - name: Post to Instagram
+        if: >
+          github.event.inputs.platform == '' ||
+          github.event.inputs.platform == 'instagram' ||
+          github.event.inputs.platform == 'both'
+        env:
+          INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          MODE="${{ steps.promo.outputs.mode }}"
+          if [ "$DRY" = "true" ]; then
+            python3 post_instagram.py --mode "$MODE" --dry-run
+          else
+            python3 post_instagram.py --mode "$MODE"
+          fi
+
       - name: Save promo rotation state
         if: github.event.inputs.mode == ''
         run: |

@@ -17,7 +17,7 @@ on:
         required: false
         default: 'morning'
       platform:
-        description: 'Platform: facebook, telegram, or both'
+        description: 'Platform: facebook, telegram, instagram, or both'
         required: false
         default: 'both'
       dry_run:
@@ -83,6 +83,27 @@ jobs:
             python3 post_facebook.py --mode "$MODE" --dry-run
           else
             python3 post_facebook.py --mode "$MODE"
+          fi
+
+      - name: Post to Instagram
+        if: >
+          github.event.inputs.platform == '' ||
+          github.event.inputs.platform == 'instagram' ||
+          github.event.inputs.platform == 'both'
+        env:
+          INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          MODE="${{ steps.mode.outputs.mode }}"
+          # Instagram: skip afternoon/festival/news modes (no image equivalent)
+          SKIP_MODES="afternoon festival evening"
+          if echo "$SKIP_MODES" | grep -qw "$MODE"; then
+            echo "[SKIP] Instagram not used for mode=$MODE"
+          elif [ "$DRY" = "true" ]; then
+            python3 post_instagram.py --mode "$MODE" --dry-run
+          else
+            python3 post_instagram.py --mode "$MODE"
           fi
 
       - name: Commit tracker CSV updates
