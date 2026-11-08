@@ -31,6 +31,7 @@ import os
 import sys
 import json
 import re
+import time
 import argparse
 import urllib.request
 import urllib.parse
@@ -120,6 +121,29 @@ def ig_post(caption: str, image_url: str, dry_run: bool = False) -> dict:
         return {}
 
     print(f"[INFO] Media container created: {container_id}")
+
+    # Step 1b: Poll until container status is FINISHED (up to 30s)
+    status_url = (
+        f"{IG_API_BASE}/{container_id}"
+        f"?fields=status_code&access_token={IG_ACCESS_TOKEN}"
+    )
+    for attempt in range(6):
+        time.sleep(5)
+        try:
+            with urllib.request.urlopen(status_url, timeout=15) as r:
+                status_data = json.loads(r.read())
+        except Exception as e:
+            print(f"[WARN] Status check failed: {e}")
+            continue
+        status_code = status_data.get("status_code", "")
+        print(f"[INFO] Container status ({attempt+1}): {status_code}")
+        if status_code == "FINISHED":
+            break
+        if status_code == "ERROR":
+            print(f"[ERROR] Container processing failed: {status_data}")
+            return {}
+    else:
+        print("[WARN] Container not FINISHED after 30s — attempting publish anyway")
 
     # Step 2: Publish the container
     publish_url = f"{IG_API_BASE}/{IG_ACCOUNT_ID}/media_publish"
@@ -337,7 +361,10 @@ def main():
     }
     run_modes = modes.get(args.mode, [args.mode])
 
-    for m in run_modes:
+    for i, m in enumerate(run_modes):
+        if i > 0 and not args.dry_run:
+            print("[INFO] Waiting 10s before next post...")
+            time.sleep(10)
         print(f"\n── {m} ──")
         if m == "notes":
             post_notes(tracker, dry_run=args.dry_run)
