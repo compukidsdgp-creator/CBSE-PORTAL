@@ -1,0 +1,106 @@
+name: Weekly Promo Post
+
+on:
+  schedule:
+    # Every Sunday 9:00 AM IST (3:30 UTC)
+    - cron: '30 3 * * 0'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Force a specific promo: promo_quest, promo_mock, promo_lab, promo_notes (leave blank to auto-rotate)'
+        required: false
+        default: ''
+      platform:
+        description: 'Platform: facebook, telegram, or both'
+        required: false
+        default: 'both'
+      dry_run:
+        description: 'Dry run (true/false)'
+        required: false
+        default: 'false'
+
+jobs:
+  weekly-promo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Determine which promo to post
+        id: promo
+        run: |
+          PROMO_ORDER="promo_quest promo_mock promo_lab promo_notes"
+          INPUT_MODE="${{ github.event.inputs.mode }}"
+
+          if [ -n "$INPUT_MODE" ]; then
+            echo "mode=$INPUT_MODE" >> $GITHUB_OUTPUT
+            echo "Using forced mode: $INPUT_MODE"
+          else
+            # Read current index from state file
+            STATE_FILE="promo-rotation-state.txt"
+            if [ -f "$STATE_FILE" ]; then
+              IDX=$(cat "$STATE_FILE")
+            else
+              IDX=0
+            fi
+
+            # Pick the promo at this index
+            PROMOS=($PROMO_ORDER)
+            MODE="${PROMOS[$IDX]}"
+            echo "mode=$MODE" >> $GITHUB_OUTPUT
+            echo "Posting promo #$IDX: $MODE"
+
+            # Advance index (wrap around at 4)
+            NEXT=$(( (IDX + 1) % 4 ))
+            echo "$NEXT" > "$STATE_FILE"
+            echo "next_idx=$NEXT" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post to Facebook
+        if: >
+          github.event.inputs.platform == '' ||
+          github.event.inputs.platform == 'facebook' ||
+          github.event.inputs.platform == 'both'
+        env:
+          FB_PAGE_ID:           ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          MODE="${{ steps.promo.outputs.mode }}"
+          if [ "$DRY" = "true" ]; then
+            python3 post_facebook.py --mode "$MODE" --dry-run
+          else
+            python3 post_facebook.py --mode "$MODE"
+          fi
+
+      - name: Post to Telegram
+        if: >
+          github.event.inputs.platform == '' ||
+          github.event.inputs.platform == 'telegram' ||
+          github.event.inputs.platform == 'both'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          MODE="${{ steps.promo.outputs.mode }}"
+          if [ "$DRY" = "true" ]; then
+            python3 post_telegram.py --mode "$MODE" --dry-run
+          else
+            python3 post_telegram.py --mode "$MODE"
+          fi
+
+      - name: Save promo rotation state
+        if: github.event.inputs.mode == ''
+        run: |
+          git config user.name  "social-post-bot"
+          git config user.email "bot@cbsemock.org.in"
+          git add promo-rotation-state.txt 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "chore: advance weekly promo rotation [skip ci]"
+          git push || true
