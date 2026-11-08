@@ -498,10 +498,121 @@ def post_lab_fb(tracker, dry_run=False):
     print(f"[OK] FB lab: {item.get('title','n/a')} → {result.get('id','n/a')}")
 
 
+# ── Special Promo Posts ───────────────────────────────────────────────────────
+
+def post_promo_quest_fb(dry_run: bool = False):
+    text = (
+        "🏆 Have You Tried Our Monthly Quest?\n\n"
+        "Every month, we drop a brand-new Quest Challenge — a set of "
+        "carefully curated MCQs designed to push your CBSE board prep to the next level!\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "🎯 What's in a Quest?\n"
+        "• Handpicked high-difficulty MCQs\n"
+        "• Covers all core CBSE subjects (Class 10 & 12)\n"
+        "• New set every month — fresh challenge each time\n"
+        "• Instant score + answer explanations\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "📲 How to Attempt:\n"
+        "1️⃣ Open → https://cbsemock.org.in/quest/\n"
+        "2️⃣ Select your subject or attempt the combined challenge\n"
+        "3️⃣ Answer all questions within the time limit\n"
+        "4️⃣ Submit → see your score instantly!\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "🔥 This month's quest is LIVE NOW!\n\n"
+        "👉 Attempt November Quest: https://cbsemock.org.in/quest/\n\n"
+        "#Quest #CBSE #MCQ #BoardExams2027 #Class10 #Class12 #CBSEMock"
+    )
+    result = fb_post(text, dry_run=dry_run)
+    print(f"[OK] Promo Quest (FB): {result.get('id','n/a')}")
+
+
+def post_promo_mock_fb(dry_run: bool = False):
+    text = (
+        "📝 15 Full-Length CBSE Board Mock Tests — All FREE!\n\n"
+        "Gear up for CBSE Board Exams 2027 with our comprehensive "
+        "mock test series — the closest simulation to your actual board paper!\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "📋 What You Get:\n"
+        "✅ 15 complete practice papers per subject\n"
+        "✅ Strictly follows the latest CBSE pattern\n"
+        "✅ All papers come with detailed answer keys\n"
+        "✅ Covers Class 10 & Class 12 core subjects\n"
+        "✅ Includes marking scheme & expected answers\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "📚 Subjects Available:\n"
+        "🔵 Class 10: Science · Maths · SST · English · Hindi · Computer\n"
+        "🟢 Class 12: Physics · Chemistry · Maths · Biology · English · CS\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "💡 Pro Tip: Attempt each paper under real exam conditions "
+        "— 3 hours, no distractions — then check your score with the answer key!\n\n"
+        "👉 Start Mock Tests Now: https://cbsemock.org.in\n\n"
+        "#MockTest #CBSE #Class10 #Class12 #PracticePaper #BoardExams2027 #AnswerKey"
+    )
+    result = fb_post(text, dry_run=dry_run)
+    print(f"[OK] Promo Mock (FB): {result.get('id','n/a')}")
+
+
+def post_promo_lab_fb(dry_run: bool = False):
+    text = (
+        "🧪 Practice Science Like Never Before — Virtual Labs!\n\n"
+        "Forget memorising experiments — actually do them! "
+        "Our Virtual Practice Labs bring every CBSE science experiment "
+        "to life on your screen. 🖥️\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "🔬 Why Our Virtual Labs Stand Out:\n"
+        "🌟 200+ interactive experiments across all science subjects\n"
+        "🌟 Covers Physics · Chemistry · Biology · Maths\n"
+        "🌟 Step-by-step simulation — just like a real lab\n"
+        "🌟 Watch results update in real time\n"
+        "🌟 Understand the concept behind every experiment\n"
+        "🌟 Directly mapped to CBSE board exam questions\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "🎯 Perfect for:\n"
+        "• Students without lab access at home\n"
+        "• Last-minute experiment revision before practicals\n"
+        "• Visual learners who understand better by doing\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "🚀 No equipment. No mess. Just pure learning!\n\n"
+        "👉 Open Virtual Labs: https://cbsemock.org.in/virtual-labs/\n\n"
+        "#VirtualLab #CBSE #Science #Physics #Chemistry #Biology #HandsOn #BoardExams2027"
+    )
+    result = fb_post(text, dry_run=dry_run)
+    print(f"[OK] Promo Lab (FB): {result.get('id','n/a')}")
+
+
+def post_promo_notes_fb(dry_run: bool = False):
+    text = (
+        "📖 Chapter-wise Study Notes for CBSE Boards — All Subjects!\n\n"
+        "Stop juggling multiple textbooks. Everything you need to revise "
+        "for CBSE boards is right here — concise, clear, and exam-ready! 🎯\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "📚 What Our Notes Cover:\n"
+        "✏️ Chapter-wise breakdown for every CBSE subject\n"
+        "✏️ Key definitions, formulas & theorems highlighted\n"
+        "✏️ Important diagrams & process summaries\n"
+        "✏️ Previous year question patterns included\n"
+        "✏️ Quick-revision bullet points per chapter\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "🗂️ Navigate from our Menu:\n"
+        "🔹 Study Zone — Class 11 & 12 in-depth notes\n"
+        "🔹 Resources — Subject-wise notes for all classes\n"
+        "🔹 Quick Revision — Last-minute formula sheets\n"
+        "🔹 Class 9 & 10 — Foundation notes with examples\n\n"
+        "━━━━━━━━━━━━━━━━\n"
+        "💡 Available for: Class 9, 10, 11 & 12\n"
+        "Subjects: Physics · Chemistry · Maths · Biology · English · Hindi · SST · CS · Economics · Accountancy & more!\n\n"
+        "👉 Explore Notes: https://cbsemock.org.in\n\n"
+        "#StudyNotes #CBSE #Revision #BoardExams2027 #Class12 #Class10 #ChapterWise"
+    )
+    result = fb_post(text, dry_run=dry_run)
+    print(f"[OK] Promo Notes (FB): {result.get('id','n/a')}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="CBSE Mock Facebook auto-poster")
     parser.add_argument("--mode", default="morning",
-        choices=["quest","news","notes","practice_10","practice_12","morning","lab_slot","afternoon","festival","evening","all"])
+        choices=["quest","news","notes","practice_10","practice_12","morning","lab_slot","afternoon","festival","evening","all",
+                 "promo_quest","promo_mock","promo_lab","promo_notes"])
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--date", help="Force festival date MM-DD")
     args = parser.parse_args()
@@ -559,6 +670,14 @@ def main():
             post_afternoon_fb(dry_run=args.dry_run)
         elif m == "lab":
             post_lab_fb(tracker, dry_run=args.dry_run)
+        elif m == "promo_quest":
+            post_promo_quest_fb(dry_run=args.dry_run)
+        elif m == "promo_mock":
+            post_promo_mock_fb(dry_run=args.dry_run)
+        elif m == "promo_lab":
+            post_promo_lab_fb(dry_run=args.dry_run)
+        elif m == "promo_notes":
+            post_promo_notes_fb(dry_run=args.dry_run)
 
     print("\nDone.")
 

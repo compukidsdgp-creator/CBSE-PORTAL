@@ -366,6 +366,120 @@ def post_weekly_focus(tracker, dry_run: bool = False):
     print(f"[OK] Weekly focus posted: {item['title']} → msg {result.get('result',{}).get('message_id','n/a')}")
 
 
+# ── Special Promo Posts ───────────────────────────────────────────────────────
+
+def post_promo_quest(dry_run: bool = False):
+    """Feature spotlight: Quest of the Month — navigation guide + link."""
+    text = (
+        "🏆 <b>Have You Tried Our Monthly Quest?</b>\n\n"
+        "Every month, we drop a brand-new <b>Quest Challenge</b> — a set of "
+        "carefully curated MCQs designed to push your CBSE board prep to the next level!\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "🎯 <b>What's in a Quest?</b>\n"
+        "• Handpicked high-difficulty MCQs\n"
+        "• Covers all core CBSE subjects (Class 10 & 12)\n"
+        "• New set every month — fresh challenge each time\n"
+        "• Instant score + answer explanations\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "📲 <b>How to Attempt:</b>\n"
+        "1️⃣ Open → <a href='https://cbsemock.org.in/quest/'>cbsemock.org.in/quest</a>\n"
+        "2️⃣ Select your subject or attempt the combined challenge\n"
+        "3️⃣ Answer all questions within the time limit\n"
+        "4️⃣ Submit → see your score instantly!\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "🔥 This month's quest is <b>LIVE NOW!</b>\n\n"
+        "👉 <a href='https://cbsemock.org.in/quest/'><b>Attempt November Quest →</b></a>\n\n"
+        "#Quest #CBSE #MCQ #BoardExams2027 #Class10 #Class12 #CBSEMock"
+    )
+    result = tg_send(text, dry_run)
+    print(f"[OK] Promo Quest posted: msg {result.get('result',{}).get('message_id','n/a')}")
+
+
+def post_promo_mock(dry_run: bool = False):
+    """Feature spotlight: CBSE Board Mock Tests — 15 practice papers."""
+    text = (
+        "📝 <b>15 Full-Length CBSE Board Mock Tests — All FREE!</b>\n\n"
+        "Gear up for <b>CBSE Board Exams 2027</b> with our comprehensive "
+        "mock test series — the closest simulation to your actual board paper!\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "📋 <b>What You Get:</b>\n"
+        "✅ <b>15 complete practice papers</b> per subject\n"
+        "✅ Strictly follows the <b>latest CBSE pattern</b>\n"
+        "✅ All papers come with <b>detailed answer keys</b>\n"
+        "✅ Covers Class 10 & Class 12 core subjects\n"
+        "✅ Includes marking scheme & expected answers\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "📚 <b>Subjects Available:</b>\n"
+        "🔵 Class 10: Science · Maths · SST · English · Hindi · Computer\n"
+        "🟢 Class 12: Physics · Chemistry · Maths · Biology · English · CS\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "💡 <b>Pro Tip:</b> Attempt each paper under <i>real exam conditions</i> "
+        "— 3 hours, no distractions — then check your score with the answer key!\n\n"
+        "👉 <a href='https://cbsemock.org.in'><b>Start Mock Tests Now →</b></a>\n\n"
+        "#MockTest #CBSE #Class10 #Class12 #PracticePaper #BoardExams2027 #AnswerKey"
+    )
+    result = tg_send(text, dry_run)
+    print(f"[OK] Promo Mock posted: msg {result.get('result',{}).get('message_id','n/a')}")
+
+
+def post_promo_lab(dry_run: bool = False):
+    """Feature spotlight: Virtual Practice Labs — interactive simulations."""
+    text = (
+        "🧪 <b>Practice Science Like Never Before — Virtual Labs!</b>\n\n"
+        "Forget memorising experiments — <i>actually do them!</i> "
+        "Our <b>Virtual Practice Labs</b> bring every CBSE science experiment "
+        "to life on your screen. 🖥️\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "🔬 <b>Why Our Virtual Labs Stand Out:</b>\n"
+        "🌟 <b>200+ interactive experiments</b> across all science subjects\n"
+        "🌟 Covers Physics · Chemistry · Biology · Maths\n"
+        "🌟 <b>Step-by-step simulation</b> — just like a real lab\n"
+        "🌟 Watch results update in <b>real time</b>\n"
+        "🌟 Understand the <i>concept behind every experiment</i>\n"
+        "🌟 Directly mapped to <b>CBSE board exam questions</b>\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "🎯 <b>Perfect for:</b>\n"
+        "• Students without lab access at home\n"
+        "• Last-minute experiment revision before practicals\n"
+        "• Visual learners who understand better by doing\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "🚀 No equipment. No mess. Just pure learning!\n\n"
+        "👉 <a href='https://cbsemock.org.in/virtual-labs/'><b>Open Virtual Labs →</b></a>\n\n"
+        "#VirtualLab #CBSE #Science #Physics #Chemistry #Biology #HandsOn #BoardExams2027"
+    )
+    result = tg_send(text, dry_run)
+    print(f"[OK] Promo Lab posted: msg {result.get('result',{}).get('message_id','n/a')}")
+
+
+def post_promo_notes(dry_run: bool = False):
+    """Feature spotlight: Chapter-wise Study Notes — all subjects."""
+    text = (
+        "📖 <b>Chapter-wise Study Notes for CBSE Boards — All Subjects!</b>\n\n"
+        "Stop juggling multiple textbooks. Everything you need to revise "
+        "for CBSE boards is right here — <b>concise, clear, and exam-ready!</b> 🎯\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "📚 <b>What Our Notes Cover:</b>\n"
+        "✏️ <b>Chapter-wise breakdown</b> for every CBSE subject\n"
+        "✏️ Key definitions, formulas & theorems highlighted\n"
+        "✏️ Important diagrams & process summaries\n"
+        "✏️ Previous year question patterns included\n"
+        "✏️ Quick-revision bullet points per chapter\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "🗂️ <b>Navigate from our Menu:</b>\n"
+        "🔹 <b>Study Zone</b> — Class 11 & 12 in-depth notes\n"
+        "🔹 <b>Resources</b> — Subject-wise notes for all classes\n"
+        "🔹 <b>Quick Revision</b> — Last-minute formula sheets\n"
+        "🔹 <b>Class 9 & 10</b> — Foundation notes with examples\n\n"
+        "━━━━━━━━━━━━━━━━━━━━━\n"
+        "💡 Available for: Class 9, 10, 11 & 12\n"
+        "Subjects: Physics · Chemistry · Maths · Biology · English · Hindi · SST · CS · Economics · Accountancy & more!\n\n"
+        "👉 <a href='https://cbsemock.org.in'><b>Explore Notes at cbsemock.org.in →</b></a>\n\n"
+        "#StudyNotes #CBSE #Revision #BoardExams2027 #Class12 #Class10 #ChapterWise"
+    )
+    result = tg_send(text, dry_run)
+    print(f"[OK] Promo Notes posted: msg {result.get('result',{}).get('message_id','n/a')}")
+
+
 # ── Helper: Get Chat ID ───────────────────────────────────────────────────────
 def get_chat_id():
     if not BOT_TOKEN:
@@ -388,7 +502,8 @@ def get_chat_id():
 def main():
     parser = argparse.ArgumentParser(description="CBSE Mock Telegram auto-poster")
     parser.add_argument("--mode", default="morning",
-        choices=["quest","news","notes","practice_10","practice_12","lab","weekly_focus","morning","lab_slot","evening","all"])
+        choices=["quest","news","notes","practice_10","practice_12","lab","weekly_focus","morning","lab_slot","evening","all",
+                 "promo_quest","promo_mock","promo_lab","promo_notes"])
     parser.add_argument("--dry-run",     action="store_true")
     parser.add_argument("--get-chat-id", action="store_true")
     args = parser.parse_args()
@@ -427,6 +542,14 @@ def main():
             post_lab(tracker, dry_run=args.dry_run)
         elif m == "weekly_focus":
             post_weekly_focus(tracker, dry_run=args.dry_run)
+        elif m == "promo_quest":
+            post_promo_quest(dry_run=args.dry_run)
+        elif m == "promo_mock":
+            post_promo_mock(dry_run=args.dry_run)
+        elif m == "promo_lab":
+            post_promo_lab(dry_run=args.dry_run)
+        elif m == "promo_notes":
+            post_promo_notes(dry_run=args.dry_run)
 
     print("\nDone.")
 
