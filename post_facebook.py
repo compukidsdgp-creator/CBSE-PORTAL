@@ -165,7 +165,7 @@ def format_quest_post(q: dict) -> str:
     post += f"""
 
 ─────────────────
-🔗 Practice more at cbsemock.org.in
+🔗 Attempt this month's quests: https://cbsemock.org.in/quest/
 #CBSE #BoardExams #Quest #MCQ #{subject.replace(' ','')} #Class{cls}"""
 
     return post
