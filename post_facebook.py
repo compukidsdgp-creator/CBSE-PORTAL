@@ -7,7 +7,7 @@ Posts daily content to the CBSEMock Facebook page:
   • Evening: Top CBSE news headlines
 
 Environment variables (set as GitHub Secrets):
-  FB_PAGE_ID           — Facebook Page ID (61596243964780)
+  FB_PAGE_ID           — Facebook Page ID (1472735085918141)
   FB_PAGE_ACCESS_TOKEN — Never-expiring Page Access Token
 
 Usage:
