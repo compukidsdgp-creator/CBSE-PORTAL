@@ -351,14 +351,6 @@ section{scroll-margin-top:130px}
   <span class="mnb-title" id="mobileNavTitle">Menu</span>
 </div>
 
-<div class="modal-overlay" id="nameModal">
-  <div class="modal-box">
-    <h2>🧪 Welcome to Chemistry XII</h2>
-    <p>Enter your name to track progress and earn badges!</p>
-    <input class="modal-input" id="nameInput" placeholder="Your name..." maxlength="30">
-    <button class="modal-btn" onclick="saveName()">Start Learning 🚀</button>
-  </div>
-</div>
 <div class="toast" id="toast"></div>
 <nav class="topnav">
   <div class="brand">CBSE<span>MOCK</span> | Chemistry XII</div>
@@ -1812,20 +1804,7 @@ function toggleTheme(){
   document.querySelector('.theme-btn').textContent=cur==='dark'?'🌙':'☀️';
 }
 
-// ── Name Modal ────────────────────────────────────────────────────────────
-function saveName(){
-  const inp=document.getElementById('nameInput').value.trim();
-  if(!inp)return;
-  localStorage.setItem('cbsemock_username',inp);
-  document.getElementById('nameModal').classList.remove('show');
-  showToast('Welcome, '+inp+'! 🧪');
-  awardXP(10,'First visit!');
-}
-(function initModal(){
-  if(!localStorage.getItem('cbsemock_username')){
-    document.getElementById('nameModal').classList.add('show');
-  }
-})();
+
 
 // ── Search ────────────────────────────────────────────────────────────────
 function doSearch(q){
