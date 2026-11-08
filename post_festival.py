@@ -220,6 +220,7 @@ def build_message(festival: dict) -> str:
     tip    = tmpl["study_tip"]
     countdown = board_countdown_line()
 
+    tag = name.replace(" ", "").replace("(", "").replace(")", "").replace("/", "").replace("'", "")
     msg = (
         f"{anim}\n\n"
         f"<b>{header}</b>\n\n"
@@ -232,8 +233,7 @@ def build_message(festival: dict) -> str:
         f"{cta}\n\n"
         f"🔗 <a href='{PORTAL_URL}'>Practice at cbsemock.org.in →</a>\n\n"
         f"<i>— Team CBSE Mock 🎓</i>\n\n"
-        f"#CBSEMock #{name.replace(' ','').replace('(','').replace(')','').replace('/','').replace('\'','')} "
-        f"#BoardExams2027 #CBSEStudents #ExamPrep"
+        f"#CBSEMock #{tag} #BoardExams2027 #CBSEStudents #ExamPrep"
     )
     return msg
 
