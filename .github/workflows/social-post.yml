@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'What to post: morning, lab_slot, afternoon, evening, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all'
+        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all'
         required: false
         default: 'morning'
       platform:
@@ -41,7 +41,7 @@ jobs:
       - name: Determine post mode from schedule
         id: mode
         run: |
-          VALID_MODES="morning lab_slot afternoon evening quest news notes practice_10 practice_12 lab weekly_focus all"
+          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all"
           INPUT_MODE="${{ github.event.inputs.mode }}"
           HOUR_UTC="$(date -u +%H)"
 
@@ -93,26 +93,33 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: update social posting tracker [skip ci]"
           git push || true
 
-      - name: Festival Greeting (Telegram — morning only)
+      - name: Festival Greeting (Telegram)
         if: >
-          steps.mode.outputs.mode == 'morning' &&
-          (github.event.inputs.platform == '' ||
-           github.event.inputs.platform == 'telegram' ||
-           github.event.inputs.platform == 'both')
+          github.event.inputs.platform == '' ||
+          github.event.inputs.platform == 'telegram' ||
+          github.event.inputs.platform == 'both'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
-          if [ "$DRY" = "true" ]; then
-            python3 post_festival.py --dry-run
+          MODE="${{ steps.mode.outputs.mode }}"
+          # Always run festival check on morning/all/festival mode
+          # On other explicit modes, only run if specifically requested
+          if [ "$MODE" = "festival" ] || [ "$MODE" = "morning" ] || [ "$MODE" = "all" ]; then
+            if [ "$DRY" = "true" ]; then
+              python3 post_festival.py --dry-run
+            else
+              python3 post_festival.py
+            fi
           else
-            python3 post_festival.py
+            echo "[SKIP] Festival check skipped for mode=$MODE"
           fi
 
       - name: Post to Telegram (morning / lab / evening)
         if: >
           steps.mode.outputs.mode != 'afternoon' &&
+          steps.mode.outputs.mode != 'festival' &&
           (github.event.inputs.platform == '' ||
            github.event.inputs.platform == 'telegram' ||
            github.event.inputs.platform == 'both')
