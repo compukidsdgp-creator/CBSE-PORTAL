@@ -37,7 +37,7 @@ TRACKER_PATH = REPO_ROOT / "social-posting-tracker.csv"
 
 PORTAL_BASE  = "https://cbsemock.org.in"
 
-FIELDNAMES = ["content_type", "title", "url", "telegram", "facebook"]
+FIELDNAMES = ["content_type", "title", "url", "telegram", "facebook", "instagram"]
 
 # ── Content catalogue ─────────────────────────────────────────────────────────
 # Notes pages: class → list of (title, url)
@@ -159,6 +159,11 @@ class ContentTracker:
             with open(TRACKER_PATH, encoding="utf-8", newline="") as f:
                 reader = csv.DictReader(f)
                 self.rows = list(reader)
+            # Backfill any missing columns (e.g. instagram added later)
+            for row in self.rows:
+                for col in FIELDNAMES:
+                    if col not in row:
+                        row[col] = ""
             # Add any new items that aren't tracked yet
             self._sync_catalogue()
         else:
@@ -169,19 +174,19 @@ class ContentTracker:
         self.rows = []
         for title, url in NOTES_PAGES:
             self.rows.append({"content_type": "notes", "title": title,
-                               "url": url, "telegram": "", "facebook": ""})
+                               "url": url, "telegram": "", "facebook": "", "instagram": ""})
         for title, url in PRACTICE_10_PAGES:
             self.rows.append({"content_type": "practice_10", "title": title,
-                               "url": url, "telegram": "", "facebook": ""})
+                               "url": url, "telegram": "", "facebook": "", "instagram": ""})
         for title, url in PRACTICE_12_PAGES:
             self.rows.append({"content_type": "practice_12", "title": title,
-                               "url": url, "telegram": "", "facebook": ""})
+                               "url": url, "telegram": "", "facebook": "", "instagram": ""})
         for title, url in LAB_PAGES:
             self.rows.append({"content_type": "lab", "title": title,
-                               "url": url, "telegram": "", "facebook": ""})
+                               "url": url, "telegram": "", "facebook": "", "instagram": ""})
         for topic, desc, url in WEEKLY_FOCUS_TOPICS:
             self.rows.append({"content_type": "weekly_focus", "title": topic,
-                               "url": url, "telegram": "", "facebook": ""})
+                               "url": url, "telegram": "", "facebook": "", "instagram": ""})
         self.save()
         print(f"[OK] Tracker initialised: {TRACKER_PATH.name}")
         print(f"     {len([r for r in self.rows if r['content_type']=='notes'])} notes")
@@ -197,27 +202,27 @@ class ContentTracker:
         for title, url in NOTES_PAGES:
             if ("notes", title) not in existing:
                 self.rows.append({"content_type": "notes", "title": title,
-                                   "url": url, "telegram": "", "facebook": ""})
+                                   "url": url, "telegram": "", "facebook": "", "instagram": ""})
                 added += 1
         for title, url in PRACTICE_10_PAGES:
             if ("practice_10", title) not in existing:
                 self.rows.append({"content_type": "practice_10", "title": title,
-                                   "url": url, "telegram": "", "facebook": ""})
+                                   "url": url, "telegram": "", "facebook": "", "instagram": ""})
                 added += 1
         for title, url in PRACTICE_12_PAGES:
             if ("practice_12", title) not in existing:
                 self.rows.append({"content_type": "practice_12", "title": title,
-                                   "url": url, "telegram": "", "facebook": ""})
+                                   "url": url, "telegram": "", "facebook": "", "instagram": ""})
                 added += 1
         for title, url in LAB_PAGES:
             if ("lab", title) not in existing:
                 self.rows.append({"content_type": "lab", "title": title,
-                                   "url": url, "telegram": "", "facebook": ""})
+                                   "url": url, "telegram": "", "facebook": "", "instagram": ""})
                 added += 1
         for topic, desc, url in WEEKLY_FOCUS_TOPICS:
             if ("weekly_focus", topic) not in existing:
                 self.rows.append({"content_type": "weekly_focus", "title": topic,
-                                   "url": url, "telegram": "", "facebook": ""})
+                                   "url": url, "telegram": "", "facebook": "", "instagram": ""})
                 added += 1
         if added:
             print(f"[SYNC] Added {added} new items to tracker.")
