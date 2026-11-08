@@ -64,11 +64,44 @@ NEWS_QUERIES = [
     "CBSE result 2026",
 ]
 
+# ── Branded image variants (GitHub raw URLs) ──────────────────────────────────
+# 12 design variants per post type, served from social-images/ in this repo.
+# Rotation: pick variant by (day_of_year % 12) so each day a fresh design.
+_GITHUB_RAW = "https://raw.githubusercontent.com/compukidsdgp-creator/CBSE-PORTAL/main/social-images"
+
+IMAGE_TYPES = [
+    "study_notes", "practice_papers", "virtual_lab", "quest_zone",
+    "weekly_challenge", "exam_tip", "python_tip", "ai_concept",
+    "answer_key", "portal_overview",
+]
+
+BRANDED_IMAGES: dict[str, list[str]] = {
+    t: [f"{_GITHUB_RAW}/{t}_v{i:02d}.jpg" for i in range(1, 13)]
+    for t in IMAGE_TYPES
+}
+BRANDED_IMAGES["branded_poster_01"] = [f"{_GITHUB_RAW}/branded_poster_01.jpg"]
+BRANDED_IMAGES["branded_poster_02"] = [f"{_GITHUB_RAW}/branded_poster_02.jpg"]
+
+def _day_variant(n: int = 12) -> int:
+    """Return today's 0-based variant index (wraps over n variants)."""
+    return date.today().timetuple().tm_yday % n
+
+def get_image_url(post_type: str = "study_notes") -> str:
+    """
+    Return a branded image URL for the given post type.
+    Falls back to study_notes if type is unknown.
+    Rotates through 12 variants based on day-of-year.
+    """
+    variants = BRANDED_IMAGES.get(post_type) or BRANDED_IMAGES["study_notes"]
+    idx = _day_variant(len(variants))
+    return variants[idx]
+
+
 # ── Facebook API ──────────────────────────────────────────────────────────────
 def fb_post(message: str, dry_run: bool = False) -> dict:
-    """Post a message to the Facebook page."""
+    """Post a text-only message to the Facebook page feed (fallback)."""
     if dry_run:
-        print("\n[DRY RUN] Would post to Facebook:")
+        print("\n[DRY RUN] Would post to Facebook (text):")
         print("─" * 60)
         print(message)
         print("─" * 60)
@@ -86,6 +119,38 @@ def fb_post(message: str, dry_run: bool = False) -> dict:
     req = urllib.request.Request(url, data=data, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()
+        raise RuntimeError(f"Facebook API error {e.code}: {body}")
+
+
+def fb_photo_post(message: str, image_url: str, dry_run: bool = False) -> dict:
+    """
+    Post a photo + caption to the Facebook page via the /photos endpoint.
+    Shows in the feed AND the Photos tab — better reach than text-only.
+    """
+    if dry_run:
+        print("\n[DRY RUN] Would post to Facebook (photo):")
+        print(f"  Image: {image_url}")
+        print("─" * 60)
+        print(message)
+        print("─" * 60)
+        return {"id": "dry_run_post_id"}
+
+    if not PAGE_TOKEN:
+        raise ValueError("FB_PAGE_ACCESS_TOKEN not set. Add it to GitHub Secrets.")
+
+    url = f"{FB_API_BASE}/{PAGE_ID}/photos"
+    data = urllib.parse.urlencode({
+        "url":          image_url,
+        "caption":      message,
+        "access_token": PAGE_TOKEN,
+    }).encode("utf-8")
+
+    req = urllib.request.Request(url, data=data, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
         body = e.read().decode()
@@ -250,7 +315,7 @@ def post_notes(tracker, dry_run: bool = False):
         f"📌 Bookmark cbsemock.org.in for all subjects!\n\n"
         f"#CBSE #StudyNotes #{cls_str.replace(' ','')} #BoardExams2027"
     )
-    result = fb_post(text, dry_run=dry_run)
+    result = fb_photo_post(text, get_image_url("study_notes"), dry_run=dry_run)
     if not dry_run:
         tracker.mark_posted("notes", item, "facebook")
         tracker.save()
@@ -275,7 +340,7 @@ def post_practice(tracker, content_type: str, dry_run: bool = False):
         f"💡 Tip: Attempt under exam conditions for best results!\n\n"
         f"#CBSE #Class{cls} #PracticePaper #MockTest #BoardExams2027"
     )
-    result = fb_post(text, dry_run=dry_run)
+    result = fb_photo_post(text, get_image_url("practice_papers"), dry_run=dry_run)
     if not dry_run:
         tracker.mark_posted(content_type, item, "facebook")
         tracker.save()
@@ -345,7 +410,7 @@ def post_festival_fb(dry_run=False, override_date=None):
         f"— Team CBSE Mock 🎓\n\n"
         f"#CBSEMock #{tag} #BoardExams2027 #CBSEStudents #ExamPrep"
     )
-    result = fb_post(msg, dry_run=dry_run)
+    result = fb_photo_post(msg, get_image_url("branded_poster_01"), dry_run=dry_run)
     print(f"[OK] Festival post (FB): {name} → {result.get('id','n/a')}")
 
 
@@ -474,7 +539,8 @@ def post_afternoon_fb(dry_run=False):
                 f"🔗 {ch['url']}\n\n"
                 f"#TeachersEye #CBSE #Class{ch['class']} #ExaminerTips #BoardExams2027"
             )
-        result = fb_post(msg, dry_run=dry_run)
+        img_type = {"flash": "answer_key", "mistakes": "exam_tip", "teacher": "study_notes"}.get(key, "study_notes")
+        result = fb_photo_post(msg, get_image_url(img_type), dry_run=dry_run)
         print(f"[OK] FB afternoon/{key}: {ch['title']} → {result.get('id','n/a')}")
 
 
@@ -491,7 +557,7 @@ def post_lab_fb(tracker, dry_run=False):
         f"🔗 {item.get('url', PORTAL_URL)}\n\n"
         f"#CBSELab #PracticalExam #BoardExams2027 #CBSEMock"
     )
-    result = fb_post(text, dry_run=dry_run)
+    result = fb_photo_post(text, get_image_url("virtual_lab"), dry_run=dry_run)
     if not dry_run:
         tracker.mark_posted("lab", item, "facebook")
         tracker.save()
@@ -522,7 +588,7 @@ def post_promo_quest_fb(dry_run: bool = False):
         "👉 Attempt November Quest: https://cbsemock.org.in/quest/\n\n"
         "#Quest #CBSE #MCQ #BoardExams2027 #Class10 #Class12 #CBSEMock"
     )
-    result = fb_post(text, dry_run=dry_run)
+    result = fb_photo_post(text, get_image_url("quest_zone"), dry_run=dry_run)
     print(f"[OK] Promo Quest (FB): {result.get('id','n/a')}")
 
 
@@ -548,7 +614,7 @@ def post_promo_mock_fb(dry_run: bool = False):
         "👉 Start Mock Tests Now: https://cbsemock.org.in\n\n"
         "#MockTest #CBSE #Class10 #Class12 #PracticePaper #BoardExams2027 #AnswerKey"
     )
-    result = fb_post(text, dry_run=dry_run)
+    result = fb_photo_post(text, get_image_url("practice_papers"), dry_run=dry_run)
     print(f"[OK] Promo Mock (FB): {result.get('id','n/a')}")
 
 
@@ -576,7 +642,7 @@ def post_promo_lab_fb(dry_run: bool = False):
         "👉 Open Virtual Labs: https://cbsemock.org.in/virtual-labs/\n\n"
         "#VirtualLab #CBSE #Science #Physics #Chemistry #Biology #HandsOn #BoardExams2027"
     )
-    result = fb_post(text, dry_run=dry_run)
+    result = fb_photo_post(text, get_image_url("virtual_lab"), dry_run=dry_run)
     print(f"[OK] Promo Lab (FB): {result.get('id','n/a')}")
 
 
@@ -604,7 +670,7 @@ def post_promo_notes_fb(dry_run: bool = False):
         "👉 Explore Notes: https://cbsemock.org.in\n\n"
         "#StudyNotes #CBSE #Revision #BoardExams2027 #Class12 #Class10 #ChapterWise"
     )
-    result = fb_post(text, dry_run=dry_run)
+    result = fb_photo_post(text, get_image_url("study_notes"), dry_run=dry_run)
     print(f"[OK] Promo Notes (FB): {result.get('id','n/a')}")
 
 
@@ -639,7 +705,7 @@ def main():
         if m == "quest":
             q = pick_question()
             if q:
-                result = fb_post(format_quest_post(q), dry_run=args.dry_run)
+                result = fb_photo_post(format_quest_post(q), get_image_url("quest_zone"), dry_run=args.dry_run)
                 print(f"[OK] Quest posted: {result.get('id','n/a')}")
             else:
                 print("[SKIP] No question available.")
