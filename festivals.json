@@ -1,0 +1,40 @@
+{
+  "_note": "Festival calendar for CBSE Mock social media greetings. MM-DD format for fixed dates; 'variable' for dates that change yearly (update at year start). All times IST.",
+  "2026": {
+    "11-08": { "name": "Diwali", "emoji": "🪔", "type": "major" },
+    "11-09": { "name": "Diwali (Day 2)", "emoji": "🪔✨", "type": "major" },
+    "11-10": { "name": "Govardhan Puja", "emoji": "🌸", "type": "minor" },
+    "11-11": { "name": "Bhai Dooj", "emoji": "❤️", "type": "minor" },
+    "11-15": { "name": "Guru Nanak Jayanti", "emoji": "🙏", "type": "major" },
+    "12-25": { "name": "Christmas", "emoji": "🎄", "type": "major" },
+    "12-31": { "name": "New Year's Eve", "emoji": "🎆", "type": "minor" }
+  },
+  "2027": {
+    "01-01": { "name": "New Year", "emoji": "🎉", "type": "major" },
+    "01-14": { "name": "Makar Sankranti / Lohri", "emoji": "🪁🔥", "type": "major" },
+    "01-26": { "name": "Republic Day", "emoji": "🇮🇳", "type": "major" },
+    "02-14": { "name": "Valentine's Day", "emoji": "💝", "type": "minor" },
+    "02-26": { "name": "Maha Shivratri", "emoji": "🔱", "type": "major" },
+    "03-14": { "name": "Holi", "emoji": "🌈", "type": "major" },
+    "03-29": { "name": "Ram Navami", "emoji": "🙏", "type": "major" },
+    "04-14": { "name": "Dr. Ambedkar Jayanti / Baisakhi", "emoji": "🌾", "type": "major" },
+    "04-18": { "name": "Good Friday", "emoji": "✝️", "type": "minor" },
+    "04-20": { "name": "Easter", "emoji": "🐣", "type": "minor" },
+    "05-01": { "name": "Labour Day", "emoji": "✊", "type": "minor" },
+    "05-12": { "name": "Eid ul-Fitr", "emoji": "🌙", "type": "major" },
+    "06-05": { "name": "World Environment Day", "emoji": "🌍", "type": "minor" },
+    "07-19": { "name": "Eid ul-Adha", "emoji": "🌙", "type": "major" },
+    "08-15": { "name": "Independence Day", "emoji": "🇮🇳", "type": "major" },
+    "08-16": { "name": "Janmashtami", "emoji": "🦚", "type": "major" },
+    "09-05": { "name": "Teachers' Day", "emoji": "👩‍🏫", "type": "major" },
+    "10-02": { "name": "Gandhi Jayanti", "emoji": "🕊️", "type": "major" },
+    "10-14": { "name": "Dussehra", "emoji": "🏹", "type": "major" },
+    "10-21": { "name": "Diwali", "emoji": "🪔", "type": "major" },
+    "10-22": { "name": "Diwali (Day 2)", "emoji": "🪔✨", "type": "major" },
+    "10-23": { "name": "Govardhan Puja", "emoji": "🌸", "type": "minor" },
+    "10-24": { "name": "Bhai Dooj", "emoji": "❤️", "type": "minor" },
+    "11-05": { "name": "Guru Nanak Jayanti", "emoji": "🙏", "type": "major" },
+    "12-25": { "name": "Christmas", "emoji": "🎄", "type": "major" },
+    "12-31": { "name": "New Year's Eve", "emoji": "🎆", "type": "minor" }
+  }
+}

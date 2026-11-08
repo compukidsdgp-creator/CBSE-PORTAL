@@ -93,6 +93,23 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: update social posting tracker [skip ci]"
           git push || true
 
+      - name: Festival Greeting (Telegram — morning only)
+        if: >
+          steps.mode.outputs.mode == 'morning' &&
+          (github.event.inputs.platform == '' ||
+           github.event.inputs.platform == 'telegram' ||
+           github.event.inputs.platform == 'both')
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          if [ "$DRY" = "true" ]; then
+            python3 post_festival.py --dry-run
+          else
+            python3 post_festival.py
+          fi
+
       - name: Post to Telegram (morning / lab / evening)
         if: >
           steps.mode.outputs.mode != 'afternoon' &&
