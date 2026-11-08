@@ -7086,23 +7086,8 @@ function renderBadgesRow(){
   });
 }
 
-// Name modal
-function showNameModal(){
-  const m=document.getElementById('nameModal');
-  if(m){m.style.display='flex';setTimeout(()=>{const i=document.getElementById('nameInput');if(i)i.focus();},100);}
 }
-function saveName(){
-  const inp=document.getElementById('nameInput');
-  const name=inp?inp.value.trim():'';
-  const gs=getGS();
-  gs.studentName=name||'Student';
-  saveGS(gs);
-  const m=document.getElementById('nameModal');
-  if(m)m.style.display='none';
-  updateXPBar(gs);
-  showToast('👋 Welcome, '+gs.studentName+'! Start earning XP →');
-  addXP(10,'first login');
-}
+
 
 // ═══════════════════════════════════════
 // SECTION NAVIGATION
@@ -7585,15 +7570,6 @@ window.addEventListener('DOMContentLoaded',()=>{
 <div id="toast"><span id="toastMsg">🏆 Achievement unlocked!</span></div>
 
 <!-- NAME MODAL -->
-<div id="nameModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:10000;align-items:center;justify-content:center">
-  <div style="background:#fff;border-radius:14px;padding:32px 28px;max-width:360px;width:90%;text-align:center;box-shadow:0 16px 48px rgba(0,0,0,.3)">
-    <div style="font-size:44px;margin-bottom:10px">🤖</div>
-    <h2 style="font-size:18px;font-weight:900;color:#0d1b2a;margin-bottom:6px">Welcome to CBSEMOCK AI Portal!</h2>
-    <p style="font-size:12px;color:#666;margin-bottom:18px">Enter your name to personalise your learning and track XP, streaks and badges.</p>
-    <input id="nameInput" type="text" placeholder="Your name…" style="width:100%;padding:10px 14px;border:2px solid #e0e0e0;border-radius:8px;font-size:13px;outline:none;box-sizing:border-box;margin-bottom:12px" onkeydown="if(event.key==='Enter')saveName()">
-    <button onclick="saveName()" style="width:100%;padding:12px;background:linear-gradient(135deg,#0d1b2a,#00b4d8);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer">Let's Go! 🚀</button>
-  </div>
-</div>
 
 
 <!-- ══ ADSENSE BOTTOM LEADERBOARD ══ Highest RPM slot ══ -->
