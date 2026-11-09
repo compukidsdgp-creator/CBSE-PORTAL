@@ -301,6 +301,72 @@ def generate_card(topic_id: str) -> Path:
     print(f"[OK] {out_path}")
     return out_path
 
+TOPICS.update({
+    "genetics": {
+        "subject":      "Biology",
+        "chapter_tag":  "Chapter 5 · Class XII",
+        "title_line1":  "Principles of",
+        "title_line2":  "Inheritance",
+        "board_note":   "🧬  5–6 marks · Every Board Exam",
+        "rows": [
+            {"label": "Monohybrid Ratio",   "formula": r"$3 : 1$",                             "diagram": "flux",        "note": "F₂ phenotype ratio"},
+            {"label": "Dihybrid Ratio",     "formula": r"$9 : 3 : 3 : 1$",                     "diagram": "coil_magnet", "note": "F₂ phenotype ratio"},
+            {"label": "Hardy-Weinberg",     "formula": r"$p^2 + 2pq + q^2 = 1$",              "diagram": "lenz",        "note": "Allele frequency"},
+            {"label": "Chi-Square",         "formula": r"$\chi^2 = \sum\dfrac{(O-E)^2}{E}$",   "diagram": "motional",    "note": "Goodness of fit"},
+            {"label": "Mutation Rate",      "formula": r"$\mu = \dfrac{\text{mutations}}{\text{gametes}}$", "diagram": "inductor", "note": "per generation"},
+        ],
+        "cta":      "SAVE FOR REVISION",
+        "hashtags": "#Biology #Genetics #CBSE #BoardExam2027 #ClassXII",
+    },
+    "chemical_kinetics": {
+        "subject":      "Chemistry",
+        "chapter_tag":  "Chapter 3 · Class XII",
+        "title_line1":  "Chemical",
+        "title_line2":  "Kinetics",
+        "board_note":   "⚗️  5–6 marks · Every Board Exam",
+        "rows": [
+            {"label": "Rate Law",           "formula": r"$r = k[A]^m[B]^n$",                   "diagram": "flux",        "note": "mol L⁻¹ s⁻¹"},
+            {"label": "1st Order",          "formula": r"$k = \dfrac{2.303}{t}\log\dfrac{[A]_0}{[A]}$", "diagram": "coil_magnet", "note": "s⁻¹"},
+            {"label": "Half Life (1st)",    "formula": r"$t_{1/2} = \dfrac{0.693}{k}$",         "diagram": "lenz",        "note": "Independent of [A]"},
+            {"label": "Arrhenius Eq.",      "formula": r"$k = A e^{-E_a/RT}$",                  "diagram": "motional",    "note": "Activation energy"},
+            {"label": "Activation Energy",  "formula": r"$\ln\dfrac{k_2}{k_1} = \dfrac{E_a}{R}\left(\dfrac{1}{T_1}-\dfrac{1}{T_2}\right)$", "diagram": "inductor", "note": "J mol⁻¹"},
+        ],
+        "cta":      "SAVE FOR REVISION",
+        "hashtags": "#Chemistry #Kinetics #CBSE #BoardExam2027 #ClassXII",
+    },
+    "calculus": {
+        "subject":      "Mathematics",
+        "chapter_tag":  "Chapter 5–7 · Class XII",
+        "title_line1":  "Calculus",
+        "title_line2":  "Quick Reference",
+        "board_note":   "📐  12–15 marks · Every Board Exam",
+        "rows": [
+            {"label": "Chain Rule",         "formula": r"$\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot\dfrac{du}{dx}$", "diagram": "flux",        "note": "Composite fn"},
+            {"label": "Product Rule",       "formula": r"$(uv)' = u'v + uv'$",                 "diagram": "coil_magnet", "note": "Leibniz rule"},
+            {"label": "Integration by Parts","formula": r"$\int u\,dv = uv - \int v\,du$",      "diagram": "lenz",        "note": "ILATE order"},
+            {"label": "Definite Integral",  "formula": r"$\int_a^b f(x)\,dx = F(b)-F(a)$",     "diagram": "motional",    "note": "Newton-Leibniz"},
+            {"label": "Area Under Curve",   "formula": r"$A = \int_a^b |f(x)|\,dx$",           "diagram": "inductor",    "note": "sq. units"},
+        ],
+        "cta":      "SAVE FOR REVISION",
+        "hashtags": "#Maths #Calculus #CBSE #BoardExam2027 #ClassXII",
+    },
+    "boolean_algebra": {
+        "subject":      "CS",
+        "chapter_tag":  "Chapter 3 · Class XII",
+        "title_line1":  "Boolean Algebra",
+        "title_line2":  "& Logic Gates",
+        "board_note":   "💻  4–5 marks · Every Board Exam",
+        "rows": [
+            {"label": "De Morgan I",        "formula": r"$\overline{A+B} = \bar{A}\cdot\bar{B}$","diagram": "flux",        "note": "NOR = AND of NOT"},
+            {"label": "De Morgan II",       "formula": r"$\overline{A\cdot B} = \bar{A}+\bar{B}$","diagram": "coil_magnet","note": "NAND = OR of NOT"},
+            {"label": "Absorption Law",     "formula": r"$A + AB = A$",                         "diagram": "lenz",        "note": "Simplification"},
+            {"label": "Half Adder SOP",     "formula": r"$S=A\oplus B,\ C=A\cdot B$",           "diagram": "motional",    "note": "Sum & Carry"},
+            {"label": "POS / SOP",          "formula": r"$f=\sum m_i = \prod M_i$",             "diagram": "inductor",    "note": "Canonical forms"},
+        ],
+        "cta":      "SAVE FOR REVISION",
+        "hashtags": "#ComputerScience #BooleanAlgebra #CBSE #BoardExam2027 #ClassXII",
+    },
+})
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--topic", default="em_induction")
@@ -309,3 +375,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# ── Additional topic data ────────────────────────────────────────────────────────
