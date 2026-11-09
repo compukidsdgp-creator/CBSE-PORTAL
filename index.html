@@ -1542,21 +1542,29 @@ footer strong{color:var(--text);}
   </section>
 
   <script>
-  // Exam countdown — CBSE boards typically start ~15 Feb
+  // Exam countdown — CBSE boards 2026-27: Class 10 & 12 typically start mid-Feb
   (function(){
-    const examDate = new Date('2026-02-15T00:00:00+05:30');
+    const examStart = new Date('2027-02-15T00:00:00+05:30');
+    const examEnd   = new Date('2027-04-05T23:59:59+05:30');
     const now = new Date();
-    const diff = Math.ceil((examDate - now)/(1000*60*60*24));
     const box = document.getElementById('countdown-box');
     const lbl = document.getElementById('countdown-label');
     if(!box) return;
-    if(diff > 0){
+    if(now < examStart){
+      const diff = Math.ceil((examStart - now)/(1000*60*60*24));
       box.textContent = diff + ' days';
       box.style.color = diff < 30 ? '#c0392b' : diff < 90 ? '#d97706' : '#2d6a4f';
-      lbl.textContent = 'Days to CBSE Board Exams 2026 (Feb 15 est.)';
-    } else {
-      box.textContent = 'Exams Ongoing / Over';
+      lbl.textContent = 'Days to CBSE Board Exams 2027 (Feb 15 est.)';
+    } else if(now <= examEnd){
+      box.textContent = 'Exams Ongoing';
+      box.style.color = '#c0392b';
       box.style.fontSize = '1rem';
+      lbl.textContent = 'CBSE Board Exams 2027 in Progress';
+    } else {
+      box.textContent = 'Exams Over';
+      box.style.color = '#6c757d';
+      box.style.fontSize = '1rem';
+      lbl.textContent = 'CBSE Board Exams 2027 Completed';
     }
   })();
   </script>
