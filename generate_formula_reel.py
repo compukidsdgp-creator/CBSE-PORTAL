@@ -45,7 +45,7 @@ GREEN   = "#00e676"
 ORANGE  = "#ff6b35"
 PINK    = "#ff4081"
 
-LOGO_PATH = Path(__file__).parent / "formula-posts" / "_cbsemock_logo_dark.png"
+LOGO_PATH = Path(__file__).parent / "formula-posts" / "_cbsemock_logo_circle.png"
 
 LABEL_COLORS = ["#0d47a1","#1565c0","#1976d2","#1e88e5","#2196f3","#1976d2"]
 
@@ -294,20 +294,25 @@ def render_frame(data, global_t, frame_idx):
     # ── CBSEMock logo header ────────────────────────────────────────────────────
     ax_logo = fig.add_axes([0, 1 - logo_frac, 1, logo_frac])
     ax_logo.set_facecolor(BG); ax_logo.axis("off")
+    # Reel is 10.80 × (19.20 * 0.07) = 10.80 × 1.344 inches → ~8:1 aspect
+    # Square logo: width = 0.13 in axes coords to keep it circular
+    logo_w = 0.13
+    logo_x = 0.5 - logo_w / 2
     if LOGO_PATH.exists() and title_prog > 0:
         try:
             logo_img = matplotlib.image.imread(str(LOGO_PATH))
-            # Centre the logo: x=0.25 → 0.75, full height
-            li = ax_logo.inset_axes([0.25, 0.05, 0.50, 0.90])
+            li = ax_logo.inset_axes([logo_x, 0.03, logo_w, 0.94])
             li.imshow(logo_img); li.axis("off")
             li.patch.set_alpha(title_prog)
         except Exception:
             ax_logo.text(0.5, 0.55, "CBSEMock", color=CYAN, fontsize=22,
                          fontweight="bold", ha="center", va="center", alpha=title_prog,
                          transform=ax_logo.transAxes)
-    # Chapter tag — small, right-aligned bottom
-    ax_logo.text(0.98, 0.12, data["chapter_tag"], color=GREY, fontsize=7.5,
+    ax_logo.text(0.98, 0.50, "cbsemock.org.in", color=GREY, fontsize=8,
                  ha="right", va="center", alpha=title_prog,
+                 transform=ax_logo.transAxes)
+    ax_logo.text(0.02, 0.50, data["chapter_tag"], color=GREY, fontsize=8,
+                 ha="left", va="center", alpha=title_prog,
                  transform=ax_logo.transAxes)
     ax_logo.axhline(0, color="#1565c0", lw=2)
 

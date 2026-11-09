@@ -27,7 +27,7 @@ from PIL import Image
 import io
 
 OUT_DIR   = Path(__file__).parent / "formula-posts" / "images"
-LOGO_PATH = Path(__file__).parent / "formula-posts" / "_cbsemock_logo_dark.png"
+LOGO_PATH = Path(__file__).parent / "formula-posts" / "_cbsemock_logo_circle.png"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Canvas: 1080×1350 at 100 dpi
@@ -281,27 +281,37 @@ DIAGRAM_FNS = {
 # ────────────────────────────── header / footer ───────────────────────────────
 
 def draw_brand_header(ax, chapter_tag):
-    """Draw CBSEMock logo centred in the header axis."""
+    """Draw CBSEMock circle logo centred in the header axis."""
     ax.set_facecolor(BRAND_NAVY); ax.axis("off")
-    # Load logo image — centred, full-height
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1)
+
+    # Logo is a square circle icon — place it centred, aspect-correct
+    # Header is 10.80 × (13.50 * 0.10) = 10.80 × 1.35 inches → aspect ratio 8:1
+    # To show square logo: width = height_of_axes * aspect_ratio_correction
+    # In axes coords: height=1.0, width=1.0/8 = 0.125; centre at x=0.5
+    logo_w = 0.14   # axes width fraction (narrow to keep circle round)
+    logo_x = 0.5 - logo_w / 2  # centred
+
     if LOGO_PATH.exists():
         try:
             logo_img = matplotlib.image.imread(str(LOGO_PATH))
-            # Centre the logo: x=0.25 → 0.25+0.50=0.75 (50% wide, centred)
-            logo_ax = ax.inset_axes([0.25, 0.05, 0.50, 0.90])
+            logo_ax = ax.inset_axes([logo_x, 0.03, logo_w, 0.94])
             logo_ax.imshow(logo_img)
             logo_ax.axis("off")
         except Exception:
-            ax.text(0.5, 0.60, "CBSEMock", color=BRAND_CYAN,
+            ax.text(0.5, 0.55, "CBSEMock", color=BRAND_CYAN,
                     fontsize=22, fontweight="bold", ha="center", va="center",
                     transform=ax.transAxes)
     else:
-        ax.text(0.5, 0.60, "CBSEMock", color=BRAND_CYAN,
+        ax.text(0.5, 0.55, "CBSEMock", color=BRAND_CYAN,
                 fontsize=22, fontweight="bold", ha="center", va="center",
                 transform=ax.transAxes)
-    # Chapter tag — small, right-aligned, below logo
-    ax.text(0.98, 0.15, chapter_tag, color=GREY, fontsize=7.5,
+    # "cbsemock.org.in" text — right side, small
+    ax.text(0.98, 0.50, "cbsemock.org.in", color=GREY, fontsize=8,
             ha="right", va="center", transform=ax.transAxes)
+    # Chapter tag — left side, small
+    ax.text(0.02, 0.50, chapter_tag, color=GREY, fontsize=8,
+            ha="left", va="center", transform=ax.transAxes)
     # Thin divider line at bottom
     ax.axhline(0, color=BRAND_BLUE, lw=2)
 
