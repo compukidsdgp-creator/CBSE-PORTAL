@@ -1552,7 +1552,7 @@ footer strong{color:var(--text);}
     if(!box) return;
     if(now < examStart){
       const diff = Math.ceil((examStart - now)/(1000*60*60*24));
-      box.textContent = diff + ' days';
+      box.textContent = diff;
       box.style.color = diff < 30 ? '#c0392b' : diff < 90 ? '#d97706' : '#f4c430';
       lbl.textContent = 'Days to CBSE Board Exams 2027 (Feb 15 est.)';
     } else if(now <= examEnd){
