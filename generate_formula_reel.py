@@ -35,17 +35,19 @@ DPI = 100
 FPS = 30
 TOTAL_SEC = 8
 
-BG      = "#1a1a2e"
-CARD_BG = "#16213e"
-CYAN    = "#00d4ff"
-YELLOW  = "#ffd700"
+BG      = "#0a1628"   # CBSEMock brand navy
+CARD_BG = "#0d1e35"
+CYAN    = "#00b4d8"   # brand cyan
+YELLOW  = "#f9c820"   # brand yellow
 WHITE   = "#f0f0f0"
-GREY    = "#888888"
-GREEN   = "#00ff88"
+GREY    = "#8899aa"
+GREEN   = "#00e676"
 ORANGE  = "#ff6b35"
-PINK    = "#e94560"
+PINK    = "#ff4081"
 
-LABEL_COLORS = ["#0077b6","#0096c7","#00b4d8","#48cae4","#90e0ef","#0077b6"]
+LOGO_PATH = Path(__file__).parent / "formula-posts" / "_cbsemock_logo_dark.png"
+
+LABEL_COLORS = ["#0d47a1","#1565c0","#1976d2","#1e88e5","#2196f3","#1976d2"]
 
 # ── Reuse diagram functions from card script ───────────────────────────────────
 def draw_flux_diagram(ax, progress=1.0):
@@ -234,33 +236,33 @@ DIAGRAM_FNS = {
 
 TOPICS = {
     "em_induction": {
-        "title": "Electromagnetic",
-        "subtitle": "Induction",
-        "subject": "PHYSICS · Class XII · Chapter 6",
-        "tagline": "⚡ 5–6 marks in Boards every year",
+        "chapter_tag": "Chapter 6 · Class XII",
+        "title_line1": "Electromagnetic",
+        "title_line2": "Induction",
+        "board_note":  "⚡  5–6 marks · Every Board Exam",
+        "cta":         "Practice EMI Questions →",
         "rows": [
-            {"label": "Magnetic Flux",   "formula": r"$\Phi = BA\cos\theta$",          "diagram": "flux",       "note": "Φ in Weber (Wb)"},
-            {"label": "Faraday's Law",   "formula": r"$\varepsilon = -N\dfrac{d\Phi}{dt}$", "diagram": "coil_magnet", "note": "ε in Volt (V)"},
-            {"label": "Lenz's Law",      "formula": r"$\varepsilon = -\dfrac{d\Phi}{dt}$",  "diagram": "lenz",       "note": "Opposes cause"},
-            {"label": "Motional EMF",    "formula": r"$\varepsilon = Blv$",             "diagram": "motional",   "note": "B·l·v"},
-            {"label": "Self-Inductance", "formula": r"$\varepsilon = -L\dfrac{dI}{dt}$","diagram": "inductor",   "note": "L in Henry (H)"},
+            {"label": "Magnetic Flux",   "formula": r"$\Phi = BA\cos\theta$",             "diagram": "flux",        "note": "Weber (Wb)"},
+            {"label": "Faraday's Law",   "formula": r"$\varepsilon = -N\dfrac{d\Phi}{dt}$","diagram": "coil_magnet", "note": "Volt (V)"},
+            {"label": "Lenz's Law",      "formula": r"$\varepsilon = -\dfrac{d\Phi}{dt}$", "diagram": "lenz",        "note": "Opposes cause"},
+            {"label": "Motional EMF",    "formula": r"$\varepsilon = Blv$",                "diagram": "motional",    "note": "B·l·v"},
+            {"label": "Self-Inductance", "formula": r"$\varepsilon = -L\dfrac{dI}{dt}$",   "diagram": "inductor",    "note": "Henry (H)"},
         ],
-        "footer": "cbsemock.org.in  ·  Class X & XII Board Prep",
         "hashtags": "#Physics #EMI #CBSE #BoardExam2027 #ClassXII",
     },
     "current_electricity": {
-        "title": "Current",
-        "subtitle": "Electricity",
-        "subject": "PHYSICS · Class XII · Chapter 3",
-        "tagline": "⚡ 8–10 marks in Boards",
+        "chapter_tag": "Chapter 3 · Class XII",
+        "title_line1": "Current",
+        "title_line2": "Electricity",
+        "board_note":  "⚡  8–10 marks · Every Board Exam",
+        "cta":         "Practice Electricity Questions →",
         "rows": [
-            {"label": "Ohm's Law",    "formula": r"$V = IR$",                        "diagram": "ohm",    "note": "V·I·R triangle"},
-            {"label": "Resistivity",  "formula": r"$R = \rho\dfrac{l}{A}$",           "diagram": "wire",   "note": "ρ in Ω·m"},
-            {"label": "Kirchhoff KVL","formula": r"$\sum V = 0$",                    "diagram": "loop",   "note": "Closed loop"},
-            {"label": "Wheatstone",   "formula": r"$\dfrac{P}{Q} = \dfrac{R}{S}$",   "diagram": "bridge", "note": "Balanced bridge"},
-            {"label": "Power",        "formula": r"$P = \dfrac{V^2}{R} = I^2R$",     "diagram": "power",  "note": "P in Watt (W)"},
+            {"label": "Ohm's Law",    "formula": r"$V = IR$",                       "diagram": "ohm",    "note": "V·I·R"},
+            {"label": "Resistivity",  "formula": r"$R = \rho\dfrac{l}{A}$",          "diagram": "wire",   "note": "Ω·m"},
+            {"label": "KVL",          "formula": r"$\sum V = 0$",                   "diagram": "loop",   "note": "Closed loop"},
+            {"label": "Wheatstone",   "formula": r"$\dfrac{P}{Q}=\dfrac{R}{S}$",    "diagram": "bridge", "note": "Balanced bridge"},
+            {"label": "Power",        "formula": r"$P = \dfrac{V^2}{R} = I^2R$",    "diagram": "power",  "note": "Watt (W)"},
         ],
-        "footer": "cbsemock.org.in  ·  Class X & XII Board Prep",
         "hashtags": "#Physics #Electricity #CBSE #BoardExam2027",
     },
 }
@@ -282,31 +284,48 @@ def render_frame(data, global_t, frame_idx):
 
     fig = plt.figure(figsize=(W_IN, H_IN), facecolor=BG)
 
-    top_frac    = 0.14
-    footer_frac = 0.06
-    row_frac    = (1.0 - top_frac - footer_frac) / n
+    logo_frac   = 0.055  # CBSEMock logo strip
+    top_frac    = 0.085  # title band
+    footer_frac = 0.065
+    row_frac    = (1.0 - logo_frac - top_frac - footer_frac) / n
 
     title_prog = min(1.0, global_t / 0.12)
 
-    # ── Title block ────────────────────────────────────────────────────────────
-    ax_title = fig.add_axes([0, 1 - top_frac, 1, top_frac])
-    ax_title.set_facecolor(BG)
-    ax_title.axis("off")
-    ax_title.text(0.5, 0.80, data["title"], color=CYAN,
-                  fontsize=28, fontweight="bold", ha="center", va="top",
+    # ── CBSEMock logo header ────────────────────────────────────────────────────
+    ax_logo = fig.add_axes([0, 1 - logo_frac, 1, logo_frac])
+    ax_logo.set_facecolor(BG); ax_logo.axis("off")
+    if LOGO_PATH.exists() and title_prog > 0:
+        try:
+            logo_img = matplotlib.image.imread(str(LOGO_PATH))
+            li = ax_logo.inset_axes([0.01, 0.05, 0.38, 0.90])
+            li.imshow(logo_img); li.axis("off")
+            li.patch.set_alpha(title_prog)
+        except Exception:
+            ax_logo.text(0.03, 0.55, "CBSEMock", color=CYAN, fontsize=20,
+                         fontweight="bold", va="center", alpha=title_prog,
+                         transform=ax_logo.transAxes)
+    # Chapter tag right
+    ax_logo.text(0.97, 0.55, data["chapter_tag"], color=CYAN, fontsize=9,
+                 ha="right", va="center", alpha=title_prog,
+                 transform=ax_logo.transAxes,
+                 bbox=dict(boxstyle="round,pad=0.4", facecolor="#0d2a4a",
+                           edgecolor=CYAN, lw=1.5, alpha=title_prog))
+    ax_logo.axhline(0, color="#1565c0", lw=2)
+
+    # ── Title band ─────────────────────────────────────────────────────────────
+    ax_title = fig.add_axes([0, 1 - logo_frac - top_frac, 1, top_frac])
+    ax_title.set_facecolor(BG); ax_title.axis("off")
+    ax_title.text(0.5, 0.78, data["title_line1"], color=WHITE,
+                  fontsize=26, fontweight="bold", ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
-    ax_title.text(0.5, 0.52, data["subtitle"], color=WHITE,
-                  fontsize=26, fontweight="bold", ha="center", va="top",
+    ax_title.text(0.5, 0.40, data["title_line2"], color=CYAN,
+                  fontsize=26, fontweight="bold", ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
-    ax_title.text(0.5, 0.25, f"── {data['subject']} ──", color=GREY,
-                  fontsize=8, ha="center", va="top",
-                  alpha=title_prog, transform=ax_title.transAxes)
-    ax_title.text(0.5, 0.08, data["tagline"], color=YELLOW,
-                  fontsize=8, ha="center", va="top",
+    ax_title.text(0.5, 0.08, data["board_note"], color=YELLOW,
+                  fontsize=8, ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
 
     # ── Rows ───────────────────────────────────────────────────────────────────
-    # Each row starts appearing at t = 0.12 + i*(0.88/n)
     row_window = (1.0 - 0.12 - 0.08) / n
 
     for i, row in enumerate(rows):
@@ -331,22 +350,27 @@ def render_frame(data, global_t, frame_idx):
             spine.set_linewidth(1.5)
         ax_card.set_xticks([]); ax_card.set_yticks([])
 
-        # Label pill
+        # Label pill — coloured background via explicit patch
         ax_label = fig.add_axes([pad*2, y_bottom + pad*2 + slide_offset,
-                                  0.30, row_frac - pad*4])
-        ax_label.set_facecolor((*matplotlib.colors.to_rgb(LABEL_COLORS[i % len(LABEL_COLORS)]),
-                                 row_alpha))
-        ax_label.axis("off")
+                                  0.28, row_frac - pad*4])
+        ax_label.set_facecolor(BG); ax_label.axis("off")
+        ax_label.set_xlim(0,1); ax_label.set_ylim(0,1)
+        pill_col = LABEL_COLORS[i % len(LABEL_COLORS)]
+        import matplotlib.patches as _mp2
+        ax_label.add_patch(_mp2.FancyBboxPatch((0.03,0.03), 0.94, 0.94,
+                            boxstyle="round,pad=0.04",
+                            facecolor=(*matplotlib.colors.to_rgb(pill_col), row_alpha),
+                            edgecolor="none", zorder=1))
         ax_label.text(0.5, 0.65, row["label"], color=WHITE, fontsize=8.5,
                       fontweight="bold", ha="center", va="center",
-                      alpha=row_alpha, transform=ax_label.transAxes, wrap=True)
-        ax_label.text(0.5, 0.25, row["note"], color="#dddddd", fontsize=6.5,
+                      alpha=row_alpha, transform=ax_label.transAxes, wrap=True, zorder=2)
+        ax_label.text(0.5, 0.22, row["note"], color="#ccddee", fontsize=6.5,
                       ha="center", va="center",
-                      alpha=row_alpha, transform=ax_label.transAxes)
+                      alpha=row_alpha, transform=ax_label.transAxes, zorder=2)
 
         # Diagram
         diag_prog = min(1.0, row_local * 1.5)
-        ax_diag = fig.add_axes([0.31 + pad, y_bottom + pad*2 + slide_offset,
+        ax_diag = fig.add_axes([0.29 + pad, y_bottom + pad*2 + slide_offset,
                                   0.34, row_frac - pad*4])
         ax_diag.set_facecolor((*matplotlib.colors.to_rgb(CARD_BG), row_alpha))
         ax_diag.axis("off")
@@ -364,18 +388,26 @@ def render_frame(data, global_t, frame_idx):
                      fontsize=14, fontweight="bold", ha="center", va="center",
                      transform=ax_form.transAxes, usetex=False)
 
-    # ── Footer ─────────────────────────────────────────────────────────────────
+    # ── Footer — CBSEMock branded ───────────────────────────────────────────────
     footer_alpha = ease_out(max(0, (global_t - 0.92) / 0.08))
     ax_foot = fig.add_axes([0, 0, 1, footer_frac])
-    ax_foot.set_facecolor(BG)
-    ax_foot.axis("off")
-    ax_foot.axhline(0.92, color=(*matplotlib.colors.to_rgb(CYAN), footer_alpha), lw=1.5)
-    ax_foot.text(0.5, 0.58, data["footer"], color=CYAN, fontsize=9,
+    ax_foot.set_facecolor("#071020"); ax_foot.axis("off")
+    ax_foot.axhline(0.97, color=(*matplotlib.colors.to_rgb("#1565c0"), footer_alpha), lw=2)
+    # Yellow CTA pill
+    ax_foot.text(0.50, 0.68, data["cta"], color="#1a1a1a", fontsize=10,
                  fontweight="bold", ha="center", va="center",
-                 alpha=footer_alpha, transform=ax_foot.transAxes)
-    ax_foot.text(0.5, 0.18, data["hashtags"], color=GREY, fontsize=7,
-                 ha="center", va="center",
-                 alpha=footer_alpha, transform=ax_foot.transAxes)
+                 alpha=footer_alpha, transform=ax_foot.transAxes,
+                 bbox=dict(boxstyle="round,pad=0.45",
+                           facecolor=(*matplotlib.colors.to_rgb(YELLOW), footer_alpha),
+                           edgecolor="none", lw=0))
+    # Domain
+    ax_foot.text(0.50, 0.28, "www  cbsemock.org.in", color=WHITE, fontsize=9,
+                 ha="center", va="center", alpha=footer_alpha,
+                 transform=ax_foot.transAxes)
+    # Hashtags
+    ax_foot.text(0.50, 0.08, data["hashtags"], color=GREY, fontsize=6.5,
+                 ha="center", va="center", alpha=footer_alpha,
+                 transform=ax_foot.transAxes)
 
     # Save frame
     out_path = FRAME_DIR / f"frame_{frame_idx:05d}.png"
