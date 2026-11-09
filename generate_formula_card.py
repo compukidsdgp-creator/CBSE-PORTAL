@@ -281,42 +281,38 @@ DIAGRAM_FNS = {
 # ────────────────────────────── header / footer ───────────────────────────────
 
 def draw_brand_header(ax, chapter_tag):
-    """Draw CBSEMock logo + chapter tag in the header axis."""
+    """Draw CBSEMock logo centred in the header axis."""
     ax.set_facecolor(BRAND_NAVY); ax.axis("off")
-    # Load logo image
+    # Load logo image — centred, full-height
     if LOGO_PATH.exists():
         try:
             logo_img = matplotlib.image.imread(str(LOGO_PATH))
-            # Place logo left side
-            logo_ax = ax.inset_axes([0.01, 0.05, 0.42, 0.90])
+            # Centre the logo: x=0.25 → 0.25+0.50=0.75 (50% wide, centred)
+            logo_ax = ax.inset_axes([0.25, 0.05, 0.50, 0.90])
             logo_ax.imshow(logo_img)
             logo_ax.axis("off")
         except Exception:
-            ax.text(0.02, 0.60, "CBSEMock", color=BRAND_CYAN,
-                    fontsize=18, fontweight="bold", va="center",
+            ax.text(0.5, 0.60, "CBSEMock", color=BRAND_CYAN,
+                    fontsize=22, fontweight="bold", ha="center", va="center",
                     transform=ax.transAxes)
-            ax.text(0.02, 0.22, "org.in", color=WHITE, fontsize=10,
-                    va="center", transform=ax.transAxes)
     else:
-        ax.text(0.02, 0.60, "CBSEMock", color=BRAND_CYAN,
-                fontsize=18, fontweight="bold", va="center",
+        ax.text(0.5, 0.60, "CBSEMock", color=BRAND_CYAN,
+                fontsize=22, fontweight="bold", ha="center", va="center",
                 transform=ax.transAxes)
-    # Chapter tag pill — right side
-    ax.text(0.98, 0.65, chapter_tag, color=BRAND_CYAN, fontsize=9,
-            ha="right", va="center", transform=ax.transAxes,
-            bbox=dict(boxstyle="round,pad=0.4", facecolor="#0d2a4a",
-                      edgecolor=BRAND_CYAN, lw=1.5))
+    # Chapter tag — small, right-aligned, below logo
+    ax.text(0.98, 0.15, chapter_tag, color=GREY, fontsize=7.5,
+            ha="right", va="center", transform=ax.transAxes)
     # Thin divider line at bottom
     ax.axhline(0, color=BRAND_BLUE, lw=2)
 
 
 def draw_title_band(ax, line1, line2, board_note):
     ax.set_facecolor(BRAND_NAVY); ax.axis("off")
-    ax.text(0.5, 0.80, line1, color=WHITE, fontsize=24, fontweight="bold",
+    ax.text(0.5, 0.80, line1, color=WHITE, fontsize=30, fontweight="bold",
             ha="center", va="center", transform=ax.transAxes)
-    ax.text(0.5, 0.42, line2, color=BRAND_CYAN, fontsize=24, fontweight="bold",
+    ax.text(0.5, 0.42, line2, color=BRAND_CYAN, fontsize=30, fontweight="bold",
             ha="center", va="center", transform=ax.transAxes)
-    ax.text(0.5, 0.08, board_note, color=BRAND_YELL, fontsize=8,
+    ax.text(0.5, 0.08, board_note, color=BRAND_YELL, fontsize=10,
             ha="center", va="center", transform=ax.transAxes)
 
 
@@ -346,8 +342,8 @@ def generate_card(topic_id: str) -> Path:
     fig = plt.figure(figsize=(W_IN, H_IN), facecolor=BRAND_NAVY)
 
     # Height fractions
-    hdr_frac   = 0.085   # logo strip
-    title_frac = 0.095   # title band
+    hdr_frac   = 0.100   # logo strip (taller for centred logo)
+    title_frac = 0.100   # title band
     foot_frac  = 0.090   # footer
     rows_frac  = 1.0 - hdr_frac - title_frac - foot_frac
     row_h      = rows_frac / n
@@ -381,10 +377,10 @@ def generate_card(topic_id: str) -> Path:
         ax_l.add_patch(_mp.FancyBboxPatch((0.04,0.04), 0.92, 0.92,
                         boxstyle="round,pad=0.04",
                         facecolor=col, edgecolor="none", zorder=1))
-        ax_l.text(0.5, 0.64, row["label"], color=WHITE, fontsize=8,
+        ax_l.text(0.5, 0.64, row["label"], color=WHITE, fontsize=10,
                   fontweight="bold", ha="center", va="center",
                   transform=ax_l.transAxes, wrap=True, zorder=2)
-        ax_l.text(0.5, 0.22, row["note"], color="#ccddee", fontsize=6.5,
+        ax_l.text(0.5, 0.22, row["note"], color="#ccddee", fontsize=8,
                   ha="center", va="center", transform=ax_l.transAxes, zorder=2)
 
         # Centre diagram (35%)
@@ -398,7 +394,7 @@ def generate_card(topic_id: str) -> Path:
         ax_f = fig.add_axes([0.65, yb + pad, 0.35 - pad, row_h - pad*2])
         ax_f.set_facecolor("#0d1e35"); ax_f.axis("off")
         ax_f.text(0.5, 0.52, row["formula"], color=BRAND_YELL,
-                  fontsize=13, fontweight="bold",
+                  fontsize=15, fontweight="bold",
                   ha="center", va="center", transform=ax_f.transAxes)
 
     # ── Footer ─────────────────────────────────────────────────────────────────

@@ -284,8 +284,8 @@ def render_frame(data, global_t, frame_idx):
 
     fig = plt.figure(figsize=(W_IN, H_IN), facecolor=BG)
 
-    logo_frac   = 0.055  # CBSEMock logo strip
-    top_frac    = 0.085  # title band
+    logo_frac   = 0.070  # CBSEMock logo strip (taller for centred logo)
+    top_frac    = 0.090  # title band
     footer_frac = 0.065
     row_frac    = (1.0 - logo_frac - top_frac - footer_frac) / n
 
@@ -297,32 +297,31 @@ def render_frame(data, global_t, frame_idx):
     if LOGO_PATH.exists() and title_prog > 0:
         try:
             logo_img = matplotlib.image.imread(str(LOGO_PATH))
-            li = ax_logo.inset_axes([0.01, 0.05, 0.38, 0.90])
+            # Centre the logo: x=0.25 → 0.75, full height
+            li = ax_logo.inset_axes([0.25, 0.05, 0.50, 0.90])
             li.imshow(logo_img); li.axis("off")
             li.patch.set_alpha(title_prog)
         except Exception:
-            ax_logo.text(0.03, 0.55, "CBSEMock", color=CYAN, fontsize=20,
-                         fontweight="bold", va="center", alpha=title_prog,
+            ax_logo.text(0.5, 0.55, "CBSEMock", color=CYAN, fontsize=22,
+                         fontweight="bold", ha="center", va="center", alpha=title_prog,
                          transform=ax_logo.transAxes)
-    # Chapter tag right
-    ax_logo.text(0.97, 0.55, data["chapter_tag"], color=CYAN, fontsize=9,
+    # Chapter tag — small, right-aligned bottom
+    ax_logo.text(0.98, 0.12, data["chapter_tag"], color=GREY, fontsize=7.5,
                  ha="right", va="center", alpha=title_prog,
-                 transform=ax_logo.transAxes,
-                 bbox=dict(boxstyle="round,pad=0.4", facecolor="#0d2a4a",
-                           edgecolor=CYAN, lw=1.5, alpha=title_prog))
+                 transform=ax_logo.transAxes)
     ax_logo.axhline(0, color="#1565c0", lw=2)
 
     # ── Title band ─────────────────────────────────────────────────────────────
     ax_title = fig.add_axes([0, 1 - logo_frac - top_frac, 1, top_frac])
     ax_title.set_facecolor(BG); ax_title.axis("off")
     ax_title.text(0.5, 0.78, data["title_line1"], color=WHITE,
-                  fontsize=26, fontweight="bold", ha="center", va="center",
+                  fontsize=32, fontweight="bold", ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
     ax_title.text(0.5, 0.40, data["title_line2"], color=CYAN,
-                  fontsize=26, fontweight="bold", ha="center", va="center",
+                  fontsize=32, fontweight="bold", ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
     ax_title.text(0.5, 0.08, data["board_note"], color=YELLOW,
-                  fontsize=8, ha="center", va="center",
+                  fontsize=11, ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
 
     # ── Rows ───────────────────────────────────────────────────────────────────
@@ -361,10 +360,10 @@ def render_frame(data, global_t, frame_idx):
                             boxstyle="round,pad=0.04",
                             facecolor=(*matplotlib.colors.to_rgb(pill_col), row_alpha),
                             edgecolor="none", zorder=1))
-        ax_label.text(0.5, 0.65, row["label"], color=WHITE, fontsize=8.5,
+        ax_label.text(0.5, 0.65, row["label"], color=WHITE, fontsize=10.5,
                       fontweight="bold", ha="center", va="center",
                       alpha=row_alpha, transform=ax_label.transAxes, wrap=True, zorder=2)
-        ax_label.text(0.5, 0.22, row["note"], color="#ccddee", fontsize=6.5,
+        ax_label.text(0.5, 0.22, row["note"], color="#ccddee", fontsize=8,
                       ha="center", va="center",
                       alpha=row_alpha, transform=ax_label.transAxes, zorder=2)
 
@@ -385,7 +384,7 @@ def render_frame(data, global_t, frame_idx):
         ax_form.axis("off")
         ax_form.text(0.5, 0.52, row["formula"], color=(*matplotlib.colors.to_rgb(YELLOW),
                                                          row_alpha),
-                     fontsize=14, fontweight="bold", ha="center", va="center",
+                     fontsize=16, fontweight="bold", ha="center", va="center",
                      transform=ax_form.transAxes, usetex=False)
 
     # ── Footer — CBSEMock branded ───────────────────────────────────────────────
