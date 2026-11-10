@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all, formula_flash | Promo: promo_quest, promo_mock, promo_lab, promo_notes'
+        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all, formula_flash, formula_reel | Promo: promo_quest, promo_mock, promo_lab, promo_notes'
         required: false
         default: 'morning'
       platform:
@@ -45,7 +45,7 @@ jobs:
       - name: Determine post mode from schedule
         id: mode
         run: |
-          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash promo_quest promo_mock promo_lab promo_notes"
+          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash formula_reel promo_quest promo_mock promo_lab promo_notes"
           INPUT_MODE="${{ github.event.inputs.mode }}"
           HOUR_UTC="$(date -u +%H)"
 
@@ -140,11 +140,41 @@ jobs:
             echo "[SKIP] Formula Flash only runs at 8 AM / 8 PM IST (UTC 02:xx / 14:xx)"
           fi
 
+      - name: Post Formula Reel (FB + Instagram Reels) — 8 PM IST
+        if: >
+          github.event.inputs.mode == 'formula_reel' ||
+          github.event.inputs.mode == 'all'
+        env:
+          FB_PAGE_ID:            ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN:  ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID:  ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          GITHUB_REPOSITORY:     ${{ github.repository }}
+          GITHUB_REF_NAME:       ${{ github.ref_name }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          HOUR_UTC="$(date -u +%H)"
+          MODE="${{ github.event.inputs.mode }}"
+          # Run at 8 PM IST (14:xx UTC) or when explicitly triggered
+          if [ "$MODE" = "formula_reel" ] || \
+             ( [ "$MODE" = "all" ] ) || \
+             ( [ "$MODE" = "" ] && [ "$HOUR_UTC" = "14" ] ); then
+            if [ "$DRY" = "true" ]; then
+              python3 post_formula_reel.py --dry-run
+            else
+              python3 post_formula_reel.py
+            fi
+          else
+            echo "[SKIP] Formula Reel only auto-runs at 8 PM IST (UTC 14:xx)"
+          fi
+
       - name: Commit tracker CSV updates
         run: |
           git config user.name  "social-post-bot"
           git config user.email "bot@cbsemock.org.in"
-          git add social-posting-tracker.csv formula-posts/post_log.csv 2>/dev/null || true
+          git add social-posting-tracker.csv \
+                  formula-posts/post_log.csv \
+                  formula-posts/reel_log.csv 2>/dev/null || true
           git diff --cached --quiet || git commit -m "chore: update social posting tracker [skip ci]"
           git push || true
 
