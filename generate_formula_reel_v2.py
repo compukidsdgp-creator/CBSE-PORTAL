@@ -49,8 +49,12 @@ LOGO_PATH = Path(__file__).parent / "formula-posts" / "_cbsemock_logo_dark.png"
 
 LABEL_COLORS = ["#0d47a1","#1565c0","#1976d2","#1e88e5","#2196f3","#1976d2"]
 
-# ── Reuse diagram functions from card script ───────────────────────────────────
-def draw_flux_diagram(ax, progress=1.0):
+# ── Subject-specific diagram library ──────────────────────────────────────────
+from diagram_library import DIAGRAMS as DIAGRAM_FNS  # noqa: E402
+
+# (old inline physics-only functions removed — library has all subjects)
+
+def draw_flux_diagram(ax, progress=1.0):  # keep for any legacy direct call
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
     n = max(1, int(6 * progress))
     for y in np.linspace(0.15, 0.85, n):
@@ -220,19 +224,6 @@ def draw_power(ax, progress=1.0):
         ax.plot([0.64, 0.36], [0.44, 0.76], color=YELLOW, lw=2,
                 alpha=(progress-0.4)/0.6)
 
-
-DIAGRAM_FNS = {
-    "flux": draw_flux_diagram,
-    "coil_magnet": draw_coil_magnet,
-    "lenz": draw_lenz,
-    "motional": draw_motional,
-    "inductor": draw_inductor,
-    "ohm": draw_ohm,
-    "wire": draw_wire,
-    "loop": draw_loop,
-    "bridge": draw_bridge,
-    "power": draw_power,
-}
 
 from formula_topics_master import TOPICS
 
