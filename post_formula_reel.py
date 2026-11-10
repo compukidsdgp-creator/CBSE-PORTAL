@@ -250,7 +250,7 @@ def _upload_video_fb(video_path: Path, caption: str, dry_run: bool) -> str | Non
         "upload_phase":        "finish",
         "upload_session_id":    session_id,
         "description":          caption,
-        "content_category":     "EDUCATION",
+        "content_category":     "SCIENCE",
         "embeddable":           "true",
         "access_token":         FB_TOKEN,
     }
@@ -325,13 +325,28 @@ def _upload_reel_instagram(video_path: Path, caption: str, dry_run: bool) -> str
         upload_req.add_header("Content-Length", str(file_size))
         upload_req.add_header("offset", "0")
         upload_req.add_header("file_size", str(file_size))
-        try:
-            with urllib.request.urlopen(upload_req, timeout=120) as r:
-                upload_result = json.loads(r.read())
-                print(f"[IG] Upload result: {upload_result}")
-        except urllib.error.HTTPError as e:
-            err = e.read().decode()
-            print(f"[IG ERROR] Upload failed: {e.code}: {err}")
+        upload_result = None
+        for attempt in range(3):
+            try:
+                # Re-build request each retry (Request objects are single-use)
+                upload_req2 = urllib.request.Request(upload_uri, data=video_bytes, method="POST")
+                upload_req2.add_header("Authorization", f"OAuth {IG_TOKEN}")
+                upload_req2.add_header("Content-Type", "video/mp4")
+                upload_req2.add_header("Content-Length", str(file_size))
+                upload_req2.add_header("offset", "0")
+                upload_req2.add_header("file_size", str(file_size))
+                with urllib.request.urlopen(upload_req2, timeout=180) as r:
+                    upload_result = json.loads(r.read())
+                    print(f"[IG] Upload result: {upload_result}")
+                break
+            except urllib.error.HTTPError as e:
+                err = e.read().decode()
+                print(f"[IG] Upload attempt {attempt+1} failed: {e.code}: {err[:200]}")
+                if attempt == 2:
+                    print(f"[IG ERROR] Upload failed after 3 attempts")
+                    return None
+                time.sleep(5)
+        if upload_result is None:
             return None
 
     print(f"[IG] Container {container_id} — waiting for processing…")
