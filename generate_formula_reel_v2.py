@@ -2,7 +2,7 @@
 """
 generate_formula_reel_v2.py
 ─────────────────────────
-Generates a 7-sec animated MP4 reel (1080×1920) in the new reference style.
+Generates a 20-sec animated MP4 reel (1080×1920) in the new reference style.
 Each formula row slides in one by one, diagram draws itself in.
 Branding: cbsemock.org.in
 
@@ -33,7 +33,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 W_IN, H_IN = 10.80, 19.20   # 1080×1920 at 100 dpi
 DPI = 100
 FPS = 30
-TOTAL_SEC = 8
+TOTAL_SEC = 20
 
 BG      = "#050e1f"   # CBSEMock brand navy
 CARD_BG = "#0a1628"
