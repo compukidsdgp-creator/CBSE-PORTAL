@@ -455,11 +455,15 @@ def generate_reel(topic_id: str) -> Path:
         "-i", str(FRAME_DIR / "frame_%05d.png"),
         "-i", str(audio_wav),
         "-c:v", "libx264",
+        "-profile:v", "main",   # Instagram requires H.264 Main profile
+        "-level", "4.0",
         "-c:a", "aac",
+        "-ar", "44100",         # Explicit sample rate
         "-b:a", "128k",
         "-preset", "fast",
-        "-crf", "20",
+        "-crf", "23",
         "-pix_fmt", "yuv420p",
+        "-vf", f"scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
         "-shortest",
         "-movflags", "+faststart",
         str(out_path),
