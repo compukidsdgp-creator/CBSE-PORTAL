@@ -384,6 +384,51 @@ def render_frame(data, global_t, frame_idx):
     plt.close(fig)
 
 
+def generate_background_audio(duration_sec: float, out_wav: Path) -> None:
+    """
+    Generate a soft ambient background tone as a WAV file.
+    Uses a layered chord (A minor feel): A2 + E3 + A3 + C4
+    with gentle LFO tremolo and fade-in/fade-out.
+    Pure numpy — no external audio library needed.
+    """
+    SAMPLE_RATE = 44100
+    t = np.linspace(0, duration_sec, int(SAMPLE_RATE * duration_sec), endpoint=False)
+
+    # Base chord frequencies (soft, study-friendly)
+    freqs = [110.0, 164.81, 220.0, 261.63]   # A2, E3, A3, C4
+    amps  = [0.30,  0.25,   0.25,  0.20]
+
+    # Build sine waves with slight detuning to avoid harshness
+    audio = np.zeros_like(t)
+    for freq, amp in zip(freqs, amps):
+        detune = 1.0 + np.random.uniform(-0.001, 0.001)
+        audio += amp * np.sin(2 * np.pi * freq * detune * t)
+
+    # Gentle tremolo LFO at 0.3 Hz, depth 15%
+    lfo = 1.0 - 0.15 * (0.5 + 0.5 * np.sin(2 * np.pi * 0.3 * t))
+    audio *= lfo
+
+    # Fade in (1.5s) and fade out (2s)
+    fade_in  = np.minimum(t / 1.5, 1.0)
+    fade_out = np.minimum((duration_sec - t) / 2.0, 1.0)
+    audio *= fade_in * fade_out
+
+    # Normalise to 60% peak to keep it gentle background
+    peak = np.max(np.abs(audio))
+    if peak > 0:
+        audio = audio / peak * 0.60
+
+    # Convert to 16-bit PCM and write WAV
+    pcm = (audio * 32767).astype(np.int16)
+    import wave, struct
+    with wave.open(str(out_wav), "w") as wf:
+        wf.setnchannels(1)
+        wf.setsampwidth(2)
+        wf.setframerate(SAMPLE_RATE)
+        wf.writeframes(pcm.tobytes())
+    print(f"[INFO] Background audio generated: {out_wav.name}  ({out_wav.stat().st_size/1024:.0f} KB)")
+
+
 def generate_reel(topic_id: str) -> Path:
     data = TOPICS[topic_id]
     total_frames = FPS * TOTAL_SEC
@@ -399,22 +444,41 @@ def generate_reel(topic_id: str) -> Path:
         if i % 30 == 0:
             print(f"  frame {i}/{total_frames}")
 
+    # Generate background audio
+    audio_wav = FRAME_DIR / "bg_audio.wav"
+    generate_background_audio(TOTAL_SEC, audio_wav)
+
     out_path = OUT_DIR / f"{topic_id}_reel_v2.mp4"
     cmd = [
         "ffmpeg", "-y",
         "-framerate", str(FPS),
         "-i", str(FRAME_DIR / "frame_%05d.png"),
+        "-i", str(audio_wav),
         "-c:v", "libx264",
+        "-c:a", "aac",
+        "-b:a", "128k",
         "-preset", "fast",
         "-crf", "20",
         "-pix_fmt", "yuv420p",
+        "-shortest",
         "-movflags", "+faststart",
         str(out_path),
     ]
-    print("[INFO] Encoding MP4...")
+    print("[INFO] Encoding MP4 with background audio...")
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
         print(f"[ERROR] FFmpeg: {result.stderr[-600:]}")
+        # Fallback: encode without audio
+        print("[INFO] Retrying without audio...")
+        cmd_noaudio = [
+            "ffmpeg", "-y",
+            "-framerate", str(FPS),
+            "-i", str(FRAME_DIR / "frame_%05d.png"),
+            "-c:v", "libx264", "-preset", "fast", "-crf", "20",
+            "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+            str(out_path),
+        ]
+        subprocess.run(cmd_noaudio, capture_output=True, text=True)
     else:
         size_mb = out_path.stat().st_size / 1024 / 1024
         print(f"[OK] Saved: {out_path}  ({size_mb:.1f} MB)")
