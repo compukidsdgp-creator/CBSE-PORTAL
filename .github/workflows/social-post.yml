@@ -83,7 +83,10 @@ jobs:
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
           MODE="${{ steps.mode.outputs.mode }}"
-          if [ "$DRY" = "true" ]; then
+          # formula_flash and formula_reel are handled by their own dedicated steps below
+          if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_reel" ]; then
+            echo "[SKIP] mode=$MODE is handled by dedicated step"
+          elif [ "$DRY" = "true" ]; then
             python3 post_facebook.py --mode "$MODE" --dry-run
           else
             python3 post_facebook.py --mode "$MODE"
@@ -100,12 +103,15 @@ jobs:
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
           MODE="${{ steps.mode.outputs.mode }}"
-          # Instagram: skip afternoon/festival/news modes (no image equivalent)
+          # Instagram: skip modes that have no image equivalent or use dedicated steps
           SKIP_MODES="afternoon festival evening"
           # Translate lab_slot → lab for post_instagram.py (which uses 'lab')
           IG_MODE="$MODE"
           [ "$MODE" = "lab_slot" ] && IG_MODE="lab"
-          if echo "$SKIP_MODES" | grep -qw "$MODE"; then
+          # formula_flash and formula_reel are handled by their own dedicated steps below
+          if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_reel" ]; then
+            echo "[SKIP] mode=$MODE is handled by dedicated step"
+          elif echo "$SKIP_MODES" | grep -qw "$MODE"; then
             echo "[SKIP] Instagram not used for mode=$MODE"
           elif [ "$DRY" = "true" ]; then
             python3 post_instagram.py --mode "$IG_MODE" --dry-run
@@ -217,7 +223,10 @@ jobs:
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
           MODE="${{ steps.mode.outputs.mode }}"
-          if [ "$DRY" = "true" ]; then
+          # formula_flash and formula_reel handled by dedicated steps
+          if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_reel" ]; then
+            echo "[SKIP] mode=$MODE is handled by dedicated step"
+          elif [ "$DRY" = "true" ]; then
             python3 post_telegram.py --mode "$MODE" --dry-run
           else
             python3 post_telegram.py --mode "$MODE"
