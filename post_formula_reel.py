@@ -119,16 +119,16 @@ def build_reel_caption(topic_id: str, data: dict, slot: str = "evening") -> str:
     subj_tag = SUBJECT_TAGS.get(subject, f"#{subject}")
     extra    = data.get("hashtags", "")
 
-    caption = f"""Evening Revision — Formula Flash!
+    caption = f"""🎯 Evening Revision — Formula Flash!
 
 {t1} {t2}
-{chapter}
+📚 {chapter}
 
-Watch all 5 key formulas with diagrams. Save this reel for quick revision before your board exam!
+Watch all 5 key formulas with animated diagrams. Save this reel for quick revision before your board exam!
 
-Full notes & practice tests (free) → cbsemock.org.in
+🌐 Free notes & practice tests → https://cbsemock.org.in
 
-{subj_tag} #FormulaFlash #CBSEMock #BoardRevision #BoardExam2027 #EveningStudy {extra}""".strip()
+{subj_tag} #FormulaFlash #CBSEMock #BoardRevision #BoardExam2027 #EveningStudy #CBSE2027 {extra}""".strip()
 
     return caption
 
@@ -245,12 +245,14 @@ def _upload_video_fb(video_path: Path, caption: str, dry_run: bool) -> str | Non
         print(f"[FB ERROR] Transfer: {e.code} {e.read().decode()[:300]}")
         return None
 
-    # Step 3 — Finish
+    # Step 3 — Finish (description shown under FB Reel; URL in text is tappable on FB)
     finish_data = {
-        "upload_phase":     "finish",
-        "upload_session_id": session_id,
-        "description":       caption,
-        "access_token":      FB_TOKEN,
+        "upload_phase":        "finish",
+        "upload_session_id":    session_id,
+        "description":          caption,
+        "content_category":     "EDUCATION",
+        "embeddable":           "true",
+        "access_token":         FB_TOKEN,
     }
     finish_resp = _api_post(init_url, finish_data, label="fb-finish")
     if "success" in finish_resp or "id" in finish_resp:
