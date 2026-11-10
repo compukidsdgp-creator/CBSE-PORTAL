@@ -444,31 +444,53 @@ def generate_reel(topic_id: str) -> Path:
         if i % 30 == 0:
             print(f"  frame {i}/{total_frames}")
 
-    # Generate background audio
-    audio_wav = FRAME_DIR / "bg_audio.wav"
-    generate_background_audio(TOTAL_SEC, audio_wav)
+    # Background music — use committed MP3, trim to reel duration
+    BG_MUSIC = Path(__file__).parent / "formula-posts" / "bg_music.mp3"
 
     out_path = OUT_DIR / f"{topic_id}_reel_v2.mp4"
-    cmd = [
-        "ffmpeg", "-y",
-        "-framerate", str(FPS),
-        "-i", str(FRAME_DIR / "frame_%05d.png"),
-        "-i", str(audio_wav),
-        "-c:v", "libx264",
-        "-profile:v", "main",   # Instagram requires H.264 Main profile
-        "-level", "4.0",
-        "-c:a", "aac",
-        "-ar", "44100",         # Explicit sample rate
-        "-b:a", "128k",
-        "-preset", "fast",
-        "-crf", "23",
-        "-pix_fmt", "yuv420p",
-        "-vf", f"scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
-        "-shortest",
-        "-movflags", "+faststart",
-        str(out_path),
-    ]
-    print("[INFO] Encoding MP4 with background audio...")
+
+    if BG_MUSIC.exists():
+        print(f"[INFO] Using background music: {BG_MUSIC.name}")
+        cmd = [
+            "ffmpeg", "-y",
+            "-framerate", str(FPS),
+            "-i", str(FRAME_DIR / "frame_%05d.png"),
+            "-stream_loop", "-1",          # loop audio if shorter than video
+            "-i", str(BG_MUSIC),
+            "-c:v", "libx264",
+            "-profile:v", "main",
+            "-level", "4.0",
+            "-c:a", "aac",
+            "-ar", "44100",
+            "-b:a", "128k",
+            "-af", f"afade=t=in:st=0:d=1.5,afade=t=out:st={TOTAL_SEC-2}:d=2,volume=0.4",
+            "-preset", "fast",
+            "-crf", "23",
+            "-pix_fmt", "yuv420p",
+            "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
+            "-shortest",
+            "-movflags", "+faststart",
+            str(out_path),
+        ]
+    else:
+        # Fallback: generate ambient tone if music file missing
+        print("[INFO] bg_music.mp3 not found — generating fallback tone")
+        audio_wav = FRAME_DIR / "bg_audio.wav"
+        generate_background_audio(TOTAL_SEC, audio_wav)
+        cmd = [
+            "ffmpeg", "-y",
+            "-framerate", str(FPS),
+            "-i", str(FRAME_DIR / "frame_%05d.png"),
+            "-i", str(audio_wav),
+            "-c:v", "libx264", "-profile:v", "main", "-level", "4.0",
+            "-c:a", "aac", "-ar", "44100", "-b:a", "128k",
+            "-preset", "fast", "-crf", "23", "-pix_fmt", "yuv420p",
+            "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
+            "-shortest", "-movflags", "+faststart",
+            str(out_path),
+        ]
+
+    print("[INFO] Encoding MP4 with background music...")
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
         print(f"[ERROR] FFmpeg: {result.stderr[-600:]}")
@@ -478,7 +500,7 @@ def generate_reel(topic_id: str) -> Path:
             "ffmpeg", "-y",
             "-framerate", str(FPS),
             "-i", str(FRAME_DIR / "frame_%05d.png"),
-            "-c:v", "libx264", "-preset", "fast", "-crf", "20",
+            "-c:v", "libx264", "-preset", "fast", "-crf", "23",
             "-pix_fmt", "yuv420p", "-movflags", "+faststart",
             str(out_path),
         ]
