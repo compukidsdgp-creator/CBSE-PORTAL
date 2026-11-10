@@ -491,7 +491,7 @@ TOPICS = {
             {"label": "List comp.",    "formula": r"$[f(x) \text{ for } x \text{ in list}]$", "diagram": "code_block",   "note": "Concise loops"},
             {"label": "dict get",      "formula": r"$d.get(k,\ \mathrm{default})$",           "diagram": "code_block",   "note": "No KeyError"},
             {"label": "Lambda",        "formula": r"$\lambda x: x^2$",                        "diagram": "code_block",   "note": "Anonymous fn"},
-            {"label": "File I/O",      "formula": r"$\mathrm{open(f,}'r') as fh:}$",          "diagram": "code_block",   "note": "Context manager"},
+            {"label": "File I/O",      "formula": r"$\mathrm{open(f,\ 'r')\ as\ fh}$",        "diagram": "code_block",   "note": "Context manager"},
         ],
     },
 
