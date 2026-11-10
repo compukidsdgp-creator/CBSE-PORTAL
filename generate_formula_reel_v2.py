@@ -245,9 +245,9 @@ def render_frame(data, global_t, frame_idx):
 
     fig = plt.figure(figsize=(W_IN, H_IN), facecolor=BG)
 
-    logo_frac   = 0.070  # CBSEMock logo strip (taller for centred logo)
-    top_frac    = 0.090  # title band
-    footer_frac = 0.065
+    logo_frac   = 0.080  # CBSEMock logo strip
+    top_frac    = 0.100  # title band
+    footer_frac = 0.070
     row_frac    = (1.0 - logo_frac - top_frac - footer_frac) / n
 
     title_prog = min(1.0, global_t / 0.12)
@@ -276,7 +276,7 @@ def render_frame(data, global_t, frame_idx):
     ax_logo.add_patch(FancyBboxPatch((0.73, 0.15), 0.25, 0.70,
         boxstyle="round,pad=0.02", facecolor=(*matplotlib.colors.to_rgb(sc), title_prog),
         edgecolor="none", transform=ax_logo.transAxes))
-    ax_logo.text(0.855, 0.52, subject, color="white", fontsize=9, fontweight="bold",
+    ax_logo.text(0.855, 0.52, subject, color="white", fontsize=14, fontweight="bold",
                  ha="center", va="center", alpha=title_prog, transform=ax_logo.transAxes)
     ax_logo.axhline(0, color=CYAN, lw=2, alpha=0.8)
 
@@ -284,13 +284,13 @@ def render_frame(data, global_t, frame_idx):
     ax_title = fig.add_axes([0, 1 - logo_frac - top_frac, 1, top_frac])
     ax_title.set_facecolor(BG); ax_title.axis("off")
     ax_title.text(0.5, 0.78, data["title_line1"], color=WHITE,
-                  fontsize=32, fontweight="bold", ha="center", va="center",
+                  fontsize=42, fontweight="bold", ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
     ax_title.text(0.5, 0.40, data["title_line2"], color=CYAN,
-                  fontsize=32, fontweight="bold", ha="center", va="center",
+                  fontsize=42, fontweight="bold", ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
     ax_title.text(0.5, 0.08, data.get("board_note", "CBSE Board Exam"), color=YELLOW,
-                  fontsize=11, ha="center", va="center",
+                  fontsize=16, ha="center", va="center",
                   alpha=title_prog, transform=ax_title.transAxes)
 
     # ── Rows ───────────────────────────────────────────────────────────────────
@@ -329,10 +329,10 @@ def render_frame(data, global_t, frame_idx):
                             boxstyle="round,pad=0.04",
                             facecolor=(*matplotlib.colors.to_rgb(pill_col), row_alpha),
                             edgecolor="none", zorder=1))
-        ax_label.text(0.5, 0.65, row["label"], color=WHITE, fontsize=10.5,
+        ax_label.text(0.5, 0.65, row["label"], color=WHITE, fontsize=17,
                       fontweight="bold", ha="center", va="center",
                       alpha=row_alpha, transform=ax_label.transAxes, wrap=True, zorder=2)
-        ax_label.text(0.5, 0.22, row["note"], color="#ccddee", fontsize=8,
+        ax_label.text(0.5, 0.22, row["note"], color="#ccddee", fontsize=13,
                       ha="center", va="center",
                       alpha=row_alpha, transform=ax_label.transAxes, zorder=2)
 
@@ -353,7 +353,7 @@ def render_frame(data, global_t, frame_idx):
         ax_form.axis("off")
         ax_form.text(0.5, 0.52, row["formula"], color=(*matplotlib.colors.to_rgb(YELLOW),
                                                          row_alpha),
-                     fontsize=16, fontweight="bold", ha="center", va="center",
+                     fontsize=22, fontweight="bold", ha="center", va="center",
                      transform=ax_form.transAxes, usetex=False)
 
     # ── Footer — CBSEMock branded ───────────────────────────────────────────────
@@ -362,14 +362,14 @@ def render_frame(data, global_t, frame_idx):
     ax_foot.set_facecolor("#071020"); ax_foot.axis("off")
     ax_foot.axhline(0.97, color=(*matplotlib.colors.to_rgb("#1565c0"), footer_alpha), lw=2)
     # Yellow CTA pill
-    ax_foot.text(0.50, 0.68, data.get("cta", "Save for Revision  •  cbsemock.org.in"), color="#1a1a1a", fontsize=10,
+    ax_foot.text(0.50, 0.68, data.get("cta", "Save for Revision  •  cbsemock.org.in"), color="#1a1a1a", fontsize=14,
                  fontweight="bold", ha="center", va="center",
                  alpha=footer_alpha, transform=ax_foot.transAxes,
                  bbox=dict(boxstyle="round,pad=0.45",
                            facecolor=(*matplotlib.colors.to_rgb(YELLOW), footer_alpha),
                            edgecolor="none", lw=0))
     # Domain
-    ax_foot.text(0.50, 0.28, "www  cbsemock.org.in", color=WHITE, fontsize=9,
+    ax_foot.text(0.50, 0.28, "www  cbsemock.org.in", color=WHITE, fontsize=13,
                  ha="center", va="center", alpha=footer_alpha,
                  transform=ax_foot.transAxes)
     # Hashtags
