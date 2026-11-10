@@ -130,10 +130,7 @@ def draw_inductor(ax):
                 arrowprops=dict(arrowstyle="->", color=YELLOW, lw=2))
     ax.text(0.50,0.82,"L",color=CYAN,fontsize=12,ha="center",fontweight="bold",style="italic")
 
-DIAGRAM_FNS = {
-    "flux": draw_flux_diagram, "coil_magnet": draw_coil_magnet,
-    "lenz": draw_lenz, "motional": draw_motional, "inductor": draw_inductor,
-}
+from diagram_library import DIAGRAMS as DIAGRAM_FNS  # subject-specific library
 
 # ── Neon glow helper ────────────────────────────────────────────────────────────
 def draw_neon_box(ax, x, y, w, h, color, lw_outer=4, lw_inner=1.5):
