@@ -275,30 +275,67 @@ def _upload_reel_instagram(video_path: Path, caption: str, dry_run: bool) -> str
         print(f"  [DRY-RUN] Would upload {video_path.name} ({video_path.stat().st_size/1e6:.1f} MB)")
         return "dry-run-ig-reel"
 
-    # Instagram Reels require a publicly accessible video URL.
-    # We serve it via GitHub raw URL after the reel is committed to the repo.
-    video_url = f"{GH_CDN}/formula-posts/videos/{video_path.name}"
-    print(f"[IG] Using public URL: {video_url}")
+    # Instagram Reels: use resumable upload (direct binary) so no public URL needed.
+    file_size = video_path.stat().st_size
 
-    # Step 1 — Create container (Reels)
-    container_url  = f"{FB_API_BASE}/{IG_ACCT_ID}/media"
-    container_data = {
-        "media_type":   "REELS",
-        "video_url":    video_url,
-        "caption":      caption,
+    # Step 1 — Initialise upload session
+    init_url  = f"{FB_API_BASE}/{IG_ACCT_ID}/media"
+    init_data = {
+        "media_type":    "REELS",
+        "caption":       caption,
         "share_to_feed": "true",
-        "access_token": IG_TOKEN,
+        "upload_type":   "resumable",
+        "access_token":  IG_TOKEN,
     }
-    container = _api_post(container_url, container_data, label="ig-container")
-    if "id" not in container:
-        print(f"[IG FAIL] Container: {container}")
-        return None
+    print(f"[IG] Initialising resumable upload ({file_size/1e6:.1f} MB)…")
+    init_resp = _api_post(init_url, init_data, label="ig-init")
+    if "id" not in init_resp or "uri" not in init_resp:
+        # Fallback: try video_url with raw GitHub (last resort)
+        print(f"[IG] Resumable init failed: {init_resp} — trying video_url fallback")
+        video_url = f"{GH_RAW}/formula-posts/videos/{video_path.name}"
+        fallback_data = {
+            "media_type":    "REELS",
+            "video_url":     video_url,
+            "caption":       caption,
+            "share_to_feed": "true",
+            "access_token":  IG_TOKEN,
+        }
+        init_resp = _api_post(init_url, fallback_data, label="ig-container-fallback")
+        if "id" not in init_resp:
+            print(f"[IG FAIL] Container: {init_resp}")
+            return None
+        container_id = init_resp["id"]
+    else:
+        container_id = init_resp["id"]
+        upload_uri   = init_resp["uri"]
 
-    container_id = container["id"]
+        # Step 2 — Upload video bytes
+        print(f"[IG] Uploading bytes to {upload_uri[:60]}…")
+        with open(video_path, "rb") as vf:
+            video_bytes = vf.read()
+        upload_req = urllib.request.Request(
+            upload_uri,
+            data=video_bytes,
+            method="POST",
+        )
+        upload_req.add_header("Authorization", f"OAuth {IG_TOKEN}")
+        upload_req.add_header("Content-Type", "video/mp4")
+        upload_req.add_header("Content-Length", str(file_size))
+        upload_req.add_header("offset", "0")
+        upload_req.add_header("file_size", str(file_size))
+        try:
+            with urllib.request.urlopen(upload_req, timeout=120) as r:
+                upload_result = json.loads(r.read())
+                print(f"[IG] Upload result: {upload_result}")
+        except urllib.error.HTTPError as e:
+            err = e.read().decode()
+            print(f"[IG ERROR] Upload failed: {e.code}: {err}")
+            return None
+
     print(f"[IG] Container {container_id} — waiting for processing…")
 
-    # Poll status (up to 90 s)
-    for attempt in range(18):
+    # Poll status (up to 120 s)
+    for attempt in range(24):
         time.sleep(5)
         status_url = (
             f"{FB_API_BASE}/{container_id}"
@@ -317,7 +354,7 @@ def _upload_reel_instagram(video_path: Path, caption: str, dry_run: bool) -> str
             print(f"[IG ERROR] Container failed: {st}")
             return None
 
-    # Step 2 — Publish
+    # Step 3 — Publish
     pub_url  = f"{FB_API_BASE}/{IG_ACCT_ID}/media_publish"
     pub_data = {"creation_id": container_id, "access_token": IG_TOKEN}
     pub = _api_post(pub_url, pub_data, label="ig-publish")
