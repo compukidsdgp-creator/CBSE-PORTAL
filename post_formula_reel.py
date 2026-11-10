@@ -55,6 +55,8 @@ IG_TOKEN    = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
 GH_REPO   = os.environ.get("GITHUB_REPOSITORY", "compukidsdgp-creator/CBSE-PORTAL")
 GH_BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
 GH_RAW    = f"https://raw.githubusercontent.com/{GH_REPO}/{GH_BRANCH}"
+# jsdelivr CDN serves GitHub content with proper headers Instagram accepts for video
+GH_CDN    = f"https://cdn.jsdelivr.net/gh/{GH_REPO}@{GH_BRANCH}"
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -275,7 +277,7 @@ def _upload_reel_instagram(video_path: Path, caption: str, dry_run: bool) -> str
 
     # Instagram Reels require a publicly accessible video URL.
     # We serve it via GitHub raw URL after the reel is committed to the repo.
-    video_url = f"{GH_RAW}/formula-posts/videos/{video_path.name}"
+    video_url = f"{GH_CDN}/formula-posts/videos/{video_path.name}"
     print(f"[IG] Using public URL: {video_url}")
 
     # Step 1 — Create container (Reels)
