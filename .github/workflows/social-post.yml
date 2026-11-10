@@ -102,12 +102,15 @@ jobs:
           MODE="${{ steps.mode.outputs.mode }}"
           # Instagram: skip afternoon/festival/news modes (no image equivalent)
           SKIP_MODES="afternoon festival evening"
+          # Translate lab_slot → lab for post_instagram.py (which uses 'lab')
+          IG_MODE="$MODE"
+          [ "$MODE" = "lab_slot" ] && IG_MODE="lab"
           if echo "$SKIP_MODES" | grep -qw "$MODE"; then
             echo "[SKIP] Instagram not used for mode=$MODE"
           elif [ "$DRY" = "true" ]; then
-            python3 post_instagram.py --mode "$MODE" --dry-run
+            python3 post_instagram.py --mode "$IG_MODE" --dry-run
           else
-            python3 post_instagram.py --mode "$MODE"
+            python3 post_instagram.py --mode "$IG_MODE"
           fi
 
       - name: Post Formula Flash Image (FB + Instagram)
