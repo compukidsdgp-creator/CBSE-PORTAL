@@ -20,9 +20,45 @@ try:
     from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_JUSTIFY, TA_RIGHT
     from reportlab.pdfgen import canvas
     from reportlab.platypus.flowables import Flowable
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
 except ImportError:
     print("reportlab not installed — run: pip install reportlab --break-system-packages")
     sys.exit(1)
+
+# ─── Register Unicode-capable fonts ──────────────────────────────────────────
+# DejaVu Sans supports subscripts (H₂O), superscripts (x²), arrows (→),
+# Greek letters (α,β,λ), degree symbol (°) and all other chemistry Unicode.
+
+_DEJAVU_PATHS = {
+    "DejaVu":           "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    "DejaVu-Bold":      "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    "DejaVu-Italic":    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Oblique.ttf",
+    "DejaVu-BoldItalic":"/usr/share/fonts/truetype/dejavu/DejaVuSans-BoldOblique.ttf",
+}
+_FONTS_REGISTERED = False
+
+def _register_fonts():
+    global _FONTS_REGISTERED
+    if _FONTS_REGISTERED:
+        return
+    for name, path in _DEJAVU_PATHS.items():
+        if Path(path).exists():
+            pdfmetrics.registerFont(TTFont(name, path))
+    # Register family so bold/italic switching works inside Paragraph XML
+    from reportlab.pdfbase.pdfmetrics import registerFontFamily
+    registerFontFamily(
+        "DejaVu",
+        normal="DejaVu",
+        bold="DejaVu-Bold",
+        italic="DejaVu-Italic",
+        boldItalic="DejaVu-BoldItalic",
+    )
+    _FONTS_REGISTERED = True
+
+BODY_FONT      = "DejaVu"
+BODY_FONT_BOLD = "DejaVu-Bold"
+BODY_FONT_ITAL = "DejaVu-Italic"
 
 try:
     from pyq_question_bank import QUESTION_BANKS, get_all_question_ids
@@ -141,7 +177,7 @@ class WatermarkCanvas(canvas.Canvas):
 
     def draw_watermark(self):
         self.saveState()
-        self.setFont("Helvetica", 60)
+        self.setFont(BODY_FONT, 60)
         self.setFillColorRGB(0.9, 0.9, 0.9, 0.08)
         self.translate(PAGE_W / 2, PAGE_H / 2)
         self.rotate(45)
@@ -153,6 +189,7 @@ class WatermarkCanvas(canvas.Canvas):
 # ─── Style sheet ──────────────────────────────────────────────────────────────
 
 def build_styles():
+    _register_fonts()
     base = getSampleStyleSheet()
     styles = {}
 
@@ -163,73 +200,73 @@ def build_styles():
 
     s("school_name",
       fontSize=18, leading=22, textColor=BRAND_BLUE,
-      fontName="Helvetica-Bold", alignment=TA_CENTER, spaceAfter=1)
+      fontName=BODY_FONT_BOLD, alignment=TA_CENTER, spaceAfter=1)
 
     s("board_name",
       fontSize=11, leading=14, textColor=BRAND_GREY,
-      fontName="Helvetica", alignment=TA_CENTER, spaceAfter=1)
+      fontName=BODY_FONT, alignment=TA_CENTER, spaceAfter=1)
 
     s("paper_title",
       fontSize=14, leading=18, textColor=BRAND_ORANGE,
-      fontName="Helvetica-Bold", alignment=TA_CENTER, spaceAfter=4)
+      fontName=BODY_FONT_BOLD, alignment=TA_CENTER, spaceAfter=4)
 
     s("meta_row",
       fontSize=9, leading=11, textColor=BRAND_GREY,
-      fontName="Helvetica", alignment=TA_CENTER, spaceAfter=2)
+      fontName=BODY_FONT, alignment=TA_CENTER, spaceAfter=2)
 
     s("general_instructions_heading",
       fontSize=10, leading=12, textColor=BRAND_BLUE,
-      fontName="Helvetica-Bold", alignment=TA_LEFT, spaceBefore=6, spaceAfter=2)
+      fontName=BODY_FONT_BOLD, alignment=TA_LEFT, spaceBefore=6, spaceAfter=2)
 
     s("general_instructions",
       fontSize=8.5, leading=12, textColor=BRAND_GREY,
-      fontName="Helvetica", alignment=TA_JUSTIFY, spaceAfter=1)
+      fontName=BODY_FONT, alignment=TA_JUSTIFY, spaceAfter=1)
 
     s("section_header",
       fontSize=11, leading=14, textColor=white,
-      fontName="Helvetica-Bold", alignment=TA_CENTER,
+      fontName=BODY_FONT_BOLD, alignment=TA_CENTER,
       spaceBefore=10, spaceAfter=4,
       leftIndent=0, rightIndent=0,
       backColor=BRAND_BLUE)
 
     s("section_subhead",
       fontSize=9, leading=11, textColor=BRAND_GREY,
-      fontName="Helvetica-Oblique", alignment=TA_CENTER, spaceAfter=4)
+      fontName=BODY_FONT_ITAL, alignment=TA_CENTER, spaceAfter=4)
 
     s("q_num",
       fontSize=9.5, leading=13, textColor=BRAND_BLUE,
-      fontName="Helvetica-Bold", alignment=TA_LEFT)
+      fontName=BODY_FONT_BOLD, alignment=TA_LEFT)
 
     s("q_text",
       fontSize=9.5, leading=14, textColor=BRAND_GREY,
-      fontName="Helvetica", alignment=TA_JUSTIFY, spaceAfter=2)
+      fontName=BODY_FONT, alignment=TA_JUSTIFY, spaceAfter=2)
 
     s("q_option",
       fontSize=9, leading=12, textColor=BRAND_GREY,
-      fontName="Helvetica", leftIndent=12, spaceAfter=1)
+      fontName=BODY_FONT, leftIndent=12, spaceAfter=1)
 
     s("q_note",
       fontSize=8.5, leading=11, textColor=MID_GREY,
-      fontName="Helvetica-Oblique", leftIndent=12, spaceAfter=2)
+      fontName=BODY_FONT_ITAL, leftIndent=12, spaceAfter=2)
 
     s("q_preamble",
       fontSize=8.5, leading=12, textColor=BRAND_GREY,
-      fontName="Helvetica-Oblique", alignment=TA_LEFT,
+      fontName=BODY_FONT_ITAL, alignment=TA_LEFT,
       spaceBefore=4, spaceAfter=3,
       borderPad=4, backColor=CREAM,
       leftIndent=6, rightIndent=6)
 
     s("marks_badge",
       fontSize=8, leading=10, textColor=BRAND_ORANGE,
-      fontName="Helvetica-Bold", alignment=TA_RIGHT)
+      fontName=BODY_FONT_BOLD, alignment=TA_RIGHT)
 
     s("footer",
       fontSize=7.5, leading=10, textColor=MID_GREY,
-      fontName="Helvetica", alignment=TA_CENTER)
+      fontName=BODY_FONT, alignment=TA_CENTER)
 
     s("website",
       fontSize=8, leading=10, textColor=BRAND_BLUE,
-      fontName="Helvetica-Bold", alignment=TA_RIGHT)
+      fontName=BODY_FONT_BOLD, alignment=TA_RIGHT)
 
     return styles
 
@@ -391,7 +428,7 @@ class NumberedCanvas(canvas.Canvas):
         self.line(MARGIN, 1.0 * cm, PAGE_W - MARGIN, 1.0 * cm)
 
         # Left: branding
-        self.setFont("Helvetica", 7)
+        self.setFont(BODY_FONT, 7)
         self.setFillColor(MID_GREY)
         self.drawString(MARGIN, 0.65 * cm, "www.cbsemock.org.in  |  Free CBSE Practice Papers")
 
@@ -408,6 +445,7 @@ class NumberedCanvas(canvas.Canvas):
 # ─── Main build function ──────────────────────────────────────────────────────
 
 def build_pdf(bank_key: str, out_path: str, paper_date: str = None) -> str:
+    _register_fonts()
     if paper_date is None:
         paper_date = date.today().strftime("%d %B %Y")
 
@@ -483,7 +521,7 @@ def build_pdf(bank_key: str, out_path: str, paper_date: str = None) -> str:
             "We are committed to your success. 🎯",
             ParagraphStyle("back_tag", parent=styles["meta_row"],
                            fontSize=11, textColor=BRAND_GREY, leading=14,
-                           fontName="Helvetica-Oblique")),
+                           fontName=BODY_FONT_ITAL)),
         HRFlowable(width="100%", thickness=1, color=BRAND_ORANGE, spaceBefore=10),
     ]
 
