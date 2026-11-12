@@ -51,31 +51,54 @@ jobs:
       - name: Determine post mode from schedule
         id: mode
         run: |
-          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash formula_reel promo_quest promo_mock promo_lab promo_notes"
+          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash formula_flash_evening formula_reel promo_quest promo_mock promo_lab promo_notes"
           INPUT_MODE="${{ github.event.inputs.mode }}"
-          HOUR_UTC="$(date -u +%H)"
+
+          # GitHub Actions cron can be delayed by several hours.
+          # Use the SCHEDULED cron minute/hour from github.event.schedule instead of
+          # the actual wall-clock time — this way the mode is always correct even
+          # when the runner starts late.
+          SCHEDULE="${{ github.event.schedule }}"
+          echo "Scheduled cron: '$SCHEDULE'  (actual UTC: $(date -u +%H:%M))"
 
           if [ -n "$INPUT_MODE" ]; then
-            # Validate the input mode
+            # Manual dispatch — validate and use the given mode
             if echo "$VALID_MODES" | grep -qw "$INPUT_MODE"; then
               echo "mode=$INPUT_MODE" >> $GITHUB_OUTPUT
+              echo "slot=manual" >> $GITHUB_OUTPUT
             else
               echo "❌ Invalid mode: '$INPUT_MODE'"
               echo "   Valid modes: $VALID_MODES"
               exit 1
             fi
-          elif [ "$HOUR_UTC" -lt "03" ]; then
-            # Morning run (1:30 UTC = 7 AM IST)
+          elif [ "$SCHEDULE" = "30 1 * * *" ]; then
+            # 1:30 UTC = 7:00 AM IST — Quest / Morning
             echo "mode=morning" >> $GITHUB_OUTPUT
-          elif [ "$HOUR_UTC" -lt "07" ]; then
-            # Lab Activity run (4:30 UTC = 10 AM IST)
+            echo "slot=1_30utc" >> $GITHUB_OUTPUT
+          elif [ "$SCHEDULE" = "30 2 * * *" ]; then
+            # 2:30 UTC = 8:00 AM IST — Formula Flash (morning)
+            echo "mode=formula_flash" >> $GITHUB_OUTPUT
+            echo "slot=2_30utc" >> $GITHUB_OUTPUT
+          elif [ "$SCHEDULE" = "30 4 * * *" ]; then
+            # 4:30 UTC = 10:00 AM IST — Lab Activity
             echo "mode=lab_slot" >> $GITHUB_OUTPUT
-          elif [ "$HOUR_UTC" -lt "11" ]; then
-            # Afternoon Engagement (8:30 UTC = 2 PM IST)
+            echo "slot=4_30utc" >> $GITHUB_OUTPUT
+          elif [ "$SCHEDULE" = "30 8 * * *" ]; then
+            # 8:30 UTC = 2:00 PM IST — Afternoon Engagement
             echo "mode=afternoon" >> $GITHUB_OUTPUT
-          else
-            # Evening run (12:30 UTC = 6 PM IST): news only
+            echo "slot=8_30utc" >> $GITHUB_OUTPUT
+          elif [ "$SCHEDULE" = "30 12 * * *" ]; then
+            # 12:30 UTC = 6:00 PM IST — News Digest
             echo "mode=evening" >> $GITHUB_OUTPUT
+            echo "slot=12_30utc" >> $GITHUB_OUTPUT
+          elif [ "$SCHEDULE" = "30 14 * * *" ]; then
+            # 14:30 UTC = 8:00 PM IST — Formula Flash (evening) + Formula Reel
+            echo "mode=formula_flash_evening" >> $GITHUB_OUTPUT
+            echo "slot=14_30utc" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️  Unknown schedule '$SCHEDULE' — defaulting to morning"
+            echo "mode=morning" >> $GITHUB_OUTPUT
+            echo "slot=unknown" >> $GITHUB_OUTPUT
           fi
 
       - name: Post to Facebook
@@ -89,8 +112,8 @@ jobs:
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
           MODE="${{ steps.mode.outputs.mode }}"
-          # formula_flash and formula_reel are handled by their own dedicated steps below
-          if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_reel" ]; then
+          # formula_flash/formula_flash_evening/formula_reel handled by dedicated steps
+          if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_flash_evening" ] || [ "$MODE" = "formula_reel" ]; then
             echo "[SKIP] mode=$MODE is handled by dedicated step"
           elif [ "$DRY" = "true" ]; then
             python3 post_facebook.py --mode "$MODE" --dry-run
@@ -110,26 +133,24 @@ jobs:
           DRY="${{ github.event.inputs.dry_run }}"
           MODE="${{ steps.mode.outputs.mode }}"
           # Instagram: skip modes that have no image equivalent or use dedicated steps
-          SKIP_MODES="afternoon festival evening"
+          SKIP_MODES="afternoon festival evening formula_flash formula_flash_evening formula_reel"
           # Translate lab_slot → lab for post_instagram.py (which uses 'lab')
           IG_MODE="$MODE"
           [ "$MODE" = "lab_slot" ] && IG_MODE="lab"
-          # formula_flash and formula_reel are handled by their own dedicated steps below
-          if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_reel" ]; then
-            echo "[SKIP] mode=$MODE is handled by dedicated step"
-          elif echo "$SKIP_MODES" | grep -qw "$MODE"; then
-            echo "[SKIP] Instagram not used for mode=$MODE"
+          if echo "$SKIP_MODES" | grep -qw "$MODE"; then
+            echo "[SKIP] Instagram not used for mode=$MODE (handled by dedicated step or not applicable)"
           elif [ "$DRY" = "true" ]; then
             python3 post_instagram.py --mode "$IG_MODE" --dry-run
           else
             python3 post_instagram.py --mode "$IG_MODE"
           fi
 
-      - name: Post Formula Flash Image (FB + Instagram)
+      - name: Post Formula Flash Image — Morning 8 AM IST (FB + Instagram)
         if: >
-          github.event.inputs.mode == 'formula_flash' ||
-          github.event.inputs.mode == '' ||
-          github.event.inputs.mode == 'all'
+          steps.mode.outputs.mode == 'formula_flash' &&
+          (github.event.inputs.platform == '' ||
+           github.event.inputs.platform == 'facebook' ||
+           github.event.inputs.platform == 'both')
         env:
           FB_PAGE_ID:            ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN:  ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
@@ -139,26 +160,18 @@ jobs:
           GITHUB_REF_NAME:       ${{ github.ref_name }}
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
-          HOUR_UTC="$(date -u +%H)"
-          # Only run at 8 AM IST (02:xx UTC) or 8 PM IST (14:xx UTC)
-          # or when explicitly triggered with formula_flash mode
-          MODE="${{ github.event.inputs.mode }}"
-          if [ "$MODE" = "formula_flash" ] || \
-             ( [ "$MODE" = "" ] && ( [ "$HOUR_UTC" = "02" ] || [ "$HOUR_UTC" = "14" ] ) ); then
-            SLOT=$( [ "$HOUR_UTC" -lt "10" ] && echo "morning" || echo "evening" )
-            if [ "$DRY" = "true" ]; then
-              python3 post_formula_image.py --slot "$SLOT" --dry-run
-            else
-              python3 post_formula_image.py --slot "$SLOT"
-            fi
+          if [ "$DRY" = "true" ]; then
+            python3 post_formula_image.py --slot morning --dry-run
           else
-            echo "[SKIP] Formula Flash only runs at 8 AM / 8 PM IST (UTC 02:xx / 14:xx)"
+            python3 post_formula_image.py --slot morning
           fi
 
-      - name: Post Formula Reel (FB + Instagram Reels) — 8 PM IST
+      - name: Post Formula Flash Image + Reel — Evening 8 PM IST (FB + Instagram)
         if: >
-          github.event.inputs.mode == 'formula_reel' ||
-          github.event.inputs.mode == 'all'
+          steps.mode.outputs.mode == 'formula_flash_evening' &&
+          (github.event.inputs.platform == '' ||
+           github.event.inputs.platform == 'facebook' ||
+           github.event.inputs.platform == 'both')
         env:
           FB_PAGE_ID:            ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN:  ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
@@ -168,19 +181,39 @@ jobs:
           GITHUB_REF_NAME:       ${{ github.ref_name }}
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
-          HOUR_UTC="$(date -u +%H)"
-          MODE="${{ github.event.inputs.mode }}"
-          # Run at 8 PM IST (14:xx UTC) or when explicitly triggered
-          if [ "$MODE" = "formula_reel" ] || \
-             ( [ "$MODE" = "all" ] ) || \
-             ( [ "$MODE" = "" ] && [ "$HOUR_UTC" = "14" ] ); then
-            if [ "$DRY" = "true" ]; then
-              python3 post_formula_reel.py --dry-run
-            else
-              python3 post_formula_reel.py
-            fi
+          # Formula Flash Image (evening slot)
+          if [ "$DRY" = "true" ]; then
+            python3 post_formula_image.py --slot evening --dry-run
           else
-            echo "[SKIP] Formula Reel only auto-runs at 8 PM IST (UTC 14:xx)"
+            python3 post_formula_image.py --slot evening
+          fi
+          # Formula Reel (FB + Instagram Reels)
+          if [ "$DRY" = "true" ]; then
+            python3 post_formula_reel.py --dry-run
+          else
+            python3 post_formula_reel.py
+          fi
+
+      - name: Post Formula Reel (manual / all trigger only)
+        if: >
+          (steps.mode.outputs.mode == 'formula_reel' ||
+           steps.mode.outputs.mode == 'all') &&
+          (github.event.inputs.platform == '' ||
+           github.event.inputs.platform == 'facebook' ||
+           github.event.inputs.platform == 'both')
+        env:
+          FB_PAGE_ID:            ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN:  ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID:  ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          GITHUB_REPOSITORY:     ${{ github.repository }}
+          GITHUB_REF_NAME:       ${{ github.ref_name }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          if [ "$DRY" = "true" ]; then
+            python3 post_formula_reel.py --dry-run
+          else
+            python3 post_formula_reel.py
           fi
 
       - name: Commit tracker CSV updates
@@ -229,8 +262,8 @@ jobs:
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
           MODE="${{ steps.mode.outputs.mode }}"
-          # formula_flash and formula_reel handled by dedicated steps
-          if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_reel" ]; then
+          # formula_flash/formula_flash_evening/formula_reel handled by dedicated steps
+          if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_flash_evening" ] || [ "$MODE" = "formula_reel" ]; then
             echo "[SKIP] mode=$MODE is handled by dedicated step"
           elif [ "$DRY" = "true" ]; then
             python3 post_telegram.py --mode "$MODE" --dry-run
