@@ -118,7 +118,7 @@ def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
     draw.rectangle([44, 355, W - 44, 360], fill=BRAND_ORANGE)
 
     # ── Date ─────────────────────────────────────────────────────────────────
-    draw.text((44, 374), f"📅  {paper_date}", font=font(26), fill=(200, 230, 255))
+    draw.text((44, 374), f"★  {paper_date}", font=font(26), fill=(200, 230, 255))
 
     # ── Main headline ─────────────────────────────────────────────────────────
     headline_lines = [
@@ -135,7 +135,7 @@ def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
 
     # ── Commitment line ───────────────────────────────────────────────────────
     draw.text((54, y + 10),
-              "We are committed to your success. 🎯",
+              "We are committed to your success.",
               font=font(28), fill=(200, 230, 255))
 
     # ── CTA box ───────────────────────────────────────────────────────────────
@@ -147,7 +147,7 @@ def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
 
     cta_fnt_sm = font(22, bold=False)
     cta_fnt_lg = font(30, bold=True)
-    draw.text((W // 2, cta_y + 22), "👇  Get today's paper link here 👇",
+    draw.text((W // 2, cta_y + 22), "▼  Get today's paper link below  ▼",
               font=cta_fnt_sm, fill=DARK_GREY, anchor="mm")
     draw.text((W // 2, cta_y + 72), "www.cbsemock.org.in",
               font=cta_fnt_lg, fill=BRAND_BLUE, anchor="mm")
