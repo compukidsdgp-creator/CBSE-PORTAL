@@ -72,9 +72,11 @@ jobs:
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
           MODE="${{ steps.mode.outputs.mode }}"
-          # formula_flash/formula_flash_evening/formula_reel handled by dedicated steps
+          # formula_flash/formula_flash_evening/formula_reel/pyq_* handled by dedicated steps
           if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_flash_evening" ] || [ "$MODE" = "formula_reel" ]; then
             echo "[SKIP] mode=$MODE is handled by dedicated step"
+          elif echo "$MODE" | grep -q "^pyq_"; then
+            echo "[SKIP] mode=$MODE is handled by Post PYQ Practice Paper step"
           elif [ "$DRY" = "true" ]; then
             python3 post_facebook.py --mode "$MODE" --dry-run
           else
@@ -99,6 +101,8 @@ jobs:
           [ "$MODE" = "lab_slot" ] && IG_MODE="lab"
           if echo "$SKIP_MODES" | grep -qw "$MODE"; then
             echo "[SKIP] Instagram not used for mode=$MODE (handled by dedicated step or not applicable)"
+          elif echo "$MODE" | grep -q "^pyq_"; then
+            echo "[SKIP] mode=$MODE is handled by Post PYQ Practice Paper step"
           elif [ "$DRY" = "true" ]; then
             python3 post_instagram.py --mode "$IG_MODE" --dry-run
           else
@@ -249,9 +253,11 @@ jobs:
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
           MODE="${{ steps.mode.outputs.mode }}"
-          # formula_flash/formula_flash_evening/formula_reel handled by dedicated steps
+          # formula_flash/formula_flash_evening/formula_reel/pyq_* handled by dedicated steps
           if [ "$MODE" = "formula_flash" ] || [ "$MODE" = "formula_flash_evening" ] || [ "$MODE" = "formula_reel" ]; then
             echo "[SKIP] mode=$MODE is handled by dedicated step"
+          elif echo "$MODE" | grep -q "^pyq_"; then
+            echo "[SKIP] mode=$MODE is handled by Post PYQ Practice Paper step"
           elif [ "$DRY" = "true" ]; then
             python3 post_telegram.py --mode "$MODE" --dry-run
           else
