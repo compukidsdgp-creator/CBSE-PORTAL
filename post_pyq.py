@@ -331,21 +331,32 @@ def post_instagram(img_path: str, subject_key: str,
         f"📄 Class {meta['class']} {meta['label']} Practice Paper — {paper_date}\n\n"
         f"🎯 FREE Pre-Board Practice Paper — Every Day!\n"
         f"We are committed to your success 💪\n\n"
-        f"📥 Link in bio to download today's paper!\n"
+        f"🔗 Bio link updated to today's paper — tap it to download!\n"
         f"🌐 www.cbsemock.org.in\n"
         f"📲 Telegram: t.me/cbsemockportal\n"
-        f"👍 Facebook: facebook.com/profile.php?id=61596243964780\n\n"
+        f"👍 Facebook: facebook.com/cbsemock\n\n"
         f"#CBSE #PreBoard #Class{meta['class']} #{meta['label'].replace(' ','')} "
         f"#FreeStudyMaterial #CBSEExam #StudyWithUs #CBSEMock #BoardExam"
     )
 
     if dry_run:
-        print(f"[DRY] Instagram: would post {img_filename} (IG URL: {ig_img_url})")
+        print(f"[DRY] Instagram: would update bio link to {pdf_url} and post {img_filename}")
         return
 
     if not ig_id or not token:
         print("⚠️  INSTAGRAM_ACCOUNT_ID / INSTAGRAM_ACCESS_TOKEN not set — skipping Instagram")
         return
+
+    # Step 0: update Instagram bio link to today's paper URL
+    rb = requests.post(
+        f"https://graph.facebook.com/v19.0/{ig_id}",
+        data={"website": pdf_url, "access_token": token},
+        timeout=30,
+    )
+    if rb.status_code == 200:
+        print(f"✅  Instagram: bio link updated → {pdf_url}")
+    else:
+        print(f"⚠️  Instagram bio update: {rb.status_code} {rb.text[:200]}")
 
     # Step 1: create media container
     r1 = requests.post(
