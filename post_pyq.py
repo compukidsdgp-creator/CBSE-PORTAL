@@ -212,7 +212,8 @@ def post_telegram(pdf_path: str, img_path: str,
         f"We are committed to your success\\.\n\n"
         f"📥 *Download today's paper here:*\n"
         f"{pdf_url}\n\n"
-        f"💡 More free resources at: www\\.cbsemock\\.org\\.in\n\n"
+        f"💡 More free resources: www\\.cbsemock\\.org\\.in\n"
+        f"📲 Join our Telegram: https://t\\.me/cbsemockportal\n\n"
         f"\\#CBSE \\#PreBoard \\#Class{meta['class']} \\#{''.join(meta['label'].split())} "
         f"\\#FreeStudyMaterial \\#CBSEMock"
     )
@@ -269,7 +270,7 @@ def post_facebook(img_path: str, subject_key: str,
         f"We are committed to your success. 💪\n\n"
         f"📥 Download today's paper:\n{pdf_url}\n\n"
         f"🌐 More free resources: www.cbsemock.org.in\n"
-        f"📲 Join our Telegram for daily updates!\n\n"
+        f"📲 Join our Telegram for daily papers: https://t.me/cbsemockportal\n\n"
         f"#CBSE #PreBoard #Class{meta['class']} #{meta['label'].replace(' ','')} "
         f"#FreeStudyMaterial #CBSEExam #StudyWithUs #CBSEMock"
     )
@@ -315,7 +316,8 @@ def post_instagram(img_path: str, subject_key: str,
         f"🎯 FREE Pre-Board Practice Paper — Every Day!\n"
         f"We are committed to your success 💪\n\n"
         f"📥 Link in bio to download today's paper!\n"
-        f"🌐 www.cbsemock.org.in\n\n"
+        f"🌐 www.cbsemock.org.in\n"
+        f"📲 Join Telegram for daily papers: t.me/cbsemockportal\n\n"
         f"#CBSE #PreBoard #Class{meta['class']} #{meta['label'].replace(' ','')} "
         f"#FreeStudyMaterial #CBSEExam #StudyWithUs #CBSEMock #BoardExam"
     )
