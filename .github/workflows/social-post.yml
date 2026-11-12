@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all, formula_flash, formula_reel | Promo: promo_quest, promo_mock, promo_lab, promo_notes'
+        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all, formula_flash, formula_reel | Promo: promo_quest, promo_mock, promo_lab, promo_notes | PYQ: pyq_science10, pyq_maths10, pyq_physics12, pyq_maths12, pyq_chemistry12, pyq_biology12'
         required: false
         default: 'morning'
       platform:
@@ -34,14 +34,14 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install --quiet requests pillow numpy matplotlib ffmpeg-python 2>/dev/null || true
+          pip install --quiet requests pillow numpy matplotlib ffmpeg-python reportlab 2>/dev/null || true
           # ffmpeg binary (for reel encoding)
           sudo apt-get install -y ffmpeg --quiet 2>/dev/null || true
 
       - name: Determine post mode from schedule
         id: mode
         run: |
-          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash formula_flash_evening formula_reel promo_quest promo_mock promo_lab promo_notes"
+          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash formula_flash_evening formula_reel promo_quest promo_mock promo_lab promo_notes pyq_science10 pyq_maths10 pyq_physics12 pyq_maths12 pyq_chemistry12 pyq_biology12"
           INPUT_MODE="${{ github.event.inputs.mode }}"
 
           # Scheduling is done via cronjobs.org → workflow_dispatch API.
@@ -174,6 +174,33 @@ jobs:
             python3 post_formula_reel.py --dry-run
           else
             python3 post_formula_reel.py
+          fi
+
+      - name: Post PYQ Practice Paper
+        if: startsWith(steps.mode.outputs.mode, 'pyq_')
+        env:
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          GITHUB_REPOSITORY:      ${{ github.repository }}
+          GITHUB_REF_NAME:        ${{ github.ref_name }}
+          GH_TOKEN:               ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          MODE="${{ steps.mode.outputs.mode }}"
+          # Extract subject key: pyq_science10 → science10
+          SUBJECT="${MODE#pyq_}"
+          # Configure git for the commit inside post_pyq.py
+          git config user.name  "social-post-bot"
+          git config user.email "bot@cbsemock.org.in"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          if [ "$DRY" = "true" ]; then
+            python3 post_pyq.py --subject "$SUBJECT" --dry-run
+          else
+            python3 post_pyq.py --subject "$SUBJECT"
           fi
 
       - name: Commit tracker CSV updates
