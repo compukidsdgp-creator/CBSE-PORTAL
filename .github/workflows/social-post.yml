@@ -1,19 +1,9 @@
 name: Daily Social Media Posts
 
 on:
-  schedule:
-    # Quest of the Day — 7:00 AM IST (1:30 UTC)
-    - cron: '30 1 * * *'
-    # Formula Flash Morning — 8:00 AM IST (2:30 UTC)
-    - cron: '30 2 * * *'
-    # Lab Activity — 10:00 AM IST (4:30 UTC)
-    - cron: '30 4 * * *'
-    # Afternoon Engagement — 2:00 PM IST (8:30 UTC)
-    - cron: '30 8 * * *'
-    # News Digest — 6:00 PM IST (12:30 UTC)
-    - cron: '30 12 * * *'
-    # Formula Flash Evening — 8:00 PM IST (14:30 UTC)
-    - cron: '30 14 * * *'
+  # GitHub cron removed — scheduling is now handled by cronjobs.org
+  # which calls the workflow_dispatch API endpoint at exact IST times.
+  # This avoids GitHub's shared-runner queue delay (can be 5-7 hours late).
   workflow_dispatch:
     inputs:
       mode:
@@ -54,51 +44,21 @@ jobs:
           VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash formula_flash_evening formula_reel promo_quest promo_mock promo_lab promo_notes"
           INPUT_MODE="${{ github.event.inputs.mode }}"
 
-          # GitHub Actions cron can be delayed by several hours.
-          # Use the SCHEDULED cron minute/hour from github.event.schedule instead of
-          # the actual wall-clock time — this way the mode is always correct even
-          # when the runner starts late.
-          SCHEDULE="${{ github.event.schedule }}"
-          echo "Scheduled cron: '$SCHEDULE'  (actual UTC: $(date -u +%H:%M))"
+          # Scheduling is done via cronjobs.org → workflow_dispatch API.
+          # INPUT_MODE is always set (cronjobs.org passes it in the request body).
+          echo "Input mode: '$INPUT_MODE'  (triggered at UTC: $(date -u +%H:%M))"
 
           if [ -n "$INPUT_MODE" ]; then
-            # Manual dispatch — validate and use the given mode
             if echo "$VALID_MODES" | grep -qw "$INPUT_MODE"; then
               echo "mode=$INPUT_MODE" >> $GITHUB_OUTPUT
-              echo "slot=manual" >> $GITHUB_OUTPUT
             else
               echo "❌ Invalid mode: '$INPUT_MODE'"
               echo "   Valid modes: $VALID_MODES"
               exit 1
             fi
-          elif [ "$SCHEDULE" = "30 1 * * *" ]; then
-            # 1:30 UTC = 7:00 AM IST — Quest / Morning
-            echo "mode=morning" >> $GITHUB_OUTPUT
-            echo "slot=1_30utc" >> $GITHUB_OUTPUT
-          elif [ "$SCHEDULE" = "30 2 * * *" ]; then
-            # 2:30 UTC = 8:00 AM IST — Formula Flash (morning)
-            echo "mode=formula_flash" >> $GITHUB_OUTPUT
-            echo "slot=2_30utc" >> $GITHUB_OUTPUT
-          elif [ "$SCHEDULE" = "30 4 * * *" ]; then
-            # 4:30 UTC = 10:00 AM IST — Lab Activity
-            echo "mode=lab_slot" >> $GITHUB_OUTPUT
-            echo "slot=4_30utc" >> $GITHUB_OUTPUT
-          elif [ "$SCHEDULE" = "30 8 * * *" ]; then
-            # 8:30 UTC = 2:00 PM IST — Afternoon Engagement
-            echo "mode=afternoon" >> $GITHUB_OUTPUT
-            echo "slot=8_30utc" >> $GITHUB_OUTPUT
-          elif [ "$SCHEDULE" = "30 12 * * *" ]; then
-            # 12:30 UTC = 6:00 PM IST — News Digest
-            echo "mode=evening" >> $GITHUB_OUTPUT
-            echo "slot=12_30utc" >> $GITHUB_OUTPUT
-          elif [ "$SCHEDULE" = "30 14 * * *" ]; then
-            # 14:30 UTC = 8:00 PM IST — Formula Flash (evening) + Formula Reel
-            echo "mode=formula_flash_evening" >> $GITHUB_OUTPUT
-            echo "slot=14_30utc" >> $GITHUB_OUTPUT
           else
-            echo "⚠️  Unknown schedule '$SCHEDULE' — defaulting to morning"
+            echo "⚠️  No mode supplied — defaulting to morning"
             echo "mode=morning" >> $GITHUB_OUTPUT
-            echo "slot=unknown" >> $GITHUB_OUTPUT
           fi
 
       - name: Post to Facebook
