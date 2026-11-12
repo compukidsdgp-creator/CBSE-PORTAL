@@ -171,6 +171,18 @@ def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
 
 # ─── Git commit + push PDF ────────────────────────────────────────────────────
 
+def _set_git_remote():
+    """Set authenticated remote URL using GH_TOKEN if available."""
+    gh_token = os.getenv("GH_TOKEN", "")
+    repo = os.getenv("GITHUB_REPOSITORY", "compukidsdgp-creator/CBSE-PORTAL")
+    if gh_token:
+        url = f"https://x-access-token:{gh_token}@github.com/{repo}.git"
+        subprocess.run(
+            ["git", "-C", str(REPO_ROOT), "remote", "set-url", "origin", url],
+            capture_output=True
+        )
+
+
 def commit_pdf(pdf_path: str, subject_key: str, dry_run: bool = False):
     """Add the PDF to git and push so it's live at cbsemock.org.in/pyq-papers/."""
     rel_path = Path(pdf_path).relative_to(REPO_ROOT)
@@ -178,6 +190,7 @@ def commit_pdf(pdf_path: str, subject_key: str, dry_run: bool = False):
         print(f"[DRY] Would commit: {rel_path}")
         return
 
+    _set_git_remote()
     cmds = [
         ["git", "-C", str(REPO_ROOT), "config", "user.name", "social-post-bot"],
         ["git", "-C", str(REPO_ROOT), "config", "user.email", "bot@cbsemock.org.in"],
@@ -206,16 +219,16 @@ def post_telegram(pdf_path: str, img_path: str,
     meta    = SUBJECT_META[subject_key]
 
     caption = (
-        f"📄 *Class {meta['class']} {meta['label']} — Pre-Board Practice Paper*\n"
+        f"📄 *Class {meta['class']} {meta['label']} — Pre\\-Board Practice Paper*\n"
         f"📅 Date: {paper_date}\n\n"
-        f"🎯 Get our FREE pre-board practice paper every day for your practice\\!\n"
+        f"🎯 Get our FREE pre\\-board practice paper every day for your practice\\!\n"
         f"We are committed to your success\\.\n\n"
         f"📥 *Download today's paper here:*\n"
         f"{pdf_url}\n\n"
         f"💡 More free resources: www\\.cbsemock\\.org\\.in\n"
-        f"📲 Join our Telegram: https://t\\.me/cbsemockportal\n"
-        f"👍 Follow on Facebook: https://www\\.facebook\\.com/profile\\.php?id=61596243964780\n"
-        f"📸 Follow on Instagram: https://www\\.instagram\\.com/cbsemock/\n\n"
+        f"📲 Join our Telegram: t\\.me/cbsemockportal\n"
+        f"👍 Follow on Facebook: cbsemock\\.org\\.in\n"
+        f"📸 Follow on Instagram: @cbsemock\n\n"
         f"\\#CBSE \\#PreBoard \\#Class{meta['class']} \\#{''.join(meta['label'].split())} "
         f"\\#FreeStudyMaterial \\#CBSEMock"
     )
@@ -408,11 +421,19 @@ def main():
              f"Claude-Session: https://claude.ai/code/session_01TuPQgyyjEsjE236cZyznix"],
             capture_output=True
         )
-        subprocess.run(["git", "-C", str(REPO_ROOT), "push"], capture_output=True)
+        result = subprocess.run(["git", "-C", str(REPO_ROOT), "push"], capture_output=True, text=True)
+        if result.returncode != 0:
+            print(f"  git warning (cover): {result.stderr.strip()}")
 
     # 5) Post to all platforms
     post_telegram(pdf_path, img_path, subject_key, pdf_url, paper_date, dry_run)
     post_facebook(img_path, subject_key, pdf_url, paper_date, dry_run)
+
+    # Wait for GitHub to serve the raw cover image URL before Instagram fetches it
+    if not dry_run:
+        import time
+        print("⏳  Waiting 20s for GitHub raw URL to be available for Instagram...")
+        time.sleep(20)
     post_instagram(img_path, subject_key, pdf_url, paper_date, dry_run)
 
     print(f"\n🎉  All done for Class {meta['class']} {meta['label']}!")
