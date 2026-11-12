@@ -149,7 +149,7 @@ def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
     cta_fnt_lg = font(30, bold=True)
     draw.text((W // 2, cta_y + 22), "▼  Get today's paper link below  ▼",
               font=cta_fnt_sm, fill=DARK_GREY, anchor="mm")
-    draw.text((W // 2, cta_y + 72), "CBSEMOCK.org.in",
+    draw.text((W // 2, cta_y + 72), "www.cbsemock.org.in",
               font=cta_fnt_lg, fill=BRAND_BLUE, anchor="mm")
     draw.text((W // 2, cta_y + 110),
               "Also available on our Telegram channel",
