@@ -936,3 +936,567 @@ DIAGRAMS: dict[str, callable] = {
     "sql_table":           draw_sql_table,
     "code_block":          draw_code_block,
 }
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+#  FORMULA-SPECIFIC DIAGRAMS (added for the one-formula-per-screen reels)
+#  Same contract as above: draw_xyz(ax, progress=1.0), 0..1 coordinates.
+# ═══════════════════════════════════════════════════════════════════════════════
+from matplotlib.patches import Ellipse, Rectangle, Polygon, Circle
+
+_K = 0.83   # x-compression so circles look round in the reel's diagram box
+
+def _setup(ax):
+    ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+
+def _fade(progress, start=0.0):
+    return max(0.0, min(1.0, (progress - start) / max(1e-6, 1 - start)))
+
+def _arrow(ax, p0, p1, color, lw=1.6, style="->", alpha=1.0, ls="-"):
+    ax.annotate("", xy=p1, xytext=p0,
+                arrowprops=dict(arrowstyle=style, color=color, lw=lw, alpha=alpha, linestyle=ls))
+
+def _ball(ax, x, y, r, color, label="", tcolor="#06101f", fs=9, alpha=1.0, ec="none"):
+    ax.add_patch(Ellipse((x, y), 2 * r * _K, 2 * r, facecolor=color, edgecolor=ec,
+                         linewidth=1.5, alpha=alpha, zorder=3))
+    if label:
+        ax.text(x, y, label, color=tcolor, fontsize=fs, ha="center", va="center",
+                fontweight="bold", alpha=alpha, zorder=4)
+
+def _ring(ax, x, y, r, color, lw=1.5, ls="-", alpha=1.0):
+    ax.add_patch(Ellipse((x, y), 2 * r * _K, 2 * r, fill=False, edgecolor=color,
+                         linewidth=lw, linestyle=ls, alpha=alpha, zorder=2))
+
+def _zig(ax, x0, x1, y, color, amp=0.05, n=6, lw=2.0):
+    xs = np.linspace(x0, x1, 2 * n + 1)
+    ys = [y] + [y + (amp if i % 2 == 0 else -amp) for i in range(2 * n - 1)] + [y]
+    ax.plot(xs, ys, color=color, lw=lw, solid_joinstyle="round")
+
+def _t(ax, x, y, s, color=WHITE, fs=8, alpha=1.0, **kw):
+    kw.setdefault("ha", "center"); kw.setdefault("va", "center")
+    ax.text(x, y, s, color=color, fontsize=fs, alpha=alpha, **kw)
+
+def _crosses(ax, xs, ys, alpha=0.5):
+    for x in xs:
+        for y in ys:
+            ax.text(x, y, "×", color=GREY, fontsize=9, ha="center", va="center", alpha=alpha)
+
+# ── Physics ──────────────────────────────────────────────────────────────────
+def draw_coil_magnet(ax, progress=1.0):
+    """Bar magnet moving into a coil connected to a galvanometer (Faraday)."""
+    _setup(ax)
+    for x in np.linspace(0.56, 0.86, 6):
+        ax.add_patch(Ellipse((x, 0.58), 0.07, 0.36, fill=False, edgecolor=CYAN, linewidth=1.8))
+    ax.plot([0.56, 0.56, 0.86, 0.86], [0.40, 0.17, 0.17, 0.40], color=CYAN, lw=1.4)
+    _ball(ax, 0.71, 0.17, 0.075, "#0a1a30", "G", tcolor=YELLOW, ec=YELLOW)
+    mx = 0.04 + 0.16 * progress
+    ax.add_patch(Rectangle((mx, 0.50), 0.14, 0.16, facecolor=RED, edgecolor="none"))
+    ax.add_patch(Rectangle((mx + 0.14, 0.50), 0.14, 0.16, facecolor=BLUE, edgecolor="none"))
+    _t(ax, mx + 0.07, 0.58, "S", fs=9, fontweight="bold"); _t(ax, mx + 0.21, 0.58, "N", fs=9, fontweight="bold")
+    _arrow(ax, (mx + 0.04, 0.80), (mx + 0.26, 0.80), YELLOW, lw=2)
+    _t(ax, mx + 0.15, 0.88, "magnet moves", YELLOW, fs=7)
+    _t(ax, 0.71, 0.03, "changing flux → induced EMF", GREEN, fs=7, alpha=_fade(progress, 0.5))
+
+def draw_lenz_ring(ax, progress=1.0):
+    """Magnet approaching a ring; induced field opposes the change (Lenz)."""
+    _setup(ax)
+    ax.add_patch(Ellipse((0.68, 0.52), 0.14, 0.56, fill=False, edgecolor=CYAN, linewidth=2.4))
+    mx = 0.05 + 0.10 * progress
+    ax.add_patch(Rectangle((mx, 0.44), 0.13, 0.16, facecolor=BLUE, edgecolor="none"))
+    ax.add_patch(Rectangle((mx + 0.13, 0.44), 0.13, 0.16, facecolor=RED, edgecolor="none"))
+    _t(ax, mx + 0.065, 0.52, "S", fs=9, fontweight="bold"); _t(ax, mx + 0.195, 0.52, "N", fs=9, fontweight="bold")
+    _arrow(ax, (mx + 0.28, 0.52), (mx + 0.40, 0.52), YELLOW, lw=2)
+    a = _fade(progress, 0.4)
+    _arrow(ax, (0.66, 0.66), (0.50, 0.66), ORANGE, lw=2, alpha=a)
+    _arrow(ax, (0.66, 0.38), (0.50, 0.38), ORANGE, lw=2, alpha=a)
+    _t(ax, 0.60, 0.92, "induced B opposes", ORANGE, fs=7, alpha=a)
+    _t(ax, 0.86, 0.52, "I", GREEN, fs=10, alpha=a, fontweight="bold")
+    _arrow(ax, (0.80, 0.40), (0.80, 0.64), GREEN, lw=1.8, alpha=a)
+
+def draw_motional_rod(ax, progress=1.0):
+    """Conducting rod sliding on rails in a magnetic field."""
+    _setup(ax)
+    _crosses(ax, np.linspace(0.22, 0.88, 6), np.linspace(0.30, 0.70, 3))
+    ax.plot([0.12, 0.92], [0.80, 0.80], color=CYAN, lw=2); ax.plot([0.12, 0.92], [0.20, 0.20], color=CYAN, lw=2)
+    ax.plot([0.12, 0.12], [0.20, 0.40], color=CYAN, lw=2); ax.plot([0.12, 0.12], [0.60, 0.80], color=CYAN, lw=2)
+    ys = np.linspace(0.40, 0.60, 9); ax.plot([0.12 + (0.03 if i % 2 else -0.03) * (0 < i < 8) for i in range(9)], ys, color=YELLOW, lw=2)
+    rx = 0.38 + 0.26 * progress
+    ax.plot([rx, rx], [0.16, 0.84], color=ORANGE, lw=4, solid_capstyle="round")
+    _arrow(ax, (rx + 0.02, 0.50), (rx + 0.17, 0.50), GREEN, lw=2.2)
+    _t(ax, rx + 0.10, 0.58, "v", GREEN, fs=10, fontweight="bold")
+    _t(ax, rx - 0.05, 0.50, "l", ORANGE, fs=10, fontweight="bold", fontstyle="italic")
+    _t(ax, 0.50, 0.93, "B (into page)", GREY, fs=7)
+
+def draw_inductor_coil(ax, progress=1.0):
+    """Inductor coil with current."""
+    _setup(ax)
+    t = np.linspace(0, 1, 600)
+    ax.plot(0.22 + 0.56 * t + 0.035 * np.sin(2 * np.pi * 8 * t), 0.52 + 0.20 * np.cos(2 * np.pi * 8 * t),
+            color=CYAN, lw=2)
+    ax.plot([0.05, 0.22], [0.72, 0.72], color=CYAN, lw=2); ax.plot([0.78, 0.95], [0.72, 0.72], color=CYAN, lw=2)
+    _arrow(ax, (0.05, 0.86), (0.22, 0.86), YELLOW, lw=2); _t(ax, 0.135, 0.94, "I", YELLOW, fs=10, fontweight="bold")
+    _t(ax, 0.50, 0.14, "L", ORANGE, fs=13, fontweight="bold")
+    _t(ax, 0.50, 0.03, "opposes change in current", GREY, fs=7, alpha=_fade(progress, 0.4))
+
+def draw_wire_resistivity(ax, progress=1.0):
+    """Cylindrical wire with length l and cross-section A."""
+    _setup(ax)
+    ax.add_patch(Rectangle((0.18, 0.40), 0.62, 0.24, facecolor="#274060", edgecolor=CYAN, linewidth=1.6))
+    ax.add_patch(Ellipse((0.80, 0.52), 0.09, 0.24, facecolor=ORANGE, edgecolor=CYAN, linewidth=1.6, zorder=3))
+    ax.add_patch(Ellipse((0.18, 0.52), 0.09, 0.24, facecolor="#274060", edgecolor=CYAN, linewidth=1.6))
+    _arrow(ax, (0.18, 0.24), (0.80, 0.24), YELLOW, style="<->", lw=1.8); _t(ax, 0.49, 0.15, "length  l", YELLOW, fs=8)
+    _t(ax, 0.92, 0.52, "A", ORANGE, fs=11, fontweight="bold")
+    _arrow(ax, (0.30, 0.82), (0.66, 0.82), GREEN, lw=1.8, alpha=_fade(progress, 0.3)); _t(ax, 0.48, 0.90, "current", GREEN, fs=7, alpha=_fade(progress, 0.3))
+
+def draw_two_charges(ax, progress=1.0):
+    """Two point charges and the force between them (Coulomb)."""
+    _setup(ax)
+    _ball(ax, 0.25, 0.55, 0.10, RED, "+q₁", tcolor=WHITE, fs=8)
+    _ball(ax, 0.75, 0.55, 0.10, RED, "+q₂", tcolor=WHITE, fs=8)
+    a = _fade(progress, 0.3)
+    _arrow(ax, (0.16, 0.55), (0.02, 0.55), YELLOW, lw=2.4, alpha=a); _arrow(ax, (0.84, 0.55), (0.98, 0.55), YELLOW, lw=2.4, alpha=a)
+    _t(ax, 0.07, 0.66, "F", YELLOW, fs=10, alpha=a, fontweight="bold"); _t(ax, 0.93, 0.66, "F", YELLOW, fs=10, alpha=a, fontweight="bold")
+    _arrow(ax, (0.25, 0.28), (0.75, 0.28), CYAN, style="<->", lw=1.6); _t(ax, 0.50, 0.19, "r", CYAN, fs=10, fontstyle="italic")
+
+def draw_equipotential(ax, progress=1.0):
+    """Point charge with equipotential circles."""
+    _setup(ax)
+    for i, r in enumerate([0.16, 0.28, 0.40]):
+        _ring(ax, 0.5, 0.5, r, CYAN, lw=1.3, ls="--", alpha=_fade(progress, i * 0.2) * 0.9)
+    for ang in np.arange(0, 360, 45):
+        c, s = math.cos(math.radians(ang)), math.sin(math.radians(ang))
+        _arrow(ax, (0.5 + 0.10 * c * _K, 0.5 + 0.10 * s), (0.5 + 0.44 * c * _K, 0.5 + 0.44 * s), ORANGE, lw=1.0, alpha=0.55)
+    _ball(ax, 0.5, 0.5, 0.075, RED, "+Q", tcolor=WHITE, fs=8)
+    _t(ax, 0.90, 0.88, "V falls as r grows", YELLOW, fs=7, ha="right")
+
+def _lens(ax, x=0.5, half=0.34, thick=0.045):
+    y = np.linspace(0.5 - half, 0.5 + half, 80)
+    w = thick * (1 - ((y - 0.5) / half) ** 2)
+    ax.fill_betweenx(y, x - w, x + w, color=CYAN, alpha=0.35, lw=0)
+    ax.plot(x - w, y, color=CYAN, lw=1.6); ax.plot(x + w, y, color=CYAN, lw=1.6)
+    ax.plot([0.03, 0.97], [0.5, 0.5], color=GREY, lw=0.9, ls="--", alpha=0.7)
+
+def draw_convex_lens(ax, progress=1.0):
+    """Convex lens forming a real inverted image."""
+    _setup(ax); _lens(ax)
+    _arrow(ax, (0.15, 0.50), (0.15, 0.74), GREEN, lw=2.2); _t(ax, 0.15, 0.81, "object", GREEN, fs=7)
+    a = _fade(progress, 0.25)
+    ax.plot([0.15, 0.50, 0.85], [0.74, 0.74, 0.26], color=YELLOW, lw=1.5, alpha=a)
+    ax.plot([0.15, 0.85], [0.74, 0.26], color=ORANGE, lw=1.5, alpha=a)
+    _arrow(ax, (0.85, 0.50), (0.85, 0.26), PINK, lw=2.2, alpha=_fade(progress, 0.5)); _t(ax, 0.85, 0.19, "image", PINK, fs=7, alpha=_fade(progress, 0.5))
+    for x in (0.325, 0.675):
+        ax.plot(x, 0.5, "o", color=WHITE, markersize=3.5); _t(ax, x, 0.44, "F", WHITE, fs=7)
+    _t(ax, 0.32, 0.95, "u", CYAN, fs=9, fontstyle="italic"); _t(ax, 0.68, 0.95, "v", CYAN, fs=9, fontstyle="italic")
+
+def draw_lens_focus(ax, progress=1.0):
+    """Parallel rays converging at the focus; focal length f."""
+    _setup(ax); _lens(ax)
+    a = _fade(progress, 0.2)
+    for y in (0.70, 0.60, 0.40, 0.30):
+        ax.plot([0.05, 0.50, 0.80], [y, y, 0.5], color=YELLOW, lw=1.5, alpha=a)
+    ax.plot(0.80, 0.5, "o", color=ORANGE, markersize=5); _t(ax, 0.84, 0.57, "F", ORANGE, fs=9, fontweight="bold")
+    _arrow(ax, (0.50, 0.12), (0.80, 0.12), CYAN, style="<->", lw=1.6); _t(ax, 0.65, 0.05, "f  (in metres)", CYAN, fs=7)
+
+def draw_logic_gate_not(ax, progress=1.0):
+    """NOT gate (inverter)."""
+    _setup(ax)
+    ax.add_patch(Polygon([[0.32, 0.28], [0.32, 0.72], [0.64, 0.50]], closed=True, fill=False, edgecolor=CYAN, linewidth=2))
+    _ring(ax, 0.675, 0.50, 0.04, CYAN, lw=2)
+    ax.plot([0.10, 0.32], [0.50, 0.50], color=WHITE, lw=1.6); ax.plot([0.71, 0.92], [0.50, 0.50], color=WHITE, lw=1.6)
+    _t(ax, 0.07, 0.58, "A", CYAN, fs=10, fontweight="bold"); _t(ax, 0.93, 0.58, "Y", YELLOW, fs=10, fontweight="bold")
+    a = _fade(progress, 0.4)
+    _t(ax, 0.50, 0.12, "0 → 1      1 → 0", GREEN, fs=8, alpha=a)
+
+def draw_wire_field(ax, progress=1.0):
+    """Straight current-carrying wire with circular magnetic field lines."""
+    _setup(ax)
+    for i, (w, h) in enumerate([(0.30, 0.10), (0.55, 0.18), (0.80, 0.26)]):
+        ax.add_patch(Ellipse((0.5, 0.48), w, h, fill=False, edgecolor=CYAN, linewidth=1.5, alpha=_fade(progress, i * 0.2)))
+        ax.annotate("", xy=(0.5 + 0.01, 0.48 - h / 2), xytext=(0.5 - 0.01, 0.48 - h / 2),
+                    arrowprops=dict(arrowstyle="->", color=CYAN, lw=1.5, alpha=_fade(progress, i * 0.2)))
+    ax.plot([0.5, 0.5], [0.05, 0.95], color=ORANGE, lw=3.5, solid_capstyle="round", zorder=5)
+    _arrow(ax, (0.58, 0.72), (0.58, 0.92), YELLOW, lw=2); _t(ax, 0.63, 0.82, "I", YELLOW, fs=10, fontweight="bold")
+    _t(ax, 0.90, 0.30, "B", CYAN, fs=10, fontweight="bold")
+
+def draw_current_element(ax, progress=1.0):
+    """Current element dl, point P at distance r (Biot-Savart)."""
+    _setup(ax)
+    ax.plot([0.20, 0.20], [0.08, 0.92], color=ORANGE, lw=3, solid_capstyle="round")
+    ax.plot([0.20, 0.20], [0.36, 0.52], color=YELLOW, lw=6, solid_capstyle="butt")
+    _t(ax, 0.11, 0.44, "dl", YELLOW, fs=9, fontweight="bold"); _arrow(ax, (0.27, 0.74), (0.27, 0.90), ORANGE, lw=1.8); _t(ax, 0.32, 0.82, "I", ORANGE, fs=9)
+    a = _fade(progress, 0.3)
+    ax.plot([0.20, 0.78], [0.44, 0.70], color=CYAN, lw=1.5, ls="--", alpha=a)
+    _t(ax, 0.50, 0.63, "r", CYAN, fs=10, fontstyle="italic", alpha=a)
+    _t(ax, 0.29, 0.56, "θ", WHITE, fs=9, alpha=a)
+    _ball(ax, 0.80, 0.71, 0.035, PINK, alpha=a); _t(ax, 0.80, 0.83, "P", PINK, fs=9, alpha=a, fontweight="bold")
+    _t(ax, 0.80, 0.55, "dB ⊗", GREEN, fs=8, alpha=_fade(progress, 0.6))
+
+def draw_force_on_wire(ax, progress=1.0):
+    """Current-carrying wire in a magnetic field with the force on it."""
+    _setup(ax)
+    _crosses(ax, np.linspace(0.12, 0.88, 7), [0.22, 0.40, 0.62, 0.80])
+    ax.plot([0.10, 0.90], [0.50, 0.50], color=ORANGE, lw=3.5, solid_capstyle="round")
+    _arrow(ax, (0.30, 0.50), (0.48, 0.50), YELLOW, lw=2.2); _t(ax, 0.26, 0.43, "I", YELLOW, fs=10, fontweight="bold")
+    a = _fade(progress, 0.3)
+    _arrow(ax, (0.62, 0.52), (0.62, 0.86), GREEN, lw=2.6, alpha=a); _t(ax, 0.69, 0.78, "F", GREEN, fs=11, alpha=a, fontweight="bold")
+    _t(ax, 0.50, 0.07, "B (into page)", GREY, fs=7)
+
+def draw_solenoid(ax, progress=1.0):
+    """Solenoid with uniform field inside."""
+    _setup(ax)
+    for x in np.linspace(0.20, 0.80, 9):
+        ax.add_patch(Ellipse((x, 0.52), 0.06, 0.46, fill=False, edgecolor=ORANGE, linewidth=1.8))
+    a = _fade(progress, 0.3)
+    for y in (0.44, 0.52, 0.60):
+        _arrow(ax, (0.08, y), (0.94, y), CYAN, lw=1.5, alpha=a)
+    _t(ax, 0.94, 0.70, "B", CYAN, fs=10, fontweight="bold", alpha=a)
+    _t(ax, 0.50, 0.14, "n turns per metre", ORANGE, fs=7); _t(ax, 0.14, 0.86, "I", YELLOW, fs=10, fontweight="bold")
+
+def draw_mass_energy(ax, progress=1.0):
+    """Nucleus splitting, mass defect released as energy."""
+    _setup(ax)
+    _ball(ax, 0.20, 0.52, 0.15, PURPLE, "m", tcolor=WHITE, fs=11)
+    _arrow(ax, (0.36, 0.52), (0.50, 0.52), WHITE, lw=2)
+    a = _fade(progress, 0.3)
+    _ball(ax, 0.66, 0.70, 0.09, CYAN, alpha=a); _ball(ax, 0.66, 0.34, 0.09, GREEN, alpha=a)
+    for ang in (-35, -12, 12, 35):
+        c, s = math.cos(math.radians(ang)), math.sin(math.radians(ang))
+        _arrow(ax, (0.76, 0.52 + 0.10 * s), (0.76 + 0.17 * c, 0.52 + 0.45 * s), YELLOW, lw=1.8, alpha=_fade(progress, 0.5))
+    _t(ax, 0.90, 0.90, "energy", YELLOW, fs=8, alpha=_fade(progress, 0.5))
+    _t(ax, 0.50, 0.06, "lost mass becomes energy", GREY, fs=7)
+
+def _battery_loop(ax):
+    ax.plot([0.08, 0.08, 0.92, 0.92], [0.68, 0.18, 0.18, 0.68], color=CYAN, lw=1.6)
+    ax.plot([0.46, 0.46], [0.10, 0.26], color=WHITE, lw=2.4); ax.plot([0.54, 0.54], [0.13, 0.23], color=WHITE, lw=4)
+    ax.plot([0.46, 0.54], [0.18, 0.18], color="#0a1a30", lw=3)
+
+def draw_resistors_series(ax, progress=1.0):
+    """Three resistors in series."""
+    _setup(ax); _battery_loop(ax)
+    xs = [0.08, 0.16, 0.34, 0.42, 0.60, 0.66, 0.84, 0.92]
+    for a, b in ((0, 1), (2, 3), (4, 5), (6, 7)):
+        ax.plot([xs[a], xs[b]], [0.68, 0.68], color=CYAN, lw=1.6)
+    for i, (a, b) in enumerate(((1, 2), (3, 4), (5, 6))):
+        _zig(ax, xs[a], xs[b], 0.68, YELLOW, n=4)
+        _t(ax, (xs[a] + xs[b]) / 2, 0.84, f"R{'₁₂₃'[i]}", YELLOW, fs=9)
+    _arrow(ax, (0.20, 0.50), (0.44, 0.50), GREEN, lw=1.8, alpha=_fade(progress, 0.3)); _t(ax, 0.60, 0.50, "same I", GREEN, fs=7, alpha=_fade(progress, 0.3))
+
+def draw_resistors_parallel(ax, progress=1.0):
+    """Two resistors in parallel."""
+    _setup(ax); _battery_loop(ax)
+    ax.plot([0.08, 0.08], [0.68, 0.76], color=CYAN, lw=1.6); ax.plot([0.92, 0.92], [0.68, 0.76], color=CYAN, lw=1.6)
+    ax.plot([0.08, 0.26], [0.76, 0.76], color=CYAN, lw=1.6); ax.plot([0.74, 0.92], [0.76, 0.76], color=CYAN, lw=1.6)
+    ax.plot([0.26, 0.26], [0.60, 0.90], color=CYAN, lw=1.6); ax.plot([0.74, 0.74], [0.60, 0.90], color=CYAN, lw=1.6)
+    for y, lab in ((0.90, "R₁"), (0.60, "R₂")):
+        ax.plot([0.26, 0.36], [y, y], color=CYAN, lw=1.6); ax.plot([0.64, 0.74], [y, y], color=CYAN, lw=1.6)
+        _zig(ax, 0.36, 0.64, y, YELLOW, n=4, amp=0.04); _t(ax, 0.50, y - 0.10, lab, YELLOW, fs=9)
+    _t(ax, 0.50, 0.36, "same V across each", GREEN, fs=7, alpha=_fade(progress, 0.3))
+
+# ── Chemistry ────────────────────────────────────────────────────────────────
+def _axes(ax, xl="", yl=""):
+    ax.plot([0.14, 0.14], [0.14, 0.92], color=GREY, lw=1.2); ax.plot([0.14, 0.94], [0.14, 0.14], color=GREY, lw=1.2)
+    if xl: _t(ax, 0.56, 0.05, xl, WHITE, fs=7)
+    if yl: _t(ax, 0.06, 0.55, yl, WHITE, fs=7, rotation=90)
+
+def draw_rate_conc(ax, progress=1.0):
+    """Rate rising with concentration."""
+    _setup(ax); _axes(ax, "concentration  [A]", "rate")
+    x = np.linspace(0, max(0.05, progress), 100)
+    ax.plot(0.14 + 0.76 * x, 0.14 + 0.72 * x ** 2, color=ORANGE, lw=2.5)
+    _t(ax, 0.50, 0.72, "more collisions,\nfaster reaction", YELLOW, fs=7, alpha=_fade(progress, 0.5))
+
+def draw_galvanic_cell(ax, progress=1.0):
+    """Galvanic (Daniell) cell with salt bridge and voltmeter."""
+    _setup(ax)
+    for x0, col in ((0.10, "#12406a"), (0.58, "#1a4a3a")):
+        ax.add_patch(Rectangle((x0, 0.10), 0.32, 0.34, facecolor=col, edgecolor="none"))
+        ax.plot([x0, x0, x0 + 0.32, x0 + 0.32], [0.56, 0.10, 0.10, 0.56], color=WHITE, lw=1.5)
+    ax.plot([0.20, 0.20], [0.20, 0.74], color=GREY, lw=5); ax.plot([0.80, 0.80], [0.20, 0.74], color=ORANGE, lw=5)
+    _t(ax, 0.20, 0.04, "Zn  anode (−)", GREY, fs=7); _t(ax, 0.80, 0.04, "Cu  cathode (+)", ORANGE, fs=7)
+    ax.plot([0.36, 0.36, 0.64, 0.64], [0.24, 0.64, 0.64, 0.24], color=PURPLE, lw=5, solid_joinstyle="round")
+    _t(ax, 0.50, 0.56, "salt bridge", PURPLE, fs=6)
+    ax.plot([0.20, 0.20, 0.80, 0.80], [0.74, 0.88, 0.88, 0.74], color=CYAN, lw=1.5)
+    _ball(ax, 0.50, 0.88, 0.07, "#0a1a30", "V", tcolor=YELLOW, ec=YELLOW)
+    a = _fade(progress, 0.4)
+    _arrow(ax, (0.26, 0.95), (0.40, 0.95), GREEN, lw=1.6, alpha=a); _t(ax, 0.33, 0.995, "e⁻", GREEN, fs=7, alpha=a, va="top")
+
+def draw_beaker_solution(ax, progress=1.0):
+    """Beaker: moles of solute in one litre of solution."""
+    _setup(ax)
+    ax.add_patch(Rectangle((0.30, 0.12), 0.40, 0.50, facecolor="#12406a", edgecolor="none"))
+    ax.plot([0.30, 0.30, 0.70, 0.70], [0.86, 0.12, 0.12, 0.86], color=WHITE, lw=1.8)
+    rng = np.random.default_rng(3)
+    n = max(1, int(22 * progress))
+    ax.plot(rng.uniform(0.34, 0.66, n), rng.uniform(0.16, 0.58, n), "o", color=ORANGE, markersize=3.5)
+    ax.plot([0.70, 0.76], [0.62, 0.62], color=YELLOW, lw=1.5); _t(ax, 0.87, 0.62, "1 L", YELLOW, fs=8)
+    _t(ax, 0.14, 0.38, "solute\n(moles)", ORANGE, fs=7)
+
+def draw_cfse_splitting(ax, progress=1.0):
+    """Octahedral crystal-field splitting of d orbitals."""
+    _setup(ax)
+    for i in range(5):
+        ax.plot([0.08 + i * 0.065, 0.12 + i * 0.065], [0.50, 0.50], color=WHITE, lw=2.5)
+    _t(ax, 0.23, 0.40, "5 d orbitals", GREY, fs=7)
+    a = _fade(progress, 0.3)
+    ax.plot([0.42, 0.56], [0.50, 0.80], color=GREY, lw=1, ls="--", alpha=a); ax.plot([0.42, 0.56], [0.50, 0.26], color=GREY, lw=1, ls="--", alpha=a)
+    for i in range(2):
+        ax.plot([0.60 + i * 0.10, 0.67 + i * 0.10], [0.80, 0.80], color=ORANGE, lw=3, alpha=a)
+    for i in range(3):
+        ax.plot([0.57 + i * 0.09, 0.63 + i * 0.09], [0.26, 0.26], color=CYAN, lw=3, alpha=a)
+    _t(ax, 0.70, 0.90, "$e_g$", ORANGE, fs=9, alpha=a); _t(ax, 0.70, 0.15, "$t_{2g}$", CYAN, fs=9, alpha=a)
+    _arrow(ax, (0.90, 0.26), (0.90, 0.80), YELLOW, style="<->", lw=1.8, alpha=a); _t(ax, 0.96, 0.53, "$\\Delta_o$", YELLOW, fs=9, alpha=a)
+
+def _rxn(ax, left, right, progress):
+    """left/right: lists of molecules; a molecule is a list of (label, colour)."""
+    nmax = max(sum(len(m) for m in side) for side in (left, right))
+    gmax = max(len(side) - 1 for side in (left, right))
+    r = min(0.085, (0.40 - 0.10 * gmax) / (2 * nmax * _K))
+    def place(mols, x0, x1, alpha):
+        n = sum(len(m) for m in mols)
+        units = n * 2 * r * _K + (len(mols) - 1) * 0.10
+        x = (x0 + x1) / 2 - units / 2
+        for j, m in enumerate(mols):
+            for lab, col in m:
+                _ball(ax, x + r * _K, 0.52, r, col, lab, fs=9, alpha=alpha); x += 2 * r * _K
+            if j < len(mols) - 1:
+                _t(ax, x + 0.05, 0.52, "+", WHITE, fs=11, alpha=alpha); x += 0.10
+    place(left, 0.0, 0.43, 1.0)
+    _arrow(ax, (0.445, 0.52), (0.555, 0.52), YELLOW, lw=2.4)
+    place(right, 0.57, 1.0, _fade(progress, 0.35))
+
+_A, _B, _C, _D = ("A", CYAN), ("B", ORANGE), ("C", GREEN), ("D", PINK)
+
+def draw_rxn_combination(ax, progress=1.0):
+    _setup(ax); _rxn(ax, [[_A], [_B]], [[_A, _B]], progress); _t(ax, 0.5, 0.14, "two join to make one", GREY, fs=7)
+
+def draw_rxn_decomposition(ax, progress=1.0):
+    _setup(ax); _rxn(ax, [[_A, _B]], [[_A], [_B]], progress); _t(ax, 0.5, 0.14, "one breaks into two", GREY, fs=7)
+
+def draw_rxn_displacement(ax, progress=1.0):
+    _setup(ax); _rxn(ax, [[_A], [_B, _C]], [[_A, _C], [_B]], progress); _t(ax, 0.5, 0.14, "A pushes B out", GREY, fs=7)
+
+def draw_rxn_double(ax, progress=1.0):
+    _setup(ax); _rxn(ax, [[_A, _B], [_C, _D]], [[_A, _D], [_C, _B]], progress); _t(ax, 0.5, 0.14, "partners are swapped", GREY, fs=7)
+
+def draw_electron_transfer(ax, progress=1.0):
+    """Redox: electron moves from one species to another."""
+    _setup(ax)
+    _ball(ax, 0.24, 0.48, 0.15, ORANGE, "X", fs=12); _ball(ax, 0.76, 0.48, 0.15, CYAN, "Y", fs=12)
+    a = _fade(progress, 0.2)
+    ax.annotate("", xy=(0.70, 0.68), xytext=(0.30, 0.68),
+                arrowprops=dict(arrowstyle="->", color=YELLOW, lw=2.2, alpha=a, connectionstyle="arc3,rad=-0.45"))
+    _t(ax, 0.50, 0.93, "e⁻", YELLOW, fs=10, alpha=a, fontweight="bold")
+    _t(ax, 0.24, 0.20, "oxidised", ORANGE, fs=8); _t(ax, 0.76, 0.20, "reduced", CYAN, fs=8)
+
+# ── Biology ──────────────────────────────────────────────────────────────────
+def _bars(ax, vals, labels, cols, progress, ymax=None, base=0.16, top=0.88):
+    ymax = ymax or max(vals); n = len(vals); w = 0.62 / n
+    ax.plot([0.12, 0.92], [base, base], color=GREY, lw=1.2)
+    for i, (v, lab, c) in enumerate(zip(vals, labels, cols)):
+        x = 0.18 + i * (0.70 / n)
+        h = (top - base) * v / ymax * min(1.0, progress * 1.4)
+        ax.add_patch(Rectangle((x, base), w * 0.8, h, facecolor=c, edgecolor="none"))
+        _t(ax, x + w * 0.4, base - 0.08, lab, c, fs=8)
+
+def draw_allele_bars(ax, progress=1.0):
+    """Hardy-Weinberg genotype frequencies."""
+    _setup(ax); _bars(ax, [0.25, 0.50, 0.25], ["AA\n$p^2$", "Aa\n$2pq$", "aa\n$q^2$"], [CYAN, YELLOW, PINK], progress, ymax=0.62, base=0.26)
+    _t(ax, 0.52, 0.95, "genotype frequencies add up to 1", GREY, fs=7)
+
+def draw_obs_exp_bars(ax, progress=1.0):
+    """Observed vs expected counts (chi-square)."""
+    _setup(ax)
+    ax.plot([0.10, 0.92], [0.16, 0.16], color=GREY, lw=1.2)
+    for i, (o, e) in enumerate([(0.62, 0.56), (0.30, 0.38), (0.44, 0.40)]):
+        x = 0.16 + i * 0.26; k = min(1.0, progress * 1.4)
+        ax.add_patch(Rectangle((x, 0.16), 0.09, o * k, facecolor=CYAN, edgecolor="none"))
+        ax.add_patch(Rectangle((x + 0.10, 0.16), 0.09, e * k, facecolor=ORANGE, edgecolor="none"))
+    _t(ax, 0.36, 0.93, "■ Observed", CYAN, fs=8); _t(ax, 0.70, 0.93, "■ Expected", ORANGE, fs=8)
+
+def draw_crossing_over(ax, progress=1.0):
+    """Homologous chromosomes before and after crossing over."""
+    _setup(ax)
+    for x, c in ((0.16, CYAN), (0.26, ORANGE)):
+        ax.plot([x, x], [0.15, 0.85], color=c, lw=7, solid_capstyle="round")
+    _t(ax, 0.08, 0.70, "A", CYAN, fs=8); _t(ax, 0.08, 0.30, "B", CYAN, fs=8); _t(ax, 0.34, 0.70, "a", ORANGE, fs=8); _t(ax, 0.34, 0.30, "b", ORANGE, fs=8)
+    _arrow(ax, (0.42, 0.50), (0.56, 0.50), WHITE, lw=2)
+    a = _fade(progress, 0.35)
+    for x, ctop, cbot in ((0.70, CYAN, ORANGE), (0.80, ORANGE, CYAN)):
+        ax.plot([x, x], [0.50, 0.85], color=ctop, lw=7, solid_capstyle="round", alpha=a)
+        ax.plot([x, x], [0.15, 0.50], color=cbot, lw=7, solid_capstyle="round", alpha=a)
+    _t(ax, 0.62, 0.70, "A", CYAN, fs=8, alpha=a); _t(ax, 0.62, 0.30, "b", ORANGE, fs=8, alpha=a); _t(ax, 0.88, 0.70, "a", ORANGE, fs=8, alpha=a); _t(ax, 0.88, 0.30, "B", CYAN, fs=8, alpha=a)
+    _t(ax, 0.75, 0.04, "recombinants", YELLOW, fs=7, alpha=a)
+
+def draw_chloroplast(ax, progress=1.0):
+    """Chloroplast with grana; light splits water."""
+    _setup(ax)
+    ax.add_patch(Ellipse((0.55, 0.42), 0.74, 0.56, facecolor="#0f3d24", edgecolor=GREEN, linewidth=2))
+    for gx in (0.36, 0.55, 0.74):
+        for k in range(4):
+            ax.add_patch(FancyBboxPatch((gx - 0.07, 0.30 + k * 0.065), 0.14, 0.04, boxstyle="round,pad=0,rounding_size=0.02",
+                                        facecolor=GREEN, edgecolor="none", alpha=0.85))
+    a = _fade(progress, 0.2)
+    for x in (0.10, 0.20, 0.30):
+        _arrow(ax, (x, 0.98), (x + 0.12, 0.76), YELLOW, lw=1.8, alpha=a)
+    _t(ax, 0.10, 0.70, "light", YELLOW, fs=8, alpha=a)
+    _t(ax, 0.55, 0.07, "thylakoids (grana)", GREEN, fs=7)
+    _t(ax, 0.92, 0.88, "$O_2$", CYAN, fs=9, alpha=_fade(progress, 0.5)); _arrow(ax, (0.82, 0.66), (0.90, 0.80), CYAN, lw=1.6, alpha=_fade(progress, 0.5))
+
+def draw_calvin_cycle(ax, progress=1.0):
+    """Calvin cycle: CO2 in, G3P out, powered by ATP and NADPH."""
+    _setup(ax)
+    for i, a0 in enumerate((100, 220, 340)):
+        ang = np.radians(np.linspace(a0, a0 + 95, 30))
+        ax.plot(0.5 + 0.24 * _K * np.cos(ang), 0.5 + 0.24 * np.sin(ang), color=GREEN, lw=2.5, alpha=_fade(progress, i * 0.2))
+        e = np.radians(a0 + 95); e2 = np.radians(a0 + 108)
+        _arrow(ax, (0.5 + 0.24 * _K * math.cos(e), 0.5 + 0.24 * math.sin(e)), (0.5 + 0.24 * _K * math.cos(e2), 0.5 + 0.24 * math.sin(e2)), GREEN, lw=2.5, alpha=_fade(progress, i * 0.2))
+    _t(ax, 0.5, 0.50, "Calvin\ncycle", WHITE, fs=8)
+    _t(ax, 0.14, 0.86, "$CO_2$ in", CYAN, fs=8); _arrow(ax, (0.18, 0.80), (0.31, 0.68), CYAN, lw=1.6)
+    _t(ax, 0.86, 0.14, "G3P out", YELLOW, fs=8); _arrow(ax, (0.68, 0.33), (0.82, 0.20), YELLOW, lw=1.6)
+    _t(ax, 0.86, 0.86, "ATP +\nNADPH", ORANGE, fs=7); _arrow(ax, (0.82, 0.78), (0.69, 0.66), ORANGE, lw=1.6)
+
+def draw_mitochondrion(ax, progress=1.0):
+    """Mitochondrion: O2 in, CO2 out, ATP made."""
+    _setup(ax)
+    ax.add_patch(Ellipse((0.5, 0.48), 0.56, 0.40, facecolor="#4a2410", edgecolor=ORANGE, linewidth=2))
+    x = np.linspace(0.28, 0.72, 200)
+    ax.plot(x, 0.48 + 0.11 * np.sin((x - 0.28) * 2 * np.pi * 5.5), color=ORANGE, lw=1.8)
+    a = _fade(progress, 0.25)
+    _arrow(ax, (0.03, 0.80), (0.24, 0.62), CYAN, lw=2, alpha=a); _t(ax, 0.08, 0.90, "$O_2$ in", CYAN, fs=8, alpha=a)
+    _arrow(ax, (0.76, 0.62), (0.97, 0.80), GREY, lw=2, alpha=a); _t(ax, 0.90, 0.90, "$CO_2$ out", WHITE, fs=8, alpha=a)
+    _t(ax, 0.50, 0.10, "ATP  (energy)", YELLOW, fs=9, alpha=_fade(progress, 0.5), fontweight="bold")
+
+def draw_flask_bubbles(ax, progress=1.0):
+    """Fermentation flask: yeast releasing CO2."""
+    _setup(ax)
+    ax.add_patch(Polygon([[0.24, 0.12], [0.76, 0.12], [0.60, 0.48], [0.40, 0.48]], closed=True, facecolor="#5a4a12", edgecolor="none"))
+    ax.plot([0.44, 0.44, 0.22, 0.78, 0.56, 0.56], [0.90, 0.56, 0.10, 0.10, 0.56, 0.90], color=WHITE, lw=1.8, solid_joinstyle="round")
+    rng = np.random.default_rng(5); n = max(1, int(9 * progress))
+    ax.plot(rng.uniform(0.465, 0.535, n), rng.uniform(0.20, 0.84, n), "o", markerfacecolor="none", markeredgecolor=CYAN, markersize=5)
+    _t(ax, 0.86, 0.82, "$CO_2$", CYAN, fs=9); _t(ax, 0.50, 0.03, "yeast + sugar, no oxygen", YELLOW, fs=7)
+    _t(ax, 0.12, 0.30, "ethanol", ORANGE, fs=7)
+
+def draw_pregnancy_timeline(ax, progress=1.0):
+    """Gestation timeline in trimesters."""
+    _setup(ax)
+    for i, (c, lab) in enumerate(((CYAN, "1st"), (YELLOW, "2nd"), (PINK, "3rd"))):
+        w = 0.26 * min(1.0, max(0.0, progress * 3 - i))
+        ax.add_patch(Rectangle((0.11 + i * 0.26, 0.44), w, 0.16, facecolor=c, edgecolor="none", alpha=0.9))
+        _t(ax, 0.24 + i * 0.26, 0.52, lab, "#06101f", fs=8, fontweight="bold")
+    for x, lab in ((0.11, "0"), (0.37, "13"), (0.63, "27"), (0.89, "40")):
+        ax.plot([x, x], [0.36, 0.44], color=WHITE, lw=1.2); _t(ax, x, 0.28, lab, WHITE, fs=8)
+    _t(ax, 0.50, 0.14, "weeks", GREY, fs=7); _t(ax, 0.50, 0.78, "trimesters", WHITE, fs=8)
+
+def draw_xy_chromosomes(ax, progress=1.0):
+    """XX and XY sex-chromosome pairs."""
+    _setup(ax)
+    def X(cx, cy, c, a=1.0):
+        ax.plot([cx - 0.05, cx + 0.05], [cy - 0.17, cy + 0.17], color=c, lw=6, solid_capstyle="round", alpha=a)
+        ax.plot([cx - 0.05, cx + 0.05], [cy + 0.17, cy - 0.17], color=c, lw=6, solid_capstyle="round", alpha=a)
+    def Y(cx, cy, c, a=1.0):
+        ax.plot([cx - 0.04, cx], [cy + 0.12, cy], color=c, lw=6, solid_capstyle="round", alpha=a)
+        ax.plot([cx + 0.04, cx], [cy + 0.12, cy], color=c, lw=6, solid_capstyle="round", alpha=a)
+        ax.plot([cx, cx], [cy, cy - 0.12], color=c, lw=6, solid_capstyle="round", alpha=a)
+    X(0.16, 0.58, PINK); X(0.32, 0.58, PINK); _t(ax, 0.24, 0.22, "XX  Female", PINK, fs=9, fontweight="bold")
+    a = _fade(progress, 0.3)
+    X(0.66, 0.58, CYAN, a); Y(0.82, 0.56, CYAN, a); _t(ax, 0.74, 0.22, "XY  Male", CYAN, fs=9, fontweight="bold", alpha=a)
+
+def draw_species_bars(ax, progress=1.0):
+    """Relative abundance of species in a community."""
+    _setup(ax); _bars(ax, [0.40, 0.25, 0.18, 0.10, 0.07], ["$p_1$", "$p_2$", "$p_3$", "$p_4$", "$p_5$"], [CYAN, GREEN, YELLOW, ORANGE, PINK], progress, ymax=0.46)
+    _t(ax, 0.60, 0.94, "share of each species", GREY, fs=7)
+
+# ── Mathematics ──────────────────────────────────────────────────────────────
+def draw_plane_normal(ax, progress=1.0):
+    """A plane with its normal vector."""
+    _setup(ax)
+    ax.add_patch(Polygon([[0.10, 0.18], [0.68, 0.18], [0.92, 0.56], [0.34, 0.56]], closed=True, facecolor=CYAN, alpha=0.22, edgecolor=CYAN, linewidth=1.8))
+    a = _fade(progress, 0.3)
+    _arrow(ax, (0.50, 0.37), (0.50, 0.90), YELLOW, lw=2.4, alpha=a); _t(ax, 0.58, 0.84, "normal  (a, b, c)", YELLOW, fs=7, alpha=a, ha="left")
+    ax.plot(0.50, 0.37, "o", color=WHITE, markersize=4); _t(ax, 0.24, 0.10, "plane", CYAN, fs=8)
+
+def draw_venn(ax, progress=1.0):
+    """Two overlapping events A and B."""
+    _setup(ax)
+    ax.add_patch(Rectangle((0.06, 0.10), 0.88, 0.80, fill=False, edgecolor=GREY, linewidth=1.2))
+    ax.add_patch(Ellipse((0.40, 0.50), 0.50 * _K, 0.50, facecolor=CYAN, alpha=0.35, edgecolor=CYAN, linewidth=1.8))
+    ax.add_patch(Ellipse((0.60, 0.50), 0.50 * _K, 0.50, facecolor=ORANGE, alpha=0.35 * _fade(progress, 0.2), edgecolor=ORANGE, linewidth=1.8))
+    _t(ax, 0.29, 0.50, "A", CYAN, fs=11, fontweight="bold"); _t(ax, 0.71, 0.50, "B", ORANGE, fs=11, fontweight="bold")
+    _t(ax, 0.50, 0.50, "A∩B", WHITE, fs=7, alpha=_fade(progress, 0.5))
+
+def draw_binomial_bars(ax, progress=1.0):
+    """Binomial distribution with its mean."""
+    _setup(ax)
+    vals = [math.comb(8, r) for r in range(9)]
+    ax.plot([0.08, 0.94], [0.16, 0.16], color=GREY, lw=1.2)
+    for r, v in enumerate(vals):
+        ax.add_patch(Rectangle((0.11 + r * 0.09, 0.16), 0.07, 0.62 * v / 70 * min(1.0, progress * 1.4), facecolor=CYAN, edgecolor="none"))
+    a = _fade(progress, 0.5)
+    ax.plot([0.505, 0.505], [0.16, 0.90], color=YELLOW, lw=1.5, ls="--", alpha=a); _t(ax, 0.62, 0.92, "mean = np", YELLOW, fs=7, alpha=a)
+    _t(ax, 0.50, 0.06, "number of successes  r", WHITE, fs=7)
+
+def draw_lp_unbounded(ax, progress=1.0):
+    """Unbounded feasible region."""
+    _setup(ax); _axes(ax, "x", "y")
+    ax.add_patch(Polygon([[0.14, 0.70], [0.34, 0.40], [0.66, 0.14], [0.94, 0.14], [0.94, 0.92], [0.14, 0.92]], closed=True, facecolor=CYAN, alpha=0.20, edgecolor="none"))
+    ax.plot([0.14, 0.34, 0.66], [0.70, 0.40, 0.14], color=CYAN, lw=2)
+    a = _fade(progress, 0.3)
+    for p0, p1 in (((0.55, 0.55), (0.80, 0.80)), ((0.40, 0.70), (0.56, 0.90)), ((0.70, 0.40), (0.90, 0.56))):
+        _arrow(ax, p0, p1, YELLOW, lw=1.8, alpha=a)
+    _t(ax, 0.62, 0.36, "region never closes", YELLOW, fs=7, alpha=a)
+
+def draw_right_triangle(ax, progress=1.0):
+    """Right triangle with opposite, adjacent and hypotenuse."""
+    _setup(ax)
+    ax.add_patch(Polygon([[0.16, 0.20], [0.82, 0.20], [0.82, 0.80]], closed=True, fill=False, edgecolor=CYAN, linewidth=2.2))
+    ax.plot([0.77, 0.77, 0.82], [0.20, 0.26, 0.26], color=WHITE, lw=1.2)
+    _t(ax, 0.30, 0.255, "θ", YELLOW, fs=10)
+    _t(ax, 0.49, 0.11, "Adjacent (A)", GREEN, fs=8); _t(ax, 0.91, 0.50, "Opposite (O)", ORANGE, fs=8, rotation=90)
+    _t(ax, 0.42, 0.58, "Hypotenuse (H)", PINK, fs=8, rotation=38, alpha=_fade(progress, 0.3))
+
+def draw_elevation(ax, progress=1.0):
+    """Angle of elevation to the top of a tower."""
+    _setup(ax)
+    ax.plot([0.06, 0.94], [0.18, 0.18], color=GREY, lw=1.5)
+    ax.add_patch(Rectangle((0.76, 0.18), 0.08, 0.62, facecolor="#274060", edgecolor=CYAN, linewidth=1.6))
+    ax.plot(0.14, 0.18, "o", color=YELLOW, markersize=6)
+    a = _fade(progress, 0.25)
+    ax.plot([0.14, 0.76], [0.18, 0.80], color=YELLOW, lw=1.6, ls="--", alpha=a)
+    _t(ax, 0.29, 0.235, "θ", YELLOW, fs=10, alpha=a)
+    _t(ax, 0.92, 0.50, "height", ORANGE, fs=8, rotation=90); _t(ax, 0.45, 0.08, "distance", GREEN, fs=8)
+    _t(ax, 0.36, 0.60, "line of sight", WHITE, fs=7, rotation=41, alpha=a)
+
+# ── Computer Science ─────────────────────────────────────────────────────────
+def draw_osi_stack(ax, progress=1.0):
+    """Seven OSI layers."""
+    _setup(ax)
+    names = ["7  Application", "6  Presentation", "5  Session", "4  Transport", "3  Network", "2  Data Link", "1  Physical"]
+    cols = [PINK, PURPLE, BLUE, CYAN, GREEN, YELLOW, ORANGE]
+    show = max(1, int(7 * min(1.0, progress * 1.3)))
+    for i, (nm, c) in enumerate(zip(names, cols)):
+        if i >= show: break
+        y = 0.86 - i * 0.125
+        ax.add_patch(Rectangle((0.20, y), 0.60, 0.105, facecolor=c, edgecolor="none", alpha=0.85))
+        _t(ax, 0.50, y + 0.052, nm, "#06101f" if c in (CYAN, GREEN, YELLOW, ORANGE, PINK) else WHITE, fs=7, fontweight="bold")
+
+
+DIAGRAMS.update({
+    "coil_magnet_emi": draw_coil_magnet, "lenz_ring": draw_lenz_ring, "motional_rod": draw_motional_rod,
+    "inductor_coil": draw_inductor_coil, "wire_resistivity": draw_wire_resistivity,
+    "two_charges": draw_two_charges, "equipotential": draw_equipotential,
+    "convex_lens": draw_convex_lens, "lens_focus": draw_lens_focus, "logic_gate_not": draw_logic_gate_not,
+    "wire_field": draw_wire_field, "current_element": draw_current_element,
+    "force_on_wire": draw_force_on_wire, "solenoid": draw_solenoid, "mass_energy": draw_mass_energy,
+    "resistors_series": draw_resistors_series, "resistors_parallel": draw_resistors_parallel,
+    "rate_conc": draw_rate_conc, "galvanic_cell": draw_galvanic_cell, "beaker_solution": draw_beaker_solution,
+    "cfse_splitting": draw_cfse_splitting, "rxn_combination": draw_rxn_combination,
+    "rxn_decomposition": draw_rxn_decomposition, "rxn_displacement": draw_rxn_displacement,
+    "rxn_double": draw_rxn_double, "electron_transfer": draw_electron_transfer,
+    "allele_bars": draw_allele_bars, "obs_exp_bars": draw_obs_exp_bars, "crossing_over": draw_crossing_over,
+    "chloroplast": draw_chloroplast, "calvin_cycle": draw_calvin_cycle, "mitochondrion": draw_mitochondrion,
+    "flask_bubbles": draw_flask_bubbles, "pregnancy_timeline": draw_pregnancy_timeline,
+    "xy_chromosomes": draw_xy_chromosomes, "species_bars": draw_species_bars,
+    "plane_normal": draw_plane_normal, "venn": draw_venn, "binomial_bars": draw_binomial_bars,
+    "lp_unbounded": draw_lp_unbounded, "right_triangle": draw_right_triangle, "elevation": draw_elevation,
+    "osi_stack": draw_osi_stack,
+})
