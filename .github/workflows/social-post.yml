@@ -217,20 +217,27 @@ jobs:
             python3 post_pyq.py --today
           fi
 
-      - name: Commit tracker CSV updates
+      - name: Save posting progress (after Facebook / Instagram / papers)
+        if: always()
         run: |
           git config user.name  "social-post-bot"
           git config user.email "bot@cbsemock.org.in"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git add social-posting-tracker.csv \
-                  formula-posts/post_log.csv \
-                  formula-posts/reel_log.csv \
-                  formula-posts/queue/ \
-                  formula-posts/posted/ \
-                  formula-posts/videos/queue/ \
-                  formula-posts/videos/posted/ 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "chore: update formula flash queue and tracker [skip ci]"
-          git push || true
+          # Add each path on its own: one missing folder must not stop the others
+          # from being saved (that is what made the same lab / notes post repeat).
+          for p in social-posting-tracker.csv afternoon-tracker.json \
+                   formula-posts/post_log.csv formula-posts/reel_log.csv \
+                   formula-posts/queue formula-posts/posted \
+                   formula-posts/videos/queue formula-posts/videos/posted; do
+            [ -e "$p" ] && git add -A -- "$p" || true
+          done
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "chore: save posting progress [skip ci]"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" || true
+            git push origin "HEAD:${GITHUB_REF_NAME:-main}" || echo "::warning::Could not save posting progress — the same item may be posted again."
+          fi
 
       - name: Festival Greeting (Telegram)
         if: >
@@ -296,11 +303,24 @@ jobs:
             python3 post_afternoon.py
           fi
 
-      - name: Commit afternoon tracker updates
-        if: steps.mode.outputs.mode == 'afternoon'
+      - name: Save posting progress (after Telegram)
+        if: always()
         run: |
           git config user.name  "social-post-bot"
           git config user.email "bot@cbsemock.org.in"
-          git add afternoon-tracker.json 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "chore: update afternoon tracker [skip ci]"
-          git push || true
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          # Add each path on its own: one missing folder must not stop the others
+          # from being saved (that is what made the same lab / notes post repeat).
+          for p in social-posting-tracker.csv afternoon-tracker.json \
+                   formula-posts/post_log.csv formula-posts/reel_log.csv \
+                   formula-posts/queue formula-posts/posted \
+                   formula-posts/videos/queue formula-posts/videos/posted; do
+            [ -e "$p" ] && git add -A -- "$p" || true
+          done
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "chore: save posting progress [skip ci]"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}" || true
+            git push origin "HEAD:${GITHUB_REF_NAME:-main}" || echo "::warning::Could not save posting progress — the same item may be posted again."
+          fi
