@@ -458,7 +458,7 @@ section{scroll-margin-top:130px;max-width:900px;margin-left:auto;margin-right:au
 
 <div class="topnav">
   <div class="brand">CBSE<span>Mock</span> — Business Studies XII</div>
-  <div class="nav-right"><span id="streakLabel">🔥 0</span><span id="navUser" onclick="showNameModal()">👤 Set Name</span></div>
+  <div class="nav-right"><span id="streakLabel">🔥 0</span><span id="navUser">👤 Student</span></div>
 </div>
 <div class="xp-bar-wrap">
   <div class="xp-meta"><span id="xpLevel">Lv 1 · Business Novice</span><span id="xpLabel">0 XP</span></div>
@@ -1751,7 +1751,7 @@ if(gs.visited&&gs.visited['f1']&&gs.visited['f2'])add('finance_done');
 if(gs.visited&&gs.visited['m1'])add('marketing_done');
 if(gs.visited&&gs.visited['m2'])add('consumer_done');}
 function renderBadgesRow(){const gs=getGS();const earned=gs.badges||[];['badgeRowHome','badgeRowDash'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.innerHTML=ALL_BADGES.map(b=>`<div class="badge-chip ${earned.includes(b.id)?'earned':'locked'}"><span class="b-icon">${b.icon}</span>${b.name}</div>`).join('')})}
-function showNameModal(){document.getElementById('nameModal').classList.add('open')}
+function showNameModal(){const m=document.getElementById('nameModal');if(m)m.classList.add('open');}
 function saveName(){const n=document.getElementById('nameInput').value.trim();if(!n)return;const gs=getGS();gs.name=n;saveGS(gs);document.getElementById('navUser').textContent='👤 '+n;document.getElementById('nameModal').classList.remove('open');showToast('Welcome, '+n+'! 🎉')}
 
 const MAP={home:'sec-home',b1:'sec-b1',b2:'sec-b2',b3:'sec-b3',b4:'sec-b4',b5:'sec-b5',b6:'sec-b6',b7:'sec-b7',b8:'sec-b8',f1:'sec-f1',f2:'sec-f2',m1:'sec-m1',m2:'sec-m2',worked:'sec-worked',pp:'sec-pp',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',sim:'sec-sim',dash:'sec-dash'};

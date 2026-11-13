@@ -393,7 +393,7 @@ section{scroll-margin-top:130px}
 <nav class="topnav">
   <a class="brand" href="../index.html">CBSE<span>Mock</span></a>
   <div class="nav-links"><a href="../index.html">🏠 Home</a><a href="#">📚 Resources</a></div>
-  <span id="navUser" onclick="showNameModal()">👤 Student</span>
+  <span id="navUser">👤 Student</span>
   <span id="streakLabel">🔥 0</span>
 </nav>
 <div class="xp-bar-wrap">
@@ -1715,7 +1715,7 @@ function go(k){showMainSection(k)}
 function resumeLearning(){let gs=getGS()||initGS();const visited=ALL_TOPIC_KEYS.filter(k=>gs.topicVisits[k]);const next=ALL_TOPIC_KEYS.find(k=>!gs.topicVisits[k]);go(next||visited[visited.length-1]||'num')}
 
 // ─── Name modal ────────────────────────────────────────────────────────────
-function showNameModal(){document.getElementById('nameModal').classList.add('open')}
+function showNameModal(){const m=document.getElementById('nameModal');if(m)m.classList.add('open');}
 function saveName(){const n=document.getElementById('nameInput').value.trim();if(!n)return;let gs=getGS()||initGS();gs.name=n;saveGS(gs);document.getElementById('navUser').textContent='👤 '+n;document.getElementById('nameModal').classList.remove('open');showToast('Welcome, '+n+'!')}
 
 // ─── Exam ───────────────────────────────────────────────────────────────────

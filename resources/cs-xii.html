@@ -12570,7 +12570,7 @@ function _goTopicBase(id){
   const view = document.getElementById('topic-'+id);
   if(view) view.classList.add('active');
   else document.getElementById('contentArea').innerHTML='<div style="padding:40px;color:#999;text-align:center">Topic content loading…</div>';
-  const _sec=document.getElementById(MAP[key]);if(_sec){const _stickyH=(document.querySelector('.main-tabs-wrap')||{offsetTop:0,offsetHeight:0});const _barH=(_stickyH.offsetTop||52)+(_stickyH.offsetHeight||72)+10;const _y=_sec.getBoundingClientRect().top+window.scrollY-_barH;window.scrollTo({top:Math.max(0,_y),behavior:'smooth'});}else{window.scrollTo({top:0,behavior:'smooth'});}
+  const _sec=document.getElementById('topic-'+id);if(_sec){const _stickyH=(document.querySelector('.main-tabs-wrap')||{offsetTop:0,offsetHeight:0});const _barH=(_stickyH.offsetTop||52)+(_stickyH.offsetHeight||72)+10;const _y=_sec.getBoundingClientRect().top+window.scrollY-_barH;window.scrollTo({top:Math.max(0,_y),behavior:'smooth'});}else{window.scrollTo({top:0,behavior:'smooth'});}
 }
 
 

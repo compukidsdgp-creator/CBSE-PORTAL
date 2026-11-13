@@ -425,7 +425,7 @@ section{scroll-margin-top:130px}
 <nav class="topnav">
   <a class="brand" href="../index.html">CBSE<span>Mock</span></a>
   <div class="nav-links"><a href="../index.html">🏠 Home</a><a href="#">📚 Resources</a></div>
-  <span id="navUser" onclick="showNameModal()">👤 Student</span>
+  <span id="navUser">👤 Student</span>
   <span id="streakLabel">🔥 0</span>
 </nav>
 <div class="xp-bar-wrap">
@@ -1408,7 +1408,7 @@ function renderBadgesRow(){let gs=getGS()||initGS();const earned=new Set(gs.badg
 function showMainSection(k){ALL_SECS.forEach(id=>{const s=document.getElementById(id);if(s)s.classList.remove('active')});const sec=document.getElementById(MAP[k]||MAP['home']);if(sec)sec.classList.add('active');document.querySelectorAll('.main-tab').forEach((t,i)=>{t.classList.toggle('active',i===(tabMap[k]??0))});if(ALL_TOPIC_KEYS.includes(k))recordTopicVisit(k)}
 function go(k){showMainSection(k)}
 function resumeLearning(){let gs=getGS()||initGS();const next=ALL_TOPIC_KEYS.find(k=>!gs.topicVisits[k]);go(next||'hist')}
-function showNameModal(){document.getElementById('nameModal').classList.add('open')}
+function showNameModal(){const m=document.getElementById('nameModal');if(m)m.classList.add('open');}
 function saveName(){const n=document.getElementById('nameInput').value.trim();if(!n)return;let gs=getGS()||initGS();gs.name=n;saveGS(gs);document.getElementById('navUser').textContent='👤 '+n;document.getElementById('nameModal').classList.remove('open');showToast('Welcome, '+n+'!')}
 let examState=null;
 function buildExamModes(){const c=document.getElementById('examModeCards');c.innerHTML='';Object.entries(EXAM_MODES).forEach(([k,m])=>{const d=document.createElement('div');d.className='exam-mode-card';d.dataset.mode=k;d.innerHTML=`<h3>${m.label}</h3><p>${m.mins} mins · ${m.marks} marks</p>`;d.onclick=()=>{document.querySelectorAll('.exam-mode-card').forEach(x=>x.classList.remove('selected'));d.classList.add('selected');examState={mode:k}};c.appendChild(d)})}

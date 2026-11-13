@@ -434,7 +434,7 @@ section{scroll-margin-top:130px}
 <nav class="topnav">
   <a class="brand" href="../index.html">CBSE<span>Mock</span></a>
   <div class="nav-links"><a href="../index.html">🏠 Home</a><a href="#">📚 Resources</a></div>
-  <span id="navUser" onclick="showNameModal()">👤 Student</span>
+  <span id="navUser">👤 Student</span>
   <span id="streakLabel">🔥 0</span>
 </nav>
 <div class="xp-bar-wrap">
@@ -1355,7 +1355,7 @@ if(gs.visits&&gs.visits.trg)add('trg_done');
 if(gs.visits&&gs.visits.sta)add('sta_done');
 return changed;}
 function renderBadgesRow(){const gs=getGS();const earned=new Set(gs.badges);const html=ALL_BADGES.map(b=>`<span class="badge-chip ${earned.has(b.id)?'earned':'locked'}" title="${b.desc}">${b.icon} ${b.name}</span>`).join('');document.getElementById('badgeRowHome').innerHTML=html;document.getElementById('badgeRowDash').innerHTML=html;}
-function showNameModal(){document.getElementById('nameModal').classList.add('open');}
+function showNameModal(){const m=document.getElementById('nameModal');if(m)m.classList.add('open');}
 function saveName(){const v=document.getElementById('nameInput').value.trim();if(!v)return;const gs=getGS();gs.name=v;saveGS(gs);document.getElementById('navUser').textContent='👤 '+v;document.getElementById('nameModal').classList.remove('open');}
 function showMainSection(k){ALL_SECS.forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('active');});const sec=document.getElementById(MAP[k]||'sec-home');if(sec)sec.classList.add('active');document.querySelectorAll('.main-tab').forEach((t,i)=>{t.classList.toggle('active',i===tabMap[k]);});if(ALL_TOPIC_KEYS.includes(k)){recordTopicVisit(k);const gs=getGS();gs.lastTopic=k;saveGS(gs);}if(k==='dash')updateDash();}
 function go(k){showMainSection(k);}
