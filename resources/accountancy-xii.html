@@ -448,7 +448,7 @@ section{scroll-margin-top:130px}
 <nav class="topnav">
   <div class="logo" onclick="go('home')">CBSE<span>Mock</span> · Accountancy XII 📒</div>
   <div class="nav-right">
-    <span class="nav-user" id="navUser" onclick="showNameModal()">👤 Student</span>
+    <span class="nav-user" id="navUser">👤 Student</span>
     <button class="nav-btn" onclick="go('exam')">📝 Exam</button>
     <button class="nav-btn" onclick="go('dash')">📊 Dashboard</button>
   </div>
@@ -1570,7 +1570,7 @@ const comp=['c1','c2'];if(comp.every(k=>gs.visited&&gs.visited[k]))add('all_comp
 if(gs.visited&&gs.visited['f1'])add('ratio_done');
 if(gs.visited&&gs.visited['f2'])add('cashflow_done');}
 function renderBadgesRow(){const gs=getGS();const earned=gs.badges||[];['badgeRowHome','badgeRowDash'].forEach(id=>{const el=document.getElementById(id);if(!el)return;el.innerHTML=ALL_BADGES.map(b=>`<div class="badge-chip ${earned.includes(b.id)?'earned':'locked'}"><span class="b-icon">${b.icon}</span>${b.name}</div>`).join('')})}
-function showNameModal(){document.getElementById('nameModal').classList.add('open')}
+function showNameModal(){const m=document.getElementById('nameModal');if(m)m.classList.add('open');}
 function saveName(){const n=document.getElementById('nameInput').value.trim();if(!n)return;const gs=getGS();gs.name=n;saveGS(gs);document.getElementById('navUser').textContent='👤 '+n;document.getElementById('nameModal').classList.remove('open');showToast('Welcome, '+n+'! 🎉')}
 
 const MAP={home:'sec-home',p1:'sec-p1',p2:'sec-p2',p3:'sec-p3',p4:'sec-p4',p5:'sec-p5',c1:'sec-c1',c2:'sec-c2',f1:'sec-f1',f2:'sec-f2',pp:'sec-pp',pyq:'sec-pyq',mistakes:'sec-mistakes',examiner:'sec-examiner',highprob:'sec-highprob',lastmin:'sec-lastmin',sim:'sec-sim',exam:'sec-sim',dash:'sec-dash'};

@@ -1756,6 +1756,16 @@ const MAP={
 };
 let curKey="home";
 
+// Light / dark theme button (the styles already support both)
+function toggleTheme(){
+  const r=document.documentElement;
+  const cur=r.getAttribute('data-theme')||(window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  const next=cur==='dark'?'light':'dark';
+  r.setAttribute('data-theme',next);
+  try{localStorage.setItem('ck_theme',next);}catch(e){}
+}
+try{const _t=localStorage.getItem('ck_theme');if(_t)document.documentElement.setAttribute('data-theme',_t);}catch(e){}
+
 function go(key){
   document.querySelectorAll('main > section').forEach(s=>s.style.display='none');
   const sec=document.getElementById(MAP[key]);
