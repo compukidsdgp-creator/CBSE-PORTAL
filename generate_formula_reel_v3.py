@@ -446,7 +446,15 @@ def render_frame(job):
     plt.close(fig)
 
 
-def generate_reel(topic_id, part=None, out_dir=OUT_DIR, workers=None):
+def queue_name(topic_id, part, nparts):
+    """Poster-friendly file name: post_formula_reel.py turns the stem into the caption title."""
+    import re
+    d = TOPICS[topic_id]
+    slug = re.sub(r"[^a-z0-9]+", "_", f"{d['title_line1']} {d['title_line2']}".lower()).strip("_")
+    return f"{slug}_part_{part}.mp4" if nparts > 1 else f"{slug}.mp4"
+
+
+def generate_reel(topic_id, part=None, out_dir=OUT_DIR, workers=None, queue_names=False):
     """Render one topic. Returns the list of MP4 paths (one per part)."""
     data   = TOPICS[topic_id]
     chunks = split_rows(data["rows"])
@@ -456,7 +464,10 @@ def generate_reel(topic_id, part=None, out_dir=OUT_DIR, workers=None):
         secs    = INTRO_SEC + CARD_SEC * len(chunks[pn - 1]) + OUTRO_SEC
         nframes = int(round(secs * FPS))
         suffix  = f"_p{pn}" if len(chunks) > 1 else ""
-        out     = out_dir / f"{topic_id}_reel_v3{suffix}.mp4"
+        out     = out_dir / (queue_name(topic_id, pn, len(chunks)) if queue_names
+                             else f"{topic_id}_reel_v3{suffix}.mp4")
+        if queue_names and out.exists():
+            print(f"[SKIP] {out.name} exists"); outputs.append(out); continue
         frame_dir = Path(tempfile.mkdtemp(prefix="reel_v3_"))
         print(f"[INFO] {topic_id} part {pn}/{len(chunks)}: {nframes} frames ({secs:.0f}s)")
         jobs = [(topic_id, pn, fi, str(frame_dir)) for fi in range(nframes)]
@@ -464,12 +475,12 @@ def generate_reel(topic_id, part=None, out_dir=OUT_DIR, workers=None):
             pool.map(render_frame, jobs, chunksize=15)
 
         base = ["ffmpeg", "-y", "-framerate", str(FPS), "-i", str(frame_dir / "frame_%05d.png")]
-        venc = ["-c:v", "libx264", "-profile:v", "main", "-level", "4.0", "-preset", "fast",
-                "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart"]
+        venc = ["-c:v", "libx264", "-profile:v", "main", "-level", "4.0", "-preset", "slow",
+                "-crf", "23", "-pix_fmt", "yuv420p", "-movflags", "+faststart"]
         ok = False
         if BG_MUSIC.exists():
             cmd = base + ["-stream_loop", "-1", "-i", str(BG_MUSIC)] + venc + [
-                "-c:a", "aac", "-ar", "44100", "-b:a", "128k",
+                "-c:a", "aac", "-ar", "44100", "-b:a", "96k",
                 "-af", f"afade=t=in:st=0:d=1.5,afade=t=out:st={secs - 2}:d=2,volume=0.4",
                 "-t", f"{secs}", str(out)]
             r = subprocess.run(cmd, capture_output=True, text=True)
@@ -494,6 +505,8 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--out-dir", default=str(OUT_DIR))
     ap.add_argument("--list", action="store_true", help="list topics and their parts")
+    ap.add_argument("--queue-names", action="store_true",
+                    help="name files the way post_formula_reel.py expects (title_part_N.mp4)")
     a = ap.parse_args()
     if a.list:
         for k, v in TOPICS.items():
@@ -502,7 +515,7 @@ def main():
     for tid in (TOPICS if a.all else [a.topic]):
         if tid not in TOPICS:
             sys.exit(f"Unknown topic '{tid}'. Use --list.")
-        generate_reel(tid, a.part, a.out_dir)
+        generate_reel(tid, a.part, a.out_dir, queue_names=a.queue_names)
 
 
 if __name__ == "__main__":
