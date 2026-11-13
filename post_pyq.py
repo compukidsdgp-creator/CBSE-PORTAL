@@ -490,7 +490,7 @@ def run_today(dry_run: bool):
     and papers that are already posted.
     """
     import mock_bank
-    from pyq_generator import build_pdf_from_paper
+    from mock_paper_pdf import build_mock_pdf
 
     d = mock_bank.today_ist()
     paper_date = d.strftime("%d %B %Y")
@@ -512,9 +512,9 @@ def run_today(dry_run: bool):
     built, paths = [], []
     for cls, e in todo:
         sk = e["subject_key"]
-        meta, _ = mock_bank.paper_sections(sk, e["question_ids"])
+        meta, _ = mock_bank.paper_sections(sk, e["question_ids"], raw=True)
         pdf_path = OUTPUT_DIR / f"{sk}_{d.isoformat()}.pdf"
-        build_pdf_from_paper(meta, str(pdf_path), paper_date)
+        build_mock_pdf(meta, str(pdf_path), paper_date, paper_id=e["paper_id"])
         print(f"📄  {e['paper_id']}: {pdf_path.name}")
         built.append((cls, sk, pdf_path, f"https://cbsemock.org.in/pyq-papers/{pdf_path.name}"))
         paths.append(pdf_path.relative_to(REPO_ROOT))

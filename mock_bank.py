@@ -128,7 +128,7 @@ def _for_pdf(q: dict) -> dict:
         out["note"] = _markup(q["note"])
     return out
 
-def paper_sections(subject_key: str, question_ids: list):
+def paper_sections(subject_key: str, question_ids: list, raw: bool = False):
     """(meta, sections-with-questions) ready for pyq_generator.build_pdf_from_paper."""
     bank = load_subject(subject_key)
     by_id = {q["id"]: q for q in bank["questions"]}
@@ -137,11 +137,12 @@ def paper_sections(subject_key: str, question_ids: list):
         raise KeyError(f"{subject_key}: questions missing from the bank: {missing[:5]}")
     wanted, sections, n = set(question_ids), [], 1
     for sec in bank["sections"]:
-        qs = [_for_pdf(by_id[i]) for i in question_ids if by_id[i]["section"] == sec["name"]]
+        qs = [(dict(by_id[i], marks=TYPE_MARKS[by_id[i]["type"]]) if raw else _for_pdf(by_id[i]))
+              for i in question_ids if by_id[i]["section"] == sec["name"]]
         order = [t for t, _ in sec["slots"]]
         qs.sort(key=lambda q: order.index(q["type"]))
         ar = [n + k for k, q in enumerate(qs) if q["type"] == "A/R"]
-        if ar:
+        if ar and not raw:
             nums = " & ".join(str(x) for x in ar) if len(ar) <= 2 else f"{ar[0]} to {ar[-1]}"
             first = next(q for q in qs if q["type"] == "A/R")
             first["preamble"] = _markup(AR_PREAMBLE.format(nums=nums))
@@ -353,7 +354,7 @@ def main():
             validate(); sys.exit("Fix the problems above before planning.")
         plan(a.slots, date.fromisoformat(a.start) if a.start else None)
     if a.cmd == "preview":
-        from pyq_generator import build_pdf_from_paper
+        from mock_paper_pdf import build_mock_pdf
         out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
         for d, e in load_calendar().items():
             if d < today_ist().isoformat():
@@ -361,10 +362,10 @@ def main():
             for cls in ROTATION:
                 if e[cls]["posted"]:
                     continue
-                meta, _ = paper_sections(e[cls]["subject_key"], e[cls]["question_ids"])
+                meta, _ = paper_sections(e[cls]["subject_key"], e[cls]["question_ids"], raw=True)
                 pd_ = date.fromisoformat(d).strftime("%d %B %Y")
                 f = out / f"{e[cls]['subject_key']}_{d}.pdf"
-                build_pdf_from_paper(meta, str(f), pd_)
+                build_mock_pdf(meta, str(f), pd_, paper_id=e[cls]["paper_id"])
                 print(f"[PDF] {f}")
 
 
