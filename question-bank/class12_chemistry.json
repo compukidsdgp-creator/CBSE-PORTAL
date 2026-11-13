@@ -1,0 +1,500 @@
+{
+ "subject_key": "chemistry12",
+ "subject": "Chemistry",
+ "class": "XII",
+ "max_marks": 70,
+ "time": "3 Hours",
+ "sections": [
+  {
+   "name": "SECTION A",
+   "title": "MCQ & Assertion-Reason",
+   "marks": 16,
+   "slots": [
+    [
+     "MCQ",
+     14
+    ],
+    [
+     "A/R",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "SECTION B",
+   "title": "Very Short Answer",
+   "marks": 10,
+   "slots": [
+    [
+     "VSA",
+     5
+    ]
+   ]
+  },
+  {
+   "name": "SECTION C",
+   "title": "Short Answer",
+   "marks": 21,
+   "slots": [
+    [
+     "SA",
+     7
+    ]
+   ]
+  },
+  {
+   "name": "SECTION D",
+   "title": "Case Study",
+   "marks": 8,
+   "slots": [
+    [
+     "CBQ",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "SECTION E",
+   "title": "Long Answer",
+   "marks": 15,
+   "slots": [
+    [
+     "LA",
+     3
+    ]
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "ch12-0001",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Solutions",
+   "text": "Which colligative property is most suitable for determining the molar mass of proteins and polymers?",
+   "options": [
+    "(A) Relative lowering of vapour pressure",
+    "(B) Elevation of boiling point",
+    "(C) Osmotic pressure",
+    "(D) Depression of freezing point"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0002",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Solutions",
+   "text": "The van't Hoff factor for K₂SO₄, assuming complete dissociation in water, is:",
+   "options": [
+    "(A) 2",
+    "(B) 3",
+    "(C) 4",
+    "(D) 1"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0003",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Solutions",
+   "text": "A mixture of nitric acid and water forms a maximum boiling azeotrope. This solution shows:",
+   "options": [
+    "(A) negative deviation from Raoult's law",
+    "(B) positive deviation from Raoult's law",
+    "(C) ideal behaviour",
+    "(D) no change in boiling point"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0004",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electrochemistry",
+   "text": "The unit of molar conductivity is:",
+   "options": [
+    "(A) S cm⁻¹",
+    "(B) S cm mol⁻¹",
+    "(C) S⁻¹ cm² mol⁻¹",
+    "(D) S cm² mol⁻¹"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0005",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electrochemistry",
+   "text": "The quantity of charge required to reduce 1 mol of Al³⁺ ions to Al is:",
+   "options": [
+    "(A) 1 F",
+    "(B) 2 F",
+    "(C) 3 F",
+    "(D) 6 F"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0006",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electrochemistry",
+   "text": "The electrolyte used in a lead storage battery is:",
+   "options": [
+    "(A) 38% solution of sulphuric acid",
+    "(B) concentrated nitric acid",
+    "(C) potassium hydroxide solution",
+    "(D) ammonium chloride paste"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0007",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Chemical Kinetics",
+   "text": "The unit of the rate constant for a first order reaction is:",
+   "options": [
+    "(A) mol L⁻¹ s⁻¹",
+    "(B) s⁻¹",
+    "(C) L mol⁻¹ s⁻¹",
+    "(D) mol² L⁻² s⁻¹"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0008",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Chemical Kinetics",
+   "text": "For a zero order reaction, the half-life period is:",
+   "options": [
+    "(A) directly proportional to the initial concentration",
+    "(B) independent of the initial concentration",
+    "(C) inversely proportional to the initial concentration",
+    "(D) proportional to the square of the initial concentration"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0009",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Chemical Kinetics",
+   "text": "A catalyst increases the rate of a reaction by:",
+   "options": [
+    "(A) increasing the activation energy",
+    "(B) increasing the enthalpy of reaction",
+    "(C) shifting the equilibrium towards products",
+    "(D) providing a path of lower activation energy"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0010",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "The d- and f-Block Elements",
+   "text": "Most transition metal ions are coloured in aqueous solution because of:",
+   "options": [
+    "(A) charge transfer from water",
+    "(B) their small size",
+    "(C) d-d transitions of electrons",
+    "(D) their high ionisation enthalpy"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0011",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "The d- and f-Block Elements",
+   "text": "Lanthanoid contraction is caused by:",
+   "options": [
+    "(A) the high nuclear charge alone",
+    "(B) the poor shielding of nuclear charge by 4f electrons",
+    "(C) the strong shielding by 5d electrons",
+    "(D) the presence of unpaired electrons"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0012",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordination Compounds",
+   "text": "The oxidation state of iron in K₄[Fe(CN)₆] is:",
+   "options": [
+    "(A) +2",
+    "(B) +3",
+    "(C) +4",
+    "(D) 0"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0013",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordination Compounds",
+   "text": "The IUPAC name of [Co(NH₃)₆]Cl₃ is:",
+   "options": [
+    "(A) hexaamminecobalt(II) chloride",
+    "(B) hexaaminecobaltate(III) chloride",
+    "(C) cobalt(III) hexaammine chloride",
+    "(D) hexaamminecobalt(III) chloride"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0014",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "Which of the following alkyl halides reacts fastest by the SN1 mechanism?",
+   "options": [
+    "(A) CH₃Br",
+    "(B) CH₃CH₂Br",
+    "(C) (CH₃)₃CBr",
+    "(D) (CH₃)₂CHBr"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0015",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "Phenol reacts with bromine water to give a white precipitate of:",
+   "options": [
+    "(A) o-bromophenol",
+    "(B) 2,4,6-tribromophenol",
+    "(C) p-bromophenol",
+    "(D) bromobenzene"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0016",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "Which of the following compounds gives a silver mirror with Tollens' reagent?",
+   "options": [
+    "(A) Propanone",
+    "(B) Ethanal",
+    "(C) Ethanol",
+    "(D) Ethanoic acid"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0017",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Amines",
+   "text": "Which of the following is the strongest base in aqueous solution?",
+   "options": [
+    "(A) NH₃",
+    "(B) CH₃NH₂",
+    "(C) (CH₃)₂NH",
+    "(D) C₆H₅NH₂"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0018",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biomolecules",
+   "text": "The linkage that joins two amino acid units in a protein is called:",
+   "options": [
+    "(A) a peptide linkage",
+    "(B) a glycosidic linkage",
+    "(C) a phosphodiester linkage",
+    "(D) an ester linkage"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0019",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biomolecules",
+   "text": "The deficiency of which vitamin causes scurvy?",
+   "options": [
+    "(A) Vitamin A",
+    "(B) Vitamin B₁₂",
+    "(C) Vitamin D",
+    "(D) Vitamin C"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0020",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Solutions",
+   "text": "Assertion (A): The molarity of a solution changes with temperature.\nReason (R): The volume of a solution changes with temperature.",
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0021",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Coordination Compounds",
+   "text": "Assertion (A): [Ni(CO)₄] is a diamagnetic complex.\nReason (R): Nickel is in the +2 oxidation state in [Ni(CO)₄].",
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0022",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "Assertion (A): Phenol is a stronger acid than ethanol.\nReason (R): The phenoxide ion is stabilised by resonance, whereas the ethoxide ion is not.",
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0023",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Solutions",
+   "text": "State Henry's law. Why are bottles of soft drinks sealed under high pressure?"
+  },
+  {
+   "id": "ch12-0024",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Electrochemistry",
+   "text": "Calculate the standard emf and the standard Gibbs energy change of the cell Zn | Zn²⁺(1 M) || Cu²⁺(1 M) | Cu.\n(Given: E°(Zn²⁺/Zn) = −0.76 V, E°(Cu²⁺/Cu) = +0.34 V, F = 96500 C mol⁻¹)"
+  },
+  {
+   "id": "ch12-0025",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Chemical Kinetics",
+   "text": "The rate constant of a first order reaction is 6.93 × 10⁻³ s⁻¹. Calculate its half-life and the time required for 75% of the reaction to be completed."
+  },
+  {
+   "id": "ch12-0026",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "The d- and f-Block Elements",
+   "text": "Give reasons:\n(a) Zinc, cadmium and mercury are not regarded as transition elements.\n(b) Transition metals and many of their compounds act as good catalysts."
+  },
+  {
+   "id": "ch12-0027",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "Give two reasons why haloarenes are less reactive than haloalkanes towards nucleophilic substitution reactions."
+  },
+  {
+   "id": "ch12-0028",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Amines",
+   "text": "Describe a chemical test to distinguish between methylamine and dimethylamine. Write the chemical equation involved.\nOR\nWrite the chemical equations for the conversion of aniline into (a) benzenediazonium chloride and (b) 2,4,6-tribromoaniline."
+  },
+  {
+   "id": "ch12-0029",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Solutions",
+   "text": "(a) Define the molal elevation constant (ebullioscopic constant).\n(b) 18 g of glucose (molar mass 180 g mol⁻¹) is dissolved in 1 kg of water. Calculate the boiling point of the solution. (K_b for water = 0.52 K kg mol⁻¹, boiling point of pure water = 373.15 K)"
+  },
+  {
+   "id": "ch12-0030",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electrochemistry",
+   "text": "(a) State Kohlrausch's law of independent migration of ions.\n(b) The limiting molar conductivities of HCl, NaCl and CH₃COONa are 426, 126 and 91 S cm² mol⁻¹ respectively. Calculate the limiting molar conductivity of acetic acid.\n(c) If the molar conductivity of an acetic acid solution is 39.1 S cm² mol⁻¹, find its degree of dissociation."
+  },
+  {
+   "id": "ch12-0031",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Chemical Kinetics",
+   "text": "The rate constant of a reaction doubles when the temperature is raised from 300 K to 310 K. Calculate the activation energy of the reaction. (R = 8.314 J K⁻¹ mol⁻¹, log 2 = 0.3010)"
+  },
+  {
+   "id": "ch12-0032",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "The d- and f-Block Elements",
+   "text": "Account for the following:\n(a) Cr²⁺ is a reducing agent while Mn³⁺ is an oxidising agent, although both have the d⁴ configuration.\n(b) Actinoids show a wider range of oxidation states than lanthanoids.\n(c) Cu⁺ ion is not stable in aqueous solution."
+  },
+  {
+   "id": "ch12-0033",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Coordination Compounds",
+   "text": "Using valence bond theory, compare [Fe(CN)₆]³⁻ and [FeF₆]³⁻ with respect to (a) the type of hybridisation, (b) the magnetic behaviour and (c) whether each is an inner or outer orbital complex. (Atomic number of Fe = 26)"
+  },
+  {
+   "id": "ch12-0034",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "Differentiate between SN1 and SN2 reactions on the basis of (a) the number of steps in the mechanism, (b) the order of the reaction and (c) the stereochemistry of the product. Give one example of an alkyl halide that reacts mainly by each mechanism."
+  },
+  {
+   "id": "ch12-0035",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "How will you carry out the following conversions? Write the chemical equations.\n(a) Phenol to salicylaldehyde\n(b) Propene to propan-2-ol\n(c) Ethanol to ethoxyethane"
+  },
+  {
+   "id": "ch12-0036",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "Explain the following reactions with one chemical equation each:\n(a) Aldol condensation\n(b) Cannizzaro reaction\n(c) Clemmensen reduction"
+  },
+  {
+   "id": "ch12-0037",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Amines",
+   "text": "Account for the following:\n(a) Aniline does not undergo the Friedel-Crafts reaction.\n(b) The pK_b of aniline is higher than that of methylamine.\n(c) Aromatic diazonium salts are more stable than aliphatic diazonium salts."
+  },
+  {
+   "id": "ch12-0038",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Biomolecules",
+   "text": "Carbohydrates are the main source of energy in our food. Glucose, a monosaccharide, exists mostly in a cyclic form. Two monosaccharide units join through an oxygen atom to form a disaccharide such as sucrose, maltose or lactose. Sugars that reduce Tollens' reagent and Fehling's solution are called reducing sugars. Starch, the storage polysaccharide of plants, is a mixture of two components, amylose and amylopectin, while cellulose forms the cell walls of plants.\n(a) What name is given to the linkage that joins two monosaccharide units?\n(b) Why is sucrose a non-reducing sugar while maltose is a reducing sugar?\n(c) Write two structural differences between amylose and amylopectin.\nOR\n(c) Name the products obtained on the hydrolysis of (i) sucrose and (ii) lactose. Why is sucrose called invert sugar?"
+  },
+  {
+   "id": "ch12-0039",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Electrochemistry",
+   "text": "A fuel cell is a galvanic cell that converts the energy of combustion of a fuel directly into electrical energy. In the hydrogen-oxygen fuel cell, hydrogen and oxygen gases are bubbled through porous carbon electrodes into a concentrated aqueous solution of sodium hydroxide. The cell runs as long as the gases are supplied, and the only product is water. Such cells were used to provide electrical power in the Apollo space programme, and the water produced was used by the astronauts for drinking.\n(a) Write the reactions taking place at the anode and at the cathode of this cell.\n(b) Write the overall cell reaction.\n(c) State two advantages of a fuel cell over a thermal power plant.\nOR\n(c) How is a fuel cell different from a primary cell such as a dry cell? Give two points."
+  },
+  {
+   "id": "ch12-0040",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "(a) An organic compound A (C₃H₆O) does not reduce Tollens' reagent but gives a yellow precipitate with iodine and sodium hydroxide. On reduction, A gives compound B (C₃H₈O), which on heating with concentrated sulphuric acid gives compound C (C₃H₆). Identify A, B and C and write the equations for the reactions involved.\n(b) Give one chemical test each to distinguish between (i) benzaldehyde and acetophenone and (ii) ethanal and propanal.\nOR\n(a) Arrange the following in increasing order of acid strength and give a reason: CH₃COOH, ClCH₂COOH, FCH₂COOH, Cl₂CHCOOH.\n(b) Why are carboxylic acids higher boiling than alcohols of comparable molecular mass?\n(c) Write the equations for (i) the Hell-Volhard-Zelinsky reaction and (ii) the decarboxylation of sodium ethanoate."
+  },
+  {
+   "id": "ch12-0041",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Coordination Compounds",
+   "text": "(a) Write the IUPAC names of [Pt(NH₃)₂Cl₂] and K₃[Cr(C₂O₄)₃].\n(b) Draw the crystal field splitting diagram for an octahedral complex. Write the electronic configuration of a d⁴ ion when (i) Δ₀ > P and (ii) Δ₀ < P.\n(c) What type of isomerism is shown by [Co(NH₃)₅Br]SO₄ and [Co(NH₃)₅SO₄]Br? Give a chemical test to distinguish between them.\nOR\n(a) What is meant by the chelate effect? Give one example of a chelating ligand.\n(b) Draw the geometrical isomers of [Co(en)₂Cl₂]⁺. Which of them is optically active?\n(c) Explain why [Ti(H₂O)₆]³⁺ is coloured while [Sc(H₂O)₆]³⁺ is colourless."
+  },
+  {
+   "id": "ch12-0042",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Chemical Kinetics",
+   "text": "(a) State two differences between the order and the molecularity of a reaction.\n(b) A first order reaction is 20% complete in 10 minutes. Calculate the rate constant and the time taken for 75% completion of the reaction. (log 1.25 = 0.0969, log 4 = 0.6021)\n(c) What is a pseudo first order reaction? Give one example.\nOR\n(a) Derive the integrated rate equation for a zero order reaction.\n(b) Show that the half-life of a first order reaction is independent of the initial concentration.\n(c) The half-life of a first order reaction is 30 minutes. What fraction of the reactant remains after 2 hours?"
+  }
+ ]
+}

@@ -1,0 +1,556 @@
+{
+ "subject_key": "maths10",
+ "subject": "Mathematics",
+ "class": "X",
+ "max_marks": 80,
+ "time": "3 Hours",
+ "sections": [
+  {
+   "name": "SECTION A",
+   "title": "MCQ & Assertion-Reason",
+   "marks": 20,
+   "slots": [
+    [
+     "MCQ",
+     18
+    ],
+    [
+     "A/R",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "SECTION B",
+   "title": "Very Short Answer",
+   "marks": 10,
+   "slots": [
+    [
+     "VSA",
+     5
+    ]
+   ]
+  },
+  {
+   "name": "SECTION C",
+   "title": "Short Answer",
+   "marks": 18,
+   "slots": [
+    [
+     "SA",
+     6
+    ]
+   ]
+  },
+  {
+   "name": "SECTION D",
+   "title": "Long Answer",
+   "marks": 20,
+   "slots": [
+    [
+     "LA",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "SECTION E",
+   "title": "Case Study",
+   "marks": 12,
+   "slots": [
+    [
+     "CBQ",
+     3
+    ]
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "ma10-0001",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Real Numbers",
+   "text": "The HCF of 72 and 120 is 24. Their LCM is:",
+   "options": [
+    "(A) 240",
+    "(B) 720",
+    "(C) 360",
+    "(D) 1440"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0002",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Real Numbers",
+   "text": "The number 7 × 11 × 13 + 13 is:",
+   "options": [
+    "(A) a prime number",
+    "(B) a composite number",
+    "(C) an odd number",
+    "(D) neither prime nor composite"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0003",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Polynomials",
+   "text": "The zeroes of the polynomial x² − 5x + 6 are:",
+   "options": [
+    "(A) 2 and 3",
+    "(B) −2 and −3",
+    "(C) 1 and 6",
+    "(D) −1 and −6"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0004",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Polynomials",
+   "text": "If α and β are the zeroes of the polynomial x² − 4x + 3, then the value of 1/α + 1/β is:",
+   "options": [
+    "(A) 3/4",
+    "(B) −4/3",
+    "(C) −3/4",
+    "(D) 4/3"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0005",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "The pair of equations x + 2y = 5 and 3x + 6y = 15 has:",
+   "options": [
+    "(A) a unique solution",
+    "(B) no solution",
+    "(C) infinitely many solutions",
+    "(D) exactly two solutions"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0006",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "The value of k for which the equations 2x + 3y = 5 and 4x + ky = 10 have infinitely many solutions is:",
+   "options": [
+    "(A) 3",
+    "(B) 6",
+    "(C) 12",
+    "(D) 1"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0007",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Quadratic Equations",
+   "text": "The discriminant of the quadratic equation 2x² − 4x + 3 = 0 is:",
+   "options": [
+    "(A) −8",
+    "(B) 8",
+    "(C) 40",
+    "(D) −40"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0008",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Quadratic Equations",
+   "text": "The roots of the equation x² − 7x + 12 = 0 are:",
+   "options": [
+    "(A) −3 and −4",
+    "(B) 2 and 6",
+    "(C) 3 and 4",
+    "(D) 1 and 12"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0009",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "The 10th term of the AP 2, 7, 12, 17, ... is:",
+   "options": [
+    "(A) 52",
+    "(B) 47",
+    "(C) 45",
+    "(D) 50"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0010",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "The sum of the first 20 natural numbers is:",
+   "options": [
+    "(A) 200",
+    "(B) 190",
+    "(C) 420",
+    "(D) 210"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0011",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Triangles",
+   "text": "In ΔABC, D and E are points on AB and AC such that DE ∥ BC. If AD = 2 cm, DB = 3 cm and AE = 4 cm, then EC is:",
+   "options": [
+    "(A) 5 cm",
+    "(B) 8 cm",
+    "(C) 6 cm",
+    "(D) 1.5 cm"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0012",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordinate Geometry",
+   "text": "The distance of the point (3, 4) from the origin is:",
+   "options": [
+    "(A) 5 units",
+    "(B) 7 units",
+    "(C) 1 unit",
+    "(D) 12 units"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0013",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordinate Geometry",
+   "text": "The mid-point of the line segment joining the points (−2, 5) and (6, −1) is:",
+   "options": [
+    "(A) (4, 4)",
+    "(B) (2, 2)",
+    "(C) (−4, 3)",
+    "(D) (2, 3)"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0014",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Introduction to Trigonometry",
+   "text": "If sin θ = 3/5 and θ is an acute angle, then tan θ is equal to:",
+   "options": [
+    "(A) 4/5",
+    "(B) 4/3",
+    "(C) 3/4",
+    "(D) 5/3"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0015",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Introduction to Trigonometry",
+   "text": "The value of sin² 30° + cos² 60° is:",
+   "options": [
+    "(A) 1/2",
+    "(B) 1",
+    "(C) 1/4",
+    "(D) 3/4"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0016",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "A vertical pole 6 m high casts a shadow 2√3 m long on the ground. The angle of elevation of the Sun is:",
+   "options": [
+    "(A) 30°",
+    "(B) 45°",
+    "(C) 90°",
+    "(D) 60°"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0017",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Circles",
+   "text": "Two tangents drawn to a circle from an external point are inclined to each other at an angle of 60°. The angle between the radii drawn to the points of contact is:",
+   "options": [
+    "(A) 60°",
+    "(B) 120°",
+    "(C) 90°",
+    "(D) 30°"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0018",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Areas Related to Circles",
+   "text": "The area of a sector of a circle of radius 14 cm and central angle 90° is: (Use π = 22/7)",
+   "options": [
+    "(A) 77 cm²",
+    "(B) 308 cm²",
+    "(C) 154 cm²",
+    "(D) 616 cm²"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0019",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Surface Areas and Volumes",
+   "text": "The volume of a right circular cone of base radius 3 cm and height 4 cm is:",
+   "options": [
+    "(A) 12π cm³",
+    "(B) 36π cm³",
+    "(C) 15π cm³",
+    "(D) 48π cm³"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0020",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Statistics",
+   "text": "For a certain distribution, the mean is 18 and the median is 20. Using the empirical relationship, the mode is:",
+   "options": [
+    "(A) 22",
+    "(B) 19",
+    "(C) 16",
+    "(D) 24"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0021",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "A die is thrown once. The probability of getting a prime number is:",
+   "options": [
+    "(A) 1/3",
+    "(B) 1/2",
+    "(C) 2/3",
+    "(D) 1/6"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0022",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "One card is drawn at random from a well-shuffled pack of 52 cards. The probability that it is a red king is:",
+   "options": [
+    "(A) 1/13",
+    "(B) 1/52",
+    "(C) 1/26",
+    "(D) 1/4"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0023",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Real Numbers",
+   "text": "Assertion (A): √3 is an irrational number.\nReason (R): The square root of every positive integer is an irrational number.",
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0024",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Arithmetic Progressions",
+   "text": "Assertion (A): The sum of the first n odd natural numbers is n².\nReason (R): The sum of the first n terms of an AP is given by Sₙ = (n/2)[2a + (n − 1)d].",
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0025",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Circles",
+   "text": "Assertion (A): The tangent at any point of a circle is perpendicular to the radius through the point of contact.\nReason (R): The lengths of the two tangents drawn from an external point to a circle are equal.",
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0026",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Real Numbers",
+   "text": "Given that √3 is irrational, prove that 5 − √3 is an irrational number."
+  },
+  {
+   "id": "ma10-0027",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "Solve the following pair of linear equations:\n2x + 3y = 11\n2x − 4y = −24"
+  },
+  {
+   "id": "ma10-0028",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Quadratic Equations",
+   "text": "Find the value of k for which the quadratic equation kx² − 2kx + 6 = 0 has two equal roots."
+  },
+  {
+   "id": "ma10-0029",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Coordinate Geometry",
+   "text": "Find the ratio in which the y-axis divides the line segment joining the points (5, −6) and (−1, −4)."
+  },
+  {
+   "id": "ma10-0030",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Introduction to Trigonometry",
+   "text": "Evaluate: 2 tan² 45° + cos² 30° − sin² 60°"
+  },
+  {
+   "id": "ma10-0031",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Probability",
+   "text": "Two dice are thrown at the same time. Find the probability that the sum of the two numbers appearing on them is 8."
+  },
+  {
+   "id": "ma10-0032",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Circles",
+   "text": "Prove that the tangents drawn at the ends of a diameter of a circle are parallel."
+  },
+  {
+   "id": "ma10-0033",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Polynomials",
+   "text": "Find the zeroes of the polynomial 6x² − 7x − 3 and verify the relationship between the zeroes and the coefficients."
+  },
+  {
+   "id": "ma10-0034",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "The sum of the digits of a two-digit number is 9. Nine times this number is twice the number obtained by reversing the order of its digits. Find the number."
+  },
+  {
+   "id": "ma10-0035",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Arithmetic Progressions",
+   "text": "Which term of the AP 3, 15, 27, 39, ... will be 132 more than its 54th term?"
+  },
+  {
+   "id": "ma10-0036",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Triangles",
+   "text": "In ΔABC, D and E are points on the sides AB and AC respectively such that DE ∥ BC. If AD = x, DB = x − 2, AE = x + 2 and EC = x − 1, find the value of x."
+  },
+  {
+   "id": "ma10-0037",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Introduction to Trigonometry",
+   "text": "Prove that: (sin θ − 2 sin³ θ) / (2 cos³ θ − cos θ) = tan θ"
+  },
+  {
+   "id": "ma10-0038",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Circles",
+   "text": "Prove that a parallelogram circumscribing a circle is a rhombus."
+  },
+  {
+   "id": "ma10-0039",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Areas Related to Circles",
+   "text": "In a circle of radius 21 cm, an arc subtends an angle of 60° at the centre. Find (a) the length of the arc, (b) the area of the sector formed by the arc and (c) the perimeter of the sector. (Use π = 22/7)"
+  },
+  {
+   "id": "ma10-0040",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Statistics",
+   "text": "Find the mean of the following frequency distribution:\nClass: 0-10, 10-20, 20-30, 30-40, 40-50\nFrequency: 5, 8, 15, 16, 6"
+  },
+  {
+   "id": "ma10-0041",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Quadratic Equations",
+   "text": "A train travels a distance of 480 km at a uniform speed. If the speed had been 8 km/h more, it would have taken 3 hours less for the same journey. Find the speed of the train.\nOR\nTwo water taps together can fill a tank in 6 hours. The tap of larger diameter takes 5 hours less than the smaller one to fill the tank separately. Find the time in which each tap can separately fill the tank."
+  },
+  {
+   "id": "ma10-0042",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "From the top of a 9 m high building, the angle of elevation of the top of a cable tower is 60° and the angle of depression of its foot is 45°. Determine the height of the tower.\nOR\nAs observed from the top of a 60 m high lighthouse above sea level, the angles of depression of two ships are 30° and 45°. If one ship is exactly behind the other on the same side of the lighthouse, find the distance between the two ships."
+  },
+  {
+   "id": "ma10-0043",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Surface Areas and Volumes",
+   "text": "A toy is in the form of a cone of radius 7 cm mounted on a hemisphere of the same radius. The total height of the toy is 31 cm. Find the total surface area of the toy. (Use π = 22/7)\nOR\nA tent is in the shape of a cylinder surmounted by a conical top. The height and diameter of the cylindrical part are 3 m and 7 m respectively, and the slant height of the top is 5 m. Find the area of the canvas used for making the tent. Also find the cost of the canvas at the rate of ₹400 per m². (Use π = 22/7)"
+  },
+  {
+   "id": "ma10-0044",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Statistics",
+   "text": "Find the median and the mode of the following frequency distribution:\nClass: 0-20, 20-40, 40-60, 60-80, 80-100, 100-120, 120-140\nFrequency: 6, 8, 10, 12, 6, 5, 3"
+  },
+  {
+   "id": "ma10-0045",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "Riya decides to save money from her pocket money to buy a gift for her grandmother. She saves ₹50 in the first week and then increases her weekly saving by ₹20 every week.\n(a) Write the common difference of the AP formed by her weekly savings.\n(b) How much does she save in the 10th week?\n(c) Find the total amount she saves in the first 12 weeks.\nOR\n(c) In which week will her saving for that week be ₹410?"
+  },
+  {
+   "id": "ma10-0046",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Coordinate Geometry",
+   "text": "A town planner marks three places on a coordinate grid, in which each unit represents 1 km: the school at A(2, 3), the library at B(6, 7) and the park at C(8, 3).\n(a) Find the distance between the school and the library.\n(b) Find the coordinates of the point exactly midway between the school and the park.\n(c) A bus stop is to be built on the road AB such that it divides AB in the ratio 1 : 3 from the school's side. Find the coordinates of the bus stop.\nOR\n(c) Find the lengths BC and AC and state whether triangle ABC is isosceles."
+  },
+  {
+   "id": "ma10-0047",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Probability",
+   "text": "At a school fair, a game stall has a spinner with eight equal sectors numbered 1 to 8. A player spins the arrow once, and it is equally likely to stop on any one of the eight numbers.\n(a) Find the probability that the arrow stops on an odd number.\n(b) Find the probability that it stops on a number greater than 6.\n(c) A prize is given if the arrow stops on a prime number. Find the probability of winning a prize.\nOR\n(c) Find the probability that the arrow stops on (i) a multiple of 3 and (ii) a factor of 8."
+  }
+ ]
+}

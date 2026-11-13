@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all, formula_flash, formula_reel | Promo: promo_quest, promo_mock, promo_lab, promo_notes | PYQ: pyq_science10, pyq_maths10, pyq_physics12, pyq_maths12, pyq_chemistry12, pyq_biology12'
+        description: 'What to post: morning, lab_slot, afternoon, evening, festival, quest, news, notes, practice_10, practice_12, lab, weekly_focus, all, formula_flash, formula_reel | Promo: promo_quest, promo_mock, promo_lab, promo_notes | Mock papers: pyq_today (Mon/Wed/Fri, Class 10 + Class 12) | old: pyq_science10, pyq_maths10, pyq_physics12, pyq_maths12, pyq_chemistry12, pyq_biology12'
         required: false
         default: 'morning'
       platform:
@@ -22,6 +22,10 @@ on:
 jobs:
   post:
     runs-on: ubuntu-latest
+    # Mock-paper runs wait for each other, so two triggers can never post the same paper twice
+    concurrency:
+      group: ${{ startsWith(github.event.inputs.mode, 'pyq_') && 'mock-papers' || github.run_id }}
+      cancel-in-progress: false
     permissions:
       contents: write   # allow git push back to repo (queue→posted moves, tracker CSVs)
 
@@ -43,7 +47,7 @@ jobs:
       - name: Determine post mode from schedule
         id: mode
         run: |
-          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash formula_flash_evening formula_reel promo_quest promo_mock promo_lab promo_notes pyq_science10 pyq_maths10 pyq_physics12 pyq_maths12 pyq_chemistry12 pyq_biology12"
+          VALID_MODES="morning lab_slot afternoon evening festival quest news notes practice_10 practice_12 lab weekly_focus all formula_flash formula_flash_evening formula_reel promo_quest promo_mock promo_lab promo_notes pyq_today pyq_science10 pyq_maths10 pyq_physics12 pyq_maths12 pyq_chemistry12 pyq_biology12"
           INPUT_MODE="${{ github.event.inputs.mode }}"
 
           # Scheduling is done via cronjobs.org → workflow_dispatch API.
@@ -203,10 +207,14 @@ jobs:
           git config user.name  "social-post-bot"
           git config user.email "bot@cbsemock.org.in"
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+          # Every pyq_* mode now posts today's planned papers (Class 10 + Class 12)
+          # from the no-repeat pool. Use mode=pyq_today; the old per-subject modes
+          # are kept only so existing schedules do not break.
+          echo "Requested: $SUBJECT → posting today's planned papers"
           if [ "$DRY" = "true" ]; then
-            python3 post_pyq.py --subject "$SUBJECT" --dry-run
+            python3 post_pyq.py --today --dry-run
           else
-            python3 post_pyq.py --subject "$SUBJECT"
+            python3 post_pyq.py --today
           fi
 
       - name: Commit tracker CSV updates
