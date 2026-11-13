@@ -122,7 +122,7 @@ def parse_filename(stem: str) -> dict:
             class_part = f"class{m.group(1)}"
         elif low == "class" and k + 1 < len(tokens) and tokens[k + 1].isdigit():
             class_part = f"class{tokens[k + 1]}"; k += 1
-        elif re.fullmatch(r"\d+[a-z]?", low) or low in _NOISE_WORDS:
+        elif re.fullmatch(r"\d+([a-z]\d*)?", low) or low in _NOISE_WORDS:
             pass                                   # order prefix, part number, style word
         elif not subject and low in SUBJECT_META:
             subject = low
