@@ -218,7 +218,9 @@ jobs:
                   formula-posts/post_log.csv \
                   formula-posts/reel_log.csv \
                   formula-posts/queue/ \
-                  formula-posts/posted/ 2>/dev/null || true
+                  formula-posts/posted/ \
+                  formula-posts/videos/queue/ \
+                  formula-posts/videos/posted/ 2>/dev/null || true
           git diff --cached --quiet || git commit -m "chore: update formula flash queue and tracker [skip ci]"
           git push || true
 

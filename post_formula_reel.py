@@ -3,10 +3,14 @@
 post_formula_reel.py — CBSEMock Formula Flash Reel Auto-Publisher
 ──────────────────────────────────────────────────────────────────
 Runs at 8 PM IST via GitHub Actions.
-1. Picks a random topic NOT posted in the last 90 days
-2. Generates the MP4 reel (vibrance v2 style, 1080×1920)
-3. Uploads to Facebook Page + Instagram Reels via Graph API
-4. Logs the result to formula-posts/reel_log.csv
+1. Picks the FIRST .mp4 (alphabetically) from formula-posts/videos/queue/
+2. Uploads to Facebook Page + Instagram Reels via Graph API
+3. Moves the file to formula-posts/videos/posted/
+4. When queue is empty, moves all posted/ files back to queue/ (full circle)
+5. Logs the result to formula-posts/reel_log.csv
+
+Queue folder : formula-posts/videos/queue/
+Posted folder: formula-posts/videos/posted/
 
 Environment variables (GitHub Secrets):
   FB_PAGE_ID             — Facebook Page ID
@@ -17,10 +21,9 @@ Environment variables (GitHub Secrets):
   GITHUB_REF_NAME        — Branch name (default: main)
 
 Usage:
-  python3 post_formula_reel.py               # Pick random topic & post
+  python3 post_formula_reel.py               # Post next reel in queue
   python3 post_formula_reel.py --dry-run     # Preview without posting
-  python3 post_formula_reel.py --topic em_induction  # Force a topic
-  python3 post_formula_reel.py --status      # Show what has been posted
+  python3 post_formula_reel.py --status      # Show queue status
 """
 
 import os
@@ -28,7 +31,6 @@ import sys
 import csv
 import json
 import time
-import random
 import argparse
 import tempfile
 import subprocess
@@ -40,10 +42,13 @@ from datetime import datetime, timezone, timedelta, date
 from pathlib import Path
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-REPO_ROOT = Path(__file__).parent
-LOG_CSV   = REPO_ROOT / "formula-posts" / "reel_log.csv"
-VIDEO_DIR = REPO_ROOT / "formula-posts" / "videos"
-VIDEO_DIR.mkdir(parents=True, exist_ok=True)
+REPO_ROOT  = Path(__file__).parent
+LOG_CSV    = REPO_ROOT / "formula-posts" / "reel_log.csv"
+VIDEO_DIR  = REPO_ROOT / "formula-posts" / "videos"
+QUEUE_DIR  = VIDEO_DIR / "queue"
+POSTED_DIR = VIDEO_DIR / "posted"
+QUEUE_DIR.mkdir(parents=True, exist_ok=True)
+POSTED_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── API config ────────────────────────────────────────────────────────────────
 FB_API_BASE = "https://graph.facebook.com/v27.0"
@@ -63,44 +68,35 @@ IST = timezone(timedelta(hours=5, minutes=30))
 def now_ist():
     return datetime.now(IST)
 
-# ── Topic selection ────────────────────────────────────────────────────────────
-def load_posted_topics(days: int = 90) -> set:
-    """Return set of topic IDs posted in the last `days` days."""
-    if not LOG_CSV.exists():
-        return set()
-    cutoff = now_ist().date() - timedelta(days=days)
-    posted = set()
-    with open(LOG_CSV, newline="", encoding="utf-8") as f:
-        for row in csv.DictReader(f):
-            try:
-                d = datetime.strptime(row["date_ist"], "%Y-%m-%d").date()
-                if d >= cutoff:
-                    posted.add(row["topic_id"])
-            except (KeyError, ValueError):
-                pass
-    return posted
+# ── Queue helpers ──────────────────────────────────────────────────────────────
+def next_reel() -> Path:
+    """
+    Return the first .mp4 (alphabetically) from queue/.
+    If queue is empty, move all posted/ files back to queue/ (full circle reset)
+    and return the first one.
+    """
+    queued = sorted(f for f in QUEUE_DIR.iterdir() if f.suffix.lower() == ".mp4")
+    if not queued:
+        posted = sorted(f for f in POSTED_DIR.iterdir() if f.suffix.lower() == ".mp4")
+        if not posted:
+            print("[SKIP] No reels in queue or posted. Add .mp4 files to formula-posts/videos/queue/")
+            sys.exit(0)
+        print(f"[INFO] Queue empty — full circle complete! Resetting {len(posted)} reels back to queue.")
+        for f in posted:
+            shutil.move(str(f), str(QUEUE_DIR / f.name))
+        queued = sorted(f for f in QUEUE_DIR.iterdir() if f.suffix.lower() == ".mp4")
+    return queued[0]
 
-def pick_topic(force: str | None = None) -> tuple[str, dict]:
-    """Return (topic_id, topic_data). Randomly picks from unposted topics."""
-    from formula_topics_master import TOPICS
+def move_to_posted(reel_path: Path) -> Path:
+    dest = POSTED_DIR / reel_path.name
+    shutil.move(str(reel_path), str(dest))
+    return dest
 
-    if force:
-        if force not in TOPICS:
-            print(f"[ERROR] Unknown topic: {force}")
-            print(f"Available: {', '.join(TOPICS.keys())}")
-            sys.exit(1)
-        return force, TOPICS[force]
-
-    posted   = load_posted_topics(90)
-    eligible = [t for t in TOPICS if t not in posted]
-
-    if not eligible:
-        # All topics posted recently — reset and use full list
-        print("[INFO] All topics posted in last 90 days. Resetting pool.")
-        eligible = list(TOPICS.keys())
-
-    topic_id = random.choice(eligible)
-    return topic_id, TOPICS[topic_id]
+def topic_from_filename(stem: str) -> str:
+    """Derive a readable topic label from the filename stem."""
+    # e.g. em_induction_reel_v2 → em induction, boolean_algebra_reel_v2 → boolean algebra
+    name = stem.replace("_reel_v2", "").replace("_reel", "").replace("_", " ")
+    return name.title()
 
 # ── Caption generator ─────────────────────────────────────────────────────────
 SUBJECT_TAGS = {
@@ -111,55 +107,19 @@ SUBJECT_TAGS = {
     "CS":          "#ComputerScience #CSFormulas",
 }
 
-def build_reel_caption(topic_id: str, data: dict, slot: str = "evening") -> str:
-    subject  = data.get("subject", "CBSE")
-    t1       = data.get("title_line1", "")
-    t2       = data.get("title_line2", "")
-    chapter  = data.get("chapter_tag", "CBSE Board")
-    subj_tag = SUBJECT_TAGS.get(subject, f"#{subject}")
-    extra    = data.get("hashtags", "")
-
-    caption = f"""🎯 Evening Revision — Formula Flash!
-
-{t1} {t2}
-📚 {chapter}
-
-Watch all 5 key formulas with animated diagrams. Save this reel for quick revision before your board exam!
-
-🌐 Free notes & practice tests → https://cbsemock.org.in
-
-{subj_tag} #FormulaFlash #CBSEMock #BoardRevision #BoardExam2027 #EveningStudy #CBSE2027 {extra}""".strip()
-
+def build_reel_caption(topic_label: str) -> str:
+    caption = (
+        f"🎯 Evening Revision — Formula Flash!\n\n"
+        f"📌 {topic_label}\n\n"
+        f"Watch key formulas with animated diagrams. Save this reel for quick revision before your board exam!\n\n"
+        f"🌐 Free notes & practice tests → https://cbsemock.org.in\n"
+        f"📲 Join Telegram: t.me/cbsemockportal\n"
+        f"👍 Facebook: cbsemock.org.in\n"
+        f"📸 Instagram: @cbsemock\n\n"
+        f"#FormulaFlash #CBSEMock #BoardRevision #BoardExam2027 #EveningStudy #CBSE2027 #CBSERevision"
+    )
     return caption
 
-# ── Reel generation ────────────────────────────────────────────────────────────
-def generate_reel(topic_id: str, data: dict) -> Path:
-    """Generate MP4 using generate_formula_reel_v2.py. Returns path."""
-    script = REPO_ROOT / "generate_formula_reel_v2.py"
-    out_path = VIDEO_DIR / f"{topic_id}_reel_v2.mp4"
-
-    print(f"[INFO] Generating reel for '{topic_id}'…")
-    result = subprocess.run(
-        [sys.executable, str(script), "--topic", topic_id],
-        capture_output=False,
-        timeout=600,
-    )
-    if result.returncode != 0:
-        print(f"[ERROR] Reel generation failed (exit {result.returncode})")
-        sys.exit(1)
-
-    if not out_path.exists():
-        # Fallback: check for any v2 mp4 with this topic
-        matches = list(VIDEO_DIR.glob(f"{topic_id}*.mp4"))
-        if matches:
-            out_path = matches[-1]
-        else:
-            print(f"[ERROR] Expected output not found: {out_path}")
-            sys.exit(1)
-
-    size_mb = out_path.stat().st_size / 1024 / 1024
-    print(f"[INFO] Reel ready: {out_path.name}  ({size_mb:.1f} MB)")
-    return out_path
 
 # ── Upload helpers ─────────────────────────────────────────────────────────────
 def _api_post(url: str, data: dict, dry_run: bool = False, label: str = "") -> dict:
@@ -294,7 +254,7 @@ def _upload_reel_instagram(video_path: Path, caption: str, dry_run: bool) -> str
     if "id" not in init_resp or "uri" not in init_resp:
         # Fallback: try video_url with raw GitHub (last resort)
         print(f"[IG] Resumable init failed: {init_resp} — trying video_url fallback")
-        video_url = f"{GH_RAW}/formula-posts/videos/{video_path.name}"
+        video_url = f"{GH_RAW}/formula-posts/videos/queue/{video_path.name}"
         fallback_data = {
             "media_type":    "REELS",
             "video_url":     video_url,
@@ -383,46 +343,40 @@ def _upload_reel_instagram(video_path: Path, caption: str, dry_run: bool) -> str
         return None
 
 # ── Logging ───────────────────────────────────────────────────────────────────
-def log_reel(topic_id: str, subject: str, fb_id: str | None,
-             ig_id: str | None, dry_run: bool):
+def log_reel(filename: str, fb_id: str | None, ig_id: str | None, dry_run: bool):
     write_header = not LOG_CSV.exists()
     with open(LOG_CSV, "a", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         if write_header:
-            w.writerow(["date_ist", "time_ist", "topic_id", "subject",
-                        "fb_video_id", "ig_media_id", "dry_run"])
+            w.writerow(["date_ist", "time_ist", "filename", "fb_video_id", "ig_media_id", "dry_run"])
         w.writerow([
             now_ist().strftime("%Y-%m-%d"),
             now_ist().strftime("%H:%M"),
-            topic_id, subject,
+            filename,
             fb_id or "FAILED",
             ig_id or "FAILED",
             str(dry_run),
         ])
 
 def show_status():
-    from formula_topics_master import TOPICS
-    posted = load_posted_topics(90)
-    remaining = [t for t in TOPICS if t not in posted]
-    print(f"\n── Reel log: {LOG_CSV} ──")
-    if LOG_CSV.exists():
-        with open(LOG_CSV, newline="", encoding="utf-8") as f:
-            rows = list(csv.DictReader(f))
-        for r in rows[-10:]:
-            print(f"  {r.get('date_ist','')} {r.get('topic_id','')} "
-                  f"[{r.get('subject','')}] FB:{r.get('fb_video_id','')} IG:{r.get('ig_media_id','')}")
-    print(f"\n── Topics remaining (not posted in 90 days): {len(remaining)}/{len(TOPICS)} ──")
-    for t in remaining[:20]:
-        print(f"  {t}")
-    if len(remaining) > 20:
-        print(f"  … and {len(remaining)-20} more")
+    queued = sorted(f.name for f in QUEUE_DIR.iterdir() if f.suffix.lower() == ".mp4")
+    posted = sorted(f.name for f in POSTED_DIR.iterdir() if f.suffix.lower() == ".mp4")
+    total  = len(queued) + len(posted)
+    print(f"\n── Reel Queue ({len(queued)} remaining of {total} total) ──")
+    for i, fn in enumerate(queued, 1):
+        marker = "▶ NEXT" if i == 1 else f"  {i}."
+        print(f"  {marker}  {fn}")
+    print(f"\n── Posted ({len(posted)}) ──")
+    for fn in posted[-10:]:
+        print(f"  {fn}")
+    if not queued:
+        print("\n  ⚠️  Queue empty — will reset to full circle on next run.")
     print()
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
-    parser = argparse.ArgumentParser(description="Generate & post Formula Flash reel")
+    parser = argparse.ArgumentParser(description="Post next Formula Flash reel from queue")
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--topic",   default=None, help="Force a specific topic ID")
     parser.add_argument("--status",  action="store_true")
     args = parser.parse_args()
 
@@ -433,32 +387,30 @@ def main():
     print(f"\n[INFO] Formula Reel poster — dry_run={args.dry_run}")
     print(f"[INFO] Time: {now_ist().strftime('%Y-%m-%d %H:%M IST')}")
 
-    topic_id, data = pick_topic(args.topic)
-    print(f"[INFO] Topic: {topic_id}  ({data['subject']} — {data['title_line1']} {data['title_line2']})")
+    reel_path   = next_reel()
+    topic_label = topic_from_filename(reel_path.stem)
+    caption     = build_reel_caption(topic_label)
 
-    caption  = build_reel_caption(topic_id, data, slot="evening")
+    queued_count = len(list(QUEUE_DIR.glob("*.mp4")))
+    print(f"[INFO] Next reel: {reel_path.name}  ({queued_count} in queue)")
     print(f"\n── Caption preview ──\n{caption[:300]}\n────────────────────\n")
-
-    # Generate reel (skipped on dry-run to save time)
-    if args.dry_run:
-        reel_path = VIDEO_DIR / f"{topic_id}_reel_v2.mp4"
-        # Use existing file if available, else create a placeholder
-        if not reel_path.exists():
-            existing = list(VIDEO_DIR.glob("*.mp4"))
-            reel_path = existing[0] if existing else reel_path
-        print(f"[DRY-RUN] Would generate reel → {reel_path.name}")
-    else:
-        reel_path = generate_reel(topic_id, data)
 
     # Post to both platforms
     fb_id = _upload_video_fb(reel_path, caption, dry_run=args.dry_run)
     ig_id = _upload_reel_instagram(reel_path, caption, dry_run=args.dry_run)
 
+    # Move to posted/ (even on dry-run so queue advances in test)
+    if not args.dry_run:
+        dest = move_to_posted(reel_path)
+        print(f"[INFO] Moved to posted/: {dest.name}")
+    else:
+        print(f"[DRY-RUN] Would move {reel_path.name} → posted/")
+
     # Log
-    log_reel(topic_id, data.get("subject", ""), fb_id, ig_id, args.dry_run)
+    log_reel(reel_path.name, fb_id, ig_id, args.dry_run)
 
     ok = bool(fb_id and ig_id)
-    print(f"\n{'OK' if ok else 'PARTIAL/FAIL'}  FB: {fb_id or 'FAILED'}  |  IG: {ig_id or 'FAILED'}")
+    print(f"\n{'✅  Done' if ok else '⚠️  PARTIAL/FAIL'}  FB: {fb_id or 'FAILED'}  |  IG: {ig_id or 'FAILED'}")
     sys.exit(0 if ok else 1)
 
 if __name__ == "__main__":
