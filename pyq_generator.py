@@ -301,7 +301,7 @@ def build_header(bank: dict, paper_date: str, styles) -> list:
     # General instructions box
     story.append(Paragraph("GENERAL INSTRUCTIONS:", styles["general_instructions_heading"]))
     instrs = [
-        "1. This question paper contains 5 sections. Read the instructions for each section carefully.",
+        f"1. This question paper contains {len(bank.get('sections', [])) or 5} sections. Read the instructions for each section carefully.",
         "2. All questions are compulsory unless stated otherwise.",
         "3. Write all answers neatly and show relevant working wherever required.",
         "4. Marks for each question are indicated against it.",
@@ -377,7 +377,7 @@ def build_section(section: dict, questions: list, q_counter_start: int, styles) 
     story.append(Paragraph(sec_title, styles["section_header"]))
 
     # Type guide sub-heading
-    q_types = list({q["type"] for q in questions})
+    q_types = list(dict.fromkeys(q["type"] for q in questions))
     type_guide = {
         "MCQ":  "1 mark each",
         "A/R":  "1 mark each",
@@ -531,6 +531,67 @@ def build_pdf(bank_key: str, out_path: str, paper_date: str = None) -> str:
     mark_used(log, bank_key, used_ids)
     save_log(log)
 
+    return out_path
+
+
+# ─── Build from a planned paper (JSON pool, see mock_bank.py) ────────────────
+
+def build_pdf_from_paper(meta: dict, out_path: str, paper_date: str) -> str:
+    """
+    meta: {"subject", "class", "max_marks", "time",
+           "sections": [{"name", "title", "marks", "questions": [...]}]}
+    Same look as build_pdf(), but the questions are the ones planned in
+    question-bank/calendar.json, so nothing is picked or logged here.
+    """
+    _register_fonts()
+    styles  = build_styles()
+    subject, cls = meta["subject"], meta["class"]
+
+    def make_canvas(filename, **kwargs):
+        return NumberedCanvas(filename, subject, cls, paper_date, **kwargs)
+
+    doc = SimpleDocTemplate(
+        out_path, pagesize=A4,
+        rightMargin=MARGIN, leftMargin=MARGIN, topMargin=MARGIN, bottomMargin=1.6 * cm,
+        title=f"Class {cls} {subject} — CBSE Pre-Board Practice Paper",
+        author="CBSEMock.org.in",
+        subject=f"Class {cls} {subject} Practice Paper | {paper_date}",
+        creator="CBSEMock.org.in Auto-Generator",
+    )
+    story = build_header(meta, paper_date, styles)
+    q_counter = 1
+    for section in meta["sections"]:
+        if not section["questions"]:
+            continue
+        sec_story, q_counter = build_section(section, section["questions"], q_counter, styles)
+        story += sec_story
+
+    story.append(PageBreak())
+    story += [
+        Spacer(1, 2 * cm),
+        HRFlowable(width="100%", thickness=2, color=BRAND_BLUE),
+        Spacer(1, 0.5 * cm),
+        Paragraph("✦  END OF QUESTION PAPER  ✦", ParagraphStyle(
+            "end_title2", parent=styles["paper_title"], fontSize=14, spaceAfter=8)),
+        Paragraph(
+            "We hope you found this practice paper helpful.<br/>"
+            "Every paper in this series is new — no question is repeated.",
+            ParagraphStyle("back_body2", parent=styles["meta_row"], fontSize=10, leading=16)),
+        Spacer(1, 0.4 * cm),
+        Paragraph("Join our Telegram channel for instant updates",
+                  ParagraphStyle("back_cta2", parent=styles["meta_row"],
+                                 fontSize=10, textColor=BRAND_ORANGE, leading=14)),
+        Spacer(1, 0.3 * cm),
+        Paragraph("<b>www.cbsemock.org.in</b>",
+                  ParagraphStyle("back_web2", parent=styles["meta_row"],
+                                 fontSize=16, textColor=BRAND_BLUE, leading=20)),
+        Spacer(1, 0.3 * cm),
+        Paragraph("We are committed to your success.",
+                  ParagraphStyle("back_tag2", parent=styles["meta_row"], fontSize=11,
+                                 textColor=BRAND_GREY, leading=14, fontName=BODY_FONT_ITAL)),
+        HRFlowable(width="100%", thickness=1, color=BRAND_ORANGE, spaceBefore=10),
+    ]
+    doc.build(story, canvasmaker=make_canvas)
     return out_path
 
 

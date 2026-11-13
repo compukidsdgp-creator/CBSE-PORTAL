@@ -1,0 +1,598 @@
+{
+ "subject_key": "maths12",
+ "subject": "Mathematics",
+ "class": "XII",
+ "max_marks": 80,
+ "time": "3 Hours",
+ "sections": [
+  {
+   "name": "SECTION A",
+   "title": "MCQ & Assertion-Reason",
+   "marks": 20,
+   "slots": [
+    [
+     "MCQ",
+     18
+    ],
+    [
+     "A/R",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "SECTION B",
+   "title": "Very Short Answer",
+   "marks": 10,
+   "slots": [
+    [
+     "VSA",
+     5
+    ]
+   ]
+  },
+  {
+   "name": "SECTION C",
+   "title": "Short Answer",
+   "marks": 18,
+   "slots": [
+    [
+     "SA",
+     6
+    ]
+   ]
+  },
+  {
+   "name": "SECTION D",
+   "title": "Long Answer",
+   "marks": 20,
+   "slots": [
+    [
+     "LA",
+     4
+    ]
+   ]
+  },
+  {
+   "name": "SECTION E",
+   "title": "Case Study",
+   "marks": 12,
+   "slots": [
+    [
+     "CBQ",
+     3
+    ]
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "ma12-0001",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Relations and Functions",
+   "text": "The relation R = {(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)} on the set {1, 2, 3} is:",
+   "options": [
+    "(A) reflexive only",
+    "(B) symmetric only",
+    "(C) reflexive and symmetric but not transitive",
+    "(D) an equivalence relation"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0002",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Relations and Functions",
+   "text": "The function f : R → R defined by f(x) = x² is:",
+   "options": [
+    "(A) one-one and onto",
+    "(B) one-one but not onto",
+    "(C) neither one-one nor onto",
+    "(D) onto but not one-one"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0003",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Inverse Trigonometric Functions",
+   "text": "The principal value of sin⁻¹(−1/2) is:",
+   "options": [
+    "(A) π/6",
+    "(B) −π/6",
+    "(C) 5π/6",
+    "(D) 7π/6"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0004",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Inverse Trigonometric Functions",
+   "text": "The value of tan⁻¹(1) + cos⁻¹(−1/2) is:",
+   "options": [
+    "(A) 7π/12",
+    "(B) 5π/12",
+    "(C) 11π/12",
+    "(D) π/12"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0005",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Matrices",
+   "text": "If A is a matrix of order 3 × 4 and B is a matrix of order 4 × 2, then the order of AB is:",
+   "options": [
+    "(A) 3 × 2",
+    "(B) 2 × 3",
+    "(C) 4 × 4",
+    "(D) 3 × 4"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0006",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Matrices",
+   "text": "If A is a skew-symmetric matrix, then every element on its principal diagonal is:",
+   "options": [
+    "(A) 1",
+    "(B) 0",
+    "(C) −1",
+    "(D) any real number"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0007",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Determinants",
+   "text": "If A is a square matrix of order 3 and |A| = 4, then |2A| is equal to:",
+   "options": [
+    "(A) 8",
+    "(B) 16",
+    "(C) 32",
+    "(D) 64"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0008",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Determinants",
+   "text": "If A is a square matrix of order 3 and |A| = 5, then |adj A| is equal to:",
+   "options": [
+    "(A) 5",
+    "(B) 125",
+    "(C) 15",
+    "(D) 25"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0009",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Continuity and Differentiability",
+   "text": "The derivative of sin² x with respect to x is:",
+   "options": [
+    "(A) sin 2x",
+    "(B) cos² x",
+    "(C) 2 sin x",
+    "(D) −sin 2x"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0010",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Continuity and Differentiability",
+   "text": "The derivative of log(log x) with respect to x, for x > 1, is:",
+   "options": [
+    "(A) 1/log x",
+    "(B) 1/(x log x)",
+    "(C) log x / x",
+    "(D) x/log x"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0011",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Continuity and Differentiability",
+   "text": "The function f(x) = |x| at x = 0 is:",
+   "options": [
+    "(A) differentiable but not continuous",
+    "(B) neither continuous nor differentiable",
+    "(C) continuous but not differentiable",
+    "(D) both continuous and differentiable"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0012",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Application of Derivatives",
+   "text": "The rate of change of the area of a circle with respect to its radius r, when r = 5 cm, is:",
+   "options": [
+    "(A) 10π cm²/cm",
+    "(B) 25π cm²/cm",
+    "(C) 5π cm²/cm",
+    "(D) 20π cm²/cm"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0013",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Application of Derivatives",
+   "text": "The function f(x) = x³ − 3x has a local maximum at:",
+   "options": [
+    "(A) x = 1",
+    "(B) x = −1",
+    "(C) x = 0",
+    "(D) x = 3"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0014",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Integrals",
+   "text": "∫ eˣ (1/x − 1/x²) dx is equal to:",
+   "options": [
+    "(A) eˣ/x² + C",
+    "(B) −eˣ/x + C",
+    "(C) eˣ log x + C",
+    "(D) eˣ/x + C"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0015",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Integrals",
+   "text": "The value of the definite integral of cos x from x = 0 to x = π/2 is:",
+   "options": [
+    "(A) 1",
+    "(B) 0",
+    "(C) −1",
+    "(D) π/2"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0016",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Integrals",
+   "text": "The value of the definite integral of x³ from x = −1 to x = 1 is:",
+   "options": [
+    "(A) 1/2",
+    "(B) 1/4",
+    "(C) 0",
+    "(D) 2"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0017",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Differential Equations",
+   "text": "The order and degree of the differential equation (d²y/dx²)³ + (dy/dx)² + y = 0 are respectively:",
+   "options": [
+    "(A) 3 and 2",
+    "(B) 2 and 3",
+    "(C) 2 and 2",
+    "(D) 3 and 3"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0018",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Differential Equations",
+   "text": "The integrating factor of the differential equation dy/dx + y/x = x², for x > 0, is:",
+   "options": [
+    "(A) x",
+    "(B) 1/x",
+    "(C) eˣ",
+    "(D) log x"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0019",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Vector Algebra",
+   "text": "If |a| = 3, |b| = 4 and a · b = 6 for two vectors a and b, then the angle between them is:",
+   "options": [
+    "(A) 30°",
+    "(B) 45°",
+    "(C) 60°",
+    "(D) 90°"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0020",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Vector Algebra",
+   "text": "The unit vector in the direction of the vector i + 2j + 2k is:",
+   "options": [
+    "(A) (i + 2j + 2k)/9",
+    "(B) (i + 2j + 2k)/5",
+    "(C) i + 2j + 2k",
+    "(D) (i + 2j + 2k)/3"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0021",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Three Dimensional Geometry",
+   "text": "The direction cosines of the z-axis are:",
+   "options": [
+    "(A) 1, 0, 0",
+    "(B) 0, 0, 1",
+    "(C) 0, 1, 0",
+    "(D) 1, 1, 1"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0022",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Three Dimensional Geometry",
+   "text": "The angle between two lines whose direction ratios are 1, 1, 0 and 0, 1, 1 is:",
+   "options": [
+    "(A) 30°",
+    "(B) 45°",
+    "(C) 60°",
+    "(D) 90°"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0023",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Linear Programming",
+   "text": "In a linear programming problem with a bounded feasible region, the maximum value of the objective function occurs at:",
+   "options": [
+    "(A) a corner point of the feasible region",
+    "(B) the origin only",
+    "(C) the centre of the feasible region",
+    "(D) any point outside the feasible region"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0024",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "If A and B are independent events with P(A) = 0.4 and P(B) = 0.5, then P(A ∩ B) is:",
+   "options": [
+    "(A) 0.9",
+    "(B) 0.1",
+    "(C) 0.45",
+    "(D) 0.2"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0025",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "If P(A ∩ B) = 0.2 and P(B) = 0.5, then P(A | B) is equal to:",
+   "options": [
+    "(A) 0.1",
+    "(B) 0.4",
+    "(C) 0.7",
+    "(D) 2.5"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0026",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Matrices",
+   "text": "Assertion (A): For any two square matrices A and B of the same order, (A + B)² = A² + 2AB + B².\nReason (R): Matrix multiplication is not commutative in general.",
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0027",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Continuity and Differentiability",
+   "text": "Assertion (A): Every differentiable function is continuous.\nReason (R): Every continuous function is differentiable.",
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0028",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Vector Algebra",
+   "text": "Assertion (A): For two non-zero, non-parallel vectors a and b, the vector a × b is perpendicular to both a and b.\nReason (R): a × b = |a| |b| sin θ n, where n is a unit vector perpendicular to the plane containing a and b.",
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0029",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Inverse Trigonometric Functions",
+   "text": "Find the value of cos⁻¹(cos 7π/6)."
+  },
+  {
+   "id": "ma12-0030",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Matrices",
+   "text": "If A is the 2 × 2 matrix with rows [2, 3] and [1, 2], show that A² − 4A + I = O. Hence find A⁻¹."
+  },
+  {
+   "id": "ma12-0031",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Continuity and Differentiability",
+   "text": "Find dy/dx if y = xˣ, x > 0."
+  },
+  {
+   "id": "ma12-0032",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Application of Derivatives",
+   "text": "The radius of a spherical balloon is increasing at the rate of 0.2 cm/s. Find the rate at which its volume is increasing when the radius is 5 cm."
+  },
+  {
+   "id": "ma12-0033",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Integrals",
+   "text": "Evaluate: ∫ dx / (x² + 4x + 8)"
+  },
+  {
+   "id": "ma12-0034",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Vector Algebra",
+   "text": "Find the area of the parallelogram whose adjacent sides are given by the vectors a = i + j − k and b = i − j + k."
+  },
+  {
+   "id": "ma12-0035",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Probability",
+   "text": "A bag contains 4 red and 6 black balls. Two balls are drawn at random one after the other without replacement. Find the probability that both the balls are red."
+  },
+  {
+   "id": "ma12-0036",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Relations and Functions",
+   "text": "Show that the relation R on the set Z of integers, given by R = {(a, b) : 5 divides (a − b)}, is an equivalence relation."
+  },
+  {
+   "id": "ma12-0037",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Continuity and Differentiability",
+   "text": "If y = Ae²ˣ + Be⁻³ˣ, where A and B are constants, show that d²y/dx² + dy/dx − 6y = 0."
+  },
+  {
+   "id": "ma12-0038",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Application of Derivatives",
+   "text": "Find the intervals in which the function f(x) = 2x³ − 9x² + 12x + 15 is (a) strictly increasing and (b) strictly decreasing."
+  },
+  {
+   "id": "ma12-0039",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Integrals",
+   "text": "Evaluate: ∫ x / ((x + 1)(x + 2)) dx"
+  },
+  {
+   "id": "ma12-0040",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Integrals",
+   "text": "Using a property of definite integrals, evaluate the integral of sin x / (sin x + cos x) from x = 0 to x = π/2."
+  },
+  {
+   "id": "ma12-0041",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Differential Equations",
+   "text": "Find the general solution of the differential equation dy/dx = (1 + x²)(1 + y²)."
+  },
+  {
+   "id": "ma12-0042",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Vector Algebra",
+   "text": "Three vectors a, b and c satisfy a + b + c = 0. If |a| = 3, |b| = 5 and |c| = 7, find the angle between a and b."
+  },
+  {
+   "id": "ma12-0043",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Probability",
+   "text": "Bag I contains 4 red and 2 black balls, and Bag II contains 3 red and 5 black balls. One bag is chosen at random and a ball is drawn from it. The ball is found to be red. Find the probability that it was drawn from Bag II."
+  },
+  {
+   "id": "ma12-0044",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Determinants",
+   "text": "Solve the following system of equations by the matrix method:\nx + y + z = 6\nx − y + z = 2\n2x + y − z = 1"
+  },
+  {
+   "id": "ma12-0045",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Application of Integrals",
+   "text": "Using integration, find the area of the region bounded by the parabola y² = 4x and the line x = 3.\nOR\nUsing integration, find the area of the region enclosed by the ellipse x²/16 + y²/9 = 1."
+  },
+  {
+   "id": "ma12-0046",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Three Dimensional Geometry",
+   "text": "Find the shortest distance between the lines whose vector equations are\nr = (i + j) + λ(i + k) and\nr = (2j + k) + μ(j + k)."
+  },
+  {
+   "id": "ma12-0047",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Linear Programming",
+   "text": "Solve the following linear programming problem graphically:\nMaximise Z = 3x + 2y\nsubject to the constraints x + 2y ≤ 10, 3x + y ≤ 15, x ≥ 0, y ≥ 0."
+  },
+  {
+   "id": "ma12-0048",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Application of Derivatives",
+   "text": "A craft teacher gives each student a square sheet of cardboard of side 24 cm. An open box is to be made by cutting a square of side x cm from each corner and folding up the flaps. The teacher asks the students to make the box that can hold the maximum volume.\n(a) Express the volume V of the box in terms of x.\n(b) Find dV/dx.\n(c) Find the value of x for which the volume is maximum, and find the maximum volume.\nOR\n(c) Find the values of x for which dV/dx = 0 and explain why one of them cannot be the side of the square that is cut off."
+  },
+  {
+   "id": "ma12-0049",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Probability",
+   "text": "A factory has two machines, A and B. Machine A produces 60% of the items and machine B produces the remaining 40%. It is found that 2% of the items produced by machine A and 1% of the items produced by machine B are defective. An item is picked at random from the day's production.\n(a) Find the probability that the item was produced by machine A and is defective.\n(b) Find the probability that the item is defective.\n(c) If the item is found to be defective, find the probability that it was produced by machine A.\nOR\n(c) If the item is found to be defective, find the probability that it was produced by machine B."
+  },
+  {
+   "id": "ma12-0050",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Matrices",
+   "text": "A bookshop sells Physics, Chemistry and Mathematics guide books. On Monday it sold 10, 8 and 12 copies of the three books respectively, and on Tuesday it sold 6, 10 and 9 copies. The selling prices of the three books are ₹300, ₹250 and ₹400 per copy respectively.\n(a) Write the sales of the two days as a matrix with one row for each day, and state its order.\n(b) Using matrix multiplication, find the amount collected on Monday.\n(c) Find the total amount collected on the two days together.\nOR\n(c) If the price of each book is increased by 10%, find the amount that would have been collected on Monday."
+  }
+ ]
+}

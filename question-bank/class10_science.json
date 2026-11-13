@@ -1,0 +1,1035 @@
+{
+ "subject_key": "science10",
+ "subject": "Science",
+ "class": "X",
+ "max_marks": 80,
+ "time": "3 Hours",
+ "sections": [
+  {
+   "name": "SECTION A",
+   "title": "Biology",
+   "marks": 30,
+   "slots": [
+    [
+     "MCQ",
+     7
+    ],
+    [
+     "A/R",
+     2
+    ],
+    [
+     "VSA",
+     3
+    ],
+    [
+     "SA",
+     2
+    ],
+    [
+     "CBQ",
+     1
+    ],
+    [
+     "LA",
+     1
+    ]
+   ]
+  },
+  {
+   "name": "SECTION B",
+   "title": "Chemistry",
+   "marks": 25,
+   "slots": [
+    [
+     "MCQ",
+     6
+    ],
+    [
+     "A/R",
+     2
+    ],
+    [
+     "VSA",
+     1
+    ],
+    [
+     "SA",
+     2
+    ],
+    [
+     "CBQ",
+     1
+    ],
+    [
+     "LA",
+     1
+    ]
+   ]
+  },
+  {
+   "name": "SECTION C",
+   "title": "Physics",
+   "marks": 25,
+   "slots": [
+    [
+     "MCQ",
+     3
+    ],
+    [
+     "A/R",
+     1
+    ],
+    [
+     "SA",
+     4
+    ],
+    [
+     "CBQ",
+     1
+    ],
+    [
+     "LA",
+     1
+    ]
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "sc10-0001",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Life Processes",
+   "text": "The enzyme pepsin digests proteins most effectively in:",
+   "options": [
+    "(A) the alkaline medium of the small intestine",
+    "(B) the acidic medium of the stomach",
+    "(C) the neutral medium of the mouth",
+    "(D) the alkaline medium of the large intestine"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0002",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Life Processes",
+   "text": "Oxygen-rich blood returning from the lungs first enters which chamber of the human heart?",
+   "options": [
+    "(A) Right atrium",
+    "(B) Right ventricle",
+    "(C) Left atrium",
+    "(D) Left ventricle"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0003",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Life Processes",
+   "text": "The opening and closing of a stomatal pore is brought about by the change in shape of:",
+   "options": [
+    "(A) epidermal cells",
+    "(B) mesophyll cells",
+    "(C) root hair cells",
+    "(D) guard cells"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0004",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Life Processes",
+   "text": "Which of the following shows the correct path of air during inhalation in humans?",
+   "options": [
+    "(A) Nostrils → pharynx → larynx → trachea → bronchi → alveoli",
+    "(B) Nostrils → larynx → pharynx → bronchi → trachea → alveoli",
+    "(C) Nostrils → trachea → pharynx → larynx → alveoli → bronchi",
+    "(D) Nostrils → pharynx → trachea → larynx → bronchi → alveoli"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0005",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Life Processes",
+   "text": "The structural and functional unit of the human kidney, where urine is formed, is the:",
+   "options": [
+    "(A) ureter",
+    "(B) nephron",
+    "(C) urethra",
+    "(D) urinary bladder"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0006",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Control and Coordination",
+   "text": "The tiny gap across which a nerve impulse passes from one neuron to the next is called a:",
+   "options": [
+    "(A) dendrite",
+    "(B) axon",
+    "(C) synapse",
+    "(D) cell body"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0007",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Control and Coordination",
+   "text": "Which plant hormone mainly promotes cell division and is present in high concentration in fruits and seeds?",
+   "options": [
+    "(A) Auxin",
+    "(B) Gibberellin",
+    "(C) Abscisic acid",
+    "(D) Cytokinin"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0008",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Control and Coordination",
+   "text": "Iodised salt is recommended in our diet because iodine is needed for the synthesis of:",
+   "options": [
+    "(A) thyroxine",
+    "(B) insulin",
+    "(C) adrenaline",
+    "(D) growth hormone"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0009",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Control and Coordination",
+   "text": "When you accidentally touch a hot vessel, your hand is pulled back at once. The reflex arc for this action is formed in the:",
+   "options": [
+    "(A) cerebrum",
+    "(B) spinal cord",
+    "(C) cerebellum",
+    "(D) medulla"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0010",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "In which of the following organisms does binary fission take place in a definite orientation in relation to its cell structures?",
+   "options": [
+    "(A) Amoeba",
+    "(B) Plasmodium",
+    "(C) Leishmania",
+    "(D) Hydra"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0011",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "After fertilisation in a flowering plant, the seed develops from the:",
+   "options": [
+    "(A) ovary",
+    "(B) stigma",
+    "(C) anther",
+    "(D) ovule"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0012",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "Which of the following sexually transmitted diseases is caused by bacteria?",
+   "options": [
+    "(A) Gonorrhoea",
+    "(B) AIDS",
+    "(C) Genital warts",
+    "(D) Hepatitis-B"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0013",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Heredity",
+   "text": "A pure tall pea plant (TT) is crossed with a pure dwarf pea plant (tt) and the F₁ plants are self-pollinated. The ratio of the genotypes TT : Tt : tt in the F₂ generation is:",
+   "options": [
+    "(A) 3 : 1 : 0",
+    "(B) 1 : 2 : 1",
+    "(C) 1 : 1 : 2",
+    "(D) 2 : 1 : 1"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0014",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Heredity",
+   "text": "In human beings, whether a child will be a boy or a girl is decided by:",
+   "options": [
+    "(A) the sex chromosome present in the mother's egg",
+    "(B) the diet of the mother during pregnancy",
+    "(C) the sex chromosome present in the father's sperm",
+    "(D) the age of the parents"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0015",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Our Environment",
+   "text": "Which of the following is a correct food chain?",
+   "options": [
+    "(A) Grasshopper → Grass → Frog → Snake",
+    "(B) Grass → Frog → Grasshopper → Snake",
+    "(C) Snake → Frog → Grasshopper → Grass",
+    "(D) Grass → Grasshopper → Frog → Snake"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0016",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Our Environment",
+   "text": "If 10,000 J of energy is available at the producer level of a food chain, the energy available to the secondary consumers will be about:",
+   "options": [
+    "(A) 100 J",
+    "(B) 1000 J",
+    "(C) 10 J",
+    "(D) 5000 J"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0017",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Life Processes",
+   "text": "Assertion (A): Arteries have thick and elastic walls.\nReason (R): Blood flows through the arteries under high pressure as it is pumped out of the heart.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0018",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Control and Coordination",
+   "text": "Assertion (A): Insulin helps in regulating the level of sugar in the blood.\nReason (R): Insulin is secreted by the thyroid gland.",
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0019",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "Assertion (A): Plants raised by vegetative propagation are genetically similar to the parent plant.\nReason (R): Vegetative propagation involves the fusion of male and female gametes.",
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0020",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Our Environment",
+   "text": "Assertion (A): The use of chlorofluorocarbons (CFCs) is being reduced all over the world.\nReason (R): A molecule of ozone is made up of three atoms of oxygen.",
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0021",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Life Processes",
+   "text": "Why is the rate of breathing in aquatic organisms much faster than that in terrestrial organisms? Give one reason."
+  },
+  {
+   "id": "sc10-0022",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Life Processes",
+   "text": "State two differences between the transport of materials in xylem and in phloem."
+  },
+  {
+   "id": "sc10-0023",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Control and Coordination",
+   "text": "Name the plant hormone responsible for (a) the elongation of the stem and (b) the wilting of leaves. State one more function of each."
+  },
+  {
+   "id": "sc10-0024",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "What is the role of the seminal vesicles and the prostate gland in the human male reproductive system?"
+  },
+  {
+   "id": "sc10-0025",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Heredity",
+   "text": "How did Mendel's experiments with pea plants show that a trait may be dominant or recessive? Explain with one example."
+  },
+  {
+   "id": "sc10-0026",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Our Environment",
+   "text": "Why are substances like polythene bags called non-biodegradable? State two ways in which they harm the environment."
+  },
+  {
+   "id": "sc10-0027",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "Life Processes",
+   "text": "Describe the digestion of food in the small intestine of human beings. In your answer, state the role of (a) bile juice, (b) pancreatic juice and (c) villi."
+  },
+  {
+   "id": "sc10-0028",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "Control and Coordination",
+   "text": "How is the movement of the leaves of the 'touch-me-not' plant different from the bending of a shoot towards light? Give three points of difference."
+  },
+  {
+   "id": "sc10-0029",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "Describe the events that take place in a flower from the time a pollen grain lands on a suitable stigma until the formation of the zygote. What do the ovary and the ovule develop into after fertilisation?"
+  },
+  {
+   "id": "sc10-0030",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "Heredity",
+   "text": "A plant with blue flowers (BB) is crossed with a plant with white flowers (bb).\n(a) What will be the colour of the flowers in the F₁ generation? Give a reason.\n(b) If the F₁ plants are self-pollinated, what percentage of the F₂ plants will have white flowers?\n(c) State the ratio of BB : Bb plants in the F₂ generation."
+  },
+  {
+   "id": "sc10-0031",
+   "section": "SECTION A",
+   "type": "CBQ",
+   "chapter": "Our Environment",
+   "text": "Farmers around a village pond used a pesticide on their crops for several years. Rain water carried a part of this pesticide into the pond. A study of the pond showed that the concentration of the pesticide was 0.02 ppm in water, 5 ppm in small fish and 25 ppm in the fish-eating birds living near the pond. The pesticide could not be broken down by the organisms and so it kept collecting in their bodies.\n(a) Name the phenomenon shown by the rising concentration of the pesticide.\n(b) Why do the birds have the highest concentration of the pesticide?\n(c) Suggest two practices that farmers can adopt to reduce this problem.\nOR\n(c) Write a food chain of four trophic levels operating in this pond and name the organisms that form the third trophic level."
+  },
+  {
+   "id": "sc10-0032",
+   "section": "SECTION A",
+   "type": "CBQ",
+   "chapter": "Life Processes",
+   "text": "The kidneys remove nitrogenous wastes such as urea from the blood. If both kidneys of a person stop working, the wastes build up in the blood and can be fatal. Such a person is treated with an artificial kidney, a process called haemodialysis. The patient's blood is passed through long tubes with a selectively permeable lining, which are dipped in a tank of dialysing fluid. The wastes pass from the blood into this fluid and the purified blood is returned to the patient.\n(a) Name the main nitrogenous waste removed by the kidneys in humans.\n(b) Why should the dialysing fluid have the same concentration of salts and glucose as normal blood?\n(c) State two differences between the working of a natural kidney and that of an artificial kidney.\nOR\n(c) Explain how the amount of water reabsorbed in the nephron changes on a hot day when a person has drunk very little water."
+  },
+  {
+   "id": "sc10-0033",
+   "section": "SECTION A",
+   "type": "LA",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "(a) Name the parts of the human female reproductive system where (i) eggs are produced, (ii) fertilisation takes place and (iii) the embryo is implanted.\n(b) How does the embryo get its nourishment inside the mother's body?\n(c) What happens when the egg is not fertilised?\nOR\n(a) What is contraception? List three different methods of contraception and state how each one works.\n(b) Why is the use of a condom also considered important for health reasons?"
+  },
+  {
+   "id": "sc10-0034",
+   "section": "SECTION A",
+   "type": "LA",
+   "chapter": "Life Processes",
+   "text": "(a) What is meant by double circulation of blood? Why is it necessary in human beings?\n(b) Why is the wall of the left ventricle thicker than that of the right ventricle?\n(c) State two differences between arteries and veins.\nOR\n(a) List the three events that occur during photosynthesis.\n(b) How do desert plants take up carbon dioxide and still prevent the loss of water?\n(c) Describe an activity to show that sunlight is necessary for photosynthesis."
+  },
+  {
+   "id": "sc10-0035",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "The reaction Fe + CuSO₄ → FeSO₄ + Cu is an example of a:",
+   "options": [
+    "(A) combination reaction",
+    "(B) displacement reaction",
+    "(C) decomposition reaction",
+    "(D) double displacement reaction"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0036",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Which of the following is an endothermic process?",
+   "options": [
+    "(A) Burning of natural gas",
+    "(B) Respiration",
+    "(C) Decomposition of calcium carbonate on heating",
+    "(D) Reaction of quicklime with water"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0037",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "When lead nitrate is heated strongly, brown fumes are seen. These fumes are of:",
+   "options": [
+    "(A) nitrogen dioxide",
+    "(B) nitrogen",
+    "(C) oxygen",
+    "(D) lead oxide"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0038",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Packets of potato chips are flushed with nitrogen gas in order to:",
+   "options": [
+    "(A) make the chips crisp",
+    "(B) increase the weight of the packet",
+    "(C) add flavour to the chips",
+    "(D) prevent the oil in the chips from getting oxidised"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0039",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "A solution turns red litmus blue. Its pH is most likely to be:",
+   "options": [
+    "(A) 1",
+    "(B) 4",
+    "(C) 7",
+    "(D) 10"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0040",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "The chemical formula of Plaster of Paris is:",
+   "options": [
+    "(A) CaSO₄·2H₂O",
+    "(B) CaSO₄·½H₂O",
+    "(C) CaCO₃",
+    "(D) Ca(OH)₂"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0041",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "Milk of magnesia, used as an antacid, is chemically:",
+   "options": [
+    "(A) sodium hydrogencarbonate",
+    "(B) calcium hydroxide",
+    "(C) magnesium hydroxide",
+    "(D) magnesium carbonate"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0042",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "Tooth enamel starts getting corroded when the pH in the mouth falls below:",
+   "options": [
+    "(A) 7.0",
+    "(B) 5.5",
+    "(C) 8.5",
+    "(D) 6.5"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0043",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Metals and Non-metals",
+   "text": "Which of the following metals is kept under kerosene oil?",
+   "options": [
+    "(A) Sodium",
+    "(B) Magnesium",
+    "(C) Aluminium",
+    "(D) Zinc"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0044",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Metals and Non-metals",
+   "text": "Which of the following oxides is amphoteric in nature?",
+   "options": [
+    "(A) Na₂O",
+    "(B) CO₂",
+    "(C) Al₂O₃",
+    "(D) MgO"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0045",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Metals and Non-metals",
+   "text": "Ionic compounds generally have high melting points because:",
+   "options": [
+    "(A) they are soluble in water",
+    "(B) strong electrostatic forces of attraction hold their ions together",
+    "(C) they conduct electricity in the solid state",
+    "(D) they are made up of molecules"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0046",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Metals and Non-metals",
+   "text": "Brass is an alloy of:",
+   "options": [
+    "(A) copper and zinc",
+    "(B) copper and tin",
+    "(C) lead and tin",
+    "(D) iron and carbon"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0047",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Carbon and its Compounds",
+   "text": "The functional group present in propanone is:",
+   "options": [
+    "(A) aldehyde",
+    "(B) alcohol",
+    "(C) ketone",
+    "(D) carboxylic acid"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0048",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Carbon and its Compounds",
+   "text": "The next higher homologue of C₃H₇OH is:",
+   "options": [
+    "(A) C₂H₅OH",
+    "(B) C₄H₉OH",
+    "(C) C₃H₇CHO",
+    "(D) C₄H₈"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0049",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Carbon and its Compounds",
+   "text": "The total number of covalent bonds present in a molecule of ethane (C₂H₆) is:",
+   "options": [
+    "(A) 5",
+    "(B) 6",
+    "(C) 7",
+    "(D) 8"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0050",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Carbon and its Compounds",
+   "text": "When ethanol reacts with sodium metal, the products formed are:",
+   "options": [
+    "(A) sodium hydroxide and ethene",
+    "(B) sodium ethanoate and water",
+    "(C) sodium carbonate and hydrogen",
+    "(D) sodium ethoxide and hydrogen"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0051",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Assertion (A): White silver chloride turns grey when it is kept in sunlight.\nReason (R): Silver chloride decomposes into silver and chlorine in the presence of sunlight.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0052",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Acids, Bases and Salts",
+   "text": "Assertion (A): Dry hydrogen chloride gas does not change the colour of dry blue litmus paper.\nReason (R): Hydrogen chloride produces hydrogen ions only in the presence of water.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0053",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Metals and Non-metals",
+   "text": "Assertion (A): Gold and platinum occur in the free state in nature.\nReason (R): Gold and platinum are highly reactive metals.",
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0054",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Carbon and its Compounds",
+   "text": "Assertion (A): Soaps do not form lather easily with hard water.\nReason (R): Hard water contains calcium and magnesium salts, which react with soap to form an insoluble scum.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0055",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Acids, Bases and Salts",
+   "text": "A milkman adds a very small amount of baking soda to fresh milk.\n(a) Why does he shift the pH of the fresh milk from 6 to slightly alkaline?\n(b) Why does this milk take a longer time to set as curd?"
+  },
+  {
+   "id": "sc10-0056",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Metals and Non-metals",
+   "text": "Give reasons for the following:\n(a) Ionic compounds conduct electricity in the molten state but not in the solid state.\n(b) Metals are used for making school bells."
+  },
+  {
+   "id": "sc10-0057",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Write balanced chemical equations for the following reactions and name the type of each reaction:\n(a) Barium chloride solution is mixed with sodium sulphate solution.\n(b) Zinc granules are added to dilute sulphuric acid.\n(c) Ferrous sulphate crystals are heated strongly."
+  },
+  {
+   "id": "sc10-0058",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Acids, Bases and Salts",
+   "text": "(a) What is the chlor-alkali process? Write the chemical equation of the reaction involved.\n(b) Name the gas produced at the anode and the gas produced at the cathode in this process.\n(c) State one use of each of these two gases."
+  },
+  {
+   "id": "sc10-0059",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Metals and Non-metals",
+   "text": "A metal M occurs in nature as its carbonate ore, MCO₃. The metal lies in the middle of the reactivity series.\n(a) Name the two main steps used to obtain the metal from this ore.\n(b) Write the chemical equations for these steps, taking zinc as the metal.\n(c) Name the process used to refine the impure metal so obtained."
+  },
+  {
+   "id": "sc10-0060",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Carbon and its Compounds",
+   "text": "(a) Distinguish between saturated and unsaturated hydrocarbons on the basis of the flame they produce on burning.\n(b) What is hydrogenation? Write a chemical equation to show it.\n(c) State one industrial application of hydrogenation."
+  },
+  {
+   "id": "sc10-0061",
+   "section": "SECTION B",
+   "type": "CBQ",
+   "chapter": "Metals and Non-metals",
+   "text": "Three clean iron nails were kept in three test tubes for a week. Test tube P had tap water, so the nail was in contact with both air and water. Test tube Q had boiled distilled water covered with a layer of oil. Test tube R had dry air with some anhydrous calcium chloride. After a week, only the nail in test tube P had rusted. Rusting damages bridges, ships and car bodies, and a lot of money is spent every year to prevent it.\n(a) What does this experiment tell us about the conditions necessary for rusting?\n(b) Why was a layer of oil added in test tube Q?\n(c) What is galvanisation? Why does a galvanised iron article not rust even when the zinc coating is scratched?\nOR\n(c) What is an alloy? Name the metals mixed with iron to make stainless steel and state how this helps."
+  },
+  {
+   "id": "sc10-0062",
+   "section": "SECTION B",
+   "type": "CBQ",
+   "chapter": "Carbon and its Compounds",
+   "text": "Most dirt is oily in nature and oil does not dissolve in water. A soap molecule has two ends: a long hydrocarbon chain and an ionic end. When soap is added to water containing oily dirt, the soap molecules arrange themselves in clusters around the oil droplets. Rinsing then removes the dirt. In hard water, however, soap forms a sticky white solid and a lot of soap is wasted. Detergents were developed to overcome this problem.\n(a) What name is given to the cluster of soap molecules formed around an oil droplet?\n(b) Which end of the soap molecule attaches to the oil droplet and which end faces the water?\n(c) Why does soap form a sticky solid (scum) with hard water? Why do detergents not form it?\nOR\n(c) Would a micelle be formed if soap were dissolved in ethanol instead of water? Give a reason for your answer."
+  },
+  {
+   "id": "sc10-0063",
+   "section": "SECTION B",
+   "type": "LA",
+   "chapter": "Carbon and its Compounds",
+   "text": "(a) Write the chemical equation for the reaction of ethanoic acid with ethanol in the presence of an acid catalyst. Name the reaction and the product.\n(b) What is observed when ethanoic acid is added to sodium hydrogencarbonate? Write the equation.\n(c) Why is pure ethanoic acid called glacial acetic acid?\n(d) State one chemical test to distinguish ethanol from ethanoic acid.\nOR\n(a) What is a homologous series? State three characteristics of a homologous series.\n(b) Draw the structures of the two isomers of butane (C₄H₁₀).\n(c) Why does carbon form compounds mainly by covalent bonding?"
+  },
+  {
+   "id": "sc10-0064",
+   "section": "SECTION B",
+   "type": "LA",
+   "chapter": "Acids, Bases and Salts",
+   "text": "(a) Explain the importance of pH in (i) the digestion of food in the stomach and (ii) the growth of plants in soil.\n(b) What is baking powder? Write the equation for the change that takes place when it is heated or mixed with water, and explain how it makes a cake soft and spongy.\n(c) What is meant by water of crystallisation? Give one example of a salt that has it.\nOR\n(a) How is washing soda prepared from sodium chloride? Write the chemical equations of the steps involved.\n(b) State two uses of washing soda.\n(c) A solution of sodium carbonate is basic. Explain why."
+  },
+  {
+   "id": "sc10-0065",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "An object is placed 20 cm in front of a concave mirror of focal length 10 cm. The image formed is:",
+   "options": [
+    "(A) virtual, erect and magnified",
+    "(B) real, inverted and of the same size as the object",
+    "(C) real, inverted and diminished",
+    "(D) real, inverted and magnified"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0066",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "The refractive index of water is 4/3 and that of glass is 3/2. The refractive index of glass with respect to water is:",
+   "options": [
+    "(A) 9/8",
+    "(B) 8/9",
+    "(C) 2",
+    "(D) 1/2"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0067",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "A lens has a focal length of −50 cm. Its power and nature are:",
+   "options": [
+    "(A) +2 D, convex",
+    "(B) +0.5 D, convex",
+    "(C) −2 D, concave",
+    "(D) −0.5 D, concave"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0068",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "The sky appears blue to an observer on the Earth because of the:",
+   "options": [
+    "(A) reflection of sunlight by clouds",
+    "(B) dispersion of sunlight by water droplets",
+    "(C) refraction of sunlight by the atmosphere",
+    "(D) scattering of sunlight by fine particles in the atmosphere"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0069",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "A student sitting on the last bench cannot read the blackboard clearly but can read a book easily. The defect of vision and the lens needed to correct it are:",
+   "options": [
+    "(A) myopia, concave lens",
+    "(B) myopia, convex lens",
+    "(C) hypermetropia, convex lens",
+    "(D) hypermetropia, concave lens"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0070",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Electricity",
+   "text": "A wire of resistance R is stretched to double its length without any change in its volume. Its new resistance is:",
+   "options": [
+    "(A) R/2",
+    "(B) R",
+    "(C) 2R",
+    "(D) 4R"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0071",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Electricity",
+   "text": "Three resistors of 2 Ω, 3 Ω and 6 Ω are connected in parallel. Their equivalent resistance is:",
+   "options": [
+    "(A) 1 Ω",
+    "(B) 11 Ω",
+    "(C) 6 Ω",
+    "(D) 1/11 Ω"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0072",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Electricity",
+   "text": "One kilowatt-hour of electrical energy is equal to:",
+   "options": [
+    "(A) 3.6 × 10³ J",
+    "(B) 3.6 × 10⁵ J",
+    "(C) 3.6 × 10⁶ J",
+    "(D) 3.6 × 10⁸ J"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0073",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "The magnetic field inside a long straight current-carrying solenoid is:",
+   "options": [
+    "(A) zero",
+    "(B) the same at all points",
+    "(C) greater at the ends than at the centre",
+    "(D) changing from point to point"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0074",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "The direction of the magnetic field around a straight current-carrying conductor is given by:",
+   "options": [
+    "(A) the right-hand thumb rule",
+    "(B) Fleming's left-hand rule",
+    "(C) Ohm's law",
+    "(D) Joule's law"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0075",
+   "section": "SECTION C",
+   "type": "A/R",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "Assertion (A): A convex mirror is used as a rear-view mirror in vehicles.\nReason (R): A convex mirror always forms a virtual, erect and diminished image and gives a wider field of view.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0076",
+   "section": "SECTION C",
+   "type": "A/R",
+   "chapter": "Electricity",
+   "text": "Assertion (A): A fuse wire is made of a material that has a high melting point.\nReason (R): A fuse wire melts and breaks the circuit when the current becomes larger than the safe limit.",
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0077",
+   "section": "SECTION C",
+   "type": "A/R",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "Assertion (A): Two magnetic field lines never cross each other.\nReason (R): Magnetic field lines are closed curves.",
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0078",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "An object 5 cm high is placed at a distance of 30 cm from a convex lens of focal length 20 cm. Find the position, nature and size of the image formed."
+  },
+  {
+   "id": "sc10-0079",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "(a) State the two laws of refraction of light.\n(b) The refractive index of glass is 1.5. Calculate the speed of light in glass. (Speed of light in vacuum = 3 × 10⁸ m/s)"
+  },
+  {
+   "id": "sc10-0080",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "A concave mirror of focal length 15 cm forms a real image that is three times the size of the object. Calculate the distance of the object from the mirror."
+  },
+  {
+   "id": "sc10-0081",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "Explain the formation of a rainbow in the sky with the help of a labelled diagram. Why is a rainbow always seen in the direction opposite to that of the Sun?"
+  },
+  {
+   "id": "sc10-0082",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "(a) What is presbyopia? State its cause and how it is corrected.\n(b) Why can we see the Sun about two minutes before the actual sunrise?"
+  },
+  {
+   "id": "sc10-0083",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electricity",
+   "text": "(a) Derive an expression for the equivalent resistance of three resistors R₁, R₂ and R₃ connected in series.\n(b) Why is an ammeter always connected in series in a circuit?"
+  },
+  {
+   "id": "sc10-0084",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electricity",
+   "text": "An electric iron is rated 1100 W, 220 V. Calculate:\n(a) the current drawn by the iron,\n(b) the resistance of its heating element, and\n(c) the energy consumed in kWh if it is used for 2 hours."
+  },
+  {
+   "id": "sc10-0085",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "(a) Draw the pattern of magnetic field lines around a bar magnet.\n(b) State two properties of magnetic field lines.\n(c) How does a current-carrying solenoid behave like a bar magnet?"
+  },
+  {
+   "id": "sc10-0086",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "(a) State Fleming's left-hand rule.\n(b) On what factors does the force on a current-carrying conductor placed in a magnetic field depend?\n(c) When is this force the largest?"
+  },
+  {
+   "id": "sc10-0087",
+   "section": "SECTION C",
+   "type": "CBQ",
+   "chapter": "Electricity",
+   "text": "In a house, all the appliances are connected in parallel across the live and neutral wires, and each appliance has its own switch. The supply reaches the house at 220 V. The wiring has two separate circuits, one of 5 A rating for bulbs and fans and another of 15 A rating for appliances such as geysers and air coolers. A third wire, the earth wire, is connected to the metal body of appliances such as the electric iron and the refrigerator.\n(a) Why are household appliances connected in parallel and not in series? Give one reason.\n(b) What is the function of the earth wire?\n(c) What is overloading? State two ways in which it can be caused.\nOR\n(c) A geyser of 2 kW and an electric kettle of 1.5 kW are switched on together in the 15 A circuit at 220 V. Find the total current drawn and state whether the fuse will blow."
+  },
+  {
+   "id": "sc10-0088",
+   "section": "SECTION C",
+   "type": "CBQ",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "An eye specialist tests the eyesight of two patients. For the first patient, Asha, the prescription for the lens is +2.0 D. For the second patient, Imran, the prescription is −0.5 D. The power of a lens tells us how strongly it converges or diverges light, and opticians often place lenses in contact to get the required power.\n(a) What type of lens is prescribed for Asha?\n(b) Calculate the focal length of the lens prescribed for Imran.\n(c) Define one dioptre. If lenses of power +2.0 D and −0.5 D are placed in contact, find the power and the focal length of the combination.\nOR\n(c) Draw a ray diagram to show how a convex lens corrects the defect of vision in which nearby objects cannot be seen clearly."
+  },
+  {
+   "id": "sc10-0089",
+   "section": "SECTION C",
+   "type": "LA",
+   "chapter": "Electricity",
+   "text": "(a) State Ohm's law. Describe the shape of the V-I graph for a metallic conductor.\n(b) List the factors on which the resistance of a conductor depends.\n(c) A 4 Ω resistor is connected in series with a parallel combination of a 6 Ω resistor and a 3 Ω resistor. The arrangement is connected to a 6 V battery. Find (i) the total resistance of the circuit, (ii) the current drawn from the battery and (iii) the current through the 6 Ω resistor.\nOR\n(a) What is the heating effect of electric current? Write the expression for the heat produced in a resistor.\n(b) Why is tungsten used for the filament of an electric bulb?\n(c) A 100 W bulb and a 60 W bulb are connected in parallel to a 220 V supply. Find the total current drawn from the supply."
+  },
+  {
+   "id": "sc10-0090",
+   "section": "SECTION C",
+   "type": "LA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "(a) Draw a ray diagram to show the image formed by a convex lens when the object is placed between F₁ and 2F₁. State the nature of the image.\n(b) Write the lens formula and state the sign convention used for the object distance.\n(c) An object is placed 30 cm from a concave lens of focal length 15 cm. Find the position and the magnification of the image.\nOR\n(a) Draw a ray diagram to show the image formed by a concave mirror when the object is placed between the pole and the principal focus. State the nature of the image.\n(b) Define the radius of curvature of a spherical mirror and write its relation with the focal length.\n(c) An object is placed 10 cm in front of a convex mirror of focal length 15 cm. Find the position and nature of the image."
+  }
+ ]
+}

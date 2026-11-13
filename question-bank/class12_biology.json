@@ -1,0 +1,69 @@
+{
+ "subject_key": "biology12",
+ "subject": "Biology",
+ "class": "XII",
+ "max_marks": 70,
+ "time": "3 Hours",
+ "sections": [
+  {
+   "name": "SECTION A",
+   "title": "MCQ & Assertion-Reason",
+   "marks": 16,
+   "slots": [
+    [
+     "MCQ",
+     14
+    ],
+    [
+     "A/R",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "SECTION B",
+   "title": "Very Short Answer",
+   "marks": 10,
+   "slots": [
+    [
+     "VSA",
+     5
+    ]
+   ]
+  },
+  {
+   "name": "SECTION C",
+   "title": "Short Answer",
+   "marks": 21,
+   "slots": [
+    [
+     "SA",
+     7
+    ]
+   ]
+  },
+  {
+   "name": "SECTION D",
+   "title": "Case Study",
+   "marks": 8,
+   "slots": [
+    [
+     "CBQ",
+     2
+    ]
+   ]
+  },
+  {
+   "name": "SECTION E",
+   "title": "Long Answer",
+   "marks": 15,
+   "slots": [
+    [
+     "LA",
+     3
+    ]
+   ]
+  }
+ ],
+ "questions": []
+}

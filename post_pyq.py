@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 """
+CBSE Mock — Free Mock Paper Post
+
+  python3 post_pyq.py --today            # Mon/Wed/Fri: Class 10 + Class 12 paper, never repeated
+  python3 post_pyq.py --today --dry-run  # build everything, post nothing
+
+Papers come from the JSON pool in question-bank/ (see mock_bank.py).
+
+(Older description follows.)
 CBSE Mock — PYQ Practice Paper Daily Post
 Generates a branded cover image, commits the PDF to the repo,
 and posts to Telegram + Facebook + Instagram.
@@ -53,118 +61,136 @@ GOLD         = (249, 168,  37)
 
 # ─── Image generator ─────────────────────────────────────────────────────────
 
+FONT_DIR   = REPO_ROOT / "assets" / "fonts"
+LOGO_CIRCLE = REPO_ROOT / "formula-posts" / "_cbsemock_logo_circle.png"
+
+# Top-half colour per class, so the two papers of the day are easy to tell apart
+COVER_THEME = {
+    "X":   {"top": (255, 214, 0),  "chip_text": (255, 214, 0)},    # yellow
+    "XII": {"top": (0, 212, 255),  "chip_text": (0, 212, 255)},    # cyan
+}
+
 def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
-    """Create a 1080×1080 branded cover image. Returns path to PNG."""
+    """Create the 1080x1080 'Bold Poster' cover (JPEG). Returns its path."""
+    from PIL import ImageFilter
     meta    = SUBJECT_META[subject_key]
     cls     = meta["class"]
-    subject = meta["label"]
+    subject = meta["label"].upper()
+    theme   = COVER_THEME.get(cls, COVER_THEME["X"])
+    TOP, NAVY, WHITE = theme["top"], (8, 20, 48), (255, 255, 255)
+    BLUE, ORANGE = (21, 101, 192), (230, 81, 0)
 
-    W, H = 1080, 1080
-    img  = Image.new("RGB", (W, H), color=BRAND_BLUE)
-    draw = ImageDraw.Draw(img)
+    S = 2                                   # draw at 2x, shrink at the end for smooth edges
+    W = H = 1080 * S
 
-    # ── Background gradient effect using rectangles ──────────────────────────
-    for i in range(H):
-        t = i / H
-        r = int(BRAND_BLUE[0] * (1 - t) + 10 * t)
-        g = int(BRAND_BLUE[1] * (1 - t) + 20 * t)
-        b = int(BRAND_BLUE[2] * (1 - t) + 60 * t)
-        draw.line([(0, i), (W, i)], fill=(r, g, b))
-
-    # ── Decorative top stripe ────────────────────────────────────────────────
-    draw.rectangle([0, 0, W, 12], fill=BRAND_ORANGE)
-
-    # ── Top-right accent circle ──────────────────────────────────────────────
-    draw.ellipse([W - 320, -200, W + 100, 220], fill=(255, 255, 255, 20))
-    draw.ellipse([W - 220, -120, W + 60, 160], fill=(230, 81, 0, 40))
-
-    # ── Helper: load font with fallback ──────────────────────────────────────
-    def font(size, bold=False):
-        for name in (
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-            "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf" if bold else
-            "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
-            "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf" if bold else
-            "/usr/share/fonts/truetype/freefont/FreeSans.ttf",
-        ):
-            if Path(name).exists():
+    def font(size, weight="Bold"):
+        fallbacks = {"Bold": "DejaVuSans-Bold.ttf", "Medium": "DejaVuSans.ttf", "Regular": "DejaVuSans.ttf"}
+        for path in (FONT_DIR / f"Poppins-{weight}.ttf",
+                     Path("/usr/share/fonts/truetype/dejavu") / fallbacks[weight]):
+            if path.exists():
                 try:
-                    return ImageFont.truetype(name, size)
+                    return ImageFont.truetype(str(path), int(size * S))
                 except Exception:
                     pass
         return ImageFont.load_default()
 
-    # ── CBSEMOCK logo text ────────────────────────────────────────────────────
-    logo_fnt = font(42, bold=True)
-    draw.text((54, 30), "CBSE", font=logo_fnt, fill=WHITE)
-    draw.text((54 + 120, 30), "MOCK", font=logo_fnt, fill=GOLD)
-    draw.text((54 + 240, 30), ".ORG.IN", font=font(28), fill=(200, 230, 255))
+    def fit(text, size, max_w, weight="Bold"):
+        f = font(size, weight)
+        while f.getlength(text) > max_w * S and size > 12:
+            size -= 2; f = font(size, weight)
+        return f
 
-    # ── Orange label badge ───────────────────────────────────────────────────
-    badge_y = 110
-    draw.rounded_rectangle([44, badge_y, 460, badge_y + 54], radius=8, fill=BRAND_ORANGE)
-    badge_text = "FREE PRE-BOARD PRACTICE PAPER"
-    draw.text((52, badge_y + 10), badge_text, font=font(20, bold=True), fill=WHITE)
+    def P(*v):
+        return tuple(int(x * S) for x in v)
+
+    def txt(d, xy, s_, f, fill, anchor="la", stroke=0):
+        d.text(P(*xy), s_, font=f, fill=fill, anchor=anchor,
+               stroke_width=int(stroke * S), stroke_fill=fill)
+
+    def rr(d, box, r, fill=None, outline=None, width=0):
+        d.rounded_rectangle(P(*box), radius=int(r * S), fill=fill, outline=outline, width=int(width * S))
+
+    img = Image.new("RGBA", (W, H), (*NAVY, 255))
+    d = ImageDraw.Draw(img)
+    d.polygon([P(0, 0), P(1080, 0), P(1080, 430), P(0, 540)], fill=TOP)
+    d.polygon([P(0, 540), P(1080, 430), P(1080, 448), P(0, 558)], fill=WHITE)
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse(P(520, 520, 1280, 1280), fill=(*BLUE, 90))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(170 * S)))
+    d = ImageDraw.Draw(img)
+
+    # ── Logo on a white disc (the logo's inside is see-through) + wordmark ────
+    x = 44
+    if LOGO_CIRCLE.exists():
+        lg = Image.open(LOGO_CIRCLE).convert("RGBA").resize(P(120, 120), Image.LANCZOS)
+        disc = Image.new("RGBA", lg.size, (0, 0, 0, 0))
+        m = int(120 * S * 0.035)
+        ImageDraw.Draw(disc).ellipse([m, m, lg.width - m, lg.height - m], fill=(255, 255, 255, 255))
+        img.alpha_composite(disc, P(36, 18)); img.alpha_composite(lg, P(36, 18))
+        d = ImageDraw.Draw(img); x = 168
+    f = font(40)
+    txt(d, (x, 78), "CBSE", f, NAVY, "lm"); x += f.getlength("CBSE") / S
+    txt(d, (x, 78), "MOCK", f, BLUE, "lm"); x += f.getlength("MOCK") / S
+    txt(d, (x + 4, 83), ".ORG.IN", font(24, "Medium"), NAVY, "lm")
 
     # ── Class chip ───────────────────────────────────────────────────────────
-    draw.rounded_rectangle([44, 185, 170, 230], radius=6, fill=GOLD)
-    draw.text((52, 192), f"CLASS {cls}", font=font(22, bold=True), fill=(50, 30, 0))
+    f = font(28); w = f.getlength(f"CLASS {cls}") / S
+    rr(d, (1036 - w - 44, 50, 1036, 106), 28, fill=NAVY)
+    txt(d, (1036 - w / 2 - 22, 79), f"CLASS {cls}", f, theme["chip_text"], "mm")
 
-    # ── Subject name ─────────────────────────────────────────────────────────
-    draw.text((44, 250), subject.upper(), font=font(78, bold=True), fill=WHITE)
+    # ── Headline ─────────────────────────────────────────────────────────────
+    txt(d, (44, 204), "TODAY'S FREE", fit("TODAY'S FREE", 150, 990), NAVY, "lm", stroke=2)
+    txt(d, (44, 356), "MOCK PAPER", fit("MOCK PAPER", 150, 990), NAVY, "lm", stroke=2)
 
-    # ── Horizontal rule ───────────────────────────────────────────────────────
-    draw.rectangle([44, 355, W - 44, 360], fill=BRAND_ORANGE)
+    # ── Badge, subject, date ─────────────────────────────────────────────────
+    badge = "FREE PRE-BOARD PRACTICE PAPER"
+    f = font(22); w = f.getlength(badge) / S
+    rr(d, (44, 590, 44 + w + 40, 636), 23, outline=TOP, width=2)
+    txt(d, (64, 614), badge, f, TOP, "lm")
+    txt(d, (40, 714), subject, fit(subject, 130, 620), WHITE, "lm", stroke=1.5)
+    txt(d, (44, 796), paper_date, font(28, "Medium"), TOP, "lm")
 
-    # ── Date ─────────────────────────────────────────────────────────────────
-    draw.text((44, 374), f"★  {paper_date}", font=font(26), fill=(200, 230, 255))
+    # ── Question-paper illustration ──────────────────────────────────────────
+    pw, ph = 250, 330
+    sheet = Image.new("RGBA", P(pw + 40, ph + 40), (0, 0, 0, 0))
+    shadow = Image.new("RGBA", sheet.size, (0, 0, 0, 0))
+    ImageDraw.Draw(shadow).rounded_rectangle(P(32, 34, pw + 32, ph + 34), radius=16 * S, fill=(0, 0, 0, 110))
+    sheet.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(10 * S)))
+    sd = ImageDraw.Draw(sheet)
+    rr(sd, (20, 16, pw + 20, ph + 16), 16, fill=WHITE)
+    rr(sd, (20, 16, pw + 20, 76), 16, fill=BLUE); sd.rectangle(P(20, 56, pw + 20, 76), fill=BLUE)
+    txt(sd, (20 + pw / 2, 46), "MOCK PAPER", font(22), WHITE, "mm")
+    y = 104
+    for qn in range(3):
+        sd.ellipse(P(40, y, 66, y + 26), fill=BLUE)
+        txt(sd, (53, y + 13), str(qn + 1), font(14), WHITE, "mm")
+        rr(sd, (78, y + 3, pw - 6, y + 13), 5, fill=(205, 214, 228))
+        rr(sd, (78, y + 21, pw - 70 - qn * 18, y + 31), 5, fill=(225, 231, 240))
+        for k in range(2):
+            sd.ellipse(P(80 + k * 96, y + 44, 94 + k * 96, y + 58), outline=(150, 165, 185), width=2 * S)
+            rr(sd, (100 + k * 96, y + 47, 156 + k * 96, y + 55), 4, fill=(225, 231, 240))
+        y += 72
+    rot = sheet.rotate(8, expand=True, resample=Image.BICUBIC)
+    cx, cy = P(880, 680)
+    img.alpha_composite(rot, (cx - rot.width // 2, cy - rot.height // 2))
+    d = ImageDraw.Draw(img)
 
-    # ── Main headline ─────────────────────────────────────────────────────────
-    headline_lines = [
-        "Get our Free",
-        "Pre-Board Practice Paper",
-        "Every Day for Your Practice!",
-    ]
-    y = 440
-    for i, line in enumerate(headline_lines):
-        fnt = font(50 if i == 0 else (54 if i == 1 else 42), bold=True)
-        col = WHITE if i < 2 else GOLD
-        draw.text((54, y), line, font=fnt, fill=col)
-        y += 68
+    # ── Supporting lines ─────────────────────────────────────────────────────
+    l1 = "Get our Free Pre-Board Practice Paper"
+    l2 = "Every Day for Your Practice!  We are committed to your success."
+    txt(d, (44, 846), l1, fit(l1, 30, 700), WHITE, "lm")
+    txt(d, (44, 884), l2, fit(l2, 24, 990, "Medium"), (200, 215, 240), "lm")
 
-    # ── Commitment line ───────────────────────────────────────────────────────
-    draw.text((54, y + 10),
-              "We are committed to your success.",
-              font=font(28), fill=(200, 230, 255))
+    # ── Call to action ───────────────────────────────────────────────────────
+    rr(d, (44, 918, 1036, 1046), 64, fill=WHITE)
+    l3 = "Get today's paper link below  •  Also available on our Telegram channel"
+    txt(d, (540, 944), l3, fit(l3, 20, 900, "Medium"), (70, 80, 100), "mm")
+    txt(d, (540, 984), "www.cbsemock.org.in", font(40), BLUE, "mm")
+    txt(d, (540, 1024), "New paper EVERY DAY — absolutely FREE!", font(21), ORANGE, "mm")
 
-    # ── CTA box ───────────────────────────────────────────────────────────────
-    cta_y = H - 230
-    draw.rounded_rectangle([44, cta_y, W - 44, cta_y + 160],
-                            radius=14, fill=(255, 255, 255, 240))
-    draw.rounded_rectangle([44, cta_y, W - 44, cta_y + 160],
-                            radius=14, outline=BRAND_ORANGE, width=3)
-
-    cta_fnt_sm = font(22, bold=False)
-    cta_fnt_lg = font(30, bold=True)
-    draw.text((W // 2, cta_y + 22), "▼  Get today's paper link below  ▼",
-              font=cta_fnt_sm, fill=DARK_GREY, anchor="mm")
-    draw.text((W // 2, cta_y + 72), "www.cbsemock.org.in",
-              font=cta_fnt_lg, fill=BRAND_BLUE, anchor="mm")
-    draw.text((W // 2, cta_y + 110),
-              "Also available on our Telegram channel",
-              font=cta_fnt_sm, fill=DARK_GREY, anchor="mm")
-    draw.text((W // 2, cta_y + 140),
-              "New paper EVERY DAY — absolutely FREE!",
-              font=font(22, bold=True), fill=BRAND_ORANGE, anchor="mm")
-
-    # ── Bottom rule ───────────────────────────────────────────────────────────
-    draw.rectangle([0, H - 12, W, H], fill=BRAND_ORANGE)
-
-    # ── Save ──────────────────────────────────────────────────────────────────
     date_slug = date.today().strftime("%Y-%m-%d")
-    img_path  = str(OUTPUT_DIR / f"cover_{subject_key}_{date_slug}.png")
-    img.save(img_path, "PNG", optimize=True)
+    img_path  = str(OUTPUT_DIR / f"cover_{subject_key}_{date_slug}.jpg")
+    img.convert("RGB").resize((1080, 1080), Image.LANCZOS).save(img_path, "JPEG", quality=92, optimize=True)
     print(f"🖼️   Cover image: {img_path}")
     return img_path
 
@@ -316,7 +342,7 @@ def post_facebook(img_path: str, subject_key: str,
 # ─── Instagram post ───────────────────────────────────────────────────────────
 
 def post_instagram(img_path: str, subject_key: str,
-                   pdf_url: str, paper_date: str, dry_run: bool):
+                   pdf_url: str, paper_date: str, dry_run: bool, bio_url: str = None):
     ig_id  = os.getenv("INSTAGRAM_ACCOUNT_ID", "")
     token  = os.getenv("INSTAGRAM_ACCESS_TOKEN", "")
     meta   = SUBJECT_META[subject_key]
@@ -340,7 +366,7 @@ def post_instagram(img_path: str, subject_key: str,
     )
 
     if dry_run:
-        print(f"[DRY] Instagram: would update bio link to {pdf_url} and post {img_filename}")
+        print(f"[DRY] Instagram: would update bio link to {bio_url or pdf_url} and post {img_filename}")
         return
 
     if not ig_id or not token:
@@ -350,7 +376,7 @@ def post_instagram(img_path: str, subject_key: str,
     # Step 0: update Instagram bio link to today's paper URL
     rb = requests.post(
         f"https://graph.facebook.com/v19.0/{ig_id}",
-        data={"website": pdf_url, "access_token": token},
+        data={"website": bio_url or pdf_url, "access_token": token},
         timeout=30,
     )
     if rb.status_code == 200:
@@ -383,13 +409,131 @@ def post_instagram(img_path: str, subject_key: str,
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
+TODAY_PAGE_URL = "https://cbsemock.org.in/pyq-papers/today.html"
+
+def _git_commit_push(paths, message, dry_run):
+    if dry_run:
+        print(f"[DRY] Would commit: {', '.join(str(p) for p in paths)}")
+        return
+    _set_git_remote()
+    for cmd in (["config", "user.name", "social-post-bot"],
+                ["config", "user.email", "bot@cbsemock.org.in"],
+                ["add", *[str(p) for p in paths]],
+                ["commit", "-m", message + " [skip ci]"],
+                ["pull", "--rebase", "--autostash", "origin", os.getenv("GITHUB_REF_NAME", "main")],
+                ["push", "origin", "HEAD:" + os.getenv("GITHUB_REF_NAME", "main")]):
+        r = subprocess.run(["git", "-C", str(REPO_ROOT), *cmd], capture_output=True, text=True)
+        if r.returncode != 0 and "nothing to commit" not in r.stdout:
+            print(f"  git warning ({cmd[0]}): {r.stderr.strip()[:200]}")
+
+
+def _write_today_page(papers, paper_date):
+    """One page that links to both of today's papers (used for the Instagram bio link)."""
+    rows = "".join(
+        f'<a class="b" href="{u}">Class {SUBJECT_META[k]["class"]} {SUBJECT_META[k]["label"]}'
+        f'<span>Download PDF</span></a>' for k, u in papers)
+    html = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Today's Free Mock Papers | CBSEMock</title>
+<style>body{{margin:0;font-family:system-ui,Arial,sans-serif;background:#081430;color:#fff;text-align:center;padding:40px 16px}}
+h1{{color:#ffd600;font-size:28px;margin:0 0 6px}}p{{color:#c8d7f0;margin:0 0 28px}}
+.b{{display:block;max-width:420px;margin:14px auto;padding:18px 20px;border-radius:16px;background:#fff;color:#1565c0;
+font-weight:700;font-size:20px;text-decoration:none}}.b span{{display:block;font-size:14px;color:#e65100;margin-top:4px}}
+.f{{margin-top:30px;font-size:14px}}.f a{{color:#00d4ff}}</style></head><body>
+<h1>Today's Free Mock Papers</h1><p>{paper_date}</p>{rows}
+<p class="f"><a href="https://cbsemock.org.in">More free practice at cbsemock.org.in</a></p></body></html>
+"""
+    path = OUTPUT_DIR / "today.html"
+    path.write_text(html, encoding="utf-8")
+    return path
+
+
+def publish(subject_key, pdf_path, pdf_url, paper_date, dry_run, bio_url=None):
+    """Cover image + posts for one paper whose PDF is already built and pushed."""
+    meta = SUBJECT_META[subject_key]
+    img_path = build_cover_image(subject_key, paper_date, pdf_url)
+    _git_commit_push([Path(img_path).relative_to(REPO_ROOT)],
+                     f"feat: add cover image {Path(img_path).name}", dry_run)
+    post_telegram(pdf_path, img_path, subject_key, pdf_url, paper_date, dry_run)
+    post_facebook(img_path, subject_key, pdf_url, paper_date, dry_run)
+    if not dry_run:
+        import time
+        print("⏳  Waiting 20s for GitHub raw URL to be available for Instagram...")
+        time.sleep(20)
+    post_instagram(img_path, subject_key, pdf_url, paper_date, dry_run, bio_url=bio_url)
+    print(f"🎉  Done: Class {meta['class']} {meta['label']}  →  {pdf_url}")
+
+
+def run_today(dry_run: bool):
+    """
+    Post the papers planned for today in question-bank/calendar.json:
+    one Class 10 paper and one Class 12 paper, every Monday, Wednesday and Friday.
+    Safe to run on any day and more than once: it skips days with nothing planned
+    and papers that are already posted.
+    """
+    import mock_bank
+    from pyq_generator import build_pdf_from_paper
+
+    d = mock_bank.today_ist()
+    paper_date = d.strftime("%d %B %Y")
+    entry = mock_bank.entry_for(d)
+    if not entry:
+        if d.weekday() in mock_bank.POST_WEEKDAYS:
+            print(f"::error::No mock paper is planned for {paper_date}. The reviewed question stock has run out. "
+                  f"Add questions and run: python3 mock_bank.py plan")
+            sys.exit(1)
+        print(f"[SKIP] {paper_date} is not a paper day (papers go out Mon/Wed/Fri).")
+        return
+
+    todo = [(cls, e) for cls, e in entry.items() if not e.get("posted")]
+    if not todo:
+        print(f"[SKIP] Today's papers ({paper_date}) are already posted.")
+        return
+
+    # 1) Build the PDFs and the page that links to both, then push them together
+    built, paths = [], []
+    for cls, e in todo:
+        sk = e["subject_key"]
+        meta, _ = mock_bank.paper_sections(sk, e["question_ids"])
+        pdf_path = OUTPUT_DIR / f"{sk}_{d.isoformat()}.pdf"
+        build_pdf_from_paper(meta, str(pdf_path), paper_date)
+        print(f"📄  {e['paper_id']}: {pdf_path.name}")
+        built.append((cls, sk, pdf_path, f"https://cbsemock.org.in/pyq-papers/{pdf_path.name}"))
+        paths.append(pdf_path.relative_to(REPO_ROOT))
+    page = _write_today_page([(sk, url) for _, sk, _, url in built], paper_date)
+    paths.append(page.relative_to(REPO_ROOT))
+    _git_commit_push(paths, f"feat: mock papers for {d.isoformat()}", dry_run)
+
+    # 2) Post each paper, then record it as posted so it is never used again
+    for n, (cls, sk, pdf_path, pdf_url) in enumerate(built):
+        if n and not dry_run:
+            import time; time.sleep(30)
+        publish(sk, str(pdf_path), pdf_url, paper_date, dry_run, bio_url=TODAY_PAGE_URL)
+        if not dry_run:
+            mock_bank.mark_posted(d, cls)
+            _git_commit_push(["question-bank/calendar.json"], f"chore: mark {sk} {d.isoformat()} as posted", dry_run)
+
+    left = mock_bank.unposted_days() if not dry_run else mock_bank.unposted_days() - 1
+    if left < 3:
+        print(f"::warning::Only {left} more paper day(s) are planned. Add questions and run: python3 mock_bank.py plan")
+    else:
+        print(f"ℹ️  Paper days still planned: {left}")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--subject",
                         choices=list(SUBJECT_META.keys()),
-                        default="science10")
+                        default=None,
+                        help="OLD behaviour: one paper from the small legacy bank (questions repeat)")
+    parser.add_argument("--today", action="store_true",
+                        help="post today's planned Class 10 + Class 12 papers (no repeats)")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
+
+    if args.today or not args.subject:
+        run_today(args.dry_run)
+        return
 
     subject_key = args.subject
     dry_run     = args.dry_run
