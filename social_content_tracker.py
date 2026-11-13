@@ -160,6 +160,12 @@ class ContentTracker:
             valid = {t for t, _ in NOTES_PAGES}
             self.rows = [r for r in self.rows
                          if r["content_type"] != "notes" or r["title"] in valid]
+            seen, unique = set(), []
+            for r in self.rows:                       # one row per item
+                key = (r["content_type"], r["title"])
+                if key not in seen:
+                    seen.add(key); unique.append(r)
+            self.rows = unique
             # Add any new items that aren't tracked yet
             self._sync_catalogue()
         else:
