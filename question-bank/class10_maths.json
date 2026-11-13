@@ -551,6 +551,765 @@
    "type": "CBQ",
    "chapter": "Probability",
    "text": "At a school fair, a game stall has a spinner with eight equal sectors numbered 1 to 8. A player spins the arrow once, and it is equally likely to stop on any one of the eight numbers.\n(a) Find the probability that the arrow stops on an odd number.\n(b) Find the probability that it stops on a number greater than 6.\n(c) A prize is given if the arrow stops on a prime number. Find the probability of winning a prize.\nOR\n(c) Find the probability that the arrow stops on (i) a multiple of 3 and (ii) a factor of 8."
+  },
+  {
+   "id": "ma10-0048",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Real Numbers",
+   "text": "The LCM of the smallest prime number and the smallest composite number is:",
+   "options": [
+    "(A) 2",
+    "(B) 4",
+    "(C) 6",
+    "(D) 8"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0049",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Real Numbers",
+   "text": "If p and q are two co-prime numbers, then their HCF is:",
+   "options": [
+    "(A) 1",
+    "(B) p",
+    "(C) q",
+    "(D) pq"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0050",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Real Numbers",
+   "text": "The exponent of 2 in the prime factorisation of 144 is:",
+   "options": [
+    "(A) 2",
+    "(B) 3",
+    "(C) 4",
+    "(D) 5"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0051",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Polynomials",
+   "text": "A quadratic polynomial whose zeroes are −3 and 4 is:",
+   "options": [
+    "(A) x² + x − 12",
+    "(B) x² − x + 12",
+    "(C) x² + 7x + 12",
+    "(D) x² − x − 12"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0052",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Polynomials",
+   "text": "The graph of a polynomial p(x) cuts the x-axis at exactly three points. The number of zeroes of p(x) is:",
+   "options": [
+    "(A) 2",
+    "(B) 3",
+    "(C) 1",
+    "(D) 4"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0053",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Polynomials",
+   "text": "If one zero of the polynomial x² + 3x + k is 2, then the value of k is:",
+   "options": [
+    "(A) −10",
+    "(B) 10",
+    "(C) 5",
+    "(D) −5"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0054",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "The lines represented by the equations x = a and y = b (a, b ≠ 0) are:",
+   "options": [
+    "(A) parallel",
+    "(B) coincident",
+    "(C) intersecting at the point (a, b)",
+    "(D) intersecting at the point (b, a)"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0055",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "The pair of equations 2x + y = 5 and 4x + 2y = 9 has:",
+   "options": [
+    "(A) a unique solution",
+    "(B) no solution",
+    "(C) infinitely many solutions",
+    "(D) exactly two solutions"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0056",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "If x + y = 14 and x − y = 4, then the value of x is:",
+   "options": [
+    "(A) 5",
+    "(B) 7",
+    "(C) 8",
+    "(D) 9"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0057",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Quadratic Equations",
+   "text": "Which of the following is a quadratic equation?",
+   "options": [
+    "(A) x(x + 3) = x² + 5",
+    "(B) (x + 2)² = x² + 7",
+    "(C) (x + 1)² = 2(x − 3)",
+    "(D) x(2x + 1) = 2x² − 9"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0058",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Quadratic Equations",
+   "text": "If x = 3 is a root of the equation x² − kx + 6 = 0, then the value of k is:",
+   "options": [
+    "(A) 5",
+    "(B) −5",
+    "(C) 3",
+    "(D) 6"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0059",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Quadratic Equations",
+   "text": "The roots of the quadratic equation x² + x + 1 = 0 are:",
+   "options": [
+    "(A) real and equal",
+    "(B) real and distinct",
+    "(C) rational",
+    "(D) not real"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0060",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "The common difference of the AP 3, 1, −1, −3, ... is:",
+   "options": [
+    "(A) 2",
+    "(B) −2",
+    "(C) 4",
+    "(D) −4"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0061",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "If the nth term of an AP is 3n + 2, then its common difference is:",
+   "options": [
+    "(A) 2",
+    "(B) 5",
+    "(C) 3",
+    "(D) 1"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0062",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "The number of two-digit numbers that are divisible by 7 is:",
+   "options": [
+    "(A) 13",
+    "(B) 14",
+    "(C) 12",
+    "(D) 15"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0063",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Triangles",
+   "text": "ΔABC ~ ΔDEF. If AB = 4 cm, DE = 6 cm and BC = 5 cm, then EF is equal to:",
+   "options": [
+    "(A) 3.3 cm",
+    "(B) 6 cm",
+    "(C) 8 cm",
+    "(D) 7.5 cm"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0064",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Triangles",
+   "text": "Which of the following pairs of figures are always similar?",
+   "options": [
+    "(A) Two rectangles",
+    "(B) Two equilateral triangles",
+    "(C) Two isosceles triangles",
+    "(D) Two rhombuses"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0065",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordinate Geometry",
+   "text": "The distance between the points (2, 3) and (−1, −1) is:",
+   "options": [
+    "(A) 3 units",
+    "(B) 4 units",
+    "(C) 5 units",
+    "(D) 7 units"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0066",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordinate Geometry",
+   "text": "The point which divides the line segment joining (1, 2) and (7, 8) in the ratio 1 : 2 is:",
+   "options": [
+    "(A) (3, 4)",
+    "(B) (5, 6)",
+    "(C) (4, 5)",
+    "(D) (2, 3)"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0067",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordinate Geometry",
+   "text": "The distance of the point (−6, 8) from the x-axis is:",
+   "options": [
+    "(A) 6 units",
+    "(B) 8 units",
+    "(C) 10 units",
+    "(D) 14 units"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0068",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Introduction to Trigonometry",
+   "text": "If tan θ = 1 and θ is acute, then the value of sin θ + cos θ is:",
+   "options": [
+    "(A) 1",
+    "(B) 2",
+    "(C) 1/√2",
+    "(D) √2"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0069",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Introduction to Trigonometry",
+   "text": "The value of (1 + tan² θ)(1 − sin² θ) is:",
+   "options": [
+    "(A) 1",
+    "(B) 0",
+    "(C) 2",
+    "(D) tan² θ"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0070",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Introduction to Trigonometry",
+   "text": "If cos A = 4/5, then sec A is equal to:",
+   "options": [
+    "(A) 3/5",
+    "(B) 4/3",
+    "(C) 5/4",
+    "(D) 5/3"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0071",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "A ladder 10 m long just reaches a window 5 m above the ground. The angle made by the ladder with the ground is:",
+   "options": [
+    "(A) 60°",
+    "(B) 30°",
+    "(C) 45°",
+    "(D) 90°"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0072",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "The angle of elevation of the top of a tower from a point 30 m away from its foot is 45°. The height of the tower is:",
+   "options": [
+    "(A) 15 m",
+    "(B) 30√3 m",
+    "(C) 30 m",
+    "(D) 60 m"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0073",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Circles",
+   "text": "The number of tangents that can be drawn to a circle from a point lying inside it is:",
+   "options": [
+    "(A) 0",
+    "(B) 1",
+    "(C) 2",
+    "(D) infinitely many"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0074",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Circles",
+   "text": "From a point P, the length of the tangent to a circle is 24 cm and the distance of P from the centre is 25 cm. The radius of the circle is:",
+   "options": [
+    "(A) 12 cm",
+    "(B) 24.5 cm",
+    "(C) 15 cm",
+    "(D) 7 cm"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0075",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Areas Related to Circles",
+   "text": "The circumference of a circle is 44 cm. Its area is: (Use π = 22/7)",
+   "options": [
+    "(A) 77 cm²",
+    "(B) 154 cm²",
+    "(C) 308 cm²",
+    "(D) 616 cm²"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0076",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Areas Related to Circles",
+   "text": "The length of an arc of a circle of radius 21 cm that subtends an angle of 60° at the centre is: (Use π = 22/7)",
+   "options": [
+    "(A) 11 cm",
+    "(B) 44 cm",
+    "(C) 22 cm",
+    "(D) 66 cm"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0077",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Surface Areas and Volumes",
+   "text": "The total surface area of a solid hemisphere of radius r is:",
+   "options": [
+    "(A) 2πr²",
+    "(B) 4πr²",
+    "(C) πr²",
+    "(D) 3πr²"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0078",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Surface Areas and Volumes",
+   "text": "Two cubes, each of side 4 cm, are joined end to end. The surface area of the resulting cuboid is:",
+   "options": [
+    "(A) 160 cm²",
+    "(B) 192 cm²",
+    "(C) 128 cm²",
+    "(D) 176 cm²"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0079",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Statistics",
+   "text": "If the mean of 5, 7, 9 and x is 9, then the value of x is:",
+   "options": [
+    "(A) 12",
+    "(B) 15",
+    "(C) 13",
+    "(D) 17"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0080",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Statistics",
+   "text": "The mode of the data 2, 3, 3, 5, 3, 5, 7, 5, 3 is:",
+   "options": [
+    "(A) 3",
+    "(B) 5",
+    "(C) 7",
+    "(D) 2"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0081",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "For any event E, the value of P(E) + P(not E) is:",
+   "options": [
+    "(A) 0",
+    "(B) 2",
+    "(C) 1",
+    "(D) 1/2"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0082",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "A bag contains 3 red and 5 blue balls. One ball is drawn at random. The probability that it is blue is:",
+   "options": [
+    "(A) 3/8",
+    "(B) 3/5",
+    "(C) 5/3",
+    "(D) 5/8"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0083",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "A letter is chosen at random from the letters of the word MATHEMATICS. The probability that it is a vowel is:",
+   "options": [
+    "(A) 7/11",
+    "(B) 4/11",
+    "(C) 3/11",
+    "(D) 5/11"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0084",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Polynomials",
+   "text": "Assertion (A): The polynomial x² + 4 has no real zeroes.\nReason (R): A quadratic polynomial can have at most two zeroes.",
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0085",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Introduction to Trigonometry",
+   "text": "Assertion (A): sin θ = 4/3 is not possible for any angle θ.\nReason (R): In a right triangle, the hypotenuse is the longest side.",
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0086",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Probability",
+   "text": "Assertion (A): The probability of a sure event is 1.\nReason (R): The probability of every event is greater than 0 and less than 1.",
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0087",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Real Numbers",
+   "text": "Explain why the number 6ⁿ cannot end with the digit 0 for any natural number n."
+  },
+  {
+   "id": "ma10-0088",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Polynomials",
+   "text": "Find a quadratic polynomial, the sum and product of whose zeroes are −3 and 2 respectively. Also find its zeroes."
+  },
+  {
+   "id": "ma10-0089",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Arithmetic Progressions",
+   "text": "Find the sum of the first 20 positive multiples of 6."
+  },
+  {
+   "id": "ma10-0090",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Triangles",
+   "text": "A vertical pole of height 3 m casts a shadow 2 m long on the ground. At the same time, a tower casts a shadow 24 m long. Find the height of the tower."
+  },
+  {
+   "id": "ma10-0091",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Coordinate Geometry",
+   "text": "Find the values of y for which the distance between the points A(3, y) and B(−1, 2) is 5 units."
+  },
+  {
+   "id": "ma10-0092",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Introduction to Trigonometry",
+   "text": "If tan A = 4/3, find the values of sin A and sec A."
+  },
+  {
+   "id": "ma10-0093",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Areas Related to Circles",
+   "text": "The circumference of a circle is 88 cm. Find the area of a quadrant of this circle. (Use π = 22/7)"
+  },
+  {
+   "id": "ma10-0094",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Probability",
+   "text": "A box contains cards numbered from 1 to 25. One card is drawn at random. Find the probability that the number on the card is a multiple of 3 or 5."
+  },
+  {
+   "id": "ma10-0095",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Real Numbers",
+   "text": "Prove that √7 is an irrational number."
+  },
+  {
+   "id": "ma10-0096",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Polynomials",
+   "text": "If α and β are the zeroes of the polynomial 2x² − 5x + 3, find the values of (a) α² + β² and (b) 1/α + 1/β, without finding the zeroes."
+  },
+  {
+   "id": "ma10-0097",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "Five years ago, a father was seven times as old as his son. Five years from now, he will be three times as old as his son. Find their present ages."
+  },
+  {
+   "id": "ma10-0098",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Quadratic Equations",
+   "text": "The sum of the squares of two consecutive odd positive integers is 290. Find the integers."
+  },
+  {
+   "id": "ma10-0099",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Arithmetic Progressions",
+   "text": "The sum of the first n terms of an AP is given by Sₙ = 3n² + 5n. Find its nth term and hence its 15th term."
+  },
+  {
+   "id": "ma10-0100",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Triangles",
+   "text": "ABCD is a trapezium in which AB ∥ DC and its diagonals intersect each other at the point O. Show that AO/BO = CO/DO."
+  },
+  {
+   "id": "ma10-0101",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Coordinate Geometry",
+   "text": "Find the coordinates of the points of trisection of the line segment joining the points A(1, −2) and B(−5, 7)."
+  },
+  {
+   "id": "ma10-0102",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Introduction to Trigonometry",
+   "text": "Prove that: (1 + cot A − cosec A)(1 + tan A + sec A) = 2"
+  },
+  {
+   "id": "ma10-0103",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Circles",
+   "text": "Two concentric circles have radii 13 cm and 5 cm. Find the length of the chord of the larger circle which touches the smaller circle."
+  },
+  {
+   "id": "ma10-0104",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Probability",
+   "text": "A bag contains 5 red, 8 white and 7 black balls. A ball is drawn at random from the bag. Find the probability that the ball drawn is (a) red or white, (b) not black and (c) neither white nor black."
+  },
+  {
+   "id": "ma10-0105",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Statistics",
+   "text": "Find the mode of the following frequency distribution:\nClass: 0-10, 10-20, 20-30, 30-40, 40-50\nFrequency: 5, 9, 16, 12, 8"
+  },
+  {
+   "id": "ma10-0106",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "A boat covers 24 km upstream and 28 km downstream in 6 hours. It can cover 30 km upstream and 21 km downstream in 6 hours 30 minutes. Find the speed of the boat in still water and the speed of the stream."
+  },
+  {
+   "id": "ma10-0107",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Quadratic Equations",
+   "text": "The diagonal of a rectangular field is 16 m more than its shorter side. If the longer side is 14 m more than the shorter side, find the sides of the field.\nOR\nTwo positive numbers differ by 4 and their product is 192. Find the numbers."
+  },
+  {
+   "id": "ma10-0108",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Arithmetic Progressions",
+   "text": "The 4th term of an AP is 11 and the sum of its 5th and 7th terms is 34. Find the AP and the sum of its first 20 terms.\nOR\nHow many terms of the AP 27, 24, 21, ... should be taken so that their sum is zero? Also find the last of these terms."
+  },
+  {
+   "id": "ma10-0109",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Triangles",
+   "text": "Sides AB and BC and median AD of a triangle ABC are respectively proportional to sides PQ and QR and median PM of another triangle PQR. Show that ΔABC ~ ΔPQR."
+  },
+  {
+   "id": "ma10-0110",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "From a point on a bridge across a river, the angles of depression of the banks on opposite sides of the river are 30° and 45° respectively. If the bridge is at a height of 12 m above the banks, find the width of the river.\nOR\nAn observer 1.6 m tall is standing at some distance from a building 41.6 m high. The angle of elevation of the top of the building from his eyes increases from 30° to 60° as he walks towards the building. Find the distance he walked."
+  },
+  {
+   "id": "ma10-0111",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Circles",
+   "text": "(a) Prove that the angle between the two tangents drawn from an external point to a circle is supplementary to the angle subtended by the line segment joining the points of contact at the centre.\n(b) PQ is a chord of length 16 cm of a circle of radius 10 cm. The tangents at P and Q intersect at a point T. Find the length TP."
+  },
+  {
+   "id": "ma10-0112",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Surface Areas and Volumes",
+   "text": "A medicine capsule is in the shape of a cylinder with two hemispheres stuck to each of its ends. The length of the entire capsule is 20 mm and its diameter is 7 mm. Find its surface area. (Use π = 22/7)\nOR\nA vessel is in the form of a hollow hemisphere mounted by a hollow cylinder. The diameter of the hemisphere is 28 cm and the total height of the vessel is 20 cm. Find the inner surface area of the vessel. (Use π = 22/7)"
+  },
+  {
+   "id": "ma10-0113",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Statistics",
+   "text": "The mean of the following frequency distribution is 50 and the sum of all the frequencies is 120. Find the missing frequencies f₁ and f₂.\nClass: 0-20, 20-40, 40-60, 60-80, 80-100\nFrequency: 17, f₁, 32, f₂, 19"
+  },
+  {
+   "id": "ma10-0114",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Quadratic Equations",
+   "text": "A school wants to build a rectangular vegetable garden. The gardener has 60 m of wire to fence all four sides of the garden, and the garden must have an area of 216 m².\n(a) If the length of the garden is x metres, express its breadth in terms of x.\n(b) Write the quadratic equation in x that represents this situation.\n(c) Find the length and breadth of the garden.\nOR\n(c) Find the length of the diagonal of the garden, correct to one decimal place."
+  },
+  {
+   "id": "ma10-0115",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Triangles",
+   "text": "On a sunny afternoon, Meena, who is 1.5 m tall, notices that her shadow on the level playground is 2 m long. At the same time, the shadow of the school flagpole is 12 m long. Her teacher explains that the Sun's rays make the same angle with the ground for both, so two similar triangles are formed.\n(a) Name the criterion by which the two triangles are similar.\n(b) Find the height of the flagpole.\n(c) Later in the day, Meena's shadow becomes 1 m long. What will be the length of the shadow of the flagpole at that time?\nOR\n(c) At the time when Meena's shadow is 2 m long, find the distance between the top of her head and the tip of her shadow."
+  },
+  {
+   "id": "ma10-0116",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "During a kite festival, Arjun flies a kite at a height of 60 m above the ground. The string attached to the kite is tied to a peg on the ground and makes an angle of 60° with the ground. Assume that there is no slack in the string.\n(a) Which trigonometric ratio connects the height of the kite with the length of the string?\n(b) Find the length of the string.\n(c) Find the horizontal distance of the kite from the peg.\nOR\n(c) If the string were 120 m long and the kite were still at a height of 60 m, find the angle that the string would make with the ground."
+  },
+  {
+   "id": "ma10-0117",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Surface Areas and Volumes",
+   "text": "An ice-cream seller serves ice cream in a cone of radius 3 cm and height 12 cm. The cone is filled completely and then topped with a hemispherical scoop of the same radius.\n(a) Find the volume of the conical part in terms of π.\n(b) Find the volume of the hemispherical scoop in terms of π.\n(c) Find the total volume of ice cream in one serving. (Use π = 3.14)\nOR\n(c) Find the slant height of the cone and the area of the paper needed to wrap its curved surface, correct to one decimal place. (Use π = 3.14)"
+  },
+  {
+   "id": "ma10-0118",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Statistics",
+   "text": "The heights of 50 students of Class X were measured during a health check-up and recorded as follows:\nHeight (in cm): 140-145, 145-150, 150-155, 155-160, 160-165\nNumber of students: 5, 10, 20, 10, 5\n(a) Write the modal class of the data.\n(b) Find the cumulative frequency of the class 150-155.\n(c) Find the median height of the students.\nOR\n(c) Find the mean height of the students."
+  },
+  {
+   "id": "ma10-0119",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Areas Related to Circles",
+   "text": "A circular pizza of radius 14 cm is cut into 8 equal slices through its centre for a birthday party. Each slice is a sector of the circle.\n(a) Find the angle of each slice at the centre.\n(b) Find the area of the top surface of one slice. (Use π = 22/7)\n(c) Find the length of the curved edge (crust) of one slice.\nOR\n(c) Find the perimeter of one slice."
   }
  ]
 }

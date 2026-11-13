@@ -138,9 +138,27 @@ def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
     rr(d, (1036 - w - 44, 50, 1036, 106), 28, fill=NAVY)
     txt(d, (1036 - w / 2 - 22, 79), f"CLASS {cls}", f, theme["chip_text"], "mm")
 
-    # ── Headline ─────────────────────────────────────────────────────────────
-    txt(d, (44, 204), "TODAY'S FREE", fit("TODAY'S FREE", 150, 990), NAVY, "lm", stroke=2)
-    txt(d, (44, 356), "MOCK PAPER", fit("MOCK PAPER", 150, 990), NAVY, "lm", stroke=2)
+    # ── Headline: the day's name, e.g. MONDAY'S FREE MOCK PAPER ──────────────
+    from datetime import datetime as _dt
+    try:
+        weekday = _dt.strptime(paper_date, "%d %B %Y").strftime("%A")
+    except ValueError:
+        weekday = date.today().strftime("%A")
+    line1 = f"{weekday.upper()}'S FREE"
+    txt(d, (44, 192), line1, fit(line1, 132, 990), NAVY, "lm", stroke=2)
+    txt(d, (44, 322), "MOCK PAPER", fit("MOCK PAPER", 132, 990), NAVY, "lm", stroke=2)
+
+    # ── This week's papers strip: Mon / Wed / Fri, today's day highlighted ───
+    f = font(23)
+    lead = "THIS WEEK'S FREE MOCK PAPERS FOR CLASS X & XII"
+    f = fit(lead, 23, 560)
+    txt(d, (46, 421), lead, f, NAVY, "lm")
+    px = 46 + f.getlength(lead) / S + 18
+    for short in ("MON", "WED", "FRI"):
+        on = weekday.upper().startswith(short)
+        rr(d, (px, 400, px + 84, 442), 21, fill=NAVY if on else None, outline=NAVY, width=2.5)
+        txt(d, (px + 42, 421), short, font(22), TOP if on else NAVY, "mm")
+        px += 94
 
     # ── Badge, subject, date ─────────────────────────────────────────────────
     badge = "FREE PRE-BOARD PRACTICE PAPER"
@@ -177,7 +195,7 @@ def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
 
     # ── Supporting lines ─────────────────────────────────────────────────────
     l1 = "Get our Free Pre-Board Practice Paper"
-    l2 = "Every Day for Your Practice!  We are committed to your success."
+    l2 = "Every Mon, Wed & Fri for Your Practice!  We are committed to your success."
     txt(d, (44, 846), l1, fit(l1, 30, 700), WHITE, "lm")
     txt(d, (44, 884), l2, fit(l2, 24, 990, "Medium"), (200, 215, 240), "lm")
 
@@ -186,7 +204,7 @@ def build_cover_image(subject_key: str, paper_date: str, pdf_url: str) -> str:
     l3 = "Get today's paper link below  •  Also available on our Telegram channel"
     txt(d, (540, 944), l3, fit(l3, 20, 900, "Medium"), (70, 80, 100), "mm")
     txt(d, (540, 984), "www.cbsemock.org.in", font(40), BLUE, "mm")
-    txt(d, (540, 1024), "New paper EVERY DAY — absolutely FREE!", font(21), ORANGE, "mm")
+    txt(d, (540, 1024), "New papers every MON, WED & FRI — absolutely FREE!", font(21), ORANGE, "mm")
 
     date_slug = date.today().strftime("%Y-%m-%d")
     img_path  = str(OUTPUT_DIR / f"cover_{subject_key}_{date_slug}.jpg")
@@ -247,7 +265,7 @@ def post_telegram(pdf_path: str, img_path: str,
     caption = (
         f"📄 *Class {meta['class']} {meta['label']} — Pre\\-Board Practice Paper*\n"
         f"📅 Date: {paper_date}\n\n"
-        f"🎯 Get our FREE pre\\-board practice paper every day for your practice\\!\n"
+        f"🎯 Get our FREE pre\\-board mock papers every Monday, Wednesday and Friday\\!\n"
         f"We are committed to your success\\.\n\n"
         f"📥 *Download today's paper here:*\n"
         f"{pdf_url}\n\n"
@@ -307,11 +325,11 @@ def post_facebook(img_path: str, subject_key: str,
 
     message = (
         f"📄 Class {meta['class']} {meta['label']} — Pre-Board Practice Paper | {paper_date}\n\n"
-        f"🎯 Get our FREE pre-board practice paper EVERY DAY for your practice!\n"
+        f"🎯 Get our FREE pre-board mock papers every Monday, Wednesday & Friday!\n"
         f"We are committed to your success. 💪\n\n"
         f"📥 Download today's paper:\n{pdf_url}\n\n"
         f"🌐 More free resources: www.cbsemock.org.in\n"
-        f"📲 Join our Telegram for daily papers: https://t.me/cbsemockportal\n"
+        f"📲 Join our Telegram for every new paper: https://t.me/cbsemockportal\n"
         f"📸 Follow on Instagram: https://www.instagram.com/cbsemock/\n\n"
         f"#CBSE #PreBoard #Class{meta['class']} #{meta['label'].replace(' ','')} "
         f"#FreeStudyMaterial #CBSEExam #StudyWithUs #CBSEMock"
@@ -355,7 +373,7 @@ def post_instagram(img_path: str, subject_key: str,
 
     caption = (
         f"📄 Class {meta['class']} {meta['label']} Practice Paper — {paper_date}\n\n"
-        f"🎯 FREE Pre-Board Practice Paper — Every Day!\n"
+        f"🎯 FREE Pre-Board Mock Papers — every Mon, Wed & Fri!\n"
         f"We are committed to your success 💪\n\n"
         f"🔗 Bio link updated to today's paper — tap it to download!\n"
         f"🌐 www.cbsemock.org.in\n"
