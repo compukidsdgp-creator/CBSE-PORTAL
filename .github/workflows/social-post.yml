@@ -22,6 +22,8 @@ on:
 jobs:
   post:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # allow git push back to repo (queue→posted moves, tracker CSVs)
 
     steps:
       - name: Checkout repository
