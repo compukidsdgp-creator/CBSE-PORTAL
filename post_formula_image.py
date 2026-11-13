@@ -97,24 +97,46 @@ CLASS_HASHTAGS = {
 
 COMMON_TAGS = "#CBSEMock #FormulaFlash #CBSERevision #StudySmart #BoardPrep"
 
+_NOISE_WORDS = {"formulaflash", "concept8", "neonyellow", "neon", "infographic",
+                "poster", "guide", "study", "cbse", "card", "v2"}
+
 def parse_filename(stem: str) -> dict:
     """
     Parse image filename stem into subject / topic / class.
-    Format: {subject}_{topic...}_{classN}  or  {subject}_{topic...}
+
+    Works with any of:
+      physics_em_induction_class12
+      03_FormulaFlash_Chemistry_pH              (order prefix + style words are ignored)
+      01b_Physics_Alternating_Current_class12
+      Chemical Kinetics Class 12 Infographic    (spaces work too)
+    The subject is the first recognised subject word anywhere in the name.
     """
-    parts = stem.lower().split("_")
-    subject = parts[0] if parts else "cbse"
-    class_part = ""
-    topic_parts = parts[1:]
+    import re
+    tokens = [t for t in re.split(r"[_\s\-]+", stem) if t]
+    subject, class_part, topic_tokens = "", "", []
+    k = 0
+    while k < len(tokens):
+        tok = tokens[k]; low = tok.lower()
+        m = re.fullmatch(r"class(\d{1,2})", low)
+        if m:
+            class_part = f"class{m.group(1)}"
+        elif low == "class" and k + 1 < len(tokens) and tokens[k + 1].isdigit():
+            class_part = f"class{tokens[k + 1]}"; k += 1
+        elif re.fullmatch(r"\d+[a-z]?", low) or low in _NOISE_WORDS:
+            pass                                   # order prefix, part number, style word
+        elif not subject and low in SUBJECT_META:
+            subject = low
+        else:
+            topic_tokens.append(tok)
+        k += 1
 
-    # Check if last part is a class indicator
-    if topic_parts and topic_parts[-1].startswith("class"):
-        class_part = topic_parts[-1]
-        topic_parts = topic_parts[:-1]
-
-    topic = " ".join(w.capitalize() for w in topic_parts) if topic_parts else "Formula Flash"
-
-    return {"subject": subject, "topic": topic, "class": class_part}
+    words = []
+    for tok in topic_tokens:
+        w = tok.capitalize() if (tok.islower() and len(tok) > 3) else tok
+        if not words or words[-1].lower() != w.lower():      # drop immediate repeats
+            words.append(w)
+    topic = " ".join(words) if words else "Formula Flash"
+    return {"subject": subject or "cbse", "topic": topic, "class": class_part}
 
 def build_caption(stem: str, slot: str = "morning") -> str:
     """Auto-generate a rich caption from the image filename."""
@@ -122,7 +144,7 @@ def build_caption(stem: str, slot: str = "morning") -> str:
     subj    = info["subject"]
     topic   = info["topic"]
     cls     = info["class"]
-    meta    = SUBJECT_META.get(subj, {"emoji": "📚", "tag": f"#{subj.capitalize()}", "pill": subj.capitalize()})
+    meta    = SUBJECT_META.get(subj, {"emoji": "📚", "tag": "#CBSE", "pill": "CBSE"})
     emoji   = meta["emoji"]
     subj_tag = meta["tag"]
     cls_tags = CLASS_HASHTAGS.get(cls, "#CBSE")
@@ -148,14 +170,14 @@ def build_caption(stem: str, slot: str = "morning") -> str:
 🌐 Full revision portal → cbsemock.org.in
 Practice tests, formula sheets, virtual labs — all free!
 
-{subj_tag} {cls_tags} {COMMON_TAGS} #FormulaCard #{topic.replace(' ','')}"""
+{subj_tag} {cls_tags} {COMMON_TAGS} #FormulaCard #{''.join(c for c in topic if c.isalnum())}"""
 
     return caption.strip()
 
 # ── GitHub raw URL for image ───────────────────────────────────────────────────
 def get_public_image_url(filename: str) -> str:
     """Return publicly accessible raw GitHub URL for the image."""
-    return f"{GH_RAW_BASE}/formula-posts/queue/{filename}"
+    return f"{GH_RAW_BASE}/formula-posts/queue/{urllib.parse.quote(filename)}"
 
 # ── Facebook Graph API ────────────────────────────────────────────────────────
 def _fb_api(endpoint: str, data: dict, dry_run: bool = False) -> dict:
