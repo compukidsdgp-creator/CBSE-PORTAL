@@ -878,5 +878,861 @@
  "ma12-0050": {
   "paper": "maths12-P01",
   "date": "2026-11-20"
+ },
+ "ma10-0010": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0013": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0015": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0022": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0048": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0051": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0054": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0057": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0063": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0071": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0073": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0075": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0077": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0079": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0049": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0052": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0055": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0058": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0085": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0086": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0032": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0089": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0090": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0091": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0093": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0105": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0034": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0038": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0095": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0096": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0098": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0110": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0112": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0108": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0109": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0116": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0117": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "ma10-0118": {
+  "paper": "maths10-P02",
+  "date": "2026-11-23"
+ },
+ "bi12-0001": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0003": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0005": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0006": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0008": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0011": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0012": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0014": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0015": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0016": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0017": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0018": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0019": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0002": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0020": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0021": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0024": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0025": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0026": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0027": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0023": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0029": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0032": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0034": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0035": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0030": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0033": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0028": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0036": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0037": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0038": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0039": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "bi12-0040": {
+  "paper": "biology12-P01",
+  "date": "2026-11-23"
+ },
+ "sc10-0005": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0012": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0092": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0094": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0095": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0091": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0093": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0097": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0098": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0099": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0101": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0100": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0103": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0102": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0104": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0105": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0045": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0049": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0106": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0046": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0050": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0107": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0110": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0109": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0111": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0112": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0113": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0114": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0115": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0067": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0072": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0073": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0076": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0118": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0080": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0116": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0117": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0119": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "sc10-0120": {
+  "paper": "science10-P03",
+  "date": "2026-11-25"
+ },
+ "ph12-0002": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0004": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0006": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0008": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0012": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0047": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0048": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0049": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0050": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0051": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0052": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0043": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0044": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0045": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0022": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0054": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0059": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0028": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0056": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0057": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0058": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0035": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0061": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0063": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0065": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0031": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0060": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0062": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0066": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0067": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0069": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0070": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ph12-0068": {
+  "paper": "physics12-P02",
+  "date": "2026-11-25"
+ },
+ "ma10-0050": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0053": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0056": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0059": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0060": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0064": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0065": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0068": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0072": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0074": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0076": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0078": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0080": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0081": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0061": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0066": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0069": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0082": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0023": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0084": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0028": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0087": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0088": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0092": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0094": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0097": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0100": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0103": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0099": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0101": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0102": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0113": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0106": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0107": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0111": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0119": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0115": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ma10-0114": {
+  "paper": "maths10-P03",
+  "date": "2026-11-27"
+ },
+ "ch12-0003": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0006": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0009": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0013": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0019": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0046": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0048": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0049": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0050": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0051": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0043": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0044": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0045": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0047": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0054": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0020": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0026": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0058": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0059": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0056": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0057": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0064": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0031": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0062": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0063": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0065": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0030": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0060": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0067": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0066": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0069": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0068": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
+ },
+ "ch12-0070": {
+  "paper": "chemistry12-P02",
+  "date": "2026-11-27"
  }
 }

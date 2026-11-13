@@ -495,6 +495,274 @@
    "type": "LA",
    "chapter": "Chemical Kinetics",
    "text": "(a) State two differences between the order and the molecularity of a reaction.\n(b) A first order reaction is 20% complete in 10 minutes. Calculate the rate constant and the time taken for 75% completion of the reaction. (log 1.25 = 0.0969, log 4 = 0.6021)\n(c) What is a pseudo first order reaction? Give one example.\nOR\n(a) Derive the integrated rate equation for a zero order reaction.\n(b) Show that the half-life of a first order reaction is independent of the initial concentration.\n(c) The half-life of a first order reaction is 30 minutes. What fraction of the reactant remains after 2 hours?"
+  },
+  {
+   "id": "ch12-0043",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Solutions",
+   "text": "The unit of molality is:",
+   "options": [
+    "(A) mol L⁻¹",
+    "(B) mol kg⁻¹",
+    "(C) g L⁻¹",
+    "(D) mol dm⁻³"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0044",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electrochemistry",
+   "text": "The standard electrode potential of the standard hydrogen electrode is taken as:",
+   "options": [
+    "(A) 0.00 V",
+    "(B) 1.00 V",
+    "(C) −1.00 V",
+    "(D) 0.76 V"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0045",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Chemical Kinetics",
+   "text": "The molecularity of an elementary reaction can never be:",
+   "options": [
+    "(A) 1",
+    "(B) 2",
+    "(C) 3",
+    "(D) zero"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0046",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "The d- and f-Block Elements",
+   "text": "The highest oxidation state shown by manganese in its compounds is:",
+   "options": [
+    "(A) +4",
+    "(B) +6",
+    "(C) +7",
+    "(D) +2"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0047",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordination Compounds",
+   "text": "The coordination number of cobalt in [Co(en)₃]³⁺ is:",
+   "options": [
+    "(A) 3",
+    "(B) 6",
+    "(C) 4",
+    "(D) 2"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0048",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "Chlorobenzene reacts with methyl chloride and sodium in dry ether to give toluene. This reaction is called the:",
+   "options": [
+    "(A) Wurtz-Fittig reaction",
+    "(B) Fittig reaction",
+    "(C) Wurtz reaction",
+    "(D) Friedel-Crafts reaction"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0049",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "Lucas reagent is a mixture of:",
+   "options": [
+    "(A) anhydrous AlCl₃ and concentrated HCl",
+    "(B) concentrated HNO₃ and concentrated H₂SO₄",
+    "(C) anhydrous ZnCl₂ and dilute HCl",
+    "(D) anhydrous ZnCl₂ and concentrated HCl"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0050",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "Formalin is a 40% aqueous solution of:",
+   "options": [
+    "(A) ethanal",
+    "(B) methanol",
+    "(C) methanal",
+    "(D) methanoic acid"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0051",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Amines",
+   "text": "The Gabriel phthalimide synthesis is used for the preparation of:",
+   "options": [
+    "(A) primary aliphatic amines",
+    "(B) secondary amines",
+    "(C) tertiary amines",
+    "(D) primary aromatic amines"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0052",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biomolecules",
+   "text": "The sugar present in DNA is:",
+   "options": [
+    "(A) ribose",
+    "(B) 2-deoxyribose",
+    "(C) glucose",
+    "(D) fructose"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0053",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Chemical Kinetics",
+   "text": "Assertion (A): The rate of a reaction generally increases when the temperature is raised.\nReason (R): At a higher temperature, a larger fraction of the molecules has energy equal to or greater than the activation energy.",
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0054",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "Assertion (A): Tertiary alkyl halides react fastest by the SN2 mechanism.\nReason (R): The rate of an SN2 reaction decreases as the crowding around the carbon bearing the halogen increases.",
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0055",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Solutions",
+   "text": "What is an ideal solution? State two of its characteristics and give one example."
+  },
+  {
+   "id": "ch12-0056",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Electrochemistry",
+   "text": "Why does the conductivity of a solution decrease on dilution, whereas its molar conductivity increases?"
+  },
+  {
+   "id": "ch12-0057",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Coordination Compounds",
+   "text": "Write the IUPAC names of the following coordination compounds and state the oxidation number of the central metal in each:\n(a) [Cr(NH₃)₃Cl₃]\n(b) K₂[Zn(OH)₄]"
+  },
+  {
+   "id": "ch12-0058",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "Give reasons:\n(a) The boiling point of ethanol is higher than that of methoxymethane.\n(b) o-Nitrophenol is more steam volatile than p-nitrophenol."
+  },
+  {
+   "id": "ch12-0059",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Biomolecules",
+   "text": "What are essential and non-essential amino acids? Give one example of each. What is a zwitterion?"
+  },
+  {
+   "id": "ch12-0060",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Solutions",
+   "text": "(a) Define osmotic pressure.\n(b) A solution is prepared by dissolving 1.0 g of a polymer in water to make 100 mL of solution. Its osmotic pressure at 300 K is 2.5 × 10⁻³ atm. Calculate the molar mass of the polymer. (R = 0.0821 L atm K⁻¹ mol⁻¹)"
+  },
+  {
+   "id": "ch12-0061",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electrochemistry",
+   "text": "Write the Nernst equation for the cell Zn | Zn²⁺(0.1 M) || Cu²⁺(0.01 M) | Cu and calculate its emf at 298 K. (E°cell = 1.10 V)"
+  },
+  {
+   "id": "ch12-0062",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "The d- and f-Block Elements",
+   "text": "Write balanced ionic equations for the following reactions:\n(a) Acidified potassium permanganate with iron(II) ions\n(b) Acidified potassium permanganate with oxalate ions\n(c) Acidified potassium dichromate with iodide ions"
+  },
+  {
+   "id": "ch12-0063",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "Write the structure of the major product in each of the following reactions and give a reason for your answer in each case:\n(a) 2-Bromobutane is heated with alcoholic potassium hydroxide.\n(b) Chlorobenzene is treated with a mixture of concentrated nitric acid and concentrated sulphuric acid.\n(c) Bromoethane is treated with silver cyanide."
+  },
+  {
+   "id": "ch12-0064",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Amines",
+   "text": "Identify the compounds A, B and C in the following sequence of reactions and write the equations:\nBenzoic acid is heated with ammonia to give A. A is treated with bromine and aqueous sodium hydroxide to give B. B is treated with sodium nitrite and hydrochloric acid at 273-278 K to give C.\nName the reaction by which A is converted into B."
+  },
+  {
+   "id": "ch12-0065",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Biomolecules",
+   "text": "(a) Write two structural differences between DNA and RNA.\n(b) What type of bonding stabilises the α-helix structure of a protein?\n(c) What happens when a protein is denatured? Give one example."
+  },
+  {
+   "id": "ch12-0066",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Chemical Kinetics",
+   "text": "Hydrogen peroxide solution decomposes very slowly at room temperature. When a small amount of potassium iodide solution is added, the decomposition becomes rapid and bubbles of oxygen are seen at once. If the mixture is warmed, the reaction becomes faster still. Chemists explain these observations by saying that molecules must collide with a certain minimum energy before they can react, and that only a fraction of the collisions are effective.\n(a) Define the activation energy of a reaction.\n(b) How does potassium iodide increase the rate of this reaction? Does it change the enthalpy change of the reaction?\n(c) Write the Arrhenius equation and state what each term in it represents.\nOR\n(c) The decomposition follows first order kinetics with a half-life of 20 minutes under certain conditions. How long will it take for the concentration of hydrogen peroxide to fall to one-eighth of its initial value?"
+  },
+  {
+   "id": "ch12-0067",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "Ethanol is produced on a large scale by the fermentation of the sugar present in molasses, sugarcane or fruits. The process is carried out by yeast in the absence of air. The ethanol sold for industrial use is made unfit for drinking by adding substances such as copper sulphate and pyridine. Methanol, which is sometimes present in illicit liquor, is highly poisonous and can cause blindness and death even in small amounts.\n(a) Name the two enzymes, present in yeast, that take part in the conversion of sugar into ethanol.\n(b) What is ethanol called after copper sulphate and pyridine have been added to it? Why are they added?\n(c) What product is obtained when ethanol is oxidised with (i) pyridinium chlorochromate (PCC) and (ii) acidified potassium dichromate in excess?\nOR\n(c) Describe a chemical test to distinguish between methanol and ethanol and write the equation involved."
+  },
+  {
+   "id": "ch12-0068",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Electrochemistry",
+   "text": "(a) State Faraday's first law of electrolysis.\n(b) A current of 2 A is passed through a solution of silver nitrate for 30 minutes. Calculate the mass of silver deposited at the cathode. (Atomic mass of Ag = 108 u, F = 96500 C mol⁻¹)\n(c) Name the products formed at the cathode and at the anode when (i) an aqueous solution of sodium chloride and (ii) dilute sulphuric acid are electrolysed using platinum electrodes.\nOR\n(a) Write the reactions taking place at the anode and at the cathode of a lead storage battery when it is in use.\n(b) What happens when the battery is recharged?\n(c) The resistance of a conductivity cell filled with a KCl solution of conductivity 1.29 × 10⁻² S cm⁻¹ is 100 Ω. Calculate the cell constant."
+  },
+  {
+   "id": "ch12-0069",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "(a) Write the mechanism of the acid-catalysed hydration of ethene to ethanol.\n(b) Explain Williamson's synthesis of ethers with one example. Why can tert-butyl ethyl ether not be prepared from tert-butyl bromide and sodium ethoxide?\n(c) Write the equation for Kolbe's reaction.\nOR\n(a) How will you convert (i) phenol to benzene, (ii) ethanol to ethanal and (iii) anisole to phenol?\n(b) Arrange the following in increasing order of acid strength and give a reason: phenol, p-nitrophenol, p-cresol.\n(c) Give one chemical test to distinguish between phenol and ethanol."
+  },
+  {
+   "id": "ch12-0070",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Solutions",
+   "text": "(a) State Raoult's law for a solution of two volatile liquids. What is meant by positive deviation from Raoult's law? Give one example and explain the cause of the deviation.\n(b) The vapour pressures of pure liquids A and B at a certain temperature are 400 mm Hg and 600 mm Hg respectively. If the total vapour pressure of their solution is 520 mm Hg, find the mole fraction of each liquid in the solution and the mole fraction of A in the vapour phase.\nOR\n(a) What is the van't Hoff factor? What is its value for a solute that associates in solution?\n(b) 2.0 g of a non-electrolyte solute dissolved in 100 g of benzene lowers the freezing point of benzene by 0.64 K. Calculate the molar mass of the solute. (K_f for benzene = 5.12 K kg mol⁻¹)\n(c) Why is a 1 M solution of NaCl expected to show a greater depression in freezing point than a 1 M solution of glucose?"
   }
  ]
 }

@@ -65,5 +65,422 @@
    ]
   }
  ],
- "questions": []
+ "questions": [
+  {
+   "id": "bi12-0001",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "How many meiotic divisions are required to produce 100 pollen grains?",
+   "options": [
+    "(A) 100",
+    "(B) 25",
+    "(C) 50",
+    "(D) 400"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "bi12-0002",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "In angiosperms, triple fusion results in the formation of the:",
+   "options": [
+    "(A) zygote",
+    "(B) embryo sac",
+    "(C) primary endosperm nucleus",
+    "(D) seed coat"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0003",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Human Reproduction",
+   "text": "Ovulation in the human female is triggered by a surge in the level of:",
+   "options": [
+    "(A) luteinising hormone",
+    "(B) progesterone",
+    "(C) prolactin",
+    "(D) oxytocin"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0004",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Human Reproduction",
+   "text": "Fertilisation in human beings normally takes place in the:",
+   "options": [
+    "(A) uterus",
+    "(B) cervix",
+    "(C) ovary",
+    "(D) ampullary region of the fallopian tube"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0005",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Reproductive Health",
+   "text": "The copper ions released by a Copper-T mainly act by:",
+   "options": [
+    "(A) preventing ovulation",
+    "(B) suppressing the motility and fertilising capacity of sperms",
+    "(C) blocking the fallopian tubes",
+    "(D) increasing the secretion of oestrogen"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "bi12-0006",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "A heterozygous tall pea plant is crossed with a dwarf pea plant. The ratio of tall to dwarf plants in the progeny will be:",
+   "options": [
+    "(A) 3 : 1",
+    "(B) 1 : 2",
+    "(C) 1 : 1",
+    "(D) All tall"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0007",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "The AB blood group in human beings is an example of:",
+   "options": [
+    "(A) codominance",
+    "(B) incomplete dominance",
+    "(C) polygenic inheritance",
+    "(D) pleiotropy"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0008",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "If a double-stranded DNA molecule has 20% adenine, the percentage of cytosine in it will be:",
+   "options": [
+    "(A) 20%",
+    "(B) 40%",
+    "(C) 60%",
+    "(D) 30%"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0009",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "The enzyme that joins the Okazaki fragments during DNA replication is:",
+   "options": [
+    "(A) DNA polymerase",
+    "(B) DNA ligase",
+    "(C) helicase",
+    "(D) primase"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "bi12-0010",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "Which of the following codons acts as the start codon and also codes for methionine?",
+   "options": [
+    "(A) UAA",
+    "(B) UGA",
+    "(C) AUG",
+    "(D) UAG"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0011",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Evolution",
+   "text": "The variety of beaks seen in Darwin's finches of the Galapagos Islands is an example of:",
+   "options": [
+    "(A) adaptive radiation",
+    "(B) convergent evolution",
+    "(C) genetic drift",
+    "(D) saltation"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0012",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Human Health and Disease",
+   "text": "The most serious form of malaria, called malignant malaria, is caused by:",
+   "options": [
+    "(A) Plasmodium vivax",
+    "(B) Plasmodium malariae",
+    "(C) Plasmodium ovale",
+    "(D) Plasmodium falciparum"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0013",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Human Health and Disease",
+   "text": "The antibody present in abundance in colostrum, which protects the newborn, is:",
+   "options": [
+    "(A) IgG",
+    "(B) IgA",
+    "(C) IgM",
+    "(D) IgE"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "bi12-0014",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Microbes in Human Welfare",
+   "text": "Which microorganism is used for the commercial production of citric acid?",
+   "options": [
+    "(A) Acetobacter aceti",
+    "(B) Lactobacillus",
+    "(C) Aspergillus niger",
+    "(D) Saccharomyces cerevisiae"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0015",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "The restriction enzyme EcoRI recognises and cuts the DNA sequence:",
+   "options": [
+    "(A) GAATTC",
+    "(B) GGATCC",
+    "(C) AAGCTT",
+    "(D) CTGCAG"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0016",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biotechnology and its Applications",
+   "text": "The cry genes used to make Bt cotton resistant to bollworms were obtained from:",
+   "options": [
+    "(A) Agrobacterium tumefaciens",
+    "(B) Bacillus thuringiensis",
+    "(C) Escherichia coli",
+    "(D) Bacillus subtilis"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "bi12-0017",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Organisms and Populations",
+   "text": "The interaction between two species in which one is benefited and the other is neither benefited nor harmed is called:",
+   "options": [
+    "(A) mutualism",
+    "(B) parasitism",
+    "(C) amensalism",
+    "(D) commensalism"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0018",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Ecosystem",
+   "text": "Which of the following ecological pyramids is always upright?",
+   "options": [
+    "(A) Pyramid of numbers",
+    "(B) Pyramid of biomass",
+    "(C) Pyramid of energy",
+    "(D) Both pyramid of numbers and pyramid of biomass"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0019",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biodiversity and Conservation",
+   "text": "Which of the following is an example of in situ conservation?",
+   "options": [
+    "(A) National park",
+    "(B) Botanical garden",
+    "(C) Seed bank",
+    "(D) Zoological park"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0020",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "Assertion (A): The replication of DNA is semi-conservative.\nReason (R): Each new DNA molecule has one parental strand and one newly synthesised strand.",
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0021",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Human Health and Disease",
+   "text": "Assertion (A): Vaccination provides passive immunity to the body.\nReason (R): A vaccine contains antigens that stimulate the body to produce antibodies and memory cells.",
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0022",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Biodiversity and Conservation",
+   "text": "Assertion (A): Tropical regions have a greater diversity of species than temperate regions.\nReason (R): Tropical regions have remained relatively undisturbed for millions of years and so had a long time for species to evolve.",
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0023",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "Differentiate between geitonogamy and xenogamy. Why is geitonogamy genetically similar to autogamy?"
+  },
+  {
+   "id": "bi12-0024",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Human Reproduction",
+   "text": "State the role of (a) Leydig cells and (b) Sertoli cells in the human testis."
+  },
+  {
+   "id": "bi12-0025",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "A colour-blind man marries a woman with normal vision whose father was colour-blind. With the help of a cross, find the probability of their son being colour-blind."
+  },
+  {
+   "id": "bi12-0026",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Microbes in Human Welfare",
+   "text": "What are biofertilisers? Give two examples and state how each enriches the soil.\nOR\nWhat are methanogens? State their role in the production of biogas."
+  },
+  {
+   "id": "bi12-0027",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Biodiversity and Conservation",
+   "text": "What is meant by 'the Evil Quartet' in relation to the loss of biodiversity? Name its four components."
+  },
+  {
+   "id": "bi12-0028",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "Describe the development of the female gametophyte (embryo sac) in an angiosperm, starting from the megaspore mother cell. Why is the mature embryo sac described as 7-celled and 8-nucleate?"
+  },
+  {
+   "id": "bi12-0029",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Reproductive Health",
+   "text": "What are assisted reproductive technologies? Briefly explain any three such techniques that help infertile couples to have children."
+  },
+  {
+   "id": "bi12-0030",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "Describe the experiment of Hershey and Chase. What conclusion was drawn from it?"
+  },
+  {
+   "id": "bi12-0031",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "Explain how the lac operon of E. coli is regulated (a) in the absence of lactose and (b) in the presence of lactose."
+  },
+  {
+   "id": "bi12-0032",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Evolution",
+   "text": "(a) State the Hardy-Weinberg principle.\n(b) List any four factors that affect the Hardy-Weinberg equilibrium.\n(c) In a population in equilibrium, 16% of the individuals show the recessive trait (aa). Find the frequency of the dominant allele and the percentage of heterozygous individuals."
+  },
+  {
+   "id": "bi12-0033",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Human Health and Disease",
+   "text": "Describe the stages of the life cycle of Plasmodium that take place in the human body. What causes the chill and high fever that recur every three to four days in malaria?"
+  },
+  {
+   "id": "bi12-0034",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "Explain the three steps of each cycle of the polymerase chain reaction (PCR). Why is Taq polymerase used in this technique?"
+  },
+  {
+   "id": "bi12-0035",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Ecosystem",
+   "text": "(a) What is an ecological pyramid?\n(b) Why is the pyramid of biomass in a sea generally inverted?\n(c) State two limitations of ecological pyramids."
+  },
+  {
+   "id": "bi12-0036",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Biotechnology and its Applications",
+   "text": "People with diabetes need regular doses of insulin. Earlier, insulin was extracted from the pancreas of slaughtered cattle and pigs. Human insulin is made of two short polypeptide chains, chain A and chain B, linked by disulphide bridges. In the body it is first made as a pro-hormone that contains an extra stretch called the C peptide, which is removed during maturation. In 1983, an American company prepared two DNA sequences corresponding to the A and B chains of human insulin and introduced them into plasmids of E. coli. The two chains were produced separately, extracted and combined to form human insulin.\n(a) State one problem caused by the use of insulin obtained from animal sources.\n(b) What is the C peptide? Is it present in mature insulin?\n(c) Why was it an advantage to produce chains A and B separately in E. coli?\nOR\n(c) What is gene therapy? Name the genetic disorder for which it was first used, and the enzyme that is deficient in this disorder."
+  },
+  {
+   "id": "bi12-0037",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Organisms and Populations",
+   "text": "A small herd of deer was introduced on an island that had plenty of grass and no predators. For the first few years the number of deer increased slowly, then it rose very rapidly. As the herd grew larger, grass became scarce, and the growth slowed down. Finally the population became almost steady at about 1000 deer, the largest number that the island could support. When ecologists plotted the number of deer against time, they obtained an S-shaped curve.\n(a) What name is given to the maximum population size that a habitat can support?\n(b) Write the equation that describes this type of population growth and name the type of growth.\n(c) Why can a population not keep growing exponentially for a long time in nature?\nOR\n(c) At a time when the island had 200 deer, the intrinsic rate of natural increase was 0.1 per year. Using K = 1000, calculate the rate of growth of the population (dN/dt) at that time."
+  },
+  {
+   "id": "bi12-0038",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Human Reproduction",
+   "text": "(a) Describe the process of spermatogenesis in human beings with the help of a schematic diagram.\n(b) Explain the role of the hormones that regulate this process.\n(c) Draw a labelled diagram of a human sperm.\nOR\n(a) Describe the events of the menstrual cycle in the ovary and in the uterus.\n(b) Explain the role of the pituitary and ovarian hormones in regulating the cycle.\n(c) What is the fate of the corpus luteum if fertilisation does not occur?"
+  },
+  {
+   "id": "bi12-0039",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "(a) State Mendel's law of independent assortment. Explain it with the help of a dihybrid cross between pea plants having round yellow seeds (RRYY) and wrinkled green seeds (rryy), up to the F₂ generation.\n(b) How did Morgan explain the deviation from this law in his experiments on Drosophila? Define linkage and recombination.\nOR\n(a) Explain the mechanism of sex determination in (i) human beings and (ii) honey bees.\n(b) Haemophilia is a sex-linked recessive disorder. Explain why it is much more common in males than in females.\n(c) What is aneuploidy? Give one example of a disorder caused by it."
+  },
+  {
+   "id": "bi12-0040",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "(a) List the main steps involved in recombinant DNA technology, from the isolation of DNA to the production of the desired product.\n(b) Explain how recombinant colonies can be distinguished from non-recombinant colonies by insertional inactivation of an enzyme.\n(c) What is a bioreactor? State two conditions that it provides for the growth of the cells.\nOR\n(a) Distinguish between innate immunity and acquired immunity.\n(b) Draw a labelled diagram of an antibody molecule.\n(c) Describe how the human immunodeficiency virus (HIV) multiplies inside the body after infection and why the patient becomes prone to other infections."
+  }
+ ]
 }

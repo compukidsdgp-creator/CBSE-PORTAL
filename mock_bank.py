@@ -294,17 +294,60 @@ def stock(verbose=True) -> dict:
     return out
 
 
+def need(days: int = 6, verbose=True) -> dict:
+    """
+    What must be written so that `days` future paper days are planned.
+    Returns {subject_key: {"papers": n, "short": {(section, type): count}}}.
+    """
+    cal, used = load_calendar(), set(load_usage())
+    t = today_ist().isoformat()
+    planned_ahead = sum(1 for d_ in cal if d_ > t)
+    missing_days = max(0, days - planned_ahead)
+    want = {}
+    for i in range(missing_days):
+        for subjects in ROTATION.values():
+            sk = subjects[(len(cal) + i) % len(subjects)]
+            want[sk] = want.get(sk, 0) + 1
+    out = {}
+    for sk, papers in want.items():
+        bank = load_subject(sk)
+        short = {}
+        for sec in bank["sections"]:
+            for qtype, count in sec["slots"]:
+                have = sum(1 for q in bank["questions"]
+                           if q["id"] not in used and q["section"] == sec["name"] and q["type"] == qtype)
+                if papers * count > have:
+                    short[(sec["name"], qtype)] = papers * count - have
+        out[sk] = {"papers": papers, "short": short}
+    if verbose:
+        print(f"Paper days planned after today: {planned_ahead}. Target: {days}. Days still to plan: {missing_days}.")
+        for sk, o in out.items():
+            print(f"{sk}: {o['papers']} more paper(s) needed.")
+            for (sec, qtype), n in o["short"].items():
+                print(f"    write {n:3d} x {qtype:4s} for {sec}")
+            if not o["short"]:
+                print("    enough unused questions already in the pool")
+        if not out:
+            print("Nothing to write: the calendar already covers the target.")
+        else:
+            print(f"After adding the questions run: python3 mock_bank.py plan --slots {missing_days}")
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(description="Mock paper question pool")
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("validate"); sub.add_parser("stock")
     p = sub.add_parser("plan"); p.add_argument("--slots", type=int, default=6); p.add_argument("--start")
     v = sub.add_parser("preview"); v.add_argument("--out", required=True)
+    n = sub.add_parser("need"); n.add_argument("--days", type=int, default=6)
     a = ap.parse_args()
     if a.cmd == "validate":
         sys.exit(1 if validate() else 0)
     if a.cmd == "stock":
         stock()
+    if a.cmd == "need":
+        need(a.days)
     if a.cmd == "plan":
         if validate(verbose=False):
             validate(); sys.exit("Fix the problems above before planning.")
@@ -313,6 +356,8 @@ def main():
         from pyq_generator import build_pdf_from_paper
         out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
         for d, e in load_calendar().items():
+            if d < today_ist().isoformat():
+                continue
             for cls in ROTATION:
                 if e[cls]["posted"]:
                     continue
