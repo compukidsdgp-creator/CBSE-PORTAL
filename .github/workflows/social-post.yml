@@ -211,10 +211,13 @@ jobs:
         run: |
           git config user.name  "social-post-bot"
           git config user.email "bot@cbsemock.org.in"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git add social-posting-tracker.csv \
                   formula-posts/post_log.csv \
-                  formula-posts/reel_log.csv 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "chore: update social posting tracker [skip ci]"
+                  formula-posts/reel_log.csv \
+                  formula-posts/queue/ \
+                  formula-posts/posted/ 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "chore: update formula flash queue and tracker [skip ci]"
           git push || true
 
       - name: Festival Greeting (Telegram)
