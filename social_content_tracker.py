@@ -42,40 +42,32 @@ FIELDNAMES = ["content_type", "title", "url", "telegram", "facebook", "instagram
 # ── Content catalogue ─────────────────────────────────────────────────────────
 # Notes pages: class → list of (title, url)
 NOTES_PAGES = [
-    # Class 9
-    ("Science Notes — Class 9",           f"{PORTAL_BASE}/resources/science-x.html"),
-    ("Mathematics Notes — Class 9",       f"{PORTAL_BASE}/resources/maths-x.html"),
-    ("Social Science Notes — Class 9",    f"{PORTAL_BASE}/resources/sst-x.html"),
-    ("Hindi Course A Notes — Class 9",    f"{PORTAL_BASE}/resources/hindi-a-x.html"),
-    ("English LL Notes — Class 9",        f"{PORTAL_BASE}/resources/english-ll-x.html"),
-    ("AI Notes — Class 9/10",             f"{PORTAL_BASE}/resources/ai-x.html"),
+    # Every title matches the page it links to. There are no separate Class 9 or
+    # Class 11 notes pages on the portal, so those classes are covered by the
+    # two Study Zone hub pages instead of mislabelled links.
     # Class 10
-    ("Science Notes — Class 10",          f"{PORTAL_BASE}/resources/science-x.html"),
-    ("Mathematics Standard Notes — Cl 10",f"{PORTAL_BASE}/resources/maths-x.html"),
-    ("Mathematics Basic Notes — Class 10",f"{PORTAL_BASE}/resources/maths-basic-x.html"),
-    ("Social Science Notes — Class 10",   f"{PORTAL_BASE}/resources/sst-x.html"),
-    ("Hindi Course A Notes — Class 10",   f"{PORTAL_BASE}/resources/hindi-a-x.html"),
-    ("English Communicative Notes — Cl10",f"{PORTAL_BASE}/resources/english-comm-x.html"),
-    ("English LL Notes — Class 10",       f"{PORTAL_BASE}/resources/english-ll-x.html"),
-    ("Computer Applications Notes — Cl10",f"{PORTAL_BASE}/resources/comp-app-x.html"),
-    # Class 11 (linking study-zone)
-    ("Physics Notes — Class 11",          f"{PORTAL_BASE}/study-zone/classes-11-12.html"),
-    ("Chemistry Notes — Class 11",        f"{PORTAL_BASE}/study-zone/classes-11-12.html"),
-    ("Mathematics Notes — Class 11",      f"{PORTAL_BASE}/study-zone/classes-11-12.html"),
-    ("Biology Notes — Class 11",          f"{PORTAL_BASE}/study-zone/classes-11-12.html"),
-    ("Accountancy Notes — Class 11",      f"{PORTAL_BASE}/study-zone/classes-11-12.html"),
-    ("Economics Notes — Class 11",        f"{PORTAL_BASE}/study-zone/classes-11-12.html"),
+    ("Science Notes — Class 10",                f"{PORTAL_BASE}/resources/science-x.html"),
+    ("Mathematics Standard Notes — Class 10",   f"{PORTAL_BASE}/resources/maths-x.html"),
+    ("Mathematics Basic Notes — Class 10",      f"{PORTAL_BASE}/resources/maths-basic-x.html"),
+    ("Social Science Notes — Class 10",         f"{PORTAL_BASE}/resources/sst-x.html"),
+    ("Hindi Course A Notes — Class 10",         f"{PORTAL_BASE}/resources/hindi-a-x.html"),
+    ("English Communicative Notes — Class 10",  f"{PORTAL_BASE}/resources/english-comm-x.html"),
+    ("English Language & Literature Notes — Class 10", f"{PORTAL_BASE}/resources/english-ll-x.html"),
+    ("Computer Applications Notes — Class 10",  f"{PORTAL_BASE}/resources/comp-app-x.html"),
+    ("Artificial Intelligence Notes — Class 9-10", f"{PORTAL_BASE}/resources/ai-x.html"),
     # Class 12
-    ("Physics Notes — Class 12",          f"{PORTAL_BASE}/resources/physics-xii.html"),
-    ("Chemistry Notes — Class 12",        f"{PORTAL_BASE}/resources/chemistry-xii.html"),
-    ("Mathematics Notes — Class 12",      f"{PORTAL_BASE}/resources/maths-xii.html"),
-    ("Biology Notes — Class 12",          f"{PORTAL_BASE}/resources/biology-xii.html"),
-    ("Accountancy Notes — Class 12",      f"{PORTAL_BASE}/resources/accountancy-xii.html"),
-    ("Economics Notes — Class 12",        f"{PORTAL_BASE}/resources/economics-xii.html"),
-    ("Physics Notes — Class 12",          f"{PORTAL_BASE}/resources/physics-xii.html"),
-    ("Computer Science Notes — Class 12", f"{PORTAL_BASE}/resources/cs-xii.html"),
-    ("English Core Notes — Class 12",     f"{PORTAL_BASE}/resources/english-xii.html"),
-    ("Business Studies Notes — Class 12", f"{PORTAL_BASE}/resources/business-xii.html"),
+    ("Physics Notes — Class 12",                f"{PORTAL_BASE}/resources/physics-xii.html"),
+    ("Chemistry Notes — Class 12",              f"{PORTAL_BASE}/resources/chemistry-xii.html"),
+    ("Mathematics Notes — Class 12",            f"{PORTAL_BASE}/resources/maths-xii.html"),
+    ("Biology Notes — Class 12",                f"{PORTAL_BASE}/resources/biology-xii.html"),
+    ("Accountancy Notes — Class 12",            f"{PORTAL_BASE}/resources/accountancy-xii.html"),
+    ("Economics Notes — Class 12",              f"{PORTAL_BASE}/resources/economics-xii.html"),
+    ("Computer Science Notes — Class 12",       f"{PORTAL_BASE}/resources/cs-xii.html"),
+    ("English Core Notes — Class 12",           f"{PORTAL_BASE}/resources/english-xii.html"),
+    ("Business Studies Notes — Class 12",       f"{PORTAL_BASE}/resources/business-xii.html"),
+    # Hubs
+    ("Study Zone — Classes 9 & 10",             f"{PORTAL_BASE}/study-zone/classes-9-10.html"),
+    ("Study Zone — Classes 11 & 12",            f"{PORTAL_BASE}/study-zone/classes-11-12.html"),
 ]
 
 PRACTICE_10_PAGES = [
@@ -164,6 +156,10 @@ class ContentTracker:
                 for col in FIELDNAMES:
                     if col not in row:
                         row[col] = ""
+            # Drop notes rows that are no longer in the catalogue (renamed or removed)
+            valid = {t for t, _ in NOTES_PAGES}
+            self.rows = [r for r in self.rows
+                         if r["content_type"] != "notes" or r["title"] in valid]
             # Add any new items that aren't tracked yet
             self._sync_catalogue()
         else:
