@@ -147,6 +147,7 @@ main{{max-width:1040px;margin:0 auto;padding:22px 16px 40px}}
 .next li span{{color:var(--muted);min-width:86px}}
 .note{{margin-top:18px;font-size:.8rem;color:var(--muted);text-align:center}}
 .tg{{display:inline-block;margin-top:14px;background:#229ED9;color:#fff;font-weight:700;font-size:.85rem;text-decoration:none;border-radius:30px;padding:8px 18px}}
+.ig{{display:inline-block;margin:14px 0 0 8px;background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);color:#fff;font-weight:700;font-size:.85rem;text-decoration:none;border-radius:30px;padding:8px 18px}}
 footer{{text-align:center;font-size:.8rem;color:var(--muted);padding:18px 16px 28px}}
 </style>
 </head>
@@ -177,7 +178,7 @@ footer{{text-align:center;font-size:.8rem;color:var(--muted);padding:18px 16px 2
   </section>
 
   <p class="note">These are practice papers prepared by CBSEMock.org.in on the CBSE pattern. They are not official CBSE question papers.<br>
-    <a class="tg" href="https://t.me/cbsemockportal" target="_blank" rel="noopener">Get each new paper on Telegram</a></p>
+    <a class="tg" href="https://t.me/cbsemockportal" target="_blank" rel="noopener">Get each new paper on Telegram</a><a class="ig" href="https://www.instagram.com/cbsemock/" target="_blank" rel="noopener">Follow on Instagram</a></p>
 </main>
 <footer>&copy; CBSEMock.org.in &middot; <a href="../index.html">Home</a> &middot; <a href="../mock-zone/classes-9-10.html">Class IX-X Mock Zone</a> &middot; <a href="../mock-zone/classes-11-12.html">Class XI-XII Mock Zone</a></footer>
 <script>
