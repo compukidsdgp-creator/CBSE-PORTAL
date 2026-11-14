@@ -7,7 +7,7 @@
    LIVE = false  -> only shows with ?follow=preview (owner's preview).
    LIVE = true   -> shows to every visitor by the rules above. */
 (function () {
-  var LIVE = false;
+  var LIVE = true;
   var KEY = 'cbsemock_follow_card_until';
   var preview = /[?&]follow=preview\b/.test(location.search);
   function snoozed() {
