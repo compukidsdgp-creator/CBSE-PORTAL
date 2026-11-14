@@ -1,0 +1,13 @@
+🤖 WHY? — How does a computer SEE an image?
+
+A computer never sees a face… it sees a grid of numbers! 🔢
+Pixels → numbers (0 = black, 255 = white) → filters find edges → layers find shapes → "FACE ✅"
+
+That's the idea behind Computer Vision in your AI syllabus (Class 10 & 12). 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #ComputerVision #AIClass10 #AIClass12 #CBSE #LearnAI
