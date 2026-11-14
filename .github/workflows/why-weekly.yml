@@ -1,8 +1,8 @@
-name: WHY? reel (Sunday 6:30 PM IST)
+name: WHY? reel (Sunday + Wednesday 6:30 PM IST)
 
 on:
   schedule:
-    - cron: '0 13 * * 0'          # Sunday 13:00 UTC = 6:30 PM IST
+    - cron: '0 13 * * 0,3'        # Sunday + Wednesday 13:00 UTC = 6:30 PM IST
   workflow_dispatch:
     inputs:
       dry_run:
