@@ -529,7 +529,13 @@ def run_today(dry_run: bool):
         publish(sk, str(pdf_path), pdf_url, paper_date, dry_run, bio_url=TODAY_PAGE_URL)
         if not dry_run:
             mock_bank.mark_posted(d, cls)
-            _git_commit_push(["question-bank/calendar.json"], f"chore: mark {sk} {d.isoformat()} as posted", dry_run)
+            saved = ["question-bank/calendar.json"]
+            try:                                    # add the paper to the portal's Free Mock Papers section
+                import mock_papers_page
+                saved.append(str(mock_papers_page.build().relative_to(REPO_ROOT)))
+            except Exception as exc:
+                print(f"::warning::Could not rebuild the Free Mock Papers page: {exc}")
+            _git_commit_push(saved, f"chore: mark {sk} {d.isoformat()} as posted", dry_run)
 
     left = mock_bank.unposted_days() if not dry_run else mock_bank.unposted_days() - 1
     if left < 3:
