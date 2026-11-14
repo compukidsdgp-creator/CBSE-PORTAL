@@ -71,6 +71,8 @@ def _day_variant(n: int = 12) -> int:
     """Return today's 0-based variant index (wraps over n variants)."""
     return date.today().timetuple().tm_yday % n
 
+from promo_config import poster_url, month_name   # weekend promo posters
+
 def get_image_url(title: str = "", post_type: str = "study_notes") -> str:
     """
     Return a branded image URL.
@@ -271,11 +273,11 @@ def post_promo_quest(dry_run=False):
         "1️⃣ Open cbsemock.org.in/quest\n"
         "2️⃣ Select your subject\n"
         "3️⃣ Submit → see your score instantly!\n\n"
-        "🔥 November Quest is LIVE NOW!\n\n"
+        f"🔥 {month_name()} Quest is LIVE NOW!\n\n"
         f"🔗 {PORTAL_URL}/quest/\n\n"
         "#Quest #CBSE #MCQ #BoardExams2027 #Class10 #Class12 #CBSEMock"
     )
-    ig_post(caption, get_image_url(post_type="quest_zone"), dry_run)
+    ig_post(caption, poster_url("promo_quest"), dry_run)
     print("[OK] IG Promo Quest")
 
 
@@ -294,7 +296,7 @@ def post_promo_mock(dry_run=False):
         f"🔗 {PORTAL_URL}\n\n"
         "#MockTest #CBSE #Class10 #Class12 #PracticePaper #BoardExams2027 #CBSEMock"
     )
-    ig_post(caption, get_image_url(post_type="practice_papers"), dry_run)
+    ig_post(caption, poster_url("promo_mock"), dry_run)
     print("[OK] IG Promo Mock")
 
 
@@ -314,7 +316,7 @@ def post_promo_lab(dry_run=False):
         f"🔗 {PORTAL_URL}/virtual-labs/\n\n"
         "#VirtualLab #CBSE #Science #Physics #Chemistry #Biology #BoardExams2027 #CBSEMock"
     )
-    ig_post(caption, get_image_url(post_type="virtual_lab"), dry_run)
+    ig_post(caption, poster_url("promo_lab"), dry_run)
     print("[OK] IG Promo Lab")
 
 
@@ -334,7 +336,7 @@ def post_promo_notes(dry_run=False):
         f"🔗 {PORTAL_URL}\n\n"
         "#StudyNotes #CBSE #Revision #BoardExams2027 #Class12 #Class10 #CBSEMock"
     )
-    ig_post(caption, get_image_url(post_type="study_notes"), dry_run)
+    ig_post(caption, poster_url("promo_notes"), dry_run)
     print("[OK] IG Promo Notes")
 
 
