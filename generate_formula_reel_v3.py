@@ -66,6 +66,13 @@ GREY       = "#7a90a8"
 ACCENTS    = [BRAND_CYAN, "#ff8c00", "#00e676", "#ff4db8"]
 
 matplotlib.rcParams["mathtext.fontset"] = "dejavusans"
+# Same font on every machine (GitHub's runners do not have Inter installed)
+from matplotlib import font_manager as _fm
+for _f in ("Inter-Regular.otf", "Inter-Bold.otf"):
+    _p = ROOT / "assets" / "fonts" / _f
+    if _p.exists():
+        _fm.fontManager.addfont(str(_p))
+matplotlib.rcParams["font.family"] = ["Inter", "DejaVu Sans"]
 
 _LOGO = None
 def logo_img():
