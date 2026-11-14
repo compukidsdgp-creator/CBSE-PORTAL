@@ -1,0 +1,17 @@
+🎯 WHY? — Why can 99% accuracy still be a BAD AI model?
+
+Rare disease: 1 sick person out of 100 🧑‍⚕️
+A lazy model says "healthy" for everyone → right 99 times → 99% accuracy! 🤩
+…but it missed the ONE person who needed help ❌
+
+Confusion matrix → Recall = 0 / 1 = 0% 😱
+Lesson: never trust accuracy alone — check recall & precision.
+
+Model evaluation — AI syllabus, Class 10 & 12. 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #ConfusionMatrix #ModelEvaluation #AIClass10 #AIClass12 #CBSE

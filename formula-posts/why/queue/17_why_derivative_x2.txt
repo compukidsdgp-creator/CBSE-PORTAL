@@ -1,0 +1,15 @@
+📐 WHY? — Why is d/dx (x²) = 2x?
+
+Take a square of side x → area x² 🟦
+Grow each side by a tiny dx → the extra area is two strips (x·dx each) + a tiny corner (dx)²
+As dx → 0, the corner vanishes → change in area ≈ 2x·dx
+Divide by dx → d/dx (x²) = 2x ✨
+
+Class 12 Derivatives — finally SEE where the formula comes from. 🧠
+
+💾 Save it · 📤 Share with your maths group
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Calculus #Derivatives #Class12Maths #VisualMaths #BoardExam2027 #CBSE
