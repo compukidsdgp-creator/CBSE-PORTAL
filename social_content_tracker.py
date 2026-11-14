@@ -71,15 +71,15 @@ NOTES_PAGES = [
 ]
 
 PRACTICE_10_PAGES = [
-    ("Science Mock Test — Class 10",              f"{PORTAL_BASE}/Science%20Mock%20Tests%20_%20Class%2010%20CBSE.html"),
-    ("Mathematics Standard Mock — Class 10",      f"{PORTAL_BASE}/Mathematics%20Standard%20Mock%20Tests%20_%20Class%2010%20CBSE.html"),
-    ("Mathematics Basic Mock — Class 10",         f"{PORTAL_BASE}/Mathematics%20Basic%20Mock%20Tests%20_%20Class%2010%20CBSE.html"),
-    ("Social Science Mock — Class 10",            f"{PORTAL_BASE}/Social%20Science%20Mock%20Tests%20_%20Class%2010%20CBSE.html"),
-    ("English Communicative Mock — Class 10",     f"{PORTAL_BASE}/English%20Communicative%20Mock%20Tests%20_%20Class%2010%20CBSE.html"),
-    ("English Language & Lit Mock — Class 10",    f"{PORTAL_BASE}/English%20Language%20%26%20Literature%20Mock%20Tests%20_%20Class%2010%20CBSE.html"),
-    ("Hindi Course A Mock — Class 10",            f"{PORTAL_BASE}/Hindi%20Course%20A%20Class%2010%20CBSE.html"),
-    ("Computer Applications Mock — Class 10",     f"{PORTAL_BASE}/Computer%20Applications%20Mock%20Tests%20_%20Class%2010%20CBSE.html"),
-    ("AI Mock Papers — Class 10",                 f"{PORTAL_BASE}/CBSE%20Class%2010%20AI%20Mock%20Papers.html"),
+    ("Science Mock Test — Class 10",              f"{PORTAL_BASE}/cbse-class-10-science-mock-tests.html"),
+    ("Mathematics Standard Mock — Class 10",      f"{PORTAL_BASE}/cbse-class-10-maths-standard-mock-tests.html"),
+    ("Mathematics Basic Mock — Class 10",         f"{PORTAL_BASE}/cbse-class-10-maths-basic-mock-tests.html"),
+    ("Social Science Mock — Class 10",            f"{PORTAL_BASE}/cbse-class-10-social-science-mock-tests.html"),
+    ("English Communicative Mock — Class 10",     f"{PORTAL_BASE}/cbse-class-10-english-communicative-mock-tests.html"),
+    ("English Language & Lit Mock — Class 10",    f"{PORTAL_BASE}/cbse-class-10-english-language-literature-mock-tests.html"),
+    ("Hindi Course A Mock — Class 10",            f"{PORTAL_BASE}/cbse-class-10-hindi-course-a-mock-tests.html"),
+    ("Computer Applications Mock — Class 10",     f"{PORTAL_BASE}/cbse-class-10-computer-applications-mock-tests.html"),
+    ("AI Mock Papers — Class 10",                 f"{PORTAL_BASE}/cbse-class-10-ai-mock-papers.html"),
 ]
 
 def _discover_labs() -> list[tuple[str, str]]:
@@ -127,16 +127,16 @@ WEEKLY_FOCUS_TOPICS = [
 ]
 
 PRACTICE_12_PAGES = [
-    ("Physics Board Prep — Class 12",             f"{PORTAL_BASE}/Physics%20XII%20Board%20Prep.html"),
-    ("Chemistry Board Prep — Class 12",           f"{PORTAL_BASE}/Chemistry%20XII%20Board%20Prep.html"),
-    ("Mathematics Board Prep — Class 12",         f"{PORTAL_BASE}/Mathematics%20XII%20Board%20Prep.html"),
-    ("Biology Board Prep — Class 12",             f"{PORTAL_BASE}/Biology%20XII%20Board%20Prep.html"),
-    ("English Core Practice — Class 12",          f"{PORTAL_BASE}/English%20Core%20XII.html"),
-    ("English Elective Practice — Class 12",      f"{PORTAL_BASE}/English%20Elective%20001%20Class%2012%20Practice%20Papers.html"),
-    ("Computer Science Mock — Class 12",          f"{PORTAL_BASE}/CBSE%20Class%20XII%20CS%20Mock%20Papers.html"),
-    ("Informatics Practices Mock — Class 12",     f"{PORTAL_BASE}/Informatics%20Practices%20065%20Class%2012%20Practice%20Papers.html"),
-    ("Physical Education Mock — Class 12",        f"{PORTAL_BASE}/Physical%20Education%20048%20Class%2012%20Practice%20Papers.html"),
-    ("Bengali Practice — Class 12",              f"{PORTAL_BASE}/Bengali%20Class%2012%20Practice%20Papers.html"),
+    ("Physics Board Prep — Class 12",             f"{PORTAL_BASE}/cbse-class-12-physics-mock-papers.html"),
+    ("Chemistry Board Prep — Class 12",           f"{PORTAL_BASE}/cbse-class-12-chemistry-mock-papers.html"),
+    ("Mathematics Board Prep — Class 12",         f"{PORTAL_BASE}/cbse-class-12-maths-mock-papers.html"),
+    ("Biology Board Prep — Class 12",             f"{PORTAL_BASE}/cbse-class-12-biology-mock-papers.html"),
+    ("English Core Practice — Class 12",          f"{PORTAL_BASE}/cbse-class-12-english-core-mock-papers.html"),
+    ("English Elective Practice — Class 12",      f"{PORTAL_BASE}/cbse-class-12-english-elective-practice-papers.html"),
+    ("Computer Science Mock — Class 12",          f"{PORTAL_BASE}/cbse-class-12-computer-science-mock-papers.html"),
+    ("Informatics Practices Mock — Class 12",     f"{PORTAL_BASE}/cbse-class-12-informatics-practices-practice-papers.html"),
+    ("Physical Education Mock — Class 12",        f"{PORTAL_BASE}/cbse-class-12-physical-education-practice-papers.html"),
+    ("Bengali Practice — Class 12",              f"{PORTAL_BASE}/cbse-class-12-bengali-practice-papers.html"),
 ]
 
 

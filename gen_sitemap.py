@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 """Generate a canonical, recursive XML sitemap for CBSEMOCK.
 
-Includes public HTML pages only, follows each page's canonical URL, and omits
-pages marked noindex. Run from any working directory with Python 3.
+Includes public HTML pages only, omits pages marked noindex (incl. redirect
+stubs left at old URLs) and pages whose canonical points to a different URL,
+and adds <lastmod> from the last git commit that touched each page.
+Run from any working directory with Python 3 (needs full git history for
+accurate dates: actions/checkout with fetch-depth: 0).
 """
 from __future__ import annotations
 
 import os
 import re
 import html
+import subprocess
 from pathlib import Path
 from urllib.parse import quote
 
@@ -39,24 +43,51 @@ def is_indexable(path: Path) -> bool:
         return False
     if re.search(r'<meta\b(?=[^>]*\bname=["\']robots["\'])[^>]*\bcontent=["\'][^"\']*noindex', content, re.I):
         return False
+    if re.search(r'<meta\b[^>]*http-equiv=["\']refresh', content, re.I):
+        return False
+    m = re.search(r'<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*\bhref=["\']([^"\']+)', content, re.I)
+    if m and m.group(1).strip().rstrip("/") != canonical_for(path).rstrip("/"):
+        return False                      # page declares another URL as the real one
     return True
 
 
-def collect_urls() -> list[str]:
-    urls = []
+def git_lastmod() -> dict[str, str]:
+    """path -> YYYY-MM-DD of the newest commit touching it (one git call)."""
+    try:
+        out = subprocess.run(["git", "-c", "core.quotepath=off", "log", "--format=@%cs", "--name-only", "--", "*.html"],
+                             cwd=BASE_DIR, capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return {}
+    dates, cur = {}, None
+    for line in out.splitlines():
+        if line.startswith("@"):
+            cur = line[1:]
+        elif line and cur:
+            dates.setdefault(line, cur)
+    return dates
+
+
+def collect_urls() -> list[tuple[str, str]]:
+    dates = git_lastmod()
+    urls = {}
     for path in BASE_DIR.rglob("*.html"):
         if is_indexable(path):
-            urls.append(canonical_for(path))
-    return sorted(set(urls))
+            urls[canonical_for(path)] = dates.get(path.relative_to(BASE_DIR).as_posix(), "")
+    # home first, then section hubs (…/), then pages
+    return sorted(urls.items(), key=lambda kv: (kv[0] != DOMAIN + "/", not kv[0].endswith("/"), kv[0]))
 
 
-def build_sitemap(urls: list[str]) -> str:
+def build_sitemap(urls: list[tuple[str, str]]) -> str:
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
-    for url in urls:
-        lines.extend(["  <url>", f"    <loc>{html.escape(url)}</loc>", "  </url>"])
+    for url, lastmod in urls:
+        lines.append("  <url>")
+        lines.append(f"    <loc>{html.escape(url)}</loc>")
+        if lastmod:
+            lines.append(f"    <lastmod>{lastmod}</lastmod>")
+        lines.append("  </url>")
     lines.append("</urlset>")
     return "\n".join(lines) + "\n"
 

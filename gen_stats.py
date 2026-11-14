@@ -37,10 +37,20 @@ def count_questions_in_file(path):
     except Exception:
         return 0
 
+def is_redirect_stub(path):
+    """Old-URL pages that just forward to the renamed page (see url-redirects.json)."""
+    try:
+        with open(path, encoding="utf-8", errors="ignore") as f:
+            head = f.read(1500)
+        return 'http-equiv="refresh"' in head and "noindex" in head
+    except OSError:
+        return False
+
 def scan_files():
     files = []
     for fname in os.listdir(BASE_DIR):
-        if fname.endswith(".html") and fname not in EXCLUDE and not fname.startswith("."):
+        if fname.endswith(".html") and fname not in EXCLUDE and not fname.startswith(".") \
+                and not is_redirect_stub(os.path.join(BASE_DIR, fname)):
             files.append(("root", fname, os.path.join(BASE_DIR, fname)))
     if os.path.isdir(RES_DIR):
         for fname in os.listdir(RES_DIR):
