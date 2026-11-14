@@ -1,0 +1,18 @@
+🗄️ WHY? — How does an SQL JOIN match rows?
+
+Students(roll, name) + Marks(roll, marks)
+JOIN finds rows where roll = roll and glues them together 🔗
+Aman → 92 ✅  Riya → 88 ✅
+Kabir (no marks) & roll 4 (no student) → left out by INNER JOIN ❌
+LEFT JOIN keeps every student → missing marks = NULL
+
+SELECT name, marks FROM Students JOIN Marks ON Students.roll = Marks.roll;
+
+CS Class 12 SQL — joins finally make sense. 🧠
+
+💾 Save it · 📤 Share with your CS batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #SQL #MySQL #Database #ComputerScience #CSClass12 #CBSE

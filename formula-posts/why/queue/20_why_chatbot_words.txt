@@ -1,0 +1,16 @@
+💬 WHY? — How does a chatbot understand WORDS?
+
+Computers only understand numbers 🔢
+1️⃣ Every word becomes a list of numbers — an EMBEDDING
+2️⃣ On this "meaning map", similar words sit close together (apple 🍎 near mango 🥭)
+3️⃣ Directions carry meaning: king − man + woman ≈ queen 👑
+4️⃣ The chatbot spots patterns and PREDICTS the most likely next word
+
+Natural Language Processing (NLP) — AI syllabus, Class 10 & 12. 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #NLP #Chatbot #AIClass10 #AIClass12 #CBSE
