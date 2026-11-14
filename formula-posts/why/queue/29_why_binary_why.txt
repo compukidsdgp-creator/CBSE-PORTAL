@@ -1,0 +1,16 @@
+💡 WHY? — Why do computers use BINARY?
+
+A chip holds billions of tiny switches (transistors): OFF or ON → 0 or 1
+Two levels are easy to tell apart even with electrical noise — ten levels would blur together ⚡
+3 switches → count 0 to 7 · 8 switches = 1 byte = 256 patterns
+'A' = 01000001 = 65 🔤
+n bits → 2ⁿ patterns
+
+Number systems & data representation — Computer Science basics. 🧠
+
+💾 Save it · 📤 Share with your CS batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Binary #ComputerScience #NumberSystem #CSClass12 #Coding #CBSE

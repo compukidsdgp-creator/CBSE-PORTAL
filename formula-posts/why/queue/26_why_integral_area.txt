@@ -1,0 +1,15 @@
+∫ WHY? — Why is the integral the AREA under a curve?
+
+Fill the area under y = f(x) with rectangles (width Δx, height f(x)) and add them up 🟦🟦🟦
+Make them thinner: 8 → 16 → 64… the gaps vanish
+As Δx → 0 the sum becomes EXACT → that limit IS the integral ✨
+Area = ∫ₐᵇ f(x) dx
+
+Class 12 Integrals & Application of Integrals — finally see it. 🧠
+
+💾 Save it · 📤 Share with your maths group
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Calculus #Integration #Class12Maths #VisualMaths #BoardExam2027 #CBSE

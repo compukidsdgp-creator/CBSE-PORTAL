@@ -1,0 +1,16 @@
+🔲 WHY? — Where does the QUADRATIC FORMULA come from?
+
+Picture x² as a square and bx as a rectangle
+Cut the rectangle in half → stick the halves on two sides
+A corner is missing: (b/2)² → add it → a PERFECT square ✨
+x² + bx + (b/2)² = (x + b/2)²
+Solve for x (for ax² + bx + c = 0) → x = (−b ± √(b² − 4ac)) / 2a
+
+"Completing the square" — Class 10 Quadratic Equations, made visual. 🧠
+
+💾 Save it · 📤 Share with your maths group
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #QuadraticEquations #CompletingTheSquare #Class10Maths #VisualMaths #CBSE

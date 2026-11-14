@@ -1,0 +1,16 @@
+🌳 WHY? — How does an AI DECISION TREE decide?
+
+Like a game of 20 questions — one yes/no question at a time:
+❓ Raining? → Yes → stay indoors
+❓ No → Homework done? → Yes → PLAY CRICKET 🏏 / No → study first 📚
+Every path ends in a LEAF (the decision).
+
+The AI builds the tree from data, choosing the questions that split the examples best.
+AI modelling — Class 10 & 12. 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #DecisionTree #MachineLearning #AIClass10 #AIClass12 #CBSE
