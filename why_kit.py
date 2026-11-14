@@ -116,9 +116,10 @@ class Ctx:
             if a <= 0:
                 continue
             if col == GOLD:
-                self.pill(0.5, y, min(0.86, 0.40 * back_out(a) * max(1, len(s) / 18)), 0.056,
-                          GOLD, alpha=a, dark="#2a2000")
-                self.text(0.5, y - 0.008 * (1 - a), s, size=50, color=GOLD, alpha=a, max_w=0.82)
+                size = R.fit_size(s, 50, 0.80)
+                w = max(0.40, V.text_w(s, size) + 0.10)
+                self.pill(0.5, y, min(0.90, w * back_out(a)), 0.056, GOLD, alpha=a, dark="#2a2000")
+                self.text(0.5, y - 0.008 * (1 - a), s, size=size, color=GOLD, alpha=a)
             else:
                 self.text(0.5, y - 0.008 * (1 - a), s, size=40, color=col, alpha=a, max_w=0.9)
 

@@ -1,0 +1,16 @@
+🐍 WHY? — Why does 0.1 + 0.2 give 0.30000000000000004 in Python?
+
+Computers store numbers in binary (0s and 1s).
+1/10 in binary never ends: 0.000110011001100… ♾️
+Python cuts it after 52 bits → a tiny error → it shows up when you add! 😮
+
+✅ Fix: round(0.1 + 0.2, 2) == 0.3  or  math.isclose(0.1 + 0.2, 0.3)
+
+A classic CS Class 12 viva / interview question! 🧠
+
+💾 Save it · 📤 Share with your coding friends
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #ComputerScience #CSClass12 #Coding #FloatingPoint #CBSE

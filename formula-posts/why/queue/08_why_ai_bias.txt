@@ -1,0 +1,16 @@
+⚖️ WHY? — Why can AI be BIASED?
+
+An AI learns ONLY from the examples we give it.
+Train a hiring AI on old records where almost everyone hired was from one group…
+→ it learns "that group = good" → a brilliant candidate from another group gets rejected ❌
+
+The fix ✅ balanced data · fairness testing · humans checking important decisions
+
+Biased data in → biased decisions out. A key AI Ethics topic for Class 10 & 12. 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #AIEthics #AIBias #AIClass10 #AIClass12 #CBSE
