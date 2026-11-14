@@ -1,0 +1,17 @@
+🔑 WHY? — How does a Python dictionary find keys INSTANTLY?
+
+A list: check items one by one 🐢
+A dictionary: hash("Riya") → a number → that number picks the SLOT 🎯
+Looking up again? Same hash → same slot → ONE step ⚡
+Even with a million keys — about one step!
+
+marks = {"Riya": 88}  →  marks["Riya"] → 88
+
+CS Class 12 Python dictionaries — now you know the magic. 🧠
+
+💾 Save it · 📤 Share with your CS batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #Dictionary #Hashing #ComputerScience #CSClass12 #CBSE

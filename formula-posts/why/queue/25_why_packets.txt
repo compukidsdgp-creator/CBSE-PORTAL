@@ -1,0 +1,17 @@
+🌐 WHY? — How does data TRAVEL across the internet?
+
+1️⃣ Your photo is split into small PACKETS 📦 — each with the destination IP address + a number
+2️⃣ Packets hop through ROUTERS, each taking its own path 🛣️
+3️⃣ They can arrive out of order (3, 1, 4…)
+4️⃣ The receiver reorders them and asks again for any lost packet ✅
+
+That's TCP/IP: IP = addressing & routing · TCP = order & reliability
+
+CS Class 12 Computer Networks — packet switching made visual. 🧠
+
+💾 Save it · 📤 Share with your CS batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ComputerNetworks #TCPIP #Internet #ComputerScience #CSClass12 #CBSE
