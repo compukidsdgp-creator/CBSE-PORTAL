@@ -35,7 +35,8 @@ import generate_formula_reel_v3 as R                      # noqa: E402
 from voiceover import synth, write_wav, SR                # noqa: E402
 
 W, H, DPI, FPS = R.W, R.H, R.DPI, R.FPS
-LEAD, TAIL = 0.35, 0.55          # silence before / after each sentence (s)
+LEAD, TAIL = 0.35, 0.55
+MIN_TOTAL = 20.0                 # locked rule: every reel is at least 20 s          # silence before / after each sentence (s)
 
 from reel_narration import NARRATION, line      # noqa: E402
 
@@ -54,6 +55,15 @@ SPOKEN_TITLE = {
     "linear_programming": "Linear Programming", "quadratic_cl10": "Quadratic Equations",
     "trigonometry_cl10": "Trigonometry", "boolean_algebra": "Boolean Algebra",
     "networking": "Computer Networks", "python_basics": "Python", "dbms": "Database",
+    "alternating_current": "Alternating Current", "em_waves": "Electromagnetic Waves", "wave_optics": "Wave Optics",
+    "gauss_law": "Gauss's Law", "capacitors": "Capacitor", "moving_charges": "Moving Charges",
+    "d_f_block": "d and f Block", "name_reactions": "Organic Name Reaction", "derivative_rules": "Derivative",
+    "standard_integrals": "Integral", "differential_equations": "Differential Equation",
+    "inverse_trig": "Inverse Trigonometry", "application_derivatives": "Application of Derivatives",
+    "ap_cl10": "Arithmetic Progression", "coordinate_cl10": "Coordinate Geometry", "statistics_cl10": "Statistics",
+    "areas_circles_cl10": "Circle Area", "surface_volume_cl10": "Surface Area and Volume",
+    "polynomials_cl10": "Polynomial", "acids_bases_cl10": "Acids, Bases and Salts",
+    "carbon_compounds_cl10": "Carbon Compound", "metals_cl10": "Metals and Non-metals", "sql_functions": "SQL",
 }
 NUM = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five"}
 
@@ -241,6 +251,15 @@ def build(topic_id, part, out, workers=None):
         if extra:
             seg["i"], seg["cap"] = extra
         segments.append(seg); clips.append((t + LEAD, a)); t += d
+    if t < MIN_TOTAL:                      # never shorter than MIN_TOTAL: give the extra time to the recap
+        extra = MIN_TOTAL - t
+        for seg in segments:
+            if seg["kind"] == "recap":
+                seg["end"] += extra
+            elif seg["kind"] == "outro":
+                seg["start"] += extra; seg["end"] += extra
+        clips = [(st + (extra if st >= segments[-1]["start"] - extra else 0), a) for st, a in clips]
+        t = MIN_TOTAL
     total = t
     voice = np.zeros(int(total * SR) + SR, dtype=np.float32)
     for st, a in clips:

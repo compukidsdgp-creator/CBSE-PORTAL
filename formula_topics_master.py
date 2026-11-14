@@ -510,3 +510,7 @@ TOPICS = {
     },
 
 }
+
+# ── Jan–Feb 2027 chapters (6 formulas each) ──────────────────────────────────
+from formula_topics_feb import TOPICS_FEB  # noqa: E402
+TOPICS.update(TOPICS_FEB)
