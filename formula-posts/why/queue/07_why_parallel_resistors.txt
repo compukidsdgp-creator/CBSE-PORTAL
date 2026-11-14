@@ -1,0 +1,14 @@
+⚡ WHY? — Why does adding a resistor in parallel LOWER the resistance?
+
+Think of current as cars 🚗 and resistors as roads 🛣️
+One road → 1 A. Add a second road side by side → 2 A from the same battery!
+Same V, double I → R = V/I is HALVED. That's 1/R = 1/R₁ + 1/R₂ ✨
+
+Class 10 Electricity & Class 12 Current Electricity — finally intuitive. 🧠
+
+💾 Save it · 📤 Share with your physics group
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Physics #Electricity #Class10Science #Class12Physics #BoardExam2027 #CBSE

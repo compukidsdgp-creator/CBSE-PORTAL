@@ -1,0 +1,14 @@
+🧠 WHY? — How does an AI neuron decide?
+
+Inputs × weights → add them up → compare with a threshold → fire or not! ⚡
+Sunny ✅ Friends ✅ Homework ❌ → 0.7 → stay home 🏠
+Finish homework ✅ → 1.3 → GO PLAY! ⚽
+
+That's a perceptron — the building block of every neural network in your AI syllabus (Class 10 & 12).
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #NeuralNetwork #Perceptron #AIClass10 #AIClass12 #CBSE
