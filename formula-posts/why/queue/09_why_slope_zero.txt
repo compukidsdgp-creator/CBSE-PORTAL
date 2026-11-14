@@ -1,0 +1,18 @@
+📈 WHY? — Why is dy/dx = 0 at a maximum or minimum?
+
+Slide a tangent along a curve:
+⬆️ uphill → slope positive
+⛰️ at the peak → tangent is FLAT → slope = 0
+⬇️ downhill → slope negative
+🏞️ at the valley → flat again → slope = 0
+
+That's why we solve dy/dx = 0 to find maxima & minima! (y = x³ − 3x → x = ±1)
+
+A must-know idea for Class 12 Application of Derivatives. 🧠
+
+💾 Save it · 📤 Share with your maths group
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Calculus #Derivatives #MaximaMinima #Class12Maths #BoardExam2027 #CBSE
