@@ -1,0 +1,15 @@
+➕ WHY? — Why is the AP sum Sₙ = n/2 (a + l)?
+
+Draw 1, 2, 3 … 6 as columns of blocks → a staircase 🪜
+Copy it, flip it, fit it on top → a perfect 6 × 7 rectangle! ▭
+Rectangle = 42 blocks → the staircase is HALF = 21 ✨
+So Sₙ = n/2 × (first + last)
+
+Class 10 Arithmetic Progressions — the picture you'll never forget. 🧠
+
+💾 Save it · 📤 Share with your maths group
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArithmeticProgression #Class10Maths #VisualMaths #BoardExam2027 #CBSE #MathsTricks

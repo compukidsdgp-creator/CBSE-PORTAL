@@ -1,0 +1,15 @@
+📊 WHY? — Why split data into TRAINING and TESTING sets?
+
+A student who sees the exam questions beforehand scores 100%… then crashes on new questions 📉
+An AI can "memorise" its training data the same way — that's OVERFITTING 🤖
+So we split: 80% to train 🏋️ · 20% locked away to test 🔒
+The test set checks if the AI really learned — on data it has never seen ✅
+
+A core AI concept for Class 10 & 12 (model evaluation). 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #MachineLearning #Overfitting #AIClass10 #AIClass12 #CBSE
