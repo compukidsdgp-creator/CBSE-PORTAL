@@ -17,7 +17,9 @@ Usage:
   python3 post_pyq.py --subject physics12 --dry-run
 """
 
-import os, sys, json, argparse, subprocess, textwrap
+import html
+import os
+import re, sys, json, argparse, subprocess, textwrap
 from datetime import date
 from pathlib import Path
 
@@ -262,19 +264,20 @@ def post_telegram(pdf_path: str, img_path: str,
     chat_id = os.getenv("TELEGRAM_CHAT_ID", "")
     meta    = SUBJECT_META[subject_key]
 
+    lbl, cls = html.escape(meta["label"]), meta["class"]
     caption = (
-        f"📄 *Class {meta['class']} {meta['label']} — Pre\\-Board Practice Paper*\n"
-        f"📅 Date: {paper_date}\n\n"
-        f"🎯 Get our FREE pre\\-board mock papers every Monday, Wednesday and Friday\\!\n"
-        f"We are committed to your success\\.\n\n"
-        f"📥 *Download today's paper here:*\n"
-        f"{pdf_url}\n\n"
-        f"💡 More free resources: www\\.cbsemock\\.org\\.in\n"
-        f"📲 Join our Telegram: t\\.me/cbsemockportal\n"
-        f"👍 Follow on Facebook: cbsemock\\.org\\.in\n"
+        f"📄 <b>Class {cls} {lbl} — Pre-Board Practice Paper</b>\n"
+        f"📅 Date: {html.escape(paper_date)}\n\n"
+        f"🎯 Get our FREE pre-board mock papers every Monday, Wednesday and Friday!\n"
+        f"We are committed to your success.\n\n"
+        f"📥 <b>Download today's paper:</b>\n"
+        f"<a href=\"{html.escape(pdf_url, quote=True)}\">{html.escape(pdf_url)}</a>\n\n"
+        f"💡 More free resources: www.cbsemock.org.in\n"
+        f"📲 Join our Telegram: t.me/cbsemockportal\n"
+        f"👍 Follow on Facebook: cbsemock.org.in\n"
         f"📸 Follow on Instagram: @cbsemock\n\n"
-        f"\\#CBSE \\#PreBoard \\#Class{meta['class']} \\#{''.join(meta['label'].split())} "
-        f"\\#FreeStudyMaterial \\#CBSEMock"
+        f"#CBSE #PreBoard #Class{cls} #{''.join(ch for ch in meta['label'] if ch.isalnum())} "
+        f"#FreeStudyMaterial #CBSEMock"
     )
 
     if dry_run:
@@ -286,16 +289,19 @@ def post_telegram(pdf_path: str, img_path: str,
         print("⚠️  TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set — skipping Telegram")
         return
 
-    # Send cover image with caption
-    with open(img_path, "rb") as f:
-        resp = requests.post(
-            f"https://api.telegram.org/bot{token}/sendPhoto",
-            data={"chat_id": chat_id, "caption": caption, "parse_mode": "MarkdownV2"},
-            files={"photo": f},
-            timeout=30,
-        )
+    # Send the poster (cover image) with the caption. If Telegram rejects the formatted
+    # caption for any reason, retry once with a plain-text caption so the poster always goes out.
+    def _send_photo(data):
+        with open(img_path, "rb") as f:
+            return requests.post(f"https://api.telegram.org/bot{token}/sendPhoto",
+                                 data=data, files={"photo": f}, timeout=60)
+    resp = _send_photo({"chat_id": chat_id, "caption": caption, "parse_mode": "HTML"})
+    if resp.status_code != 200:
+        print(f"⚠️  Telegram image (HTML caption): {resp.status_code} {resp.text[:200]} — retrying plain")
+        plain = re.sub(r"<[^>]+>", "", caption)
+        resp = _send_photo({"chat_id": chat_id, "caption": html.unescape(plain)})
     if resp.status_code == 200:
-        print("✅  Telegram: cover image posted")
+        print("✅  Telegram: poster image posted")
     else:
         print(f"❌  Telegram image: {resp.status_code} {resp.text[:200]}")
 
@@ -304,8 +310,7 @@ def post_telegram(pdf_path: str, img_path: str,
         resp2 = requests.post(
             f"https://api.telegram.org/bot{token}/sendDocument",
             data={"chat_id": chat_id,
-                  "caption": f"📎 Direct PDF download — Class {meta['class']} {meta['label']}",
-                  "parse_mode": "MarkdownV2"},
+                  "caption": f"📎 Direct PDF download — Class {meta['class']} {meta['label']}"},
             files={"document": f},
             timeout=30,
         )
