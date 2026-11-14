@@ -106,11 +106,17 @@ def note_text(note):
     return note
 
 def class_label(chapter_tag):
+    """Read the class from the part after "Class" (not from the chapter number)."""
+    import re
     tag = chapter_tag or ""
-    if "XII" in tag or "12" in tag:
+    m = re.search(r"Class\s+([XVI]+|\d+)", tag)
+    cls = m.group(1) if m else ""
+    if "XII" in tag or cls == "12":          # topics shared by XI and XII count as XII
         return "Class 12"
-    if "X" in tag or "10" in tag:
+    if cls in ("X", "10"):
         return "Class 10"
+    if cls in ("XI", "11"):
+        return "Class 11"
     return "CBSE"
 
 
