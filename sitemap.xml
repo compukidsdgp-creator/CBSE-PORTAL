@@ -208,9 +208,6 @@
     <loc>https://cbsemock.org.in/formula-reels/</loc>
   </url>
   <url>
-    <loc>https://cbsemock.org.in/why-reels/</loc>
-  </url>
-  <url>
     <loc>https://cbsemock.org.in/free-mock-papers/</loc>
   </url>
   <url>
@@ -1100,5 +1097,8 @@
   </url>
   <url>
     <loc>https://cbsemock.org.in/weekly-focus/weekly-focus-prod.html</loc>
+  </url>
+  <url>
+    <loc>https://cbsemock.org.in/why-reels/</loc>
   </url>
 </urlset>
