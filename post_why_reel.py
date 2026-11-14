@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-post_why_reel.py — posts the next "WHY?" reel (Sunday 6:30 PM IST) to Facebook + Instagram.
+post_why_reel.py — posts the next "WHY?" reel (Sunday + Wednesday 6:30 PM IST) to Facebook + Instagram.
 
 Queue : formula-posts/why/queue/NN_why_<slug>.mp4   (+ optional NN_why_<slug>.txt = caption)
 Posted: formula-posts/why/posted/
