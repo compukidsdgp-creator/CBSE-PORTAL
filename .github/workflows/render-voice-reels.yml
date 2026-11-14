@@ -1,0 +1,133 @@
+name: Render voiced Formula Flash reels
+
+# Renders Formula Flash reels WITH NARRATION on GitHub's machines, many topics in parallel.
+#   mode = queue  -> re-render (with voice) only the reels still waiting in formula-posts/videos/queue,
+#                    keeping the same file names, so the posting order does not change
+#   mode = all    -> render every topic and add any reel that is not queued or posted yet
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'queue = add voice to reels already in the queue · all = render every topic'
+        required: false
+        default: 'queue'
+      topics:
+        description: 'Optional: only these topic ids (space separated)'
+        required: false
+        default: ''
+
+concurrency:
+  group: render-voice-reels
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      topics: ${{ steps.p.outputs.topics }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install --quiet matplotlib numpy
+      - id: p
+        env:
+          MODE: ${{ github.event.inputs.mode }}
+          ONLY: ${{ github.event.inputs.topics }}
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json, os
+          from formula_topics_master import TOPICS
+          from generate_formula_reel_v3 import split_rows, queue_name
+          q = set(os.listdir("formula-posts/videos/queue"))
+          only = set(os.environ.get("ONLY", "").split())
+          out = []
+          for k, d in TOPICS.items():
+              if only and k not in only:
+                  continue
+              n = len(split_rows(d["rows"]))
+              names = [queue_name(k, p, n) for p in range(1, n + 1)]
+              if os.environ.get("MODE", "queue") == "all" or any(x in q for x in names):
+                  out.append(k)
+          print("topics=" + json.dumps(out))
+          EOF
+          cat "$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    if: needs.plan.outputs.topics != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        topic: ${{ fromJson(needs.plan.outputs.topics) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/kokoro
+          key: kokoro-v1.0
+      - name: Install
+        run: |
+          which ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          pip install --quiet matplotlib numpy pillow kokoro-onnx soundfile
+      - name: Render
+        env:
+          MODE: ${{ github.event.inputs.mode }}
+        run: |
+          if [ "$MODE" = "all" ]; then
+            python3 generate_voice_reel.py --topic "${{ matrix.topic }}" --out-dir out
+          else
+            python3 generate_voice_reel.py --topic "${{ matrix.topic }}" --out-dir out \
+              --only-in formula-posts/videos/queue
+          fi
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voiced-${{ matrix.topic }}
+          path: out/*.mp4
+          if-no-files-found: ignore
+          retention-days: 3
+
+  save:
+    needs: render
+    if: always() && needs.render.result != 'skipped'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: voiced-*
+          path: voiced
+          merge-multiple: true
+      - name: Put the voiced reels in the queue
+        env:
+          MODE: ${{ github.event.inputs.mode }}
+        run: |
+          git config user.name  "social-post-bot"
+          git config user.email "bot@cbsemock.org.in"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash -q origin main
+            n=0
+            for f in voiced/*.mp4; do
+              [ -e "$f" ] || continue
+              b=$(basename "$f")
+              Q="formula-posts/videos/queue/$b"; P="formula-posts/videos/posted/$b"
+              if [ -e "$Q" ]; then cp "$f" "$Q"; n=$((n+1))          # replace, same place in the order
+              elif [ "$MODE" = "all" ] && [ ! -e "$P" ]; then cp "$f" "$Q"; n=$((n+1))   # brand-new reel
+              fi                                                   # already posted -> leave it alone
+            done
+            echo "voiced reels placed: $n"
+            git add -A formula-posts/videos/queue
+            git diff --cached --quiet && exit 0
+            git commit -q -m "Voiced Formula Flash reels ($n) [skip ci]"
+            git push -q origin main && exit 0
+            git reset -q --soft HEAD~1; sleep $((attempt * 7))
+          done
+          echo "::error::Could not push the voiced reels"; exit 1

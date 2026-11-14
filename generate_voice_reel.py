@@ -37,29 +37,52 @@ from voiceover import synth, write_wav, SR                # noqa: E402
 W, H, DPI, FPS = R.W, R.H, R.DPI, R.FPS
 LEAD, TAIL = 0.35, 0.55          # silence before / after each sentence (s)
 
-# ── Script for the sample reel ───────────────────────────────────────────────
-# "say" is what the voice speaks (spelled for the voice), "cap" is what is shown.
-SAMPLES = {
-    "electricity": {
-        "topic": "electricity_class10",
-        "intro": "Four Electricity formulas you must know for your class ten boards.",
-        "cards": [
-            {"say": "Ohm's law. V equals I R. The current through a conductor is proportional "
-                    "to the voltage across it.",
-             "cap": "Ohm's law: V = IR. Current is proportional to the voltage across the conductor."},
-            {"say": "Resistance. R equals rho, L by A. A longer wire resists more, "
-                    "a thicker wire resists less.",
-             "cap": "R = ρL/A. A longer wire resists more, a thicker wire resists less."},
-            {"say": "In series, resistances simply add up, and the same current flows through each one.",
-             "cap": "In series, resistances simply add up. The same current flows through each one."},
-            {"say": "In parallel, add the reciprocals. Every resistor gets the same voltage, "
-                    "so the total resistance drops.",
-             "cap": "In parallel, add the reciprocals. Same voltage across each, total resistance drops."},
-        ],
-        "recap": "That's Electricity in four formulas. Save this reel for your revision.",
-        "outro": "Share it with your batchmates, and follow C B S E Mock for more.",
-    },
+from reel_narration import NARRATION, line      # noqa: E402
+
+# How the narrator says each topic's name (the on-screen titles are not always speakable)
+SPOKEN_TITLE = {
+    "em_induction": "Electromagnetic Induction", "current_electricity": "Current Electricity",
+    "electrostatics": "Electrostatics", "optics": "Optics", "semiconductor": "Semiconductor",
+    "magnetism": "Magnetism", "dual_nature": "Dual Nature", "atoms_nuclei": "Atoms and Nuclei",
+    "light_class10": "Light", "electricity_class10": "Electricity",
+    "chemical_kinetics": "Chemical Kinetics", "electrochemistry": "Electrochemistry",
+    "solutions": "Solutions", "coordination": "Coordination Compounds", "solid_state": "Solid State",
+    "chemical_reactions_cl10": "Chemical Reactions", "genetics": "Genetics",
+    "photosynthesis": "Photosynthesis", "reproduction": "Human Reproduction", "ecology": "Ecology",
+    "life_processes_cl10": "Life Processes", "calculus": "Calculus", "vectors_3d": "Vectors and 3 D",
+    "probability": "Probability", "matrices_determinants": "Matrices and Determinants",
+    "linear_programming": "Linear Programming", "quadratic_cl10": "Quadratic Equations",
+    "trigonometry_cl10": "Trigonometry", "boolean_algebra": "Boolean Algebra",
+    "networking": "Computer Networks", "python_basics": "Python", "dbms": "Database",
 }
+NUM = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five"}
+
+
+def script(topic_id, part):
+    """Intro / cards / recap / outro narration for one reel (one part of a topic)."""
+    data = R.TOPICS[topic_id]
+    chunks = R.split_rows(data["rows"])
+    rows = chunks[part - 1]
+    offset = sum(len(c) for c in chunks[:part - 1])
+    title = SPOKEN_TITLE.get(topic_id, data["title_line1"])
+    cls = {"Class 10": "class ten", "Class 12": "class twelve", "Class 11": "class eleven"}.get(
+        R.class_label(data.get("chapter_tag", "")), "")
+    what = "key points" if data["subject"] == "CS" else "formulas"
+    n, nparts = len(rows), len(chunks)
+    boards = f" for your {cls} boards" if cls else ""
+    if part == 1:
+        intro = f"{NUM[n]} {title} {what} you must know{boards}."
+    else:
+        intro = f"{NUM[n]} more {title} {what}{boards}. Part {NUM[part].lower()}."
+    recap = (f"That's part {NUM[part].lower()} of {title}. Save this reel for your revision."
+             if nparts > 1 else f"That's {title} in {NUM[n].lower()} {what}. Save this reel for your revision.")
+    outro = (f"Follow C B S E Mock, so you don't miss part {NUM[part + 1].lower()}."
+             if part < nparts else "Share it with your batchmates, and follow C B S E Mock for more.")
+    cards = [dict(zip(("say", "cap"), line(topic_id, offset + k))) for k in range(n)]
+    return {"data": data, "rows": rows, "offset": offset, "total": len(data["rows"]),
+            "part": part, "nparts": nparts, "intro": intro, "cards": cards,
+            "recap": recap, "outro": outro}
+
 
 G = {}   # filled in each worker: rows, segments, data
 
@@ -155,7 +178,9 @@ def draw_recap(ax, rows, prog, t):
     R.flat_text(ax, 0.5, 0.855, "QUICK RECAP", size=40, color=R.GOLD, alpha=p)
     R.flat_text(ax, 0.5, 0.815, "Screenshot this!", size=19, color=R.LTGREY,
                 weight="normal", alpha=p * 0.9)
-    cells = [(0.27, 0.62), (0.73, 0.62), (0.27, 0.37), (0.73, 0.37)]
+    cells = {1: [(0.5, 0.50)], 2: [(0.27, 0.50), (0.73, 0.50)],
+             3: [(0.27, 0.62), (0.73, 0.62), (0.5, 0.37)]}.get(
+        len(rows), [(0.27, 0.62), (0.73, 0.62), (0.27, 0.37), (0.73, 0.37)])
     for k, row in enumerate(rows[:4]):
         cx, cy = cells[k]
         a = R.back_out((prog - 0.08 - k * 0.10) / 0.18) if prog > 0.08 + k * 0.10 else 0
@@ -183,16 +208,16 @@ def render_frame(fi):
     rows, n = G["rows"], len(G["rows"])
     if seg["kind"] == "intro":
         acc = R.BRAND_CYAN; R.draw_bg(ax, t, acc)
-        R.draw_intro(ax, G["data"], 1, 1, n, min(1.0, t / 2.5), t, G["topic"])
+        R.draw_intro(ax, G["data"], G["part"], G["nparts"], n, min(1.0, t / 2.5), t, G["topic"])
     elif seg["kind"] == "card":
-        i = seg["i"]; acc = R.ACCENTS[i % len(R.ACCENTS)]
+        i = seg["i"]; acc = R.ACCENTS[(G["offset"] + i) % len(R.ACCENTS)]
         R.draw_bg(ax, t, acc)
-        draw_vcard(ax, rows[i], seg["cap"], i + 1, n, prog, speech_frac, t, acc)
+        draw_vcard(ax, rows[i], seg["cap"], G["offset"] + i + 1, G["total"], prog, speech_frac, t, acc)
         R.draw_dots(ax, i, n, acc)
     elif seg["kind"] == "recap":
         acc = R.GOLD; R.draw_bg(ax, t, acc); draw_recap(ax, rows, prog, t)
     else:
-        acc = R.GOLD; R.draw_bg(ax, t, acc); R.draw_outro(ax, 1, 1, prog, t)
+        acc = R.GOLD; R.draw_bg(ax, t, acc); R.draw_outro(ax, G["part"], G["nparts"], prog, t)
     R.draw_logo_bar(ax, acc)
     R.draw_footer(ax, t, acc)
     fig.savefig(str(Path(G["frame_dir"]) / f"frame_{fi:05d}.png"), dpi=DPI, facecolor=R.BG)
@@ -200,10 +225,9 @@ def render_frame(fi):
 
 
 # ── Build ────────────────────────────────────────────────────────────────────
-def build(sample, out, workers=None):
-    S = SAMPLES[sample]
-    data = R.TOPICS[S["topic"]]
-    rows = data["rows"][:len(S["cards"])]
+def build(topic_id, part, out, workers=None):
+    S = script(topic_id, part)
+    rows = S["rows"]
     parts = [("intro", S["intro"], None, 2.8)]
     parts += [("card", c["say"], (k, c["cap"]), 4.0) for k, c in enumerate(S["cards"])]
     parts += [("recap", S["recap"], None, 4.5), ("outro", S["outro"], None, 4.0)]
@@ -217,7 +241,6 @@ def build(sample, out, workers=None):
         if extra:
             seg["i"], seg["cap"] = extra
         segments.append(seg); clips.append((t + LEAD, a)); t += d
-        print(f"  {kind:6s} {d:5.2f}s  speech {sp:4.2f}s  | {say[:60]}")
     total = t
     voice = np.zeros(int(total * SR) + SR, dtype=np.float32)
     for st, a in clips:
@@ -229,8 +252,9 @@ def build(sample, out, workers=None):
     frame_dir = tmp / "f"; frame_dir.mkdir()
     write_wav(tmp / "voice.wav", voice)
     nframes = int(round(total * FPS))
-    print(f"[INFO] {nframes} frames ({total:.1f}s)")
-    g = {"rows": rows, "segments": segments, "data": data, "topic": S["topic"],
+    print(f"[INFO] {topic_id} part {part}/{S['nparts']}: {nframes} frames ({total:.1f}s)")
+    g = {"rows": rows, "segments": segments, "data": S["data"], "topic": topic_id,
+         "part": part, "nparts": S["nparts"], "offset": S["offset"], "total": S["total"],
          "frame_dir": str(frame_dir)}
     with Pool(workers or os.cpu_count() or 1, initializer=_init, initargs=(g,)) as pool:
         pool.map(render_frame, range(nframes), chunksize=10)
@@ -257,9 +281,33 @@ def mux(frame_dir, voice_wav, total, out, music_vol=0.10):
         raise RuntimeError(r.stderr[-800:])
 
 
-if __name__ == "__main__":
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--sample", default="electricity", choices=list(SAMPLES))
-    ap.add_argument("--out", default="voice_reel_sample.mp4")
+def main():
+    ap = argparse.ArgumentParser(description="Voiced Formula Flash reels")
+    ap.add_argument("--topic", action="append", help="topic id (repeatable); default: all")
+    ap.add_argument("--part", type=int, default=None)
+    ap.add_argument("--out-dir", default=str(R.OUT_DIR / "voiced"))
+    ap.add_argument("--only-in", default=None,
+                    help="render only reels whose queue file name exists in this folder")
+    ap.add_argument("--out", default=None, help="single output file (with --topic and --part)")
     a = ap.parse_args()
-    build(a.sample, a.out)
+    topics = a.topic or list(R.TOPICS)
+    for tid in topics:
+        missing = [k for k in NARRATION if k not in R.TOPICS]
+        if tid not in NARRATION or len(NARRATION[tid]) != len(R.TOPICS[tid]["rows"]):
+            sys.exit(f"Narration missing or incomplete for '{tid}'")
+    out_dir = Path(a.out_dir); out_dir.mkdir(parents=True, exist_ok=True)
+    have = set(os.listdir(a.only_in)) if a.only_in else None
+    for tid in topics:
+        nparts = len(R.split_rows(R.TOPICS[tid]["rows"]))
+        for pn in ([a.part] if a.part else range(1, nparts + 1)):
+            name = R.queue_name(tid, pn, nparts)
+            if have is not None and name not in have:
+                print(f"[SKIP] {name} not in {a.only_in}"); continue
+            out = Path(a.out) if a.out else out_dir / name
+            if out.exists() and not a.out:
+                print(f"[SKIP] {name} already rendered"); continue
+            build(tid, pn, out)
+
+
+if __name__ == "__main__":
+    main()
