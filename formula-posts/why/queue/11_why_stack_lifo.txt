@@ -1,0 +1,17 @@
+🥞 WHY? — Why does a STACK reverse things?
+
+Think of a pile of plates 🍽️
+PUSH A, B, C → only the TOP is reachable → POP gives C, B, A!
+In: A B C → Out: C B A = Last In, First Out (LIFO) 🔁
+
+Stacks power Undo (Ctrl+Z), the browser Back button and string reversal.
+Python: push → append(), pop → pop()
+
+A CS Class 12 Data Structures favourite — never forget LIFO again. 🧠
+
+💾 Save it · 📤 Share with your CS batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ComputerScience #Stack #DataStructures #Python #CSClass12 #CBSE

@@ -1,0 +1,15 @@
+🧠 WHY? — Why does a neural network need LAYERS?
+
+One neuron can only draw ONE straight line ➖
+Blue dots in the middle, pink dots around them → no single line can split them ❌
+A hidden layer draws many lines → the next layer combines them → they wrap around the blue dots ✅
+More layers → smooth, complex shapes → faces, voices, language! 🎯
+
+That's the idea behind DEEP learning — AI syllabus, Class 10 & 12.
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #DeepLearning #NeuralNetwork #AIClass10 #AIClass12 #CBSE
