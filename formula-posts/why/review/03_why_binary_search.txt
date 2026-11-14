@@ -1,0 +1,14 @@
+💻 WHY? — Why is Binary Search so fast?
+
+Linear search: check items one by one → up to 1000 tries 🐢
+Binary search: open the middle, throw away half, repeat → about 10 tries ⚡
+That's log₂ n — a million items in just 20 steps!
+
+One of the favourite CS Class 12 topics — now you'll never forget why it works. 🧠
+
+💾 Save it · 📤 Share with your CS batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ComputerScience #BinarySearch #Python #CSClass12 #CBSE #Coding

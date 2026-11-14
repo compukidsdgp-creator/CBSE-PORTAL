@@ -1,0 +1,14 @@
+📐 WHY? — Why is sin²θ + cos²θ = 1?
+
+Put a point on a circle of radius 1 and drop a line down…
+Base = cos θ, height = sin θ, slanted side = 1 → Pythagoras does the rest! ✨
+cos²θ + sin²θ = 1² = 1 — for EVERY angle.
+
+The most important identity in Class 10 Trigonometry, finally makes sense. 🧠
+
+💾 Save it · 📤 Share with your maths group
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Trigonometry #Class10Maths #VisualMaths #BoardExam2027 #CBSE #MathsTricks
