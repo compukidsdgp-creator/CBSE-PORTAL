@@ -1,0 +1,18 @@
+🔁 WHY? — How does RECURSION know when to stop?
+
+def fact(n):
+    if n == 1: return 1        # base case 🛑
+    return n * fact(n - 1)
+
+fact(4) → fact(3) → fact(2) → fact(1) 🛑
+then back up: 2 × 1 = 2 → 3 × 2 = 6 → 4 × 6 = 24 ✅
+
+No base case = it never stops → RecursionError ❌
+A CS Class 12 favourite — now you can SEE the call stack. 🧠
+
+💾 Save it · 📤 Share with your CS batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #Recursion #ComputerScience #CSClass12 #Coding #CBSE
