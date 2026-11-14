@@ -86,6 +86,8 @@ def _day_variant(n: int = 12) -> int:
     """Return today's 0-based variant index (wraps over n variants)."""
     return date.today().timetuple().tm_yday % n
 
+from promo_config import poster_url, month_name   # weekend promo posters
+
 def get_image_url(post_type: str = "study_notes") -> str:
     """
     Return a branded image URL for the given post type.
@@ -585,10 +587,10 @@ def post_promo_quest_fb(dry_run: bool = False):
         "4️⃣ Submit → see your score instantly!\n\n"
         "━━━━━━━━━━━━━━━━\n"
         "🔥 This month's quest is LIVE NOW!\n\n"
-        "👉 Attempt November Quest: https://cbsemock.org.in/quest/\n\n"
+        f"👉 Attempt {month_name()} Quest: https://cbsemock.org.in/quest/\n\n"
         "#Quest #CBSE #MCQ #BoardExams2027 #Class10 #Class12 #CBSEMock"
     )
-    result = fb_photo_post(text, get_image_url("quest_zone"), dry_run=dry_run)
+    result = fb_photo_post(text, poster_url("promo_quest"), dry_run=dry_run)
     print(f"[OK] Promo Quest (FB): {result.get('id','n/a')}")
 
 
@@ -614,7 +616,7 @@ def post_promo_mock_fb(dry_run: bool = False):
         "👉 Start Mock Tests Now: https://cbsemock.org.in\n\n"
         "#MockTest #CBSE #Class10 #Class12 #PracticePaper #BoardExams2027 #AnswerKey"
     )
-    result = fb_photo_post(text, get_image_url("practice_papers"), dry_run=dry_run)
+    result = fb_photo_post(text, poster_url("promo_mock"), dry_run=dry_run)
     print(f"[OK] Promo Mock (FB): {result.get('id','n/a')}")
 
 
@@ -642,7 +644,7 @@ def post_promo_lab_fb(dry_run: bool = False):
         "👉 Open Virtual Labs: https://cbsemock.org.in/virtual-labs/\n\n"
         "#VirtualLab #CBSE #Science #Physics #Chemistry #Biology #HandsOn #BoardExams2027"
     )
-    result = fb_photo_post(text, get_image_url("virtual_lab"), dry_run=dry_run)
+    result = fb_photo_post(text, poster_url("promo_lab"), dry_run=dry_run)
     print(f"[OK] Promo Lab (FB): {result.get('id','n/a')}")
 
 
@@ -670,7 +672,7 @@ def post_promo_notes_fb(dry_run: bool = False):
         "👉 Explore Notes: https://cbsemock.org.in\n\n"
         "#StudyNotes #CBSE #Revision #BoardExams2027 #Class12 #Class10 #ChapterWise"
     )
-    result = fb_photo_post(text, get_image_url("study_notes"), dry_run=dry_run)
+    result = fb_photo_post(text, poster_url("promo_notes"), dry_run=dry_run)
     print(f"[OK] Promo Notes (FB): {result.get('id','n/a')}")
 
 

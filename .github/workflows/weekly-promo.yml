@@ -2,12 +2,12 @@ name: Weekly Promo Post
 
 on:
   schedule:
-    # Every Sunday 9:00 AM IST (3:30 UTC)
-    - cron: '30 3 * * 0'
+    # Every Saturday and Sunday 11:30 AM IST (6:00 UTC)
+    - cron: '0 6 * * 6,0'
   workflow_dispatch:
     inputs:
       mode:
-        description: 'Force a specific promo: promo_quest, promo_mock, promo_lab, promo_notes (leave blank to auto-rotate)'
+        description: 'Force a specific promo: promo_quest, promo_mock, promo_lab, promo_notes (leave blank for the promo planned for today)'
         required: false
         default: ''
       platform:
@@ -35,32 +35,19 @@ jobs:
       - name: Determine which promo to post
         id: promo
         run: |
-          PROMO_ORDER="promo_quest promo_mock promo_lab promo_notes"
           INPUT_MODE="${{ github.event.inputs.mode }}"
-
           if [ -n "$INPUT_MODE" ]; then
-            echo "mode=$INPUT_MODE" >> $GITHUB_OUTPUT
-            echo "Using forced mode: $INPUT_MODE"
+            MODE="$INPUT_MODE"
           else
-            # Read current index from state file
-            STATE_FILE="promo-rotation-state.txt"
-            if [ -f "$STATE_FILE" ]; then
-              IDX=$(cat "$STATE_FILE")
-            else
-              IDX=0
-            fi
-
-            # Pick the promo at this index
-            PROMOS=($PROMO_ORDER)
-            MODE="${PROMOS[$IDX]}"
-            echo "mode=$MODE" >> $GITHUB_OUTPUT
-            echo "Posting promo #$IDX: $MODE"
-
-            # Advance index (wrap around at 4)
-            NEXT=$(( (IDX + 1) % 4 ))
-            echo "$NEXT" > "$STATE_FILE"
-            echo "next_idx=$NEXT" >> $GITHUB_OUTPUT
+            # Weekend A: Sat Study Notes, Sun Mock Tests · Weekend B: Sat Monthly Quest, Sun Virtual Labs
+            MODE="$(python3 promo_config.py)"
           fi
+          if [ -z "$MODE" ]; then
+            echo "::error::No promo is planned for today (promos go out on Saturday and Sunday). To post one anyway, run again and fill in the mode."
+            exit 1
+          fi
+          echo "mode=$MODE" >> $GITHUB_OUTPUT
+          echo "Posting promo: $MODE"
 
       - name: Post to Facebook
         if: >
@@ -81,9 +68,10 @@ jobs:
 
       - name: Post to Telegram
         if: >
+          always() && steps.promo.outputs.mode != '' && (
           github.event.inputs.platform == '' ||
           github.event.inputs.platform == 'telegram' ||
-          github.event.inputs.platform == 'both'
+          github.event.inputs.platform == 'both' )
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -98,9 +86,10 @@ jobs:
 
       - name: Post to Instagram
         if: >
+          always() && steps.promo.outputs.mode != '' && (
           github.event.inputs.platform == '' ||
           github.event.inputs.platform == 'instagram' ||
-          github.event.inputs.platform == 'both'
+          github.event.inputs.platform == 'both' )
         env:
           INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
@@ -112,12 +101,3 @@ jobs:
           else
             python3 post_instagram.py --mode "$MODE"
           fi
-
-      - name: Save promo rotation state
-        if: github.event.inputs.mode == ''
-        run: |
-          git config user.name  "social-post-bot"
-          git config user.email "bot@cbsemock.org.in"
-          git add promo-rotation-state.txt 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "chore: advance weekly promo rotation [skip ci]"
-          git push || true

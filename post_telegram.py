@@ -366,6 +366,66 @@ def post_weekly_focus(tracker, dry_run: bool = False):
     print(f"[OK] Weekly focus posted: {item['title']} → msg {result.get('result',{}).get('message_id','n/a')}")
 
 
+
+# ── Weekend promo posters ─────────────────────────────────────────────────────
+from promo_config import poster_url, month_name
+
+PROMO_CAPTIONS = {
+    "promo_notes": (
+        "📖 <b>Master every chapter with our Study Notes</b>\n\n"
+        "✅ 30+ subjects · Class 9–12\n"
+        "✅ Chapter-wise breakdowns\n"
+        "✅ Key formulas &amp; definitions\n"
+        "✅ Quick revision points\n\n"
+        "👉 <a href='https://cbsemock.org.in/study-zone/'><b>Explore Study Notes →</b></a>\n\n"
+        "#StudyNotes #CBSE #Revision #BoardExams2027 #Class10 #Class12"
+    ),
+    "promo_mock": (
+        "📝 <b>15 full-length CBSE board mock tests — FREE</b>\n\n"
+        "✅ 15 papers per subject\n"
+        "✅ Latest CBSE pattern 2027\n"
+        "✅ Detailed answer keys\n"
+        "✅ Class 10 &amp; Class 12\n\n"
+        "💡 Attempt one under real exam conditions this weekend — 3 hours, no distractions.\n\n"
+        "👉 <a href='https://cbsemock.org.in/mock-zone/'><b>Start your mock test →</b></a>\n\n"
+        "#MockTest #CBSE #Class10 #Class12 #BoardExams2027"
+    ),
+    "promo_quest": (
+        "🏆 <b>The Monthly Quest — challenge yourself!</b>\n\n"
+        "✅ New challenge every month\n"
+        "✅ High-difficulty MCQs\n"
+        "✅ Class 10 &amp; Class 12\n"
+        "✅ Instant score + explanations\n\n"
+        "🔥 The {month} Quest is live now.\n\n"
+        "👉 <a href='https://cbsemock.org.in/quest/'><b>Take the Quest →</b></a>\n\n"
+        "#Quest #CBSE #MCQ #BoardExams2027 #Class10 #Class12"
+    ),
+    "promo_lab": (
+        "🧪 <b>200+ virtual experiments — no lab needed!</b>\n\n"
+        "✅ Biology · Chemistry · Physics · Maths\n"
+        "✅ Step-by-step simulations\n"
+        "✅ Real-time results\n"
+        "✅ Works on phone &amp; laptop\n\n"
+        "👉 <a href='https://cbsemock.org.in/virtual-labs/'><b>Try Virtual Labs free →</b></a>\n\n"
+        "#VirtualLab #CBSE #Science #Practicals #BoardExams2027"
+    ),
+}
+
+
+def tg_promo(mode: str, long_text: str, dry_run: bool = False) -> dict:
+    """Send the promo poster with a short caption; if the photo fails, send the long text."""
+    caption = PROMO_CAPTIONS[mode].format(month=month_name())
+    try:
+        return tg_request("sendPhoto", {
+            "chat_id":    CHAT_ID,
+            "photo":      poster_url(mode),
+            "caption":    caption,
+            "parse_mode": "HTML",
+        }, dry_run)
+    except Exception as exc:
+        print(f"[WARN] Poster could not be sent ({exc}); sending text instead.")
+        return tg_send(long_text, dry_run)
+
 # ── Special Promo Posts ───────────────────────────────────────────────────────
 
 def post_promo_quest(dry_run: bool = False):
@@ -388,10 +448,10 @@ def post_promo_quest(dry_run: bool = False):
         "4️⃣ Submit → see your score instantly!\n\n"
         "━━━━━━━━━━━━━━━━━━━━━\n"
         "🔥 This month's quest is <b>LIVE NOW!</b>\n\n"
-        "👉 <a href='https://cbsemock.org.in/quest/'><b>Attempt November Quest →</b></a>\n\n"
+        "👉 <a href='https://cbsemock.org.in/quest/'><b>Attempt this month's Quest →</b></a>\n\n"
         "#Quest #CBSE #MCQ #BoardExams2027 #Class10 #Class12 #CBSEMock"
     )
-    result = tg_send(text, dry_run)
+    result = tg_promo("promo_quest", text, dry_run)
     print(f"[OK] Promo Quest posted: msg {result.get('result',{}).get('message_id','n/a')}")
 
 
@@ -418,7 +478,7 @@ def post_promo_mock(dry_run: bool = False):
         "👉 <a href='https://cbsemock.org.in'><b>Start Mock Tests Now →</b></a>\n\n"
         "#MockTest #CBSE #Class10 #Class12 #PracticePaper #BoardExams2027 #AnswerKey"
     )
-    result = tg_send(text, dry_run)
+    result = tg_promo("promo_mock", text, dry_run)
     print(f"[OK] Promo Mock posted: msg {result.get('result',{}).get('message_id','n/a')}")
 
 
@@ -447,7 +507,7 @@ def post_promo_lab(dry_run: bool = False):
         "👉 <a href='https://cbsemock.org.in/virtual-labs/'><b>Open Virtual Labs →</b></a>\n\n"
         "#VirtualLab #CBSE #Science #Physics #Chemistry #Biology #HandsOn #BoardExams2027"
     )
-    result = tg_send(text, dry_run)
+    result = tg_promo("promo_lab", text, dry_run)
     print(f"[OK] Promo Lab posted: msg {result.get('result',{}).get('message_id','n/a')}")
 
 
@@ -476,7 +536,7 @@ def post_promo_notes(dry_run: bool = False):
         "👉 <a href='https://cbsemock.org.in'><b>Explore Notes at cbsemock.org.in →</b></a>\n\n"
         "#StudyNotes #CBSE #Revision #BoardExams2027 #Class12 #Class10 #ChapterWise"
     )
-    result = tg_send(text, dry_run)
+    result = tg_promo("promo_notes", text, dry_run)
     print(f"[OK] Promo Notes posted: msg {result.get('result',{}).get('message_id','n/a')}")
 
 
