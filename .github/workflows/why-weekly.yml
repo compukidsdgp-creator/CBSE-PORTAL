@@ -1,0 +1,52 @@
+name: WHY? reel (Sunday 6:30 PM IST)
+
+on:
+  schedule:
+    - cron: '0 13 * * 0'          # Sunday 13:00 UTC = 6:30 PM IST
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (true/false)'
+        required: false
+        default: 'false'
+
+concurrency:
+  group: why-reel
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Post the next WHY? reel
+        env:
+          FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          GITHUB_REPOSITORY:      ${{ github.repository }}
+          GITHUB_REF_NAME:        ${{ github.ref_name }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python3 post_why_reel.py --dry-run
+          else
+            python3 post_why_reel.py
+          fi
+      - name: Save progress
+        if: always() && github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name  "social-post-bot"
+          git config user.email "bot@cbsemock.org.in"
+          git add -A formula-posts/why || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "chore: WHY? reel posted [skip ci]"
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash -q origin main && git push -q origin main && exit 0
+            sleep $((i * 6))
+          done
+          echo "::warning::Could not save WHY? posting progress"

@@ -1,0 +1,13 @@
+🤔 WHY? — Why is the area of a circle πr²?
+
+Slice a circle into thin rings, unroll every ring… and they stack into a triangle! 🔺
+Base = 2πr, height = r → Area = ½ × 2πr × r = πr² ✨
+
+Don't just memorise the formula — see where it comes from. 👀
+
+💾 Save this for revision · 📤 Share with a friend who still mugs up formulas
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #CircleArea #VisualMaths #Class10Maths #BoardExam2027 #CBSE #MathsTricks
