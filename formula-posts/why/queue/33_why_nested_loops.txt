@@ -1,0 +1,21 @@
+🔁 WHY? — How do NESTED loops work?
+
+for i in range(3):        # outer: rows
+    for j in range(4):    # inner: columns
+        print("*", end=" ")
+    print()
+
+For EVERY pass of the outer loop, the inner loop runs completely 🕐
+Like a clock: minute hand goes round once for each hour.
+
+Total runs = outer × inner = 3 × 4 = 12 ⭐
+Used for patterns, multiplication tables, matrices, comparing pairs.
+
+Python — Computer Science, Class 11 & 12. 💻
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #NestedLoops #ComputerScience #Class12CS #Coding #CBSE

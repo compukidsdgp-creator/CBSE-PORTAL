@@ -1,0 +1,22 @@
+🐞 WHY? — Why is DEBUGGING so important, and how does it work?
+
+1947: engineers found a real moth in a computer — "first actual case of bug being found" 🦋
+
+3 kinds of errors:
+❌ Syntax — breaks Python's grammar (missing colon)
+💥 Runtime — crashes while running (divide by zero)
+🤔 Logical — runs fine, wrong answer (the sneakiest!)
+
+avg = a + b / 2   → 80 + 45 = 125 ❌
+avg = (a + b) / 2 → 85 ✅
+
+Debugging = Reproduce → Read → Trace (print values) → Fix → Retest 🔁
+
+Errors & exceptions — Computer Science, Class 11 & 12. 💻
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #Debugging #ComputerScience #Class12CS #Coding #CBSE

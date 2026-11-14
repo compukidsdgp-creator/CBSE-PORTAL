@@ -1,0 +1,24 @@
+↹ WHY? — Why is INDENTATION so important in Python?
+
+C / Java use { } to mark blocks.
+Python has no brackets — the indentation IS the block! 🧱
+
+if marks >= 33:
+    print("Pass")
+    print("Well done")   # inside → only when passing
+
+if marks >= 33:
+    print("Pass")
+print("Well done")       # outside → runs every time
+
+Misaligned spaces → IndentationError ❌
+Rule: 4 spaces per level, always consistent ✅
+
+Python basics — Computer Science, Class 11 & 12. 💻
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #Indentation #ComputerScience #Class12CS #Coding #CBSE

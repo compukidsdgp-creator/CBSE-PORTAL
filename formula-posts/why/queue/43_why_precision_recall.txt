@@ -1,0 +1,20 @@
+🎣 WHY? — Why do we need BOTH precision AND recall?
+
+Pond with fish 🐟 and junk 🥫 — your AI is the net.
+
+🎯 Precision: of everything caught, how much is fish? = TP/(TP+FP)
+🔍 Recall: of all the fish, how many were caught? = TP/(TP+FN)
+
+Giant net → recall 100%, precision terrible
+Tiny net → precision 100%, recall terrible
+
+Each alone can be gamed — together (F1 score) they tell the truth!
+
+Model Evaluation — AI, Class 10 & 12. 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Precision #Recall #F1Score #ArtificialIntelligence #AIClass12 #CBSE

@@ -1,0 +1,23 @@
+🔢 WHY? — Why do we need DATA TYPES?
+
+5 + 5 = 10 ✅
+"5" + "5" = "55" 😲
+
+Inside, everything is 0s and 1s — the data type says what they MEAN.
+
+int → whole numbers (17)
+float → decimals (3.14)
+str → text ("Hello")
+bool → True / False
+
++ adds numbers, joins strings, and 5 + "5" → TypeError ❌
+input() gives a string → use int(input()) for maths ✅
+
+Data types in Python — Computer Science, Class 11 & 12. 💻
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #DataTypes #ComputerScience #Class12CS #Coding #CBSE

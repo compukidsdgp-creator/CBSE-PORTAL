@@ -1,0 +1,19 @@
+⚡ WHY? — Why does power have THREE formulas?
+
+Start with P = V × I (energy per second)
+Ohm's law: V = I R
+➡️ Replace V: P = (IR) × I = I²R
+➡️ Replace I: P = V × (V/R) = V²/R
+
+Which one to use? 🤔
+🔗 Series (same current) → I²R
+🔀 Parallel (same voltage) → V²/R
+
+Three formulas, ONE idea. Electricity — Class 10 Science. 📘
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ElectricPower #OhmsLaw #Class10Science #Electricity #CBSE #BoardExams

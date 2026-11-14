@@ -1,0 +1,22 @@
+🧩 WHY? — Why use FUNCTIONS instead of repeating code?
+
+Copy-paste the same code 3 times… find a bug → fix it in 3 places 😩
+
+def area(l, b):      # parameters = inputs
+    return l * b     # return = sends answer back
+
+a1 = area(4, 3)
+a2 = area(5, 2)
+
+✅ Write once, use many times
+✅ Fix once, fixed everywhere
+✅ Shorter, cleaner, easier to test
+
+Functions in Python — Computer Science, Class 11 & 12. 💻
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #Functions #ComputerScience #Class12CS #Coding #CBSE

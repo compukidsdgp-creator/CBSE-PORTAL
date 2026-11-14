@@ -1,0 +1,18 @@
+📋 WHY? — Why use a LIST when we already have variables?
+
+40 students → m1, m2, m3 … m40? 😵
+Average = (m1 + m2 + … + m40) / 40 — and change the code for every new student!
+
+marks = [78, 92, 65, 88, …]   # ONE name, many values
+marks[0] → 78   (index starts at 0)
+avg = sum(marks) / len(marks)   # works for 40 or 4000
+marks.append(71)   # new student joins ✅
+
+Lists in Python — Computer Science, Class 11 & 12. 💻
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #Lists #ComputerScience #Class12CS #Coding #CBSE

@@ -1,0 +1,21 @@
+🧮 WHY? — Why does a confusion matrix have FOUR boxes?
+
+Spam filter example 📧
+Each email → 2 questions: what did the model SAY? what was it REALLY?
+2 answers × yes/no = 2 × 2 = 4 outcomes
+
+✅ TP: spam caught
+✅ TN: normal email delivered
+⚠️ FP: normal email sent to spam (false alarm)
+❌ FN: spam slipped through (miss)
+
+Different mistakes, different costs — so we count them separately!
+
+Model Evaluation — AI, Class 10 & 12. 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ConfusionMatrix #ArtificialIntelligence #AIClass10 #AIClass12 #MachineLearning #CBSE

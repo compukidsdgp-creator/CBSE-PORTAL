@@ -1,0 +1,22 @@
+🔀 WHY? — Why do we need ELIF instead of many separate IFs?
+
+marks = 95
+if marks >= 90: print("A")
+if marks >= 75: print("B")
+if marks >= 50: print("C")
+➡️ prints A, B AND C 😱 (each if is checked separately)
+
+if marks >= 90:   print("A")
+elif marks >= 75: print("B")
+elif marks >= 50: print("C")
+else:             print("Fail")
+➡️ prints only A ✅ — stops at the first true condition (and skips the rest)
+
+Conditional statements — Computer Science, Class 11 & 12. 💻
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #IfElse #ComputerScience #Class12CS #Coding #CBSE

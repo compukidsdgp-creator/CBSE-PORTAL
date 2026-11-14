@@ -1,0 +1,17 @@
+🔍 WHY? — Why is a concave lens's focal length ALWAYS negative?
+
+Parallel rays → concave lens → they spread out (diverge) ↗️↘️
+Trace them backwards → they seem to come from the focus F,
+on the SAME side as the incoming light ⬅️
+
+Sign convention 📏: along the light = +, against it = −
+So f(concave) < 0 ❌   and   f(convex) > 0 ✅ (rays really meet on the far side)
+
+Refraction of Light — Class 10 Science. 📘
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ConcaveLens #SignConvention #Class10Science #Light #CBSE #BoardExams

@@ -1,0 +1,19 @@
+🧲 WHY? — Why does a current-carrying wire feel a FORCE in a magnetic field?
+
+The magnet's field runs N → S ➡️
+The current makes its own field in circles around the wire 🔄
+Above the wire they ADD, below they CANCEL ➕➖
+Field lines push the wire from strong → weak 💥
+
+Direction = Fleming's Left-Hand Rule ✋
+First finger → Field · seCond finger → Current · thuMb → Motion
+Size: F = BIL
+
+Magnetic Effects of Current — Class 10 · Moving Charges — Class 12. 📘
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #FlemingsLeftHandRule #Magnetism #Class10Science #Class12Physics #CBSE #BoardExams
