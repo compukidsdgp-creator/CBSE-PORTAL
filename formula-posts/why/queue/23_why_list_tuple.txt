@@ -1,0 +1,17 @@
+🐍 WHY? — Why can a LIST change but a TUPLE can't?
+
+LIST = whiteboard 🧽 → marks[1] = 95 ✅ (mutable)
+TUPLE = printed certificate 📜 → t[1] = 95 ❌ TypeError (immutable)
+
+Use tuples for data that must never change — date of birth, map coordinates.
+They're a little faster and safer too!
+[ ] → list · ( ) → tuple
+
+CS Class 12 Python — a guaranteed viva question. 🧠
+
+💾 Save it · 📤 Share with your CS batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Python #ComputerScience #CSClass12 #Coding #PythonTips #CBSE

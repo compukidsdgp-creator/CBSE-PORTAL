@@ -23,6 +23,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
+      - name: Install page builder dependencies
+        run: pip install --quiet matplotlib numpy pillow || true
       - name: Post the next WHY? reel
         env:
           FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
@@ -42,7 +44,8 @@ jobs:
         run: |
           git config user.name  "social-post-bot"
           git config user.email "bot@cbsemock.org.in"
-          git add -A formula-posts/why || true
+          python3 reels_page.py || echo "::warning::Reel pages were not refreshed"
+          git add -A formula-posts/why why-reels formula-reels || true
           git diff --cached --quiet && exit 0
           git commit -q -m "chore: WHY? reel posted [skip ci]"
           for i in 1 2 3 4; do

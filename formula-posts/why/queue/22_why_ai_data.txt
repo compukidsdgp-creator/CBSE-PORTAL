@@ -1,0 +1,16 @@
+🐱 WHY? — Why does AI need SO MUCH data?
+
+Show an AI only 3 orange cats → it learns "cat = orange blob" 🟠
+Show it a black cat → ❓ no idea!
+Give it thousands of varied examples → it learns what REALLY makes a cat: ears, eyes, whiskers 👂👀
+More good data → better accuracy (until it levels off) 📈
+
+Few examples → memorise. Many varied examples → generalise.
+AI syllabus (data & learning), Class 10 & 12. 🧠
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #ArtificialIntelligence #MachineLearning #Data #AIClass10 #AIClass12 #CBSE
