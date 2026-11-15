@@ -9,7 +9,7 @@ Environment:
   ADMIN_PASSWORD               required to write the vault
   ADMIN_GH_TOKEN               fine-grained token (this repo: Contents + Actions read/write)
   GSC_SERVICE_ACCOUNT_JSON     optional — Search Console clicks / impressions / queries
-  GSC_PROPERTY                 optional — "sc-domain:cbsemock.org.in" (default) or "https://cbsemock.org.in/"
+  GSC_PROPERTY                 optional — "https://cbsemock.org.in/" (default, URL-prefix property) or "sc-domain:cbsemock.org.in"
   GA4_PROPERTY_ID              optional — numeric GA4 property id (same service account)
   GITHUB_TOKEN                 optional — counts promo / WHY? runs via the Actions API
 
@@ -204,7 +204,7 @@ def search_console():
     tok = google_token("https://www.googleapis.com/auth/webmasters.readonly")
     if not tok:
         return None
-    prop = os.environ.get("GSC_PROPERTY", "sc-domain:cbsemock.org.in")
+    prop = os.environ.get("GSC_PROPERTY") or "https://cbsemock.org.in/"
     base = f"https://www.googleapis.com/webmasters/v3/sites/{urllib.parse.quote(prop, safe='')}/searchAnalytics/query"
     end = TODAY - timedelta(days=2)                     # Search Console lags ~2 days
     start = end - timedelta(days=27)
