@@ -52,6 +52,14 @@ h1 em{font-style:normal;color:var(--gold2);}
 .byline a{color:var(--navy);font-weight:600;}
 .reel{float:right;width:250px;margin:4px 0 18px 26px;}
 .reel video{width:100%;aspect-ratio:9/16;border-radius:16px;background:#000;display:block;border:3px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,39,.15),0 14px 30px rgba(15,35,71,.3);}
+.igf{position:relative;width:100%;aspect-ratio:9/16;border-radius:16px;background:#000 center/cover no-repeat;cursor:pointer;border:3px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,39,.15),0 14px 30px rgba(15,35,71,.3);transition:transform .2s,box-shadow .2s;}
+.igf:hover,.igf:focus{transform:translateY(-4px);box-shadow:0 0 0 6px rgba(201,162,39,.3),0 20px 36px rgba(15,35,71,.38);outline:none;}
+.igplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);color:#fff;font-size:1.6rem;display:flex;align-items:center;justify-content:center;padding-left:5px;box-shadow:0 6px 20px rgba(0,0,0,.45);transition:transform .2s;}
+.igf:hover .igplay{transform:translate(-50%,-50%) scale(1.12);}
+.igbadge{position:absolute;left:50%;top:calc(50% + 46px);transform:translateX(-50%);white-space:nowrap;padding:3px 10px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.03em;}
+.igbtn{display:block;margin-top:10px;text-align:center;padding:9px 12px;border-radius:12px;color:#fff;text-decoration:none;font-size:.8rem;font-weight:700;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);box-shadow:0 4px 12px rgba(238,42,123,.3);transition:transform .2s,box-shadow .2s;}
+.igbtn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(238,42,123,.45);}
+.reel .instagram-media{min-width:0!important;width:100%!important;margin:0!important;border-radius:14px!important;}
 .reel p{font-size:.78rem;color:var(--muted);text-align:center;margin-top:8px;font-weight:600;}
 article h2{font-size:1.55rem;margin:32px 0 10px;line-height:1.25;color:var(--navy);display:flex;align-items:center;gap:10px;}
 article h2::before{content:'';flex:0 0 6px;height:24px;border-radius:3px;background:linear-gradient(180deg,var(--gold2),var(--gold));}

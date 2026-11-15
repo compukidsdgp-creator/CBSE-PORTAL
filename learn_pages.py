@@ -35,6 +35,44 @@ def find_reel(mod):
     return "", ""
 
 
+IG_CACHE = OUT / "ig_links.json"
+IG_PROFILE = "https://www.instagram.com/cbsemock/"
+
+
+def ig_links():
+    """{reel filename: instagram permalink} for WHY? reels already posted to Instagram.
+
+    IDs come from formula-posts/why/why_log.csv; permalinks are looked up once with the Graph API
+    (INSTAGRAM_ACCESS_TOKEN) and cached in learn/ig_links.json, so runs without the token keep them."""
+    import csv, json, os, urllib.request, urllib.parse
+    try:
+        cache = json.loads(IG_CACHE.read_text())
+    except Exception:
+        cache = {}
+    log = ROOT / "formula-posts/why/why_log.csv"
+    token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "")
+    changed = False
+    if log.exists():
+        with open(log, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                mid, name = (row.get("ig_media_id") or "").strip(), row.get("filename", "")
+                if row.get("dry_run") == "True" or not mid.isdigit() or name in cache or not token:
+                    continue
+                url = f"https://graph.facebook.com/v27.0/{mid}?" + urllib.parse.urlencode(
+                    {"fields": "permalink", "access_token": token})
+                try:
+                    with urllib.request.urlopen(url, timeout=20) as r:
+                        link = json.load(r).get("permalink", "")
+                    if link.startswith("https://www.instagram.com/"):
+                        cache[name] = link.split("?")[0]
+                        changed = True
+                except Exception as e:
+                    print(f"[WARN] Instagram permalink for {name}: {e}")
+    if changed:
+        IG_CACHE.write_text(json.dumps(cache, indent=1, sort_keys=True))
+    return cache
+
+
 def live_articles():
     arts = [a for a in ARTICLES if datetime.strptime(a["published"], "%Y-%m-%d").date() <= TODAY]
     return sorted(arts, key=lambda a: (a["published"], ARTICLES.index(a)), reverse=True)
@@ -78,6 +116,14 @@ h1 em{font-style:normal;color:var(--gold2);}
 .byline a{color:var(--navy);font-weight:600;}
 .reel{float:right;width:250px;margin:4px 0 18px 26px;}
 .reel video{width:100%;aspect-ratio:9/16;border-radius:16px;background:#000;display:block;border:3px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,39,.15),0 14px 30px rgba(15,35,71,.3);}
+.igf{position:relative;width:100%;aspect-ratio:9/16;border-radius:16px;background:#000 center/cover no-repeat;cursor:pointer;border:3px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,39,.15),0 14px 30px rgba(15,35,71,.3);transition:transform .2s,box-shadow .2s;}
+.igf:hover,.igf:focus{transform:translateY(-4px);box-shadow:0 0 0 6px rgba(201,162,39,.3),0 20px 36px rgba(15,35,71,.38);outline:none;}
+.igplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);color:#fff;font-size:1.6rem;display:flex;align-items:center;justify-content:center;padding-left:5px;box-shadow:0 6px 20px rgba(0,0,0,.45);transition:transform .2s;}
+.igf:hover .igplay{transform:translate(-50%,-50%) scale(1.12);}
+.igbadge{position:absolute;left:50%;top:calc(50% + 46px);transform:translateX(-50%);white-space:nowrap;padding:3px 10px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.03em;}
+.igbtn{display:block;margin-top:10px;text-align:center;padding:9px 12px;border-radius:12px;color:#fff;text-decoration:none;font-size:.8rem;font-weight:700;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);box-shadow:0 4px 12px rgba(238,42,123,.3);transition:transform .2s,box-shadow .2s;}
+.igbtn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(238,42,123,.45);}
+.reel .instagram-media{min-width:0!important;width:100%!important;margin:0!important;border-radius:14px!important;}
 .reel p{font-size:.78rem;color:var(--muted);text-align:center;margin-top:8px;font-weight:600;}
 article h2{font-size:1.55rem;margin:32px 0 10px;line-height:1.25;color:var(--navy);display:flex;align-items:center;gap:10px;}
 article h2::before{content:'';flex:0 0 6px;height:24px;border-radius:3px;background:linear-gradient(180deg,var(--gold2),var(--gold));}
@@ -153,6 +199,23 @@ FOOTER = """<footer>&copy; 2026 CBSEMock.org.in &nbsp;|&nbsp;
 <a href="../about.html">About Us</a>|<a href="../privacy.html">Privacy Policy</a>|<a href="../terms.html">Terms of Use</a>|<a href="../contact.html">Contact</a>|<a href="../disclaimer.html">Disclaimer</a></footer>"""
 
 
+IG_JS = """<script>
+document.querySelectorAll('.igf').forEach(function(el){
+  function go(){
+    var u=el.getAttribute('data-ig'), b=document.createElement('blockquote');
+    b.className='instagram-media'; b.setAttribute('data-instgrm-permalink',u+'?utm_source=ig_embed');
+    b.setAttribute('data-instgrm-version','14'); b.innerHTML='<a href="'+u+'" target="_blank" rel="noopener">View this reel on Instagram</a>';
+    el.replaceWith(b);
+    if(window.instgrm){window.instgrm.Embeds.process();}
+    else{var s=document.createElement('script');s.async=true;s.src='https://www.instagram.com/embed.js';document.body.appendChild(s);}
+    try{gtag('event','ig_reel_play',{page_path:location.pathname});}catch(e){}
+  }
+  el.addEventListener('click',go);
+  el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+});
+</script>"""
+
+
 def head(title, desc, url, ldjson, og_img="", og_type="article"):
     import json
     img = f'<meta property="og:image" content="{SITE}/{og_img}">' if og_img else ""
@@ -183,9 +246,10 @@ def nice_date(s):
     return f"{d.day} {d:%B %Y}"
 
 
-def article_page(a, others):
+def article_page(a, others, ig):
     url = f"{SITE}/learn/{a['slug']}.html"
     video, thumb = find_reel(a["reel"])
+    ig_url = ig.get(Path(video).name, "") if video else ""
     color = CAT_COLOR.get(a["category"], "#2d6a4f")
     pub = a["published"]
     upd = a.get("updated", pub)
@@ -211,7 +275,13 @@ def article_page(a, others):
     ld = {"@context": "https://schema.org", "@graph": graph}
 
     reel = ""
-    if video:
+    if ig_url:
+        bg = f' style="background-image:url(../{thumb})"' if thumb else ""
+        reel = (f'<figure class="reel"><div class="igf" data-ig="{E(ig_url)}" role="button" tabindex="0" '
+                f'aria-label="Play the reel on Instagram"{bg}><span class="igplay">▶</span>'
+                f'<span class="igbadge">Instagram</span></div>'
+                f'<a class="igbtn" href="{E(ig_url)}" target="_blank" rel="noopener">Watch &amp; follow on Instagram ↗</a></figure>')
+    elif video:
         poster = f' poster="../{thumb}"' if thumb else ""
         reel = (f'<figure class="reel"><video controls playsinline preload="none"'
                 f'{poster} src="../{video}" title="{E(a["h1"])}"></video>'
@@ -240,6 +310,7 @@ def article_page(a, others):
 {f'<section class="box"><h2>More WHY? explainers</h2><ul class="links">{more}</ul></section>' if more else ''}
 </main>
 {FOOTER}
+{IG_JS if ig_url else ""}
 </body>
 </html>
 """
@@ -292,12 +363,13 @@ def index_page(arts):
 def main():
     OUT.mkdir(exist_ok=True)
     arts = live_articles()
+    ig = ig_links()
     keep = {"index.html"}
     for a in arts:
         others = [o for o in arts if o is not a]
         same = [o for o in others if o["category"] == a["category"]]
         others = same + [o for o in others if o not in same]
-        (OUT / f"{a['slug']}.html").write_text(article_page(a, others), encoding="utf-8")
+        (OUT / f"{a['slug']}.html").write_text(article_page(a, others, ig), encoding="utf-8")
         keep.add(f"{a['slug']}.html")
         v, _ = find_reel(a["reel"])
         if not v:
