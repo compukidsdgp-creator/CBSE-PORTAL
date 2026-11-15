@@ -1,0 +1,45 @@
+name: Admin dashboard data
+
+on:
+  schedule:
+    - cron: '20 1 * * *'      # 6:50 AM IST
+    - cron: '50 15 * * *'     # 9:20 PM IST (after the evening posts)
+  workflow_dispatch:          # "Refresh data" button in the admin panel
+
+concurrency:
+  group: admin-dashboard
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Install dependencies
+        run: pip install --quiet cryptography google-auth requests
+      - name: Build and encrypt dashboard data
+        env:
+          ADMIN_PASSWORD:           ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_GH_TOKEN:           ${{ secrets.ADMIN_GH_TOKEN }}
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_PROPERTY:             ${{ vars.GSC_PROPERTY }}
+          GA4_PROPERTY_ID:          ${{ vars.GA4_PROPERTY_ID }}
+          GITHUB_TOKEN:             ${{ secrets.GITHUB_TOKEN }}
+        run: python3 build_admin_data.py
+      - name: Save
+        run: |
+          git config user.name  "cbse-bot"
+          git config user.email "bot@cbsemock.org.in"
+          git add admin/data/vault.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -q -m "chore: admin dashboard data"
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash -q origin main && git push -q origin main && exit 0
+            sleep $((i * 5))
+          done
+          echo "::error::Could not save the dashboard data"; exit 1

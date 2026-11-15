@@ -1,0 +1,77 @@
+{
+  "show_placeholders": false,
+  "contact": "ads@cbsemock.org.in",
+  "note": "Edited from cbsemock.org.in/admin/. show_placeholders=false hides every empty ad box (needed for AdSense approval).",
+  "slots": {
+    "leaderboard_top": {
+      "active": false,
+      "img": "ads/leaderboard-top.jpg",
+      "url": "#",
+      "alt": "Advertise here — 728×90 — cbsemock.org.in",
+      "label": "Top Banner · 728×90"
+    },
+    "leaderboard_bottom": {
+      "active": false,
+      "img": "ads/leaderboard-bottom.jpg",
+      "url": "#",
+      "alt": "Advertise here — 728×90 — cbsemock.org.in",
+      "label": "Bottom Banner · 728×90"
+    },
+    "sidebar_left_1": {
+      "active": false,
+      "img": "ads/sidebar-left-1.jpg",
+      "url": "#",
+      "alt": "Advertise here — cbsemock.org.in",
+      "label": "Left Panel 1 · 300×75"
+    },
+    "sidebar_left_2": {
+      "active": false,
+      "img": "ads/sidebar-left-2.jpg",
+      "url": "#",
+      "alt": "Advertise here — cbsemock.org.in",
+      "label": "Left Panel 2 · 300×75"
+    },
+    "sidebar_left_3": {
+      "active": false,
+      "img": "ads/sidebar-left-3.jpg",
+      "url": "#",
+      "alt": "Advertise here — cbsemock.org.in",
+      "label": "Left Panel 3 · 300×75"
+    },
+    "sidebar_right_1": {
+      "active": false,
+      "img": "ads/sidebar-right-1.jpg",
+      "url": "#",
+      "alt": "Advertise here — cbsemock.org.in",
+      "label": "Right Panel 1 · 300×75"
+    },
+    "sidebar_right_2": {
+      "active": false,
+      "img": "ads/sidebar-right-2.jpg",
+      "url": "#",
+      "alt": "Advertise here — cbsemock.org.in",
+      "label": "Right Panel 2 · 300×75"
+    },
+    "sidebar_right_3": {
+      "active": false,
+      "img": "ads/sidebar-right-3.jpg",
+      "url": "#",
+      "alt": "Advertise here — cbsemock.org.in",
+      "label": "Right Panel 3 · 300×75"
+    },
+    "inline_1": {
+      "active": false,
+      "img": "ads/inline-1.jpg",
+      "url": "#",
+      "alt": "Advertise here — cbsemock.org.in",
+      "label": "Inline 1 · 580×90"
+    },
+    "inline_2": {
+      "active": false,
+      "img": "ads/inline-2.jpg",
+      "url": "#",
+      "alt": "Advertise here — cbsemock.org.in",
+      "label": "Inline 2 · 580×90"
+    }
+  }
+}

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CBSEMock Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1220;--panel:#121b2e;--panel2:#18233a;--line:#24314d;--text:#e8eefc;--muted:#8fa0c0;
+--accent:#ffc83d;--cyan:#2ad4ff;--green:#3ddc97;--pink:#ff5d8f;--purple:#a98bff;--orange:#ff9f43;--red:#ff6b6b}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
+a{color:var(--cyan)}button{font-family:inherit}
+.hidden{display:none!important}
+/* login */
+#login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+.login-card{width:100%;max-width:380px;text-align:center}
+.login-card h1{margin:6px 0 2px;font-size:22px}.login-card p{color:var(--muted);font-size:14px;margin:0 0 18px}
+input[type=password],input[type=text],input[type=url]{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);
+border-radius:10px;padding:11px 12px;font-size:15px;outline:none}input:focus{border-color:var(--cyan)}
+.btn{background:var(--accent);color:#1b1300;border:0;border-radius:10px;padding:11px 16px;font-weight:700;font-size:14px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}.btn:disabled{opacity:.5;cursor:default}
+.err{color:var(--red);font-size:13px;min-height:18px;margin-top:10px}
+/* shell */
+header.top{position:sticky;top:0;z-index:5;background:rgba(11,18,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1240px;margin:auto;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:18px}.brand span{color:var(--accent)}
+.tabs{display:flex;gap:6px;margin-left:8px}
+.tab{background:transparent;border:1px solid transparent;color:var(--muted);padding:8px 12px;border-radius:9px;font-weight:600;cursor:pointer}
+.tab.on{background:var(--panel2);border-color:var(--line);color:var(--text)}
+.spacer{flex:1}.stamp{color:var(--muted);font-size:12px}
+main{max-width:1240px;margin:auto;padding:18px 16px 60px}
+.grid{display:grid;gap:14px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}
+.two{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}.half{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.two,.half{grid-template-columns:minmax(0,1fr)}}
+.kpi .label{color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.kpi .val{font-size:30px;font-weight:800;margin-top:6px}.kpi .sub{color:var(--muted);font-size:12px;margin-top:4px}
+.kpi .sub b{color:var(--green)}.kpi .sub b.down{color:var(--red)}
+h2{font-size:15px;margin:0 0 12px;display:flex;align-items:center;gap:8px}h2 small{color:var(--muted);font-weight:500;font-size:12px}
+.section-title{margin:26px 0 10px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.chart{position:relative;height:260px}
+/* runway */
+.runway{display:flex;flex-direction:column;gap:12px}
+.rw-row{display:grid;grid-template-columns:130px 1fr 92px;gap:10px;align-items:center;font-size:13px}
+.rw-bar{height:12px;background:var(--panel2);border-radius:99px;overflow:hidden}.rw-bar i{display:block;height:100%;border-radius:99px}
+.rw-until{text-align:right;color:var(--muted);font-size:12px}.rw-until b{color:var(--text);display:block;font-size:13px}
+/* weekly cycle */
+.cycle{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.cday{background:var(--panel2);border-radius:10px;padding:8px;min-height:150px}.cday.today{outline:2px solid var(--accent)}
+.cday h4{margin:0 0 6px;font-size:12px;color:var(--muted)}
+.chip{display:block;font-size:11px;line-height:1.25;border-radius:6px;padding:4px 6px;margin-bottom:4px;border-left:3px solid}
+.chip time{opacity:.75;margin-right:4px;font-variant-numeric:tabular-nums}
+@media(max-width:700px){.cycle{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;font-variant-numeric:tabular-nums}
+.tag{font-size:11px;padding:2px 7px;border-radius:99px;background:var(--panel2);white-space:nowrap}
+.empty{color:var(--muted);font-size:13px;line-height:1.6}
+.scroll{overflow:auto;max-height:340px}
+/* ads */
+.switchrow{display:flex;gap:14px;align-items:flex-start}
+.switch{position:relative;width:46px;height:26px;flex:0 0 auto}.switch input{opacity:0;width:0;height:0}
+.switch span{position:absolute;inset:0;background:#33405e;border-radius:99px;cursor:pointer;transition:.2s}
+.switch span:before{content:"";position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s}
+.switch input:checked+span{background:var(--green)}.switch input:checked+span:before{transform:translateX(20px)}
+.slots{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.slot h3{margin:0;font-size:14px}.slot .size{color:var(--muted);font-size:12px}
+.slot .prev{margin:10px 0;height:84px;border:1px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--bg);color:var(--muted);font-size:12px}
+.slot .prev img{max-width:100%;max-height:100%}
+.slot label{display:block;font-size:12px;color:var(--muted);margin:8px 0 4px}
+.slot .head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.savebar{position:sticky;bottom:0;background:rgba(11,18,32,.95);border-top:1px solid var(--line);padding:12px 0;margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.note{font-size:13px;color:var(--muted)}.note.ok{color:var(--green)}.note.bad{color:var(--red)}
+.warn{background:#2a2008;border:1px solid #5c4710;color:#ffdc8a;border-radius:10px;padding:10px 12px;font-size:13px;margin-top:10px}
+</style>
+</head>
+<body>
+
+<section id="login">
+  <div class="card login-card">
+    <div style="font-size:34px">🔐</div>
+    <h1>CBSEMock Admin</h1>
+    <p>Enter the admin password to open the dashboard.</p>
+    <form id="loginForm" autocomplete="on">
+      <input type="text" name="username" value="admin" autocomplete="username" class="hidden" aria-hidden="true">
+      <input id="pw" type="password" placeholder="Admin password" autocomplete="current-password" required>
+      <button class="btn" style="width:100%;margin-top:12px" id="loginBtn">Unlock</button>
+    </form>
+    <div class="err" id="loginErr"></div>
+  </div>
+</section>
+
+<div id="app" class="hidden">
+  <header class="top"><div class="top-in">
+    <div class="brand">CBSE<span>Mock</span> Admin</div>
+    <nav class="tabs">
+      <button class="tab on" data-tab="dash">Dashboard</button>
+      <button class="tab" data-tab="ads">Ad blocks</button>
+    </nav>
+    <div class="spacer"></div>
+    <span class="stamp" id="stamp"></span>
+    <button class="btn ghost" id="refreshBtn" title="Rebuild the dashboard data now (about 1–2 minutes)">↻ Refresh data</button>
+    <button class="btn ghost" id="logoutBtn">Lock</button>
+  </div></header>
+
+  <main>
+    <!-- DASHBOARD -->
+    <section id="tab-dash">
+      <div class="grid kpis">
+        <div class="card kpi"><div class="label">Posts · last 7 days</div><div class="val" id="k-posts">–</div><div class="sub" id="k-posts-sub"></div></div>
+        <div class="card kpi"><div class="label">Website users · 28 days</div><div class="val" id="k-users">–</div><div class="sub" id="k-users-sub"></div></div>
+        <div class="card kpi"><div class="label">Google search clicks · 28 days</div><div class="val" id="k-clicks">–</div><div class="sub" id="k-clicks-sub"></div></div>
+        <div class="card kpi"><div class="label">Live sponsor ads</div><div class="val" id="k-ads">–</div><div class="sub" id="k-ads-sub"></div></div>
+      </div>
+
+      <div class="section-title">Content pipeline</div>
+      <div class="grid two">
+        <div class="card"><h2>Posting activity <small>last 45 days, by type</small></h2><div class="chart"><canvas id="c-activity"></canvas></div></div>
+        <div class="card"><h2>Queue runway <small>when each queue runs out</small></h2><div class="runway" id="runway"></div></div>
+      </div>
+
+      <div class="section-title">Weekly post cycle</div>
+      <div class="card"><div class="cycle" id="cycle"></div></div>
+
+      <div class="grid half" style="margin-top:14px">
+        <div class="card"><h2>Rotation progress <small>Telegram / FB / IG cycles · no repeats until a cycle completes</small></h2><div class="chart" style="height:230px"><canvas id="c-rotation"></canvas></div></div>
+        <div class="card"><h2>Recent posts</h2><div class="scroll"><table id="recent"><thead><tr><th>Date</th><th>Type</th><th>Item</th><th>Where</th></tr></thead><tbody></tbody></table></div></div>
+      </div>
+
+      <div class="section-title">Website traffic</div>
+      <div class="grid two">
+        <div class="card"><h2>Visitors &amp; search <small>daily, last 28 days</small></h2><div class="chart" id="trafficWrap"><canvas id="c-traffic"></canvas></div></div>
+        <div class="card"><h2>Top pages <small>views, 28 days</small></h2><div class="scroll" id="topPages"></div></div>
+      </div>
+      <div class="grid half" style="margin-top:14px">
+        <div class="card"><h2>Top Google searches <small>28 days</small></h2><div class="scroll" id="queries"></div></div>
+        <div class="card"><h2>Almost on page 1 <small>pages ranking 5–15: easiest wins</small></h2><div class="scroll" id="nearTop"></div></div>
+      </div>
+    </section>
+
+    <!-- AD BLOCKS -->
+    <section id="tab-ads" class="hidden">
+      <div class="card">
+        <div class="switchrow">
+          <label class="switch"><input type="checkbox" id="phToggle"><span></span></label>
+          <div><h2 style="margin:0 0 4px">Show “Your ad here” boxes on empty slots</h2>
+          <div class="note">Off = every empty ad box on the site is hidden and the layout closes up. Slots with a live sponsor always show.</div>
+          <div class="warn" id="phWarn">⚠ Keep this OFF while AdSense is reviewing the site — empty ad boxes are a common reason for “low value content” rejections.</div></div>
+        </div>
+      </div>
+      <div class="section-title">Sponsor slots</div>
+      <div class="grid slots" id="slots"></div>
+      <div class="savebar">
+        <button class="btn" id="saveAds">Save &amp; publish</button>
+        <span class="note" id="saveNote">Changes go live on the site about 1–2 minutes after saving.</span>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(() => {
+const $ = s => document.querySelector(s);
+const COLORS = {image:'#ffc83d', reel:'#2ad4ff', why:'#a98bff', paper:'#3ddc97', promo:'#ff9f43', rotation:'#ff5d8f',
+                telegram:'#5b8cff', focus:'#2ad4ff'};
+const KIND_LABEL = {image:'Formula images', reel:'Formula reels', why:'WHY? reels', paper:'Mock papers', promo:'Weekend promos', rotation:'Telegram/FB/IG items'};
+const DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+const SLOT_SIZE = {leaderboard:'728 × 90', sidebar:'300 × 75', inline:'580 × 90'};
+let DATA = null, ADS = null, ADS_SHA = null, charts = [];
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = n => n == null ? '–' : Number(n).toLocaleString('en-IN');
+
+/* ── crypto: open the vault ── */
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function openVault(password) {
+  const r = await fetch('data/vault.json?t=' + Date.now(), {cache:'no-store'});
+  if (!r.ok) throw new Error('nodata');
+  const v = await r.json();
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']);
+  const key = await crypto.subtle.deriveKey({name:'PBKDF2', salt:b64(v.salt), iterations:v.iter, hash:'SHA-256'},
+                                            base, {name:'AES-GCM', length:256}, false, ['decrypt']);
+  const plain = await crypto.subtle.decrypt({name:'AES-GCM', iv:b64(v.iv)}, key, b64(v.data));
+  return JSON.parse(new TextDecoder().decode(plain));
+}
+
+/* ── GitHub API (uses the token stored inside the vault) ── */
+async function gh(path, opts = {}) {
+  const r = await fetch('https://api.github.com/repos/' + DATA.repo + path, {
+    ...opts, headers: {Authorization: 'Bearer ' + DATA.gh_token, Accept: 'application/vnd.github+json', ...(opts.headers || {})}});
+  if (!r.ok && r.status !== 204) { const t = await r.text(); throw new Error(r.status + ' ' + t.slice(0, 160)); }
+  return r.status === 204 ? null : r.json();
+}
+const toB64 = str => btoa(unescape(encodeURIComponent(str)));
+const fromB64 = s => decodeURIComponent(escape(atob(s.replace(/\n/g, ''))));
+
+/* ── login ── */
+$('#loginForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  $('#loginBtn').disabled = true; $('#loginErr').textContent = '';
+  try {
+    DATA = await openVault($('#pw').value);
+    try { sessionStorage.setItem('cbse_admin_pw', $('#pw').value); } catch (_) {}
+    start();
+  } catch (err) {
+    $('#loginErr').textContent = err.message === 'nodata' ? 'Dashboard data has not been built yet.' : 'Wrong password.';
+  } finally { $('#loginBtn').disabled = false; }
+});
+$('#logoutBtn').onclick = () => { try { sessionStorage.removeItem('cbse_admin_pw'); } catch (_) {} location.reload(); };
+(async () => { let pw = null; try { pw = sessionStorage.getItem('cbse_admin_pw'); } catch (_) {}
+  if (pw) { try { DATA = await openVault(pw); start(); } catch (_) {} } })();
+
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === t));
+  $('#tab-dash').classList.toggle('hidden', t.dataset.tab !== 'dash');
+  $('#tab-ads').classList.toggle('hidden', t.dataset.tab !== 'ads');
+  if (t.dataset.tab === 'ads' && !ADS) loadAds();
+});
+
+function start() {
+  $('#login').classList.add('hidden'); $('#app').classList.remove('hidden');
+  $('#stamp').textContent = 'Data: ' + DATA.generated_at;
+  renderDash();
+}
+
+/* ── dashboard ── */
+function renderDash() {
+  charts.forEach(c => c.destroy()); charts = [];
+  Chart.defaults.color = '#8fa0c0'; Chart.defaults.borderColor = '#24314d'; Chart.defaults.font.family = 'Inter';
+  const k = DATA.kpis;
+  $('#k-posts').textContent = fmt(k.posts_7d);
+  const diff = k.posts_7d - k.posts_prev_7d;
+  $('#k-posts-sub').innerHTML = `<b class="${diff < 0 ? 'down' : ''}">${diff >= 0 ? '▲' : '▼'} ${Math.abs(diff)}</b> vs previous 7 days · ${fmt(k.posts_total)} logged in all`;
+  $('#k-ads').textContent = fmt(k.live_ads);
+  $('#k-ads-sub').textContent = k.live_ads ? 'sponsor banners showing' : 'no sponsor banners live';
+  const ga = DATA.analytics, sc = DATA.search_console;
+  if (ga && ga.daily) {
+    const u = ga.daily.reduce((a, r) => a + r.users, 0), v = ga.daily.reduce((a, r) => a + r.views, 0);
+    $('#k-users').textContent = fmt(u); $('#k-users-sub').textContent = fmt(v) + ' page views';
+  } else { $('#k-users').textContent = '—'; $('#k-users-sub').textContent = ga && ga.error ? 'GA4 error: ' + ga.error : 'Connect GA4 to see visitors'; }
+  if (sc && sc.daily) {
+    const c = sc.daily.reduce((a, r) => a + r.clicks, 0), im = sc.daily.reduce((a, r) => a + r.impressions, 0);
+    $('#k-clicks').textContent = fmt(c); $('#k-clicks-sub').textContent = fmt(im) + ' impressions';
+  } else { $('#k-clicks').textContent = '—'; $('#k-clicks-sub').textContent = sc && sc.error ? 'Search Console error' : 'Connect Search Console to see clicks'; }
+
+  // activity
+  const h = DATA.history;
+  charts.push(new Chart($('#c-activity'), {type:'bar',
+    data:{labels:h.days.map(d => d.slice(5)), datasets:Object.keys(h.series).map(kd => ({label:KIND_LABEL[kd] || kd, data:h.series[kd], backgroundColor:COLORS[kd], borderRadius:3, stack:'s'}))},
+    options:{maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{boxWidth:10, font:{size:11}}}},
+      scales:{x:{stacked:true, grid:{display:false}, ticks:{maxRotation:0, autoSkip:true, maxTicksLimit:9}}, y:{stacked:true, beginAtZero:true, ticks:{precision:0}}}}}));
+
+  // runway
+  const today = new Date(DATA.generated_at.slice(0, 10));
+  $('#runway').innerHTML = DATA.queues.map(q => {
+    const days = q.until ? Math.round((new Date(q.until) - today) / 864e5) : 0;
+    const col = days < 14 ? 'var(--red)' : days < 30 ? 'var(--orange)' : 'var(--green)';
+    const pct = Math.max(3, Math.min(100, days / 120 * 100));
+    const until = q.until ? new Date(q.until).toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'}) : 'empty';
+    return `<div class="rw-row"><div><b>${esc(q.name)}</b><div class="stamp">${q.left} left · ${esc(q.rate)}</div></div>
+      <div class="rw-bar"><i style="width:${pct}%;background:${col}"></i></div>
+      <div class="rw-until"><b>${days} days</b>${until}</div></div>`;
+  }).join('') + '<div class="stamp">Bar = days of posts left (full bar = 120 days). Red under 2 weeks, amber under a month.</div>';
+
+  // weekly cycle
+  const todayIdx = (today.getDay() + 6) % 7;
+  $('#cycle').innerHTML = DAYS.map((dn, i) => {
+    const items = DATA.schedule.filter(s => s.day === i).sort((a, b) => a.time.localeCompare(b.time));
+    return `<div class="cday ${i === todayIdx ? 'today' : ''}"><h4>${dn}${i === todayIdx ? ' · today' : ''}</h4>` +
+      items.map(s => `<span class="chip" style="border-color:${COLORS[s.kind]};background:${COLORS[s.kind]}1f"><time>${s.time}</time>${esc(s.label)}</span>`).join('') + '</div>';
+  }).join('');
+
+  // rotation
+  const rot = DATA.rotation, names = Object.keys(rot);
+  const pretty = {notes:'Study notes', practice_10:'Class 10 papers', practice_12:'Class 12 papers', lab:'Virtual labs', weekly_focus:'Weekly focus'};
+  charts.push(new Chart($('#c-rotation'), {type:'bar',
+    data:{labels:names.map(n => pretty[n] || n),
+      datasets:[{label:'Posted this cycle', data:names.map(n => Math.max(rot[n].telegram, rot[n].facebook, rot[n].instagram)), backgroundColor:'#3ddc97', borderRadius:4},
+                {label:'Still to post', data:names.map(n => rot[n].total - Math.max(rot[n].telegram, rot[n].facebook, rot[n].instagram)), backgroundColor:'#24314d', borderRadius:4}]},
+    options:{indexAxis:'y', maintainAspectRatio:false, plugins:{legend:{position:'bottom', labels:{boxWidth:10, font:{size:11}}},
+      tooltip:{callbacks:{footer:items => { const n = names[items[0].dataIndex]; return `of ${rot[n].total} · TG ${rot[n].telegram} · FB ${rot[n].facebook} · IG ${rot[n].instagram}`; }}}},
+      scales:{x:{stacked:true, beginAtZero:true}, y:{stacked:true, grid:{display:false}}}}}));
+
+  // recent
+  $('#recent tbody').innerHTML = DATA.recent.map(r => `<tr><td>${r.date.slice(5)}</td><td><span class="tag">${esc(r.kind.replace('_', ' '))}</span></td><td>${esc(r.label)}</td><td>${esc(r.where)}</td></tr>`).join('');
+
+  // traffic
+  if ((ga && ga.daily) || (sc && sc.daily)) {
+    const dates = [...new Set([...(ga && ga.daily ? ga.daily.map(r => r.date) : []), ...(sc && sc.daily ? sc.daily.map(r => r.date) : [])])].sort();
+    const pick = (arr, key) => dates.map(d => { const r = (arr || []).find(x => x.date === d); return r ? r[key] : null; });
+    const ds = [];
+    if (ga && ga.daily) { ds.push({label:'Users', data:pick(ga.daily, 'users'), borderColor:'#ffc83d', backgroundColor:'#ffc83d33', tension:.3, fill:true});
+                          ds.push({label:'Page views', data:pick(ga.daily, 'views'), borderColor:'#2ad4ff', tension:.3}); }
+    if (sc && sc.daily) ds.push({label:'Search clicks', data:pick(sc.daily, 'clicks'), borderColor:'#3ddc97', tension:.3});
+    charts.push(new Chart($('#c-traffic'), {type:'line', data:{labels:dates.map(d => d.slice(5)), datasets:ds},
+      options:{maintainAspectRatio:false, spanGaps:true, plugins:{legend:{position:'bottom', labels:{boxWidth:10, font:{size:11}}}},
+        scales:{x:{grid:{display:false}, ticks:{maxTicksLimit:8, maxRotation:0}}, y:{beginAtZero:true}}}}));
+  } else {
+    $('#trafficWrap').style.height = 'auto';
+    $('#trafficWrap').innerHTML = '<div class="empty">Traffic charts appear here once Google Analytics (GA4) and Search Console are connected to the dashboard.<br>Setup: add the <b>GSC_SERVICE_ACCOUNT_JSON</b> and <b>GA4_PROPERTY_ID</b> secrets in GitHub.</div>';
+  }
+  const table = (rows, cols) => rows && rows.length ? `<table><thead><tr>${cols.map(c => `<th class="${c[2] || ''}">${c[0]}</th>`).join('')}</tr></thead><tbody>` +
+      rows.map(r => `<tr>${cols.map(c => `<td class="${c[2] || ''}">${esc(typeof c[1] === 'function' ? c[1](r) : r[c[1]])}</td>`).join('')}</tr>`).join('') + '</tbody></table>'
+    : '<div class="empty">No data yet.</div>';
+  $('#topPages').innerHTML = ga && ga.pages ? table(ga.pages, [['Page', 'path'], ['Views', r => fmt(r.views), 'num']]) : '<div class="empty">Needs GA4.</div>';
+  $('#queries').innerHTML = sc && sc.queries ? table(sc.queries, [['Search', 'q'], ['Clicks', r => fmt(r.clicks), 'num'], ['Shown', r => fmt(r.impressions), 'num'], ['Pos.', 'position', 'num']]) : '<div class="empty">Needs Search Console.</div>';
+  $('#nearTop').innerHTML = sc && sc.near_top ? table(sc.near_top, [['Page', 'page'], ['Shown', r => fmt(r.impressions), 'num'], ['Pos.', 'position', 'num']]) : '<div class="empty">Needs Search Console.</div>';
+}
+
+/* ── refresh data (runs the GitHub workflow) ── */
+$('#refreshBtn').onclick = async () => {
+  const b = $('#refreshBtn'); b.disabled = true; b.textContent = 'Refreshing…';
+  try {
+    await gh('/actions/workflows/admin-dashboard.yml/dispatches', {method:'POST', body:JSON.stringify({ref:'main'})});
+    const pw = sessionStorage.getItem('cbse_admin_pw'), old = DATA.generated_at;
+    for (let i = 0; i < 30; i++) {           // poll for up to ~5 minutes
+      await new Promise(r => setTimeout(r, 10000));
+      try { const d = await openVault(pw); if (d.generated_at !== old) { DATA = d; start(); b.textContent = '↻ Refresh data'; b.disabled = false; return; } } catch (_) {}
+    }
+    b.textContent = 'Still building — try later';
+  } catch (e) { b.textContent = 'Refresh failed'; console.error(e); }
+  setTimeout(() => { b.textContent = '↻ Refresh data'; b.disabled = false; }, 6000);
+};
+
+/* ── ad blocks ── */
+async function loadAds() {
+  $('#slots').innerHTML = '<div class="empty">Loading current ad settings…</div>';
+  try {
+    const f = await gh('/contents/ads-config.json?ref=main');
+    ADS_SHA = f.sha; ADS = JSON.parse(fromB64(f.content));
+    renderAds();
+  } catch (e) {
+    $('#slots').innerHTML = `<div class="empty">Could not read the ad settings from GitHub (${esc(e.message)}). Check that the ADMIN_GH_TOKEN secret is valid.</div>`;
+  }
+}
+function renderAds() {
+  $('#phToggle').checked = !!ADS.show_placeholders;
+  $('#phWarn').classList.toggle('hidden', !ADS.show_placeholders);
+  $('#phToggle').onchange = e => { ADS.show_placeholders = e.target.checked; $('#phWarn').classList.toggle('hidden', !e.target.checked); };
+  const site = 'https://cbsemock.org.in/';
+  $('#slots').innerHTML = Object.entries(ADS.slots).map(([key, s]) => {
+    const kind = key.split('_')[0];
+    return `<div class="card slot" data-key="${key}">
+      <div class="head"><div><h3>${esc(s.label || key)}</h3><div class="size">${SLOT_SIZE[kind] || ''} px</div></div>
+        <label class="switch" title="Show this sponsor"><input type="checkbox" class="s-active" ${s.active ? 'checked' : ''}><span></span></label></div>
+      <div class="prev">${s.img ? `<img src="${site + esc(s.img)}?t=${Date.now()}" onerror="this.replaceWith('No image uploaded yet')">` : 'No image'}</div>
+      <label>Banner image</label><input type="file" class="s-file" accept="image/png,image/jpeg,image/webp,image/gif">
+      <label>Link (where the banner goes)</label><input type="url" class="s-url" value="${esc(s.url === '#' ? '' : s.url)}" placeholder="https://sponsor-website.com">
+      <label>Alt text (sponsor name)</label><input type="text" class="s-alt" value="${esc(/advertise here/i.test(s.alt || '') ? '' : s.alt)}" placeholder="e.g. ABC Coaching Centre">
+    </div>`;
+  }).join('');
+  document.querySelectorAll('.s-file').forEach(inp => inp.onchange = () => {
+    const f = inp.files[0]; if (!f) return;
+    const prev = inp.closest('.slot').querySelector('.prev');
+    prev.innerHTML = `<img src="${URL.createObjectURL(f)}">`;
+  });
+}
+const readFile = f => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result.split(',')[1]); r.onerror = rej; r.readAsDataURL(f); });
+
+$('#saveAds').onclick = async () => {
+  const note = $('#saveNote'), btn = $('#saveAds');
+  btn.disabled = true; note.className = 'note'; note.textContent = 'Saving…';
+  try {
+    for (const card of document.querySelectorAll('.slot')) {
+      const key = card.dataset.key, s = ADS.slots[key];
+      s.active = card.querySelector('.s-active').checked;
+      s.url = card.querySelector('.s-url').value.trim() || '#';
+      s.alt = card.querySelector('.s-alt').value.trim() || 'Sponsored';
+      const file = card.querySelector('.s-file').files[0];
+      if (file) {
+        if (file.size > 900 * 1024) throw new Error(`${s.label}: image is over 900 KB — please compress it first`);
+        const ext = (file.name.split('.').pop() || 'jpg').toLowerCase().replace('jpeg', 'jpg');
+        const path = `ads/${key.replace(/_/g, '-')}.${ext}`;
+        note.textContent = `Uploading ${s.label}…`;
+        let sha; try { sha = (await gh('/contents/' + path + '?ref=main')).sha; } catch (_) {}
+        await gh('/contents/' + path, {method:'PUT', body:JSON.stringify({message:`admin: sponsor image for ${key}`, content:await readFile(file), branch:'main', ...(sha ? {sha} : {})})});
+        s.img = path;
+      }
+      if (s.active && !s.img) throw new Error(`${s.label}: upload a banner image before switching it on`);
+    }
+    note.textContent = 'Publishing settings…';
+    const cur = await gh('/contents/ads-config.json?ref=main');
+    const res = await gh('/contents/ads-config.json', {method:'PUT', body:JSON.stringify({message:'admin: update ad settings',
+      content:toB64(JSON.stringify(ADS, null, 2) + '\n'), sha:cur.sha, branch:'main'})});
+    ADS_SHA = res.content.sha;
+    note.className = 'note ok'; note.textContent = '✓ Saved. The site updates in about 1–2 minutes.';
+    document.querySelectorAll('.s-file').forEach(i => i.value = '');
+  } catch (e) {
+    note.className = 'note bad'; note.textContent = 'Not saved: ' + e.message;
+  } finally { btn.disabled = false; }
+};
+})();
+</script>
+</body>
+</html>
