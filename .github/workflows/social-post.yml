@@ -226,11 +226,12 @@ jobs:
           # Refresh the Formula Board page so newly uploaded formula images appear on it.
           python3 formula_board_page.py || echo "::warning::Formula Board was not refreshed"
           python3 reels_page.py || echo "::warning::Reel pages were not refreshed"
+          python3 go_page.py || echo "::warning::Link-in-bio page was not refreshed"
           # Add each path on its own: one missing folder must not stop the others
           # from being saved (that is what made the same lab / notes post repeat).
           for p in social-posting-tracker.csv afternoon-tracker.json \
                    formula-posts/post_log.csv formula-posts/reel_log.csv \
-                   formula-posts/queue formula-posts/posted formula-board formula-reels why-reels \
+                   formula-posts/queue formula-posts/posted formula-board formula-reels why-reels go \
                    formula-posts/videos/queue formula-posts/videos/posted; do
             [ -e "$p" ] && git add -A -- "$p" || true
           done
@@ -316,7 +317,7 @@ jobs:
           # from being saved (that is what made the same lab / notes post repeat).
           for p in social-posting-tracker.csv afternoon-tracker.json \
                    formula-posts/post_log.csv formula-posts/reel_log.csv \
-                   formula-posts/queue formula-posts/posted formula-board formula-reels why-reels \
+                   formula-posts/queue formula-posts/posted formula-board formula-reels why-reels go \
                    formula-posts/videos/queue formula-posts/videos/posted; do
             [ -e "$p" ] && git add -A -- "$p" || true
           done

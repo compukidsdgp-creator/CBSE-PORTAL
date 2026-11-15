@@ -44,6 +44,22 @@ def find(folder_queue: Path, folder_posted: Path, pattern="*.mp4"):
     return out
 
 
+# ── where each reel sends people (chapter quiz / explainer / mock papers) ──
+from topic_links import why_links, formula_links, SITE as _SITE
+
+
+def page_links(L):
+    """-> [[label, href relative to a gallery page, kind]] for the player and the static list."""
+    out = []
+    if L.get("learn"):
+        out.append(["📘 Read the explainer", L["learn"][1], "learn"])
+    for t, u in L.get("chapters", [])[:1]:
+        out.append(["📝 Practise: " + t.replace(" quiz", ""), u, "quiz"])
+    if L.get("portal"):
+        out.append(["📄 " + L["portal"][0], L["portal"][1], "paper"])
+    return [[a, b.replace(_SITE + "/", "../"), k] for a, b, k in out]
+
+
 # ── Formula Flash reels ──────────────────────────────────────────────────────
 def formula_items():
     from formula_topics_master import TOPICS
@@ -62,7 +78,8 @@ def formula_items():
             cls = class_label(d.get("chapter_tag", "")).replace("Class ", "")
             items.append({"id": Path(name).stem, "title": title + (f" · Part {p}" if n > 1 else ""),
                           "cat": subj, "cls": cls if cls in ("10", "12") else "",
-                          "src": str(files[name].relative_to(ROOT))})
+                          "src": str(files[name].relative_to(ROOT)),
+                          "links": page_links(formula_links(d["subject"], f"{tid.replace('_', ' ')} {title}", cls))})
     import hashlib                      # fixed shuffle so subjects are mixed in the stack
     items.sort(key=lambda d: hashlib.md5(d["id"].encode()).hexdigest())
     return items
@@ -99,7 +116,7 @@ def why_items():
         except Exception as e:
             print(f"[WARN] {slug}: {e}")
         items.append({"id": f"{m.group(1)}-{slug}", "n": int(m.group(1)), "title": title, "cat": cat, "cls": cls,
-                      "src": str(f.relative_to(ROOT))})
+                      "src": str(f.relative_to(ROOT)), "links": page_links(why_links(name))})
     items.sort(key=lambda d: d["n"])
     return items
 
@@ -163,7 +180,8 @@ def static_index(items, cfg):
             if t and t not in seen:
                 seen.add(t)
                 cls = f" — Class {it['cls']}" if str(it.get("cls")) in ("10", "11", "12") else ""
-                parts.append(f"<li>{_h.escape(t)}{cls}</li>")
+                lk = " · ".join(f'<a href="{_h.escape(h)}">{_h.escape(l.split(" ", 1)[1])}</a>' for l, h, _ in it.get("links", []))
+                parts.append(f"<li>{_h.escape(t)}{cls}" + (f" <span class=\"il\">— {lk}</span>" if lk else "") + "</li>")
         parts.append("</ul>")
     parts.append("</section>")
     return "".join(parts)
@@ -264,6 +282,15 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:0 16px 34px}
 .lb .acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding-top:12px}
 .lb .acts a,.lb .acts button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);border-radius:22px;padding:8px 16px;font-size:.84rem;font-weight:600;cursor:pointer;text-decoration:none}
 .lb .acts .go{background:var(--acc);border-color:var(--acc);color:var(--ink2)}
+.lb .lnk{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding-top:10px;max-width:560px}
+.lb .lnk:empty{display:none}
+.lb .lnk a{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border-radius:22px;font-size:.82rem;font-weight:700;color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .18s,box-shadow .18s,filter .18s}
+.lb .lnk a:hover{transform:translateY(-3px);filter:brightness(1.12);box-shadow:0 8px 20px rgba(0,0,0,.45),0 0 0 2px #e8cc6a}
+.lb .lnk a.learn{background:linear-gradient(135deg,#c99a06,#7a5c00)}
+.lb .lnk a.quiz{background:linear-gradient(135deg,#2b9a80,#12483e)}
+.lb .lnk a.paper{background:linear-gradient(135deg,#3b6fb8,#0e2344)}
+.idx .il{font-size:.85em;opacity:.85}
+.idx .il a{color:var(--acc)}
 @media(max-width:600px){.stage{--dx:18px;--dy:26px;--dz:100px}.nav{width:40px;height:40px;font-size:19px;top:auto;bottom:4px;transform:none}.nav.p{left:22%}.nav.n{right:22%}
   .wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
 @media(prefers-reduced-motion:reduce){.fc,.deck,.tile{transition:none}.tile{opacity:1;transform:none}}
@@ -309,6 +336,7 @@ __INDEX__
     <button type="button" id="lbS" class="go">Share</button>
     <button type="button" id="lbN">Next ›</button>
   </div>
+  <div class="lnk" id="lbL"></div>
 </div>
 <script>
 (function () {
@@ -387,6 +415,7 @@ __INDEX__
   var lb = $('lb'), vid = $('lbV'), big = -1, lastFocus = null;
   function showV(i) { var n = list.length; big = ((i % n) + n) % n; var d = list[big];
     vid.poster = d.thumb || ''; vid.src = d.src; $('lbT').textContent = d.title + ' · ' + sub(d);
+    $('lbL').innerHTML = (d.links || []).map(function (l) { return '<a class="' + l[2] + '" href="' + l[1] + '">' + esc(l[0]) + '</a>'; }).join('');
     var p = vid.play(); if (p && p.catch) p.catch(function () {});
     try { history.replaceState(null, '', '#' + d.id); } catch (e) {}
     if (window.gtag) { try { gtag('event', 'reel_play', { page: SLUG, reel: d.id }); } catch (e) {} } }

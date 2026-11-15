@@ -396,8 +396,12 @@ def main():
     print(f"\n── Caption preview ──\n{caption[:300]}\n────────────────────\n")
 
     # Post to both platforms
+    import social_links as SL
+    links = SL.links_for_formula_reel(reel_path.stem)
     fb_id = _upload_video_fb(reel_path, caption, dry_run=args.dry_run)
-    ig_id = _upload_reel_instagram(reel_path, caption, dry_run=args.dry_run)
+    if fb_id:
+        SL.post_fb_comment(fb_id, SL.comment_text(links, topic_label), FB_TOKEN, dry_run=args.dry_run)
+    ig_id = _upload_reel_instagram(reel_path, SL.ig_caption(caption), dry_run=args.dry_run)
 
     # Move to posted/ (even on dry-run so queue advances in test)
     if not args.dry_run:

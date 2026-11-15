@@ -52,8 +52,13 @@ def main():
     txt = reel.with_suffix(".txt")
     caption = txt.read_text(encoding="utf-8").strip() if txt.exists() else default_caption(reel.stem)
     print(f"[WHY] {reel.name} ({len(queued)} in queue)\n{caption[:200]}\n")
+    import social_links as SL
+    links = SL.links_for_why(reel.name)
     fb = P._upload_video_fb(reel, caption, dry_run=a.dry_run)
-    ig = P._upload_reel_instagram(reel, caption, dry_run=a.dry_run)
+    if fb:
+        title = caption.splitlines()[0].split("WHY? —", 1)[-1].strip()
+        SL.post_fb_comment(fb, SL.comment_text(links, title), P.FB_TOKEN, dry_run=a.dry_run)
+    ig = P._upload_reel_instagram(reel, SL.ig_caption(caption), dry_run=a.dry_run)
     if not a.dry_run and (fb or ig):
         shutil.move(str(reel), str(POSTED / reel.name))
         if txt.exists():

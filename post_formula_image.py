@@ -374,8 +374,13 @@ def main():
     print(f"\n── Image URL ──\n{image_url}\n────────────────────\n")
 
     # Post to both platforms
+    import social_links as SL
+    info = parse_filename(img_path.stem)
+    links = SL.links_for_formula_image(info["subject"], info["topic"], info["class"])
     fb_id = post_to_facebook(image_url, caption, dry_run=args.dry_run)
-    ig_id = post_to_instagram(image_url, caption, dry_run=args.dry_run)
+    if fb_id:
+        SL.post_fb_comment(fb_id, SL.comment_text(links, info["topic"]), FB_TOKEN, dry_run=args.dry_run)
+    ig_id = post_to_instagram(image_url, SL.ig_caption(caption), dry_run=args.dry_run)
 
     # Log result
     log_post(img_path.name, slot, fb_id, ig_id, caption, args.dry_run)

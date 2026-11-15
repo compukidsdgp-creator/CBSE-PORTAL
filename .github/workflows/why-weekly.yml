@@ -64,7 +64,8 @@ jobs:
           git config user.email "bot@cbsemock.org.in"
           python3 reels_page.py || echo "::warning::Reel pages were not refreshed"
           python3 learn_pages.py || echo "::warning::Learn pages were not refreshed"
-          git add -A formula-posts/why why-reels formula-reels learn index.html chapters cbse-class-*.html || true
+          python3 go_page.py || echo "::warning::Link-in-bio page was not refreshed"
+          git add -A formula-posts/why why-reels formula-reels learn go index.html chapters cbse-class-*.html || true
           git diff --cached --quiet && exit 0
           git commit -q -m "chore: WHY? reel posted [skip ci]"
           for i in 1 2 3 4; do

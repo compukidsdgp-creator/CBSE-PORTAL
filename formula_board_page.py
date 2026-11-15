@@ -43,7 +43,18 @@ def describe(stem: str) -> dict:
     if subj not in SUBJECT_META:
         subj = "other"
     cls = info["class"].replace("class", "") if info["class"] else ""
-    return {"subject": subj, "topic": topic, "cls": cls}
+    return {"subject": subj, "topic": topic, "cls": cls, "links": card_links(subj, topic, cls)}
+
+
+def card_links(subj, topic, cls):
+    """[[label, href, kind]] — the chapter quiz and mock papers for this card's topic."""
+    from topic_links import formula_links, SITE
+    name = {"maths": "Maths", "cs": "CS", "ai": "AI"}.get(subj, subj.title())
+    L = formula_links(name, topic, cls or "")
+    out = [["📝 Practise: " + t.replace(" quiz", ""), u, "quiz"] for t, u in L["chapters"][:1]]
+    if L.get("portal"):
+        out.append(["📄 " + L["portal"][0], L["portal"][1], "paper"])
+    return [[a, b.replace(SITE + "/", "../"), k] for a, b, k in out]
 
 
 def collect():
@@ -132,7 +143,8 @@ def static_index(data, labels):
                 continue
             seen.add(key)
             cls = f" — Class {d['cls']}" if d.get("cls") in ("10", "11", "12") else ""
-            parts.append(f"<li>{_h.escape(name)}{cls}</li>")
+            lk = " · ".join(f'<a href="{_h.escape(h)}">{_h.escape(l.split(" ", 1)[1])}</a>' for l, h, _ in d.get("links", []))
+            parts.append(f"<li>{_h.escape(name)}{cls}" + (f" <span class=\"il\">— {lk}</span>" if lk else "") + "</li>")
         parts.append("</ul>")
     parts.append("</section>")
     return "".join(parts)
@@ -206,6 +218,12 @@ button{font:inherit;color:inherit}
 .cap small{color:var(--muted);font-size:.84rem}
 .cap .hint{display:block;margin-top:8px;font-size:.78rem;color:var(--muted)}
 .cap.none{margin-top:24px}
+.cap .cl{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.cap .cl a{display:inline-block;padding:7px 14px;border-radius:20px;font-size:.8rem;font-weight:700;color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.25);transition:transform .18s,box-shadow .18s,filter .18s}
+.cap .cl a:hover{transform:translateY(-3px);filter:brightness(1.12);box-shadow:0 8px 18px rgba(0,0,0,.35),0 0 0 2px var(--gold,#e8cc6a)}
+.cap .cl a.quiz{background:linear-gradient(135deg,#2b9a80,#12483e)}
+.cap .cl a.paper{background:linear-gradient(135deg,#3b6fb8,#0e2344)}
+.idx .il{font-size:.85em;opacity:.85}
 .empty{text-align:center;color:var(--muted);padding:60px 16px}
 
 /* ── the wall ── */
@@ -370,6 +388,7 @@ __INDEX__
     cap.style.setProperty('--c', col(d0));
     cap.innerHTML = '<span class="pill">' + esc(label(d0)) + '</span><h2>' + esc(d0.topic) + '</h2><small>' +
       (d0.cls ? 'Class ' + d0.cls + ' · ' : '') + (cur + 1) + ' of ' + n + '</small>' +
+      ((d0.links && d0.links.length) ? '<span class="cl">' + d0.links.map(function (l) { return '<a class="' + l[2] + '" href="' + l[1] + '">' + esc(l[0]) + '</a>'; }).join('') + '</span>' : '') +
       '<span class="hint">Swipe or use the arrows · tap the card to zoom</span>';
   }
   function go(step) { var n = list.length; if (n < 2) return; cur = ((cur + step) % n + n) % n; layout(); }

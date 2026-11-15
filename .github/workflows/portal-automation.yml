@@ -38,12 +38,16 @@ jobs:
           git commit -m "chore: daily news $(date -u +%Y-%m-%d)"
           for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && exit 0; sleep $((i * 5)); done
           exit 1
-      - name: Refresh Learn pages (new articles + Instagram reel embeds)
+      - name: Refresh Learn, reel, board and link-in-bio pages
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
         run: |
+          pip install --quiet pillow || true
           python3 learn_pages.py || { echo "::warning::Learn pages were not refreshed"; exit 0; }
-          git add learn index.html chapters cbse-class-*.html
+          python3 reels_page.py || echo "::warning::Reel pages were not refreshed"
+          python3 formula_board_page.py || echo "::warning::Formula Board was not refreshed"
+          python3 go_page.py || echo "::warning::Link-in-bio page was not refreshed"
+          git add learn go why-reels formula-reels formula-board index.html chapters cbse-class-*.html
           git diff --cached --quiet && exit 0
           git commit -q -m "chore: refresh Learn pages"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q && exit 0; sleep 5; done
