@@ -1,7 +1,7 @@
 {
-  "flash_idx": 2,
-  "mistakes_idx": 2,
-  "teacher_idx": 2,
+  "flash_idx": 3,
+  "mistakes_idx": 3,
+  "teacher_idx": 3,
   "flash_order": [
     "differential-equations-12",
     "light-optics-10",
@@ -134,5 +134,5 @@
     "matrices-12",
     "oop-python-12"
   ],
-  "last_run": "2026-11-14T08:31:43.306158+00:00"
+  "last_run": "2026-11-15T08:32:08.501581+00:00"
 }
