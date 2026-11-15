@@ -86,6 +86,7 @@ SUBJECT_META = {
     "history":      {"emoji": "🏛️", "tag": "#History",      "pill": "History"},
     "geography":    {"emoji": "🌍", "tag": "#Geography",    "pill": "Geography"},
     "science":      {"emoji": "🔬", "tag": "#Science",      "pill": "Science"},
+    "ai":           {"emoji": "🤖", "tag": "#ArtificialIntelligence", "pill": "AI"},
 }
 
 CLASS_HASHTAGS = {
