@@ -55,7 +55,13 @@ jobs:
           git config user.name  "cbse-bot"
           git config user.email "bot@cbsemock.org.in"
           git add sitemap.xml weekly-focus/weekly-focus-prod.html
-          git diff --cached --quiet || git commit -m "chore: sitemap update $(date -u +%Y-%m-%d)" && git push
+          git diff --cached --quiet && exit 0
+          git commit -q -m "chore: sitemap update $(date -u +%Y-%m-%d)"
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash -q origin main && git push -q origin main && exit 0
+            sleep $((i * 5))
+          done
+          echo "::error::Could not push sitemap.xml"; exit 1
 
   # ── 3. Auto-stats update ─────────────────────────────────────────────────────
   stats:

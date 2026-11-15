@@ -19,9 +19,16 @@ on:
         required: false
         default: 'false'
 
+concurrency:
+  group: weekly-promo
+  cancel-in-progress: false
+
 jobs:
   weekly-promo:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
 
     steps:
       - name: Checkout repository
@@ -32,8 +39,19 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Skip if already posted today
+        id: guard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.mode }}" ]; then
+            echo "done=no" >> $GITHUB_OUTPUT; exit 0      # an explicit manual request always runs
+          fi
+          echo "done=$(python3 already_posted_today.py weekly-promo.yml)" >> $GITHUB_OUTPUT
+
       - name: Determine which promo to post
         id: promo
+        if: steps.guard.outputs.done != 'yes'
         run: |
           INPUT_MODE="${{ github.event.inputs.mode }}"
           if [ -n "$INPUT_MODE" ]; then

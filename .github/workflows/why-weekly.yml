@@ -9,6 +9,10 @@ on:
         description: 'Dry run (true/false)'
         required: false
         default: 'false'
+      force:
+        description: 'Post even if a WHY? reel already went out today (true/false)'
+        required: false
+        default: ''
 
 concurrency:
   group: why-reel
@@ -19,13 +23,25 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
+      - name: Skip if already posted today
+        id: guard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.force }}" ]; then
+            echo "done=no" >> $GITHUB_OUTPUT; exit 0      # an explicit manual request always runs
+          fi
+          echo "done=$(python3 already_posted_today.py why-weekly.yml)" >> $GITHUB_OUTPUT
       - name: Install page builder dependencies
+        if: steps.guard.outputs.done != 'yes'
         run: pip install --quiet matplotlib numpy pillow || true
       - name: Post the next WHY? reel
+        if: steps.guard.outputs.done != 'yes'
         env:
           FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
@@ -40,7 +56,7 @@ jobs:
             python3 post_why_reel.py
           fi
       - name: Save progress
-        if: always() && github.event.inputs.dry_run != 'true'
+        if: always() && github.event.inputs.dry_run != 'true' && steps.guard.outputs.done != 'yes'
         run: |
           git config user.name  "social-post-bot"
           git config user.email "bot@cbsemock.org.in"

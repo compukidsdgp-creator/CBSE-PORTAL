@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: read
 
     steps:
       - name: Checkout repository
@@ -26,40 +27,50 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run Weekly Focus release script
+      - name: Skip if already released today
+        id: guard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ -n "${{ github.event.inputs.week }}" ]; then
-            # Override: temporarily set ISO week via environment variable
-            python3 -c "
-import sys, json
-from pathlib import Path
-week = int('${{ github.event.inputs.week }}')
-data_dir = Path('weekly-focus/data')
-src = data_dir / f'week_{week:02d}.json'
-if not src.exists():
-    print(f'[ERROR] week_{week:02d}.json not found')
-    sys.exit(1)
-import shutil
-shutil.copy(src, 'weekly-focus/weekly-focus.json')
-print(f'[OK] Copied week_{week:02d}.json -> weekly-focus/weekly-focus.json')
-"
+          if [ -n "${{ github.event.inputs.week }}" ]; then echo "done=no" >> $GITHUB_OUTPUT; exit 0; fi
+          echo "done=$(python3 already_posted_today.py weekly-focus-release.yml)" >> $GITHUB_OUTPUT
+
+      - name: Run Weekly Focus release script
+        if: steps.guard.outputs.done != 'yes'
+        env:
+          WEEK: ${{ github.event.inputs.week }}
+        run: |
+          if [ -n "$WEEK" ]; then
+            # Override: copy a specific week's lesson into place
+            python3 - <<'PY'
+          import os, shutil, sys
+          from pathlib import Path
+          week = int(os.environ["WEEK"])
+          src = Path("weekly-focus/data") / f"week_{week:02d}.json"
+          if not src.exists():
+              print(f"[ERROR] {src.name} not found"); sys.exit(1)
+          shutil.copy(src, "weekly-focus/weekly-focus.json")
+          print(f"[OK] Copied {src.name} -> weekly-focus/weekly-focus.json")
+          PY
           else
             DRY_RUN=false python3 weekly_focus_release.py
           fi
 
       - name: Run SEO update
+        if: steps.guard.outputs.done != 'yes'
         run: python3 update_weekly_focus_seo.py
         continue-on-error: true
 
       - name: Commit and push updated weekly focus
+        if: steps.guard.outputs.done != 'yes'
         run: |
           git config user.name  "weekly-focus-bot"
           git config user.email "bot@cbsemock.org.in"
-          git add weekly-focus/weekly-focus.json
-          git diff --cached --quiet && \
-            echo "Nothing to commit — weekly focus already up to date." || \
-            git commit -m "chore: weekly focus release $(python3 -c \"
-from datetime import date
-w = date.today().isocalendar()[1]
-print(f'week {w:02d}')
-\")" -m "Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>" && git push
+          git add weekly-focus/
+          git diff --cached --quiet && { echo "Nothing to commit — weekly focus already up to date."; exit 0; }
+          git commit -q -m "chore: weekly focus release week $(date -u +%V)"
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash -q origin main && git push -q origin main && exit 0
+            sleep $((i * 5))
+          done
+          echo "::error::Could not push the weekly focus update"; exit 1
