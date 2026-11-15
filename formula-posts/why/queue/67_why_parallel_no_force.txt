@@ -1,0 +1,18 @@
+🧲 WHY? — Why does a charge moving PARALLEL to a magnetic field feel NO force?
+
+F = q v B sin θ   (θ = angle between velocity and field)
+
+➡️ Across the field (θ = 90°): maximum force → circular path ⭕
+➡️ Along the field (θ = 0°): sin 0 = 0 → NO force → straight line
+➡️ In between: circle + straight motion = HELIX 🌀
+
+A magnetic field only pushes the part of motion that cuts across it.
+
+Moving Charges and Magnetism — Class 12 Physics. 📗
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #LorentzForce #MovingCharges #Class12Physics #Magnetism #JEE #CBSE

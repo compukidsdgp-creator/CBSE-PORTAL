@@ -1,0 +1,18 @@
+🔌 WHY? — Why does resistance go UP with length and DOWN with thickness?
+
+Electrons drift through a crowd of vibrating atoms — bumping all the way 💥
+
+📏 Double the length → twice the distance → twice the bumps → R doubles
+⭕ Double the area → like an extra lane → twice the flow → R halves
+🧪 Material matters: copper (low ρ) vs nichrome (high ρ)
+
+R = ρL / A
+
+Electricity — Class 10 Science. 📘
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Resistance #Resistivity #Class10Science #Electricity #CBSE #BoardExams

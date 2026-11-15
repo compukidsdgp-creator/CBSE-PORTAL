@@ -1,0 +1,21 @@
+⏱️ WHY? — Why does TIME COMPLEXITY matter more than just working code?
+
+Task: does a list have a duplicate?
+
+🐢 Compare every pair → ~n² steps → O(n²)
+🚀 Remember seen items in a set → ~n steps → O(n)
+
+For 1 million items:
+n² = 10¹² steps → hours 😴
+n = 10⁶ steps → 0.01 s ⚡
+
+Time complexity = how the steps GROW as data grows. Working isn't enough — it must SCALE.
+
+Algorithms — Computer Science. 💻
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #TimeComplexity #BigO #Algorithms #ComputerScience #Class12CS #CBSE

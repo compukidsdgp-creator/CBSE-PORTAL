@@ -1,0 +1,17 @@
+⛰️ WHY? — Why does gradient descent move OPPOSITE to the gradient?
+
+📉 Loss function = one number for how wrong the model is
+Plot loss vs a weight → a valley. Training = reach the bottom.
+
+↗️ Gradient = slope → points UPHILL (loss increases fastest)
+↘️ So step the OPPOSITE way: w_new = w − η × gradient
+η (learning rate) = step size: too big overshoots, too small is slow
+
+AI / Neural Networks — Class 12. 🤖
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #GradientDescent #LossFunction #MachineLearning #ArtificialIntelligence #AIClass12 #CBSE

@@ -1,0 +1,19 @@
+🧠 WHY? — Why do neural networks need ACTIVATION FUNCTIONS?
+
+A neuron does multiply + add → a straight line (y = wx + b) 📏
+Stack 10 linear layers → still ONE straight line! (they collapse)
+
+Real data is curvy — faces, voices, handwriting 〰️
+Activation (e.g. ReLU: max(0, x)) adds a BEND
+Many neurons × many bends → the network can fit almost any curve ✅
+
+No activation = one big line. With activation = curves!
+
+Neural Networks — AI, Class 10 & 12. 🤖
+
+💾 Save it · 📤 Share with your AI batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #NeuralNetworks #ActivationFunction #ReLU #ArtificialIntelligence #AIClass12 #CBSE

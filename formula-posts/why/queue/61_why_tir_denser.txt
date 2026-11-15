@@ -1,0 +1,18 @@
+💎 WHY? — Why does total internal reflection only happen from DENSER to RARER?
+
+Glass → air: light bends AWAY from the normal (refracted angle > incident angle)
+Tilt more → refracted ray reaches 90° at the CRITICAL angle C
+Beyond C → refraction would need > 90° 🚫 → ALL light reflects = TIR ✨
+
+Air → glass: light bends TOWARDS the normal — never reaches 90° → no TIR
+
+sin C = 1/μ · Uses: optical fibres, diamond sparkle 💎
+
+Ray Optics — Class 12 Physics. 📗
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #TotalInternalReflection #RayOptics #Class12Physics #CriticalAngle #JEE #CBSE
