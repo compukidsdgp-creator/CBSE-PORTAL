@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>Heredity explains how traits pass from parents to offspring. This chapter covers Mendel&#x27;s experiments with pea plants, dominant and recessive traits, monohybrid and dihybrid crosses, and sex determination in humans. Board questions often ask you to predict the ratio of offspring from a cross or to explain why the father determines the sex of the child.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Heredity &amp; Evolution</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. The character that is expressed in F1 generation (Tt) is called:</summary><ol type="A"><li>Recessive</li><li>Dominant</li><li>Codominant</li><li>Lethal</li></ol><p class="sc-ans"><b>Answer: (B) Dominant</b> — Dominant trait is expressed when only one copy of the dominant allele (T) is present.</p></details><details><summary>Q2. The sex of a child is determined by:</summary><ol type="A"><li>X chromosome of mother</li><li>Y chromosome of father</li><li>Both parents equally</li><li>Mitochondrial DNA</li></ol><p class="sc-ans"><b>Answer: (B) Y chromosome of father</b> — Father gives either X (daughter) or Y (son). Mother always gives X. So Y from father determines male sex.</p></details><details><summary>Q3. Mendel&#x27;s laws apply to characters controlled by genes located on:</summary><ol type="A"><li>Sex chromosomes</li><li>Autosomes</li><li>Both autosomes and sex chromosomes</li><li>Mitochondria</li></ol><p class="sc-ans"><b>Answer: (B) Autosomes</b> — Classical Mendelian inheritance applies to autosomal (non-sex) genes with simple dominant-recessive relationship.</p></details><details><summary>Q4. Fossils provide evidence for evolution because they show:</summary><ol type="A"><li>Living organisms of the past</li><li>Remains/traces of organisms that existed previously</li><li>Mutations in DNA</li><li>Current biodiversity</li></ol><p class="sc-ans"><b>Answer: (B) Remains/traces of organisms that existed previously</b> — Fossils are preserved remains/traces of past organisms, showing us forms that no longer exist and evolutionary progression.</p></details><details><summary>Q5. Homologous organs suggest:</summary><ol type="A"><li>Convergent evolution</li><li>Divergent evolution from common ancestor</li><li>Analogous development</li><li>Acquired characters</li></ol><p class="sc-ans"><b>Answer: (B) Divergent evolution from common ancestor</b> — Homologous organs: same basic structure, different functions (e.g., whale flipper, bat wing, human arm) — divergent evolution from common ancestor.</p></details><details><summary>Q6. Evolution is a change in the _____ of a population over time:</summary><ol type="A"><li>Phenotype only</li><li>Genotype only</li><li>Allele frequency</li><li>Body size</li></ol><p class="sc-ans"><b>Answer: (C) Allele frequency</b> — Evolution = change in allele frequencies in a population over successive generations.</p></details><details><summary>Q7. Traits acquired during an individual&#x27;s lifetime (like developed muscles):</summary><ol type="A"><li>Are passed to offspring</li><li>Are not heritable</li><li>Become dominant</li><li>Cause mutation</li></ol><p class="sc-ans"><b>Answer: (B) Are not heritable</b> — Lamarck was wrong — acquired characters are not inherited. Only genetic changes are heritable.</p></details><details><summary>Q8. If a trait is controlled by a gene with two alleles T and t, the number of genotypes possible is:</summary><ol type="A"><li>2</li><li>3</li><li>4</li><li>1</li></ol><p class="sc-ans"><b>Answer: (B) 3</b> — Genotypes: TT, Tt, tt = 3 possible genotypes.</p></details><details><summary>Q9. Natural selection acts on:</summary><ol type="A"><li>Genotype only</li><li>Phenotype</li><li>DNA only</li><li>Both genotype and phenotype equally</li></ol><p class="sc-ans"><b>Answer: (B) Phenotype</b> — Natural selection acts on phenotype (the expressed traits). Advantageous phenotypes survive and reproduce more.</p></details><details><summary>Q10. Speciation occurs when:</summary><ol type="A"><li>Two populations interbreed freely</li><li>Reproductive isolation leads to separate gene pools</li><li>Mutations occur frequently</li><li>Migration increases</li></ol><p class="sc-ans"><b>Answer: (B) Reproductive isolation leads to separate gene pools</b> — Speciation: populations become reproductively isolated → separate gene pools evolve independently → new species.</p></details><details><summary>Q11. If Mendel&#x27;s law of independent assortment holds, dihybrid cross (RrYy × RrYy) gives ratio:</summary><ol type="A"><li>3:1</li><li>1:2:1</li><li>9:3:3:1</li><li>1:1:1:1</li></ol><p class="sc-ans"><b>Answer: (C) 9:3:3:1</b> — Dihybrid F2 phenotypic ratio: 9 R_Y_ : 3 R_yy : 3 rrY_ : 1 rryy = 9:3:3:1.</p></details><details><summary>Q12. DNA is the genetic material, proved by:</summary><ol type="A"><li>Mendel&#x27;s experiments</li><li>Griffith&#x27;s transformation and Avery–MacLeod–McCarty experiments</li><li>Darwin&#x27;s observations</li><li>Morgan&#x27;s fruit fly work</li></ol><p class="sc-ans"><b>Answer: (B) Griffith&#x27;s transformation and Avery–MacLeod–McCarty experiments</b> — Griffith (1928) showed transformation; Avery et al. (1944) proved the transforming principle was DNA.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

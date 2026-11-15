@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>This chapter describes the male and female reproductive systems, gametogenesis (spermatogenesis and oogenesis), the menstrual cycle and its hormones, fertilisation, implantation, pregnancy and parturition. Diagram-based questions on the structure of the testis, ovary and sperm, and on the hormonal control of the menstrual cycle, are common in the board paper.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Human Reproduction</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. The process of formation of sperm from spermatogonia is called:</summary><ol type="A"><li>Oogenesis</li><li>Spermatogenesis</li><li>Gametogenesis</li><li>Fertilization</li></ol><p class="sc-ans"><b>Answer: (B) Spermatogenesis</b> — Spermatogenesis: spermatogonia (2n) → primary spermatocyte → secondary spermatocyte → spermatids → spermatozoa.</p></details><details><summary>Q2. Fertilisation in humans normally occurs in:</summary><ol type="A"><li>Uterus</li><li>Cervix</li><li>Fallopian tube (oviduct)</li><li>Ovary</li></ol><p class="sc-ans"><b>Answer: (C) Fallopian tube (oviduct)</b> — Sperm meets egg in the ampullary-isthmic junction of the fallopian tube; fertilized egg then travels to uterus.</p></details><details><summary>Q3. The hormone responsible for ovulation is surge of:</summary><ol type="A"><li>FSH</li><li>Progesterone</li><li>LH (Luteinising Hormone)</li><li>Oestrogen</li></ol><p class="sc-ans"><b>Answer: (C) LH (Luteinising Hormone)</b> — LH surge at mid-cycle triggers ovulation (~14th day of 28-day cycle).</p></details><details><summary>Q4. Corpus luteum secretes:</summary><ol type="A"><li>FSH and LH</li><li>Oestrogen only</li><li>Progesterone mainly</li><li>Testosterone</li></ol><p class="sc-ans"><b>Answer: (C) Progesterone mainly</b> — Corpus luteum (ruptured Graafian follicle) secretes progesterone, maintaining endometrium for implantation.</p></details><details><summary>Q5. The zona pellucida is:</summary><ol type="A"><li>Inner layer of uterus</li><li>Acrosome of sperm</li><li>Glycoprotein coat around egg</li><li>Placental membrane</li></ol><p class="sc-ans"><b>Answer: (C) Glycoprotein coat around egg</b> — Zona pellucida: glycoprotein layer surrounding the egg; sperm must penetrate it for fertilisation.</p></details><details><summary>Q6. Implantation occurs at which stage of embryo?</summary><ol type="A"><li>Zygote</li><li>Morula</li><li>Blastocyst</li><li>Gastrula</li></ol><p class="sc-ans"><b>Answer: (C) Blastocyst</b> — Blastocyst implants into uterine endometrium ~6-7 days after fertilisation.</p></details><details><summary>Q7. hCG (human Chorionic Gonadotropin) is produced by:</summary><ol type="A"><li>Pituitary gland</li><li>Corpus luteum</li><li>Trophoblast of implanted embryo</li><li>Ovary</li></ol><p class="sc-ans"><b>Answer: (C) Trophoblast of implanted embryo</b> — hCG from trophoblast maintains corpus luteum during early pregnancy; forms the basis of pregnancy tests.</p></details><details><summary>Q8. Acrosome reaction helps sperm to:</summary><ol type="A"><li>Swim faster</li><li>Penetrate zona pellucida</li><li>Fuse with corpus luteum</li><li>Produce testosterone</li></ol><p class="sc-ans"><b>Answer: (B) Penetrate zona pellucida</b> — Acrosome releases hydrolytic enzymes (acrosin) that digest zona pellucida, allowing sperm to reach egg plasma membrane.</p></details><details><summary>Q9. Amniocentesis is performed to:</summary><ol type="A"><li>Determine sex of fetus</li><li>Detect chromosomal abnormalities in fetus</li><li>Monitor fetal heartbeat</li><li>Induce labour</li></ol><p class="sc-ans"><b>Answer: (B) Detect chromosomal abnormalities in fetus</b> — Amniocentesis: amniotic fluid withdrawn, fetal cells karyotyped to detect Down syndrome and other chromosomal disorders.</p></details><details><summary>Q10. Polyspermy is prevented by:</summary><ol type="A"><li>Zona reaction / cortical reaction</li><li>Acrosome reaction</li><li>Implantation</li><li>Meiosis I</li></ol><p class="sc-ans"><b>Answer: (A) Zona reaction / cortical reaction</b> — Cortical reaction: cortical granules release enzymes that modify zona pellucida, making it impenetrable to additional sperm.</p></details><details><summary>Q11. The placenta acts as an endocrine organ because it secretes:</summary><ol type="A"><li>Insulin and glucagon</li><li>hCG, hPL, oestrogen, progesterone</li><li>FSH and LH</li><li>Prolactin</li></ol><p class="sc-ans"><b>Answer: (B) hCG, hPL, oestrogen, progesterone</b> — Placenta secretes hCG, human Placental Lactogen (hPL), oestrogen and progesterone to maintain pregnancy.</p></details><details><summary>Q12. Parturition is triggered by:</summary><ol type="A"><li>Sudden drop in progesterone and rise in oxytocin</li><li>Rise in progesterone</li><li>FSH surge</li><li>hCG decline</li></ol><p class="sc-ans"><b>Answer: (A) Sudden drop in progesterone and rise in oxytocin</b> — Near term: progesterone falls, oxytocin rises → uterine contractions → parturition (childbirth).</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>A solution is a uniform mixture of two or more substances. This chapter covers ways of expressing concentration, Henry&#x27;s law for gases, Raoult&#x27;s law and ideal and non-ideal solutions, and colligative properties — relative lowering of vapour pressure, elevation of boiling point, depression of freezing point and osmotic pressure — together with the van&#x27;t Hoff factor. Numerical problems on colligative properties are very common.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Solutions</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. Raoult&#x27;s law states that vapour pressure of solvent above solution is:</summary><ol type="A"><li>Equal to vapour pressure of pure solvent</li><li>Equal to mole fraction of solvent × vapour pressure of pure solvent</li><li>Proportional to solute concentration</li><li>Independent of composition</li></ol><p class="sc-ans"><b>Answer: (B) Equal to mole fraction of solvent × vapour pressure of pure solvent</b> — Raoult&#x27;s law: p_A = x_A × p°_A, where x_A is mole fraction of solvent.</p></details><details><summary>Q2. Relative lowering of vapour pressure is equal to:</summary><ol type="A"><li>Mole fraction of solute</li><li>Mole fraction of solvent</li><li>Molality of solution</li><li>Molarity of solution</li></ol><p class="sc-ans"><b>Answer: (A) Mole fraction of solute</b> — (p°−p)/p° = x_solute. Relative lowering = mole fraction of solute (for ideal dilute solution).</p></details><details><summary>Q3. Osmotic pressure π of a dilute solution is given by:</summary><ol type="A"><li>π = MRT</li><li>π = nRT/V</li><li>π = CRT</li><li>All of these (C=M=n/V)</li></ol><p class="sc-ans"><b>Answer: (D) All of these (C=M=n/V)</b> — Van&#x27;t Hoff equation: π = CRT = MRT = nRT/V. All are equivalent expressions.</p></details><details><summary>Q4. Elevation in boiling point is a colligative property because it depends on:</summary><ol type="A"><li>Nature of solute</li><li>Colour of solution</li><li>Number of solute particles</li><li>Molecular weight of solute alone</li></ol><p class="sc-ans"><b>Answer: (C) Number of solute particles</b> — Colligative properties depend on number of solute particles, not their nature.</p></details><details><summary>Q5. If a solute dimerises in solution, the van&#x27;t Hoff factor i is:</summary><ol type="A"><li>Greater than 1</li><li>Equal to 1</li><li>Less than 1</li><li>Equal to 2</li></ol><p class="sc-ans"><b>Answer: (C) Less than 1</b> — Dimerisation reduces number of particles (2 monomers → 1 dimer), so i &lt; 1.</p></details><details><summary>Q6. Henry&#x27;s law states that at constant temperature, solubility of a gas in liquid is:</summary><ol type="A"><li>Proportional to temperature</li><li>Inversely proportional to pressure</li><li>Proportional to partial pressure of gas</li><li>Independent of pressure</li></ol><p class="sc-ans"><b>Answer: (C) Proportional to partial pressure of gas</b> — Henry&#x27;s law: p = K_H × x. Partial pressure ∝ mole fraction (solubility) of dissolved gas.</p></details><details><summary>Q7. Depression in freezing point ΔTf = Kf × m. For electrolyte NaCl, effective molality is:</summary><ol type="A"><li>m</li><li>2m</li><li>m/2</li><li>3m</li></ol><p class="sc-ans"><b>Answer: (B) 2m</b> — NaCl → Na⁺ + Cl⁻, i=2. Effective molality = i×m = 2m.</p></details><details><summary>Q8. Azeotrope is a mixture that:</summary><ol type="A"><li>Separates completely on distillation</li><li>Distils without change in composition</li><li>Has zero vapour pressure</li><li>Is always 50:50 mixture</li></ol><p class="sc-ans"><b>Answer: (B) Distils without change in composition</b> — Azeotrope: composition of vapour = composition of liquid at boiling point — cannot be separated by simple distillation.</p></details><details><summary>Q9. Mole fraction of a component in solution is always:</summary><ol type="A"><li>Greater than 1</li><li>Between 0 and 1</li><li>Equal to molarity</li><li>Equal to molality</li></ol><p class="sc-ans"><b>Answer: (B) Between 0 and 1</b> — Mole fraction x = n_i/n_total; it ranges from 0 (absent) to 1 (pure component). Sum of all = 1.</p></details><details><summary>Q10. Reverse osmosis involves applying pressure to:</summary><ol type="A"><li>Solvent side to push water through membrane</li><li>Solution side to push solvent through membrane</li><li>Both sides equally</li><li>Either side, it doesn&#x27;t matter</li></ol><p class="sc-ans"><b>Answer: (B) Solution side to push solvent through membrane</b> — In reverse osmosis, pressure greater than osmotic pressure is applied on solution side, forcing solvent (water) through semipermeable membrane.</p></details><details><summary>Q11. Boiling point elevation constant Kb depends on:</summary><ol type="A"><li>Nature of solute</li><li>Concentration of solution</li><li>Nature of solvent only</li><li>Both solute and solvent</li></ol><p class="sc-ans"><b>Answer: (C) Nature of solvent only</b> — Kb is a property of the solvent only: Kb = RT²b×M/(1000×ΔHvap). Different for each solvent.</p></details><details><summary>Q12. Isotonic solutions have:</summary><ol type="A"><li>Same molarity</li><li>Same osmotic pressure</li><li>Same boiling point</li><li>Same density</li></ol><p class="sc-ans"><b>Answer: (B) Same osmotic pressure</b> — Isotonic solutions: same osmotic pressure (π = CRT), so no net osmosis between them.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

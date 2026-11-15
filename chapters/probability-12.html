@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>Class 12 probability builds on basic probability with conditional probability, the multiplication theorem, independent events, the theorem of total probability and Bayes&#x27; theorem, along with random variables and their probability distributions. Bayes&#x27; theorem questions — such as finding the chance that an item came from a particular machine — appear in almost every board paper.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Probability</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. P(A∪B) = P(A) + P(B) if A and B are:</summary><ol type="A"><li>Independent events</li><li>Mutually exclusive events</li><li>Exhaustive events</li><li>Equally likely events</li></ol><p class="sc-ans"><b>Answer: (B) Mutually exclusive events</b> — If A∩B = ∅ (mutually exclusive), then P(A∪B) = P(A) + P(B). Otherwise P(A∪B) = P(A)+P(B)−P(A∩B).</p></details><details><summary>Q2. Bayes&#x27; theorem finds:</summary><ol type="A"><li>Total probability</li><li>Posterior probability given prior probability and likelihood</li><li>Joint probability</li><li>Conditional probability of cause given effect</li></ol><p class="sc-ans"><b>Answer: (D) Conditional probability of cause given effect</b> — Bayes&#x27; theorem: P(A|B) = P(B|A)P(A)/P(B). It updates probability of a hypothesis given evidence.</p></details><details><summary>Q3. If P(A) = 0.6 and P(B) = 0.5 and A, B are independent, then P(A∩B) =</summary><ol type="A"><li>0.3</li><li>0.11</li><li>0.8</li><li>0.1</li></ol><p class="sc-ans"><b>Answer: (A) 0.3</b> — Independent: P(A∩B) = P(A)×P(B) = 0.6×0.5 = 0.3.</p></details><details><summary>Q4. For a binomial distribution, mean = np and variance =</summary><ol type="A"><li>np</li><li>np(1−p)</li><li>n²p</li><li>np²</li></ol><p class="sc-ans"><b>Answer: (B) np(1−p)</b> — Binomial: mean μ = np, variance σ² = npq = np(1−p).</p></details><details><summary>Q5. P(A|B) = P(A∩B)/P(B). This is defined when:</summary><ol type="A"><li>P(A) &gt; 0</li><li>P(B) &gt; 0</li><li>P(A∩B) &gt; 0</li><li>P(A)+P(B) = 1</li></ol><p class="sc-ans"><b>Answer: (B) P(B) &gt; 0</b> — Conditional probability P(A|B) requires P(B) &gt; 0 (can&#x27;t condition on impossible event).</p></details><details><summary>Q6. Total probability theorem: P(B) = ΣP(B|Aᵢ)P(Aᵢ) for partition {Aᵢ}. This assumes:</summary><ol type="A"><li>Events Aᵢ are independent</li><li>Events Aᵢ form a partition (mutually exclusive, exhaustive)</li><li>P(B) = 1</li><li>All P(Aᵢ) are equal</li></ol><p class="sc-ans"><b>Answer: (B) Events Aᵢ form a partition (mutually exclusive, exhaustive)</b> — Total probability requires {Aᵢ} to be a complete partition: mutually exclusive and exhaustive.</p></details><details><summary>Q7. A fair die is rolled. P(getting 6 | getting even number) =</summary><ol type="A"><li>1/6</li><li>1/3</li><li>1/2</li><li>1/4</li></ol><p class="sc-ans"><b>Answer: (B) 1/3</b> — P(6|even) = P(6∩even)/P(even) = P(6)/P(even) = (1/6)/(3/6) = 1/3.</p></details><details><summary>Q8. If E(X) = μ, then E(X−μ)² is:</summary><ol type="A"><li>μ²</li><li>0</li><li>Var(X)</li><li>E(X)²</li></ol><p class="sc-ans"><b>Answer: (C) Var(X)</b> — Variance = E[(X−μ)²]. This is the definition of variance.</p></details><details><summary>Q9. Poisson distribution is a limiting case of binomial when:</summary><ol type="A"><li>n is small, p is large</li><li>n→∞ and p→0 with np = λ constant</li><li>n = p</li><li>n and p are both large</li></ol><p class="sc-ans"><b>Answer: (B) n→∞ and p→0 with np = λ constant</b> — Poisson approximation: n large, p small, np = λ finite. P(X=k) = e⁻λλᵏ/k!</p></details><details><summary>Q10. Two cards are drawn without replacement from a pack. P(both aces) =</summary><ol type="A"><li>1/13</li><li>4/52×4/52</li><li>4/52×3/51</li><li>1/221</li></ol><p class="sc-ans"><b>Answer: (C) 4/52×3/51</b> — P = 4/52 × 3/51 = 12/2652 = 1/221. After removing one ace, 3 remain from 51 cards.</p></details><details><summary>Q11. P(A&#x27;) = 1 − P(A) is called:</summary><ol type="A"><li>Bayes&#x27; formula</li><li>Complement rule</li><li>Total probability</li><li>Addition theorem</li></ol><p class="sc-ans"><b>Answer: (B) Complement rule</b> — Complement rule: P(Aᶜ) = P(A&#x27;) = 1 − P(A).</p></details><details><summary>Q12. In a random experiment, sample space S is the set of all:</summary><ol type="A"><li>Favourable outcomes</li><li>Possible outcomes</li><li>Equally likely outcomes</li><li>Independent outcomes</li></ol><p class="sc-ans"><b>Answer: (B) Possible outcomes</b> — Sample space S is the set of all possible outcomes of a random experiment.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

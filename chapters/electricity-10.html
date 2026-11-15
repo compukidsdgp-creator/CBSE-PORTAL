@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>Electricity in Class 10 covers electric current, potential difference, Ohm&#x27;s law, the factors that affect resistance, resistors in series and parallel, the heating effect of current and electric power. Learn the formulas V = IR, R = ρl/A and P = VI = I²R = V²/R, and practise circuit problems — they form a large share of the Science paper.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Electricity</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. SI unit of electric charge is:</summary><ol type="A"><li>Ampere</li><li>Volt</li><li>Coulomb</li><li>Ohm</li></ol><p class="sc-ans"><b>Answer: (C) Coulomb</b> — Charge is measured in Coulombs (C). Current I = Q/t.</p></details><details><summary>Q2. Resistance of a wire depends on:</summary><ol type="A"><li>Current through it</li><li>Voltage across it</li><li>Length, area and material</li><li>Temperature only</li></ol><p class="sc-ans"><b>Answer: (C) Length, area and material</b> — R = ρl/A where ρ is resistivity, l is length, A is cross-sectional area.</p></details><details><summary>Q3. Three 2Ω resistors in parallel. Equivalent resistance is:</summary><ol type="A"><li>6Ω</li><li>2Ω</li><li>2/3Ω</li><li>3/2Ω</li></ol><p class="sc-ans"><b>Answer: (C) 2/3Ω</b> — 1/R = 1/2+1/2+1/2 = 3/2 → R = 2/3 Ω.</p></details><details><summary>Q4. Electric power P = V²/R. If voltage doubles and R unchanged, power becomes:</summary><ol type="A"><li>Double</li><li>Half</li><li>4 times</li><li>Same</li></ol><p class="sc-ans"><b>Answer: (C) 4 times</b> — P ∝ V². Doubling V → P becomes 4P.</p></details><details><summary>Q5. 1 kWh is equal to:</summary><ol type="A"><li>1000 J</li><li>3.6×10³ J</li><li>3.6×10⁶ J</li><li>1000 W</li></ol><p class="sc-ans"><b>Answer: (C) 3.6×10⁶ J</b> — 1 kWh = 1000 W × 3600 s = 3.6×10⁶ J = 3.6 MJ.</p></details><details><summary>Q6. A fuse wire has:</summary><ol type="A"><li>Very high melting point</li><li>High resistance and low melting point</li><li>Low resistance</li><li>Same as connecting wire</li></ol><p class="sc-ans"><b>Answer: (B) High resistance and low melting point</b> — Fuse: high resistance (heats up at excess current) and low melting point (melts to break circuit).</p></details><details><summary>Q7. Ohm&#x27;s law: V = IR is valid when:</summary><ol type="A"><li>Temperature is constant</li><li>Current is DC only</li><li>Resistance is high</li><li>Voltage is very low</li></ol><p class="sc-ans"><b>Answer: (A) Temperature is constant</b> — Ohm&#x27;s law holds only at constant temperature; resistance changes with temperature.</p></details><details><summary>Q8. Direction of conventional current is:</summary><ol type="A"><li>Direction of electron flow</li><li>Opposite to electron flow</li><li>From − to + inside the cell</li><li>Both same</li></ol><p class="sc-ans"><b>Answer: (B) Opposite to electron flow</b> — Conventional current flows from + to − (outside), which is opposite to electron flow (from − to +).</p></details><details><summary>Q9. The heating effect of current is used in:</summary><ol type="A"><li>Fans</li><li>Electric motors</li><li>Electric iron and bulb</li><li>Transformers</li></ol><p class="sc-ans"><b>Answer: (C) Electric iron and bulb</b> — H = I²Rt (Joule&#x27;s law). Electric iron, bulbs, heaters — all use the heating effect.</p></details><details><summary>Q10. If charge Q flows through a circuit in time t, the current I =</summary><ol type="A"><li>Q/t</li><li>Qt</li><li>t/Q</li><li>Q²t</li></ol><p class="sc-ans"><b>Answer: (A) Q/t</b> — Current I = Q/t (charge per unit time).</p></details><details><summary>Q11. Potential difference of 6V is applied across a 3Ω resistor. Current is:</summary><ol type="A"><li>2A</li><li>18A</li><li>0.5A</li><li>3A</li></ol><p class="sc-ans"><b>Answer: (A) 2A</b> — I = V/R = 6/3 = 2 A.</p></details><details><summary>Q12. An electric device of 500W runs for 2 hours daily. Monthly bill (₹5/unit, 30 days) is:</summary><ol type="A"><li>₹100</li><li>₹150</li><li>₹200</li><li>₹250</li></ol><p class="sc-ans"><b>Answer: (B) ₹150</b> — Energy = 0.5kW × 2h × 30 = 30 kWh. Cost = 30 × 5 = ₹150.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

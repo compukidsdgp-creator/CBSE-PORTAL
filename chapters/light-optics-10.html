@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>This chapter covers reflection by plane and spherical mirrors and refraction through glass slabs and lenses. You will use the mirror formula 1/v + 1/u = 1/f and the lens formula 1/v − 1/u = 1/f with the New Cartesian sign convention, calculate magnification and lens power, and draw ray diagrams. Ray diagrams and sign-convention numericals carry substantial marks.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Light — Reflection &amp; Refraction</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. The focal length of a concave mirror is 10 cm. Its radius of curvature is:</summary><ol type="A"><li>5 cm</li><li>10 cm</li><li>20 cm</li><li>40 cm</li></ol><p class="sc-ans"><b>Answer: (C) 20 cm</b> — R = 2f = 2×10 = 20 cm.</p></details><details><summary>Q2. An object is placed at the centre of curvature of a concave mirror. The image is:</summary><ol type="A"><li>At focus, real and inverted</li><li>At C, real, inverted and same size</li><li>At infinity</li><li>Virtual and erect</li></ol><p class="sc-ans"><b>Answer: (B) At C, real, inverted and same size</b> — Object at C → image at C: real, inverted, same size.</p></details><details><summary>Q3. Refractive index n = c/v means:</summary><ol type="A"><li>Speed of light in medium / speed in vacuum</li><li>Speed of light in vacuum / speed in medium</li><li>Both are same</li><li>Neither</li></ol><p class="sc-ans"><b>Answer: (B) Speed of light in vacuum / speed in medium</b> — n = c/v where c is speed in vacuum and v is speed in medium. n &gt; 1 for most media (v &lt; c).</p></details><details><summary>Q4. A ray of light going from less dense to more dense medium:</summary><ol type="A"><li>Bends away from normal</li><li>Bends towards normal</li><li>Goes straight</li><li>Reflects completely</li></ol><p class="sc-ans"><b>Answer: (B) Bends towards normal</b> — Less dense → more dense (e.g., air→glass): light slows down and bends toward the normal.</p></details><details><summary>Q5. Magnification m = −v/u. For a virtual erect image, m is:</summary><ol type="A"><li>Negative</li><li>Greater than 1</li><li>Positive</li><li>Zero</li></ol><p class="sc-ans"><b>Answer: (C) Positive</b> — Virtual erect image: m is positive. Real inverted image: m is negative.</p></details><details><summary>Q6. Power of a convex lens with focal length 25 cm is:</summary><ol type="A"><li>4 D</li><li>−4 D</li><li>0.25 D</li><li>25 D</li></ol><p class="sc-ans"><b>Answer: (A) 4 D</b> — P = 1/f(m) = 1/0.25 = +4 D. Convex (converging) lens has positive power.</p></details><details><summary>Q7. Concave lens always forms:</summary><ol type="A"><li>Real, inverted image</li><li>Virtual, erect, diminished image</li><li>Virtual, inverted image</li><li>Real, erect image</li></ol><p class="sc-ans"><b>Answer: (B) Virtual, erect, diminished image</b> — Concave (diverging) lens: image is always virtual, erect, and diminished (smaller than object).</p></details><details><summary>Q8. In a spherical mirror, the pole, focus, and centre of curvature are:</summary><ol type="A"><li>At the same point</li><li>On the principal axis</li><li>Behind the mirror</li><li>In front of the mirror</li></ol><p class="sc-ans"><b>Answer: (B) On the principal axis</b> — Pole, focus F, and centre of curvature C all lie on the principal axis of the mirror.</p></details><details><summary>Q9. The phenomenon due to which we can see objects around a corner using fibre optics is:</summary><ol type="A"><li>Refraction</li><li>Reflection</li><li>Total internal reflection</li><li>Diffraction</li></ol><p class="sc-ans"><b>Answer: (C) Total internal reflection</b> — Optical fibres use total internal reflection to carry light signals around bends without energy loss.</p></details><details><summary>Q10. If the image formed in a plane mirror is 4 m behind the mirror, the object is:</summary><ol type="A"><li>2 m in front</li><li>4 m in front</li><li>8 m in front</li><li>1 m in front</li></ol><p class="sc-ans"><b>Answer: (B) 4 m in front</b> — Plane mirror: image is as far behind mirror as object is in front. Object = 4 m in front.</p></details><details><summary>Q11. Dispersion of white light by a prism shows that:</summary><ol type="A"><li>Prism changes speed of all colours equally</li><li>Different colours have different refractive indices in glass</li><li>White light is a single colour</li><li>Violet light is least deviated</li></ol><p class="sc-ans"><b>Answer: (B) Different colours have different refractive indices in glass</b> — Different colours (frequencies) travel at different speeds in glass → different n → different deviation. Violet deviates most.</p></details><details><summary>Q12. Myopic person can see clearly up to 2 m. Required lens power is:</summary><ol type="A"><li>−0.5 D</li><li>−2 D</li><li>−2.5 D</li><li>0.5 D</li></ol><p class="sc-ans"><b>Answer: (A) −0.5 D</b> — Myopia: far point = 2 m. Need lens to form image of distant object at 2 m. P = 1/f = 1/(−2) = −0.5 D.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

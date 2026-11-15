@@ -265,7 +265,7 @@ const pyMCQ = [
   {q:`Output of:\nmy_dict={'name':'Alicia','age':27,'city':'DELHI'}\nprint(my_dict.get('profession','Not Specified'))`,o:["A) Alicia","B) DELHI","C) None","D) Not Specified"],a:"D) Not Specified  (key 'profession' absent; default returned)"},
   {q:`Output of:\ni=5\nprint(i,end='@@')\ndef add():\n    global i\n    i=i+7\n    print(i,end='##')\nadd()\nprint(i)`,o:["A) 5@@12##15","B) 5@@5##12","C) 5@@12##12","D) 12@@12##12"],a:"C) 5@@12##12"},
   {q:`Output of:\nst='Waterskiing is thrilling!'\nprint(st.split('i'))`,o:["A) ['Watersk','ng ','s thr','ll','ng!']","B) ['Watersk','','ng ','s thr','ll','ng!']","C) Error","D) None"],a:"B) ['Watersk', '', 'ng ', 's thr', 'll', 'ng!']"},
-  {q:`Output of:\ns1='SQP-25'\ns2=''\ni=0\nwhile i<len(s1):\n    if s1[i]>='0' and s1[i]<='9':\n        Num=int(s1[i]); Num-=1; s2+=str(Num)\n    elif s1[i]>='A' and s1[i]<='Z':\n        s2+=s1[i+1]\n    else: s2+='^'\n    i+=1\nprint(s2)`,o:["A) Q^P^14","B) Q^P^14","C) ^Q^^14","D) Error"],a:"B) Q^P^14  (S→s1[1]='Q'; Q→'^'; P→s1[3]='-'→'^'; -→'^'; 2→1; 5→4)"},
+  {q:`Output of:\ns1='SQP-25'\ns2=''\ni=0\nwhile i<len(s1):\n    if s1[i]>='0' and s1[i]<='9':\n        Num=int(s1[i]); Num-=1; s2+=str(Num)\n    elif s1[i]>='A' and s1[i]<='Z':\n        s2+=s1[i+1]\n    else: s2+='^'\n    i+=1\nprint(s2)`,o:["A) Q^P^14","B) QP-^14","C) ^Q^^14","D) Error"],a:"B) QP-^14  (S→next char Q; Q→next char P; P→next char -; -→^; 2→1; 5→4)"},
   {q:`Output of:\ncode='gLaD5'\nresult=[]\ni=0\nwhile i<len(code):\n    if code[i].isupper(): result.append(code[i].lower())\n    elif code[i].isdigit(): result.append(int(code[i])*2)\n    else: result.append('#')\n    i+=1\nprint(result)`,o:["A) ['#','l','#','d',10]","B) ['g','l','a','d',10]","C) ['#','L','#','D','5']","D) Error"],a:"A) ['#', 'l', '#', 'd', 10]"},
   {q:`print(Dl) where Dl={'Pen':12,'Pencil':6,'Scale':5,'InkPen':20}\nprint(12 in Dl)`,o:["A) False","B) Error","C) None","D) True"],a:"A) False  ('in' checks keys only, not values)"},
   {q:`Output of:\nemp={'Arv':(85000,90000),'Ria':(78000,88000),'Jay':(72000,80000),'Tia':(80000,70000)}\nselected=[]\nfor name in emp:\n    av=(emp[name][0]+emp[name][1])/2\n    if av>80000: selected.append(name)\nprint(selected)`,o:["A) ['Arv']","B) ['Arv','Ria']","C) ['Arv','Ria','Jay']","D) []"],a:"B) ['Arv', 'Ria']  (Arv avg=87500>80000; Ria avg=83000>80000; Jay=76000; Tia=75000)"}
@@ -689,7 +689,7 @@ render(PAPERS[0]);
   <a href="cbse-class-12-maths-mock-papers.html" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:#e8edf7;color:#1a3a6b;border-radius:20px;text-decoration:none;font-size:.8rem;font-weight:600;border:1px solid #d1d9e6;white-space:nowrap;">📐 Maths Cl.12</a>
   <a href="cbse-class-12-informatics-practices-practice-papers.html" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:#e8edf7;color:#1a3a6b;border-radius:20px;text-decoration:none;font-size:.8rem;font-weight:600;border:1px solid #d1d9e6;white-space:nowrap;">🖥️ IP Cl.12</a>
   </div></section>
-<div style="text-align:center;padding:16px;font-size:.75rem;opacity:.6;border-top:1px solid #e0e0e0;margin-top:20px;"><a href="privacy.html" style="color:inherit;text-decoration:none;margin:0 6px;">Privacy Policy</a> | <a href="terms.html" style="color:inherit;text-decoration:none;margin:0 6px;">Terms of Use</a> | <a href="contact.html" style="color:inherit;text-decoration:none;margin:0 6px;">Contact</a> | <a href="disclaimer.html" style="color:inherit;text-decoration:none;margin:0 6px;">Disclaimer</a></div>
+<div style="text-align:center;padding:16px;font-size:.75rem;opacity:.6;border-top:1px solid #e0e0e0;margin-top:20px;"><a href="about.html" style="color:inherit;text-decoration:none;margin:0 6px;">About Us</a> | <a href="privacy.html" style="color:inherit;text-decoration:none;margin:0 6px;">Privacy Policy</a> | <a href="terms.html" style="color:inherit;text-decoration:none;margin:0 6px;">Terms of Use</a> | <a href="contact.html" style="color:inherit;text-decoration:none;margin:0 6px;">Contact</a> | <a href="disclaimer.html" style="color:inherit;text-decoration:none;margin:0 6px;">Disclaimer</a></div>
 
 <!-- chapter-quick-links -->
 <style>.cql-link:hover{background:#1a3a6b!important;color:#ffd54f!important;border-color:#1a3a6b!important;transform:translateX(4px);}</style>
@@ -700,4 +700,99 @@ render(PAPERS[0]);
       <a href="chapters/database-sql-12.html" class="cql-link" style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:#fff;color:#1a3a6b;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;border:1.5px solid #c9a227;white-space:nowrap;transition:background .15s,color .15s,transform .12s;">🗄️ Database & SQL</a>
       <a href="chapters/networking-12.html" class="cql-link" style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:#fff;color:#1a3a6b;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;border:1.5px solid #c9a227;white-space:nowrap;transition:background .15s,color .15s,transform .12s;">🌐 Networking & Cyber Safety</a>
       </div></section>
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="About these papers">
+<div class="sc-card"><h2>About these papers — COMPUTER SCIENCE (Code 083)</h2><p>Free Computer Science (Code 083) Class 12 CBSE mock papers. Python programming, DBMS, Computer Networks, Societal Impact and Boolean Algebra practice tests. Every paper follows the latest CBSE sample-paper pattern, with sections, marks and internal choices laid out as in the board exam, and answers are shown after you submit so you can check your work.</p></div>
+<div class="sc-card sc-qa"><h2>Sample questions with answers</h2><p style="margin-bottom:8px;color:var(--muted,#666)">A taste of the question bank behind these papers. Open a question to see the answer.</p><details><summary>Q1. What will be the output?
+L=[10,20,25,30]
+L.insert(1,15)
+print(L)</summary><ol type="A"><li>[10,15,20,25,30]</li><li>[15,10,20,25,30]</li><li>[10,20,15,25,30]</li><li>Error</li></ol><p class="sc-ans"><b>Answer: (A) [10,15,20,25,30]</b></p></details><details><summary>Q2. A column in one table matching a primary key of another table is called a:</summary><ol type="A"><li>Composite key</li><li>Candidate key</li><li>Foreign key</li><li>Super key</li></ol><p class="sc-ans"><b>Answer: (C) Foreign key</b></p></details><details><summary>Q3. Long-distance communication without line-of-sight is mainly achieved using:</summary><ol type="A"><li>Microwaves</li><li>Ultraviolet</li><li>Radio waves</li><li>X-rays</li></ol><p class="sc-ans"><b>Answer: (C) Radio waves</b></p></details><details><summary>Q4. What will be the output?
+Msg=&#x27;programming is amazing&#x27;
+print(Msg.split(&#x27;m&#x27;))</summary><ol type="A"><li>[&#x27;progra&#x27;,&#x27;&#x27;,&#x27;ing is a&#x27;,&#x27;azing&#x27;]</li><li>[&#x27;progra&#x27;,&#x27;ming is a&#x27;,&#x27;azing&#x27;]</li><li>(&#x27;progra&#x27;,&#x27;&#x27;,&#x27;ing is amazing&#x27;)</li><li>[&#x27;program&#x27;,&#x27;ing is a&#x27;,&#x27;zing&#x27;]</li></ol><p class="sc-ans"><b>Answer: (A) [&#x27;progra&#x27;,&#x27;&#x27;,&#x27;ing is a&#x27;,&#x27;azing&#x27;]</b></p></details><details><summary>Q5. Which MySQL query displays employees with salary between 90000 and 100000 (inclusive)?</summary><ol type="A"><li>WHERE salary&gt;90000 AND salary&lt;100000</li><li>WHERE salary IN (90000,100000)</li><li>WHERE salary BETWEEN 90000 AND 100000</li><li>WHERE salary=90000 OR salary=100000</li></ol><p class="sc-ans"><b>Answer: (C) WHERE salary BETWEEN 90000 AND 100000</b></p></details><details><summary>Q6. Every network interface card (NIC) comes with its own ________ address.</summary><ol type="A"><li>IP</li><li>OSI</li><li>Physical (MAC)</li><li>DHCP</li></ol><p class="sc-ans"><b>Answer: (C) Physical (MAC)</b></p></details><details><summary>Q7. Which Python data type is mutable?</summary><ol type="A"><li>Tuple</li><li>String</li><li>Integer</li><li>List</li></ol><p class="sc-ans"><b>Answer: (D) List</b></p></details><details><summary>Q8. In a student table, &#x27;Class&#x27; can only take {IX,X,XI,XII}. This set is called:</summary><ol type="A"><li>Domain</li><li>Tuple</li><li>Attribute</li><li>Key</li></ol><p class="sc-ans"><b>Answer: (A) Domain</b></p></details><details><summary>Q9. Define global variable and local variable with a suitable example.</summary><p class="sc-ans"><b>Model answer:</b> Global variable: Defined outside all functions; accessible everywhere in the program.
+Local variable: Defined inside a function; accessible only within that function.
+
+Example:
+x = 10          # global variable
+def demo():
+    y = 5       # local variable
+    print(x, y) # can access global x
+demo()
+print(x)        # can access x
+# print(y)      # ERROR — y is local</p></details><details><summary>Q10. Write a Python function to read &#x27;History.txt&#x27; and display all lines that contain a four-digit year (e.g. 1999, 2024).</summary><p class="sc-ans"><b>Model answer:</b> import re
+def display_year_lines():
+    try:
+        with open(&#x27;History.txt&#x27;, &#x27;r&#x27;) as f:
+            for line in f:
+                if re.search(r&#x27;\b\d{4}\b&#x27;, line):
+                    print(line, end=&#x27;&#x27;)
+    except FileNotFoundError:
+        print(&#x27;File not found&#x27;)
+
+display_year_lines()</p></details><details><summary>Q11. Consider table TECH_EVENT_REG (Reg_ID, Participant_Name, Event_Name, Grade, Reg_Fee).
+Write queries:
+(I) Number of participants per event where count &gt; 1
+(II) Distinct event names
+(III) Participants whose name contains &#x27;an&#x27;
+(IV) All records sorted by participant_name descending</summary><p class="sc-ans"><b>Model answer:</b> (I) SELECT Event_Name, COUNT(*) AS Participant_Count
+    FROM TECH_EVENT_REG
+    GROUP BY Event_Name
+    HAVING COUNT(*) &gt; 1;
+
+(II) SELECT DISTINCT Event_Name
+    FROM TECH_EVENT_REG;
+
+(III) SELECT * FROM TECH_EVENT_REG
+    WHERE Participant_Name LIKE &#x27;%an%&#x27;;
+
+(IV) SELECT * FROM TECH_EVENT_REG
+    ORDER BY Participant_Name DESC;</p></details><details><summary>Q12. A college administrator maintains enrollment records (Roll_No, Student_Name, Course, Fees).
+Write Python functions:
+(I) Input enrollment details and append to a binary file
+(II) Update Fees of all &#x27;Data Science&#x27; students to 75000</summary><p class="sc-ans"><b>Model answer:</b> import pickle
+
+def add_enrollment():
+    record = {
+        &#x27;Roll_No&#x27;: input(&#x27;Roll No: &#x27;),
+        &#x27;Student_Name&#x27;: input(&#x27;Name: &#x27;),
+        &#x27;Course&#x27;: input(&#x27;Course: &#x27;),
+        &#x27;Fees&#x27;: float(input(&#x27;Fees: &#x27;))
+    }
+    with open(&#x27;enrollment.dat&#x27;,&#x27;ab&#x27;) as f:
+        pickle.dump(record, f)
+    print(&#x27;Record added.&#x27;)
+
+def update_fees():
+    records = []
+    try:
+        with open(&#x27;enrollment.dat&#x27;,&#x27;rb&#x27;) as f:
+            while True:
+                try: records.append(pickle.load(f))
+                except EOFError: break
+    except FileNotFoundError: pass
+    for r in records:
+        if r[&#x27;Course&#x27;] == &#x27;Data Science&#x27;:
+            r[&#x27;Fees&#x27;] = 75000
+    with open(&#x27;enrollment.dat&#x27;,&#x27;wb&#x27;) as f:
+        for r in records:
+            pickle.dump(r, f)
+    print(&#x27;Fees updated for Data Science students.&#x27;)</p></details></div>
+<p class="sc-meta">Prepared by the <a href="about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 </body></html>

@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>This chapter explains how DNA stores and expresses genetic information. Topics include DNA structure and packaging, the search for the genetic material, replication, transcription, the genetic code, translation, regulation of gene expression through the lac operon, the Human Genome Project and DNA fingerprinting. Diagrams of the replication fork and the lac operon are frequently asked.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Molecular Basis of Inheritance</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. The double helix model of DNA was proposed by:</summary><ol type="A"><li>Mendel and Morgan</li><li>Watson and Crick</li><li>Franklin and Wilkins</li><li>Chargaff and Avery</li></ol><p class="sc-ans"><b>Answer: (B) Watson and Crick</b> — Watson and Crick (1953) proposed the double helix model, using X-ray data from Franklin.</p></details><details><summary>Q2. Chargaff&#x27;s rule states that in DNA:</summary><ol type="A"><li>A+G = T+C</li><li>A = T and G = C</li><li>A = G and T = C</li><li>Total purines ≠ pyrimidines</li></ol><p class="sc-ans"><b>Answer: (B) A = T and G = C</b> — Chargaff: A pairs with T (A=T) and G pairs with C (G=C). Total purines = total pyrimidines.</p></details><details><summary>Q3. The enzyme responsible for opening the DNA double helix during replication is:</summary><ol type="A"><li>DNA Polymerase</li><li>Ligase</li><li>Helicase</li><li>Primase</li></ol><p class="sc-ans"><b>Answer: (C) Helicase</b> — Helicase unwinds and separates the two DNA strands at the replication fork.</p></details><details><summary>Q4. Transcription produces:</summary><ol type="A"><li>DNA from DNA</li><li>RNA from DNA</li><li>Protein from RNA</li><li>DNA from RNA</li></ol><p class="sc-ans"><b>Answer: (B) RNA from DNA</b> — Transcription: DNA → mRNA. RNA polymerase reads template strand (3&#x27;→5&#x27;) and synthesises mRNA (5&#x27;→3&#x27;).</p></details><details><summary>Q5. The central dogma of molecular biology is:</summary><ol type="A"><li>Protein → RNA → DNA</li><li>DNA → RNA → Protein</li><li>RNA → DNA → Protein</li><li>DNA → Protein → RNA</li></ol><p class="sc-ans"><b>Answer: (B) DNA → RNA → Protein</b> — Central dogma: DNA → (transcription) → RNA → (translation) → Protein.</p></details><details><summary>Q6. Meselson and Stahl experiment proved DNA replication is:</summary><ol type="A"><li>Conservative</li><li>Dispersive</li><li>Semi-conservative</li><li>Random</li></ol><p class="sc-ans"><b>Answer: (C) Semi-conservative</b> — Using ¹⁵N/¹⁴N labelling and CsCl gradient, they showed each new DNA has one old + one new strand.</p></details><details><summary>Q7. tRNA that carries amino acid to ribosome has an anticodon that is complementary to:</summary><ol type="A"><li>Another tRNA</li><li>rRNA</li><li>mRNA codon</li><li>DNA template strand</li></ol><p class="sc-ans"><b>Answer: (C) mRNA codon</b> — tRNA anticodon base-pairs with the complementary mRNA codon during translation.</p></details><details><summary>Q8. Start codon in mRNA is:</summary><ol type="A"><li>UAA</li><li>UGA</li><li>AUG</li><li>UAG</li></ol><p class="sc-ans"><b>Answer: (C) AUG</b> — AUG codes for methionine and signals the start of translation. UAA, UAG, UGA are stop codons.</p></details><details><summary>Q9. Lac operon in E. coli is an example of:</summary><ol type="A"><li>Positive regulation only</li><li>Negative regulation (repressible)</li><li>Inducible operon</li><li>Both positive and negative regulation</li></ol><p class="sc-ans"><b>Answer: (D) Both positive and negative regulation</b> — Lac operon is primarily inducible (lactose removes repressor = negative regulation) but also has catabolite (positive) regulation by CAP-cAMP.</p></details><details><summary>Q10. The enzyme reverse transcriptase makes:</summary><ol type="A"><li>mRNA from DNA</li><li>DNA from mRNA</li><li>Protein from mRNA</li><li>DNA from DNA</li></ol><p class="sc-ans"><b>Answer: (B) DNA from mRNA</b> — Reverse transcriptase (in retroviruses): RNA → DNA (reverse of normal transcription).</p></details><details><summary>Q11. Human Genome Project found the human genome has approximately:</summary><ol type="A"><li>1 million genes</li><li>20,000–25,000 genes</li><li>100,000 genes</li><li>1 billion genes</li></ol><p class="sc-ans"><b>Answer: (B) 20,000–25,000 genes</b> — HGP showed humans have ~20,000–25,000 protein-coding genes (much fewer than expected).</p></details><details><summary>Q12. Satellite DNA is useful in DNA fingerprinting because it has:</summary><ol type="A"><li>Very few repeats</li><li>Unique sequence in each individual</li><li>Highly repeated short sequences with individual variation</li><li>Codes for important proteins</li></ol><p class="sc-ans"><b>Answer: (C) Highly repeated short sequences with individual variation</b> — VNTRs (Variable Number Tandem Repeats) / microsatellites are highly polymorphic short repeats used in DNA fingerprinting.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

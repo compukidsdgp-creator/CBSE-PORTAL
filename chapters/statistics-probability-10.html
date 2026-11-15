@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>Statistics in Class 10 is about finding the mean, median and mode of grouped data using the direct, assumed-mean and step-deviation methods. The probability part covers classical probability for single events, with dice, coins and cards as typical examples. Practise the mode and median formulas for grouped data — they appear almost every year.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Statistics &amp; Probability</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. Mean of 2, 4, 6, 8, 10 is:</summary><ol type="A"><li>5</li><li>6</li><li>7</li><li>4</li></ol><p class="sc-ans"><b>Answer: (B) 6</b> — Mean = (2+4+6+8+10)/5 = 30/5 = 6.</p></details><details><summary>Q2. Median of 3, 5, 7, 9, 11 (n=5) is:</summary><ol type="A"><li>5</li><li>7</li><li>9</li><li>6</li></ol><p class="sc-ans"><b>Answer: (B) 7</b> — Arranged in order; median = middle value = 3rd value = 7.</p></details><details><summary>Q3. Mode is the value that:</summary><ol type="A"><li>Appears least frequently</li><li>Appears most frequently</li><li>Is in the middle</li><li>Is the average</li></ol><p class="sc-ans"><b>Answer: (B) Appears most frequently</b> — Mode = most frequently occurring value in a data set.</p></details><details><summary>Q4. Empirical relationship between mean, median and mode is:</summary><ol type="A"><li>Mean − Mode = 2(Mean − Median)</li><li>Mode = 3 Median − 2 Mean</li><li>Mean + Mode = 2 Median</li><li>None</li></ol><p class="sc-ans"><b>Answer: (B) Mode = 3 Median − 2 Mean</b> — Empirical: Mode ≈ 3 Median − 2 Mean (for moderately asymmetric distributions).</p></details><details><summary>Q5. Probability P(E) of an event E always satisfies:</summary><ol type="A"><li>0 &lt; P(E) &lt; 1</li><li>0 ≤ P(E) ≤ 1</li><li>P(E) &gt; 1 is possible</li><li>P(E) = 1 always</li></ol><p class="sc-ans"><b>Answer: (B) 0 ≤ P(E) ≤ 1</b> — Probability ranges from 0 (impossible) to 1 (certain): 0 ≤ P(E) ≤ 1.</p></details><details><summary>Q6. A card is drawn from a deck of 52. P(ace) =</summary><ol type="A"><li>1/52</li><li>4/52 = 1/13</li><li>1/4</li><li>4/13</li></ol><p class="sc-ans"><b>Answer: (B) 4/52 = 1/13</b> — 4 aces in 52 cards. P = 4/52 = 1/13.</p></details><details><summary>Q7. Cumulative frequency is used to draw:</summary><ol type="A"><li>Bar graph</li><li>Histogram</li><li>Ogive</li><li>Frequency polygon</li></ol><p class="sc-ans"><b>Answer: (C) Ogive</b> — Ogive (cumulative frequency curve) is plotted using cumulative frequencies vs. class boundaries.</p></details><details><summary>Q8. If P(A) = 0.4, then P(not A) =</summary><ol type="A"><li>0.4</li><li>0.6</li><li>1</li><li>0</li></ol><p class="sc-ans"><b>Answer: (B) 0.6</b> — P(A&#x27;) = 1 − P(A) = 1 − 0.4 = 0.6.</p></details><details><summary>Q9. Class mark (mid-point) of class 20−30 is:</summary><ol type="A"><li>20</li><li>25</li><li>30</li><li>10</li></ol><p class="sc-ans"><b>Answer: (B) 25</b> — Class mark = (lower limit + upper limit)/2 = (20+30)/2 = 25.</p></details><details><summary>Q10. Median using ogive is found at cumulative frequency:</summary><ol type="A"><li>n/4</li><li>n/2</li><li>3n/4</li><li>n</li></ol><p class="sc-ans"><b>Answer: (B) n/2</b> — Median corresponds to the n/2 cumulative frequency on the ogive (Q2 = 50th percentile).</p></details><details><summary>Q11. A bag has 5 red and 3 blue balls. P(blue ball) =</summary><ol type="A"><li>5/8</li><li>3/8</li><li>3/5</li><li>1/3</li></ol><p class="sc-ans"><b>Answer: (B) 3/8</b> — P(blue) = 3/(5+3) = 3/8.</p></details><details><summary>Q12. For grouped data, Mean = Σfᵢxᵢ/Σfᵢ. If Σfᵢ = 50 and Σfᵢxᵢ = 1000, Mean =</summary><ol type="A"><li>500</li><li>20</li><li>50</li><li>1000</li></ol><p class="sc-ans"><b>Answer: (B) 20</b> — Mean = 1000/50 = 20.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

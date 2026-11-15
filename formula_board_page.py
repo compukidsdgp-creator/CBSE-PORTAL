@@ -105,8 +105,37 @@ def build_page(data):
             .replace("__DATA__", json.dumps(data, separators=(",", ":"), ensure_ascii=False))
             .replace("__SUBJECTS__", json.dumps([[s, labels[s]] for s in subjects]))
             .replace("__CLASSES__", json.dumps(classes))
-            .replace("__COUNT__", str(len(data))))
+            .replace("__COUNT__", str(len(data)))
+            .replace("__INDEX__", static_index(data, labels)))
     (OUT / "index.html").write_text(page, encoding="utf-8")
+
+
+def static_index(data, labels):
+    """Plain-HTML list of every card, so the board's content is readable without JavaScript."""
+    import html as _h
+    groups = {}
+    for d in data:
+        groups.setdefault(d["subject"], []).append(d)
+    parts = ['<section class="idx" aria-label="All formula cards"><h2>All formula cards on the board</h2>'
+             '<p>Each card is a one-page summary of the key formulas, definitions and exam points for a chapter, '
+             'designed for quick revision on a phone. Tap a card above to open it full-size and save it.</p>']
+    for subj, items in groups.items():
+        parts.append(f"<h3>{_h.escape(labels.get(subj, subj.title()))}</h3><ul>")
+        seen = set()
+        for d in items:
+            name = d.get("topic") or d.get("title") or ""
+            name = {"v u at": "Equations of Motion (v = u + at)", "Ohms Law": "Ohm's Law"}.get(name, name)
+            if name.split()[-1:] and name.split()[-1] in ("Answer", "Question", "Recap", "Calculation"):
+                continue                      # slides of a multi-part card, already covered by its main title
+            key = (name, d.get("cls"))
+            if not name or key in seen:
+                continue
+            seen.add(key)
+            cls = f" — Class {d['cls']}" if d.get("cls") in ("10", "11", "12") else ""
+            parts.append(f"<li>{_h.escape(name)}{cls}</li>")
+        parts.append("</ul>")
+    parts.append("</section>")
+    return "".join(parts)
 
 
 TEMPLATE = r"""<!doctype html>
@@ -216,6 +245,7 @@ footer a{color:var(--gold)}
 @media(max-width:600px){.stage{--dx:20px;--dy:30px;--dz:110px}.nav{width:40px;height:40px;font-size:19px;top:auto;bottom:6px;transform:none}.nav.p{left:22%}.nav.n{right:22%}
   .wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.cap{margin-top:8px}.cap.none{margin-top:24px}}
 @media(prefers-reduced-motion:reduce){.fc,.deck,.tile,.lb img{transition:none;animation:none}.tile{opacity:1;transform:none}}
+.idx{max-width:960px;margin:28px auto 0;padding:0 16px;color:#b9c4dd;font-size:14px;line-height:1.6}.idx h2{font-size:16px;color:#fff;margin:0 0 6px}.idx p{margin:0 0 12px}.idx h3{font-size:13px;color:#fff;margin:14px 0 4px;text-transform:uppercase;letter-spacing:.06em}.idx ul{margin:0;padding-left:18px;columns:2;column-gap:28px}@media(max-width:600px){.idx ul{columns:1}}
 </style>
 </head>
 <body>
@@ -247,7 +277,8 @@ footer a{color:var(--gold)}
     <a href="https://www.facebook.com/profile.php?id=61596243964780" target="_blank" rel="noopener" style="background:#1877f2">Facebook</a>
   </div>
 </main>
-<footer>© CBSEMock · <a href="../index.html">cbsemock.org.in</a> · <a href="../free-mock-papers/">Free mock papers</a></footer>
+__INDEX__
+<footer>© CBSEMock · <a href="../index.html">cbsemock.org.in</a> · <a href="../about.html">About</a> · <a href="../free-mock-papers/">Free mock papers</a></footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Formula card">
   <div class="t" id="lbT"></div>

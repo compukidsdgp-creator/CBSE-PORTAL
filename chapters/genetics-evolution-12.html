@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>This unit covers Mendel&#x27;s laws of inheritance, deviations from them such as incomplete dominance and co-dominance, sex determination, linkage, and genetic disorders, followed by the origin of life and the evidence and mechanisms of evolution. Expect cross-based questions (monohybrid and dihybrid ratios), pedigree analysis, and comparisons between Darwin&#x27;s natural selection and other theories.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Genetics &amp; Evolution</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. Mendel&#x27;s law of independent assortment applies to genes located on:</summary><ol type="A"><li>Same chromosome</li><li>Different chromosomes</li><li>X chromosome only</li><li>Mitochondrial DNA</li></ol><p class="sc-ans"><b>Answer: (B) Different chromosomes</b> — Independent assortment occurs when genes are on different (non-homologous) chromosomes, so they segregate independently.</p></details><details><summary>Q2. Test cross is a cross between F1 and:</summary><ol type="A"><li>F1 × F1</li><li>F1 × dominant parent</li><li>F1 × homozygous recessive</li><li>F1 × F2</li></ol><p class="sc-ans"><b>Answer: (C) F1 × homozygous recessive</b> — Test cross: F1 (unknown genotype) × homozygous recessive parent to determine F1 genotype from offspring ratio.</p></details><details><summary>Q3. Sickle cell anaemia is an example of:</summary><ol type="A"><li>Chromosomal disorder</li><li>Sex-linked disease</li><li>Autosomal recessive disorder</li><li>Autosomal dominant disorder</li></ol><p class="sc-ans"><b>Answer: (C) Autosomal recessive disorder</b> — Sickle cell anaemia: single point mutation in β-globin gene; autosomal recessive — both alleles must be defective.</p></details><details><summary>Q4. Hardy-Weinberg equilibrium is disturbed by:</summary><ol type="A"><li>Large population</li><li>Random mating</li><li>Gene flow</li><li>No mutation</li></ol><p class="sc-ans"><b>Answer: (C) Gene flow</b> — H-W equilibrium requires no mutation, no selection, large population, random mating, no gene flow. Gene flow disrupts it.</p></details><details><summary>Q5. Analogous organs are those that:</summary><ol type="A"><li>Have same structure, different function</li><li>Have different structure, same function</li><li>Share common ancestry</li><li>Are vestigial in one species</li></ol><p class="sc-ans"><b>Answer: (B) Have different structure, same function</b> — Analogous organs: similar function, different evolutionary origin (e.g., wings of birds and insects).</p></details><details><summary>Q6. Mutation theory of evolution was proposed by:</summary><ol type="A"><li>Darwin</li><li>Lamarck</li><li>Hugo de Vries</li><li>Mendel</li></ol><p class="sc-ans"><b>Answer: (C) Hugo de Vries</b> — Hugo de Vries proposed that new species arise by sudden heritable changes — mutations.</p></details><details><summary>Q7. If p² + 2pq + q² = 1 (H-W), and q = 0.3, then p =</summary><ol type="A"><li>0.3</li><li>0.7</li><li>0.09</li><li>0.49</li></ol><p class="sc-ans"><b>Answer: (B) 0.7</b> — p + q = 1 → p = 1 − 0.3 = 0.7.</p></details><details><summary>Q8. Genetic drift is most significant in:</summary><ol type="A"><li>Large populations</li><li>Small isolated populations</li><li>Sexually reproducing populations</li><li>Populations with high mutation rate</li></ol><p class="sc-ans"><b>Answer: (B) Small isolated populations</b> — Genetic drift (random allele frequency change) has greater effect in small populations where chance events matter more.</p></details><details><summary>Q9. What is the phenotypic ratio in F2 of a monohybrid cross?</summary><ol type="A"><li>1:2:1</li><li>3:1</li><li>1:1</li><li>9:3:3:1</li></ol><p class="sc-ans"><b>Answer: (B) 3:1</b> — Monohybrid F2: 3 dominant : 1 recessive (phenotypic ratio); genotypic 1:2:1.</p></details><details><summary>Q10. Darwin&#x27;s natural selection is based on:</summary><ol type="A"><li>Use and disuse of organs</li><li>Survival of the fittest — heritable variation</li><li>Inheritance of acquired characters</li><li>Random mutations only</li></ol><p class="sc-ans"><b>Answer: (B) Survival of the fittest — heritable variation</b> — Natural selection: heritable variation exists; organisms better adapted survive and reproduce more.</p></details><details><summary>Q11. Chromosomal theory of inheritance was proposed by:</summary><ol type="A"><li>Mendel and Morgan</li><li>Sutton and Boveri</li><li>Watson and Crick</li><li>Griffith and Avery</li></ol><p class="sc-ans"><b>Answer: (B) Sutton and Boveri</b> — Sutton and Boveri (1902) independently proposed that chromosomes carry Mendelian factors (genes).</p></details><details><summary>Q12. Recombination frequency between two linked genes is used to:</summary><ol type="A"><li>Determine mutation rate</li><li>Construct genetic map</li><li>Calculate gene expression</li><li>Find chromosome number</li></ol><p class="sc-ans"><b>Answer: (B) Construct genetic map</b> — Recombination frequency ∝ distance between genes → used to construct linkage maps (genetic maps).</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

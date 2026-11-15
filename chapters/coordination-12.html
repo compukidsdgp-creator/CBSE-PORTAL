@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>Coordination compounds contain a central metal atom or ion bonded to surrounding ligands. The chapter covers Werner&#x27;s theory, IUPAC naming, coordination number, isomerism, and bonding through valence bond theory and crystal field theory, which explains colour and magnetic behaviour. Practise naming complexes, predicting the number of unpaired electrons, and deciding whether a complex is high-spin or low-spin — these appear in almost every board paper.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Coordination Compounds</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. In [Fe(CN)₆]³⁻, the oxidation state of Fe is:</summary><ol type="A"><li>0</li><li>+2</li><li>+3</li><li>+6</li></ol><p class="sc-ans"><b>Answer: (C) +3</b> — CN⁻ is −1 each. Total charge of complex = −3. x + 6(−1) = −3 → x = +3.</p></details><details><summary>Q2. EDTA is a:</summary><ol type="A"><li>Monodentate ligand</li><li>Bidentate ligand</li><li>Tetradentate ligand</li><li>Hexadentate ligand</li></ol><p class="sc-ans"><b>Answer: (D) Hexadentate ligand</b> — EDTA has 2 N and 4 O donor atoms, coordinating through 6 atoms — hexadentate (sexadentate).</p></details><details><summary>Q3. Crystal Field Theory explains the colour of coordination compounds due to:</summary><ol type="A"><li>d-d electron transitions</li><li>s-p transitions</li><li>Change in oxidation state</li><li>Presence of ligands in outer sphere</li></ol><p class="sc-ans"><b>Answer: (A) d-d electron transitions</b> — The splitting of d-orbitals in crystal field causes d-d transitions, absorbing visible light and imparting colour.</p></details><details><summary>Q4. For [Co(NH₃)₆]³⁺, the coordination number of Co is:</summary><ol type="A"><li>3</li><li>4</li><li>6</li><li>12</li></ol><p class="sc-ans"><b>Answer: (C) 6</b> — Coordination number = number of ligand donor atoms bonded to central metal = 6 (one N from each NH₃).</p></details><details><summary>Q5. Which of the following is an ambidentate ligand?</summary><ol type="A"><li>NH₃</li><li>CN⁻</li><li>en</li><li>EDTA</li></ol><p class="sc-ans"><b>Answer: (B) CN⁻</b> — CN⁻ can donate through either C or N — ambidentate. en and EDTA are chelating; NH₃ is monodentate.</p></details><details><summary>Q6. Chelate effect makes complexes with chelating ligands more stable because:</summary><ol type="A"><li>Chelating ligands are stronger</li><li>Formation increases entropy</li><li>Central metal oxidation state changes</li><li>Electronic repulsion decreases</li></ol><p class="sc-ans"><b>Answer: (B) Formation increases entropy</b> — Chelation involves ring closure, releasing free solvent molecules, increasing entropy of system (ΔS &gt; 0 → more stable).</p></details><details><summary>Q7. EAN rule (18-electron rule) is best satisfied by:</summary><ol type="A"><li>Ionic complexes</li><li>Organometallic compounds</li><li>Coordination polymers</li><li>Werner complexes with high CN</li></ol><p class="sc-ans"><b>Answer: (B) Organometallic compounds</b> — Organometallic compounds (carbonyls, cyclopentadienyl complexes) typically obey the 18-electron rule.</p></details><details><summary>Q8. Geometric isomerism is possible in square planar complexes of type:</summary><ol type="A"><li>[MA₄]</li><li>[MA₃B]</li><li>[MA₂B₂]</li><li>[MAB₃]</li></ol><p class="sc-ans"><b>Answer: (C) [MA₂B₂]</b> — [MA₂B₂] square planar has cis (A&#x27;s adjacent) and trans (A&#x27;s opposite) forms.</p></details><details><summary>Q9. [Ni(CO)₄] has geometry:</summary><ol type="A"><li>Octahedral</li><li>Square planar</li><li>Tetrahedral</li><li>Linear</li></ol><p class="sc-ans"><b>Answer: (C) Tetrahedral</b> — Ni(0) in [Ni(CO)₄] has d¹⁰ configuration; CO is a strong field ligand but Ni(0) is tetrahedral (sp³).</p></details><details><summary>Q10. Spectrochemical series orders ligands by their ability to:</summary><ol type="A"><li>Donate electrons to metal</li><li>Split d-orbitals</li><li>Form ionic bonds</li><li>Increase coordination number</li></ol><p class="sc-ans"><b>Answer: (B) Split d-orbitals</b> — Spectrochemical series orders ligands from weak field (small Δ) to strong field (large d-orbital splitting Δ).</p></details><details><summary>Q11. Linkage isomers differ in the:</summary><ol type="A"><li>Coordination number</li><li>Mode of attachment of ambidentate ligand</li><li>Geometry</li><li>Oxidation state of metal</li></ol><p class="sc-ans"><b>Answer: (B) Mode of attachment of ambidentate ligand</b> — Linkage isomers: same formula but ambidentate ligand bonded through different donor atoms (e.g., SCN vs NCS).</p></details><details><summary>Q12. Werner&#x27;s theory was confirmed by:</summary><ol type="A"><li>Spectroscopy</li><li>Resolution of optically active complexes</li><li>X-ray crystallography</li><li>All of these</li></ol><p class="sc-ans"><b>Answer: (D) All of these</b> — Werner&#x27;s coordination theory was confirmed by isolation and resolution of optically active complexes and later by X-ray and spectroscopy.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

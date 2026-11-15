@@ -69,6 +69,9 @@
     <lastmod>2026-11-15</lastmod>
   </url>
   <url>
+    <loc>https://cbsemock.org.in/about.html</loc>
+  </url>
+  <url>
     <loc>https://cbsemock.org.in/cbse-class-10-ai-mock-papers.html</loc>
     <lastmod>2026-11-14</lastmod>
   </url>
@@ -343,10 +346,6 @@
   <url>
     <loc>https://cbsemock.org.in/news.html</loc>
     <lastmod>2026-11-14</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/privacy-policy.html</loc>
-    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://cbsemock.org.in/privacy.html</loc>
@@ -745,10 +744,6 @@
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/02-ph-scale-explorer.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
     <loc>https://cbsemock.org.in/virtual-labs/chemistry/03-neutralisation-reaction.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
@@ -777,10 +772,6 @@
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/10-balancing-chemical-equations.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
     <loc>https://cbsemock.org.in/virtual-labs/chemistry/11-filtration.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
@@ -793,15 +784,7 @@
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/14-paper-chromatography.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
     <loc>https://cbsemock.org.in/virtual-labs/chemistry/15-sublimation.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/16-temperature-and-solubility.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
@@ -809,63 +792,11 @@
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/18-rate-of-reaction-temperature.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/19-catalyst-investigation.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/20-gas-tests-laboratory.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
     <loc>https://cbsemock.org.in/virtual-labs/chemistry/21-electrolysis-of-water.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/22-electroplating-simulator.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/23-conductivity-of-solutions.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
     <loc>https://cbsemock.org.in/virtual-labs/chemistry/24-preparation-of-a-salt.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/25-flame-test-explorer.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/26-atomic-structure-explorer.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/27-electronic-configuration.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/28-periodic-table-trends.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/29-ionic-bond-formation.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/30-covalent-bond-formation.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/31-saturated-and-unsaturated-carbon-compounds.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/32-esterification-reaction.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
@@ -881,347 +812,11 @@
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/36-enthalpy-and-exothermic-reactions.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/37-equilibrium-shift-explorer.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
     <loc>https://cbsemock.org.in/virtual-labs/chemistry/38-redox-electron-transfer.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
     <loc>https://cbsemock.org.in/virtual-labs/chemistry/39-titration-and-endpoint.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/chemistry/40-organic-functional-group-identifier.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-01.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-02.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-03.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-04.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-05.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-06.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-07.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-08.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-09.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-10.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-11.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-12.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-13.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-14.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-15.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-16.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-17.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-18.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-19.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-20.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-21.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-22.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-23.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-24.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-25.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-26.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-27.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-28.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-29.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-30.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-31.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-32.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-33.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-34.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-35.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-36.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-37.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-38.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-39.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-40.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-41.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-42.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-43.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-44.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-45.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-46.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-47.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-48.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-49.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-50.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-51.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-52.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-53.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-54.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-55.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-56.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-57.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-58.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-59.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-60.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-61.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-62.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-63.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-64.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-65.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-66.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-67.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-68.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-69.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-70.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-71.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-72.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-73.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-74.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-75.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-76.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-77.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/lab-78.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/reference-demos/01-logic-gate-builder.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/reference-demos/02-loop-pattern-studio.html</loc>
-    <lastmod>2026-11-07</lastmod>
-  </url>
-  <url>
-    <loc>https://cbsemock.org.in/virtual-labs/computer-science/reference-demos/03-list-memory-studio.html</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>

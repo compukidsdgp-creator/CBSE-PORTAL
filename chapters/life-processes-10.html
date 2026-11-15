@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>Life processes are the basic functions that keep organisms alive: nutrition, respiration, transportation and excretion. The chapter explains photosynthesis, human digestion, aerobic and anaerobic respiration, the human heart and double circulation, transport in plants through xylem and phloem, and the structure of the nephron. Labelled diagrams of the digestive system, heart and nephron are frequently asked.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Life Processes</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. Photosynthesis occurs in:</summary><ol type="A"><li>Mitochondria</li><li>Nucleus</li><li>Chloroplasts</li><li>Ribosomes</li></ol><p class="sc-ans"><b>Answer: (C) Chloroplasts</b> — Chloroplasts contain chlorophyll; light reactions occur in thylakoid membrane, dark reactions in stroma.</p></details><details><summary>Q2. The equation for aerobic respiration is:</summary><ol type="A"><li>C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂</li><li>C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP</li><li>6CO₂+6H₂O → C₆H₁₂O₆+6O₂</li><li>C₆H₁₂O₆ → 2C₃H₄O₃</li></ol><p class="sc-ans"><b>Answer: (B) C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP</b> — Aerobic: glucose + oxygen → carbon dioxide + water + energy (ATP). Net: ~36-38 ATP.</p></details><details><summary>Q3. Stomata in leaves help in:</summary><ol type="A"><li>Water absorption</li><li>Gas exchange and transpiration</li><li>Photosynthesis directly</li><li>Mineral absorption</li></ol><p class="sc-ans"><b>Answer: (B) Gas exchange and transpiration</b> — Stomata: pores in leaves for CO₂ in / O₂ out (gas exchange) and water vapour out (transpiration).</p></details><details><summary>Q4. In human digestion, bile is produced by the:</summary><ol type="A"><li>Stomach</li><li>Pancreas</li><li>Liver</li><li>Small intestine</li></ol><p class="sc-ans"><b>Answer: (C) Liver</b> — Bile is produced in the liver, stored in gall bladder, released into duodenum to emulsify fats.</p></details><details><summary>Q5. Blood entering the right atrium comes from:</summary><ol type="A"><li>Lungs (oxygenated)</li><li>Body tissues (deoxygenated)</li><li>Heart muscle</li><li>Aorta</li></ol><p class="sc-ans"><b>Answer: (B) Body tissues (deoxygenated)</b> — Deoxygenated blood from body → Superior/Inferior Vena Cava → Right atrium → Right ventricle → Lungs.</p></details><details><summary>Q6. Excretion in humans is primarily by the:</summary><ol type="A"><li>Liver</li><li>Lungs</li><li>Kidneys</li><li>Skin</li></ol><p class="sc-ans"><b>Answer: (C) Kidneys</b> — Kidneys filter blood, form urine (urea, water, salts). Primary excretory organs. Lungs excrete CO₂.</p></details><details><summary>Q7. The functional unit of kidney is:</summary><ol type="A"><li>Neuron</li><li>Nephron</li><li>Alveolus</li><li>Villus</li></ol><p class="sc-ans"><b>Answer: (B) Nephron</b> — Nephron is the filtration unit of kidney: glomerulus, Bowman&#x27;s capsule, tubules, collecting duct.</p></details><details><summary>Q8. Transpiration in plants helps in:</summary><ol type="A"><li>Food transport</li><li>Water and mineral transport upward</li><li>CO₂ absorption</li><li>Photosynthesis only</li></ol><p class="sc-ans"><b>Answer: (B) Water and mineral transport upward</b> — Transpiration pull creates suction that draws water and minerals upward through xylem.</p></details><details><summary>Q9. Fermentation is an example of:</summary><ol type="A"><li>Aerobic respiration</li><li>Anaerobic respiration</li><li>Photosynthesis</li><li>Digestion</li></ol><p class="sc-ans"><b>Answer: (B) Anaerobic respiration</b> — Fermentation: glucose → ethanol + CO₂ (by yeast) in absence of oxygen — anaerobic respiration.</p></details><details><summary>Q10. Haemoglobin carries oxygen and is present in:</summary><ol type="A"><li>White blood cells</li><li>Plasma</li><li>Red blood cells</li><li>Platelets</li></ol><p class="sc-ans"><b>Answer: (C) Red blood cells</b> — Haemoglobin in RBCs (erythrocytes) carries O₂ from lungs to tissues.</p></details><details><summary>Q11. Villi in small intestine increase:</summary><ol type="A"><li>Length</li><li>Surface area for absorption</li><li>Blood supply</li><li>Peristalsis</li></ol><p class="sc-ans"><b>Answer: (B) Surface area for absorption</b> — Villi (and microvilli = brush border) enormously increase surface area, maximising nutrient absorption.</p></details><details><summary>Q12. Arteries carry blood:</summary><ol type="A"><li>Away from heart</li><li>To the heart</li><li>Only oxygenated blood</li><li>Only deoxygenated blood</li></ol><p class="sc-ans"><b>Answer: (A) Away from heart</b> — Arteries always carry blood AWAY from heart. Veins carry blood TO heart. Oxygenation content varies.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>

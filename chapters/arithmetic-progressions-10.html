@@ -101,6 +101,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -167,9 +168,32 @@ footer a:hover{color:var(--gold);}
   </div>
 </main>
 
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>An arithmetic progression is a list of numbers with a constant difference between consecutive terms. The chapter rests on two formulas — the nth term aₙ = a + (n − 1)d and the sum Sₙ = n/2 [2a + (n − 1)d] — and on reading word problems about savings, instalments or rows of seats as an AP. Questions often ask for a missing term, the number of terms, or which term of the AP equals a given value.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Arithmetic Progressions</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. The nth term of an AP with first term a and common difference d is:</summary><ol type="A"><li>a + nd</li><li>a + (n−1)d</li><li>na + d</li><li>a − (n−1)d</li></ol><p class="sc-ans"><b>Answer: (B) a + (n−1)d</b> — aₙ = a + (n−1)d. First term a, adding d a total of (n−1) times to reach nth term.</p></details><details><summary>Q2. Sum of first n terms of AP: Sₙ =</summary><ol type="A"><li>n(a+l)/2</li><li>n/2 × (2a+(n−1)d)</li><li>Both A and B</li><li>na + nd²</li></ol><p class="sc-ans"><b>Answer: (C) Both A and B</b> — Sₙ = n(a+l)/2 (where l = last term) = n/2×(2a+(n−1)d). Both are equivalent.</p></details><details><summary>Q3. Find the 20th term of AP: 3, 7, 11, 15, ...</summary><ol type="A"><li>79</li><li>77</li><li>75</li><li>81</li></ol><p class="sc-ans"><b>Answer: (A) 79</b> — a=3, d=4. a₂₀ = 3 + 19×4 = 3 + 76 = 79.</p></details><details><summary>Q4. If a₅ = 17 and a₉ = 33, the common difference d =</summary><ol type="A"><li>2</li><li>4</li><li>8</li><li>16</li></ol><p class="sc-ans"><b>Answer: (B) 4</b> — a₉ − a₅ = 4d = 33 − 17 = 16 → d = 4.</p></details><details><summary>Q5. How many terms of AP 1, 4, 7, ... give sum 1326?</summary><ol type="A"><li>27</li><li>28</li><li>29</li><li>30</li></ol><p class="sc-ans"><b>Answer: (B) 28</b> — Sₙ = n/2(2+3(n−1)) = n(3n−1)/2 = 1326 → n² − n/3 = 884 → 3n²−n−2652=0 → n=29... Let&#x27;s verify: S₂₉ = 29/2(1+1+(28×3))= 29/2×85=1232.5. Try S₂₈ = 28/2(2+27×3)= 14×83=1162. Try formula: n(3n-1)/2=1326 → 3n²-n-2652=0, discriminant=1+4×3×2652=31825, √31825≈178.4, n=(1+178.4)/6≈29.9, so n=28 actual check: a=1,d=3, S₂₈=14(2+81)=14×83=1162. S₃₀=15(2+87)=15×89=1335. Hmm, need exact. 1 to check: n=29: 29/2(2+28×3)=29/2×86=29×43=1247. Try different: Wait. a=1,d=3. Sn=n/2(2+3(n-1))=n/2(3n-1)=1326→3n²-n-2652=0→n=(1+√(1+31824))/6=(1+√31825)/6. √31836=178.43. Actually let me just pick B=28 as the answer and note the calculation.</p></details><details><summary>Q6. The sum 1 + 2 + 3 + ... + 100 =</summary><ol type="A"><li>5000</li><li>5050</li><li>10000</li><li>100</li></ol><p class="sc-ans"><b>Answer: (B) 5050</b> — S₁₀₀ = 100×101/2 = 5050. Gauss&#x27;s formula: Sₙ = n(n+1)/2.</p></details><details><summary>Q7. The 10th term of AP: 100, 97, 94, ... is:</summary><ol type="A"><li>73</li><li>76</li><li>70</li><li>79</li></ol><p class="sc-ans"><b>Answer: (A) 73</b> — a=100, d=−3. a₁₀ = 100 + 9×(−3) = 100 − 27 = 73.</p></details><details><summary>Q8. In an AP, if first term = 7, last term = 49 and sum = 420, number of terms =</summary><ol type="A"><li>12</li><li>15</li><li>14</li><li>10</li></ol><p class="sc-ans"><b>Answer: (B) 15</b> — S = n(a+l)/2 → 420 = n×56/2 = 28n → n = 15.</p></details><details><summary>Q9. Which term of AP 3, 10, 17, ... is 59?</summary><ol type="A"><li>9th</li><li>8th</li><li>10th</li><li>7th</li></ol><p class="sc-ans"><b>Answer: (A) 9th</b> — aₙ = 59 → 3+(n−1)7 = 59 → (n−1)7=56 → n−1=8 → n=9.</p></details><details><summary>Q10. If a, b, c are in AP, then:</summary><ol type="A"><li>a+c = 2b</li><li>a−c = 2b</li><li>ac = b²</li><li>a/c = b</li></ol><p class="sc-ans"><b>Answer: (A) a+c = 2b</b> — In AP: b−a = c−b → a+c = 2b. The middle term is the arithmetic mean of the other two.</p></details><details><summary>Q11. Sum of first 10 natural numbers =</summary><ol type="A"><li>45</li><li>55</li><li>50</li><li>100</li></ol><p class="sc-ans"><b>Answer: (B) 55</b> — S = n(n+1)/2 = 10×11/2 = 55.</p></details><details><summary>Q12. For the AP: 2, 5, 8, 11, ..., the common difference is:</summary><ol type="A"><li>2</li><li>3</li><li>5</li><li>8</li></ol><p class="sc-ans"><b>Answer: (B) 3</b> — d = 5−2 = 3 (or 8−5 = 3). Common difference is constant = 3.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>
@@ -184,7 +208,7 @@ const QUESTIONS = [
   {q:"How many terms of AP 1, 4, 7, ... give sum 1326?",opts:["27", "28", "29", "30"],ans:"B",exp:"S\u2099 = n/2(2+3(n\u22121)) = n(3n\u22121)/2 = 1326 \u2192 n\u00b2 \u2212 n/3 = 884 \u2192 3n\u00b2\u2212n\u22122652=0 \u2192 n=29... Let's verify: S\u2082\u2089 = 29/2(1+1+(28\u00d73))= 29/2\u00d785=1232.5. Try S\u2082\u2088 = 28/2(2+27\u00d73)= 14\u00d783=1162. Try formula: n(3n-1)/2=1326 \u2192 3n\u00b2-n-2652=0, discriminant=1+4\u00d73\u00d72652=31825, \u221a31825\u2248178.4, n=(1+178.4)/6\u224829.9, so n=28 actual check: a=1,d=3, S\u2082\u2088=14(2+81)=14\u00d783=1162. S\u2083\u2080=15(2+87)=15\u00d789=1335. Hmm, need exact. 1 to check: n=29: 29/2(2+28\u00d73)=29/2\u00d786=29\u00d743=1247. Try different: Wait. a=1,d=3. Sn=n/2(2+3(n-1))=n/2(3n-1)=1326\u21923n\u00b2-n-2652=0\u2192n=(1+\u221a(1+31824))/6=(1+\u221a31825)/6. \u221a31836=178.43. Actually let me just pick B=28 as the answer and note the calculation."},
   {q:"The sum 1 + 2 + 3 + ... + 100 =",opts:["5000", "5050", "10000", "100"],ans:"B",exp:"S\u2081\u2080\u2080 = 100\u00d7101/2 = 5050. Gauss's formula: S\u2099 = n(n+1)/2."},
   {q:"The 10th term of AP: 100, 97, 94, ... is:",opts:["73", "76", "70", "79"],ans:"A",exp:"a=100, d=\u22123. a\u2081\u2080 = 100 + 9\u00d7(\u22123) = 100 \u2212 27 = 73."},
-  {q:"In an AP, if first term = 7, last term = 49 and sum = 420, number of terms =",opts:["12", "15", "15", "10"],ans:"B",exp:"S = n(a+l)/2 \u2192 420 = n\u00d756/2 = 28n \u2192 n = 15."},
+  {q:"In an AP, if first term = 7, last term = 49 and sum = 420, number of terms =",opts:["12", "15", "14", "10"],ans:"B",exp:"S = n(a+l)/2 \u2192 420 = n\u00d756/2 = 28n \u2192 n = 15."},
   {q:"Which term of AP 3, 10, 17, ... is 59?",opts:["9th", "8th", "10th", "7th"],ans:"A",exp:"a\u2099 = 59 \u2192 3+(n\u22121)7 = 59 \u2192 (n\u22121)7=56 \u2192 n\u22121=8 \u2192 n=9."},
   {q:"If a, b, c are in AP, then:",opts:["a+c = 2b", "a\u2212c = 2b", "ac = b\u00b2", "a/c = b"],ans:"A",exp:"In AP: b\u2212a = c\u2212b \u2192 a+c = 2b. The middle term is the arithmetic mean of the other two."},
   {q:"Sum of first 10 natural numbers =",opts:["45", "55", "50", "100"],ans:"B",exp:"S = n(n+1)/2 = 10\u00d711/2 = 55."},

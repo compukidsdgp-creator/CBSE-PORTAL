@@ -138,10 +138,35 @@ def build(slug, cfg):
     html = (TEMPLATE.replace("__TITLE__", cfg["title"]).replace("__H1__", cfg["h1"])
             .replace("__LEAD__", cfg["lead"]).replace("__META__", cfg["meta"]).replace("__ACCENT__", cfg["accent"])
             .replace("__SLUG__", slug).replace("__DATA__", json.dumps(items, ensure_ascii=False, separators=(",", ":")))
-            .replace("__CATS__", json.dumps(cats)).replace("__COUNT__", str(len(items))))
+            .replace("__CATS__", json.dumps(cats)).replace("__COUNT__", str(len(items)))
+            .replace("__INDEX__", static_index(items, cfg)))
     out.mkdir(exist_ok=True)
     (out / "index.html").write_text(html, encoding="utf-8")
     print(f"[reels] /{slug}/  {len(items)} reels")
+
+
+def static_index(items, cfg):
+    """Plain-HTML list of every reel title, so the page's content is readable without JavaScript."""
+    import html as _h
+    intro = ("Short voiced reels that walk through the formulas of one chapter at a time, with an animated diagram for each formula."
+             if "Formula" in cfg["title"] else
+             "Short animated reels that explain the reason behind a formula, rule or idea, one concept per reel, in under a minute.")
+    groups = {}
+    for it in items:
+        groups.setdefault(it.get("cat") or "Other", []).append(it)
+    parts = [f'<section class="idx" aria-label="All reels"><h2>All {_h.escape(cfg["title"])}</h2><p>{_h.escape(intro)}</p>']
+    for cat, its in groups.items():
+        parts.append(f"<h3>{_h.escape(cat)}</h3><ul>")
+        seen = set()
+        for it in its:
+            t = it.get("title") or ""
+            if t and t not in seen:
+                seen.add(t)
+                cls = f" — Class {it['cls']}" if str(it.get("cls")) in ("10", "11", "12") else ""
+                parts.append(f"<li>{_h.escape(t)}{cls}</li>")
+        parts.append("</ul>")
+    parts.append("</section>")
+    return "".join(parts)
 
 
 TEMPLATE = r"""<!doctype html>
@@ -242,6 +267,7 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:0 16px 34px}
 @media(max-width:600px){.stage{--dx:18px;--dy:26px;--dz:100px}.nav{width:40px;height:40px;font-size:19px;top:auto;bottom:4px;transform:none}.nav.p{left:22%}.nav.n{right:22%}
   .wall{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
 @media(prefers-reduced-motion:reduce){.fc,.deck,.tile{transition:none}.tile{opacity:1;transform:none}}
+.idx{max-width:960px;margin:28px auto 0;padding:0 16px;color:#b9c4dd;font-size:14px;line-height:1.6}.idx h2{font-size:16px;color:#fff;margin:0 0 6px}.idx p{margin:0 0 12px}.idx h3{font-size:13px;color:#fff;margin:14px 0 4px;text-transform:uppercase;letter-spacing:.06em}.idx ul{margin:0;padding-left:18px;columns:2;column-gap:28px}@media(max-width:600px){.idx ul{columns:1}}
 </style>
 </head>
 <body>
@@ -272,7 +298,8 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:0 16px 34px}
     <a href="https://www.facebook.com/profile.php?id=61596243964780" target="_blank" rel="noopener" style="background:#1877f2">Facebook</a>
   </div>
 </main>
-<footer>© CBSEMock · <a href="../index.html">cbsemock.org.in</a> · <a href="../formula-board/">Formula Board</a> · <a href="../free-mock-papers/">Free mock papers</a></footer>
+__INDEX__
+<footer>© CBSEMock · <a href="../index.html">cbsemock.org.in</a> · <a href="../about.html">About</a> · <a href="../formula-board/">Formula Board</a> · <a href="../free-mock-papers/">Free mock papers</a></footer>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Reel player">
   <div class="t" id="lbT"></div>
   <button class="x" id="lbX" type="button" aria-label="Close">&times;</button>

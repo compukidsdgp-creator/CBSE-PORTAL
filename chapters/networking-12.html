@@ -85,6 +85,7 @@ main{max-width:860px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-lef
 footer{background:var(--navy);color:rgba(255,255,255,.65);text-align:center;padding:20px 16px;font-size:.78rem;}
 footer a{color:inherit;text-decoration:none;margin:0 6px;}
 footer a:hover{color:var(--gold);}
+@media(max-width:560px){.info-box{flex-wrap:wrap;row-gap:10px;justify-content:center}.info-box .stat{padding:0 8px}} /* info-box-fix */
 </style>
 </head>
 <body>
@@ -136,9 +137,32 @@ footer a:hover{color:var(--gold);}
       </div>
   </div>
 </main>
+<!-- STATIC-CONTENT:START -->
+<style id="static-content-css">
+.sc-wrap{max-width:860px;margin:28px auto 8px;padding:0 16px;font-family:inherit}
+.sc-card{background:var(--card,#fff);border:1px solid var(--border,#dde3ed);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sc-card h2{font-size:1.1rem;margin:0 0 10px;color:var(--navy,#0f2347)}
+.sc-card p{line-height:1.7;margin:0;color:var(--text,#1a1a1a)}
+.sc-qa details{border-top:1px solid var(--border,#dde3ed);padding:10px 0}
+.sc-qa details:first-of-type{border-top:0}
+.sc-qa summary{cursor:pointer;font-weight:600;line-height:1.5;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans{margin:8px 0 0 0;line-height:1.65;color:var(--text,#1a1a1a)}
+.sc-qa .sc-ans b{color:var(--correct,#2e7d32)}
+.sc-qa ol{margin:6px 0 0 18px;padding:0;color:var(--muted,#666)}
+.sc-qa summary,.sc-qa .sc-ans{white-space:pre-line}
+.sc-meta{font-size:.85rem;color:var(--muted,#666);text-align:center;margin:6px 0 0}
+.sc-meta a{color:inherit}
+body.dark .sc-card h2{color:var(--gold,#ffd54f)}
+</style>
+<section class="sc-wrap" aria-label="Chapter notes and answers">
+<div class="sc-card"><h2>About this chapter</h2><p>This chapter covers how computers communicate: network types (PAN, LAN, MAN, WAN), topologies, transmission media, devices such as switches, routers and gateways, protocols like HTTP, FTP and TCP/IP, and web concepts including URLs and web servers. Case-study questions ask you to suggest the best layout, cable type and device for connecting the buildings of an organisation.</p></div>
+<div class="sc-card sc-qa"><h2>Answers &amp; explanations — Networking &amp; Cyber Safety</h2><p style="margin-bottom:8px;color:var(--muted,#666)">Try the quiz above first, then open each question to check the answer and the reasoning.</p><details><summary>Q1. HTTP stands for:</summary><ol type="A"><li>HyperText Transfer Protocol</li><li>High Transfer Text Protocol</li><li>HyperText Transmission Protocol</li><li>Hybrid Text Transfer Protocol</li></ol><p class="sc-ans"><b>Answer: (A) HyperText Transfer Protocol</b> — HTTP (HyperText Transfer Protocol) is the foundation of data communication on the World Wide Web.</p></details><details><summary>Q2. An IP address uniquely identifies:</summary><ol type="A"><li>A website</li><li>A device on a network</li><li>A protocol</li><li>A port</li></ol><p class="sc-ans"><b>Answer: (B) A device on a network</b> — IP (Internet Protocol) address identifies a device on a network. IPv4: 32-bit (e.g. 192.168.1.1).</p></details><details><summary>Q3. DNS stands for:</summary><ol type="A"><li>Domain Name System</li><li>Data Network System</li><li>Digital Name Server</li><li>Domain Node Service</li></ol><p class="sc-ans"><b>Answer: (A) Domain Name System</b> — DNS translates human-readable domain names (cbsemock.org.in) to IP addresses.</p></details><details><summary>Q4. Which topology connects all devices to a central hub/switch?</summary><ol type="A"><li>Bus</li><li>Ring</li><li>Star</li><li>Mesh</li></ol><p class="sc-ans"><b>Answer: (C) Star</b> — Star topology: all nodes connect to a central hub/switch. Easy to manage; hub failure affects all.</p></details><details><summary>Q5. FTP is used to:</summary><ol type="A"><li>Send emails</li><li>Transfer files between computers</li><li>Browse websites</li><li>Stream video</li></ol><p class="sc-ans"><b>Answer: (B) Transfer files between computers</b> — FTP (File Transfer Protocol) is used to transfer files between a client and server over a network.</p></details><details><summary>Q6. The number of bits in an IPv4 address is:</summary><ol type="A"><li>16</li><li>32</li><li>64</li><li>128</li></ol><p class="sc-ans"><b>Answer: (B) 32</b> — IPv4: 32-bit address, written as 4 octets (e.g. 192.168.0.1). IPv6 is 128-bit.</p></details><details><summary>Q7. A firewall is used to:</summary><ol type="A"><li>Increase internet speed</li><li>Monitor and control network traffic based on rules</li><li>Assign IP addresses</li><li>Connect two different networks</li></ol><p class="sc-ans"><b>Answer: (B) Monitor and control network traffic based on rules</b> — Firewall: security system that monitors/controls incoming and outgoing network traffic based on predetermined rules.</p></details><details><summary>Q8. Phishing is a type of:</summary><ol type="A"><li>Network topology</li><li>Cyber attack to steal credentials by deception</li><li>Encryption method</li><li>File transfer protocol</li></ol><p class="sc-ans"><b>Answer: (B) Cyber attack to steal credentials by deception</b> — Phishing: fraudulent attempt to obtain sensitive information (passwords, card numbers) by disguising as a trusted entity.</p></details><details><summary>Q9. Which protocol secures data transmission over HTTP?</summary><ol type="A"><li>FTP</li><li>SMTP</li><li>HTTPS (SSL/TLS)</li><li>POP3</li></ol><p class="sc-ans"><b>Answer: (C) HTTPS (SSL/TLS)</b> — HTTPS uses SSL/TLS encryption to secure HTTP communication. The padlock in browser indicates HTTPS.</p></details><details><summary>Q10. LAN covers:</summary><ol type="A"><li>A city</li><li>A country</li><li>A small area like a building or campus</li><li>The whole world</li></ol><p class="sc-ans"><b>Answer: (C) A small area like a building or campus</b> — LAN (Local Area Network): limited geographic area like a building or campus. MAN = city, WAN = wide area.</p></details><details><summary>Q11. Cookies in web browsing are:</summary><ol type="A"><li>Malware</li><li>Small data files stored on client by website</li><li>Encryption keys</li><li>Network packets</li></ol><p class="sc-ans"><b>Answer: (B) Small data files stored on client by website</b> — Cookies: small text files stored on the user&#x27;s browser by a website to remember state, preferences, session info.</p></details><details><summary>Q12. Which of the following is NOT a cyber safety practice?</summary><ol type="A"><li>Using strong passwords</li><li>Sharing OTP with known contacts</li><li>Enabling 2-factor authentication</li><li>Keeping software updated</li></ol><p class="sc-ans"><b>Answer: (B) Sharing OTP with known contacts</b> — NEVER share OTP — even with known contacts. OTPs are for your eyes only. This is a common social engineering attack.</p></details></div>
+<p class="sc-meta">Prepared by the <a href="../about.html">CBSEMock team</a> · Last updated 15 November 2026 · Found a mistake? <a href="../contact.html">Tell us</a></p>
+</section>
+<!-- STATIC-CONTENT:END -->
 <footer>
   &copy; 2026 cbsemock.org.in &nbsp;|&nbsp;
-  <a href="../privacy.html">Privacy Policy</a> |
+  <a href="../about.html">About Us</a> | <a href="../privacy.html">Privacy Policy</a> |
   <a href="../terms.html">Terms of Use</a> |
   <a href="../contact.html">Contact</a> |
   <a href="../disclaimer.html">Disclaimer</a>
