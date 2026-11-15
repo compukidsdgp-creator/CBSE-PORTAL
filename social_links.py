@@ -54,15 +54,29 @@ def post_fb_comment(object_id, message, token, dry_run=False):
         print("[FB comment] no token — skipped")
         return None
     data = urllib.parse.urlencode({"message": message, "access_token": token}).encode()
-    try:
-        with urllib.request.urlopen(urllib.request.Request(f"{FB_API}/{object_id}/comments", data=data), timeout=30) as r:
-            cid = json.load(r).get("id")
-            print(f"[FB comment OK] {cid}")
-            return cid
-    except urllib.error.HTTPError as e:
-        print(f"::warning::Facebook link comment failed ({e.code}): {e.read().decode()[:200]}")
-    except Exception as e:
-        print(f"::warning::Facebook link comment failed: {e}")
+    targets = [str(object_id)]
+    try:                                    # a reel's video id can't take comments — its post id can
+        q = urllib.parse.urlencode({"fields": "post_id", "access_token": token})
+        with urllib.request.urlopen(f"{FB_API}/{object_id}?{q}", timeout=20) as r:
+            pid = json.load(r).get("post_id")
+        if pid:
+            targets.insert(0, pid if "_" in str(pid) else str(pid))
+    except Exception:
+        pass
+    err = ""
+    for t in targets:
+        try:
+            with urllib.request.urlopen(urllib.request.Request(f"{FB_API}/{t}/comments", data=data), timeout=30) as r:
+                cid = json.load(r).get("id")
+                print(f"[FB comment OK] {cid}")
+                return cid
+        except urllib.error.HTTPError as e:
+            err = f"({e.code}): {e.read().decode()[:200]}"
+        except Exception as e:
+            err = str(e)
+    print(f"::warning::Facebook link comment failed {err}")
+    if "(#200)" in err:
+        print("::warning::The Facebook page token needs the pages_manage_engagement permission for link comments.")
     return None
 
 
