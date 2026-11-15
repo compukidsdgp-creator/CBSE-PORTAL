@@ -141,7 +141,7 @@ footer a:hover{text-decoration:underline;}
 <main class="wrap">
 <article>
 <div class="byline"><div class="av" aria-hidden="true">BM</div><div><b>Biswarup Mukherjee</b> · Teaching Administrator, CBSEMock<small>20 years of teaching · Reviewed by subject teachers · <a href="../about.html">About us</a></small></div></div>
-<figure class="reel"><video controls playsinline preload="none" poster="../why-reels/thumb/01-circle_area_pi_r_squared.jpg" src="../formula-posts/why/posted/01_why_circle_area_pi_r_squared.mp4" title="Why is the area of a circle πr²?"></video><p>▶ Watch the WHY? reel</p></figure>
+<figure class="reel"><div class="igf" data-ig="https://www.instagram.com/reel/Dfwre-WkgeP/" role="button" tabindex="0" aria-label="Play the reel on Instagram" style="background-image:url(../why-reels/thumb/01-circle_area_pi_r_squared.jpg)"><span class="igplay">▶</span><span class="igbadge">Instagram</span></div><a class="igbtn" href="https://www.instagram.com/reel/Dfwre-WkgeP/" target="_blank" rel="noopener">Watch &amp; follow on Instagram ↗</a></figure>
 <p>Every Class 10 student can write <b>A = πr²</b>. Far fewer can say <i>why</i> it is true — and that is exactly what an examiner is testing when a question asks you to “justify” a formula or when a word problem looks unfamiliar. The good news: the reason fits into one picture.</p>
 
 <h2>The short answer</h2>
@@ -181,6 +181,20 @@ footer a:hover{text-decoration:underline;}
 </main>
 <footer>&copy; 2026 CBSEMock.org.in &nbsp;|&nbsp;
 <a href="../about.html">About Us</a>|<a href="../privacy.html">Privacy Policy</a>|<a href="../terms.html">Terms of Use</a>|<a href="../contact.html">Contact</a>|<a href="../disclaimer.html">Disclaimer</a></footer>
-
+<script>
+document.querySelectorAll('.igf').forEach(function(el){
+  function go(){
+    var u=el.getAttribute('data-ig'), b=document.createElement('blockquote');
+    b.className='instagram-media'; b.setAttribute('data-instgrm-permalink',u+'?utm_source=ig_embed');
+    b.setAttribute('data-instgrm-version','14'); b.innerHTML='<a href="'+u+'" target="_blank" rel="noopener">View this reel on Instagram</a>';
+    el.replaceWith(b);
+    if(window.instgrm){window.instgrm.Embeds.process();}
+    else{var s=document.createElement('script');s.async=true;s.src='https://www.instagram.com/embed.js';document.body.appendChild(s);}
+    try{gtag('event','ig_reel_play',{page_path:location.pathname});}catch(e){}
+  }
+  el.addEventListener('click',go);
+  el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+});
+</script>
 </body>
 </html>
