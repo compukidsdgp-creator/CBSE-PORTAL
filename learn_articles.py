@@ -320,4 +320,452 @@ print(math.isclose(a, 0.3))     # True   — the recommended way</code></pre>
             ("Python Functions & Modules quiz", "chapters/python-functions-12.html"),
             ("Informatics Practices practice papers", "cbse-class-12-informatics-practices-practice-papers.html")],
 },
+{
+"slug": "why-does-adding-resistors-in-parallel-lower-resistance",
+"reel": "parallel_resistors",
+"title": "Why does adding a resistor in parallel lower the resistance?",
+"h1": "Why does adding a resistor in parallel lower the total resistance?",
+"description": "Adding a resistor in parallel gives current an extra path, so total resistance falls. The road analogy, the 1/R formula derived, worked examples and exam traps for CBSE Class 10 and 12 Physics.",
+"category": "Physics", "class_label": "Class 10 · 12", "published": "2026-11-18", "read_min": 6,
+"body": """
+<p>It feels wrong at first. You add <i>more</i> resistors to a circuit and the total resistance goes <i>down</i>. Yet that is exactly what happens when resistors are connected in parallel — and it is why every appliance in your home is wired in parallel. Once you see current as traffic, the result becomes obvious.</p>
+
+<h2>The short answer</h2>
+<p>A resistor in parallel does not sit in the way of the current — it opens a <b>new path</b> beside the old one. With the same battery voltage pushing, more paths let more current flow. Since <b>R = V / I</b>, a bigger current at the same voltage means a <b>smaller</b> total resistance.</p>
+
+<h2>Think of current as cars on roads</h2>
+<p>Picture the battery as a city that sends cars (charge) out, and each resistor as a road. With one narrow road, only so many cars get through each second — say 1 ampere. Now build a second, identical road right beside the first. Each road still carries 1 A, because each one still has the full voltage across it. Together they carry <b>2 A</b>. The city sees twice the traffic flowing for the same push, so the combination behaves like a road with <b>half</b> the resistance.</p>
+<p>Compare this with <b>series</b>: putting a second road at the end of the first makes one longer road. Every car must travel both, so traffic slows and resistance adds up: R = R₁ + R₂.</p>
+
+<h2>Deriving the formula</h2>
+<ol>
+  <li>In parallel, every resistor is connected across the same two points, so each has the <b>same voltage V</b>.</li>
+  <li>The current through each is given by Ohm's law: I₁ = V/R₁ and I₂ = V/R₂.</li>
+  <li>The main current splits and rejoins, so <b>I = I₁ + I₂</b> (charge is conserved).</li>
+  <li>Write I = V/R for the whole combination: V/R = V/R₁ + V/R₂.</li>
+  <li>Divide by V: <b>1/R = 1/R₁ + 1/R₂</b>.</li>
+</ol>
+<p>Because you are adding positive fractions, 1/R is bigger than either 1/R₁ or 1/R₂ alone — so R is always <b>smaller than the smallest resistor</b> in the group. That single fact lets you check your answers instantly.</p>
+
+<h2>Worked examples</h2>
+<p><b>Q1.</b> Two 6 Ω resistors are connected in parallel. Find the equivalent resistance.</p>
+<p><b>A.</b> 1/R = 1/6 + 1/6 = 2/6, so R = <b>3 Ω</b>. Two equal resistors in parallel always give half of one: n equal resistors give R/n.</p>
+<p><b>Q2.</b> 3 Ω and 6 Ω are in parallel across a 6 V battery. Find the total current.</p>
+<p><b>A.</b> 1/R = 1/3 + 1/6 = 3/6, so R = 2 Ω. I = V/R = 6/2 = <b>3 A</b>. Check: 6/3 = 2 A through one branch and 6/6 = 1 A through the other, total 3 A. ✔</p>
+<p>A handy shortcut for exactly two resistors: <b>R = R₁R₂ / (R₁ + R₂)</b> — “product over sum”. For 3 Ω and 6 Ω: 18/9 = 2 Ω.</p>
+
+<h2>Why homes are wired in parallel</h2>
+<ul>
+  <li>Every appliance gets the full mains voltage (220 V in India).</li>
+  <li>Each appliance can be switched on or off without affecting the others.</li>
+  <li>If one bulb fuses, the others keep working — unlike old series fairy lights.</li>
+</ul>
+<p>The flip side: every appliance you switch on adds another path and the total current drawn from the mains rises. That is why overloading a socket is dangerous and why circuits need fuses or MCBs.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+  <li><b>Forgetting to flip at the end.</b> If 1/R = 1/2, then R = 2 Ω, not 0.5 Ω.</li>
+  <li><b>Adding resistances in parallel.</b> Only series resistances add directly.</li>
+  <li><b>Getting an answer larger than the smallest resistor.</b> In parallel that is impossible — recheck.</li>
+</ul>
+""",
+"practice": [
+  ("Three 9 Ω resistors are connected in parallel. What is the equivalent resistance?", "n equal resistors in parallel give R/n = 9/3 = 3 Ω."),
+  ("A 4 Ω and a 12 Ω resistor are in parallel. Find the equivalent resistance.", "Product over sum: (4 × 12)/(4 + 12) = 48/16 = 3 Ω."),
+  ("Why does a fused bulb not switch off the other bulbs in a house?", "House wiring is parallel, so each bulb is on its own path across the mains; breaking one path leaves the others complete."),
+],
+"related": [("Class 10 Science mock tests", "cbse-class-10-science-mock-tests.html"),
+            ("Electricity (Class 10) quiz", "chapters/electricity-10.html"),
+            ("Current Electricity (Class 12) quiz", "chapters/current-electricity-12.html"),
+            ("Class 12 Physics mock papers", "cbse-class-12-physics-mock-papers.html")],
+},
+{
+"slug": "why-can-ai-be-biased",
+"reel": "ai_bias",
+"title": "Why can AI be biased? Data, fairness and AI ethics explained",
+"h1": "Why can an AI be biased?",
+"description": "AI learns only from its training data, so biased data produces biased decisions. A hiring-AI example, types of bias and how to reduce them — AI ethics for CBSE AI Class 10 and 12.",
+"category": "AI", "class_label": "Class 10 · 12", "published": "2026-11-22", "read_min": 5,
+"body": """
+<p>We often imagine computers as perfectly neutral: they just follow the numbers. So how can an AI system be unfair? The surprising answer is that an AI is only as fair as the <b>data</b> it learns from. This is one of the central ideas of <b>AI Ethics</b> in the CBSE AI curriculum.</p>
+
+<h2>The short answer</h2>
+<p>A machine-learning model has no opinions of its own. It finds patterns in its training examples and copies them. If the examples carry an unfair pattern from the past, the model learns that pattern too — and then repeats it automatically, at scale, on new people.</p>
+
+<h2>A hiring example</h2>
+<p>Imagine a company trains an AI to shortlist job applicants. It feeds the AI ten years of old hiring records. In those years, for reasons that had nothing to do with ability, almost everyone hired came from one group — call it Group A.</p>
+<ol>
+  <li>The AI studies the records and notices a strong pattern: applicants from Group A were usually hired.</li>
+  <li>It quietly learns the rule “Group A means a good candidate”.</li>
+  <li>A brilliant applicant from Group B, with top marks, applies. The AI scores them low and rejects them.</li>
+</ol>
+<p>The AI did exactly what it was trained to do. The problem was never the algorithm's arithmetic; it was the history baked into the data. This really happened with a large technology company's experimental recruiting tool, which was scrapped after it was found to favour male candidates.</p>
+
+<h2>Where bias comes from</h2>
+<ul>
+  <li><b>Historical bias</b> — the data reflects unfair decisions people made in the past.</li>
+  <li><b>Sampling (representation) bias</b> — some groups are missing or rare in the data. A face-recognition system trained mostly on light-skinned faces makes more errors on darker-skinned faces.</li>
+  <li><b>Measurement bias</b> — the thing recorded is a poor stand-in for what we care about, such as using arrests as a measure of crime.</li>
+  <li><b>Hidden proxies</b> — even if you delete a sensitive column such as gender, other columns (a hobby, a school, a postcode) can carry the same information.</li>
+</ul>
+
+<h2>Why it matters more for AI</h2>
+<p>One biased human interviewer affects the people they meet. A biased AI can screen millions of applications, loan requests or medical scans, repeating the same mistake every time — and people may trust it more because “the computer said so”. That is why fairness is treated as a design requirement, not an afterthought.</p>
+
+<h2>How to reduce bias</h2>
+<ul>
+  <li><b>Balanced, representative data</b> that covers all the groups the system will serve.</li>
+  <li><b>Fairness testing</b> — check accuracy and outcomes separately for each group before deployment.</li>
+  <li><b>Transparency</b> — be able to explain which factors drove a decision.</li>
+  <li><b>Human oversight</b> — keep people in the loop for high-stakes decisions such as jobs, loans and healthcare.</li>
+  <li><b>Diverse teams</b> who are more likely to notice problems early.</li>
+</ul>
+
+<h2>How this appears in exams</h2>
+<p>Expect short questions such as “What is AI bias? Give one example”, “Name two ways to reduce bias”, or a case study describing a system that treats some users unfairly and asking you to identify the cause. Always link your answer to the <b>training data</b>.</p>
+""",
+"practice": [
+  ("Define AI bias in one sentence.", "AI bias is when an AI system produces unfair results for some people or groups because of patterns in its training data or design."),
+  ("A voice assistant understands some accents far worse than others. What is the most likely cause?", "Sampling/representation bias — those accents were under-represented in the training data."),
+  ("Give two ways to reduce bias in an AI system.", "Any two: use balanced and representative data; test fairness for each group; keep human oversight; make decisions explainable; build diverse teams."),
+],
+"related": [("Neural Networks & AI Ethics quiz", "chapters/neural-networks-10.html"),
+            ("Introduction to AI quiz", "chapters/ai-introduction-10.html"),
+            ("Class 10 AI mock papers", "cbse-class-10-ai-mock-papers.html")],
+},
+{
+"slug": "why-is-dy-dx-zero-at-maximum-and-minimum",
+"reel": "slope_zero",
+"title": "Why is dy/dx = 0 at a maximum or minimum? Class 12 Maths",
+"h1": "Why is dy/dx = 0 at a maximum or minimum?",
+"description": "Slide a tangent along a curve and watch its slope change sign — why maxima and minima occur where dy/dx = 0, with the first and second derivative tests and a worked example for CBSE Class 12.",
+"category": "Maths", "class_label": "Class 12", "published": "2026-11-25", "read_min": 6,
+"body": """
+<p>“Put dy/dx = 0 and solve” is the first step of almost every maxima–minima question in Class 12. But why does a maximum or minimum have to be at a point where the derivative is zero? The answer is a picture of a tangent sliding along a hill.</p>
+
+<h2>The short answer</h2>
+<p>The derivative dy/dx is the <b>slope of the tangent</b>. On the way up a hill the slope is positive; on the way down it is negative. At the very top it must switch from positive to negative, and a smooth curve can only do that by passing through <b>zero</b> — a flat tangent. The same happens, in reverse, at the bottom of a valley.</p>
+
+<h2>Watch the tangent</h2>
+<p>Take the curve <b>y = x³ − 3x</b>. It rises, reaches a peak, falls into a valley and rises again. Slide a tangent line along it from left to right:</p>
+<ul>
+  <li>Climbing towards the peak, the tangent tilts upward: <b>dy/dx &gt; 0</b>.</li>
+  <li>At the peak, the tangent lies perfectly flat: <b>dy/dx = 0</b>.</li>
+  <li>Going downhill, the tangent tilts downward: <b>dy/dx &lt; 0</b>.</li>
+  <li>At the bottom of the valley it is flat again: <b>dy/dx = 0</b>.</li>
+  <li>Climbing out, the slope becomes positive once more.</li>
+</ul>
+<p>So the turning points — the local maximum and local minimum — are exactly where the tangent is horizontal. These are called <b>critical</b> or <b>stationary points</b>.</p>
+
+<h2>Finding them for y = x³ − 3x</h2>
+<p>dy/dx = 3x² − 3. Setting it to zero: 3x² − 3 = 0 ⇒ x² = 1 ⇒ <b>x = −1 or x = 1</b>.</p>
+<p>At x = −1, y = −1 + 3 = 2 (the peak). At x = 1, y = 1 − 3 = −2 (the valley).</p>
+
+<h2>Which is the maximum? Two tests</h2>
+<p><b>First derivative test.</b> Check the sign of dy/dx just before and just after the point. Positive → negative means a <b>maximum</b>; negative → positive means a <b>minimum</b>. For x = −1: at x = −2, dy/dx = 9 &gt; 0; at x = 0, dy/dx = −3 &lt; 0, so x = −1 is a local maximum.</p>
+<p><b>Second derivative test.</b> d²y/dx² measures how the slope is changing. Here d²y/dx² = 6x. At x = −1 it is −6 &lt; 0: the slope is decreasing, the curve bends downward, so it is a <b>maximum</b>. At x = 1 it is 6 &gt; 0: the curve bends upward, a <b>minimum</b>. If the second derivative is 0, the test fails and you fall back on the first derivative test.</p>
+
+<h2>A warning: zero slope is not always a turning point</h2>
+<p>For y = x³, dy/dx = 3x² is zero at x = 0, but the curve keeps rising on both sides — the slope is positive, touches zero, and stays positive. This is a <b>point of inflection</b>, not a maximum or minimum. dy/dx = 0 tells you <i>where to look</i>; the tests tell you <i>what you found</i>.</p>
+
+<h2>Exam tips</h2>
+<ul>
+  <li>In word problems (largest area, least cost), write the quantity as a function of one variable before differentiating.</li>
+  <li>Always justify a maximum or minimum with the second derivative or a sign check — answers without justification lose marks.</li>
+  <li>For a closed interval, also compare the values at the endpoints to find the absolute maximum or minimum.</li>
+</ul>
+""",
+"practice": [
+  ("Find the critical points of f(x) = x² − 6x + 5 and classify them.", "f′(x) = 2x − 6 = 0 ⇒ x = 3. f″(x) = 2 > 0, so x = 3 is a local minimum, with f(3) = −4."),
+  ("For f(x) = −x² + 4x, find the maximum value.", "f′(x) = −2x + 4 = 0 ⇒ x = 2; f″ = −2 < 0 so it is a maximum. f(2) = 4."),
+  ("Is x = 0 a maximum or minimum of f(x) = x³? Why?", "Neither. f′(0) = 0, but f′(x) = 3x² ≥ 0 on both sides, so the function keeps increasing — it is a point of inflection."),
+],
+"related": [("Class 12 Maths mock papers", "cbse-class-12-maths-mock-papers.html"),
+            ("Application of Derivatives quiz", "chapters/application-derivatives-12.html"),
+            ("Formula Board: quick revision cards", "formula-board/")],
+},
+{
+"slug": "why-does-a-neural-network-need-layers",
+"reel": "nn_layers",
+"title": "Why does a neural network need layers? Hidden layers explained",
+"h1": "Why does a neural network need layers?",
+"description": "One neuron can only draw a straight line. See how hidden layers combine many lines to solve problems no single neuron can — deep learning explained for CBSE AI Class 10 and 12.",
+"category": "AI", "class_label": "Class 10 · 12", "published": "2026-11-29", "read_min": 5,
+"body": """
+<p>Diagrams of neural networks show columns of circles joined by lines: an input layer, some hidden layers, an output layer. Why not just use one big neuron? Because a single neuron has a strict limit — it can only ever draw a <b>straight line</b>.</p>
+
+<h2>The short answer</h2>
+<p>One neuron splits data with a single straight boundary. Many real problems cannot be split that way. A <b>hidden layer</b> lets many neurons each draw their own line, and the next layer <b>combines</b> those lines into curved or closed shapes. More layers allow ever more complex patterns — that is what “deep” learning means.</p>
+
+<h2>What one neuron can do</h2>
+<p>An artificial neuron computes a weighted sum of its inputs, such as w₁x₁ + w₂x₂ + b, and fires if the sum crosses a threshold. On a graph of x₁ against x₂, the points where the sum exactly equals the threshold form a <b>straight line</b>. Everything on one side gets “yes”; everything on the other side gets “no”. Training can move and rotate that line, but it can never bend it.</p>
+
+<h2>A problem one line cannot solve</h2>
+<p>Imagine blue dots clustered in the middle of a chart, with pink dots all around them. Try to separate them with one straight line: however you turn it, some pink dots end up on the blue side. The data is <b>not linearly separable</b>. A famous small example is the <b>XOR</b> function, which outputs 1 when exactly one of its two inputs is 1 — no single straight line can separate its yes and no cases.</p>
+
+<h2>Adding a hidden layer</h2>
+<ol>
+  <li>Put several neurons in a hidden layer. Each one learns its own straight line — one above the blue cluster, one below, one to the left, one to the right.</li>
+  <li>Each hidden neuron reports which side of its line a point is on.</li>
+  <li>An output neuron combines these reports: “yes only if the point is inside <i>all</i> the lines”.</li>
+</ol>
+<p>Together the lines form a boundary that wraps around the blue dots. A problem that was impossible for one neuron becomes easy for a small network.</p>
+
+<h2>Why go deeper?</h2>
+<p>Each extra layer works with the patterns found by the layer before. In image recognition, early layers detect edges, middle layers combine edges into shapes such as eyes or wheels, and later layers combine shapes into whole objects such as faces or cars. Deep networks can therefore model very complex relationships — but they also need more data and more computing power to train, and they are harder to explain.</p>
+
+<h2>One important detail</h2>
+<p>Layers only help because each neuron applies a <b>non-linear activation function</b> (such as ReLU or sigmoid) to its sum. Without it, stacking layers would just produce another straight-line rule, no matter how many layers you added.</p>
+
+<h2>How this appears in exams</h2>
+<p>You may be asked to name and describe the three types of layers, explain what a hidden layer does, or state the difference between a simple neural network and a deep neural network (deep networks have many hidden layers).</p>
+""",
+"practice": [
+  ("What is the role of the hidden layer in a neural network?", "It transforms the inputs into intermediate features, letting the network combine simple patterns into complex ones that a single neuron cannot represent."),
+  ("Why can't a single neuron learn the XOR function?", "A single neuron can only draw one straight decision boundary, and XOR's outputs are not linearly separable."),
+  ("What makes a neural network 'deep'?", "Having many hidden layers between the input and output layers."),
+],
+"related": [("Neural Networks & AI Ethics quiz", "chapters/neural-networks-10.html"),
+            ("Machine Learning Concepts quiz", "chapters/ml-concepts-10.html"),
+            ("Class 10 AI mock papers", "cbse-class-10-ai-mock-papers.html")],
+},
+{
+"slug": "why-does-a-stack-reverse-things",
+"reel": "stack_lifo",
+"title": "Why does a stack reverse things? LIFO explained for Class 12 CS",
+"h1": "Why does a stack reverse things?",
+"description": "Push A, B, C and pop gives C, B, A. Why a stack is Last In First Out, how to implement push and pop with a Python list, and where stacks are used — CBSE Class 12 Computer Science.",
+"category": "Computer Science", "class_label": "Class 12", "published": "2026-12-02", "read_min": 6,
+"body": """
+<p>The <b>stack</b> is the one data structure in the CBSE Class 12 Computer Science syllabus, and it reliably earns marks in the board exam: a 3–4 mark program to push and pop, plus short questions on its uses. Everything about it follows from a single rule you already know from a pile of plates.</p>
+
+<h2>The short answer</h2>
+<p>In a stack you can only add or remove items at <b>one end — the top</b>. The last item you put in sits on top, so it is the first to come out. Push A, B, C and you pop C, B, A. That rule is called <b>LIFO: Last In, First Out</b>, and it is why a stack naturally reverses order.</p>
+
+<h2>The pile of plates</h2>
+<p>Stack three plates: A first, then B on top of it, then C on top of B. You cannot pull A out from the bottom without lifting the others. The only plate you can reach is C. Take it off and B becomes the top; take that off and finally A. In went A, B, C; out came C, B, A.</p>
+
+<h2>The stack operations</h2>
+<ul>
+  <li><b>PUSH</b> — add an element to the top.</li>
+  <li><b>POP</b> — remove and return the top element.</li>
+  <li><b>PEEK</b> (or TOP) — look at the top element without removing it.</li>
+  <li><b>isEmpty</b> — check whether the stack has no elements.</li>
+</ul>
+<p>Trying to pop from an empty stack is called <b>underflow</b>. In a fixed-size stack, pushing onto a full stack is called <b>overflow</b>.</p>
+
+<h2>A stack in Python</h2>
+<p>A Python list makes a perfect stack if you treat its <b>end</b> as the top: <code>append()</code> pushes and <code>pop()</code> pops.</p>
+<pre><code>stack = []
+
+def push(stack, item):
+    stack.append(item)
+
+def pop_item(stack):
+    if not stack:                 # check for underflow
+        return "Underflow"
+    return stack.pop()
+
+def peek(stack):
+    return stack[-1] if stack else None
+
+for ch in "ABC":
+    push(stack, ch)
+print(stack)              # ['A', 'B', 'C']   top is 'C'
+print(pop_item(stack))    # C
+print(pop_item(stack))    # B</code></pre>
+
+<h2>Reversing a string with a stack</h2>
+<p>Push every character, then pop them all. Because of LIFO, they come out backwards:</p>
+<pre><code>def reverse(text):
+    s = []
+    for ch in text:
+        s.append(ch)
+    out = ""
+    while s:
+        out += s.pop()
+    return out
+
+print(reverse("CBSE"))    # ESBC</code></pre>
+
+<h2>Where stacks are used</h2>
+<ul>
+  <li><b>Undo (Ctrl+Z)</b> — each action is pushed; undo pops the most recent one.</li>
+  <li><b>The browser Back button</b> — pages you visit are pushed; Back pops the last page.</li>
+  <li><b>Function calls</b> — Python keeps a call stack; the most recently called function finishes first.</li>
+  <li><b>Checking brackets</b> in an expression, and converting or evaluating postfix expressions.</li>
+</ul>
+
+<h2>Exam tips</h2>
+<ul>
+  <li>Board questions often say “push only the numbers divisible by 5 from a list” or “push records meeting a condition”, then pop and display until empty. Practise that pattern.</li>
+  <li>Always handle underflow (empty stack) before popping — examiners look for it.</li>
+  <li>Use <code>pop()</code> without an argument. <code>pop(0)</code> removes from the bottom and breaks LIFO.</li>
+</ul>
+""",
+"practice": [
+  ("The elements 10, 20, 30 are pushed onto an empty stack in that order. What does the first pop return?", "30 — the last element pushed is on top (LIFO)."),
+  ("What is stack underflow?", "Attempting to pop (or peek) from an empty stack."),
+  ("Which Python list methods implement push and pop?", "append() for push and pop() (with no argument) for pop."),
+],
+"related": [("Data Structures (Stack) quiz", "chapters/data-structures-12.html"),
+            ("Class 12 Computer Science mock papers", "cbse-class-12-computer-science-mock-papers.html"),
+            ("Python Functions & Modules quiz", "chapters/python-functions-12.html")],
+},
+{
+"slug": "why-does-a-convex-lens-focus-light",
+"reel": "convex_lens",
+"title": "Why does a convex lens focus light? The prism picture explained",
+"h1": "Why does a convex lens bring light to a focus?",
+"description": "A convex lens is like a stack of prisms, thick in the middle and thin at the edges. See why parallel rays meet at the focus, plus lens formula, power and sign-convention tips for CBSE Class 10 and 12.",
+"category": "Physics", "class_label": "Class 10 · 12", "published": "2026-12-06", "read_min": 6,
+"body": """
+<p>Hold a magnifying glass in sunlight and you can gather the light into one tiny, bright spot. Why does a curved piece of glass send all those parallel rays to the same point? The trick is to think of the lens as a stack of <b>prisms</b>.</p>
+
+<h2>The short answer</h2>
+<p>A prism always bends light towards its <b>thicker end</b>. A convex lens is like a set of prisms that are thick in the middle and thin at the edges. Rays near the top bend down, rays near the bottom bend up, and the central ray goes straight through. Because the edges are angled more steeply, outer rays bend more — just enough for all of them to meet at one point, the <b>principal focus</b>.</p>
+
+<h2>Step 1: a prism bends light towards its base</h2>
+<p>When light enters glass it slows down and bends towards the normal; when it leaves it speeds up and bends away from the normal. In a triangular prism both bends push the ray the same way: <b>towards the base</b>, the thick end.</p>
+
+<h2>Step 2: stack the prisms</h2>
+<p>Place one prism above the middle with its base facing down, one below with its base facing up, and a flat slab in the centre. Now send in parallel rays:</p>
+<ul>
+  <li>The top prism bends its ray <b>down</b>.</li>
+  <li>The bottom prism bends its ray <b>up</b>.</li>
+  <li>The ray through the centre goes <b>straight</b> on.</li>
+</ul>
+<p>The rays converge. Make the steps smaller and smaller and the outline smooths into a curved surface — a <b>convex lens</b>. Near the edges the surfaces meet at a steeper angle, so outer rays bend more, and the rays meet at a single point.</p>
+
+<h2>Step 3: the focus and focal length</h2>
+<p>Rays parallel to the principal axis meet at the <b>principal focus F</b>. The distance from the optical centre to F is the <b>focal length f</b>. A more strongly curved (fatter) lens bends light more and has a <b>shorter</b> focal length. A concave lens is the opposite stack — thin in the middle, thick at the edges — so it spreads rays apart and is called a diverging lens.</p>
+
+<h2>Power of a lens</h2>
+<p>The <b>power</b> of a lens measures how strongly it bends light: <b>P = 1/f</b>, with f in metres. The unit is the <b>dioptre (D)</b>. A convex lens of focal length 25 cm has P = 1/0.25 = <b>+4 D</b>. Convex lenses have positive power; concave lenses have negative power.</p>
+
+<h2>A worked example</h2>
+<p><b>Q.</b> An object is placed 30 cm in front of a convex lens of focal length 20 cm. Where is the image?</p>
+<p><b>A.</b> Lens formula: 1/v − 1/u = 1/f. With u = −30 cm and f = +20 cm: 1/v = 1/20 + 1/(−30) = 3/60 − 2/60 = 1/60, so <b>v = +60 cm</b>. The image is real, formed 60 cm behind the lens, inverted, and magnified (m = v/u = −2).</p>
+
+<h2>Common mistakes</h2>
+<ul>
+  <li><b>Sign convention.</b> Distances are measured from the optical centre; those against the incoming light (object side) are negative. For a convex lens, f is positive.</li>
+  <li><b>Units in power.</b> Convert f to metres before using P = 1/f.</li>
+  <li><b>Mixing up the formulas.</b> The lens formula is 1/v − 1/u = 1/f; the mirror formula is 1/v + 1/u = 1/f.</li>
+</ul>
+""",
+"practice": [
+  ("Find the power of a convex lens of focal length 50 cm.", "P = 1/f = 1/0.5 m = +2 D."),
+  ("Why is a convex lens called a converging lens?", "It is thicker in the middle, so like a stack of prisms it bends parallel rays towards each other until they meet at the focus."),
+  ("A lens has power −2.5 D. What type of lens is it, and what is its focal length?", "Concave (negative power); f = 1/P = −0.4 m = −40 cm."),
+],
+"related": [("Light – Reflection & Refraction quiz", "chapters/light-optics-10.html"),
+            ("Ray Optics (Class 12) quiz", "chapters/ray-optics-12.html"),
+            ("Class 10 Science mock tests", "cbse-class-10-science-mock-tests.html"),
+            ("Class 12 Physics mock papers", "cbse-class-12-physics-mock-papers.html")],
+},
+{
+"slug": "why-is-ap-sum-n-by-2-first-plus-last",
+"reel": "ap_sum",
+"title": "Why is the AP sum Sₙ = n/2 (a + l)? The staircase proof",
+"h1": "Why is the sum of an AP equal to n/2 × (first + last)?",
+"description": "Two copies of an AP staircase make a perfect rectangle — the picture behind Sₙ = n/2 (a + l) and Sₙ = n/2 [2a + (n − 1)d], with Gauss's trick, worked examples and tips for CBSE Class 10.",
+"category": "Maths", "class_label": "Class 10", "published": "2026-12-09", "read_min": 5,
+"body": """
+<p>Arithmetic Progressions carry some of the easiest marks in the Class 10 board paper, and the sum formula sits at the centre of them. Instead of memorising <b>Sₙ = n/2 (a + l)</b>, you can <i>see</i> it — with a staircase of blocks.</p>
+
+<h2>The short answer</h2>
+<p>Draw the terms of an AP as columns of blocks and you get a staircase. Make a copy, turn it upside down and fit it on top: the two staircases form a perfect rectangle that is <b>n</b> columns wide and <b>(first + last)</b> blocks tall. The staircase is exactly half of that rectangle, so Sₙ = n/2 × (a + l).</p>
+
+<h2>Step 1: build the staircase</h2>
+<p>Take the AP 1, 2, 3, 4, 5, 6. Draw a column of 1 block, then 2 blocks, then 3, up to 6. The columns rise evenly — because in an AP every term goes up by the same common difference — so the shape is a neat staircase.</p>
+
+<h2>Step 2: copy, flip and fit</h2>
+<p>Make an identical staircase, turn it upside down, and place it on top of the first. The tallest column of the copy (6) sits on the shortest column of the original (1); the next pair is 5 on 2; then 4 on 3, and so on. Every column now has the same height: 1 + 6 = 2 + 5 = 3 + 4 = <b>7</b>, which is first + last.</p>
+
+<h2>Step 3: halve the rectangle</h2>
+<p>The two staircases together make a rectangle of 6 columns × 7 blocks = 42 blocks. One staircase is exactly half: <b>21</b>. In general, with n terms, first term a and last term l, the rectangle has n × (a + l) blocks and the sum is</p>
+<p><b>Sₙ = n/2 (a + l)</b>.</p>
+
+<h2>The same idea with numbers: Gauss's trick</h2>
+<p>A famous story says the young mathematician Carl Friedrich Gauss was asked to add 1 to 100. He wrote the sum forwards and backwards and added the two rows: each pair (1 + 100, 2 + 99, …) makes 101, and there are 100 pairs, so twice the sum is 10,100. The sum is <b>5050</b>. That is the flipped staircase, written in numbers.</p>
+
+<h2>The second form of the formula</h2>
+<p>The last term of an AP is l = a + (n − 1)d. Substitute it in:</p>
+<p><b>Sₙ = n/2 [2a + (n − 1)d]</b>.</p>
+<p>Use the first form when you know the last term, and the second when you know the common difference.</p>
+
+<h2>A worked example</h2>
+<p><b>Q.</b> Find the sum of the first 20 terms of the AP 3, 7, 11, …</p>
+<p><b>A.</b> a = 3, d = 4, n = 20. S₂₀ = 20/2 [2(3) + 19(4)] = 10 × (6 + 76) = <b>820</b>.</p>
+
+<h2>Exam tips</h2>
+<ul>
+  <li>Write down a, d and n clearly before substituting — most errors come from a wrong n.</li>
+  <li>To find how many terms are needed for a given sum, set Sₙ equal to it and solve the quadratic in n; reject negative or fractional values.</li>
+  <li>Remember: the nth term can be found from sums using aₙ = Sₙ − Sₙ₋₁.</li>
+</ul>
+""",
+"practice": [
+  ("Find the sum of the first 50 natural numbers.", "S = 50/2 × (1 + 50) = 25 × 51 = 1275."),
+  ("Find the sum of the AP 2, 5, 8, …, 29.", "29 = 2 + (n − 1)3 ⇒ n = 10. S = 10/2 × (2 + 29) = 155."),
+  ("If Sₙ = n² + 2n, find the first term and the common difference.", "a₁ = S₁ = 3; S₂ = 8 so a₂ = 5; d = 2."),
+],
+"related": [("Arithmetic Progressions quiz", "chapters/arithmetic-progressions-10.html"),
+            ("Class 10 Maths Standard mock tests", "cbse-class-10-maths-standard-mock-tests.html"),
+            ("Class 10 Maths Basic mock tests", "cbse-class-10-maths-basic-mock-tests.html")],
+},
+{
+"slug": "why-split-data-into-training-and-testing-sets",
+"reel": "train_test",
+"title": "Why split data into training and testing sets? Overfitting explained",
+"h1": "Why do we split data into training and testing sets?",
+"description": "A model that memorises its training data fails on new data — that is overfitting. Why we hold back a test set, the 80/20 split, accuracy and evaluation for CBSE AI Class 10 and 12.",
+"category": "AI", "class_label": "Class 10 · 12", "published": "2026-12-13", "read_min": 5,
+"body": """
+<p>Imagine a student who somehow gets the exact exam questions a week early and memorises the answers. They score 100%. Have they learnt the subject? You would only find out by giving them <i>new</i> questions. Machine learning has exactly the same problem — and the training/testing split is the solution.</p>
+
+<h2>The short answer</h2>
+<p>We train a model on one part of the data and keep another part <b>locked away</b>. After training, we test the model on this unseen data. Good performance on the test set shows the model has learnt general patterns; good performance only on the training set shows it has merely <b>memorised</b> — a problem called <b>overfitting</b>.</p>
+
+<h2>What overfitting looks like</h2>
+<p>A flexible model can fit its training examples almost perfectly — including their noise and accidents. Suppose you train a model to recognise cats, and by chance most cat photos in your data were taken indoors. The model may learn “indoor background = cat”. It scores brilliantly on the training photos, then fails on a cat photographed in a garden. It learnt the quirks of the data, not the idea of a cat.</p>
+<p>The opposite problem is <b>underfitting</b>: a model too simple to capture the pattern, which does badly on both training and test data.</p>
+
+<h2>How the split works</h2>
+<ol>
+  <li><b>Collect and shuffle</b> the labelled data so both parts are representative.</li>
+  <li><b>Split</b> it — commonly about <b>80% for training</b> and <b>20% for testing</b> (70/30 is also common).</li>
+  <li><b>Train</b> the model using only the training set.</li>
+  <li><b>Evaluate</b> on the test set, which the model has never seen, using measures such as accuracy.</li>
+</ol>
+<p>The test set acts like the real board exam: fresh questions that show whether learning really happened.</p>
+
+<h2>Reading the results</h2>
+<table>
+  <tr><th>Training accuracy</th><th>Test accuracy</th><th>What it means</th></tr>
+  <tr><td>High</td><td>High</td><td>Good fit — the model generalises</td></tr>
+  <tr><td>High</td><td>Low</td><td>Overfitting — memorised the training data</td></tr>
+  <tr><td>Low</td><td>Low</td><td>Underfitting — model too simple</td></tr>
+</table>
+
+<h2>Golden rules</h2>
+<ul>
+  <li><b>Never train on the test data.</b> Even a peek makes the test score meaningless, like the student who saw the paper.</li>
+  <li><b>Keep the split representative.</b> If all examples of one class end up in the test set, the model never learns them.</li>
+  <li>Many projects also keep a third <b>validation set</b> to tune the model before the final test.</li>
+</ul>
+
+<h2>Where this fits in the AI project cycle</h2>
+<p>In the CBSE AI project cycle — Problem Scoping, Data Acquisition, Data Exploration, Modelling and Evaluation — the split happens before modelling, and the test set is used in the <b>Evaluation</b> stage. Questions on evaluation often ask why a model must be tested on data it has not seen, and how to calculate accuracy from correct and total predictions.</p>
+""",
+"practice": [
+  ("A model scores 99% on training data but 60% on test data. What is the problem called?", "Overfitting — it has memorised the training data instead of learning general patterns."),
+  ("Why shouldn't a model be evaluated on the same data it was trained on?", "It may simply have memorised those examples, so the score would not show how it performs on new, unseen data."),
+  ("A model makes 170 correct predictions out of 200 test cases. What is its accuracy?", "170/200 × 100 = 85%."),
+],
+"related": [("Machine Learning Concepts quiz", "chapters/ml-concepts-10.html"),
+            ("Data Handling quiz", "chapters/data-handling-10.html"),
+            ("Class 10 AI mock papers", "cbse-class-10-ai-mock-papers.html")],
+},
 ]
