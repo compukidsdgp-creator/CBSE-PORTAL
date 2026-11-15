@@ -299,7 +299,7 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:0 16px 34px}
   </div>
 </main>
 __INDEX__
-<footer>© CBSEMock · <a href="../index.html">cbsemock.org.in</a> · <a href="../about.html">About</a> · <a href="../formula-board/">Formula Board</a> · <a href="../free-mock-papers/">Free mock papers</a></footer>
+<footer>© CBSEMock · <a href="../index.html">cbsemock.org.in</a> · <a href="../about.html">About</a> · <a href="../learn/">Learn</a> · <a href="../formula-board/">Formula Board</a> · <a href="../free-mock-papers/">Free mock papers</a></footer>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Reel player">
   <div class="t" id="lbT"></div>
   <button class="x" id="lbX" type="button" aria-label="Close">&times;</button>

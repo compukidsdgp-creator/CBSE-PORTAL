@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why is sin²θ + cos²θ = 1? The unit-circle proof for Class 10 | CBSEMock</title>
+<meta name="description" content="Prove sin²θ + cos²θ = 1 with one unit-circle picture and Pythagoras — plus the two related identities, worked examples and practice for CBSE Class 10.">
+<link rel="canonical" href="https://cbsemock.org.in/learn/why-is-sin2-plus-cos2-equal-to-1.html">
+<meta property="og:title" content="Why is sin²θ + cos²θ = 1? The unit-circle proof for Class 10 | CBSEMock">
+<meta property="og:description" content="Prove sin²θ + cos²θ = 1 with one unit-circle picture and Pythagoras — plus the two related identities, worked examples and practice for CBSE Class 10.">
+<meta property="og:url" content="https://cbsemock.org.in/learn/why-is-sin2-plus-cos2-equal-to-1.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://cbsemock.org.in/why-reels/thumb/04-trig_identity.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f8f7f4;--card:#fff;--text:#1a1a1a;--muted:#5f5f5f;--accent:#2d6a4f;--border:#e5e3df;--code:#f1f0ec;}
+@media(prefers-color-scheme:dark){:root{--bg:#161616;--card:#222;--text:#eee;--muted:#a0a0a0;--border:#343434;--accent:#52b788;--code:#2b2b2b;}}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font:16px/1.75 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);}
+header.top{background:#2d6a4f;color:#fff;padding:14px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+header.top a{color:#fff;text-decoration:none;font-size:.88rem;opacity:.88;}
+header.top a:hover{opacity:1;}
+.wrap{max-width:780px;margin:0 auto;padding:28px 20px 70px;}
+.crumb{font-size:.82rem;color:var(--muted);margin-bottom:14px;}
+.crumb a{color:var(--muted);}
+h1{font-size:1.85rem;line-height:1.25;margin-bottom:12px;letter-spacing:-.01em;}
+.meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:.86rem;color:var(--muted);margin-bottom:22px;}
+.pill{display:inline-block;padding:2px 10px;border-radius:99px;color:#fff;font-size:.76rem;font-weight:600;letter-spacing:.02em;}
+.byline{display:flex;gap:12px;align-items:center;border:1px solid var(--border);background:var(--card);border-radius:12px;padding:12px 14px;margin:0 0 24px;font-size:.9rem;}
+.byline .av{flex:0 0 42px;height:42px;border-radius:50%;background:#2d6a4f;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;}
+.byline small{color:var(--muted);display:block;line-height:1.45;}
+.reel{float:right;width:250px;margin:4px 0 18px 26px;}
+.reel video{width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;display:block;box-shadow:0 6px 24px rgba(0,0,0,.18);}
+.reel p{font-size:.78rem;color:var(--muted);text-align:center;margin-top:6px;line-height:1.4;}
+article h2{font-size:1.25rem;margin:30px 0 10px;line-height:1.3;}
+article p{margin:0 0 14px;}
+article ul,article ol{margin:0 0 16px 22px;}
+article li{margin:5px 0;}
+article code{background:var(--code);padding:1px 6px;border-radius:5px;font-size:.9em;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
+article pre{background:#1e1e2e;color:#e7e7f0;border-radius:10px;padding:14px 16px;overflow-x:auto;margin:0 0 18px;font-size:.85rem;line-height:1.55;clear:both;}
+article pre code{background:none;padding:0;color:inherit;}
+article table{border-collapse:collapse;width:100%;margin:0 0 18px;font-size:.92rem;clear:both;display:block;overflow-x:auto;}
+article th,article td{border:1px solid var(--border);padding:7px 10px;text-align:left;}
+article th{background:var(--code);}
+.box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:30px 0 0;clear:both;}
+.box h2{margin-top:0;font-size:1.12rem;}
+details{border-top:1px solid var(--border);padding:10px 0;}
+details:first-of-type{border-top:0;}
+summary{cursor:pointer;font-weight:600;}
+details .ans{margin-top:8px;color:var(--muted);}
+.links{list-style:none;margin:0!important;display:grid;gap:8px;}
+.links a{display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);}
+.links a:hover{border-color:var(--accent);}
+.links a::after{content:" →";color:var(--accent);}
+a{color:var(--accent);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--text);transition:transform .15s,border-color .15s;}
+.card:hover{transform:translateY(-2px);border-color:var(--accent);}
+.card .th{aspect-ratio:16/10;background:#111 center/cover no-repeat;}
+.card .bd{padding:12px 14px 16px;}
+.card b{display:block;font-size:1rem;line-height:1.35;margin:6px 0;}
+.card span.d{font-size:.84rem;color:var(--muted);line-height:1.5;}
+.intro{color:var(--muted);font-size:1.02rem;margin-bottom:24px;}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);}
+footer a{color:var(--muted);margin:0 6px;}
+@media(max-width:640px){h1{font-size:1.5rem;}.reel{float:none;width:min(260px,72%);margin:0 auto 22px;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cbsemock.org.in/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://cbsemock.org.in/learn/"}, {"@type": "ListItem", "position": 3, "name": "Why is sin²θ + cos²θ = 1?", "item": "https://cbsemock.org.in/learn/why-is-sin2-plus-cos2-equal-to-1.html"}]}, {"@type": "Article", "headline": "Why is sin²θ + cos²θ = 1?", "description": "Prove sin²θ + cos²θ = 1 with one unit-circle picture and Pythagoras — plus the two related identities, worked examples and practice for CBSE Class 10.", "url": "https://cbsemock.org.in/learn/why-is-sin2-plus-cos2-equal-to-1.html", "mainEntityOfPage": "https://cbsemock.org.in/learn/why-is-sin2-plus-cos2-equal-to-1.html", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "wordCount": 408, "inLanguage": "en-IN", "articleSection": "Maths", "educationalLevel": "CBSE Class 10", "author": {"@type": "Person", "name": "Biswarup Mukherjee", "jobTitle": "Teaching Administrator, CBSEMock", "url": "https://cbsemock.org.in/about.html"}, "publisher": {"@type": "EducationalOrganization", "name": "CBSE Mock", "url": "https://cbsemock.org.in"}, "image": "https://cbsemock.org.in/why-reels/thumb/04-trig_identity.jpg"}, {"@type": "VideoObject", "name": "Why is sin²θ + cos²θ = 1?", "description": "Prove sin²θ + cos²θ = 1 with one unit-circle picture and Pythagoras — plus the two related identities, worked examples and practice for CBSE Class 10.", "thumbnailUrl": "https://cbsemock.org.in/why-reels/thumb/04-trig_identity.jpg", "uploadDate": "2026-11-15T18:30:00+05:30", "contentUrl": "https://cbsemock.org.in/formula-posts/why/queue/04_why_trig_identity.mp4", "embedUrl": "https://cbsemock.org.in/learn/why-is-sin2-plus-cos2-equal-to-1.html"}]}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+</head>
+<body>
+<header class="top"><a href="../index.html">← CBSEMock.org.in</a><span style="opacity:.5">|</span><a href="./"><strong>Learn</strong></a></header>
+<main class="wrap">
+<nav class="crumb"><a href="../index.html">Home</a> › <a href="./">Learn</a> › Maths</nav>
+<article>
+<h1>Why is sin²θ + cos²θ = 1?</h1>
+<div class="meta"><span class="pill" style="background:#2d6a4f">Maths</span><span>CBSE Class 10</span><span>5 min read</span><span>Updated 15 November 2026</span></div>
+<div class="byline"><div class="av" aria-hidden="true">BM</div><div><b>Biswarup Mukherjee</b> · Teaching Administrator, CBSEMock<small>20 years of teaching · Reviewed by subject teachers · <a href="../about.html">About us</a></small></div></div>
+<figure class="reel"><video controls playsinline preload="none" poster="../why-reels/thumb/04-trig_identity.jpg" src="../formula-posts/why/queue/04_why_trig_identity.mp4" title="Why is sin²θ + cos²θ = 1?"></video><p>Watch: the short WHY? reel</p></figure>
+<p><b>sin²θ + cos²θ = 1</b> is the most used identity in trigonometry. It appears in proofs, simplifications and “find the value” questions in almost every Class 10 paper. It is also one of the easiest formulas to <i>see</i>.</p>
+
+<h2>The short answer</h2>
+<p>In a right-angled triangle with hypotenuse 1, the two shorter sides are cos θ and sin θ. Pythagoras' theorem then says cos²θ + sin²θ = 1² = 1.</p>
+
+<h2>Step 1: draw a unit circle</h2>
+<p>Draw a circle of radius 1 with its centre at the origin. Mark a point P on the circle so that the radius OP makes an angle θ with the x-axis.</p>
+
+<h2>Step 2: make a right-angled triangle</h2>
+<p>Drop a perpendicular from P to the x-axis at M. Triangle OMP is right-angled at M, with:</p>
+<ul>
+  <li>hypotenuse OP = 1 (the radius),</li>
+  <li>base OM = OP cos θ = <b>cos θ</b>,</li>
+  <li>height MP = OP sin θ = <b>sin θ</b>.</li>
+</ul>
+
+<h2>Step 3: apply Pythagoras</h2>
+<p>OM² + MP² = OP² gives <b>cos²θ + sin²θ = 1</b>. As P moves round the circle the triangle changes shape, but the hypotenuse is always the radius, 1 — so the identity holds for every angle.</p>
+
+<h2>The same proof without a circle</h2>
+<p>In any right triangle ABC (right angle at B), sin A = BC/AC and cos A = AB/AC. Then sin²A + cos²A = (BC² + AB²)/AC² = AC²/AC² = 1, using Pythagoras (AB² + BC² = AC²). This is the version CBSE expects in a written proof.</p>
+
+<h2>Two more identities for free</h2>
+<p>Divide sin²θ + cos²θ = 1 by cos²θ and you get <b>tan²θ + 1 = sec²θ</b>. Divide it by sin²θ and you get <b>1 + cot²θ = cosec²θ</b>. Remember one identity and you have all three.</p>
+
+<h2>A worked example</h2>
+<p><b>Q.</b> If sin θ = 3/5 and θ is acute, find cos θ and tan θ.</p>
+<p><b>A.</b> cos²θ = 1 − sin²θ = 1 − 9/25 = 16/25, so cos θ = 4/5 (positive, since θ is acute). tan θ = sin θ / cos θ = (3/5) ÷ (4/5) = <b>3/4</b>.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+  <li>Writing sin²θ as sin(θ²). sin²θ means (sin θ)².</li>
+  <li>Forgetting that cos θ could be negative for angles beyond 90°. In Class 10, angles are acute, so take the positive root — but say so.</li>
+  <li>Starting a “prove that” question from the result. Begin from one side (usually the more complicated one) and work towards the other.</li>
+</ul>
+</article>
+<section class="box"><h2>Try it yourself</h2><details><summary>If cos θ = 12/13 (θ acute), find sin θ.</summary><p class="ans">sin²θ = 1 − 144/169 = 25/169, so sin θ = 5/13.</p></details><details><summary>Simplify (1 − sin²θ) sec²θ.</summary><p class="ans">1 − sin²θ = cos²θ, and cos²θ × sec²θ = 1.</p></details><details><summary>Prove that sec²θ − tan²θ = 1.</summary><p class="ans">Divide sin²θ + cos²θ = 1 by cos²θ: tan²θ + 1 = sec²θ, so sec²θ − tan²θ = 1.</p></details></section>
+<section class="box"><h2>Practise this topic</h2><ul class="links"><li><a href="../cbse-class-10-maths-standard-mock-tests.html">Class 10 Maths Standard mock tests</a></li><li><a href="../chapters/triangles-10.html">Triangles quiz</a></li><li><a href="../formula-board/">Formula Board: quick revision cards</a></li><li><a href="../why-reels/">All WHY? reels</a></li></ul></section>
+<section class="box"><h2>More WHY? explainers</h2><ul class="links"><li><a href="why-is-area-of-circle-pi-r-squared.html">Why is the area of a circle πr²?</a></li><li><a href="why-is-0-1-plus-0-2-not-0-3-in-python.html">Why is 0.1 + 0.2 not equal to 0.3 in Python?</a></li><li><a href="how-does-an-ai-neuron-make-a-decision.html">How does an AI neuron make a decision?</a></li><li><a href="why-is-binary-search-so-fast.html">Why is binary search so fast?</a></li></ul></section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in &nbsp;|&nbsp;
+<a href="../about.html">About Us</a>|<a href="../privacy.html">Privacy Policy</a>|<a href="../terms.html">Terms of Use</a>|<a href="../contact.html">Contact</a>|<a href="../disclaimer.html">Disclaimer</a></footer>
+</body>
+</html>

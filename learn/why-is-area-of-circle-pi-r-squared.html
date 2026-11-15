@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why is the area of a circle πr²? A picture proof for Class 10 | CBSEMock</title>
+<meta name="description" content="See why the area of a circle is πr² by unrolling it into a triangle — a picture proof for CBSE Class 10 Maths, with a worked example and practice questions.">
+<link rel="canonical" href="https://cbsemock.org.in/learn/why-is-area-of-circle-pi-r-squared.html">
+<meta property="og:title" content="Why is the area of a circle πr²? A picture proof for Class 10 | CBSEMock">
+<meta property="og:description" content="See why the area of a circle is πr² by unrolling it into a triangle — a picture proof for CBSE Class 10 Maths, with a worked example and practice questions.">
+<meta property="og:url" content="https://cbsemock.org.in/learn/why-is-area-of-circle-pi-r-squared.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://cbsemock.org.in/why-reels/thumb/01-circle_area_pi_r_squared.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f8f7f4;--card:#fff;--text:#1a1a1a;--muted:#5f5f5f;--accent:#2d6a4f;--border:#e5e3df;--code:#f1f0ec;}
+@media(prefers-color-scheme:dark){:root{--bg:#161616;--card:#222;--text:#eee;--muted:#a0a0a0;--border:#343434;--accent:#52b788;--code:#2b2b2b;}}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font:16px/1.75 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);}
+header.top{background:#2d6a4f;color:#fff;padding:14px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+header.top a{color:#fff;text-decoration:none;font-size:.88rem;opacity:.88;}
+header.top a:hover{opacity:1;}
+.wrap{max-width:780px;margin:0 auto;padding:28px 20px 70px;}
+.crumb{font-size:.82rem;color:var(--muted);margin-bottom:14px;}
+.crumb a{color:var(--muted);}
+h1{font-size:1.85rem;line-height:1.25;margin-bottom:12px;letter-spacing:-.01em;}
+.meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:.86rem;color:var(--muted);margin-bottom:22px;}
+.pill{display:inline-block;padding:2px 10px;border-radius:99px;color:#fff;font-size:.76rem;font-weight:600;letter-spacing:.02em;}
+.byline{display:flex;gap:12px;align-items:center;border:1px solid var(--border);background:var(--card);border-radius:12px;padding:12px 14px;margin:0 0 24px;font-size:.9rem;}
+.byline .av{flex:0 0 42px;height:42px;border-radius:50%;background:#2d6a4f;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;}
+.byline small{color:var(--muted);display:block;line-height:1.45;}
+.reel{float:right;width:250px;margin:4px 0 18px 26px;}
+.reel video{width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;display:block;box-shadow:0 6px 24px rgba(0,0,0,.18);}
+.reel p{font-size:.78rem;color:var(--muted);text-align:center;margin-top:6px;line-height:1.4;}
+article h2{font-size:1.25rem;margin:30px 0 10px;line-height:1.3;}
+article p{margin:0 0 14px;}
+article ul,article ol{margin:0 0 16px 22px;}
+article li{margin:5px 0;}
+article code{background:var(--code);padding:1px 6px;border-radius:5px;font-size:.9em;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
+article pre{background:#1e1e2e;color:#e7e7f0;border-radius:10px;padding:14px 16px;overflow-x:auto;margin:0 0 18px;font-size:.85rem;line-height:1.55;clear:both;}
+article pre code{background:none;padding:0;color:inherit;}
+article table{border-collapse:collapse;width:100%;margin:0 0 18px;font-size:.92rem;clear:both;display:block;overflow-x:auto;}
+article th,article td{border:1px solid var(--border);padding:7px 10px;text-align:left;}
+article th{background:var(--code);}
+.box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:30px 0 0;clear:both;}
+.box h2{margin-top:0;font-size:1.12rem;}
+details{border-top:1px solid var(--border);padding:10px 0;}
+details:first-of-type{border-top:0;}
+summary{cursor:pointer;font-weight:600;}
+details .ans{margin-top:8px;color:var(--muted);}
+.links{list-style:none;margin:0!important;display:grid;gap:8px;}
+.links a{display:block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);}
+.links a:hover{border-color:var(--accent);}
+.links a::after{content:" →";color:var(--accent);}
+a{color:var(--accent);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--text);transition:transform .15s,border-color .15s;}
+.card:hover{transform:translateY(-2px);border-color:var(--accent);}
+.card .th{aspect-ratio:16/10;background:#111 center/cover no-repeat;}
+.card .bd{padding:12px 14px 16px;}
+.card b{display:block;font-size:1rem;line-height:1.35;margin:6px 0;}
+.card span.d{font-size:.84rem;color:var(--muted);line-height:1.5;}
+.intro{color:var(--muted);font-size:1.02rem;margin-bottom:24px;}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);}
+footer a{color:var(--muted);margin:0 6px;}
+@media(max-width:640px){h1{font-size:1.5rem;}.reel{float:none;width:min(260px,72%);margin:0 auto 22px;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cbsemock.org.in/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://cbsemock.org.in/learn/"}, {"@type": "ListItem", "position": 3, "name": "Why is the area of a circle πr²?", "item": "https://cbsemock.org.in/learn/why-is-area-of-circle-pi-r-squared.html"}]}, {"@type": "Article", "headline": "Why is the area of a circle πr²?", "description": "See why the area of a circle is πr² by unrolling it into a triangle — a picture proof for CBSE Class 10 Maths, with a worked example and practice questions.", "url": "https://cbsemock.org.in/learn/why-is-area-of-circle-pi-r-squared.html", "mainEntityOfPage": "https://cbsemock.org.in/learn/why-is-area-of-circle-pi-r-squared.html", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "wordCount": 565, "inLanguage": "en-IN", "articleSection": "Maths", "educationalLevel": "CBSE Class 10", "author": {"@type": "Person", "name": "Biswarup Mukherjee", "jobTitle": "Teaching Administrator, CBSEMock", "url": "https://cbsemock.org.in/about.html"}, "publisher": {"@type": "EducationalOrganization", "name": "CBSE Mock", "url": "https://cbsemock.org.in"}, "image": "https://cbsemock.org.in/why-reels/thumb/01-circle_area_pi_r_squared.jpg"}, {"@type": "VideoObject", "name": "Why is the area of a circle πr²?", "description": "See why the area of a circle is πr² by unrolling it into a triangle — a picture proof for CBSE Class 10 Maths, with a worked example and practice questions.", "thumbnailUrl": "https://cbsemock.org.in/why-reels/thumb/01-circle_area_pi_r_squared.jpg", "uploadDate": "2026-11-15T18:30:00+05:30", "contentUrl": "https://cbsemock.org.in/formula-posts/why/posted/01_why_circle_area_pi_r_squared.mp4", "embedUrl": "https://cbsemock.org.in/learn/why-is-area-of-circle-pi-r-squared.html"}]}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+</head>
+<body>
+<header class="top"><a href="../index.html">← CBSEMock.org.in</a><span style="opacity:.5">|</span><a href="./"><strong>Learn</strong></a></header>
+<main class="wrap">
+<nav class="crumb"><a href="../index.html">Home</a> › <a href="./">Learn</a> › Maths</nav>
+<article>
+<h1>Why is the area of a circle πr²?</h1>
+<div class="meta"><span class="pill" style="background:#2d6a4f">Maths</span><span>CBSE Class 10</span><span>5 min read</span><span>Updated 15 November 2026</span></div>
+<div class="byline"><div class="av" aria-hidden="true">BM</div><div><b>Biswarup Mukherjee</b> · Teaching Administrator, CBSEMock<small>20 years of teaching · Reviewed by subject teachers · <a href="../about.html">About us</a></small></div></div>
+<figure class="reel"><video controls playsinline preload="none" poster="../why-reels/thumb/01-circle_area_pi_r_squared.jpg" src="../formula-posts/why/posted/01_why_circle_area_pi_r_squared.mp4" title="Why is the area of a circle πr²?"></video><p>Watch: the short WHY? reel</p></figure>
+<p>Every Class 10 student can write <b>A = πr²</b>. Far fewer can say <i>why</i> it is true — and that is exactly what an examiner is testing when a question asks you to “justify” a formula or when a word problem looks unfamiliar. The good news: the reason fits into one picture.</p>
+
+<h2>The short answer</h2>
+<p>Cut a circle into very thin rings, straighten every ring into a strip and stack the strips. They form a triangle whose base is the circumference, <b>2πr</b>, and whose height is the radius, <b>r</b>. The area of that triangle is ½ × 2πr × r = <b>πr²</b>. Nothing was added or removed, so the circle has the same area.</p>
+
+<h2>Step 1: think of a circle as rings</h2>
+<p>Imagine the circle is made of very thin rings, like the layers of an onion or the grooves of a vinyl record. The innermost ring is tiny; the outermost ring runs right around the edge. The length of any ring is its circumference, so a ring at distance x from the centre has length <b>2πx</b>. The outermost ring, at distance r, has length <b>2πr</b>.</p>
+
+<h2>Step 2: cut and straighten every ring</h2>
+<p>Snip each ring at the bottom and pull it out straight. Each ring becomes a thin strip. Lay the strips on top of one another, the longest (outermost ring) at the bottom and the shortest (centre) at the top. Because the ring lengths grow evenly — 2πx grows in direct proportion to x — the stack narrows evenly from bottom to top. In other words, the stack is a <b>triangle</b>.</p>
+
+<h2>Step 3: read off the base and height</h2>
+<ul>
+  <li><b>Base</b> = length of the outermost ring = <b>2πr</b>.</li>
+  <li><b>Height</b> = number of rings × thickness = the distance from centre to edge = <b>r</b>.</li>
+</ul>
+<p>So the area of the triangle is ½ × base × height = ½ × 2πr × r = <b>πr²</b>. Since we only rearranged the pieces of the circle, the circle's area is also πr².</p>
+
+<h2>Why is this more than a trick?</h2>
+<p>This “slice it thin and add up the pieces” idea is the heart of <b>integration</b>, which you will meet properly in Class 12. Adding up rings of area 2πx · dx from x = 0 to x = r gives exactly πr². The picture you just saw is the integral in disguise. It also explains why area always involves <i>r²</i>: one factor of r comes from the size of the rings and the other from how many rings there are.</p>
+
+<h2>A worked example</h2>
+<p><b>Q.</b> A circular park has a radius of 21 m. Find its area. (Take π = 22/7.)</p>
+<p><b>A.</b> Area = πr² = (22/7) × 21 × 21 = 22 × 3 × 21 = <b>1386 m²</b>.</p>
+<p>Notice how choosing π = 22/7 makes the arithmetic clean when the radius is a multiple of 7 — a hint the board often gives deliberately.</p>
+
+<h2>Common mistakes to avoid</h2>
+<ul>
+  <li><b>Using the diameter in place of the radius.</b> If the question gives d = 14 cm, the radius is 7 cm, so the area is 154 cm², not 616 cm².</li>
+  <li><b>Mixing up area and circumference.</b> Area (πr²) is in square units; circumference (2πr) is in plain units. Check your units.</li>
+  <li><b>Forgetting to square only the radius.</b> πr² means π × r × r, not (πr)².</li>
+</ul>
+</article>
+<section class="box"><h2>Try it yourself</h2><details><summary>Find the area of a circle whose circumference is 44 cm. (Take π = 22/7.)</summary><p class="ans">2πr = 44 ⇒ r = 7 cm. Area = (22/7) × 7 × 7 = 154 cm².</p></details><details><summary>If the radius of a circle is doubled, what happens to its area?</summary><p class="ans">Area becomes π(2r)² = 4πr², so it becomes four times as large.</p></details><details><summary>A wheel has a diameter of 28 cm. Find its area.</summary><p class="ans">r = 14 cm. Area = (22/7) × 14 × 14 = 616 cm².</p></details></section>
+<section class="box"><h2>Practise this topic</h2><ul class="links"><li><a href="../cbse-class-10-maths-standard-mock-tests.html">Class 10 Maths Standard mock tests</a></li><li><a href="../cbse-class-10-maths-basic-mock-tests.html">Class 10 Maths Basic mock tests</a></li><li><a href="../formula-board/">Formula Board: quick revision cards</a></li><li><a href="../why-reels/">All WHY? reels</a></li></ul></section>
+<section class="box"><h2>More WHY? explainers</h2><ul class="links"><li><a href="why-is-sin2-plus-cos2-equal-to-1.html">Why is sin²θ + cos²θ = 1?</a></li><li><a href="why-is-0-1-plus-0-2-not-0-3-in-python.html">Why is 0.1 + 0.2 not equal to 0.3 in Python?</a></li><li><a href="how-does-an-ai-neuron-make-a-decision.html">How does an AI neuron make a decision?</a></li><li><a href="why-is-binary-search-so-fast.html">Why is binary search so fast?</a></li></ul></section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in &nbsp;|&nbsp;
+<a href="../about.html">About Us</a>|<a href="../privacy.html">Privacy Policy</a>|<a href="../terms.html">Terms of Use</a>|<a href="../contact.html">Contact</a>|<a href="../disclaimer.html">Disclaimer</a></footer>
+</body>
+</html>

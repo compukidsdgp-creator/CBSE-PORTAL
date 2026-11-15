@@ -61,7 +61,8 @@ jobs:
           git config user.name  "social-post-bot"
           git config user.email "bot@cbsemock.org.in"
           python3 reels_page.py || echo "::warning::Reel pages were not refreshed"
-          git add -A formula-posts/why why-reels formula-reels || true
+          python3 learn_pages.py || echo "::warning::Learn pages were not refreshed"
+          git add -A formula-posts/why why-reels formula-reels learn || true
           git diff --cached --quiet && exit 0
           git commit -q -m "chore: WHY? reel posted [skip ci]"
           for i in 1 2 3 4; do
