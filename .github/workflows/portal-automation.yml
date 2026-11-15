@@ -43,7 +43,7 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
         run: |
           python3 learn_pages.py || { echo "::warning::Learn pages were not refreshed"; exit 0; }
-          git add learn
+          git add learn index.html chapters cbse-class-*.html
           git diff --cached --quiet && exit 0
           git commit -q -m "chore: refresh Learn pages"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q && exit 0; sleep 5; done

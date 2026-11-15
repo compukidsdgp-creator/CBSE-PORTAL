@@ -360,6 +360,102 @@ def index_page(arts):
     return head("Learn — WHY? explainers for CBSE Class 10 & 12 | CBSEMock", desc, url, ld, og_type="website") + "\n" + body
 
 
+# ── cross-links: home-page strip + "explained" links on related chapter / portal pages ──────
+GRAD = {"Maths": ("#3b6fb8", "#0e2344"), "AI": ("#8b6bc2", "#392653"), "Computer Science": ("#0e8aa8", "#0b3d52"),
+        "Physics": ("#c18a45", "#563318"), "Science": ("#c18a45", "#563318"), "Chemistry": ("#c0395f", "#5a1228"),
+        "Biology": ("#2b9a80", "#12483e")}
+HS, HE = "<!-- LEARN-STRIP:START -->", "<!-- LEARN-STRIP:END -->"
+LS, LE = "<!-- LEARN-LINKS:START -->", "<!-- LEARN-LINKS:END -->"
+LOCKED = {"resources/physics-xii-new.html"}          # never modified
+
+
+def home_strip(arts):
+    cards = []
+    for a in arts[:3]:
+        _, thumb = find_reel(a["reel"])
+        c1, c2 = GRAD.get(a["category"], GRAD["Maths"])
+        img = f'<span class="lrn-th" style="background-image:url({thumb})"></span>' if thumb else ""
+        cards.append(f'<a class="lrn-card" href="learn/{a["slug"]}.html" style="background:linear-gradient(145deg,{c1},{c2})">'
+                     f'{img}<span class="lrn-bd"><span class="lrn-tag">{E(a["category"])} · CBSE {E(a["class_label"])}</span>'
+                     f'<span class="lrn-t">{E(a["h1"])}</span><span class="lrn-go">READ &amp; WATCH →</span></span></a>')
+    return f"""{HS}
+<style>
+.lrn{{max-width:1100px;margin:30px auto 10px;padding:0 20px;}}
+.lrn-head{{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;}}
+.lrn-head h2{{font-family:'Crimson Pro',serif;color:var(--gold,#c9a227);font-size:clamp(1.45rem,2.8vw,1.85rem);margin:0;}}
+.lrn-head p{{color:var(--muted,#666);font-size:.86rem;margin:2px 0 0;}}
+.lrn-all{{display:inline-block;padding:9px 18px;border-radius:99px;background:linear-gradient(135deg,#1a3a6b,#0f2347);color:#ffe4a0;font-weight:800;font-size:.78rem;letter-spacing:.04em;text-decoration:none;border:1.5px solid #c9a227;transition:transform .18s,box-shadow .18s,background .18s;}}
+.lrn-all:hover{{transform:translateY(-3px);background:#c9a227;color:#0f2347;box-shadow:0 8px 18px rgba(201,162,39,.45);}}
+.lrn-grid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}}
+.lrn-card{{display:flex;border-radius:18px;overflow:hidden;text-decoration:none;color:#fff;min-height:150px;border:1px solid rgba(255,255,255,.35);box-shadow:0 8px 0 rgba(10,28,54,.16),0 15px 26px rgba(10,28,54,.18);transition:transform .22s,box-shadow .22s;}}
+.lrn-card:hover{{transform:translateY(-6px);box-shadow:0 13px 0 rgba(10,28,54,.13),0 24px 34px rgba(10,28,54,.26),0 0 0 3px #e8cc6a;}}
+.lrn-th{{flex:0 0 96px;background:#111 center 25%/cover no-repeat;}}
+.lrn-bd{{display:flex;flex-direction:column;padding:14px 16px;}}
+.lrn-tag{{font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#ffe4a0;}}
+.lrn-t{{font-family:'Crimson Pro',serif;font-size:1.18rem;font-weight:700;line-height:1.2;margin:6px 0 10px;}}
+.lrn-go{{margin-top:auto;font-size:.72rem;font-weight:800;color:#ffe4a0;letter-spacing:.05em;}}
+@media(max-width:860px){{.lrn-grid{{grid-template-columns:1fr;}}.lrn-card{{min-height:120px;}}}}
+</style>
+<section class="lrn" aria-label="Latest Learn explainers">
+<div class="lrn-head"><div><h2>📘 Learn: the WHY? behind CBSE concepts</h2><p>Short explainers with a reel, a worked example and practice questions — new every Sunday &amp; Wednesday.</p></div>
+<a class="lrn-all" href="learn/">ALL EXPLAINERS →</a></div>
+<div class="lrn-grid">{''.join(cards)}</div>
+</section>
+{HE}"""
+
+
+def update_home(arts):
+    f = ROOT / "index.html"
+    s = f.read_text(encoding="utf-8")
+    block = home_strip(arts)
+    if HS in s:
+        s = s[:s.index(HS)] + block + s[s.index(HE) + len(HE):]
+    else:                                    # first run: right after the Learning Zones section
+        i = s.index('<div class="zone-launch-grid"')
+        j = s.index("</section>", i) + len("</section>")
+        s = s[:j] + "\n\n" + block + s[j:]
+    f.write_text(s, encoding="utf-8")
+
+
+def update_backlinks(arts):
+    """Add 'Explained simply' links to pages each live article points to (chapter quizzes / portals)."""
+    want = {}
+    for a in arts:
+        for _, h in a.get("related", []):
+            if h.endswith(".html") and (h.startswith("chapters/") or "/" not in h) and h not in LOCKED:
+                want.setdefault(h, []).append(a)
+    pages = set(want)
+    for f in list(ROOT.glob("chapters/*.html")) + list(ROOT.glob("cbse-class-*.html")):
+        rel = str(f.relative_to(ROOT))
+        if rel not in LOCKED and LS in f.read_text(encoding="utf-8"):
+            pages.add(rel)
+    n = 0
+    for rel in sorted(pages):
+        f = ROOT / rel
+        if not f.exists() or rel in LOCKED:
+            continue
+        s = f.read_text(encoding="utf-8")
+        if LS in s:
+            s = s[:s.index(LS)] + s[s.index(LE) + len(LE):].lstrip("\n")
+        items = want.get(rel, [])
+        if items:
+            pre = "../" if rel.startswith("chapters/") else ""
+            links = "".join(f'<li><a href="{pre}learn/{a["slug"]}.html">{E(a["h1"])}</a></li>' for a in items[:4])
+            block = (f'{LS}\n<div class="sc-card lrn-x"><h2>📘 Explained simply</h2>'
+                     f'<p style="margin-bottom:8px;color:var(--muted,#666)">Short WHY? explainers on ideas from this topic, each with a reel and practice questions.</p>'
+                     f'<ul style="margin:0 0 0 18px;line-height:1.9;font-weight:600">{links}</ul>'
+                     f'<p style="margin-top:8px"><a href="{pre}learn/" style="display:inline-block;padding:7px 16px;border-radius:99px;background:linear-gradient(135deg,#1a3a6b,#0f2347);color:#ffe4a0;font-weight:800;font-size:.8rem;text-decoration:none;border:1.5px solid #c9a227">All Learn explainers →</a></p></div>\n{LE}\n')
+            if "<!-- STATIC-CONTENT:END -->" in s and '<p class="sc-meta">' in s:
+                k = s.rindex('<p class="sc-meta">', 0, s.index("<!-- STATIC-CONTENT:END -->"))
+                s = s[:k] + block + s[k:]
+            else:
+                print(f"[WARN] no static-content block in {rel}; skipped")
+                continue
+            n += 1
+        f.write_text(s, encoding="utf-8")
+    print(f"[ok] Learn links on {n} related pages")
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     arts = live_articles()
@@ -375,6 +471,8 @@ def main():
         if not v:
             print(f"[WARN] no reel video found for {a['slug']} ({a['reel']})")
     (OUT / "index.html").write_text(index_page(arts), encoding="utf-8")
+    update_home(arts)
+    update_backlinks(arts)
     for f in OUT.glob("*.html"):
         if f.name not in keep:
             f.unlink()
