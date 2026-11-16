@@ -44,7 +44,8 @@
     "sc10-0087",
     "sc10-0090"
    ],
-   "posted": false
+   "posted": true,
+   "posted_at": "2026-11-16 16:02 IST"
   },
   "class12": {
    "subject_key": "physics12",
@@ -84,7 +85,8 @@
     "ph12-0042",
     "ph12-0041"
    ],
-   "posted": false
+   "posted": true,
+   "posted_at": "2026-11-16 16:03 IST"
   }
  },
  "2026-11-18": {
