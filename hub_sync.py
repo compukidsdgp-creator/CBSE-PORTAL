@@ -170,9 +170,8 @@ def main():
             banner = (f'{BANNER_A}<div class="chn-banner"><h3>📘 Full chapter notes <em>NEW</em></h3>'
                       f'<p>Detailed, exam-ready notes for each chapter. Tap a card to open it.</p>{cards}'
                       f'<a class="chn-all" href="{index}">See all chapters ({len(live)} ready) →</a></div>{BANNER_B}')
-            spot = banner_spot(html)
-            if spot:
-                html = html[:spot] + banner + html[spot:]
+            # (no Home-tab banner: the owner wants students to go through the subject tabs;
+            #  the 3D card lives only inside the chapter's own tab)
             fab = f'{FAB_A}<a class="chn-fab" href="{index}" aria-label="Open chapter notes">📘 Chapter notes</a>{FAB_B}'
             html = html.replace("</body>", fab + "</body>", 1)
             html = ensure_style(html)
@@ -201,8 +200,7 @@ def main():
             href = f"../notes/class-{ch['class']}/{ch['subject_slug']}/{ch['slug']}.html"
             blk = a + card(href, f"📘 Full chapter notes: {ch['title']}",
                            "Revise it properly first: concepts, labelled diagrams, worked board questions") + b
-            k = html.rindex('<p class="sc-meta">', 0, html.index("<!-- STATIC-CONTENT:END -->"))
-            html = html[:k] + blk + html[k:]
+            # one card per page: the top one below (the bottom block is not added any more)
             # and once more at the top of the page content, so it is seen before the quiz starts
             m = re.search(r"<main[^>]*>", html) or re.search(r"<body[^>]*>", html)
             top = a.replace("CHNOTES:", "CHNOTES-TOP:")
