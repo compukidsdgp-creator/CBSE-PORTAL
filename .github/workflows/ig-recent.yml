@@ -1,0 +1,21 @@
+name: Instagram — list recent posts (diagnostic)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Last 8 Instagram posts
+        env:
+          IG_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          IG_ID: "17841480792360992"
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          q = urllib.parse.urlencode({"fields": "id,timestamp,media_type,permalink,caption", "limit": 8, "access_token": os.environ["IG_TOKEN"]})
+          d = json.load(urllib.request.urlopen(f"https://graph.facebook.com/v21.0/{os.environ['IG_ID']}/media?{q}", timeout=30))
+          for m in d.get("data", []):
+              print(m["timestamp"], m["media_type"], m.get("permalink"), "|", (m.get("caption") or "").splitlines()[0][:90])
+          PY
