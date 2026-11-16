@@ -418,12 +418,29 @@ def post_instagram(img_path: str, subject_key: str,
         return
     container_id = r1.json().get("id")
 
-    # Step 2: publish
-    r2 = requests.post(
-        f"https://graph.facebook.com/v19.0/{ig_id}/media_publish",
-        data={"creation_id": container_id, "access_token": token},
-        timeout=30,
-    )
+    # Step 2: wait until Instagram has finished processing the image, then publish
+    import time
+    for _ in range(12):                                     # up to ~1 minute
+        try:
+            st = requests.get(f"https://graph.facebook.com/v19.0/{container_id}",
+                              params={"fields": "status_code", "access_token": token}, timeout=20).json()
+            if st.get("status_code") in ("FINISHED", "PUBLISHED"):
+                break
+            if st.get("status_code") == "ERROR":
+                print(f"❌  Instagram container failed to process: {st}")
+                return
+        except Exception:
+            pass
+        time.sleep(5)
+    for attempt in range(3):                                # "Media ID is not available" → retry
+        r2 = requests.post(
+            f"https://graph.facebook.com/v19.0/{ig_id}/media_publish",
+            data={"creation_id": container_id, "access_token": token},
+            timeout=30,
+        )
+        if r2.status_code == 200 or "2207027" not in r2.text:
+            break
+        time.sleep(10)
     if r2.status_code == 200:
         print("✅  Instagram: post published")
     else:
