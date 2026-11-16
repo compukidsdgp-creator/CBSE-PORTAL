@@ -1,0 +1,47 @@
+name: Instagram — re-post a mock paper
+
+# Re-posts ONE day's mock paper to Instagram only (Telegram and Facebook are not touched).
+# Run it from the Actions tab with the subject key and date; editing the defaults below and
+# pushing also runs it once.
+on:
+  workflow_dispatch:
+    inputs:
+      subject:
+        description: "subject key, e.g. physics12 or science10"
+        required: true
+        default: "physics12"
+      date:
+        description: "paper date YYYY-MM-DD"
+        required: true
+        default: "2026-11-16"
+  push:
+    branches: [main]
+    paths: [".github/workflows/ig-repost-paper.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  repost:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Post to Instagram
+        env:
+          INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          SUBJ: ${{ github.event.inputs.subject || 'physics12' }}
+          DAY:  ${{ github.event.inputs.date || '2026-11-16' }}
+        run: |
+          pip install --quiet requests pillow
+          python3 - <<'PY'
+          import os, post_pyq as P
+          s, d = os.environ["SUBJ"], os.environ["DAY"]
+          img = f"pyq-papers/cover_{s}_{d}.jpg"
+          assert os.path.exists(img), f"missing {img}"
+          P.post_instagram(img, s, f"https://cbsemock.org.in/pyq-papers/{s}_{d}.pdf", d, False,
+                           bio_url="https://cbsemock.org.in/go/")
+          PY
