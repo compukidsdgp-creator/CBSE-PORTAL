@@ -51,6 +51,8 @@ from topic_links import why_links, formula_links, SITE as _SITE
 def page_links(L):
     """-> [[label, href relative to a gallery page, kind]] for the player and the static list."""
     out = []
+    if L.get("notes"):
+        out.append(["📒 Chapter notes", L["notes"][1], "notes"])
     if L.get("learn"):
         out.append(["📘 Read the explainer", L["learn"][1], "learn"])
     for t, u in L.get("chapters", [])[:1]:
@@ -287,6 +289,8 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;padding:0 16px 34px}
 .lb .lnk a{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border-radius:22px;font-size:.82rem;font-weight:700;color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .18s,box-shadow .18s,filter .18s}
 .lb .lnk a:hover{transform:translateY(-3px);filter:brightness(1.12);box-shadow:0 8px 20px rgba(0,0,0,.45),0 0 0 2px #e8cc6a}
 .lb .lnk a.learn{background:linear-gradient(135deg,#c99a06,#7a5c00)}
+.lb .lnk a.notes{background:linear-gradient(135deg,#e8452c,#7a1a0c);animation:lnkPulse 1.8s infinite}
+@keyframes lnkPulse{0%{box-shadow:0 0 0 0 rgba(232,69,44,.6)}70%{box-shadow:0 0 0 10px rgba(232,69,44,0)}100%{box-shadow:0 0 0 0 rgba(232,69,44,0)}}
 .lb .lnk a.quiz{background:linear-gradient(135deg,#2b9a80,#12483e)}
 .lb .lnk a.paper{background:linear-gradient(135deg,#3b6fb8,#0e2344)}
 .idx .il{font-size:1em;opacity:.85}

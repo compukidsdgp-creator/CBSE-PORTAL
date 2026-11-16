@@ -39,7 +39,9 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -q -m "chore: admin dashboard data"
           for i in 1 2 3 4; do
-            git pull --rebase --autostash -q origin main && git push -q origin main && exit 0
+            # our freshly built vault always wins over an older one pushed meanwhile
+            git pull --rebase -X theirs --autostash -q origin main && git push -q origin main && exit 0
+            git rebase --abort 2>/dev/null || true
             sleep $((i * 5))
           done
           echo "::error::Could not save the dashboard data"; exit 1

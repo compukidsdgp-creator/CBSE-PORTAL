@@ -21,6 +21,8 @@ GO_URL = "cbsemock.org.in/go"
 
 def comment_text(links, topic=""):
     lines = []
+    if links.get("notes"):
+        lines.append(f"📒 Full chapter notes (diagrams + worked board questions): {links['notes'][1]}")
     if links.get("learn"):
         lines.append(f"📘 Read the full explainer: {links['learn'][1]}")
     for t, u in links.get("chapters", [])[:1]:

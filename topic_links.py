@@ -155,6 +155,34 @@ def learn_for(reel_module):
     return None
 
 
+_NOTES = None
+
+
+def notes_for(chapter_links):
+    """Live chapter-notes page for the chapter(s) a reel/card maps to (via their chapter quiz), or None."""
+    global _NOTES
+    if _NOTES is None:
+        _NOTES = {}
+        try:
+            import syllabus
+            from notes_pages import load_chapters
+            live = {(c["class"], c["subject_slug"], c["number"]): c for c in load_chapters() if c.get("status") == "live"}
+            for sub in syllabus.SUBJECTS:
+                cls, subj = sub["class"], sub["key"].split("/", 1)[1]
+                for num, title, quiz in sub["chapters"]:
+                    c = live.get((cls, subj, num))
+                    if c and quiz and quiz not in _NOTES:
+                        _NOTES[quiz] = (f"{c['title']} — chapter notes",
+                                        f"{SITE}/notes/class-{cls}/{subj}/{c['slug']}.html")
+        except Exception:
+            pass
+    for _, u in chapter_links:
+        q = u.rsplit("/", 1)[-1].replace(".html", "")
+        if q in _NOTES:
+            return _NOTES[q]
+    return None
+
+
 def _why_module(slug):
     parts = slug.split("_")
     for k in range(len(parts), 0, -1):
@@ -181,8 +209,8 @@ def why_links(filename):
                                    ("Chemistry", "Chemistry"), ("Biology", "Biology"), ("Science", "Science"))
                     if k in tags), "Science")
     text = f"{slug} {title} {tags}"
-    return {"learn": learn_for(name), "chapters": chapters_for(text, subject, classes),
-            "portal": portal_for(subject, classes)}
+    ch = chapters_for(text, subject, classes)
+    return {"learn": learn_for(name), "notes": notes_for(ch), "chapters": ch, "portal": portal_for(subject, classes)}
 
 
 def formula_links(subject, topic, cls):
@@ -196,11 +224,13 @@ def formula_links(subject, topic, cls):
             break
     if ch and len(classes) > 1:                      # class unknown: follow the chapter's class
         classes = [ch[0][1].rsplit("-", 1)[-1].split(".")[0]]
-    return {"learn": None, "chapters": ch, "portal": portal_for(subject, classes)}
+    return {"learn": None, "notes": notes_for(ch), "chapters": ch, "portal": portal_for(subject, classes)}
 
 
 def best_link(links):
     """The single most useful link (for captions): Learn article > chapter quiz > subject portal > home."""
+    if links.get("notes"):
+        return links["notes"]
     if links.get("learn"):
         return links["learn"]
     if links.get("chapters"):

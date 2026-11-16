@@ -173,7 +173,7 @@ def page(ch):
 <body>
 <header class="hero">
 <div class="topbar"><a class="brand" href="{up}index.html">CBSE<b>Mock</b></a><nav class="navbtns"><a class="nb" href="{up}cbse-class-{cls}-science-mock-tests.html">📝 Mock tests</a><a class="nb" href="{up}learn/">📘 Learn</a><a class="nb" href="{up}formula-board/">🧮 Formulas</a></nav></div>
-<div class="hero-in"><nav class="crumb"><a href="{up}index.html">Home</a> › <a href="{up}study-zone/index.html">Notes</a> › Class {cls} {E(subj)}</nav>
+<div class="hero-in"><nav class="crumb"><a href="{up}index.html">Home</a> › <a href="{up}study-zone/index.html">Notes</a> › <a href="./">Class {cls} {E(subj)} chapter notes</a></nav>
 <span class="badge">Chapter {ch['number']} · Class {cls} {E(subj)}</span>
 <h1>{E(ch['title'])}</h1>
 <div class="meta"><span class="chip">{E(ch.get('unit', ''))}</span><span class="chip">CBSE 2026–27 syllabus</span><span class="chip">~{max(5, words // 200)} min read</span></div></div>
@@ -199,9 +199,92 @@ def page(ch):
 """
 
 
+def subject_index(key, chapters):
+    """notes/class-N/<subject>/index.html: every syllabus chapter, linked once its notes are live."""
+    import syllabus
+    s = next((x for x in syllabus.SUBJECTS if x["key"] == key), None)
+    if not s:
+        return None
+    cls, subj_slug = s["class"], key.split("/", 1)[1]
+    live = {c["slug"]: c for c in chapters if c.get("status") == "live"}
+    rel = f"notes/class-{cls}/{subj_slug}/index.html"
+    url = f"{SITE}/notes/class-{cls}/{subj_slug}/"
+    up = "../../../"
+    items = []
+    for num, title, _ in s["chapters"]:
+        slug = syllabus.slugify(title)
+        if not re.match(r"^[a-z0-9-]+$", slug):
+            slug = f"chapter-{num}"
+        if slug in live:
+            items.append(f'<li><a class="chl live" href="{slug}.html"><span class="no">{num}</span><span>{E(title)}</span><b>Read →</b></a></li>')
+        else:
+            items.append(f'<li><div class="chl"><span class="no">{num}</span><span>{E(title)}</span><em>coming soon</em></div></li>')
+    name = f"Class {cls} {s['name']}"
+    hub = s["hubs"][0]
+    desc = f"Chapter-wise CBSE {name} notes for 2026–27: concepts, labelled diagrams, worked board questions, common mistakes and quick revision."
+    robots = "" if live else '<meta name="robots" content="noindex, follow">'
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "name": f"{name} chapter notes", "url": url, "description": desc, "inLanguage": "en-IN",
+         "isPartOf": {"@id": SITE + "/#website"}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": f"{name} chapter notes", "item": url}]}]}
+    extra = """
+.chlist{list-style:none;margin:0!important;display:grid;gap:10px}
+.chl{display:flex;align-items:center;gap:14px;padding:13px 16px;border:1.5px solid var(--border);border-radius:14px;background:var(--card);color:var(--muted);text-decoration:none}
+.chl .no{flex:0 0 34px;height:34px;border-radius:50%;background:var(--code);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--navy)}
+.chl span:nth-child(2){flex:1}.chl em{font-size:.8rem;font-style:normal}
+a.chl.live{color:var(--text);border-color:var(--gold);transition:transform .18s,box-shadow .18s}
+a.chl.live .no{background:var(--grd);color:var(--gold2)}a.chl.live b{color:var(--navy);white-space:nowrap}
+a.chl.live:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(15,35,71,.15),0 0 0 2px var(--gold2)}
+.wrap1{max-width:860px;margin:0 auto;padding:26px 20px 70px}
+"""
+    doc = f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{E(name)} Chapter-wise Notes 2026–27 | CBSEMock</title>
+<meta name="description" content="{E(desc)}">
+{robots}
+<link rel="canonical" href="{url}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>{CSS}{extra}</style>
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+</head>
+<body>
+<header class="hero">
+<div class="topbar"><a class="brand" href="{up}index.html">CBSE<b>Mock</b></a><nav class="navbtns"><a class="nb" href="{up}{hub}">📒 {E(s['name'])} notes page</a><a class="nb" href="{up}learn/">📘 Learn</a></nav></div>
+<div class="hero-in"><nav class="crumb"><a href="{up}index.html">Home</a> › <a href="{up}study-zone/index.html">Notes</a> › {E(name)}</nav>
+<span class="badge">CBSE 2026–27 syllabus</span>
+<h1>{E(name)} — chapter notes</h1>
+<div class="meta"><span class="chip">{len(live)} of {len(s['chapters'])} chapters ready</span><span class="chip">New chapters added regularly</span></div></div>
+</header>
+<main class="wrap1">
+<section><h2>Chapters</h2><p>Each chapter has the concepts in order, labelled diagrams, worked board questions, common mistakes and a quick-revision box. For tests, flashcards and past-year questions, open the <a href="{up}{hub}">{E(s['name'])} notes page</a>.</p>
+<ul class="chlist">{''.join(items)}</ul></section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="{up}about.html">About Us</a> · <a href="{up}privacy.html">Privacy Policy</a> · <a href="{up}contact.html">Contact</a></footer>
+</body>
+</html>
+"""
+    out = ROOT / rel
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(doc, encoding="utf-8")
+    return rel
+
+
 def main():
     n = 0
-    for ch in load_chapters():
+    chapters = load_chapters()
+    for key in sorted({f"class{c['class']}/{c['subject_slug']}" for c in chapters}):
+        rel = subject_index(key, [c for c in chapters if f"class{c['class']}/{c['subject_slug']}" == key])
+        if rel:
+            print(f"[notes] index {rel}")
+    for ch in chapters:
         rel, doc = page(ch)
         out = ROOT / rel
         out.parent.mkdir(parents=True, exist_ok=True)

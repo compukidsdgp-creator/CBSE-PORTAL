@@ -125,6 +125,7 @@ h2{font-family:'Crimson Pro',Georgia,serif;color:var(--gold2);font-size:1.35rem;
 .bt a{display:inline-block;padding:6px 11px;border-radius:99px;font-size:.76rem;font-weight:700;color:#fff;text-decoration:none;transition:transform .15s,filter .15s}
 .bt a:hover{transform:translateY(-2px);filter:brightness(1.15)}
 .bt .learn{background:linear-gradient(135deg,#c99a06,#7a5c00)}
+.bt .notes{background:linear-gradient(135deg,#e8452c,#7a1a0c)}
 .bt .quiz{background:linear-gradient(135deg,#2b9a80,#12483e)}
 .bt .paper{background:linear-gradient(135deg,#3b6fb8,#0e2344)}
 .bt .watch{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25)}
@@ -138,6 +139,8 @@ def build():
     for d in items():
         L = d["links"]
         btn = []
+        if L.get("notes"):
+            btn.append(f'<a class="notes" href="{rel(L["notes"][1])}">📒 Chapter notes</a>')
         if L.get("learn"):
             btn.append(f'<a class="learn" href="{rel(L["learn"][1])}">📘 Explainer</a>')
         for t, u in L.get("chapters", [])[:1]:
