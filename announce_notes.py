@@ -101,7 +101,7 @@ def captions(ch):
             f"✅ {len(ch.get('worked', []))} worked board questions with model answers\n✅ Common mistakes + quick revision\n")
     tags = f"#CBSE #Class{ch['class']} #{ch['subject'].replace(' ', '')} #BoardExam2027 #CBSEMock"
     tg = f"{head}\n\n{body}\n👉 Read free: {url}\n\n{tags}"
-    fb = f"{head}\n\n{body}\n👇 Link in the first comment.\n\n{tags}"
+    fb = f"{head}\n\n{body}\n👉 Read free: {url}\n\n{tags}"     # announcements carry the link itself
     ig = f"{head}\n\n{body}\n🔗 Link in bio (cbsemock.org.in/go)\n\n{tags}"
     return tg, fb, ig
 
