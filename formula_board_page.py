@@ -213,7 +213,7 @@ button{font:inherit;color:inherit}
 .nav:hover{background:var(--gold);color:var(--ink2);border-color:var(--gold)}
 .nav.p{left:max(10px,calc(50% - 420px))}.nav.n{right:max(10px,calc(50% - 420px))}
 .cap{position:relative;z-index:3;text-align:center;padding:0 16px 30px;margin-top:-18px}
-.cap .pill{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:20px;padding:3px 12px;color:var(--ink2);background:var(--c,var(--gold))}
+.cap .pill{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:20px;padding:3px 12px;color:var(--ink2);background:var(--c,var(--gold))}
 .cap h2{font-family:'Crimson Pro',Georgia,serif;font-size:clamp(1.25rem,4.4vw,1.7rem);margin:8px 0 2px;line-height:1.2}
 .cap small{color:var(--muted);font-size:.84rem}
 .cap .hint{display:block;margin-top:8px;font-size:.78rem;color:var(--muted)}
@@ -223,7 +223,9 @@ button{font:inherit;color:inherit}
 .cap .cl a:hover{transform:translateY(-3px);filter:brightness(1.12);box-shadow:0 8px 18px rgba(0,0,0,.35),0 0 0 2px var(--gold,#e8cc6a)}
 .cap .cl a.quiz{background:linear-gradient(135deg,#2b9a80,#12483e)}
 .cap .cl a.paper{background:linear-gradient(135deg,#3b6fb8,#0e2344)}
-.idx .il{font-size:.85em;opacity:.85}
+.idx .il{font-size:1em;opacity:.85}
+.idx li{margin:4px 0}.idx li a{display:inline-block;padding:4px 0}
+footer a{display:inline-block;padding:6px 4px}
 .empty{text-align:center;color:var(--muted);padding:60px 16px}
 
 /* ── the wall ── */
@@ -242,7 +244,7 @@ main{max-width:1100px;margin:0 auto;padding:30px 16px 46px}
 .tile:hover .ph,.tile:focus-visible .ph{border-color:var(--c,var(--gold))}
 .tile img{width:100%;height:100%;object-fit:contain;display:block}
 .tile b{display:block;font-size:.8rem;font-weight:600;margin-top:9px;line-height:1.3}
-.tile span{display:block;font-size:.7rem;color:var(--c,var(--gold));font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-top:1px}
+.tile span{display:block;font-size:.75rem;color:var(--c,var(--gold));font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-top:1px}
 .follow{margin-top:36px;border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;background:rgba(255,255,255,.04)}
 .follow p{margin:0 0 12px;color:var(--muted);font-size:.9rem}
 .follow a{display:inline-block;text-decoration:none;font-weight:700;font-size:.85rem;border-radius:22px;padding:8px 18px;margin:4px;color:#fff}

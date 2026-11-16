@@ -99,14 +99,14 @@ body{font:16px/1.75 Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif
 .hero-in{max-width:780px;margin:0 auto;padding-top:22px;}
 .hero-in.wide{max-width:1040px;text-align:center;}
 .crumb{font-size:.8rem;color:rgba(255,255,255,.7);margin-bottom:12px;}
-.crumb a{color:var(--gold2);text-decoration:none;}
+.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0;}
 .crumb a:hover{text-decoration:underline;}
 h1{font-size:clamp(1.8rem,4.2vw,2.6rem);line-height:1.15;margin-bottom:14px;font-weight:700;}
 h1 em{font-style:normal;color:var(--gold2);}
-.badge{display:inline-block;background:var(--gold);color:var(--navy2);border-radius:20px;padding:4px 16px;font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+.badge{display:inline-block;background:var(--gold);color:var(--navy2);border-radius:20px;padding:4px 16px;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
 .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.8rem;}
 .chip{padding:4px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;}
-.pill{display:inline-block;padding:4px 12px;border-radius:99px;color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.03em;}
+.pill{display:inline-block;padding:4px 12px;border-radius:99px;color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.03em;}
 .intro{color:rgba(255,255,255,.85);font-size:1rem;max-width:760px;margin:0 auto;}
 /* page */
 .wrap{max-width:780px;margin:0 auto;padding:0 20px 70px;}
@@ -120,7 +120,7 @@ h1 em{font-style:normal;color:var(--gold2);}
 .igf:hover,.igf:focus{transform:translateY(-4px);box-shadow:0 0 0 6px rgba(201,162,39,.3),0 20px 36px rgba(15,35,71,.38);outline:none;}
 .igplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);color:#fff;font-size:1.6rem;display:flex;align-items:center;justify-content:center;padding-left:5px;box-shadow:0 6px 20px rgba(0,0,0,.45);transition:transform .2s;}
 .igf:hover .igplay{transform:translate(-50%,-50%) scale(1.12);}
-.igbadge{position:absolute;left:50%;top:calc(50% + 46px);transform:translateX(-50%);white-space:nowrap;padding:3px 10px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.03em;}
+.igbadge{position:absolute;left:50%;top:calc(50% + 46px);transform:translateX(-50%);white-space:nowrap;padding:3px 10px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.03em;}
 .igbtn{display:block;margin-top:10px;text-align:center;padding:9px 12px;border-radius:12px;color:#fff;text-decoration:none;font-size:.8rem;font-weight:700;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);box-shadow:0 4px 12px rgba(238,42,123,.3);transition:transform .2s,box-shadow .2s;}
 .igbtn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(238,42,123,.45);}
 .reel .instagram-media{min-width:0!important;width:100%!important;margin:0!important;border-radius:14px!important;}
@@ -175,10 +175,10 @@ details .ans::before{content:'Answer: ';font-weight:700;color:#237d69;}
 .card .th::after{content:'▶';position:absolute;right:12px;bottom:-18px;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--navy2);display:flex;align-items:center;justify-content:center;font-size:.9rem;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .2s;}
 .card:hover .th::after{transform:scale(1.15);}
 .card .bd{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1;}
-.card .tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold2);}
+.card .tag{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold2);}
 .card b{display:block;font-family:'Crimson Pro',Georgia,serif;font-size:1.3rem;line-height:1.2;margin:6px 0 8px;}
 .card span.d{font-size:.8rem;color:rgba(255,255,255,.82);line-height:1.5;}
-.card .go{margin-top:auto;padding-top:14px;font-size:.74rem;font-weight:800;color:#ffe4a0;letter-spacing:.05em;}
+.card .go{margin-top:auto;padding-top:14px;font-size:.75rem;font-weight:800;color:#ffe4a0;letter-spacing:.05em;}
 .cat-Maths{--c1:#3b6fb8;--c2:#0e2344;}
 .cat-AI{--c1:#8b6bc2;--c2:#392653;}
 .cat-ComputerScience{--c1:#0e8aa8;--c2:#0b3d52;}
@@ -186,7 +186,7 @@ details .ans::before{content:'Answer: ';font-weight:700;color:#237d69;}
 .cat-Chemistry{--c1:#c0395f;--c2:#5a1228;}
 .cat-Biology{--c1:#2b9a80;--c2:#12483e;}
 footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd);margin-top:20px;}
-footer a{color:var(--gold2);margin:0 6px;text-decoration:none;}
+footer a{color:var(--gold2);margin:0 2px;text-decoration:none;display:inline-block;padding:6px 4px;}
 footer a:hover{text-decoration:underline;}
 @media(max-width:640px){.reel{float:none;width:min(260px,72%);margin:0 auto 22px;}.navbtns .nb.hide-m{display:none;}.links{grid-template-columns:1fr;}}
 """
@@ -404,9 +404,9 @@ def home_strip(arts):
 .lrn-card:hover{{transform:translateY(-6px);box-shadow:0 13px 0 rgba(10,28,54,.13),0 24px 34px rgba(10,28,54,.26),0 0 0 3px #e8cc6a;}}
 .lrn-th{{flex:0 0 96px;background:#111 center 25%/cover no-repeat;}}
 .lrn-bd{{display:flex;flex-direction:column;padding:14px 16px;}}
-.lrn-tag{{font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#ffe4a0;}}
+.lrn-tag{{font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#ffe4a0;}}
 .lrn-t{{font-family:'Crimson Pro',serif;font-size:1.18rem;font-weight:700;line-height:1.2;margin:6px 0 10px;}}
-.lrn-go{{margin-top:auto;font-size:.72rem;font-weight:800;color:#ffe4a0;letter-spacing:.05em;}}
+.lrn-go{{margin-top:auto;font-size:.75rem;font-weight:800;color:#ffe4a0;letter-spacing:.05em;}}
 @media(max-width:860px){{.lrn-grid{{grid-template-columns:1fr;}}.lrn-card{{min-height:120px;}}}}
 </style>
 <section class="lrn" aria-label="Latest Learn explainers">
