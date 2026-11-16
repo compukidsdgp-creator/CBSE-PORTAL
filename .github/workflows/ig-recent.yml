@@ -1,6 +1,9 @@
 name: Instagram — list recent posts (diagnostic)
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/ig-recent.yml"]
 permissions:
   contents: read
 jobs:
