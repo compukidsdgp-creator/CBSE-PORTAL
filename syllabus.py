@@ -50,12 +50,6 @@ SUBJECTS = [
   (18, "Economics: Development", None), (19, "Economics: Sectors of the Indian Economy", None),
   (20, "Economics: Money and Credit", None), (21, "Economics: Globalisation and the Indian Economy", None),
   (22, "Map Work", None)]},
-{"key": "class10/ai", "class": "10", "name": "Artificial Intelligence", "code": "417", "hubs": ["resources/ai-x.html"], "verified": False,
- "chapters": [
-  (1, "Revisiting the AI Project Cycle and Ethical Frameworks", "ai-introduction-10"),
-  (2, "Advanced Concepts of Modeling in AI", "ml-concepts-10"), (3, "Evaluating Models", None),
-  (4, "Statistical Data", "data-handling-10"), (5, "Computer Vision", None),
-  (6, "Natural Language Processing", None), (7, "Employability Skills (Part A)", None)]},
 {"key": "class10/computer-applications", "class": "10", "name": "Computer Applications", "code": "165",
  "hubs": ["resources/comp-app-x.html"], "verified": False,
  "chapters": [(1, "Networking and the Internet", None), (2, "HTML", None), (3, "Cyber Ethics", None),
@@ -110,12 +104,6 @@ SUBJECTS = [
   (8, "Application of Integrals", "integrals-12"), (9, "Differential Equations", "differential-equations-12"),
   (10, "Vector Algebra", None), (11, "Three Dimensional Geometry", None), (12, "Linear Programming", None),
   (13, "Probability", "probability-12")]},
-{"key": "class12/computer-science", "class": "12", "name": "Computer Science", "code": "083", "hubs": ["resources/cs-xii.html"], "verified": False,
- "chapters": [
-  (1, "Python Revision Tour", "python-basics-10"), (2, "Functions", "python-functions-12"), (3, "Exception Handling", None),
-  (4, "File Handling: Text, Binary and CSV Files", None), (5, "Data Structures: Stack", "data-structures-12"),
-  (6, "Computer Networks", "networking-12"), (7, "Database Concepts and SQL", "database-sql-12"),
-  (8, "Interface of Python with MySQL", "database-sql-12")]},
 {"key": "class12/economics", "class": "12", "name": "Economics", "code": "030", "hubs": ["resources/economics-xii.html"], "verified": False,
  "chapters": [
   (1, "Macro: National Income and Related Aggregates", None), (2, "Macro: Money and Banking", None),
@@ -150,10 +138,16 @@ SUBJECTS = [
   (16, "Vistas: On the Face of It", None), (17, "Vistas: Memories of Childhood", None)]},
 ]
 
+# Finished by the owner and frozen: never tracked, drafted, revised or linked by the notes pipeline.
+FROZEN = {
+    "class10/ai": "resources/ai-x.html",                    # Class 10 Artificial Intelligence (417)
+    "class12/computer-science": "resources/cs-xii.html",    # Class 12 Computer Science (083)
+}
+
 # Order the nightly drafting works through (roadmap phases 1 → 3).
 QUEUE_ORDER = ["class10/science", "class10/maths", "class12/physics", "class12/chemistry",
                "class12/biology", "class12/maths", "class12/economics", "class12/english-core",
-               "class10/social-science", "class10/computer-applications", "class10/ai", "class12/computer-science",
+               "class10/social-science", "class10/computer-applications",
                "class12/accountancy", "class12/business-studies", "class10/english-ll", "class10/english-comm",
                "class10/hindi-a"]
 
