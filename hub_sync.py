@@ -12,7 +12,7 @@ import syllabus
 from notes_pages import load_chapters
 
 ROOT = Path(__file__).resolve().parent
-LOCKED = {"resources/physics-xii-new.html"}
+LOCKED = {"resources/physics-xii-new.html", "resources/ai-x.html", "resources/cs-xii.html"}  # locked or owner-frozen
 PROGRESS = ROOT / "notes_content" / "progress.json"
 STYLE_MARK = "<!-- CHNOTES-STYLE -->"
 STYLE = (STYLE_MARK + "<style>.chn-btn{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 16px;"

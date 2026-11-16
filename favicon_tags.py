@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-LOCKED = {"resources/physics-xii-new.html"}
+LOCKED = {"resources/physics-xii-new.html", "resources/ai-x.html", "resources/cs-xii.html"}  # locked or owner-frozen
 MARK = "<!-- favicon -->"
 TAGS = (MARK + '<link rel="icon" href="/favicon.ico" sizes="48x48">'
         '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">'
