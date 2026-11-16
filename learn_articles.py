@@ -2,6 +2,8 @@
 
 Fields:
   slug       URL: /learn/<slug>.html
+  author     optional: the article's actual author or responsible editor (default AUTHOR below)
+  author_role optional: their role, shown in the byline and in the structured data
   reel       WHY? reel module name (finds the video in formula-posts/why/queue or /posted and its thumbnail)
   published  YYYY-MM-DD — the article goes live on the site on/after this date (lets articles roll out with the reels)
   body       article HTML (h2 / p / ul / ol / table / pre allowed)

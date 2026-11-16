@@ -254,24 +254,35 @@ def article_page(a, others, ig):
     pub = a["published"]
     upd = a.get("updated", pub)
     words = len(re.sub(r"<[^>]+>", " ", a["body"]).split())
+    author_name = a.get("author", AUTHOR)              # the article's real author / responsible editor
+    author = {"@type": "Person", "name": author_name, "url": SITE + "/about.html"}
+    author_role = a.get("author_role", AUTHOR_ROLE if author_name == AUTHOR else "Subject teacher, CBSEMock")
+    author["jobTitle"] = author_role
+    initials = "".join(w[0] for w in author_name.split()[:2]).upper()
     graph = [
-        {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": a["title"], "description": a["description"],
+         "inLanguage": "en-IN", "isPartOf": {"@id": SITE + "/#website"}, "breadcrumb": {"@id": url + "#breadcrumb"},
+         "datePublished": pub, "dateModified": upd,
+         **({"primaryImageOfPage": {"@type": "ImageObject", "url": f"{SITE}/{thumb}"}} if thumb else {})},
+        {"@type": "Article", "@id": url + "#article", "headline": a["h1"], "description": a["description"], "url": url,
+         "mainEntityOfPage": {"@id": url + "#webpage"}, "isPartOf": {"@id": SITE + "/learn/#collection"},
+         "datePublished": pub, "dateModified": upd, "wordCount": words,
+         "inLanguage": "en-IN", "articleSection": a["category"],
+         "educationalLevel": "CBSE " + a["class_label"], "isAccessibleForFree": True,
+         "author": author,
+         "publisher": {"@type": "Organization", "@id": SITE + "/#organization", "name": "CBSEMOCK", "url": SITE + "/",
+                       "logo": {"@type": "ImageObject", "url": SITE + "/og-image.jpg"}},
+         **({"image": [f"{SITE}/{thumb}"]} if thumb else {}),
+         **({"video": {"@id": url + "#video"}} if video else {})},
+        {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Learn", "item": SITE + "/learn/"},
             {"@type": "ListItem", "position": 3, "name": a["h1"], "item": url}]},
-        {"@type": "Article", "headline": a["h1"], "description": a["description"], "url": url,
-         "mainEntityOfPage": url, "datePublished": pub, "dateModified": upd, "wordCount": words,
-         "inLanguage": "en-IN", "articleSection": a["category"],
-         "educationalLevel": "CBSE " + a["class_label"],
-         "author": {"@type": "Person", "name": AUTHOR, "jobTitle": AUTHOR_ROLE, "url": SITE + "/about.html"},
-         "publisher": {"@type": "EducationalOrganization", "name": "CBSE Mock", "url": SITE},
-         **({"image": f"{SITE}/{thumb}"} if thumb else {})},
     ]
     if video:
-        graph.append({"@type": "VideoObject", "name": a["h1"], "description": a["description"],
-                      "thumbnailUrl": f"{SITE}/{thumb}" if thumb else f"{SITE}/logo.png",
-                      "uploadDate": pub + "T18:30:00+05:30", "contentUrl": f"{SITE}/{video}",
-                      "embedUrl": url})
+        graph.append({"@type": "VideoObject", "@id": url + "#video", "name": a["h1"], "description": a["description"],
+                      "thumbnailUrl": [f"{SITE}/{thumb}"] if thumb else [SITE + "/og-image.jpg"],
+                      "uploadDate": pub + "T18:30:00+05:30", "contentUrl": f"{SITE}/{video}"})
     ld = {"@context": "https://schema.org", "@graph": graph}
 
     reel = ""
@@ -301,7 +312,7 @@ def article_page(a, others, ig):
 </header>
 <main class="wrap">
 <article>
-<div class="byline"><div class="av" aria-hidden="true">BM</div><div><b>{E(AUTHOR)}</b> · {E(AUTHOR_ROLE)}<small>20 years of teaching · Reviewed by subject teachers · <a href="../about.html">About us</a></small></div></div>
+<div class="byline"><div class="av" aria-hidden="true">{E(initials)}</div><div><b>{E(author_name)}</b> · {E(author_role)}<small>{"20 years of teaching · " if author_name == AUTHOR else ""}Reviewed by subject teachers · <a href="../about.html">About us</a></small></div></div>
 {reel}
 {a['body'].strip()}
 </article>
@@ -325,7 +336,9 @@ def index_page(arts):
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Learn", "item": url}]},
-        {"@type": "CollectionPage", "name": "Learn — WHY? explainers", "url": url, "description": desc,
+        {"@type": "CollectionPage", "@id": url + "#collection", "name": "Learn — WHY? explainers", "url": url,
+         "description": desc, "inLanguage": "en-IN", "isPartOf": {"@id": SITE + "/#website"},
+         "publisher": {"@id": SITE + "/#organization"},
          "mainEntity": {"@type": "ItemList", "itemListElement": [
              {"@type": "ListItem", "position": i + 1, "url": f"{SITE}/learn/{a['slug']}.html", "name": a["h1"]}
              for i, a in enumerate(arts)]}}]}
