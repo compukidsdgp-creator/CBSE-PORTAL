@@ -32,7 +32,9 @@
     '.cbse-ad-hidden{display:none!important}' +
     '.ad-page-wrap.cbse-no-rails{grid-template-columns:minmax(0,1fr)!important}' +
     '.ad-page-wrap.cbse-no-rails .ad-main-col{grid-column:1!important}' +
-    '.ad-page-wrap.cbse-no-rails .ad-leader{grid-column:1!important}';
+    '.ad-page-wrap.cbse-no-rails .ad-leader{grid-column:1!important}' +
+    '.portal-layout.cbse-no-side{grid-template-columns:minmax(0,1fr)!important}' +
+    'ins.adsbygoogle.cbse-ins-wait{height:0!important;min-height:0!important;overflow:hidden!important;margin:0!important}';
   (document.head || document.documentElement).appendChild(css);
 
   function placeholder(slot, contact) {
@@ -118,13 +120,74 @@
     }
   }
 
+  // 4. AdSense units, side columns and stray "Advertisement" labels.
+  //    A manual AdSense unit without data-ad-slot can never show an ad → hidden with its wrapper.
+  //    A real unit stays full width (AdSense needs that to fill it) but takes no height until an ad
+  //    arrives. Side columns and "Advertisement" labels show only when something in them is live.
+  function filled(ins) { return ins.getAttribute('data-ad-status') === 'filled'; }
+  function liveIn(el) {
+    if (el.querySelector('.cbse-ad-live')) return true;
+    var any = false;
+    el.querySelectorAll('ins.adsbygoogle').forEach(function (i) { if (filled(i)) any = true; });
+    return any;
+  }
+  function onlyAdBits(el) {             // wrapper that holds nothing but ad code / ad boxes
+    for (var c = el.firstElementChild; c; c = c.nextElementSibling) {
+      var t = c.tagName;
+      if (t === 'SCRIPT' || t === 'INS' || (c.id && c.id.indexOf('ad-') === 0)) continue;
+      if (/^advertisement$/i.test((c.textContent || '').trim()) && !c.firstElementChild) continue;
+      return false;
+    }
+    return true;
+  }
+  function tidy(showPh) {
+    document.querySelectorAll('ins.adsbygoogle').forEach(function (ins) {
+      var wrap = ins.parentElement && ins.parentElement !== document.body && onlyAdBits(ins.parentElement) ? ins.parentElement : null;
+      if (filled(ins)) {
+        ins.classList.remove('cbse-ins-wait', 'cbse-ad-hidden');
+        if (wrap) wrap.classList.remove('cbse-ad-hidden');
+      } else if (!ins.getAttribute('data-ad-slot') && !ins.closest('.google-auto-placed')) {
+        ins.classList.add('cbse-ad-hidden');
+        if (wrap) wrap.classList.add('cbse-ad-hidden');
+      } else {
+        ins.classList.add('cbse-ins-wait');
+      }
+    });
+    if (showPh) return;
+    document.querySelectorAll('.side-panel').forEach(function (sp) {
+      sp.classList.toggle('cbse-ad-hidden', !liveIn(sp));
+    });
+    document.querySelectorAll('.portal-layout').forEach(function (pl) {
+      var sides = pl.querySelectorAll(':scope > .side-panel'), vis = false;
+      sides.forEach(function (sp) { if (!sp.classList.contains('cbse-ad-hidden')) vis = true; });
+      pl.classList.toggle('cbse-no-side', sides.length > 0 && !vis);
+    });
+    document.querySelectorAll('div, span, p').forEach(function (el) {
+      if (el.firstElementChild || !/^advertisement$/i.test((el.textContent || '').trim())) return;
+      var box = el.parentElement;
+      if (!box) return;
+      var live = liveIn(box);
+      el.classList.toggle('cbse-ad-hidden', !live);
+      if (onlyAdBits(box) && box !== document.body) box.classList.toggle('cbse-ad-hidden', !live);
+    });
+  }
+  var watching = false;
+  function watch(showPh) {
+    if (watching || !window.MutationObserver) return;
+    watching = true;
+    new MutationObserver(function () { tidy(showPh); })
+      .observe(document.body, { subtree: true, attributes: true, attributeFilter: ['data-ad-status'] });
+  }
+
   var DEFAULTS = { show_placeholders: false, slots: {} };
   var bust = Math.floor(Date.now() / 300000);          // re-read the config at most every 5 minutes
   var cfgPromise = fetch(CONFIG_URL + '?v=' + bust, { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : DEFAULTS; })
     .catch(function () { return DEFAULTS; });
 
-  function run() { cfgPromise.then(apply); }
+  function run() {
+    cfgPromise.then(function (cfg) { apply(cfg); tidy(!!cfg.show_placeholders); watch(!!cfg.show_placeholders); });
+  }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
   else run();
 })();
