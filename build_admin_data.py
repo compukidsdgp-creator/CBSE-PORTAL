@@ -287,9 +287,20 @@ def build():
         "recent": [{"date": e[0].isoformat(), "kind": e[1].split(":")[-1], "label": e[2], "where": e[3]} for e in recent],
         "search_console": search_console(),
         "analytics": analytics(),
+        "tracker": tracker(),
         "gh_token": os.environ.get("ADMIN_GH_TOKEN", ""),
         "repo": REPO,
     }
+
+
+def tracker():
+    """Content Tracker: state of every syllabus chapter (notes page, hub link, quiz, reels, Learn)."""
+    try:
+        import content_tracker
+        return content_tracker.build()
+    except Exception as e:                       # never break the dashboard over the tracker
+        print(f"[warn] content tracker: {e}")
+        return None
 
 
 def seal(data, password):

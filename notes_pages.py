@@ -19,6 +19,10 @@ AUTHOR, AUTHOR_ROLE = "Biswarup Mukherjee", "Teaching Administrator, CBSEMock"
 
 
 def load_chapters():
+    try:
+        approvals = json.loads((SRC / "approvals.json").read_text(encoding="utf-8"))
+    except Exception:
+        approvals = {}
     out = []
     for f in sorted(SRC.glob("*/*.py")):
         if f.name.startswith("_"):
@@ -26,6 +30,11 @@ def load_chapters():
         spec = importlib.util.spec_from_file_location(f"nc_{f.parent.name}_{f.stem}", f)
         m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
         ch = dict(m.CHAPTER); ch["_src"] = str(f.relative_to(ROOT))
+        ch["_id"] = f"class{ch['class']}/{ch['subject_slug']}/{ch['slug']}"
+        appr = approvals.get(ch["_id"], {})
+        if appr.get("status") == "approved":       # approved in the admin panel → publish
+            ch["status"] = "live"
+            ch["updated"] = max(ch.get("updated", ""), appr.get("at", "")[:10])
         out.append(ch)
     return out
 

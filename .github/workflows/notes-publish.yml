@@ -1,0 +1,49 @@
+name: Notes — publish approved chapters
+
+# Runs when a chapter is approved (or changes are requested) in the admin panel's Content Tracker,
+# or when the nightly run adds a new draft. Rebuilds the chapter pages, links live chapters from their
+# subject notes pages, refreshes the sitemap and the tracker numbers.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "notes_content/**"
+      - "notes_pages.py"
+      - "hub_sync.py"
+      - "syllabus.py"
+  workflow_dispatch:
+
+concurrency:
+  group: notes-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build chapter pages and link live chapters
+        run: |
+          python3 notes_pages.py
+          python3 hub_sync.py
+          python3 favicon_tags.py || true
+          python3 gen_sitemap.py || true
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add notes notes_content resources sitemap.xml
+          git diff --cached --quiet && { echo "nothing to publish"; exit 0; }
+          git commit -q -m "notes: publish approved chapters"
+          for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+      - name: Refresh the admin dashboard numbers
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run admin-dashboard.yml || true

@@ -75,6 +75,28 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
 .savebar{position:sticky;bottom:0;background:rgba(11,18,32,.95);border-top:1px solid var(--line);padding:12px 0;margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .note{font-size:13px;color:var(--muted)}.note.ok{color:var(--green)}.note.bad{color:var(--red)}
 .warn{background:#2a2008;border:1px solid #5c4710;color:#ffdc8a;border-radius:10px;padding:10px 12px;font-size:13px;margin-top:10px}
+/* tracker */
+.trk-kpis{grid-template-columns:repeat(5,minmax(0,1fr))}@media(max-width:900px){.trk-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bigbar{height:14px;background:var(--panel2);border-radius:99px;overflow:hidden;display:flex;margin-top:10px}
+.bigbar i{display:block;height:100%}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}.legend b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.rev-item{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:10px;background:var(--panel2)}
+.rev-item h3{margin:0 0 4px;font-size:15px}.rev-item .meta{color:var(--muted);font-size:12px;margin-bottom:8px}
+.rev-item textarea{width:100%;min-height:70px;background:var(--bg);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:9px;font:inherit;font-size:13px;margin-top:8px}
+.rev-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn.green{background:var(--green);color:#06210f}.btn.sm{padding:7px 12px;font-size:13px}
+.subj{border:1px solid var(--line);border-radius:12px;margin-top:10px;background:var(--panel);overflow:hidden}
+.subj summary{list-style:none;cursor:pointer;padding:12px 14px;display:grid;grid-template-columns:minmax(0,1fr) 220px 90px;gap:12px;align-items:center}
+.subj summary::-webkit-details-marker{display:none}
+.subj summary .nm{font-weight:700}.subj summary .nm small{color:var(--muted);font-weight:500;margin-left:6px}
+.subj .pb{height:10px;background:var(--panel2);border-radius:99px;overflow:hidden;display:flex}.subj .pb i{display:block;height:100%}
+.subj .cnt{text-align:right;font-size:13px;color:var(--muted)}.subj .cnt b{color:var(--text)}
+.subj .body{padding:0 14px 14px;overflow:auto}
+.st{font-size:11px;font-weight:700;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.st.todo{background:#2a3350;color:#9fb0d4}.st.draft{background:#3a2f0a;color:#ffd166}.st.changes{background:#3a1520;color:#ff8fa8}.st.live{background:#0e3325;color:#5ff0b0}
+.ok{color:var(--green);font-weight:700}.no{color:#55607a}
+.flag{font-size:11px;color:#ffd166;margin-left:6px}
+@media(max-width:700px){.subj summary{grid-template-columns:1fr;gap:6px}.subj .cnt{text-align:left}}
 </style>
 </head>
 <body>
@@ -98,6 +120,7 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
     <div class="brand">CBSE<span>Mock</span> Admin</div>
     <nav class="tabs">
       <button class="tab on" data-tab="dash">Dashboard</button>
+      <button class="tab" data-tab="tracker">Content tracker</button>
       <button class="tab" data-tab="ads">Ad blocks</button>
     </nav>
     <div class="spacer"></div>
@@ -139,6 +162,25 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
         <div class="card"><h2>Top Google searches <small>28 days</small></h2><div class="scroll" id="queries"></div></div>
         <div class="card"><h2>Almost on page 1 <small>pages ranking 5–15: easiest wins</small></h2><div class="scroll" id="nearTop"></div></div>
       </div>
+    </section>
+
+    <!-- CONTENT TRACKER -->
+    <section id="tab-tracker" class="hidden">
+      <div class="grid kpis trk-kpis">
+        <div class="card kpi"><div class="label">Chapters in syllabus</div><div class="val" id="t-total">–</div><div class="sub" id="t-subj"></div></div>
+        <div class="card kpi"><div class="label">Live</div><div class="val" id="t-live" style="color:var(--green)">–</div><div class="sub">published chapter notes</div></div>
+        <div class="card kpi"><div class="label">Waiting for review</div><div class="val" id="t-draft" style="color:var(--accent)">–</div><div class="sub">drafts to approve</div></div>
+        <div class="card kpi"><div class="label">Changes requested</div><div class="val" id="t-changes" style="color:var(--pink)">–</div><div class="sub">fixed by the next nightly run</div></div>
+        <div class="card kpi"><div class="label">Not started</div><div class="val" id="t-todo">–</div><div class="sub" id="t-next"></div></div>
+      </div>
+      <div class="card" style="margin-top:14px"><h2>Overall progress</h2>
+        <div class="bigbar" id="t-bar"></div>
+        <div class="legend"><span><b style="background:var(--green)"></b>Live</span><span><b style="background:var(--accent)"></b>Draft</span><span><b style="background:var(--pink)"></b>Changes requested</span><span><b style="background:#2a3350"></b>Not started</span></div>
+      </div>
+      <div class="section-title">Waiting for your review</div>
+      <div class="card" id="t-review"></div>
+      <div class="section-title">Every subject and chapter <small style="text-transform:none;letter-spacing:0">· tap a subject to see its chapters</small></div>
+      <div id="t-subjects"></div>
     </section>
 
     <!-- AD BLOCKS -->
@@ -214,9 +256,9 @@ $('#logoutBtn').onclick = () => { try { sessionStorage.removeItem('cbse_admin_pw
 
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === t));
-  $('#tab-dash').classList.toggle('hidden', t.dataset.tab !== 'dash');
-  $('#tab-ads').classList.toggle('hidden', t.dataset.tab !== 'ads');
+  ['dash', 'tracker', 'ads'].forEach(k => $('#tab-' + k).classList.toggle('hidden', t.dataset.tab !== k));
   if (t.dataset.tab === 'ads' && !ADS) loadAds();
+  if (t.dataset.tab === 'tracker') renderTracker();
 });
 
 function start() {
@@ -323,6 +365,78 @@ $('#refreshBtn').onclick = async () => {
   } catch (e) { b.textContent = 'Refresh failed'; console.error(e); }
   setTimeout(() => { b.textContent = '↻ Refresh data'; b.disabled = false; }, 6000);
 };
+
+/* ── content tracker ── */
+function renderTracker() {
+  const T = DATA.tracker;
+  if (!T) { $('#t-review').innerHTML = '<div class="empty">Tracker data appears after the next dashboard refresh (press ↻ Refresh data).</div>'; return; }
+  const t = T.totals, pct = n => (100 * n / Math.max(1, t.chapters)).toFixed(2) + '%';
+  $('#t-total').textContent = fmt(t.chapters); $('#t-subj').textContent = T.subjects.length + ' subjects';
+  $('#t-live').textContent = fmt(t.live); $('#t-draft').textContent = fmt(t.draft);
+  $('#t-changes').textContent = fmt(t.changes); $('#t-todo').textContent = fmt(t.todo);
+  $('#t-next').textContent = T.next ? (T.next.action === 'revise' ? 'next: fix ' : 'next: ') + T.next.title : 'all chapters drafted';
+  $('#t-bar').innerHTML = `<i style="width:${pct(t.live)};background:var(--green)"></i><i style="width:${pct(t.draft)};background:var(--accent)"></i><i style="width:${pct(t.changes)};background:var(--pink)"></i>`;
+  const site = 'https://cbsemock.org.in/';
+  const drafts = T.subjects.flatMap(s => s.rows.filter(r => r.state === 'draft' || r.state === 'changes').map(r => ({...r, sname: s.name, cls: s.class})));
+  $('#t-review').innerHTML = drafts.length ? drafts.map(r => `<div class="rev-item" data-id="${esc(r.id)}">
+      <h3>${esc(r.title)} <span class="st ${r.state}">${r.state === 'changes' ? 'changes requested' : 'draft'}</span></h3>
+      <div class="meta">Class ${esc(r.cls)} ${esc(r.sname)} · Chapter ${r.n} · ${fmt(r.words)} words · ${r.diagrams} diagrams · ${r.worked} worked questions · ${r.mistakes} mistakes · updated ${esc(r.updated)}</div>
+      ${r.state === 'changes' && r.note ? `<div class="warn" style="margin:0 0 8px">Your note: ${esc(r.note)}</div>` : ''}
+      <div class="rev-actions"><a class="btn ghost sm" href="${site + esc(r.url)}" target="_blank" rel="noopener">Open preview ↗</a>
+        <button class="btn green sm t-approve">✓ Approve &amp; publish</button>
+        <button class="btn ghost sm t-change">✎ Request changes</button><span class="note t-msg"></span></div>
+      <textarea class="hidden t-note" placeholder="What should change? e.g. add the activity on heating lead nitrate; make diagram 2 labels bigger"></textarea>
+    </div>`).join('') : '<div class="empty">Nothing to review right now. New drafts appear here each morning after the nightly run.</div>';
+  document.querySelectorAll('.rev-item').forEach(el => {
+    const id = el.dataset.id, msg = el.querySelector('.t-msg'), ta = el.querySelector('.t-note');
+    el.querySelector('.t-approve').onclick = () => saveApproval(id, {status: 'approved'}, msg, el);
+    el.querySelector('.t-change').onclick = e => {
+      if (ta.classList.contains('hidden')) { ta.classList.remove('hidden'); e.target.textContent = 'Send changes'; ta.focus(); return; }
+      if (!ta.value.trim()) { msg.className = 'note bad t-msg'; msg.textContent = 'Write what should change first.'; return; }
+      saveApproval(id, {status: 'changes', note: ta.value.trim()}, msg, el);
+    };
+  });
+  const cell = b => b ? '<span class="ok">✓</span>' : '<span class="no">–</span>';
+  $('#t-subjects').innerHTML = T.subjects.map(s => {
+    const n = s.total, w = k => (100 * s.rows.filter(r => r.state === k).length / n) + '%';
+    return `<details class="subj"><summary>
+        <div class="nm">Class ${esc(s.class)} · ${esc(s.name)}<small>Code ${esc(s.code)}</small>${s.verified ? '' : '<span class="flag" title="Chapter list to be checked against the official 2026–27 syllabus PDF">syllabus to verify</span>'}${s.hub_locked ? '<span class="flag" title="The subject notes page is locked; chapter pages are built separately">hub locked</span>' : ''}</div>
+        <div class="pb"><i style="width:${w('live')};background:var(--green)"></i><i style="width:${w('draft')};background:var(--accent)"></i><i style="width:${w('changes')};background:var(--pink)"></i></div>
+        <div class="cnt"><b>${s.live}</b> / ${n} live</div></summary>
+      <div class="body"><table><thead><tr><th>#</th><th>Chapter</th><th>Notes page</th><th class="num">Words</th><th class="num">Diagrams</th><th class="num">Worked Qs</th><th>Subject page linked</th><th>Tool tabs</th><th>Quiz</th><th class="num">Reels</th><th class="num">Learn</th></tr></thead><tbody>
+      ${s.rows.map(r => `<tr><td class="num">${r.n}</td><td>${r.url ? `<a href="${site + esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a>` : esc(r.title)}</td>
+        <td><span class="st ${r.state}">${{todo: 'not started', draft: 'draft', changes: 'changes', live: 'live'}[r.state]}</span></td>
+        <td class="num">${r.words ? fmt(r.words) : '–'}</td><td class="num">${r.diagrams || '–'}</td><td class="num">${r.worked || '–'}</td>
+        <td>${cell(r.hub)}</td><td>${r.tools.length ? esc(r.tools.length + ' / 6') : '<span class="no">–</span>'}</td>
+        <td>${r.quiz ? `<a href="${site}chapters/${esc(r.quiz_slug)}.html" target="_blank" rel="noopener">✓</a>` : '<span class="no">–</span>'}</td>
+        <td class="num">${r.reels || '–'}</td><td class="num">${r.learn || '–'}</td></tr>`).join('')}
+      </tbody></table></div></details>`;
+  }).join('');
+}
+
+async function saveApproval(id, entry, msg, el) {
+  msg.className = 'note t-msg'; msg.textContent = 'Saving…';
+  el.querySelectorAll('button').forEach(b => b.disabled = true);
+  try {
+    const path = '/contents/notes_content/approvals.json';
+    const cur = await gh(path + '?ref=main');
+    const data = JSON.parse(fromB64(cur.content) || '{}');
+    data[id] = {...entry, at: new Date().toISOString()};
+    await gh(path, {method: 'PUT', body: JSON.stringify({message: `admin: ${entry.status === 'approved' ? 'approve' : 'request changes for'} ${id}`,
+      content: toB64(JSON.stringify(data, null, 2) + '\n'), sha: cur.sha, branch: 'main'})});
+    const row = DATA.tracker.subjects.flatMap(s => s.rows).find(r => r.id === id);
+    if (row) { row.state = entry.status === 'approved' ? 'live' : 'changes'; row.note = entry.note || ''; }
+    const T = DATA.tracker.totals; T.draft = DATA.tracker.subjects.flatMap(s => s.rows).filter(r => r.state === 'draft').length;
+    T.live = DATA.tracker.subjects.flatMap(s => s.rows).filter(r => r.state === 'live').length;
+    T.changes = DATA.tracker.subjects.flatMap(s => s.rows).filter(r => r.state === 'changes').length;
+    msg.className = 'note ok t-msg';
+    msg.textContent = entry.status === 'approved' ? '✓ Approved. It goes live on the site in about 3 minutes.' : '✓ Sent. The next nightly run revises it first.';
+    setTimeout(renderTracker, 2500);
+  } catch (e) {
+    msg.className = 'note bad t-msg'; msg.textContent = 'Not saved: ' + e.message;
+    el.querySelectorAll('button').forEach(b => b.disabled = false);
+  }
+}
 
 /* ── ad blocks ── */
 async function loadAds() {
