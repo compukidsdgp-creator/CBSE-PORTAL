@@ -495,3 +495,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+    import favicon_tags                       # favicon links on the pages just written
+    for _g in "learn/*.html".split():
+        for _f in sorted(favicon_tags.ROOT.glob(_g)):
+            favicon_tags.add(_f)

@@ -47,7 +47,9 @@ jobs:
           python3 reels_page.py || echo "::warning::Reel pages were not refreshed"
           python3 formula_board_page.py || echo "::warning::Formula Board was not refreshed"
           python3 go_page.py || echo "::warning::Link-in-bio page was not refreshed"
+          python3 favicon_tags.py || true
           git add learn go why-reels formula-reels formula-board index.html chapters cbse-class-*.html
+          git add -u -- '*.html' || true
           git diff --cached --quiet && exit 0
           git commit -q -m "chore: refresh Learn pages"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q && exit 0; sleep 5; done

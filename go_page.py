@@ -189,3 +189,7 @@ def build():
 
 if __name__ == "__main__":
     build()
+    import favicon_tags                       # favicon links on the pages just written
+    for _g in "go/*.html".split():
+        for _f in sorted(favicon_tags.ROOT.glob(_g)):
+            favicon_tags.add(_f)
