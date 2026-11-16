@@ -43,6 +43,12 @@ jobs:
           git diff --cached --quiet && { echo "nothing to publish"; exit 0; }
           git commit -q -m "notes: publish approved chapters"
           for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+      - name: Tell the owner a new draft is ready (private Telegram chat)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+          MSG: ${{ github.event.head_commit.message }}
+        run: python3 notify_draft.py || true
       - name: Refresh the admin dashboard numbers
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
