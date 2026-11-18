@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Why does adding a resistor in parallel lower the resistance? | CBSEMock</title>
+<meta name="description" content="Adding a resistor in parallel gives current an extra path, so total resistance falls. The road analogy, the 1/R formula derived, worked examples and exam traps for CBSE Class 10 and 12 Physics.">
+<link rel="canonical" href="https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html">
+<meta property="og:title" content="Why does adding a resistor in parallel lower the resistance? | CBSEMock">
+<meta property="og:description" content="Adding a resistor in parallel gives current an extra path, so total resistance falls. The road analogy, the 1/R formula derived, worked examples and exam traps for CBSE Class 10 and 12 Physics.">
+<meta property="og:url" content="https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://cbsemock.org.in/why-reels/thumb/07-parallel_resistors.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--code:#f1eee6;
+--grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%);}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--code:#1f2630;}}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font:16px/1.75 Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);}
+.serif,h1,h2{font-family:'Crimson Pro',Georgia,serif;}
+/* hero */
+.hero{background:var(--grd);color:#fff;position:relative;overflow:hidden;padding:0 20px 34px;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");}
+.hero::after{content:'';position:absolute;width:340px;height:340px;right:-120px;top:-140px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.22),transparent 70%);}
+.hero>*{position:relative;z-index:1;}
+.topbar{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:1.05rem;letter-spacing:.01em;}
+.brand b{color:var(--gold2);}
+.navbtns{display:flex;gap:8px;flex-wrap:wrap;}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:6px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s;}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 16px rgba(201,162,39,.4);}
+.hero-in{max-width:780px;margin:0 auto;padding-top:22px;}
+.hero-in.wide{max-width:1040px;text-align:center;}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.7);margin-bottom:12px;}
+.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0;}
+.crumb a:hover{text-decoration:underline;}
+h1{font-size:clamp(1.8rem,4.2vw,2.6rem);line-height:1.15;margin-bottom:14px;font-weight:700;}
+h1 em{font-style:normal;color:var(--gold2);}
+.badge{display:inline-block;background:var(--gold);color:var(--navy2);border-radius:20px;padding:4px 16px;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.8rem;}
+.chip{padding:4px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;}
+.pill{display:inline-block;padding:4px 12px;border-radius:99px;color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.03em;}
+.intro{color:rgba(255,255,255,.85);font-size:1rem;max-width:760px;margin:0 auto;}
+/* page */
+.wrap{max-width:780px;margin:0 auto;padding:0 20px 70px;}
+.byline{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--border);border-left:5px solid var(--gold);border-radius:14px;padding:13px 16px;margin:-20px 0 26px;position:relative;z-index:2;box-shadow:0 10px 26px rgba(15,35,71,.12);font-size:.9rem;}
+.byline .av{flex:0 0 44px;height:44px;border-radius:50%;background:var(--grd);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-weight:800;border:2px solid var(--gold);}
+.byline small{color:var(--muted);display:block;line-height:1.45;}
+.byline a{color:var(--navy);font-weight:600;}
+.reel{float:right;width:250px;margin:4px 0 18px 26px;}
+.reel video{width:100%;aspect-ratio:9/16;border-radius:16px;background:#000;display:block;border:3px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,39,.15),0 14px 30px rgba(15,35,71,.3);}
+.igf{position:relative;width:100%;aspect-ratio:9/16;border-radius:16px;background:#000 center/cover no-repeat;cursor:pointer;border:3px solid var(--gold);box-shadow:0 0 0 6px rgba(201,162,39,.15),0 14px 30px rgba(15,35,71,.3);transition:transform .2s,box-shadow .2s;}
+.igf:hover,.igf:focus{transform:translateY(-4px);box-shadow:0 0 0 6px rgba(201,162,39,.3),0 20px 36px rgba(15,35,71,.38);outline:none;}
+.igplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);color:#fff;font-size:1.6rem;display:flex;align-items:center;justify-content:center;padding-left:5px;box-shadow:0 6px 20px rgba(0,0,0,.45);transition:transform .2s;}
+.igf:hover .igplay{transform:translate(-50%,-50%) scale(1.12);}
+.igbadge{position:absolute;left:50%;top:calc(50% + 46px);transform:translateX(-50%);white-space:nowrap;padding:3px 10px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.03em;}
+.igbtn{display:block;margin-top:10px;text-align:center;padding:9px 12px;border-radius:12px;color:#fff;text-decoration:none;font-size:.8rem;font-weight:700;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);box-shadow:0 4px 12px rgba(238,42,123,.3);transition:transform .2s,box-shadow .2s;}
+.igbtn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(238,42,123,.45);}
+.reel .instagram-media{min-width:0!important;width:100%!important;margin:0!important;border-radius:14px!important;}
+.reel p{font-size:.78rem;color:var(--muted);text-align:center;margin-top:8px;font-weight:600;}
+article h2{font-size:1.55rem;margin:32px 0 10px;line-height:1.25;color:var(--navy);display:flex;align-items:center;gap:10px;}
+article h2::before{content:'';flex:0 0 6px;height:24px;border-radius:3px;background:linear-gradient(180deg,var(--gold2),var(--gold));}
+article p{margin:0 0 14px;}
+article ul,article ol{margin:0 0 16px 22px;}
+article li{margin:5px 0;}
+article li::marker{color:var(--gold);font-weight:700;}
+article b{color:var(--navy);}
+article code{background:var(--code);padding:1px 6px;border-radius:5px;font-size:.9em;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
+article pre{background:#0f2347;color:#e7e7f0;border-radius:12px;padding:14px 16px;overflow-x:auto;margin:0 0 18px;font-size:.85rem;line-height:1.55;clear:both;border-left:4px solid var(--gold);}
+article pre code{background:none;padding:0;color:inherit;}
+article table{border-collapse:collapse;width:100%;margin:0 0 18px;font-size:.92rem;clear:both;display:block;overflow-x:auto;border-radius:10px;}
+article th,article td{border:1px solid var(--border);padding:8px 11px;text-align:left;}
+article th{background:var(--navy);color:#fff;}
+article tr:nth-child(odd) td{background:rgba(201,162,39,.06);}
+@media(prefers-color-scheme:dark){article h2,article b,.byline a{color:var(--gold2);}}
+/* boxes */
+.box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px 22px;margin:30px 0 0;clear:both;box-shadow:0 6px 18px rgba(15,35,71,.06);}
+.box h2{font-size:1.45rem;margin:0 0 14px;color:var(--navy);}
+@media(prefers-color-scheme:dark){.box h2{color:var(--gold2);}}
+details{border:1.5px solid var(--border);border-radius:12px;padding:0;margin:10px 0;overflow:hidden;transition:border-color .18s,box-shadow .18s;}
+details:hover{border-color:var(--gold);box-shadow:0 4px 14px rgba(201,162,39,.2);}
+details[open]{border-color:var(--navy);}
+summary{cursor:pointer;font-weight:600;padding:12px 16px;list-style:none;display:flex;gap:10px;align-items:flex-start;}
+summary::-webkit-details-marker{display:none;}
+summary::before{content:'Q';flex:0 0 24px;height:24px;border-radius:50%;background:var(--grd);color:var(--gold2);font-size:.75rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+details[open] summary{background:linear-gradient(90deg,rgba(26,58,107,.08),transparent);}
+details .ans{padding:4px 16px 14px 50px;color:var(--text);}
+details .ans::before{content:'Answer: ';font-weight:700;color:#237d69;}
+/* colourful link buttons */
+.links{list-style:none;margin:0!important;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
+.links a{--c1:#3b6fb8;--c2:#0f2347;position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:58px;padding:12px 16px;border-radius:14px;text-decoration:none;color:#fff;font-weight:700;font-size:.9rem;line-height:1.35;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 5px 0 rgba(10,28,54,.18),0 10px 18px rgba(10,28,54,.14);transition:transform .2s,box-shadow .2s,filter .2s;overflow:hidden;}
+.links a::after{content:'→';flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;color:var(--gold2);transition:transform .2s,background .2s,color .2s;}
+.links a::before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);transform:translateX(-120%);transition:transform .55s;}
+.links a:hover{transform:translateY(-4px);filter:saturate(1.15);box-shadow:0 9px 0 rgba(10,28,54,.14),0 18px 28px rgba(10,28,54,.24),0 0 0 3px var(--gold2);}
+.links a:hover::before{transform:translateX(120%);}
+.links a:hover::after{transform:translateX(4px);background:var(--gold);color:var(--navy2);}
+.links li:nth-child(6n+1) a{--c1:#3b6fb8;--c2:#0f2347;}
+.links li:nth-child(6n+2) a{--c1:#2b9a80;--c2:#12483e;}
+.links li:nth-child(6n+3) a{--c1:#8b6bc2;--c2:#392653;}
+.links li:nth-child(6n+4) a{--c1:#c18a45;--c2:#563318;}
+.links li:nth-child(6n+5) a{--c1:#c0395f;--c2:#5a1228;}
+.links li:nth-child(6n+6) a{--c1:#0e8aa8;--c2:#0b3d52;}
+/* index cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin-top:-22px;position:relative;z-index:2;}
+.card{--c1:#3b6fb8;--c2:#0e2344;position:relative;display:flex;flex-direction:column;border-radius:18px;overflow:hidden;text-decoration:none;color:#fff;background:linear-gradient(145deg,var(--c1),var(--c2));border:1px solid rgba(255,255,255,.35);box-shadow:0 8px 0 rgba(10,28,54,.16),0 15px 26px rgba(10,28,54,.18),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .22s,box-shadow .22s;}
+.card:hover{transform:translateY(-7px) rotateX(2deg) rotateY(-1deg);box-shadow:0 13px 0 rgba(10,28,54,.13),0 25px 36px rgba(10,28,54,.26),0 0 0 3px var(--gold2);}
+.card .th{aspect-ratio:16/10;background:#111 center 30%/cover no-repeat;position:relative;}
+.card .th::after{content:'▶';position:absolute;right:12px;bottom:-18px;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--navy2);display:flex;align-items:center;justify-content:center;font-size:.9rem;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .2s;}
+.card:hover .th::after{transform:scale(1.15);}
+.card .bd{padding:16px 16px 18px;display:flex;flex-direction:column;flex:1;}
+.card .tag{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold2);}
+.card b{display:block;font-family:'Crimson Pro',Georgia,serif;font-size:1.3rem;line-height:1.2;margin:6px 0 8px;}
+.card span.d{font-size:.8rem;color:rgba(255,255,255,.82);line-height:1.5;}
+.card .go{margin-top:auto;padding-top:14px;font-size:.75rem;font-weight:800;color:#ffe4a0;letter-spacing:.05em;}
+.cat-Maths{--c1:#3b6fb8;--c2:#0e2344;}
+.cat-AI{--c1:#8b6bc2;--c2:#392653;}
+.cat-ComputerScience{--c1:#0e8aa8;--c2:#0b3d52;}
+.cat-Physics,.cat-Science{--c1:#c18a45;--c2:#563318;}
+.cat-Chemistry{--c1:#c0395f;--c2:#5a1228;}
+.cat-Biology{--c1:#2b9a80;--c2:#12483e;}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd);margin-top:20px;}
+footer a{color:var(--gold2);margin:0 2px;text-decoration:none;display:inline-block;padding:6px 4px;}
+footer a:hover{text-decoration:underline;}
+@media(max-width:640px){.reel{float:none;width:min(260px,72%);margin:0 auto 22px;}.navbtns .nb.hide-m{display:none;}.links{grid-template-columns:1fr;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html#webpage", "url": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html", "name": "Why does adding a resistor in parallel lower the resistance?", "description": "Adding a resistor in parallel gives current an extra path, so total resistance falls. The road analogy, the 1/R formula derived, worked examples and exam traps for CBSE Class 10 and 12 Physics.", "inLanguage": "en-IN", "isPartOf": {"@id": "https://cbsemock.org.in/#website"}, "breadcrumb": {"@id": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html#breadcrumb"}, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "primaryImageOfPage": {"@type": "ImageObject", "url": "https://cbsemock.org.in/why-reels/thumb/07-parallel_resistors.jpg"}}, {"@type": "Article", "@id": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html#article", "headline": "Why does adding a resistor in parallel lower the total resistance?", "description": "Adding a resistor in parallel gives current an extra path, so total resistance falls. The road analogy, the 1/R formula derived, worked examples and exam traps for CBSE Class 10 and 12 Physics.", "url": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html", "mainEntityOfPage": {"@id": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html#webpage"}, "isPartOf": {"@id": "https://cbsemock.org.in/learn/#collection"}, "datePublished": "2026-11-18", "dateModified": "2026-11-18", "wordCount": 608, "inLanguage": "en-IN", "articleSection": "Physics", "educationalLevel": "CBSE Class 10 · 12", "isAccessibleForFree": true, "author": {"@type": "Person", "name": "Biswarup Mukherjee", "url": "https://cbsemock.org.in/about.html", "jobTitle": "Teaching Administrator, CBSEMock"}, "publisher": {"@type": "Organization", "@id": "https://cbsemock.org.in/#organization", "name": "CBSEMOCK", "url": "https://cbsemock.org.in/", "logo": {"@type": "ImageObject", "url": "https://cbsemock.org.in/og-image.jpg"}}, "image": ["https://cbsemock.org.in/why-reels/thumb/07-parallel_resistors.jpg"], "video": {"@id": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html#video"}}, {"@type": "BreadcrumbList", "@id": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cbsemock.org.in/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://cbsemock.org.in/learn/"}, {"@type": "ListItem", "position": 3, "name": "Why does adding a resistor in parallel lower the total resistance?", "item": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html"}]}, {"@type": "VideoObject", "@id": "https://cbsemock.org.in/learn/why-does-adding-resistors-in-parallel-lower-resistance.html#video", "name": "Why does adding a resistor in parallel lower the total resistance?", "description": "Adding a resistor in parallel gives current an extra path, so total resistance falls. The road analogy, the 1/R formula derived, worked examples and exam traps for CBSE Class 10 and 12 Physics.", "thumbnailUrl": ["https://cbsemock.org.in/why-reels/thumb/07-parallel_resistors.jpg"], "uploadDate": "2026-11-18T18:30:00+05:30", "contentUrl": "https://cbsemock.org.in/formula-posts/why/queue/07_why_parallel_resistors.mp4"}]}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+</head>
+<body>
+<header class="hero"><div class="topbar"><a class="brand" href="../index.html">CBSE<b>Mock</b></a><nav class="navbtns"><a class="nb" href="./">📘 Learn</a><a class="nb" href="../why-reels/">🤔 WHY? Reels</a><a class="nb hide-m" href="../free-mock-papers.html">📝 Mock Papers</a></nav></div>
+<div class="hero-in"><nav class="crumb"><a href="../index.html">Home</a> › <a href="./">Learn</a> › Physics</nav>
+<span class="badge">🤔 WHY? explainer</span>
+<h1>Why does adding a resistor in parallel lower the total resistance?</h1>
+<div class="meta"><span class="pill" style="background:#c18a45">Physics</span><span class="chip">CBSE Class 10 · 12</span><span class="chip">⏱ 6 min read</span><span class="chip">Updated 18 November 2026</span></div></div>
+</header>
+<main class="wrap">
+<article>
+<div class="byline"><div class="av" aria-hidden="true">BM</div><div><b>Biswarup Mukherjee</b> · Teaching Administrator, CBSEMock<small>20 years of teaching · Reviewed by subject teachers · <a href="../about.html">About us</a></small></div></div>
+<figure class="reel"><video controls playsinline preload="none" poster="../why-reels/thumb/07-parallel_resistors.jpg" src="../formula-posts/why/queue/07_why_parallel_resistors.mp4" title="Why does adding a resistor in parallel lower the total resistance?"></video><p>▶ Watch the WHY? reel</p></figure>
+<p>It feels wrong at first. You add <i>more</i> resistors to a circuit and the total resistance goes <i>down</i>. Yet that is exactly what happens when resistors are connected in parallel — and it is why every appliance in your home is wired in parallel. Once you see current as traffic, the result becomes obvious.</p>
+
+<h2>The short answer</h2>
+<p>A resistor in parallel does not sit in the way of the current — it opens a <b>new path</b> beside the old one. With the same battery voltage pushing, more paths let more current flow. Since <b>R = V / I</b>, a bigger current at the same voltage means a <b>smaller</b> total resistance.</p>
+
+<h2>Think of current as cars on roads</h2>
+<p>Picture the battery as a city that sends cars (charge) out, and each resistor as a road. With one narrow road, only so many cars get through each second — say 1 ampere. Now build a second, identical road right beside the first. Each road still carries 1 A, because each one still has the full voltage across it. Together they carry <b>2 A</b>. The city sees twice the traffic flowing for the same push, so the combination behaves like a road with <b>half</b> the resistance.</p>
+<p>Compare this with <b>series</b>: putting a second road at the end of the first makes one longer road. Every car must travel both, so traffic slows and resistance adds up: R = R₁ + R₂.</p>
+
+<h2>Deriving the formula</h2>
+<ol>
+  <li>In parallel, every resistor is connected across the same two points, so each has the <b>same voltage V</b>.</li>
+  <li>The current through each is given by Ohm's law: I₁ = V/R₁ and I₂ = V/R₂.</li>
+  <li>The main current splits and rejoins, so <b>I = I₁ + I₂</b> (charge is conserved).</li>
+  <li>Write I = V/R for the whole combination: V/R = V/R₁ + V/R₂.</li>
+  <li>Divide by V: <b>1/R = 1/R₁ + 1/R₂</b>.</li>
+</ol>
+<p>Because you are adding positive fractions, 1/R is bigger than either 1/R₁ or 1/R₂ alone — so R is always <b>smaller than the smallest resistor</b> in the group. That single fact lets you check your answers instantly.</p>
+
+<h2>Worked examples</h2>
+<p><b>Q1.</b> Two 6 Ω resistors are connected in parallel. Find the equivalent resistance.</p>
+<p><b>A.</b> 1/R = 1/6 + 1/6 = 2/6, so R = <b>3 Ω</b>. Two equal resistors in parallel always give half of one: n equal resistors give R/n.</p>
+<p><b>Q2.</b> 3 Ω and 6 Ω are in parallel across a 6 V battery. Find the total current.</p>
+<p><b>A.</b> 1/R = 1/3 + 1/6 = 3/6, so R = 2 Ω. I = V/R = 6/2 = <b>3 A</b>. Check: 6/3 = 2 A through one branch and 6/6 = 1 A through the other, total 3 A. ✔</p>
+<p>A handy shortcut for exactly two resistors: <b>R = R₁R₂ / (R₁ + R₂)</b> — “product over sum”. For 3 Ω and 6 Ω: 18/9 = 2 Ω.</p>
+
+<h2>Why homes are wired in parallel</h2>
+<ul>
+  <li>Every appliance gets the full mains voltage (220 V in India).</li>
+  <li>Each appliance can be switched on or off without affecting the others.</li>
+  <li>If one bulb fuses, the others keep working — unlike old series fairy lights.</li>
+</ul>
+<p>The flip side: every appliance you switch on adds another path and the total current drawn from the mains rises. That is why overloading a socket is dangerous and why circuits need fuses or MCBs.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+  <li><b>Forgetting to flip at the end.</b> If 1/R = 1/2, then R = 2 Ω, not 0.5 Ω.</li>
+  <li><b>Adding resistances in parallel.</b> Only series resistances add directly.</li>
+  <li><b>Getting an answer larger than the smallest resistor.</b> In parallel that is impossible — recheck.</li>
+</ul>
+</article>
+<section class="box"><h2>Try it yourself</h2><details><summary>Three 9 Ω resistors are connected in parallel. What is the equivalent resistance?</summary><p class="ans">n equal resistors in parallel give R/n = 9/3 = 3 Ω.</p></details><details><summary>A 4 Ω and a 12 Ω resistor are in parallel. Find the equivalent resistance.</summary><p class="ans">Product over sum: (4 × 12)/(4 + 12) = 48/16 = 3 Ω.</p></details><details><summary>Why does a fused bulb not switch off the other bulbs in a house?</summary><p class="ans">House wiring is parallel, so each bulb is on its own path across the mains; breaking one path leaves the others complete.</p></details></section>
+<section class="box"><h2>Practise this topic</h2><ul class="links"><li><a href="../cbse-class-10-science-mock-tests.html">Class 10 Science mock tests</a></li><li><a href="../chapters/electricity-10.html">Electricity (Class 10) quiz</a></li><li><a href="../chapters/current-electricity-12.html">Current Electricity (Class 12) quiz</a></li><li><a href="../cbse-class-12-physics-mock-papers.html">Class 12 Physics mock papers</a></li><li><a href="../why-reels/">All WHY? reels</a></li></ul></section>
+<section class="box"><h2>More WHY? explainers</h2><ul class="links"><li><a href="why-is-0-1-plus-0-2-not-0-3-in-python.html">Why is 0.1 + 0.2 not equal to 0.3 in Python?</a></li><li><a href="how-does-an-ai-neuron-make-a-decision.html">How does an AI neuron make a decision?</a></li><li><a href="why-is-sin2-plus-cos2-equal-to-1.html">Why is sin²θ + cos²θ = 1?</a></li><li><a href="why-is-binary-search-so-fast.html">Why is binary search so fast?</a></li></ul></section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in &nbsp;|&nbsp;
+<a href="../about.html">About Us</a>|<a href="../privacy.html">Privacy Policy</a>|<a href="../terms.html">Terms of Use</a>|<a href="../contact.html">Contact</a>|<a href="../disclaimer.html">Disclaimer</a></footer>
+
+</body>
+</html>
