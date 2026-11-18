@@ -1307,6 +1307,532 @@
    "type": "LA",
    "chapter": "The Human Eye and the Colourful World",
    "text": "(a) Draw a labelled diagram of the human eye. State the function of the iris, the ciliary muscles and the retina.\n(b) What is meant by the power of accommodation of the eye?\n(c) The far point of a person with myopia is 80 cm. Find the nature and the power of the lens needed to correct this defect.\nOR\n(a) What is dispersion of white light? Draw a diagram to show the dispersion of white light by a glass prism.\n(b) Why do different colours of white light bend through different angles in a prism?\n(c) How did Newton show that white light is made up of seven colours and that these colours can be recombined?"
+  },
+  {
+   "id": "sc10-0121",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Heredity",
+   "text": "A pea plant that is heterozygous for tallness (Tt) is crossed with a dwarf pea plant (tt). The ratio of tall to dwarf plants among the offspring will be:",
+   "options": [
+    "(A) 3 : 1",
+    "(B) 1 : 1",
+    "(C) 1 : 2 : 1",
+    "(D) all tall"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0122",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Heredity",
+   "text": "Which of the following characters of the pea plant was NOT among those studied by Mendel?",
+   "options": [
+    "(A) Shape of the seed",
+    "(B) Colour of the flower",
+    "(C) Shape of the leaf",
+    "(D) Height of the stem"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0123",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Our Environment",
+   "text": "In the food chain grass → grasshopper → frog → snake → eagle, the frog is a:",
+   "options": [
+    "(A) producer",
+    "(B) primary consumer",
+    "(C) tertiary consumer",
+    "(D) secondary consumer"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0124",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Our Environment",
+   "text": "Which of the following groups contains only biodegradable materials?",
+   "options": [
+    "(A) Grass clippings, paper and cotton cloth",
+    "(B) Plastic bottle, glass and paper",
+    "(C) Polythene bag, fruit peels and wood",
+    "(D) Aluminium foil, cotton and DDT"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0125",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "After fertilisation in a flower, the fruit develops from the:",
+   "options": [
+    "(A) ovary",
+    "(B) ovule",
+    "(C) style",
+    "(D) petal"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0126",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "Which of the following organisms reproduces by forming spores in sporangia?",
+   "options": [
+    "(A) Hydra",
+    "(B) Planaria",
+    "(C) Leishmania",
+    "(D) Rhizopus"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0127",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Control and Coordination",
+   "text": "Growth hormone in the human body is secreted by the:",
+   "options": [
+    "(A) thyroid gland",
+    "(B) adrenal gland",
+    "(C) pituitary gland",
+    "(D) pancreas"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0128",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Life Processes",
+   "text": "Which of the following organisms breaks down food material outside its body and then absorbs it?",
+   "options": [
+    "(A) Amoeba",
+    "(B) Bread mould",
+    "(C) Cuscuta",
+    "(D) Grasshopper"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0129",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "Assertion (A): In human males, the testes are located outside the abdominal cavity in the scrotum.\nReason (R): The formation of sperms requires a temperature lower than the normal body temperature.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0130",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Our Environment",
+   "text": "Assertion (A): The flow of energy in an ecosystem is unidirectional.\nReason (R): Only about 1% of the energy available at one trophic level is passed on to the next trophic level.",
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0131",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Life Processes",
+   "text": "Assertion (A): The kidneys are the main excretory organs in human beings.\nReason (R): Urine is stored in the urinary bladder until it is passed out.",
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0132",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Heredity",
+   "text": "What is a gene? Explain, taking the example of plant height, how a gene controls a characteristic."
+  },
+  {
+   "id": "sc10-0133",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Our Environment",
+   "text": "What is a trophic level? Why do food chains usually have only three or four trophic levels?"
+  },
+  {
+   "id": "sc10-0134",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "Name the male and the female reproductive parts of a bisexual flower. How is cross-pollination different from self-pollination?"
+  },
+  {
+   "id": "sc10-0135",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Control and Coordination",
+   "text": "What are tropic movements? Give one example each of positive phototropism and negative geotropism."
+  },
+  {
+   "id": "sc10-0136",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "Life Processes",
+   "text": "(a) What is translocation in plants? Which tissue carries it out?\n(b) Explain how water and minerals reach the top of a tall tree. What is the role of transpiration in this process?"
+  },
+  {
+   "id": "sc10-0137",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "(a) Describe the process of budding in Hydra.\n(b) Why can complex multicellular organisms not reproduce by simple cell division, as unicellular organisms do?\n(c) Name one organism that reproduces by fragmentation."
+  },
+  {
+   "id": "sc10-0138",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "Heredity",
+   "text": "(a) Explain, with the help of a flow chart, how the sex of a child is determined in human beings.\n(b) Why is it wrong to say that the mother is responsible for the sex of her child?"
+  },
+  {
+   "id": "sc10-0139",
+   "section": "SECTION A",
+   "type": "CBQ",
+   "chapter": "Heredity",
+   "text": "Ravi crossed a pure-breeding pea plant with violet flowers with a pure-breeding pea plant with white flowers. All the plants of the F₁ generation had violet flowers. He then allowed the F₁ plants to self-pollinate and raised 400 plants in the F₂ generation. Of these, 300 plants had violet flowers and 100 had white flowers.\n(a) Which flower colour is dominant? Give a reason.\n(b) Using V for the dominant allele and v for the recessive allele, write the genotype of the F₁ plants.\n(c) How many of the 300 violet-flowered F₂ plants are expected to be pure-breeding? Explain.\nOR\n(c) Write the genotypic ratio of the F₂ generation and name the genotypes."
+  },
+  {
+   "id": "sc10-0140",
+   "section": "SECTION A",
+   "type": "LA",
+   "chapter": "Life Processes",
+   "text": "(a) What is respiration? Write two differences between aerobic and anaerobic respiration.\n(b) Show, with the help of a flow chart, the breakdown of glucose by different pathways in (i) yeast, (ii) our muscle cells during vigorous exercise and (iii) the mitochondria.\n(c) Why do we sometimes get muscle cramps after running fast?\nOR\n(a) Write the balanced chemical equation for photosynthesis and list the three events that occur during this process.\n(b) How do desert plants carry out gas exchange without losing too much water?\n(c) Describe an experiment to show that chlorophyll is necessary for photosynthesis."
+  },
+  {
+   "id": "sc10-0141",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Which of the following is a double displacement reaction?",
+   "options": [
+    "(A) 2Mg + O₂ → 2MgO",
+    "(B) CaCO₃ → CaO + CO₂",
+    "(C) AgNO₃ + NaCl → AgCl + NaNO₃",
+    "(D) Zn + CuSO₄ → ZnSO₄ + Cu"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0142",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "In the balanced equation a Fe + b H₂O → c Fe₃O₄ + d H₂, the values of a, b, c and d are respectively:",
+   "options": [
+    "(A) 3, 4, 1, 4",
+    "(B) 2, 3, 1, 3",
+    "(C) 3, 4, 1, 3",
+    "(D) 1, 4, 1, 4"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0143",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "When dilute hydrochloric acid is added to sodium carbonate, a gas is given off that turns lime water milky. The gas is:",
+   "options": [
+    "(A) hydrogen",
+    "(B) carbon dioxide",
+    "(C) chlorine",
+    "(D) oxygen"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0144",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "An aqueous solution of which of the following salts is basic?",
+   "options": [
+    "(A) NaCl",
+    "(B) NH₄Cl",
+    "(C) K₂SO₄",
+    "(D) Na₂CO₃"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0145",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Metals and Non-metals",
+   "text": "Which of the following non-metals is a good conductor of electricity?",
+   "options": [
+    "(A) Sulphur",
+    "(B) Graphite",
+    "(C) Phosphorus",
+    "(D) Iodine"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0146",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Metals and Non-metals",
+   "text": "An element X forms an oxide X₂O. A solution of this oxide in water turns red litmus blue. The element X is most likely:",
+   "options": [
+    "(A) sulphur",
+    "(B) carbon",
+    "(C) phosphorus",
+    "(D) sodium"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0147",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Carbon and its Compounds",
+   "text": "The IUPAC name of the compound CH₃CH₂CHO is:",
+   "options": [
+    "(A) propanol",
+    "(B) propanone",
+    "(C) propanal",
+    "(D) propanoic acid"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0148",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Carbon and its Compounds",
+   "text": "Which of the following pairs of compounds belongs to the same homologous series?",
+   "options": [
+    "(A) CH₄ and C₂H₆",
+    "(B) C₃H₆ and C₃H₈",
+    "(C) C₂H₄ and C₃H₈",
+    "(D) C₂H₆ and C₂H₄"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0149",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Assertion (A): Iron gates and grills are painted to protect them from rusting.\nReason (R): A coat of paint prevents moist air from coming in contact with the surface of iron.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0150",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Carbon and its Compounds",
+   "text": "Assertion (A): Ethanoic acid is a strong acid.\nReason (R): Ethanoic acid turns blue litmus red.",
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0151",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Acids, Bases and Salts",
+   "text": "Assertion (A): Baking powder is used to make cakes soft and spongy.\nReason (R): Sodium hydrogencarbonate is also used in soda-acid fire extinguishers.",
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0152",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Why should a magnesium ribbon be cleaned with sandpaper before burning it in air? Write the balanced chemical equation for the burning of magnesium."
+  },
+  {
+   "id": "sc10-0153",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Metals and Non-metals",
+   "text": "What is an alloy? Why is pure gold not used for making jewellery? What is meant by 22-carat gold?"
+  },
+  {
+   "id": "sc10-0154",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Metals and Non-metals",
+   "text": "Metals differ in how they react with water.\n(a) Name one metal that reacts with cold water and write the balanced equation for the reaction.\n(b) Name one metal that does not react with cold or hot water but reacts with steam. Write the equation.\n(c) Why does calcium start floating when it reacts with water?"
+  },
+  {
+   "id": "sc10-0155",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Acids, Bases and Salts",
+   "text": "(a) How is washing soda obtained from baking soda? Write the chemical equations involved.\n(b) What is meant by water of crystallisation? Write the formula of washing soda and of gypsum.\n(c) State one use of washing soda."
+  },
+  {
+   "id": "sc10-0156",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "What is a decomposition reaction? Write one balanced chemical equation each for a decomposition reaction brought about by (a) heat, (b) electricity and (c) light."
+  },
+  {
+   "id": "sc10-0157",
+   "section": "SECTION B",
+   "type": "CBQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "While playing in the garden, Nisha was stung by a red ant and felt a sharp burning pain. Her mother quickly rubbed a paste of baking soda on the spot and the pain soon reduced. The same evening, her grandfather complained of a burning feeling in his chest after a heavy meal and took a spoonful of an antacid. Her mother explained that both remedies work on the same principle.\n(a) Name the acid present in the sting of the ant.\n(b) Why did the baking soda paste give relief? Name the type of reaction involved.\n(c) Why does a person get a burning feeling in the stomach after overeating? Name one substance commonly used as an antacid.\nOR\n(c) Why are we advised to brush our teeth after eating sweets? How does toothpaste help to prevent tooth decay?"
+  },
+  {
+   "id": "sc10-0158",
+   "section": "SECTION B",
+   "type": "LA",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "(a) Why should a chemical equation always be balanced?\n(b) Write the balanced chemical equations for the following and state the type of each reaction:\n(i) Aluminium reacts with copper chloride to give aluminium chloride and copper.\n(ii) Zinc carbonate on heating gives zinc oxide and carbon dioxide.\n(iii) Hydrogen combines with chlorine to form hydrogen chloride.\n(c) In the reaction ZnO + C → Zn + CO, identify the substance that is oxidised and the substance that is reduced.\nOR\n(a) What is rancidity? State two methods used to prevent it.\n(b) What is corrosion? Name the conditions required for the rusting of iron and describe an activity to show that both are needed.\n(c) What is the black coating formed on silver articles left in air? Name the substance responsible for it."
+  },
+  {
+   "id": "sc10-0159",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "An object is placed 15 cm in front of a convex lens of focal length 10 cm. The image is formed at a distance of:",
+   "options": [
+    "(A) 6 cm",
+    "(B) 15 cm",
+    "(C) 25 cm",
+    "(D) 30 cm"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0160",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "Light travels from air into glass of refractive index 1.5. If the speed of light in air is 3 × 10⁸ m/s, its speed in glass is:",
+   "options": [
+    "(A) 3 × 10⁸ m/s",
+    "(B) 2 × 10⁸ m/s",
+    "(C) 4.5 × 10⁸ m/s",
+    "(D) 1.5 × 10⁸ m/s"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0161",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Electricity",
+   "text": "The heat produced in a 20 Ω resistor when a current of 2 A flows through it for 5 s is:",
+   "options": [
+    "(A) 200 J",
+    "(B) 100 J",
+    "(C) 400 J",
+    "(D) 800 J"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0162",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "The focal length of the human eye lens is adjusted to see near and distant objects by the:",
+   "options": [
+    "(A) ciliary muscles",
+    "(B) pupil",
+    "(C) retina",
+    "(D) iris"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0163",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "In domestic electric circuits in India, the potential difference between the live wire and the neutral wire is:",
+   "options": [
+    "(A) 110 V",
+    "(B) 50 V",
+    "(C) 440 V",
+    "(D) 220 V"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0164",
+   "section": "SECTION C",
+   "type": "A/R",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "Assertion (A): The focal length of a concave lens is taken as positive.\nReason (R): A concave lens spreads out a parallel beam of light passing through it.",
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0165",
+   "section": "SECTION C",
+   "type": "A/R",
+   "chapter": "Electricity",
+   "text": "Assertion (A): Tungsten is used for making the filaments of electric bulbs.\nReason (R): Tungsten has a very high melting point.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0166",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "A concave lens of focal length 20 cm forms an image at a distance of 10 cm from the lens on the same side as the object. Find the distance of the object from the lens and the magnification. State the nature of the image."
+  },
+  {
+   "id": "sc10-0167",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "(a) Define the principal focus of a concave mirror.\n(b) An object is placed 10 cm in front of a concave mirror of focal length 15 cm. Find the position, nature and magnification of the image."
+  },
+  {
+   "id": "sc10-0168",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electricity",
+   "text": "Two resistors of 4 Ω and 12 Ω are connected in parallel, and this combination is connected in series with a 2 Ω resistor and a 6 V battery. Find (a) the equivalent resistance of the circuit, (b) the current drawn from the battery and (c) the current through the 4 Ω resistor."
+  },
+  {
+   "id": "sc10-0169",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electricity",
+   "text": "In a house, an electric heater of 1000 W is used for 2 hours a day and a 100 W bulb is used for 10 hours a day. Calculate (a) the electrical energy consumed in 30 days in kWh and (b) the cost of this energy at ₹6 per kWh."
+  },
+  {
+   "id": "sc10-0170",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "(a) What is meant by earthing? Why is it necessary for electrical appliances with metallic bodies?\n(b) Distinguish between overloading and short-circuiting in a domestic circuit.\n(c) What is the function of an electric fuse?"
+  },
+  {
+   "id": "sc10-0171",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "A student cannot see objects clearly when they are more than 2 m away.\n(a) Name the defect of vision she is suffering from.\n(b) State two possible causes of this defect.\n(c) Find the nature and power of the lens she needs to see distant objects clearly."
+  },
+  {
+   "id": "sc10-0172",
+   "section": "SECTION C",
+   "type": "CBQ",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "Rohan's grandmother uses a convex lens of focal length 10 cm as a magnifying glass to read the small print on medicine labels. She holds the lens 6 cm above the label and sees a large, clear image of the letters.\n(a) What is the power of the lens?\n(b) Find the position of the image formed by the lens and state its nature.\n(c) Find the magnification produced.\nOR\n(c) If she holds the lens 20 cm above the label, where will the image be formed and what will be its size compared with the letters?"
+  },
+  {
+   "id": "sc10-0173",
+   "section": "SECTION C",
+   "type": "LA",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "(a) Describe an activity to show that a current-carrying straight conductor experiences a force when it is placed in a magnetic field.\n(b) State Fleming's left-hand rule.\n(c) A proton moving horizontally from west to east enters a magnetic field that is directed vertically downwards. In which direction will the proton be deflected?\nOR\n(a) Draw the pattern of magnetic field lines due to a current-carrying circular loop.\n(b) How does the magnetic field at the centre of the loop change if (i) the current is increased and (ii) the number of turns is increased?\n(c) What is an electromagnet? State two ways in which its strength can be increased."
   }
  ]
 }

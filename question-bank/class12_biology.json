@@ -481,6 +481,366 @@
    "type": "LA",
    "chapter": "Biotechnology: Principles and Processes",
    "text": "(a) List the main steps involved in recombinant DNA technology, from the isolation of DNA to the production of the desired product.\n(b) Explain how recombinant colonies can be distinguished from non-recombinant colonies by insertional inactivation of an enzyme.\n(c) What is a bioreactor? State two conditions that it provides for the growth of the cells.\nOR\n(a) Distinguish between innate immunity and acquired immunity.\n(b) Draw a labelled diagram of an antibody molecule.\n(c) Describe how the human immunodeficiency virus (HIV) multiplies inside the body after infection and why the patient becomes prone to other infections."
+  },
+  {
+   "id": "bi12-0041",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "The innermost wall layer of the microsporangium, which nourishes the developing pollen grains, is the:",
+   "options": [
+    "(A) endothecium",
+    "(B) middle layer",
+    "(C) epidermis",
+    "(D) tapetum"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0042",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "Which of the following is a post-fertilisation event in flowering plants?",
+   "options": [
+    "(A) Pollination",
+    "(B) Embryogenesis",
+    "(C) Microsporogenesis",
+    "(D) Megasporogenesis"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "bi12-0043",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Human Reproduction",
+   "text": "During pregnancy in human females, the hormone hCG is secreted by the:",
+   "options": [
+    "(A) placenta",
+    "(B) anterior pituitary",
+    "(C) hypothalamus",
+    "(D) corpus albicans"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0044",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Reproductive Health",
+   "text": "Which of the following is a natural method of contraception?",
+   "options": [
+    "(A) Vasectomy",
+    "(B) Copper-T",
+    "(C) Lactational amenorrhoea",
+    "(D) Oral contraceptive pills"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0045",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "In a cross between two heterozygous plants (Aa × Aa), the proportion of offspring that are homozygous is:",
+   "options": [
+    "(A) 1/4",
+    "(B) 3/4",
+    "(C) 1",
+    "(D) 1/2"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0046",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "A disorder caused by the presence of an additional copy of chromosome number 21 is:",
+   "options": [
+    "(A) Down's syndrome",
+    "(B) Turner's syndrome",
+    "(C) Klinefelter's syndrome",
+    "(D) phenylketonuria"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0047",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "In eukaryotes, the removal of introns from the hnRNA and the joining of exons in a defined order is called:",
+   "options": [
+    "(A) capping",
+    "(B) tailing",
+    "(C) splicing",
+    "(D) replication"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0048",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Evolution",
+   "text": "Which of the following pairs is an example of homologous organs?",
+   "options": [
+    "(A) Wings of a butterfly and wings of a bird",
+    "(B) Thorn of Bougainvillea and tendril of Cucurbita",
+    "(C) Sweet potato and potato",
+    "(D) Flippers of a penguin and flippers of a dolphin"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "bi12-0049",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Human Health and Disease",
+   "text": "Which of the following diseases is caused by a helminth?",
+   "options": [
+    "(A) Typhoid",
+    "(B) Common cold",
+    "(C) Ringworm",
+    "(D) Ascariasis"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0050",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Microbes in Human Welfare",
+   "text": "Milk is converted into curd by the action of:",
+   "options": [
+    "(A) Lactobacillus",
+    "(B) Acetobacter aceti",
+    "(C) Clostridium butylicum",
+    "(D) Trichoderma polysporum"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0051",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biotechnology: Principles and Processes",
+   "text": "In the cloning vector pBR322, which of the following is commonly used as a selectable marker?",
+   "options": [
+    "(A) ori",
+    "(B) rop",
+    "(C) the ampicillin resistance gene",
+    "(D) the BamHI recognition site"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0052",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biotechnology and its Applications",
+   "text": "The first transgenic cow, Rosie, produced milk that was enriched with:",
+   "options": [
+    "(A) human insulin",
+    "(B) human alpha-lactalbumin",
+    "(C) human growth hormone",
+    "(D) alpha-1-antitrypsin"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "bi12-0053",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Ecosystem",
+   "text": "The rate of formation of new organic matter by consumers in an ecosystem is called:",
+   "options": [
+    "(A) gross primary productivity",
+    "(B) net primary productivity",
+    "(C) standing crop",
+    "(D) secondary productivity"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0054",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biodiversity and Conservation",
+   "text": "Which of the following animals became extinct mainly because of over-exploitation by human beings?",
+   "options": [
+    "(A) Steller's sea cow",
+    "(B) Bengal tiger",
+    "(C) Indian rhinoceros",
+    "(D) Asiatic lion"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0055",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Organisms and Populations",
+   "text": "A population interaction in which both the interacting species are harmed is:",
+   "options": [
+    "(A) mutualism",
+    "(B) commensalism",
+    "(C) competition",
+    "(D) predation"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0056",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Evolution",
+   "text": "Assertion (A): The eye of an octopus and the eye of a mammal are analogous structures.\nReason (R): Analogous structures are the result of convergent evolution.",
+   "answer": "(A)"
+  },
+  {
+   "id": "bi12-0057",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Human Reproduction",
+   "text": "Assertion (A): Spermatogenesis begins at birth in human males.\nReason (R): Spermatogenesis is started at puberty by a significant increase in the secretion of GnRH.",
+   "answer": "(D)"
+  },
+  {
+   "id": "bi12-0058",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "Assertion (A): Haemophilia is a sex-linked recessive disorder.\nReason (R): The gene for haemophilia is located on the Y chromosome.",
+   "answer": "(C)"
+  },
+  {
+   "id": "bi12-0059",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "State the function of (a) the promoter and (b) the terminator in a transcription unit."
+  },
+  {
+   "id": "bi12-0060",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Human Health and Disease",
+   "text": "What is metastasis? Why is it considered the most feared property of malignant tumours?"
+  },
+  {
+   "id": "bi12-0061",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Ecosystem",
+   "text": "Distinguish between gross primary productivity and net primary productivity. Write the relationship between the two."
+  },
+  {
+   "id": "bi12-0062",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Reproductive Health",
+   "text": "What is amniocentesis? Why has a statutory ban been imposed on its use for determining the sex of the foetus?"
+  },
+  {
+   "id": "bi12-0063",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Biotechnology and its Applications",
+   "text": "What is RNA interference (RNAi)? How has it been used to protect tobacco plants from the nematode Meloidogyne incognita?"
+  },
+  {
+   "id": "bi12-0064",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Organisms and Populations",
+   "text": "Define natality and mortality. How does each of them affect the density of a population?"
+  },
+  {
+   "id": "bi12-0065",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Human Reproduction",
+   "text": "Describe the events that take place in the human female from fertilisation up to the implantation of the blastocyst in the uterus."
+  },
+  {
+   "id": "bi12-0066",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Principles of Inheritance and Variation",
+   "text": "Explain incomplete dominance with the help of a cross between red-flowered and white-flowered snapdragon plants, up to the F₂ generation. Why are the phenotypic and genotypic ratios of the F₂ generation the same in this case?"
+  },
+  {
+   "id": "bi12-0067",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "What is meant by the genetic code? Describe any five salient features of the genetic code."
+  },
+  {
+   "id": "bi12-0068",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Evolution",
+   "text": "Explain Darwin's theory of natural selection. How does the example of industrial melanism in the peppered moth in England support this theory?"
+  },
+  {
+   "id": "bi12-0069",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Human Health and Disease",
+   "text": "(a) What is an allergy? Name the antibody and the chemicals released by mast cells that are responsible for allergic reactions.\n(b) Name one class of drugs used to reduce the symptoms of allergy.\n(c) Why are more children in metro cities suffering from allergies?"
+  },
+  {
+   "id": "bi12-0070",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Microbes in Human Welfare",
+   "text": "Describe the primary and secondary treatment of sewage in a sewage treatment plant. What is BOD and what does a high BOD of a water sample indicate?"
+  },
+  {
+   "id": "bi12-0071",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Biodiversity and Conservation",
+   "text": "Distinguish between in situ and ex situ conservation of biodiversity, giving two examples of each. What is cryopreservation and how does it help in conservation?"
+  },
+  {
+   "id": "bi12-0072",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "In a court case about the identity of the father of a child, the court ordered a DNA test. Blood samples were taken from the child, the mother and the man concerned. DNA was isolated from each sample, cut with restriction enzymes and the fragments were separated. The separated DNA was then transferred to a membrane and treated with a labelled probe that binds to repeated DNA sequences, called VNTRs. The bands obtained from the child were compared with those of the mother and the man.\n(a) What are VNTRs?\n(b) Name the technique used to separate the DNA fragments according to their size.\n(c) Why can DNA isolated from blood, hair roots or skin cells of a person all be used to obtain the same DNA fingerprint?\nOR\n(c) Name the scientist who developed the technique of DNA fingerprinting. Why does every person, except identical twins, have a unique DNA fingerprint?"
+  },
+  {
+   "id": "bi12-0073",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "A farmer grows maize and papaya on his farm. In maize, the male and female flowers are borne on the same plant, while in papaya, the male and female flowers are borne on different plants. To produce a new hybrid variety of maize, a plant breeder visited his farm and carried out artificial hybridisation by covering the female inflorescences with paper bags and dusting them with pollen collected from the selected male parent.\n(a) Which of the two plants, maize or papaya, prevents both autogamy and geitonogamy? Give a reason.\n(b) What is bagging? Why is it necessary in artificial hybridisation?\n(c) Why is emasculation not needed in maize during artificial hybridisation?\nOR\n(c) Why is the endosperm of a maize grain triploid? Explain how it is formed."
+  },
+  {
+   "id": "bi12-0074",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Molecular Basis of Inheritance",
+   "text": "(a) Describe the process of transcription in bacteria, explaining the steps of initiation, elongation and termination.\n(b) How is the primary transcript (hnRNA) processed in eukaryotes to form a functional mRNA?\nOR\n(a) Describe the experiment of Meselson and Stahl that proved that DNA replicates semi-conservatively.\n(b) Why is DNA replication continuous on one strand and discontinuous on the other strand of the replication fork?"
+  },
+  {
+   "id": "bi12-0075",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Sexual Reproduction in Flowering Plants",
+   "text": "(a) Describe the process of double fertilisation in angiosperms and name the products formed.\n(b) Describe the structure of a typical dicotyledonous embryo.\n(c) What is polyembryony? Give one example.\nOR\n(a) What are outbreeding devices? Describe any three such devices found in flowering plants.\n(b) What is pollen-pistil interaction? Why is it important?"
+  },
+  {
+   "id": "bi12-0076",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Organisms and Populations",
+   "text": "(a) Explain, with one example each, the population interactions of predation, parasitism and mutualism.\n(b) State Gause's competitive exclusion principle.\n(c) What is brood parasitism? Describe one adaptation shown in it.\nOR\n(a) Describe the steps of decomposition of detritus in an ecosystem: fragmentation, leaching, catabolism, humification and mineralisation.\n(b) How do temperature, moisture and the chemical composition of detritus affect the rate of decomposition?"
   }
  ]
 }

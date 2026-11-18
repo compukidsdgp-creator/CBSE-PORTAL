@@ -593,6 +593,422 @@
    "type": "CBQ",
    "chapter": "Matrices",
    "text": "A bookshop sells Physics, Chemistry and Mathematics guide books. On Monday it sold 10, 8 and 12 copies of the three books respectively, and on Tuesday it sold 6, 10 and 9 copies. The selling prices of the three books are ₹300, ₹250 and ₹400 per copy respectively.\n(a) Write the sales of the two days as a matrix with one row for each day, and state its order.\n(b) Using matrix multiplication, find the amount collected on Monday.\n(c) Find the total amount collected on the two days together.\nOR\n(c) If the price of each book is increased by 10%, find the amount that would have been collected on Monday."
+  },
+  {
+   "id": "ma12-0051",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Relations and Functions",
+   "text": "The number of one-one functions from the set {a, b, c} to itself is:",
+   "options": [
+    "(A) 3",
+    "(B) 9",
+    "(C) 27",
+    "(D) 6"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0052",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Relations and Functions",
+   "text": "The relation R on the set N of natural numbers defined by R = {(a, b) : a ≤ b} is:",
+   "options": [
+    "(A) symmetric only",
+    "(B) reflexive and transitive but not symmetric",
+    "(C) an equivalence relation",
+    "(D) symmetric and transitive but not reflexive"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0053",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Inverse Trigonometric Functions",
+   "text": "The principal value of cos⁻¹(−√3/2) is:",
+   "options": [
+    "(A) 5π/6",
+    "(B) π/6",
+    "(C) 2π/3",
+    "(D) −π/6"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0054",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Matrices",
+   "text": "A = [aᵢⱼ] is a 2 × 2 matrix whose elements are given by aᵢⱼ = i + 2j. The element a₂₁ is:",
+   "options": [
+    "(A) 3",
+    "(B) 5",
+    "(C) 4",
+    "(D) 6"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0055",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Matrices",
+   "text": "If the matrix with rows [x + y, 2] and [5, x − y] is equal to the matrix with rows [6, 2] and [5, 2], then the values of x and y are:",
+   "options": [
+    "(A) x = 2, y = 4",
+    "(B) x = 3, y = 3",
+    "(C) x = 4, y = −2",
+    "(D) x = 4, y = 2"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0056",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Determinants",
+   "text": "If the determinant with rows [x, 2] and [3, x] is equal to the determinant with rows [4, 1] and [2, 3], then x is equal to:",
+   "options": [
+    "(A) ±2",
+    "(B) 4",
+    "(C) ±4",
+    "(D) ±√6"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0057",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Determinants",
+   "text": "If A is an invertible matrix of order 2 and |A| = 3, then |A⁻¹| is equal to:",
+   "options": [
+    "(A) 3",
+    "(B) 1/3",
+    "(C) 9",
+    "(D) 1/9"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0058",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Continuity and Differentiability",
+   "text": "The derivative of tan⁻¹(eˣ) with respect to x is:",
+   "options": [
+    "(A) eˣ/(1 + e²ˣ)",
+    "(B) 1/(1 + e²ˣ)",
+    "(C) eˣ/(1 + eˣ)",
+    "(D) e²ˣ/(1 + e²ˣ)"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0059",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Continuity and Differentiability",
+   "text": "The function f defined by f(x) = kx + 1 for x ≤ 2 and f(x) = 3x − 1 for x > 2 is continuous at x = 2. The value of k is:",
+   "options": [
+    "(A) 1",
+    "(B) 5/2",
+    "(C) 3",
+    "(D) 2"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0060",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Application of Derivatives",
+   "text": "The function f(x) = e²ˣ is:",
+   "options": [
+    "(A) strictly decreasing on R",
+    "(B) strictly increasing on R",
+    "(C) increasing only for x > 0",
+    "(D) neither increasing nor decreasing on R"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0061",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Application of Derivatives",
+   "text": "The minimum value of the function f(x) = x² − 6x + 10 is:",
+   "options": [
+    "(A) 3",
+    "(B) 10",
+    "(C) 1",
+    "(D) −1"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0062",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Integrals",
+   "text": "∫ (sec² x / tan x) dx is equal to:",
+   "options": [
+    "(A) log |sec x| + C",
+    "(B) log |tan x| + C",
+    "(C) tan x + C",
+    "(D) log |sin x| + C"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0063",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Integrals",
+   "text": "The value of the definite integral of 1/(1 + x²) from x = 0 to x = 1 is:",
+   "options": [
+    "(A) π/4",
+    "(B) π/2",
+    "(C) 1",
+    "(D) π/3"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0064",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Application of Integrals",
+   "text": "The area of the region bounded by the line y = 2x, the x-axis and the line x = 3 is:",
+   "options": [
+    "(A) 6 sq units",
+    "(B) 18 sq units",
+    "(C) 3 sq units",
+    "(D) 9 sq units"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0065",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Differential Equations",
+   "text": "Separating the variables in eʸ (dy/dx) = eˣ and integrating both sides, we obtain:",
+   "options": [
+    "(A) eˣ + eʸ = C",
+    "(B) e⁻ʸ = eˣ + C",
+    "(C) eʸ = eˣ + C",
+    "(D) eʸ = e⁻ˣ + C"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0066",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Vector Algebra",
+   "text": "The value of p for which the vectors 2i + pj + k and i − 2j + 3k are perpendicular is:",
+   "options": [
+    "(A) −5/2",
+    "(B) 2",
+    "(C) 3/2",
+    "(D) 5/2"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0067",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Three Dimensional Geometry",
+   "text": "The direction ratios of the line (x − 1)/2 = (3 − y)/1 = (z + 2)/4 are:",
+   "options": [
+    "(A) 2, 1, 4",
+    "(B) 2, −1, 4",
+    "(C) 1, 3, −2",
+    "(D) −2, 1, 4"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma12-0068",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Linear Programming",
+   "text": "The corner points of the bounded feasible region of a linear programming problem are (0, 0), (5, 0), (3, 4) and (0, 6). The maximum value of Z = 3x + 2y is:",
+   "options": [
+    "(A) 17",
+    "(B) 15",
+    "(C) 12",
+    "(D) 18"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0069",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "A random variable X takes the values 0, 1, 2 and 3 with probabilities k, 2k, 3k and 4k respectively. The value of k is:",
+   "options": [
+    "(A) 1/4",
+    "(B) 1/6",
+    "(C) 1/10",
+    "(D) 1/12"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0070",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Integrals",
+   "text": "Assertion (A): The definite integral of x³ cos x from x = −2 to x = 2 is equal to 0.\nReason (R): If f is an odd function, then the integral of f(x) from x = −a to x = a is 0.",
+   "answer": "(A)"
+  },
+  {
+   "id": "ma12-0071",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Application of Derivatives",
+   "text": "Assertion (A): The function f(x) = x³ has a local minimum at x = 0.\nReason (R): For f(x) = x³, the derivative f′(0) = 0.",
+   "answer": "(D)"
+  },
+  {
+   "id": "ma12-0072",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Relations and Functions",
+   "text": "Assertion (A): The map g(x) = 3x + 2 from the set of real numbers to itself is a bijection.\nReason (R): Every injective map is also surjective.",
+   "answer": "(C)"
+  },
+  {
+   "id": "ma12-0073",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Inverse Trigonometric Functions",
+   "text": "Find the values of (a) sin⁻¹(sin 3π/5) and (b) cos⁻¹(cos 4π/3)."
+  },
+  {
+   "id": "ma12-0074",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Continuity and Differentiability",
+   "text": "Find dy/dx if x² + xy + y² = 7."
+  },
+  {
+   "id": "ma12-0075",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Differential Equations",
+   "text": "Solve: (x − 1) dy = (y + 1) dx, where x ≠ 1 and y ≠ −1."
+  },
+  {
+   "id": "ma12-0076",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Three Dimensional Geometry",
+   "text": "Show that the line (x − 2)/1 = (y + 1)/(−2) = z/2 is perpendicular to the line (x + 3)/2 = (y − 4)/2 = (z − 1)/1."
+  },
+  {
+   "id": "ma12-0077",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Probability",
+   "text": "For two events A and B, P(A) = 0.5, P(B) = 0.4 and P(A ∪ B) = 0.7. Find P(A | B) and state whether A and B are independent."
+  },
+  {
+   "id": "ma12-0078",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Integrals",
+   "text": "Evaluate: ∫ x² log x dx"
+  },
+  {
+   "id": "ma12-0079",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Integrals",
+   "text": "Evaluate the definite integral of |x − 2| from x = 0 to x = 5."
+  },
+  {
+   "id": "ma12-0080",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Differential Equations",
+   "text": "Find the particular solution of the differential equation x (dy/dx) − y = x², x > 0, given that y = 3 when x = 1."
+  },
+  {
+   "id": "ma12-0081",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Application of Derivatives",
+   "text": "Find the absolute maximum and the absolute minimum values of the function f(x) = x³ − 6x² + 9x + 1 on the interval [0, 5]."
+  },
+  {
+   "id": "ma12-0082",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Vector Algebra",
+   "text": "Find a unit vector perpendicular to both the vectors a = i + 2j − k and b = 2i − j + k. Also find the sine of the angle between a and b."
+  },
+  {
+   "id": "ma12-0083",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Probability",
+   "text": "A coin is biased so that a head is twice as likely to occur as a tail. The coin is tossed three times. Find the probability distribution of the number of tails and hence find its mean."
+  },
+  {
+   "id": "ma12-0084",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Determinants",
+   "text": "Solve the following system of equations by the matrix method:\nx + 2y + z = 8\n2x − y + z = 3\nx + y − z = 0"
+  },
+  {
+   "id": "ma12-0085",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Application of Integrals",
+   "text": "Using integration, find the area of the region enclosed by the ellipse 4x² + 25y² = 100.\nOR\nUsing integration, find the area of the region in the first quadrant enclosed by the x-axis, the line y = x and the circle x² + y² = 8."
+  },
+  {
+   "id": "ma12-0086",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Three Dimensional Geometry",
+   "text": "Find the coordinates of the foot of the perpendicular drawn from the point P(4, 1, 7) to the line (x − 1)/1 = (y − 2)/(−1) = (z − 3)/2. Hence find the perpendicular distance of P from the line and the image of P in the line.\nOR\nShow that the lines (x − 1)/1 = (y + 1)/2 = (z − 2)/(−1) and (x − 4)/1 = (y − 3)/1 = (z + 1)/(−1) intersect. Also find their point of intersection."
+  },
+  {
+   "id": "ma12-0087",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Linear Programming",
+   "text": "A carpenter makes chairs and tables. Each chair needs 1 hour on the cutting machine and 2 hours on the polishing machine, while each table needs 1 hour on the cutting machine and 1 hour on the polishing machine. The cutting machine is available for at most 8 hours a day and the polishing machine for at most 12 hours a day. The profit is ₹400 on a chair and ₹300 on a table. Formulate this as a linear programming problem and solve it graphically to find how many chairs and tables should be made each day to get the maximum profit.\nOR\nSolve the following linear programming problem graphically:\nMinimise Z = 2x + 3y\nsubject to the constraints x + 2y ≥ 6, 3x + y ≥ 8, x ≥ 0, y ≥ 0."
+  },
+  {
+   "id": "ma12-0088",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Application of Derivatives",
+   "text": "A farmer has 200 m of fencing wire. He wants to fence a rectangular field that lies along a straight river. No fence is needed along the river bank, so the wire is used only for the other three sides. Let x metres be the length of each of the two sides perpendicular to the river.\n(a) Express the area A of the field as a function of x.\n(b) Find dA/dx and the value of x at which dA/dx = 0.\n(c) Find the maximum area that can be enclosed and the dimensions of the field.\nOR\n(c) Use the second derivative test to show that the area found is a maximum."
+  },
+  {
+   "id": "ma12-0089",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Probability",
+   "text": "In a school, 60% of the students play cricket, 40% play football and 25% play both games. A student is selected at random.\n(a) Find the probability that the student plays football, given that the student plays cricket.\n(b) Find the probability that the student plays neither game.\n(c) Are the events 'plays cricket' and 'plays football' independent? Justify your answer.\nOR\n(c) Find the probability that the student plays cricket, given that the student does not play football."
+  },
+  {
+   "id": "ma12-0090",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Vector Algebra",
+   "text": "A delivery drone takes off from its base O, taken as the origin, and flies in a straight line to a point A with position vector 2i + 3j + 6k. It then flies in a straight line to a point B with position vector 5i + 7j + 6k. All distances are in kilometres.\n(a) Find the distance OA.\n(b) Find the vector AB and the distance AB.\n(c) Find the cosine of the angle between OA and AB.\nOR\n(c) Find the projection of the vector AB on the vector OA."
   }
  ]
 }
