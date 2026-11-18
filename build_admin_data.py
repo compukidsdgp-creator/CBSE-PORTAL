@@ -289,6 +289,7 @@ def build():
         "analytics": analytics(),
         "tracker": tracker(),
         "booster": booster(),
+        "labs": labs_tracker(),
         "gh_token": os.environ.get("ADMIN_GH_TOKEN", ""),
         "repo": REPO,
     }
@@ -311,6 +312,16 @@ def booster():
         return booster_plan.admin_data()
     except Exception as e:
         print(f"[warn] booster tracker: {e}")
+        return None
+
+
+def labs_tracker():
+    """Virtual labs: rebuild progress against the locked lab standard."""
+    try:
+        import lab_registry
+        return lab_registry.admin_data()
+    except Exception as e:
+        print(f"[warn] labs tracker: {e}")
         return None
 
 

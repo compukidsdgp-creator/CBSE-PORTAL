@@ -1,3 +1,5 @@
+> **SUPERSEDED on 19 Nov 2026** by the site-wide locked standard `virtual-labs/LAB_STANDARD.md`, which applies to every subject. The V7 points below are carried into it (real interaction, reset/challenge, keyboard access, no fake execution, and the Lab 07/25/33 reference features).
+
 # CBSEMOCK V7 – Locked Interactive Virtual Lab Standard
 
 1. Retain V6's premium dark visual identity and continuously animated, concept-native main workflow.
