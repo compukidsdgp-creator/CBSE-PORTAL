@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://cbsemock.org.in/virtual-labs/physics/convex-lens-focal-length.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Focal length of a convex lens by the u–v method — virtual lab","url":"https://cbsemock.org.in/virtual-labs/physics/convex-lens-focal-length.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 10","Class 12"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Lens formula","Focal length of a convex lens","u–v method","1/u–1/v graph"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
@@ -118,7 +118,7 @@ details.q p{margin-top:8px;color:var(--text)}
 footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
 footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
 #record{display:none}
-/* ── header designs (review: A / B / C) ── */
+/* ── header: lab scene ── */
 .hv{padding-bottom:26px}
 .hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
 .hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
@@ -141,19 +141,6 @@ footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6p
 @keyframes flick{0%{transform:scaleY(1)}40%{transform:scaleY(1.08) skewX(2deg)}100%{transform:scaleY(.95) skewX(-2deg)}}
 .rd .dims path{fill:none;stroke-width:1.3}
 @media(prefers-reduced-motion:reduce){.rd .ray,.rd .flame,.sceneB .flameB,.sceneB .glowB{animation:none}}
-/* A — diagram */
-.hA{max-width:1180px;margin:0 auto;padding-top:12px;display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:center}
-.hA h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.05;margin:0 0 10px}.hA h1 .kick{display:block;font-family:Inter,sans-serif;font-size:.36em;font-weight:800;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:8px}
-.hA h1 em{font-style:italic;color:var(--gold2)}
-.hA .dot{width:8px;height:8px;border-radius:50%;background:#7fe0b8;box-shadow:0 0 0 4px rgba(127,224,184,.2)}
-.hA-fig{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:14px 14px 10px;backdrop-filter:blur(4px);box-shadow:0 24px 50px rgba(0,0,0,.3)}
-.hA-fig figcaption{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:.8rem;color:rgba(255,255,255,.78);padding:6px 4px 0}
-.hA-fig figcaption .mono{background:var(--gold);color:var(--navy2);font-weight:700;padding:4px 10px;border-radius:8px}
-.rdA .axis{stroke:rgba(255,255,255,.4)}.rdA .marks circle{fill:#9cc8ff}.rdA .marks text{fill:#9cc8ff}
-.rdA .ray{stroke:#ffd36b}.rdA .r2{stroke:#7fe0b8}.rdA .r3{stroke:#ff9fb0}
-.rdA .lens{stroke:#d6f0ff}.rdA .screen{fill:#f3efe3}.rdA .dims path{stroke:rgba(255,255,255,.55)}.rdA .dims text{fill:#fff;font-style:italic;font-size:15px}
-.rdA .lbl{fill:rgba(255,255,255,.75);font-weight:600}.rdA .lbl.red{fill:#ff9fb0}
-@media(max-width:860px){.hA{grid-template-columns:1fr}.hA-fig{order:-1}}
 /* B — lab scene */
 .hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
 .hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
@@ -168,39 +155,6 @@ footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6p
 .sceneB .glowB{animation:pulse 1.6s ease-in-out infinite alternate}@keyframes pulse{to{opacity:.7}}
 .sceneB .beamB{animation:pulse 2.4s ease-in-out infinite alternate}
 @media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
-/* C — practical file */
-.hv-c{background:#fbf8ef;color:#1f2a44;background-image:linear-gradient(#e7e1cf 1px,transparent 1px),linear-gradient(90deg,#e7e1cf 1px,transparent 1px),linear-gradient(#efeadb 1px,transparent 1px),linear-gradient(90deg,#efeadb 1px,transparent 1px);background-size:50px 50px,50px 50px,10px 10px,10px 10px}
-.hv-c::after{display:none}
-.hv-c .topbar{border-color:#d8cfb6}.hv-c .brand{color:var(--navy)}.hv-c .brand b{color:#b08a14}.hv-c .nb{color:var(--navy);border-color:#cbbf9f}
-.hv-c .crumb{color:#6b6450}.hv-c .crumb a{color:#9a7810}
-.hC{max-width:1180px;margin:0 auto;padding-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-.hC-txt{position:relative;border-left:3px solid #d9534f;padding-left:20px}
-.hC h1{font-size:clamp(2rem,4.2vw,3rem);color:#14254a;margin:4px 0 2px;max-width:13ch}
-.hv-c p{color:#2b3550}.hv-c .hand{color:#2852a3}.hand{font-family:Caveat,cursive;font-size:1.45rem;color:#2852a3}
-.stamp{position:absolute;right:0;top:-6px;transform:rotate(8deg);border:2.5px solid #c0392b;color:#c0392b;border-radius:10px;padding:4px 12px;font:800 .7rem/1.15 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-align:center;opacity:.85}
-.stamp b{font-size:1.35rem;letter-spacing:0}
-.hC dl{margin:12px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:.92rem}
-.hC dt{font-weight:800;color:#9a7810;text-transform:uppercase;font-size:.74rem;letter-spacing:.1em;padding-top:3px}.hC dd{color:#2b3550}
-.hv-c .chips span{background:#fff;border-color:#d8cfb6;color:#2b3550}
-.hv-c .go{box-shadow:0 5px 0 #8f7212}
-.hC-fig{background:#fffdf6;border:1px solid #d8cfb6;border-radius:6px;padding:14px;box-shadow:6px 8px 0 rgba(31,42,68,.08);transform:rotate(-1deg)}
-.hC-fig figcaption{text-align:center;font-size:1.25rem}
-.rdC .axis{stroke:#5c6a85}.rdC .marks circle{fill:#1f2a44}.rdC .marks text{fill:#1f2a44}
-.rdC .ray{stroke:#2852a3;stroke-dasharray:none;animation:none}.rdC .r2{stroke:#2852a3}.rdC .r3{stroke:#2852a3}
-.rdC .lens{stroke:#1f2a44}.rdC .screen{fill:#e8e1cc;stroke:#1f2a44}.rdC .wax{fill:#fff;stroke:#1f2a44}
-.rdC .dims path{stroke:#c0392b}.rdC .dims text{fill:#c0392b;font-family:Caveat,cursive;font-size:22px}
-.rdC .lbl{fill:#2852a3;font-family:Caveat,cursive;font-size:19px;font-weight:600}.rdC .lbl.red{fill:#c0392b}.rdC .glow{display:none}
-.hv-c .hsteps li{background:#fff;border-color:#d8cfb6;color:#1f2a44}.hv-c .hsteps li::after{color:#b08a14}
-@media(max-width:860px){.hC{grid-template-columns:1fr}.stamp{position:static;display:inline-block;margin-bottom:6px}.hC-fig{transform:none}}
-/* review picker */
-.hv-pick{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:6px;background:#0f2347;border:1px solid var(--gold);border-radius:99px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:calc(100vw - 20px);overflow-x:auto}
-.hv-pick span{color:var(--gold2);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:0 8px;white-space:nowrap}
-.hv-pick button{cursor:pointer;border:0;font:inherit;font-size:.8rem;font-weight:700;white-space:nowrap;padding:8px 12px;border-radius:99px;background:transparent;color:#fff}
-.hv-pick button.on{background:var(--gold);color:var(--navy2)}
-@media print{.hv-pick{display:none}}
-@media(max-width:560px){.hv-pick span{display:none}.hv-pick button{padding:8px 10px;font-size:.76rem}}
-@media(max-width:860px){.hC-fig{order:-1}}
-
 @media print{
  body{background:#fff;color:#000;font-size:11pt}
  body>*:not(#record){display:none!important}
@@ -213,45 +167,7 @@ footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6p
 </style>
 </head>
 <body>
-<header class="hero hv hv-a" data-hv="a">
- <div class="topbar"><a class="brand" href="../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../index.html">🔬 All virtual labs</a></div>
- <div class="hA">
-  <div class="hA-txt"><nav class="crumb"><a href="../../index.html">Home</a> › <a href="../index.html">Virtual Labs</a> › Physics › Convex lens: focal length</nav>
-   <div class="eyebrow"><span class="dot"></span>Virtual Lab · Physics · Optics</div>
-   <h1><span class="kick">The Lens Bench</span>Focal Length of a <em>Convex Lens</em></h1>
-   <p>Focus a candle flame on a screen, read the metre scale yourself and find f from your own readings and graphs. Every session uses a new lens with an unknown focal length.</p>
-   <div class="chips"><span>Class 12 · u–v method</span><span>Class 10 · distant object</span><span>⏱ about 20 min</span></div>
-   <a class="go" href="#lab">Start the experiment ↓</a>
-  </div>
-  <figure class="hA-fig"><svg class="rd rdA" viewBox="0 0 560 300" role="img" aria-label="Ray diagram: a candle beyond 2F forms a real, inverted, smaller image on the screen between F and 2F">
-<defs>
- <linearGradient id="rdA-glass" x1="0" x2="1"><stop offset="0" stop-color="#8fd0ff" stop-opacity=".55"/><stop offset=".5" stop-color="#f2fbff" stop-opacity=".25"/><stop offset="1" stop-color="#6ab8f0" stop-opacity=".55"/></linearGradient>
- <radialGradient id="rdA-fl" cx=".5" cy=".75" r=".7"><stop offset="0" stop-color="#fffbe6"/><stop offset=".45" stop-color="#ffd35c"/><stop offset="1" stop-color="#ff8a1c"/></radialGradient>
- <radialGradient id="rdA-gl"><stop offset="0" stop-color="#ffcf6e" stop-opacity=".55"/><stop offset="1" stop-color="#ff8a1c" stop-opacity="0"/></radialGradient>
-</defs>
-<line class="axis" x1="10" y1="160" x2="550" y2="160"/>
-<g class="marks"><circle cx="100" cy="160" r="3.5"/><circle cx="190" cy="160" r="3.5"/><circle cx="370" cy="160" r="3.5"/><circle cx="460" cy="160" r="3.5"/>
- <text x="100" y="180">2F</text><text x="190" y="180">F</text><text x="370" y="180">F</text><text x="460" y="180">2F</text><text x="288" y="180" text-anchor="start">O</text></g>
-<g class="rays">
- <path class="ray r1" d="M70 100 H280 L437.5 205"/>
- <path class="ray r2" d="M70 100 L437.5 205"/>
- <path class="ray r3" d="M70 100 L280 205 H437.5"/>
-</g>
-<path class="lens" d="M280 62 Q306 160 280 258 Q254 160 280 62Z" fill="url(#rdA-glass)"/>
-<g class="candle"><circle cx="70" cy="92" r="30" fill="url(#rdA-gl)" class="glow"/><rect x="62" y="104" width="16" height="56" rx="2" class="wax"/><line x1="70" y1="104" x2="70" y2="99" class="wick"/>
- <path class="flame" d="M70 74 C76 84 80 92 78 99 C76 105 64 105 62 99 C60 92 64 84 70 74Z" fill="url(#rdA-fl)"/></g>
-<rect class="screen" x="434" y="96" width="9" height="130" rx="2"/>
-<g class="img"><circle cx="437.5" cy="200" r="16" fill="url(#rdA-gl)" class="glow"/>
- <path class="flame" d="M437.5 205 C433 197.5 430 191.5 431.5 186.25 C433 181.75 442 181.75 443.5 186.25 C445 191.5 442 197.5 437.5 205Z" fill="url(#rdA-fl)" transform="translate(-3 0)"/></g>
-<g class="dims"><path d="M70 262 H276 M284 262 H437.5" /><path d="M70 256v12M280 256v12M437.5 256v12"/>
- <text x="175" y="284">u</text><text x="359" y="284">v</text></g>
-<text class="lbl" x="70" y="56">object</text><text class="lbl" x="280" y="50">convex lens</text><text class="lbl" x="437.5" y="88">screen</text>
-<text class="lbl red" x="500" y="246">real, inverted</text>
-</svg><figcaption><span class="mono">1/v − 1/u = 1/f</span> Object beyond 2F → image between F and 2F</figcaption></figure>
- </div>
- <ol class="hsteps"><li><b>1</b>Rough f</li><li><b>2</b>u–v readings</li><li><b>3</b>Graphs</li><li><b>4</b>Result &amp; viva</li></ol>
-</header>
-<header class="hero hv hv-b" data-hv="b" hidden>
+<header class="hero hv hv-b">
  <div class="topbar"><a class="brand" href="../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../index.html">🔬 All virtual labs</a></div>
  <div class="hB">
   <div class="hB-txt"><nav class="crumb"><a href="../../index.html">Home</a> › <a href="../index.html">Virtual Labs</a> › Physics › Convex lens: focal length</nav>
@@ -299,47 +215,7 @@ footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6p
  </div>
  <ol class="hsteps"><li><b>1</b>Rough f</li><li><b>2</b>u–v readings</li><li><b>3</b>Graphs</li><li><b>4</b>Result &amp; viva</li></ol>
 </header>
-<header class="hero hv hv-c" data-hv="c" hidden>
- <div class="topbar"><a class="brand" href="../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../index.html">🔬 All virtual labs</a></div>
- <div class="hC">
-  <div class="hC-txt"><nav class="crumb"><a href="../../index.html">Home</a> › <a href="../index.html">Virtual Labs</a> › Physics › Convex lens: focal length</nav>
-   <div class="stamp">Practical<br><b>No. 7</b></div>
-   <h1>Focal Length of a Convex Lens</h1>
-   <p class="hand">by the u–v method, with graphs</p>
-   <dl><dt>Aim</dt><dd>To find the focal length of a convex lens by plotting u–v and 1/u–1/v graphs.</dd>
-   <dt>Formula</dt><dd class="mono">1/v − 1/u = 1/f</dd></dl>
-   <div class="chips"><span>Class 12 · u–v method</span><span>Class 10 · distant object</span><span>⏱ about 20 min</span></div>
-   <a class="go" href="#lab">Begin the practical ↓</a>
-  </div>
-  <figure class="hC-fig"><svg class="rd rdC" viewBox="0 0 560 300" role="img" aria-label="Ray diagram: a candle beyond 2F forms a real, inverted, smaller image on the screen between F and 2F">
-<defs>
- <linearGradient id="rdC-glass" x1="0" x2="1"><stop offset="0" stop-color="#8fd0ff" stop-opacity=".55"/><stop offset=".5" stop-color="#f2fbff" stop-opacity=".25"/><stop offset="1" stop-color="#6ab8f0" stop-opacity=".55"/></linearGradient>
- <radialGradient id="rdC-fl" cx=".5" cy=".75" r=".7"><stop offset="0" stop-color="#fffbe6"/><stop offset=".45" stop-color="#ffd35c"/><stop offset="1" stop-color="#ff8a1c"/></radialGradient>
- <radialGradient id="rdC-gl"><stop offset="0" stop-color="#ffcf6e" stop-opacity=".55"/><stop offset="1" stop-color="#ff8a1c" stop-opacity="0"/></radialGradient>
-</defs>
-<line class="axis" x1="10" y1="160" x2="550" y2="160"/>
-<g class="marks"><circle cx="100" cy="160" r="3.5"/><circle cx="190" cy="160" r="3.5"/><circle cx="370" cy="160" r="3.5"/><circle cx="460" cy="160" r="3.5"/>
- <text x="100" y="180">2F</text><text x="190" y="180">F</text><text x="370" y="180">F</text><text x="460" y="180">2F</text><text x="288" y="180" text-anchor="start">O</text></g>
-<g class="rays">
- <path class="ray r1" d="M70 100 H280 L437.5 205"/>
- <path class="ray r2" d="M70 100 L437.5 205"/>
- <path class="ray r3" d="M70 100 L280 205 H437.5"/>
-</g>
-<path class="lens" d="M280 62 Q306 160 280 258 Q254 160 280 62Z" fill="url(#rdC-glass)"/>
-<g class="candle"><circle cx="70" cy="92" r="30" fill="url(#rdC-gl)" class="glow"/><rect x="62" y="104" width="16" height="56" rx="2" class="wax"/><line x1="70" y1="104" x2="70" y2="99" class="wick"/>
- <path class="flame" d="M70 74 C76 84 80 92 78 99 C76 105 64 105 62 99 C60 92 64 84 70 74Z" fill="url(#rdC-fl)"/></g>
-<rect class="screen" x="434" y="96" width="9" height="130" rx="2"/>
-<g class="img"><circle cx="437.5" cy="200" r="16" fill="url(#rdC-gl)" class="glow"/>
- <path class="flame" d="M437.5 205 C433 197.5 430 191.5 431.5 186.25 C433 181.75 442 181.75 443.5 186.25 C445 191.5 442 197.5 437.5 205Z" fill="url(#rdC-fl)" transform="translate(-3 0)"/></g>
-<g class="dims"><path d="M70 262 H276 M284 262 H437.5" /><path d="M70 256v12M280 256v12M437.5 256v12"/>
- <text x="175" y="284">u</text><text x="359" y="284">v</text></g>
-<text class="lbl" x="70" y="56">object</text><text class="lbl" x="280" y="50">convex lens</text><text class="lbl" x="437.5" y="88">screen</text>
-<text class="lbl red" x="500" y="246">real, inverted</text>
-</svg><figcaption class="hand">Fig. 1 — object beyond 2F: image real, inverted, diminished</figcaption></figure>
- </div>
- <ol class="hsteps"><li><b>1</b>Rough f</li><li><b>2</b>u–v readings</li><li><b>3</b>Graphs</li><li><b>4</b>Result &amp; viva</li></ol>
-</header>
-<div class="hv-pick" id="hvPick" role="group" aria-label="Choose a header design (review)"><span>Header design</span><button data-v="a">A · Diagram</button><button data-v="b">B · Lab scene</button><button data-v="c">C · Practical file</button></div>
+
 
 <main class="wrap">
  <section class="lab" id="lab" aria-label="Optical bench">
@@ -487,13 +363,6 @@ footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6p
 <div id="record"></div>
 
 <script>
-/* header design picker (review) */
-(function(){var q=(location.search.match(/[?&]hero=([abc])/)||[])[1];var v=q;try{v=v||localStorage.getItem('cbse-lab-hero')}catch(e){}v=v||'a';
- function show(x){document.querySelectorAll('header.hv').forEach(function(h){h.hidden=h.dataset.hv!==x});
-  document.querySelectorAll('#hvPick button').forEach(function(b){b.classList.toggle('on',b.dataset.v===x)});
-  try{localStorage.setItem('cbse-lab-hero',x)}catch(e){}
-  if(history.replaceState){var u=new URL(location.href);u.searchParams.set('hero',x);history.replaceState(null,'',u)}}
- document.querySelectorAll('#hvPick button').forEach(function(b){b.onclick=function(){show(b.dataset.v)}});show(v)})();
 (function(){
 'use strict';
 /* ───────── physics + state ───────── */
