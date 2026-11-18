@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Focal Length of a Convex Lens (u–v Method) — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Realistic optical-bench virtual lab: find the focal length of a convex lens by the u–v method. Focus a candle flame on a screen, read the scale, plot u–v and 1/u–1/v graphs. CBSE Class 10 and 12 practical.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/physics/convex-lens-focal-length.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Focal length of a convex lens by the u–v method — virtual lab","url":"https://cbsemock.org.in/virtual-labs/physics/convex-lens-focal-length.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 10","Class 12"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Lens formula","Focal length of a convex lens","u–v method","1/u–1/v graph"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:7px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.hero-in{max-width:1180px;margin:0 auto;padding-top:20px}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.badge{display:inline-block;background:var(--gold);color:var(--navy2);border-radius:20px;padding:5px 14px;font-size:.74rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin-bottom:10px}
+.hero h1{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:8px}
+.hero p{color:rgba(255,255,255,.86);max-width:780px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.72rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:-24px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.76rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.benchbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+#bench{display:block;width:100%;height:auto;touch-action:none;user-select:none;-webkit-user-select:none}
+#bench .up{cursor:grab;touch-action:none}#bench .up.drag{cursor:grabbing}
+.benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:700px){#bench{min-width:820px;touch-action:pan-x}.hint{display:none}.benchbox::after{content:'⟷ swipe the bench · drag a stand to move it';position:absolute;right:8px;bottom:6px;font-size:.7rem;color:#e8cc6a;background:rgba(5,8,14,.7);padding:3px 8px;border-radius:99px;pointer-events:none}}
+.hint{position:absolute;left:12px;top:10px;font-size:.74rem;color:#8ea2bd;background:rgba(5,8,14,.6);padding:4px 9px;border-radius:99px;pointer-events:none}
+.row2{display:grid;grid-template-columns:300px 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px}
+.panel h4{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px}
+#screenView{display:block;width:100%;max-width:276px;margin:0 auto;aspect-ratio:1;border-radius:6px;box-shadow:0 0 0 6px #2a2f38,0 0 0 7px #3b4250,0 10px 24px rgba(0,0,0,.5)}
+.scrcap{font-size:.76rem;color:#8ea2bd;text-align:center;margin-top:12px}
+#mag{display:block;width:100%;height:auto;border-radius:10px}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 8px}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:99px;min-height:38px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.nudge button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;min-height:42px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff}
+.nudge button:hover{background:#21385c}.nudge button:active{transform:translateY(1px)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:#c9d6e6;cursor:pointer;padding:4px 0}
+.sw input{width:18px;height:18px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:42px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.rough{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px;font-size:.88rem}
+.rough input,.obs input{font:inherit;font-family:'JetBrains Mono',monospace;font-size:.9rem;width:90px;padding:7px 8px;border-radius:8px;border:1.5px solid #3a5276;background:#0b1320;color:#fff}
+.msg{font-size:.85rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:760px;font-size:.88rem}
+.obs th,.obs td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:center}
+.obs th{background:var(--soft);font-weight:700;font-size:.78rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs input{background:var(--card);color:var(--text);border-color:var(--border);width:84px}
+.obs input.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs input.good{border-color:var(--green)}
+.obs .del{cursor:pointer;border:0;background:none;color:var(--muted);font-size:1.1rem;padding:4px 8px}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.note{font-size:.8rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.graphs{grid-template-columns:1fr}}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1.05rem}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
+#record{display:none}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:48%;margin:1%;border:1px solid #bbb}
+ #record .lines{border-bottom:1px solid #aaa;height:18pt}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="topbar"><a class="brand" href="../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../index.html">🔬 All virtual labs</a></div>
+ <div class="hero-in">
+  <nav class="crumb"><a href="../../index.html">Home</a> › <a href="../index.html">Virtual Labs</a> › Physics › Convex lens: focal length</nav>
+  <span class="badge">Practical · Class 12 (u–v method) · Class 10 (distant object)</span>
+  <h1>Focal Length of a Convex Lens</h1>
+  <p>A real optical bench: move the candle, lens and screen, focus the flame until the image is sharpest, read the metre scale yourself, and find the focal length from your own readings and graphs. Every session uses a new lens with an unknown focal length.</p>
+ </div>
+</header>
+
+<main class="wrap">
+ <section class="lab" aria-label="Optical bench">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-mode="far" role="tab"><b>Step 1 · Rough focal length</b><small>Focus a distant window on the screen</small></button>
+   <button class="tab" data-mode="uv" role="tab"><b>Step 2 · u–v readings</b><small>Candle, lens and screen: 6 observations</small></button>
+  </div>
+  <div class="task" id="task"></div>
+  <div class="benchbox">
+   <div class="benchscroll" id="benchScroll"><svg id="bench" viewBox="0 0 1000 330" role="img" aria-label="Optical bench with metre scale, candle, convex lens and screen"></svg></div>
+   <span class="hint" id="hint">Drag the stands, or select one and use the fine-adjust buttons</span>
+  </div>
+  <div class="row2">
+   <div class="panel">
+    <h4><span>On the screen</span><span id="lensTag">Lens L-?</span></h4>
+    <svg id="screenView" viewBox="-6 -6 12 12" aria-label="View of the screen"></svg>
+    <div class="scrcap">Move the screen until the image is <b>sharpest</b>. Come from both sides and settle in the middle.</div>
+   </div>
+   <div class="panel">
+    <h4><span>Metre scale under the selected stand (zoomed)</span><span id="readout" class="mono"></span></h4>
+    <svg id="mag" viewBox="0 0 640 120" aria-label="Zoomed metre scale"></svg>
+    <div class="sel" id="sel"></div>
+    <div class="nudge"><button data-d="-1">−1 cm</button><button data-d="-0.1">−1 mm</button><button data-d="0.1">+1 mm</button><button data-d="1">+1 cm</button></div>
+    <div class="tools">
+     <label class="sw"><input type="checkbox" id="rays"> Show ray diagram</label>
+     <label class="sw"><input type="checkbox" id="labels"> Show readings (helper)</label>
+     <span style="flex:1"></span>
+     <button class="btn ghost" id="newLens" type="button">↺ New lens</button>
+    </div>
+    <div id="farBox" class="rough">
+     <span>Lens reading <input id="rL" inputmode="decimal" placeholder="cm"></span>
+     <span>Screen reading <input id="rS" inputmode="decimal" placeholder="cm"></span>
+     <button class="btn gold" id="saveRough" type="button">Save rough focal length</button>
+    </div>
+    <div id="uvBox" class="rough" hidden>
+     <button class="btn gold" id="recBtn" type="button">＋ Record this observation</button>
+     <span class="note" style="color:#93a6bf">Then type the three scale readings into the table below.</span>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 / 6</span></h2>
+  <p class="lead">Rough focal length: <b id="fr" class="mono">not found yet</b>. Sign convention: distances are measured from the optical centre; u is negative (object on the left), v is positive for a real image.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Position of<br>object (cm)</th><th>Position of<br>lens (cm)</th><th>Position of<br>screen (cm)</th><th>u (cm)</th><th>v (cm)</th><th>1/u (cm⁻¹)</th><th>1/v (cm⁻¹)</th><th>f = uv/(u−v) (cm)</th><th></th></tr></thead>
+   <tbody id="tb"><tr><td colspan="10" class="note" style="padding:16px">No observations yet. Go to Step 2, focus the image and press “Record this observation”.</td></tr></tbody>
+  </table></div>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graphs</h2>
+  <p class="lead">They appear after 5 good observations. Use magnitudes of u and v.</p>
+  <div class="graphs">
+   <figure><canvas id="g1" width="560" height="420"></canvas><figcaption><b>u–v graph.</b> A rectangular hyperbola. The line v = u cuts it at (2f, 2f).</figcaption></figure>
+   <figure><canvas id="g2" width="560" height="420"></canvas><figcaption><b>1/u–1/v graph.</b> A straight line; each intercept equals 1/f.</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Mean of f from table</small><b id="rT">—</b></div>
+   <div class="rbox"><small>From u–v graph (½ × 2f)</small><b id="rG1">—</b></div>
+   <div class="rbox"><small>From 1/u–1/v graph</small><b id="rG2">—</b></div>
+   <div class="rbox true" id="trueBox" hidden><small>Actual focal length of this lens</small><b id="rTrue">—</b></div>
+  </div>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the actual focal length</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To find the focal length of a convex lens by plotting graphs between u and v, and between 1/u and 1/v.</p>
+    <h3>Apparatus</h3>
+    <p>An optical bench with a metre scale and three uprights, a convex lens with a lens holder, a candle (object), a white screen, and a matchbox.</p>
+    <h3>Theory</h3>
+    <p>For a thin lens, the object distance u, image distance v and focal length f are related by the lens formula:</p>
+    <p class="eq">1/v − 1/u = 1/f &nbsp;⇒&nbsp; f = uv / (u − v)</p>
+    <p>With the New Cartesian sign convention, u is negative and v is positive for a real image formed by a convex lens, so f comes out positive.</p>
+    <p>When the object is at 2F, the image is also at 2F and of the same size, so u = −2f and v = 2f. That is why the line v = u meets the u–v curve at (2f, 2f).</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li><b>Rough focal length:</b> focus a distant object (a window or tree) on the screen. The distance between the lens and the screen is roughly f.</li>
+     <li>Fix the lens upright near the middle of the bench. Make the flame tip, the centre of the lens and the centre of the screen the same height, so they lie on the principal axis.</li>
+     <li>Place the candle at a distance between 1.5f and 3f from the lens.</li>
+     <li>Move the screen until a sharp, inverted image of the flame appears. Approach from both sides; the sharpest position is in the middle.</li>
+     <li>Read the positions of the candle, lens and screen on the scale, with your eye vertically above each index mark.</li>
+     <li>Repeat for at least six different object distances, some less than 2f and some more than 2f.</li>
+     <li>Calculate u, v and f for each reading, then plot the two graphs.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>The lens should be clean, thin and vertical.</li>
+     <li>The flame tip, the centre of the lens and the centre of the screen should be at the same height.</li>
+     <li>Keep the object beyond the focus (|u| &gt; f); otherwise no real image forms on the screen.</li>
+     <li>Darken the room so the image is easy to see.</li>
+     <li>Read the scale with your eye directly above the index mark to avoid parallax.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>Judging the sharpest image: the image looks sharp over a small range (depth of focus).</li>
+     <li>The optical centre of the lens may not lie exactly above the index mark of its upright (index error).</li>
+     <li>The uprights may not be perfectly vertical.</li>
+     <li>The flame flickers and changes shape, which makes focusing harder.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask in this practical. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../cbse-class-12-physics-mock-papers.html">📄 Class 12 Physics mock papers</a></li>
+   <li><a href="../../cbse-class-10-science-mock-tests.html">📄 Class 10 Science mock tests</a></li>
+   <li><a href="../../formula-board/">📐 Formula board</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../about.html">About Us</a> · <a href="../../privacy.html">Privacy Policy</a> · <a href="../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
+<script>
+(function(){
+'use strict';
+/* ───────── physics + state ───────── */
+var NS='http://www.w3.org/2000/svg';
+var A=4.0;               // clear aperture of the lens (cm)
+var HO=1.8;              // flame height (cm)
+var FAR_U=-1000;         // "distant" window: 10 m away
+var SHARP=0.3;           // screen within this of the true image (cm) counts as focused
+var READ_TOL=0.15;       // allowed scale-reading error (cm)
+function rnd(a,b){return a+Math.random()*(b-a)}
+function r1(x){return Math.round(x*10)/10}
+var S={f:null,lensNo:0,mode:'far',sel:'scr',pos:{obj:12,lens:30,scr:48},rays:false,labels:false,rows:[],fRough:null,revealed:false};
+try{var sv=JSON.parse(localStorage.getItem('cbse-lab-lens')||'null');if(sv&&sv.f){S.f=sv.f;S.lensNo=sv.lensNo;S.rows=sv.rows||[];S.fRough=sv.fRough||null}}catch(e){}
+if(!S.f)newLens(true);
+function save(){try{localStorage.setItem('cbse-lab-lens',JSON.stringify({f:S.f,lensNo:S.lensNo,rows:S.rows,fRough:S.fRough}))}catch(e){}}
+function newLens(silent){S.f=r1(rnd(12,20));S.lensNo=Math.floor(rnd(101,999));S.rows=[];S.fRough=null;S.revealed=false;save();if(!silent){renderTable();renderResult();say('A new lens is on the bench. Its focal length is unknown: start again from Step 1.','ok')}}
+function image(){ // true image for current positions
+  var u=S.mode==='far'?FAR_U:-(S.pos.lens-S.pos.obj);
+  var f=S.f, denom=u+f;
+  if(Math.abs(denom)<1e-6||u+f>=0) return {real:false,u:u};
+  var v=u*f/denom; if(v<=0) return {real:false,u:u};
+  return {real:true,u:u,v:v,x:S.pos.lens+v,m:v/u};
+}
+
+/* ───────── bench drawing ───────── */
+var X0=40,PX=9.2,AXIS=128;
+function X(cm){return X0+cm*PX}
+var bench=document.getElementById('bench');
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function defs(svg,html){var d=el('defs',{},svg);d.innerHTML=html;return d}
+defs(bench,
+ '<linearGradient id="room" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0f18"/><stop offset="1" stop-color="#151b26"/></linearGradient>'+
+ '<linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset=".08" stop-color="#5a3c24"/><stop offset="1" stop-color="#2e1d10"/></linearGradient>'+
+ '<pattern id="grain" width="140" height="18" patternUnits="userSpaceOnUse"><path d="M0 6 Q35 2 70 7 T140 6 M0 13 Q40 10 80 14 T140 12" stroke="#000" stroke-opacity=".12" fill="none"/></pattern>'+
+ '<linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9dee5"/><stop offset=".35" stop-color="#a7afba"/><stop offset=".55" stop-color="#7c8592"/><stop offset="1" stop-color="#4a525d"/></linearGradient>'+
+ '<linearGradient id="scale" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f1e4"/><stop offset="1" stop-color="#ddd7c2"/></linearGradient>'+
+ '<linearGradient id="rod" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d6672"/><stop offset=".45" stop-color="#e3e8ee"/><stop offset="1" stop-color="#4b535e"/></linearGradient>'+
+ '<linearGradient id="wax" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9d2bf"/><stop offset=".5" stop-color="#fffaf0"/><stop offset="1" stop-color="#cfc6b0"/></linearGradient>'+
+ '<linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9fd6ff" stop-opacity=".55"/><stop offset=".5" stop-color="#e9f7ff" stop-opacity=".35"/><stop offset="1" stop-color="#7cc3f2" stop-opacity=".55"/></linearGradient>'+
+ '<radialGradient id="glow"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset=".4" stop-color="#ff9d2e" stop-opacity=".18"/><stop offset="1" stop-color="#ff7a00" stop-opacity="0"/></radialGradient>'+
+ '<radialGradient id="flameG" cx=".5" cy=".75" r=".7"><stop offset="0" stop-color="#fffbe6"/><stop offset=".45" stop-color="#ffd35c"/><stop offset="1" stop-color="#ff8a1c"/></radialGradient>'+
+ '<linearGradient id="board" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bdb6a4"/><stop offset=".5" stop-color="#f7f3e8"/><stop offset="1" stop-color="#a39c8a"/></linearGradient>'+
+ '<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.2"/></filter>'
+);
+el('rect',{x:0,y:0,width:1000,height:330,fill:'url(#room)'},bench);
+// window in the far mode (left, outside the bench)
+var gWin=el('g',{},bench);
+gWin.innerHTML='<rect x="6" y="40" width="26" height="70" rx="2" fill="#fff6d6" opacity=".9"/><path d="M19 40v70M6 75h26" stroke="#3b3326" stroke-width="2.5"/><rect x="6" y="40" width="26" height="70" fill="none" stroke="#3b3326" stroke-width="3"/><text x="19" y="128" fill="#8ea2bd" font-size="10" text-anchor="middle" font-family="Inter">window</text><text x="19" y="140" fill="#8ea2bd" font-size="10" text-anchor="middle" font-family="Inter">≈ 10 m</text>';
+// table + bench
+el('rect',{x:0,y:262,width:1000,height:68,fill:'url(#wood)'},bench);
+el('rect',{x:0,y:262,width:1000,height:68,fill:'url(#grain)'},bench);
+el('rect',{x:X(-2),y:226,width:X(102)-X(-2),height:14,rx:3,fill:'url(#steel)'},bench);
+el('rect',{x:X(-2.5),y:238,width:X(102.5)-X(-2.5),height:26,rx:2,fill:'url(#scale)',stroke:'#8b8574','stroke-width':1},bench);
+el('rect',{x:X(-3),y:220,width:10,height:44,rx:2,fill:'#3a414b'},bench);
+el('rect',{x:X(103)-10,y:220,width:10,height:44,rx:2,fill:'#3a414b'},bench);
+(function ticks(){var p='';var lab=el('g',{'font-family':'Inter','font-size':9,fill:'#2b2b2b','text-anchor':'middle'},bench);
+ for(var mm=0;mm<=1000;mm++){var x=X(mm/10).toFixed(2),h=mm%100===0?13:mm%50===0?10:mm%10===0?7:3.5;p+='M'+x+' 238v'+h;
+  if(mm%100===0){var t=el('text',{x:x,y:261},lab);t.textContent=mm/10}}
+ el('path',{d:p,stroke:'#2b2b2b','stroke-width':.6},bench)})();
+// principal axis (faint) and ray layer
+var axisLine=el('line',{x1:X(0),x2:X(100),y1:AXIS,y2:AXIS,stroke:'#3c5a80','stroke-width':1,'stroke-dasharray':'4 5',opacity:0},bench);
+var gRays=el('g',{},bench);
+// uprights
+function upright(id,draw){var g=el('g',{class:'up','data-id':id,tabindex:0,role:'slider','aria-label':id},bench);
+ el('rect',{x:-16,y:214,width:32,height:14,rx:3,fill:'#2d333c',stroke:'#59626e'},g);
+ el('rect',{x:-11,y:208,width:22,height:8,rx:2,fill:'#3a414b'},g);
+ el('circle',{cx:13,cy:211,r:3.2,fill:'#9aa3ae',stroke:'#434a54'},g);
+ el('path',{d:'M-4 238 L4 238 L0 246 Z',fill:'#d22'},g);       // index mark on the scale
+ el('rect',{x:-2.6,y:150,width:5.2,height:60,fill:'url(#rod)'},g);
+ var hl=el('rect',{x:-22,y:60,width:44,height:190,rx:10,fill:'none',stroke:'#e8cc6a','stroke-width':1.5,'stroke-dasharray':'4 4',opacity:0,class:'hl'},g);
+ draw(g);
+ var lab=el('text',{x:0,y:52,'text-anchor':'middle','font-family':'JetBrains Mono','font-size':12,fill:'#e8cc6a',opacity:0,class:'lab'},g);
+ return {g:g,hl:hl,lab:lab}}
+var U={};
+U.obj=upright('candle',function(g){
+ el('rect',{x:-11,y:146,width:22,height:5,rx:1.5,fill:'#5b636e'},g);
+ el('rect',{x:-6,y:AXIS+2,width:12,height:146-AXIS-2,rx:1.5,fill:'url(#wax)'},g);
+ el('path',{d:'M-6 '+(AXIS+3)+' q6 -3 12 0',stroke:'#efe6cf','stroke-width':1.4,fill:'none'},g);
+ el('line',{x1:0,y1:AXIS+2,x2:0,y2:AXIS-1,stroke:'#222','stroke-width':1.3},g);
+ U._glow=el('circle',{cx:0,cy:AXIS-8,r:34,fill:'url(#glow)'},g);
+ U._flame=el('path',{d:flamePath(0,AXIS,HO*PX,1),fill:'url(#flameG)'},g);
+ el('path',{d:'M0 '+(AXIS-3)+' c1.6 -1 1.8 -3 0 -5 c-1.8 2 -1.6 4 0 5z',fill:'#5aa0ff',opacity:.8},g);
+});
+U.lens=upright('lens',function(g){
+ el('rect',{x:-5,y:164,width:10,height:10,fill:'#4b535e'},g);
+ el('path',{d:'M-9 '+(AXIS+34)+' v-68 h18 v68',fill:'none',stroke:'#50402c','stroke-width':5,'stroke-linejoin':'round'},g);
+ el('path',{d:'M0 '+(AXIS-28)+' Q10 '+AXIS+' 0 '+(AXIS+28)+' Q-10 '+AXIS+' 0 '+(AXIS-28)+'Z',fill:'url(#glass)',stroke:'#bfe6ff','stroke-width':1.2},g);
+ el('path',{d:'M-2 '+(AXIS-18)+' q3 6 2 14',stroke:'#fff',opacity:.7,'stroke-width':1.3,fill:'none'},g);
+ el('rect',{x:-10,y:AXIS+33,width:20,height:6,rx:1,fill:'#6b5638'},g);
+});
+U.scr=upright('screen',function(g){
+ el('rect',{x:-4,y:AXIS-44,width:8,height:92,rx:1.5,fill:'url(#board)',stroke:'#7f7867'},g);
+ U._spot=el('ellipse',{cx:-4.5,cy:AXIS,rx:2.5,ry:6,fill:'#ffe08a',opacity:0,filter:'url(#soft)'},g);
+});
+function flamePath(cx,base,h,w){w=w||1;var hw=h*.24*w;
+ return 'M'+cx+' '+(base-h)+' C'+(cx+hw*.75)+' '+(base-h*.6)+' '+(cx+hw*1.15)+' '+(base-h*.28)+' '+(cx+hw)+' '+(base-h*.1)+
+  ' C'+(cx+hw*.9)+' '+(base+h*.02)+' '+(cx+hw*.4)+' '+(base+h*.06)+' '+cx+' '+(base+h*.06)+
+  ' C'+(cx-hw*.4)+' '+(base+h*.06)+' '+(cx-hw*.9)+' '+(base+h*.02)+' '+(cx-hw)+' '+(base-h*.1)+
+  ' C'+(cx-hw*1.15)+' '+(base-h*.28)+' '+(cx-hw*.75)+' '+(base-h*.6)+' '+cx+' '+(base-h)+'Z'}
+
+/* ───────── screen view ───────── */
+var sv=document.getElementById('screenView');
+defs(sv,
+ '<radialGradient id="paper" cx=".5" cy=".45" r=".75"><stop offset="0" stop-color="#ece7d8"/><stop offset="1" stop-color="#c9c3b2"/></radialGradient>'+
+ '<radialGradient id="iflame" cx=".5" cy=".75" r=".7"><stop offset="0" stop-color="#fffdf0"/><stop offset=".4" stop-color="#ffe07a"/><stop offset="1" stop-color="#ff9a2a"/></radialGradient>'+
+ '<filter id="bl" filterUnits="userSpaceOnUse" x="-12" y="-12" width="24" height="24"><feGaussianBlur id="blv" stdDeviation="0.05"/></filter>'+
+ '<pattern id="fib" width=".6" height=".6" patternUnits="userSpaceOnUse"><circle cx=".15" cy=".2" r=".03" fill="#000" opacity=".06"/><circle cx=".45" cy=".5" r=".025" fill="#000" opacity=".05"/></pattern>');
+el('rect',{x:-6,y:-6,width:12,height:12,fill:'url(#paper)'},sv);
+el('rect',{x:-6,y:-6,width:12,height:12,fill:'url(#fib)'},sv);
+var gImg=el('g',{filter:'url(#bl)'},sv);
+var blv=document.getElementById('blv');
+el('g',{},sv).innerHTML='<path d="M-5.6 0h.5M5.1 0h.5M0 -5.6v.5M0 5.1v.5" stroke="#7d7768" stroke-width=".06"/>';
+
+/* ───────── zoomed scale ───────── */
+var mag=document.getElementById('mag');
+defs(mag,'<linearGradient id="mscale" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f4e8"/><stop offset="1" stop-color="#dcd5bf"/></linearGradient>'+
+ '<radialGradient id="lensv" cx=".5" cy=".5" r=".6"><stop offset=".8" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient>');
+var magG=el('g',{},mag);
+
+/* ───────── interaction ───────── */
+var NAMES={obj:'Candle',lens:'Lens',scr:'Screen'};
+var selBox=document.getElementById('sel');
+function buildSel(){selBox.innerHTML='';['obj','lens','scr'].forEach(function(k){if(S.mode==='far'&&k==='obj')return;
+ var b=document.createElement('button');b.type='button';b.className='chip'+(S.sel===k?' on':'');b.textContent=NAMES[k];
+ b.onclick=function(){S.sel=k;buildSel();render()};selBox.appendChild(b)})}
+function clamp(k,x){var p=S.pos,lo=1,hi=99;
+ if(k==='obj'){hi=p.lens-4}
+ if(k==='lens'){lo=(S.mode==='far'?6:p.obj+4);hi=p.scr-3}
+ if(k==='scr'){lo=p.lens+3}
+ return Math.min(hi,Math.max(lo,r1(x)))}
+function move(k,x){S.pos[k]=clamp(k,x);render()}
+document.querySelectorAll('.nudge button').forEach(function(b){b.onclick=function(){move(S.sel,S.pos[S.sel]+parseFloat(b.dataset.d))}});
+var drag=null;
+function svgX(evt){var pt=bench.createSVGPoint();pt.x=evt.clientX;pt.y=evt.clientY;return pt.matrixTransform(bench.getScreenCTM().inverse()).x}
+['obj','lens','scr'].forEach(function(k){var g=U[k].g;
+ g.addEventListener('pointerdown',function(e){S.sel=k;buildSel();drag={k:k,dx:svgX(e)-X(S.pos[k])};g.classList.add('drag');g.setPointerCapture(e.pointerId);render();e.preventDefault()});
+ g.addEventListener('pointermove',function(e){if(!drag||drag.k!==k)return;move(k,(svgX(e)-drag.dx-X0)/PX)});
+ g.addEventListener('pointerup',function(){drag=null;g.classList.remove('drag')});
+ g.addEventListener('keydown',function(e){var d=e.shiftKey?1:0.1;if(e.key==='ArrowLeft'){move(k,S.pos[k]-d);e.preventDefault()}if(e.key==='ArrowRight'){move(k,S.pos[k]+d);e.preventDefault()}});
+ g.addEventListener('focus',function(){S.sel=k;buildSel();render()});
+});
+document.getElementById('rays').onchange=function(){S.rays=this.checked;render()};
+document.getElementById('labels').onchange=function(){S.labels=this.checked;render()};
+document.getElementById('newLens').onclick=function(){if(S.rows.length&&!confirmInline(this))return;newLens();setMode('far')};
+function confirmInline(btn){if(btn.dataset.sure){delete btn.dataset.sure;btn.textContent='↺ New lens';return true}
+ btn.dataset.sure=1;btn.textContent='Tap again to clear readings';setTimeout(function(){delete btn.dataset.sure;btn.textContent='↺ New lens'},3500);return false}
+var msgEl=document.getElementById('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setMode(t.dataset.mode)}});
+function setMode(m){S.mode=m;document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.mode===m)});
+ if(m==='far'){S.pos={obj:12,lens:30,scr:Math.min(99,30+(S.fRough?S.fRough+6:24))};S.sel='scr'}
+ else{var f=S.fRough||16;S.pos={obj:Math.max(2,r1(50-2.2*f)),lens:50,scr:Math.min(99,r1(50+1.4*f))};S.sel='scr'}
+ document.getElementById('farBox').hidden=m!=='far';document.getElementById('uvBox').hidden=m!=='uv';
+ document.getElementById('task').innerHTML=m==='far'
+  ?'<b>Step 1.</b> Light from a distant window falls on the lens. Slide the <b>screen</b> until the window’s image is sharpest. Read the lens and screen positions from the zoomed scale; their difference is the rough focal length.'
+  :'<b>Step 2.</b> Put the candle at a distance between about 1.5f and 3f from the lens (rough f = <b>'+(S.fRough?S.fRough.toFixed(1)+' cm':'?')+'</b>). Focus the flame on the screen, then record. Take 6 readings with different candle positions.';
+ say('');buildSel();render()}
+
+document.getElementById('saveRough').onclick=function(){
+ var L=parseFloat(document.getElementById('rL').value),Sc=parseFloat(document.getElementById('rS').value);
+ if(isNaN(L)||isNaN(Sc)){say('Type both readings from the scale (in cm, to one decimal place).','bad');return}
+ var im=image(),bad=[];
+ if(Math.abs(L-S.pos.lens)>READ_TOL)bad.push('lens');
+ if(Math.abs(Sc-S.pos.scr)>READ_TOL)bad.push('screen');
+ if(bad.length){say('Re-read the '+bad.join(' and ')+' position on the zoomed scale — the red index mark is under the stand.','bad');return}
+ if(Math.abs(S.pos.scr-im.x)>SHARP){say('The window’s image is not at its sharpest yet. Slide the screen slowly both ways and stop where the bars look crispest.','bad');return}
+ S.fRough=r1(Sc-L);save();renderTable();
+ say('Rough focal length = '+S.fRough.toFixed(1)+' cm. Now go to Step 2.','ok')};
+
+document.getElementById("recBtn").onclick=function(){
+ var im=image();
+ if(!im.real){say('No image forms on the screen: the candle is within the focal length. Move it further from the lens.','bad');return}
+ if(S.rows.length>=10){say('Ten observations is plenty. Delete one to add another.','bad');return}
+ S.rows.push({t:{o:S.pos.obj,l:S.pos.lens,s:S.pos.scr,d:r1((S.pos.scr-im.x)*100)/100},o:'',l:'',s:''});save();renderTable();
+ say('Observation '+S.rows.length+' recorded. Type the three readings into the table.','ok');
+ var ins=document.querySelectorAll('#tb tr:last-child input');if(ins[0])ins[0].focus({preventScroll:true})};
+
+/* ───────── render bench + views ───────── */
+var flick=0;
+function render(){
+ var p=S.pos,im=image();
+ U.obj.g.style.display=S.mode==='far'?'none':'';gWin.style.display=S.mode==='far'?'':'none';
+ ['obj','lens','scr'].forEach(function(k){var u=U[k];u.g.setAttribute('transform','translate('+X(p[k]).toFixed(2)+',0)');
+  u.hl.setAttribute('opacity',S.sel===k?1:0);u.lab.setAttribute('opacity',S.labels?1:0);u.lab.textContent=p[k].toFixed(1)});
+ document.getElementById('lensTag').textContent='Lens L-'+S.lensNo;
+ drawRays(im);drawScreen(im);drawMag();
+ var bs=document.getElementById('benchScroll');if(bs.scrollWidth>bs.clientWidth+4&&!drag){var px=X(p[S.sel])/1000*bs.scrollWidth;if(px<bs.scrollLeft+40||px>bs.scrollLeft+bs.clientWidth-40)bs.scrollLeft=px-bs.clientWidth/2}
+ document.getElementById('readout').textContent=S.labels?NAMES[S.sel]+': '+p[S.sel].toFixed(1)+' cm':NAMES[S.sel];
+}
+function drawRays(im){gRays.innerHTML='';axisLine.setAttribute('opacity',S.rays?.6:0);if(!S.rays)return;
+ var lx=X(S.pos.lens),sx=X(S.pos.scr),fx=X(S.pos.lens+S.f),f2=X(S.pos.lens-S.f);
+ el('circle',{cx:fx,cy:AXIS,r:2.5,fill:'#9cc8ff'},gRays);el('circle',{cx:f2,cy:AXIS,r:2.5,fill:'#9cc8ff'},gRays);
+ [[fx,'F'],[f2,'F']].forEach(function(a){var t=el('text',{x:a[0],y:AXIS+14,'font-size':10,'font-family':'Inter',fill:'#9cc8ff','text-anchor':'middle'},gRays);t.textContent=a[1]});
+ var tipY=AXIS-HO*PX,col='#ffd36b';
+ if(S.mode==='far'){ // parallel beam from the left converging at F (v≈f)
+  [-14,0,14].forEach(function(dy){var y=AXIS+dy;var ix=X(im.x);
+   el('line',{x1:X(0),y1:y,x2:lx,y2:y,stroke:col,'stroke-width':1,opacity:.75},gRays);
+   var ex=sx,ey=y+(AXIS-y)*(sx-lx)/(ix-lx);el('line',{x1:lx,y1:y,x2:ex,y2:ey,stroke:col,'stroke-width':1,opacity:.75},gRays)});return}
+ var ox=X(S.pos.obj);
+ if(!im.real){var t=el('text',{x:lx,y:40,'font-size':12,'font-family':'Inter',fill:'#ffab9e','text-anchor':'middle'},gRays);t.textContent='Object inside F — the rays diverge: no real image';
+  el('line',{x1:ox,y1:tipY,x2:lx,y2:tipY,stroke:col,opacity:.8},gRays);el('line',{x1:lx,y1:tipY,x2:Math.min(990,lx+300),y2:tipY+(AXIS-tipY)*300/(fx-lx),stroke:col,opacity:.8},gRays);
+  el('line',{x1:ox,y1:tipY,x2:Math.min(990,lx+300),y2:tipY+(AXIS-tipY)*(lx+300-ox)/(lx-ox),stroke:col,opacity:.8},gRays);return}
+ var ix=X(im.x),iy=AXIS+(AXIS-tipY)*Math.abs(im.m);
+ var endX=Math.max(sx,ix)+20;
+ function ray(x1,y1,x2,y2){el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:col,'stroke-width':1.2,opacity:.85},gRays)}
+ ray(ox,tipY,lx,tipY);ray(lx,tipY,endX,tipY+(iy-tipY)*(endX-lx)/(ix-lx));
+ ray(ox,tipY,endX,tipY+(iy-tipY)*(endX-ox)/(ix-ox));
+ if(Math.abs(ix-sx)>2){el('line',{x1:ix,y1:AXIS,x2:ix,y2:iy,stroke:'#ff9d9d','stroke-width':2,'stroke-dasharray':'3 3'},gRays);
+  var t2=el('text',{x:ix,y:Math.min(205,iy+14),'font-size':10,'font-family':'Inter',fill:'#ff9d9d','text-anchor':'middle'},gRays);t2.textContent='image'}
+}
+function drawScreen(im){
+ gImg.innerHTML='';var d,B,bright,html='';
+ if(!im.real){blv.setAttribute('stdDeviation',1.6);U._spot.setAttribute('opacity',.12);
+  gImg.innerHTML='<circle cx="0" cy="0" r="3.8" fill="#ffcf73" opacity=".22"/>';return}
+ d=S.pos.scr-im.x;                         // defocus (cm)
+ B=A*Math.abs(d)/im.v;                     // blur-circle diameter (cm)
+ var sigma=Math.max(0.035,B/3.2);
+ blv.setAttribute('stdDeviation',sigma.toFixed(3));
+ var M=Math.abs(im.m);
+ if(S.mode==='far'){
+  var w=0.12*im.v,h=0.16*im.v;            // window 1.2 m × 1.6 m seen from 10 m: image size = angular size × v
+  bright=Math.min(1,.9);
+  html='<g transform="rotate(180)" opacity="'+bright+'"><rect x="'+(-w/2)+'" y="'+(-h/2)+'" width="'+w+'" height="'+h+'" fill="#fff8de"/>'+
+   '<circle cx="'+(w*.18)+'" cy="'+(h*.12)+'" r="'+(w*.22)+'" fill="#7fa86a" opacity=".85"/>'+
+   '<path d="M0 '+(-h/2)+'V'+(h/2)+'M'+(-w/2)+' 0H'+(w/2)+'" stroke="#4a3f2c" stroke-width="'+(w*.07)+'"/>'+
+   '<rect x="'+(-w/2)+'" y="'+(-h/2)+'" width="'+w+'" height="'+h+'" fill="none" stroke="#4a3f2c" stroke-width="'+(w*.09)+'"/></g>';
+ }else{
+  var k=M;bright=Math.max(.35,Math.min(1,Math.pow(2*S.f/im.v,2)*.95));
+  var fs=1+flick*.04;
+  // object coordinates: flame base at 0, flame tip at -HO, candle wax from +0.15 to +3.2 (below)
+  html='<g transform="scale('+k+','+(-k)+')">'+
+   '<rect x="-0.55" y="0.15" width="1.1" height="3.4" fill="#d8cfb6" opacity="'+(.32*bright)+'"/>'+
+   '<ellipse cx="0" cy="-0.75" rx="1.2" ry="1.6" fill="#ffb347" opacity="'+(.16*bright)+'"/>'+
+   '<g transform="scale(1,'+fs+')"><path d="'+flamePath(0,0.06,HO,1.05)+'" fill="url(#iflame)" opacity="'+bright+'"/>'+
+   '<path d="M0 -0.08 c.14 -.08 .16 -.26 0 -.45 c-.16 .19 -.14 .37 0 .45z" fill="#6aa8ff" opacity="'+(.75*bright)+'"/></g>'+
+   '<line x1="0" y1="0.16" x2="0" y2="-0.02" stroke="#2a2a2a" stroke-width=".05" opacity="'+bright+'"/></g>';
+ }
+ gImg.innerHTML=html;
+ var near=Math.max(0,1-Math.abs(d)/1.5);U._spot.setAttribute('opacity',(near*.9).toFixed(2));
+}
+function drawMag(){
+ var c=S.pos[S.sel],PXM=80,W=640,mid=W/2;magG.innerHTML='';
+ el('rect',{x:0,y:0,width:W,height:120,fill:'#20262f'},magG);
+ el('rect',{x:0,y:22,width:W,height:80,fill:'url(#mscale)'},magG);
+ var p='',from=Math.floor((c-4.2)*10),to=Math.ceil((c+4.2)*10);
+ for(var mm=from;mm<=to;mm++){if(mm<0||mm>1000)continue;var x=mid+(mm/10-c)*PXM,h=mm%10===0?34:mm%5===0?24:14;p+='M'+x.toFixed(2)+' 22v'+h;
+  if(mm%10===0){var t=el('text',{x:x,y:82,'text-anchor':'middle','font-family':'Inter','font-weight':700,'font-size':20,fill:'#1d1d1d'},magG);t.textContent=mm/10}}
+ el('path',{d:p,stroke:'#1d1d1d','stroke-width':1.3},magG);
+ var u=el('text',{x:W-10,y:98,'text-anchor':'end','font-family':'Inter','font-size':11,fill:'#555'},magG);u.textContent='cm';
+ // the upright's saddle edge with its red index mark
+ el('rect',{x:mid-60,y:0,width:120,height:22,fill:'#2d333c',stroke:'#59626e'},magG);
+ el('path',{d:'M'+(mid-9)+' 22 L'+(mid+9)+' 22 L'+mid+' 42 Z',fill:'#d22',stroke:'#7a0000','stroke-width':.8},magG);
+ el('line',{x1:mid,y1:22,x2:mid,y2:58,stroke:'#d22','stroke-width':1.6},magG);
+ var nm=el('text',{x:mid,y:15,'text-anchor':'middle','font-family':'Inter','font-size':11,'font-weight':700,fill:'#e8cc6a'},magG);nm.textContent=NAMES[S.sel].toUpperCase()+' INDEX';
+ el('rect',{x:0,y:0,width:W,height:120,fill:'url(#lensv)'},magG);
+}
+setInterval(function(){flick=Math.random()*2-1;var s=1+flick*.035;
+ if(U._flame){U._flame.setAttribute('transform','translate(0,'+AXIS+') scale('+(1-flick*.02)+','+s+') translate(0,'+(-AXIS)+')');U._glow.setAttribute('r',(33+flick*2.5).toFixed(1))}
+ if(S.mode==='uv')drawScreen(image())},140);
+
+/* ───────── table ───────── */
+var tb=document.getElementById('tb');
+function calc(r){var o=parseFloat(r.o),l=parseFloat(r.l),s=parseFloat(r.s);if([o,l,s].some(isNaN))return null;
+ var u=-(l-o),v=s-l;if(u>=0||v<=0)return null;return {u:u,v:v,iu:1/u,iv:1/v,f:u*v/(u-v)}}
+function renderTable(){
+ document.getElementById('fr').textContent=S.fRough?S.fRough.toFixed(1)+' cm':'not found yet';
+ document.getElementById('nObs').textContent=S.rows.length+' / 6';
+ if(!S.rows.length){tb.innerHTML='<tr><td colspan="10" class="note" style="padding:16px">No observations yet. Go to Step 2, focus the image and press “Record this observation”.</td></tr>';drawGraphs();renderResult();return}
+ tb.innerHTML='';S.rows.forEach(function(r,i){var tr=document.createElement('tr');
+  tr.innerHTML='<td>'+(i+1)+'</td><td><input data-k="o" value="'+r.o+'" inputmode="decimal" aria-label="object position"></td><td><input data-k="l" value="'+r.l+'" inputmode="decimal" aria-label="lens position"></td><td><input data-k="s" value="'+r.s+'" inputmode="decimal" aria-label="screen position"></td>'+
+   '<td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td><button class="del" title="Delete">✕</button></td>';
+  tr.querySelectorAll('input').forEach(function(inp){inp.oninput=function(){r[inp.dataset.k]=inp.value.trim();inp.classList.remove('bad','good');fill(tr,r);save();drawGraphs();renderResult()}});
+  tr.querySelector('.del').onclick=function(){S.rows.splice(i,1);save();renderTable()};
+  fill(tr,r);tb.appendChild(tr)});
+ drawGraphs();renderResult()}
+function fill(tr,r){var c=calc(r),td=tr.querySelectorAll('td.n');
+ if(!c){td.forEach(function(t){t.textContent='–'});return}
+ td[0].textContent=c.u.toFixed(1);td[1].textContent='+'+c.v.toFixed(1);td[2].textContent=c.iu.toFixed(4);td[3].textContent=c.iv.toFixed(4);td[4].textContent=c.f.toFixed(2)}
+document.getElementById('check').onclick=function(){
+ var fb=[],rows=tb.querySelectorAll('tr');
+ if(!S.rows.length){showFb(['Record some observations first.']);return}
+ S.rows.forEach(function(r,i){var tr=rows[i],bad=[];
+  ['o','l','s'].forEach(function(k){var inp=tr.querySelector('input[data-k="'+k+'"]'),v=parseFloat(r[k]);
+   var ok=!isNaN(v)&&Math.abs(v-r.t[k])<=READ_TOL;inp.classList.toggle('bad',!ok);inp.classList.toggle('good',ok);if(!ok)bad.push({o:'object',l:'lens',s:'screen'}[k])});
+  var msgs=[];if(bad.length)msgs.push('re-read the '+bad.join(', ')+' position');
+  if(Math.abs(r.t.d)>SHARP)msgs.push('the image was not at its sharpest (screen '+Math.abs(r.t.d).toFixed(1)+' cm '+(r.t.d>0?'too far':'too close')+') — take this reading again');
+  tr.classList.toggle('flag',msgs.length>0);
+  if(msgs.length)fb.push('Observation '+(i+1)+': '+msgs.join('; ')+'.')});
+ var good=goodRows();
+ if(good.length<5)fb.push('You need at least 5 correct, focused observations for the graphs (now '+good.length+').');
+ if(good.length>=3){var us=good.map(function(c){return -c.u}),f=fitF(good);
+  if(!us.some(function(u){return u<2*f})||!us.some(function(u){return u>2*f}))fb.push('Take some readings with the candle closer than 2f and some farther than 2f, so the graph shows both sides of (2f, 2f).')}
+ if(!fb.length)fb.push('✓ All readings are correct and every image was focused. Well done — see your graphs and result below.');
+ showFb(fb)};
+function showFb(a){document.getElementById('fb').innerHTML=a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+function goodRows(){return S.rows.filter(function(r){var c=calc(r);return c&&['o','l','s'].every(function(k){return Math.abs(parseFloat(r[k])-r.t[k])<=READ_TOL})&&Math.abs(r.t.d)<=SHARP}).map(calc)}
+function validRows(){return S.rows.map(calc).filter(Boolean)}
+function fitF(rows){var s=0;rows.forEach(function(c){s+=1/c.v-1/c.u});return rows.length/s}
+
+/* ───────── graphs ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=document.getElementById(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(300,r.width||560),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h}}
+function axes(g,xmax,ymax,xl,yl,xstep,ystep,fmt){
+ var x=g.x,L=56,B=44,R=16,T=16,W=g.w-L-R,H=g.h-T-B,txt=css('--text')||'#222',mut=css('--muted')||'#666',bd=css('--border')||'#ddd';
+ x.clearRect(0,0,g.w,g.h);x.font='11px Inter, sans-serif';x.lineWidth=1;
+ for(var v=0;v<=xmax+1e-9;v+=xstep){var px=L+v/xmax*W;x.strokeStyle=bd;x.beginPath();x.moveTo(px,T);x.lineTo(px,T+H);x.stroke();x.fillStyle=mut;x.textAlign='center';x.fillText(fmt(v),px,T+H+15)}
+ for(v=0;v<=ymax+1e-9;v+=ystep){var py=T+H-v/ymax*H;x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(fmt(v),L-6,py+4)}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T);x.lineTo(L,T+H);x.lineTo(L+W,T+H);x.stroke();
+ x.fillStyle=txt;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(14,T+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();
+ return function(a,b){return [L+a/xmax*W,T+H-b/ymax*H]}}
+function nice(m){var steps=[1,2,2.5,5,10,20,25,50,100],e=Math.pow(10,Math.floor(Math.log10(m/6)));for(var i=0;i<steps.length;i++){if(m/(steps[i]*e)<=7)return steps[i]*e}return m/5}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);g.x.fillStyle=css('--muted')||'#777';g.x.font='14px Inter, sans-serif';g.x.textAlign='center';g.x.fillText(t,g.w/2,g.h/2)}
+var FIT=null;
+function drawGraphs(){
+ var g1=canvas('g1'),g2=canvas('g2'),rows=goodRows();FIT=null;
+ if(rows.length<5){var t='Needs 5 correct, focused readings ('+rows.length+' so far)';empty(g1,t);empty(g2,t);return}
+ var gold=css('--gold')||'#c9a227',navy='#3b6fb8',red='#c0392b',green=css('--green')||'#237d69';
+ // u–v
+ var f=fitF(rows),mx=Math.max.apply(null,rows.map(function(c){return Math.max(-c.u,c.v)}).concat([2*f]))*1.12;
+ var st=nice(mx);mx=Math.ceil(mx/st)*st;
+ var P=axes(g1,mx,mx,'|u| (cm)','v (cm)',st,st,function(v){return String(Math.round(v*10)/10)}),x=g1.x;
+ x.strokeStyle=gold;x.setLineDash([6,5]);x.lineWidth=1.5;x.beginPath();var a=P(0,0),b=P(mx,mx);x.moveTo(a[0],a[1]);x.lineTo(b[0],b[1]);x.stroke();x.setLineDash([]);
+ x.strokeStyle=navy;x.lineWidth=2;x.beginPath();var first=true;
+ for(var uu=f*1.04;uu<=mx;uu+=mx/400){var vv=uu*f/(uu-f);if(vv>mx){continue}var q=P(uu,vv);if(first){x.moveTo(q[0],q[1]);first=false}else x.lineTo(q[0],q[1])}x.stroke();
+ var k=P(2*f,2*f);x.strokeStyle=red;x.setLineDash([3,4]);x.lineWidth=1.2;x.beginPath();x.moveTo(k[0],k[1]);x.lineTo(k[0],P(0,0)[1]);x.moveTo(k[0],k[1]);x.lineTo(P(0,0)[0],k[1]);x.stroke();x.setLineDash([]);
+ x.fillStyle=red;x.beginPath();x.arc(k[0],k[1],4.5,0,7);x.fill();x.font='700 12px Inter, sans-serif';x.textAlign='left';x.fillText('(2f, 2f) ≈ ('+(2*f).toFixed(1)+', '+(2*f).toFixed(1)+')',k[0]+8,k[1]-8);
+ rows.forEach(function(c){var q=P(-c.u,c.v);x.fillStyle=gold;x.strokeStyle='#5c4600';x.lineWidth=1;x.beginPath();x.arc(q[0],q[1],4.5,0,7);x.fill();x.stroke()});
+ // 1/u–1/v: unconstrained least-squares line y = a + b·x
+ var X1=rows.map(function(c){return -1/c.u}),Y1=rows.map(function(c){return 1/c.v}),n=rows.length;
+ var mxx=X1.reduce(function(s,v){return s+v},0)/n,myy=Y1.reduce(function(s,v){return s+v},0)/n,sxy=0,sxx=0;
+ for(var i=0;i<n;i++){sxy+=(X1[i]-mxx)*(Y1[i]-myy);sxx+=(X1[i]-mxx)*(X1[i]-mxx)}
+ var bb=sxy/sxx,aa=myy-bb*mxx,xi=-aa/bb,yi=aa,f2=(1/xi+1/yi)/2;
+ var m2=Math.max(xi,yi,Math.max.apply(null,X1),Math.max.apply(null,Y1))*1.12,st2=nice(m2);m2=Math.ceil(m2/st2)*st2;
+ var Q=axes(g2,m2,m2,'1/|u| (cm⁻¹)','1/v (cm⁻¹)',st2,st2,function(v){return v.toFixed(st2<0.01?3:2)}),y=g2.x;
+ y.strokeStyle=navy;y.lineWidth=2;y.beginPath();var p1=Q(0,yi),p2=Q(xi,0);y.moveTo(p1[0],p1[1]);y.lineTo(p2[0],p2[1]);y.stroke();
+ y.fillStyle=red;[p1,p2].forEach(function(p){y.beginPath();y.arc(p[0],p[1],4.5,0,7);y.fill()});
+ y.font='700 12px Inter, sans-serif';y.textAlign='left';y.fillText('1/f = '+yi.toFixed(4),p1[0]+8,p1[1]+4);y.textAlign='right';y.fillText('1/f = '+xi.toFixed(4),p2[0]-4,p2[1]-10);
+ X1.forEach(function(v,i){var q=Q(v,Y1[i]);y.fillStyle=gold;y.strokeStyle='#5c4600';y.lineWidth=1;y.beginPath();y.arc(q[0],q[1],4.5,0,7);y.fill();y.stroke()});
+ FIT={g1:f,g2:f2};
+}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(drawGraphs,150)});
+
+/* ───────── result ───────── */
+function renderResult(){var v=validRows();
+ document.getElementById('rT').textContent=v.length?(v.reduce(function(s,c){return s+c.f},0)/v.length).toFixed(1)+' cm':'—';
+ document.getElementById('rG1').textContent=FIT?FIT.g1.toFixed(1)+' cm':'—';
+ document.getElementById('rG2').textContent=FIT?FIT.g2.toFixed(1)+' cm':'—';
+ var tbx=document.getElementById('trueBox');tbx.hidden=!S.revealed;document.getElementById('rTrue').textContent=S.f.toFixed(1)+' cm';
+ var e=document.getElementById('err');e.textContent='';
+ if(S.revealed&&v.length){var m=v.reduce(function(s,c){return s+c.f},0)/v.length;e.textContent='Your table mean differs from the actual value by '+(Math.abs(m-S.f)/S.f*100).toFixed(1)+'%.'}}
+document.getElementById('reveal').onclick=function(){
+ if(goodRows().length<5){document.getElementById('err').textContent='Complete at least 5 correct observations first (press “Check my table”).';return}
+ S.revealed=true;renderResult()};
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['Why is a convex lens called a converging lens?','It bends a parallel beam of light towards the principal axis so that the rays meet at the principal focus.'],
+ ['What is the focal length of a lens?','The distance between the optical centre and the principal focus of the lens.'],
+ ['Why do we find the rough focal length first?','So that we place the object beyond F (and around 2F). An object inside F gives a virtual image that cannot be taken on a screen.'],
+ ['Where should the object be placed to get an image of the same size as the object?','At 2F (u = −2f). The image is then formed at 2F on the other side, real, inverted and of the same size.'],
+ ['What is the nature of the image you obtained on the screen?','Real and inverted. It is diminished when the object is beyond 2F and magnified when the object is between F and 2F.'],
+ ['What is the shape of the u–v graph?','A rectangular hyperbola. It approaches v = f as |u| becomes very large and |u| = f as v becomes very large.'],
+ ['How do you find f from the 1/u–1/v graph?','The graph is a straight line. Its intercepts on both axes are each equal to 1/f; take the reciprocal and average the two values.'],
+ ['What is the power of a convex lens of focal length 20 cm?','P = 1/f (in metres) = 1/0.20 m = +5 D.'],
+ ['Why should the flame, the centre of the lens and the centre of the screen be at the same height?','So that the object lies on the principal axis. Otherwise the image shifts and blurs, and the lens formula used for paraxial rays is not obeyed well.'],
+ ['What happens to the focal length of a glass lens when it is placed in water?','It increases, because the refractive index of glass relative to water is less than relative to air, so the lens bends light less.'],
+ ['Can you get the image on the screen if the object is placed between F and the lens?','No. The image is virtual, erect and magnified, on the same side as the object, so it cannot be obtained on a screen.']];
+document.getElementById('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){var v=S.rows.map(function(r){return {r:r,c:calc(r)}});
+ var rows=v.map(function(o,i){var c=o.c;return '<tr><td>'+(i+1)+'</td><td>'+(o.r.o||'')+'</td><td>'+(o.r.l||'')+'</td><td>'+(o.r.s||'')+'</td><td>'+(c?c.u.toFixed(1):'')+'</td><td>'+(c?c.v.toFixed(1):'')+'</td><td>'+(c?c.iu.toFixed(4):'')+'</td><td>'+(c?c.iv.toFixed(4):'')+'</td><td>'+(c?c.f.toFixed(2):'')+'</td></tr>'}).join('');
+ var img='';try{img='<img src="'+document.getElementById('g1').toDataURL()+'"><img src="'+document.getElementById('g2').toDataURL()+'">'}catch(e){}
+ document.getElementById('record').innerHTML='<h1>Experiment: Focal length of a convex lens (u–v method)</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Date: ___________ &nbsp; Lens: L-'+S.lensNo+'</p>'+
+  '<h2>Aim</h2><p>To find the focal length of a convex lens by plotting graphs between u and v and between 1/u and 1/v.</p>'+
+  '<h2>Apparatus</h2><p>Optical bench with metre scale and three uprights, convex lens with holder, candle, white screen, matchbox.</p>'+
+  '<h2>Theory</h2><p>Lens formula: 1/v − 1/u = 1/f, so f = uv/(u − v). u is negative and v positive for a real image.</p>'+
+  '<h2>Observations</h2><p>Rough focal length = '+(S.fRough?S.fRough.toFixed(1):'____')+' cm</p><table><tr><th>S. No.</th><th>Object (cm)</th><th>Lens (cm)</th><th>Screen (cm)</th><th>u (cm)</th><th>v (cm)</th><th>1/u (cm⁻¹)</th><th>1/v (cm⁻¹)</th><th>f (cm)</th></tr>'+rows+'</table>'+
+  '<h2>Graphs</h2>'+(FIT?img:'<p>(Plot the u–v and 1/u–1/v graphs on graph paper.)</p>')+
+  '<h2>Result</h2><p>Focal length from the table (mean) = '+document.getElementById('rT').textContent+'; from the u–v graph = '+document.getElementById('rG1').textContent+'; from the 1/u–1/v graph = '+document.getElementById('rG2').textContent+'.</p>'+
+  '<h2>Precautions</h2><ol><li>The lens should be clean, thin and vertical.</li><li>The flame tip, lens centre and screen centre should be at the same height.</li><li>The object should be beyond F.</li><li>The sharpest image is found by approaching from both sides.</li><li>Read the scale without parallax.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>Judging the sharpest image (depth of focus).</li><li>Index error of the lens upright.</li><li>Uprights not vertical.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+document.getElementById('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,image:image,move:move,render:render};
+setMode(S.fRough?'uv':'far');renderTable();
+})();
+</script>
+</body>
+</html>
