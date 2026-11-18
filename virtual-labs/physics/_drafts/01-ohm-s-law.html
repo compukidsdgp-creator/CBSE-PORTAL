@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Ohm’s Law: V–I Graph and Resistance — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Wire a real-looking circuit, read the ammeter and voltmeter without parallax, plot the V–I graph and find the resistance and resistivity of an unknown coil.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="cbse-lab-standard" content="2026-11">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/physics/01-ohm-s-law.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Ohm’s law: V–I graph and resistance of a resistor — virtual lab","url":"https://cbsemock.org.in/virtual-labs/physics/01-ohm-s-law.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 10","Class 12"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Ohm’s law","V–I graph","Resistance of a resistor","Resistivity of a wire","Use of ammeter, voltmeter and rheostat"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:7px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.hero p{color:rgba(255,255,255,.86);max-width:780px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.72rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.76rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.tab .tick{color:#7fe0b8;font-weight:800}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.benchbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+#bench{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none}
+#bench .term{cursor:pointer}#bench .term:focus{outline:none}#bench .term:focus .ring{stroke:#e8cc6a;stroke-width:3}
+#bench .wire{cursor:pointer}
+#bench .knob{cursor:grab;touch-action:none}#bench .knob.drag{cursor:grabbing}#bench .knob:focus{outline:none}#bench .knob:focus .kr{stroke:#e8cc6a;stroke-width:2.5}
+#bench .plug{cursor:pointer}
+.benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:700px){#bench{min-width:820px}.hint{display:none}.benchbox::after{content:'⟷ swipe the board · tap two terminals to join them';position:absolute;right:8px;bottom:6px;font-size:.7rem;color:#e8cc6a;background:rgba(5,8,14,.7);padding:3px 8px;border-radius:99px;pointer-events:none}}
+.hint{position:absolute;left:12px;top:10px;font-size:.74rem;color:#8ea2bd;background:rgba(5,8,14,.6);padding:4px 9px;border-radius:99px;pointer-events:none}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px}
+@media(max-width:860px){.row2{grid-template-columns:minmax(0,1fr)}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px;min-width:0}
+.panel h4{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#zoom{display:block;width:100%;height:auto;border-radius:10px}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 8px;align-items:center}
+.sel .lb{font-size:.78rem;color:#93a6bf;margin-right:2px}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:99px;min-height:38px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.nudge button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;min-height:42px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff}
+.nudge button:hover{background:#21385c}.nudge button:active{transform:translateY(1px)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:#c9d6e6;cursor:pointer;padding:4px 0}
+.sw input{width:18px;height:18px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:42px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.btn.sm{font-size:.78rem;padding:7px 12px;min-height:36px}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.rough{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px;font-size:.88rem}
+.rough input,.obs input{font:inherit;font-family:'JetBrains Mono',monospace;font-size:.9rem;width:90px;padding:7px 8px;border-radius:8px;border:1.5px solid #3a5276;background:#0b1320;color:#fff}
+.msg{font-size:.85rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+.cfb{font-size:.84rem;margin-top:8px}.cfb li{margin:3px 0 3px 18px}.cfb .ok{color:#7fe0b8}.cfb .bad{color:#ffab9e}
+details.cd{margin-top:10px;font-size:.84rem;color:#c9d6e6}details.cd summary{cursor:pointer;font-weight:700;color:var(--gold2)}
+details.cd svg{display:block;width:100%;max-width:420px;margin:8px auto 0;background:#f7f4ea;border-radius:10px}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:720px;font-size:.88rem}
+.obs th,.obs td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:center}
+.obs th{background:var(--soft);font-weight:700;font-size:.78rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs input{background:var(--card);color:var(--text);border-color:var(--border);width:84px}
+.obs input.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs input.good{border-color:var(--green)}
+.obs .del{cursor:pointer;border:0;background:none;color:var(--muted);font-size:1.1rem;padding:4px 8px}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.note{font-size:.8rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:16px;align-items:start}
+@media(max-width:820px){.graphs{grid-template-columns:minmax(0,1fr)}}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1.05rem}
+.cdfig{display:block;width:100%;max-width:440px;margin:8px auto;background:#fbf9f2;border:1px solid var(--border);border-radius:12px}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}.links li:nth-child(4) a{background:linear-gradient(135deg,#c08a2b,#4d3410)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;counter-reset:s}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.6);font:600 12px Inter,sans-serif;text-anchor:middle;letter-spacing:.08em;text-transform:uppercase}
+.sceneB .flowB{stroke-dasharray:4 14;animation:flow 1.4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-36}}
+.sceneB .ndlA{transform-origin:200px 128px;animation:swingA 4.8s ease-in-out infinite}
+.sceneB .ndlV{transform-origin:560px 128px;animation:swingV 4.8s ease-in-out infinite}
+@keyframes swingA{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(22deg)}}
+@keyframes swingV{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(24deg)}}
+.sceneB .glowB{animation:pulse 4.8s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.15}50%{opacity:.55}}
+.sceneB .slideB{animation:slide 4.8s ease-in-out infinite}@keyframes slide{0%,100%{transform:translateX(0)}50%{transform:translateX(-90px)}}
+@media(prefers-reduced-motion:reduce){.sceneB .flowB,.sceneB .ndlA,.sceneB .ndlV,.sceneB .glowB,.sceneB .slideB{animation:none}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:70%;margin:1% 15%;border:1px solid #bbb}
+ #record svg{width:55%;display:block;margin:4pt auto}#record ol{padding-left:18pt}
+}
+</style>
+</head>
+<body>
+<div class="lab-draft" style="background:#fff4d6;color:#6b4e00;padding:8px 14px;font:600 14px Inter,sans-serif;text-align:center">Draft preview — waiting for approval in the admin panel</div>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../../index.html">Home</a> › <a href="../../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../../virtual-labs/physics/index.html">Physics</a> › Ohm’s law</nav>
+   <div class="eyebrow">Experiment · Ammeter, Voltmeter &amp; Rheostat</div>
+   <h1><span class="g1">Ohm’s Law</span><span class="g2">V–I Graph and Resistance</span></h1>
+   <p>Wire the circuit yourself, slide the rheostat and read the needles the way an examiner expects: eye in line with the mirror. Then plot V against I and find the resistance of an unknown coil.</p>
+   <div class="chips"><span>Class 10 · V–I graph &amp; resistance</span><span>Class 12 · resistivity of a wire</span><span>⏱ about 25 min</span></div>
+   <a class="go" href="#lab">Start wiring ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <linearGradient id="b-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#24170c"/></linearGradient>
+ <linearGradient id="b-board" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f47"/><stop offset="1" stop-color="#22262c"/></linearGradient>
+ <linearGradient id="b-case" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b4350"/><stop offset="1" stop-color="#181c22"/></linearGradient>
+ <linearGradient id="b-face" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf5"/><stop offset="1" stop-color="#e4dfcf"/></linearGradient>
+ <linearGradient id="b-cell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a6fa8"/><stop offset=".45" stop-color="#9fbbe6"/><stop offset="1" stop-color="#1f3866"/></linearGradient>
+ <linearGradient id="b-brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dc8a"/><stop offset="1" stop-color="#9a7420"/></linearGradient>
+ <linearGradient id="b-cer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4efe2"/><stop offset=".5" stop-color="#d9d0bb"/><stop offset="1" stop-color="#a69d88"/></linearGradient>
+ <radialGradient id="b-hot"><stop offset="0" stop-color="#ff7a2e" stop-opacity=".8"/><stop offset="1" stop-color="#ff3d00" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="0" y="318" width="760" height="42" fill="url(#b-wood)"/>
+<rect x="30" y="40" width="700" height="284" rx="10" fill="url(#b-board)" opacity=".9"/>
+<!-- wires (current flowing) -->
+<g fill="none" stroke-linecap="round">
+ <path d="M96 286 C70 230 80 180 140 172" stroke="#c0392b" stroke-width="4"/>
+ <path d="M260 172 C320 172 380 200 420 214" stroke="#d4a017" stroke-width="4"/>
+ <path d="M520 214 C560 230 600 270 640 276" stroke="#d4a017" stroke-width="4"/>
+ <path d="M640 300 C560 318 380 318 300 296" stroke="#222" stroke-width="4"/>
+ <path d="M500 166 C490 186 470 200 440 212" stroke="#c0392b" stroke-width="3"/><path d="M620 166 C620 190 560 204 512 212" stroke="#222" stroke-width="3"/>
+ <path class="flowB" d="M96 286 C70 230 80 180 140 172 M260 172 C320 172 380 200 420 214 M520 214 C560 230 600 270 640 276 M640 300 C560 318 380 318 300 296" stroke="#ffe08a" stroke-width="2"/>
+</g>
+<!-- battery of cells -->
+<g><rect x="90" y="276" width="214" height="38" rx="6" fill="#1b1f25" stroke="#4a525d"/>
+ <rect x="98" y="282" width="46" height="26" rx="4" fill="url(#b-cell)"/><rect x="149" y="282" width="46" height="26" rx="4" fill="url(#b-cell)"/><rect x="200" y="282" width="46" height="26" rx="4" fill="url(#b-cell)"/><rect x="251" y="282" width="46" height="26" rx="4" fill="url(#b-cell)"/>
+ <circle cx="96" cy="286" r="5" fill="url(#b-brass)"/><circle cx="300" cy="296" r="5" fill="url(#b-brass)"/></g>
+<!-- ammeter -->
+<g><rect x="120" y="58" width="160" height="128" rx="10" fill="url(#b-case)" stroke="#59626e"/>
+ <rect x="132" y="66" width="136" height="78" rx="4" fill="url(#b-face)"/>
+ <path d="M150 98 A58 58 0 0 1 250 98" stroke="#333" stroke-width="5" fill="none" stroke-dasharray="1 4"/>
+ <text x="200" y="118" font-size="14" fill="#1a1a1a" text-anchor="middle" font-family="Crimson Pro" font-weight="700">mA</text>
+ <line class="ndlA" x1="200" y1="128" x2="200" y2="66" stroke="#b3261e" stroke-width="2"/><circle cx="200" cy="128" r="5" fill="#2a2a2a"/>
+ <circle cx="140" cy="172" r="6" fill="#c0392b"/><circle cx="260" cy="172" r="6" fill="#222" stroke="#666"/></g>
+<!-- voltmeter -->
+<g><rect x="480" y="58" width="160" height="128" rx="10" fill="url(#b-case)" stroke="#59626e"/>
+ <rect x="492" y="66" width="136" height="78" rx="4" fill="url(#b-face)"/>
+ <path d="M510 98 A58 58 0 0 1 610 98" stroke="#333" stroke-width="5" fill="none" stroke-dasharray="1 4"/>
+ <text x="560" y="118" font-size="14" fill="#1a1a1a" text-anchor="middle" font-family="Crimson Pro" font-weight="700">V</text>
+ <line class="ndlV" x1="560" y1="128" x2="560" y2="66" stroke="#b3261e" stroke-width="2"/><circle cx="560" cy="128" r="5" fill="#2a2a2a"/>
+ <circle cx="500" cy="166" r="5" fill="#c0392b"/><circle cx="620" cy="166" r="5" fill="#222" stroke="#666"/></g>
+<!-- unknown resistance coil -->
+<g><circle class="glowB" cx="470" cy="222" r="60" fill="url(#b-hot)"/>
+ <rect x="404" y="226" width="132" height="16" rx="3" fill="#2d333c"/>
+ <rect x="424" y="204" width="92" height="22" rx="11" fill="url(#b-cer)"/>
+ <path d="M430 204l4 22M438 204l4 22M446 204l4 22M454 204l4 22M462 204l4 22M470 204l4 22M478 204l4 22M486 204l4 22M494 204l4 22M502 204l4 22" stroke="#8a5a2b" stroke-width="2"/>
+ <circle cx="420" cy="214" r="6" fill="url(#b-brass)"/><circle cx="520" cy="214" r="6" fill="url(#b-brass)"/></g>
+<!-- rheostat -->
+<g><rect x="560" y="276" width="150" height="20" rx="10" fill="url(#b-cer)"/>
+ <path d="M566 276v20M574 276v20M582 276v20M590 276v20M598 276v20M606 276v20M614 276v20M622 276v20M630 276v20M638 276v20M646 276v20M654 276v20M662 276v20M670 276v20M678 276v20M686 276v20M694 276v20M702 276v20" stroke="#8a5a2b" stroke-width="1.6"/>
+ <rect x="556" y="262" width="158" height="5" rx="2" fill="#9aa3ae"/>
+ <g class="slideB"><rect x="680" y="254" width="20" height="16" rx="3" fill="#1b1f25" stroke="#7a838f"/><path d="M690 270v6" stroke="#d6dbe1" stroke-width="3"/></g>
+ <circle cx="640" cy="276" r="0" fill="none"/></g>
+<text x="200" y="48" class="tB">ammeter</text><text x="560" y="48" class="tB">voltmeter</text><text x="470" y="262" class="tB">unknown coil R</text><text x="196" y="336" class="tB" style="fill:rgba(255,255,255,.75)">battery of cells</text><text x="636" y="314" class="tB">rheostat</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Wire the circuit</li><li><b>2</b>Zero error &amp; V–I readings</li><li><b>3</b>V–I graph</li><li><b>4</b>Result &amp; viva</li></ol>
+</header>
+
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Circuit board for Ohm’s law">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-mode="wire" role="tab"><b>Step 1 · Wire the circuit <span class="tick" id="tk1"></span></b><small>Join the terminals, then check the circuit</small></button>
+   <button class="tab" data-mode="zero" role="tab"><b>Step 2 · Zero error <span class="tick" id="tk2"></span></b><small>Plug key out: where do the needles rest?</small></button>
+   <button class="tab" data-mode="read" role="tab"><b>Step 3 · V–I readings</b><small>Slide the rheostat: 6 pairs of readings</small></button>
+  </div>
+  <div class="task" id="task"></div>
+  <div class="benchbox">
+   <div class="benchscroll" id="benchScroll"><svg id="bench" viewBox="0 0 1000 440" role="img" aria-label="Circuit board with battery, plug key, ammeter, voltmeter, unknown coil and rheostat"></svg></div>
+   <span class="hint" id="hint">Tap a terminal, then another to join them · tap a wire to remove it</span>
+  </div>
+  <div class="row2">
+   <div class="panel">
+    <h4><span id="zTitle">Ammeter (zoomed)</span><span id="zRead" class="mono"></span></h4>
+    <svg id="zoom" viewBox="0 0 640 330" aria-label="Zoomed meter face with mirror strip"></svg>
+    <div class="sel"><span class="lb">Meter:</span><button type="button" class="chip on" data-m="A">Ammeter</button><button type="button" class="chip" data-m="V">Voltmeter</button></div>
+    <div class="sel"><span class="lb">Your eye:</span><button type="button" class="chip" id="eyeL">◀ move left</button><span class="mono" id="eyeTxt" style="font-size:.82rem;min-width:110px;text-align:center"></span><button type="button" class="chip" id="eyeR">move right ▶</button></div>
+    <p class="note" style="color:#93a6bf">Read the needle only when it hides its own image in the mirror strip. Then you are looking straight down and there is no parallax.</p>
+   </div>
+   <div class="panel">
+    <h4><span>Controls</span><span id="coilTag" class="mono"></span></h4>
+    <div id="wireBox">
+     <div class="tools" style="margin-top:0">
+      <button class="btn gold" id="chkC" type="button">✓ Check my circuit</button>
+      <button class="btn ghost sm" id="undoW" type="button">↶ Undo wire</button>
+      <button class="btn ghost sm" id="clrW" type="button">✕ Clear wires</button>
+      <button class="btn ghost sm" id="autoW" type="button">Wire it for me (helper)</button>
+     </div>
+     <ul class="cfb" id="cfb"></ul>
+     <details class="cd"><summary>Circuit diagram</summary><div id="cdMini"></div></details>
+    </div>
+    <div class="sel"><span class="lb">Cells in use:</span><span id="cellChips"></span></div>
+    <div class="tools" style="margin-top:4px"><button class="btn navy" id="keyBtn" type="button">Insert plug key</button><span class="note" id="keyNote" style="color:#93a6bf"></span></div>
+    <div style="margin-top:10px"><div class="note" style="color:#93a6bf;margin-bottom:6px">Rheostat sliding contact (drag it on the board, or use the arrow keys)</div>
+     <div class="nudge"><button data-d="-0.1" type="button">◀◀ big</button><button data-d="-0.01" type="button">◀ fine</button><button data-d="0.01" type="button">fine ▶</button><button data-d="0.1" type="button">big ▶▶</button></div></div>
+    <div id="zeroBox" class="rough" hidden>
+     <span>Ammeter zero error <input id="zA" inputmode="decimal" placeholder="mA"></span>
+     <span>Voltmeter zero error <input id="zV" inputmode="decimal" placeholder="V"></span>
+     <button class="btn gold" id="saveZero" type="button">Save zero errors</button>
+    </div>
+    <div id="readBox" class="rough" hidden>
+     <span>Ammeter <input id="inA" inputmode="decimal" placeholder="mA"></span>
+     <span>Voltmeter <input id="inV" inputmode="decimal" placeholder="V"></span>
+     <button class="btn gold" id="recBtn" type="button">＋ Record observation</button>
+    </div>
+    <div class="tools">
+     <label class="sw"><input type="checkbox" id="helper"> Show readings (helper)</label>
+     <span style="flex:1"></span>
+     <button class="btn ghost sm" id="newCoil" type="button">↺ New coil</button>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 / 6</span></h2>
+  <p class="lead">Least count: ammeter <b class="mono">10 mA</b>, voltmeter <b class="mono">0.1 V</b>. Zero error: ammeter <b class="mono" id="zeA">not recorded</b>, voltmeter <b class="mono" id="zeV">not recorded</b>. Corrected reading = observed reading − zero error.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Ammeter reading<br>(mA)</th><th>Corrected current<br>I (A)</th><th>Voltmeter reading<br>(V)</th><th>Corrected p.d.<br>V (V)</th><th>R = V / I<br>(Ω)</th><th></th></tr></thead>
+   <tbody id="tb"><tr><td colspan="7" class="note" style="padding:16px">No observations yet. Go to Step 3, insert the plug key, read both meters and press “Record observation”.</td></tr></tbody>
+  </table></div>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graph</h2>
+  <p class="lead">It appears after 5 correct readings. Current I goes on the x-axis and potential difference V on the y-axis, so the slope of the line is the resistance.</p>
+  <div class="graphs">
+   <figure><canvas id="g1" width="640" height="480"></canvas><figcaption><b>V–I graph.</b> A straight line through the origin shows V ∝ I (Ohm’s law). Slope = ΔV/ΔI = R.</figcaption></figure>
+   <figure><canvas id="g2" width="420" height="315"></canvas><figcaption><b>R for each reading.</b> For an ohmic conductor R stays constant; the dashed line is your mean.</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Mean R from table</small><b id="rT">—</b></div>
+   <div class="rbox"><small>R from slope of V–I graph</small><b id="rG">—</b></div>
+   <div class="rbox"><small>Resistivity ρ = RπD²/4L (Class 12)</small><b id="rRho">—</b></div>
+   <div class="rbox true" id="trueBox" hidden><small>Actual R of this coil (at 27 °C) · actual ρ</small><b id="rTrue">—</b></div>
+  </div>
+  <p class="note" id="concl" style="margin-top:10px"></p>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the actual resistance</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p><b>Class 10:</b> To study the dependence of the potential difference (V) across a resistor on the current (I) through it, and to find its resistance. Also to plot a graph between V and I.</p>
+    <p><b>Class 12:</b> To find the resistivity of the material of a given wire by plotting a graph of potential difference against current.</p>
+    <h3>Apparatus</h3>
+    <p>A battery of four dry cells (1.5 V each), a plug key, an ammeter (0–500 mA), a voltmeter (0–5 V), a rheostat (0–25 Ω), a coil of nichrome wire of unknown resistance, connecting wires and a piece of sandpaper. For resistivity: a metre scale and a screw gauge.</p>
+    <h3>Theory</h3>
+    <p><b>Ohm’s law:</b> at constant temperature (and other physical conditions), the current through a conductor is directly proportional to the potential difference across its ends.</p>
+    <p class="eq">V ∝ I &nbsp;⇒&nbsp; V = I R &nbsp;⇒&nbsp; R = V / I</p>
+    <p>So the V–I graph of an ohmic conductor is a straight line through the origin, and its slope ΔV/ΔI is the resistance R. The SI unit of resistance is the ohm (1 Ω = 1 V A⁻¹).</p>
+    <p>The resistance of a uniform wire of length L and diameter D is R = ρL/A with A = πD²/4, so</p>
+    <p class="eq">ρ = R π D² / (4 L) &nbsp;(Ω m)</p>
+    <svg class="cdfig" id="cdBig" viewBox="0 0 470 262" role="img" aria-label="Circuit diagram: cells, plug key, ammeter, resistor and rheostat in series; voltmeter across the resistor"></svg>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li>Clean the ends of the connecting wires with sandpaper. Note the range and least count of the ammeter and voltmeter.</li>
+     <li>Connect the cells, plug key, ammeter, resistance coil and rheostat <b>in series</b>, with the + terminal of the ammeter towards the + of the battery.</li>
+     <li>Connect the voltmeter <b>in parallel</b> across the resistance coil, its + terminal on the side joined to the battery’s + terminal.</li>
+     <li>With the plug key out, note where each needle rests. This is the zero error (+ if right of zero, − if left).</li>
+     <li>Set the rheostat for the maximum resistance, insert the key and read the ammeter and voltmeter with your eye in line with the needle and its image.</li>
+     <li>Take out the key. Move the rheostat contact to increase the current and take the next pair of readings. Take at least six readings.</li>
+     <li>Subtract the zero errors, find R = V/I for each pair, and plot V (y-axis) against I (x-axis). Find the slope.</li>
+     <li>(Class 12) Measure the length L of the wire with a metre scale and its diameter D with a screw gauge, and find ρ.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>Connections should be neat and tight; wire ends should be cleaned with sandpaper.</li>
+     <li>The ammeter is always in series and the voltmeter always in parallel with the resistor; + terminals go towards the + of the battery.</li>
+     <li>Do not let either needle go beyond full scale: start with the rheostat at maximum resistance.</li>
+     <li>Use enough cells that the largest readings lie in the upper half of each scale; a reading of a few divisions has a large percentage error.</li>
+     <li>Insert the plug key only while taking a reading, so the coil does not heat up.</li>
+     <li>Read each meter with your eye vertically above the needle (needle covers its mirror image) to avoid parallax.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>Current heats the coil, so its resistance rises slightly during the experiment.</li>
+     <li>Loose or dirty connections add extra resistance.</li>
+     <li>Zero error or parallax in reading the meters; the needle can only be read to the nearest division.</li>
+     <li>The voltmeter draws a small current, so the ammeter reads a little more than the current through the coil.</li>
+     <li>(Class 12) Error in measuring the diameter: it appears squared in ρ, so its error counts twice.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask in this practical. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../../chapters/electricity-10.html">📘 Class 10 Electricity notes</a></li>
+   <li><a href="../../../chapters/current-electricity-12.html">📗 Class 12 Current Electricity notes</a></li>
+   <li><a href="../../../cbse-class-10-science-mock-tests.html">📄 Class 10 Science mock tests</a></li>
+   <li><a href="../../../cbse-class-12-physics-mock-papers.html">📄 Class 12 Physics mock papers</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../../about.html">About Us</a> · <a href="../../../privacy.html">Privacy Policy</a> · <a href="../../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
+<script>
+(function(){
+'use strict';
+/* ───────── apparatus constants (real values) ───────── */
+var NS='http://www.w3.org/2000/svg';
+var E_CELL=1.52, R_CELL=0.25;     // fresh dry cell: emf (V) and internal resistance (Ω)
+var RA=0.2;                       // ammeter resistance (Ω)
+var RV=5000;                      // voltmeter resistance (Ω): 1000 Ω per volt, 0–5 V
+var RMAX=25;                      // rheostat (Ω)
+var KEY_G=100;                    // closed plug key: 0.01 Ω
+var LC_A=10, LC_V=0.1;            // least counts: 10 mA, 0.1 V (50 divisions each)
+var ALPHA=4e-4;                   // temperature coefficient of nichrome (per K)
+var K_TH=0.02, C_TH=0.8;          // coil heat loss (W/K) and heat capacity (J/K): τ = 40 s
+var PAR=0.8;                      // apparent shift of needle per eye step (divisions)
+var TOL_A=6.5, TOL_V=0.065;       // reading tolerance: about half a division
+var HEAT_FLAG=0.012;              // coil resistance risen by more than 1.2 %
+var TERMS=['B+','B-','K1','K2','A+','A-','R1','R2','V+','V-','Rh1','RhS','Rh3'];
+var TNAME={'B+':'battery +','B-':'battery −','K1':'plug key','K2':'plug key','A+':'ammeter +','A-':'ammeter −','R1':'coil end 1','R2':'coil end 2','V+':'voltmeter +','V-':'voltmeter −','Rh1':'rheostat end A','RhS':'rheostat sliding contact','Rh3':'rheostat end B'};
+function rnd(a,b){return a+Math.random()*(b-a)}
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function r2(x){return Math.round(x*100)/100}
+
+/* ───────── state ───────── */
+var S={sess:null,cells:2,key:false,p:1,wires:[],zero:{a:'',v:'',ok:false},eye:1,meter:'A',rows:[],revealed:false,mode:'wire',cOK:false,helper:false,dT:0,selT:null};
+try{var sv=JSON.parse(localStorage.getItem('cbse-lab-ohm')||'null');if(sv&&sv.sess&&sv.sess.R0){S.sess=sv.sess;S.cells=sv.cells||2;S.wires=sv.wires||[];S.zero=sv.zero||S.zero;S.rows=sv.rows||[];S.eye=typeof sv.eye==='number'?sv.eye:1;S.p=typeof sv.p==='number'?sv.p:1}}catch(e){}
+if(!S.sess)newSession(true);
+function save(){try{localStorage.setItem('cbse-lab-ohm',JSON.stringify({sess:S.sess,cells:S.cells,wires:S.wires,zero:S.zero,rows:S.rows,eye:S.eye,p:S.p}))}catch(e){}}
+function newSession(silent){
+ var rho,L,D,R0,n=0;
+ do{rho=rnd(1.05,1.15)*1e-6;L=pick([0.5,0.6,0.7,0.8,0.9,1.0]);D=pick([0.32,0.36,0.40,0.45,0.50])*1e-3;R0=rho*L/(Math.PI*D*D/4);n++}while((R0<4||R0>11)&&n<200);
+ var zA=pick([-10,0,10,20]),zV=pick([-0.1,0,0.1,0.2]);if(zA===0&&zV===0)zV=0.1;
+ S.sess={R0:R0,rho:rho,L:L,D:D,zA:zA,zV:zV,no:Math.floor(rnd(101,999))};
+ S.rows=[];S.zero={a:'',v:'',ok:false};S.revealed=false;S.dT=0;S.eye=pick([-2,-1,1,2]);save();
+ if(!silent){renderTable();renderResult();say('A new coil is on the board. Its resistance is unknown. Re-check the zero errors in Step 2.','ok')}}
+function Reff(){return S.sess.R0*(1+ALPHA*S.dT)}
+
+/* ───────── circuit solver: nodal analysis of whatever the student has wired ───────── */
+function nets(){var par={};TERMS.forEach(function(t){par[t]=t});
+ function f(x){while(par[x]!==x){par[x]=par[par[x]];x=par[x]}return x}
+ S.wires.forEach(function(w){var a=f(w[0]),b=f(w[1]);if(a!==b)par[a]=b});
+ var idx={},n=0,net={};TERMS.forEach(function(t){var r=f(t);if(!(r in idx))idx[r]=n++;net[t]=idx[r]});return {net:net,n:n}}
+function solve(o){
+ o=o||{};var key=('key' in o)?o.key:S.key,p=('p' in o)?o.p:S.p,R=o.R||Reff(),cells=o.cells||S.cells;
+ var N=nets(),n=N.n,net=N.net,gnd=net['B-'],G=[],I=[],i,j;
+ for(i=0;i<n;i++){G.push(new Array(n).fill(0));I.push(0);G[i][i]=1e-9}
+ function st(a,b,g){var x=net[a],y=net[b];if(x===y)return;G[x][x]+=g;G[y][y]+=g;G[x][y]-=g;G[y][x]-=g}
+ var E=cells*E_CELL,r=cells*R_CELL;
+ st('B+','B-',1/r);if(net['B+']!==net['B-']){I[net['B+']]+=E/r;I[net['B-']]-=E/r}
+ if(key)st('K1','K2',KEY_G);
+ st('A+','A-',1/RA);st('R1','R2',1/R);st('V+','V-',1/RV);
+ st('Rh1','RhS',1/Math.max(0.2,p*RMAX));st('RhS','Rh3',1/Math.max(0.2,(1-p)*RMAX));
+ // remove ground row/column, Gaussian elimination with partial pivoting
+ var map=[];for(i=0;i<n;i++)if(i!==gnd)map.push(i);
+ var m=map.length,M=[];for(i=0;i<m;i++){M.push(map.map(function(c){return G[map[i]][c]}).concat([I[map[i]]]))}
+ for(var c=0;c<m;c++){var pv=c;for(i=c+1;i<m;i++)if(Math.abs(M[i][c])>Math.abs(M[pv][c]))pv=i;var t=M[c];M[c]=M[pv];M[pv]=t;
+  for(i=c+1;i<m;i++){var f=M[i][c]/M[c][c];if(!f)continue;for(j=c;j<=m;j++)M[i][j]-=f*M[c][j]}}
+ var x=new Array(m).fill(0);for(i=m-1;i>=0;i--){var s=M[i][m];for(j=i+1;j<m;j++)s-=M[i][j]*x[j];x[i]=s/M[i][i]}
+ var V=new Array(n).fill(0);map.forEach(function(k,ii){V[k]=x[ii]});
+ function v(t){return V[net[t]]}
+ var IA=(v('A+')-v('A-'))/RA,VV=v('V+')-v('V-'),IR=(v('R1')-v('R2'))/R;
+ return {IA:IA,VV:VV,IR:IR,IV:VV/RV,IB:(E-(v('B+')-v('B-')))/r,net:net}}
+function connected(t){return S.wires.some(function(w){return w[0]===t||w[1]===t})}
+function checkCircuit(){
+ var P=[],N=nets().net;
+ [['battery',['B+','B-']],['plug key',['K1','K2']],['ammeter',['A+','A-']],['voltmeter',['V+','V-']],['unknown coil',['R1','R2']]].forEach(function(c){
+  if(!c[1].every(connected))P.push('The '+c[0]+' is not fully connected: join both of its terminals.')});
+ if(['Rh1','RhS','Rh3'].filter(connected).length<2)P.push('The rheostat is not in the circuit: connect one end terminal and the sliding-contact terminal.');
+ if(P.length)return P;
+ if(N['B+']===N['B-'])return ['A wire joins the two battery terminals directly. That is a short circuit: remove it.'];
+ var s1=solve({key:true,p:0.5}),s0=solve({key:false,p:0.5});
+ if(Math.abs(s0.IR)>1e-4)P.push('Current flows even with the plug key out, so the key is not in the main circuit. Put it in series, straight after the battery.');
+ var vAcross=[N['V+'],N['V-']].sort().join()===[N['R1'],N['R2']].sort().join();
+ if(!vAcross){
+  if(Math.abs(s1.IR)<0.005)P.push('The voltmeter is in series: almost no current flows because a voltmeter has a very high resistance. Connect it across (in parallel with) the coil.');
+  else P.push('The voltmeter must be connected directly across the two ends of the coil, with nothing else in between.')}
+ var series=Math.abs(s1.IA)>1e-3&&Math.abs(Math.abs(s1.IA)-Math.abs(s1.IR+s1.IV))<0.02*Math.abs(s1.IA);
+ if(!series&&!(vAcross===false&&Math.abs(s1.IR)<0.005)){
+  if(Math.abs(s1.IA)>2*Math.abs(s1.IR)+0.01)P.push('The ammeter is in parallel. Its resistance is tiny, so a very large current would flow and could damage it. An ammeter always goes in series.');
+  else P.push('The ammeter must carry the whole current that goes through the coil: put it in series with the coil.')}
+ if(Math.abs(s1.IR)<1e-3&&vAcross)P.push('No current reaches the coil. Check that the loop battery → key → ammeter → coil → rheostat → battery is complete.');
+ if(!P.length){var a=solve({key:true,p:0.1}),b=solve({key:true,p:0.9});
+  if(Math.abs(a.IR-b.IR)<0.1*Math.abs(a.IR))P.push('Moving the rheostat contact does not change the current. Use one end terminal (bottom) and the sliding-contact terminal (top of the bar).');
+  if(s1.IA<0)P.push('The ammeter terminals are reversed: its needle would kick backwards. Its + terminal must be on the side of the battery’s + terminal.');
+  if(s1.VV<0)P.push('The voltmeter terminals are reversed. Join its + terminal to the end of the coil that leads back to the battery’s + terminal.')}
+ return P}
+
+/* ───────── drawing helpers ───────── */
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function txt(parent,x,y,s,attrs){var a={x:x,y:y,'font-family':'Inter'};for(var k in attrs)a[k]=attrs[k];var t=el('text',a,parent);t.textContent=s;return t}
+var bench=document.getElementById('bench');
+var defsB=el('defs',{},bench);
+defsB.innerHTML=
+ '<linearGradient id="room" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0f18"/><stop offset="1" stop-color="#151b26"/></linearGradient>'+
+ '<linearGradient id="lam" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9d2bf"/><stop offset="1" stop-color="#bfb69f"/></linearGradient>'+
+ '<pattern id="grain" width="160" height="22" patternUnits="userSpaceOnUse"><path d="M0 7 Q40 3 80 8 T160 7 M0 16 Q45 12 90 17 T160 15" stroke="#6b5a3a" stroke-opacity=".12" fill="none"/></pattern>'+
+ '<linearGradient id="case" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d4552"/><stop offset="1" stop-color="#181c22"/></linearGradient>'+
+ '<linearGradient id="face" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf6"/><stop offset="1" stop-color="#e6e1d0"/></linearGradient>'+
+ '<linearGradient id="mirror" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9aa6b5"/><stop offset=".5" stop-color="#dfe6ee"/><stop offset="1" stop-color="#7d8897"/></linearGradient>'+
+ '<linearGradient id="brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe7a1"/><stop offset=".5" stop-color="#d4a73c"/><stop offset="1" stop-color="#7d5a12"/></linearGradient>'+
+ '<linearGradient id="cell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f63a0"/><stop offset=".42" stop-color="#a8c3ec"/><stop offset="1" stop-color="#1b3262"/></linearGradient>'+
+ '<linearGradient id="cer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6f1e4"/><stop offset=".5" stop-color="#d8cfba"/><stop offset="1" stop-color="#9f9682"/></linearGradient>'+
+ '<linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef1f4"/><stop offset=".5" stop-color="#9aa3ae"/><stop offset="1" stop-color="#5b636e"/></linearGradient>'+
+ '<linearGradient id="ebon" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#0e0e0e"/></linearGradient>'+
+ '<radialGradient id="hot"><stop offset="0" stop-color="#ff6a1a" stop-opacity=".85"/><stop offset="1" stop-color="#ff3d00" stop-opacity="0"/></radialGradient>';
+el('rect',{x:0,y:0,width:1000,height:440,fill:'url(#room)'},bench);
+el('rect',{x:10,y:12,width:980,height:418,rx:14,fill:'url(#lam)',stroke:'#7d6f52','stroke-width':2},bench);
+el('rect',{x:10,y:12,width:980,height:418,rx:14,fill:'url(#grain)'},bench);
+[[26,28],[974,28],[26,414],[974,414]].forEach(function(c){el('circle',{cx:c[0],cy:c[1],r:4,fill:'#8d8470',stroke:'#5d5544'},bench)});
+
+/* positions */
+var TP={'B+':[96,382],'B-':[418,382],'K1':[78,252],'K2':[166,252],'A+':[240,216],'A-':[340,216],'V+':[520,216],'V-':[620,216],'R1':[492,292],'R2':[648,292],'Rh1':[704,410],'RhS':[712,312],'Rh3':[954,410]};
+var MA={cx:290,cy:168,r:84},MV={cx:570,cy:168,r:84};
+
+/* battery of 4 cells */
+var gBat=el('g',{},bench);
+el('rect',{x:108,y:352,width:298,height:60,rx:8,fill:'#1d2127',stroke:'#4a525d','stroke-width':1.5},gBat);
+var cellEls=[];for(var ci=0;ci<4;ci++){var cx0=118+ci*71,gc=el('g',{},gBat);
+ el('rect',{x:cx0,y:362,width:62,height:38,rx:5,fill:'url(#cell)'},gc);el('rect',{x:cx0+62,y:374,width:5,height:14,rx:1.5,fill:'#c9ced5'},gc);
+ txt(gc,cx0+31,386,'1.5 V',{'font-size':10,'font-weight':700,fill:'#fff','text-anchor':'middle'});txt(gc,cx0+8,374,'+',{'font-size':10,'font-weight':800,fill:'#fff'});
+ var off=el('rect',{x:cx0-2,y:360,width:66,height:42,rx:6,fill:'#0b0e12',opacity:0},gc);cellEls.push(off)}
+txt(gBat,257,428,'BATTERY OF CELLS',{'font-size':10,'font-weight':700,fill:'#4b4334','text-anchor':'middle','letter-spacing':'.08em'});
+/* plug key */
+var gKey=el('g',{},bench);
+el('rect',{x:62,y:232,width:122,height:44,rx:6,fill:'url(#ebon)'},gKey);
+el('rect',{x:70,y:240,width:44,height:20,rx:2,fill:'url(#brass)'},gKey);el('rect',{x:130,y:240,width:44,height:20,rx:2,fill:'url(#brass)'},gKey);
+el('ellipse',{cx:122,cy:250,rx:6,ry:9,fill:'#2a1d05'},gKey);
+var plug=el('g',{class:'plug',tabindex:0,role:'button','aria-label':'Plug key: insert or remove the plug'},gKey);
+el('rect',{x:110,y:206,width:24,height:18,rx:4,fill:'#151515',stroke:'#444'},plug);el('rect',{x:116,y:222,width:12,height:24,fill:'url(#brass)'},plug);
+el('rect',{x:100,y:196,width:44,height:56,fill:'transparent'},plug);
+txt(gKey,123,292,'PLUG KEY  K',{'font-size':10,'font-weight':700,fill:'#4b4334','text-anchor':'middle','letter-spacing':'.08em'});
+/* meters on the board */
+function meterBox(m,type){var g=el('g',{},bench),x=m.cx-92;
+ el('rect',{x:x,y:30,width:184,height:176,rx:12,fill:'url(#case)',stroke:'#59626e','stroke-width':1.5},g);
+ el('rect',{x:x+10,y:40,width:164,height:140,rx:6,fill:'url(#face)'},g);
+ scale(g,m.cx,m.cy,m.r,type,false);
+ txt(g,m.cx,m.cy-18,type==='A'?'mA':'V',{'font-family':'Crimson Pro','font-size':22,'font-weight':700,fill:'#1a1a1a','text-anchor':'middle'});
+ txt(g,x+16,176,type==='A'?'0–500 mA':'0–5 V',{'font-size':8,fill:'#555'});
+ var nd=el('line',{x1:m.cx,y1:m.cy,x2:m.cx,y2:m.cy-m.r-4,stroke:'#b3261e','stroke-width':1.6,'stroke-linecap':'round'},g);
+ el('circle',{cx:m.cx,cy:m.cy,r:6,fill:'#2a2a2a'},g);
+ el('rect',{x:x+10,y:184,width:164,height:16,rx:3,fill:'#262b33'},g);
+ txt(g,m.cx,197,type==='A'?'AMMETER':'VOLTMETER',{'font-size':9.5,'font-weight':800,fill:'#e8cc6a','text-anchor':'middle','letter-spacing':'.12em'});
+ var hl=txt(g,m.cx,m.cy+4+0,'',{'font-family':'JetBrains Mono','font-size':12,'font-weight':700,fill:'#0b6b55','text-anchor':'middle'});hl.setAttribute('y',m.cy+14);
+ return {nd:nd,hl:hl}}
+function ang(div){return (-50+div*2)*Math.PI/180}
+function scale(g,cx,cy,r,type,big){var p='',pf='',lab=type==='A'?[0,100,200,300,400,500]:[0,1,2,3,4,5];
+ for(var d=-2;d<=50;d++){var a=ang(d),L=d%10===0?(big?26:12):d%5===0?(big?18:8):(big?11:5),s=Math.sin(a),c=Math.cos(a);
+  var seg='M'+(cx+r*s).toFixed(2)+' '+(cy-r*c).toFixed(2)+'L'+(cx+(r-L)*s).toFixed(2)+' '+(cy-(r-L)*c).toFixed(2);if(d<0)pf+=seg;else p+=seg;
+  if(d>=0&&d%10===0){var rr=r-(big?46:22);txt(g,cx+rr*s,cy-rr*c+(big?7:3.5),String(lab[d/10]),{'font-size':big?20:9,'font-weight':700,fill:'#1d1d1d','text-anchor':'middle'})}}
+ el('path',{d:'M'+(cx+r*Math.sin(ang(0))).toFixed(2)+' '+(cy-r*Math.cos(ang(0))).toFixed(2)+' A'+r+' '+r+' 0 0 1 '+(cx+r*Math.sin(ang(50))).toFixed(2)+' '+(cy-r*Math.cos(ang(50))).toFixed(2),fill:'none',stroke:'#1d1d1d','stroke-width':big?1.6:0.8},g);
+ el('path',{d:p,stroke:'#1d1d1d','stroke-width':big?1.4:0.7},g);el('path',{d:pf,stroke:'#1d1d1d','stroke-width':big?1:0.5,opacity:.35},g)}
+var mA=meterBox(MA,'A'),mV=meterBox(MV,'V');
+/* unknown coil */
+var gCoil=el('g',{},bench);
+var hot=el('ellipse',{cx:570,cy:282,rx:120,ry:46,fill:'url(#hot)',opacity:0},gCoil);
+el('rect',{x:470,y:300,width:200,height:22,rx:4,fill:'#2d333c',stroke:'#59626e'},gCoil);
+el('rect',{x:510,y:266,width:120,height:30,rx:15,fill:'url(#cer)'},gCoil);
+var cp='';for(var wx=516;wx<=622;wx+=5)cp+='M'+wx+' 266l4 30';el('path',{d:cp,stroke:'#8a5a2b','stroke-width':1.8},gCoil);
+el('path',{d:'M500 292 H514 M626 292 H640',stroke:'#8a5a2b','stroke-width':2},gCoil);
+txt(gCoil,570,316,'',{'font-size':10,'font-weight':800,fill:'#e8cc6a','text-anchor':'middle','letter-spacing':'.08em'}).textContent='UNKNOWN COIL  R = ?';
+/* coil tag */
+var gTag=el('g',{},bench);
+el('path',{d:'M760 70 h190 v92 h-190 l-16 -46z',fill:'#fbf6e3',stroke:'#a99a74'},gTag);el('circle',{cx:758,cy:116,r:5,fill:'#c9bfa2'},gTag);
+var tag1=txt(gTag,772,94,'',{'font-size':12,'font-weight':800,fill:'#3b3326'}),tag2=txt(gTag,772,114,'',{'font-size':11,fill:'#3b3326'}),tag3=txt(gTag,772,132,'',{'font-size':11,fill:'#3b3326'}),tag4=txt(gTag,772,150,'',{'font-size':10,fill:'#6b5f45'});
+/* rheostat */
+var gRh=el('g',{},bench);
+el('rect',{x:696,y:396,width:266,height:22,rx:4,fill:'#2d333c',stroke:'#59626e'},gRh);
+el('rect',{x:700,y:300,width:24,height:100,rx:3,fill:'#3a414b'},gRh);el('rect',{x:936,y:300,width:24,height:100,rx:3,fill:'#3a414b'},gRh);
+el('rect',{x:722,y:350,width:216,height:36,rx:18,fill:'url(#cer)'},gRh);
+var rp='';for(var rx=728;rx<=932;rx+=4)rp+='M'+rx+' 350v36';el('path',{d:rp,stroke:'#8a5a2b','stroke-width':1.4},gRh);
+el('rect',{x:712,y:318,width:236,height:8,rx:3,fill:'url(#bar)'},gRh);
+txt(gRh,830,411,'',{'font-size':10,'font-weight':700,fill:'#e8cc6a','text-anchor':'middle','letter-spacing':'.08em'}).textContent='RHEOSTAT 0–25 Ω';
+var knob=el('g',{class:'knob',tabindex:0,role:'slider','aria-label':'Rheostat sliding contact','aria-valuemin':0,'aria-valuemax':25},gRh);
+el('rect',{x:-30,y:300,width:60,height:90,fill:'transparent'},knob);
+el('rect',{class:'kr',x:-14,y:310,width:28,height:24,rx:4,fill:'#1b1f25',stroke:'#7a838f','stroke-width':1.5},knob);
+el('rect',{x:-3,y:334,width:6,height:18,fill:'#d6dbe1'},knob);el('rect',{x:-8,y:346,width:16,height:6,rx:2,fill:'#b8bec6'},knob);
+var rhLab=txt(knob,0,296,'',{'font-family':'JetBrains Mono','font-size':11,'font-weight':700,fill:'#0b6b55','text-anchor':'middle'});
+/* wires layer, then terminals */
+var gW=el('g',{},bench);
+var termEl={};
+TERMS.forEach(function(t){var c=TP[t],g=el('g',{class:'term',tabindex:0,role:'button','aria-label':'Terminal: '+TNAME[t],transform:'translate('+c[0]+' '+c[1]+')'},bench);
+ el('circle',{r:17,fill:'transparent'},g);
+ var ring=el('circle',{class:'ring',r:11,fill:'none',stroke:'transparent','stroke-width':0},g);
+ el('circle',{r:8.5,fill:'url(#brass)',stroke:'#5c430c','stroke-width':1},g);
+ el('circle',{r:4,fill:'#a77d22',stroke:'#5c430c','stroke-width':.8},g);
+ var sign=t.slice(-1)==='+'?'+':(t.slice(-1)==='-'?'−':'');
+ if(sign)txt(g,-15,-10,sign,{'font-size':14,'font-weight':800,fill:sign==='+'?'#c0392b':'#111','text-anchor':'middle'});
+ if(t==='RhS')txt(g,-22,4,'C',{'font-size':11,'font-weight':800,fill:'#eee','text-anchor':'middle'});
+ if(t==='Rh1'||t==='Rh3')txt(g,0,-13,t==='Rh1'?'A':'B',{'font-size':11,'font-weight':800,fill:'#eee','text-anchor':'middle'});
+ termEl[t]={g:g,ring:ring};
+ g.addEventListener('click',function(){tapTerm(t)});
+ g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){tapTerm(t);e.preventDefault()}})});
+function wireCol(w){if(w.some(function(t){return t.slice(-1)==='+'}))return '#c0392b';if(w.some(function(t){return t.slice(-1)==='-'}))return '#1c1c1c';return ['#d4a017','#2e6fd1','#2a9d6f'][(w[0].length+w[1].length)%3]}
+function renderWires(){gW.innerHTML='';S.wires.forEach(function(w,i){var a=TP[w[0]],b=TP[w[1]],mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2,d=Math.hypot(b[0]-a[0],b[1]-a[1]),sag=18+d*0.12;
+ var path='M'+a[0]+' '+a[1]+' Q'+mx+' '+(my+sag)+' '+b[0]+' '+b[1],col=wireCol(w);
+ var g=el('g',{class:'wire'},gW);
+ el('path',{d:path,fill:'none',stroke:'#000','stroke-opacity':.25,'stroke-width':6,transform:'translate(2 3)'},g);
+ el('path',{d:path,fill:'none',stroke:col,'stroke-width':4.5,'stroke-linecap':'round'},g);
+ el('path',{d:path,fill:'none',stroke:'#fff','stroke-opacity':.28,'stroke-width':1.3,transform:'translate(-1 -1)'},g);
+ el('path',{d:path,fill:'none',stroke:'transparent','stroke-width':16},g);
+ var t=el('title',{},g);t.textContent='Wire: '+TNAME[w[0]]+' to '+TNAME[w[1]]+' (tap to remove)';
+ g.addEventListener('click',function(){if(S.mode!=='wire'){say('Go back to Step 1 to change the wiring.','bad');return}S.wires.splice(i,1);wiringChanged();say('Wire removed.','')})})}
+function tapTerm(t){
+ if(S.mode!=='wire'){say('The circuit is fixed while you take readings. Go back to Step 1 to change the wiring.','bad');return}
+ if(!S.selT){S.selT=t;renderTerms();say('Selected '+TNAME[t]+'. Now tap the terminal to join it to.','');return}
+ if(S.selT===t){S.selT=null;renderTerms();say('');return}
+ var a=S.selT,b=t;S.selT=null;
+ if(S.wires.some(function(w){return (w[0]===a&&w[1]===b)||(w[0]===b&&w[1]===a)})){say('These two terminals are already joined.','bad');renderTerms();return}
+ if(S.wires.length>=16){say('That is a lot of wires! Remove some first.','bad');renderTerms();return}
+ S.wires.push([a,b]);wiringChanged();say('Joined '+TNAME[a]+' to '+TNAME[b]+'.','ok')}
+function renderTerms(){TERMS.forEach(function(t){var r=termEl[t].ring;r.setAttribute('stroke',S.selT===t?'#e8cc6a':'transparent');r.setAttribute('stroke-width',S.selT===t?3:0)})}
+function wiringChanged(){S.key=false;S.cOK=checkCircuit().length===0;document.getElementById('cfb').innerHTML='';save();renderWires();renderTerms();renderAll()}
+var AUTO=[['B+','K1'],['K2','A+'],['A-','R1'],['R1','V+'],['R2','V-'],['R2','Rh1'],['RhS','B-']];
+
+/* ───────── zoomed meter with mirror strip ───────── */
+var zoom=document.getElementById('zoom'),ZC={cx:320,cy:318,r:276};
+var zN,zR,zFace;
+function buildZoom(){zoom.innerHTML='';
+ var d=el('defs',{},zoom);d.innerHTML='<linearGradient id="zf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf6"/><stop offset="1" stop-color="#e3ddca"/></linearGradient>'+
+  '<linearGradient id="zm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7f8a99"/><stop offset=".5" stop-color="#e6ecf2"/><stop offset="1" stop-color="#7f8a99"/></linearGradient>'+
+  '<radialGradient id="zv" cx=".5" cy=".6" r=".75"><stop offset=".75" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></radialGradient>'+
+  '<clipPath id="zclip"><path id="zmirrorPath"/></clipPath>';
+ el('rect',{x:0,y:0,width:640,height:330,fill:'#20262f'},zoom);
+ el('rect',{x:8,y:8,width:624,height:322,rx:10,fill:'url(#zf)'},zoom);
+ var c=ZC,r1=c.r-58,r2=c.r-34,a0=ang(-3),a1=ang(53);
+ var mp='M'+(c.cx+r2*Math.sin(a0))+' '+(c.cy-r2*Math.cos(a0))+' A'+r2+' '+r2+' 0 0 1 '+(c.cx+r2*Math.sin(a1))+' '+(c.cy-r2*Math.cos(a1))+' L'+(c.cx+r1*Math.sin(a1))+' '+(c.cy-r1*Math.cos(a1))+' A'+r1+' '+r1+' 0 0 0 '+(c.cx+r1*Math.sin(a0))+' '+(c.cy-r1*Math.cos(a0))+'Z';
+ document.getElementById('zmirrorPath').setAttribute('d',mp);
+ el('path',{d:mp,fill:'url(#zm)',stroke:'#6b7480','stroke-width':1},zoom);
+ txt(zoom,c.cx,c.cy-r1+22,'MIRROR',{'font-size':9,'font-weight':700,fill:'#56606c','text-anchor':'middle','letter-spacing':'.2em'});
+ scale(zoom,c.cx,c.cy,c.r,S.meter,true);
+ txt(zoom,c.cx,c.cy-120,S.meter==='A'?'mA':'V',{'font-family':'Crimson Pro','font-size':40,'font-weight':700,fill:'#1a1a1a','text-anchor':'middle'});
+ txt(zoom,c.cx,c.cy-92,S.meter==='A'?'least count 10 mA':'least count 0.1 V',{'font-size':12,fill:'#555','text-anchor':'middle'});
+ var cl=el('g',{'clip-path':'url(#zclip)'},zoom);
+ zR=el('line',{x1:c.cx,y1:c.cy,x2:c.cx,y2:c.cy-c.r,stroke:'#2a2a2a','stroke-opacity':.45,'stroke-width':2.4},cl);
+ zN=el('g',{},zoom);
+ el('path',{d:'M'+(c.cx-1.6)+' '+c.cy+' L'+c.cx+' '+(c.cy-c.r-6)+' L'+(c.cx+1.6)+' '+c.cy+'Z',fill:'#111'},zN);
+ el('circle',{cx:c.cx,cy:c.cy,r:16,fill:'#2a2a2a'},zoom);
+ el('rect',{x:0,y:0,width:640,height:330,fill:'url(#zv)','pointer-events':'none'},zoom);
+ document.getElementById('zTitle').textContent=(S.meter==='A'?'Ammeter':'Voltmeter')+' (zoomed)'}
+
+/* ───────── needle dynamics + heating (animation loop) ───────── */
+var NE={A:{d:0,v:0,t:0},V:{d:0,v:0,t:0}},SOL=null,lastT=0,warned={hot:false,peg:false};
+function targets(){SOL=solve();var s=S.sess;
+ NE.A.t=SOL.IA*1000/LC_A+s.zA/LC_A;NE.V.t=SOL.VV/LC_V+s.zV/LC_V}
+function step(now){var dt=Math.min(0.05,(now-(lastT||now))/1000);lastT=now;
+ if(S.key&&SOL){var P=SOL.IR*SOL.IR*Reff();S.dT+=(P-K_TH*S.dT)/C_TH*dt}else S.dT+=(-K_TH*S.dT)/C_TH*dt;
+ if(S.dT<0)S.dT=0;
+ targets();
+ ['A','V'].forEach(function(k){var n=NE[k],tg=Math.max(-2.6,Math.min(52.4,n.t)),w=9,z=0.32;
+  n.v+=(w*w*(tg-n.d)-2*z*w*n.v)*dt;n.d+=n.v*dt;
+  if(n.d>52.4){n.d=52.4;n.v=-0.3*n.v}if(n.d<-2.6){n.d=-2.6;n.v=-0.3*n.v}});
+ drawNeedles();
+ hot.setAttribute('opacity',Math.min(.85,S.dT/55).toFixed(2));
+ if(S.dT>25&&S.key&&!warned.hot){warned.hot=true;say('The coil is getting warm and its resistance is rising. Take the plug key out between readings.','bad')}
+ if(S.dT<10)warned.hot=false;
+ var peg=S.key&&(NE.A.t>50.5||NE.V.t>50.5||NE.A.t<-2.5||NE.V.t<-2.5);
+ if(peg&&!warned.peg){warned.peg=true;say(NE.A.t<-2.5||NE.V.t<-2.5?'A needle kicked backwards against its stop: a meter is connected the wrong way round. Take the key out!':'A needle has hit the end stop: the current is beyond the meter’s range. Take the key out and increase the rheostat resistance or use fewer cells.','bad')}
+ if(!peg)warned.peg=false;
+ requestAnimationFrame(step)}
+function drawNeedles(){
+ mA.nd.setAttribute('transform','rotate('+(-50+NE.A.d*2).toFixed(2)+' '+MA.cx+' '+MA.cy+')');
+ mV.nd.setAttribute('transform','rotate('+(-50+NE.V.d*2).toFixed(2)+' '+MV.cx+' '+MV.cy+')');
+ var n=NE[S.meter],app=n.d-S.eye*PAR,ref=n.d+S.eye*PAR;
+ zN.setAttribute('transform','rotate('+(-50+app*2).toFixed(2)+' '+ZC.cx+' '+ZC.cy+')');
+ zR.setAttribute('transform','rotate('+(-50+ref*2).toFixed(2)+' '+ZC.cx+' '+ZC.cy+')');
+ var h=S.helper;
+ mA.hl.textContent=h?Math.round(NE.A.d*LC_A)+' mA':'';mV.hl.textContent=h?(NE.V.d*LC_V).toFixed(2)+' V':'';
+ document.getElementById('zRead').textContent=h?(S.meter==='A'?(n.d*LC_A).toFixed(0)+' mA':(n.d*LC_V).toFixed(2)+' V'):''}
+function settled(){return ['A','V'].every(function(k){return Math.abs(NE[k].d-Math.max(-2.6,Math.min(52.4,NE[k].t)))<0.15&&Math.abs(NE[k].v)<0.6})}
+
+/* ───────── controls ───────── */
+var msgEl=document.getElementById('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+function renderAll(){
+ knob.setAttribute('transform','translate('+(726+S.p*208).toFixed(1)+' 0)');knob.setAttribute('aria-valuenow',(S.p*RMAX).toFixed(1));
+ rhLab.textContent=S.helper?(S.p*RMAX).toFixed(1)+' Ω':'';
+ plug.setAttribute('transform',S.key?'translate(0 0)':'translate(-62 -14)');
+ cellEls.forEach(function(c,i){c.setAttribute('opacity',i<S.cells?0:.62)});
+ document.getElementById('keyBtn').textContent=S.key?'Take out plug key':'Insert plug key';
+ document.getElementById('keyNote').textContent=S.key?'Current is flowing.':'No current: the key is open.';
+ document.getElementById('cellChips').innerHTML='';[1,2,3,4].forEach(function(n){var b=document.createElement('button');b.type='button';b.className='chip'+(S.cells===n?' on':'');b.textContent=n+' ('+(n*1.5).toFixed(1)+' V)';
+  b.onclick=function(){S.cells=n;save();renderAll()};document.getElementById('cellChips').appendChild(b)});
+ var eyes={'-2':'far left','-1':'a little left','0':'straight above ✓','1':'a little right','2':'far right'};document.getElementById('eyeTxt').textContent=eyes[S.eye];
+ var s=S.sess;document.getElementById('coilTag').textContent='Coil R-'+s.no;
+ tag1.textContent='Coil R-'+s.no+' · nichrome';tag2.textContent='Length L = '+s.L.toFixed(2)+' m';tag3.textContent='Diameter D = '+(s.D*1000).toFixed(2)+' mm';tag4.textContent='(D measured with a screw gauge)';
+ document.getElementById('tk1').textContent=S.cOK?'✓':'';document.getElementById('tk2').textContent=S.zero.ok?'✓':'';
+ targets()}
+function setP(p){S.p=Math.max(0.02,Math.min(1,Math.round(p*1000)/1000));save();renderAll()}
+document.querySelectorAll('.nudge button').forEach(function(b){b.onclick=function(){setP(S.p+parseFloat(b.dataset.d))}});
+var drag=false;
+function svgX(evt){var pt=bench.createSVGPoint();pt.x=evt.clientX;pt.y=evt.clientY;return pt.matrixTransform(bench.getScreenCTM().inverse()).x}
+knob.addEventListener('pointerdown',function(e){drag=true;knob.classList.add('drag');knob.setPointerCapture(e.pointerId);e.preventDefault()});
+knob.addEventListener('pointermove',function(e){if(drag)setP((svgX(e)-726)/208)});
+knob.addEventListener('pointerup',function(){drag=false;knob.classList.remove('drag')});
+knob.addEventListener('keydown',function(e){var d=e.shiftKey?0.1:0.01;if(e.key==='ArrowLeft'||e.key==='ArrowDown'){setP(S.p-d);e.preventDefault()}if(e.key==='ArrowRight'||e.key==='ArrowUp'){setP(S.p+d);e.preventDefault()}});
+function toggleKey(){
+ if(!S.key&&!S.cOK&&S.wires.length){var pr=checkCircuit();if(pr.length&&/short circuit|parallel/.test(pr.join(' '))){say('Not safe to switch on: '+pr[0],'bad');return}}
+ S.key=!S.key;if(!S.key)warned.peg=false;renderAll()}
+plug.addEventListener('click',toggleKey);plug.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){toggleKey();e.preventDefault()}});
+document.getElementById('keyBtn').onclick=toggleKey;
+document.querySelectorAll('[data-m]').forEach(function(b){b.onclick=function(){S.meter=b.dataset.m;document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x===b)});buildZoom();drawNeedles()}});
+document.getElementById('eyeL').onclick=function(){S.eye=Math.max(-2,S.eye-1);save();renderAll()};
+document.getElementById('eyeR').onclick=function(){S.eye=Math.min(2,S.eye+1);save();renderAll()};
+document.getElementById('helper').onchange=function(){S.helper=this.checked;renderAll()};
+document.getElementById('undoW').onclick=function(){if(S.mode!=='wire')return;S.wires.pop();wiringChanged()};
+document.getElementById('clrW').onclick=function(){if(S.mode!=='wire')return;S.wires=[];wiringChanged()};
+document.getElementById('autoW').onclick=function(){if(S.mode!=='wire')return;S.wires=AUTO.map(function(w){return w.slice()});wiringChanged();say('Wired for you. Study the connections, then press “Check my circuit”.','ok')};
+document.getElementById('chkC').onclick=function(){var P=checkCircuit();S.cOK=!P.length;renderAll();
+ document.getElementById('cfb').innerHTML=P.length?P.map(function(x){return '<li class="bad">'+x+'</li>'}).join(''):'<li class="ok">✓ Correct: cells, key, ammeter, coil and rheostat are in series, and the voltmeter is across the coil with the right polarity. Go to Step 2.</li>'};
+document.getElementById('newCoil').onclick=function(){if(S.rows.length&&!confirmInline(this))return;newSession();renderAll()};
+function confirmInline(btn){if(btn.dataset.sure){delete btn.dataset.sure;btn.textContent='↺ New coil';return true}
+ btn.dataset.sure=1;btn.textContent='Tap again to clear readings';setTimeout(function(){delete btn.dataset.sure;btn.textContent='↺ New coil'},3500);return false}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setMode(t.dataset.mode)}});
+function setMode(m){
+ if(m!=='wire'&&!S.cOK){S.cOK=checkCircuit().length===0;if(!S.cOK){say('First wire the circuit correctly and press “Check my circuit”.','bad');m='wire'}}
+ S.mode=m;S.selT=null;renderTerms();document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.mode===m)});
+ document.getElementById('wireBox').hidden=m!=='wire';document.getElementById('zeroBox').hidden=m!=='zero';document.getElementById('readBox').hidden=m!=='read';
+ document.getElementById('hint').textContent=m==='wire'?'Tap a terminal, then another to join them · tap a wire to remove it':'Drag the rheostat contact · tap the plug to switch on/off';
+ var T={wire:'<b>Step 1.</b> Build the circuit: cells → plug key → ammeter (+ to −) → coil → rheostat (one end + sliding contact C) → back to the cells. Then join the voltmeter <b>across the coil</b>, + to the side nearer the battery’s +. Press <b>Check my circuit</b>.',
+  zero:'<b>Step 2.</b> Keep the plug key <b>out</b>. Look at each meter in the zoomed view: move your eye until the needle hides its mirror image, then read where it rests. Type the zero errors (+ if right of zero, − if left of zero) and save them.',
+  read:'<b>Step 3.</b> Start with the rheostat at maximum. Insert the key, wait for the needles to settle, line up your eye and read <b>both</b> meters. Type the readings and record them, then take the key out. Choose the number of cells so your largest readings fall in the <b>upper half</b> of the scales without going off scale, and take 6 readings over a wide range of current.'};
+ document.getElementById('task').innerHTML=T[m];say('');renderAll()}
+document.getElementById('saveZero').onclick=function(){
+ var a=parseFloat(document.getElementById('zA').value),v=parseFloat(document.getElementById('zV').value),s=S.sess,bad=[];
+ if(isNaN(a)||isNaN(v)){say('Type both zero errors (0 if the needle rests exactly on zero).','bad');return}
+ if(S.key){say('Take the plug key out first: zero error is read when no current flows.','bad');return}
+ if(Math.abs(a-s.zA)>3)bad.push(Math.abs(a-(s.zA-S.eye*PAR*LC_A))<=3&&S.eye?'ammeter (parallax: your eye is not straight above the needle)':'ammeter');
+ if(Math.abs(v-s.zV)>0.03)bad.push(Math.abs(v-(s.zV-S.eye*PAR*LC_V))<=0.03&&S.eye?'voltmeter (parallax: your eye is not straight above the needle)':'voltmeter');
+ if(bad.length){say('Look again at the '+bad.join(' and ')+'. Count the divisions between zero and the needle; right of zero is +, left is −.','bad');return}
+ S.zero={a:a,v:v,ok:true};save();renderAll();renderTable();say('Zero errors saved: ammeter '+fmtZ(a,'mA')+', voltmeter '+fmtZ(v,'V')+'. Now go to Step 3.','ok')};
+function fmtZ(x,u){return (x>0?'+':x<0?'−':'')+Math.abs(x)+' '+u}
+document.getElementById('recBtn').onclick=function(){
+ if(!S.key){say('Insert the plug key first, then read the meters.','bad');return}
+ var a=parseFloat(document.getElementById('inA').value),v=parseFloat(document.getElementById('inV').value);
+ if(isNaN(a)||isNaN(v)){say('Type both meter readings: ammeter in mA, voltmeter in volts.','bad');return}
+ if(S.rows.length>=10){say('Ten observations is plenty. Delete one to add another.','bad');return}
+ var tA=NE.A.t*LC_A,tV=NE.V.t*LC_V;
+ S.rows.push({t:{a:r2(tA),v:Math.round(tV*1000)/1000,pa:r2(tA-S.eye*PAR*LC_A),pv:Math.round((tV-S.eye*PAR*LC_V)*1000)/1000,eye:S.eye,st:settled(),over:NE.A.t>50.5||NE.V.t>50.5||NE.A.t<-0.5||NE.V.t<-0.5,heat:Math.round((Reff()/S.sess.R0-1)*10000)/10000},a:String(a),v:String(v)});
+ save();renderTable();document.getElementById('inA').value='';document.getElementById('inV').value='';
+ say('Observation '+S.rows.length+' recorded. Take out the plug key, move the rheostat contact and take the next reading.','ok')};
+
+/* ───────── table ───────── */
+var tb=document.getElementById('tb');
+function zA(){return S.zero.ok?S.zero.a:0}function zV(){return S.zero.ok?S.zero.v:0}
+function calc(r){var a=parseFloat(r.a),v=parseFloat(r.v);if(isNaN(a)||isNaN(v))return null;var I=(a-zA())/1000,V=v-zV();if(I<=0||V<=0)return null;return {I:I,V:V,R:V/I}}
+function renderTable(){
+ document.getElementById('zeA').textContent=S.zero.ok?fmtZ(S.zero.a,'mA'):'not recorded';document.getElementById('zeV').textContent=S.zero.ok?fmtZ(S.zero.v,'V'):'not recorded';
+ document.getElementById('nObs').textContent=S.rows.length+' / 6';
+ if(!S.rows.length){tb.innerHTML='<tr><td colspan="7" class="note" style="padding:16px">No observations yet. Go to Step 3, insert the plug key, read both meters and press “Record observation”.</td></tr>';drawGraphs();renderResult();return}
+ tb.innerHTML='';S.rows.forEach(function(r,i){var tr=document.createElement('tr');
+  tr.innerHTML='<td>'+(i+1)+'</td><td><input data-k="a" value="'+r.a+'" inputmode="decimal" aria-label="ammeter reading in mA"></td><td class="n"></td><td><input data-k="v" value="'+r.v+'" inputmode="decimal" aria-label="voltmeter reading in V"></td><td class="n"></td><td class="n"></td><td><button class="del" title="Delete" type="button">✕</button></td>';
+  tr.querySelectorAll('input').forEach(function(inp){inp.oninput=function(){r[inp.dataset.k]=inp.value.trim();inp.classList.remove('bad','good');fill(tr,r);save();drawGraphs();renderResult()}});
+  tr.querySelector('.del').onclick=function(){S.rows.splice(i,1);save();renderTable()};
+  fill(tr,r);tb.appendChild(tr)});
+ drawGraphs();renderResult()}
+function fill(tr,r){var c=calc(r),td=tr.querySelectorAll('td.n');
+ if(!c){td.forEach(function(t){t.textContent='–'});return}
+ td[0].textContent=c.I.toFixed(3);td[1].textContent=c.V.toFixed(2);td[2].textContent=c.R.toFixed(2)}
+function rowIssues(r){var m=[],a=parseFloat(r.a),v=parseFloat(r.v),t=r.t;
+ var okA=!isNaN(a)&&Math.abs(a-t.a)<=TOL_A,okV=!isNaN(v)&&Math.abs(v-t.v)<=TOL_V;
+ if(!okA)m.push(t.eye&&Math.abs(a-t.pa)<=TOL_A?'ammeter misread because of parallax: your eye was not straight above the needle (it did not hide its mirror image)':'re-read the ammeter (count the 10 mA divisions from zero)');
+ if(!okV)m.push(t.eye&&Math.abs(v-t.pv)<=TOL_V?'voltmeter misread because of parallax: line up the needle with its image in the mirror':'re-read the voltmeter (count the 0.1 V divisions from zero)');
+ if(t.over)m.push('a needle was against its end stop, so the reading is meaningless; reduce the current');
+ if(!t.st)m.push('you read the meters before the needles had settled');
+ if(t.heat>HEAT_FLAG)m.push('the coil had warmed up and its resistance had risen by '+(t.heat*100).toFixed(1)+'%: take the key out between readings and let it cool');
+ return {m:m,okA:okA,okV:okV}}
+document.getElementById('check').onclick=function(){
+ var fb=[],rows=tb.querySelectorAll('tr');
+ if(!S.rows.length){showFb(['Record some observations first.']);return}
+ if(!S.zero.ok)fb.push('Record the zero errors in Step 2 first. Without them the corrected readings (and R) are wrong.');
+ S.rows.forEach(function(r,i){var tr=rows[i],x=rowIssues(r);
+  tr.querySelector('input[data-k="a"]').classList.toggle('bad',!x.okA);tr.querySelector('input[data-k="a"]').classList.toggle('good',x.okA);
+  tr.querySelector('input[data-k="v"]').classList.toggle('bad',!x.okV);tr.querySelector('input[data-k="v"]').classList.toggle('good',x.okV);
+  tr.classList.toggle('flag',x.m.length>0);if(x.m.length)fb.push('Observation '+(i+1)+': '+x.m.join('; ')+'.')});
+ var good=goodRows();
+ if(good.length<5)fb.push('You need at least 5 correct readings for the graph (now '+good.length+').');
+ if(good.length>=3){var Is=good.map(function(c){return c.I});if(Math.max.apply(null,Is)<1.8*Math.min.apply(null,Is))fb.push('Your currents are bunched together. Spread them out: the largest current should be at least about twice the smallest.')}
+ if(!fb.length)fb.push('✓ All readings are correct, zero errors applied, no parallax. Well done: see your graph and result below.');
+ showFb(fb)};
+function showFb(a){document.getElementById('fb').innerHTML=a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+function goodRows(){if(!S.zero.ok)return [];return S.rows.filter(function(r){return calc(r)&&rowIssues(r).m.length===0}).map(calc)}
+function validRows(){return S.rows.map(calc).filter(Boolean)}
+
+/* ───────── graphs ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=document.getElementById(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(280,r.width||560),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h}}
+function axes(g,xmin,xmax,ymin,ymax,xl,yl,xstep,ystep,fx,fy){
+ var x=g.x,L=58,B=44,R=16,T=16,W=g.w-L-R,H=g.h-T-B,txc=css('--text')||'#222',mut=css('--muted')||'#666',bd=css('--border')||'#ddd';
+ x.clearRect(0,0,g.w,g.h);x.font='11px Inter, sans-serif';x.lineWidth=1;
+ for(var v=xmin;v<=xmax+1e-9;v+=xstep){var px=L+(v-xmin)/(xmax-xmin)*W;x.strokeStyle=bd;x.beginPath();x.moveTo(px,T);x.lineTo(px,T+H);x.stroke();x.fillStyle=mut;x.textAlign='center';x.fillText(fx(v),px,T+H+15)}
+ for(v=ymin;v<=ymax+1e-9;v+=ystep){var py=T+H-(v-ymin)/(ymax-ymin)*H;x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(fy(v),L-6,py+4)}
+ x.strokeStyle=txc;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T);x.lineTo(L,T+H);x.lineTo(L+W,T+H);x.stroke();
+ x.fillStyle=txc;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(14,T+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();
+ return function(a,b){return [L+(a-xmin)/(xmax-xmin)*W,T+H-(b-ymin)/(ymax-ymin)*H]}}
+function nice(m){var steps=[1,2,2.5,5,10],e=Math.pow(10,Math.floor(Math.log10(m/6)));for(var i=0;i<steps.length;i++){if(m/(steps[i]*e)<=7)return steps[i]*e}return m/5}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);g.x.fillStyle=css('--muted')||'#777';g.x.font='14px Inter, sans-serif';g.x.textAlign='center';g.x.fillText(t,g.w/2,g.h/2)}
+var FIT=null;
+function drawGraphs(){
+ var g1=canvas('g1'),g2=canvas('g2'),rows=goodRows();FIT=null;
+ if(rows.length<5){var t='Needs 5 correct readings ('+rows.length+' so far)';empty(g1,t);empty(g2,t);return}
+ var gold=css('--gold')||'#c9a227',navy='#3b6fb8',red='#c0392b';
+ var n=rows.length,mx=0,my=0,sxy=0,sxx=0,i;rows.forEach(function(c){mx+=c.I;my+=c.V});mx/=n;my/=n;
+ rows.forEach(function(c){sxy+=(c.I-mx)*(c.V-my);sxx+=(c.I-mx)*(c.I-mx)});
+ var b=sxy/sxx,a=my-b*mx;
+ var Imax=Math.max.apply(null,rows.map(function(c){return c.I}))*1.15,Vmax=Math.max.apply(null,rows.map(function(c){return c.V}))*1.15;
+ var sx=nice(Imax),sy=nice(Vmax);Imax=Math.ceil(Imax/sx)*sx;Vmax=Math.ceil(Vmax/sy)*sy;
+ var P=axes(g1,0,Imax,0,Vmax,'Current I (A)','Potential difference V (V)',sx,sy,function(v){return v.toFixed(sx<0.1?2:1)},function(v){return v.toFixed(sy<1?1:0)}),x=g1.x;
+ var xe=Math.min(Imax,(Vmax-a)/b),p0=P(Math.max(0,-a/b),Math.max(0,a)),p1=P(xe,a+b*xe);
+ x.strokeStyle=navy;x.lineWidth=2;x.beginPath();x.moveTo(p0[0],p0[1]);x.lineTo(p1[0],p1[1]);x.stroke();
+ // slope triangle between the smallest and largest readings
+ var Is=rows.map(function(c){return c.I}),i1=Math.min.apply(null,Is),i2=Math.max.apply(null,Is),v1=a+b*i1,v2=a+b*i2,A1=P(i1,v1),A2=P(i2,v1),A3=P(i2,v2);
+ x.strokeStyle=red;x.setLineDash([5,4]);x.lineWidth=1.4;x.beginPath();x.moveTo(A1[0],A1[1]);x.lineTo(A2[0],A2[1]);x.lineTo(A3[0],A3[1]);x.stroke();x.setLineDash([]);
+ x.fillStyle=red;x.font='700 12px Inter, sans-serif';x.textAlign='center';x.fillText('ΔI = '+(i2-i1).toFixed(3)+' A',(A1[0]+A2[0])/2,A1[1]+16);
+ x.textAlign='left';x.fillText('ΔV = '+(v2-v1).toFixed(2)+' V',A2[0]+6,(A2[1]+A3[1])/2+4);
+ x.textAlign='left';var lp=P(Imax*0.04,Vmax*0.9);x.fillText('Slope R = ΔV/ΔI = '+b.toFixed(2)+' Ω',lp[0],lp[1]);
+ x.fillStyle=css('--muted')||'#666';x.font='11px Inter, sans-serif';x.fillText('Intercept on V-axis = '+a.toFixed(2)+' V (≈ 0)',lp[0],lp[1]+16);
+ rows.forEach(function(c){var q=P(c.I,c.V);x.fillStyle=gold;x.strokeStyle='#5c4600';x.lineWidth=1;x.beginPath();x.arc(q[0],q[1],4.5,0,7);x.fill();x.stroke()});
+ // R per reading
+ var Rs=rows.map(function(c){return c.R}),Rm=Rs.reduce(function(s,v){return s+v},0)/n,lo=Math.min.apply(null,Rs.concat([Rm*0.9])),hi=Math.max.apply(null,Rs.concat([Rm*1.1]));
+ var sr=nice(hi-lo);lo=Math.floor(lo/sr)*sr;hi=Math.ceil(hi/sr)*sr;
+ var Q=axes(g2,0,n+1,lo,hi,'Reading number','R (Ω)',1,sr,function(v){return v>0&&v<=n?String(v):''},function(v){return v.toFixed(sr<1?1:0)}),y=g2.x;
+ var m1=Q(0,Rm),m2=Q(n+1,Rm);y.strokeStyle=navy;y.setLineDash([6,5]);y.lineWidth=1.5;y.beginPath();y.moveTo(m1[0],m1[1]);y.lineTo(m2[0],m2[1]);y.stroke();y.setLineDash([]);
+ y.fillStyle=navy;y.font='700 11px Inter, sans-serif';y.textAlign='right';y.fillText('mean '+Rm.toFixed(2)+' Ω',m2[0]-4,m2[1]-6);
+ Rs.forEach(function(v,k){var q=Q(k+1,v);y.fillStyle=gold;y.strokeStyle='#5c4600';y.lineWidth=1;y.beginPath();y.arc(q[0],q[1],4.5,0,7);y.fill();y.stroke()});
+ FIT={R:b,a:a}}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(drawGraphs,150)});
+
+/* ───────── result ───────── */
+function sci(x){var e=Math.floor(Math.log10(x)),m=x/Math.pow(10,e);var sup={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};return m.toFixed(2)+' × 10'+String(e).split('').map(function(c){return sup[c]}).join('')+' Ω m'}
+function rho(R){var s=S.sess;return R*Math.PI*s.D*s.D/(4*s.L)}
+function renderResult(){var v=validRows(),s=S.sess;
+ var mean=v.length?v.reduce(function(t,c){return t+c.R},0)/v.length:null;
+ document.getElementById('rT').textContent=mean?mean.toFixed(2)+' Ω':'—';
+ document.getElementById('rG').textContent=FIT?FIT.R.toFixed(2)+' Ω':'—';
+ document.getElementById('rRho').textContent=FIT?sci(rho(FIT.R)):'—';
+ document.getElementById('concl').textContent=FIT?'The V–I graph is a straight line passing (very nearly) through the origin, so V ∝ I and Ohm’s law is verified for this coil.':'';
+ var tbx=document.getElementById('trueBox');tbx.hidden=!S.revealed;document.getElementById('rTrue').textContent=s.R0.toFixed(2)+' Ω · '+sci(s.rho);
+ var e=document.getElementById('err');e.textContent='';
+ if(S.revealed){var parts=[];if(mean)parts.push('table mean differs by '+(Math.abs(mean-s.R0)/s.R0*100).toFixed(1)+'%');if(FIT)parts.push('graph slope by '+(Math.abs(FIT.R-s.R0)/s.R0*100).toFixed(1)+'%');e.textContent=parts.length?'Percentage error: your '+parts.join(', your ')+'.':''}}
+document.getElementById('reveal').onclick=function(){
+ if(goodRows().length<5){document.getElementById('err').textContent='Complete at least 5 correct readings first (press “Check my table”).';return}
+ S.revealed=true;renderResult()};
+
+/* ───────── circuit diagram (standard symbols) ───────── */
+function circuitSVG2(){var k='#1d1d1d';return ''+
+ '<g fill="none" stroke="'+k+'" stroke-width="2" stroke-linecap="round">'+
+ '<path d="M40 60H92 M118 60H190 M230 60H282 M318 60H400V104 M400 156V200H262 M198 200H40V60"/>'+
+ '<path d="M92 50v20 M100 42v36 M110 50v20 M118 42v36"/>'+
+ '<path d="M190 60h4 M226 60h4 M196 48 q-8 12 0 24 M224 48 q8 12 0 24"/><circle cx="203" cy="60" r="3.5" fill="'+k+'"/><circle cx="217" cy="60" r="3.5" fill="'+k+'"/>'+
+ '<circle cx="300" cy="60" r="18"/>'+
+ '<rect x="390" y="104" width="20" height="52"/><path d="M372 170 L426 92 M426 92 l-11 1 M426 92 l-2 11"/>'+
+ '<path d="M198 200 l5 -9 l10 18 l10 -18 l10 18 l10 -18 l10 18 l5 -9"/>'+
+ '<path d="M198 200 V236 H212 M248 236 H262 V200"/><circle cx="230" cy="236" r="16"/>'+
+ '</g>'+
+ '<g font-family="Inter" font-weight="700" fill="'+k+'" text-anchor="middle">'+
+ '<text x="300" y="66" font-size="16">A</text><text x="230" y="242" font-size="15">V</text>'+
+ '<text x="105" y="30" font-size="12">Battery</text><text x="85" y="56" font-size="13" fill="#b3261e">−</text><text x="128" y="56" font-size="13" fill="#b3261e">+</text>'+
+ '<text x="210" y="84" font-size="12">K</text><text x="276" y="44" font-size="13" fill="#b3261e">+</text><text x="324" y="44" font-size="13" fill="#b3261e">−</text>'+
+ '<text x="434" y="134" font-size="12" text-anchor="start">Rh</text><text x="230" y="186" font-size="12">R (coil)</text>'+
+ '<text x="268" y="230" font-size="13" fill="#b3261e">+</text><text x="192" y="230" font-size="13" fill="#b3261e">−</text>'+
+ '<path d="M150 52 l10 8 l-10 8" fill="none" stroke="#b3261e" stroke-width="1.6"/><text x="160" y="44" font-size="10" fill="#b3261e">I</text>'+
+ '</g>'}
+document.getElementById('cdBig').innerHTML=circuitSVG2();
+document.getElementById('cdMini').innerHTML='<svg viewBox="0 0 470 262" role="img" aria-label="Circuit diagram">'+circuitSVG2()+'</svg>';
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['State Ohm’s law.','At constant temperature and other physical conditions, the current through a conductor is directly proportional to the potential difference across its ends: V = IR.'],
+ ['What does the slope of your V–I graph give?','With I on the x-axis and V on the y-axis, the slope ΔV/ΔI is the resistance R of the coil. (If V is on the x-axis instead, the slope is 1/R.)'],
+ ['Why is the ammeter connected in series and the voltmeter in parallel?','The ammeter must carry the whole current through the coil, so it goes in series; its resistance is very low so it hardly changes the current. The voltmeter measures the p.d. between two points, so it goes across the coil; its resistance is very high so it draws almost no current.'],
+ ['What would happen if the ammeter were connected in parallel with the coil?','Its very low resistance would nearly short-circuit the coil. A large current would flow through the ammeter, which could burn out or damage it.'],
+ ['What is the use of the rheostat in this experiment?','It is a variable resistance in series. Changing it changes the current in the circuit, so we get different pairs of V and I readings.'],
+ ['Why do we take out the plug key when we are not taking a reading?','A steady current heats the coil (Joule heating). Its temperature, and hence its resistance, would rise and the readings would not obey V ∝ I.'],
+ ['What is zero error and how did you correct for it?','If a needle does not rest at zero when no current flows, the meter has a zero error. Corrected reading = observed reading − zero error (taking the sign of the zero error).'],
+ ['How do you avoid parallax while reading the meter?','Keep your eye vertically above the needle. Meters have a mirror strip under the scale: the needle should hide its own image before you read it.'],
+ ['What is the least count of an ammeter of range 0–500 mA with 50 divisions?','Least count = range ÷ number of divisions = 500 mA ÷ 50 = 10 mA.'],
+ ['On what factors does the resistance of a wire depend?','R = ρL/A: it is directly proportional to the length L, inversely proportional to the area of cross-section A, and depends on the material (resistivity ρ) and the temperature.'],
+ ['Does the resistivity of the wire change if you cut it to half its length?','No. Resistance halves, but resistivity is a property of the material at a given temperature and stays the same.'],
+ ['Name a conductor that does not obey Ohm’s law.','A semiconductor diode, a filament lamp (whose resistance rises as it heats) and an electrolyte are common examples of non-ohmic conductors.']];
+document.getElementById('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){var s=S.sess;
+ var rows=S.rows.map(function(r,i){var c=calc(r);return '<tr><td>'+(i+1)+'</td><td>'+(r.a||'')+'</td><td>'+(c?c.I.toFixed(3):'')+'</td><td>'+(r.v||'')+'</td><td>'+(c?c.V.toFixed(2):'')+'</td><td>'+(c?c.R.toFixed(2):'')+'</td></tr>'}).join('');
+ var img='';try{img='<img src="'+document.getElementById('g1').toDataURL()+'" alt="V–I graph">'}catch(e){}
+ document.getElementById('record').innerHTML='<h1>Experiment: Ohm’s law — V–I graph and resistance</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Roll No.: ______ &nbsp; Date: ___________ &nbsp; Coil: R-'+s.no+'</p>'+
+  '<h2>Aim</h2><p>To study the dependence of potential difference (V) across a resistor on the current (I) through it, to find its resistance from the V–I graph, and (Class 12) to find the resistivity of its material.</p>'+
+  '<h2>Apparatus</h2><p>Battery of cells, plug key, ammeter (0–500 mA, least count 10 mA), voltmeter (0–5 V, least count 0.1 V), rheostat (0–25 Ω), resistance coil, connecting wires, sandpaper, metre scale, screw gauge.</p>'+
+  '<h2>Circuit diagram</h2><svg viewBox="0 0 470 262">'+circuitSVG2()+'</svg>'+
+  '<h2>Theory</h2><p>Ohm’s law: V ∝ I at constant temperature, so V = IR and R = V/I. The V–I graph is a straight line through the origin whose slope is R. Resistivity ρ = RπD²/(4L).</p>'+
+  '<h2>Observations</h2><p>Zero error of ammeter = '+(S.zero.ok?fmtZ(S.zero.a,'mA'):'_____')+'; zero error of voltmeter = '+(S.zero.ok?fmtZ(S.zero.v,'V'):'_____')+'. Length of wire L = '+s.L.toFixed(2)+' m; diameter D = '+(s.D*1000).toFixed(2)+' mm.</p>'+
+  '<table><tr><th>S. No.</th><th>Ammeter reading (mA)</th><th>Corrected I (A)</th><th>Voltmeter reading (V)</th><th>Corrected V (V)</th><th>R = V/I (Ω)</th></tr>'+rows+'</table>'+
+  '<h2>Graph</h2>'+(FIT?img:'<p>(Plot V on the y-axis against I on the x-axis on graph paper.)</p>')+
+  '<h2>Result</h2><p>The V–I graph is a straight line through the origin, so V ∝ I (Ohm’s law is verified). Resistance from the table (mean) = '+document.getElementById('rT').textContent+'; from the slope of the graph = '+document.getElementById('rG').textContent+'. Resistivity of the material = '+document.getElementById('rRho').textContent+'.</p>'+
+  '<h2>Precautions</h2><ol><li>Connections are neat and tight; wire ends cleaned with sandpaper.</li><li>Ammeter in series, voltmeter in parallel, + terminals towards the + of the battery.</li><li>Rheostat set to maximum first so no needle goes beyond full scale.</li><li>Plug key inserted only while taking readings.</li><li>Meters read without parallax, using the mirror strip.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>Heating of the coil raises its resistance.</li><li>Loose connections add resistance.</li><li>Zero error and parallax; readings only to the nearest division.</li><li>The voltmeter draws a small current.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+document.getElementById('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,NE:NE,solve:solve,checkCircuit:checkCircuit,setP:setP,settled:settled,Reff:Reff,renderTable:renderTable,wiringChanged:wiringChanged,setMode:setMode,FIT:function(){return FIT}};
+S.cOK=checkCircuit().length===0;
+buildZoom();renderWires();renderTerms();
+setMode(S.cOK?(S.zero.ok?'read':'zero'):'wire');renderTable();
+targets();NE.A.d=Math.max(-2.6,Math.min(52.4,NE.A.t));NE.V.d=Math.max(-2.6,Math.min(52.4,NE.V.t));drawNeedles();
+requestAnimationFrame(step);
+})();
+
+</script>
+</body>
+</html>
