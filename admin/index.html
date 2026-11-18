@@ -89,7 +89,7 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
 .subj summary{list-style:none;cursor:pointer;padding:12px 14px;display:grid;grid-template-columns:minmax(0,1fr) 220px 90px;gap:12px;align-items:center}
 .subj summary::-webkit-details-marker{display:none}
 .subj summary .nm{font-weight:700}.subj summary .nm small{color:var(--muted);font-weight:500;margin-left:6px}
-.subj .pb{height:10px;background:var(--panel2);border-radius:99px;overflow:hidden;display:flex}.subj .pb i{display:block;height:100%}
+#b-cover .pb,.subj .pb{height:10px;background:var(--panel2);border-radius:99px;overflow:hidden;display:flex}#b-cover .pb i,.subj .pb i{display:block;height:100%}
 .subj .cnt{text-align:right;font-size:13px;color:var(--muted)}.subj .cnt b{color:var(--text)}
 .subj .body{padding:0 14px 14px;overflow:auto}
 .st{font-size:11px;font-weight:700;padding:3px 8px;border-radius:99px;white-space:nowrap}
@@ -179,6 +179,9 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
       </div>
       <div class="section-title">Waiting for your review</div>
       <div class="card" id="t-review"></div>
+      <div class="section-title">Weekly Knowledge Booster <small style="text-transform:none;letter-spacing:0">· one booster per subject every Monday · approve before Monday 06:30 IST</small></div>
+      <div class="card" id="b-review"></div>
+      <div class="card" id="b-cover" style="margin-top:12px"></div>
       <div class="section-title">Every subject and chapter <small style="text-transform:none;letter-spacing:0">· tap a subject to see its chapters</small></div>
       <div id="t-subjects"></div>
     </section>
@@ -258,7 +261,7 @@ document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === t));
   ['dash', 'tracker', 'ads'].forEach(k => $('#tab-' + k).classList.toggle('hidden', t.dataset.tab !== k));
   if (t.dataset.tab === 'ads' && !ADS) loadAds();
-  if (t.dataset.tab === 'tracker') renderTracker();
+  if (t.dataset.tab === 'tracker') { renderTracker(); renderBooster(); }
 });
 
 function start() {
@@ -414,16 +417,54 @@ function renderTracker() {
   }).join('');
 }
 
-async function saveApproval(id, entry, msg, el) {
+function renderBooster() {
+  const B = DATA.booster, site = 'https://cbsemock.org.in/';
+  if (!B) { $('#b-review').innerHTML = '<div class="empty">Booster data appears after the next dashboard refresh.</div>'; $('#b-cover').innerHTML = ''; return; }
+  const lab = {draft: 'draft', changes: 'changes requested', scheduled: 'approved · goes live Monday', live: 'live'};
+  const cls = {draft: 'draft', changes: 'changes', scheduled: 'live', live: 'live'};
+  const open = B.items.filter(b => b.state !== 'live');
+  $('#b-review').innerHTML = open.length ? open.map(b => `<div class="rev-item b-item" data-id="${esc(b.id)}">
+      <h3>Class ${esc(b.class)} ${esc(b.subject)} · week of ${esc(b.monday)} <span class="st ${cls[b.state]}">${lab[b.state]}</span></h3>
+      <div class="meta">${b.chapters.map(esc).join(' + ')} · ${b.questions} questions with answers</div>
+      ${b.state === 'changes' && b.note ? `<div class="warn" style="margin:0 0 8px">Your note: ${esc(b.note)}</div>` : ''}
+      <div class="rev-actions"><a class="btn ghost sm" href="${site + esc(b.url)}" target="_blank" rel="noopener">Open preview ↗</a>
+        ${b.state === 'scheduled' ? '' : '<button class="btn green sm t-approve">✓ Approve</button><button class="btn ghost sm t-change">✎ Request changes</button>'}<span class="note t-msg"></span></div>
+      <textarea class="hidden t-note" placeholder="What should change? e.g. case study 2 is too easy; replace HOTS 4"></textarea></div>`).join('')
+    : '<div class="empty">No boosters waiting. Next week\'s drafts arrive on Thursday/Friday nights.</div>';
+  document.querySelectorAll('.b-item').forEach(el => {
+    const id = el.dataset.id, msg = el.querySelector('.t-msg'), ta = el.querySelector('.t-note'), ap = el.querySelector('.t-approve');
+    if (!ap) return;
+    ap.onclick = () => saveApproval(id, {status: 'approved'}, msg, el, 'booster');
+    el.querySelector('.t-change').onclick = e => {
+      if (ta.classList.contains('hidden')) { ta.classList.remove('hidden'); e.target.textContent = 'Send changes'; ta.focus(); return; }
+      if (!ta.value.trim()) { msg.className = 'note bad t-msg'; msg.textContent = 'Write what should change first.'; return; }
+      saveApproval(id, {status: 'changes', note: ta.value.trim()}, msg, el, 'booster');
+    };
+  });
+  const nx = (B.next.plan || []).map(p => `<li>Class ${esc(p.class)} ${esc(p.subject)}: ${p.status === 'written' ? '✓ written' : p.status === 'complete' ? 'all chapters covered' : 'to write — ' + esc((p.titles || []).join(' + '))}</li>`).join('');
+  $('#b-cover').innerHTML = `<h2>Coverage before the board exams</h2>` + B.coverage.map(c => `<div style="display:flex;align-items:center;gap:10px;margin:8px 0">
+      <div style="flex:0 0 190px">Class ${esc(c.class)} ${esc(c.subject)}</div>
+      <div class="pb" style="flex:1"><i style="width:${100 * c.done / c.total}%;background:var(--green)"></i></div><div style="flex:0 0 70px;text-align:right"><b>${c.done}</b> / ${c.total}</div></div>`).join('')
+    + `<div class="meta" style="margin-top:10px">Week of ${esc(B.next.monday)}:</div><ul style="margin:4px 0 0 18px">${nx}</ul>`;
+}
+
+async function saveApproval(id, entry, msg, el, kind) {
   msg.className = 'note t-msg'; msg.textContent = 'Saving…';
   el.querySelectorAll('button').forEach(b => b.disabled = true);
   try {
-    const path = '/contents/notes_content/approvals.json';
+    const path = kind === 'booster' ? '/contents/booster_content/approvals.json' : '/contents/notes_content/approvals.json';
     const cur = await gh(path + '?ref=main');
     const data = JSON.parse(fromB64(cur.content) || '{}');
     data[id] = {...entry, at: new Date().toISOString()};
     await gh(path, {method: 'PUT', body: JSON.stringify({message: `admin: ${entry.status === 'approved' ? 'approve' : 'request changes for'} ${id}`,
       content: toB64(JSON.stringify(data, null, 2) + '\n'), sha: cur.sha, branch: 'main'})});
+    if (kind === 'booster') {
+      const it = DATA.booster.items.find(b => b.id === id);
+      if (it) { it.state = entry.status === 'approved' ? (new Date(it.monday + 'T06:30:00+05:30') <= new Date() ? 'live' : 'scheduled') : 'changes'; it.note = entry.note || ''; }
+      msg.className = 'note ok t-msg';
+      msg.textContent = entry.status === 'approved' ? '✓ Approved. It goes live on its Monday at 06:30 IST.' : '✓ Sent. The next writing night revises it first.';
+      setTimeout(renderBooster, 2500); return;
+    }
     const row = DATA.tracker.subjects.flatMap(s => s.rows).find(r => r.id === id);
     if (row) { row.state = entry.status === 'approved' ? 'live' : 'changes'; row.note = entry.note || ''; }
     const T = DATA.tracker.totals; T.draft = DATA.tracker.subjects.flatMap(s => s.rows).filter(r => r.state === 'draft').length;

@@ -10,13 +10,17 @@ import urllib.request
 
 token, chat, msg = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("SEO_REPORT_CHAT_ID"), os.environ.get("MSG", "")
 lines = msg.splitlines() or [""]
-if not (token and chat) or not re.match(r"notes: (draft|revise)\b", lines[0]):
+if not (token and chat) or not re.match(r"(notes|booster): (draft|revise)\b", lines[0]):
     print("[notify] nothing to send"); raise SystemExit
 url = next((l.split("Preview: ", 1)[1].strip() for l in lines if l.startswith("Preview: ")), "")
-kind = "Revised chapter" if lines[0].startswith("notes: revise") else "New chapter draft"
-title = re.sub(r"^notes: (draft|revise)\s*", "", lines[0])
-text = (f"📘 <b>{kind} ready for review</b>\n{title}\n\n" + (f"Preview: {url}\n" if url else "")
-        + "Approve or request changes in the admin panel → Content tracker:\nhttps://cbsemock.org.in/admin/")
+booster = lines[0].startswith("booster:")
+rev = re.match(r"\w+: revise", lines[0])
+kind = ("Revised booster" if rev else "New Weekly Knowledge Booster draft") if booster else ("Revised chapter" if rev else "New chapter draft")
+title = re.sub(r"^\w+: (draft|revise)\s*", "", lines[0])
+icon = "⚡" if booster else "📘"
+text = (f"{icon} <b>{kind} ready for review</b>\n{title}\n\n" + (f"Preview: {url}\n" if url else "")
+        + "Approve or request changes in the admin panel → Content tracker"
+        + (" → Weekly Knowledge Booster" if booster else "") + ":\nhttps://cbsemock.org.in/admin/")
 req = urllib.request.Request(f"https://api.telegram.org/bot{token}/sendMessage",
                              data=json.dumps({"chat_id": chat, "text": text, "parse_mode": "HTML",
                                               "disable_web_page_preview": True}).encode(),

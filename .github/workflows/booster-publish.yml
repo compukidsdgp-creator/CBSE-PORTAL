@@ -1,0 +1,73 @@
+name: Weekly Knowledge Booster — publish
+
+# Rebuilds booster pages when a booster is written, approved or changed in the admin panel, and every
+# Monday at 06:30 IST, when approved boosters for that week go live and are announced.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "booster_content/**"
+      - "booster_pages.py"
+      - "booster_plan.py"
+  schedule:
+    - cron: "0 1 * * 1"          # Monday 01:00 UTC = 06:30 IST
+  workflow_dispatch:
+
+concurrency:
+  group: booster-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check and build booster pages
+        run: |
+          pip install --quiet pillow
+          python3 booster_check.py || echo "::warning::booster_check found problems (see above)"
+          python3 booster_pages.py
+          python3 gen_sitemap.py || true
+          python3 announce_booster.py --render || true
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add booster sitemap.xml
+          git diff --cached --quiet && { echo "nothing to publish"; exit 0; }
+          git commit -q -m "booster: publish pages"
+          for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+      - name: Announce boosters that just went live (Telegram channel, Facebook, Instagram)
+        env:
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          python3 - <<'PY' || exit 0
+          import announce_booster as A, sys
+          sys.exit(0 if A.pending() else 1)
+          PY
+          sleep 25
+          python3 announce_booster.py --post
+          git add booster_content/progress.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "booster: mark announced [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+      - name: Tell the owner a new draft is ready (private Telegram chat)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+          MSG: ${{ github.event.head_commit.message }}
+        run: python3 notify_draft.py || true
+      - name: Refresh the admin dashboard numbers
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run admin-dashboard.yml || true
