@@ -46,6 +46,26 @@ def video_path(reel, lang):
     return VIDEOS / f"{reel['number']:03d}-{reel['id']}-{lang}.mp4"
 
 
+def thumb_path(reel, lang):
+    return ROOT / "mistake_reels" / "thumb" / f"{reel['number']:03d}-{reel['id']}-{lang}.jpg"
+
+
+def make_thumb(reel, lang):
+    """Cover frame for the site: the moment the WRONG stamp lands."""
+    from PIL import Image
+    L = reel["lang"][lang]
+    tmp = Path(tempfile.mkdtemp(prefix="mthumb_"))
+    times, total = build_audio(L, tmp, reel["id"], lang)
+    w = next(x for x in times if x[0] == "wrong")
+    at = (w[1] + 0.62 * (w[2] - w[1]) + 0.45) if reel.get("scene", {}).get("type") == "flip" else w[1] + 1.45
+    render_frames(page_html(reel, L, times, total), total, tmp, only=at)
+    out = thumb_path(reel, lang)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    Image.open(next(tmp.glob("frame_*.jpg"))).convert("RGB").resize((360, 640)).save(out, quality=82, optimize=True)
+    shutil.rmtree(tmp, ignore_errors=True)
+    print(f"[thumb] {out.relative_to(ROOT)}")
+
+
 # ── audio ────────────────────────────────────────────────────────────────────
 def tone(freq, dur, vol=0.25, kind="sine", decay=8.0):
     t = np.arange(int(dur * SR)) / SR
@@ -374,6 +394,8 @@ if __name__ == "__main__":
             for lang in r["lang"]:
                 if not video_path(r, lang).exists():
                     build(r, video_path(r, lang), None, lang)
+                if not thumb_path(r, lang).exists():
+                    make_thumb(r, lang)
     else:
         r = find(a.reel)
         build(r, a.out or str(video_path(r, a.lang)), a.preview, a.lang)

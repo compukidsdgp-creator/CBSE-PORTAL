@@ -46,9 +46,10 @@ jobs:
         if: github.event.inputs.dry_run != 'true'
         run: |
           python3 go_page.py || true
+          python3 mistake_links.py || true
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add mistake_reels/posted.json mistake-bank go
+          git add mistake_reels/posted.json mistake-bank go index.html
           git diff --cached --quiet && exit 0
           git commit -q -m "mistake reels: posted [skip ci]"
           for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done

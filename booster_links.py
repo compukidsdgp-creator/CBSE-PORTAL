@@ -118,6 +118,10 @@ def home(live):
         lead = "One chapter per subject, every Monday: assertion–reason, case studies, HOTS, competency-based and knowledge questions with model answers."
     else:
         plan = BP.plan_for(BP.FIRST_MONDAY)
+        for p_ in plan:                      # written boosters carry chapter numbers only
+            if not p_.get("titles") and p_.get("chapters"):
+                _, chs = BP.chapters_of(p_["subject_key"])
+                p_["titles"] = [c["title"] for c in chs if c["number"] in p_["chapters"]]
         cards = "".join(f'<a class="wkh-card soon" href="booster/"><small>CLASS {p["class"]} · {E(p["subject"].upper())}</small>'
                         f'<b>{E(" & ".join(p.get("titles", [])) or "Coming soon")}</b><span>Live Monday {nice(BP.FIRST_MONDAY.isoformat())}</span></a>'
                         for p in plan)
