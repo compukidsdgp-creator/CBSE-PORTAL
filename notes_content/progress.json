@@ -15,6 +15,13 @@
   "tries": 1
  },
  "class10/science/metals-and-non-metals": {
-  "hub_linked": true
+  "hub_linked": true,
+  "channels": {
+   "tg": true,
+   "fb": true,
+   "ig": true
+  },
+  "tries": 0,
+  "announced": true
  }
 }
