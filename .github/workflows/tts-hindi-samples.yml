@@ -32,6 +32,7 @@ jobs:
           [ -n "$HF_TOKEN" ] || { echo "::warning::HF_TOKEN secret not set — skipping Indic Parler-TTS"; exit 0; }
           pip install --quiet git+https://github.com/huggingface/parler-tts.git soundfile
           pip install --quiet --force-reinstall --no-deps torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet -U "protobuf>=5.28" sentencepiece
           python3 tools/tts_hindi_samples.py parler || true
       - name: Save samples
         run: |
