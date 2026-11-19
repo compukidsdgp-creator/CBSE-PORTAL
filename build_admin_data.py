@@ -290,6 +290,7 @@ def build():
         "tracker": tracker(),
         "booster": booster(),
         "labs": labs_tracker(),
+        "mistakes": mistakes_tracker(),
         "gh_token": os.environ.get("ADMIN_GH_TOKEN", ""),
         "repo": REPO,
     }
@@ -322,6 +323,16 @@ def labs_tracker():
         return lab_registry.admin_data()
     except Exception as e:
         print(f"[warn] labs tracker: {e}")
+        return None
+
+
+def mistakes_tracker():
+    """Mistake Bank reels: drafts to approve (English + Hindi videos)."""
+    try:
+        import mistake_bank
+        return mistake_bank.admin()
+    except Exception as e:
+        print(f"[warn] mistake tracker: {e}")
         return None
 
 

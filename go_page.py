@@ -172,6 +172,8 @@ def build():
 <h1>CBSE<b>Mock</b></h1><p>Free CBSE Class 10 &amp; 12 practice — tap a post below for its quiz, explainer and mock papers.</p></div>
 <nav class="main">
 <a href="../free-mock-papers/">📄 Free pre-board papers</a>
+<a href="../mistake-bank/">⚠️ Mistake Bank: top board-exam mistakes</a>
+<a href="../booster/">⚡ Weekly Knowledge Booster</a>
 <a href="../learn/">📘 Learn: WHY? explainers</a>
 <a href="../mock-zone/index.html">📝 Mock tests</a>
 <a href="../formula-board/">🧮 Formula Board</a>

@@ -4,8 +4,10 @@ generate_mistake_reel.py — "Mistake Bank" reels (≈15 s, 1080×1920): one com
 wrong → right with a 3D-styled animation, narrated (Kokoro TTS, offline) with on-screen captions,
 sound effects and the usual music bed. Scenes are HTML/CSS drawn per frame and captured with Playwright.
 
-Sample: Class 10 Chemistry, Ch 1 — "Never change subscripts to balance an equation".
-    python3 generate_mistake_reel.py --out mistake_subscripts.mp4 [--lang en|hi] [--preview 6.0]
+Reels are specs in mistake_reels/specs/NNN-<id>.py (REEL dict, English + Hindi). Scenes: "molecules"
+(the custom #01 scene) and "flip" (generic: wrong answer card → stamp → 3D flip to the right answer).
+    python3 generate_mistake_reel.py 2 --lang en [--out x.mp4] [--preview 6.0]
+    python3 generate_mistake_reel.py --missing        (render every missing video into mistake_reels/video/)
 """
 import argparse
 import json
@@ -24,47 +26,24 @@ MUSIC = ROOT / "formula-posts" / "bg_music.mp3"
 W, H, FPS = 1080, 1920, 30
 LEAD, GAP, OUTRO = 0.35, 0.18, 1.6
 
-REEL = {
-    "id": "class10-chemistry-subscripts",
-    "number": 1,
-    "notes": "notes/class-10/science/chemical-reactions-and-equations.html",
-    "lang": {
-        "en": {
-            "voice": "af_heart", "speed": 1.15,
-            "badge": "Class 10 · Chemistry · Ch 1",
-            "intro": ("TOP BOARD EXAM", "MISTAKES"),
-            "title": "Changing subscripts to balance",
-            "stamp": ("WRONG", "H₂O₂ is hydrogen peroxide,<br>not water!"),
-            "rule": ("Subscripts = what it is", "Coefficients = how many"),
-            "cta": "📒 Full Mistake Bank · cbsemock.org.in",
-            "beats": [   # (key, narration, caption shown on screen)
-                ("intro", "Top board exam mistake, number one!", "Top board-exam mistakes · #1"),
-                ("hook", "Never change subscripts to balance!", "Never change subscripts to balance!"),
-                ("setup", "H two, plus O two, gives H two O. Oxygen doesn't balance.", "H₂ + O₂ → H₂O … oxygen doesn't balance"),
-                ("wrong", "Make it H two O two? Wrong! That's hydrogen peroxide.", "Make it H₂O₂? WRONG — that's hydrogen peroxide!"),
-                ("right", "Change only coefficients. Two H two, plus O two, gives two H two O.", "Change only coefficients: 2H₂ + O₂ → 2H₂O"),
-                ("done", "Now it's balanced!", "Balanced ✓"),
-            ],
-        },
-        "hi": {
-            "voice": "rohit", "engine": "parler", "speed": 1.08,
-            "badge": "Class 10 · Chemistry · Ch 1",
-            "intro": ("बोर्ड एग्ज़ाम की", "टॉप गलतियाँ"),
-            "title": "बैलेंस करने के लिए subscript बदलना",
-            "stamp": ("गलत!", "H₂O₂ हाइड्रोजन पेरोक्साइड है,<br>पानी नहीं!"),
-            "rule": ("Subscript = पहचान (क्या है)", "Coefficient = संख्या (कितने)"),
-            "cta": "📒 पूरा Mistake Bank · cbsemock.org.in",
-            "beats": [
-                ("intro", "बोर्ड एग्ज़ाम की टॉप गलती, नंबर वन!", "बोर्ड एग्ज़ाम की टॉप गलतियाँ · #1"),
-                ("hook", "बैलेंस करते समय सबस्क्रिप्ट कभी मत बदलो!", "बैलेंस के लिए subscript कभी मत बदलो!"),
-                ("setup", "एच टू प्लस ओ टू से एच टू ओ बनता है। लेकिन ऑक्सीजन बैलेंस नहीं है।", "H₂ + O₂ → H₂O … ऑक्सीजन बैलेंस नहीं"),
-                ("wrong", "तो क्या एच टू ओ टू बना दें? बिल्कुल गलत! ये तो हाइड्रोजन पेरोक्साइड है।", "H₂O₂ बना दिया? गलत — ये हाइड्रोजन पेरोक्साइड है!"),
-                ("right", "सिर्फ़ आगे का नंबर बदलो। टू एच टू, प्लस ओ टू, टू एच टू ओ।", "सिर्फ़ आगे का नंबर (coefficient) बदलो: 2H₂ + O₂ → 2H₂O"),
-                ("done", "अब बैलेंस्ड!", "बैलेंस ✓"),
-            ],
-        },
-    },
-}
+SPECS = ROOT / "mistake_reels" / "specs"
+VIDEOS = ROOT / "mistake_reels" / "video"
+
+
+def load_specs():
+    """Every reel spec: mistake_reels/specs/NNN-<id>.py, each defining REEL."""
+    import importlib.util
+    out = []
+    for f in sorted(SPECS.glob("[0-9]*.py")):
+        spec = importlib.util.spec_from_file_location(f"ms_{f.stem.replace('-', '_')}", f)
+        m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+        r = dict(m.REEL); r["_src"] = str(f.relative_to(ROOT))
+        out.append(r)
+    return out
+
+
+def video_path(reel, lang):
+    return VIDEOS / f"{reel['number']:03d}-{reel['id']}-{lang}.mp4"
 
 
 # ── audio ────────────────────────────────────────────────────────────────────
@@ -135,7 +114,8 @@ def page_html(reel, L, times, total):
                                     ("Poppins", "Poppins-Bold.ttf", 700), ("Poppins", "Poppins-Medium.ttf", 500)])
     tl = json.dumps({"beats": [{"k": k, "s": s, "e": e, "cap": c} for k, s, e, c in times], "total": total,
                      "rule": L["rule"], "title": L["title"], "badge": L["badge"], "n": reel["number"],
-                     "intro": L["intro"], "stamp": L["stamp"], "cta": L["cta"]})
+                     "intro": L["intro"], "stamp": L["stamp"], "cta": L["cta"],
+                     "scene": {**reel.get("scene", {"type": "molecules"}), **L.get("scene", {})}})
     return """<!doctype html><html><head><meta charset="utf-8"><style>""" + faces + """
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1920px;overflow:hidden;background:#060c1d;font-family:Inter,Poppins,sans-serif;color:#fff}
@@ -182,6 +162,18 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#060c1d;font-fam
 #stamp b{font:800 120px/1.3 Inter,Poppins;letter-spacing:.06em}#stamp span{font:700 44px Poppins;color:#ffd0d8;margin-top:12px}
 #ok{position:absolute;left:50%;top:700px;width:260px;height:260px;margin-left:-130px;border-radius:50%;background:radial-gradient(#22c55e,#15803d);display:flex;align-items:center;justify-content:center;
  font:800 170px Inter;box-shadow:0 0 0 22px rgba(34,197,94,.25),0 0 90px rgba(34,197,94,.6)}
+#flip{position:absolute;left:80px;right:80px;top:560px;height:780px;perspective:1800px}
+#card3d{position:absolute;inset:0;transform-style:preserve-3d}
+.face{position:absolute;inset:0;border-radius:34px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.55);
+ background:#fffdf6;color:#0f172a;background-image:linear-gradient(#e8edf5 2px,transparent 2px);background-size:100% 64px;background-position:0 150px}
+.face.backf{transform:rotateY(180deg)}
+.fh{height:110px;display:flex;align-items:center;gap:16px;padding:0 40px;font:800 46px Inter,Poppins;color:#fff}
+.fh.bad{background:linear-gradient(90deg,#e11d48,#9f1239)}.fh.good{background:linear-gradient(90deg,#16a34a,#14532d)}
+.fq{padding:30px 44px 0;font:700 40px/1.3 Poppins;color:#1e3a8a}
+.fb{padding:22px 44px 0;font:700 58px/1.25 Poppins;color:#0f172a}
+.fb mark{background:linear-gradient(transparent 12%,#ffd23f 12%,#ffd23f 88%,transparent 88%) no-repeat;background-size:0% 100%;color:#0f172a;padding:0 8px;border-radius:6px}
+.front .fb{color:#9f1239}.front .fb s{text-decoration-thickness:6px;text-decoration-color:#e11d48}
+.fsvg{position:absolute;left:44px;right:44px;bottom:36px;height:260px;display:flex;align-items:center;justify-content:center}.fsvg svg{width:100%;height:100%}
 #rule{position:absolute;left:80px;right:80px;top:1040px;border-radius:28px;background:linear-gradient(135deg,#0f2347,#13306a);border:3px solid #5eead4;padding:30px 36px;box-shadow:0 30px 60px rgba(0,0,0,.45)}
 #rule p{font:700 48px/1.3 Poppins}#rule p:first-child{color:#5eead4}#rule p:last-child{color:#ffd23f}
 #cap{position:absolute;left:70px;right:70px;top:1440px;text-align:center;font:800 54px/1.3 Inter,Poppins;text-shadow:0 4px 18px rgba(0,0,0,.8)}
@@ -191,12 +183,14 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#060c1d;font-fam
 #prog{position:absolute;left:70px;right:70px;top:110px;height:8px;border-radius:8px;background:rgba(255,255,255,.12)}#prog i{display:block;height:100%;border-radius:8px;background:#ffd23f}
 </style></head><body>
 <div id="bg"></div><div id="rays"></div><div id="floor"></div><div id="tint"></div>
-<div id="intro"><div class="fire">🔥</div><div class="l1" id="i1"></div><div class="l2" id="i2"></div><div class="n1">#01</div></div>
+<div id="intro"><div class="fire">🔥</div><div class="l1" id="i1"></div><div class="l2" id="i2"></div><div class="n1" id="n1"></div></div>
 <div id="prog"><i></i></div>
 <div class="hdr"><div class="badge">⚠ MISTAKE BANK</div><div class="num" id="num"></div></div>
 <div class="sub" id="sub"></div>
 <div id="hook"><div id="hookCard"><div class="x">✕</div><b id="hookT"></b></div></div>
 <div id="stage"><div id="row"></div></div>
+<div id="flip"><div id="card3d"><div class="face front"><div class="fh bad">✕ <span id="fwl"></span></div><div class="fq" id="fq"></div><div class="fb" id="fw"></div><div class="fsvg" id="fsw"></div></div>
+ <div class="face backf"><div class="fh good">✓ <span id="frl"></span></div><div class="fq" id="fq2"></div><div class="fb" id="fr"></div><div class="fsvg" id="fsr"></div></div></div></div>
 <div id="scale"><div id="post"></div><div id="base"></div><div id="beam"></div>
  <div class="pan" id="panL" style="left:-60px"><div class="str"></div><div class="dish">LEFT<i id="cL"></i></div></div>
  <div class="pan" id="panR" style="right:-60px"><div class="str"></div><div class="dish">RIGHT<i id="cR"></i></div></div></div>
@@ -209,11 +203,17 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#060c1d;font-fam
 <script>
 const T=""" + tl + """;
 const B={};T.beats.forEach(b=>B[b.k]=b);
-document.getElementById('num').textContent='#'+String(T.n).padStart(2,'0');
+document.getElementById('num').textContent='#'+String(T.n).padStart(2,'0');document.getElementById('n1').textContent='#'+String(T.n).padStart(2,'0');
 document.getElementById('sub').textContent=T.badge;
 document.getElementById('hookT').textContent=T.title;
 document.getElementById('i1').textContent=T.intro[0];document.getElementById('i2').textContent=T.intro[1];
 document.getElementById('s1').textContent=T.stamp[0];document.getElementById('s2').innerHTML=T.stamp[1];document.getElementById('cta').textContent=T.cta;
+const SC=T.scene;
+if(SC.type==='flip'){document.getElementById('fwl').textContent=SC.wrong_label||'What students write';document.getElementById('frl').textContent=SC.right_label||'Write this instead';
+ document.getElementById('fq').innerHTML=SC.q||'';document.getElementById('fq2').innerHTML=SC.q||'';document.getElementById('fw').innerHTML=SC.wrong||'';document.getElementById('fr').innerHTML=SC.right||'';
+ document.getElementById('fsw').innerHTML=SC.svg_wrong||'';document.getElementById('fsr').innerHTML=SC.svg_right||SC.svg_wrong||'';
+ ['stage','scale'].forEach(i=>document.getElementById(i).style.display='none')}
+else document.getElementById('flip').style.display='none';
 document.getElementById('r1').textContent=T.rule[0];document.getElementById('r2').textContent=T.rule[1];
 const $=id=>document.getElementById(id);
 const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2,
@@ -250,6 +250,7 @@ function setTime(t){
   const hin=back(seg(t,h.s-0.3,0.6)),hout=ease(seg(t,s.s-0.1,0.5));
   $('hookCard').style.transform=`rotateX(${(1-hin)*-90+hout*60}deg) rotateZ(${Math.sin(t*3)*1.2}deg) scale(${1-hout*.35}) translateY(${-hout*380}px)`;
   $('hook').style.opacity=1-hout;
+  if(SC.type==='flip'){flipScene(t,s,w,r,d)}else{
   // stage state
   let st='base';if(t>=w.s+0.5&&t<r.s+0.25)st='wrong';if(t>=r.s+0.25)st='right';
   if(st!==laid){lay(st);laid=st}
@@ -274,15 +275,17 @@ function setTime(t){
   $('beam').style.transform=`rotate(${tilt}deg)`;
   $('panL').style.transform=`translateY(${-Math.sin(tilt*Math.PI/180)*170}px)`;$('panR').style.transform=`translateY(${Math.sin(tilt*Math.PI/180)*170}px)`;
   $('scale').style.opacity=cl(seg(t,s.s+0.4,0.5))*(1-cl(seg(t,d.s+0.6,0.4)));
+  $('stage').style.transform=`translateY(${-ease(seg(t,d.s+0.6,0.5))*80}px) scale(${1-ease(seg(t,d.s+0.6,0.5))*.12})`;
+  }
   // WRONG stamp + red tint
-  const wi=seg(t,w.s+1.0,0.25),wo=seg(t,r.s-0.1,0.3);
+  const wAt=SC.type==='flip'?w.s+0.62*(w.e-w.s):w.s+1.0;
+  const wi=seg(t,wAt,0.25),wo=seg(t,r.s-0.1,0.3);
   $('stamp').style.opacity=wi*(1-wo);$('stamp').style.transform=`rotate(${-8+ (1-back(wi))*30}deg) scale(${2.2-1.2*back(wi)})`;
   $('tint').style.background=`rgba(255,30,60,${0.22*wi*(1-wo)})`;
   // done: tick + green tint, then rule card
   const di=back(seg(t,d.s,0.45));$('ok').style.opacity=cl(seg(t,d.s,0.2))*(1-seg(t,d.s+0.9,0.3));$('ok').style.transform=`scale(${di}) rotate(${(1-di)*-90}deg)`;
   if(t>=d.s)$('tint').style.background=`rgba(34,197,94,${0.16*(1-seg(t,d.s+0.8,0.6))})`;
   const ri=back(seg(t,d.s+0.6,0.5));$('rule').style.opacity=cl(seg(t,d.s+0.6,0.3));$('rule').style.transform=`perspective(1200px) rotateX(${(1-ri)*80}deg) translateY(${(1-ri)*60}px)`;
-  $('stage').style.transform=`translateY(${-ease(seg(t,d.s+0.6,0.5))*80}px) scale(${1-ease(seg(t,d.s+0.6,0.5))*.12})`;
   // captions: words appear with the voice
   const cur=T.beats.find(b=>t>=b.s-0.15&&t<b.e+0.25);const capEl=$('cap');
   if(cur&&cur.k!=='done'&&cur.k!=='intro'){const words=cur.cap.split(' ');const n=Math.ceil(words.length*cl((t-cur.s)/(cur.e-cur.s)*1.15));
@@ -291,6 +294,15 @@ function setTime(t){
   // outro CTA
   const ci=back(seg(t,d.s+1.2,0.5));$('cta').style.opacity=cl(seg(t,d.s+1.2,0.3));$('cta').style.transform=`scale(${ci})`;
   $('logo').style.opacity=cl(seg(t,d.s+1.4,0.4));
+}
+function flipScene(t,s,w,r,d){
+  const rise=back(seg(t,s.s+0.15,0.7)),fl=ease(seg(t,r.s,0.65)),up=ease(seg(t,d.s+0.6,0.5));
+  $('flip').style.opacity=cl(seg(t,s.s+0.05,0.35));
+  $('card3d').style.transform=`translateY(${(1-rise)*260-up*270}px) scale(${1-up*.32}) rotateX(${(1-rise)*55+Math.sin(t*1.4)*2}deg) rotateY(${fl*180+Math.sin(t*1.1)*3}deg)`;
+  $('fw').style.opacity=cl(seg(t,w.s+0.1,0.4));$('fw').style.transform=`translateY(${(1-ease(seg(t,w.s+0.1,0.4)))*30}px)`;
+  const m=document.querySelector('#fr mark');if(m)m.style.backgroundSize=`${100*ease(seg(t,r.s+0.8,0.5))}% 100%`;
+  $('fr').style.opacity=cl(seg(t,r.s+0.35,0.3));
+  const shake=t>w.s+0.62*(w.e-w.s)&&t<w.s+0.62*(w.e-w.s)+0.45?Math.sin(t*90)*12:0;$('flip').style.transform=`translateX(${shake}px)`;
 }
 window.setTime=setTime;setTime(0);
 </script></body></html>"""
@@ -341,10 +353,27 @@ def build(reel, out, preview=None, lang="en"):
     print(f"[OK] {out} ({Path(out).stat().st_size / 1048576:.1f} MB, {total:.1f}s)")
 
 
+def find(key):
+    for r in load_specs():
+        if key in (r["id"], str(r["number"]), f"{r['number']:03d}"):
+            return r
+    raise SystemExit(f"no reel spec {key}")
+
+
 if __name__ == "__main__":
     a = argparse.ArgumentParser()
-    a.add_argument("--out", default="mistake_reel.mp4")
+    a.add_argument("reel", nargs="?", default="1", help="spec id or number (default 1)")
+    a.add_argument("--out")
     a.add_argument("--preview", type=float)
     a.add_argument("--lang", default="en", choices=["en", "hi"])
+    a.add_argument("--missing", action="store_true", help="render every spec/language whose video is missing")
     a = a.parse_args()
-    build(REEL, a.out, a.preview, a.lang)
+    if a.missing:
+        VIDEOS.mkdir(parents=True, exist_ok=True)
+        for r in load_specs():
+            for lang in r["lang"]:
+                if not video_path(r, lang).exists():
+                    build(r, video_path(r, lang), None, lang)
+    else:
+        r = find(a.reel)
+        build(r, a.out or str(video_path(r, a.lang)), a.preview, a.lang)

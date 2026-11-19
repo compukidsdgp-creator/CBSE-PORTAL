@@ -15,7 +15,7 @@ import generate_mistake_reel as G
 STYLE = {"rohit": "Rohit speaks with a clear, confident and expressive tone at a moderately fast pace, like a teacher explaining "
                   "to students. The recording is very clear with no background noise."}
 todo = []
-for reel in [G.REEL]:
+for reel in G.load_specs():
     for lang, L in reel["lang"].items():
         if L.get("engine") != "parler":
             continue

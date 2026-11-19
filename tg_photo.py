@@ -36,3 +36,31 @@ def send_photo(path, caption, chat=None, token=None, parse_mode=None):
     except Exception as e:
         print(f"::warning::Telegram post failed: {e}")
     return False
+
+
+def send_video(path, caption, chat=None, token=None):
+    """Upload a video file to Telegram (multipart). Returns True on success."""
+    token = token or os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat = chat or os.environ.get("TELEGRAM_CHAT_ID")
+    if not (token and chat):
+        print("[TG] no token/chat — skipped")
+        return False
+    b = uuid.uuid4().hex
+    body = b""
+    for k, v in {"chat_id": str(chat), "caption": caption[:1024], "supports_streaming": "true"}.items():
+        body += f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode()
+    p = Path(path)
+    body += (f'--{b}\r\nContent-Disposition: form-data; name="video"; filename="{p.name}"\r\n'
+             f"Content-Type: video/mp4\r\n\r\n").encode() + p.read_bytes() + f"\r\n--{b}--\r\n".encode()
+    req = urllib.request.Request(f"https://api.telegram.org/bot{token}/sendVideo", data=body,
+                                 headers={"Content-Type": f"multipart/form-data; boundary={b}"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            ok = json.load(r).get("ok", False)
+            print("[TG] video sent" if ok else "[TG] not ok")
+            return ok
+    except urllib.error.HTTPError as e:
+        print(f"::warning::Telegram video failed ({e.code}): {e.read().decode()[:300]}")
+    except Exception as e:
+        print(f"::warning::Telegram video failed: {e}")
+    return False

@@ -1,0 +1,67 @@
+name: Mistake Bank reels — voice + render drafts
+
+# Runs when a reel spec is added or changed (mistake_reels/specs/), and on demand. Makes the Hindi narration
+# (AI4Bharat Indic Parler-TTS, voice Rohit), renders every missing English/Hindi video, saves them, and sends
+# each new draft to the owner's private Telegram chat for review.
+on:
+  push:
+    branches: [main]
+    paths: ["mistake_reels/specs/**", "generate_mistake_reel.py", "tools/parler_voice.py"]
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: mistake-reels
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/kokoro
+          key: kokoro-v1.0
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          pip install --quiet git+https://github.com/huggingface/parler-tts.git soundfile
+          pip install --quiet --force-reinstall --no-deps torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet -U "protobuf>=5.28" sentencepiece numpy kokoro-onnx pillow playwright
+          python -m playwright install --with-deps chromium >/dev/null
+      - name: Hindi narration (missing clips only)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python3 tools/parler_voice.py
+      - name: Render missing videos
+        run: |
+          ls mistake_reels/video/*.mp4 2>/dev/null | sort > /tmp/before.txt || true
+          python3 generate_mistake_reel.py --missing
+          ls mistake_reels/video/*.mp4 2>/dev/null | sort > /tmp/after.txt || true
+          comm -13 /tmp/before.txt /tmp/after.txt > /tmp/new.txt; cat /tmp/new.txt
+      - name: Save
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add mistake_reels/voice mistake_reels/video
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "mistake reels: drafts rendered [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
+          git fetch -q origin main; [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::could not push"; exit 1; }
+      - name: Send new drafts to the owner (private Telegram)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+        run: |
+          [ -s /tmp/new.txt ] && python3 mistake_bank.py notify $(cat /tmp/new.txt) || true
+      - name: Refresh the admin dashboard
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run admin-dashboard.yml || true

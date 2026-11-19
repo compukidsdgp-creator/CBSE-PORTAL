@@ -1,0 +1,54 @@
+name: Mistake Bank reels — post (English 5:31 PM, Hindi 9:01 PM IST)
+on:
+  schedule:
+    - cron: "1 12 * * *"     # 17:31 IST — English
+    - cron: "31 15 * * *"    # 21:01 IST — Hindi
+  workflow_dispatch:
+    inputs:
+      lang:
+        description: "en or hi"
+        required: true
+        default: "en"
+      dry_run:
+        description: "true for a dry run"
+        required: false
+        default: "false"
+permissions:
+  contents: write
+concurrency:
+  group: mistake-post
+  cancel-in-progress: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Post the next approved reel
+        env:
+          FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_REPOSITORY:      ${{ github.repository }}
+        run: |
+          pip install --quiet numpy
+          LANG_=${{ github.event.inputs.lang }}
+          if [ -z "$LANG_" ]; then [ "${{ github.event.schedule }}" = "1 12 * * *" ] && LANG_=en || LANG_=hi; fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then python3 mistake_bank.py post $LANG_ --dry-run; else python3 mistake_bank.py post $LANG_; fi
+      - name: Save
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          python3 go_page.py || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add mistake_reels/posted.json mistake-bank go
+          git diff --cached --quiet && exit 0
+          git commit -q -m "mistake reels: posted [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done

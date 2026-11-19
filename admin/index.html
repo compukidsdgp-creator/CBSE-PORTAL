@@ -182,6 +182,8 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
       <div class="section-title">Weekly Knowledge Booster <small style="text-transform:none;letter-spacing:0">· one booster per subject every Monday · approve before Monday 06:30 IST</small></div>
       <div class="card" id="b-review"></div>
       <div class="card" id="b-cover" style="margin-top:12px"></div>
+      <div class="section-title">Mistake Bank reels <small style="text-transform:none;letter-spacing:0">· English posts 5:31 PM, Hindi 9:01 PM IST — only approved reels go out</small></div>
+      <div class="card" id="m-review"></div>
       <div class="section-title">Virtual labs <small style="text-transform:none;letter-spacing:0">· every lab rebuilt to the locked standard (reference: convex lens focal length)</small></div>
       <div class="card" id="l-review"></div>
       <div id="l-subjects" style="margin-top:12px"></div>
@@ -264,7 +266,7 @@ document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === t));
   ['dash', 'tracker', 'ads'].forEach(k => $('#tab-' + k).classList.toggle('hidden', t.dataset.tab !== k));
   if (t.dataset.tab === 'ads' && !ADS) loadAds();
-  if (t.dataset.tab === 'tracker') { renderTracker(); renderBooster(); renderLabs(); }
+  if (t.dataset.tab === 'tracker') { renderTracker(); renderBooster(); renderMistakes(); renderLabs(); }
 });
 
 function start() {
@@ -420,6 +422,35 @@ function renderTracker() {
   }).join('');
 }
 
+function renderMistakes() {
+  const M = DATA.mistakes;
+  if (!M) { $('#m-review').innerHTML = '<div class="empty">Reel data appears after the next dashboard refresh.</div>'; return; }
+  const lab = {rendering: 'rendering…', draft: 'draft', changes: 'changes requested', approved: 'approved'};
+  const cls = {rendering: 'todo', draft: 'draft', changes: 'changes', approved: 'live'};
+  const nm = {en: 'English', hi: 'Hindi'};
+  const open = M.items.filter(m => m.state !== 'approved' || m.posted.length < Object.keys(m.videos).length);
+  const done = M.items.filter(m => m.state === 'approved').length, posted = M.items.filter(m => m.posted.length).length;
+  $('#m-review').innerHTML = `<div class="meta" style="margin-bottom:8px"><b>${M.items.length}</b> reels · ${done} approved · ${posted} posted</div>` +
+    (open.length ? open.map(m => `<div class="rev-item m-item" data-id="${esc(m.id)}" style="margin-top:10px">
+      <h3>#${String(m.number).padStart(2, '0')} · ${esc(m.title)} <span class="st ${cls[m.state]}">${lab[m.state]}</span></h3>
+      <div class="meta">${esc(m.badge)}${m.posted.length ? ' · posted: ' + m.posted.map(l => nm[l]).join(', ') : ''}</div>
+      ${m.state === 'changes' && m.note ? `<div class="warn" style="margin:0 0 8px">Your note: ${esc(m.note)}</div>` : ''}
+      <div class="rev-actions">${Object.entries(m.videos).map(([l, u]) => `<a class="btn ghost sm" href="${esc(u)}" target="_blank" rel="noopener">▶ ${nm[l]}</a>`).join('')}
+        ${m.state === 'approved' || m.state === 'rendering' ? '' : '<button class="btn green sm t-approve">✓ Approve both</button><button class="btn ghost sm t-change">✎ Request changes</button>'}<span class="note t-msg"></span></div>
+      <textarea class="hidden t-note" placeholder="What should change? e.g. Hindi line 3 sounds unnatural; make the WRONG stamp appear later"></textarea></div>`).join('')
+    : '<div class="empty" style="margin-top:10px">Nothing waiting. New reels arrive after the nightly writing run.</div>');
+  document.querySelectorAll('.m-item').forEach(el => {
+    const id = el.dataset.id, msg = el.querySelector('.t-msg'), ta = el.querySelector('.t-note'), ap = el.querySelector('.t-approve');
+    if (!ap) return;
+    ap.onclick = () => saveApproval(id, {status: 'approved'}, msg, el, 'mistake');
+    el.querySelector('.t-change').onclick = e => {
+      if (ta.classList.contains('hidden')) { ta.classList.remove('hidden'); e.target.textContent = 'Send changes'; ta.focus(); return; }
+      if (!ta.value.trim()) { msg.className = 'note bad t-msg'; msg.textContent = 'Write what should change first.'; return; }
+      saveApproval(id, {status: 'changes', note: ta.value.trim()}, msg, el, 'mistake');
+    };
+  });
+}
+
 function renderLabs() {
   const L = DATA.labs, site = 'https://cbsemock.org.in/';
   if (!L) { $('#l-review').innerHTML = '<div class="empty">Lab data appears after the next dashboard refresh.</div>'; $('#l-subjects').innerHTML = ''; return; }
@@ -494,12 +525,19 @@ async function saveApproval(id, entry, msg, el, kind) {
   msg.className = 'note t-msg'; msg.textContent = 'Saving…';
   el.querySelectorAll('button').forEach(b => b.disabled = true);
   try {
-    const path = kind === 'booster' ? '/contents/booster_content/approvals.json' : kind === 'lab' ? '/contents/labs_content/approvals.json' : '/contents/notes_content/approvals.json';
+    const path = kind === 'booster' ? '/contents/booster_content/approvals.json' : kind === 'lab' ? '/contents/labs_content/approvals.json' : kind === 'mistake' ? '/contents/mistake_reels/approvals.json' : '/contents/notes_content/approvals.json';
     const cur = await gh(path + '?ref=main');
     const data = JSON.parse(fromB64(cur.content) || '{}');
     data[id] = {...entry, at: new Date().toISOString()};
     await gh(path, {method: 'PUT', body: JSON.stringify({message: `admin: ${entry.status === 'approved' ? 'approve' : 'request changes for'} ${id}`,
       content: toB64(JSON.stringify(data, null, 2) + '\n'), sha: cur.sha, branch: 'main'})});
+    if (kind === 'mistake') {
+      const it = DATA.mistakes.items.find(m => m.id === id);
+      if (it) { it.state = entry.status === 'approved' ? 'approved' : 'changes'; it.note = entry.note || ''; }
+      msg.className = 'note ok t-msg';
+      msg.textContent = entry.status === 'approved' ? '✓ Approved. It joins the posting queue (English 5:31 PM, Hindi 9:01 PM).' : '✓ Sent. The next writing run revises it first.';
+      setTimeout(renderMistakes, 2500); return;
+    }
     if (kind === 'lab') {
       const r = DATA.labs.subjects.flatMap(s => s.rows).find(x => x.id === id);
       if (r) { r.state = entry.status === 'approved' ? 'live' : 'changes'; r.note = entry.note || ''; }
