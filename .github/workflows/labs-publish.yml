@@ -39,7 +39,7 @@ jobs:
           git add -A virtual-labs labs_content sitemap.xml
           git diff --cached --quiet && { echo "nothing to publish"; exit 0; }
           git commit -q -m "labs: publish approved rebuilds"
-          for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i * 5)); done; git fetch -q origin main; [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::could not push the commit"; exit 1; }
       - name: Tell the owner a new lab draft is ready (private Telegram chat)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

@@ -134,7 +134,15 @@ def page(ch):
     mistakes = ('<table class="mist"><tr><th>Mistake</th><th>What students write</th><th>Write this instead</th></tr>' +
                 "".join(f"<tr><td><b>{E(a)}</b></td><td>{E(b)}</td><td>{E(c)}</td></tr>" for a, b, c in ch["mistakes"]) + "</table>")
     revision = "<ol>" + "".join(f"<li>{E(x)}</li>" for x in ch["revision"]) + "</ol>"
-    links = "".join(f'<li><a href="{up}{h}">{E(l)}</a></li>' for h, l in ch["practice"])
+    practice = list(ch["practice"])
+    try:                                    # this chapter's Weekly Knowledge Booster, once it is live
+        from booster_links import booster_for_chapter
+        bk = booster_for_chapter(f"class{ch['class']}/{ch['subject_slug']}", int(ch["number"]))
+        if bk:
+            practice.insert(0, (bk[0], f"⚡ Weekly Knowledge Booster: 50+ board-style questions on {ch['title']}"))
+    except Exception as e:
+        print(f"[notes] booster link skipped: {e}")
+    links = "".join(f'<li><a href="{up}{h}">{E(l)}</a></li>' for h, l in practice)
     words = len(re.sub(r"<[^>]+>", " ", ch["glance"] + "".join(b for _, b in ch["concepts"])).split())
     title = f"{ch['title']} Class {cls} Notes | CBSE {subj} Chapter {ch['number']}"
     ld = {"@context": "https://schema.org", "@graph": [

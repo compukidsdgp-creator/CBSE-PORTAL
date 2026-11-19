@@ -47,7 +47,7 @@ jobs:
           git add notes notes_content resources chapters sitemap.xml why-reels formula-reels formula-board go
           git diff --cached --quiet && { echo "nothing to publish"; exit 0; }
           git commit -q -m "notes: publish approved chapters"
-          for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i * 5)); done; git fetch -q origin main; [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::could not push the commit"; exit 1; }
       - name: Announce newly published chapters (Telegram channel, Facebook, Instagram)
         env:
           TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -64,7 +64,7 @@ jobs:
           git add notes_content/progress.json
           git diff --cached --quiet && exit 0
           git commit -q -m "notes: mark announced [skip ci]"
-          for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i * 5)); done; git fetch -q origin main; [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::could not push the commit"; exit 1; }
       - name: Tell the owner a new draft is ready (private Telegram chat)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

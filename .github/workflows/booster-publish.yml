@@ -9,6 +9,7 @@ on:
       - "booster_content/**"
       - "booster_pages.py"
       - "booster_plan.py"
+      - "booster_links.py"
   schedule:
     - cron: "0 1 * * 1"          # Monday 01:00 UTC = 06:30 IST
   workflow_dispatch:
@@ -34,16 +35,18 @@ jobs:
           pip install --quiet pillow
           python3 booster_check.py || echo "::warning::booster_check found problems (see above)"
           python3 booster_pages.py
+          python3 booster_links.py
+          python3 notes_pages.py || true
           python3 gen_sitemap.py || true
           python3 announce_booster.py --render || true
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add booster sitemap.xml
+          git add booster sitemap.xml index.html cbse-class-*.html chapters resources notes
           git diff --cached --quiet && { echo "nothing to publish"; exit 0; }
           git commit -q -m "booster: publish pages"
-          for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i * 5)); done; git fetch -q origin main; [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::could not push the commit"; exit 1; }
       - name: Announce boosters that just went live (Telegram channel, Facebook, Instagram)
         env:
           TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -60,7 +63,7 @@ jobs:
           git add booster_content/progress.json
           git diff --cached --quiet && exit 0
           git commit -q -m "booster: mark announced [skip ci]"
-          for i in 1 2 3 4; do git pull -q --rebase --autostash origin main && git push -q && break; sleep $((i * 5)); done
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i * 5)); done; git fetch -q origin main; [ -z "$(git log origin/main..HEAD --oneline)" ] || { echo "::error::could not push the commit"; exit 1; }
       - name: Tell the owner a new draft is ready (private Telegram chat)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
