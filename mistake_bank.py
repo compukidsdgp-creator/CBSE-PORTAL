@@ -116,23 +116,59 @@ def post(lang, dry=False):
     return False
 
 
+POST_TIME = {"en": (17, 31), "hi": (21, 1)}
+
+
+def schedule():
+    """Expected premiere time (IST) of each approved, unposted reel per language: one per day, in order."""
+    appr, posted = jload("approvals.json"), jload("posted.json")
+    now = datetime.now(timezone.utc) + timedelta(hours=5, minutes=30)
+    out = {}
+    for lang, (h, m) in POST_TIME.items():
+        slot = now.replace(hour=h, minute=m, second=0, microsecond=0)
+        if slot <= now:
+            slot += timedelta(days=1)
+        for r in G.load_specs():
+            if lang in r["lang"] and state(r, appr) == "approved" and f"{key(r)}/{lang}" not in posted:
+                out[f"{key(r)}/{lang}"] = slot
+                slot += timedelta(days=1)
+    return out
+
+
+def when(dt):
+    today = (datetime.now(timezone.utc) + timedelta(hours=5, minutes=30)).date()
+    day = "today" if dt.date() == today else "tomorrow" if dt.date() == today + timedelta(days=1) else f"{dt:%a} {dt.day} {dt:%b}"
+    return f"{day}, {dt.strftime('%I:%M %p').lstrip('0')}"
+
+
 def page():
-    posted = jload("posted.json")
-    rows = []
-    for r in G.load_specs():
-        links = {l: posted.get(f"{key(r)}/{l}", {}).get("ig_link") for l in r["lang"]}
-        if not any(f"{key(r)}/{l}" in posted for l in r["lang"]):
-            continue
-        rows.append((r, links))
+    posted, appr, sched = jload("posted.json"), jload("approvals.json"), schedule()
+    rows = [r for r in G.load_specs()
+            if state(r, appr) == "approved" or any(f"{key(r)}/{l}" in posted for l in r["lang"])]
     cards = ""
-    for r, links in rows:
+    for r in reversed(rows):                 # newest first
         L = r["lang"]["en"]
         beats = {k: c for k, _, c in L["beats"]}
-        btn = "".join(f'<a class="ig" href="{E(u)}" target="_blank" rel="noopener">▶ Watch ({LANG_NAME[l]})</a>' for l, u in links.items() if u)
-        cards += (f'<article class="mb"><div class="hd"><span class="n">#{r["number"]:02d}</span><span>{E(L["badge"])}</span></div>'
+        phones, btns = "", {}
+        for l, label in (("hi", "हिंदी"), ("en", "English")):
+            if l not in r["lang"]:
+                continue
+            info = posted.get(f"{key(r)}/{l}", {})
+            th = G.thumb_path(r, l)
+            img = f'style="background-image:url(../{th.relative_to(ROOT).as_posix()})"' if th.exists() else ""
+            if info.get("ig_link"):
+                phones += f'<a class="ph {l}" href="{E(info["ig_link"])}" target="_blank" rel="noopener" {img}><i>▶</i><b>{label}</b></a>'
+                btns[l] = f'<a class="ig" href="{E(info["ig_link"])}" target="_blank" rel="noopener">▶ Watch in {label}</a>'
+            else:
+                at = sched.get(f"{key(r)}/{l}")
+                phones += f'<span class="ph {l} soon" {img}><b>{label}</b></span>'
+                btns[l] = f'<span class="soon">🕒 {label}: {"premieres " + when(at) if at else "coming soon"}</span>'
+        btn = btns.get("en", "") + btns.get("hi", "")
+        cards += (f'<article class="mb"><div class="stk">{phones}</div><div class="tx">'
+                  f'<div class="hd"><span class="n">#{r["number"]:02d}</span><span>{E(L["badge"])}</span></div>'
                   f'<h2>{E(L["title"])}</h2><p class="w">❌ {E(beats.get("wrong", ""))}</p><p class="r">✅ {E(beats.get("right", ""))}</p>'
                   f'<p class="rule">📌 {E(L["rule"][0])} · {E(L["rule"][1])}</p><div class="bt">{btn}'
-                  f'<a class="nt" href="../{E(r["notes"])}#mistakes">📒 All mistakes in this chapter</a></div></article>')
+                  f'<a class="nt" href="../{E(r["notes"])}#mistakes">📒 All mistakes in this chapter</a></div></div></article>')
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mistake Bank — Top CBSE Board Exam Mistakes | CBSEMock</title>
 <meta name="description" content="Short reels on the mistakes that cost marks in CBSE board exams: what students write, what to write instead, and the rule to remember. English and Hindi.">
@@ -147,7 +183,17 @@ def page():
 .top{{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}}.top a{{color:#fff;text-decoration:none;font-weight:800}}.top b{{color:#e8cc6a}}
 .hin{{max-width:1000px;margin:0 auto;padding-top:20px}}.badge{{display:inline-block;background:#e11d48;padding:6px 14px;border-radius:99px;font-weight:800;font-size:.8rem;letter-spacing:.06em}}
 h1{{font-family:'Crimson Pro',serif;font-size:clamp(2rem,5vw,2.8rem);margin:10px 0 6px}}.hin p{{color:rgba(255,255,255,.85);max-width:720px}}
-main{{max-width:1000px;margin:-20px auto 0;padding:0 16px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}}
+main{{max-width:1000px;margin:-20px auto 0;padding:0 16px 60px;display:grid;grid-template-columns:1fr;gap:16px}}
+.mb{{display:grid;grid-template-columns:230px 1fr;gap:18px;align-items:center}}
+.stk{{position:relative;height:240px}}
+.ph{{position:absolute;top:8px;width:118px;height:210px;border-radius:18px;border:5px solid #0b0f1a;background:#111 center/cover no-repeat;box-shadow:0 14px 26px rgba(0,0,0,.35);text-decoration:none;transition:transform .35s}}
+.ph.hi{{left:92px;transform:rotate(8deg)}}.ph.en{{left:8px;transform:rotate(-6deg);z-index:2}}
+.stk:hover .ph.en{{transform:rotate(-10deg) translateX(-6px)}}.stk:hover .ph.hi{{transform:rotate(12deg) translateX(8px)}}
+.ph i{{position:absolute;left:50%;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:rgba(255,255,255,.92);color:#e11d48;font-style:normal;display:flex;align-items:center;justify-content:center;padding-left:3px}}
+.ph b{{position:absolute;left:8px;bottom:8px;background:#ffd23f;color:#0f2347;font-size:.72rem;padding:3px 8px;border-radius:99px}}
+.ph.soon::after{{content:"SOON";position:absolute;right:6px;top:8px;background:#e11d48;color:#fff;font:800 .62rem Inter;padding:2px 6px;border-radius:6px}}
+.bt .soon{{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border-radius:99px;background:rgba(225,29,72,.1);color:#be123c;font-weight:700;font-size:.85rem}}
+@media(max-width:620px){{.mb{{grid-template-columns:1fr}}.stk{{width:230px;margin:0 auto}}}}
 .mb{{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.06)}}
 .hd{{display:flex;gap:10px;align-items:center;font-size:.8rem;color:var(--muted);font-weight:600}}.n{{background:#e11d48;color:#fff;border-radius:8px;padding:2px 8px;font-weight:800}}
 .mb h2{{font-family:'Crimson Pro',serif;font-size:1.4rem;margin:8px 0}}.w{{color:#b91c1c}}.r{{color:#15803d;font-weight:600}}.rule{{font-size:.9rem;color:var(--muted);margin-top:6px}}

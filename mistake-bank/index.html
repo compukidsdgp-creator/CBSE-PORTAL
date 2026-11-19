@@ -12,7 +12,17 @@
 .top{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.top a{color:#fff;text-decoration:none;font-weight:800}.top b{color:#e8cc6a}
 .hin{max-width:1000px;margin:0 auto;padding-top:20px}.badge{display:inline-block;background:#e11d48;padding:6px 14px;border-radius:99px;font-weight:800;font-size:.8rem;letter-spacing:.06em}
 h1{font-family:'Crimson Pro',serif;font-size:clamp(2rem,5vw,2.8rem);margin:10px 0 6px}.hin p{color:rgba(255,255,255,.85);max-width:720px}
-main{max-width:1000px;margin:-20px auto 0;padding:0 16px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+main{max-width:1000px;margin:-20px auto 0;padding:0 16px 60px;display:grid;grid-template-columns:1fr;gap:16px}
+.mb{display:grid;grid-template-columns:230px 1fr;gap:18px;align-items:center}
+.stk{position:relative;height:240px}
+.ph{position:absolute;top:8px;width:118px;height:210px;border-radius:18px;border:5px solid #0b0f1a;background:#111 center/cover no-repeat;box-shadow:0 14px 26px rgba(0,0,0,.35);text-decoration:none;transition:transform .35s}
+.ph.hi{left:92px;transform:rotate(8deg)}.ph.en{left:8px;transform:rotate(-6deg);z-index:2}
+.stk:hover .ph.en{transform:rotate(-10deg) translateX(-6px)}.stk:hover .ph.hi{transform:rotate(12deg) translateX(8px)}
+.ph i{position:absolute;left:50%;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:rgba(255,255,255,.92);color:#e11d48;font-style:normal;display:flex;align-items:center;justify-content:center;padding-left:3px}
+.ph b{position:absolute;left:8px;bottom:8px;background:#ffd23f;color:#0f2347;font-size:.72rem;padding:3px 8px;border-radius:99px}
+.ph.soon::after{content:"SOON";position:absolute;right:6px;top:8px;background:#e11d48;color:#fff;font:800 .62rem Inter;padding:2px 6px;border-radius:6px}
+.bt .soon{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border-radius:99px;background:rgba(225,29,72,.1);color:#be123c;font-weight:700;font-size:.85rem}
+@media(max-width:620px){.mb{grid-template-columns:1fr}.stk{width:230px;margin:0 auto}}
 .mb{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
 .hd{display:flex;gap:10px;align-items:center;font-size:.8rem;color:var(--muted);font-weight:600}.n{background:#e11d48;color:#fff;border-radius:8px;padding:2px 8px;font-weight:800}
 .mb h2{font-family:'Crimson Pro',serif;font-size:1.4rem;margin:8px 0}.w{color:#b91c1c}.r{color:#15803d;font-weight:600}.rule{font-size:.9rem;color:var(--muted);margin-top:6px}
@@ -24,6 +34,6 @@ footer{text-align:center;padding:24px;font-size:.8rem;color:var(--muted)}footer 
 <header class="hero"><div class="top"><a href="../index.html">CBSE<b>Mock</b></a><a href="../learn/">📘 Learn</a></div>
 <div class="hin"><span class="badge">⚠ MISTAKE BANK</span><h1>Top board exam mistakes — fixed in 20 seconds</h1>
 <p>Each reel shows what students write, why it loses marks, and what to write instead. New reels in English and Hindi.</p></div></header>
-<main><div class="empty">The first Mistake Bank reels arrive soon.</div></main>
+<main><article class="mb"><div class="stk"><span class="ph hi soon" style="background-image:url(../mistake_reels/thumb/002-class10-chemistry-ph-backwards-hi.jpg)"><b>हिंदी</b></span><span class="ph en soon" style="background-image:url(../mistake_reels/thumb/002-class10-chemistry-ph-backwards-en.jpg)"><b>English</b></span></div><div class="tx"><div class="hd"><span class="n">#02</span><span>Class 10 · Chemistry · Ch 2</span></div><h2>Reading the pH scale backwards</h2><p class="w">❌ “pH 5, because 5 is bigger” — WRONG!</p><p class="r">✅ Lower pH = more H⁺ ions → pH 2 is more acidic</p><p class="rule">📌 pH below 7 = acidic · Lower the pH, stronger the acid</p><div class="bt"><span class="soon">🕒 English: premieres tomorrow, 5:31 PM</span><span class="soon">🕒 हिंदी: premieres tomorrow, 9:01 PM</span><a class="nt" href="../notes/class-10/science/acids-bases-and-salts.html#mistakes">📒 All mistakes in this chapter</a></div></div></article><article class="mb"><div class="stk"><span class="ph hi soon" style="background-image:url(../mistake_reels/thumb/001-class10-chemistry-subscripts-hi.jpg)"><b>हिंदी</b></span><span class="ph en soon" style="background-image:url(../mistake_reels/thumb/001-class10-chemistry-subscripts-en.jpg)"><b>English</b></span></div><div class="tx"><div class="hd"><span class="n">#01</span><span>Class 10 · Chemistry · Ch 1</span></div><h2>Changing subscripts to balance</h2><p class="w">❌ Make it H₂O₂? WRONG — that&#x27;s hydrogen peroxide!</p><p class="r">✅ Change only coefficients: 2H₂ + O₂ → 2H₂O</p><p class="rule">📌 Subscripts = what it is · Coefficients = how many</p><div class="bt"><span class="soon">🕒 English: premieres today, 5:31 PM</span><span class="soon">🕒 हिंदी: premieres today, 9:01 PM</span><a class="nt" href="../notes/class-10/science/chemical-reactions-and-equations.html#mistakes">📒 All mistakes in this chapter</a></div></div></article></main>
 <footer>&copy; 2026 CBSEMock.org.in · <a href="../about.html">About Us</a> · <a href="../privacy.html">Privacy Policy</a></footer>
 </body></html>

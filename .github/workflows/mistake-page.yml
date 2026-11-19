@@ -1,0 +1,35 @@
+name: Mistake Bank page refresh
+# Light job: when a reel is approved/posted (or each night, so "premieres today/tomorrow" stays right),
+# rebuild /mistake-bank/ and the home-page Mistake Bank cards.
+on:
+  push:
+    branches: [main]
+    paths: ["mistake_reels/approvals.json", "mistake_reels/thumb/**", "mistake_bank.py", "mistake_links.py"]
+  schedule:
+    - cron: "40 18 * * *"     # 00:10 IST
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mistake-page
+  cancel-in-progress: true
+jobs:
+  page:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: |
+          pip install --quiet numpy
+          python3 mistake_bank.py page
+          python3 mistake_links.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add mistake-bank index.html
+          git diff --cached --quiet && exit 0
+          git commit -q -m "mistake bank: page refresh [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
