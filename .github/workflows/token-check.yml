@@ -1,0 +1,39 @@
+name: Social tokens — check (diagnostic, posts nothing)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/token-check.yml"]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check FB page token and Instagram token
+        env:
+          FB: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          IG: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          API = "https://graph.facebook.com/v21.0"
+          def get(path, **q):
+              try:
+                  return json.load(urllib.request.urlopen(f"{API}/{path}?{urllib.parse.urlencode(q)}", timeout=30))
+              except urllib.error.HTTPError as e:
+                  return {"error": e.read().decode()[:300]}
+          for name in ("FB", "IG"):
+              t = os.environ.get(name, "")
+              if not t:
+                  print(name, ": secret missing"); continue
+              me = get("me", fields="id,name", access_token=t)
+              d = get("debug_token", input_token=t, access_token=t).get("data", {})
+              print(f"{name}: me={me.get('name')} ({me.get('id')}) type={d.get('type')} valid={d.get('is_valid')} "
+                    f"expires_at={d.get('expires_at')} data_access_expires_at={d.get('data_access_expires_at')}")
+              print(f"   scopes: {', '.join(d.get('scopes', []))}")
+              if me.get("error") or d.get("error"):
+                  print("   error:", me.get("error") or d.get("error"))
+          ig = get("17841480792360992", fields="username", access_token=os.environ.get("IG", ""))
+          print("IG account via IG token:", ig.get("username") or ig)
+          PY
