@@ -1,7 +1,11 @@
 {
- "001-class10-chemistry-subscripts": {
-  "status": "approved",
-  "at": "2026-11-19T02:53:00Z",
-  "note": "locked by owner in chat"
- }
+  "001-class10-chemistry-subscripts": {
+    "status": "approved",
+    "at": "2026-11-19T02:53:00Z",
+    "note": "locked by owner in chat"
+  },
+  "002-class10-chemistry-ph-backwards": {
+    "status": "approved",
+    "at": "2026-11-19T04:00:02.455Z"
+  }
 }
