@@ -55,6 +55,8 @@ def check(path, live=False):
         if "googletagmanager" not in src:
             need(re.search(r"@\d+\.\d+(\.\d+)?|/\d+\.\d+\.\d+/", src), f"script version must be pinned: {src}")
     need(not re.search(r'<img[^>]+src="https?://', s), "no remote images: draw with inline SVG")
+    need(re.search(r"@media\s*\(max-width:\s*(7\d\d|8[0-2]\d)px\)", s), "needs phone breakpoints (@media(max-width:700–820px)) — see §3a")
+    need("overflow-x:auto" in s.replace(" ", ""), "wide apparatus/tables need a horizontal scroller (overflow-x:auto) on phones — see §3a")
     if live:
         need("noindex" not in s, "live page must not be noindex")
         need('class="lab-draft"' not in s, "live page must not carry the draft bar")

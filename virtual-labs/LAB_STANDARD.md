@@ -34,6 +34,13 @@ Those V7 rules are kept here where they still fit: real interaction, reset and c
 - **Hidden unknown per session** where it makes sense (unknown focal length, unknown concentration, unknown resistor, unknown specimen), so answers can't be copied. "New sample" resets it.
 - **Progress is saved** per viewer in `localStorage`, with every read and write wrapped in try/catch so the page still works without it.
 
+### 3a. Mobile-first (every lab is used mostly on phones)
+- **Phone widths:** the page works fully at 360 px and 390 px wide. The page itself never scrolls sideways. A wide apparatus (bench, circuit board, long table) sits in its own horizontal scroller (`overflow-x:auto`) with a "⟷ swipe" hint. The selected part scrolls into view automatically.
+- **Tap targets:** every control is at least 40 × 40 px: buttons, chips, inputs, sliders, switches, and SVG hotspots such as terminals and knobs. Draw an invisible larger hit circle or rectangle around small SVG parts. Checkboxes are at least 22 px and sit inside a clickable label.
+- **Text:** nothing is smaller than 12 px on a phone, including table headers, badges, pills and captions. Inputs use a 16 px font so iOS does not zoom in.
+- **Layout:** panels stack in one column under 820 px. Zoomed views (scale magnifier, meter face, microscope field) stay big enough to read at 390 px. Nothing important hides behind the share buttons or a sticky bar.
+- **Interaction:** no hover-only interactions. Dragging uses pointer events with `touch-action:none` on the draggable part only, so the page still scrolls, and every drag has a button or keyboard alternative.
+
 ## 4. Record, check, analyse
 1. **Observation table** in the format of the CBSE practical file, with derived columns calculated live.
 2. **"Check my table":** flags each misread value and any reading taken in the wrong condition (image not sharp, endpoint overshot, wrong focus), with a clear reason.
@@ -63,11 +70,14 @@ Those V7 rules are kept here where they still fit: real interaction, reset and c
 
 ## 7. Quality gates (checked before a lab can be approved)
 - `python3 lab_check.py <file>` prints 0 problems. It checks the structure in §1–§5.
-- Playwright: no console errors; no horizontal scroll at 390 px; the whole flow is done once (set up → readings → check → graph → result) with a correct answer.
+- `node tools/lab_mobile_audit.js http://127.0.0.1:8765 audit.json <file>` reports `doc: 0`, no overflowing elements, no text under 12 px and no tap target under 32 px at both 360 and 390 px. The only exceptions are non-interactive labels and checkboxes inside a clickable label.
+- Playwright: no console errors; the whole flow is done once (set up → readings → check → graph → result) with a correct answer.
 - A screenshot of the header, the environment and the graphs, looked at on both desktop and phone.
 - A subject check of every number, equation, reaction, label and code output.
 
 ## 8. Workflow
 - **Same address:** a rebuilt lab keeps its file name, so links and the subject index stay valid. The draft is built at `virtual-labs/<subject>/_drafts/<file>` (noindex). When the owner approves it in Admin → Content tracker → Virtual labs, the publish workflow moves it into place, removes noindex and the draft bar, and refreshes the sitemap.
+- **Speed:** three separate nightly runs (01:23, 03:11, 04:53 IST), one lab each. A run claims its lab first (`python3 lab_registry.py claim <id>`, pushed straight away), so two runs never build the same lab.
+- **Older labs:** until a lab is rebuilt, `tools/lab_mobile.py` keeps the LAB-MOBILE layer on it (bigger tap targets, compact share buttons, text lifted to 12 px on phones).
 - **Order:** board-practical experiments first (`labs_content/queue.json`), then the rest.
 - **Locked pages:** the owner's locked pages are never touched: `resources/physics-xii-new.html`, `resources/ai-x.html`, `resources/cs-xii.html`. Each lab that has been approved and published is locked from then on, and changes only on the owner's request.

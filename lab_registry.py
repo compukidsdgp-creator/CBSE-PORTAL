@@ -4,6 +4,7 @@ States: legacy (old design) → draft (rebuilt, in virtual-labs/<subject>/_draft
         → changes (owner asked for changes) → live (approved; meets the standard).
     python3 lab_registry.py next      → JSON: what tonight's run should do
     python3 lab_registry.py status    → progress per subject
+    python3 lab_registry.py claim <id> → mark a lab as being built (parallel nightly runs skip it for 8 h)
     python3 lab_registry.py queue     → rebuild (re)write labs_content/queue.json (board-practical labs first)
 """
 import json
@@ -114,14 +115,38 @@ def queue():
     return [i for i in q if i in known] + sorted(known - set(q))
 
 
+def claimed(hours=8):
+    """Labs claimed by a nightly run in the last few hours (labs_content/claims.json), so parallel runs never collide."""
+    import time
+    try:
+        c = json.loads((SRC / "claims.json").read_text(encoding="utf-8"))
+    except Exception:
+        return set()
+    return {k for k, t in c.items() if time.time() - t < hours * 3600}
+
+
+def claim(lab_id):
+    import time
+    try:
+        c = json.loads((SRC / "claims.json").read_text(encoding="utf-8"))
+    except Exception:
+        c = {}
+    c = {k: t for k, t in c.items() if time.time() - t < 48 * 3600}
+    c[lab_id] = int(time.time())
+    (SRC / "claims.json").write_text(json.dumps(c, indent=1) + "\n", encoding="utf-8")
+
+
 def next_job():
     items = {x["id"]: x for x in labs()}
-    rev = [x for x in items.values() if x["state"] == "changes"]
+    rev = [x for x in items.values() if x["state"] == "changes" and x["id"] not in claimed()]
     if rev:
         x = rev[0]
         return {"action": "revise", **x}
     pending = [x for x in items.values() if x["state"] == "draft"]
+    skip = claimed()                             # labs another run is building right now
     for i in queue():
+        if i in skip:
+            continue
         x = items[i]
         if x["state"] == "legacy":
             return {"action": "build", "drafts_waiting": len(pending), **x,
@@ -150,7 +175,9 @@ def admin_data():
 
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "next"
-    if cmd == "queue":
+    if cmd == "claim":
+        claim(sys.argv[2]); print("claimed", sys.argv[2])
+    elif cmd == "queue":
         print(len(build_queue()), "labs queued")
     elif cmd == "status":
         d = admin_data()

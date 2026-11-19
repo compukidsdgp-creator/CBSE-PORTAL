@@ -56,7 +56,7 @@ h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
 #bench .knob{cursor:grab;touch-action:none}#bench .knob.drag{cursor:grabbing}#bench .knob:focus{outline:none}#bench .knob:focus .kr{stroke:#e8cc6a;stroke-width:2.5}
 #bench .plug{cursor:pointer}
 .benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-@media(max-width:700px){#bench{min-width:820px}.hint{display:none}.benchbox::after{content:'⟷ swipe the board · tap two terminals to join them';position:absolute;right:8px;bottom:6px;font-size:.7rem;color:#e8cc6a;background:rgba(5,8,14,.7);padding:3px 8px;border-radius:99px;pointer-events:none}}
+@media(max-width:700px){#bench{min-width:960px}.hint{display:none}.benchbox::after{content:'⟷ swipe the board · tap two terminals to join them';position:absolute;right:8px;bottom:6px;font-size:.7rem;color:#e8cc6a;background:rgba(5,8,14,.7);padding:3px 8px;border-radius:99px;pointer-events:none}}
 .hint{position:absolute;left:12px;top:10px;font-size:.74rem;color:#8ea2bd;background:rgba(5,8,14,.6);padding:4px 9px;border-radius:99px;pointer-events:none}
 .row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px}
 @media(max-width:860px){.row2{grid-template-columns:minmax(0,1fr)}}
@@ -164,6 +164,7 @@ footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6p
  #record img{width:70%;margin:1% 15%;border:1px solid #bbb}
  #record svg{width:55%;display:block;margin:4pt auto}#record ol{padding-left:18pt}
 }
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small{font-size:12px}.sw input{width:22px;height:22px}}
 </style>
 </head>
 <body>
@@ -583,7 +584,7 @@ var rhLab=txt(knob,0,296,'',{'font-family':'JetBrains Mono','font-size':11,'font
 var gW=el('g',{},bench);
 var termEl={};
 TERMS.forEach(function(t){var c=TP[t],g=el('g',{class:'term',tabindex:0,role:'button','aria-label':'Terminal: '+TNAME[t],transform:'translate('+c[0]+' '+c[1]+')'},bench);
- el('circle',{r:17,fill:'transparent'},g);
+ el('circle',{r:20,fill:'transparent'},g);
  var ring=el('circle',{class:'ring',r:11,fill:'none',stroke:'transparent','stroke-width':0},g);
  el('circle',{r:8.5,fill:'url(#brass)',stroke:'#5c430c','stroke-width':1},g);
  el('circle',{r:4,fill:'#a77d22',stroke:'#5c430c','stroke-width':.8},g);
