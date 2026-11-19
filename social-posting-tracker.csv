@@ -5,7 +5,7 @@ notes,Mathematics Basic Notes — Class 10,https://cbsemock.org.in/resources/mat
 notes,Social Science Notes — Class 10,https://cbsemock.org.in/resources/sst-x.html,✓ 2026-11-16,✓ 2026-11-16,✓ 2026-11-16
 notes,Hindi Course A Notes — Class 10,https://cbsemock.org.in/resources/hindi-a-x.html,✓ 2026-11-17,✓ 2026-11-17,✓ 2026-11-17
 notes,English Communicative Notes — Class 10,https://cbsemock.org.in/resources/english-comm-x.html,✓ 2026-11-18,✓ 2026-11-18,✓ 2026-11-18
-notes,English Language & Literature Notes — Class 10,https://cbsemock.org.in/resources/english-ll-x.html,,,
+notes,English Language & Literature Notes — Class 10,https://cbsemock.org.in/resources/english-ll-x.html,,✓ 2026-11-19,✓ 2026-11-19
 notes,Computer Applications Notes — Class 10,https://cbsemock.org.in/resources/comp-app-x.html,,,
 notes,Artificial Intelligence Notes — Class 9-10,https://cbsemock.org.in/resources/ai-x.html,,,
 notes,Physics Notes — Class 12,https://cbsemock.org.in/resources/physics-xii.html,,,
@@ -25,7 +25,7 @@ practice_10,Mathematics Basic Mock — Class 10,https://cbsemock.org.in/Mathemat
 practice_10,Social Science Mock — Class 10,https://cbsemock.org.in/Social%20Science%20Mock%20Tests%20_%20Class%2010%20CBSE.html,✓ 2026-11-16,✓ 2026-11-16,✓ 2026-11-16
 practice_10,English Communicative Mock — Class 10,https://cbsemock.org.in/English%20Communicative%20Mock%20Tests%20_%20Class%2010%20CBSE.html,✓ 2026-11-17,✓ 2026-11-17,✓ 2026-11-17
 practice_10,English Language & Lit Mock — Class 10,https://cbsemock.org.in/English%20Language%20%26%20Literature%20Mock%20Tests%20_%20Class%2010%20CBSE.html,✓ 2026-11-18,✓ 2026-11-18,✓ 2026-11-18
-practice_10,Hindi Course A Mock — Class 10,https://cbsemock.org.in/Hindi%20Course%20A%20Class%2010%20CBSE.html,,,
+practice_10,Hindi Course A Mock — Class 10,https://cbsemock.org.in/Hindi%20Course%20A%20Class%2010%20CBSE.html,,✓ 2026-11-19,✓ 2026-11-19
 practice_10,Computer Applications Mock — Class 10,https://cbsemock.org.in/Computer%20Applications%20Mock%20Tests%20_%20Class%2010%20CBSE.html,,,
 practice_10,AI Mock Papers — Class 10,https://cbsemock.org.in/CBSE%20Class%2010%20AI%20Mock%20Papers.html,,,
 practice_12,Physics Board Prep — Class 12,https://cbsemock.org.in/Physics%20XII%20Board%20Prep.html,✓ 2026-11-13,✓ 2026-11-13,✓ 2026-11-13
@@ -34,7 +34,7 @@ practice_12,Mathematics Board Prep — Class 12,https://cbsemock.org.in/Mathemat
 practice_12,Biology Board Prep — Class 12,https://cbsemock.org.in/Biology%20XII%20Board%20Prep.html,✓ 2026-11-16,✓ 2026-11-16,✓ 2026-11-16
 practice_12,English Core Practice — Class 12,https://cbsemock.org.in/English%20Core%20XII.html,✓ 2026-11-17,✓ 2026-11-17,✓ 2026-11-17
 practice_12,English Elective Practice — Class 12,https://cbsemock.org.in/English%20Elective%20001%20Class%2012%20Practice%20Papers.html,✓ 2026-11-18,✓ 2026-11-18,✓ 2026-11-18
-practice_12,Computer Science Mock — Class 12,https://cbsemock.org.in/CBSE%20Class%20XII%20CS%20Mock%20Papers.html,,,
+practice_12,Computer Science Mock — Class 12,https://cbsemock.org.in/CBSE%20Class%20XII%20CS%20Mock%20Papers.html,,✓ 2026-11-19,✓ 2026-11-19
 practice_12,Informatics Practices Mock — Class 12,https://cbsemock.org.in/Informatics%20Practices%20065%20Class%2012%20Practice%20Papers.html,,,
 practice_12,Physical Education Mock — Class 12,https://cbsemock.org.in/Physical%20Education%20048%20Class%2012%20Practice%20Papers.html,,,
 practice_12,Bengali Practice — Class 12,https://cbsemock.org.in/Bengali%20Class%2012%20Practice%20Papers.html,,,
@@ -299,3 +299,4 @@ lab,Matrices Operations Studio — Mathematics Lab,https://cbsemock.org.in/virtu
 lab,Vector Coordinate Transformation Lab — Mathematics Lab,https://cbsemock.org.in/virtual-labs/mathematics/18-vector-coordinate-transformation-lab.html,,,
 lab,Differentiation Tangent Gradient Lab — Mathematics Lab,https://cbsemock.org.in/virtual-labs/mathematics/19-differentiation-tangent-gradient-lab.html,,,
 lab,Integration Area Under Curve Lab — Mathematics Lab,https://cbsemock.org.in/virtual-labs/mathematics/20-integration-area-under-curve-lab.html,,,
+lab,Convex Lens Focal Length — Physics Lab,https://cbsemock.org.in/virtual-labs/physics/convex-lens-focal-length.html,,,
