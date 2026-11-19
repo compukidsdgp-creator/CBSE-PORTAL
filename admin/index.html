@@ -239,7 +239,7 @@ async function openVault(password) {
 /* ── GitHub API (uses the token stored inside the vault) ── */
 async function gh(path, opts = {}) {
   const r = await fetch('https://api.github.com/repos/' + DATA.repo + path, {
-    ...opts, headers: {Authorization: 'Bearer ' + DATA.gh_token, Accept: 'application/vnd.github+json', ...(opts.headers || {})}});
+    cache: 'no-store', ...opts, headers: {Authorization: 'Bearer ' + DATA.gh_token, Accept: 'application/vnd.github+json', ...(opts.headers || {})}});
   if (!r.ok && r.status !== 204) { const t = await r.text(); throw new Error(r.status + ' ' + t.slice(0, 160)); }
   return r.status === 204 ? null : r.json();
 }
@@ -526,11 +526,20 @@ async function saveApproval(id, entry, msg, el, kind) {
   el.querySelectorAll('button').forEach(b => b.disabled = true);
   try {
     const path = kind === 'booster' ? '/contents/booster_content/approvals.json' : kind === 'lab' ? '/contents/labs_content/approvals.json' : kind === 'mistake' ? '/contents/mistake_reels/approvals.json' : '/contents/notes_content/approvals.json';
-    const cur = await gh(path + '?ref=main');
-    const data = JSON.parse(fromB64(cur.content) || '{}');
-    data[id] = {...entry, at: new Date().toISOString()};
-    await gh(path, {method: 'PUT', body: JSON.stringify({message: `admin: ${entry.status === 'approved' ? 'approve' : 'request changes for'} ${id}`,
-      content: toB64(JSON.stringify(data, null, 2) + '\n'), sha: cur.sha, branch: 'main'})});
+    // read the latest file and write it back; if someone/something changed it in between (409), re-read and retry
+    for (let attempt = 1; ; attempt++) {
+      const cur = await gh(path + '?ref=main&t=' + Date.now());
+      const data = JSON.parse(fromB64(cur.content) || '{}');
+      data[id] = {...entry, at: new Date().toISOString()};
+      try {
+        await gh(path, {method: 'PUT', body: JSON.stringify({message: `admin: ${entry.status === 'approved' ? 'approve' : 'request changes for'} ${id}`,
+          content: toB64(JSON.stringify(data, null, 2) + '\n'), sha: cur.sha, branch: 'main'})});
+        break;
+      } catch (err) {
+        if (attempt >= 3 || !/^(409|422)/.test(err.message)) throw err;
+        await new Promise(r => setTimeout(r, 1200 * attempt));
+      }
+    }
     if (kind === 'mistake') {
       const it = DATA.mistakes.items.find(m => m.id === id);
       if (it) { it.state = entry.status === 'approved' ? 'approved' : 'changes'; it.note = entry.note || ''; }
