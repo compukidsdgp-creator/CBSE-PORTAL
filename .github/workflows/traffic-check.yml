@@ -17,6 +17,7 @@ jobs:
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
           GA4_PROPERTY_ID:          ${{ vars.GA4_PROPERTY_ID }}
+          GSC_PROPERTY:             ${{ vars.GSC_PROPERTY }}
         run: |
           pip install --quiet google-auth requests cryptography
           python3 - <<'PY'
@@ -39,4 +40,16 @@ jobs:
                "orderBys": [{"metric": {"metricName": "sessions"}, "desc": True}], "limit": 8}, "where news-page visitors come from")
           rep({"dateRanges": dr, "dimensions": [{"name": "deviceCategory"}], "metrics": [{"name": "sessions"}],
                "dimensionFilter": {"filter": {"fieldName": "landingPage", "stringFilter": {"matchType": "CONTAINS", "value": "news"}}}}, "news visitors by device")
+          rep({"dateRanges": [{"startDate": "28daysAgo", "endDate": "today"}], "dimensions": [{"name": "pagePath"}], "metrics": [{"name": "screenPageViews"}],
+               "dimensionFilter": {"filter": {"fieldName": "pagePath", "stringFilter": {"matchType": "CONTAINS", "value": "news"}}}}, "news pages, 28 days")
+          import urllib.parse
+          from datetime import date, timedelta
+          gt = B.google_token("https://www.googleapis.com/auth/webmasters.readonly")
+          prop = os.environ.get("GSC_PROPERTY") or "https://cbsemock.org.in/"
+          base = f"https://www.googleapis.com/webmasters/v3/sites/{urllib.parse.quote(prop, safe='')}/searchAnalytics/query"
+          end = date.today() - timedelta(days=2); start = end - timedelta(days=27)
+          r = B.post_json(base, {"startDate": str(start), "endDate": str(end), "dimensions": ["page"], "rowLimit": 15}, gt)
+          print("\n== Search Console top pages, 28 days (clicks / impressions / position)")
+          for row in sorted(r.get("rows", []), key=lambda x: -x["impressions"])[:15]:
+              print("  ", row["keys"][0], "→", row["clicks"], "/", row["impressions"], "/", round(row["position"], 1))
           PY
