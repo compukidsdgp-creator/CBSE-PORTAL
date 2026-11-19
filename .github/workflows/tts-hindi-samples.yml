@@ -1,0 +1,39 @@
+name: Hindi voice samples (TTS comparison)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/tts-hindi-samples.yml", "tools/tts_hindi_samples.py"]
+permissions:
+  contents: write
+concurrency:
+  group: tts-hindi-samples
+  cancel-in-progress: true
+jobs:
+  samples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Piper Hindi voices
+        run: |
+          pip install --quiet piper-tts numpy
+          python3 tools/tts_hindi_samples.py piper || true
+      - name: AI4Bharat Indic Parler-TTS
+        run: |
+          pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet git+https://github.com/huggingface/parler-tts.git soundfile
+          python3 tools/tts_hindi_samples.py parler || true
+      - name: Save samples
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add tts-samples
+          git diff --cached --quiet && exit 0
+          git commit -q -m "tts: Hindi voice samples [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
