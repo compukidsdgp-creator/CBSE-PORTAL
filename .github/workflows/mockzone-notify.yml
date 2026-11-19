@@ -1,0 +1,24 @@
+name: Mock Zone — tell the owner about new papers
+
+# Papers publish directly (the nightly run commits the bank + page). This only sends a private Telegram
+# message with the page link and two random new questions for a quick spot-check.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "mockzone_bank/*.json"
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Private Telegram message (owner only)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: python3 notify_mockzone.py || true

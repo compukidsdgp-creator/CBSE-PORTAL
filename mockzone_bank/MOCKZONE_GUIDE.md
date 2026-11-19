@@ -48,6 +48,9 @@ A paper is complete only when every pool got its `k` new items. Never commit hal
 - Same object fields as the existing items of that pool (look at item 0); keep `\n` line breaks the same way.
 - Hindi / Bengali pages: correct, natural standard Hindi/Bengali in the right script, board-style.
 - If you find an error in an existing item while working, fix it in the bank (mention it in the commit message).
+- **Paper 1 clean-up (first run on each page):** the old Paper 1 items were never reviewed. Before writing new papers,
+  replace any Paper 1 item on a deleted / out-of-syllabus topic (e.g. Physics XII still has a transistor-amplifier question)
+  with an in-syllabus item of the same type and marks, and fix wrong answers or odd mark labels. Say so in the commit message.
 
 ## Verify before committing
 1. `python3 mockzone_build.py check <page>` → OK (0 errors).
@@ -63,3 +66,5 @@ Stage only `mockzone_bank/<page-stem>.json` and the page (plus `mockzone_build.p
 Commit first line `mockzone: <Subject> papers <a>–<b> (<fresh>/15 fresh)`, blank line,
 `Co-Authored-By: Claude <noreply@anthropic.com>`. `git pull --no-rebase`; if the bank changed upstream, re-run check + build;
 then push (retry up to 4 times).
+A workflow (`mockzone-notify.yml`) then sends the owner a private Telegram message with the page link and two random new
+questions for a spot-check — no action needed from you.
