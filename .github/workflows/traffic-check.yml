@@ -1,0 +1,42 @@
+name: Traffic check (diagnostic, read-only)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/traffic-check.yml"]
+permissions:
+  contents: read
+jobs:
+  ga:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: GA4 top pages, landing pages and next pages from news
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GA4_PROPERTY_ID:          ${{ vars.GA4_PROPERTY_ID }}
+        run: |
+          pip install --quiet google-auth requests cryptography
+          python3 - <<'PY'
+          import os, build_admin_data as B
+          prop = os.environ["GA4_PROPERTY_ID"]
+          tok = B.google_token("https://www.googleapis.com/auth/analytics.readonly")
+          url = f"https://analyticsdata.googleapis.com/v1beta/properties/{prop}:runReport"
+          def rep(body, label):
+              r = B.post_json(url, body, tok)
+              print(f"\n== {label}")
+              for row in r.get("rows", []):
+                  print("  ", " | ".join(v["value"] for v in row["dimensionValues"]), "→", " / ".join(m["value"] for m in row["metricValues"]))
+          dr = [{"startDate": "7daysAgo", "endDate": "today"}]
+          rep({"dateRanges": dr, "dimensions": [{"name": "pagePath"}], "metrics": [{"name": "screenPageViews"}, {"name": "activeUsers"}, {"name": "averageSessionDuration"}],
+               "orderBys": [{"metric": {"metricName": "screenPageViews"}, "desc": True}], "limit": 15}, "top pages, 7 days (views / users / avg session s)")
+          rep({"dateRanges": dr, "dimensions": [{"name": "landingPage"}], "metrics": [{"name": "sessions"}, {"name": "bounceRate"}, {"name": "screenPageViewsPerSession"}],
+               "orderBys": [{"metric": {"metricName": "sessions"}, "desc": True}], "limit": 10}, "landing pages (sessions / bounce / pages per session)")
+          rep({"dateRanges": dr, "dimensions": [{"name": "sessionSource"}], "metrics": [{"name": "sessions"}],
+               "dimensionFilter": {"filter": {"fieldName": "landingPage", "stringFilter": {"matchType": "CONTAINS", "value": "news"}}},
+               "orderBys": [{"metric": {"metricName": "sessions"}, "desc": True}], "limit": 8}, "where news-page visitors come from")
+          rep({"dateRanges": dr, "dimensions": [{"name": "deviceCategory"}], "metrics": [{"name": "sessions"}],
+               "dimensionFilter": {"filter": {"fieldName": "landingPage", "stringFilter": {"matchType": "CONTAINS", "value": "news"}}}}, "news visitors by device")
+          PY
