@@ -69,6 +69,11 @@ def chapter_url(ch):
 
 
 def render(ch):
+    try:                                     # designed poster (HTML → image); the simple one below is the fallback
+        import notes_poster
+        return notes_poster.render(ch, poster_path(ch))
+    except Exception as e:
+        print(f"::warning::designed poster failed ({e}); using the simple one")
     W, H = 1080, 1350
     im = Image.new("RGB", (W, H), "#0f2347")
     d = ImageDraw.Draw(im)

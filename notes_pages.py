@@ -169,7 +169,7 @@ def page(ch):
 <meta name="description" content="{E(ch['description'])}">
 {robots}
 <link rel="canonical" href="{url}">
-<meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(ch['description'])}"><meta property="og:url" content="{url}"><meta property="og:type" content="article">
+<meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(ch['description'])}"><meta property="og:url" content="{url}"><meta property="og:type" content="article"><meta property="og:image" content="{SITE}/notes/posters/class{ch['class']}-{ch['subject_slug']}-{ch['slug']}.jpg"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>{CSS}</style>

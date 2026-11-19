@@ -33,7 +33,7 @@ jobs:
           python-version: "3.12"
       - name: Build chapter pages and link live chapters
         run: |
-          pip install --quiet pillow
+          pip install --quiet pillow && { pip install --quiet playwright && python -m playwright install --with-deps chromium >/dev/null || echo "::warning::playwright unavailable, simple posters"; }
           python3 notes_pages.py
           python3 hub_sync.py
           python3 favicon_tags.py || true
