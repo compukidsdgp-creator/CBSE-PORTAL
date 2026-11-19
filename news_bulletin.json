@@ -1,0 +1,9 @@
+{
+  "_help": "Pinned notes on the News page bulletin board. Edit freely: title, text, link (optional), until (optional YYYY-MM-DD, the note hides after that date). Max 4 are shown. The Weekly Booster note is added automatically.",
+  "exam_date": "2027-02-16",
+  "notes": [
+    {"title": "Board exams begin 16 Feb 2027", "text": "Official date sheet at cbse.gov.in", "link": "https://www.cbse.gov.in/", "until": "2027-02-16"},
+    {"title": "📝 Free mock papers", "text": "A new paper every Mon, Wed & Fri", "link": "free-mock-papers/"},
+    {"title": "⚠️ Mistake Bank reels", "text": "Daily · English 5:31 PM, हिंदी 9:01 PM", "link": "mistake-bank/"}
+  ]
+}
