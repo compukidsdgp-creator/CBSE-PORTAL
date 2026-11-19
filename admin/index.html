@@ -395,8 +395,9 @@ function renderTracker() {
         <button class="btn ghost sm t-change">✎ Request changes</button><span class="note t-msg"></span></div>
       <textarea class="hidden t-note" placeholder="What should change? e.g. add the activity on heating lead nitrate; make diagram 2 labels bigger"></textarea>
     </div>`).join('') : '<div class="empty">Nothing to review right now. New drafts appear here each morning after the nightly run.</div>';
-  document.querySelectorAll('.rev-item').forEach(el => {
+  document.querySelectorAll('#t-review .rev-item').forEach(el => {
     const id = el.dataset.id, msg = el.querySelector('.t-msg'), ta = el.querySelector('.t-note');
+    if (!el.querySelector('.t-approve')) return;
     el.querySelector('.t-approve').onclick = () => saveApproval(id, {status: 'approved'}, msg, el);
     el.querySelector('.t-change').onclick = e => {
       if (ta.classList.contains('hidden')) { ta.classList.remove('hidden'); e.target.textContent = 'Send changes'; ta.focus(); return; }
@@ -439,7 +440,7 @@ function renderMistakes() {
         ${m.state === 'approved' || m.state === 'rendering' ? '' : '<button class="btn green sm t-approve">✓ Approve both</button><button class="btn ghost sm t-change">✎ Request changes</button>'}<span class="note t-msg"></span></div>
       <textarea class="hidden t-note" placeholder="What should change? e.g. Hindi line 3 sounds unnatural; make the WRONG stamp appear later"></textarea></div>`).join('')
     : '<div class="empty" style="margin-top:10px">Nothing waiting. New reels arrive after the nightly writing run.</div>');
-  document.querySelectorAll('.m-item').forEach(el => {
+  document.querySelectorAll('#m-review .m-item').forEach(el => {
     const id = el.dataset.id, msg = el.querySelector('.t-msg'), ta = el.querySelector('.t-note'), ap = el.querySelector('.t-approve');
     if (!ap) return;
     ap.onclick = () => saveApproval(id, {status: 'approved'}, msg, el, 'mistake');
@@ -522,6 +523,9 @@ function renderBooster() {
 }
 
 async function saveApproval(id, entry, msg, el, kind) {
+  if (el && el.dataset.id && el.dataset.id !== id) { msg.className = 'note bad t-msg'; msg.textContent = 'Mismatch — reload the page and try again.'; return; }
+  if (el && el.dataset.saving === '1') return;
+  if (el) el.dataset.saving = '1';
   msg.className = 'note t-msg'; msg.textContent = 'Saving…';
   el.querySelectorAll('button').forEach(b => b.disabled = true);
   try {
@@ -575,6 +579,7 @@ async function saveApproval(id, entry, msg, el, kind) {
   } catch (e) {
     msg.className = 'note bad t-msg'; msg.textContent = 'Not saved: ' + e.message;
     el.querySelectorAll('button').forEach(b => b.disabled = false);
+    el.dataset.saving = '';
   }
 }
 
