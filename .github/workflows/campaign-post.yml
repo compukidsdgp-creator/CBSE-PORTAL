@@ -1,0 +1,50 @@
+name: Campaign reel post (weekdays 1:01 PM IST)
+# Exact time comes from cron-job.org calling workflow_dispatch at 13:01 IST Mon–Fri. The GitHub schedule is only a
+# fallback; campaign_post.py skips a scheduled run that is >3 h late and never posts twice on one day.
+on:
+  schedule:
+    - cron: "31 7 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "true for a dry run"
+        required: false
+        default: "false"
+permissions:
+  contents: write
+concurrency:
+  group: campaign-post
+  cancel-in-progress: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Post today's reel
+        env:
+          FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
+          SEO_REPORT_CHAT_ID:     ${{ secrets.SEO_REPORT_CHAT_ID }}
+          GITHUB_REPOSITORY:      ${{ github.repository }}
+          SCHEDULED:              ${{ github.event_name == 'schedule' && '1' || '0' }}
+        run: |
+          pip install --quiet numpy
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then python3 campaign_post.py post --dry-run; else python3 campaign_post.py post; fi
+      - name: Save
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add campaign_reels/posted.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "campaign reel posted [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done

@@ -1,0 +1,53 @@
+name: Campaign reels — render (60-day 90+ Score Hack)
+
+# Renders every campaign reel spec that has no video yet (Kokoro voice), saves it, and sends the owner a private
+# Telegram preview. Posting happens on the reel's date via campaign-post.yml.
+on:
+  push:
+    branches: [main]
+    paths: ["campaign_reels/specs/**", "generate_hack_reel.py"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: campaign-reels
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/kokoro
+          key: kokoro-v1.0
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          pip install --quiet numpy kokoro-onnx soundfile pillow playwright
+          python -m playwright install --with-deps chromium >/dev/null
+      - name: Render missing videos
+        run: |
+          ls campaign_reels/video/*.mp4 2>/dev/null | sort > /tmp/before.txt || true
+          python3 generate_hack_reel.py --missing
+          ls campaign_reels/video/*.mp4 2>/dev/null | sort > /tmp/after.txt || true
+          comm -13 /tmp/before.txt /tmp/after.txt > /tmp/new.txt; cat /tmp/new.txt
+      - name: Save
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add campaign_reels/video campaign_reels/thumb
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "campaign reels: rendered [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
+      - name: Private preview to the owner
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+        run: '[ -s /tmp/new.txt ] && python3 campaign_post.py notify $(cat /tmp/new.txt) || true'
