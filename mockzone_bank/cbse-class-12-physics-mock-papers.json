@@ -531,6 +531,358 @@
      ],
      "ans": "C",
      "key": "A is true. R is false — microwaves have short wavelengths (mm to cm), so they travel as narrow, straight beams; that is why they suit RADAR."
+    },
+    {
+     "q": "A charge of 3 μC is carried from one point to another on an equipotential surface that is at a potential of 50 V. The work done by the electric field is:",
+     "opts": [
+      "A. 150 μJ",
+      "B. zero",
+      "C. 1.5×10⁻⁴ J only if the path is straight",
+      "D. 50 μJ"
+     ],
+     "ans": "B",
+     "key": "On an equipotential surface ΔV = 0, so W = qΔV = 0, whatever the path. (The value 50 V of the surface does not matter, only the potential difference.)"
+    },
+    {
+     "q": "A parallel plate air capacitor stays connected to a battery while a slab of dielectric constant K completely fills the space between its plates. The charge on the capacitor:",
+     "opts": [
+      "A. remains the same",
+      "B. becomes 1/K times",
+      "C. becomes K² times",
+      "D. becomes K times"
+     ],
+     "ans": "D",
+     "key": "With the battery connected, V stays fixed. C becomes KC₀, so Q = CV = KC₀V = K times the original charge."
+    },
+    {
+     "q": "A cell of emf 12 V and internal resistance 0.5 Ω supplies a current of 4 A to an external circuit. The potential difference across its terminals is:",
+     "opts": [
+      "A. 10 V",
+      "B. 12 V",
+      "C. 14 V",
+      "D. 2 V"
+     ],
+     "ans": "A",
+     "key": "V = E − Ir = 12 − 4 × 0.5 = 10 V (the cell is discharging, so V is less than E)."
+    },
+    {
+     "q": "A copper wire is connected across a battery of constant potential difference. If it is replaced by another copper wire of double the length (same thickness and temperature), the drift velocity of the free electrons becomes:",
+     "opts": [
+      "A. double",
+      "B. four times",
+      "C. half",
+      "D. unchanged"
+     ],
+     "ans": "C",
+     "key": "v_d = eEτ/m and E = V/l. With V fixed and l doubled, E is halved, so v_d is halved."
+    },
+    {
+     "q": "A toroid with 400 turns has a mean radius of 10 cm and carries a current of 0.5 A. The magnetic field inside its core (air) is:",
+     "opts": [
+      "A. 4 mT",
+      "B. 0.4 mT",
+      "C. 0.04 mT",
+      "D. zero"
+     ],
+     "ans": "B",
+     "key": "B = μ₀NI/(2πr) = (4π×10⁻⁷ × 400 × 0.5)/(2π × 0.1) = 4×10⁻⁴ T = 0.4 mT."
+    },
+    {
+     "q": "A charged particle moves through a region with only a uniform magnetic field. Which quantity of the particle remains constant?",
+     "opts": [
+      "A. its velocity",
+      "B. its momentum",
+      "C. its acceleration vector",
+      "D. its kinetic energy"
+     ],
+     "ans": "D",
+     "key": "The magnetic force q(v × B) is always perpendicular to v, so it does no work: the speed and hence kinetic energy stay constant, though the direction of velocity (and momentum) changes."
+    },
+    {
+     "q": "The current in a coil of self-inductance 0.3 H falls uniformly from 5 A to 1 A in 0.2 s. The magnitude of the self-induced emf is:",
+     "opts": [
+      "A. 6 V",
+      "B. 1.2 V",
+      "C. 7.5 V",
+      "D. 0.24 V"
+     ],
+     "ans": "A",
+     "key": "|e| = L ΔI/Δt = 0.3 × (5 − 1)/0.2 = 6 V."
+    },
+    {
+     "q": "The instantaneous voltage of the household supply is v = 311 sin(100πt) volt. Its rms value and frequency are:",
+     "opts": [
+      "A. 311 V, 100 Hz",
+      "B. 220 V, 100 Hz",
+      "C. 220 V, 50 Hz",
+      "D. 155 V, 50 Hz"
+     ],
+     "ans": "C",
+     "key": "V_rms = V₀/√2 = 311/1.414 ≈ 220 V; ω = 100π = 2πν → ν = 50 Hz."
+    },
+    {
+     "q": "In a plane electromagnetic wave in vacuum, the amplitude of the electric field is 60 V/m. The amplitude of the magnetic field is:",
+     "opts": [
+      "A. 1.8×10¹⁰ T",
+      "B. 60 T",
+      "C. 5×10⁻⁶ T",
+      "D. 2×10⁻⁷ T"
+     ],
+     "ans": "D",
+     "key": "B₀ = E₀/c = 60/(3×10⁸) = 2×10⁻⁷ T."
+    },
+    {
+     "q": "When a narrow beam of white light passes through a glass prism, the colour that is deviated the least is:",
+     "opts": [
+      "A. violet",
+      "B. red",
+      "C. green",
+      "D. blue"
+     ],
+     "ans": "B",
+     "key": "Refractive index of glass is least for red (longest wavelength), and deviation increases with refractive index, so red deviates least."
+    },
+    {
+     "q": "A convex lens of focal length 15 cm is used to form a real image of an object on a screen. The minimum possible distance between the object and its real image is:",
+     "opts": [
+      "A. 60 cm",
+      "B. 30 cm",
+      "C. 45 cm",
+      "D. 15 cm"
+     ],
+     "ans": "A",
+     "key": "For a real image the object–image distance u + v is least when u = v = 2f. Minimum distance = 4f = 4 × 15 = 60 cm."
+    },
+    {
+     "q": "The work function of a metal is 3.1 eV. The threshold (longest) wavelength of light that can eject photoelectrons from it is about:",
+     "opts": [
+      "A. 620 nm",
+      "B. 310 nm",
+      "C. 400 nm",
+      "D. 3100 nm"
+     ],
+     "ans": "C",
+     "key": "λ₀ = hc/φ₀ ≈ 1240 eV nm/3.1 eV = 400 nm."
+    },
+    {
+     "q": "[A-R Q13] A: In a hydrogen atom, the energy levels come closer and closer together as the principal quantum number n increases. R: The radius of the nth orbit is proportional to n².",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "B",
+     "key": "Both true. A follows from E_n = −13.6/n² eV (the gap between successive levels falls as n grows). R is a correct statement about orbit radii but does not explain the spacing of energy levels."
+    },
+    {
+     "q": "[A-R Q14] A: At room temperature, pure germanium conducts better than pure silicon. R: The band gap of germanium (about 0.7 eV) is smaller than that of silicon (about 1.1 eV).",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "A",
+     "key": "Both true and R explains A: with a smaller band gap, many more electrons are thermally excited into the conduction band of Ge, giving more electron–hole pairs and higher conductivity."
+    },
+    {
+     "q": "[A-R Q15] A: Total internal reflection can take place when light travels from water into glass. R: For total internal reflection, light must travel from an optically denser medium to an optically rarer medium.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "D",
+     "key": "A is false — glass is optically denser than water, so light going from water to glass cannot be totally reflected. R is true and is the very reason A fails."
+    },
+    {
+     "q": "[A-R Q16] A: Nuclear forces are short-range forces. R: The nuclear force between two nucleons is attractive at all separations.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "C",
+     "key": "A is true — the nuclear force is negligible beyond a few femtometres. R is false — the force is strongly repulsive when nucleons come closer than about 0.8 fm, and attractive only over a small range."
+    },
+    {
+     "q": "Two electric field lines never cross each other because:",
+     "opts": [
+      "A. field lines are always straight",
+      "B. like charges repel",
+      "C. at any point the electric field has only one direction",
+      "D. field lines start only from positive charges"
+     ],
+     "ans": "C",
+     "key": "If two lines crossed, there would be two tangents (two directions of E) at the crossing point, which is impossible since the net field at a point is unique."
+    },
+    {
+     "q": "A point charge of 2 nC is fixed in air. The work needed to bring a charge of 3 μC from infinity to a point 30 cm from it is:",
+     "opts": [
+      "A. 60 J",
+      "B. 1.8×10⁻⁴ J",
+      "C. 6×10⁻⁵ J",
+      "D. 5.4×10⁻⁴ J"
+     ],
+     "ans": "B",
+     "key": "V at 30 cm = kq/r = 9×10⁹ × 2×10⁻⁹/0.3 = 60 V. W = q′V = 3×10⁻⁶ × 60 = 1.8×10⁻⁴ J."
+    },
+    {
+     "q": "Five identical resistors, each of resistance R, are first connected in series and then in parallel. The ratio of the equivalent resistance in series to that in parallel is:",
+     "opts": [
+      "A. 5 : 1",
+      "B. 1 : 25",
+      "C. 1 : 5",
+      "D. 25 : 1"
+     ],
+     "ans": "D",
+     "key": "R_series = 5R, R_parallel = R/5. Ratio = 5R ÷ (R/5) = 25 : 1."
+    },
+    {
+     "q": "When the temperature of a metallic conductor is increased, the average relaxation time of its free electrons:",
+     "opts": [
+      "A. decreases",
+      "B. increases",
+      "C. remains unchanged",
+      "D. first increases and then decreases"
+     ],
+     "ans": "A",
+     "key": "At higher temperature the ions vibrate more strongly, so electrons collide more often; τ decreases, and resistivity ρ = m/(ne²τ) increases."
+    },
+    {
+     "q": "A charged particle moves in a circle perpendicular to a uniform magnetic field. If its speed is doubled, the time it takes to complete one revolution:",
+     "opts": [
+      "A. is doubled",
+      "B. is halved",
+      "C. remains the same",
+      "D. becomes four times"
+     ],
+     "ans": "C",
+     "key": "T = 2πm/(qB), independent of speed. Doubling v doubles the radius r = mv/(qB), but the period is unchanged."
+    },
+    {
+     "q": "When a ferromagnetic material such as iron is heated above its Curie temperature, it:",
+     "opts": [
+      "A. becomes diamagnetic",
+      "B. becomes a permanent magnet",
+      "C. becomes ferromagnetic more strongly",
+      "D. becomes paramagnetic"
+     ],
+     "ans": "D",
+     "key": "Above the Curie temperature thermal agitation destroys the alignment of the domains, and the material behaves as a paramagnetic substance."
+    },
+    {
+     "q": "A metal rod 1 m long rotates at 10 rad/s about an axis through one end, perpendicular to the rod, in a uniform magnetic field of 0.5 T parallel to the axis. The emf induced between its ends is:",
+     "opts": [
+      "A. 2.5 V",
+      "B. 5 V",
+      "C. 0.25 V",
+      "D. 1.25 V"
+     ],
+     "ans": "A",
+     "key": "e = ½Bωl² = ½ × 0.5 × 10 × 1² = 2.5 V."
+    },
+    {
+     "q": "An inductor of 10 mH and a capacitor of 1 μF are connected in series to an AC source. The angular frequency at which resonance occurs is:",
+     "opts": [
+      "A. 10² rad/s",
+      "B. 10⁴ rad/s",
+      "C. 10⁶ rad/s",
+      "D. 1592 rad/s"
+     ],
+     "ans": "B",
+     "key": "ω₀ = 1/√(LC) = 1/√(10×10⁻³ × 1×10⁻⁶) = 1/√(10⁻⁸) = 10⁴ rad/s (ν₀ ≈ 1592 Hz)."
+    },
+    {
+     "q": "Many household water purifiers in India use a lamp that kills bacteria in the water. The electromagnetic radiation emitted by this lamp is:",
+     "opts": [
+      "A. infrared",
+      "B. microwaves",
+      "C. ultraviolet",
+      "D. radio waves"
+     ],
+     "ans": "C",
+     "key": "UV radiation (short wavelength, high-energy photons) damages the DNA of micro-organisms, so UV lamps are used to disinfect drinking water."
+    },
+    {
+     "q": "A real object is placed anywhere in front of a convex mirror. The image formed is always:",
+     "opts": [
+      "A. real, inverted and diminished",
+      "B. virtual, erect and magnified",
+      "C. real, erect and of the same size",
+      "D. virtual, erect and diminished"
+     ],
+     "ans": "D",
+     "key": "For a convex mirror, f is positive and v always comes out positive and smaller than |u|, so the image is behind the mirror (virtual), erect and diminished."
+    },
+    {
+     "q": "A thin glass lens (μ = 1.5) is completely immersed in a transparent liquid that also has refractive index 1.5. Inside the liquid the lens:",
+     "opts": [
+      "A. behaves like a plane glass sheet (zero power)",
+      "B. has the same focal length as in air",
+      "C. has its focal length doubled",
+      "D. changes from converging to diverging"
+     ],
+     "ans": "A",
+     "key": "Lens maker's formula: 1/f = (μ_g/μ_l − 1)(1/R₁ − 1/R₂) = (1 − 1)(…) = 0. So f is infinite and the power is zero — the lens becomes practically invisible."
+    },
+    {
+     "q": "In a Young's double-slit experiment, the intensity of light from one slit is four times that from the other. The ratio of maximum to minimum intensity in the interference pattern is:",
+     "opts": [
+      "A. 4 : 1",
+      "B. 9 : 1",
+      "C. 16 : 1",
+      "D. 2 : 1"
+     ],
+     "ans": "B",
+     "key": "Amplitudes are in the ratio √4 : 1 = 2 : 1. I_max/I_min = (2 + 1)²/(2 − 1)² = 9 : 1."
+    },
+    {
+     "q": "[A-R Q13] A: According to Bohr's model, the electron in a hydrogen atom moves faster in an inner orbit than in an outer orbit. R: The speed of the electron in the nth orbit is inversely proportional to n.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "A",
+     "key": "Both true and R explains A: v_n = e²/(2ε₀nh) ∝ 1/n, so the speed is greatest in n = 1 and decreases outwards."
+    },
+    {
+     "q": "[A-R Q14] A: For light above the threshold frequency, the photoelectric current increases when the intensity of light is increased. R: The stopping potential increases when the intensity of light is increased.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "C",
+     "key": "A is true — more photons per second eject more electrons. R is false — the stopping potential depends only on the frequency of light (and the metal), not on intensity."
+    },
+    {
+     "q": "[A-R Q15] A: When a p-n junction is formed, holes diffuse from the n-side to the p-side. R: The concentration of holes is much higher on the p-side than on the n-side.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "D",
+     "key": "A is false — holes diffuse from the p-side (high concentration) to the n-side (low concentration). R is true and shows why the direction in A is wrong."
+    },
+    {
+     "q": "[A-R Q16] A: The binding energy per nucleon is nearly the same for nuclei with mass numbers between about 30 and 170. R: The nuclear force between two nucleons is independent of their charge.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "B",
+     "key": "Both statements are true, but the near-constancy of BE/A is explained by the short range (saturation) of the nuclear force — each nucleon interacts only with its nearest neighbours — not by its charge independence."
     }
    ]
   },
@@ -610,6 +962,56 @@
     {
      "q": "An electron is accelerated from rest through a potential difference of 150 V. Calculate its de Broglie wavelength. In which region of the electromagnetic spectrum does a photon of this wavelength lie?",
      "ans": "λ = h/√(2meV) = 6.63×10⁻³⁴/√(2 × 9.11×10⁻³¹ × 1.6×10⁻¹⁹ × 150) ≈ 1.0×10⁻¹⁰ m (or λ = 1.227/√V nm = 0.100 nm). [1]\nλ ≈ 0.1 nm = 1 Å, which lies in the X-ray region (comparable to inter-atomic spacing). [1]",
+     "marks": 2
+    },
+    {
+     "q": "Two wires A and B are made of the same metal. B is twice as long as A and has twice its diameter. Find the ratio of their resistances. If they are connected in series across a battery, find the ratio of the powers dissipated in A and B.",
+     "ans": "R = ρl/A = 4ρl/(πd²), so R ∝ l/d². R_B/R_A = 2/2² = 1/2 → R_A : R_B = 2 : 1. [1]\nIn series the same current flows, so P = I²R ∝ R → P_A : P_B = 2 : 1. [1]",
+     "marks": 2
+    },
+    {
+     "q": "A straight wire 0.5 m long carrying a current of 3 A is placed in a uniform magnetic field of 0.4 T, the wire making an angle of 30° with the field. Find the force on the wire. At what angle would this force be maximum, and what would be its value?",
+     "ans": "F = BIl sin θ = 0.4 × 3 × 0.5 × sin 30° = 0.3 N, perpendicular to the plane containing the wire and B (Fleming's left-hand rule). [1]\nMaximum when the wire is perpendicular to the field (θ = 90°): F_max = BIl = 0.4 × 3 × 0.5 = 0.6 N. [1]",
+     "marks": 2
+    },
+    {
+     "q": "A ray of light is incident at 60° on the surface of a glass slab of refractive index √3. Find the angle of refraction and show that the reflected and refracted rays are perpendicular to each other.",
+     "ans": "Snell's law: sin r = sin 60°/√3 = (√3/2)/√3 = 1/2 → r = 30°. [1]\nReflected ray makes 60° with the normal and the refracted ray 30° on the other side, so the angle between them = 180° − 60° − 30° = 90°. [1]",
+     "marks": 2
+    },
+    {
+     "q": "A proton and an α-particle are each accelerated from rest through the same potential difference. Find the ratio of their de Broglie wavelengths, λ_p : λ_α.",
+     "ans": "K = qV, so p = √(2mqV) and λ = h/√(2mqV). [1]\nλ_p/λ_α = √(m_α q_α/(m_p q_p)) = √(4 × 2) = 2√2 ≈ 2.83, i.e. λ_p : λ_α = 2√2 : 1. [1]",
+     "marks": 2
+    },
+    {
+     "q": "Give two differences between intrinsic and extrinsic semiconductors. Why does doping silicon with a trivalent impurity produce a p-type semiconductor?",
+     "ans": "Intrinsic: pure, n_e = n_h, very low conductivity at room temperature. Extrinsic: doped with impurity, n_e ≠ n_h, much higher and controllable conductivity. [1]\nA trivalent atom (B, Al, Ga, In) forms only three covalent bonds with neighbouring Si atoms; the vacancy in the fourth bond is a hole, which can accept an electron. So holes become the majority carriers → p-type. [1]",
+     "marks": 2
+    },
+    {
+     "q": "An electron is released from rest in a uniform electric field of 2×10⁴ N/C between two charged plates. Find (i) its acceleration, (ii) the time it takes to travel 1.5 cm. (e = 1.6×10⁻¹⁹ C, m_e = 9.11×10⁻³¹ kg; neglect gravity)",
+     "ans": "(i) a = eE/m = (1.6×10⁻¹⁹ × 2×10⁴)/(9.11×10⁻³¹) ≈ 3.5×10¹⁵ m/s², opposite to the field. [1]\n(ii) s = ½at² → t = √(2s/a) = √(2 × 0.015/3.51×10¹⁵) ≈ 2.9×10⁻⁹ s (about 3 ns). [1]",
+     "marks": 2
+    },
+    {
+     "q": "A straight horizontal wire of mass 20 g and length 0.5 m is placed in a uniform horizontal magnetic field of 0.4 T perpendicular to the wire. What current must flow in it so that it stays suspended in mid-air? How should the direction of current be chosen? (g = 9.8 m/s²)",
+     "ans": "For suspension the magnetic force balances the weight: BIl = mg → I = mg/(Bl) = (0.02 × 9.8)/(0.4 × 0.5) = 0.98 A. [1]\nDirection: chosen so that the force IL × B points vertically upward (by Fleming's left-hand rule), e.g. for B pointing north, current must flow from west to east. [1]",
+     "marks": 2
+    },
+    {
+     "q": "A ray of light falls normally on one face of an equilateral glass prism of refractive index √2. Find the critical angle for glass and trace the path of the ray. Will it emerge from the second face?",
+     "ans": "Critical angle: sin C = 1/√2 → C = 45°. [1]\nThe ray enters undeviated (normal incidence) and meets the second face at an angle of incidence equal to the prism angle, 60°. Since 60° is greater than 45°, it is totally internally reflected and does not emerge from the second face; the reflected ray then meets the third face normally and passes out undeviated. [1]",
+     "marks": 2
+    },
+    {
+     "q": "The total energy of the electron in the ground state of a hydrogen atom is −13.6 eV. (i) What are its kinetic and potential energies in this state? (ii) What is the total energy of the electron in the n = 4 state?",
+     "ans": "(i) In Bohr's model K = −E and U = 2E: K = +13.6 eV, U = −27.2 eV. [1]\n(ii) E₄ = −13.6/4² = −0.85 eV. [1]",
+     "marks": 2
+    },
+    {
+     "q": "A silicon diode (forward voltage drop 0.7 V) is connected in series with a 220 Ω resistor across a 5 V battery so that it is forward biased. Find the current in the circuit. What will the current be (approximately) if the battery terminals are reversed? Give reason.",
+     "ans": "Forward bias: I = (5 − 0.7)/220 = 4.3/220 ≈ 0.0195 A ≈ 19.5 mA. [1]\nReversed: the diode is reverse biased and offers very high resistance; only a tiny reverse saturation current (of the order of μA or less) flows, so the current is practically zero. [1]",
      "marks": 2
     }
    ]
@@ -721,6 +1123,76 @@
      "q": "When light of wavelength 300 nm falls on a metal surface, the stopping potential is 1.85 V; for light of wavelength 400 nm it is 0.82 V. From these data find (i) Planck's constant, (ii) the work function of the metal. (e = 1.6×10⁻¹⁹ C, c = 3×10⁸ m/s)",
      "ans": "Einstein's equation: eV₀ = hc/λ − φ₀. Subtracting for the two wavelengths: e(V₁ − V₂) = hc(1/λ₁ − 1/λ₂). [1]\n(i) h = 1.6×10⁻¹⁹ × 1.03/[3×10⁸ × (1/300 − 1/400)×10⁹] = 1.648×10⁻¹⁹/(3×10⁸ × 8.33×10⁵) ≈ 6.6×10⁻³⁴ J s. [1]\n(ii) φ₀ = hc/λ₁ − eV₁ = (6.6×10⁻³⁴ × 3×10⁸/3×10⁻⁷) J − 1.85 eV ≈ 4.13 eV − 1.85 eV ≈ 2.28 eV. [1]",
      "marks": 3
+    },
+    {
+     "q": "Capacitors of 3 μF and 6 μF are joined in series, and this combination is connected in parallel with a 4 μF capacitor. The arrangement is charged by a 10 V battery. Find (i) the equivalent capacitance, (ii) the charge on each capacitor and the potential difference across the 3 μF capacitor, (iii) the total energy stored.",
+     "ans": "(i) Series part: 1/C = 1/3 + 1/6 = 1/2 → 2 μF. Equivalent C = 2 + 4 = 6 μF. [1]\n(ii) 4 μF: Q = 4 × 10 = 40 μC. Series branch: Q = 2 × 10 = 20 μC on each of the 3 μF and 6 μF. V across 3 μF = 20/3 ≈ 6.67 V (and 3.33 V across 6 μF). [1]\n(iii) U = ½CV² = ½ × 6×10⁻⁶ × 10² = 3×10⁻⁴ J = 300 μJ. [1]",
+     "marks": 3
+    },
+    {
+     "q": "The tungsten filament of a 100 W, 220 V bulb has a resistance of 40 Ω at room temperature (20 °C). The temperature coefficient of resistance of tungsten is 4.5×10⁻³ °C⁻¹ (assume it constant). Find (i) the resistance of the filament when the bulb glows normally, (ii) the temperature of the filament, (iii) explain why bulbs usually fuse at the moment they are switched on.",
+     "ans": "(i) Hot resistance R = V²/P = 220²/100 = 484 Ω. [1]\n(ii) R = R₀[1 + α(T − 20)] → 484 = 40[1 + 4.5×10⁻³(T − 20)] → T − 20 = 11.1/4.5×10⁻³ ≈ 2467 → T ≈ 2487 °C (about 2490 °C). [1]\n(iii) When cold, the resistance is only 40 Ω, so the initial current 220/40 = 5.5 A is about 12 times the normal current (0.45 A). This sudden surge heats weak spots in the filament and can snap it. [1]",
+     "marks": 3
+    },
+    {
+     "q": "A rectangular coil of 20 turns, 8 cm × 5 cm, carries a current of 2 A in a uniform magnetic field of 0.5 T. The plane of the coil makes an angle of 30° with the field. Find (i) the torque on the coil, (ii) the maximum torque possible. (iii) In which orientation is the coil in stable equilibrium?",
+     "ans": "Area A = 0.08 × 0.05 = 4×10⁻³ m²; the normal to the coil makes 60° with B. [½]\n(i) τ = NIAB sin 60° = 20 × 2 × 4×10⁻³ × 0.5 × 0.866 ≈ 6.9×10⁻² N m. [1]\n(ii) τ_max = NIAB = 0.08 N m (when the plane of the coil is parallel to B). [½]\n(iii) Stable equilibrium when the magnetic moment (normal to the coil) is parallel to B, i.e. the plane of the coil is perpendicular to the field; torque is then zero and potential energy minimum. [1]",
+     "marks": 3
+    },
+    {
+     "q": "A bulb rated 60 W, 120 V is to be operated from 240 V, 50 Hz mains by connecting a pure inductor in series with it. Find (i) the current through the bulb when it glows normally, (ii) the inductance required. (iii) Why is an inductor preferred to a resistor for this purpose?",
+     "ans": "(i) R = V²/P = 120²/60 = 240 Ω; I = P/V = 60/120 = 0.5 A. [1]\n(ii) Z = 240/0.5 = 480 Ω; X_L = √(Z² − R²) = √(480² − 240²) ≈ 415.7 Ω; L = X_L/(2πf) = 415.7/(2π × 50) ≈ 1.32 H. [1]\n(iii) A pure inductor consumes no average power (current and voltage across it differ in phase by 90°), whereas a series resistor would waste 0.5 × 120 = 60 W as heat. [1]",
+     "marks": 3
+    },
+    {
+     "q": "An object and a screen are fixed 90 cm apart. A convex lens placed between them gives a sharp image on the screen for two positions of the lens that are 30 cm apart. Find (i) the object distances for the two positions, (ii) the focal length of the lens, (iii) the ratio of the sizes of the two images.",
+     "ans": "(i) By symmetry the two positions interchange u and v: |u| + |v| = 90 and |v| − |u| = 30 → |u| = 30 cm, |v| = 60 cm for one position, and |u| = 60 cm, |v| = 30 cm for the other. [1]\n(ii) 1/f = 1/v − 1/u = 1/60 + 1/30 = 1/20 → f = 20 cm [or f = (D² − d²)/4D = (8100 − 900)/360 = 20 cm]. [1]\n(iii) Magnifications are 60/30 = 2 and 30/60 = 0.5, so the image sizes are in the ratio 4 : 1 (both real, inverted). [1]",
+     "marks": 3
+    },
+    {
+     "q": "In a Geiger–Marsden experiment, an α-particle of kinetic energy 5.0 MeV moves head-on towards a gold nucleus (Z = 79). (i) Find its distance of closest approach. (ii) What is the impact parameter and the scattering angle in this case? (iii) What does this distance tell us about the size of the nucleus?",
+     "ans": "(i) At closest approach K = k(2e)(Ze)/r₀ → r₀ = (9×10⁹ × 2 × 79 × (1.6×10⁻¹⁹)²)/(5 × 1.6×10⁻¹³) ≈ 4.6×10⁻¹⁴ m (≈ 46 fm). [1]\n(ii) Head-on: impact parameter b = 0; the α-particle retraces its path, scattering angle 180°. [1]\n(iii) The nucleus must be smaller than about 4.6×10⁻¹⁴ m — this gives an upper limit to nuclear size, about 10⁻⁴ of the atomic size (10⁻¹⁰ m). [1]",
+     "marks": 3
+    },
+    {
+     "q": "A laser pointer emits 5 mW of light of wavelength 663 nm. Find (i) the energy of each photon in eV, (ii) the number of photons emitted per second. (iii) Will this light eject photoelectrons from caesium (work function 2.14 eV)? Would a more powerful laser of the same wavelength help? (h = 6.63×10⁻³⁴ J s)",
+     "ans": "(i) E = hc/λ = (6.63×10⁻³⁴ × 3×10⁸)/(663×10⁻⁹) = 3.0×10⁻¹⁹ J ≈ 1.88 eV. [1]\n(ii) N = P/E = 5×10⁻³/3.0×10⁻¹⁹ ≈ 1.7×10¹⁶ photons per second. [1]\n(iii) No — 1.88 eV is less than 2.14 eV. A more powerful laser only gives more photons of the same energy, and each electron absorbs one photon, so still no emission. [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) Using Gauss's law, obtain the electric field due to an infinite plane sheet with uniform surface charge density σ. (ii) Two large, thin parallel metal plates carry surface charge densities +17.7 nC/m² and −17.7 nC/m² on their inner faces. Find the electric field in the region between them and outside them. (ε₀ = 8.85×10⁻¹² C² N⁻¹ m⁻²)",
+     "ans": "(i) Take a cylindrical Gaussian surface of cross-section A piercing the sheet; E is perpendicular to the sheet, so flux passes only through the two flat ends: Φ = 2EA. Enclosed charge = σA. 2EA = σA/ε₀ → E = σ/(2ε₀), directed away from the sheet for σ positive. [1½]\n(ii) Between the plates the fields of the two sheets add: E = σ/ε₀ = 17.7×10⁻⁹/8.85×10⁻¹² = 2×10³ N/C, from the positive to the negative plate. [1]\nOutside, the two fields are equal and opposite → E = 0. [½]",
+     "marks": 3
+    },
+    {
+     "q": "Six identical cells, each of emf 1.5 V and internal resistance 0.5 Ω, are connected in series to an external resistance of 6 Ω. Find (i) the current in the circuit, (ii) the potential difference across the external resistance. (iii) Find the current if one of the cells is connected the wrong way round by mistake.",
+     "ans": "(i) Total emf = 6 × 1.5 = 9 V; total internal resistance = 6 × 0.5 = 3 Ω. I = 9/(6 + 3) = 1 A. [1]\n(ii) V = IR = 1 × 6 = 6 V. [1]\n(iii) The reversed cell opposes: net emf = 5 × 1.5 − 1.5 = 6 V, but internal resistance is still 3 Ω. I = 6/9 ≈ 0.67 A. [1]",
+     "marks": 3
+    },
+    {
+     "q": "A wire carrying a current of 4 A is bent into a semicircular arc of radius 5 cm. The current is led in and out of the arc by two long straight wires that lie along the radial lines through the two ends of the arc (extending outward, away from the centre). Find the magnetic field at the centre of the arc. Why do the straight portions contribute nothing? State the direction of the field.",
+     "ans": "Biot–Savart: each element of the arc is perpendicular to the line joining it to the centre, so B_arc = (μ₀I/4πR) × πR/R = μ₀I/(4R). [1]\nB = (4π×10⁻⁷ × 4)/(4 × 0.05) ≈ 2.5×10⁻⁵ T. [1]\nThe straight parts lie along lines through the centre, so dl × r = 0 for them and they contribute no field. Direction: perpendicular to the plane of the arc, given by the right-hand rule (out of the page for anticlockwise current as seen by the viewer). [1]",
+     "marks": 3
+    },
+    {
+     "q": "A step-down transformer at a village substation is not 100% efficient. Name three causes of energy loss in a real transformer and state how each is reduced in practice.",
+     "ans": "(1) Copper (joule) loss: heating I²R in the windings — reduced by using thick copper wire for the high-current winding. [1]\n(2) Eddy-current loss: currents induced in the iron core heat it — reduced by using a laminated core (thin insulated sheets). [1]\n(3) Flux leakage: not all primary flux links the secondary — reduced by winding the primary and secondary one over the other on a closed (shell-type) core. (Also acceptable: hysteresis loss in the core, reduced by using soft iron with a narrow loop; humming/vibration losses.) [1]",
+     "marks": 3
+    },
+    {
+     "q": "In a Young's double-slit experiment, the slits are 0.3 mm apart and the screen is 1.2 m away. The slits are illuminated by light containing two wavelengths, 600 nm and 480 nm. Find (i) the distance of the third bright fringe of the 600 nm light from the central maximum, (ii) the least distance from the central maximum at which bright fringes of both wavelengths coincide, (iii) the ratio of the fringe widths of the two patterns.",
+     "ans": "(i) y₃ = 3λD/d = 3 × 600×10⁻⁹ × 1.2/(0.3×10⁻³) = 7.2×10⁻³ m = 7.2 mm. [1]\n(ii) Coincidence: n₁ × 600 = n₂ × 480 → n₁/n₂ = 4/5; smallest n₁ = 4. y = 4 × 600×10⁻⁹ × 1.2/(0.3×10⁻³) = 9.6×10⁻³ m = 9.6 mm. [1]\n(iii) β ∝ λ → β₁ : β₂ = 600 : 480 = 5 : 4 (2.4 mm and 1.92 mm). [1]",
+     "marks": 3
+    },
+    {
+     "q": "When lithium-7 is bombarded with protons, the reaction ⁷₃Li + ¹₁H → ⁴₂He + ⁴₂He takes place. (i) Show that charge and the number of nucleons are conserved. (ii) Find the energy released (Q-value). (iii) In what form does this energy mainly appear? Masses: ⁷Li = 7.016004 u, ¹H = 1.007825 u, ⁴He = 4.002603 u; 1 u = 931.5 MeV/c².",
+     "ans": "(i) Charge: 3 + 1 = 2 + 2 = 4; nucleons: 7 + 1 = 4 + 4 = 8 — both conserved. [1]\n(ii) Δm = (7.016004 + 1.007825) − 2 × 4.002603 = 8.023829 − 8.005206 = 0.018623 u; Q = 0.018623 × 931.5 ≈ 17.3 MeV. [1]\n(iii) Mainly as kinetic energy of the two α-particles, which fly apart (the energy comes from the increase in total binding energy). [1]",
+     "marks": 3
+    },
+    {
+     "q": "Explain, with a labelled circuit diagram, how a p-n junction diode works as a half-wave rectifier. Draw (describe) the input and output waveforms. Why is a full-wave rectifier usually preferred, and what is the output frequency of each for a 50 Hz input?",
+     "ans": "Circuit: AC from the secondary of a transformer is applied to a diode in series with a load resistor R_L; output taken across R_L. [1]\nDuring the positive half-cycle the diode is forward biased and conducts, so current flows through R_L; during the negative half-cycle it is reverse biased and practically no current flows. Output: positive half-sine pulses with gaps (pulsating DC). [1]\nA full-wave rectifier uses both half-cycles, giving higher average output and easier smoothing. Output (ripple) frequency: half-wave 50 Hz, full-wave 100 Hz. [1]",
+     "marks": 3
     }
    ]
   },
@@ -755,6 +1227,26 @@
     {
      "q": "[CBQ] Diode Characteristics in the School Lab\nStudents in a Lucknow school lab record the forward characteristic of a silicon diode. The current is almost zero up to about 0.6 V and then rises sharply: at 0.70 V it is 10 mA and at 0.75 V it is 30 mA.\n(i) What is the threshold (knee) voltage, and why is the current nearly zero below it? [1m]\n(ii) Find the dynamic resistance of the diode between 0.70 V and 0.75 V. [1m]\n(iii) How does the width of the depletion layer change when the forward voltage is increased? [1m]\n(iv) Why is the diode called a non-ohmic device? [1m]",
      "ans": "(i) About 0.7 V for silicon. Below it the applied voltage cannot overcome the barrier potential, so very few majority carriers cross the junction.\n(ii) r_d = ΔV/ΔI = (0.75 − 0.70)/(30 − 10)×10⁻³ = 0.05/0.020 = 2.5 Ω.\n(iii) It decreases — the forward voltage opposes the barrier potential, so the depletion layer becomes narrower.\n(iv) Its V–I graph is not a straight line (current does not vary linearly with voltage) and it conducts differently in forward and reverse bias, so Ohm's law is not obeyed.",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] Prism Periscope in an Army Bunker\nSoldiers at a border post in Ladakh observe the area from inside a bunker using a periscope. Instead of plane mirrors, it uses two right-angled isosceles glass prisms (refractive index 1.5). Light enters one face normally and meets the hypotenuse face at an angle of incidence of 45°.\n(i) Name the phenomenon that turns the light through 90° in each prism. [1m]\n(ii) Find the critical angle for the glass–air surface. [1m]\n(iii) Would the periscope still work if the prisms were made of a material of refractive index 1.3? Give reason. [1m]\n(iv) Give one advantage of using such prisms in place of plane mirrors. [1m]",
+     "ans": "(i) Total internal reflection at the hypotenuse face.\n(ii) sin C = 1/μ = 1/1.5 = 0.667 → C ≈ 41.8°.\n(iii) No. For μ = 1.3, C = sin⁻¹(1/1.3) ≈ 50.3°; the angle of incidence 45° is less than C, so the light would be partly refracted out instead of being totally reflected.\n(iv) TIR reflects almost 100% of the light (brighter image), and there is no silvering to tarnish or peel off; no multiple images as in a thick glass mirror.",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] Temperature Sensor in a Baby Incubator\nA primary health centre in Odisha uses baby incubators whose temperature is controlled by a sensor made of a semiconductor. As the semiconductor warms up, its resistance falls noticeably, and the control circuit switches the heater off. The band gap of the material is about 1.1 eV.\n(i) Why does the resistance of a semiconductor fall when its temperature rises? [1m]\n(ii) In a pure (intrinsic) semiconductor, how does the number of free electrons compare with the number of holes? [1m]\n(iii) Can a photon of wavelength 600 nm create an electron–hole pair in this material? Show by calculation. [1m]\n(iv) Find the longest wavelength of light that can create an electron–hole pair in this material. [1m]",
+     "ans": "(i) More electrons gain enough thermal energy to cross the band gap into the conduction band, creating more electron–hole pairs; the increase in carriers far outweighs the small fall in mobility, so resistance falls.\n(ii) They are equal (n_e = n_h = n_i), since each electron that crosses the gap leaves one hole behind.\n(iii) E = hc/λ ≈ 1240/600 ≈ 2.07 eV, which is more than 1.1 eV, so yes, it can.\n(iv) λ_max = hc/E_g ≈ 1240/1.1 ≈ 1130 nm (≈ 1.13 μm, in the infrared).",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] Fuel for a Nuclear Power Station\nThe Kudankulam power station in Tamil Nadu produces electricity from the fission of uranium-235. A typical fission is ²³⁵U + n → ¹⁴¹Ba + ⁹²Kr + 3n, and each fission releases about 200 MeV. Consider a reactor that produces 3000 MW of heat. (1 MeV = 1.6×10⁻¹³ J, Avogadro number = 6.022×10²³ mol⁻¹)\n(i) Why is energy released when a heavy nucleus splits into two medium-mass nuclei? [1m]\n(ii) How many fissions take place every second in this reactor? [1m]\n(iii) Estimate the mass of U-235 used up in one day. [1m]\n(iv) How much mass is converted into energy in one day? [1m]",
+     "ans": "(i) The fission fragments have a higher binding energy per nucleon (≈ 8.5 MeV) than U-235 (≈ 7.6 MeV); the increase in total binding energy is released (mass defect → energy).\n(ii) Energy per fission = 200 × 1.6×10⁻¹³ = 3.2×10⁻¹¹ J. Fissions per second = 3×10⁹/3.2×10⁻¹¹ ≈ 9.4×10¹⁹ s⁻¹.\n(iii) Per day: 9.375×10¹⁹ × 86400 ≈ 8.1×10²⁴ nuclei; mass = (8.1×10²⁴/6.022×10²³) × 235 g ≈ 3.2×10³ g ≈ 3.2 kg.\n(iv) Energy per day = 3×10⁹ × 86400 ≈ 2.6×10¹⁴ J; Δm = E/c² = 2.6×10¹⁴/(9×10¹⁶) ≈ 2.9×10⁻³ kg ≈ 2.9 g.",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] The Jeweller's Magnifier\nA goldsmith in Jaipur checks the hallmark on a gold ring using a small magnifying glass (a convex lens of focal length 5 cm) held close to his eye. His near point is 25 cm.\n(i) Find the magnifying power when the final image is formed at his near point. [1m]\n(ii) Find the magnifying power when the image is at infinity (relaxed eye). [1m]\n(iii) How far from the lens should the ring be held so that the image forms at 25 cm? [1m]\n(iv) Why would a lens of focal length 2.5 cm suit him better for very fine engraving? [1m]",
+     "ans": "(i) m = 1 + D/f = 1 + 25/5 = 6.\n(ii) m = D/f = 25/5 = 5.\n(iii) v = −25 cm, f = +5 cm: 1/u = 1/v − 1/f = −1/25 − 1/5 = −6/25 → u ≈ −4.17 cm, i.e. about 4.2 cm in front of the lens (just inside the focus).\n(iv) Magnifying power ∝ 1/f: with f = 2.5 cm, m = 1 + 25/2.5 = 11 (or 10 at infinity), so finer details look larger.",
      "marks": 4
     }
    ]
@@ -823,6 +1315,48 @@
      "ans": "(i) Ray parallel to axis reflects through F; ray through C retraces; they meet at the real, inverted image A'B'. Triangles A'B'F and MPF (paraxial, P ≈ M) are similar: A'B'/AB = B'F/FP. Triangles A'B'P and ABP: A'B'/AB = B'P/BP. [1]\nSo B'F/FP = B'P/BP → (v − f)/f = v/u using sign convention (u, v, f negative). [1]\nRearranging: uv − uf = vf → dividing by uvf: 1/v + 1/u = 1/f. [1]\n(ii) f = +20 cm, u = −30 cm: 1/v = 1/20 − 1/(−30) = 1/20 + 1/30 = 1/12 → v = +12 cm (behind the mirror). [1]\nm = −v/u = −12/(−30) = +0.4 → image is virtual, erect, diminished, height 0.8 cm. [1]",
      "orq": "(B) (i) Draw a ray diagram of a compound microscope forming the final image at the least distance of distinct vision D and derive an expression for its magnifying power. [3m]\n(ii) A compound microscope has an objective of focal length 1.25 cm and an eyepiece of focal length 5 cm. An object is placed 1.5 cm from the objective and the final image is formed at 25 cm. Find the magnifying power and the separation of the lenses. [2m]",
      "orans": "(i) Objective (short f₀) forms a real, inverted, magnified image A'B' just inside the focus of the eyepiece; the eyepiece acts as a simple magnifier forming the final virtual image at D. [1]\nm_o = v_o/u_o (≈ L/f₀ for the image near the eyepiece focus); m_e = 1 + D/f_e. [1]\nM = m_o × m_e = (v_o/|u_o|)(1 + D/f_e). [1]\n(ii) Objective: 1/v_o = 1/1.25 + 1/(−1.5) = 0.8 − 0.667 = 0.133 → v_o = 7.5 cm; m_o = 7.5/1.5 = 5 (inverted). m_e = 1 + 25/5 = 6 → M = 30. [1]\nEyepiece: 1/u_e = 1/(−25) − 1/5 = −6/25 → u_e = −4.17 cm. Separation = 7.5 + 4.17 ≈ 11.7 cm. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) Derive an expression for the electric potential at a point at distance r from the centre of a short electric dipole, along a line making angle θ with the dipole axis. Hence show that the potential is zero everywhere on the equatorial line. [3m]\n(ii) Charges of +3 nC and −3 nC are 4 mm apart. Find the potential at a point 20 cm from the centre of the dipole on its axis (on the side of the positive charge). How much work is needed to move a small charge along the equatorial line? [2m]",
+     "ans": "(i) Distances of P from +q and −q: r₁ ≈ r − a cos θ, r₂ ≈ r + a cos θ (for r much greater than a). [1]\nV = kq(1/r₁ − 1/r₂) = kq(2a cos θ)/(r² − a² cos²θ) ≈ kp cos θ/r², where p = 2aq. [1]\nOn the equatorial line θ = 90°, cos θ = 0 → V = 0 at every point. [1]\n(ii) p = 3×10⁻⁹ × 4×10⁻³ = 1.2×10⁻¹¹ C m; V = kp/r² = 9×10⁹ × 1.2×10⁻¹¹/(0.2)² = 2.7 V. [1]\nThe equatorial line is an equipotential (V = 0), so no work is needed. [1]",
+     "orq": "(B) (i) State Kirchhoff's two rules. Use them to obtain the condition for balance of a Wheatstone bridge. [3m]\n(ii) In a Wheatstone bridge, P = 4 Ω, Q = 8 Ω and R = 6 Ω, and the fourth arm contains a coil of resistance 36 Ω. What resistance must be connected in parallel with the coil to balance the bridge? [2m]",
+     "orans": "(i) Junction rule: the sum of currents entering a junction equals the sum leaving it (charge conservation). Loop rule: the algebraic sum of the potential changes around any closed loop is zero (energy conservation). [1]\nBridge ABCD with P in AB, Q in BC, R in AD, S in DC and galvanometer G between B and D. At balance I_g = 0, so the current I₁ in P also flows in Q and I₂ in R also flows in S. [1]\nLoop ABDA: I₁P − I₂R = 0; loop BCDB: I₁Q − I₂S = 0. Dividing: P/Q = R/S. [1]\n(ii) Required S = QR/P = 8 × 6/4 = 12 Ω. [1]\n36x/(36 + x) = 12 → 24x = 432 → x = 18 Ω in parallel with the coil. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) Define mutual inductance. Derive an expression for the mutual inductance of two long coaxial solenoids of the same length l, the inner one of radius r₁ with n₁ turns per unit length and the outer one with n₂ turns per unit length. [3m]\n(ii) Two coaxial solenoids are each 0.5 m long. The inner one has radius 1 cm and 400 turns; the outer one has 1000 turns. Find their mutual inductance and the emf induced in the inner solenoid when the current in the outer one changes at 50 A/s. [2m]",
+     "ans": "(i) Mutual inductance M: flux linked with one coil per unit current in the other (N₂φ₂ = M I₁); equivalently, emf induced in one coil per unit rate of change of current in the other. [1]\nCurrent I₂ in the outer solenoid gives a uniform field B = μ₀n₂I₂ inside it. Flux linkage with the inner solenoid = (n₁l)(πr₁²)(μ₀n₂I₂). [1]\nM = μ₀n₁n₂πr₁²l (the same value is obtained by taking current in the inner coil). [1]\n(ii) n₁ = 800 m⁻¹, n₂ = 2000 m⁻¹: M = 4π×10⁻⁷ × 800 × 2000 × π(0.01)² × 0.5 ≈ 3.16×10⁻⁴ H. [1]\n|e| = M dI/dt = 3.16×10⁻⁴ × 50 ≈ 1.58×10⁻² V ≈ 15.8 mV. [1]",
+     "orq": "(B) (i) An alternating voltage v = v₀ sin ωt is applied across a pure capacitor C. Obtain the expression for the current and show that it leads the voltage by π/2. Show that the average power over a cycle is zero. [3m]\n(ii) A 50 μF capacitor is connected to a 220 V, 50 Hz supply. Find its reactance and the rms and peak values of the current. [2m]",
+     "orans": "(i) q = Cv = Cv₀ sin ωt → i = dq/dt = ωCv₀ cos ωt = i₀ sin(ωt + π/2), with i₀ = v₀/X_C and X_C = 1/(ωC). [1]\nSo the current reaches its maximum a quarter cycle before the voltage: it leads by π/2. [1]\nP_av = V_rms I_rms cos(π/2) = 0 (the capacitor stores energy for a quarter cycle and returns it in the next). [1]\n(ii) X_C = 1/(2π × 50 × 50×10⁻⁶) ≈ 63.7 Ω. [1]\nI_rms = 220/63.7 ≈ 3.46 A; I₀ = √2 × 3.46 ≈ 4.89 A. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) With a labelled diagram, describe a Cassegrain reflecting telescope. Give two advantages of a reflecting telescope over a refracting telescope. [3m]\n(ii) The objective mirror of a reflecting telescope has a radius of curvature of 4 m and the eyepiece has a focal length of 2 cm. Find the magnifying power in normal adjustment. [2m]",
+     "ans": "(i) Diagram: a large concave (paraboloidal) primary mirror with a hole at its centre; a small convex secondary mirror placed before the primary's focus reflects the converging rays back through the hole to form the image, which is viewed with an eyepiece behind the primary. [2]\nAdvantages (any two): no chromatic aberration (reflection does not depend on wavelength); paraboloidal mirror removes spherical aberration; a mirror needs support only at its back, so very large apertures are possible (more light, better resolution); cheaper to make a large mirror than a large lens. [1]\n(ii) f₀ = R/2 = 2 m = 200 cm; m = f₀/f_e = 200/2 = 100. [2]",
+     "orq": "(B) (i) What are coherent sources? Two coherent waves of equal amplitude a, with phase difference φ, superpose at a point. Show that the resultant intensity is I = 4I₀ cos²(φ/2), where I₀ is the intensity of each wave, and write the conditions for constructive and destructive interference. [3m]\n(ii) In a Young's double-slit experiment the intensity at the central maximum is I_max. Find the intensity at points where the path difference is (a) λ/4, (b) λ/3. [2m]",
+     "orans": "(i) Coherent sources emit waves of the same frequency with a constant (time-independent) phase difference. [½]\ny₁ = a cos ωt, y₂ = a cos(ωt + φ) → y = 2a cos(φ/2) cos(ωt + φ/2); resultant amplitude 2a cos(φ/2). [1]\nIntensity ∝ amplitude²: I = 4a² cos²(φ/2) = 4I₀ cos²(φ/2). [½]\nConstructive: φ = 2nπ (path difference nλ) → I = 4I₀; destructive: φ = (2n + 1)π (path difference (n + ½)λ) → I = 0. [1]\n(ii) I_max = 4I₀, so I = I_max cos²(φ/2) with φ = (2π/λ) × path difference. [½]\n(a) φ = π/2 → I = I_max cos²45° = I_max/2. [½]\n(b) φ = 2π/3 → I = I_max cos²60° = I_max/4. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) Derive an expression for the energy stored in a charged capacitor. Hence show that the energy density of the electric field between the plates of a parallel plate capacitor is ½ε₀E². [3m]\n(ii) A parallel plate air capacitor has plates of area 0.04 m² separated by 2 mm and is connected to a 100 V supply. Find its capacitance, the energy stored and the energy density between the plates. [2m]",
+     "ans": "(i) To transfer charge dq when the capacitor already has charge q (p.d. q/C), work dW = (q/C)dq. W = ∫₀^Q (q/C)dq = Q²/2C = ½CV² = ½QV, stored as electric potential energy. [1½]\nFor a parallel plate capacitor C = ε₀A/d and V = Ed: U = ½(ε₀A/d)(Ed)² = ½ε₀E²(Ad). Since Ad is the volume between the plates, energy density u = ½ε₀E². [1½]\n(ii) C = ε₀A/d = 8.85×10⁻¹² × 0.04/0.002 = 1.77×10⁻¹⁰ F = 177 pF; U = ½CV² = ½ × 1.77×10⁻¹⁰ × 100² ≈ 8.85×10⁻⁷ J. [1]\nE = V/d = 5×10⁴ V/m; u = ½ × 8.85×10⁻¹² × (5×10⁴)² ≈ 1.1×10⁻² J/m³ (check: u × volume = 0.011 × 8×10⁻⁵ ≈ 8.85×10⁻⁷ J). [1]",
+     "orq": "(B) (i) Derive an expression for the torque on an electric dipole placed in a uniform electric field. Hence obtain the expression for the potential energy of the dipole, U = −pE cos θ. [3m]\n(ii) An electric dipole of moment 2×10⁻⁸ C m is in a uniform field of 5×10⁴ N/C. Find the torque when its axis is perpendicular to the field, and the work done in turning it from the position of stable equilibrium to that of unstable equilibrium. [2m]",
+     "orans": "(i) Forces +qE and −qE act on the charges (separation 2a): net force zero, but they form a couple. Perpendicular distance between the lines of action = 2a sin θ, so τ = qE × 2a sin θ = pE sin θ, i.e. τ = p × E. [1½]\nWork done in rotating the dipole from θ₀ to θ: W = ∫pE sin θ dθ = pE(cos θ₀ − cos θ). Taking U = 0 at θ₀ = 90°: U(θ) = −pE cos θ = −p·E. [1½]\n(ii) τ = pE sin 90° = 2×10⁻⁸ × 5×10⁴ = 1×10⁻³ N m. [1]\nStable (θ = 0°) to unstable (θ = 180°): W = pE(cos 0° − cos 180°) = 2pE = 2×10⁻³ J. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) Explain the principle and working of a moving-coil galvanometer. Why is the magnetic field made radial, and why is a soft-iron core used? Define its current sensitivity. [3m]\n(ii) A galvanometer coil has 100 turns, each of area 2 cm², and hangs in a radial field of 0.25 T. The torsional constant of the suspension is 1×10⁻⁶ N m per degree. Find the deflection for a current of 1 mA and the current sensitivity. [2m]",
+     "ans": "(i) Principle: a current-carrying coil in a magnetic field experiences a torque τ = NIAB. The coil turns until this is balanced by the restoring torque kφ of the spring: NIAB = kφ → φ = (NAB/k)I, so deflection ∝ current. [1]\nThe concave pole pieces and the soft-iron cylindrical core make the field radial and stronger, so the plane of the coil is always parallel to B (sin 90° = 1) and the scale is linear; the core also increases the field (and sensitivity). [1]\nCurrent sensitivity = φ/I = NAB/k (deflection per unit current). [1]\n(ii) τ = NIAB = 100 × 1×10⁻³ × 2×10⁻⁴ × 0.25 = 5×10⁻⁶ N m; φ = τ/k = 5×10⁻⁶/1×10⁻⁶ = 5°. [1]\nCurrent sensitivity = 5° per mA (5×10³ degree per ampere). [1]",
+     "orq": "(B) (i) Obtain an expression for the average power dissipated in a series LCR circuit connected to an AC source. Define power factor and explain the term wattless current. [3m]\n(ii) In an AC circuit the rms voltage is 220 V and the rms current is 5 A, the current lagging the voltage by 60°. Find the average power consumed and the wattless component of the current. [2m]",
+     "orans": "(i) v = v₀ sin ωt, i = i₀ sin(ωt − φ). Instantaneous power p = vi = v₀i₀ sin ωt sin(ωt − φ) = (v₀i₀/2)[cos φ − cos(2ωt − φ)]. The second term averages to zero over a cycle, so P_av = (v₀i₀/2) cos φ = V_rms I_rms cos φ. [1½]\nPower factor = cos φ = R/Z. [½]\nWattless current: the component of current I_rms sin φ, perpendicular (90° out of phase) to the voltage; it contributes zero average power. [1]\n(ii) P = 220 × 5 × cos 60° = 550 W. [1]\nWattless component = I_rms sin 60° = 5 × 0.866 ≈ 4.33 A. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) A spherical surface of radius of curvature R separates a rarer medium (refractive index μ₁) from a denser medium (μ₂). Derive the relation μ₂/v − μ₁/u = (μ₂ − μ₁)/R for a point object on the principal axis in the rarer medium (real image in the denser medium). [3m]\n(ii) One end of a long glass rod (μ = 1.5) is ground into a convex hemispherical surface of radius 6 cm. An object is placed in air on the axis, 30 cm from this surface. Find the position of the image. [2m]",
+     "ans": "(i) Ray from O strikes the surface at N and refracts towards the normal NC to meet the axis at I. For small angles: i = α + γ, r = γ − β, with α ≈ MN/OM, β ≈ MN/MI, γ ≈ MN/MC. [1]\nSnell's law for small angles: μ₁i = μ₂r → μ₁(α + γ) = μ₂(γ − β). [1]\nSubstituting: μ₁/OM + μ₂/MI = (μ₂ − μ₁)/MC. With the sign convention OM = −u, MI = +v, MC = +R: μ₂/v − μ₁/u = (μ₂ − μ₁)/R. [1]\n(ii) μ₁ = 1, μ₂ = 1.5, u = −30 cm, R = +6 cm: 1.5/v = 0.5/6 + 1/(−30) = 0.0833 − 0.0333 = 0.05. [1]\nv = 1.5/0.05 = +30 cm: a real image forms inside the rod, 30 cm from the surface. [1]",
+     "orq": "(B) (i) Draw the graph of angle of deviation δ against angle of incidence i for a prism. Derive the relation μ = sin[(A + δ_m)/2]/sin(A/2), where δ_m is the angle of minimum deviation. [3m]\n(ii) A ray passes through a prism of angle 60° and refractive index 1.6 in the position of minimum deviation. Find the angle of incidence and the angle of minimum deviation. [2m]",
+     "orans": "(i) Graph: δ first decreases as i increases, reaches a minimum δ_m, then increases (U-shaped curve); for every δ other than δ_m there are two values of i. [1]\nFor any ray: r₁ + r₂ = A and δ = i + e − A. At minimum deviation i = e and r₁ = r₂ = r, so r = A/2 and i = (A + δ_m)/2. [1]\nμ = sin i/sin r = sin[(A + δ_m)/2]/sin(A/2). [1]\n(ii) r = 30°; sin i = 1.6 × sin 30° = 0.8 → i ≈ 53.1°. [1]\nδ_m = 2i − A = 106.3° − 60° ≈ 46.3°. [1]",
      "marks": 5
     }
    ]
