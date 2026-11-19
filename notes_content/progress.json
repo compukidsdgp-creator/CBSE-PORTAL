@@ -9,7 +9,8 @@
   "announced": true,
   "channels": {
    "fb": true,
-   "ig": true
+   "ig": true,
+   "tg": true
   },
   "tries": 1
  }
