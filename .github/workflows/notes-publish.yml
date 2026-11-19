@@ -62,7 +62,23 @@ jobs:
           import announce_notes as A, sys
           sys.exit(0 if A.pending() else 1)
           PY
-          sleep 25                      # let GitHub serve the freshly pushed poster
+          # wait until the website really serves the published page (no draft banner) before announcing it,
+          # so nobody who taps the link straight away lands on the old draft preview (max ~8 minutes)
+          python3 - <<'PY'
+          import time, urllib.request, announce_notes as A
+          for ch in A.pending():
+              url = A.chapter_url(ch)
+              for i in range(32):
+                  try:
+                      html = urllib.request.urlopen(f"{url}?v={int(time.time())}", timeout=20).read().decode("utf-8", "ignore")
+                      if 'class="draft"' not in html and 'noindex' not in html[:6000]:
+                          print("[live]", url); break
+                  except Exception as e:
+                      print("[wait]", url, e)
+                  time.sleep(15)
+              else:
+                  print("::warning::page still not live after 8 min:", url)
+          PY
           python3 announce_notes.py --post
           git add notes_content/progress.json
           git diff --cached --quiet && exit 0
