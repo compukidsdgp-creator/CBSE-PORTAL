@@ -1,6 +1,6 @@
 name: Campaign reels — render (60-day 90+ Score Hack)
 
-# Renders every campaign reel spec that has no video yet (Kokoro voice), saves it, and sends the owner a private
+# Makes missing Hindi narration (Indic Parler-TTS, voice Rohit), renders every campaign reel video (English + Hindi) that is missing, saves it, and sends the owner a private
 # Telegram preview. Posting happens on the reel's date via campaign-post.yml.
 on:
   push:
@@ -15,7 +15,7 @@ concurrency:
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,8 +30,14 @@ jobs:
       - name: Install
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
-          pip install --quiet numpy kokoro-onnx soundfile pillow playwright
+          pip install --quiet git+https://github.com/huggingface/parler-tts.git soundfile
+          pip install --quiet --force-reinstall --no-deps torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet -U "protobuf>=5.28" sentencepiece numpy kokoro-onnx pillow playwright
           python -m playwright install --with-deps chromium >/dev/null
+      - name: Hindi narration (missing clips only)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python3 tools/parler_voice.py
       - name: Render missing videos
         run: |
           ls campaign_reels/video/*.mp4 2>/dev/null | sort > /tmp/before.txt || true
@@ -42,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add campaign_reels/video campaign_reels/thumb
+          git add campaign_reels/video campaign_reels/thumb campaign_reels/voice
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -q -m "campaign reels: rendered [skip ci]"
           for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done

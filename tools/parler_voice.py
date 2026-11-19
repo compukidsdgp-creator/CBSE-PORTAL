@@ -1,5 +1,5 @@
 """Make the Hindi narration clips for Mistake Bank reels with AI4Bharat Indic Parler-TTS (voice: Rohit).
-Runs on GitHub Actions (needs the HF_TOKEN secret). Writes mistake_reels/voice/<reel-id>/<lang>/<beat>.wav
+Runs on GitHub Actions (needs the HF_TOKEN secret). Writes mistake_reels/voice/<reel-id>/<lang>/<beat>.wav and campaign_reels/voice/<id>/hi/b<i>.wav
     python3 tools/parler_voice.py            (every reel/beat whose clip is missing)
 """
 import sys
@@ -23,6 +23,17 @@ for reel in G.load_specs():
             out = G.VOICE_DIR / reel["id"] / lang / f"{key}.wav"
             if not out.exists():
                 todo.append((out, text, STYLE[L["voice"]]))
+# 60-day campaign reels: Hindi block REEL["hi"] → campaign_reels/voice/<id>/hi/b<i>.wav
+import generate_hack_reel as GH
+for reel in GH.load_specs():
+    for lang in GH.langs(reel):
+        L = GH.view(reel, lang)
+        if L.get("engine") != "parler":
+            continue
+        for i, b in enumerate(L["beats"]):
+            out = GH.VOICE / reel["id"] / lang / f"b{i}.wav"
+            if not out.exists():
+                todo.append((out, b["say"], STYLE[L["voice"]]))
 print(f"{len(todo)} clip(s) to make")
 if todo:
     mid = "ai4bharat/indic-parler-tts"

@@ -50,12 +50,38 @@ def load_specs():
     return out
 
 
-def video_path(r):
-    return VIDEOS / f"{r['n']:02d}-{r['id']}.mp4"
+VOICE = BASE / "voice"
+LANGS = ("en", "hi")
 
 
-def thumb_path(r):
-    return THUMBS / f"{r['n']:02d}-{r['id']}.jpg"
+def langs(r):
+    return [l for l in LANGS if l == "en" or l in r]
+
+
+def view(r, lang="en"):
+    """The spec as seen in one language: Hindi fields (r['hi']) override the English top level."""
+    return r if lang == "en" else {**r, **r[lang], "lang_code": lang}
+
+
+def video_path(r, lang="en"):
+    return VIDEOS / f"{r['n']:02d}-{r['id']}{'' if lang == 'en' else '-' + lang}.mp4"
+
+
+def thumb_path(r, lang="en"):
+    return THUMBS / f"{r['n']:02d}-{r['id']}{'' if lang == 'en' else '-' + lang}.jpg"
+
+
+def parler_clip(r, lang, i, speed, preview=False):
+    """Hindi narration made on GitHub Actions by tools/parler_voice.py (campaign_reels/voice/<id>/<lang>/b<i>.wav)."""
+    src = VOICE / r["id"] / lang / f"b{i}.wav"
+    if not src.exists():
+        if preview:   # local preview without the voice: silence of a plausible length
+            return np.zeros(int(SR * max(1.2, 0.38 * len(r["beats"][i]["say"].split()))), dtype=np.float32)
+        raise SystemExit(f"missing {src} — the 'Campaign reels — render' workflow makes Hindi voice first")
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(src), "-af", f"atempo={speed},silenceremove=start_periods=1:start_threshold=-45dB:"
+                          "stop_periods=-1:stop_threshold=-45dB:stop_duration=0.25", "-ar", str(SR), "-ac", "1", "-f", "f32le", "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(raw, dtype=np.float32).copy()
 
 
 # ── audio ────────────────────────────────────────────────────────────────────
@@ -78,10 +104,13 @@ def at(track, t, clip):
         track[i:j] += clip[: j - i]
 
 
-def build_audio(r, tmp):
+def build_audio(r, tmp, lang="en", preview=False):
     clips, times, t = [], [], LEAD
-    for b in r["beats"]:
-        a = synth(b["say"], voice=r.get("voice", "af_heart"), speed=r.get("speed", 1.12))
+    for i, b in enumerate(r["beats"]):
+        if r.get("engine") == "parler":
+            a = parler_clip(r, lang, i, r.get("speed", 1.0), preview)
+        else:
+            a = synth(b["say"], voice=r.get("voice", "af_heart"), speed=r.get("speed", 1.12))
         clips.append(a)
         times.append((t, t + len(a) / SR))
         t += len(a) / SR + GAP + b.get("hold", 0)
@@ -114,10 +143,15 @@ def page_html(r, times, total):
     faces = "".join(f"@font-face{{font-family:'{n}';src:url('{(FONTS / f).as_uri()}');font-weight:{w}}}"
                     for n, f, w in [("Inter", "Inter-Regular.otf", 400), ("Inter", "Inter-Bold.otf", 800),
                                     ("Poppins", "Poppins-Bold.ttf", 700), ("Poppins", "Poppins-Medium.ttf", 500)])
+    deva = "U+0900-097F,U+1CD0-1CFF,U+200C-200D,U+20B9,U+25CC,U+A8E0-A8FF"
+    faces += "".join(f"@font-face{{font-family:'{n}';src:url('{(FONTS / f).as_uri()}');font-weight:{w};unicode-range:{deva}}}"
+                     for n in ("Inter", "Poppins") for f, w in [("NotoSansDevanagari-Medium.woff2", 400), ("NotoSansDevanagari-Bold.woff2", 700),
+                                                                ("NotoSansDevanagari-Bold.woff2", 800), ("NotoSansDevanagari-Medium.woff2", 500)])
     data = json.dumps({"beats": [{"s": s, "e": e, "say": b["say"], "cap": b.get("cap", b["say"]), "card": b["card"],
                                   "hold": b.get("hold", 0)}
                                  for b, (s, e) in zip(r["beats"], times)],
-                       "total": total, "n": r["n"], "label": lbl}, ensure_ascii=False).replace("</", "<\\/")
+                       "total": total, "n": r["n"], "label": lbl,
+                       "series": "60 दिन का बोर्ड प्लान" if r.get("lang_code") == "hi" else "60-DAY BOARD PLAN"}, ensure_ascii=False).replace("</", "<\\/")
     return """<!doctype html><html><head><meta charset="utf-8"><style>""" + faces + """
 :root{--acc:""" + acc + """;--deep:""" + deep + """}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -182,7 +216,7 @@ const T=""" + data + """;
 const $=id=>document.getElementById(id);
 const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2,
  back=x=>{const c=1.6;x=cl(x);return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)},seg=(t,a,d)=>cl((t-a)/d);
-$('pill').textContent=T.label;$('num').textContent='#'+String(T.n).padStart(2,'0')+' · 60-DAY BOARD PLAN';
+$('pill').textContent=T.label;$('num').textContent='#'+String(T.n).padStart(2,'0')+' · '+T.series;
 const esc=s=>String(s);
 function cardHTML(c){
  if(c.type==='title')return `${c.kicker?`<div class="kick">${esc(c.kicker)}</div>`:''}<div class="big">${esc(c.big)}</div>`;
@@ -253,9 +287,10 @@ def render_frames(html, total, outdir, only=None):
     return n
 
 
-def build(r, out, preview=None):
+def build(r, out, preview=None, lang="en"):
     tmp = Path(tempfile.mkdtemp(prefix="hack_"))
-    times, total = build_audio(r, tmp)
+    spec, r = r, view(r, lang)
+    times, total = build_audio(r, tmp, lang, preview is not None)
     html = page_html(r, times, total)
     if preview is not None:
         pts = preview if isinstance(preview, list) else [preview]
@@ -282,7 +317,7 @@ def build(r, out, preview=None):
     THUMBS.mkdir(parents=True, exist_ok=True)
     k = int(min(times[0][1], 1.6) * FPS)
     from PIL import Image
-    Image.open(tmp / f"frame_{k:05d}.jpg").convert("RGB").save(thumb_path(r), quality=88, optimize=True)
+    Image.open(tmp / f"frame_{k:05d}.jpg").convert("RGB").save(thumb_path(spec, lang), quality=88, optimize=True)
     shutil.rmtree(tmp, ignore_errors=True)
     print(f"[OK] {out} ({Path(out).stat().st_size / 1048576:.1f} MB, {total:.1f}s)")
     return total
@@ -300,14 +335,17 @@ if __name__ == "__main__":
     a.add_argument("reel", nargs="?", default="1")
     a.add_argument("--out")
     a.add_argument("--preview", type=float, nargs="*")
+    a.add_argument("--lang", default="en", choices=LANGS)
     a.add_argument("--missing", action="store_true")
     a = a.parse_args()
+    VIDEOS.mkdir(parents=True, exist_ok=True)
     if a.missing:
-        VIDEOS.mkdir(parents=True, exist_ok=True)
         for r in load_specs():
-            if not video_path(r).exists():
-                build(r, video_path(r))
+            for lang in langs(r):
+                if not video_path(r, lang).exists():
+                    if lang != "en" and view(r, lang).get("engine") == "parler" and not (VOICE / r["id"] / lang).exists():
+                        print(f"[skip] {r['n']:02d} {lang}: voice not made yet"); continue
+                    build(r, video_path(r, lang), None, lang)
     else:
         r = find(a.reel)
-        VIDEOS.mkdir(parents=True, exist_ok=True)
-        build(r, a.out or str(video_path(r)), a.preview if a.preview else None)
+        build(r, a.out or str(video_path(r, a.lang)), a.preview if a.preview else None, a.lang)

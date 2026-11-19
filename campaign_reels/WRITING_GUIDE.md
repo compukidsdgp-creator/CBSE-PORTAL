@@ -42,6 +42,16 @@ compare; Exam Rescue = chain/list. One CTA only.
 - Kokoro reads text literally: write `say` the way it should sound ("CBSE Mock", "R equals V divided by I", "6 ohms").
   Put symbols only in card text and `cap`.
 
+## Hindi version (every reel)
+Every spec also has a `"hi"` block (see reel #01): `{"voice": "rohit", "engine": "parler", "speed": 1.05, "beats": [...],
+"caption", "hashtags"}` — the same number of beats and the same card types/data as English, rewritten (not word-for-word
+translated) in natural spoken Hindi, Devanagari script. Technical terms students use stay as they say them
+(फ़ॉर्मूला, यूनिट, स्टेप, MCQ); symbols, formulas and numbers on cards stay as in English. In `say`, write English words in
+Devanagari as spoken (सीबीएसई मॉक, एम सी क्यू, आर बराबर वी बटा आई) — the Hindi voice reads only Devanagari well.
+Keep each Hindi `say` about as long as the English one (Hindi narration runs slower; aim for a 18–26 s Hindi reel).
+The Hindi voice is made on GitHub Actions, so a local Hindi preview (`--lang hi`) uses silent placeholder timing — still
+preview it to check every card's Hindi text fits. Hindi posts at 7:31 PM IST on the same day.
+
 ## Caption
 Hook question + one-line value + destination line ending exactly with `link in bio (cbsemock.org.in/go)` (the poster
 swaps in a tracked link on Facebook/Telegram) + 3–5 hashtags in `hashtags` (always `#CBSE2027 #BoardExam` + topic tags).
