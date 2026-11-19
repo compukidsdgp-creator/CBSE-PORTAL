@@ -24,9 +24,12 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
           pip install --quiet piper-tts numpy
-          python3 tools/tts_hindi_samples.py piper || true
+          ls tts-samples/piper-*.mp3 >/dev/null 2>&1 || python3 tools/tts_hindi_samples.py piper || true
       - name: AI4Bharat Indic Parler-TTS
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          [ -n "$HF_TOKEN" ] || { echo "::warning::HF_TOKEN secret not set — skipping Indic Parler-TTS"; exit 0; }
           pip install --quiet git+https://github.com/huggingface/parler-tts.git soundfile
           pip install --quiet --force-reinstall --no-deps torch torchaudio --index-url https://download.pytorch.org/whl/cpu
           python3 tools/tts_hindi_samples.py parler || true
