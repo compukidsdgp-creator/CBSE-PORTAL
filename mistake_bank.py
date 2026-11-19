@@ -83,6 +83,15 @@ def notify(paths):
 def post(lang, dry=False):
     import post_formula_reel as P
     appr, posted = jload("approvals.json"), jload("posted.json")
+    ist = timezone(timedelta(hours=5, minutes=30))
+    now = datetime.now(ist)
+    if any(k.endswith("/" + lang) and datetime.fromisoformat(v["at"]).astimezone(ist).date() == now.date() for k, v in posted.items()):
+        print(f"[mistake] a {lang} reel was already posted today — one per day"); return False
+    if os.environ.get("SCHEDULED") == "1":       # GitHub cron can run hours late: never post far outside the slot
+        h, m = POST_TIME[lang]
+        slot = now.replace(hour=h, minute=m, second=0, microsecond=0)
+        if not slot - timedelta(minutes=15) <= now <= slot + timedelta(hours=3):
+            print(f"[mistake] scheduled run arrived at {now:%H:%M} IST, outside the {h:02d}:{m:02d} slot — skipped"); return False
     for r in G.load_specs():
         k = f"{key(r)}/{lang}"
         if lang not in r["lang"] or k in posted or state(r, appr) != "approved" or not G.video_path(r, lang).exists():

@@ -1,4 +1,7 @@
 name: Mistake Bank reels — post (English 5:31 PM, Hindi 9:01 PM IST)
+# Exact times come from cron-job.org calling workflow_dispatch (lang=en at 17:31, lang=hi at 21:01 IST), like social-post.yml.
+# The GitHub schedule below is only a fallback: it often runs hours late, so mistake_bank.py skips a scheduled run that is
+# more than 3 h past its slot, and never posts two reels in one language on the same day.
 on:
   schedule:
     - cron: "1 12 * * *"     # 17:31 IST — English
@@ -37,6 +40,7 @@ jobs:
           TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:       ${{ secrets.TELEGRAM_CHAT_ID }}
           GITHUB_REPOSITORY:      ${{ github.repository }}
+          SCHEDULED:              ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: |
           pip install --quiet numpy
           LANG_=${{ github.event.inputs.lang }}
