@@ -1,0 +1,38 @@
+name: Mistake Bank voice (Hindi, Indic Parler-TTS)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["generate_mistake_reel.py", "tools/parler_voice.py", ".github/workflows/mistake-voice.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: mistake-voice
+  cancel-in-progress: false
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Make missing Hindi clips
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          pip install --quiet git+https://github.com/huggingface/parler-tts.git soundfile
+          pip install --quiet --force-reinstall --no-deps torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet -U "protobuf>=5.28" sentencepiece numpy
+          python3 tools/parler_voice.py
+      - name: Save clips
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add mistake_reels/voice
+          git diff --cached --quiet && exit 0
+          git commit -q -m "mistake reels: Hindi voice clips [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done

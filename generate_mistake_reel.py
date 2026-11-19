@@ -47,7 +47,7 @@ REEL = {
             ],
         },
         "hi": {
-            "voice": "hf_beta", "speed": 1.4,
+            "voice": "rohit", "engine": "parler", "speed": 1.08,
             "badge": "Class 10 · Chemistry · Ch 1",
             "intro": ("बोर्ड एग्ज़ाम की", "टॉप गलतियाँ"),
             "title": "बैलेंस करने के लिए subscript बदलना",
@@ -57,8 +57,8 @@ REEL = {
             "beats": [
                 ("intro", "बोर्ड एग्ज़ाम की टॉप गलती, नंबर वन!", "बोर्ड एग्ज़ाम की टॉप गलतियाँ · #1"),
                 ("hook", "बैलेंस करते समय सबस्क्रिप्ट कभी मत बदलो!", "बैलेंस के लिए subscript कभी मत बदलो!"),
-                ("setup", "एच टू प्लस ओ टू, एच टू ओ। ऑक्सीजन कम है।", "H₂ + O₂ → H₂O … ऑक्सीजन कम है"),
-                ("wrong", "एच टू ओ टू बना दिया? गलत! ये हाइड्रोजन पेरोक्साइड है।", "H₂O₂ बना दिया? गलत — ये हाइड्रोजन पेरोक्साइड है!"),
+                ("setup", "एच टू प्लस ओ टू से एच टू ओ बनता है। लेकिन ऑक्सीजन बैलेंस नहीं है।", "H₂ + O₂ → H₂O … ऑक्सीजन बैलेंस नहीं"),
+                ("wrong", "तो क्या एच टू ओ टू बना दें? बिल्कुल गलत! ये तो हाइड्रोजन पेरोक्साइड है।", "H₂O₂ बना दिया? गलत — ये हाइड्रोजन पेरोक्साइड है!"),
                 ("right", "सिर्फ़ आगे का नंबर बदलो। टू एच टू, प्लस ओ टू, टू एच टू ओ।", "सिर्फ़ आगे का नंबर (coefficient) बदलो: 2H₂ + O₂ → 2H₂O"),
                 ("done", "अब बैलेंस्ड!", "बैलेंस ✓"),
             ],
@@ -86,10 +86,27 @@ def sfx_at(track, t, clip):
     track[i:j] += clip[: j - i]
 
 
-def build_audio(L, tmp):
+VOICE_DIR = ROOT / "mistake_reels" / "voice"
+
+
+def parler_clip(reel_id, lang, key, speed):
+    """Pre-generated Indic Parler-TTS clip (made on GitHub Actions by tools/parler_voice.py), resampled to SR."""
+    src = VOICE_DIR / reel_id / lang / f"{key}.wav"
+    if not src.exists():
+        raise SystemExit(f"missing {src} — run the 'Mistake Bank voice' workflow first")
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(src), "-af", f"atempo={speed},silenceremove=start_periods=1:start_threshold=-45dB:"
+                          "stop_periods=-1:stop_threshold=-45dB:stop_duration=0.25", "-ar", str(SR), "-ac", "1", "-f", "f32le", "-"],
+                         capture_output=True, check=True).stdout
+    return np.frombuffer(raw, dtype=np.float32).copy()
+
+
+def build_audio(L, tmp, reel_id="", lang="en"):
     clips, times, t = [], [], LEAD
     for key, text, cap in L["beats"]:
-        a = synth(text, voice=L["voice"], speed=L["speed"])
+        if L.get("engine") == "parler":
+            a = parler_clip(reel_id, lang, key, L.get("speed", 1.0))
+        else:
+            a = synth(text, voice=L["voice"], speed=L["speed"])
         clips.append(a)
         times.append((key, t, t + len(a) / SR, cap))
         t += len(a) / SR + GAP
@@ -300,7 +317,7 @@ def render_frames(html, total, outdir, only=None):
 def build(reel, out, preview=None, lang="en"):
     L = reel["lang"][lang]
     tmp = Path(tempfile.mkdtemp(prefix="mistake_"))
-    times, total = build_audio(L, tmp)
+    times, total = build_audio(L, tmp, reel["id"], lang)
     html = page_html(reel, L, times, total)
     if preview is not None:
         render_frames(html, total, tmp, only=preview)
