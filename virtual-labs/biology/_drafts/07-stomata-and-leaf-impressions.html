@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Stomata: Leaf Peel and Leaf Impressions — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Microscope lab: take a leaf peel or nail-polish impression, stain, focus at 40× and count stomata on both leaf surfaces to find stomatal frequency per mm².">
+<meta name="cbse-lab-standard" content="2026-11">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/biology/07-stomata-and-leaf-impressions.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Stomata: leaf peel, leaf impressions and stomatal distribution — virtual lab","url":"https://cbsemock.org.in/virtual-labs/biology/07-stomata-and-leaf-impressions.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 10","Class 11"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Temporary mount of a leaf peel to show stomata","Structure of stomata and guard cells","Distribution of stomata on the upper and lower leaf surfaces","Stomatal frequency","Use of the compound microscope"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s;min-height:40px;display:inline-flex;align-items:center}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.hero p{color:rgba(255,255,255,.86);max-width:780px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.75rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.78rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.benchbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+.benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+#bench{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none}
+#bench .tool{cursor:pointer}
+#bench .tool:focus{outline:none}#bench .tool:focus .ring{opacity:1}
+#bench .ring{opacity:0;transition:opacity .2s}
+#bench .used .ring{opacity:1;animation:pulse 1s ease-in-out 2}
+@media(max-width:760px){#bench{min-width:720px}.benchbox::after{content:'⟷ swipe the bench · tap a tool to use it';position:absolute;right:8px;bottom:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 8px;border-radius:99px;pointer-events:none;top:6px;bottom:auto}}
+.row2{display:grid;grid-template-columns:320px 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}.row2 .fieldp{order:-1}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px}
+.panel h4{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#scope{display:block;width:100%;max-width:280px;margin:0 auto;height:auto;user-select:none;-webkit-user-select:none}
+#scope .hp{cursor:pointer}#scope .knob{touch-action:none;cursor:ns-resize}
+#scope .hp:focus{outline:none}#scope .hp:focus .hring{stroke:#e8cc6a;stroke-width:2}
+.fieldwrap{position:relative;max-width:400px;margin:0 auto}
+#field{display:block;width:100%;aspect-ratio:1;border-radius:50%;touch-action:none;background:#000;box-shadow:0 0 0 8px #1b1f26,0 0 0 9px #3b4250,0 10px 30px rgba(0,0,0,.6);cursor:crosshair}
+#field:focus{outline:none;box-shadow:0 0 0 8px #1b1f26,0 0 0 11px #e8cc6a}
+.fcap{font-size:.8rem;color:#8ea2bd;text-align:center;margin-top:14px}
+.counter{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}
+.tally{font-family:'JetBrains Mono',monospace;font-size:1.15rem;font-weight:700;background:#05080e;border:1px solid #33496a;border-radius:10px;padding:6px 12px;color:#7fe0b8;min-width:120px;text-align:center}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.lbl{font-size:.78rem;color:#93a6bf;font-weight:700;margin-top:10px;text-transform:uppercase;letter-spacing:.06em}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.84rem;font-weight:700;padding:8px 12px;border-radius:99px;min-height:42px;min-width:44px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.chip:disabled{opacity:.45;cursor:not-allowed}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.nudge button,.stagepad button{cursor:pointer;font:inherit;font-weight:800;font-size:.84rem;min-height:44px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff;padding:4px}
+.nudge button:hover,.stagepad button:hover{background:#21385c}.nudge button:active,.stagepad button:active{transform:translateY(1px)}
+.stagepad{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.range{display:flex;align-items:center;gap:10px;font-size:.85rem;color:#c9d6e6}
+.range input{flex:1;min-height:44px;accent-color:var(--gold)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:#c9d6e6;cursor:pointer;padding:6px 0;min-height:44px}
+.sw input{width:22px;height:22px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.86rem;padding:10px 16px;border-radius:99px;min-height:44px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin-top:8px}
+.act{cursor:pointer;text-align:left;font:inherit;font-size:.86rem;font-weight:600;color:#e3ebf5;background:#13213a;border:1.5px solid #2f4566;border-radius:12px;padding:9px 12px;min-height:48px;line-height:1.35}
+.act:hover{border-color:#4b6488}.act.done{background:#12322b;border-color:#2c7a64;color:#9fe6c9}.act.done::before{content:'✓ '}
+.act:disabled{cursor:default}
+.prepgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.prepgrid{grid-template-columns:1fr}}
+.cal{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px;font-size:.88rem}
+.cal input,.obs input{font:inherit;font-family:'JetBrains Mono',monospace;font-size:16px;width:96px;padding:8px 8px;border-radius:8px;border:1.5px solid #3a5276;background:#0b1320;color:#fff;min-height:42px}
+.msg{font-size:.88rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+.slides{display:flex;gap:8px;flex-wrap:wrap;font-size:.82rem;margin-top:8px}
+.slides span{padding:5px 10px;border-radius:99px;background:#0b1320;border:1px solid #2f4566;color:#c9d6e6}
+.slides span.ok{border-color:#2c7a64;color:#9fe6c9}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:600px;font-size:.88rem}
+.obs th,.obs td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:center}
+.obs th{background:var(--soft);font-weight:700;font-size:.8rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs input{background:var(--card);color:var(--text);border-color:var(--border);width:84px}
+.obs input.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs input.good{border-color:var(--green)}
+.obs .del{cursor:pointer;border:0;background:none;color:var(--muted);font-size:1.1rem;min-width:42px;min-height:42px}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.note{font-size:.82rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.graphs{grid-template-columns:1fr}}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.84rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.25rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.rbox.true b{font-size:1.05rem}
+.idrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin-top:14px}
+.idrow label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;flex:1 1 240px}
+select{font:inherit;font-size:16px;padding:8px 10px;border-radius:10px;border:1.5px solid var(--border);background:var(--card);color:var(--text);min-height:44px;max-width:100%}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1rem}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:28px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.diag{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:18px;align-items:start}
+@media(max-width:760px){.diag{grid-template-columns:1fr}}
+.diag svg{width:100%;height:auto;background:#fbf6ee;border-radius:14px;border:1px solid var(--border)}
+.labs{display:grid;gap:8px}.labs label{display:flex;align-items:center;gap:10px;font-weight:700}.labs select{flex:1}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:10px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;counter-reset:s}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.62);font:600 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.06em}
+.sceneB .beamB{animation:pulse 2.4s ease-in-out infinite alternate}
+.sceneB .lampB{animation:pulse 1.8s ease-in-out infinite alternate}
+.sceneB .gU{animation:gu 4s ease-in-out infinite}.sceneB .gD{animation:gd 4s ease-in-out infinite}
+.sceneB .pore{transform-box:fill-box;transform-origin:50% 50%;animation:pore 4s ease-in-out infinite}
+.sceneB .s2 *{animation-delay:-1.3s}.sceneB .s3 *{animation-delay:-2.6s}
+@keyframes gu{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.2px)}}
+@keyframes gd{0%,100%{transform:translateY(0)}50%{transform:translateY(2.2px)}}
+@keyframes pore{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+@keyframes pulse{to{opacity:.6}}
+@media(prefers-reduced-motion:reduce){.sceneB .beamB,.sceneB .lampB,.sceneB .gU,.sceneB .gD,.sceneB .pore,#bench .used .ring{animation:none}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:48%;margin:1%;border:1px solid #bbb}
+ #record svg{width:7cm;height:auto}
+}
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small,.tab small,.note,.fcap,.lbl,.slides,.graphs figcaption,.obs th{font-size:12px}.hero{padding:0 16px 34px}.card{padding:16px 14px}.lab{padding:10px}}
+</style>
+</head>
+<body>
+<div class="lab-draft" style="background:#fff4d6;color:#6b4e00;padding:8px 14px;font:600 14px Inter,sans-serif;text-align:center">Draft preview — waiting for approval in the admin panel</div>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../../index.html">Home</a> › <a href="../../index.html">Virtual Labs</a> › <a href="../index.html">Biology</a> › Stomata</nav>
+   <div class="eyebrow">Experiment · Compound Microscope</div>
+   <h1><span class="g1">Stomata</span><span class="g2">Leaf peel &amp; leaf impressions</span></h1>
+   <p>Peel the skin of a leaf, stain it and focus down to 40×. Then count the tiny pores on the upper and lower surfaces and work out how many stomata sit on every square millimetre.</p>
+   <div class="chips"><span>Class 10 · leaf peel mount</span><span>Class 11 · stomatal distribution</span><span>⏱ about 25 min</span></div>
+   <a class="go" href="#lab">Switch on the microscope ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <linearGradient id="b-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#24170c"/></linearGradient>
+ <linearGradient id="b-body" x1="0" x2="1"><stop offset="0" stop-color="#2b3340"/><stop offset=".45" stop-color="#e9edf2"/><stop offset=".6" stop-color="#c3cad3"/><stop offset="1" stop-color="#3a4250"/></linearGradient>
+ <linearGradient id="b-steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe4ea"/><stop offset=".5" stop-color="#8a939f"/><stop offset="1" stop-color="#47505b"/></linearGradient>
+ <radialGradient id="b-lamp"><stop offset="0" stop-color="#fffbe6"/><stop offset=".4" stop-color="#ffe7a3" stop-opacity=".7"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+ <linearGradient id="b-beam" x1="0" x2="1"><stop offset="0" stop-color="#fff3c4" stop-opacity=".35"/><stop offset="1" stop-color="#fff3c4" stop-opacity=".04"/></linearGradient>
+ <radialGradient id="b-field" cx=".5" cy=".5" r=".55"><stop offset="0" stop-color="#fbe7ec"/><stop offset=".85" stop-color="#f1cfd8"/><stop offset="1" stop-color="#6d4c56"/></radialGradient>
+ <clipPath id="b-clip"><circle cx="575" cy="170" r="128"/></clipPath>
+</defs>
+<rect x="0" y="300" width="760" height="60" fill="url(#b-wood)"/>
+<!-- leaf on the bench -->
+<path d="M330 316 C360 286 430 282 470 300 C430 322 370 330 330 316Z" fill="#3f8f3a"/><path d="M332 315 C380 304 430 300 468 300" stroke="#bde3a5" stroke-width="1.5" fill="none"/>
+<!-- microscope -->
+<ellipse cx="160" cy="306" rx="112" ry="12" fill="#000" opacity=".35"/>
+<path d="M62 300 L84 270 H236 L258 300Z" fill="url(#b-steel)"/>
+<circle class="lampB" cx="150" cy="262" r="26" fill="url(#b-lamp)"/>
+<rect x="138" y="258" width="24" height="12" rx="3" fill="#ffefb8"/>
+<path d="M212 272 C248 230 252 150 220 96 L196 108 C220 150 220 222 190 262Z" fill="url(#b-body)"/>
+<rect x="70" y="200" width="160" height="12" rx="3" fill="url(#b-steel)"/>
+<rect x="96" y="194" width="28" height="7" rx="2" fill="#b9c1cb"/><rect x="170" y="194" width="28" height="7" rx="2" fill="#b9c1cb"/>
+<rect x="118" y="195" width="62" height="6" fill="#d7f0ff" opacity=".8"/><rect x="138" y="195" width="20" height="6" fill="#e8a2b6"/>
+<rect x="140" y="212" width="20" height="18" fill="#59626e"/>
+<polygon class="beamB" points="146,230 154,230 152,196 148,196" fill="#fff6cc" opacity=".8"/>
+<path d="M118 152 L176 150 L190 96 L136 90Z" fill="url(#b-body)"/>
+<path d="M136 92 L106 30 L134 18 L162 86Z" fill="url(#b-body)"/>
+<rect x="96" y="10" width="40" height="22" rx="4" transform="rotate(-24 116 21)" fill="#2b3340"/>
+<ellipse cx="146" cy="156" rx="30" ry="9" fill="#9aa3ae"/>
+<rect x="139" y="160" width="14" height="30" rx="3" fill="#d9dee5"/><rect x="139" y="176" width="14" height="4" fill="#c9a227"/>
+<rect x="116" y="158" width="12" height="22" rx="3" fill="#7d8692" transform="rotate(20 122 168)"/>
+<circle cx="222" cy="168" r="17" fill="#3a414b" stroke="#8a939f" stroke-width="2"/><circle cx="222" cy="168" r="6" fill="#8a939f"/>
+<circle cx="228" cy="206" r="10" fill="#4b535e" stroke="#9aa3ae" stroke-width="2"/>
+<!-- light from the eyepiece to the magnified view -->
+<polygon class="beamB" points="118,12 458,58 458,282" fill="url(#b-beam)"/>
+<!-- magnified field: epidermis with stomata -->
+<circle cx="575" cy="170" r="134" fill="#0a0d12"/>
+<g clip-path="url(#b-clip)">
+ <rect x="440" y="36" width="270" height="270" fill="url(#b-field)"/>
+ <path d="M447 92 C470 80 480 104 505 96 C520 90 528 70 548 74 M505 96 C500 120 520 132 512 156 C506 176 482 170 470 186 M512 156 C540 150 552 170 578 160 M548 74 C560 96 590 92 602 70 M602 70 C612 92 640 100 660 92 C676 88 690 100 704 96 M578 160 C590 140 614 150 626 132 C634 118 616 106 620 96 M626 132 C650 140 660 160 690 158 M470 186 C478 210 462 230 470 252 M470 252 C496 248 506 266 530 262 M530 262 C536 236 560 230 566 210 M566 210 C590 216 600 196 622 204 M622 204 C632 230 660 236 668 260 M690 158 C688 180 704 196 700 214 M622 204 C626 182 610 172 626 160 M530 262 C540 286 560 292 566 306 M668 260 C650 276 640 296 646 310 M450 300 C460 286 470 270 470 252" stroke="#b6405f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+ <g class="s1" transform="translate(556 118) rotate(-25)"><ellipse rx="26" ry="19" fill="#f6e3e8"/><g class="gU"><path d="M-24 0 C-22 -18 22 -18 24 0 C14 -6 -14 -6 -24 0Z" fill="#9cc477" stroke="#8a3350" stroke-width="2"/><circle cx="-8" cy="-9" r="2.3" fill="#3f8a2e"/><circle cx="4" cy="-10" r="2.3" fill="#3f8a2e"/><circle cx="14" cy="-7" r="2" fill="#3f8a2e"/></g><g class="gD"><path d="M-24 0 C-22 18 22 18 24 0 C14 6 -14 6 -24 0Z" fill="#9cc477" stroke="#8a3350" stroke-width="2"/><circle cx="-10" cy="8" r="2.3" fill="#3f8a2e"/><circle cx="3" cy="10" r="2.3" fill="#3f8a2e"/><circle cx="13" cy="7" r="2" fill="#3f8a2e"/></g><ellipse class="pore" rx="13" ry="4" fill="#3a1a24"/></g>
+ <g class="s2" transform="translate(640 208) rotate(30)"><ellipse rx="26" ry="19" fill="#f6e3e8"/><g class="gU"><path d="M-24 0 C-22 -18 22 -18 24 0 C14 -6 -14 -6 -24 0Z" fill="#9cc477" stroke="#8a3350" stroke-width="2"/><circle cx="-6" cy="-9" r="2.3" fill="#3f8a2e"/><circle cx="8" cy="-9" r="2.3" fill="#3f8a2e"/></g><g class="gD"><path d="M-24 0 C-22 18 22 18 24 0 C14 6 -14 6 -24 0Z" fill="#9cc477" stroke="#8a3350" stroke-width="2"/><circle cx="-7" cy="9" r="2.3" fill="#3f8a2e"/><circle cx="8" cy="9" r="2.3" fill="#3f8a2e"/></g><ellipse class="pore" rx="13" ry="4" fill="#3a1a24"/></g>
+ <g class="s3" transform="translate(506 220) rotate(80)"><ellipse rx="26" ry="19" fill="#f6e3e8"/><g class="gU"><path d="M-24 0 C-22 -18 22 -18 24 0 C14 -6 -14 -6 -24 0Z" fill="#9cc477" stroke="#8a3350" stroke-width="2"/><circle cx="-4" cy="-9" r="2.3" fill="#3f8a2e"/><circle cx="9" cy="-8" r="2.3" fill="#3f8a2e"/></g><g class="gD"><path d="M-24 0 C-22 18 22 18 24 0 C14 6 -14 6 -24 0Z" fill="#9cc477" stroke="#8a3350" stroke-width="2"/><circle cx="-5" cy="9" r="2.3" fill="#3f8a2e"/><circle cx="9" cy="8" r="2.3" fill="#3f8a2e"/></g><ellipse class="pore" rx="13" ry="4" fill="#3a1a24"/></g>
+ <circle cx="575" cy="170" r="128" fill="none" stroke="#000" stroke-opacity=".35" stroke-width="26"/>
+</g>
+<circle cx="575" cy="170" r="134" fill="none" stroke="#3b4250" stroke-width="5"/>
+<text x="118" y="56" class="tB">EYEPIECE</text><text x="76" y="176" class="tB">OBJECTIVE 40×</text><text x="150" y="226" class="tB" style="font-size:11px">STAGE</text><text x="270" y="210" class="tB">FINE FOCUS</text>
+<text x="575" y="326" class="tB">LEAF PEEL ×400 · GUARD CELLS</text><text x="400" y="296" class="tB">LEAF</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Calibrate field</li><li><b>2</b>Peel &amp; stain</li><li><b>3</b>Focus &amp; count</li><li><b>4</b>Compare &amp; viva</li></ol>
+</header>
+
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Microscope bench">
+  <div class="tabs" role="tablist">
+   <button class="tab" data-step="cal" role="tab" type="button"><b>Step 1 · Calibrate the field</b><small>Measure the field diameter with a mm ruler at 10×</small></button>
+   <button class="tab" data-step="prep" role="tab" type="button"><b>Step 2 · Prepare the slides</b><small>Leaf peel (safranin) or nail-polish impression</small></button>
+   <button class="tab" data-step="count" role="tab" type="button"><b>Step 3 · Focus &amp; count</b><small>40×: count stomata in 3+ fields on each surface</small></button>
+  </div>
+  <div class="task" id="task"></div>
+
+  <!-- slide preparation bench -->
+  <div id="prepBox" hidden>
+   <div class="benchbox"><div class="benchscroll" id="benchScroll"><svg id="bench" viewBox="0 100 900 200" role="img" aria-label="Slide preparation bench"></svg></div></div>
+   <div class="prepgrid">
+    <div class="panel">
+     <h4><span>Slide to make</span><span id="sampleTag">Leaf sample</span></h4>
+     <div class="lbl">Leaf surface</div>
+     <div class="sel" id="surfSel"><button class="chip" data-v="lower" type="button">Lower surface</button><button class="chip" data-v="upper" type="button">Upper surface</button></div>
+     <div class="lbl">Method</div>
+     <div class="sel" id="methSel"><button class="chip" data-v="peel" type="button">Leaf peel + safranin</button><button class="chip" data-v="imp" type="button">Nail-polish impression</button></div>
+     <div id="peelOpts">
+      <div class="lbl">Staining time in safranin</div>
+      <div class="sel" id="stainSel"><button class="chip" data-v="faint" type="button">30 s</button><button class="chip" data-v="good" type="button">2 min</button><button class="chip" data-v="dark" type="button">10 min</button></div>
+      <div class="lbl">Placing the coverslip</div>
+      <div class="sel" id="coverSel"><button class="chip" data-v="needle" type="button">Lower slowly at 45° with a needle</button><button class="chip" data-v="flat" type="button">Drop it flat</button></div>
+     </div>
+     <div id="impOpts" hidden>
+      <div class="lbl">Coat of nail polish</div>
+      <div class="sel" id="coatSel"><button class="chip" data-v="thin" type="button">Thin, even coat</button><button class="chip" data-v="thick" type="button">Thick blob</button></div>
+      <div class="lbl">Sticking the tape on the slide</div>
+      <div class="sel" id="smoothSel"><button class="chip" data-v="smooth" type="button">Smooth it out with a thumb</button><button class="chip" data-v="ends" type="button">Press only the ends</button></div>
+     </div>
+     <div class="slides" id="slideState"></div>
+    </div>
+    <div class="panel">
+     <h4><span>Actions (do them in the right order)</span><button class="chip" id="restartPrep" type="button">↺ Start this slide again</button></h4>
+     <div class="acts" id="acts"></div>
+     <div class="msg" id="pmsg" aria-live="polite"></div>
+     <div class="tools"><button class="btn gold" id="toScope" type="button" hidden>Put this slide on the microscope →</button></div>
+    </div>
+   </div>
+  </div>
+
+  <!-- microscope -->
+  <div id="scopeBox" class="row2">
+   <div class="panel">
+    <h4><span>Compound microscope</span><span id="objTag" class="mono">10×</span></h4>
+    <svg id="scope" viewBox="0 0 300 330" role="img" aria-label="Compound microscope. Tap the nosepiece to change objective, drag the focus knobs, tap the lamp to change the light."></svg>
+    <div class="lbl">On the stage</div>
+    <div class="sel" id="slideSel"></div>
+    <div class="lbl">Objective</div>
+    <div class="sel" id="objSel"><button class="chip" data-v="10" type="button">10× (low power)</button><button class="chip" data-v="40" type="button">40× (high power)</button></div>
+    <div class="lbl">Focus (moves the stage)</div>
+    <div class="nudge"><button data-f="-20" type="button" aria-label="Coarse focus down">Coarse ▼</button><button data-f="-1" type="button" aria-label="Fine focus down">Fine ▼</button><button data-f="1" type="button" aria-label="Fine focus up">Fine ▲</button><button data-f="20" type="button" aria-label="Coarse focus up">Coarse ▲</button></div>
+    <div class="lbl">Move the slide</div>
+    <div class="stagepad"><button data-m="l" type="button" aria-label="Move slide left">◀</button><button data-m="u" type="button" aria-label="Move slide up">▲</button><button data-m="d" type="button" aria-label="Move slide down">▼</button><button data-m="r" type="button" aria-label="Move slide right">▶</button></div>
+    <div class="lbl">Lamp brightness</div>
+    <label class="range"><span>☀</span><input type="range" id="light" min="0" max="100" value="30" aria-label="Lamp brightness"></label>
+    <div class="tools">
+     <label class="sw"><input type="checkbox" id="helper"> Show readings (helper)</label>
+     <span style="flex:1"></span>
+     <button class="btn ghost" id="newSample" type="button">↺ New sample</button>
+    </div>
+   </div>
+   <div class="panel fieldp">
+    <h4><span>View through the eyepiece</span><span id="readout" class="mono"></span></h4>
+    <div class="fieldwrap"><canvas id="field" width="400" height="400" tabindex="0" aria-label="Microscope field of view. Drag to move the slide; at 40× tap a stoma to mark it."></canvas></div>
+    <div class="fcap" id="fcap"></div>
+    <div id="calBox" class="cal">
+     <span>Field diameter at 10× <input id="d10" inputmode="decimal" placeholder="mm" aria-label="Field diameter at 10x in mm"></span>
+     <button class="btn gold" id="saveCal" type="button">Save field diameter</button>
+    </div>
+    <div id="cntBox" hidden>
+     <div class="counter"><span class="tally" id="tally">0 marked</span><button class="btn ghost" id="clearMarks" type="button">Clear marks</button><button class="btn gold" id="recBtn" type="button">＋ Record this field</button></div>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 fields</span></h2>
+  <p class="lead">Field diameter at 10× = <b id="dCal" class="mono">not measured yet</b>; at 40× it is one-quarter of this. Area of the field A = π r². Stomatal frequency = stomata counted ÷ A.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Leaf surface</th><th>Field no.</th><th>No. of stomata<br>in field (n)</th><th>Area of field<br>A (mm²)</th><th>Stomatal frequency<br>n / A (per mm²)</th><th></th></tr></thead>
+   <tbody id="tb"></tbody>
+  </table></div>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graphs</h2>
+  <p class="lead">They appear after 3 correct fields on each surface.</p>
+  <div class="graphs">
+   <figure><canvas id="g1" width="560" height="420"></canvas><figcaption><b>Stomatal frequency on each surface.</b> Bars show the mean; dots are single fields; the whisker shows the lowest and highest field.</figcaption></figure>
+   <figure><canvas id="g2" width="560" height="420"></canvas><figcaption><b>Running mean vs number of fields.</b> The mean settles as more fields are counted — the reason we never trust one field.</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Field diameter at 40×</small><b id="rD">—</b></div>
+   <div class="rbox"><small>Mean frequency · upper surface</small><b id="rU">—</b></div>
+   <div class="rbox"><small>Mean frequency · lower surface</small><b id="rL">—</b></div>
+   <div class="rbox"><small>Ratio lower : upper</small><b id="rR">—</b></div>
+  </div>
+  <div class="idrow">
+   <label>Shape of the guard cells you saw
+    <select id="idGuard"><option value="">Choose…</option><option value="kidney">Kidney (bean) shaped</option><option value="dumbbell">Dumb-bell shaped</option></select></label>
+   <label>Distribution of stomata
+    <select id="idDist"><option value="">Choose…</option><option value="lower">Mostly on the lower surface</option><option value="both">On both surfaces, clearly more on the lower</option><option value="equal">About equal on both surfaces</option><option value="upper">Mostly on the upper surface</option></select></label>
+   <button class="btn navy" id="checkId" type="button">Check my conclusion</button>
+  </div>
+  <div class="msg" id="idMsg" style="color:var(--text)"></div>
+  <div class="result" id="trueBox" style="margin-top:12px" hidden>
+   <div class="rbox true"><small>Actual field diameter (10× / 40×)</small><b id="tD">—</b></div>
+   <div class="rbox true"><small>Actual frequency · upper</small><b id="tU">—</b></div>
+   <div class="rbox true"><small>Actual frequency · lower</small><b id="tL">—</b></div>
+   <div class="rbox true"><small>This leaf</small><b id="tT" style="font-family:Inter,sans-serif;font-size:.95rem">—</b></div>
+  </div>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the actual values</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card">
+  <h2>Draw and label a stoma</h2>
+  <p class="lead">In your practical file, draw one stoma as seen under 40× and label it. Name the parts marked A–E.</p>
+  <div class="diag">
+   <svg id="diagram" viewBox="0 0 340 240" role="img" aria-label="Diagram of a stoma with parts marked A to E">
+    <g fill="none" stroke="#b6405f" stroke-width="2.2"><path d="M10 40 C50 30 60 60 100 50 C120 44 130 20 160 26 M160 26 C170 50 200 48 220 30 M220 30 C240 50 280 40 330 52 M100 50 C96 80 70 90 60 120 M60 120 C40 130 20 120 10 130 M60 120 C64 160 50 190 70 230 M260 120 C290 112 300 140 330 130 M260 120 C270 160 300 180 290 230 M220 30 C230 60 250 80 260 120"/></g>
+    <g transform="translate(165 135)"><ellipse rx="78" ry="56" fill="#f6e3e8" stroke="none"/>
+     <path d="M-74 0 C-70 -54 70 -54 74 0 C46 -16 -46 -16 -74 0Z" fill="#a8cd85" stroke="#8a3350" stroke-width="2.4"/>
+     <path d="M-74 0 C-70 54 70 54 74 0 C46 16 -46 16 -74 0Z" fill="#a8cd85" stroke="#8a3350" stroke-width="2.4"/>
+     <path d="M-46 0 C-30 -13 30 -13 46 0 C30 13 -30 13 -46 0Z" fill="#3a1a24" stroke="#5a1430" stroke-width="5"/>
+     <g fill="#3f8a2e"><circle cx="-40" cy="-24" r="5"/><circle cx="-14" cy="-30" r="5"/><circle cx="14" cy="-30" r="5"/><circle cx="40" cy="-24" r="5"/><circle cx="-36" cy="26" r="5"/><circle cx="-8" cy="31" r="5"/><circle cx="22" cy="30" r="5"/><circle cx="44" cy="22" r="5"/></g>
+     <circle cx="0" cy="-34" r="7" fill="#7e6b8f"/><circle cx="2" cy="36" r="7" fill="#7e6b8f"/></g>
+    <g font-family="Inter,sans-serif" font-size="15" font-weight="800" fill="#1a3a6b">
+     <line x1="245" y1="100" x2="228" y2="123" stroke="#1a3a6b"/><text x="250" y="104">A</text>
+     <line x1="300" y1="150" x2="190" y2="136" stroke="#1a3a6b"/><text x="304" y="155">B</text>
+     <line x1="70" y1="92" x2="122" y2="112" stroke="#1a3a6b"/><text x="56" y="92">C</text>
+     <line x1="30" y1="80" x2="62" y2="74" stroke="#1a3a6b"/><text x="16" y="86">D</text>
+     <line x1="60" y1="170" x2="125" y2="142" stroke="#1a3a6b"/><text x="46" y="176">E</text>
+    </g>
+   </svg>
+   <div>
+    <div class="labs" id="labs"></div>
+    <div class="tools"><button class="btn navy" id="checkLabels" type="button">✓ Check my labels</button></div>
+    <div class="msg" id="labMsg" style="color:var(--text)"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>(a) To prepare a temporary mount of a leaf peel (or a leaf impression) to show stomata.<br>(b) To study the distribution of stomata on the upper and lower surfaces of a leaf by finding the stomatal frequency of each surface.</p>
+    <h3>Apparatus</h3>
+    <p>A fresh leaf, forceps, a needle, a brush, watch glass, water, safranin solution, glycerine, glass slides, coverslips, blotting paper, a compound microscope, a transparent ruler with mm divisions. For the impression method: clear nail polish and clear sticky tape.</p>
+    <h3>Theory</h3>
+    <p><b>Stomata</b> are tiny pores in the epidermis of leaves. Each pore is surrounded by two <b>guard cells</b>. Guard cells contain chloroplasts and have a thick inner wall next to the pore. When they take in water they become turgid and bow apart, so the pore opens; when they lose water they become flaccid and the pore closes. Stomata allow exchange of gases (CO₂ in, O₂ out during photosynthesis) and the loss of water vapour in <b>transpiration</b>.</p>
+    <p>In dicot leaves the guard cells are <b>kidney (bean) shaped</b>. In grasses (monocots such as maize and wheat) they are <b>dumb-bell shaped</b>. Most dicot leaves have far more stomata on the shaded lower surface, which reduces water loss; many monocot leaves, which grow upright, have nearly equal numbers on both surfaces; floating leaves (water lily) have them only on the upper surface.</p>
+    <p>The diameter of the field of view is inversely proportional to the objective magnification, so</p>
+    <p class="eq">D₄₀ = D₁₀ × 10/40 &nbsp;·&nbsp; A = π (D₄₀/2)²</p>
+    <p class="eq">Stomatal frequency = n / A &nbsp;(stomata per mm²)</p>
+    <p>A related measure is the stomatal index, I = S/(S + E) × 100, where S and E are the numbers of stomata and epidermal cells in the same area.</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li><b>Calibrate:</b> place a transparent mm ruler on the stage, focus at 10× and count how many millimetres fit across the diameter of the field. Divide by 4 to get the field diameter at 40×.</li>
+     <li><b>Leaf peel:</b> fold the leaf and tear it obliquely; a thin, colourless layer (the epidermis) sticks out at the torn edge. Lift it with forceps from the surface you want.</li>
+     <li>Put the peel in a watch glass of water so it does not dry.</li>
+     <li>Add 2–3 drops of safranin and leave for about 2 minutes. Wash off the extra stain in water.</li>
+     <li>Place the peel in a drop of glycerine on a clean slide. Lower a coverslip slowly with a needle at 45° so no air bubbles are trapped. Remove extra glycerine with blotting paper.</li>
+     <li><b>Leaf impression (alternative):</b> paint a thin patch of clear nail polish on the leaf, let it dry, press clear tape on it, peel off the impression and stick the tape flat on a slide.</li>
+     <li>Focus first at 10× with the coarse and then the fine knob. Centre a clear area, change to 40× and use <b>only the fine knob</b>.</li>
+     <li>Count the stomata in the field. Count a stoma on the edge only if more than half of it is inside the field.</li>
+     <li>Move to a new field and repeat; count at least three fields on each surface. Calculate the stomatal frequency and compare the two surfaces.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>Use a fresh leaf, and take a thin peel; a thick peel has overlapping layers.</li>
+     <li>Never let the peel dry: keep it in water and mount it in glycerine.</li>
+     <li>Do not over-stain; wash off extra safranin.</li>
+     <li>Lower the coverslip gently with a needle to avoid air bubbles; wipe off extra glycerine.</li>
+     <li>Focus at low power first. At high power use only the fine adjustment so the objective does not hit the coverslip.</li>
+     <li>Count fields that do not overlap, avoid fields with air bubbles, and count every field in sharp focus.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>Stomata are not evenly spread, so a few fields may not represent the whole leaf.</li>
+     <li>Stomata on the edge of the field may be counted wrongly.</li>
+     <li>A stoma slightly out of the focal plane may be missed (the depth of field at 40× is very small).</li>
+     <li>Error in reading the field diameter from the ruler is squared in the area.</li>
+     <li>Air bubbles, folds or a torn peel can hide stomata.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask in this practical. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../../notes/class-10/science/index.html">📘 Class 10 Science notes</a></li>
+   <li><a href="../../../cbse-class-10-science-mock-tests.html">📄 Class 10 Science mock tests</a></li>
+   <li><a href="../../../cbse-class-12-biology-mock-papers.html">📄 Class 12 Biology mock papers</a></li>
+   <li><a href="../08-transpiration-demonstration.html">🌿 Next lab: transpiration</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../../about.html">About Us</a> · <a href="../../../privacy.html">Privacy Policy</a> · <a href="../../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
+<script>
+(function(){
+'use strict';
+/* ───────── random helpers ───────── */
+function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function h2(i,j,s){var h=(Math.imul(i,374761393)+Math.imul(j,668265263)+Math.imul(s,1442695041))|0;h=Math.imul(h^(h>>>13),1274126177);h^=h>>>16;return (h>>>0)/4294967296}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+var NS='http://www.w3.org/2000/svg';
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function $(id){return document.getElementById(id)}
+
+/* ───────── the specimen (hidden per session) ───────── */
+var SPW=4000,SPH=3000;               // area of the peel that can be viewed (µm)
+var TYPES={
+ dicot:{guard:'kidney',dist:'lower',label:'Dicot leaf, stomata mostly on the lower surface (like hibiscus, peepal or bean)'},
+ amphi:{guard:'kidney',dist:'both',label:'Dicot leaf with stomata on both surfaces, more on the lower (like sunflower or tomato)'},
+ mono:{guard:'dumbbell',dist:'equal',label:'Grass (monocot) leaf, nearly equal stomata on both surfaces (like maize or wheat)'}};
+function genSample(seed){var r=mulberry(seed),k=['dicot','amphi','mono'][Math.floor(r()*3)],up,low;
+ if(k==='dicot'){up=10+r()*15;low=110+r()*60}
+ else if(k==='amphi'){up=55+r()*25;low=up*(1.6+r()*0.8)}
+ else{up=50+r()*25;low=up*(1.0+r()*0.25)}
+ return {type:k,dUp:up,dLow:low,D10:Math.round((1.6+r()*0.6)*20)/20,rowGap:60+r()*20,zR:300+Math.floor(r()*200)}}
+var KEY='cbse-lab-stomata';
+var S={seed:0,no:0,step:'cal',cur:null,mag:10,z:0,light:30,view:{x:5300,y:350},d10:null,slides:{},rows:[],marks:{upper:[],lower:[]},revealed:false,helper:false};
+try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv&&sv.seed){['seed','no','d10','slides','rows','marks','revealed','step'].forEach(function(k){if(sv[k]!==undefined)S[k]=sv[k]})}}catch(e){}
+if(!S.marks||!S.marks.upper)S.marks={upper:[],lower:[]};
+var SM,SPEC={};
+if(!S.seed)newSample(true);else SM=genSample(S.seed);
+function save(){try{localStorage.setItem(KEY,JSON.stringify({seed:S.seed,no:S.no,d10:S.d10,slides:S.slides,rows:S.rows,marks:S.marks,revealed:S.revealed,step:S.step}))}catch(e){}}
+function newSample(silent){S.seed=1+Math.floor(Math.random()*2e9);S.no=100+Math.floor(Math.random()*900);SM=genSample(S.seed);SPEC={};
+ S.d10=null;S.slides={};S.rows=[];S.marks={upper:[],lower:[]};S.revealed=false;save();
+ if(!silent){renderTable();renderResult();say('A new leaf sample and a new microscope are on the bench. Start again from Step 1.','ok')}}
+
+function stomata(surf){if(SPEC[surf])return SPEC[surf];
+ var d=surf==='upper'?SM.dUp:SM.dLow,r=mulberry(S.seed*7+(surf==='upper'?11:23)),L=[];
+ if(SM.type==='mono'){var g=SM.rowGap,sp=1e6/(d*g);
+  for(var y=g/2;y<SPH;y+=g){var x=r()*sp;while(x<SPW){L.push({x:x,y:y+(r()-.5)*3,a:(r()-.5)*.06});x+=sp*(0.6+r()*0.8)}}}
+ else{var a=Math.sqrt(0.75e6/d);
+  for(var gy=0;gy<SPH/a;gy++)for(var gx=0;gx<SPW/a;gx++){if(r()<0.75)L.push({x:(gx+.25+.5*r())*a,y:(gy+.25+.5*r())*a,a:r()*Math.PI})}}
+ var m=200,inner=L.filter(function(s){return s.x>m&&s.x<SPW-m&&s.y>m&&s.y<SPH-m}).length;
+ L.trueD=inner/(((SPW-2*m)/1000)*((SPH-2*m)/1000));
+ SPEC[surf]=L;return L}
+
+/* ───────── optics ───────── */
+function D(mag){return (mag===40?SM.D10/4:SM.D10)*1000}      // field diameter (µm)
+function zT(){var sl=S.cur==='ruler'?{z0:SM.zR,off:2}:S.slides[S.cur];if(!sl)return 0;return sl.z0+(S.mag===40?sl.off:0)}
+function dof(){return S.mag===40?1.2:6}
+function dz(){return S.z-zT()}
+function sigmaPx(){var s=Math.abs(dz())/dof()*1.3;var sl=S.slides[S.cur];if(sl&&sl.thick)s+=1.1;return Math.min(18,s)}
+function lightEff(){return S.light/(S.mag===40?75:52)}
+function bounds(){var R=D(S.mag)/2;if(S.cur==='ruler')return {x0:R,x1:30000-R,y0:-R*0.6,y1:1200};return {x0:R,x1:SPW-R,y0:R,y1:SPH-R}}
+function clampView(){var b=bounds();S.view.x=clamp(S.view.x,b.x0,b.x1);S.view.y=clamp(S.view.y,b.y0,b.y1)}
+
+/* ───────── field of view (canvas) ───────── */
+var FC=$('field'),fctx=FC.getContext('2d'),SH=document.createElement('canvas'),TMP=document.createElement('canvas'),TMP2=document.createElement('canvas'),shKey='';
+function colours(sl){
+ if(!sl)return null;
+ if(sl.method==='imp')return {bg:[214,214,206],wall:[96,98,96],hi:[245,245,240],imp:true};
+ if(sl.stain==='faint')return {bg:[240,236,232],wall:[214,170,182]};
+ if(sl.stain==='dark')return {bg:[190,104,128],wall:[92,14,44]};
+ return {bg:[246,226,231],wall:[176,58,92]}}
+function renderSharp(lo){
+ var n=FC.width;if(lo)n=Math.round(n/2);SH.width=n;SH.height=n;var c=SH.getContext('2d');
+ var R=D(S.mag)/2,sc=n/(2*R),cx=S.view.x,cy=S.view.y;
+ if(!S.cur||(S.cur!=='ruler'&&!S.slides[S.cur])){c.fillStyle='#f4f1e8';c.fillRect(0,0,n,n);return}
+ if(S.cur==='ruler'){renderRuler(c,n,sc,cx,cy);return}
+ var sl=S.slides[S.cur],col=colours(sl),img=c.createImageData(n,n),dd=img.data,mono=SM.type==='mono';
+ var cs=44,wt=Math.max(1.6,0.9/sc),h=SM.rowGap/3;
+ for(var py=0;py<n;py++){var y=cy+(py-n/2)/sc;
+  for(var px=0;px<n;px++){var x=cx+(px-n/2)/sc,w,i=(py*n+px)*4;
+   if(mono){var m=y/h,row=Math.floor(m),fy=m-row,L=70+70*h2(row,7,S.seed),off=h2(row,3,S.seed)*L,xx=x+off+2.5*Math.sin(y/6),u=xx/L,fx=u-Math.floor(u);
+    var dist=Math.min(Math.min(fy,1-fy)*h,Math.min(fx,1-fx)*L);w=clamp(1-(dist-wt*0.35)/wt,0,1)}
+   else{var X=x+3.6*Math.sin(y/8.5+Math.sin(x/23)),Y=y+3.6*Math.sin(x/8.5+Math.cos(y/19)),gi=Math.floor(X/cs),gj=Math.floor(Y/cs),d1=1e9,d2=1e9;
+    for(var a=-1;a<=1;a++)for(var b=-1;b<=1;b++){var ii=gi+a,jj=gj+b,sx=(ii+.12+.76*h2(ii,jj,S.seed))*cs,sy=(jj+.12+.76*h2(jj,ii,S.seed+5))*cs,q=(X-sx)*(X-sx)+(Y-sy)*(Y-sy);
+     if(q<d1){d2=d1;d1=q}else if(q<d2)d2=q}
+    var e=(Math.sqrt(d2)-Math.sqrt(d1))/2;w=clamp(1-(e-wt*0.35)/wt,0,1)}
+   var g=(h2(px,py,9)-.5)*10;
+   dd[i]=col.bg[0]+(col.wall[0]-col.bg[0])*w+g;dd[i+1]=col.bg[1]+(col.wall[1]-col.bg[1])*w+g;dd[i+2]=col.bg[2]+(col.wall[2]-col.bg[2])*w+g;dd[i+3]=255}}
+ c.putImageData(img,0,0);
+ c.save();c.translate(n/2,n/2);c.scale(sc,sc);c.translate(-cx,-cy);
+ stomata(S.cur).forEach(function(s){if(Math.abs(s.x-cx)>R+40||Math.abs(s.y-cy)>R+40)return;drawStoma(c,s,col,mono)});
+ (sl.bub||[]).forEach(function(bb){if(Math.abs(bb.x-cx)>R+bb.r||Math.abs(bb.y-cy)>R+bb.r)return;
+  var gr=c.createRadialGradient(bb.x,bb.y,bb.r*.55,bb.x,bb.y,bb.r);gr.addColorStop(0,'rgba(255,255,255,.35)');gr.addColorStop(.72,'rgba(255,255,255,.15)');gr.addColorStop(.86,'rgba(25,20,22,.85)');gr.addColorStop(1,'rgba(60,50,55,.15)');
+  c.fillStyle=gr;c.beginPath();c.arc(bb.x,bb.y,bb.r,0,7);c.fill()});
+ c.restore()}
+function drawStoma(c,s,col,mono){
+ c.save();c.translate(s.x,s.y);c.rotate(s.a);
+ var bg='rgb('+col.bg.join(',')+')',wall='rgb('+col.wall.join(',')+')',imp=col.imp,gc=imp?'#c9c9c1':(col.bg[0]<200?'#8d8a50':'#a5c47f');
+ c.lineWidth=1.8;c.strokeStyle=wall;
+ if(mono){
+  c.fillStyle=bg;c.beginPath();c.ellipse(0,0,19,15,0,0,7);c.fill();
+  c.beginPath();c.ellipse(0,-8.5,14,6.5,0,0,7);c.stroke();c.beginPath();c.ellipse(0,8.5,14,6.5,0,0,7);c.stroke();   // subsidiary cells
+  [-1,1].forEach(function(k){var y=k*2.9;c.fillStyle=gc;c.strokeStyle=wall;c.lineWidth=1.4;
+   c.beginPath();c.arc(-11,y,3.5,0,7);c.fill();c.stroke();c.beginPath();c.arc(11,y,3.5,0,7);c.fill();c.stroke();
+   c.fillRect(-11,y-1.5,22,3);c.beginPath();c.moveTo(-8,y-1.5);c.lineTo(8,y-1.5);c.moveTo(-8,y+1.5);c.lineTo(8,y+1.5);c.stroke()});
+  c.strokeStyle=imp?'#4a4a48':'#3a1a24';c.lineWidth=1.2;c.beginPath();c.moveTo(-6,0);c.lineTo(6,0);c.stroke()}
+ else{
+  c.fillStyle=bg;c.beginPath();c.ellipse(0,0,15.5,11.5,0,0,7);c.fill();
+  [-1,1].forEach(function(k){c.beginPath();c.moveTo(-13,0);c.bezierCurveTo(-12,k*13,12,k*13,13,0);c.bezierCurveTo(8,k*3.6,-8,k*3.6,-13,0);c.closePath();c.fillStyle=gc;c.fill();c.stroke()});
+  if(!imp){c.fillStyle='#3d7f2c';[[-6,-6],[0,-7.2],[6,-6],[-5,6.2],[1,7.2],[6.5,5.6]].forEach(function(p){c.beginPath();c.arc(p[0],p[1],1.25,0,7);c.fill()})}
+  c.fillStyle=imp?'#55554f':'#3a1a24';c.beginPath();c.ellipse(0,0,7,1.9,0,0,7);c.fill();
+  c.strokeStyle=imp?'#3d3d3a':'#5a1430';c.lineWidth=1.3;c.stroke()}
+ if(imp){c.strokeStyle='rgba(255,255,255,.55)';c.lineWidth=1;c.beginPath();c.ellipse(-.8,-.8,mono?18:14.5,mono?14:10.5,0,Math.PI,1.5*Math.PI);c.stroke()}
+ c.restore()}
+function renderRuler(c,n,sc,cx,cy){
+ c.fillStyle='#e4ebee';c.fillRect(0,0,n,n);
+ c.save();c.translate(n/2,n/2);c.scale(sc,sc);c.translate(-cx,-cy);
+ var R=D(S.mag)/2+200;
+ if(cy-R<0){c.fillStyle='#2d3436';c.fillRect(cx-R,cy-R,2*R,-(cy-R))}            // beyond the ruler's edge (dark)
+ c.fillStyle='rgba(120,140,150,.08)';for(var k=0;k<3;k++){c.fillRect(cx-R,(k*233)%1300,2*R,6)}
+ for(var mm=Math.floor((cx-R)/1000);mm<=Math.ceil((cx+R)/1000);mm++){if(mm<0||mm>30)continue;
+  var len=mm%10===0?1250:mm%5===0?1000:750;c.fillStyle='#141414';c.fillRect(mm*1000-45,0,90,len);
+  if(mm%10===0){c.font='700 220px Inter, sans-serif';c.textAlign='center';c.fillText(String(mm/10),mm*1000+30,len+260)}}
+ c.restore()}
+function renderField(lo){
+ var key=[S.cur,S.mag,Math.round(S.view.x),Math.round(S.view.y),FC.width,S.cur&&S.slides[S.cur]?S.slides[S.cur].id:0,lo?1:0].join('|');
+ if(key!==shKey){renderSharp(lo);shKey=key}
+ var n=FC.width,c=fctx;c.save();c.globalCompositeOperation='source-over';c.fillStyle='#000';c.fillRect(0,0,n,n);
+ var sig=sigmaPx()*n/400;c.imageSmoothingEnabled=true;
+ if(sig<0.45)c.drawImage(SH,0,0,n,n);
+ else{var k=Math.min(28,1+sig*0.85),w=Math.max(4,Math.round(n/k)),w2=Math.min(n,w*2);TMP.width=w;TMP.height=w;TMP2.width=w2;TMP2.height=w2;
+  var t=TMP.getContext('2d');t.imageSmoothingEnabled=true;t.drawImage(SH,0,0,w,w);var t2=TMP2.getContext('2d');t2.imageSmoothingEnabled=true;t2.drawImage(TMP,0,0,w2,w2);c.drawImage(TMP2,0,0,n,n)}
+ var e=lightEff();
+ if(e<1){c.fillStyle='rgba(0,0,0,'+Math.min(.93,(1-e)*.95).toFixed(3)+')';c.fillRect(0,0,n,n)}
+ else if(e>1.25){c.fillStyle='rgba(255,255,248,'+Math.min(.85,(e-1.25)*1.1).toFixed(3)+')';c.fillRect(0,0,n,n)}
+ var g=c.createRadialGradient(n/2,n/2,n*.28,n/2,n/2,n*.5);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,.5)');c.fillStyle=g;c.fillRect(0,0,n,n);
+ // eyepiece pointer
+ c.strokeStyle='#111';c.lineWidth=n/170;c.beginPath();c.moveTo(n*0.02,n/2);c.lineTo(n*0.4,n/2);c.stroke();
+ // marks and helper
+ var R=D(S.mag)/2,sc=n/(2*R);
+ function P(x,y){return [n/2+(x-S.view.x)*sc,n/2+(y-S.view.y)*sc]}
+ if(S.helper&&S.cur!=='ruler'&&S.slides[S.cur]){c.strokeStyle='rgba(80,220,255,.9)';c.lineWidth=n/220;
+  stomata(S.cur).forEach(function(s){var dx=s.x-S.view.x,dy=s.y-S.view.y;if(dx*dx+dy*dy<=R*R){var p=P(s.x,s.y);c.beginPath();c.arc(p[0],p[1],Math.max(4,20*sc),0,7);c.stroke()}})}
+ if(S.cur==='upper'||S.cur==='lower'){var mk=S.marks[S.cur]||[];c.lineWidth=n/260;
+  mk.forEach(function(m){var p=P(m.x,m.y);if(p[0]<-30||p[0]>n+30||p[1]<-30||p[1]>n+30)return;var rr=Math.max(5,21*sc);c.lineWidth=Math.max(2,n/180);c.strokeStyle='rgba(20,14,0,.6)';c.beginPath();c.arc(p[0],p[1],rr+1.5,0,7);c.stroke();c.strokeStyle='#ffd23f';c.beginPath();c.arc(p[0],p[1],rr,0,7);c.stroke();c.fillStyle='#ffd23f';c.beginPath();c.arc(p[0]+rr*.72,p[1]-rr*.72,Math.max(2.5,n/170),0,7);c.fill()})}
+ c.globalCompositeOperation='destination-in';c.fillStyle='#000';c.beginPath();c.arc(n/2,n/2,n/2-1,0,7);c.fill();
+ c.globalCompositeOperation='destination-over';c.fillStyle='#000';c.fillRect(0,0,n,n);c.restore();
+ updateCounter()}
+function sizeField(){var w=FC.clientWidth||360,dpr=Math.min(2,window.devicePixelRatio||1),n=Math.min(640,Math.round(w*dpr));if(FC.width!==n){FC.width=n;FC.height=n;shKey=''}}
+
+/* ───────── microscope drawing (SVG) ───────── */
+var scope=$('scope');
+scope.innerHTML='<defs><linearGradient id="mBody" x1="0" x2="1"><stop offset="0" stop-color="#2b3340"/><stop offset=".45" stop-color="#e9edf2"/><stop offset=".6" stop-color="#c3cad3"/><stop offset="1" stop-color="#3a4250"/></linearGradient>'+
+ '<linearGradient id="mSteel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe4ea"/><stop offset=".5" stop-color="#8a939f"/><stop offset="1" stop-color="#47505b"/></linearGradient>'+
+ '<radialGradient id="mLamp"><stop offset="0" stop-color="#fffbe6"/><stop offset=".45" stop-color="#ffe7a3" stop-opacity=".7"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient></defs>'+
+ '<rect x="0" y="0" width="300" height="330" rx="12" fill="#0a111d"/>'+
+ '<path d="M40 312 L62 280 H230 L252 312Z" fill="url(#mSteel)"/>'+
+ '<g id="hpLamp" class="hp" tabindex="0" role="button" aria-label="Lamp: tap to change brightness"><circle id="lampGlow" cx="140" cy="272" r="30" fill="url(#mLamp)"/><rect x="126" y="266" width="28" height="12" rx="3" fill="#ffefb8"/><circle class="hring" cx="140" cy="272" r="26" fill="transparent" stroke="transparent"/></g>'+
+ '<path d="M205 284 C246 240 250 150 214 92 L190 104 C214 150 214 230 184 270Z" fill="url(#mBody)"/>'+
+ '<g id="stageG"><rect x="50" y="206" width="170" height="12" rx="3" fill="url(#mSteel)"/><rect x="74" y="200" width="30" height="7" rx="2" fill="#b9c1cb"/><rect x="164" y="200" width="30" height="7" rx="2" fill="#b9c1cb"/><g id="slideG"></g></g>'+
+ '<rect x="128" y="218" width="24" height="18" fill="#59626e"/>'+
+ '<polygon id="beam" points="136,236 144,236 142,200 138,200" fill="#fff6cc" opacity=".7"/>'+
+ '<g id="tubeG"><path d="M108 150 L168 148 L184 92 L128 86Z" fill="url(#mBody)"/><path d="M128 88 L98 26 L126 14 L156 82Z" fill="url(#mBody)"/><rect x="88" y="6" width="40" height="22" rx="4" transform="rotate(-24 108 17)" fill="#2b3340"/>'+
+ '<g id="hpNose" class="hp" tabindex="0" role="button" aria-label="Nosepiece: tap to change objective"><ellipse cx="138" cy="154" rx="32" ry="9" fill="#9aa3ae"/><g id="objG"></g><rect class="hring" x="100" y="140" width="76" height="60" rx="10" fill="transparent" stroke="transparent"/></g></g>'+
+ '<g id="hpCoarse" class="hp knob" tabindex="0" role="slider" aria-label="Coarse focus knob: drag up or down"><circle cx="226" cy="160" r="26" fill="transparent"/><circle cx="226" cy="160" r="18" fill="#3a414b" stroke="#8a939f" stroke-width="2"/><g id="cGrip"></g><circle cx="226" cy="160" r="6" fill="#8a939f"/><circle class="hring" cx="226" cy="160" r="24" fill="none" stroke="transparent"/></g>'+
+ '<g id="hpFine" class="hp knob" tabindex="0" role="slider" aria-label="Fine focus knob: drag up or down"><circle cx="232" cy="214" r="24" fill="transparent"/><circle cx="232" cy="214" r="12" fill="#4b535e" stroke="#9aa3ae" stroke-width="2"/><g id="fGrip"></g><circle class="hring" cx="232" cy="214" r="21" fill="none" stroke="transparent"/></g>'+
+ '<g font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#8ea2bd" text-anchor="middle"><text x="60" y="30">eyepiece</text><text x="250" y="128">coarse</text><text x="268" y="246">fine</text><text x="62" y="196">stage</text><text x="62" y="160">objective</text><text x="80" y="268">lamp</text></g>';
+function drawScope(){
+ var off=clamp(dz()*0.06,-10,4);$('stageG').setAttribute('transform','translate(0 '+(-off).toFixed(1)+')');
+ $('slideG').innerHTML=!S.cur?'':S.cur==='ruler'?'<rect x="86" y="200" width="104" height="7" fill="#d7f0ff" opacity=".85"/><path d="M90 200v4M100 200v3M110 200v3M120 200v3M130 200v4M140 200v3M150 200v3M160 200v3M170 200v4M180 200v3" stroke="#111"/>':
+  '<rect x="94" y="201" width="88" height="5" fill="#d7f0ff" opacity=".85"/><rect x="126" y="200" width="22" height="3" fill="'+(S.slides[S.cur]&&S.slides[S.cur].method==='imp'?'#e7e7df':'#e8a2b6')+'"/>';
+ $('objG').innerHTML=S.mag===40?'<rect x="146" y="150" width="14" height="22" rx="3" fill="#7d8692" transform="rotate(-24 153 160)"/><rect x="131" y="158" width="14" height="36" rx="3" fill="#d9dee5"/><rect x="131" y="180" width="14" height="4" fill="#c9a227"/>':
+  '<rect x="118" y="156" width="14" height="30" rx="3" fill="#d9dee5" transform="rotate(16 125 160)"/><rect x="133" y="158" width="12" height="22" rx="3" fill="#7d8692"/><rect x="133" y="172" width="12" height="3" fill="#2f8f5b"/>';
+ var rot=S.z*3;$('cGrip').innerHTML=grip(226,160,18,rot,10);$('fGrip').innerHTML=grip(232,214,12,rot*6,8);
+ var e=lightEff();$('lampGlow').setAttribute('opacity',(0.2+Math.min(1,S.light/80)*0.8).toFixed(2));$('beam').setAttribute('opacity',(0.15+Math.min(1,S.light/90)*0.7).toFixed(2));
+ $('objTag').textContent=(S.mag===40?'40× · ×400':'10× · ×100');}
+function grip(cx,cy,r,rot,k){var s='';for(var i=0;i<k;i++){var a=(rot+i*360/k)*Math.PI/180;s+='<line x1="'+(cx+Math.cos(a)*(r-5)).toFixed(1)+'" y1="'+(cy+Math.sin(a)*(r-5)).toFixed(1)+'" x2="'+(cx+Math.cos(a)*r).toFixed(1)+'" y2="'+(cy+Math.sin(a)*r).toFixed(1)+'" stroke="#9aa3ae" stroke-width="1.5"/>'}return s}
+
+/* ───────── microscope controls ───────── */
+var msgEl=$('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+function focus(d,coarse){
+ if(!S.cur){say('Put a slide on the stage first.','bad');return}
+ if(coarse&&S.mag===40){say('At 40× use only the fine knob. The coarse knob can drive the objective into the coverslip and crack it.','bad');return}
+ var top=zT()+(S.mag===40?5:60);S.z+=d;
+ if(S.z>top){S.z=top;say(S.mag===40?'Stop! The 40× objective is almost touching the coverslip. Turn the fine knob the other way.':'Careful — the stage is close to the objective. Focus downwards now.','bad')}
+ if(S.z<zT()-600)S.z=zT()-600;
+ update()}
+document.querySelectorAll('.nudge button').forEach(function(b){b.onclick=function(){var d=parseFloat(b.dataset.f);focus(d,Math.abs(d)>5)}});
+function moveStage(dir){if(!S.cur)return;var st=S.mag===40?D(40)*0.9:D(10)*0.25;
+ if(dir==='l')S.view.x-=st;if(dir==='r')S.view.x+=st;if(dir==='u')S.view.y-=st;if(dir==='d')S.view.y+=st;clampView();update()}
+document.querySelectorAll('.stagepad button').forEach(function(b){b.onclick=function(){moveStage(b.dataset.m)}});
+function setMag(m){if(m===S.mag)return;
+ if(!S.cur){say('Put a slide on the stage first.','bad');return}
+ if(m===40&&S.z>zT40()+5){S.z=zT40()+5;say('The 40× objective scraped the coverslip because the stage was too high. Always focus at 10× first.','bad')}
+ else if(m===40&&Math.abs(dz())>14)say('Tip: focus sharply at 10× before you change to 40×. A good microscope is nearly parfocal, so only the fine knob is then needed.','');
+ else say('');
+ S.mag=m;clampView();buildObj();update()}
+function zT40(){var sl=S.cur==='ruler'?{z0:SM.zR,off:2}:S.slides[S.cur];return sl?sl.z0+sl.off:0}
+function buildObj(){document.querySelectorAll('#objSel .chip').forEach(function(b){b.classList.toggle('on',+b.dataset.v===S.mag)})}
+document.querySelectorAll('#objSel .chip').forEach(function(b){b.onclick=function(){setMag(+b.dataset.v)}});
+$('hpNose').addEventListener('click',function(){setMag(S.mag===10?40:10)});
+$('hpLamp').addEventListener('click',function(){S.light=S.light>=85?15:S.light+20;$('light').value=S.light;update()});
+['hpNose','hpLamp'].forEach(function(id){$(id).addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();$(id).dispatchEvent(new Event('click'))}})});
+$('light').oninput=function(){S.light=+this.value;update()};
+// focus knobs: drag vertically, or arrow keys
+[['hpCoarse',20,6],['hpFine',1,5]].forEach(function(k){var g=$(k[0]),drag=null;
+ g.addEventListener('pointerdown',function(e){drag={y:e.clientY,acc:0};g.setPointerCapture(e.pointerId);e.preventDefault()});
+ g.addEventListener('pointermove',function(e){if(!drag)return;var d=drag.y-e.clientY;drag.y=e.clientY;drag.acc+=d;while(Math.abs(drag.acc)>=k[2]){var s=drag.acc>0?1:-1;drag.acc-=s*k[2];focus(s*k[1],k[1]>5)}});
+ g.addEventListener('pointerup',function(){drag=null});g.addEventListener('pointercancel',function(){drag=null});
+ g.addEventListener('keydown',function(e){if(e.key==='ArrowUp'){focus(k[1],k[1]>5);e.preventDefault()}if(e.key==='ArrowDown'){focus(-k[1],k[1]>5);e.preventDefault()}})});
+// field: drag to move the slide, tap to mark at 40×
+var fd=null,raf=0;
+function fieldScale(){return FC.clientWidth/D(S.mag)}           // css px per µm
+FC.addEventListener('pointerdown',function(e){fd={x:e.clientX,y:e.clientY,vx:S.view.x,vy:S.view.y,moved:false};FC.setPointerCapture(e.pointerId)});
+FC.addEventListener('pointermove',function(e){if(!fd)return;var dx=e.clientX-fd.x,dy=e.clientY-fd.y;if(!fd.moved&&dx*dx+dy*dy<64)return;fd.moved=true;
+ if(!S.cur)return;var s=fieldScale();S.view.x=fd.vx-dx/s;S.view.y=fd.vy-dy/s;clampView();if(!raf)raf=requestAnimationFrame(function(){raf=0;renderField(true);drawScope();showRead()})});
+FC.addEventListener('pointerup',function(e){if(!fd)return;var moved=fd.moved;fd=null;if(moved){update();return}tap(e)});
+FC.addEventListener('pointercancel',function(){fd=null;update()});
+FC.addEventListener('keydown',function(e){var map={ArrowLeft:'l',ArrowRight:'r',ArrowUp:'u',ArrowDown:'d'};if(map[e.key]){moveStage(map[e.key]);e.preventDefault()}
+ if(e.key==='+'||e.key==='='){focus(1);e.preventDefault()}if(e.key==='-'){focus(-1);e.preventDefault()}});
+function tap(e){
+ if(S.step!=='count'||!(S.cur==='upper'||S.cur==='lower'))return;
+ if(S.mag!==40){say('Count at 40× (high power). Switch the objective first.','bad');return}
+ var r=FC.getBoundingClientRect(),s=fieldScale(),x=S.view.x+(e.clientX-r.left-r.width/2)/s,y=S.view.y+(e.clientY-r.top-r.height/2)/s,R=D(40)/2;
+ if((x-S.view.x)*(x-S.view.x)+(y-S.view.y)*(y-S.view.y)>R*R)return;
+ var mk=S.marks[S.cur];
+ for(var i=0;i<mk.length;i++){if(Math.hypot(mk[i].x-x,mk[i].y-y)<13){mk.splice(i,1);save();renderField();return}}
+ var best=null,bd=17;stomata(S.cur).forEach(function(st){var d=Math.hypot(st.x-x,st.y-y);if(d<bd){bd=d;best=st}});
+ if(best){for(i=0;i<mk.length;i++)if(Math.hypot(mk[i].x-best.x,mk[i].y-best.y)<13){mk.splice(i,1);save();renderField();return}x=best.x;y=best.y}
+ mk.push({x:Math.round(x),y:Math.round(y)});save();renderField()}
+function marksInField(){if(!(S.cur==='upper'||S.cur==='lower'))return 0;var R=D(S.mag)/2;return (S.marks[S.cur]||[]).filter(function(m){var dx=m.x-S.view.x,dy=m.y-S.view.y;return dx*dx+dy*dy<=R*R}).length}
+function trueInField(){var R=D(40)/2;return stomata(S.cur).filter(function(s){var dx=s.x-S.view.x,dy=s.y-S.view.y;return dx*dx+dy*dy<=R*R}).length}
+function updateCounter(){$('tally').textContent=marksInField()+' marked'}
+$('clearMarks').onclick=function(){if(S.cur==='upper'||S.cur==='lower'){var R=D(S.mag)/2;S.marks[S.cur]=S.marks[S.cur].filter(function(m){var dx=m.x-S.view.x,dy=m.y-S.view.y;return dx*dx+dy*dy>R*R});save();renderField()}};
+$('helper').onchange=function(){S.helper=this.checked;update()};
+$('newSample').onclick=function(){if((S.rows.length||S.d10)&&!confirmInline(this))return;newSample();setStep('cal')};
+function confirmInline(btn){if(btn.dataset.sure){delete btn.dataset.sure;btn.textContent='↺ New sample';return true}
+ btn.dataset.sure=1;btn.textContent='Tap again to clear all readings';setTimeout(function(){delete btn.dataset.sure;btn.textContent='↺ New sample'},3500);return false}
+
+function placeSlide(k){S.cur=k;S.mag=10;S.z=zT()-160+Math.round(Math.random()*20);
+ if(k==='ruler'){S.view={x:5000+Math.random()*3000,y:350}}else{S.view={x:SPW/2+(Math.random()-.5)*800,y:SPH/2+(Math.random()-.5)*600}}
+ clampView();buildObj();buildSlideSel();update()}
+function buildSlideSel(){var box=$('slideSel');box.innerHTML='';
+ var list=S.step==='cal'?[['ruler','mm ruler']]:[['upper','Upper-surface slide'],['lower','Lower-surface slide']];
+ list.forEach(function(it){var b=document.createElement('button');b.type='button';b.className='chip'+(S.cur===it[0]?' on':'');b.textContent=it[1]+(it[0]!=='ruler'&&!S.slides[it[0]]?' (not made)':'');
+  b.disabled=it[0]!=='ruler'&&!S.slides[it[0]];b.onclick=function(){placeSlide(it[0]);say(it[1]+' is on the stage. Start at 10× and focus with the coarse knob.')};box.appendChild(b)})}
+function showRead(){var t='';
+ if(S.helper&&S.cur){t='Δfocus '+(dz()>0?'+':'')+dz()+' µm';if(S.cur==='ruler')t+=' · field '+(D(S.mag)/1000).toFixed(2)+' mm';else if(S.mag===40)t+=' · '+trueInField()+' stomata'}
+ $('readout').textContent=t}
+function caption(){var c='';
+ if(!S.cur)c='No slide on the stage.';
+ else if(S.cur==='ruler')c=S.mag===10?'Line one mm mark up with the edge of the field (use the pointer) and count the millimetres across the full diameter. Estimate tenths.':'At 40× only a small part of a millimetre fits in the field. Measure at 10×.';
+ else c=S.mag===10?'Low power: find a flat, clear area without bubbles, focus, then change to 40×.':'High power: tap every stoma inside the field to mark it. Count an edge stoma only if more than half is inside. Drag or use ◀▲▼▶ for a new field.';
+ var e=lightEff();if(S.cur&&e<0.6)c='Too dark to see — turn up the lamp. '+c;else if(S.cur&&e>1.7)c='Washed out with too much light — dim the lamp. '+c;
+ $('fcap').textContent=c}
+function update(){sizeField();renderField();drawScope();showRead();caption()}
+
+/* ───────── calibration ───────── */
+$('saveCal').onclick=function(){var v=parseFloat($('d10').value);
+ if(isNaN(v)){say('Type the field diameter in mm (to one decimal place), for example 1.8.','bad');return}
+ if(S.cur!=='ruler'||S.mag!==10){say('Measure with the mm ruler on the stage and the 10× objective in place.','bad');return}
+ if(Math.abs(dz())>dof()){say('The ruler lines are blurred. Focus sharply before you read the scale.','bad');return}
+ if(lightEff()<0.6){say('It is too dark to read the lines. Turn up the lamp.','bad');return}
+ if(Math.abs(v-SM.D10)>0.1){say('That is not quite right. Put the edge of one mm line at the left edge of the field, count the whole mm across the diameter (through the pointer) and estimate the last fraction.','bad');return}
+ S.d10=Math.round(v*100)/100;save();renderTable();renderResult();
+ say('Saved: field diameter at 10× = '+S.d10.toFixed(2)+' mm, so at 40× it is '+(S.d10/4).toFixed(3)+' mm. Go to Step 2.','ok')};
+
+/* ───────── slide preparation ───────── */
+var PEEL=[
+ {id:'tear',tool:'leaf',t:'Tear the leaf obliquely and lift a thin peel with forceps',pre:''},
+ {id:'water',tool:'glass',t:'Put the peel in the watch glass of water',pre:'You need a peel first. Tear the leaf obliquely to get one.'},
+ {id:'stain',tool:'saf',t:'Add 2–3 drops of safranin to the peel',pre:'Put the peel in water first, or it dries and curls before you can stain it.'},
+ {id:'wash',tool:'glass',t:'Wash off the extra stain in clean water',pre:'There is no stain to wash off yet.'},
+ {id:'gly',tool:'gly',t:'Put a drop of glycerine on the slide and lay the peel in it',pre:'Stain and wash the peel before mounting it, or the walls will not show.'},
+ {id:'cover',tool:'needle',t:'Place the coverslip on the peel',pre:'Mount the peel in glycerine on the slide before covering it.'},
+ {id:'blot',tool:'blot',t:'Blot extra glycerine from the edges with blotting paper',pre:'There is nothing to blot until the coverslip is on.'}];
+var IMP=[
+ {id:'paint',tool:'polish',t:'Paint a patch of clear nail polish on the leaf surface',pre:''},
+ {id:'dry',tool:'leaf',t:'Wait until the polish is completely dry',pre:'Paint the nail polish on first.'},
+ {id:'tape',tool:'tape',t:'Press clear tape on the dry polish and peel off the impression',pre:'Wet polish smears. Let it dry fully first.'},
+ {id:'stick',tool:'slide',t:'Stick the tape (impression side down) on a clean slide',pre:'You have no impression yet — lift it off with tape first.'}];
+var P={surf:'lower',method:'peel',stain:'good',cover:'needle',coat:'thin',smooth:'smooth',done:[],order:[],busy:false};
+function steps(){return P.method==='peel'?PEEL:IMP}
+function shuffle(n){var a=[];for(var i=0;i<n;i++)a.push(i);for(i=n-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function restartPrep(){P.done=[];P.order=shuffle(steps().length);P.busy=false;$('toScope').hidden=true;pmsg('');drawPrep()}
+var pm=$('pmsg');function pmsg(t,c){pm.textContent=t;pm.className='msg '+(c||'')}
+function chipGroup(id,key,cb){document.querySelectorAll('#'+id+' .chip').forEach(function(b){b.onclick=function(){if(P.busy)return;P[key]=b.dataset.v;if(cb)cb();drawPrep()}})}
+chipGroup('surfSel','surf',restartPrep);chipGroup('methSel','method',restartPrep);chipGroup('stainSel','stain');chipGroup('coverSel','cover');chipGroup('coatSel','coat');chipGroup('smoothSel','smooth');
+$('restartPrep').onclick=restartPrep;
+function doAction(id){if(P.busy)return;var st=steps(),next=st[P.done.length];if(!next)return;
+ var s=st.filter(function(x){return x.id===id})[0];
+ if(P.done.indexOf(id)>=0){pmsg('Already done.','');return}
+ if(id!==next.id){pmsg('Not yet. '+s.pre,'bad');return}
+ if(id==='dry'){P.busy=true;var n=3;pmsg('Drying… '+n,'');var iv=setInterval(function(){n--;if(n>0){pmsg('Drying… '+n,'')}else{clearInterval(iv);P.busy=false;P.done.push('dry');pmsg('The polish is dry and no longer sticky.','ok');drawPrep()}},700);drawPrep();return}
+ P.done.push(id);flash(s.tool);
+ var t={tear:'A thin, almost colourless peel came away from the '+P.surf+' surface.',water:'The peel floats flat in the water.',stain:'Staining for '+({faint:'30 seconds',good:'2 minutes',dark:'10 minutes'})[P.stain]+'.',wash:'Extra stain washed away.',gly:'The peel lies flat in a drop of glycerine.',
+  cover:P.cover==='needle'?'The coverslip settled slowly from one side, pushing the air out.':'The coverslip dropped flat with a little splash.',blot:'Edges blotted dry.',paint:P.coat==='thin'?'A thin, even patch of polish.':'A thick blob of polish.',tape:'The impression came away on the tape.',stick:P.smooth==='smooth'?'Tape smoothed flat on the slide.':'Tape stuck only at its ends.'}[id];
+ pmsg(t,'ok');
+ if(P.done.length===st.length)finishSlide();
+ drawPrep()}
+function finishSlide(){var r=mulberry(S.seed+Date.now()%100000),bub=[],bad=P.method==='peel'?P.cover==='flat':P.smooth==='ends';
+ var nb=bad?4+Math.floor(r()*4):(r()<0.35?1:0);
+ for(var i=0;i<nb;i++)bub.push({x:Math.round(400+r()*(SPW-800)),y:Math.round(400+r()*(SPH-800)),r:Math.round(bad?60+r()*120:25+r()*25)});
+ S.slides[P.surf]={id:Date.now()%1e9,method:P.method,stain:P.method==='peel'?P.stain:null,thick:P.method==='imp'&&P.coat==='thick',bub:bub,z0:250+Math.floor(r()*250),off:Math.round(r()*8-4)};
+ save();$('toScope').hidden=false;
+ pmsg('The '+P.surf+'-surface slide is ready. Put it on the microscope.','ok')}
+$('toScope').onclick=function(){var k=P.surf;setStep('count');placeSlide(k);say('The '+k+'-surface slide is on the stage. Focus at 10× first.')};
+var bench=$('bench');
+function flash(tool){setTimeout(function(){var g=bench.querySelector('[data-tool="'+tool+'"]');if(g){g.classList.remove('used');void g.getBBox();g.classList.add('used');var bs=$('benchScroll');if(bs.scrollWidth>bs.clientWidth+4){var r=g.getBoundingClientRect(),br=bs.getBoundingClientRect();if(r.left<br.left+20||r.right>br.right-20)bs.scrollLeft+=r.left+r.width/2-(br.left+br.width/2)}}},0)}
+function drawPrep(){
+ var st=steps(),d=P.done,has=function(x){return d.indexOf(x)>=0},peel=P.method==='peel';
+ ['surfSel','methSel','stainSel','coverSel','coatSel','smoothSel'].forEach(function(id){var key={surfSel:'surf',methSel:'method',stainSel:'stain',coverSel:'cover',coatSel:'coat',smoothSel:'smooth'}[id];
+  document.querySelectorAll('#'+id+' .chip').forEach(function(b){b.classList.toggle('on',P[key]===b.dataset.v)})});
+ $('peelOpts').hidden=!peel;$('impOpts').hidden=peel;
+ $('sampleTag').textContent='Leaf sample S-'+S.no;
+ var box=$('acts');box.innerHTML='';P.order.forEach(function(i){var s=st[i];if(!s)return;var b=document.createElement('button');b.type='button';b.className='act'+(has(s.id)?' done':'');b.textContent=s.t;b.disabled=P.busy;b.onclick=function(){doAction(s.id)};box.appendChild(b)});
+ $('slideState').innerHTML=['upper','lower'].map(function(k){var s=S.slides[k];return '<span class="'+(s?'ok':'')+'">'+(k==='upper'?'Upper':'Lower')+' slide: '+(s?(s.method==='peel'?'peel ✓':'impression ✓'):'not made')+'</span>'}).join('');
+ // bench picture
+ var stainCol={faint:'#f3c9d3',good:'#e07a98',dark:'#9e1c48'}[P.stain],h='';
+ h+='<defs><linearGradient id="bw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#2e1d10"/></linearGradient><linearGradient id="bt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2433"/><stop offset="1" stop-color="#0d131c"/></linearGradient><linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#cfefff" stop-opacity=".5"/><stop offset=".5" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#bfe6ff" stop-opacity=".5"/></linearGradient></defs>';
+ h+='<rect width="900" height="300" fill="url(#bt)"/><path d="M0 60H900M0 120H900M150 0V150M450 0V150M750 0V150" stroke="#223146" stroke-width="2"/><rect y="150" width="900" height="150" fill="url(#bw)"/>';
+ function tool(id,x,y,w,hh,inner,label){return '<g class="tool" data-tool="'+id+'" tabindex="0" role="button" aria-label="'+label+'"><rect class="ring" x="'+(x-6)+'" y="'+(y-6)+'" width="'+(w+12)+'" height="'+(hh+12)+'" rx="12" fill="rgba(232,204,106,.1)" stroke="#e8cc6a" stroke-width="2" stroke-dasharray="5 4"/>'+inner+'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+hh+'" fill="transparent"/><text x="'+(x+w/2)+'" y="'+(y+hh+20)+'" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#e8cc6a">'+label+'</text></g>'}
+ // leaf
+ var leaf='<path d="M30 220 C60 150 170 140 220 200 C170 250 70 260 30 220Z" fill="#3f8f3a"/><path d="M34 220 C90 205 160 200 218 200" stroke="#bde3a5" stroke-width="2" fill="none"/><path d="M80 214 l-14 -18 M120 208 l-10 -22 M160 204 l-8 -22 M100 212 l-6 18 M140 206 l-4 20" stroke="#8fcf7a" stroke-width="1.2"/>';
+ if(peel&&has('tear'))leaf+='<path d="M170 168 l12 10 -8 8 12 10 -10 8 14 10" stroke="#2a5e26" stroke-width="3" fill="none"/>'+(has('water')?'':'<path d="M186 160 q22 -10 34 6 q-14 14 -30 6z" fill="#e9f3e2" opacity=".85" stroke="#9cc48a"/>');
+ if(!peel&&has('paint')&&!has('tape'))leaf+='<ellipse cx="110" cy="214" rx="34" ry="14" fill="#fff" opacity="'+(has('dry')?'.35':'.6')+'" stroke="#fff" stroke-opacity=".8"/>';
+ if(!peel&&has('tape'))leaf+='<ellipse cx="110" cy="214" rx="34" ry="14" fill="#7cbf6c" opacity=".5"/>';
+ h+=tool('leaf',24,140,200,110,leaf,'Leaf ('+P.surf+' side up)');
+ if(peel){
+  var water=has('stain')?(has('wash')?'#f4c6d2':stainCol):'#cfe9f7';
+  var gl='<ellipse cx="300" cy="226" rx="56" ry="18" fill="url(#gl)" stroke="#e8f6ff" stroke-width="1.5"/><ellipse cx="300" cy="222" rx="46" ry="11" fill="'+water+'" opacity=".85"/>'+(has('water')&&!has('gly')?'<path d="M284 220 q14 -6 30 2 q-14 6 -30 -2z" fill="'+(has('stain')?'#c94a70':'#eef6e8')+'" opacity=".9"/>':'');
+  h+=tool('glass',240,196,120,50,gl,'Watch glass');
+  h+=tool('saf',384,150,52,96,'<rect x="392" y="190" width="36" height="54" rx="6" fill="#8a1236" opacity=".85"/><rect x="398" y="176" width="24" height="16" fill="#222"/><path d="M410 176 V150" stroke="#ddd" stroke-width="5"/><circle cx="410" cy="150" r="7" fill="#c33"/><rect x="394" y="208" width="32" height="14" fill="#fff" opacity=".85"/><text x="410" y="219" font-size="9" text-anchor="middle" font-family="Inter" fill="#8a1236">SAFRANIN</text>','Safranin');
+  h+=tool('gly',456,156,52,90,'<rect x="462" y="184" width="40" height="60" rx="8" fill="#e9f4f7" opacity=".7" stroke="#cfe"/><rect x="470" y="168" width="24" height="18" fill="#555"/><rect x="464" y="206" width="36" height="14" fill="#fff"/><text x="482" y="217" font-size="8.5" text-anchor="middle" font-family="Inter" fill="#246">GLYCERINE</text>','Glycerine');
+  var cv=has('cover');
+  var sl='<rect x="540" y="214" width="170" height="26" rx="2" fill="url(#gl)" stroke="#e8f6ff"/>'+(has('gly')?'<ellipse cx="625" cy="227" rx="'+(has('blot')?20:30)+'" ry="8" fill="#f4fbff" opacity=".7"/><path d="M610 225 q15 -6 30 2 q-15 6 -30 -2z" fill="'+(P.stain==='dark'?'#9e1c48':P.stain==='faint'?'#f0c4cf':'#d55a80')+'"/>':'')+
+   (cv?'<rect x="600" y="210" width="50" height="34" fill="#eaf7ff" opacity=".35" stroke="#fff"/>'+(P.cover==='flat'?'<circle cx="612" cy="220" r="4" fill="none" stroke="#fff"/><circle cx="636" cy="232" r="5" fill="none" stroke="#fff"/><circle cx="628" cy="216" r="3" fill="none" stroke="#fff"/>':''):'');
+  h+='<g>'+sl+'<text x="625" y="262" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#e8cc6a">Slide</text></g>';
+  h+=tool('needle',728,150,60,96,'<path d="M740 236 L776 160" stroke="#ccd" stroke-width="3"/><rect x="734" y="222" width="14" height="22" rx="3" fill="#8b5a2b" transform="rotate(25 741 233)"/>'+(cv?'':'<rect x="752" y="200" width="28" height="22" fill="#eaf7ff" opacity=".4" stroke="#fff"/>'),'Needle + coverslip');
+  h+=tool('blot',806,186,80,60,'<rect x="812" y="198" width="70" height="44" rx="3" fill="#f2efe6"/><path d="M818 210h56M818 220h56M818 230h40" stroke="#d8d2c2"/>'+(has('blot')?'<ellipse cx="846" cy="222" rx="12" ry="5" fill="#cfe9f7" opacity=".7"/>':''),'Blotting paper');
+ }else{
+  h+=tool('polish',256,150,60,96,'<rect x="264" y="192" width="44" height="52" rx="10" fill="#f6f2ff" opacity=".55" stroke="#fff"/><rect x="276" y="160" width="20" height="34" rx="3" fill="#222"/><rect x="268" y="212" width="36" height="12" fill="#fff" opacity=".8"/><text x="286" y="221" font-size="8" text-anchor="middle" font-family="Inter" fill="#444">CLEAR</text>','Nail polish');
+  h+=tool('tape',350,180,90,66,'<circle cx="395" cy="214" r="30" fill="#e8e3cf" opacity=".8"/><circle cx="395" cy="214" r="16" fill="#3b2c1a"/>'+(has('tape')&&!has('stick')?'<rect x="420" y="190" width="60" height="20" fill="#fff" opacity=".45" transform="rotate(-12 420 190)"/>':''),'Clear tape');
+  var sl2='<rect x="520" y="214" width="170" height="26" rx="2" fill="url(#gl)" stroke="#e8f6ff"/>'+(has('stick')?'<rect x="560" y="212" width="90" height="30" fill="#fff" opacity=".35" stroke="#fff"/><ellipse cx="605" cy="227" rx="26" ry="9" fill="#dcdcd4" opacity=".8"/>'+(P.smooth==='ends'?'<circle cx="590" cy="224" r="4" fill="none" stroke="#fff"/><circle cx="615" cy="231" r="6" fill="none" stroke="#fff"/><circle cx="628" cy="220" r="3" fill="none" stroke="#fff"/>':''):'');
+  h+=tool('slide',514,200,182,46,sl2,'Slide');
+ }
+ bench.innerHTML=h;
+ bench.querySelectorAll('.tool').forEach(function(g){var tl=g.getAttribute('data-tool');
+  var fire=function(){var nx=st[d.length];var cand=st.filter(function(x){return x.tool===tl&&d.indexOf(x.id)<0});
+   if(!cand.length){pmsg(nx?'You do not need that right now.':'This slide is finished.','');return}
+   doAction(nx&&nx.tool===tl?nx.id:cand[0].id)};
+  g.addEventListener('click',fire);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fire()}})})}
+
+/* ───────── steps ───────── */
+function setStep(k){S.step=k;save();document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.step===k)});
+ $('prepBox').hidden=k!=='prep';$('scopeBox').hidden=k==='prep';$('calBox').hidden=k!=='cal';$('cntBox').hidden=k!=='count';
+ var T={cal:'<b>Step 1.</b> A transparent <b>mm ruler</b> is on the stage. Turn up the lamp, focus at <b>10×</b> (coarse, then fine), and count how many millimetres fit across the <b>diameter</b> of the field. Type it to 0.1 mm and save it.',
+  prep:'<b>Step 2.</b> Make one slide of the <b>lower</b> surface and one of the <b>upper</b> surface. Choose a method, then tap the tools (or the action cards) in the correct order.',
+  count:'<b>Step 3.</b> Focus at 10×, move to a clear area, switch to <b>40×</b> and use only the fine knob. <b>Tap each stoma</b> inside the field to mark it, record the field, then type the count in the table. Do <b>3 or more separate fields</b> on each surface.'};
+ $('task').innerHTML=T[k]+(k!=='cal'&&!S.d10?' <b>(Calibrate the field in Step 1 first so the area can be worked out.)</b>':'');
+ if(k==='prep'){if(!P.order.length)restartPrep();else drawPrep()}
+ else{if(k==='cal'&&S.cur!=='ruler')placeSlide('ruler');
+  if(k==='count'&&(S.cur==='ruler'||!S.slides[S.cur])){var f=S.slides.lower?'lower':S.slides.upper?'upper':null;if(f)placeSlide(f);else{S.cur=null;buildSlideSel();update()}}
+  buildSlideSel();update();say(k==='count'&&!S.cur?'No slides yet — make them in Step 2.':'')}}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setStep(t.dataset.step)}});
+
+$('recBtn').onclick=function(){
+ if(!(S.cur==='upper'||S.cur==='lower')){say('Put a leaf slide on the stage first.','bad');return}
+ if(S.mag!==40){say('Stomata are counted at 40×. Switch to the high-power objective.','bad');return}
+ if(S.rows.length>=16){say('Sixteen fields is plenty. Delete one to add another.','bad');return}
+ var R=D(40)/2,sl=S.slides[S.cur],cx=S.view.x,cy=S.view.y,e=lightEff();
+ var t={n:trueInField(),cx:Math.round(cx),cy:Math.round(cy),blur:Math.abs(dz())>1,dark:e<0.6,bright:e>1.7,
+  bub:(sl.bub||[]).some(function(b){return Math.hypot(b.x-cx,b.y-cy)<b.r+R}),
+  dup:S.rows.some(function(r){return r.s===S.cur&&Math.hypot(r.t.cx-cx,r.t.cy-cy)<2*R*0.9}),mk:marksInField()};
+ S.rows.push({s:S.cur,t:t,n:''});save();renderTable();
+ say('Field recorded ('+t.mk+' marked). Type your count into the table, then move to a new field.','ok');
+ var ins=document.querySelectorAll('#tb tr:last-child input');if(ins[0])ins[0].focus({preventScroll:true})};
+
+/* ───────── table ───────── */
+var tb=$('tb');
+function area(){return S.d10?Math.PI*Math.pow(S.d10/8,2):null}
+function calc(r){var n=parseFloat(r.n),A=area();if(isNaN(n)||!A)return null;return {n:n,A:A,f:n/A}}
+function tol(n){return n>15?2:1}
+function fieldNo(i){var k=0;for(var j=0;j<=i;j++)if(S.rows[j].s===S.rows[i].s)k++;return k}
+function renderTable(){
+ $('dCal').textContent=S.d10?S.d10.toFixed(2)+' mm (40×: '+(S.d10/4).toFixed(3)+' mm)':'not measured yet';
+ var nu=S.rows.filter(function(r){return r.s==='upper'}).length;$('nObs').textContent=nu+' upper · '+(S.rows.length-nu)+' lower';
+ if(!S.rows.length){tb.innerHTML='<tr><td colspan="7" class="note" style="padding:16px">No fields yet. In Step 3, mark the stomata in a field at 40× and press “Record this field”.</td></tr>';drawGraphs();renderResult();return}
+ tb.innerHTML='';S.rows.forEach(function(r,i){var tr=document.createElement('tr');
+  tr.innerHTML='<td>'+(i+1)+'</td><td>'+(r.s==='upper'?'Upper':'Lower')+'</td><td>'+fieldNo(i)+'</td><td><input data-k="n" value="'+r.n+'" inputmode="numeric" aria-label="stomata counted"></td><td class="n"></td><td class="n"></td><td><button class="del" type="button" title="Delete" aria-label="Delete this field">✕</button></td>';
+  var inp=tr.querySelector('input');inp.oninput=function(){r.n=inp.value.trim();inp.classList.remove('bad','good');fill(tr,r);save();drawGraphs();renderResult()};
+  tr.querySelector('.del').onclick=function(){S.rows.splice(i,1);save();renderTable()};
+  fill(tr,r);tb.appendChild(tr)});
+ drawGraphs();renderResult()}
+function fill(tr,r){var c=calc(r),td=tr.querySelectorAll('td.n'),A=area();td[0].textContent=A?A.toFixed(4):'–';td[1].textContent=c?c.f.toFixed(0):'–'}
+function rowProblems(r){var m=[],n=parseFloat(r.n);
+ if(isNaN(n))m.push('type the number of stomata you counted');
+ else if(Math.abs(n-r.t.n)>tol(r.t.n))m.push('recount — '+(n>r.t.n?'you have counted too many (an edge stoma less than half inside, or a mark on something that is not a stoma?)':'you have missed some stomata (look near the edge and in darker cells)'));
+ if(r.t.blur)m.push('the field was not in sharp focus, so stomata could be missed — refocus with the fine knob and take this field again');
+ if(r.t.bub)m.push('an air bubble was in the field and hid part of it — choose a clear field');
+ if(r.t.dup)m.push('this field overlaps an earlier one on the same surface — move the slide to a new area');
+ if(r.t.dark)m.push('the field was too dark to count reliably');if(r.t.bright)m.push('the field was washed out by too much light');
+ return m}
+$('check').onclick=function(){
+ var fb=[],rows=tb.querySelectorAll('tr');
+ if(!S.d10)fb.push('Calibrate the field diameter in Step 1 — without it the area and frequency cannot be calculated.');
+ if(!S.rows.length){fb.push('Record some fields first.');showFb(fb);return}
+ S.rows.forEach(function(r,i){var tr=rows[i],p=rowProblems(r),inp=tr.querySelector('input'),n=parseFloat(r.n),ok=!isNaN(n)&&Math.abs(n-r.t.n)<=tol(r.t.n);
+  inp.classList.toggle('bad',!ok);inp.classList.toggle('good',ok);tr.classList.toggle('flag',p.length>0);
+  if(p.length)fb.push('Row '+(i+1)+' ('+(r.s==='upper'?'upper':'lower')+' surface): '+p.join('; ')+'.')});
+ var g=good();['upper','lower'].forEach(function(k){if(g[k].length<3)fb.push('You need at least 3 correct fields on the '+k+' surface (now '+g[k].length+').')});
+ if(!fb.length)fb.push('✓ Every count is correct and every field was focused, clear and separate. See your graphs and result below.');
+ showFb(fb)};
+function showFb(a){$('fb').innerHTML=a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+function good(){var o={upper:[],lower:[]};S.rows.forEach(function(r){if(!rowProblems(r).length){var c=calc(r);if(c)o[r.s].push(c)}});return o}
+function valid(){var o={upper:[],lower:[]};S.rows.forEach(function(r){var c=calc(r);if(c)o[r.s].push(c)});return o}
+function mean(a){return a.length?a.reduce(function(s,c){return s+c.f},0)/a.length:null}
+
+/* ───────── graphs ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=$(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(300,r.width||560),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h}}
+function nice(m){var steps=[1,2,2.5,5,10,20,25,50,100],e=Math.pow(10,Math.floor(Math.log10(m/6)));for(var i=0;i<steps.length;i++){if(m/(steps[i]*e)<=7)return steps[i]*e}return m/5}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);g.x.fillStyle=css('--muted')||'#777';g.x.font='14px Inter, sans-serif';g.x.textAlign='center';g.x.fillText(t,g.w/2,g.h/2)}
+function frame(g,ymax,st,yl,xl){var x=g.x,L=56,B=44,R=16,T=18,W=g.w-L-R,H=g.h-T-B,txt=css('--text')||'#222',mut=css('--muted')||'#666',bd=css('--border')||'#ddd';
+ x.clearRect(0,0,g.w,g.h);x.font='12px Inter, sans-serif';x.lineWidth=1;
+ for(var v=0;v<=ymax+1e-9;v+=st){var py=T+H-v/ymax*H;x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(String(Math.round(v*10)/10),L-6,py+4)}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T);x.lineTo(L,T+H);x.lineTo(L+W,T+H);x.stroke();
+ x.fillStyle=txt;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(14,T+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();return {L:L,T:T,W:W,H:H,Y:function(v){return T+H-v/ymax*H}}}
+var FIT=null;
+function drawGraphs(){var g1=canvas('g1'),g2=canvas('g2'),G=good();FIT=null;
+ if(G.upper.length<3||G.lower.length<3){var t='Needs 3 correct fields per surface (upper '+G.upper.length+', lower '+G.lower.length+')';empty(g1,t);empty(g2,t);return}
+ var gold=css('--gold')||'#c9a227',navy='#3b6fb8',green=css('--green')||'#237d69',red='#c0392b',txt=css('--text')||'#222';
+ var all=G.upper.concat(G.lower).map(function(c){return c.f}),mx=Math.max.apply(null,all)*1.18,st=nice(mx);mx=Math.ceil(mx/st)*st;
+ var F=frame(g1,mx,st,'Stomata per mm²','Leaf surface'),x=g1.x,mu=mean(G.upper),ml=mean(G.lower);
+ [['Upper',G.upper,mu,navy,0.3],['Lower',G.lower,ml,green,0.7]].forEach(function(b){var cx=F.L+F.W*b[4],bw=F.W*0.22,y=F.Y(b[2]);
+  x.fillStyle=b[3];x.globalAlpha=.8;x.fillRect(cx-bw/2,y,bw,F.T+F.H-y);x.globalAlpha=1;
+  var fs=b[1].map(function(c){return c.f}),lo=Math.min.apply(null,fs),hi=Math.max.apply(null,fs);
+  x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(cx,F.Y(lo));x.lineTo(cx,F.Y(hi));x.moveTo(cx-8,F.Y(lo));x.lineTo(cx+8,F.Y(lo));x.moveTo(cx-8,F.Y(hi));x.lineTo(cx+8,F.Y(hi));x.stroke();
+  b[1].forEach(function(c,i){x.fillStyle=gold;x.strokeStyle='#5c4600';x.beginPath();x.arc(cx+bw*0.5+10+(i%4)*10,F.Y(c.f),4.5,0,7);x.fill();x.stroke()});
+  x.fillStyle=txt;x.font='700 12px Inter, sans-serif';x.textAlign='center';x.fillText(b[0],cx,F.T+F.H+16);var tall=F.T+F.H-y>34;x.fillStyle=tall?'#fff':txt;x.fillText(b[2].toFixed(0)+' /mm²',cx,tall?y+20:F.Y(hi)-8)});
+ x.fillStyle=red;x.font='700 12px Inter, sans-serif';x.textAlign='left';x.fillText('lower : upper = '+(ml/mu).toFixed(1)+' : 1',F.L+8,F.T+12);
+ // running mean
+ var n=Math.max(G.upper.length,G.lower.length),rm=function(a){var s=0;return a.map(function(c,i){s+=c.f;return s/(i+1)})},ru=rm(G.upper),rl=rm(G.lower);
+ var mx2=Math.max.apply(null,ru.concat(rl))*1.25,st2=nice(mx2);mx2=Math.ceil(mx2/st2)*st2;
+ var F2=frame(g2,mx2,st2,'Mean stomata per mm²','Number of fields counted'),y=g2.x,X=function(i){return F2.L+(n<=1?0.5:i/(n-1))*F2.W*0.92+F2.W*0.04};
+ y.fillStyle=css('--muted')||'#666';y.font='12px Inter, sans-serif';y.textAlign='center';for(var i=0;i<n;i++)y.fillText(String(i+1),X(i),F2.T+F2.H+15);
+ var lu=F2.Y(ru[ru.length-1]),ll=F2.Y(rl[rl.length-1]),close=Math.abs(lu-ll)<18;
+ [[ru,navy,'upper',close&&lu>=ll?18:-6],[rl,green,'lower',close&&ll>lu?18:-6]].forEach(function(s){y.strokeStyle=s[1];y.lineWidth=2;y.beginPath();s[0].forEach(function(v,i){var p=[X(i),F2.Y(v)];if(i)y.lineTo(p[0],p[1]);else y.moveTo(p[0],p[1])});y.stroke();
+  s[0].forEach(function(v,i){y.fillStyle=s[1];y.beginPath();y.arc(X(i),F2.Y(v),4,0,7);y.fill()});
+  var last=s[0][s[0].length-1];y.setLineDash([5,5]);y.strokeStyle=s[1];y.lineWidth=1;y.beginPath();y.moveTo(F2.L,F2.Y(last));y.lineTo(F2.L+F2.W,F2.Y(last));y.stroke();y.setLineDash([]);
+  y.fillStyle=s[1];y.font='700 12px Inter, sans-serif';y.textAlign='right';y.fillText(s[2]+' ≈ '+last.toFixed(0),F2.L+F2.W-4,F2.Y(last)+s[3])});
+ FIT={u:mu,l:ml}}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(function(){drawGraphs();update()},150)});
+
+/* ───────── result ───────── */
+function renderResult(){var v=valid(),mu=mean(v.upper),ml=mean(v.lower);
+ $('rD').textContent=S.d10?(S.d10/4).toFixed(3)+' mm':'—';
+ $('rU').textContent=mu!==null?mu.toFixed(0)+' /mm²':'—';$('rL').textContent=ml!==null?ml.toFixed(0)+' /mm²':'—';
+ $('rR').textContent=(mu&&ml)?(ml/mu).toFixed(1)+' : 1':'—';
+ var tbx=$('trueBox');tbx.hidden=!S.revealed;
+ var tu=stomata('upper').trueD,tl=stomata('lower').trueD;
+ $('tD').textContent=SM.D10.toFixed(2)+' / '+(SM.D10/4).toFixed(3)+' mm';$('tU').textContent=tu.toFixed(0)+' /mm²';$('tL').textContent=tl.toFixed(0)+' /mm²';$('tT').textContent=TYPES[SM.type].label;
+ var e=$('err');e.textContent='';
+ if(S.revealed&&mu!==null&&ml!==null)e.textContent='Your mean differs from the actual frequency by '+(Math.abs(mu-tu)/tu*100).toFixed(1)+'% (upper) and '+(Math.abs(ml-tl)/tl*100).toFixed(1)+'% (lower). A few fields always give some sampling error.'}
+$('reveal').onclick=function(){var g=good();
+ if(!S.d10||g.upper.length<3||g.lower.length<3){$('err').textContent='First calibrate the field and get at least 3 correct fields on each surface (press “Check my table”).';return}
+ S.revealed=true;save();renderResult()};
+$('checkId').onclick=function(){var gs=$('idGuard').value,ds=$('idDist').value,T=TYPES[SM.type],m=[];
+ if(!gs||!ds){$('idMsg').textContent='Choose both answers first.';return}
+ m.push(gs===T.guard?'✓ Guard-cell shape is right.':'✗ Look again at the guard cells at 40×: are they curved like beans, or narrow in the middle with swollen ends?');
+ var v=valid(),mu=mean(v.upper),ml=mean(v.lower),obs=null;
+ if(mu&&ml){var r=ml/mu;obs=r>3.5?'lower':r>1.4?'both':r>=0.75?'equal':'upper'}
+ if(!obs)m.push('Count fields on both surfaces before deciding on the distribution.');
+ else m.push(ds===obs?'✓ Your conclusion matches your own counts.':'✗ Your counts (lower : upper = '+(ml/mu).toFixed(1)+' : 1) point to a different conclusion.');
+ $('idMsg').textContent=m.join(' ')};
+
+/* ───────── labelling ───────── */
+var LABS=[['A','Guard cell'],['B','Stomatal pore'],['C','Chloroplast'],['D','Epidermal cell'],['E','Thick inner wall of guard cell']];
+var opts=LABS.map(function(l){return l[1]}).slice().sort();
+$('labs').innerHTML=LABS.map(function(l){return '<label>'+l[0]+'<select data-k="'+l[0]+'" aria-label="Part '+l[0]+'"><option value="">Choose…</option>'+opts.map(function(o){return '<option>'+o+'</option>'}).join('')+'</select></label>'}).join('');
+$('checkLabels').onclick=function(){var ok=0,bad=[];LABS.forEach(function(l){var s=document.querySelector('#labs select[data-k="'+l[0]+'"]');if(s.value===l[1])ok++;else bad.push(l[0])});
+ $('labMsg').textContent=ok===5?'✓ All five labels are correct.':ok+' of 5 correct. Look again at '+bad.join(', ')+'.'};
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['What are stomata? Where are they found?','Stomata are minute pores in the epidermis, found mainly on leaves (also on young green stems). Each pore is bounded by two guard cells.'],
+ ['What are the two main functions of stomata?','Exchange of gases (CO₂ enters for photosynthesis, O₂ leaves) and loss of water vapour by transpiration.'],
+ ['How do guard cells open and close the pore?','When guard cells take in water they become turgid; their thick inner walls cannot stretch much, so the cells bow outwards and the pore opens. When they lose water they become flaccid and the pore closes.'],
+ ['Why do guard cells have chloroplasts when other epidermal cells do not?','Guard cells can photosynthesise. The sugars and the movement of ions such as K⁺ change their osmotic concentration, which helps them take in water and open the pore.'],
+ ['Why is the peel usually taken from the lower surface of a dicot leaf?','The lower surface has many more stomata. It is shaded and cooler, so keeping most stomata there reduces water loss.'],
+ ['Why is safranin used, and why is glycerine used?','Safranin stains the cell walls pink-red so the cells and guard cells stand out. Glycerine stops the peel from drying and gives a clear mount.'],
+ ['Why should the coverslip be lowered with a needle?','To push the air out from one side so no air bubbles are trapped. Bubbles look like dark-ringed circles and hide the cells.'],
+ ['Why must only the fine adjustment be used at 40×?','The working distance of the 40× objective is very small. The coarse knob moves the stage a lot and can push the objective into the coverslip and break it.'],
+ ['How do guard cells of a dicot differ from those of a grass?','Dicot guard cells are kidney (bean) shaped. Grass guard cells are dumb-bell shaped — narrow in the middle with swollen ends.'],
+ ['What is stomatal frequency? How did you calculate it?','The number of stomata per unit area (mm²) of the leaf surface. It is the number counted in a field divided by the area of the field, π r².'],
+ ['If the field diameter is 1.8 mm at 10×, what is it at 40×?','It is 1.8 × 10/40 = 0.45 mm. The diameter is inversely proportional to the objective magnification, so the area becomes 1/16.'],
+ ['Why do we count several fields?','Stomata are not evenly spread. The mean of several separate fields is a more reliable estimate of the frequency of the whole surface.'],
+ ['Name a plant whose leaves have stomata only on the upper surface.','Floating leaves such as those of the water lily or lotus; the lower surface touches the water.'],
+ ['What is the advantage of the nail-polish impression method?','It gives a quick, permanent replica of the leaf surface without tearing the leaf, and works even on leaves that are hard to peel.']];
+$('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){var A=area();
+ var rows=S.rows.map(function(r,i){var c=calc(r);return '<tr><td>'+(i+1)+'</td><td>'+(r.s==='upper'?'Upper':'Lower')+'</td><td>'+fieldNo(i)+'</td><td>'+(r.n||'')+'</td><td>'+(A?A.toFixed(4):'')+'</td><td>'+(c?c.f.toFixed(0):'')+'</td></tr>'}).join('');
+ var img='';try{img='<img src="'+$('g1').toDataURL()+'"><img src="'+$('g2').toDataURL()+'">'}catch(e){}
+ var diag=$('diagram').outerHTML.replace('id="diagram"','');
+ var lab='<p>A – guard cell; B – stomatal pore; C – chloroplast; D – epidermal cell; E – thick inner wall of guard cell.</p>';
+ $('record').innerHTML='<h1>Experiment: Stomata — leaf peel and distribution on the two leaf surfaces</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Date: ___________ &nbsp; Leaf sample: S-'+S.no+'</p>'+
+  '<h2>Aim</h2><p>(a) To prepare a temporary mount of a leaf peel to show stomata. (b) To study the distribution of stomata on the upper and lower surfaces of a leaf.</p>'+
+  '<h2>Apparatus</h2><p>Fresh leaf, forceps, needle, brush, watch glass, water, safranin, glycerine, slides, coverslips, blotting paper, compound microscope, transparent mm ruler (clear nail polish and tape for the impression method).</p>'+
+  '<h2>Theory</h2><p>Stomata are pores in the epidermis bounded by two guard cells, which open and close the pore by changes in turgor. Field diameter at 40× = D₁₀ × 10/40; area A = π r²; stomatal frequency = n / A.</p>'+
+  '<h2>Diagram</h2>'+diag+lab+
+  '<h2>Observations</h2><p>Field diameter at 10× = '+(S.d10?S.d10.toFixed(2):'____')+' mm; at 40× = '+(S.d10?(S.d10/4).toFixed(3):'____')+' mm; area of field = '+(A?A.toFixed(4):'____')+' mm²</p><table><tr><th>S. No.</th><th>Surface</th><th>Field no.</th><th>Stomata (n)</th><th>A (mm²)</th><th>n/A (per mm²)</th></tr>'+rows+'</table>'+
+  '<h2>Graphs</h2>'+(FIT?img:'<p>(Draw a bar chart of the mean stomatal frequency of the two surfaces.)</p>')+
+  '<h2>Result</h2><p>Mean stomatal frequency: upper surface = '+$('rU').textContent+'; lower surface = '+$('rL').textContent+'; ratio lower : upper = '+$('rR').textContent+'. Guard cells: '+($('idGuard').selectedOptions[0]||{}).text+'. Distribution: '+($('idDist').selectedOptions[0]||{}).text+'.</p>'+
+  '<h2>Precautions</h2><ol><li>The peel should be thin and must not dry.</li><li>Do not over-stain; wash off extra safranin.</li><li>Lower the coverslip with a needle to avoid air bubbles.</li><li>Use only the fine adjustment at 40×.</li><li>Count separate, clear, well-focused fields.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>Uneven distribution of stomata; too few fields.</li><li>Edge stomata counted wrongly.</li><li>Error in reading the field diameter.</li><li>Air bubbles or folds hiding stomata.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+$('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,SM:function(){return SM},stomata:stomata,zT:zT,D:D,trueInField:trueInField,update:update,setStep:setStep,doAction:doAction,P:P,placeSlide:placeSlide,setMag:setMag,focus:focus};
+$('light').value=S.light;
+setStep(S.step||'cal');renderTable();
+})();
+</script>
+</body>
+</html>
