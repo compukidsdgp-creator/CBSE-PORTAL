@@ -3,5 +3,8 @@
   "hub_linked": true,
   "quiz_linked": true,
   "announced": true
+ },
+ "class10/science/acids-bases-and-salts": {
+  "hub_linked": true
  }
 }
