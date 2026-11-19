@@ -51,7 +51,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add campaign_reels/posted.json
+          python3 campaign_page.py || true
+          python3 share_tags.py board-plan/index.html || true
+          git add campaign_reels/posted.json index.html board-plan
           git diff --cached --quiet && exit 0
           git commit -q -m "campaign reel posted [skip ci]"
           for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done

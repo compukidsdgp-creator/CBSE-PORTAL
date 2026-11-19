@@ -48,7 +48,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add campaign_reels/video campaign_reels/thumb campaign_reels/voice
+          python3 campaign_page.py || true
+          python3 share_tags.py board-plan/index.html || true
+          git add campaign_reels/video campaign_reels/thumb campaign_reels/voice index.html board-plan
           git diff --cached --quiet && { echo "nothing new"; exit 0; }
           git commit -q -m "campaign reels: rendered [skip ci]"
           for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
