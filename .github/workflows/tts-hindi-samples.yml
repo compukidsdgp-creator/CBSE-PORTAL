@@ -22,12 +22,13 @@ jobs:
           python-version: "3.11"
       - name: Piper Hindi voices
         run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
           pip install --quiet piper-tts numpy
           python3 tools/tts_hindi_samples.py piper || true
       - name: AI4Bharat Indic Parler-TTS
         run: |
-          pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
           pip install --quiet git+https://github.com/huggingface/parler-tts.git soundfile
+          pip install --quiet --force-reinstall --no-deps torch torchaudio --index-url https://download.pytorch.org/whl/cpu
           python3 tools/tts_hindi_samples.py parler || true
       - name: Save samples
         run: |
