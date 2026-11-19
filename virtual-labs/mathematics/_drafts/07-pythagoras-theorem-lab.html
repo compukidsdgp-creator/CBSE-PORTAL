@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Pythagoras Theorem (Measure &amp; Paper Cutting) — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Geometry-box lab: measure triangles on graph paper with a ruler and protractor, then cut and fit paper squares to verify Pythagoras theorem and its converse.">
+<meta name="cbse-lab-standard" content="2026-11">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/mathematics/07-pythagoras-theorem-lab.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Verifying Pythagoras theorem by measurement and paper cutting — virtual lab","url":"https://cbsemock.org.in/virtual-labs/mathematics/07-pythagoras-theorem-lab.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 9","Class 10"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Pythagoras theorem","Converse of Pythagoras theorem","Measuring lengths and angles","Paper cutting and pasting proof (Perigal's dissection)"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s;min-height:40px;display:inline-flex;align-items:center}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.72rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.76rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.benchbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+.benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+#sheet,#cutb{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none;touch-action:none}
+#sheet .ruler,#cutb .pc.free{cursor:grab;touch-action:none}
+#sheet .ruler.drag,#cutb .pc.drag{cursor:grabbing}
+#cutb .pc:focus,#sheet .ruler:focus{outline:none}
+#cutb{max-height:640px}
+#cutb .pc:focus polygon,#cutb .pc.sel polygon{stroke:#c9a227;stroke-width:2.5}
+#cutb .pc.home polygon{transition:none}
+@media(max-width:700px){#sheet{min-width:660px;touch-action:pan-x pan-y}#cutb{touch-action:pan-y}.hint{display:none}#sheetBox::after{content:'⟷ swipe the sheet · drag the ruler';position:absolute;right:8px;bottom:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 8px;border-radius:99px;pointer-events:none}}
+.hint{position:absolute;left:12px;top:10px;font-size:.74rem;color:#3d4a3f;background:rgba(255,255,255,.75);padding:4px 9px;border-radius:99px;pointer-events:none}
+.row2{display:grid;grid-template-columns:320px 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px}
+.panel h4{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.zooms{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.zooms{grid-template-columns:1fr}}
+.zooms figure{margin:0}
+.zooms svg{display:block;width:100%;height:auto;aspect-ratio:7/4;border-radius:10px;background:#fbfaf3;box-shadow:0 0 0 4px #2a2f38,0 0 0 5px #3b4250,0 8px 18px rgba(0,0,0,.45)}
+.zooms figcaption{font-size:.8rem;color:#c9d6e6;text-align:center;margin-top:10px}
+.zooms figcaption b{color:var(--gold2)}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.sel .lbl{font-size:.78rem;color:#93a6bf;width:100%}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:99px;min-height:40px;min-width:44px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.chip.done::after{content:' ✓';color:#7fe0b8}.chip.on.done::after{color:#0f5b3f}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.nudge button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;min-height:42px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff}
+.nudge button:hover{background:#21385c}.nudge button:active{transform:translateY(1px)}
+.nudge button:disabled{opacity:.4;cursor:default}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:#c9d6e6;cursor:pointer;padding:8px 0;min-height:40px}
+.sw input{width:22px;height:22px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:42px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn:disabled{opacity:.5;cursor:default;transform:none;box-shadow:none}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.rough{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px;font-size:.88rem}
+.rough input,.obs input,.obs select{font:inherit;font-family:'JetBrains Mono',monospace;font-size:16px;width:92px;min-height:42px;padding:7px 8px;border-radius:8px;border:1.5px solid #3a5276;background:#0b1320;color:#fff}
+.msg{font-size:.88rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:980px;font-size:.88rem}
+.obs th,.obs td{padding:8px 6px;border-bottom:1px solid var(--border);text-align:center}
+.obs th{background:var(--soft);font-weight:700;font-size:.78rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs input{background:var(--card);color:var(--text);border-color:var(--border);width:80px}
+.obs select{background:var(--card);color:var(--text);border-color:var(--border);width:132px;font-family:Inter,sans-serif}
+.obs input.bad,.obs select.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs input.good,.obs select.good{border-color:var(--green)}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.note{font-size:.8rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:1fr;gap:16px;max-width:760px}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.15rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.rbox.true b{font-size:.92rem;line-height:1.6}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1.05rem}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:28px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;counter-reset:s}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.62);font:600 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.06em}
+.sceneB .pc{stroke:#5a4a2a;stroke-width:1;stroke-opacity:.55;animation:fit 9s ease-in-out infinite}
+.sceneB .pc1{animation-delay:.35s}.sceneB .pc2{animation-delay:.7s}.sceneB .pc3{animation-delay:1.05s}.sceneB .pc4{animation-delay:1.4s}
+@keyframes fit{0%,14%{transform:translate(0,0)}42%,72%{transform:translate(var(--tx),var(--ty))}96%,100%{transform:translate(0,0)}}
+.sceneB .slot{animation:slot 9s ease-in-out infinite}@keyframes slot{0%,30%{opacity:.25}45%,70%{opacity:.9}90%,100%{opacity:.25}}
+.sceneB .pen{animation:pen 4.5s ease-in-out infinite alternate}@keyframes pen{to{transform:translate(-14px,6px)}}
+@media(prefers-reduced-motion:reduce){.sceneB .pc,.sceneB .slot,.sceneB .pen{animation:none}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:70%;margin:1% 15%;border:1px solid #bbb}
+}
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small,.tab small,.hint{font-size:12px}.obs th{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="lab-draft" style="background:#fff4d6;color:#6b4e00;padding:8px 14px;font:600 14px Inter,sans-serif;text-align:center">Draft preview — waiting for approval in the admin panel</div>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../../index.html">Home</a> › <a href="../../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../../virtual-labs/mathematics/index.html">Mathematics</a> › Pythagoras theorem</nav>
+   <div class="eyebrow">Experiment · Geometry box &amp; graph paper</div>
+   <h1><span class="g1">Pythagoras Theorem</span><span class="g2">Measure it, then cut and fit it</span></h1>
+   <p>Lay a ruler and a protractor on four pencil triangles and read the sides yourself. Then cut the square on one leg into four pieces and watch them fill the square on the hypotenuse.</p>
+   <div class="chips"><span>Class 10 Maths · lab activity</span><span>Converse test included</span><span>⏱ about 25 min</span></div>
+   <a class="go" href="#lab">Pick up the ruler ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <pattern id="h-mm" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M9 0H0V9" fill="none" stroke="#9ccfae" stroke-width=".5" opacity=".7"/></pattern>
+ <pattern id="h-cm" width="45" height="45" patternUnits="userSpaceOnUse" x="13" y="12"><path d="M45 0H0V45" fill="none" stroke="#6fb38a" stroke-width="1"/></pattern>
+ <linearGradient id="h-desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a3c24"/><stop offset="1" stop-color="#22160b"/></linearGradient>
+ <linearGradient id="h-rul" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6f4ff" stop-opacity=".85"/><stop offset="1" stop-color="#a9cde8" stop-opacity=".7"/></linearGradient>
+ <linearGradient id="h-pen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd84a"/><stop offset="1" stop-color="#c99a10"/></linearGradient>
+ <filter id="h-sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000" flood-opacity=".45"/></filter>
+</defs>
+<rect x="0" y="300" width="760" height="60" fill="url(#h-desk)"/>
+<g filter="url(#h-sh)"><rect x="118" y="22" width="600" height="318" rx="3" fill="#fbfaf3"/></g>
+<rect x="118" y="22" width="600" height="318" fill="url(#h-mm)"/><rect x="118" y="22" width="600" height="318" fill="url(#h-cm)"/>
+<!-- squares on the three sides of a 3-4-5 right triangle -->
+<polygon class="slot" points="265.0,120.0 346.0,228.0 454.0,147.0 373.0,39.0" fill="rgba(201,162,39,.12)" stroke="#8a6a12" stroke-width="1.6" stroke-dasharray="6 5"/>
+<polygon points="265,228 265,120 157,120 157,228" fill="none" stroke="#555" stroke-width="1.2"/>
+<path d="M265 133.5 L157 214.5 M170.5 120 L251.5 228" stroke="#555" stroke-width="1.1" stroke-dasharray="5 4"/>
+<polygon class="pc pc0" style="--tx:54.0px;--ty:-54.0px" points="265.0,228.0 265.0,133.5 211.0,174.0 251.5,228.0" fill="#f4a7b9"/>
+<polygon class="pc pc1" style="--tx:162.0px;--ty:-135.0px" points="211.0,174.0 157.0,214.5 157.0,228.0 251.5,228.0" fill="#ffd27a"/>
+<polygon class="pc pc2" style="--tx:135.0px;--ty:54.0px" points="265.0,133.5 265.0,120.0 170.5,120.0 211.0,174.0" fill="#9fe0c0"/>
+<polygon class="pc pc3" style="--tx:243.0px;--ty:-27.0px" points="170.5,120.0 157.0,120.0 157.0,214.5 211.0,174.0" fill="#b7a6ff"/>
+<polygon class="pc pc4" style="--tx:54.0px;--ty:-135.0px" points="265.0,228.0 346.0,228.0 346.0,309.0 265.0,309.0" fill="#8cc8ff"/>
+<polygon points="265,228 346,228 265,120" fill="rgba(255,255,255,.55)" stroke="#2b2b2b" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M265 216h12v12" fill="none" stroke="#2b2b2b" stroke-width="1.4"/>
+<g font-family="Crimson Pro,Georgia,serif" font-size="20" font-weight="700" fill="#1d1d1d"><text x="250" y="244">C</text><text x="352" y="244">B</text><text x="248" y="114">A</text></g>
+<!-- protractor -->
+<g transform="translate(600 292)">
+ <path d="M-96 0 A96 96 0 0 1 96 0 Z" fill="rgba(220,240,255,.55)" stroke="#5f87a8" stroke-width="1.5"/>
+ <path d="M-90 0A90 90 0 0 1 90 0" fill="none" stroke="#2f4f6d" stroke-width=".8"/>
+ <path d="M90 0L80 0M87 -23.3L77.3 -20.7M77.9 -45L69.3 -40M63.6 -63.6L56.6 -56.6M45 -77.9L40 -69.3M23.3 -87L20.7 -77.3M0 -90L0 -80M-23.3 -87L-20.7 -77.3M-45 -77.9L-40 -69.3M-63.6 -63.6L-56.6 -56.6M-77.9 -45L-69.3 -40M-87 -23.3L-77.3 -20.7M-90 0L-80 0" stroke="#2f4f6d" stroke-width="1.2"/>
+ <circle r="3" fill="none" stroke="#2f4f6d"/><path d="M-96 0H96" stroke="#2f4f6d" stroke-width="1.2"/>
+ <text y="-52" text-anchor="middle" font-family="Inter" font-size="12" font-weight="700" fill="#2f4f6d">90</text>
+</g>
+<!-- ruler -->
+<g transform="translate(150 316) rotate(-3)">
+ <rect x="0" y="0" width="330" height="34" rx="3" fill="url(#h-rul)" stroke="#6d93b3"/>
+ <path d="M12 0v12M34 0v8M56 0v12M78 0v8M100 0v12M122 0v8M144 0v12M166 0v8M188 0v12M210 0v8M232 0v12M254 0v8M276 0v12M298 0v8M320 0v12" stroke="#1f3a52" stroke-width="1.2"/>
+ <g font-family="Inter" font-size="10" font-weight="700" fill="#1f3a52" text-anchor="middle"><text x="12" y="24">0</text><text x="56" y="24">1</text><text x="100" y="24">2</text><text x="144" y="24">3</text><text x="188" y="24">4</text><text x="232" y="24">5</text><text x="276" y="24">6</text></g>
+</g>
+<!-- pencil -->
+<g class="pen"><g transform="translate(520 62) rotate(32)">
+ <rect x="0" y="-7" width="150" height="14" fill="url(#h-pen)"/><rect x="150" y="-7" width="16" height="14" fill="#c0c4ca"/><rect x="166" y="-7" width="14" height="14" rx="3" fill="#e57b8f"/>
+ <path d="M0 -7 L-24 0 L0 7Z" fill="#f2d3a0"/><path d="M-16 -2.3 L-24 0 L-16 2.3Z" fill="#333"/>
+</g></g>
+<text x="210" y="100" class="tB" style="fill:#4a4a4a">SQUARE ON CA</text><text x="420" y="30" class="tB" style="fill:#7a5d0a">SQUARE ON AB</text><text x="600" y="190" class="tB">PROTRACTOR</text><text x="80" y="336" class="tB">RULER</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Measure sides &amp; ∠C</li><li><b>2</b>Tabulate a², b², c²</li><li><b>3</b>Cut &amp; fit squares</li><li><b>4</b>Graph, result &amp; viva</li></ol>
+</header>
+
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Geometry box and graph paper">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-mode="measure" role="tab" type="button"><b>Step 1 · Measure the triangles</b><small>Ruler and protractor on Δ1 – Δ4</small></button>
+   <button class="tab" data-mode="cut" role="tab" type="button"><b>Step 2 · Cut &amp; fit the squares</b><small>Paper-cutting proof on Δ1</small></button>
+  </div>
+  <div class="task" id="task"></div>
+
+  <div id="measureBox">
+   <div class="benchbox" id="sheetBox">
+    <div class="benchscroll" id="sheetScroll"><svg id="sheet" viewBox="0 0 800 600" role="img" aria-label="Graph paper with a pencil triangle, a ruler and a protractor"></svg></div>
+    <span class="hint">Drag the ruler along the side, or use the buttons</span>
+   </div>
+   <div class="row2">
+    <div class="panel">
+     <h4><span>Triangle and instrument</span><span id="sheetTag">Sheet ?</span></h4>
+     <div class="sel" id="triSel"><span class="lbl">Triangle</span></div>
+     <div class="sel" id="toolSel"><span class="lbl">Place the instrument on</span></div>
+     <div class="nudge" id="nudge"><button type="button" data-d="-1">−1 cm</button><button type="button" data-d="-0.1">−1 mm</button><button type="button" data-d="0.1">+1 mm</button><button type="button" data-d="1">+1 cm</button></div>
+     <div class="tools">
+      <label class="sw"><input type="checkbox" id="labels"> Show readings (helper)</label>
+      <span style="flex:1"></span>
+      <button class="btn ghost" id="newSheet" type="button">↺ New sheet</button>
+     </div>
+    </div>
+    <div class="panel">
+     <h4><span>Magnifier (read the scale here)</span><span id="readout" class="mono"></span></h4>
+     <div class="zooms">
+      <figure><svg id="z1" viewBox="0 0 112 64" aria-label="Magnified view at the starting vertex"></svg><figcaption id="z1c"></figcaption></figure>
+      <figure><svg id="z2" viewBox="0 0 112 64" aria-label="Magnified view at the far vertex"></svg><figcaption id="z2c"></figcaption></figure>
+     </div>
+     <div class="rough">
+      <label for="quick" id="quickLbl">Reading</label>
+      <input id="quick" inputmode="decimal" placeholder="cm" autocomplete="off">
+      <button class="btn gold" id="saveQuick" type="button">Write in table</button>
+     </div>
+     <div class="msg" id="msg" aria-live="polite"></div>
+    </div>
+   </div>
+  </div>
+
+  <div id="cutBox" hidden>
+   <div class="benchbox"><svg id="cutb" role="img" aria-label="Paper squares on the sides of triangle 1, with the square on CA cut into four pieces"></svg></div>
+   <div class="row2">
+    <div class="panel">
+     <h4><span>Pieces</span><span id="cutTag">0 / 5 placed</span></h4>
+     <div class="sel" id="pcSel"></div>
+     <div class="nudge" id="pnudge"><button type="button" data-x="-1" data-y="0" aria-label="Move left">←</button><button type="button" data-x="0" data-y="-1" aria-label="Move up">↑</button><button type="button" data-x="0" data-y="1" aria-label="Move down">↓</button><button type="button" data-x="1" data-y="0" aria-label="Move right">→</button></div>
+     <div class="tools">
+      <label class="sw"><input type="checkbox" id="slots"> Show outlines (helper)</label>
+     </div>
+    </div>
+    <div class="panel">
+     <h4><span>Cut and paste</span></h4>
+     <div class="tools" style="margin-top:0">
+      <button class="btn gold" id="doCut" type="button">✂ Cut along the dashed lines</button>
+      <button class="btn ghost" id="resetCut" type="button">↺ Put the pieces back</button>
+     </div>
+     <div class="msg" id="cmsg" aria-live="polite"></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 / 4 correct</span></h2>
+  <p class="lead">a = BC, b = CA and c = AB, where AB is the side opposite ∠C. Measure to the nearest millimetre (0.1 cm) and ∠C to the nearest degree. The squares and the difference are worked out for you.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>Triangle</th><th>a = BC<br>(cm)</th><th>b = CA<br>(cm)</th><th>c = AB<br>(cm)</th><th>∠C<br>(°)</th><th>a²<br>(cm²)</th><th>b²<br>(cm²)</th><th>a² + b²<br>(cm²)</th><th>c²<br>(cm²)</th><th>c² − (a² + b²)<br>(cm²)</th><th>Conclusion</th></tr></thead>
+   <tbody id="tb"></tbody>
+  </table></div>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graph</h2>
+  <p class="lead">Each correct row becomes a point. If c² = a² + b², the point sits on the line y = x through the origin.</p>
+  <div class="graphs">
+   <figure><canvas id="g1" width="640" height="480"></canvas><figcaption><b>c² against a² + b².</b> Gold dashed line: y = x. Blue line: best-fit line through the origin for the triangles you marked c² = a² + b²; its slope should be very close to 1. A red point is a triangle whose ∠C is not 90°.</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Right triangles: mean |c² − (a² + b²)|</small><b id="rT">—</b></div>
+   <div class="rbox"><small>Slope of the best-fit line</small><b id="rG">—</b></div>
+   <div class="rbox"><small>Converse test (∠C ≠ 90°)</small><b id="rC">—</b></div>
+   <div class="rbox"><small>Paper-cutting proof (Δ1)</small><b id="rP">not done yet</b></div>
+   <div class="rbox true" id="trueBox" hidden><small>Actual sides drawn on this sheet</small><b id="rTrue">—</b></div>
+  </div>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the actual measurements</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To verify Pythagoras theorem by measuring the sides of right-angled triangles, and by the method of paper cutting and pasting. To check the converse using a triangle that is not right-angled.</p>
+    <h3>Apparatus</h3>
+    <p>Graph paper or white sheets, coloured glazed paper, a geometry box (15 cm ruler, protractor, set squares, compasses), a sharp pencil, an eraser, scissors and glue.</p>
+    <h3>Theory</h3>
+    <p><b>Pythagoras theorem:</b> in a right-angled triangle, the square on the hypotenuse is equal to the sum of the squares on the other two sides. If ∠C = 90° in ΔABC, then</p>
+    <p class="eq">AB² = BC² + CA² &nbsp;i.e.&nbsp; c² = a² + b²</p>
+    <p><b>Converse:</b> if in a triangle the square of one side equals the sum of the squares of the other two sides, the angle opposite the first side is a right angle.</p>
+    <p>If ∠C is <b>more</b> than 90°, you will find c² &gt; a² + b²; if ∠C is <b>less</b> than 90°, c² &lt; a² + b². So the equality holds only for a right angle.</p>
+    <p><b>Why the paper cutting works (Perigal’s dissection):</b> two cuts through the centre of the square on the longer leg, one parallel and one perpendicular to the hypotenuse, give four congruent pieces. These four pieces and the square on the shorter leg can be slid, without turning, to cover the square on the hypotenuse exactly. Area is not lost or gained, so c² = a² + b².</p>
+    <p>You will use this result again and again in Class 10: the distance formula, the identity sin²θ + cos²θ = 1, and heights and distances all rest on it.</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <p><b>A. By measurement</b></p>
+    <ol>
+     <li>Draw a few right-angled triangles ABC of different sizes with ∠C = 90°, and one triangle where ∠C is not 90°. (In this lab they are already drawn: Δ1 to Δ4. One of them is not right-angled; find it.)</li>
+     <li>Place the ruler along each side with its zero exactly on the starting vertex. Read the scale at the other vertex to the nearest millimetre.</li>
+     <li>Place the protractor with its centre on C and its base line along CB. Read ∠C on the scale that starts from 0 on CB.</li>
+     <li>Record a, b, c and ∠C. Work out a², b², a² + b² and c², and compare.</li>
+    </ol>
+    <p><b>B. By paper cutting and pasting</b></p>
+    <ol start="5">
+     <li>On coloured paper, draw squares outwards on all three sides of the right triangle Δ1.</li>
+     <li>On the square on the longer leg (CA), join the diagonals to find its centre O. Through O, draw one line parallel to AB and one perpendicular to AB.</li>
+     <li>Cut out the square on BC and the four pieces of the square on CA.</li>
+     <li>Without turning them over or rotating them, place the five pieces on the square on AB so that they cover it exactly, and paste them.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>Use a sharp pencil so that lines are thin and vertices are clear points.</li>
+     <li>Keep the zero of the ruler exactly on the vertex, not the end of the ruler (the end is often worn).</li>
+     <li>Keep your eye directly above the mark you read, to avoid parallax.</li>
+     <li>Put the centre of the protractor exactly on the vertex and its base line exactly along one arm; read the scale that starts from 0 on that arm.</li>
+     <li>Cut exactly along the lines and do not rotate the pieces while fitting them.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>A ruler can only be read to the nearest millimetre, so each length may be out by up to 0.05 cm. Squaring makes this bigger: an error of 0.05 cm in a 10 cm side changes c² by about 1 cm².</li>
+     <li>The thickness of the pencil line makes the exact vertex uncertain.</li>
+     <li>The protractor can be read only to about 1°, and a small misplacement of its centre changes the reading.</li>
+     <li>Paper pieces cut slightly off the line leave tiny gaps or overlaps.</li>
+     <li>Measurement only verifies the theorem for the triangles you drew; it is not a proof. The paper-cutting method illustrates a proof by areas.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask in this activity. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../../chapters/triangles-10.html">📝 Triangles: Class 10 MCQ practice</a></li>
+   <li><a href="../../../cbse-class-10-maths-standard-mock-tests.html">📄 Class 10 Maths Standard mock tests</a></li>
+   <li><a href="../../../learn/why-is-sin2-plus-cos2-equal-to-1.html">💡 Why sin²θ + cos²θ = 1 (Pythagoras again)</a></li>
+   <li><a href="../../../resources/maths-x.html">📚 Class 10 Maths resources</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../../about.html">About Us</a> · <a href="../../../privacy.html">Privacy Policy</a> · <a href="../../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
+<script>
+(function(){
+'use strict';
+/* ───────── constants + state ───────── */
+var NS='http://www.w3.org/2000/svg';
+var PX=40;            // sheet: 40 SVG units = 1 cm (1 mm = 4 units)
+var TOL=0.12;         // allowed length-reading error (cm): nearest mm plus pencil-line width
+var ATOL=1.2;         // allowed angle-reading error (degrees)
+var KEY='cbse-lab-pythagoras';
+var SNAME={a:'BC',b:'CA',c:'AB',C:'∠C'};
+function rnd(a,b){return a+Math.random()*(b-a)}
+function r1(x){return Math.round(x*10)/10}
+function r2(x){return Math.round(x*100)/100}
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function $(id){return document.getElementById(id)}
+
+var S={tris:null,sheet:0,cur:0,tool:'a',off:null,rows:null,cut:null,labels:false,slots:false,revealed:false,mode:'measure',sel:0};
+try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv&&sv.tris&&sv.tris.length===4){S.tris=sv.tris;S.sheet=sv.sheet;S.off=sv.off;S.rows=sv.rows;S.cut=sv.cut;S.cur=sv.cur||0}}catch(e){}
+if(!S.tris)newSheet(true);
+function save(){try{localStorage.setItem(KEY,JSON.stringify({tris:S.tris,sheet:S.sheet,off:S.off,rows:S.rows,cut:S.cut,cur:S.cur}))}catch(e){}}
+function randOff(){return Math.random()<.65?-(2+Math.floor(Math.random()*7))/10:(2+Math.floor(Math.random()*4))/10}
+function newSheet(silent){
+ var odd=1+Math.floor(Math.random()*3),tris=[];
+ for(var i=0;i<4;i++){var a,b,C=90;
+  if(i===0){a=r2(rnd(5,6.2));b=r2(rnd(a+1.3,8.5))}
+  else{a=r2(rnd(5,7.5));b=r2(rnd(5.5,8.5))}
+  if(i===odd)C=r1(90+(Math.random()<.5?-1:1)*rnd(9,15));
+  tris.push({a:a,b:b,C:C,rot:r1(rnd(-12,10))})}
+ S.tris=tris;S.sheet=Math.floor(rnd(101,999));S.cur=0;S.tool='a';S.revealed=false;
+ S.off=tris.map(function(){return {a:randOff(),b:randOff(),c:randOff()}});
+ S.rows=tris.map(function(){return {a:'',b:'',c:'',C:'',k:''}});
+ S.cut={cut:false,pos:[[0,0],[0,0],[0,0],[0,0],[0,0]]};save();
+ if(!silent){buildSheet();buildCut();renderTable();say('A new sheet with four new triangles. Start measuring Δ1.','ok')}
+}
+
+/* ───────── geometry of a triangle on the sheet ───────── */
+function geom(i){var t=S.tris[i],ph=-t.rot*Math.PI/180,pa=ph-t.C*Math.PI/180;
+ var B={x:t.a*PX*Math.cos(ph),y:t.a*PX*Math.sin(ph)},A={x:t.b*PX*Math.cos(pa),y:t.b*PX*Math.sin(pa)};
+ var xs=[0,B.x,A.x],ys=[0,B.y,A.y],dx=400-(Math.min.apply(null,xs)+Math.max.apply(null,xs))/2,dy=305-(Math.min.apply(null,ys)+Math.max.apply(null,ys))/2;
+ var g={C:{x:dx,y:dy},B:{x:B.x+dx,y:B.y+dy},A:{x:A.x+dx,y:A.y+dy},ph:ph};
+ g.c=Math.hypot(g.A.x-g.B.x,g.A.y-g.B.y)/PX;g.G={x:(g.A.x+g.B.x+g.C.x)/3,y:(g.A.y+g.B.y+g.C.y)/3};return g}
+function truth(i){var t=S.tris[i];return {a:t.a,b:t.b,c:geom(i).c,C:t.C,k:t.C===90?'=':(t.C>90?'>':'<')}}
+// ruler sits OUTSIDE the triangle: choose start P and end Q so that the ruler's body points away from the centroid
+function side(g,k){var U,V,nu,nv;
+ if(k==='a'){U=g.C;V=g.B;nu='C';nv='B'}else if(k==='b'){U=g.C;V=g.A;nu='C';nv='A'}else{U=g.A;V=g.B;nu='A';nv='B'}
+ function mk(P,Q,np,nq){var dx=Q.x-P.x,dy=Q.y-P.y,L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L;
+  return {P:P,Q:Q,np:np,nq:nq,ux:ux,uy:uy,vx:uy,vy:-ux,L:L/PX,phi:Math.atan2(uy,ux)*180/Math.PI}}
+ // read left → right (or bottom → top for a steep side) so the numbers are upright; the ruler body goes on the outer side
+ var s=mk(U,V,nu,nv),mx=(U.x+V.x)/2,my=(U.y+V.y)/2;
+ if(s.ux<-0.2||(Math.abs(s.ux)<=0.2&&s.uy>0))s=mk(V,U,nv,nu);
+ s.flip=(g.G.x-mx)*s.vx+(g.G.y-my)*s.vy>0;   // true: local "up" points into the triangle, so the body hangs below the edge
+ s.ox=s.flip?-s.vx:s.vx;s.oy=s.flip?-s.vy:s.vy;
+ return s}
+
+/* ───────── sheet drawing ───────── */
+var sheet=$('sheet');
+var defs=el('defs',{},sheet);
+defs.innerHTML=
+ '<linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5d4128"/><stop offset="1" stop-color="#2c1d10"/></linearGradient>'+
+ '<pattern id="grain" width="160" height="22" patternUnits="userSpaceOnUse"><path d="M0 7 Q40 3 80 8 T160 7 M0 16 Q45 12 90 17 T160 15" stroke="#000" stroke-opacity=".13" fill="none"/></pattern>'+
+ '<pattern id="mm" width="4" height="4" patternUnits="userSpaceOnUse" x="20" y="16"><path d="M4 0H0V4" fill="none" stroke="#a9d8b8" stroke-width=".35"/></pattern>'+
+ '<pattern id="cm5" width="40" height="40" patternUnits="userSpaceOnUse" x="20" y="16"><path d="M40 0H0V40" fill="none" stroke="#78bd93" stroke-width=".8"/><path d="M20 0V40M0 20H40" stroke="#93cba7" stroke-width=".5"/></pattern>'+
+ '<filter id="psh" x="-5%" y="-5%" width="110%" height="115%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#000" flood-opacity=".5"/></filter>'+
+ '<filter id="rsh" x="-5%" y="-20%" width="110%" height="150%"><feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#000" flood-opacity=".22"/></filter>';
+el('rect',{x:0,y:0,width:800,height:600,fill:'url(#desk)'},sheet);
+el('rect',{x:0,y:0,width:800,height:600,fill:'url(#grain)'},sheet);
+el('rect',{x:20,y:16,width:760,height:568,fill:'#fbfaf3',filter:'url(#psh)'},sheet);
+var paperG=el('g',{id:'paperG'},sheet);
+var triL,instL,hiL,helpL;
+function buildSheet(){
+ paperG.innerHTML='';
+ el('rect',{x:20,y:16,width:760,height:568,fill:'#fbfaf3'},paperG);
+ el('rect',{x:20,y:16,width:760,height:568,fill:'url(#mm)'},paperG);
+ el('rect',{x:20,y:16,width:760,height:568,fill:'url(#cm5)'},paperG);
+ var tx=el('text',{x:760,y:576,'text-anchor':'end','font-family':'Inter','font-size':11,fill:'#6a8f77'},paperG);tx.textContent='Sheet '+S.sheet+' · 1 small square = 1 mm';
+ triL=el('g',{},paperG);instL=el('g',{},paperG);
+ if(hiL)hiL.remove();if(helpL)helpL.remove();
+ hiL=el('g',{'pointer-events':'none'},sheet);helpL=el('g',{'pointer-events':'none'},sheet);
+ drawTriangle();buildInstrument();buildSel();render();
+}
+function drawTriangle(){triL.innerHTML='';var g=geom(S.cur);
+ el('polygon',{points:[g.A,g.B,g.C].map(function(p){return p.x.toFixed(2)+','+p.y.toFixed(2)}).join(' '),fill:'rgba(70,70,70,.025)',stroke:'#3d3d3d','stroke-width':1.25,'stroke-linejoin':'round','stroke-opacity':.9},triL);
+ ['A','B','C'].forEach(function(n){var p=g[n],dx=p.x-g.G.x,dy=p.y-g.G.y,L=Math.hypot(dx,dy);
+  el('circle',{cx:p.x,cy:p.y,r:1.5,fill:'#262626'},triL);
+  var t=el('text',{x:p.x+dx/L*17,y:p.y+dy/L*17+6,'text-anchor':'middle','font-family':'Crimson Pro,Georgia,serif','font-size':19,'font-weight':700,fill:'#2a2a2a'},triL);t.textContent=n});
+ var lab=el('text',{x:g.G.x,y:g.G.y+5,'text-anchor':'middle','font-family':'Crimson Pro,Georgia,serif','font-size':17,'font-style':'italic',fill:'#555'},triL);lab.textContent='Δ'+(S.cur+1);
+}
+var inst=null;
+function buildInstrument(){instL.innerHTML='';inst=null;
+ if(S.tool==='C'){buildProtractor();return}
+ var g=el('g',{class:'ruler',tabindex:0,role:'slider','aria-label':'Ruler along '+SNAME[S.tool]+'. Arrow keys slide it.'},instL);
+ var F=side(geom(S.cur),S.tool).flip?1:-1;   // +1: body below the measuring edge
+ var r=el('g',{filter:'url(#rsh)'},g);
+ el('rect',{x:-24,y:F>0?0:-100,width:648,height:100,rx:5,fill:'rgba(208,233,252,.52)',stroke:'rgba(55,95,135,.85)','stroke-width':1.1},r);
+ el('rect',{x:-22,y:F>0?86:-98,width:644,height:12,rx:4,fill:'rgba(255,255,255,.4)'},r);
+ var p='';for(var mm=0;mm<=150;mm++){var h=mm%10===0?20:mm%5===0?13.5:8;p+='M'+(mm*4)+' 0v'+(F*h)}
+ el('path',{d:p,stroke:'#10304a','stroke-width':.75},g);
+ var nums=el('g',{'font-family':'Inter','font-size':13,'font-weight':700,fill:'#10304a','text-anchor':'middle'},g);
+ for(var cm=0;cm<=15;cm++){var t=el('text',{x:cm*40,y:F>0?37:-26},nums);t.textContent=cm}
+ var u=el('text',{x:612,y:F>0?16:-8,'font-family':'Inter','font-size':9,fill:'#10304a','text-anchor':'end'},g);u.textContent='cm';
+ var br=el('text',{x:300,y:F>0?72:-62,'font-family':'Inter','font-size':12,'font-weight':700,'letter-spacing':'.2em',fill:'rgba(16,48,74,.35)','text-anchor':'middle'},g);br.textContent='CBSEMOCK · 15 cm';
+ inst={kind:'ruler',g:g};
+ // dragging along the side
+ var drag=null;
+ g.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,s0:S.off[S.cur][S.tool],id:e.pointerId};DRAGGING=true;g.classList.add('drag');try{g.setPointerCapture(e.pointerId)}catch(_){}e.preventDefault()});
+ g.addEventListener('pointermove',function(e){if(!drag)return;var k=sheet.getScreenCTM().a,sd=side(geom(S.cur),S.tool);
+  setOff(drag.s0+((e.clientX-drag.x)*sd.ux+(e.clientY-drag.y)*sd.uy)/k/PX,false)});
+ function end(){if(!drag)return;drag=null;DRAGGING=false;g.classList.remove('drag');var s=S.off[S.cur][S.tool];if(Math.abs(s)<0.03)setOff(0,true);else save()}
+ g.addEventListener('pointerup',end);g.addEventListener('pointercancel',end);
+ g.addEventListener('keydown',function(e){var d=e.shiftKey?1:0.1;if(e.key==='ArrowLeft'||e.key==='ArrowDown'){setOff(S.off[S.cur][S.tool]-d,true);e.preventDefault()}if(e.key==='ArrowRight'||e.key==='ArrowUp'){setOff(S.off[S.cur][S.tool]+d,true);e.preventDefault()}});
+}
+function buildProtractor(){var g=el('g',{class:'prot'},instL),R=184;
+ el('path',{d:'M'+(-R-10)+' 12 L'+(-R-10)+' 0 A'+(R+10)+' '+(R+10)+' 0 0 1 '+(R+10)+' 0 L'+(R+10)+' 12 Z',fill:'rgba(255,248,214,.42)',stroke:'rgba(120,96,30,.8)','stroke-width':1.2,filter:'url(#rsh)'},g);
+ el('path',{d:'M-62 0 A62 62 0 0 1 62 0',fill:'none',stroke:'rgba(120,96,30,.5)','stroke-width':1},g);
+ var p='';for(var k=0;k<=180;k++){var a=k*Math.PI/180,len=k%10===0?20:k%5===0?13:7,c=Math.cos(a),s=Math.sin(a);
+  p+='M'+(R*c).toFixed(2)+' '+(-R*s).toFixed(2)+'L'+((R-len)*c).toFixed(2)+' '+(-(R-len)*s).toFixed(2)}
+ el('path',{d:p,stroke:'#3a2c08','stroke-width':.7},g);
+ el('path',{d:'M'+(-R)+' 0H'+R+'M0 -10V6',stroke:'#3a2c08','stroke-width':.9},g);
+ el('circle',{cx:0,cy:0,r:3,fill:'none',stroke:'#3a2c08','stroke-width':.8},g);
+ var o=el('g',{'font-family':'Inter','font-weight':700,fill:'#3a2c08','text-anchor':'middle'},g);
+ for(k=0;k<=180;k+=10){var a2=k*Math.PI/180;
+  var t=el('text',{x:((R-31)*Math.cos(a2)).toFixed(2),y:(-(R-31)*Math.sin(a2)+4).toFixed(2),'font-size':11.5,transform:'rotate('+(90-k)+' '+((R-31)*Math.cos(a2)).toFixed(2)+' '+(-(R-31)*Math.sin(a2)).toFixed(2)+')'},o);t.textContent=k;
+  var t2=el('text',{x:((R-50)*Math.cos(a2)).toFixed(2),y:(-(R-50)*Math.sin(a2)+3.5).toFixed(2),'font-size':9.5,fill:'#8a2a1a',transform:'rotate('+(90-k)+' '+((R-50)*Math.cos(a2)).toFixed(2)+' '+(-(R-50)*Math.sin(a2)).toFixed(2)+')'},o);t2.textContent=180-k}
+ inst={kind:'prot',g:g,R:R};
+}
+// while a part is being dragged, stop the page or the sheet scroller from panning under the finger
+var DRAGGING=false;
+[sheet,$('cutb')].forEach(function(sv){sv.addEventListener('touchmove',function(e){if(DRAGGING)e.preventDefault()},{passive:false})});
+function setOff(s,doSave){s=Math.max(-3,Math.min(3,Math.round(s*100)/100));S.off[S.cur][S.tool]=s;render();if(doSave)save()}
+
+/* ───────── magnifiers ───────── */
+function zoomInit(id){var z=$(id),g=el('g',{},z);el('use',{href:'#paperG'},g);return {z:z,g:g}}
+var Z1=zoomInit('z1'),Z2=zoomInit('z2');
+function zoomAt(Z,cx,cy,phi){Z.z.setAttribute('viewBox',(cx-56).toFixed(2)+' '+(cy-32).toFixed(2)+' 112 64');Z.g.setAttribute('transform','rotate('+(-phi).toFixed(3)+' '+cx.toFixed(2)+' '+cy.toFixed(2)+')')}
+
+/* ───────── render measuring view ───────── */
+function render(){var g=geom(S.cur),sc=$('sheetScroll');hiL.innerHTML='';helpL.innerHTML='';
+ var t=truth(S.cur),nm;
+ if(S.tool==='C'){
+  inst.g.setAttribute('transform','translate('+g.C.x.toFixed(2)+' '+g.C.y.toFixed(2)+') rotate('+(g.ph*180/Math.PI).toFixed(3)+')');
+  var R=inst.R,ux=Math.cos(g.ph),uy=Math.sin(g.ph),phd=g.ph*180/Math.PI;
+  zoomAt(Z1,g.C.x+uy*16,g.C.y-ux*16,phd); // centre mark, shifted up a little so the base line is visible
+  var dA={x:(g.A.x-g.C.x),y:(g.A.y-g.C.y)},LA=Math.hypot(dA.x,dA.y);
+  zoomAt(Z2,g.C.x+dA.x/LA*(R-24),g.C.y+dA.y/LA*(R-24),phd);
+  $('z1c').innerHTML='<b>Centre</b> on C, base line on CB';$('z2c').innerHTML='Where <b>CA</b> crosses the scale';
+  nm='Protractor at C';
+  el('path',{d:'M'+g.C.x+' '+g.C.y+'L'+g.A.x+' '+g.A.y,stroke:'#e8cc6a','stroke-width':6,'stroke-opacity':.3,'stroke-linecap':'round'},hiL);
+ }else{
+  var sd=side(g,S.tool),s=S.off[S.cur][S.tool],ox=sd.P.x+s*PX*sd.ux,oy=sd.P.y+s*PX*sd.uy;
+  inst.g.setAttribute('transform','translate('+ox.toFixed(2)+' '+oy.toFixed(2)+') rotate('+sd.phi.toFixed(3)+')');
+  zoomAt(Z1,sd.P.x+sd.ox*20,sd.P.y+sd.oy*20,sd.phi);zoomAt(Z2,sd.Q.x+sd.ox*20,sd.Q.y+sd.oy*20,sd.phi);
+  $('z1c').innerHTML='At <b>'+sd.np+'</b> — the zero end';$('z2c').innerHTML='At <b>'+sd.nq+'</b> — read here';
+  nm='Ruler on '+SNAME[S.tool];
+  el('path',{d:'M'+sd.P.x+' '+sd.P.y+'L'+sd.Q.x+' '+sd.Q.y,stroke:'#e8cc6a','stroke-width':6,'stroke-opacity':.3,'stroke-linecap':'round'},hiL);
+ }
+ if(S.labels){[['a',g.C,g.B],['b',g.C,g.A],['c',g.A,g.B]].forEach(function(o){var mx=(o[1].x+o[2].x)/2,my=(o[1].y+o[2].y)/2,dx=g.G.x-mx,dy=g.G.y-my,L=Math.hypot(dx,dy);
+   var tt=el('text',{x:mx+dx/L*22,y:my+dy/L*22+4,'text-anchor':'middle','font-family':'JetBrains Mono','font-size':13,'font-weight':700,fill:'#b8860b'},helpL);tt.textContent=t[o[0]].toFixed(1)});
+  var ta=el('text',{x:g.C.x+(g.G.x-g.C.x)*.35,y:g.C.y+(g.G.y-g.C.y)*.35+4,'text-anchor':'middle','font-family':'JetBrains Mono','font-size':13,'font-weight':700,fill:'#b8860b'},helpL);ta.textContent=Math.round(t.C)+'°'}
+ $('readout').textContent=S.labels?(S.tool==='C'?'∠C ≈ '+Math.round(t.C)+'°':SNAME[S.tool]+' ≈ '+t[S.tool].toFixed(1)+' cm'):nm;
+ $('sheetTag').textContent='Sheet '+S.sheet;
+ document.querySelectorAll('#nudge button').forEach(function(b){b.disabled=S.tool==='C'});
+ if(sc.scrollWidth>sc.clientWidth+4){var cxp=(S.tool==='C'?g.C.x:(side(g,S.tool).P.x+side(g,S.tool).Q.x)/2)/800*sc.scrollWidth;if(cxp<sc.scrollLeft+60||cxp>sc.scrollLeft+sc.clientWidth-60)sc.scrollLeft=cxp-sc.clientWidth/2}
+}
+function buildSel(){
+ var ts=$('triSel');ts.querySelectorAll('button').forEach(function(b){b.remove()});
+ S.tris.forEach(function(_,i){var b=document.createElement('button');b.type='button';b.className='chip'+(S.cur===i?' on':'')+(rowOk(i).all?' done':'');b.textContent='Δ'+(i+1);
+  b.onclick=function(){S.cur=i;save();drawTriangle();buildInstrument();buildSel();render();setTask();fillQuick()};ts.appendChild(b)});
+ var tl=$('toolSel');tl.querySelectorAll('button').forEach(function(b){b.remove()});
+ [['a','BC (a)'],['b','CA (b)'],['c','AB (c)'],['C','∠C']].forEach(function(o){var b=document.createElement('button');b.type='button';b.className='chip'+(S.tool===o[0]?' on':'');b.textContent=o[1];
+  b.onclick=function(){S.tool=o[0];buildInstrument();buildSel();render();setTask();fillQuick()};tl.appendChild(b)});
+}
+document.querySelectorAll('#nudge button').forEach(function(b){b.onclick=function(){if(S.tool!=='C')setOff(S.off[S.cur][S.tool]+parseFloat(b.dataset.d),true)}});
+$('labels').onchange=function(){S.labels=this.checked;render()};
+$('newSheet').onclick=function(){var b=this;if(S.rows.some(function(r){return r.a||r.b||r.c||r.C})&&!b.dataset.sure){b.dataset.sure=1;b.textContent='Tap again to clear readings';setTimeout(function(){delete b.dataset.sure;b.textContent='↺ New sheet'},3500);return}
+ delete b.dataset.sure;b.textContent='↺ New sheet';newSheet();setTask();fillQuick()};
+var msgEl=$('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+function fillQuick(){var k=S.tool;$('quickLbl').textContent='Δ'+(S.cur+1)+' · '+(k==='C'?'∠C (°) =':SNAME[k]+' ('+k+') in cm =');$('quick').placeholder=k==='C'?'deg':'cm';$('quick').value=S.rows[S.cur][k]||''}
+$('saveQuick').onclick=function(){var v=$('quick').value.trim().replace(',','.');
+ if(v===''||isNaN(parseFloat(v))){say('Type the reading from the magnifier first.','bad');return}
+ S.rows[S.cur][S.tool]=v;save();renderTable();
+ var order=['a','b','c','C'],i=order.indexOf(S.tool),nx=null;
+ for(var j=i+1;j<order.length;j++)if(!S.rows[S.cur][order[j]]){nx=order[j];break}
+ if(nx){S.tool=nx;buildInstrument();buildSel();render();setTask();fillQuick();say('Written in the table. Next: '+(nx==='C'?'measure ∠C with the protractor.':'side '+SNAME[nx]+'.'),'ok')}
+ else if(S.cur<3){say('Δ'+(S.cur+1)+' is complete. Choose the conclusion in the table, then move on to Δ'+(S.cur+2)+'.','ok')}
+ else say('All four triangles measured. Choose a conclusion for each row in the table and press “Check my table”.','ok')};
+$('quick').addEventListener('keydown',function(e){if(e.key==='Enter')$('saveQuick').click()});
+
+/* ───────── paper cutting (Perigal's dissection on Δ1) ───────── */
+var cutb=$('cutb'),K=30,CUT=null,psel=0;
+function clip(poly,O,v,sg){var out=[],n=poly.length;function f(P){return sg*((P.x-O.x)*v.x+(P.y-O.y)*v.y)}
+ for(var i=0;i<n;i++){var P=poly[i],Q=poly[(i+1)%n],fp=f(P),fq=f(Q);if(fp>=-1e-9)out.push(P);
+  if((fp>1e-9&&fq<-1e-9)||(fp<-1e-9&&fq>1e-9)){var t=fp/(fp-fq);out.push({x:P.x+t*(Q.x-P.x),y:P.y+t*(Q.y-P.y)})}}return out}
+function buildCut(){
+ var t=S.tris[0],a=t.a,b=t.b,c=Math.hypot(a,b),m=1.3;
+ var d={x:a/c,y:-b/c},n={x:b/c,y:a/c},A={x:0,y:b},B={x:a,y:0},C0={x:0,y:0},O={x:-b/2,y:b/2};
+ var minX=-b,maxX=a+b,maxY=a+b,minY=-a,W=(maxX-minX+2*m)*K,H=(maxY-minY+2*m)*K;
+ function T(p){return {x:(p.x-minX+m)*K,y:(maxY-p.y+m)*K}}
+ function pts(arr){return arr.map(function(p){var q=T(p);return q.x.toFixed(2)+','+q.y.toFixed(2)}).join(' ')}
+ cutb.setAttribute('viewBox','0 0 '+W.toFixed(1)+' '+H.toFixed(1));cutb.innerHTML='';
+ var df=el('defs',{},cutb);df.innerHTML='<pattern id="cmm" width="'+(K/10)+'" height="'+(K/10)+'" patternUnits="userSpaceOnUse"><path d="M'+(K/10)+' 0H0V'+(K/10)+'" fill="none" stroke="#cfe7d6" stroke-width=".3"/></pattern><filter id="pcs" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="1.5" dy="2.5" stdDeviation="1.5" flood-color="#000" flood-opacity=".3"/></filter>';
+ el('rect',{x:0,y:0,width:W,height:H,fill:'#fbfaf3'},cutb);el('rect',{x:0,y:0,width:W,height:H,fill:'url(#cmm)'},cutb);
+ var sqA=[C0,B,{x:a,y:-a},{x:0,y:-a}],sqB=[C0,A,{x:-b,y:b},{x:-b,y:0}],cn={x:c*n.x,y:c*n.y},sqC=[A,B,{x:B.x+cn.x,y:B.y+cn.y},{x:A.x+cn.x,y:A.y+cn.y}];
+ var pen={fill:'none',stroke:'#444','stroke-width':1.2,'stroke-linejoin':'round'};
+ el('polygon',Object.assign({points:pts(sqC)},pen,{fill:'rgba(201,162,39,.07)'}),cutb);
+ el('polygon',Object.assign({points:pts(sqA)},pen),cutb);el('polygon',Object.assign({points:pts(sqB)},pen),cutb);
+ var slotL=el('g',{'pointer-events':'none'},cutb);
+ el('polygon',{points:pts([C0,B,A]),fill:'rgba(140,200,255,.12)',stroke:'#222','stroke-width':1.8,'stroke-linejoin':'round'},cutb);
+ var q0=T(C0),s9=K*.45;el('path',{d:'M'+q0.x+' '+(q0.y-s9)+'h'+s9+'v'+s9,fill:'none',stroke:'#222','stroke-width':1},cutb);
+ var L=el('g',{'font-family':'Crimson Pro,Georgia,serif','font-size':24,'font-weight':700,fill:'#222','text-anchor':'middle'},cutb);
+ [[C0,10,20,'C'],[A,-12,-6,'A'],[B,10,20,'B']].forEach(function(o){var q=T(o[0]),tx=el('text',{x:q.x+o[1],y:q.y+o[2]},L);tx.textContent=o[3]});
+ var cq=T({x:(A.x+B.x)/2+cn.x/2,y:(A.y+B.y)/2+cn.y/2}),tc=el('text',{x:cq.x,y:cq.y-K*c*.36,'text-anchor':'middle','font-family':'Inter','font-size':13,'font-weight':700,fill:'#7a5d0a'},cutb);tc.textContent='square on AB';
+ // pieces: four from the square on CA + the square on BC
+ var cols=['#f4a7b9','#ffd27a','#9fe0c0','#b7a6ff'],corner={'1,1':A,'-1,1':B,'1,-1':{x:A.x+cn.x,y:A.y+cn.y},'-1,-1':{x:B.x+cn.x,y:B.y+cn.y}};
+ var P=[],idx=0;
+ [[1,1],[-1,1],[1,-1],[-1,-1]].forEach(function(sg){var poly=clip(clip(sqB,O,d,sg[0]),O,n,sg[1]),Kc=corner[sg[0]+','+sg[1]];
+  var tr={x:(Kc.x-O.x)*K,y:-(Kc.y-O.y)*K},sp={x:(sg[0]*d.x+sg[1]*n.x)*K*.3,y:-(sg[0]*d.y+sg[1]*n.y)*K*.3};
+  P.push({poly:poly,col:cols[idx],name:String(idx+1),tr:tr,spread:sp});idx++});
+ var Qc={x:(A.x+B.x)/2+cn.x/2,y:(A.y+B.y)/2+cn.y/2};
+ P.push({poly:sqA,col:'#8cc8ff',name:'a²',tr:{x:(Qc.x-a/2)*K,y:-(Qc.y+a/2)*K},spread:{x:0,y:K*.3}});
+ // helper outlines of the target places
+ P.forEach(function(p){el('polygon',{points:p.poly.map(function(v){var q=T(v);return (q.x+p.tr.x).toFixed(2)+','+(q.y+p.tr.y).toFixed(2)}).join(' '),fill:'none',stroke:'#b8860b','stroke-width':1.3,'stroke-dasharray':'5 4'},slotL)});
+ CUT={P:P,slotL:slotL,T:T,O:O,d:d,n:n,b:b};
+ var pL=el('g',{},cutb);
+ P.forEach(function(p,i){var g=el('g',{class:'pc',tabindex:0,role:'button','aria-label':'Piece '+p.name},pL);
+  var poly=el('polygon',{points:pts(p.poly),fill:p.col,stroke:'#5a4a2a','stroke-width':1,'stroke-opacity':.7,filter:'url(#pcs)'},g);
+  var cx=0,cy=0;p.poly.forEach(function(v){var q=T(v);cx+=q.x;cy+=q.y});cx/=p.poly.length;cy/=p.poly.length;
+  var tt=el('text',{x:cx,y:cy+5,'text-anchor':'middle','font-family':'Inter','font-size':18,'font-weight':800,fill:'#3b2f14','pointer-events':'none'},g);tt.textContent=p.name;
+  p.g=g;
+  var drag=null;
+  g.addEventListener('pointerdown',function(e){if(!S.cut.cut)return;pick(i);drag={x:e.clientX,y:e.clientY,p0:S.cut.pos[i].slice()};DRAGGING=true;g.classList.add('drag');try{g.setPointerCapture(e.pointerId)}catch(_){}e.preventDefault()});
+  g.addEventListener('pointermove',function(e){if(!drag)return;var k=cutb.getScreenCTM().a;S.cut.pos[i]=[drag.p0[0]+(e.clientX-drag.x)/k,drag.p0[1]+(e.clientY-drag.y)/k];placePiece(i)});
+  function end(){if(!drag)return;drag=null;DRAGGING=false;g.classList.remove('drag');snap(i)}
+  g.addEventListener('pointerup',end);g.addEventListener('pointercancel',end);
+  g.addEventListener('keydown',function(e){var st=(e.shiftKey?1:.25)*K,m={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key];if(!m||!S.cut.cut)return;e.preventDefault();pick(i);nudgePiece(i,m[0]*st,m[1]*st)});
+  g.addEventListener('focus',function(){pick(i)});
+ });
+ // cut lines and centre O, drawn over the uncut square
+ var cutL=el('g',{'pointer-events':'none'},cutb),oq=T(O);
+ var cp=el('clipPath',{id:'sqBclip'},df);el('polygon',{points:pts(sqB)},cp);
+ var gl=el('g',{'clip-path':'url(#sqBclip)'},cutL);
+ var Lg=b*1.5;
+ [d,n].forEach(function(v){var p1=T({x:O.x-v.x*Lg,y:O.y-v.y*Lg}),p2=T({x:O.x+v.x*Lg,y:O.y+v.y*Lg});el('line',{x1:p1.x,y1:p1.y,x2:p2.x,y2:p2.y,stroke:'#333','stroke-width':1.3,'stroke-dasharray':'6 5'},gl)});
+ var dg1=T({x:0,y:0}),dg2=T({x:-b,y:b}),dg3=T({x:0,y:b}),dg4=T({x:-b,y:0});
+ el('path',{d:'M'+dg1.x+' '+dg1.y+'L'+dg2.x+' '+dg2.y+'M'+dg3.x+' '+dg3.y+'L'+dg4.x+' '+dg4.y,stroke:'#999','stroke-width':.7,'stroke-dasharray':'2 4'},gl);
+ el('circle',{cx:oq.x,cy:oq.y,r:3,fill:'#333'},cutL);var ot=el('text',{x:oq.x+7,y:oq.y-7,'font-family':'Crimson Pro,Georgia,serif','font-size':17,'font-weight':700,fill:'#333'},cutL);ot.textContent='O';
+ CUT.cutL=cutL;
+ // piece chips
+ var ps=$('pcSel');ps.innerHTML='';P.forEach(function(p,i){var bt=document.createElement('button');bt.type='button';bt.className='chip';bt.textContent=p.name==='a²'?'Square a²':'Piece '+p.name;bt.onclick=function(){pick(i)};ps.appendChild(bt)});
+ P.forEach(function(_,i){placePiece(i)});renderCut();
+}
+function placePiece(i){var p=CUT.P[i],pos=S.cut.pos[i];p.g.setAttribute('transform','translate('+pos[0].toFixed(2)+' '+pos[1].toFixed(2)+')')}
+function isPlaced(i){var p=CUT.P[i],pos=S.cut.pos[i];return Math.hypot(pos[0]-p.tr.x,pos[1]-p.tr.y)<0.5}
+function snap(i){var p=CUT.P[i],pos=S.cut.pos[i];if(Math.hypot(pos[0]-p.tr.x,pos[1]-p.tr.y)<0.45*K){S.cut.pos[i]=[p.tr.x,p.tr.y];placePiece(i)}save();renderCut()}
+function nudgePiece(i,dx,dy){S.cut.pos[i]=[S.cut.pos[i][0]+dx,S.cut.pos[i][1]+dy];placePiece(i);snap(i)}
+function pick(i){psel=i;CUT.P.forEach(function(p,j){p.g.classList.toggle('sel',j===i)});document.querySelectorAll('#pcSel .chip').forEach(function(b,j){b.classList.toggle('on',j===i)})}
+document.querySelectorAll('#pnudge button').forEach(function(b){b.onclick=function(){if(!S.cut.cut){cmsg('Cut the square first.','bad');return}nudgePiece(psel,parseFloat(b.dataset.x)*K*.5,parseFloat(b.dataset.y)*K*.5)}});
+$('slots').onchange=function(){S.slots=this.checked;renderCut()};
+$('doCut').onclick=function(){if(S.cut.cut)return;S.cut.cut=true;CUT.P.forEach(function(p,i){S.cut.pos[i]=[p.spread.x,p.spread.y];placePiece(i)});save();renderCut();pick(0);
+ setTask();cmsg('Cut! Four pieces from the square on CA and the square on BC are now loose. Slide them onto the square on AB.','ok')};
+$('resetCut').onclick=function(){S.cut={cut:false,pos:[[0,0],[0,0],[0,0],[0,0],[0,0]]};CUT.P.forEach(function(_,i){placePiece(i)});save();renderCut();setTask();cmsg('')};
+var cmsgEl=$('cmsg');function cmsg(t,c){cmsgEl.textContent=t;cmsgEl.className='msg '+(c||'')}
+function nPlaced(){if(!S.cut.cut)return 0;var k=0;for(var i=0;i<5;i++)if(isPlaced(i))k++;return k}
+function renderCut(){var n=nPlaced();
+ CUT.P.forEach(function(p,i){p.g.classList.toggle('free',S.cut.cut);var pl=S.cut.cut&&isPlaced(i);p.g.querySelector('polygon').setAttribute('stroke-width',pl?1:1);p.g.querySelector('polygon').setAttribute('stroke',pl?'#237d69':'#5a4a2a')});
+ CUT.cutL.style.display=S.cut.cut?'none':'';CUT.slotL.style.display=S.slots?'':'none';
+ $('doCut').disabled=S.cut.cut;$('cutTag').textContent=n+' / 5 placed';
+ document.querySelectorAll('#pcSel .chip').forEach(function(b,j){b.classList.toggle('done',S.cut.cut&&isPlaced(j))});
+ if(n===5){var r=S.rows[0],msg='All five pieces cover the square on AB exactly, with no gaps and no overlaps. So area of square on AB = area of square on BC + area of square on CA, i.e. AB² = BC² + CA².';
+  var a=parseFloat(r.a),b=parseFloat(r.b),c=parseFloat(r.c);if(!isNaN(a+b+c))msg+=' With your Δ1 readings: '+(a*a+b*b).toFixed(2)+' cm² and '+(c*c).toFixed(2)+' cm².';cmsg(msg,'ok')}
+ renderResult();
+}
+
+/* ───────── tabs + task line ───────── */
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setMode(t.dataset.mode)}});
+function setMode(m){S.mode=m;document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.mode===m);t.setAttribute('aria-selected',t.dataset.mode===m)});
+ $('measureBox').hidden=m!=='measure';$('cutBox').hidden=m!=='cut';setTask();if(m==='measure')render()}
+function setTask(){var k=S.tool,tk=$('task'),g=geom(S.cur);
+ if(S.mode==='cut'){tk.innerHTML=S.cut.cut?'<b>Step 2.</b> Drag each piece (or select it and use the arrow buttons) onto the <b>square on AB</b>. Only slide the pieces — do not turn them. The square on BC goes in the middle. A piece clicks into place when it is in the right spot.'
+  :'<b>Step 2.</b> Squares are drawn outwards on all three sides of the right triangle Δ1. The square on the longer leg CA has two dashed lines through its centre <b>O</b>: one parallel to AB and one perpendicular to AB. Press <b>Cut</b> to cut along them.';return}
+ if(k==='C'){tk.innerHTML='<b>Step 1 · Δ'+(S.cur+1)+', ∠C.</b> The protractor’s centre is on C and its base line lies along CB. In the right magnifier, read where the line <b>CA</b> crosses the scale. Use the scale that starts from <b>0 on CB</b> (the outer black numbers here). Type it to the nearest degree.';return}
+ var sd=side(g,k);
+ tk.innerHTML='<b>Step 1 · Δ'+(S.cur+1)+', side '+SNAME[k]+'.</b> The ruler lies along '+SNAME[k]+'. Slide it until its <b>0 mark sits exactly on '+sd.np+'</b> (left magnifier). Then read the scale at <b>'+sd.nq+'</b> (right magnifier) to the nearest millimetre, type it and press “Write in table”.'}
+
+/* ───────── table ───────── */
+var tb=$('tb');
+function nums(r){var a=parseFloat(r.a),b=parseFloat(r.b),c=parseFloat(r.c);if([a,b,c].some(isNaN))return null;return {a2:a*a,b2:b*b,s:a*a+b*b,c2:c*c,d:c*c-(a*a+b*b)}}
+function renderTable(){tb.innerHTML='';
+ S.rows.forEach(function(r,i){var tr=document.createElement('tr');
+  tr.innerHTML='<td><b>Δ'+(i+1)+'</b></td>'+['a','b','c','C'].map(function(k){return '<td><input data-k="'+k+'" value="'+(r[k]||'')+'" inputmode="decimal" aria-label="Δ'+(i+1)+' '+SNAME[k]+'"></td>'}).join('')+
+   '<td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td>'+
+   '<td><select data-k="k" aria-label="Δ'+(i+1)+' conclusion"><option value="">— choose —</option><option value="=">c² = a² + b²</option><option value="&gt;">c² &gt; a² + b²</option><option value="&lt;">c² &lt; a² + b²</option></select></td>';
+  tr.querySelector('select').value=r.k||'';
+  tr.querySelectorAll('input,select').forEach(function(inp){inp.addEventListener(inp.tagName==='SELECT'?'change':'input',function(){r[inp.dataset.k]=inp.value.trim().replace(',','.');inp.classList.remove('bad','good');fill(tr,r);save();drawGraph();renderResult();updCount();if(S.cur===i&&inp.dataset.k===S.tool)$('quick').value=r[S.tool]})});
+  fill(tr,r);tb.appendChild(tr)});
+ drawGraph();renderResult();updCount()}
+function fill(tr,r){var c=nums(r),td=tr.querySelectorAll('td.n');
+ if(!c){td.forEach(function(t){t.textContent='–'});return}
+ td[0].textContent=c.a2.toFixed(2);td[1].textContent=c.b2.toFixed(2);td[2].textContent=c.s.toFixed(2);td[3].textContent=c.c2.toFixed(2);td[4].textContent=(c.d>=0?'+':'')+c.d.toFixed(2)}
+function rowOk(i){var r=S.rows[i],t=truth(i),o={};
+ ['a','b','c'].forEach(function(k){var v=parseFloat(r[k]);o[k]=!isNaN(v)&&Math.abs(v-t[k])<=TOL});
+ var C=parseFloat(r.C);o.C=!isNaN(C)&&Math.abs(C-t.C)<=ATOL;o.k=r.k===t.k;o.all=o.a&&o.b&&o.c&&o.C&&o.k;return o}
+function goodIdx(){var g=[];for(var i=0;i<4;i++)if(rowOk(i).all)g.push(i);return g}
+function updCount(){var n=goodIdx().length;$('nObs').textContent=n+' / 4 correct';document.querySelectorAll('#triSel .chip').forEach(function(b,i){b.classList.toggle('done',rowOk(i).all)})}
+$('check').onclick=function(){var fb=[],trs=tb.querySelectorAll('tr');
+ S.rows.forEach(function(r,i){var t=truth(i),o=rowOk(i),tr=trs[i],m=[];
+  if(!r.a&&!r.b&&!r.c&&!r.C){m.push('not measured yet')}
+  else{
+   ['a','b','c'].forEach(function(k){var inp=tr.querySelector('input[data-k="'+k+'"]');inp.classList.toggle('bad',!o[k]);inp.classList.toggle('good',o[k]);if(o[k])return;
+    var v=parseFloat(r[k]),s=S.off[i][k],sd=side(geom(i),k);
+    if(isNaN(v))m.push(SNAME[k]+' is missing');
+    else if(s!==0&&Math.abs(v-(t[k]-s))<=TOL)m.push(SNAME[k]+': the zero of the ruler was not on '+sd.np+' when you read it. Slide the ruler so that 0 sits exactly on '+sd.np+' (or subtract the reading at '+sd.np+')');
+    else m.push(SNAME[k]+' is misread — look at the magnifier again (each small division is 1 mm)')});
+   var ci=tr.querySelector('input[data-k="C"]');ci.classList.toggle('bad',!o.C);ci.classList.toggle('good',o.C);
+   if(!o.C){var C=parseFloat(r.C);if(isNaN(C))m.push('∠C is missing');else if(t.C!==90&&Math.abs(C-(180-t.C))<=ATOL)m.push('∠C: you read the other scale of the protractor. Use the scale that starts from 0 on CB');else m.push('∠C is misread — check where CA crosses the protractor scale')}
+   var si=tr.querySelector('select');si.classList.toggle('bad',!o.k);si.classList.toggle('good',o.k);
+   if(!o.k){if(!r.k)m.push('choose a conclusion');
+    else if(t.k==='=')m.push('conclusion: ∠C is a right angle here, so c² and a² + b² differ only by measuring error (a few per cent at most) — they are equal');
+    else m.push('conclusion: ∠C is '+(t.k==='>'?'more':'less')+' than 90°, so c² is clearly '+(t.k==='>'?'greater':'less')+' than a² + b²; the difference is far too big to be a measuring error')}
+  }
+  tr.classList.toggle('flag',m.length>0);
+  if(m.length)fb.push('<b>Δ'+(i+1)+':</b> '+m.join('; ')+'.')});
+ var g=goodIdx();
+ if(!fb.length)fb.push('✓ All four rows are correct. Three triangles obey c² = a² + b², and the one whose ∠C is not 90° does not — that is the converse at work. See your graph and result below.');
+ else if(g.length)fb.push(g.length+' of 4 rows are fully correct.');
+ $('fb').innerHTML=fb.map(function(x){return '<li>'+x+'</li>'}).join('');buildSel()};
+
+/* ───────── graph ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=$(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(300,r.width||640),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h}}
+function axes(g,xmax,ymax,xl,yl,xstep,ystep,fmt){
+ var x=g.x,L=56,B=44,R=16,T=16,W=g.w-L-R,H=g.h-T-B,txt=css('--text')||'#222',mut=css('--muted')||'#666',bd=css('--border')||'#ddd';
+ x.clearRect(0,0,g.w,g.h);x.font='12px Inter, sans-serif';x.lineWidth=1;
+ for(var v=0;v<=xmax+1e-9;v+=xstep){var px=L+v/xmax*W;x.strokeStyle=bd;x.beginPath();x.moveTo(px,T);x.lineTo(px,T+H);x.stroke();x.fillStyle=mut;x.textAlign='center';x.fillText(fmt(v),px,T+H+15)}
+ for(v=0;v<=ymax+1e-9;v+=ystep){var py=T+H-v/ymax*H;x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(fmt(v),L-6,py+4)}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T);x.lineTo(L,T+H);x.lineTo(L+W,T+H);x.stroke();
+ x.fillStyle=txt;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(14,T+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();
+ return function(a,b){return [L+a/xmax*W,T+H-b/ymax*H]}}
+function nice(m){var steps=[1,2,2.5,5,10,20,25,50,100],e=Math.pow(10,Math.floor(Math.log10(m/6)));for(var i=0;i<steps.length;i++){if(m/(steps[i]*e)<=7)return steps[i]*e}return m/5}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);g.x.fillStyle=css('--muted')||'#777';g.x.font='14px Inter, sans-serif';g.x.textAlign='center';g.x.fillText(t,g.w/2,g.h/2)}
+var FIT=null;
+function drawGraph(){var g1=canvas('g1'),gi=goodIdx();FIT=null;
+ var right=gi.filter(function(i){return S.rows[i].k==='='});
+ if(gi.length<3||right.length<2){empty(g1,'Needs 3 correct rows ('+gi.length+' so far) — press “Check my table”');return}
+ var pts=gi.map(function(i){var c=nums(S.rows[i]);return {i:i,x:c.s,y:c.c2,right:S.rows[i].k==='='}});
+ var sxy=0,sxx=0;pts.forEach(function(p){if(p.right){sxy+=p.x*p.y;sxx+=p.x*p.x}});var k=sxy/sxx;
+ var mx=Math.max.apply(null,pts.map(function(p){return Math.max(p.x,p.y)}))*1.1,st=nice(mx);mx=Math.ceil(mx/st)*st;
+ var narrow=g1.w<480,P=axes(g1,mx,mx,'a² + b² (cm²)','c² (cm²)',st,st,function(v){return String(Math.round(v))}),x=g1.x;
+ var gold=css('--gold')||'#c9a227',navy='#3b6fb8',red='#c0392b';
+ x.strokeStyle=gold;x.setLineDash([7,5]);x.lineWidth=1.6;x.beginPath();var a=P(0,0),b=P(mx,mx);x.moveTo(a[0],a[1]);x.lineTo(b[0],b[1]);x.stroke();x.setLineDash([]);
+ x.strokeStyle=navy;x.lineWidth=2;x.beginPath();var e2=k>1?P(mx/k,mx):P(mx,mx*k);x.moveTo(a[0],a[1]);x.lineTo(e2[0],e2[1]);x.stroke();
+ pts.forEach(function(p){var q=P(p.x,p.y);x.fillStyle=p.right?gold:red;x.strokeStyle=p.right?'#5c4600':'#5a0d06';x.lineWidth=1;x.beginPath();x.arc(q[0],q[1],5,0,7);x.fill();x.stroke();
+  if(p.right&&narrow)return;
+  x.font='700 12px Inter, sans-serif';x.fillStyle=p.right?(css('--text')||'#222'):red;
+  var lb='Δ'+(p.i+1)+(p.right?'':' · ∠C = '+Math.round(parseFloat(S.rows[p.i].C))+'°'),left=q[0]>g1.w*.55;
+  x.textAlign=left?'right':'left';x.fillText(lb,q[0]+(left?-9:9),q[1]+(p.right?-7:(p.y>p.x?-8:16)))});
+ var lq=P(mx*.97,mx*.06);x.font='700 '+(narrow?12:13)+'px Inter, sans-serif';x.fillStyle=navy;x.textAlign='right';x.fillText((narrow?'slope = ':'slope of best-fit line = ')+k.toFixed(3),lq[0],lq[1]);
+ FIT={k:k};
+}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(function(){drawGraph()},150)});
+
+/* ───────── result ───────── */
+function renderResult(){var gi=goodIdx(),right=gi.filter(function(i){return truth(i).k==='='});
+ if(right.length){var sd=0,sp=0;right.forEach(function(i){var c=nums(S.rows[i]);sd+=Math.abs(c.d);sp+=Math.abs(c.d)/c.c2*100});
+  $('rT').textContent=(sd/right.length).toFixed(2)+' cm² ('+(sp/right.length).toFixed(1)+'% of c²)'}else $('rT').textContent='—';
+ $('rG').textContent=FIT?FIT.k.toFixed(3)+' (ideal 1)':'—';
+ var odd=-1;S.tris.forEach(function(t,i){if(t.C!==90)odd=i});
+ if(odd>=0&&gi.indexOf(odd)>=0){var C=Math.round(parseFloat(S.rows[odd].C)),gt=S.tris[odd].C>90;$('rC').textContent='Δ'+(odd+1)+': ∠C = '+C+'°, c² '+(gt?'>':'<')+' a² + b² ('+(gt?'obtuse':'acute')+')'}else $('rC').textContent='—';
+ $('rP').textContent=nPlaced()===5?'done ✓ all 5 pieces fit':(S.cut.cut?nPlaced()+' / 5 pieces placed':'not done yet');
+ var tbx=$('trueBox');tbx.hidden=!S.revealed;
+ if(S.revealed){$('rTrue').innerHTML=S.tris.map(function(t,i){var tt=truth(i);return 'Δ'+(i+1)+': a '+tt.a.toFixed(2)+', b '+tt.b.toFixed(2)+', c '+tt.c.toFixed(2)+' cm, ∠C '+tt.C.toFixed(1)+'°'}).join('<br>');
+  var e=0;S.rows.forEach(function(r,i){e+=Math.abs(parseFloat(r.c)-truth(i).c)/truth(i).c*100});$('err').textContent='Your readings of c differ from the actual lengths by '+(e/4).toFixed(2)+'% on average.'}}
+$('reveal').onclick=function(){if(goodIdx().length<4){$('err').textContent='Get all four rows correct first (press “Check my table”).';return}S.revealed=true;renderResult()};
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['State Pythagoras theorem.','In a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides: if ∠C = 90°, then AB² = BC² + CA².'],
+ ['State the converse of Pythagoras theorem.','If in a triangle the square of one side is equal to the sum of the squares of the other two sides, then the angle opposite the first side is a right angle.'],
+ ['Which side of a right triangle is the longest, and why?','The hypotenuse, the side opposite the right angle. The right angle is the largest angle of the triangle, and the largest side is opposite the largest angle.'],
+ ['Is a triangle with sides 7 cm, 24 cm and 25 cm right-angled?','Yes. 7² + 24² = 49 + 576 = 625 = 25², so by the converse the angle opposite the 25 cm side is 90°.'],
+ ['What is a Pythagorean triplet? Give two examples.','Three natural numbers a, b, c with a² + b² = c², such as (3, 4, 5), (5, 12, 13) or (8, 15, 17). For any m > 1, (2m, m² − 1, m² + 1) is a triplet.'],
+ ['In your obtuse (or acute) triangle, how did c² compare with a² + b²?','When ∠C is more than 90°, c² is greater than a² + b². When ∠C is less than 90°, c² is less than a² + b². Equality holds only when ∠C = 90°.'],
+ ['Why should you not measure from the end of the ruler?','The end of a ruler is often worn or chipped, and on many rulers the zero mark is not at the very edge. Put the zero mark on the vertex, or subtract the starting reading.'],
+ ['Does measuring a few triangles prove the theorem?','No. Measurement only checks it for those triangles, and only to the accuracy of the instruments. A proof must work for every right triangle; the paper-cutting activity shows a proof by areas.'],
+ ['In the paper-cutting activity, why are the cuts made parallel and perpendicular to the hypotenuse?','Then every piece has edges in the same directions as the sides of the square on the hypotenuse, so the four pieces can simply be slid into its corners, and the square on the shorter leg fills the gap in the middle. Cutting and sliding do not change area.'],
+ ['A 10 m ladder reaches a window 8 m above the ground. How far is its foot from the wall?','√(10² − 8²) = √36 = 6 m.'],
+ ['How is the distance formula related to Pythagoras theorem?','The horizontal gap (x₂ − x₁) and vertical gap (y₂ − y₁) are the legs of a right triangle whose hypotenuse is the distance, so d = √[(x₂ − x₁)² + (y₂ − y₁)²].'],
+ ['Find the diagonal of a rectangle 12 cm long and 5 cm wide.','The diagonal is the hypotenuse of a right triangle with legs 12 cm and 5 cm: √(144 + 25) = √169 = 13 cm.']];
+$('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){var K2={'=':'c² = a² + b²','>':'c² > a² + b²','<':'c² < a² + b²'};
+ var rows=S.rows.map(function(r,i){var c=nums(r);return '<tr><td>Δ'+(i+1)+'</td><td>'+(r.a||'')+'</td><td>'+(r.b||'')+'</td><td>'+(r.c||'')+'</td><td>'+(r.C||'')+'</td><td>'+(c?c.a2.toFixed(2):'')+'</td><td>'+(c?c.b2.toFixed(2):'')+'</td><td>'+(c?c.s.toFixed(2):'')+'</td><td>'+(c?c.c2.toFixed(2):'')+'</td><td>'+(c?c.d.toFixed(2):'')+'</td><td>'+(K2[r.k]||'')+'</td></tr>'}).join('');
+ var img='';try{if(FIT)img='<img src="'+$('g1').toDataURL()+'">'}catch(e){}
+ $('record').innerHTML='<h1>Activity: Verification of Pythagoras theorem</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Roll no.: ______ &nbsp; Date: ___________ &nbsp; Sheet: '+S.sheet+'</p>'+
+  '<h2>Aim</h2><p>To verify Pythagoras theorem by measurement and by the method of paper cutting and pasting, and to check its converse.</p>'+
+  '<h2>Materials required</h2><p>Graph paper, coloured paper, geometry box (ruler, protractor, set squares), pencil, eraser, scissors, glue.</p>'+
+  '<h2>Theory</h2><p>In a right-angled triangle ABC with ∠C = 90°: AB² = BC² + CA², i.e. c² = a² + b². Converse: if c² = a² + b², then ∠C = 90°.</p>'+
+  '<h2>Observations</h2><table><tr><th>Triangle</th><th>a = BC (cm)</th><th>b = CA (cm)</th><th>c = AB (cm)</th><th>∠C (°)</th><th>a²</th><th>b²</th><th>a² + b²</th><th>c²</th><th>c² − (a² + b²)</th><th>Conclusion</th></tr>'+rows+'</table>'+
+  '<p>Paper cutting on Δ1: '+(nPlaced()===5?'the four pieces of the square on CA and the square on BC exactly covered the square on AB.':'(paste the cut pieces here)')+'</p>'+
+  '<h2>Graph</h2>'+(img||'<p>(Plot c² against a² + b² on graph paper.)</p>')+
+  '<h2>Result</h2><p>For the right-angled triangles, c² = a² + b² within measuring error (mean difference '+$('rT').textContent+'; slope of best-fit line '+$('rG').textContent+'). Converse test: '+$('rC').textContent+'. Hence Pythagoras theorem is verified.</p>'+
+  '<h2>Precautions</h2><ol><li>Use a sharp pencil; lines should be thin.</li><li>Keep the zero of the ruler exactly on the vertex.</li><li>Read scales with the eye directly above the mark.</li><li>Place the protractor centre on the vertex and its base line along one arm.</li><li>Cut along the lines carefully and do not rotate the pieces.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>A ruler reads only to the nearest millimetre; squaring increases the error.</li><li>Thickness of pencil lines.</li><li>Protractor read only to about 1°.</li><li>Small gaps or overlaps from inaccurate cutting.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+$('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,truth:truth,geom:geom,side:side,setOff:setOff,renderTable:renderTable,renderCut:renderCut,placePiece:placePiece,CUT:function(){return CUT},K:K};
+buildSheet();buildCut();setMode('measure');renderTable();fillQuick();
+})();
+
+</script>
+</body>
+</html>
