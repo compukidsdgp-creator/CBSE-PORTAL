@@ -10,6 +10,26 @@ jobs:
   list:
     runs-on: ubuntu-latest
     steps:
+      - name: Instagram profile (bio + website link) and the link-in-bio page
+        env:
+          IG_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          IG_ID: "17841480792360992"
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          q = urllib.parse.urlencode({"fields": "username,name,website,biography", "access_token": os.environ["IG_TOKEN"]})
+          try:
+              d = json.load(urllib.request.urlopen(f"https://graph.facebook.com/v21.0/{os.environ['IG_ID']}?{q}", timeout=30))
+              print("username:", d.get("username")); print("website field:", repr(d.get("website"))); print("bio:", repr(d.get("biography")))
+          except Exception as e:
+              print("profile lookup failed:", e)
+          for u in ["https://cbsemock.org.in/go/", "https://cbsemock.org.in/go", "http://cbsemock.org.in/go/", "https://www.cbsemock.org.in/go/"]:
+              try:
+                  r = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0 Instagram"}), timeout=20)
+                  print("OK", r.status, u, "->", r.geturl())
+              except Exception as e:
+                  print("FAIL", u, e)
+          PY
       - name: Last 8 Instagram posts
         env:
           IG_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
