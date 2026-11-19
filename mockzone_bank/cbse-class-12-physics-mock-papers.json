@@ -1,0 +1,297 @@
+{
+ "page": "cbse-class-12-physics-mock-papers.html",
+ "pools": {
+  "SEC_A_MCQ": {
+   "per_paper": 16,
+   "items": [
+    {
+     "q": "A hollow conducting sphere of radius R has charge Q. If the radius is doubled keeping charge same, the electric flux through the Gaussian surface enclosing the sphere will:",
+     "opts": [
+      "A. increase",
+      "B. decrease",
+      "C. remain the same",
+      "D. become zero"
+     ],
+     "ans": "C",
+     "key": "Electric flux depends only on enclosed charge (Gauss's Law: Φ = Q/ε₀), not on size of Gaussian surface."
+    },
+    {
+     "q": "Two resistors of 1000 W each are connected in parallel across 220 V. Total power consumed is:",
+     "opts": [
+      "A. 500 W",
+      "B. 1000 W",
+      "C. 2000 W",
+      "D. 4000 W"
+     ],
+     "ans": "C",
+     "key": "Parallel: P = P₁+P₂ = 1000+1000 = 2000 W."
+    },
+    {
+     "q": "A metallic cylinder is placed in a uniform magnetic field with its axis parallel to the field. If the field changes with time, induced current in the cylinder is:",
+     "opts": [
+      "A. along its axis",
+      "B. circular inside",
+      "C. no current will be induced",
+      "D. along surface only"
+     ],
+     "ans": "C",
+     "key": "Cylinder axis parallel to B; flux through any loop perpendicular to axis is zero → no change → no induced current."
+    },
+    {
+     "q": "An electromagnetic wave propagating along x-axis has equation E = E₀cos(kx−ωt). Direction of propagation is:",
+     "opts": [
+      "A. +x̂",
+      "B. −x̂",
+      "C. ŷ",
+      "D. ẑ"
+     ],
+     "ans": "A",
+     "key": "Direction of EM wave propagation is along +x̂ (given by k direction in kx−ωt)."
+    },
+    {
+     "q": "Which of the following cannot be explained by Huygens' wave theory of light?",
+     "opts": [
+      "A. Reflection",
+      "B. Refraction",
+      "C. Interference",
+      "D. Origin of spectra"
+     ],
+     "ans": "D",
+     "key": "Huygens' principle explains reflection, refraction, interference, diffraction — but NOT origin of spectra (needs quantum theory)."
+    },
+    {
+     "q": "A distant star sends light to Earth. The wavefront reaching Earth is:",
+     "opts": [
+      "A. Spherical",
+      "B. Cylindrical",
+      "C. Plane",
+      "D. Elliptical"
+     ],
+     "ans": "C",
+     "key": "Star is so far that wavefront is essentially plane by the time it reaches Earth."
+    },
+    {
+     "q": "The binding energy per nucleon is maximum for nuclei near iron (Fe-56). This means these nuclei:",
+     "opts": [
+      "A. undergo spontaneous fission",
+      "B. are most tightly bound",
+      "C. are least stable",
+      "D. cannot participate in nuclear reactions"
+     ],
+     "ans": "B",
+     "key": "Maximum binding energy per nucleon = maximum stability = most tightly bound nuclei."
+    },
+    {
+     "q": "A superconducting ball cooled below critical temperature in a magnetic field. On removing field, ball will:",
+     "opts": [
+      "A. attract the bar magnet",
+      "B. repel the bar magnet",
+      "C. show no interaction",
+      "D. align with field"
+     ],
+     "ans": "D",
+     "key": "Below Tc ball becomes diamagnetic superconductor — it repels and moves away from magnet, opposite to bar magnet direction."
+    },
+    {
+     "q": "In a Wheatstone bridge with arms 2Ω,3Ω,4Ω,6Ω and a 5Ω galvanometer, battery 18V. Current from battery:",
+     "opts": [
+      "A. 5:3",
+      "B. 5 A",
+      "C. 3 A",
+      "D. 2 A"
+     ],
+     "ans": "B",
+     "key": "Bridge balanced (2/4=3/6=½). 5Ω ineffective. R_AB = 6×9/(6+9) = 18/5. I = 18/(18/5) = 5 A."
+    },
+    {
+     "q": "Resistances R₁ and R₂ dissipate power P₁=60W and P₂=100W from same supply. R₁:R₂ =",
+     "opts": [
+      "A. 5:3",
+      "B. 3:5",
+      "C. 6:10",
+      "D. 1:1"
+     ],
+     "ans": "A",
+     "key": "R = V²/P, so R₁/R₂ = P₂/P₁ = 100/60 = 5:3."
+    },
+    {
+     "q": "The size of a nucleus is about 10⁻¹⁵ m. If a football (22 cm radius) represents the nucleus, size of atom would be:",
+     "opts": [
+      "A. 2.2 km",
+      "B. 22 km",
+      "C. 220 km",
+      "D. 2200 km"
+     ],
+     "ans": "B",
+     "key": "Atom/nucleus ratio ~10⁵. 0.22 m × 10⁵ = 22,000 m = 22 km."
+    },
+    {
+     "q": "A circular loop of radius 0.1 m carries current 5 A. Magnetic field at centre:",
+     "opts": [
+      "A. 2π μT",
+      "B. π μT",
+      "C. 5π μT",
+      "D. 10π μT"
+     ],
+     "ans": "C",
+     "key": "B = μ₀I/2R = (4π×10⁻⁷ × 5)/(2×0.1) = 5π×10⁻⁶ T = 5π μT."
+    },
+    {
+     "q": "[A-R Q13] A: Most of the α particles pass undeflected through gold foil. R: Most of the space in atom is empty.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "B",
+     "key": "Both statements are true, but R (space is empty due to tiny nucleus) is not the correct explanation for A — R states a fact but doesn't fully explain WHY particles pass through."
+    },
+    {
+     "q": "[A-R Q14] A: A convex lens submerged in water has greater focal length. R: Lens formula uses relative refractive index.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "A",
+     "key": "Both true, R correctly explains A: in water relative μ decreases, so power decreases, focal length increases."
+    },
+    {
+     "q": "[A-R Q15] A: In YDSE, decreasing slit separation increases fringe width. R: Fringe width is directly proportional to slit separation.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "C",
+     "key": "A is true (β = λD/d, d↓ → β↑). R is false (β is INVERSELY proportional to d)."
+    },
+    {
+     "q": "[A-R Q16] A: Net electric field inside a conductor is zero. R: Electrons in a conductor are always stationary.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "D",
+     "key": "A is false (field inside conductor is zero when in equilibrium, not always). R is false (electrons move freely due to thermal energy)."
+    }
+   ]
+  },
+  "SEC_B_Qs": {
+   "per_paper": 5,
+   "items": [
+    {
+     "q": "An EM wave has frequency ν = 10¹⁸ Hz and travels in vacuum. Find: (i) refractive index of medium if speed is 2×10⁸ m/s, (ii) angular frequency ω.",
+     "ans": "(i) μ = c/v = 3×10⁸/2×10⁸ = 1.5\n(ii) ω = 2πν = 2π×10¹⁸ rad/s; frequency corresponds to X-ray range.",
+     "marks": 2
+    },
+    {
+     "q": "Distinguish between path of free electrons in a conductor (a) with electric field applied, (b) without electric field.",
+     "ans": "(a) With E-field: electrons drift opposite to E (superimposed on random motion) → net current flows.\n(b) Without E-field: purely random thermal motion; no net displacement → no current.",
+     "marks": 2
+    },
+    {
+     "q": "Two equal positive charges +q are placed at distance d apart. Find potential and work done to bring charge +q from infinity to midpoint.",
+     "ans": "V = 2kq/(d/2) = 4kq/d.\nW = qV = 4kq²/d.",
+     "marks": 2
+    },
+    {
+     "q": "Relative permeability of a material is 800. Identify type and state any two properties.",
+     "ans": "Type: Ferromagnetic (μr >> 1).\nProperties: (1) Strongly attracted by magnetic field. (2) Can retain magnetism after field removed (hysteresis).",
+     "marks": 2
+    },
+    {
+     "q": "An AC source with frequency 50 Hz is connected to an inductor. If current lags voltage by 90°, explain why? Find reactance if L = 2 H.",
+     "ans": "In pure inductor, current lags voltage by 90° due to back-emf opposing change in current.\nX_L = 2πfL = 2π×50×2 = 200π ≈ 628 Ω.",
+     "marks": 2
+    }
+   ]
+  },
+  "SEC_C_Qs": {
+   "per_paper": 7,
+   "items": [
+    {
+     "q": "(i) Compare electrical conductivity of metals, insulators and semiconductors based on band theory. (ii) Explain why diamond is insulator but tin is conductor though both are Group 14.",
+     "ans": "Metals: Overlapping/partially filled conduction band → free electrons → high conductivity.\nInsulators: Large band gap (>5 eV) → negligible thermal excitation → poor conductivity.\nSemiconductors: Moderate band gap (~1 eV) → some carriers at room temp → intermediate conductivity.\nDiamond: Very large band gap (~5.4 eV) → insulator. Tin: Metallic bonding, overlapping bands → conductor.",
+     "marks": 3
+    },
+    {
+     "q": "Internal resistance of a car battery decreases with temperature. Explain: (i) why car starts easily on warm day, (ii) why even small currents from mains can be fatal, (iii) why temperature of heater element becomes constant.",
+     "ans": "(i) Warm day: lower internal resistance → larger current → easier engine starting.\n(ii) Human body is sensitive to currents as low as a few mA → even small mains current is dangerous.\n(iii) At steady state, rate of heat production = rate of heat loss to surroundings → temperature constant.",
+     "marks": 3
+    },
+    {
+     "q": "Calculate binding energy and binding energy per nucleon for oxygen-16. (m_p=1.00727u, m_n=1.00866u, m_O=15.99493u, 1u=931.5 MeV)",
+     "ans": "Z=8, N=8. Mass of constituents = 8(1.00727)+8(1.00866) = 8.05816+8.06928 = 16.12744 u.\nMass defect Δm = 16.12744−15.99493 = 0.13251 u.\nBE = 0.13251×931.5 ≈ 123.4 MeV.\nBE/nucleon = 123.4/16 ≈ 7.71 MeV.",
+     "marks": 3
+    },
+    {
+     "q": "Find critical angle for diamond (μ=2.42). A ray hits a face at 30°. Will it undergo total internal reflection? Also explain why diamond sparkles.",
+     "ans": "θ_c = sin⁻¹(1/2.42) < sin⁻¹(0.413) ≈ 24.4°.\nIncident angle 30° > θ_c → Total Internal Reflection occurs.\nDiamond is cut so light undergoes multiple TIR internally before exiting — causing sparkle.",
+     "marks": 3
+    },
+    {
+     "q": "State Huygens' principle. Use it to derive Snell's law of refraction.",
+     "ans": "Huygens' Principle: Every point on a wavefront is a source of secondary wavelets; new wavefront is tangent to these wavelets.\nDerivation: Let AB hit boundary. A reaches medium 2, point B still in medium 1. In time t: B→C (v₁t), A→E (v₂t). Refracted wavefront CE.\nsin i = BC/AC = v₁t/AC; sin r = AE/AC = v₂t/AC.\nsin i/sin r = v₁/v₂ = n₂/n₁ → n₁ sin i = n₂ sin r (Snell's Law).",
+     "marks": 3
+    },
+    {
+     "q": "An ammeter reads up to 750 mA; galvanometer has Ig=100 mA, G=13 Ω. (i) Find shunt resistance. (ii) Why is the frame of a galvanometer made of metal?",
+     "ans": "(i) S = IgG/(I−Ig) = 100×13/(750−100) = 1300/650 = 2 Ω.\n(ii) Metal frame provides electromagnetic damping — eddy currents in frame oppose coil oscillation → quick settling.",
+     "marks": 3
+    },
+    {
+     "q": "A solenoid: N turns, area A, length l. Find (i) Inductance L. If N→5N, A→25A, l→5l, find new inductance.",
+     "ans": "L = μ₀N²A/l.\nL' = μ₀(5N)²(25A)/(5l) = μ₀×25N²×25A/(5l) = 125×μ₀N²A/l = 125L.",
+     "marks": 3
+    }
+   ]
+  },
+  "SEC_D_Qs": {
+   "per_paper": 2,
+   "items": [
+    {
+     "q": "[CBQ] Polymer Semiconductor Wearables\nA startup designs flexible wearable patches using polymer semiconductors. The device must operate with minimal power and withstand bending.\n(i) What property makes these devices low power? [1m]\n(ii) Why is diamond NOT used as semiconductor in such devices? [1m]\n(iii) In intrinsic polymer semiconductor, compare number of electrons and holes. [1m]\n(iv) Explain role of majority and minority carriers in polymer semiconductor conductivity. [4m — extended]",
+     "ans": "(i) Low power consumption and reliability: polymer semiconductors have moderate band gap → low energy needed.\n(ii) Diamond's band gap (~5.4 eV) is too large for thermal excitation at room temperature → not a semiconductor.\n(iii) In intrinsic semiconductor: electrons = holes (generated in pairs).\n(iv) Majority carriers (electrons in n-type, holes in p-type) dominate conduction. Minority carriers play role in recombination. Balance allows low-power operation even when bent/stretched.",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] Photoelectric Effect Investigation\nA lab uses UV light on sodium surface (work function φ₀ = 2 eV). Experiment varies frequency and intensity.\n(i) Define work function. [1m]\n(ii) Explain why increasing intensity increases photocurrent but not KE. [1m]\n(iii) Light of frequency 1.2×10¹⁵ Hz hits the surface. Find maximum KE. [1m]\n(iv) Which two observations CANNOT be explained by wave theory? [1m]",
+     "ans": "(i) Work function: minimum energy required to remove an electron from metal surface.\n(ii) More intensity = more photons → more electrons emitted → more current. But photon energy = hν (depends only on frequency), so KE unchanged.\n(iii) E = hν ≈ 4.14×10⁻¹⁵ × 1.2×10¹⁵ ≈ 5 eV. KE_max = E−φ₀ = 5−2 = 3 eV.\n(iv) (B) KE depends on frequency not intensity, and (C) electrons emitted instantaneously — both contradict wave theory.",
+     "marks": 4
+    }
+   ]
+  },
+  "SEC_E_Qs": {
+   "per_paper": 3,
+   "items": [
+    {
+     "q": "(A) A parallel plate capacitor has plates of area A separated by d, with dielectric K between them.\n(i) An isolated conductor always has small capacitance — why? [2m]\n(ii) Three capacitors 6μF, 9μF, 18μF: find minimum and maximum capacitance. [2m]\n(iii) Two other factors (besides area) on which capacitance depends. [1m]",
+     "ans": "(i) C = 4πε₀R for isolated sphere → depends only on radius. Very large capacitance needs impractically large sphere.\n(ii) Min (series): 1/C = 1/6+1/9+1/18 = 6/18 → C_min = 3 μF.\n    Max (parallel): C_max = 6+9+18 = 33 μF.\n(iii) Distance between plates (C ∝ 1/d), Permittivity of medium (C ∝ ε/K).",
+     "orq": "(B) Two long parallel wires carry currents I₁ and I₂ separated by distance d.\n(i) Derive expression for force per unit length between them. [3m]\n(ii) State condition for attraction/repulsion. [1m]\n(iii) Define 1 Ampere using this force law. [1m]",
+     "orans": "(i) B₁ = μ₀I₁/2πd. Force on length L of wire 2: F = I₂LB₁ = μ₀I₁I₂L/2πd. Per unit length: F/L = μ₀I₁I₂/2πd.\n(ii) Same direction currents → attract; opposite directions → repel.\n(iii) 1 A is that current which, when flowing in each of two infinitely long parallel wires 1 m apart in vacuum, produces force of 2×10⁻⁷ N per metre length.",
+     "marks": 5
+    },
+    {
+     "q": "(A) Explain Young's Double Slit Experiment:\n(i) Derive expression for fringe width β. [3m]\n(ii) What happens to fringe width if: (a) slit separation halved (b) screen distance doubled. [2m]",
+     "ans": "(i) Path difference = dy/D (d=slit sep, y=position, D=screen dist). For bright: dy/D = nλ → y_n = nλD/d. Fringe width β = λD/d.\n(ii) (a) d→d/2 → β doubles. (b) D→2D → β doubles.",
+     "orq": "(B) (i) Distinguish between nuclear fission and fusion with one example each. [2m]\n(ii) In fission of U-235, about 0.1% mass converts to energy. Energy from 1 kg? [3m]",
+     "orans": "(i) Fission: heavy nucleus splits → lighter nuclei + energy. E.g., U-235 + n → Ba-141 + Kr-92 + 3n.\nFusion: light nuclei combine → heavier nucleus + energy. E.g., ²H+³H → ⁴He + n.\n(ii) E = mc² = 0.001×1×(3×10⁸)² = 9×10¹³ J.",
+     "marks": 5
+    },
+    {
+     "q": "(A) Draw circuit diagram of common emitter n-p-n transistor amplifier.\n(i) Explain principle of amplification. [2m]\n(ii) If input signal 0.01 V gives output 2 V, find voltage gain. [1m]\n(iii) Input resistance 1kΩ, output resistance 10kΩ, current gain β=100. Find power gain. [2m]",
+     "ans": "(i) Small base current change → large collector current change (β times). Base-emitter junction forward biased, collector-base reverse biased.\n(ii) Voltage gain = 2/0.01 = 200.\n(iii) Power gain = β² × (R_out/R_in) = 100² × (10000/1000) = 10000 × 10 = 100000.",
+     "orq": "(B) (i) State and prove Ampere's circuital law. [3m]\n(ii) A solenoid 1m long, 1000 turns carries 2A. Find B inside. [2m]",
+     "orans": "(i) Ampere's Law: ∮B·dl = μ₀I_enclosed. For a closed loop, circulation of B = μ₀ × current enclosed.\nProof for infinite wire: By symmetry B is tangential, constant on circular path of radius r. B×2πr = μ₀I → B = μ₀I/2πr.\n(ii) B = μ₀nI = μ₀(N/L)I = 4π×10⁻⁷ × 1000 × 2 = 8π×10⁻⁴ T ≈ 2.51×10⁻³ T.",
+     "marks": 5
+    }
+   ]
+  }
+ }
+}
