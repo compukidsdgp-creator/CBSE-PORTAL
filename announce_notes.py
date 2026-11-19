@@ -40,9 +40,24 @@ def progress():
         return {}
 
 
+CHANNELS = ("tg", "fb", "ig")
+
+
+def missing_channels(entry):
+    """Channels still to post. Older entries (no per-channel record) count as fully announced.
+    A channel is retried on later runs up to 3 times."""
+    if entry.get("announced") and "channels" not in entry:
+        return []
+    done = entry.get("channels", {})
+    tries = entry.get("tries", 0)
+    if tries >= 3:
+        return []
+    return [c for c in CHANNELS if not done.get(c)]
+
+
 def pending():
     pr = progress()
-    return [c for c in load_chapters() if c.get("status") == "live" and not pr.get(c["_id"], {}).get("announced")]
+    return [c for c in load_chapters() if c.get("status") == "live" and missing_channels(pr.get(c["_id"], {}))]
 
 
 def poster_path(ch):
@@ -106,30 +121,25 @@ def captions(ch):
     return tg, fb, ig
 
 
-def post(ch, dry):
+def post(ch, dry, want=CHANNELS):
     import post_formula_image as P
     import social_links as SL
+    from tg_photo import send_photo
     img_url = f"{GH_RAW}/{poster_path(ch).relative_to(ROOT).as_posix()}"
     tg, fb, ig = captions(ch)
-    ok = False
-    token, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
-    if dry:
-        print("[TG dry-run]", tg[:120])
-    elif token and chat:
-        try:
-            data = urllib.parse.urlencode({"chat_id": chat, "photo": img_url, "caption": tg[:1024]}).encode()
-            with urllib.request.urlopen(f"https://api.telegram.org/bot{token}/sendPhoto", data=data, timeout=30) as r:
-                ok = json.load(r).get("ok", False) or ok
-                print("[TG] posted")
-        except Exception as e:
-            print(f"::warning::Telegram post failed: {e}")
-    fb_id = P.post_to_facebook(img_url, fb, dry_run=dry)
-    if fb_id:
-        ok = True
-        SL.post_fb_comment(fb_id, f"📘 Read the full chapter notes free: {chapter_url(ch)}", P.FB_TOKEN, dry_run=dry)
-    ig_id = P.post_to_instagram(img_url, ig, dry_run=dry)
-    ok = ok or bool(ig_id)
-    return ok
+    res = {}
+    if "tg" in want:
+        res["tg"] = True if dry else send_photo(poster_path(ch), tg)
+        if dry:
+            print("[TG dry-run]", tg[:120])
+    if "fb" in want:
+        fb_id = P.post_to_facebook(img_url, fb, dry_run=dry)
+        res["fb"] = bool(fb_id)
+        if fb_id:
+            SL.post_fb_comment(fb_id, f"📘 Read the full chapter notes free: {chapter_url(ch)}", P.FB_TOKEN, dry_run=dry)
+    if "ig" in want:
+        res["ig"] = bool(P.post_to_instagram(img_url, ig, dry_run=dry))
+    return res
 
 
 def main():
@@ -149,9 +159,14 @@ def main():
         for ch in todo:
             if not poster_path(ch).exists():
                 render(ch)
-            if post(ch, a.dry_run) and not a.dry_run:
-                pr.setdefault(ch["_id"], {})["announced"] = True
-                print(f"[announce] announced {ch['_id']}")
+            e = pr.setdefault(ch["_id"], {})
+            want = missing_channels(e)
+            res = post(ch, a.dry_run, want)
+            if not a.dry_run:
+                e.setdefault("channels", {}).update({k: True for k, v in res.items() if v})
+                e["tries"] = e.get("tries", 0) + (0 if all(res.values()) else 1)
+                e["announced"] = any(e["channels"].values())
+                print(f"[announce] {ch['_id']}: {res}")
         if not a.dry_run:
             PROGRESS.write_text(json.dumps(pr, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 

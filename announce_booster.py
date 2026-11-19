@@ -39,9 +39,20 @@ def progress():
         return {}
 
 
+CHANNELS = ("tg", "fb", "ig")
+
+
+def missing_channels(entry):
+    if entry.get("announced") and "channels" not in entry:
+        return []
+    if entry.get("tries", 0) >= 3:
+        return []
+    return [c for c in CHANNELS if not entry.get("channels", {}).get(c)]
+
+
 def pending():
     pr, appr = progress(), approvals()
-    return [b for b in BP.load_boosters() if is_live(b, appr) and not pr.get(b["_id"], {}).get("announced")]
+    return [b for b in BP.load_boosters() if is_live(b, appr) and missing_channels(pr.get(b["_id"], {}))]
 
 
 def poster_path(b):
@@ -107,25 +118,21 @@ def captions(b):
     return tg, tg, ig
 
 
-def post(b, dry):
+def post(b, dry, want=CHANNELS):
     import post_formula_image as P
+    from tg_photo import send_photo
     img = f"{GH_RAW}/{poster_path(b).relative_to(ROOT).as_posix()}"
     tg, fb, ig = captions(b)
-    ok = False
-    token, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
-    if dry:
-        print("[TG dry-run]", tg[:160])
-    elif token and chat:
-        try:
-            data = urllib.parse.urlencode({"chat_id": chat, "photo": img, "caption": tg[:1024]}).encode()
-            with urllib.request.urlopen(f"https://api.telegram.org/bot{token}/sendPhoto", data=data, timeout=30) as r:
-                ok = json.load(r).get("ok", False)
-                print("[TG] posted")
-        except Exception as e:
-            print(f"::warning::Telegram post failed: {e}")
-    ok = bool(P.post_to_facebook(img, fb, dry_run=dry)) or ok
-    ok = bool(P.post_to_instagram(img, ig, dry_run=dry)) or ok
-    return ok
+    res = {}
+    if "tg" in want:
+        res["tg"] = True if dry else send_photo(poster_path(b), tg)
+        if dry:
+            print("[TG dry-run]", tg[:160])
+    if "fb" in want:
+        res["fb"] = bool(P.post_to_facebook(img, fb, dry_run=dry))
+    if "ig" in want:
+        res["ig"] = bool(P.post_to_instagram(img, ig, dry_run=dry))
+    return res
 
 
 def main():
@@ -146,8 +153,13 @@ def main():
         for b in todo:
             if not poster_path(b).exists():
                 render(b)
-            if post(b, a.dry_run) and not a.dry_run:
-                pr.setdefault(b["_id"], {})["announced"] = True
+            e = pr.setdefault(b["_id"], {})
+            res = post(b, a.dry_run, missing_channels(e))
+            if not a.dry_run:
+                e.setdefault("channels", {}).update({k: True for k, v in res.items() if v})
+                e["tries"] = e.get("tries", 0) + (0 if all(res.values()) else 1)
+                e["announced"] = any(e["channels"].values())
+                print(f"[announce] {b['_id']}: {res}")
         if not a.dry_run:
             PROGRESS.write_text(json.dumps(pr, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 

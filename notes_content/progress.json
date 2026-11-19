@@ -6,6 +6,11 @@
  },
  "class10/science/acids-bases-and-salts": {
   "hub_linked": true,
-  "announced": true
+  "announced": true,
+  "channels": {
+   "fb": true,
+   "ig": true
+  },
+  "tries": 1
  }
 }
