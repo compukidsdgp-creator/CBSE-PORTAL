@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
       - name: Fetch CBSE news → news.html
-        run: python3 fetch_news.py
+        run: python3 fetch_news.py && (python3 share_tags.py news.html || true)
       - name: Commit news.html
         run: |
           git config user.name  "cbse-bot"
@@ -48,6 +48,7 @@ jobs:
           python3 formula_board_page.py || echo "::warning::Formula Board was not refreshed"
           python3 go_page.py || echo "::warning::Link-in-bio page was not refreshed"
           python3 favicon_tags.py || true
+          python3 share_tags.py || true
           git add learn go why-reels formula-reels formula-board index.html chapters cbse-class-*.html
           git add -u -- '*.html' || true
           git diff --cached --quiet && exit 0

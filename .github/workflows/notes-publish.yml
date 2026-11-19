@@ -37,6 +37,7 @@ jobs:
           python3 notes_pages.py
           python3 hub_sync.py
           python3 favicon_tags.py || true
+          python3 share_tags.py || true
           python3 gen_sitemap.py || true
           python3 reels_page.py || true
           python3 formula_board_page.py || true

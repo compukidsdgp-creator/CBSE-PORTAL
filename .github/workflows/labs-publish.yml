@@ -33,6 +33,7 @@ jobs:
       - name: Publish approved labs
         run: |
           python3 labs_publish.py
+          python3 share_tags.py || true
           python3 gen_sitemap.py || true
       - name: Commit
         run: |

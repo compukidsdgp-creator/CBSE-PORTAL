@@ -27,6 +27,7 @@ jobs:
           pip install --quiet numpy
           python3 mistake_bank.py page
           python3 mistake_links.py
+          python3 share_tags.py || true
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           git add mistake-bank index.html

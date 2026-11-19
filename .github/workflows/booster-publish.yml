@@ -37,6 +37,7 @@ jobs:
           pip install --quiet pillow
           python3 booster_check.py || echo "::warning::booster_check found problems (see above)"
           python3 booster_pages.py
+          python3 share_tags.py || true
           python3 booster_links.py
           python3 notes_pages.py || true
           python3 gen_sitemap.py || true
