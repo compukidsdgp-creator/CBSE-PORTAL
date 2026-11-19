@@ -21,6 +21,7 @@ def publish():
         s = draft.read_text(encoding="utf-8")
         s = re.sub(r'\s*<meta name="robots" content="noindex[^"]*">', "", s, count=1)
         s = re.sub(r'\s*<div class="lab-draft"[^>]*>.*?</div>', "", s, count=1, flags=re.S)
+        s = s.replace("../../../", "../../")              # drafts live one folder deeper than the published lab
         tmp = draft.with_suffix(".publish.html")
         tmp.write_text(s, encoding="utf-8")
         probs = lab_check.check(tmp, live=True)
