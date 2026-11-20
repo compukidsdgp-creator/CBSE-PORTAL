@@ -1,0 +1,490 @@
+"""Class 10 Science — Chapter 4: Carbon and its Compounds (NCERT, rationalised 2026–27 syllabus)."""
+
+CHAPTER = {
+"slug": "carbon-and-its-compounds",
+"class": "10", "subject": "Science", "subject_slug": "science", "number": 4,
+"title": "Carbon and its Compounds",
+"status": "draft",                     # draft = hidden preview; live = published after approval
+"updated": "2026-11-20",
+"unit": "Unit I · Chemical Substances – Nature and Behaviour",
+"description": "CBSE Class 10 Science Chapter 4 notes: covalent bonding, electron-dot structures, versatile nature of carbon, homologous series, nomenclature, chemical properties, ethanol and ethanoic acid, soaps and detergents — with labelled diagrams, worked board questions and common mistakes.",
+"glance": """
+<p>Carbon forms a huge number of compounds because it <b>shares</b> electrons instead of losing or gaining them. This chapter explains covalent bonding and electron-dot structures, why carbon can form chains, branches and rings, and how compounds are grouped into homologous series and named. You then study four types of reactions — combustion, oxidation, addition and substitution — the properties of ethanol and ethanoic acid, and how soaps and detergents clean.</p>
+<ul>
+  <li>Draw electron-dot structures of H₂, O₂, N₂, CH₄, ethane, ethene, ethyne and cyclic compounds.</li>
+  <li>Explain catenation and tetravalency; define homologous series and isomers.</li>
+  <li>Name compounds with functional groups: –Cl/–Br, –OH, –CHO, –CO–, –COOH.</li>
+  <li>Write equations for combustion, oxidation, hydrogenation, substitution, esterification and saponification.</li>
+  <li>Explain micelle formation and why soap fails in hard water but detergents do not.</li>
+</ul>
+""",
+"concepts": [
+("Bonding in carbon: the covalent bond", """
+<p>Carbon (atomic number 6) has the configuration 2, 4, so it has <b>four valence electrons</b>. To reach a noble-gas configuration it would have to gain four electrons (C⁴⁻) or lose four (C⁴⁺). Neither is practical: six protons cannot hold ten electrons in C⁴⁻, and removing four electrons to form C⁴⁺ needs far too much energy. Carbon therefore <b>shares</b> its valence electrons with other atoms.</p>
+<p>A bond formed by sharing a pair of electrons between two atoms is a <b>covalent bond</b>. Each shared pair counts towards the outer shell of both atoms.</p>
+<ul>
+  <li><b>H₂</b> — one shared pair, a <b>single bond</b> (H–H); each H now has 2 electrons like helium.</li>
+  <li><b>O₂</b> — two shared pairs, a <b>double bond</b> (O=O).</li>
+  <li><b>N₂</b> — three shared pairs, a <b>triple bond</b> (N≡N).</li>
+  <li><b>CH₄</b> — carbon shares one pair with each of four hydrogen atoms; methane is the main constituent of biogas and CNG.</li>
+</ul>
+<p><b>Properties of covalent compounds.</b> A table of melting and boiling points shows that carbon compounds such as acetic acid, ethanol and methane have <b>low melting and boiling points</b> compared with ionic compounds. This means the forces between their molecules are weak. They are generally <b>poor conductors</b> of electricity because the bonding produces no ions.</p>
+"""),
+("Versatile nature of carbon", """
+<p>Millions of carbon compounds are known — more than those of all other elements put together. Two properties explain this:</p>
+<ul>
+  <li><b>Catenation</b> — carbon can link with other carbon atoms to form long chains, branched chains and rings. The C–C bond is very strong and stable. Silicon also catenates, but only up to about seven or eight atoms, and those compounds are very reactive.</li>
+  <li><b>Tetravalency</b> — with a valency of four, carbon can bond with four other atoms of carbon or of elements such as hydrogen, oxygen, nitrogen, sulphur and chlorine. Carbon's small size lets its nucleus hold the shared pairs strongly, so these bonds are very stable.</li>
+</ul>
+"""),
+("Saturated and unsaturated compounds", """
+<p>Compounds of only carbon and hydrogen are <b>hydrocarbons</b>. In <b>ethane</b>, C₂H₆, the two carbon atoms are joined by a single bond and each carbon has three hydrogens. Compounds with only single bonds between carbon atoms are <b>saturated</b> (<b>alkanes</b>, general formula CₙH₂ₙ₊₂).</p>
+<p>In <b>ethene</b>, C₂H₄, the carbon atoms share two pairs (C=C); in <b>ethyne</b>, C₂H₂, they share three pairs (C≡C). Compounds with double or triple bonds between carbon atoms are <b>unsaturated</b>: <b>alkenes</b> (CₙH₂ₙ) and <b>alkynes</b> (CₙH₂ₙ₋₂). Unsaturated compounds are more reactive than saturated ones.</p>
+"""),
+("Chains, branches and rings", """
+<p>Carbon atoms may be joined in a <b>straight chain</b>, a <b>branched chain</b> or a <b>ring</b>. Butane, C₄H₁₀, can exist as a straight chain (n-butane) and as a branched chain (isobutane). Compounds with the same molecular formula but different structures are <b>structural isomers</b>.</p>
+<p><b>Cyclohexane</b>, C₆H₁₂, is a saturated ring of six carbon atoms. <b>Benzene</b>, C₆H₆, is a six-carbon ring with alternating single and double bonds. Whether open-chain or cyclic, all these hydrocarbons can be saturated or unsaturated.</p>
+"""),
+("Heteroatoms and functional groups", """
+<p>In carbon compounds, an element other than hydrogen that replaces hydrogen in a chain is a <b>heteroatom</b> (Cl, Br, O, N, S). A heteroatom or group of atoms that gives a compound its characteristic properties, whatever the length of the chain, is a <b>functional group</b>.</p>
+<ul>
+  <li>Halo group: –Cl, –Br (chloro/bromo)</li>
+  <li>Alcohol: –OH</li>
+  <li>Aldehyde: –CHO</li>
+  <li>Ketone: >C=O (–CO–) within the chain</li>
+  <li>Carboxylic acid: –COOH</li>
+</ul>
+"""),
+("Homologous series", """
+<p>A <b>homologous series</b> is a series of compounds with the same functional group, in which each member differs from the next by a <b>–CH₂–</b> unit. Successive members differ in molecular mass by <b>14 u</b> (12 + 2 × 1).</p>
+<p>Example (alcohols): CH₃OH, C₂H₅OH, C₃H₇OH, C₄H₉OH. Example (alkenes): C₂H₄, C₃H₆, C₄H₈.</p>
+<ul>
+  <li><b>Chemical properties</b> are similar across a series, because they are decided by the functional group.</li>
+  <li><b>Physical properties</b> (melting point, boiling point, solubility) change <b>gradually</b> as molecular mass increases.</li>
+</ul>
+"""),
+("Nomenclature of carbon compounds", """
+<ol>
+  <li>Count the carbon atoms in the longest chain and take the parent name: meth (1), eth (2), prop (3), but (4), pent (5), hex (6).</li>
+  <li>Show the functional group with a <b>prefix</b> or <b>suffix</b>: chloro-/bromo- as prefix; -ol (alcohol), -al (aldehyde), -one (ketone), -oic acid (carboxylic acid) as suffix.</li>
+  <li>If a suffix starting with a vowel is added, drop the final “e” of the parent name: propane → propanol, propanone.</li>
+  <li>For unsaturated chains, change -ane to <b>-ene</b> (double bond) or <b>-yne</b> (triple bond): propene, propyne.</li>
+</ol>
+<p>Examples: CH₃CH₂CH₂Cl — chloropropane; CH₃CH₂CH₂OH — propanol; CH₃CH₂CHO — propanal; CH₃COCH₃ — propanone; CH₃CH₂COOH — propanoic acid.</p>
+"""),
+("Chemical properties: combustion", """
+<p>Carbon and its compounds burn in oxygen to give carbon dioxide and water with heat and light:</p>
+<p class="eq">CH₄ + 2O₂ → CO₂ + 2H₂O + heat and light</p>
+<p class="eq">CH₃CH₂OH + 3O₂ → 2CO₂ + 3H₂O + heat and light</p>
+<p>When burnt on a spatula, naphthalene burns with a <b>yellow, sooty flame</b> while alcohol burns with a clean flame. Saturated hydrocarbons generally give a clean <b>blue flame</b>; unsaturated ones give a yellow flame with black smoke. A burner with closed air holes gives a sooty yellow flame; opening them gives a blue flame — limited oxygen means incomplete combustion and soot. Fuels like coal and petroleum also contain nitrogen and sulphur, so burning them releases polluting oxides of sulphur and nitrogen.</p>
+"""),
+("Chemical properties: oxidation", """
+<p>Combustion is itself oxidation, but alcohols can also be oxidised in a controlled way to carboxylic acids by <b>oxidising agents</b> — substances that add oxygen to others — such as <b>alkaline potassium permanganate</b> or <b>acidified potassium dichromate</b>.</p>
+<p class="eq">CH₃CH₂OH —(alkaline KMnO₄ + heat, or acidified K₂Cr₂O₇)→ CH₃COOH</p>
+<p>When drops of alkaline KMnO₄ added to warm ethanol lose their purple colour because the permanganate is used up in oxidising the ethanol. Once all the ethanol is oxidised, more drops keep their purple colour.</p>
+"""),
+("Chemical properties: addition and substitution", """
+<p><b>Addition reaction.</b> Unsaturated hydrocarbons add hydrogen in the presence of a <b>catalyst</b> such as nickel or palladium — a substance that changes the rate of a reaction without itself being changed.</p>
+<p class="eq">CH₂=CH₂ + H₂ —(Ni catalyst)→ CH₃–CH₃</p>
+<p>This <b>hydrogenation</b> is used to convert vegetable oils (long unsaturated chains) into vegetable ghee (saturated). Animal fats contain saturated fatty acids, which are considered harmful to health; vegetable oils with unsaturated fatty acids are better choices for cooking.</p>
+<p><b>Substitution reaction.</b> Saturated hydrocarbons are fairly unreactive, but in sunlight chlorine replaces hydrogen atoms one by one:</p>
+<p class="eq">CH₄ + Cl₂ —(sunlight)→ CH₃Cl + HCl</p>
+<p>With more chlorine, further hydrogen atoms are replaced, giving a mixture of products.</p>
+"""),
+("Ethanol: properties and uses", """
+<p><b>Ethanol</b> (ethyl alcohol, C₂H₅OH) is a liquid at room temperature, soluble in water in all proportions, and is the active ingredient of alcoholic drinks. It is a good solvent and is used in tincture of iodine, cough syrups and tonics. Even small amounts of pure ethanol can be lethal, and long-term consumption harms health. <b>Methanol</b> is highly poisonous: it can cause blindness and death. Industrial alcohol is made unfit to drink by adding methanol and a blue dye — <b>denatured alcohol</b>.</p>
+<ul>
+  <li><b>With sodium</b> (teacher's demonstration): 2Na + 2CH₃CH₂OH → 2CH₃CH₂O⁻Na⁺ (sodium ethoxide) + H₂. Hydrogen is evolved.</li>
+  <li><b>Dehydration</b>: heating with excess concentrated sulphuric acid at 443 K removes water and gives ethene; the acid acts as a dehydrating agent.</li>
+</ul>
+<p class="eq">CH₃CH₂OH —(hot conc. H₂SO₄, 443 K)→ CH₂=CH₂ + H₂O</p>
+<p>Ethanol made from sugarcane juice is added to petrol as a cleaner fuel, giving only CO₂ and water on burning in sufficient air.</p>
+"""),
+("Ethanoic acid: properties and uses", """
+<p><b>Ethanoic acid</b> (acetic acid, CH₃COOH) is a carboxylic acid. A 5–8% solution in water is <b>vinegar</b>, used as a preservative in pickles. Pure ethanoic acid has a melting point of 290 K, so it often freezes in cold climates — hence the name <b>glacial acetic acid</b>. Carboxylic acids are <b>weak acids</b>: dilute ethanoic acid gives a higher pH than dilute HCl, because it ionises only partly.</p>
+<ul>
+  <li><b>Esterification</b>: ethanol + ethanoic acid, warmed with a few drops of conc. H₂SO₄, give a sweet-smelling <b>ester</b> used in perfumes and flavourings: CH₃COOH + CH₃CH₂OH —(acid)→ CH₃COOCH₂CH₃ + H₂O.</li>
+  <li><b>Saponification</b>: an ester heated with sodium hydroxide gives back the alcohol and the sodium salt of the acid: CH₃COOC₂H₅ + NaOH → C₂H₅OH + CH₃COONa. This reaction is used to make soap.</li>
+  <li><b>With a base</b>: NaOH + CH₃COOH → CH₃COONa + H₂O (sodium ethanoate/acetate).</li>
+  <li><b>With carbonates and hydrogencarbonates</b>: salt, water and carbon dioxide form, and the gas turns lime water milky: 2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂; CH₃COOH + NaHCO₃ → CH₃COONa + H₂O + CO₂.</li>
+</ul>
+"""),
+("Soaps and detergents", """
+<p><b>Soaps</b> are sodium or potassium salts of long-chain carboxylic acids. A soap molecule has two ends: an <b>ionic (hydrophilic) end</b> that dissolves in water and a long <b>hydrocarbon (hydrophobic) tail</b> that dissolves in oil.</p>
+<p><b>Cleansing action.</b> In water, soap molecules arrange themselves into clusters called <b>micelles</b>: the hydrocarbon tails point inward into the oily dirt and the ionic heads face the water. The oily dirt is collected in the centre of the micelle, which stays dispersed in water as an emulsion. Rinsing washes the micelles — and the dirt — away. In the laboratory, an oil-water mixture separates quickly without soap but stays mixed longer after soap is added.</p>
+<p><b>Hard water</b> contains calcium and magnesium salts. These react with soap to form an insoluble, sticky precipitate called <b>scum</b>, so more soap is needed and cleaning is poor (shaking soap with hard water gives much less foam than with distilled water). <b>Detergents</b> are generally sodium salts of sulphonic acids or ammonium salts with chloride or bromide ions; their charged ends do not form insoluble salts with calcium and magnesium, so they clean well even in hard water. They are used in shampoos and washing powders.</p>
+"""),
+],
+"diagrams": [
+("covalent-small", "Electron-dot structures of H₂, O₂ and N₂: one, two and three shared pairs give single, double and triple bonds.", """
+<svg viewBox="0 0 660 250" role="img" aria-labelledby="t-cc1" xmlns="http://www.w3.org/2000/svg">
+<title id="t-cc1">Electron-dot structures of hydrogen, oxygen and nitrogen molecules showing single, double and triple covalent bonds</title>
+<text x="84.0" y="99.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<text x="136.0" y="99.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<circle cx="105.4" cy="92.0" r="3.2" fill="#1d4ed8"/><path d="M111.2 88.6 L118.0 95.4 M111.2 95.4 L118.0 88.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<text x="298.0" y="99.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">O</text>
+<text x="362.0" y="99.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">O</text>
+<path d="M322.0 81.6 L328.8 88.4 M322.0 88.4 L328.8 81.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="334.6" cy="85.0" r="3.2" fill="#1d4ed8"/>
+<path d="M322.0 95.6 L328.8 102.4 M322.0 102.4 L328.8 95.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="334.6" cy="99.0" r="3.2" fill="#1d4ed8"/>
+<path d="M290.0 68.6 L296.8 75.4 M290.0 75.4 L296.8 68.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M299.2 68.6 L306.0 75.4 M299.2 75.4 L306.0 68.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M274.6 84.0 L281.4 90.8 M274.6 90.8 L281.4 84.0" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M274.6 93.2 L281.4 100.0 M274.6 100.0 L281.4 93.2" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="357.4" cy="72.0" r="3.2" fill="#1d4ed8"/><circle cx="366.6" cy="72.0" r="3.2" fill="#1d4ed8"/>
+<circle cx="382.0" cy="87.4" r="3.2" fill="#1d4ed8"/><circle cx="382.0" cy="96.6" r="3.2" fill="#1d4ed8"/>
+<text x="518.0" y="99.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">N</text>
+<text x="582.0" y="99.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">N</text>
+<path d="M542.0 77.6 L548.8 84.4 M542.0 84.4 L548.8 77.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="554.6" cy="81.0" r="3.2" fill="#1d4ed8"/>
+<path d="M542.0 88.6 L548.8 95.4 M542.0 95.4 L548.8 88.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="554.6" cy="92.0" r="3.2" fill="#1d4ed8"/>
+<path d="M542.0 99.6 L548.8 106.4 M542.0 106.4 L548.8 99.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="554.6" cy="103.0" r="3.2" fill="#1d4ed8"/>
+<path d="M494.6 84.0 L501.4 90.8 M494.6 90.8 L501.4 84.0" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M494.6 93.2 L501.4 100.0 M494.6 100.0 L501.4 93.2" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="602.0" cy="87.4" r="3.2" fill="#1d4ed8"/><circle cx="602.0" cy="96.6" r="3.2" fill="#1d4ed8"/>
+<g font-family="Inter,Segoe UI,sans-serif" fill="#1f2937" text-anchor="middle">
+<text x="110" y="160" font-size="14" font-weight="700">Hydrogen, H₂</text>
+<text x="110" y="184" font-size="16">H – H</text>
+<text x="110" y="206" font-size="12.5" fill="#4b5563">single bond (1 shared pair)</text>
+<text x="330" y="160" font-size="14" font-weight="700">Oxygen, O₂</text>
+<text x="330" y="184" font-size="16">O = O</text>
+<text x="330" y="206" font-size="12.5" fill="#4b5563">double bond (2 shared pairs)</text>
+<text x="550" y="160" font-size="14" font-weight="700">Nitrogen, N₂</text>
+<text x="550" y="184" font-size="16">N ≡ N</text>
+<text x="550" y="206" font-size="12.5" fill="#4b5563">triple bond (3 shared pairs)</text>
+</g>
+<g font-family="Inter,Segoe UI,sans-serif" font-size="12.5" fill="#374151"><path d="M192.6 232.6 L199.4 239.4 M192.6 239.4 L199.4 232.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><text x="206" y="240">electron of first atom</text><circle cx="360.0" cy="236.0" r="3.2" fill="#1d4ed8"/><text x="370" y="240">electron of second atom</text></g>
+</svg>
+"""),
+("hydrocarbons", "Electron-dot structures of methane, ethane, ethene and ethyne. Every carbon atom shares four pairs, so it has eight electrons in its outer shell.", """
+<svg viewBox="0 0 720 300" role="img" aria-labelledby="t-cc2" xmlns="http://www.w3.org/2000/svg">
+<title id="t-cc2">Electron-dot structures of methane, ethane, ethene and ethyne</title>
+<text x="92.0" y="117.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="92.0" y="70.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M84.0 83.6 L90.8 90.4 M84.0 90.4 L90.8 83.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="96.6" cy="87.0" r="3.2" fill="#1d4ed8"/>
+<text x="92.0" y="162.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M93.2 129.6 L100.0 136.4 M93.2 136.4 L100.0 129.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="87.4" cy="133.0" r="3.2" fill="#1d4ed8"/>
+<text x="46.0" y="116.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M65.6 111.2 L72.4 118.0 M65.6 118.0 L72.4 111.2" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="69.0" cy="105.4" r="3.2" fill="#1d4ed8"/>
+<text x="138.0" y="116.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M111.6 102.0 L118.4 108.8 M111.6 108.8 L118.4 102.0" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="115.0" cy="114.6" r="3.2" fill="#1d4ed8"/>
+<text x="243.0" y="117.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="293.0" y="117.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<path d="M264.6 102.0 L271.4 108.8 M264.6 108.8 L271.4 102.0" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M264.6 111.2 L271.4 118.0 M264.6 118.0 L271.4 111.2" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<text x="243.0" y="70.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M235.0 83.6 L241.8 90.4 M235.0 90.4 L241.8 83.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="247.6" cy="87.0" r="3.2" fill="#1d4ed8"/>
+<text x="243.0" y="162.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M244.2 129.6 L251.0 136.4 M244.2 136.4 L251.0 129.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="238.4" cy="133.0" r="3.2" fill="#1d4ed8"/>
+<text x="197.0" y="116.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M216.6 111.2 L223.4 118.0 M216.6 118.0 L223.4 111.2" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="220.0" cy="105.4" r="3.2" fill="#1d4ed8"/>
+<text x="293.0" y="70.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M285.0 83.6 L291.8 90.4 M285.0 90.4 L291.8 83.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="297.6" cy="87.0" r="3.2" fill="#1d4ed8"/>
+<text x="293.0" y="162.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M294.2 129.6 L301.0 136.4 M294.2 136.4 L301.0 129.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="288.4" cy="133.0" r="3.2" fill="#1d4ed8"/>
+<text x="339.0" y="116.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M312.6 102.0 L319.4 108.8 M312.6 108.8 L319.4 102.0" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="316.0" cy="114.6" r="3.2" fill="#1d4ed8"/>
+<text x="423.0" y="117.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="473.0" y="117.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<path d="M440.0 99.6 L446.8 106.4 M440.0 106.4 L446.8 99.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M449.2 99.6 L456.0 106.4 M449.2 106.4 L456.0 99.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M440.0 113.6 L446.8 120.4 M440.0 120.4 L446.8 113.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M449.2 113.6 L456.0 120.4 M449.2 120.4 L456.0 113.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<text x="394.3" y="80.9" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M401.6 91.5 L408.4 98.3 M401.6 98.3 L408.4 91.5" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="412.2" cy="89.2" r="3.2" fill="#1d4ed8"/>
+<text x="394.3" y="152.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M408.8 127.4 L415.6 134.2 M408.8 134.2 L415.6 127.4" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="405.0" cy="125.1" r="3.2" fill="#1d4ed8"/>
+<text x="501.7" y="80.9" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M480.4 85.8 L487.2 92.6 M480.4 92.6 L487.2 85.8" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="491.0" cy="94.9" r="3.2" fill="#1d4ed8"/>
+<text x="501.7" y="152.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M487.6 121.7 L494.4 128.5 M487.6 128.5 L494.4 121.7" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="483.8" cy="130.8" r="3.2" fill="#1d4ed8"/>
+<text x="601.0" y="117.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="651.0" y="117.9" font-size="22" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<path d="M618.0 95.6 L624.8 102.4 M618.0 102.4 L624.8 95.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M627.2 95.6 L634.0 102.4 M627.2 102.4 L634.0 95.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M618.0 106.6 L624.8 113.4 M618.0 113.4 L624.8 106.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M627.2 106.6 L634.0 113.4 M627.2 113.4 L634.0 106.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M618.0 117.6 L624.8 124.4 M618.0 124.4 L624.8 117.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><path d="M627.2 117.6 L634.0 124.4 M627.2 124.4 L634.0 117.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/>
+<text x="555.0" y="116.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M574.6 111.2 L581.4 118.0 M574.6 118.0 L581.4 111.2" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="578.0" cy="105.4" r="3.2" fill="#1d4ed8"/>
+<text x="697.0" y="116.8" font-size="19" font-weight="700" text-anchor="middle" fill="#1f2937">H</text><path d="M670.6 102.0 L677.4 108.8 M670.6 108.8 L677.4 102.0" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><circle cx="674.0" cy="114.6" r="3.2" fill="#1d4ed8"/>
+<g font-family="Inter,Segoe UI,sans-serif" fill="#1f2937" text-anchor="middle">
+<text x="92" y="206" font-size="14" font-weight="700">Methane, CH₄</text>
+<text x="92" y="229" font-size="14">4 C–H single bonds</text>
+<text x="92" y="250" font-size="12.5" fill="#4b5563">saturated</text>
+<text x="268" y="206" font-size="14" font-weight="700">Ethane, C₂H₆</text>
+<text x="268" y="229" font-size="14">H₃C – CH₃</text>
+<text x="268" y="250" font-size="12.5" fill="#4b5563">saturated (alkane)</text>
+<text x="448" y="206" font-size="14" font-weight="700">Ethene, C₂H₄</text>
+<text x="448" y="229" font-size="14">H₂C = CH₂</text>
+<text x="448" y="250" font-size="12.5" fill="#4b5563">unsaturated (alkene)</text>
+<text x="626" y="206" font-size="14" font-weight="700">Ethyne, C₂H₂</text>
+<text x="626" y="229" font-size="14">HC ≡ CH</text>
+<text x="626" y="250" font-size="12.5" fill="#4b5563">unsaturated (alkyne)</text>
+</g>
+<g font-family="Inter,Segoe UI,sans-serif" font-size="12.5" fill="#374151"><path d="M228.6 280.6 L235.4 287.4 M228.6 287.4 L235.4 280.6" stroke="#b91c1c" stroke-width="1.8" stroke-linecap="round"/><text x="242" y="288">electron of carbon</text><circle cx="386.0" cy="284.0" r="3.2" fill="#1d4ed8"/><text x="396" y="288">electron of hydrogen</text></g>
+</svg>
+"""),
+("chains-rings", "Carbon forms chains, branches and rings: the two structural isomers of butane and the ring structure of benzene.", """
+<svg viewBox="0 0 760 330" role="img" aria-labelledby="t-cc3" xmlns="http://www.w3.org/2000/svg">
+<title id="t-cc3">Structural formulae of the two isomers of butane, a straight chain and a branched chain, and of benzene, a ring with alternating double bonds</title>
+<text x="70.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="70.0" y="82.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="70.0" y1="99.0" x2="70.0" y2="87.0" stroke="#374151" stroke-width="1.8"/>
+<text x="70.0" y="150.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="70.0" y1="121.0" x2="70.0" y2="133.0" stroke="#374151" stroke-width="1.8"/>
+<text x="118.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="118.0" y="82.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="118.0" y1="99.0" x2="118.0" y2="87.0" stroke="#374151" stroke-width="1.8"/>
+<text x="118.0" y="150.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="118.0" y1="121.0" x2="118.0" y2="133.0" stroke="#374151" stroke-width="1.8"/>
+<text x="166.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="166.0" y="82.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="166.0" y1="99.0" x2="166.0" y2="87.0" stroke="#374151" stroke-width="1.8"/>
+<text x="166.0" y="150.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="166.0" y1="121.0" x2="166.0" y2="133.0" stroke="#374151" stroke-width="1.8"/>
+<text x="214.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="214.0" y="82.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="214.0" y1="99.0" x2="214.0" y2="87.0" stroke="#374151" stroke-width="1.8"/>
+<text x="214.0" y="150.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="214.0" y1="121.0" x2="214.0" y2="133.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="81.0" y1="110.0" x2="107.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="129.0" y1="110.0" x2="155.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="177.0" y1="110.0" x2="203.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<text x="36.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="59.0" y1="110.0" x2="47.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<text x="248.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="225.0" y1="110.0" x2="237.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<text x="350.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="400.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="450.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="400.0" y="182.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<line x1="361.0" y1="110.0" x2="389.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="411.0" y1="110.0" x2="439.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="400.0" y1="121.0" x2="400.0" y2="165.0" stroke="#374151" stroke-width="1.8"/>
+<text x="400.0" y="82.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="400.0" y1="99.0" x2="400.0" y2="87.0" stroke="#374151" stroke-width="1.8"/>
+<text x="350.0" y="82.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="350.0" y1="99.0" x2="350.0" y2="87.0" stroke="#374151" stroke-width="1.8"/>
+<text x="350.0" y="150.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="350.0" y1="121.0" x2="350.0" y2="133.0" stroke="#374151" stroke-width="1.8"/>
+<text x="316.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="339.0" y1="110.0" x2="327.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<text x="450.0" y="82.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="450.0" y1="99.0" x2="450.0" y2="87.0" stroke="#374151" stroke-width="1.8"/>
+<text x="450.0" y="150.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="450.0" y1="121.0" x2="450.0" y2="133.0" stroke="#374151" stroke-width="1.8"/>
+<text x="484.0" y="116.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="461.0" y1="110.0" x2="473.0" y2="110.0" stroke="#374151" stroke-width="1.8"/>
+<text x="366.0" y="182.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="389.0" y1="176.0" x2="377.0" y2="176.0" stroke="#374151" stroke-width="1.8"/>
+<text x="434.0" y="182.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="411.0" y1="176.0" x2="423.0" y2="176.0" stroke="#374151" stroke-width="1.8"/>
+<text x="400.0" y="216.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="400.0" y1="187.0" x2="400.0" y2="199.0" stroke="#374151" stroke-width="1.8"/>
+<text x="640.0" y="94.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="640.0" y="64.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="640.0" y1="78.0" x2="640.0" y2="68.0" stroke="#374151" stroke-width="1.8"/>
+<text x="605.4" y="114.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="579.4" y="99.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="596.7" y1="103.0" x2="588.0" y2="98.0" stroke="#374151" stroke-width="1.8"/>
+<text x="605.4" y="154.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="579.4" y="169.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="596.7" y1="153.0" x2="588.0" y2="158.0" stroke="#374151" stroke-width="1.8"/>
+<text x="640.0" y="174.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="640.0" y="204.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="640.0" y1="178.0" x2="640.0" y2="188.0" stroke="#374151" stroke-width="1.8"/>
+<text x="674.6" y="154.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="700.6" y="169.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="683.3" y1="153.0" x2="692.0" y2="158.0" stroke="#374151" stroke-width="1.8"/>
+<text x="674.6" y="114.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">C</text>
+<text x="700.6" y="99.1" font-size="17" font-weight="700" text-anchor="middle" fill="#1f2937">H</text>
+<line x1="683.3" y1="103.0" x2="692.0" y2="98.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="630.5" y1="93.5" x2="614.9" y2="102.5" stroke="#374151" stroke-width="1.8"/>
+<line x1="630.0" y1="100.7" x2="621.3" y2="105.7" stroke="#374151" stroke-width="1.8"/>
+<line x1="605.4" y1="119.0" x2="605.4" y2="137.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="614.9" y1="153.5" x2="630.5" y2="162.5" stroke="#374151" stroke-width="1.8"/>
+<line x1="621.3" y1="150.3" x2="630.0" y2="155.3" stroke="#374151" stroke-width="1.8"/>
+<line x1="649.5" y1="162.5" x2="665.1" y2="153.5" stroke="#374151" stroke-width="1.8"/>
+<line x1="674.6" y1="137.0" x2="674.6" y2="119.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="668.6" y1="133.0" x2="668.6" y2="123.0" stroke="#374151" stroke-width="1.8"/>
+<line x1="665.1" y1="102.5" x2="649.5" y2="93.5" stroke="#374151" stroke-width="1.8"/>
+<g font-family="Inter,Segoe UI,sans-serif" fill="#1f2937" text-anchor="middle">
+<text x="142" y="270" font-size="14" font-weight="700">n-Butane (straight chain)</text>
+<text x="142" y="291" font-size="13">CH₃–CH₂–CH₂–CH₃</text>
+<text x="142" y="311" font-size="13" fill="#4b5563">C₄H₁₀</text>
+<text x="400" y="270" font-size="14" font-weight="700">Isobutane (branched chain)</text>
+<text x="400" y="291" font-size="13">2-methylpropane</text>
+<text x="400" y="311" font-size="13" fill="#4b5563">C₄H₁₀</text>
+<text x="640" y="270" font-size="14" font-weight="700">Benzene (ring)</text>
+<text x="640" y="291" font-size="13">alternating single/double bonds</text>
+<text x="640" y="311" font-size="13" fill="#4b5563">C₆H₆</text>
+</g>
+<path d="M40 44 V36 H500 V44" fill="none" stroke="#7c3aed" stroke-width="1.3"/><text x="270" y="26" font-family="Inter,Segoe UI,sans-serif" font-size="12.5" fill="#7c3aed" text-anchor="middle" font-weight="700">structural isomers of C₄H₁₀: same formula, different structure</text>
+</svg>
+"""),
+("esterification", "Esterification: ethanol and ethanoic acid warmed with a few drops of concentrated sulphuric acid form a sweet-smelling ester.", """
+<svg viewBox="0 0 600 360" role="img" aria-labelledby="t-cc4" xmlns="http://www.w3.org/2000/svg">
+<title id="t-cc4">Formation of an ester: a test tube of ethanol, glacial ethanoic acid and a few drops of concentrated sulphuric acid warmed in a water bath</title>
+<defs><radialGradient id="cc-flame" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#bfdbfe"/><stop offset=".55" stop-color="#60a5fa"/><stop offset="1" stop-color="#f59e0b"/></radialGradient>
+<linearGradient id="cc-wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dbeafe"/><stop offset="1" stop-color="#bfdbfe"/></linearGradient></defs>
+<!-- beaker -->
+<path d="M222 96 L222 238 Q222 246 230 246 L362 246 Q370 246 370 238 L370 96" fill="none" stroke="#3a4a63" stroke-width="2.6"/>
+<path d="M218 96 L226 96 M366 96 L374 96" stroke="#3a4a63" stroke-width="2.6"/>
+<rect x="224" y="140" width="144" height="104" fill="url(#cc-wat)"/>
+<line x1="224" y1="140" x2="368" y2="140" stroke="#60a5fa" stroke-width="1.5"/>
+<!-- test tube -->
+<path d="M282 44 L282 214 Q282 232 296 232 Q310 232 310 214 L310 44" fill="#ffffff" fill-opacity=".85" stroke="#3a4a63" stroke-width="2.2"/>
+<path d="M284 162 L284 214 Q284 230 296 230 Q308 230 308 214 L308 162Z" fill="#fde68a" fill-opacity=".9"/>
+<line x1="284" y1="162" x2="308" y2="162" stroke="#d97706" stroke-width="1.2"/>
+<!-- clamp holding tube -->
+<rect x="276" y="60" width="40" height="10" rx="2" fill="#9ca3af" stroke="#4b5563"/>
+<rect x="316" y="62" width="120" height="6" fill="#9ca3af" stroke="#4b5563"/>
+<rect x="436" y="40" width="7" height="296" fill="#9ca3af" stroke="#4b5563"/>
+<rect x="414" y="334" width="60" height="9" rx="2" fill="#6b7280"/>
+<!-- wire gauze + tripod -->
+<rect x="200" y="248" width="192" height="5" fill="#9ca3af" stroke="#4b5563" stroke-width=".8"/>
+<path d="M214 253 L196 340 M378 253 L396 340 M296 253 L296 340" stroke="#4b5563" stroke-width="3.5"/>
+<!-- burner -->
+<ellipse cx="296" cy="286" rx="9" ry="22" fill="url(#cc-flame)"/>
+<rect x="288" y="306" width="16" height="30" fill="#9ca3af" stroke="#4b5563"/>
+<rect x="272" y="334" width="48" height="9" rx="2" fill="#6b7280"/>
+<g font-family="Inter,Segoe UI,sans-serif" font-size="13" fill="#1f2937">
+<line x1="284" y1="190" x2="150" y2="168" stroke="#6b7280"/><text x="16" y="124">Ethanol (1 mL)</text><text x="16" y="140">+ glacial ethanoic acid (1 mL)</text><text x="16" y="156">+ few drops conc. H₂SO₄</text>
+<line x1="282" y1="118" x2="150" y2="64" stroke="#6b7280"/><text x="16" y="60" font-weight="700">Test tube</text>
+<line x1="224" y1="210" x2="150" y2="222" stroke="#6b7280"/><text x="16" y="218" font-weight="700">Water bath</text><text x="16" y="234">(beaker of warm water)</text>
+<line x1="210" y1="251" x2="150" y2="270" stroke="#6b7280"/><text x="16" y="274">Wire gauze</text>
+<line x1="205" y1="300" x2="150" y2="306" stroke="#6b7280"/><text x="16" y="310">Tripod stand</text>
+<line x1="306" y1="290" x2="456" y2="272" stroke="#6b7280"/><text x="460" y="268">Burner</text>
+<line x1="316" y1="66" x2="456" y2="100" stroke="#6b7280"/><text x="460" y="104">Clamp</text>
+<text x="460" y="150" font-weight="700">After warming,</text><text x="460" y="166">pour into a beaker</text><text x="460" y="182">of water and smell:</text><text x="460" y="198">sweet, fruity odour</text><text x="460" y="214">of the ester</text>
+</g>
+</svg>
+"""),
+("micelle", "Cleansing action of soap: tails of soap molecules dissolve in oily dirt and ionic heads face the water, forming a micelle.", """
+<svg viewBox="0 0 680 340" role="img" aria-labelledby="t-cc5" xmlns="http://www.w3.org/2000/svg">
+<title id="t-cc5">A soap molecule with its ionic head and hydrocarbon tail, and a micelle trapping an oily dirt particle in water</title>
+<rect x="300" y="20" width="370" height="300" rx="14" fill="#eff6ff" stroke="#bfdbfe"/>
+<path d="M40 120 L52 112 L66 128 L80 112 L94 128 L108 112 L122 128 L136 112 L150 128 L164 112 L178 128 L192 112" fill="none" stroke="#a16207" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="208" cy="120" r="15" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5"/>
+<text x="208" y="125" font-family="Inter,Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">−</text>
+<g font-family="Inter,Segoe UI,sans-serif" font-size="13" fill="#1f2937"><line x1="100" y1="132" x2="88" y2="168" stroke="#6b7280"/><text x="16" y="184" font-weight="700">Hydrophobic tail</text><text x="16" y="200">long hydrocarbon chain;</text><text x="16" y="216">dissolves in oil</text><text x="168" y="250" font-weight="700" text-anchor="middle">Hydrophilic head</text><text x="168" y="266" text-anchor="middle">ionic end –COO⁻ Na⁺;</text><text x="168" y="282" text-anchor="middle">dissolves in water</text><line x1="206" y1="136" x2="180" y2="234" stroke="#6b7280"/><text x="130" y="70" font-weight="700" text-anchor="middle">A soap molecule</text></g>
+<ellipse cx="470" cy="172" rx="44" ry="40" fill="#fde68a" stroke="#d97706" stroke-width="1.5"/>
+<path d="M562.0 168.0 L551.5 176.0 L541.0 168.0 L530.5 176.0 L520.0 168.0 L509.5 176.0 L499.0 168.0" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="574.0" cy="172.0" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M554.6 206.7 L541.7 209.6 L535.7 198.0 L522.8 200.8 L516.8 189.2 L503.9 192.1 L497.9 180.5" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="563.7" cy="215.4" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M530.5 238.6 L517.7 235.7 L517.4 222.8 L504.6 219.9 L504.3 207.0 L491.5 204.1 L491.2 191.3" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="534.8" cy="250.2" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M494.4 257.2 L484.2 249.2 L489.7 237.6 L479.6 229.5 L485.0 217.9 L474.9 209.9 L480.4 198.3" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="493.1" cy="269.5" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M453.4 259.0 L448.0 247.4 L458.1 239.3 L452.6 227.7 L462.8 219.7 L457.3 208.1 L467.4 200.0" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="446.9" cy="269.5" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M415.8 243.5 L416.1 230.7 L428.9 227.8 L429.2 214.9 L442.0 212.0 L442.2 199.2 L455.0 196.3" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="405.2" cy="250.2" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M388.8 213.9 L394.8 202.3 L407.8 205.2 L413.8 193.6 L426.7 196.4 L432.7 184.8 L445.6 187.7" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="376.3" cy="215.4" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M378.0 176.0 L388.5 168.0 L399.0 176.0 L409.5 168.0 L420.0 176.0 L430.5 168.0 L441.0 176.0" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="366.0" cy="172.0" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M385.4 137.3 L398.3 134.4 L404.3 146.0 L417.2 143.2 L423.2 154.8 L436.1 151.9 L442.1 163.5" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="376.3" cy="128.6" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M409.5 105.4 L422.3 108.3 L422.6 121.2 L435.4 124.1 L435.7 137.0 L448.5 139.9 L448.8 152.7" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="405.2" cy="93.8" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M445.6 86.8 L455.8 94.8 L450.3 106.4 L460.4 114.5 L455.0 126.1 L465.1 134.1 L459.6 145.7" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="446.9" cy="74.5" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M486.6 85.0 L492.0 96.6 L481.9 104.7 L487.4 116.3 L477.2 124.3 L482.7 135.9 L472.6 144.0" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="493.1" cy="74.5" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M524.2 100.5 L523.9 113.3 L511.1 116.2 L510.8 129.1 L498.0 132.0 L497.8 144.8 L485.0 147.7" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="534.8" cy="93.8" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<path d="M551.2 130.1 L545.2 141.7 L532.2 138.8 L526.2 150.4 L513.3 147.6 L507.3 159.2 L494.4 156.3" fill="none" stroke="#a16207" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="563.7" cy="128.6" r="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.2"/>
+<g font-family="Inter,Segoe UI,sans-serif" font-size="13" fill="#1f2937"><text x="470" y="177" text-anchor="middle" fill="#78350f" font-weight="700">oily dirt</text><text x="485" y="44" font-weight="700" text-anchor="middle">A micelle in water</text><line x1="574" y1="160" x2="600" y2="110" stroke="#6b7280"/><text x="560" y="88">ionic heads</text><text x="560" y="104">face the water</text><line x1="510" y1="214" x2="560" y2="290" stroke="#6b7280"/><text x="566" y="292">tails dip</text><text x="566" y="308">into the oil</text><text x="316" y="306">Water</text></g>
+</svg>
+"""),
+],
+"formulas": [
+("Alkanes (saturated)", "CₙH₂ₙ₊₂ · suffix -ane", "CH₄ methane, C₂H₆ ethane, C₃H₈ propane"),
+("Alkenes (one C=C)", "CₙH₂ₙ · suffix -ene", "C₂H₄ ethene, C₃H₆ propene"),
+("Alkynes (one C≡C)", "CₙH₂ₙ₋₂ · suffix -yne", "C₂H₂ ethyne, C₃H₄ propyne"),
+("Homologous series", "successive members differ by –CH₂– (14 u)", "CH₃OH, C₂H₅OH, C₃H₇OH"),
+("Halo / alcohol", "–Cl, –Br (prefix) · –OH (suffix -ol)", "CH₃CH₂Cl chloroethane · C₂H₅OH ethanol"),
+("Aldehyde / ketone", "–CHO (-al) · –CO– (-one)", "CH₃CHO ethanal · CH₃COCH₃ propanone"),
+("Carboxylic acid", "–COOH (-oic acid)", "CH₃COOH ethanoic acid"),
+("Combustion", "hydrocarbon + O₂ → CO₂ + H₂O + heat", "CH₄ + 2O₂ → CO₂ + 2H₂O"),
+("Oxidation of alcohol", "alcohol → carboxylic acid (alk. KMnO₄ / acid. K₂Cr₂O₇)", "CH₃CH₂OH → CH₃COOH"),
+("Addition (hydrogenation)", "C=C + H₂ → C–C (Ni or Pd catalyst)", "CH₂=CH₂ + H₂ → CH₃CH₃"),
+("Substitution", "C–H replaced by C–Cl in sunlight", "CH₄ + Cl₂ → CH₃Cl + HCl"),
+("Esterification", "acid + alcohol → ester + water (conc. H₂SO₄)", "CH₃COOH + C₂H₅OH → CH₃COOC₂H₅ + H₂O"),
+("Saponification", "ester + NaOH → alcohol + sodium salt", "CH₃COOC₂H₅ + NaOH → C₂H₅OH + CH₃COONa"),
+("Dehydration of ethanol", "hot conc. H₂SO₄ at 443 K", "CH₃CH₂OH → CH₂=CH₂ + H₂O"),
+],
+"worked": [
+("Why does carbon form covalent bonds rather than ionic bonds? (2 marks)", """
+<p>Carbon has four valence electrons (2, 4).</p>
+<ol>
+<li>To form C⁴⁻ it would have to gain four electrons — it is hard for a nucleus with six protons to hold ten electrons.</li>
+<li>To form C⁴⁺ it would have to lose four electrons — this needs a very large amount of energy.</li>
+</ol>
+<p class="ans">So carbon completes its octet by <b>sharing</b> electrons with other atoms, forming covalent bonds.</p>
+"""),
+("Name the following compounds: (a) CH₃CH₂CH₂OH (b) CH₃CH₂CHO (c) CH₃COCH₂CH₃ (d) CH₃CH₂CH₂CH₂Br (2 marks)", """
+<ol>
+<li>(a) 3 carbons → prop; –OH → suffix -ol: <b>propanol</b>.</li>
+<li>(b) 3 carbons (the –CHO carbon counts) → prop; -al: <b>propanal</b>.</li>
+<li>(c) 4 carbons → but; ketone -one: <b>butanone</b>.</li>
+<li>(d) 4 carbons → butane; bromo prefix: <b>bromobutane</b>.</li>
+</ol>
+"""),
+("The molecular formulae of three consecutive members of a homologous series are C₂H₄, C₃H₆ and C₄H₈. (a) Name the series and give its general formula. (b) Calculate the difference in molecular mass between successive members. (c) Why do they have similar chemical properties? (3 marks)", """
+<ol>
+<li>(a) Each has one C=C double bond: the <b>alkene</b> series, general formula <b>CₙH₂ₙ</b>.</li>
+<li>(b) C₂H₄ = 2 × 12 + 4 × 1 = 28 u; C₃H₆ = 36 + 6 = 42 u; C₄H₈ = 48 + 8 = 56 u. Difference = 42 − 28 = 56 − 42 = <b>14 u</b>, the mass of one –CH₂– unit.</li>
+<li>(c) Chemical properties are decided by the functional group (here the C=C bond), which is the same in every member.</li>
+</ol>
+"""),
+("A compound X with molecular formula C₂H₄O₂ turns blue litmus red and gives brisk effervescence with sodium hydrogencarbonate. The gas turns lime water milky. Identify X and the gas, and write the equation. What happens when X is warmed with ethanol and a few drops of conc. H₂SO₄? (3 marks)", """
+<ol>
+<li>An acidic compound C₂H₄O₂ is <b>ethanoic acid, CH₃COOH</b>.</li>
+<li>The gas that turns lime water milky is <b>carbon dioxide</b>.</li>
+<li>CH₃COOH + NaHCO₃ → CH₃COONa + H₂O + CO₂</li>
+<li>With ethanol and conc. H₂SO₄ it forms the sweet-smelling ester <b>ethyl ethanoate</b>: CH₃COOH + CH₃CH₂OH → CH₃COOCH₂CH₃ + H₂O (esterification).</li>
+</ol>
+"""),
+("An organic compound A (C₂H₆O) is used in cough syrups. A heated with excess conc. H₂SO₄ at 443 K gives an unsaturated hydrocarbon B. B adds hydrogen in the presence of nickel to give C. A is oxidised by alkaline KMnO₄ to D, and A reacts with D in the presence of an acid to give a sweet-smelling compound E. Identify A to E and write equations for all the reactions. (5 marks)", """
+<ol>
+<li><b>A = ethanol</b>, CH₃CH₂OH (C₂H₆O, used as a solvent in medicines).</li>
+<li>Dehydration: CH₃CH₂OH —(hot conc. H₂SO₄, 443 K)→ CH₂=CH₂ + H₂O, so <b>B = ethene</b>.</li>
+<li>Hydrogenation (addition): CH₂=CH₂ + H₂ —(Ni)→ CH₃–CH₃, so <b>C = ethane</b>.</li>
+<li>Oxidation: CH₃CH₂OH —(alkaline KMnO₄ + heat)→ CH₃COOH, so <b>D = ethanoic acid</b>.</li>
+<li>Esterification: CH₃COOH + CH₃CH₂OH —(acid)→ CH₃COOCH₂CH₃ + H₂O, so <b>E = ethyl ethanoate</b> (an ester).</li>
+</ol>
+"""),
+("Explain the cleansing action of soap. Why does soap not form lather easily with hard water? (3 marks)", """
+<ol>
+<li>A soap molecule has a hydrophilic ionic end and a long hydrophobic hydrocarbon tail.</li>
+<li>In water, the tails dissolve in the oily dirt and the ionic heads stay in the water, forming a cluster called a <b>micelle</b> with the dirt trapped at its centre.</li>
+<li>The micelles stay suspended in water and are washed away on rinsing, removing the dirt.</li>
+</ol>
+<p class="ans">Hard water contains calcium and magnesium salts, which react with soap to form an insoluble precipitate (<b>scum</b>). Much of the soap is wasted, so it lathers poorly. Detergents do not form scum and work in hard water.</p>
+"""),
+("Why do unsaturated hydrocarbons burn with a yellow sooty flame? Why are vegetable oils healthier than animal fats? (2 marks)", """
+<p class="ans">Unsaturated hydrocarbons have a higher proportion of carbon, which does not burn completely in air, so unburnt carbon glows yellow and forms soot. Vegetable oils contain <b>unsaturated</b> fatty acids, while animal fats contain <b>saturated</b> fatty acids, which are considered harmful to health.</p>
+"""),
+("What are structural isomers? Write the structural formulae of the two isomers of butane. (2 marks)", """
+<p>Compounds with the same molecular formula but different structures are structural isomers.</p>
+<p class="ans">Butane, C₄H₁₀: <b>n-butane</b> CH₃–CH₂–CH₂–CH₃ (straight chain) and <b>isobutane</b> CH₃–CH(CH₃)–CH₃ (branched chain). See Fig. 3 for the full structures.</p>
+"""),
+],
+"mistakes": [
+("Wrong electron count in dot structures", "Drawing ethene with one shared pair between carbons and forgetting electrons around C.", "Each carbon must show 8 electrons; C=C has two shared pairs and C≡C three."),
+("Saturated vs unsaturated mixed up", "“Saturated hydrocarbons burn with a sooty flame.”", "Saturated → clean blue flame; unsaturated → yellow, sooty flame."),
+("Counting carbons wrongly in names", "Calling CH₃CH₂CHO ethanal (missing the –CHO carbon).", "The carbon of –CHO or –COOH is part of the chain: CH₃CH₂CHO is propanal."),
+("Not dropping the “e”", "Writing propaneol or propaneone.", "Drop the final “e” of the parent name before a suffix starting with a vowel: propanol, propanal, propanone."),
+("Missing conditions in equations", "CH₄ + Cl₂ → CH₃Cl + HCl with no condition; C₂H₄ + H₂ → C₂H₆ with no catalyst.", "Write “sunlight” for substitution, “Ni/Pd” for hydrogenation, “conc. H₂SO₄, 443 K” for dehydration."),
+("Homologous series difference", "Writing that members differ by CH₃ or by 12 u.", "Successive members differ by –CH₂–, i.e. 14 u."),
+("Detergent vs soap", "“Detergents form scum in hard water.”", "Soap forms scum with Ca²⁺/Mg²⁺; detergents do not, so they work in hard water."),
+],
+"revision": [
+"Carbon (2, 4) shares electrons: forming C⁴⁻ or C⁴⁺ is not feasible, so it makes covalent bonds.",
+"H₂ single bond, O₂ double bond, N₂ triple bond; CH₄ has four C–H single bonds.",
+"Covalent compounds: low melting and boiling points, poor conductors of electricity.",
+"Catenation (C–C chains, branches, rings) + tetravalency = huge number of carbon compounds.",
+"Alkanes CₙH₂ₙ₊₂ (saturated); alkenes CₙH₂ₙ and alkynes CₙH₂ₙ₋₂ (unsaturated).",
+"Isomers: same molecular formula, different structure — n-butane and isobutane (C₄H₁₀).",
+"Benzene C₆H₆: ring with alternating single and double bonds; cyclohexane C₆H₁₂ is saturated.",
+"Functional groups: –Cl/–Br, –OH (-ol), –CHO (-al), –CO– (-one), –COOH (-oic acid).",
+"Homologous series: same functional group, differ by –CH₂– (14 u); chemical properties similar, physical properties change gradually.",
+"Saturated → blue clean flame; unsaturated → yellow sooty flame; closed air holes → sooty flame.",
+"Ethanol → ethanoic acid with alkaline KMnO₄ or acidified K₂Cr₂O₇ (purple colour disappears).",
+"Hydrogenation: C=C + H₂ with Ni/Pd → saturated; vegetable oil → vanaspati ghee.",
+"Substitution: CH₄ + Cl₂ —sunlight→ CH₃Cl + HCl.",
+"Ethanol + Na → sodium ethoxide + H₂; ethanol + hot conc. H₂SO₄ (443 K) → ethene + water.",
+"Vinegar = 5–8% ethanoic acid; glacial acetic acid freezes at 290 K; esterification gives a sweet smell; saponification makes soap.",
+"Soap micelle: tails in oil, heads in water; soap gives scum with hard water, detergents do not.",
+],
+"practice": [
+("cbse-class-10-science-mock-tests.html", "Class 10 Science mock tests"),
+("virtual-labs/chemistry/30-covalent-bond-formation.html", "Covalent bond formation explorer"),
+("virtual-labs/chemistry/31-saturated-and-unsaturated-carbon-compounds.html", "Saturated and unsaturated compounds lab"),
+("virtual-labs/chemistry/40-organic-functional-group-identifier.html", "Functional group identifier"),
+("virtual-labs/chemistry/32-esterification-reaction.html", "Esterification virtual lab"),
+("virtual-labs/chemistry/33-soap-and-detergent-cleaning.html", "Soap and detergent cleaning lab"),
+("virtual-labs/chemistry/34-hard-and-soft-water.html", "Hard and soft water lab"),
+("formula-board/", "Formula Board revision cards"),
+],
+}
