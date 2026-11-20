@@ -140,8 +140,9 @@ def post(slot, dry=False):
         st[str(p["part"])] = {"ig": ig, "fb": fb, "at": datetime.now(IST).isoformat(timespec="seconds")}
         save(st)
     owner(f"✅ Trig series Part {p['part']} is live (FB {'✓' if fb else '✗'} · IG {'✓' if ig else '✗'}).\n\n"
-          f"📌 Please pin the comment on Instagram (long-press it → Pin)"
-          f"{'' if ig_c else ' — it could not be posted automatically, so add it yourself'}:\n\n{pin}\n\n"
+          f"📌 Please pin this comment (long-press it → Pin)."
+          f"{'' if ig_c else ' Instagram: it could not be posted automatically — add it yourself.'}"
+          f"{'' if fb_c else ' Facebook: it could not be posted automatically — add it yourself.'}\n\n{pin}\n\n"
           f"I'll send you the first comments in about an hour.")
     return True
 
