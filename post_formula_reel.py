@@ -138,7 +138,78 @@ def _api_post(url: str, data: dict, dry_run: bool = False, label: str = "") -> d
         print(f"[API ERROR {e.code}] {err[:300]}")
         return {"error": err}
 
+def _video_seconds(video_path: Path) -> float | None:
+    try:
+        out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(video_path)],
+                             capture_output=True, text=True, timeout=30).stdout.strip()
+        return float(out)
+    except Exception:
+        return None
+
+
+def _upload_reel_fb(video_path: Path, caption: str) -> str | None:
+    """Facebook's dedicated Reels publishing flow (/video_reels): start → upload the whole file → finish (publish).
+    Posts count as Reels (Reels reach + Reels monetization). Returns the video id, or None so the caller can fall back."""
+    start = _api_post(f"{FB_API_BASE}/{PAGE_ID}/video_reels", {"upload_phase": "start", "access_token": FB_TOKEN}, label="fbr-start")
+    vid, up_url = start.get("video_id"), start.get("upload_url")
+    if not vid or not up_url:
+        print(f"[FB Reels] start failed: {str(start)[:300]}")
+        return None
+    data = video_path.read_bytes()
+    req = urllib.request.Request(up_url, data=data, method="POST")
+    req.add_header("Authorization", f"OAuth {FB_TOKEN}")
+    req.add_header("offset", "0")
+    req.add_header("file_size", str(len(data)))
+    try:
+        with urllib.request.urlopen(req, timeout=180) as r:
+            res = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        print(f"[FB Reels] upload failed: {e.code} {e.read().decode()[:300]}")
+        return None
+    if not res.get("success"):
+        print(f"[FB Reels] upload not accepted: {res}")
+        return None
+    fin = _api_post(f"{FB_API_BASE}/{PAGE_ID}/video_reels",
+                    {"upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED",
+                     "description": caption, "access_token": FB_TOKEN}, label="fbr-finish")
+    if not fin.get("success"):
+        print(f"[FB Reels] publish failed: {str(fin)[:300]}")
+        return None
+    # wait (briefly) for Facebook to finish processing so a failure shows up in the log
+    for _ in range(12):
+        try:
+            q = urllib.parse.urlencode({"fields": "status", "access_token": FB_TOKEN})
+            with urllib.request.urlopen(f"{FB_API_BASE}/{vid}?{q}", timeout=20) as r:
+                st = json.loads(r.read()).get("status", {})
+            vs = st.get("video_status")
+            if vs == "error":
+                print(f"[FB Reels] processing error: {st}")
+                return None
+            if vs == "ready" or (st.get("publishing_phase") or {}).get("status") == "complete":
+                break
+        except Exception:
+            pass
+        time.sleep(10)
+    print(f"[FB OK] Reel published — video ID {vid} ({len(data)/1e6:.1f} MB)")
+    return vid
+
+
 def _upload_video_fb(video_path: Path, caption: str, dry_run: bool) -> str | None:
+    """Post a vertical video to the Facebook Page as a Reel; falls back to a normal video upload if the Reels flow fails
+    or the video is longer than Facebook allows for Reels (90 s)."""
+    if not dry_run and FB_TOKEN:
+        secs = _video_seconds(video_path)
+        if secs is None or 3 <= secs <= 90:
+            vid = _upload_reel_fb(video_path, caption)
+            if vid:
+                return vid
+            print("[FB] Reels flow failed — falling back to a normal video upload")
+        else:
+            print(f"[FB] {secs:.0f}s is outside Reels limits (3–90 s) — normal video upload")
+    return _upload_video_fb_classic(video_path, caption, dry_run)
+
+
+def _upload_video_fb_classic(video_path: Path, caption: str, dry_run: bool) -> str | None:
     """
     Upload video to Facebook Page using chunked/resumable upload.
     Returns post ID or None on failure.
