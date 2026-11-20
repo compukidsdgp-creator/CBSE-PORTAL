@@ -16,7 +16,7 @@ Each part takes over an existing slot on its date, so the total number of posts 
 After posting a part it also: comments on the new part ("Part N of the series… pin me"), comments on the previous
 part ("Part N is out now"), and sends the owner a private Telegram note to pin the comment. Instagram/Facebook do
 not allow pinning comments through their API, so pinning stays a one-tap job for the owner.
-Saturday's run also re-posts the full Part 1 to Facebook (the original FB upload was cut off by the old upload bug).
+Part 1 is not re-posted: the original Facebook copy carries the viral views (owner's decision).
 """
 import json
 import os
@@ -114,13 +114,7 @@ def post(slot, dry=False):
         print(f"[series] nothing due in the {slot} slot today"); return False
     st = state()
     prev = PART1 if p["part"] == 2 else {**next(x for x in PARTS if x["part"] == p["part"] - 1), **st.get(str(p["part"] - 1), {})}
-    # Saturday: full Part 1 on Facebook first (the original FB copy was cut off)
-    if p["part"] == 2 and "1fb" not in st and PART1["file"].exists():
-        cap1 = (ROOT / "formula-posts" / "why" / "posted" / "04_why_trig_identity.txt")
-        c1 = cap1.read_text(encoding="utf-8").strip() if cap1.exists() else "📐 WHY? — Why is sin²θ + cos²θ = 1?"
-        fb1 = P._upload_video_fb(PART1["file"], "🔁 Full version — Part 1 of the trig series\n\n" + c1, dry_run=dry)
-        if fb1 and not dry:
-            st["1fb"] = fb1; save(st)
+    # (no re-post of Part 1: the original Facebook copy carries the viral views — owner, 20 Nov)
     cap = caption(p)
     fb = P._upload_video_fb(video(p), cap, dry_run=dry)
     ig = P._upload_reel_instagram(video(p), SL.ig_caption(cap), dry_run=dry)
