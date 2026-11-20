@@ -1,8 +1,8 @@
-name: WHY? reel (Sunday + Wednesday 6:30 PM IST)
+name: WHY? reel (Sunday + Wednesday + Friday — exact time from cron-job.org)
 
 on:
   schedule:
-    - cron: '0 13 * * 0,3'        # Sunday + Wednesday 13:00 UTC = 6:30 PM IST
+    - cron: '0 13 * * 0,3,5'      # fallback only: Sun + Wed + Fri 13:00 UTC (cron-job.org calls it on time)
   workflow_dispatch:
     inputs:
       dry_run:
