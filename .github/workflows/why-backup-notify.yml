@@ -1,0 +1,36 @@
+name: WHY? backup — send new reels to the owner
+
+# The daily writer renders one WHY? reel into formula-posts/why/backup/. This sends it to the owner's private
+# Telegram chat (preview only — it posts automatically once the main WHY? queue is used up).
+on:
+  push:
+    branches: [main]
+    paths: ["formula-posts/why/backup/*.mp4"]
+permissions:
+  contents: read
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Private Telegram preview
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          python3 - <<'PY'
+          import os, subprocess
+          from pathlib import Path
+          from tg_photo import send_video
+          new = subprocess.run(["git", "diff", "--name-only", "--diff-filter=A", os.environ["BEFORE"], "HEAD", "--", "formula-posts/why/backup/"],
+                               capture_output=True, text=True).stdout.split()
+          q = len(list(Path("formula-posts/why/queue").glob("*.mp4"))); b = len(list(Path("formula-posts/why/backup").glob("*.mp4")))
+          for f in [x for x in new if x.endswith(".mp4")]:
+              cap = Path(f).with_suffix(".txt")
+              first = cap.read_text(encoding="utf-8").splitlines()[0] if cap.exists() else Path(f).stem
+              send_video(Path(f), f"🎬 New WHY? reel in the backup queue\n{first}\n\nQueue: {q} · Backup: {b}. It posts automatically after the main queue. Want a change? Tell Claude.",
+                         chat=os.environ.get("SEO_REPORT_CHAT_ID"))
+          PY

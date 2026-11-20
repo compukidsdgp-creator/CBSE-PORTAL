@@ -42,11 +42,15 @@ def main():
     ap.add_argument("--status", action="store_true")
     a = ap.parse_args()
     queued = sorted(QUEUE.glob("*.mp4"))
+    if not queued:   # main queue finished → continue straight from the backup queue (made daily from the plan, in rank order)
+        queued = sorted((QUEUE.parent / "backup").glob("*.mp4"))
+        if queued:
+            print(f"[WHY] main queue empty — posting from the backup queue ({len(queued)} ready)")
     if a.status:
         print("Queue:", [q.name for q in queued]); print("Posted:", sorted(p.name for p in POSTED.glob("*.mp4")))
         return
     if not queued:
-        print("::warning::The WHY? queue is empty — add new WHY? reels to formula-posts/why/queue/")
+        print("::warning::The WHY? queue and the backup queue are both empty")
         return
     reel = queued[0]
     txt = reel.with_suffix(".txt")
