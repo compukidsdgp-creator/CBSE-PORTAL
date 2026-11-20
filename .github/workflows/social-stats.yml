@@ -1,0 +1,53 @@
+name: Social stats — check (diagnostic, posts nothing)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Facebook Page + Instagram numbers
+        env:
+          FB: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          IG: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          PAGE: ${{ secrets.FB_PAGE_ID }}
+          IGID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          API = "https://graph.facebook.com/v27.0"
+          def get(path, tok, **q):
+              q["access_token"] = tok
+              try:
+                  return json.load(urllib.request.urlopen(f"{API}/{path}?{urllib.parse.urlencode(q)}", timeout=30))
+              except urllib.error.HTTPError as e:
+                  return {"error": e.read().decode()[:220]}
+          FB, IG, PAGE, IGID = (os.environ[k] for k in ("FB", "IG", "PAGE", "IGID"))
+          print("== Facebook Page")
+          print(get(PAGE, FB, fields="name,fan_count,followers_count"))
+          for metric in ("page_video_views", "page_impressions_unique", "page_post_engagements", "page_follows", "page_daily_follows_unique"):
+              r = get(f"{PAGE}/insights", FB, metric=metric, period="days_28")
+              v = [x.get("values", [{}])[-1].get("value") for x in r.get("data", [])]
+              print(f"  {metric} (28 days):", v or r.get("error", "n/a"))
+          print("== Facebook videos/reels (latest 25)")
+          r = get(f"{PAGE}/videos", FB, fields="id,created_time,length,description,views", limit=25)
+          if "error" in r: print(r)
+          tot = 0
+          for v in r.get("data", []):
+              ins = get(f"{v['id']}/video_insights", FB, metric="total_video_views,total_video_avg_time_watched,fb_reels_total_plays,blue_reels_play_count")
+              m = {x["name"]: x["values"][0]["value"] for x in ins.get("data", []) if x.get("values")}
+              plays = m.get("fb_reels_total_plays") or m.get("blue_reels_play_count") or m.get("total_video_views") or v.get("views") or 0
+              tot += plays if isinstance(plays, int) else 0
+              print(f"  {v['created_time'][:10]}  {v.get('length', 0):5.1f}s  plays={plays}  avg_watch_ms={m.get('total_video_avg_time_watched')}  {(v.get('description') or '').splitlines()[0][:60] if v.get('description') else ''}")
+          print("  total plays (latest 25):", tot)
+          print("== Instagram")
+          print(get(IGID, IG, fields="username,followers_count,media_count"))
+          for mid, label in (("18061669220800240", "viral Part 1 (sin²θ+cos²θ)"),):
+              print(" ", label, get(mid, IG, fields="timestamp,like_count,comments_count"))
+              ins = get(f"{mid}/insights", IG, metric="views,reach,saved,shares,total_interactions")
+              print("   insights:", {x["name"]: x["values"][0]["value"] for x in ins.get("data", [])} or ins)
+          r = get(f"{IGID}/insights", IG, metric="reach,views,follower_count", period="day", metric_type="total_value", since="", until="")
+          r = get(f"{IGID}/insights", IG, metric="reach,views", period="day", metric_type="total_value")
+          print("  account last day:", {x["name"]: x.get("total_value", {}).get("value") for x in r.get("data", [])} or r)
+          PY
