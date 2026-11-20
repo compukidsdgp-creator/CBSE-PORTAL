@@ -93,6 +93,12 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
 .subj .cnt{text-align:right;font-size:13px;color:var(--muted)}.subj .cnt b{color:var(--text)}
 .subj .body{padding:0 14px 14px;overflow:auto}
 .st{font-size:11px;font-weight:700;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.st.ok{background:#0e3325;color:#5ff0b0}.st.warn{background:#3a1520;color:#ff8fa8}.st.idle{background:#2a3350;color:#9fb0d4}.st.pub{background:#103a4a;color:#7fe0ff}
+.nr{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}.nr:last-child{border:0}.nr b{display:block}.nr small{color:var(--muted)}
+.nr ul{margin:4px 0 0 18px;padding:0;font-size:13px}.zr{display:grid;grid-template-columns:200px 1fr 70px;gap:10px;align-items:center;padding:6px 0;font-size:13px}
+.zr .pb{height:10px;border-radius:10px;background:rgba(255,255,255,.08);overflow:hidden}.zr .pb i{display:block;height:100%;background:var(--green)}
+.cr{display:grid;grid-template-columns:70px 90px 1fr 90px 90px;gap:8px;align-items:center;padding:6px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,.05)}
+@media(max-width:700px){.nr{grid-template-columns:1fr}.zr{grid-template-columns:1fr 60px}.zr .pb{grid-column:1/-1}.cr{grid-template-columns:60px 1fr 70px 70px}.cr .cd{display:none}}
 .st.todo{background:#2a3350;color:#9fb0d4}.st.draft{background:#3a2f0a;color:#ffd166}.st.changes{background:#3a1520;color:#ff8fa8}.st.live{background:#0e3325;color:#5ff0b0}
 .ok{color:var(--green);font-weight:700}.no{color:#55607a}
 .flag{font-size:11px;color:#ffd166;margin-left:6px}
@@ -177,6 +183,8 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
         <div class="bigbar" id="t-bar"></div>
         <div class="legend"><span><b style="background:var(--green)"></b>Live</span><span><b style="background:var(--accent)"></b>Draft</span><span><b style="background:var(--pink)"></b>Changes requested</span><span><b style="background:#2a3350"></b>Not started</span></div>
       </div>
+      <div class="section-title">Last night's runs <small style="text-transform:none;letter-spacing:0">· live from GitHub — what every nightly job produced and what went live</small></div>
+      <div class="card" id="n-runs"><div class="empty">Loading…</div></div>
       <div class="section-title">Waiting for your review</div>
       <div class="card" id="t-review"></div>
       <div class="section-title">Weekly Knowledge Booster <small style="text-transform:none;letter-spacing:0">· one booster per subject every Monday · approve before Monday 06:30 IST</small></div>
@@ -187,6 +195,10 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
       <div class="section-title">Virtual labs <small style="text-transform:none;letter-spacing:0">· every lab rebuilt to the locked standard (reference: convex lens focal length)</small></div>
       <div class="card" id="l-review"></div>
       <div id="l-subjects" style="margin-top:12px"></div>
+      <div class="section-title">Mock Zone rewrite <small style="text-transform:none;letter-spacing:0">· 15 repeat-free papers per subject · 3 nightly runs, 2 papers each · publishes directly</small></div>
+      <div class="card" id="z-review"></div>
+      <div class="section-title">60-Day Board Plan reels <small style="text-transform:none;letter-spacing:0">· weekdays · English 1:01 PM, Hindi 7:31 PM IST · publishes automatically</small></div>
+      <div class="card" id="c-review"></div>
       <div class="section-title">Every subject and chapter <small style="text-transform:none;letter-spacing:0">· tap a subject to see its chapters</small></div>
       <div id="t-subjects"></div>
     </section>
@@ -266,8 +278,105 @@ document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === t));
   ['dash', 'tracker', 'ads'].forEach(k => $('#tab-' + k).classList.toggle('hidden', t.dataset.tab !== k));
   if (t.dataset.tab === 'ads' && !ADS) loadAds();
-  if (t.dataset.tab === 'tracker') { renderTracker(); renderBooster(); renderMistakes(); renderLabs(); }
+  if (t.dataset.tab === 'tracker') { renderTracker(); renderBooster(); renderMistakes(); renderLabs(); renderMockzone(); renderCampaign(); renderNightly(); liveApprovals(); }
 });
+
+// ── Live tracking (straight from GitHub, so it never waits for the dashboard rebuild) ─────────────────
+const NIGHT_JOBS = [
+  {key: 'campaign', name: 'Board Plan reel scripts', at: '18:47', rx: /^campaign: reel/, expect: 1},
+  {key: 'mistake', name: 'Mistake Bank scripts', at: '22:37', rx: /^mistake: (draft|revise)/, expect: 1},
+  {key: 'notes', name: 'Chapter notes', at: '23:17', rx: /^notes: (draft|revise)/, expect: 1},
+  {key: 'mockzone', name: 'Mock Zone papers ×3', at: '00:07 · 02:29 · 05:47', rx: /^mockzone: /, expect: 3},
+  {key: 'booster', name: 'Weekly Booster (Thu–Sat)', at: '00:43', rx: /^booster: (draft|revise)/, expect: 1, days: [4, 5, 6]},
+  {key: 'labs', name: 'Virtual labs ×3', at: '01:23 · 03:11 · 04:53', rx: /^lab: (draft|revise)/, expect: 3},
+  {key: 'stock', name: 'Mock paper stock (weekly, Sat)', at: '02:10', rx: /question-bank|top-?up|mock bank/i, expect: 0},
+];
+const LIVE_RX = [
+  [/^notes: publish/, 'Chapter notes published'], [/^labs: publish/, 'Labs published'], [/^booster: publish/, 'Booster pages built'],
+  [/^mistake reels: posted/, 'Mistake Bank reel posted'], [/^campaign reel posted/, 'Board Plan reel posted'], [/^mockzone: /, 'Mock Zone papers live'],
+  [/^campaign reels: rendered/, 'Board Plan reels rendered'], [/^mistake reels: rendered|^mistake: rendered/, 'Mistake Bank reels rendered'],
+];
+async function renderNightly() {
+  const box = $('#n-runs'); if (!box) return;
+  const ist = new Date(Date.now() + 5.5 * 3600e3);                  // IST wall clock in UTC fields
+  const start = new Date(Date.UTC(ist.getUTCFullYear(), ist.getUTCMonth(), ist.getUTCDate(), 18, 0) - 5.5 * 3600e3);
+  if (ist.getUTCHours() < 18) start.setUTCDate(start.getUTCDate() - 1);
+  let commits = [];
+  try {
+    for (let page = 1; page <= 3; page++) {
+      const r = await gh(`/commits?sha=main&per_page=100&page=${page}&since=${start.toISOString()}&t=${Date.now()}`);
+      commits = commits.concat(r); if (r.length < 100) break;
+    }
+  } catch (e) { box.innerHTML = `<div class="warn">Could not read GitHub: ${esc(e.message)}</div>`; return; }
+  const subj = c => c.commit.message.split('\n')[0];
+  const when = c => new Date(c.commit.committer.date).toLocaleTimeString('en-IN', {hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata'});
+  const pend = (DATA.pending || {});
+  const nightDow = new Date(start.getTime() + 5.5 * 3600e3 + 12 * 3600e3).getUTCDay();   // the morning after
+  const rows = NIGHT_JOBS.map(j => {
+    const got = commits.filter(c => j.rx.test(subj(c)) && !/\[skip ci\]/.test(subj(c)) && !/^admin:/.test(subj(c))).reverse();
+    let st, note = '';
+    const scheduled = !j.days || j.days.includes(nightDow);
+    if (got.length >= Math.max(1, j.expect)) st = '<span class="st ok">✓ done</span>';
+    else if (got.length) st = `<span class="st warn">${got.length} of ${j.expect}</span>`;
+    else if (!scheduled || j.expect === 0) st = '<span class="st idle">not due</span>';
+    else if (pend[j.key]) { st = '<span class="st warn">⚠ no output</span>'; note = `Still to do: ${esc(pend[j.key])}. Tonight's run picks it up — or tell Claude to re-run it now.`; }
+    else st = '<span class="st idle">idle · nothing to do</span>';
+    return `<div class="nr"><div><b>${esc(j.name)}</b><small>${esc(j.at)} IST</small></div><div>${st}${note ? `<div class="note" style="margin-top:4px">${note}</div>` : ''}
+      ${got.length ? '<ul>' + got.map(c => `<li>${esc(when(c))} · ${esc(subj(c))}</li>`).join('') + '</ul>' : ''}</div></div>`;
+  }).join('');
+  const live = commits.filter(c => LIVE_RX.some(([rx]) => rx.test(subj(c)))).reverse();
+  const liveHtml = live.length ? '<ul>' + live.map(c => `<li>${esc(when(c))} · ${esc((LIVE_RX.find(([rx]) => rx.test(subj(c))) || [, ''])[1])} <small>(${esc(subj(c).replace(' [skip ci]', ''))})</small></li>`).join('') + '</ul>' : '<small>Nothing yet.</small>';
+  box.innerHTML = `<div class="note" style="margin-bottom:6px">Since ${start.toLocaleString('en-IN', {weekday: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata'})} IST · checked ${new Date().toLocaleTimeString('en-IN', {hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata'})}</div>${rows}
+    <div class="nr"><div><b>Went live / posted</b><small>publishing & posting runs</small></div><div><span class="st pub">${live.length}</span>${liveHtml}</div></div>`;
+}
+// approvals made in this panel show as approved at once (the dashboard data only refreshes a few times a day)
+const APPR_FILES = {'#t-review': 'notes_content/approvals.json', '#b-review': 'booster_content/approvals.json',
+                    '#m-review': 'mistake_reels/approvals.json', '#l-review': 'labs_content/approvals.json'};
+let LIVE_APPR = null;
+async function liveApprovals(force) {
+  if (!LIVE_APPR || force) {
+    LIVE_APPR = {};
+    await Promise.all(Object.entries(APPR_FILES).map(async ([sel, path]) => {
+      try { const f = await gh(`/contents/${path}?ref=main&t=${Date.now()}`); LIVE_APPR[sel] = JSON.parse(fromB64(f.content) || '{}'); }
+      catch (_) { LIVE_APPR[sel] = {}; }
+    }));
+  }
+  for (const [sel, appr] of Object.entries(LIVE_APPR)) {
+    document.querySelectorAll(sel + ' .rev-item').forEach(el => {
+      const a = appr[el.dataset.id]; const btn = el.querySelector('.t-approve');
+      if (a && a.status === 'approved' && btn) {
+        const acts = btn.parentElement;
+        acts.querySelectorAll('.t-approve,.t-change').forEach(b => b.remove());
+        const t = new Date(a.at).toLocaleString('en-IN', {day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata'});
+        acts.insertAdjacentHTML('beforeend', `<span class="st pub">✓ approved ${esc(t)} · going live</span>`);
+        const ta = el.querySelector('.t-note'); if (ta) ta.remove();
+      }
+    });
+  }
+}
+function renderMockzone() {
+  const Z = DATA.mockzone, box = $('#z-review'); if (!box) return;
+  if (!Z) { box.innerHTML = '<div class="empty">No Mock Zone data yet.</div>'; return; }
+  const nx = Z.next && Z.next.action !== 'none' ? `Next: ${Z.next.action === 'convert' ? 'convert' : 'paper ' + Z.next.next_paper + ' of'} ${esc(Z.next.page.replace('.html', ''))}` : 'All pages complete';
+  box.innerHTML = `<h2>${Z.fresh} of ${Z.total} papers repeat-free <small>${Math.round(100 * Z.fresh / Z.total)}% · ${nx}</small></h2>
+    <div class="bigbar"><i style="width:${100 * Z.fresh / Z.total}%;background:var(--green)"></i></div>` +
+    Z.rows.map(r => `<div class="zr"><a href="https://cbsemock.org.in/${esc(r.page)}" target="_blank" rel="noopener">${esc(r.name)}</a>
+      <div class="pb"><i style="width:${100 * r.fresh / 15}%"></i></div><span>${r.converted ? r.fresh + '/15' : '<span class="st todo">queued</span>'}</span></div>`).join('');
+}
+function renderCampaign() {
+  const C = DATA.campaign, box = $('#c-review'); if (!box) return;
+  if (!C) { box.innerHTML = '<div class="empty">No campaign data yet.</div>'; return; }
+  const lab = {posted: '<span class="st live">posted</span>', ready: '<span class="st ok">ready</span>', rendering: '<span class="st draft">rendering</span>',
+               todo: '<span class="st todo">to write</span>', 'no-hindi': '<span class="st warn">no Hindi</span>'};
+  const today = new Date(Date.now() + 5.5 * 3600e3).toISOString().slice(0, 10);
+  const done = C.rows.filter(r => r.en === 'posted').length;
+  const soon = C.rows.filter(r => r.date >= today).slice(0, 6);
+  const gap = soon.slice(0, 4).filter(r => r.en === 'todo' || r.hi === 'todo' || r.hi === 'no-hindi');
+  box.innerHTML = `<h2>${done} of ${C.rows.length} reels posted <small>${gap.length ? `⚠ ${gap.length} of the next 4 not written yet — the 6:47 PM run writes them` : 'next 4 days covered'}</small></h2>
+    <div class="cr" style="color:var(--muted);font-weight:700"><span>#</span><span class="cd">Date</span><span>Topic</span><span>English</span><span>Hindi</span></div>` +
+    soon.map(r => `<div class="cr"><span>#${String(r.n).padStart(2, '0')}</span><span class="cd">${esc(r.date.slice(5))}</span><span>${esc(r.topic)}</span><span>${lab[r.en] || r.en}</span><span>${lab[r.hi] || r.hi}</span></div>`).join('') +
+    `<div class="note" style="margin-top:8px"><a href="https://cbsemock.org.in/board-plan/" target="_blank" rel="noopener">Open the Board Plan page ↗</a></div>`;
+}
 
 function start() {
   $('#login').classList.add('hidden'); $('#app').classList.remove('hidden');
@@ -538,6 +647,7 @@ async function saveApproval(id, entry, msg, el, kind) {
       try {
         await gh(path, {method: 'PUT', body: JSON.stringify({message: `admin: ${entry.status === 'approved' ? 'approve' : 'request changes for'} ${id}`,
           content: toB64(JSON.stringify(data, null, 2) + '\n'), sha: cur.sha, branch: 'main'})});
+        setTimeout(() => liveApprovals(true), 3000);   // re-apply 'approved · going live' after the section re-renders
         break;
       } catch (err) {
         if (attempt >= 3 || !/^(409|422)/.test(err.message)) throw err;

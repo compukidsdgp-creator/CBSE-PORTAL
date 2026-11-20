@@ -47,6 +47,12 @@ SCHEDULE = [
     *[(d, "18:30", "WHY? reel", "why") for d in (6, 2)],
     *[(d, "11:30", "Weekend promo", "promo") for d in (5, 6)],
     (0, "06:00", "Weekly Focus lesson", "focus"),
+    (0, "06:30", "Weekly Booster goes live", "focus"),
+    *[(d, "09:30", "Newsroom update", "telegram") for d in range(7)],
+    *[(d, "13:01", "Board Plan reel (English)", "reel") for d in range(5)],
+    *[(d, "19:31", "Board Plan reel (Hindi)", "reel") for d in range(5)],
+    *[(d, "17:31", "Mistake Bank reel (English)", "reel") for d in range(7)],
+    *[(d, "21:01", "Mistake Bank reel (Hindi)", "reel") for d in range(7)],
 ]
 
 
@@ -291,6 +297,9 @@ def build():
         "booster": booster(),
         "labs": labs_tracker(),
         "mistakes": mistakes_tracker(),
+        "mockzone": mockzone_tracker(),
+        "campaign": campaign_tracker(),
+        "pending": pending_work(),
         "gh_token": os.environ.get("ADMIN_GH_TOKEN", ""),
         "repo": REPO,
     }
@@ -324,6 +333,86 @@ def labs_tracker():
     except Exception as e:
         print(f"[warn] labs tracker: {e}")
         return None
+
+
+def mockzone_tracker():
+    """Mock Zone rewrite: fresh (repeat-free) papers per subject page, in the order the nightly runs work."""
+    try:
+        import mockzone_build as M
+        rows = []
+        for page in M.PRIORITY:
+            name = page.replace("cbse-class-", "Class ").replace("-mock-papers.html", "").replace("-mock-tests.html", "") \
+                .replace("-practice-papers.html", "").replace("-", " ")
+            name = name[:9] + name[9:].title()
+            if M.bank_path(page).exists():
+                b = M.load(page)
+                rows.append({"page": page, "name": name, "fresh": M.fresh_papers(b), "converted": True})
+            else:
+                rows.append({"page": page, "name": name, "fresh": 0, "converted": False})
+        done = sum(r["fresh"] for r in rows)
+        return {"rows": rows, "total": len(rows) * M.PAPERS, "fresh": done, "next": M.next_job()}
+    except Exception as e:
+        print(f"[warn] mockzone tracker: {e}")
+        return None
+
+
+def campaign_tracker():
+    """60-day Board Plan reels: written / rendered / posted, English + Hindi."""
+    try:
+        import generate_hack_reel as G
+        plan = json.loads((G.BASE / "plan.json").read_text(encoding="utf-8"))["reels"]
+        posted = json.loads((G.BASE / "posted.json").read_text(encoding="utf-8")) if (G.BASE / "posted.json").exists() else {}
+        specs = {r["n"]: r for r in G.load_specs()}
+        rows = []
+        for p in plan:
+            r = specs.get(p["n"])
+            st = {}
+            for lang in ("en", "hi"):
+                if not r:
+                    st[lang] = "todo"
+                elif lang not in G.langs(r):
+                    st[lang] = "no-hindi"
+                elif (f"{r['n']:02d}-{r['id']}" + ("" if lang == "en" else f"/{lang}")) in posted:
+                    st[lang] = "posted"
+                elif G.video_path(r, lang).exists():
+                    st[lang] = "ready"
+                else:
+                    st[lang] = "rendering"
+            rows.append({"n": p["n"], "date": p["date"], "pillar": p["pillar"], "topic": p["topic"], "en": st["en"], "hi": st["hi"]})
+        return {"rows": rows}
+    except Exception as e:
+        print(f"[warn] campaign tracker: {e}")
+        return None
+
+
+def pending_work():
+    """What each nightly writer has to do next — so 'no output last night' can be judged (idle vs. failed)."""
+    out = {}
+    try:
+        import content_tracker
+        nx = content_tracker.build().get("next")
+        out["notes"] = (nx or {}).get("title") and f"{nx['action']}: {nx['title']}"
+    except Exception:
+        pass
+    try:
+        import mistake_bank
+        waiting = [i for i in mistake_bank.admin()["items"] if i["state"] not in ("approved",)]
+        out["mistake"] = f"{len(waiting)} waiting for review" + (" — needs new scripts" if len(waiting) < 3 else "")
+    except Exception:
+        pass
+    try:
+        import lab_registry
+        nx = lab_registry.next_job() if hasattr(lab_registry, "next_job") else None
+        out["labs"] = nx and f"{nx.get('action')}: {nx.get('id', '')}"
+    except Exception:
+        pass
+    try:
+        import mockzone_build as M
+        nx = M.next_job()
+        out["mockzone"] = nx["action"] != "none" and f"{nx['action']}: {nx['page']} paper {nx.get('next_paper')}"
+    except Exception:
+        pass
+    return out
 
 
 def mistakes_tracker():

@@ -8,6 +8,10 @@ on:
     paths:
       - "mockzone_bank/*.json"
 
+permissions:
+  contents: read
+  actions: write
+
 jobs:
   notify:
     runs-on: ubuntu-latest
@@ -22,3 +26,7 @@ jobs:
           BEFORE: ${{ github.event.before }}
           AFTER: ${{ github.sha }}
         run: python3 notify_mockzone.py || true
+      - name: Refresh the admin dashboard numbers
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run admin-dashboard.yml || true

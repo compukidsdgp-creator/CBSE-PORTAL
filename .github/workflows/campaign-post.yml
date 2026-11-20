@@ -17,6 +17,7 @@ on:
         default: "false"
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: campaign-post
   cancel-in-progress: false
@@ -57,3 +58,7 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -q -m "campaign reel posted [skip ci]"
           for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
+      - name: Refresh the admin dashboard numbers
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run admin-dashboard.yml || true

@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: campaign-reels
   cancel-in-progress: false
@@ -59,3 +60,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
         run: '[ -s /tmp/new.txt ] && python3 campaign_post.py notify $(cat /tmp/new.txt) || true'
+      - name: Refresh the admin dashboard numbers
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run admin-dashboard.yml || true
