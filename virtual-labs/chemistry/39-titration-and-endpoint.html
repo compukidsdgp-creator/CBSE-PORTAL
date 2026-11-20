@@ -1,680 +1,903 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="generator" content="CBSEMOCK Chemistry Labs V2 - Colourful Drag and Drop"><meta name="viewport" content="width=device-width,initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta name="description" content="Perform a virtual acid-base titration and estimate the endpoint in this interactive CBSE Chemistry analytical virtual lab."><title>CBSEMOCK | Lab 39 Titration and Endpoint</title><style>*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0%,#e7f7ff,#f4f7ff 42%,#fff2f8);font:15px/1.5 Inter,system-ui,Arial;color:#18233c}header{background:linear-gradient(100deg,#101a36,#263d70);color:white;position:sticky;top:0;z-index:5;box-shadow:0 5px 20px #18234c30}.nav{max-width:1450px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{font-size:22px;font-weight:950}.logo span{color:#42e3d0}.nav a{color:#c4fff6;text-decoration:none;font-weight:800}main{max-width:1450px;margin:auto;padding:20px}.hero{border-radius:25px;padding:28px;color:white;background:linear-gradient(115deg,#6244d7,#2679d8 52%,#12bda8);box-shadow:0 16px 36px #536acb35;position:relative;overflow:hidden}.hero:after{content:"LAB";position:absolute;right:22px;bottom:-26px;font-size:110px;font-weight:1000;opacity:.12}.kicker{font-size:11px;letter-spacing:2px;font-weight:900;color:#d5fff8}.hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:8px 0}.hero p{max-width:820px;margin:0;color:#eff6ff}.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.pill{border:1px solid #ffffff55;background:#ffffff20;padding:5px 11px;border-radius:30px;font-size:12px;font-weight:750}.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:17px;margin-top:18px}.panel{background:#ffffffdf;border:1px solid #e1e7f4;border-radius:20px;padding:19px;box-shadow:0 8px 24px #22345a0b;margin-bottom:16px}.panel h2{font-size:18px;margin:0 0 6px}.hint{color:#69758b;font-size:13px;margin:0 0 14px}.ad{border:1px dashed #b9c5d8;border-radius:13px;min-height:62px;display:grid;place-items:center;color:#8b96a9;background:#ffffffa8;font-size:11px;margin:14px 0}.control-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.control-grid label,label{display:block;font-weight:750;font-size:13px;margin:8px 0}.control-grid input,.control-grid select,select{width:100%;margin-top:7px;padding:10px;border:1px solid #dbe3f0;border-radius:11px;background:white;font:inherit}.control-grid input[type=range],input[type=range]{accent-color:#6755e8;padding:0}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}button{border:0;border-radius:11px;padding:11px 15px;background:linear-gradient(100deg,#6c55e8,#3285e8);color:white;font-weight:850;cursor:pointer;box-shadow:0 5px 12px #5a6cd12b}button.ghost{background:#eef2fb;color:#3b4b6b;box-shadow:none;border:1px solid #dbe3f0}.workspace{min-height:300px;border-radius:19px;background:linear-gradient(145deg,#eaf1ff,#f3edff 55%,#e5fbf7);border:1px solid #dce4f4;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:20px;gap:14px;overflow:hidden}.main-emoji{font-size:85px;filter:drop-shadow(0 10px 8px #465b8433);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-9px) rotate(3deg)}}.visual-copy{text-align:center;display:grid;gap:4px}.visual-copy b{font-size:19px}.visual-copy span,.visual-copy small{color:#62718a}.result{margin-top:14px;padding:15px;border-radius:15px;background:linear-gradient(110deg,#f0edff,#e8fbfa);border:1px solid #d7dff7;min-height:86px}.result b{color:#5141b8}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.stat{background:#f6f7ff;border-radius:12px;padding:11px;text-align:center}.stat strong{font-size:18px;color:#5748c6;display:block}.stat small{font-size:10px;color:#718098}.side{position:sticky;top:80px;align-self:start}.steps{padding-left:20px;color:#53627b;font-size:13px}.steps li{margin:7px 0}.quizopt{display:block;border:1px solid #e1e7f4;border-radius:11px;padding:10px;margin:7px 0;cursor:pointer;font-size:13px}.quizopt:hover{background:#f3f5ff}.progress{height:8px;background:#e9edf6;border-radius:10px;overflow:hidden;margin-top:10px}.progress div{height:100%;width:0;background:linear-gradient(90deg,#ff6da9,#7a62ef,#19c9ad);transition:.3s}table{width:100%;border-collapse:collapse;font-size:12px}td,th{padding:8px;border-bottom:1px solid #e8edf5;text-align:left}th{background:#f5f7fc;color:#596780}.well-row{display:flex;align-items:center;gap:24px}.testtube{width:70px;height:150px;border:4px solid #92a9c4;border-top:0;border-radius:0 0 22px 22px;position:relative;background:#ffffff80;overflow:hidden}.liquid{position:absolute;bottom:0;left:0;right:0;height:65%;background:#e85a58;transition:.4s}.ph-gradient{height:24px;width:min(650px,90%);border-radius:25px;background:linear-gradient(90deg,#e53935,#ff9800,#ffeb3b,#4caf50,#03a9f4,#3f51b5,#7b1fa2)}.ph-number{font-size:76px;font-weight:1000;color:#169b71}.titration-scene{height:175px;display:flex;align-items:end;gap:80px}.burette{height:155px;width:24px;border:3px solid #9db0c7;border-radius:8px 8px 3px 3px;position:relative;background:linear-gradient(to top,#67b9e8 55%,#ffffff80 55%)}.tap{position:absolute;bottom:-10px;left:-12px;width:45px;height:7px;background:#8498b4}.flask{width:125px;height:105px;border:4px solid #91a8c3;border-top:0;border-radius:8px 8px 48px 48px;position:relative;overflow:hidden;background:#ffffff88}.flask-liquid{position:absolute;bottom:0;height:45%;width:100%;background:#f3a1b9;transition:.3s}.chart{width:100%;max-width:720px}.chart canvas{width:100%;height:auto}.electro-scene{height:205px;width:100%;display:grid;place-items:center}.beaker{width:230px;height:150px;border:4px solid #8ea6c2;border-top:0;border-radius:0 0 28px 28px;position:relative;background:linear-gradient(to top,#70cce5aa 65%,transparent 65%)}.electrode{position:absolute;top:5px;width:9px;height:115px;background:#58677c}.left{left:55px}.right{right:55px}.gas{position:absolute;bottom:52px;width:42px;border-radius:30px 30px 8px 8px;background:radial-gradient(circle,#fff 15%,#9ce5ff 65%,#42a6df);transition:height .4s;height:0}.leftgas{left:39px}.rightgas{right:39px}.wire{text-align:center;color:#50627e;font-size:12px;font-weight:900;margin-top:5px}.ratio{display:flex;gap:25px;align-items:center;justify-content:center;flex-wrap:wrap}.ratio span{background:#fff;padding:10px 17px;border-radius:12px}.chrom-paper{height:190px;width:115px;background:#fff;border:1px solid #cbd5e1;position:relative;box-shadow:0 5px 15px #34445b20}.baseline{position:absolute;bottom:18px;width:100%;border-top:2px dashed #64748b}.solvent-front{position:absolute;bottom:80px;border-top:2px dashed #20a6c7;width:100%}.spot{position:absolute;bottom:90px;left:42px;width:30px;height:13px;background:#8b5cf6;border-radius:50%;box-shadow:0 -15px 0 #f59e0b,0 -35px 0 #14b8a6;transition:bottom .3s}.flame-scene{text-align:center}.flame-shape{font-size:100px;transition:color .3s;filter:drop-shadow(0 8px 12px #ed9a4a55)}.atom-scene{width:220px;height:190px;position:relative;display:grid;place-items:center}.nucleus{z-index:2;background:#f59e0b;color:#fff;border-radius:50%;padding:17px;font-weight:900;box-shadow:0 0 0 8px #fbbf2433}.orbit{position:absolute;border:2px solid #7c8ed0aa;border-radius:50%;width:110px;height:65px}.o2{transform:rotate(60deg)}.o3{transform:rotate(-60deg)}.electrons{position:absolute;top:3px;color:#3859d6;font-size:20px;letter-spacing:9px}.micelle{width:170px;height:170px;border-radius:50%;background:repeating-conic-gradient(#24b7b0 0deg 10deg,#c9f3ee 10deg 20deg);display:grid;place-items:center;box-shadow:0 8px 25px #236a7130}.oil{background:#f6a43a;color:white;border-radius:50%;padding:26px;font-weight:900}.side .ad{min-height:110px}footer{text-align:center;color:#8791a4;font-size:12px;padding:24px}@media(max-width:960px){.layout{grid-template-columns:1fr}.side{position:static}}@media(max-width:600px){main{padding:12px}.hero{padding:20px}.nav{padding:10px}.nav .sub{display:none}.control-grid{grid-template-columns:1fr}.statgrid{grid-template-columns:1fr 1fr}.well-row{gap:12px}}@media print{header,.ad,button,.side{display:none!important}body{background:white}.layout{display:block}}
-/* Colour-rich CBSEMOCK V2 visual layer */
-:root{--ink:#18233c;--violet:#7048e8;--cyan:#13b8c8;--pink:#f05aa6;--lime:#9bd94b;--orange:#ff9b42}
-body{background:radial-gradient(circle at 5% 3%,#dff8ff 0,transparent 26%),radial-gradient(circle at 95% 8%,#ffe4f2 0,transparent 27%),linear-gradient(135deg,#f4f0ff,#eafaff 48%,#fff5e8)!important}
-header{background:linear-gradient(105deg,#101a36,#45318c 55%,#087e91)!important}
-.hero{background:linear-gradient(115deg,#5c35d5 0%,#287fe8 42%,#10b9a6 72%,#a5d93d 120%)!important;box-shadow:0 18px 45px #5e4bd344!important}
-.panel{border-color:#d9dff5!important;box-shadow:0 10px 28px #403d8220,0 2px 5px #ffffff inset!important}
-.panel h2{color:#302b70}
-.workspace{background:radial-gradient(circle at 20% 20%,#fff 0,#e6f7ff 35%,#f0eaff 70%,#e3fff4 100%)!important;border:1px solid #cbd9ff!important}
-button{background:linear-gradient(105deg,#7347e8,#3986f4 58%,#12b8ae)!important}
-button.ghost{background:#f1efff!important;color:#4c4387!important}
-.result{background:linear-gradient(110deg,#fce8f3,#eeeaff 48%,#e1fbf5)!important;border-color:#ded2fa!important}
-.stat{background:linear-gradient(145deg,#f2efff,#e6fbff)!important}
-.ad{background:linear-gradient(90deg,#fff8e9,#fff0f8,#effaff)!important}
-.dd-wrap{border:1px solid #d9d4ff;border-radius:20px;padding:18px;background:linear-gradient(125deg,#fff1f7,#f1edff 45%,#e6fbff);margin:16px 0;box-shadow:0 10px 28px #5946a51c}
-.dd-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
-.dd-head h2{margin:0;color:#432a9c;font-size:19px}
-.dd-tag{background:linear-gradient(90deg,#ffdbef,#e5e0ff,#d8fbf2);color:#49349d;padding:6px 11px;border-radius:30px;font-size:11px;font-weight:900}
-.dd-instruction{color:#59647c;font-size:13px;margin:8px 0 14px}
-.dd-board{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.dd-bank,.dd-targets{background:#ffffffb8;border:1px solid #e2e2f4;border-radius:15px;padding:12px;min-height:150px}
-.dd-bank h3,.dd-targets h3{margin:0 0 10px;font-size:13px;color:#5d4bb0}
-.dd-items{display:flex;flex-wrap:wrap;gap:9px}
-.dd-item{background:linear-gradient(120deg,#fff,#f2edff);border:1px solid #cfc4ff;color:#40318e;border-radius:12px;padding:10px 12px;font-weight:850;font-size:12px;cursor:grab;box-shadow:0 4px 9px #5644a21c;user-select:none;touch-action:manipulation}
-.dd-item:active{cursor:grabbing;transform:scale(.98)}
-.dd-item.selected{outline:3px solid #ff9b42;background:#fff2dc}
-.dd-item.done{opacity:.45;cursor:default;text-decoration:line-through}
-.dd-slot{border:2px dashed #b8b6df;border-radius:12px;padding:11px;margin:8px 0;background:#fafaff;min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:#4f5870;transition:.2s}
-.dd-slot strong{color:#4b379f}
-.dd-slot.over{background:#e5fbf5;border-color:#11b99e;transform:scale(1.01)}
-.dd-slot.correct{background:#e6fbef;border:1px solid #69c88b;color:#17663d}
-.dd-slot.wrong{animation:ddshake .25s;background:#fff0ef;border-color:#ef7777}
-@keyframes ddshake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
-.dd-feedback{padding:10px 12px;border-radius:12px;background:#fff;border:1px solid #e4e2f5;margin-top:11px;font-size:13px;color:#4d5570;min-height:42px}
-.dd-progress{height:9px;background:#e4e6f3;border-radius:20px;overflow:hidden;margin-top:10px}
-.dd-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff6cac,#7a58ec,#16c6b1);transition:.3s}
-.dd-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-.dd-actions button{padding:9px 12px;font-size:12px}
-@media(max-width:700px){.dd-board{grid-template-columns:1fr}.dd-wrap{padding:13px}.dd-bank,.dd-targets{min-height:unset}}
-
-/* ── SHARE BUTTONS FAB (injected) ── */
-.share-fab-wrap{
-  position:fixed;bottom:28px;right:16px;z-index:1000;
-  display:flex;flex-direction:column;gap:10px;
-  align-items:center;
-}
-.share-fab{
-  display:flex;align-items:center;justify-content:center;
-  width:48px;height:48px;border-radius:50%;border:none;
-  cursor:pointer;text-decoration:none;
-  box-shadow:0 4px 14px rgba(0,0,0,.35);
-  transition:transform .18s,box-shadow .18s;
-  font-size:1.35rem;
-}
-.share-fab:hover{transform:scale(1.12);box-shadow:0 6px 20px rgba(0,0,0,.45);}
-.share-fab.wa{background:#25D366;}
-.share-fab.fb{background:#1877F2;}
-.share-fab .fab-tooltip{
-  position:absolute;right:58px;
-  background:rgba(20,20,40,.85);color:#fff;
-  font-size:.7rem;font-weight:600;white-space:nowrap;
-  padding:4px 9px;border-radius:6px;
-  opacity:0;pointer-events:none;
-  transition:opacity .2s;
-}
-.share-fab:hover .fab-tooltip{opacity:1;}
-/* On desktop shift up so it doesn't overlap news FAB */
-@media(min-width:768px){
-  .share-fab-wrap{bottom:28px;right:20px;}
-}
-</style><style id='cbsemock-v8-locked-css'>
-:root{--bg:#08131f;--panel:#102235;--panel2:#142b40;--line:#29465d;--text:#eaf4fb;--muted:#9eb4c7;--cyan:#46d7df;--green:#6ee0ae;--amber:#f4c36b;--red:#ff8585;--purple:#b6a1ff;--shadow:0 18px 48px #0005}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 12% 0%,#17354a 0,#08131f 40%,#07111b 100%);color:var(--text);font:14px/1.45 Inter,system-ui,Segoe UI,Arial,sans-serif}
-button,input,select,textarea{font:inherit}button{cursor:pointer}
-.top{position:sticky;top:0;z-index:20;background:#08131feF;border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
-.topin{max-width:1500px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:16px;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:11px}.logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#1cb9c4,#6255c8);display:grid;place-items:center;font-size:21px;box-shadow:0 7px 24px #1cb9c455}
-.brand b{display:block;font-size:15px;letter-spacing:.3px}.brand small{color:var(--muted);font-size:11px}
-.status{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#102438;border-radius:30px;padding:7px 11px;font-size:11px;color:#c9dbe8}.chip strong{color:var(--green)}
-.shell{max-width:1500px;margin:auto;padding:20px}
-.hero{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin:10px 0 18px;flex-wrap:wrap}
-.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
-h1{font-size:clamp(25px,3vw,39px);line-height:1.1;margin:6px 0 8px;letter-spacing:-1px}
-.sub{color:var(--muted);max-width:760px;margin:0}
-.heroactions{display:flex;gap:8px;flex-wrap:wrap}
-.btn{border:1px solid #41627b;background:#1b354b;color:var(--text);padding:9px 13px;border-radius:9px;font-weight:700;font-size:12px;transition:.15s}
-.btn:hover{filter:brightness(1.18);transform:translateY(-1px)}.btn.primary{background:linear-gradient(120deg,#087f88,#176b91);border-color:#1b9eaa}.btn.good{background:#164333;border-color:#347c60}.btn.warn{background:#4c3520;border-color:#8d6939}.btn.ghost{background:transparent}
-.layout{display:grid;grid-template-columns:285px minmax(420px,1fr) 310px;gap:14px;align-items:start}
-.panel{background:linear-gradient(160deg,#132a3e,#0e1e2d);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);overflow:hidden}
-.ph{padding:14px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
-.ph h2{font-size:13px;margin:0;letter-spacing:.2px}.ph small{color:var(--muted);font-size:10px}
-.pb{padding:14px}
-.sectionlabel{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:#80a6bd;font-weight:800;margin:3px 0 9px}
-.chemical{display:flex;align-items:center;gap:9px;padding:9px;border:1px solid #29475e;background:#102438;border-radius:10px;margin:7px 0;cursor:pointer;transition:.15s}
-.chemical:hover,.chemical.active{border-color:var(--cyan);background:#12374a}.swatch{width:30px;height:34px;border-radius:8px;border:1px solid #ffffff35;flex:none;position:relative;overflow:hidden}
-.swatch:after{content:"";position:absolute;inset:40% 0 0;background:#ffffff20}
-.chemical b{display:block;font-size:11px}.chemical small{color:var(--muted);font-size:10px}
-.chemical .tag{margin-left:auto;font-size:9px;color:#b9d0df;border:1px solid #34536a;border-radius:20px;padding:3px 6px}
-.control{margin:12px 0}.control label{display:flex;justify-content:space-between;color:#c9dbe8;font-size:11px;margin-bottom:6px}.control output{color:var(--cyan);font-weight:800}
-input[type=range]{width:100%;accent-color:#38cbd3}
-.field{width:100%;background:#091a29;color:var(--text);border:1px solid #3a5b73;border-radius:8px;padding:9px}
-.muted{color:var(--muted);font-size:11px}
-.bench{min-height:620px}
-.tabs{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);overflow:auto}
-.tab{white-space:nowrap;border:1px solid transparent;background:transparent;color:#a9bfd0;padding:8px 11px;border-radius:8px;font-size:11px;font-weight:800}
-.tab.active{background:#12404c;border-color:#267c87;color:#e9ffff}
-.view{display:none;padding:15px}.view.active{display:block}
-.scene{min-height:330px;border:1px solid #294960;border-radius:13px;background:radial-gradient(ellipse at 50% 85%,#183b4d 0,#0a1a29 60%);position:relative;overflow:hidden;padding:18px}
-.scenehead{display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative;z-index:1}
-.scenehead b{font-size:12px}.scenehead span{font-size:10px;color:var(--muted)}
-.labbench{height:245px;display:flex;align-items:flex-end;justify-content:center;gap:clamp(10px,3vw,35px);padding:22px 10px 12px;position:relative}
-.labbench:after{content:"";position:absolute;left:3%;right:3%;bottom:11px;height:12px;border-radius:50%;background:linear-gradient(90deg,#234257,#557184,#203d52);box-shadow:0 12px 25px #0008}
-.vesselWrap{position:relative;z-index:1;text-align:center;min-width:80px}
-.vessel{width:76px;height:128px;margin:auto;position:relative;border:2px solid #9bb6c7aa;border-top:0;border-radius:5px 5px 18px 18px;background:linear-gradient(90deg,#ffffff08,#ffffff22,#ffffff08);overflow:hidden;box-shadow:inset 0 0 12px #ffffff10}
-.vessel.beaker{border-radius:2px 2px 10px 10px;width:90px;height:112px}
-.liquid{position:absolute;left:2px;right:2px;bottom:2px;height:55%;border-radius:0 0 12px 12px;background:#b0e5ef;transition:background .5s,height .3s;opacity:.9}
-.vessel:before{content:"";position:absolute;left:8px;top:0;width:55px;border-top:2px solid #c6dce8aa}
-.vessel .graduation{position:absolute;right:5px;top:24px;width:13px;height:50px;border-top:1px solid #ffffff80;border-bottom:1px solid #ffffff80;background:repeating-linear-gradient(to bottom,transparent 0 9px,#ffffff75 10px 11px)}
-.vessellabel{font-size:10px;color:#bfd0de;margin-top:8px}
-.dropzone{border:1px dashed #45677e;border-radius:10px;padding:9px 10px;color:#b4c9d8;font-size:10px;text-align:center;margin:8px auto 0;max-width:140px;min-height:35px}
-.dropzone.over{border-color:var(--cyan);background:#16404a}
-.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
-.metric{background:#0a1b2a;border:1px solid #29485f;border-radius:10px;padding:10px}
-.metric small{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.8px}.metric b{display:block;font-size:19px;margin-top:3px}.metric em{font-size:10px;color:var(--muted);font-style:normal}
-.phscale{margin-top:14px;padding:12px;background:#0a1a29;border:1px solid #29475d;border-radius:11px}
-.scale{height:15px;border-radius:20px;background:linear-gradient(90deg,#e64c48 0%,#f18b47 15%,#f4d65a 32%,#8cce79 50%,#4eb9a9 65%,#4e86d8 82%,#8b5dc2 100%);position:relative;margin:13px 2px 7px}
-.marker{position:absolute;top:-6px;width:4px;height:27px;background:white;border:1px solid #07131d;left:50%;transition:left .35s}
-.scaleNums{display:flex;justify-content:space-between;font-size:9px;color:#a9bdcc}
-.legend{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}
-.infoCard{padding:11px;border:1px solid #29485f;background:#0b1c2b;border-radius:10px;margin:8px 0}
-.infoCard b{font-size:11px}.infoCard p{font-size:10px;color:var(--muted);margin:5px 0 0;line-height:1.55}
-.indicators{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:8px}
-.ind{background:#0a1b2a;border:1px solid #2b4a61;border-radius:9px;padding:8px;text-align:center}
-.ind .dot{height:28px;width:28px;border-radius:50%;margin:0 auto 6px;border:1px solid #ffffff55;background:#ddd}
-.ind b{font-size:10px;display:block}.ind small{font-size:9px;color:var(--muted)}
-.dataTable{width:100%;border-collapse:collapse;font-size:10px}.dataTable th,.dataTable td{padding:8px;border-bottom:1px solid #29445b;text-align:left}.dataTable th{color:#9eb8ca;font-weight:700}
-.chart{width:100%;height:auto;background:#091a29;border:1px solid #29465d;border-radius:10px}
-.quizopt{display:block;width:100%;text-align:left;padding:10px;border:1px solid #35546b;border-radius:9px;background:#11283c;color:#dcebf5;margin:7px 0;font-size:11px}.quizopt.selected{border-color:var(--cyan);background:#12404a}.quizopt.correct{border-color:var(--green);background:#123a2d}.quizopt.wrong{border-color:var(--red);background:#40252a}
-.rightMetric{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid #274257;font-size:11px}.rightMetric span{color:var(--muted)}.rightMetric b{color:#e8f4fb}
-.progress{height:7px;background:#071521;border-radius:20px;overflow:hidden;margin:8px 0}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#27bac7,#69e0a7)}
-.safety{border:1px solid #805e34;background:#352a1c;border-radius:10px;padding:10px;color:#f7dcae;font-size:10px;line-height:1.5;margin-top:12px}
-footer{max-width:1500px;margin:15px auto 30px;padding:0 20px;color:#7892a7;font-size:10px}
-@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)}.rightcol{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rightcol .panel{height:100%}}
-@media(max-width:760px){.shell{padding:12px}.layout{grid-template-columns:1fr}.rightcol{grid-column:auto;display:block}.topin{padding:10px 12px}.hero{align-items:flex-start}.bench{min-height:0}.scene{padding:12px}.labbench{gap:8px}.vessel{transform:scale(.85);transform-origin:bottom center}.readout{grid-template-columns:repeat(3,1fr)}}
-
-
-/* V8: locked Acid–Base Research Studio environment */
-body{background:radial-gradient(circle at 12% 0%,#17354a 0,#08131f 40%,#07111b 100%)!important;color:#eaf4fb!important;font:14px/1.45 Inter,system-ui,Segoe UI,Arial,sans-serif!important}
-header{position:sticky!important;top:0!important;z-index:20!important;background:#08131feF!important;border-bottom:1px solid #29465d!important;backdrop-filter:blur(16px)!important;box-shadow:none!important}
-.v8topin{max-width:1500px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:16px;justify-content:space-between}
-.v8brand{display:flex;align-items:center;gap:11px}.v8logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(135deg,#1cb9c4,#6255c8);display:grid;place-items:center;font-size:21px;box-shadow:0 7px 24px #1cb9c455}
-.v8brand b{display:block;font-size:15px;letter-spacing:.3px}.v8brand small{color:#9eb4c7;font-size:11px}
-.v8status{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.v8chip{border:1px solid #29465d;background:#102438;border-radius:30px;padding:7px 11px;font-size:11px;color:#c9dbe8}
-main{max-width:1500px!important;margin:auto!important;padding:20px!important}
-.hero{border-radius:15px!important;padding:21px 23px!important;color:#eaf4fb!important;background:linear-gradient(145deg,#132a3e,#0e1e2d)!important;border:1px solid #29465d!important;box-shadow:0 18px 48px #0005!important;position:relative!important;overflow:hidden!important}
-.hero:after{display:none!important}
-.kicker{font-size:11px!important;letter-spacing:1.5px!important;font-weight:800!important;color:#46d7df!important}
-.hero h1{font-size:clamp(25px,3vw,39px)!important;line-height:1.1!important;margin:6px 0 8px!important;color:#eaf4fb!important}
-.hero p{max-width:820px!important;margin:0!important;color:#9eb4c7!important}
-.pills{display:flex!important;gap:8px!important;flex-wrap:wrap!important;margin-top:15px!important}
-.pill{border:1px solid #29465d!important;background:#102438!important;padding:5px 11px!important;border-radius:30px!important;font-size:12px!important;font-weight:750!important;color:#c9dbe8!important}
-.layout{display:grid!important;grid-template-columns:285px minmax(420px,1fr) 310px!important;gap:14px!important;align-items:start!important;margin-top:14px!important}
-.panel{background:linear-gradient(160deg,#132a3e,#0e1e2d)!important;border:1px solid #29465d!important;border-radius:15px!important;padding:14px!important;box-shadow:0 18px 48px #0003!important;margin-bottom:12px!important;color:#eaf4fb!important}
-.panel h2{font-size:13px!important;margin:0 0 6px!important;letter-spacing:.2px!important;color:#eaf4fb!important}
-.hint,.steps,.muted{color:#9eb4c7!important}
-.control-grid input,.control-grid select,select,input[type=text],input[type=number],textarea{background:#091a29!important;color:#eaf4fb!important;border:1px solid #3a5b73!important;border-radius:8px!important}
-label{color:#c9dbe8!important}
-button{border:1px solid #1b9eaa!important;border-radius:9px!important;padding:9px 13px!important;background:linear-gradient(120deg,#087f88,#176b91)!important;color:#eaf4fb!important;font-weight:750!important;box-shadow:none!important}
-button.ghost{background:transparent!important;color:#c9dbe8!important;box-shadow:none!important;border:1px solid #41627b!important}
-.workspace{min-height:330px!important;border-radius:13px!important;background:radial-gradient(ellipse at 50% 85%,#183b4d 0,#0a1a29 60%)!important;border:1px solid #294960!important;color:#eaf4fb!important}
-.result{margin-top:0!important;padding:15px!important;border-radius:12px!important;background:linear-gradient(110deg,#102d3d,#12333b)!important;border:1px solid #267c87!important;min-height:86px!important;color:#eaf4fb!important}
-.result b{color:#46d7df!important}
-.statgrid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:9px!important;margin-top:12px!important}
-.stat{background:#0a1b2a!important;border:1px solid #29485f!important;border-radius:10px!important;padding:11px!important;text-align:center!important;color:#eaf4fb!important}
-.stat strong{font-size:18px!important;color:#6ee0ae!important;display:block!important}
-.stat small{font-size:10px!important;color:#9eb4c7!important}
-.side{position:sticky!important;top:80px!important;align-self:start!important}
-.quizopt{display:block!important;width:100%!important;text-align:left!important;border:1px solid #35546b!important;border-radius:9px!important;padding:10px!important;margin:7px 0!important;cursor:pointer!important;font-size:12px!important;background:#11283c!important;color:#dcebf5!important}
-.quizopt:hover{background:#12404a!important}
-.progress{height:8px!important;background:#071521!important;border-radius:10px!important;overflow:hidden!important;margin-top:10px!important}
-.progress div{height:100%!important;width:0;background:linear-gradient(90deg,#27bac7,#69e0a7)!important;transition:.3s!important}
-table{width:100%!important;border-collapse:collapse!important;font-size:12px!important;color:#eaf4fb!important}
-td,th{padding:8px!important;border-bottom:1px solid #29445b!important;text-align:left!important}
-th{background:#102438!important;color:#9eb8ca!important}
-/* Ad slots remain visible in their original source positions. */
-.v8center{min-width:0}
-.v8tabs{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid #29465d;overflow:auto;background:#0b1c2b;border-radius:14px 14px 0 0}
-.v8tab{white-space:nowrap;border:1px solid transparent!important;background:transparent!important;color:#a9bfd0!important;padding:8px 11px!important;border-radius:8px!important;font-size:11px!important;font-weight:800!important;box-shadow:none!important}
-.v8tab.active{background:#12404c!important;border-color:#267c87!important;color:#e9ffff!important}
-.v8pane{display:none}.v8pane.active{display:block}
-.v8center .panel{border-radius:0 0 15px 15px!important;margin-bottom:0!important}
-.v8analysis{padding:14px;border:1px solid #29465d;border-radius:12px;background:#0a1a29;margin-top:12px;color:#c9dbe8;font-size:12px;line-height:1.6}
-.v8analysis b{color:#46d7df}
-.v8reflection{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.v8reflection label{display:block;font-size:11px}
-.v8reflection textarea{width:100%;min-height:80px;padding:9px;border:1px solid #3a5b73;border-radius:8px;background:#091a29;color:#eaf4fb}
-@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)!important}.side{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;position:static!important}.side .panel{height:100%}}
-@media(max-width:760px){main{padding:12px!important}.layout{grid-template-columns:1fr!important}.side{grid-column:auto;display:block}.v8topin{padding:10px 12px}.workspace{min-height:250px!important}.v8reflection{grid-template-columns:1fr}}
-</style>
-<style id="cbsemock-ad-visibility-fix">
-/* CBSEMOCK AD SLOT VISIBILITY FIX */
-.ad{
-  display:flex !important;
-  visibility:visible !important;
-  opacity:1 !important;
-  box-sizing:border-box !important;
-  width:100% !important;
-  min-height:112px !important;
-  margin:18px 0 !important;
-  padding:18px !important;
-  align-items:center !important;
-  justify-content:center !important;
-  text-align:center !important;
-  border:2px dashed #46d7df !important;
-  border-radius:14px !important;
-  background:linear-gradient(120deg,#142d42,#1a354b) !important;
-  color:#eaf4fb !important;
-  font-size:12px !important;
-  font-weight:800 !important;
-  letter-spacing:1.2px !important;
-  position:relative !important;
-  z-index:2 !important;
-}
-</style>
-
-<style id="cbsemock-master-alignment">
-/* Master-aligned structure: shared visual tokens and component geometry */
-:root{--bg:#08131f;--panel:#102235;--panel2:#142b40;--line:#29465d;--text:#eaf4fb;--muted:#9eb4c7;--cyan:#46d7df;--green:#6ee0ae}
-html,body{background:#08131f!important;color:#eaf4fb!important}
-header.top{position:sticky!important;top:0!important;z-index:50!important;background:#08131fee!important;border-bottom:1px solid #29465d!important;backdrop-filter:blur(14px)}
-.topin{max-width:1500px!important;margin:auto!important;padding:12px 22px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important}
-.brand{display:flex!important;align-items:center!important;gap:12px!important}.brand b{display:block!important;font-size:13px!important;letter-spacing:.7px!important;color:#eaf4fb!important}.brand small{display:block!important;color:#9eb4c7!important;font-size:11px!important;margin-top:3px!important}
-.logo{width:38px!important;height:38px!important;border-radius:11px!important;display:grid!important;place-items:center!important;background:#12374a!important;color:#46d7df!important;font-size:22px!important}
-.status{display:flex!important;gap:7px!important;flex-wrap:wrap!important}.chip{border:1px solid #29465d!important;background:#102235!important;color:#b8d0df!important;border-radius:999px!important;padding:6px 10px!important;font-size:10px!important;font-weight:800!important}
-.shell{max-width:1500px!important;margin:auto!important;padding:22px!important}
-.hero.master-hero{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important;background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;padding:8px 2px 18px!important;color:#eaf4fb!important}
-.hero.master-hero:after{display:none!important}.hero .eyebrow{font-size:10px!important;letter-spacing:1.7px!important;color:#46d7df!important;font-weight:900!important}.hero.master-hero h1{font-size:clamp(26px,3vw,38px)!important;color:#eaf4fb!important;margin:7px 0!important}.hero.master-hero .sub{color:#a9bfd0!important;max-width:850px!important;font-size:14px!important;line-height:1.6!important}.master-pills{display:flex!important;gap:7px!important;flex-wrap:wrap!important;margin-top:12px!important}.master-pills .pill{background:#102b3e!important;border:1px solid #29465d!important;color:#b9d5e4!important;border-radius:999px!important;font-size:10px!important;padding:5px 9px!important}
-.heroactions{display:flex!important;gap:8px!important;flex-wrap:wrap!important;align-items:center!important}.btn{border:1px solid #29465d!important;background:#123448!important;color:#eaf4fb!important;border-radius:9px!important;padding:9px 12px!important;font-size:11px!important;font-weight:800!important;cursor:pointer!important}.btn.ghost{background:#102235!important}
-.layout{display:grid!important;grid-template-columns:285px minmax(420px,1fr) 310px!important;gap:14px!important;align-items:start!important;margin-top:8px!important}
-.panel.master-panel,.panel.bench,.left-cabinet{background:#102235!important;border:1px solid #29465d!important;border-radius:14px!important;padding:0!important;box-shadow:0 12px 28px #0003!important;overflow:hidden!important;margin:0 0 14px!important;color:#eaf4fb!important}
-.ph{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;padding:13px 15px!important;border-bottom:1px solid #29465d!important;background:#122a3e!important}
-.ph h2{font-size:11px!important;letter-spacing:1px!important;color:#dcecf6!important;margin:0!important}.ph small{font-size:9px!important;letter-spacing:1px!important;color:#7fa8bd!important;font-weight:900!important}
-.pb{padding:14px!important}.hint{color:#9eb4c7!important;font-size:12px!important}
-.bench{min-height:550px!important}.tabs{display:flex!important;gap:5px!important;padding:9px 12px!important;border-bottom:1px solid #29465d!important;overflow:auto!important;background:#0d1d2c!important}
-.tab{white-space:nowrap!important;border:1px solid transparent!important;background:transparent!important;color:#9eb4c7!important;padding:8px 10px!important;border-radius:8px!important;font-size:10px!important;font-weight:900!important;cursor:pointer!important}
-.tab.active{background:#12404c!important;border-color:#267c87!important;color:#e9ffff!important}
-.view{display:none!important;padding:14px!important}.view.active{display:block!important}
-.rightcol{display:flex!important;flex-direction:column!important;gap:0!important}.rightcol .panel{margin-bottom:12px!important}
-input,select,textarea,button{font-family:inherit!important}
-input,select,textarea{background:#0b1b29!important;color:#eaf4fb!important;border:1px solid #35546a!important;border-radius:8px!important}
-.result,.infoCard{background:#0d1e2d!important;border:1px solid #29465d!important;border-radius:10px!important;color:#eaf4fb!important;padding:12px!important;margin:10px 0!important}
-.stat,.statgrid>div{background:#102b3e!important;border:1px solid #29465d!important;color:#eaf4fb!important}
-.ad{display:flex!important;visibility:visible!important;opacity:1!important;min-height:112px!important;width:100%!important;box-sizing:border-box!important;align-items:center!important;justify-content:center!important;text-align:center!important;border:2px dashed #46d7df!important;border-radius:12px!important;background:#102b3e!important;color:#9eb4c7!important;padding:18px!important;margin:14px 0!important;font-size:10px!important;font-weight:900!important;letter-spacing:1px!important}
-textarea{width:100%!important;min-height:85px!important;padding:10px!important;margin:6px 0 12px!important}
-@media(max-width:1120px){.layout{grid-template-columns:260px minmax(0,1fr)!important}.rightcol{grid-column:1/-1;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}}
-@media(max-width:760px){.shell{padding:12px!important}.layout{grid-template-columns:1fr!important}.rightcol{grid-column:auto;display:block!important}.hero.master-hero{display:block!important}.heroactions{margin-top:12px!important}.topin{padding:10px 12px!important}.bench{min-height:0!important}}
-</style>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Titration: Strength of NaOH with Oxalic Acid — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Realistic burette lab: titrate an unknown NaOH solution against M/10 oxalic acid with phenolphthalein, read the meniscus and find its molarity and strength.">
+<meta name="cbse-lab-standard" content="2026-11">
 <link rel="canonical" href="https://cbsemock.org.in/virtual-labs/chemistry/39-titration-and-endpoint.html">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="author" content="CBSE Board Exam Hub">
-<meta name="keywords" content="CBSE, CBSE board exam preparation, CBSEMOCK, Lab, Titration, and, Endpoint, mock tests, practice papers">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="CBSE Board Exam Hub">
-<meta property="og:url" content="https://cbsemock.org.in/virtual-labs/chemistry/39-titration-and-endpoint.html">
-<meta property="og:title" content="CBSEMOCK | Lab 39 Titration and Endpoint">
-<meta property="og:description" content="Perform a virtual acid-base titration and estimate the endpoint.">
-<meta property="og:image" content="https://cbsemock.org.in/og-image.jpg">
-<meta property="og:image:alt" content="CBSE Board Exam Hub — CBSE study resources and mock tests">
-<meta property="og:locale" content="en_IN">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CBSEMOCK | Lab 39 Titration and Endpoint">
-<meta name="twitter:description" content="Perform a virtual acid-base titration and estimate the endpoint.">
-<meta name="twitter:image" content="https://cbsemock.org.in/og-image.jpg">
-<meta name="theme-color" content="#17345f">
-<!-- CBSEMOCK SEO STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "name": "CBSEMOCK | Lab 39 Titration and Endpoint",
-  "description": "Perform a virtual acid-base titration and estimate the endpoint.",
-  "url": "https://cbsemock.org.in/virtual-labs/chemistry/39-titration-and-endpoint.html",
-  "inLanguage": "en-IN",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "CBSE Board Exam Hub",
-    "url": "https://cbsemock.org.in/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "CBSE Board Exam Hub",
-    "url": "https://cbsemock.org.in/"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://cbsemock.org.in/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Virtual Labs",
-      "item": "https://cbsemock.org.in/virtual-labs/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Chemistry",
-      "item": "https://cbsemock.org.in/virtual-labs/chemistry/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "CBSEMOCK | Lab 39 Titration and Endpoint",
-      "item": "https://cbsemock.org.in/virtual-labs/chemistry/39-titration-and-endpoint.html"
-    }
-  ]
-}
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
-<style>.pp-leader{display:flex;justify-content:center;padding:10px 0;}</style>
-
-<!-- Google tag (gtag.js) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Acid–base titration: strength of NaOH using standard oxalic acid — virtual lab","url":"https://cbsemock.org.in/virtual-labs/chemistry/39-titration-and-endpoint.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 11","Class 10"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Volumetric analysis","Acid–base titration","Endpoint with phenolphthalein","Molarity equation M1V1/n1 = M2V2/n2","Strength of a solution in g/L"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
-<!-- MOBILE-FIX:START --><style id="mobile-fix">@media (max-width:768px){html body div.brand > div > small,html body div.status > span.chip,html body section.hero.master-hero > div.eyebrow,html body div.master-pills > span.pill,html body div.heroactions > button.btn.ghost,html body div.ph > h2,html body div.ph > small,html body div.dd-head > span.dd-tag,html body div.tabs > button.tab,html body main.shell > footer,html body #shareWa > span.fab-tooltip,html body #shareFb > span.fab-tooltip{font-size:12px!important;}html body #volume{padding-top:4px!important;padding-bottom:4px!important;}}</style><!-- MOBILE-FIX:END -->
-<!-- LAB-MOBILE:START -->
 <style>
-@media (max-width:760px){
- .portal-backbar #portal-back,.portal-backbar a{min-height:40px;display:inline-flex;align-items:center}
- .share-fab-wrap{bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;right:10px!important;gap:8px!important}
- .share-fab{width:42px!important;height:42px!important;opacity:.92}
- .share-fab .fab-tooltip{display:none!important}
- body{padding-bottom:64px}
- input[type=range]{min-height:36px;touch-action:pan-y}
- input[type=checkbox],input[type=radio]{min-width:22px;min-height:22px}
- input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=hidden]):not([type=color]),select,textarea{min-height:40px;font-size:max(16px,1em)}
- button:not(.toggle):not(.share-fab),.btn,[role=button],a.button{min-height:40px}
- .toggle{position:relative}.toggle::before{content:"";position:absolute;inset:-9px -4px}
- img,video,canvas{max-width:100%}
- pre,code{white-space:pre-wrap;word-break:break-word}
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.hero p{color:rgba(255,255,255,.86);max-width:780px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.75rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s;min-height:44px}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.78rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.benchbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+#bench{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none}
+#bench .flask{cursor:grab;touch-action:none}#bench .flask.drag{cursor:grabbing}
+#bench .cock{cursor:pointer}
+#bench .flask:focus,#bench .cock:focus{outline:none}
+#bench .flask:focus-visible .fhl,#bench .cock:focus-visible .chl{opacity:1}
+.benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:700px){#bench{min-width:760px}.hint{display:none}.benchbox::after{content:'⟷ swipe the bench · drag the flask';position:absolute;right:8px;bottom:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 9px;border-radius:99px;pointer-events:none}}
+.hint{position:absolute;left:12px;top:10px;font-size:.76rem;color:#8ea2bd;background:rgba(5,8,14,.6);padding:4px 9px;border-radius:99px;pointer-events:none}
+.row2{display:grid;grid-template-columns:340px 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px}
+.panel h4{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.panel h5{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#93a6bf;margin:12px 0 4px}
+#zoom{display:block;width:100%;max-width:330px;margin:0 auto;height:auto;border-radius:10px}
+.scrcap{font-size:.78rem;color:#8ea2bd;text-align:center;margin-top:8px}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:99px;min-height:40px;min-width:40px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.chip:disabled{opacity:.45;cursor:not-allowed}
+.nudge{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:6px}
+.nudge button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;min-height:44px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff;padding:4px 6px}
+.nudge button:hover{background:#21385c}.nudge button:active{transform:translateY(1px)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;color:#c9d6e6;cursor:pointer;padding:8px 0;min-height:40px}
+.sw input{width:20px;height:20px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:44px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.btn.pink{background:#d63f8c;color:#fff}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.rough{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px;font-size:.88rem}
+.msg{font-size:.86rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+.fstat{display:flex;align-items:center;gap:10px;background:#0b1320;border:1px solid #23344d;border-radius:10px;padding:8px 10px;font-size:.84rem;margin-top:8px}
+.fstat i{flex:0 0 22px;height:22px;border-radius:50%;border:2px solid #9fb4cc;background:#e9f1f8}
+/* setup checklist */
+.steps{list-style:none;counter-reset:st}
+.steps li{counter-increment:st;border:1px solid #23344d;border-radius:12px;padding:8px 10px 8px 42px;margin:6px 0;position:relative;font-size:.88rem;color:#9fb0c6}
+.steps li::before{content:counter(st);position:absolute;left:10px;top:8px;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#1c2b44;color:#c9d6e6;font-weight:800;font-size:.8rem}
+.steps li.done{color:#7fe0b8}.steps li.done::before{content:'✓';background:var(--green);color:#fff}
+.steps li.now{border-color:var(--gold);color:#fff;background:#13213a}.steps li.now::before{background:var(--gold);color:var(--navy2)}
+.opts{display:grid;gap:6px;margin-top:8px}
+.opt{cursor:pointer;text-align:left;font:inherit;font-size:.86rem;font-weight:600;min-height:44px;padding:8px 12px;border-radius:10px;border:1.5px solid #33496a;background:#182a45;color:#fff}
+.opt:hover{border-color:var(--gold)}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:600px;font-size:.88rem}
+.obs th,.obs td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:center}
+.obs th{background:var(--soft);font-weight:700;font-size:.8rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs input,.calc input{font:inherit;font-family:'JetBrains Mono',monospace;font-size:16px;width:100px;min-height:42px;padding:7px 8px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);color:var(--text)}
+.obs input.bad,.calc input.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs input.good,.calc input.good{border-color:var(--green)}
+.obs .del{cursor:pointer;border:0;background:none;color:var(--muted);font-size:1.1rem;min-width:40px;min-height:40px;border-radius:8px}
+.obs tr.flag td{background:rgba(201,162,39,.09)}
+.obs tr.live td{background:rgba(59,111,184,.08)}
+.tag{display:inline-block;font-size:.75rem;font-weight:800;padding:2px 8px;border-radius:99px;background:var(--soft);color:var(--muted)}
+.note{font-size:.82rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.graphs{grid-template-columns:1fr}}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:14px 0 4px}
+.calc label{display:flex;flex-direction:column;gap:4px;font-size:.86rem;font-weight:600}
+.calc input{width:100%}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1rem;overflow-x:auto}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:28px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}.links li:nth-child(4) a{background:linear-gradient(135deg,#c26b8b,#53263a)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.62);font:600 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.08em}
+.sceneB .dropB{animation:fall 1.5s cubic-bezier(.5,0,1,1) infinite}
+.sceneB .dropB2{animation-delay:-.75s}
+@keyframes fall{0%{transform:translateY(0);opacity:0}12%{opacity:1}85%{opacity:1}100%{transform:translateY(64px);opacity:0}}
+.sceneB .pinkB{animation:blush 5s ease-in-out infinite}
+@keyframes blush{0%,30%{opacity:0}60%,80%{opacity:.75}100%{opacity:0}}
+.sceneB .ripB{transform-box:fill-box;transform-origin:50% 50%;animation:rip 1.5s ease-out infinite}
+@keyframes rip{0%{transform:scale(.2);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.sceneB .swB{transform-box:view-box;transform-origin:520px 330px;animation:swirlB 2.6s ease-in-out infinite}
+@keyframes swirlB{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+@media(prefers-reduced-motion:reduce){.sceneB .dropB,.sceneB .pinkB,.sceneB .ripB,.sceneB .swB{animation:none}.sceneB .pinkB{opacity:.5}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:48%;margin:1%;border:1px solid #bbb}
 }
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.panel h5,.rbox small,.tag,.note,.tab small,.scrcap,.obs th{font-size:12px}.sw input{width:22px;height:22px}.nb{font-size:12px}}
 </style>
-<script>
-(function(){if(!window.matchMedia||!matchMedia('(max-width:760px)').matches)return;var runs=0,t=null;
-function lift(){runs++;var els=document.body.getElementsByTagName('*');for(var i=0;i<els.length;i++){var e=els[i];if(e.closest&&e.closest('svg'))continue;
- var txt=false;for(var n=e.firstChild;n;n=n.nextSibling){if(n.nodeType===3&&n.textContent.trim().length>1){txt=true;break}}if(!txt)continue;
- var fs=parseFloat(getComputedStyle(e).fontSize);if(fs&&fs<12)e.style.fontSize='12px'}}
-function soon(){if(runs>25)return;clearTimeout(t);t=setTimeout(lift,450)}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',lift);else lift();
-try{new MutationObserver(soon).observe(document.body,{childList:true,subtree:true})}catch(e){}})();
-</script>
-<!-- LAB-MOBILE:END -->
-</head><body>
-<!-- Vendor: Top Leaderboard -->
-<div class="pp-leader"><div id="ad-leader-top" style="width:100%;max-width:728px;"></div></div>
-
-<header></header>
-<main><section class="hero"><div class="kicker">VIRTUAL CHEMISTRY WORKBENCH · EXPERIMENT 39</div><h1>Titration and Endpoint</h1><p>Perform a virtual acid-base titration and estimate the endpoint.</p><div class="pills"><span class="pill">Interactive model</span><span class="pill">Live observations</span><span class="pill">Notebook & assessment</span><span class="pill">CBSE Chemistry</span></div></section>
-<div class="ad">ADVERTISEMENT · TOP LEADERBOARD SLOT</div><div class="layout"><div>
-<section class="panel"><h2>🎛️ Experiment controls</h2><p class="hint">Change the variables, run the model and compare the predicted observations. The controls are designed around this experiment's concepts.</p><div class="control-grid"><label>Acid concentration (M)<select id="acid"><option value=".1">0.10 M</option><option value=".2">0.20 M</option><option value=".5">0.50 M</option></select></label><label>Base concentration (M)<select id="base"><option value=".1">0.10 M</option><option value=".2">0.20 M</option><option value=".5">0.50 M</option></select></label></div><label>Base delivered from burette <output id="volv">0.0 mL</output><input id="volume" type="range" min="0" max="50" step=".1" value="0" oninput="runLab()"></label><div class="toolbar"><button onclick="addDrop()">Add 1.0 mL</button><button class="ghost" onclick="resetVolume()">Reset burette</button></div><div class="result"><b id="resultTitle">Ready to investigate</b><div id="resultDetail" class="hint" style="margin:6px 0 0">Perform a virtual acid-base titration and estimate the endpoint.</div></div></section>
-<div id="handsOnChallengeMount"></div><section class="panel"><h2>🔬 Live laboratory workspace</h2><p class="hint">Visual feedback changes with your experiment settings.</p><div class="workspace"><div class="titration-scene"><div class="burette"><div class="burette-liquid"></div><div class="tap"></div></div><div class="flask"><div class="flask-liquid" id="liquid"></div></div></div><div class="chart"><canvas id="curve" width="700" height="210"></canvas></div></div><div class="statgrid"><div class="stat"><strong id="statA">LIVE</strong><small>EXPERIMENT STATE</small></div><div class="stat"><strong id="statB">39</strong><small>LAB NUMBER</small></div><div class="stat"><strong id="statC">READY</strong><small>MODEL STATUS</small></div></div></section>
-<div class="ad">ADVERTISEMENT · IN-CONTENT SLOT</div>
-<section class="panel"><h2>📓 Investigation notebook</h2><p class="hint">Record trials as you explore. Export observations for your practical record.</p><div style="overflow:auto"><table><thead><tr><th>Time</th><th>Observation</th><th>Inference</th></tr></thead><tbody id="log"></tbody></table></div><div class="toolbar"><button onclick="record()">＋ Record observation</button><button class="ghost" onclick="downloadCSV()">Download CSV</button><button class="ghost" onclick="window.print()">Print report</button></div></section>
-<section class="panel"><h2>🏆 Knowledge mission</h2><p class="hint">At the equivalence point, the acid and base have reacted in…</p><label class="quizopt"><input type="radio" name="quiz" value="A"> Stoichiometric proportions</label><label class="quizopt"><input type="radio" name="quiz" value="B"> Always equal volumes</label><label class="quizopt"><input type="radio" name="quiz" value="C"> Always equal masses</label><div class="toolbar"><button onclick="checkQuiz()">Check answer</button></div><p id="feedback" class="hint" aria-live="polite">Choose an answer to complete the mission.</p><div class="progress"><div id="progress"></div></div></section>
-</div><aside class="side"><section class="panel"><h2>🧠 Concept companion</h2><p class="hint">Perform a virtual acid-base titration and estimate the endpoint.</p><div class="result"><b>Key learning</b><div class="hint" style="margin:6px 0 0">Perform a virtual acid-base titration and estimate the endpoint.</div></div></section><section class="panel"><h2>🧭 Suggested procedure</h2><ol class="steps"><li>Read the aim and identify the variables.</li><li>Set one condition at a time.</li><li>Run the simulation and observe the change.</li><li>Repeat with a different condition.</li><li>Record evidence and write an inference.</li></ol></section><section class="panel"><h2>🛡️ Safety and model note</h2><p class="hint">This is a digital educational model, not a real laboratory instrument. Do not handle chemicals, flames, electricity or glassware based on this simulation. Practical work must be supervised and follow school laboratory safety rules. Some values and animations are simplified.</p></section><section class="ad">ADVERTISEMENT · SIDEBAR SLOT</section></aside></div><footer>CBSEMOCK Virtual Chemistry Labs · Premium interactive learning · Educational model only</footer></main>
-<script>const KIND="titration",LAB="39",ANSWER="A";let POWER=false;const ELEMENTS={1:"Hydrogen",2:"Helium",3:"Lithium",4:"Beryllium",5:"Boron",6:"Carbon",7:"Nitrogen",8:"Oxygen",9:"Fluorine",10:"Neon",11:"Sodium",12:"Magnesium",13:"Aluminium",14:"Silicon",15:"Phosphorus",16:"Sulfur",17:"Chlorine",18:"Argon",19:"Potassium",20:"Calcium"},TOPICNOTE="Perform a virtual acid-base titration and estimate the endpoint.";
-const $=id=>document.getElementById(id);
-function setText(id,t){if($(id))$(id).textContent=t}
-function setWidth(id,v){if($(id))$(id).style.width=v+"%"}
-function runLab(){
- const kind=KIND;
- if(kind==="acidbase"){
-  let s=$("sample").value, i=$("indicator").value;
-  let data={lemon:["Lemon juice",2.5,"acid"],vinegar:["Vinegar",3,"acid"],water:["Distilled water",7,"neutral"],soap:["Soap solution",10,"base"],baking:["Baking soda solution",8.3,"base"]}[s];
-  let [name,ph,type]=data, colour=type==="acid"?"#ed554b":type==="base"?"#4665c8":"#45ae78", obs="";
-  if(i==="universal")obs=type==="acid"?"Red-orange":type==="base"?"Blue-purple":"Green";
-  if(i==="blue")obs=type==="acid"?"Blue litmus turns red":"No change to blue litmus";
-  if(i==="red")obs=type==="base"?"Red litmus turns blue":"No change to red litmus";
-  if(i==="turmeric")obs=type==="base"?"Yellow turns reddish-brown":"Remains yellow";
-  $("liquid").style.background=colour;setText("sampleName",name);setText("colourName",obs);setText("pHread","Approximate pH model: "+ph);
-  setResult("Indicator observation: "+obs+". The sample is "+type+".","This is a representative educational model; natural samples vary in concentration.");
- }
- if(kind==="ph"){
-  let p=+$("ph").value;setText("phv",p.toFixed(1));setText("phNumber",p.toFixed(1));
-  let c=p<7?"Acidic":p>7?"Basic":"Neutral";setText("phClass",c);setText("phText",p<7?"Hydrogen-ion concentration is greater than in neutral water.":p>7?"Hydroxide-ion character predominates in this simplified comparison.":"At about 25°C, pure water has pH close to 7.");
-  $("phNumber").style.color=p<7?"#e34d5a":p>7?"#425bd0":"#169b71";
-  setResult("pH "+p.toFixed(1)+" is "+c.toLowerCase()+".","pH is logarithmic: a one-unit change represents a tenfold change in hydrogen-ion concentration.");
- }
- if(kind==="titration"){
-  let v=+$("volume").value, ca=+$("acid").value, cb=+$("base").value, eq=25*ca/cb, ratio=v/eq;
-  let ph=ratio<1?Math.max(1,7-5*(1-ratio)):ratio>1?Math.min(13,7+5*(ratio-1)):7;
-  setText("volv",v.toFixed(1)+" mL");$("liquid").style.background=ratio<.98?"#f3a1b9":ratio>1.02?"#a78bfa":"#e7a4d7";
-  setResult("Delivered base: "+v.toFixed(1)+" mL. Model endpoint: "+eq.toFixed(1)+" mL. Approximate pH trend: "+ph.toFixed(1)+".",Math.abs(v-eq)<.6?"Near the equivalence region. Add drops slowly and watch the indicator.":"Continue adding titrant and observe the colour transition.");
-  drawCurve(eq,v);
- }
- if(kind==="electrolysis"){
-  let on=POWER,volt=+$("volt").value;setText("voltV",volt+" V");
-  let h=on?volt*2:0,o=on?volt:0;setText("hvol",h.toFixed(0)+" units");setText("ovol",o.toFixed(0)+" units");
-  setText("ratio",on&&volt>0?"Model gas ratio H₂:O₂ = 2:1":"Power off");$("gasH").style.height=(on?Math.min(75,volt*6):0)+"%";$("gasO").style.height=(on?Math.min(48,volt*4):0)+"%";
-  setResult(on&&volt>0?"Gas bubbles form at both electrodes; hydrogen volume is modelled as twice oxygen.":"Switch on the power supply to begin electrolysis.","Overall equation: 2H₂O(l) → 2H₂(g) + O₂(g). The display is qualitative, not a real gas-volume measurement.");
- }
- if(kind==="chromatography"){
-  let f=+$("front").value,p=+$("pigment").value,rf=Math.min(1,p/f);$("frontline").style.bottom=(100-10*f)+"%";$("spot").style.bottom=(100-10*p)+"%";setText("rf","Rf = "+rf.toFixed(2));
-  setResult("Pigment travelled "+p+" cm; solvent front travelled "+f+" cm. Rf = "+rf.toFixed(2)+".","Rf is a ratio under the same experimental conditions. It has no unit.");
- }
- if(kind==="flame"){
-  let m=$("metal").value,d={sodium:["Sodium","Yellow-orange","#ffb000"],potassium:["Potassium","Lilac","#b28cff"],copper:["Copper","Blue-green","#20c9a6"],calcium:["Calcium","Brick red","#e86b55"],lithium:["Lithium","Crimson","#e43c62"]}[m];
-  setText("flameName",d[0]);setText("flameColour",d[1]);$("flameShape").style.color=d[2];setResult(d[0]+" ions produce a characteristic "+d[1].toLowerCase()+" flame in this demonstration.","Flame colours arise from electronic transitions; observations can be affected by contamination.");
- }
- if(kind==="atom"){
-  let p=+$("p").value,n=+$("n").value,e=+$("e").value;setText("pv",p);setText("nv",n);setText("ev",e);setText("nucleus",p+"p⁺ · "+n+"n");setText("atomName",ELEMENTS[p]||"Element "+p);setText("atomCharge",e===p?"Neutral atom":e<p?"Positive ion ("+(p-e)+"+)":"Negative ion ("+(e-p)+"−)");
-  setText("electrons",Array(Math.min(e,18)).fill("●").join(" "));
-  setResult("Atomic number = "+p+". Mass number = "+(p+n)+". Net charge = "+(p-e)+".","Changing proton number changes the element; changing neutron number changes the isotope.");
- }
- if(kind==="mass"){
-  let a=+$("massA").value,b=+$("massB").value,closed=$("system").value==="closed",total=a+b,shown=closed?total:Math.max(0,total-4);
-  setResult("Initial total mass: "+total+" g. Measured final mass in this model: "+shown+" g.",closed?"In a closed system, total mass is conserved.":"In an open system, a gas may escape, so measured mass can decrease although total matter is conserved.");
- }
- if(kind==="balance"){
-  let a=+$("coefA").value,b=+$("coefB").value;let leftH=2*a,rightH=2*b,rightO=b;
-  setResult("Equation: "+a+"H₂ + O₂ → "+b+"H₂O. Hydrogen: "+leftH+" vs "+rightH+"; oxygen: 2 vs "+rightO+".",a===b&&b===2?"Balanced for hydrogen and oxygen.":"Adjust coefficients to make each atom count equal on both sides.");
- }
- if(kind==="rate"){
-  let c=+$("conc").value,t=+$("temp").value;setText("cv",c+"%");setText("tv",t+"°C");let rate=(c/50)*(Math.max(.2,(t+273)/298));setResult("Relative rate index: "+rate.toFixed(2)+" (illustrative).","Higher concentration or temperature generally increases successful collision frequency. This index is not an experimental rate constant.");
- }
- if(kind==="solubility"){
-  let t=+$("temp").value,s=+$("solute").value;setText("tv",t+"°C");setText("sv",s+" g");let cap=15+t*.75;setResult("Model solubility capacity: "+cap.toFixed(1)+" g per 100 g water. Added solute: "+s+" g.",s>cap?"The model predicts undissolved solid remains.":"The model predicts the selected amount can dissolve.");
- }
- if(kind==="conductivity"){
-  let s=$("solution").value,c=+$("conc").value;setText("cv",c+"%");let factor={salt:1,acid:1.2,sugar:.03,distilled:.005}[s],v=c*factor;setResult("Relative conductivity index: "+v.toFixed(1)+".",factor>.5?"Mobile ions carry charge through the solution.":"Few mobile ions are present, so conductivity is low in this model.");
- }
- if(kind==="soap"){
-  let water=$("water").value,agent=$("agent").value,d=+$("dirt").value;setText("dirtv",d+"%");let clean=Math.max(0,100-d)*(water==="Hard water"&&agent==="Soap"?.45:.85);setText("soapResult",water==="Hard water"&&agent==="Soap"?"Soap scum competes with lather":"Micelles help lift oily dirt");setText("soapDetail","Illustrative cleaning index: "+clean.toFixed(0)+".");setResult("Cleaning model index: "+clean.toFixed(0)+".","Hard water contains calcium and magnesium ions; detergents generally work better than soap in hard water.");
- }
- if(kind==="organic"){
-  let c=$("compound").value,d={"Ethanol":["Alcohol","–OH"],"Ethanoic acid":["Carboxylic acid","–COOH"],"Ethene":["Alkene","C=C"],"Ethane":["Alkane","C–C"],"Ethanal":["Aldehyde","–CHO"],"Ethyl ethanoate":["Ester","–COO–"]}[c];setResult(c+" contains the "+d[0]+" functional group / feature "+d[1]+".","Recognising the functional group helps predict characteristic chemical behaviour.");
- }
- if(kind==="bond"){
-  let a=$("atomA").value,b=$("atomB").value;let ionic=["Sodium","Chlorine"].includes(a)||["Sodium","Chlorine"].includes(b);setResult(a+" + "+b+": "+(ionic?"electron transfer and oppositely charged ions are modelled.":"shared electron pairs are modelled in a covalent bond."),"Bond type depends on the atoms and their electron arrangements; this simplified selector is a concept prompt.");
- }
- if(kind==="energy"){
-  let p=$("process").value,n=+$("prog").value;setText("progV",n+"%");let ex=p!=="Thermal decomposition";setResult(p+" at "+n+"% model progress.",ex?"Exothermic example: energy is transferred to the surroundings.":"Endothermic example: energy is absorbed from the surroundings.");
- }
- if(kind==="equilibrium"){
-  let p=+$("pressure").value,t=+$("temp").value;setText("pressV",p+" atm");setText("tempV",t+"°C");setResult("Pressure: "+p+" atm. Temperature: "+t+"°C.","For N₂ + 3H₂ ⇌ 2NH₃, increased pressure favours the side with fewer gas molecules; temperature effect depends on reaction enthalpy.");
- }
- if(kind==="periodic"){
-  let p=+$("period").value,g=+$("group").value;setResult("Selected position: period "+p+", group "+g+".","Across a period, atomic radius generally decreases; down a group, atomic radius generally increases.");
- }
- if(kind==="gastest"){
-  let g=$("gas").value,t=$("test").value;let r=(g==="Hydrogen"&&t==="Lit splint")?"Squeaky pop":(g==="Oxygen"&&t==="Glowing splint")?"Glowing splint relights":(g==="Carbon dioxide"&&t==="Limewater")?"Limewater turns milky":"No characteristic positive result for this test combination";setResult(g+" + "+t+": "+r+".","Gas tests are practical demonstrations and must only be carried out by a trained teacher under school safety rules.");
- }
- if(kind==="separation"||kind==="distillation"||kind==="salt"||kind==="reaction"||kind==="food"||kind==="redox"){
-  let s=$("condition")?.value||"Standard conditions",st=+$("stage")?.value||3;setText("stageV",st+" / 5");setResult("Selected condition: "+s+". Stage "+st+" of 5.",TOPICNOTE);
- }
-}
-function setResult(head,detail){$("resultTitle").textContent=head;$("resultDetail").textContent=detail}
-function addDrop(){let el=$("volume");el.value=Math.min(50,+el.value+1);runLab()}
-function resetVolume(){if($("volume")){$("volume").value=0;runLab()}}
-function setPH(v){$("ph").value=v;runLab()}
-function nextSample(){let e=$("sample");e.selectedIndex=(e.selectedIndex+1)%e.options.length;runLab()}
-function checkBalance(){runLab()}
-function togglePower(){POWER=!POWER;$("power").textContent=POWER?"Switch power OFF":"Switch power ON";runLab()}
-function resetLab(){POWER=false;if($("power"))$("power").textContent="Switch power ON";if($("volume"))$("volume").value=0;runLab()}
-function drawCurve(eq,v){let c=$("curve");if(!c)return;let x=c.getContext("2d");x.clearRect(0,0,c.width,c.height);x.strokeStyle="#dbe2ef";x.lineWidth=1;for(let i=0;i<5;i++){x.beginPath();x.moveTo(35,20+i*40);x.lineTo(680,20+i*40);x.stroke()}x.strokeStyle="#635bdb";x.lineWidth=4;x.beginPath();for(let i=0;i<=100;i++){let vol=i/2,ph=vol<eq?3+3*vol/eq:6+7*(vol-eq)/(50-eq||1);let xx=35+i*6.4,yy=190-(Math.max(0,Math.min(14,ph))*12);if(i===0)x.moveTo(xx,yy);else x.lineTo(xx,yy)}x.stroke();x.fillStyle="#ee5b9c";x.beginPath();x.arc(35+eq*12.8,106,6,0,Math.PI*2);x.fill();x.fillStyle="#445";x.font="12px Arial";x.fillText("Base added (mL)",560,205);x.fillText("pH trend",8,14)}
-let logRows=[];
-function record(){runLab();let row=[new Date().toLocaleTimeString(),$("resultTitle").textContent,$("resultDetail").textContent];logRows.push(row);let tr=document.createElement("tr");row.forEach(v=>{let td=document.createElement("td");td.textContent=v;tr.appendChild(td)});$("log").appendChild(tr)}
-function downloadCSV(){if(!logRows.length)record();let csv=[["Time","Observation","Inference"],...logRows].map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(",")).join("\n");let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="CBSEMOCK_Lab_"+LAB+"_Notebook.csv";a.click();URL.revokeObjectURL(a.href)}
-function checkQuiz(){let a=document.querySelector('input[name=quiz]:checked');if(!a){$("feedback").textContent="Select an answer first.";return}let ok=a.value===ANSWER;$("feedback").textContent=ok?"Correct — mission completed!":"Not yet. Review the observation and try again."; $("progress").style.width=ok?"100%":"35%"}
-window.addEventListener("DOMContentLoaded",runLab);
-
-</script>
-<script>
-(()=>{
-const taskData=[["Burette", "Above conical flask", "The burette delivers titrant accurately."], ["Analyte + indicator", "Conical flask", "The measured sample and indicator are placed in the flask."], ["Endpoint colour", "Observation card", "A persistent indicator colour change signals the endpoint."]];
-const lab=String(39);
-const items=taskData||[];
-let completed=new Set(),selected=null;
-function el(tag,cls,html){const n=document.createElement(tag);if(cls)n.className=cls;if(html!==undefined)n.innerHTML=html;return n}
-function init(){
- const anchor=[...document.querySelectorAll('section.panel')].find(s=>s.textContent.includes('Live laboratory workspace'))||document.querySelector('.layout > div');
- if(!anchor)return;
- const panel=el('section','dd-wrap');
- panel.innerHTML='<div class="dd-head"><h2>🧪 Hands-on drag & drop challenge</h2><span class="dd-tag">PRACTICAL SKILL BUILDER</span></div><p class="dd-instruction">Drag each laboratory item from the tray to its correct destination. On a phone or tablet, tap an item and then tap its destination. Complete all placements to finish the challenge.</p><div class="dd-board"><div class="dd-bank"><h3>🧰 EQUIPMENT & MATERIALS</h3><div class="dd-items" id="ddItems"></div></div><div class="dd-targets"><h3>🎯 DROP ZONES</h3><div id="ddSlots"></div></div></div><div class="dd-feedback" id="ddFeedback" aria-live="polite">Choose an item and place it in the matching zone.</div><div class="dd-progress"><span id="ddBar"></span></div><div class="dd-actions"><button type="button" id="ddReset" class="ghost">↻ Reset challenge</button><button type="button" id="ddHint" class="ghost">💡 Give me a hint</button></div>';
- anchor.parentNode.insertBefore(panel,anchor);
- const bank=panel.querySelector('#ddItems'),slots=panel.querySelector('#ddSlots');
- // Shuffle deterministically so the bank is not in answer order.
- const shuffled=items.map((x,i)=>({x,i})).sort((a,b)=>((a.i*7+3)%11)-((b.i*7+3)%11));
- shuffled.forEach(({x,i})=>{
-  const b=el('button','dd-item',x[0]);b.type='button';b.draggable=true;b.dataset.id=i;
-  b.addEventListener('dragstart',e=>{if(completed.has(i)){e.preventDefault();return}e.dataTransfer.setData('text/plain',String(i));});
-  b.addEventListener('click',()=>{if(completed.has(i))return;panel.querySelectorAll('.dd-item').forEach(n=>n.classList.remove('selected'));b.classList.add('selected');selected=i;panel.querySelector('#ddFeedback').textContent='Selected: '+x[0]+'. Now tap the matching destination.';});
-  bank.appendChild(b);
- });
- items.forEach((x,i)=>{
-  const s=el('div','dd-slot','<span><strong>Drop zone '+(i+1)+'</strong><br>'+x[1]+'</span><b>＋</b>');s.dataset.accept=i;
-  s.addEventListener('dragover',e=>{e.preventDefault();if(!completed.has(i))s.classList.add('over')});
-  s.addEventListener('dragleave',()=>s.classList.remove('over'));
-  s.addEventListener('drop',e=>{e.preventDefault();s.classList.remove('over');const id=Number(e.dataTransfer.getData('text/plain'));place(id,i)});
-  s.addEventListener('click',()=>{if(selected!==null)place(selected,i)});
-  slots.appendChild(s);
- });
- function place(id,zone){
-  if(!Number.isInteger(id)||id<0||id>=items.length||completed.has(id))return;
-  const feedback=panel.querySelector('#ddFeedback');
-  if(id!==zone){const slot=slots.children[zone];slot.classList.remove('wrong');void slot.offsetWidth;slot.classList.add('wrong');feedback.textContent='Not quite. '+items[id][0]+' does not belong in this zone. Try another match.';return}
-  completed.add(id);const item=panel.querySelector('.dd-item[data-id="'+id+'"]');item.classList.add('done');item.classList.remove('selected');item.disabled=true;
-  const slot=slots.children[zone];slot.classList.add('correct');slot.innerHTML='<span><strong>✓ '+items[id][1]+'</strong><br>'+items[id][2]+'</span><b>✓</b>';
-  selected=null;const pct=Math.round(completed.size/items.length*100);panel.querySelector('#ddBar').style.width=pct+'%';
-  feedback.textContent='Correct! '+items[id][2];
-  if(completed.size===items.length){feedback.textContent='🏆 Challenge completed! You matched every item correctly. Now run the simulation and record your observation in the notebook.';panel.querySelector('.dd-tag').textContent='CHALLENGE COMPLETE';}
- }
- panel.querySelector('#ddReset').addEventListener('click',()=>{completed.clear();selected=null;initReset()});
- function initReset(){
-  panel.querySelectorAll('.dd-item').forEach(b=>{b.disabled=false;b.classList.remove('done','selected')});
-  panel.querySelectorAll('.dd-slot').forEach((s,i)=>{s.className='dd-slot';s.innerHTML='<span><strong>Drop zone '+(i+1)+'</strong><br>'+items[i][1]+'</span><b>＋</b>'});
-  panel.querySelector('#ddBar').style.width='0%';panel.querySelector('#ddFeedback').textContent='Challenge reset. Try matching the items again.';panel.querySelector('.dd-tag').textContent='PRACTICAL SKILL BUILDER';
- }
- panel.querySelector('#ddHint').addEventListener('click',()=>{const left=items.findIndex((x,i)=>!completed.has(i));if(left<0){panel.querySelector('#ddFeedback').textContent='All matches are complete. Great work!';return}panel.querySelector('#ddFeedback').textContent='Hint: look for the item whose purpose matches “'+items[left][1]+'”.'});
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
-})();
-</script>
+</head>
+<body>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../index.html">Home</a> › <a href="../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../virtual-labs/chemistry/index.html">Chemistry</a> › Titration</nav>
+   <div class="eyebrow">Experiment · Burette &amp; Conical Flask</div>
+   <h1><span class="g1">Titration</span><span class="g2">Strength of NaOH using Oxalic Acid</span></h1>
+   <p>Fill the burette, add the alkali drop by drop and stop at the first permanent light pink. Read the meniscus yourself, get concordant readings and work out the strength of an unknown NaOH solution.</p>
+   <div class="chips"><span>Class 11 · Volumetric analysis</span><span>Class 10 · Neutralisation</span><span>⏱ about 25 min</span></div>
+   <a class="go" href="#lab">Set up the burette ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <linearGradient id="b-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#24170c"/></linearGradient>
+ <linearGradient id="b-steel" x1="0" x2="1"><stop offset="0" stop-color="#4b535e"/><stop offset=".45" stop-color="#e3e8ee"/><stop offset="1" stop-color="#4b535e"/></linearGradient>
+ <linearGradient id="b-glass" x1="0" x2="1"><stop offset="0" stop-color="#bfe3ff" stop-opacity=".35"/><stop offset=".3" stop-color="#ffffff" stop-opacity=".18"/><stop offset=".7" stop-color="#ffffff" stop-opacity=".08"/><stop offset="1" stop-color="#9fd0f5" stop-opacity=".4"/></linearGradient>
+ <linearGradient id="b-liq" x1="0" x2="1"><stop offset="0" stop-color="#cfe6ff" stop-opacity=".55"/><stop offset=".5" stop-color="#f4faff" stop-opacity=".35"/><stop offset="1" stop-color="#b9dbff" stop-opacity=".55"/></linearGradient>
+ <linearGradient id="b-pink" x1="0" x2="1"><stop offset="0" stop-color="#ff6fb5"/><stop offset=".5" stop-color="#ffa3d0"/><stop offset="1" stop-color="#ef5aa3"/></linearGradient>
+ <radialGradient id="b-lamp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffe9b0" stop-opacity=".22"/><stop offset="1" stop-color="#ffe9b0" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse cx="520" cy="160" rx="260" ry="200" fill="url(#b-lamp)"/>
+<rect x="0" y="318" width="760" height="42" fill="url(#b-wood)"/>
+<!-- retort stand -->
+<rect x="330" y="306" width="150" height="14" rx="3" fill="#2d333c" stroke="#59626e"/>
+<rect x="356" y="20" width="8" height="290" fill="url(#b-steel)"/>
+<rect x="360" y="96" width="150" height="7" rx="2" fill="url(#b-steel)"/>
+<rect x="500" y="88" width="40" height="22" rx="4" fill="#3a414b" stroke="#6b7480"/>
+<!-- burette -->
+<rect x="509" y="14" width="22" height="214" rx="3" fill="url(#b-glass)" stroke="#d6f0ff" stroke-opacity=".7"/>
+<rect x="511" y="60" width="18" height="168" fill="url(#b-liq)"/>
+<path d="M511 60 q9 5 18 0" stroke="#e8f4ff" stroke-width="1.4" fill="none"/>
+<path d="M513 30h7M513 50h10M513 70h7M513 90h10M513 130h10M513 150h7M513 170h10M513 190h7M513 210h10" stroke="#fff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M509 228 h22 l-5 10 h-12z" fill="url(#b-glass)" stroke="#d6f0ff" stroke-opacity=".6"/>
+<rect x="508" y="238" width="24" height="12" rx="3" fill="#2f3640"/><rect x="532" y="240" width="22" height="8" rx="3" fill="#c9a227"/>
+<path d="M516 250 h8 l-2 22 h-4z" fill="url(#b-glass)" stroke="#d6f0ff" stroke-opacity=".6"/>
+<circle class="dropB" cx="520" cy="276" r="3.2" fill="#e6f3ff" opacity=".9"/>
+<circle class="dropB dropB2" cx="520" cy="276" r="3.2" fill="#e6f3ff" opacity=".9"/>
+<!-- white tile + conical flask -->
+<rect x="430" y="330" width="180" height="10" rx="2" fill="#f4f2ec"/><rect x="430" y="338" width="180" height="3" fill="#c8c3b6"/>
+<g class="swB">
+ <path d="M508 262 h24 v6 h-3 v26 l48 34 q4 4 -2 4 h-110 q-6 0 -2 -4 l48 -34 v-26 h-3z" fill="url(#b-glass)" stroke="#e1f3ff" stroke-width="1.6" stroke-opacity=".8"/>
+ <path d="M494 306 h52 l31 22 q4 4 -2 4 h-110 q-6 0 -2 -4z" fill="url(#b-liq)"/>
+ <path class="pinkB" d="M494 306 h52 l31 22 q4 4 -2 4 h-110 q-6 0 -2 -4z" fill="url(#b-pink)"/>
+ <ellipse class="ripB" cx="520" cy="307" rx="10" ry="2.4" fill="none" stroke="#ffd0e6" stroke-width="1.2"/>
+ <path d="M500 312 q-8 8 -16 15" stroke="#fff" stroke-opacity=".5" stroke-width="2" fill="none"/>
+</g>
+<!-- reagent bottles -->
+<rect x="96" y="232" width="56" height="88" rx="8" fill="#6b3f1d" opacity=".85"/><rect x="110" y="214" width="28" height="20" rx="3" fill="#2b2b2b"/><rect x="102" y="258" width="44" height="30" rx="3" fill="#f3eddc"/>
+<text x="124" y="278" font-family="Inter" font-size="11" font-weight="800" text-anchor="middle" fill="#3a2a10">NaOH</text>
+<path d="M200 320 q-34 0 -34 -34 q0 -28 26 -34 v-46 h16 v46 q26 6 26 34 q0 34 -34 34z" fill="url(#b-glass)" stroke="#d6f0ff" stroke-opacity=".7"/>
+<path d="M170 288 q2 28 30 30 q28 -2 30 -30z" fill="url(#b-liq)"/><path d="M192 222h16" stroke="#fff" stroke-width="1.2"/>
+<rect x="640" y="268" width="34" height="52" rx="5" fill="#5a3b20" opacity=".9"/><rect x="649" y="246" width="16" height="24" rx="3" fill="#1f1f1f"/><circle cx="657" cy="243" r="7" fill="#2a2a2a"/>
+<text x="124" y="204" class="tB">NAOH (UNKNOWN)</text><text x="206" y="166" class="tB">M/10 OXALIC ACID</text>
+<text x="600" y="30" class="tB">BURETTE</text><text x="600" y="270" class="tB">STOPCOCK</text><text x="657" y="230" class="tB">INDICATOR</text>
+<text x="400" y="354" class="tB" style="fill:rgba(255,255,255,.5)">CONICAL FLASK ON WHITE TILE</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Set up the burette</li><li><b>2</b>Titrate to light pink</li><li><b>3</b>Concordant readings</li><li><b>4</b>Calculate &amp; viva</li></ol>
+</header>
 
 
-<script id="cbsemock-master-aligned-layout">
-(function(){
- const main=document.querySelector('main');
- const layout=main&&main.querySelector('.layout');
- if(!main||!layout||layout.dataset.masterAligned==='1')return;
- const title=main.querySelector('.hero h1')?.textContent||'Chemistry Research Studio';
- const lab=(main.querySelector('.kicker')?.textContent.match(/EXPERIMENT\s+(\d+)/i)||[])[1]||'';
- const oldHeader=document.querySelector('header');
- if(oldHeader){
-   const h=document.createElement('header');h.className='top';
-   h.innerHTML='<div class="topin"><div class="brand"><div class="logo">⚗</div><div><b>CBSEMOCK · CHEMISTRY RESEARCH STUDIO</b><small>Virtual chemical laboratory · '+title.replace(/[&<>"]/g,'')+'</small></div></div><div class="status"><span class="chip">CLASS X · CHEMISTRY</span><span class="chip">EXPERIMENT '+lab+'/40</span></div></div>';
-   oldHeader.replaceWith(h);
- }
- main.classList.add('shell');
- const hero=main.querySelector('.hero');
- if(hero){
-   hero.classList.add('master-hero');
-   const kicker=hero.querySelector('.kicker');
-   if(kicker){kicker.className='eyebrow';}
-   const p=hero.querySelector('p');if(p)p.className='sub';
-   const pills=hero.querySelector('.pills');if(pills)pills.className='master-pills';
-   const actions=document.createElement('div');actions.className='heroactions';
-   const reset=document.createElement('button');reset.className='btn ghost';reset.type='button';reset.textContent='↺ Reset experiment';
-   reset.addEventListener('click',()=>{const b=main.querySelector('[onclick*="reset"],button[onclick*="reset"]');if(b)b.click();else location.reload()});
-   actions.appendChild(reset);hero.appendChild(actions);
- }
- layout.dataset.masterAligned='1';
- const leftOriginal=layout.children[0];
- const side=layout.querySelector(':scope > aside.side');
- if(!leftOriginal||!side)return;
- const children=[...leftOriginal.children];
- const findPanel=(rx)=>children.find(x=>x.matches('section.panel')&&rx.test(x.querySelector('h2')?.textContent||''));
- const controls=findPanel(/experiment controls/i);
- const workspace=findPanel(/live laboratory workspace/i);
- const notebook=findPanel(/investigation notebook/i);
- const mission=findPanel(/knowledge mission/i);
- const challenge=children.find(x=>x.id==='handsOnChallengeMount');
- const inAd=children.find(x=>x.matches('.ad'));
- if(!controls||!workspace||!notebook||!mission)return;
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Titration bench">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-mode="setup" role="tab"><b>Step 1 · Set up</b><small>Rinse, fill, pipette, add indicator</small></button>
+   <button class="tab" data-mode="titrate" role="tab"><b>Step 2 · Titrate &amp; read</b><small>One rough + fine titrations till concordant</small></button>
+  </div>
+  <div class="task" id="task"></div>
+  <div class="benchbox">
+   <div class="benchscroll" id="benchScroll"><svg id="bench" viewBox="0 0 1000 430" role="img" aria-label="Titration bench: retort stand with burette, conical flask on a white tile, reagent bottles"></svg></div>
+   <span class="hint" id="hint">Drag the flask under the burette · tap the stopcock to open or close it</span>
+  </div>
+  <div class="row2">
+   <div class="panel">
+    <h4><span>Burette at the meniscus (zoomed)</span><span id="readout" class="mono"></span></h4>
+    <svg id="zoom" viewBox="0 0 320 300" aria-label="Zoomed view of the burette scale at the meniscus"></svg>
+    <div class="sel" id="eye" role="group" aria-label="Eye position">
+     <button type="button" class="chip" data-eye="above">Eye above</button><button type="button" class="chip on" data-eye="level">Eye level</button><button type="button" class="chip" data-eye="below">Eye below</button>
+    </div>
+    <div class="scrcap">NaOH is colourless: read the <b>bottom of the meniscus</b>, eye level with it. The scale reads downwards, 0.1 mL per small division.</div>
+   </div>
+   <div class="panel">
+    <h4><span id="ctlTitle">Set up the apparatus</span><span id="sampleTag">NaOH sample S-?</span></h4>
+    <div id="setupBox"><ol class="steps" id="steps"></ol></div>
+    <div id="tiBox" hidden>
+     <div class="rough"><button class="btn gold" id="startBtn" type="button">＋ Start titration</button><button class="btn ghost" id="refillBtn" type="button">Refill burette</button></div>
+     <h5>Stopcock</h5>
+     <div class="sel" id="cock" role="group" aria-label="Stopcock">
+      <button type="button" class="chip on" data-s="closed">Closed</button><button type="button" class="chip" data-s="drop">Drop by drop</button><button type="button" class="chip" data-s="slow">Slow stream</button><button type="button" class="chip" data-s="fast">Fast stream</button>
+     </div>
+     <div class="nudge"><button type="button" id="oneDrop">＋ 1 drop</button><button type="button" id="swirlBtn">↻ Swirl</button><button type="button" id="placeBtn">Place flask</button></div>
+     <label class="sw"><input type="checkbox" id="swirl" checked> Keep swirling the flask while adding</label>
+     <div class="fstat" aria-live="polite"><i id="fdot"></i><span id="fstat">No flask on the tile yet.</span></div>
+     <div class="rough"><button class="btn pink" id="endBtn" type="button">■ Stop: endpoint reached</button></div>
+    </div>
+    <div class="tools">
+     <label class="sw"><input type="checkbox" id="helper"> Show readings (helper)</label>
+     <span style="flex:1"></span>
+     <button class="btn ghost" id="newSample" type="button">↺ New sample</button>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
 
- function masterPanel(panel, label){
-   const h=panel.querySelector(':scope > h2');
-   const hint=panel.querySelector(':scope > .hint');
-   const head=document.createElement('div');head.className='ph';
-   if(h)head.appendChild(h);
-   const small=document.createElement('small');small.textContent=label||'EXPERIMENT MODULE';head.appendChild(small);
-   const body=document.createElement('div');body.className='pb';
-   if(hint)body.appendChild(hint);
-   [...panel.children].forEach(n=>{if(n!==head&&n!==body&&n!==h&&n!==hint)body.appendChild(n)});
-   panel.replaceChildren(head,body);panel.classList.add('master-panel');
- }
- masterPanel(controls,'SET VARIABLES & RUN MODEL');
- masterPanel(notebook,'RECORD YOUR OBSERVATIONS');
- masterPanel(mission,'CHECK YOUR UNDERSTANDING');
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 titrations</span></h2>
+  <p class="lead">Volume of M/10 oxalic acid taken in the flask each time, V₁ = <b class="mono">10.0 mL</b>. Indicator: phenolphthalein. Endpoint: colourless → permanent light pink. Type the burette readings you see in the zoomed view.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Volume of oxalic<br>acid taken (mL)</th><th>Initial burette<br>reading (mL)</th><th>Final burette<br>reading (mL)</th><th>Volume of NaOH<br>used, V₂ (mL)</th><th></th></tr></thead>
+   <tbody id="tb"><tr><td colspan="6" class="note" style="padding:16px">No titrations yet. Finish Step 1, then press “Start titration”.</td></tr></tbody>
+  </table></div>
+  <p class="note" style="margin-top:8px">Concordant volume: <b id="concTxt" class="mono">—</b> (two fine titrations that agree within 0.1 mL)</p>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
 
- const left=document.createElement('aside');left.className='panel left-cabinet';
- const leftHead=document.createElement('div');leftHead.className='ph';
- leftHead.innerHTML='<h2>EXPERIMENT CONTROLS</h2><small>SET VARIABLES</small>';
- const leftBody=document.createElement('div');leftBody.className='pb';
- leftBody.appendChild(controls);
- if(challenge)leftBody.appendChild(challenge);
- left.append(leftHead,leftBody);
+ <section class="card">
+  <h2>Graphs</h2>
+  <p class="lead">The titre chart fills in as you work. The pH curve appears once you have concordant readings.</p>
+  <div class="graphs">
+   <figure><canvas id="g1" width="560" height="420"></canvas><figcaption><b>Your titres.</b> Grey = rough, gold = correct fine titration, red outline = flagged. The green band is ±0.05 mL around the concordant mean.</figcaption></figure>
+   <figure><canvas id="g2" width="560" height="420"></canvas><figcaption><b>pH curve for this titration</b>, calculated from the acid–base equilibria of oxalic acid (pKa₁ = 1.25, pKa₂ = 4.14) using your molarity. The pink band is phenolphthalein’s range, pH 8.2–10.</figcaption></figure>
+  </div>
+ </section>
 
- const centre=document.createElement('section');centre.className='panel bench';
- const benchHead=document.createElement('div');benchHead.className='ph';
- benchHead.innerHTML='<h2>EXPERIMENT WORKBENCH</h2><small>INTERACTIVE MODEL · LIVE OBSERVATIONS</small>';
- const tabs=document.createElement('div');tabs.className='tabs';tabs.setAttribute('role','tablist');
- const content=document.createElement('div');
- const makeTab=(key,label)=>{const b=document.createElement('button');b.type='button';b.className='tab';b.dataset.masterTab=key;b.textContent=label;b.setAttribute('role','tab');tabs.appendChild(b)};
- const makeView=(key)=>{const v=document.createElement('div');v.className='view';v.dataset.masterView=key;content.appendChild(v);return v};
- makeTab('station','Lab station');makeTab('analysis','Scientific analysis');makeTab('notebook','Lab notebook');makeTab('assessment','Assessment');
- const station=makeView('station'),analysis=makeView('analysis'),notes=makeView('notebook'),assessment=makeView('assessment');
- masterPanel(workspace,'MODEL OUTPUT');
- station.appendChild(workspace);
- if(inAd)station.appendChild(inAd);
- const result=controls.querySelector('.result')||leftBody.querySelector('.result');
- if(result)analysis.appendChild(result);
- const stats=workspace.querySelector('.statgrid');if(stats)analysis.appendChild(stats);
- const expl=document.createElement('div');expl.className='infoCard';
- expl.innerHTML='<b>Scientific analysis</b><p>Change one variable at a time. Run the model, compare the observations and explain the pattern using the scientific principles for this experiment.</p><p><b>Model limitation:</b> Results are educational simulations and should not be treated as physical measurements.</p>';
- analysis.appendChild(expl);
- const reflect=document.createElement('div');reflect.className='infoCard';
- reflect.innerHTML='<label for="masterHypothesis">Research hypothesis</label><textarea id="masterHypothesis" placeholder="I predict that… because…"></textarea><label for="masterConclusion">Evidence-based conclusion</label><textarea id="masterConclusion" placeholder="The results show… because…"></textarea>';
- analysis.appendChild(reflect);
- masterPanel(notebook,'RECORD YOUR OBSERVATIONS');notes.appendChild(notebook);
- masterPanel(mission,'KNOWLEDGE CHECK');assessment.appendChild(mission);
- centre.append(benchHead,tabs,content);
- const right=document.createElement('aside');right.className='rightcol';
- side.querySelectorAll('.panel').forEach(p=>{
-   const h=p.querySelector(':scope > h2');if(h){const ph=document.createElement('div');ph.className='ph';ph.appendChild(h);const sm=document.createElement('small');sm.textContent='REFERENCE';ph.appendChild(sm);const pb=document.createElement('div');pb.className='pb';[...p.children].forEach(n=>{if(n!==ph&&n!==h&&n!==pb)pb.appendChild(n)});p.replaceChildren(ph,pb)}
-   p.classList.add('master-panel');right.appendChild(p);
- });
- layout.replaceChildren(left,centre,right);
- function activate(key){
-   tabs.querySelectorAll('.tab').forEach(b=>{const on=b.dataset.masterTab===key;b.classList.toggle('active',on);b.setAttribute('aria-selected',String(on))});
-   content.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.dataset.masterView===key));
- }
- tabs.addEventListener('click',e=>{const b=e.target.closest('[data-master-tab]');if(b)activate(b.dataset.masterTab)});
- activate('station');
- // Retain all original controls and original script handlers; add research note export.
- const exportBtn=document.createElement('button');exportBtn.type='button';exportBtn.className='btn ghost';exportBtn.textContent='Export research notes';
- exportBtn.addEventListener('click',()=>{
-   const lines=['CBSEMOCK CHEMISTRY RESEARCH NOTES',title,'','Hypothesis',document.getElementById('masterHypothesis')?.value||'','Conclusion',document.getElementById('masterConclusion')?.value||''];
-   const blob=new Blob([lines.join('\n')],{type:'text/plain'}),url=URL.createObjectURL(blob),a=document.createElement('a');
-   a.href=url;a.download='chemistry-research-notes-'+lab+'.txt';a.click();URL.revokeObjectURL(url);
- });
- const actions=hero?.querySelector('.heroactions');if(actions)actions.appendChild(exportBtn);
-})();
-</script>
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Concordant volume of NaOH, V₂</small><b id="rV">—</b></div>
+   <div class="rbox"><small>Molarity of NaOH, M₂</small><b id="rM">—</b></div>
+   <div class="rbox"><small>Strength of NaOH</small><b id="rS">—</b></div>
+   <div class="rbox true" id="trueBox" hidden><small>Actual molarity of this sample</small><b id="rTrue">—</b></div>
+  </div>
+  <h3>Do the calculation yourself</h3>
+  <p class="eq">M₁V₁ / n₁ = M₂V₂ / n₂ &nbsp;⇒&nbsp; M₂ = 2 × M₁ × V₁ / V₂</p>
+  <div class="calc">
+   <label>Concordant volume V₂ (mL)<input id="cV" inputmode="decimal" placeholder="e.g. 20.4"></label>
+   <label>Molarity of NaOH, M₂ (mol L⁻¹)<input id="cM" inputmode="decimal" placeholder="e.g. 0.0980"></label>
+   <label>Strength of NaOH (g L⁻¹)<input id="cS" inputmode="decimal" placeholder="e.g. 3.92"></label>
+  </div>
+  <div class="tools"><button class="btn navy" id="checkCalc" type="button">✓ Check my calculation</button><button class="btn gold" id="reveal" type="button">Reveal the actual molarity</button></div>
+  <p class="note" id="err" style="margin-top:8px"></p>
+ </section>
 
-<!-- Vendor: Bottom Leaderboard -->
-<div class="pp-leader"><div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div></div>
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To determine the molarity and strength of a given solution of sodium hydroxide by titrating it against a standard M/10 solution of oxalic acid.</p>
+    <h3>Apparatus and materials</h3>
+    <p>Burette (50 mL) with stand and clamp, 10 mL pipette, conical flask (100 mL), funnel, white glazed tile, wash bottle with distilled water, beakers; standard M/10 oxalic acid solution, the given NaOH solution, phenolphthalein indicator.</p>
+    <h3>Theory</h3>
+    <p>Oxalic acid is a weak dibasic acid. It reacts with sodium hydroxide, a strong base, in the ratio 1 : 2:</p>
+    <p class="eq">(COOH)₂ + 2NaOH → (COONa)₂ + 2H₂O</p>
+    <p>At the equivalence point, moles of NaOH = 2 × moles of oxalic acid. Using the molarity equation with n₁ = 1 (acid) and n₂ = 2 (base):</p>
+    <p class="eq">M₁V₁ / 1 = M₂V₂ / 2 &nbsp;⇒&nbsp; M₂ = 2M₁V₁ / V₂</p>
+    <p class="eq">Strength (g L⁻¹) = Molarity × Molar mass of NaOH (40 g mol⁻¹)</p>
+    <p>Sodium oxalate formed at the equivalence point hydrolyses slightly, so the solution is weakly alkaline (pH ≈ 8.3). Phenolphthalein, which changes from colourless to pink between pH 8.2 and 10, therefore marks the endpoint. Methyl orange (pH 3.1–4.4) would change far too early.</p>
+    <p><b>Example:</b> if V₂ = 20.0 mL, M₂ = 2 × 0.1 × 10.0 / 20.0 = 0.100 M and strength = 0.100 × 40 = 4.00 g L⁻¹.</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li>Rinse the burette with distilled water and then with a little of the NaOH solution. Clamp it vertically.</li>
+     <li>Fill the burette with NaOH using a funnel; remove the funnel. Open the stopcock briefly to drive out any air bubble from the jet.</li>
+     <li>Note the initial reading at the lower meniscus, with your eye level with it.</li>
+     <li>Rinse the pipette with the oxalic acid solution and pipette 10.0 mL of it into a conical flask rinsed with water only. Do not blow out the last drop.</li>
+     <li>Add 1–2 drops of phenolphthalein. The solution stays colourless.</li>
+     <li>Place the flask on a white tile under the burette. Add NaOH while swirling the flask. As you near the endpoint, the pink where each drop falls takes longer to disappear: now add one drop at a time.</li>
+     <li>Stop when one drop gives a light pink colour that stays for about 30 seconds. Note the final reading.</li>
+     <li>The first (rough) titration gives an idea of the volume. Repeat the titration, running in quickly to about 1 mL short of the rough value and then drop by drop, until two readings agree within 0.1 mL (concordant readings).</li>
+     <li>Calculate M₂ and the strength from the concordant volume.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>Rinse the burette and pipette with the solutions they will hold; rinse the conical flask with distilled water only.</li>
+     <li>Remove the funnel and the air bubble from the jet before taking the initial reading.</li>
+     <li>Read the lower meniscus for colourless solutions, keeping your eye at the level of the meniscus.</li>
+     <li>Swirl the flask throughout and add the last few drops one at a time.</li>
+     <li>Do not blow out the last drop from the pipette.</li>
+     <li>Use a white tile so the faint pink at the endpoint is easy to see.</li>
+     <li>Keep the NaOH bottle closed: NaOH absorbs CO₂ from the air.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>Parallax in reading the burette if the eye is not level with the meniscus.</li>
+     <li>Drop size: the endpoint can only be found to within about one drop (≈ 0.05 mL).</li>
+     <li>Judging the first permanent pink; overshooting gives a dark pink and too large a titre.</li>
+     <li>Drainage error in the pipette or burette if they are not clean (drops sticking to the walls).</li>
+     <li>NaOH absorbing CO₂ from the air, which changes its concentration and makes the pink fade.</li>
+     <li>In this simulation, the depth of the pink is a visual model; the volumes come from the real 1 : 2 stoichiometry.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
 
-<script src="../../ads.js"></script>
-<script src="../../portal-shell.js"></script>
-<!-- Google AdSense Auto Ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2810600896966939"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-<!-- end AdSense -->
-<!-- Share FABs -->
-<div class="share-fab-wrap">
-  <a class="share-fab wa" id="shareWa" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 2C8.28 2 2 8.28 2 16c0 2.44.65 4.73 1.78 6.72L2 30l7.5-1.75A13.94 13.94 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.44 11.44 0 01-5.84-1.6l-.42-.25-4.45 1.04 1.06-4.33-.28-.45A11.46 11.46 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.3-8.56c-.34-.17-2.02-1-2.33-1.11-.32-.11-.55-.17-.78.17-.23.34-.89 1.11-1.09 1.34-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.01-1.9-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/></svg>
-    <span class="fab-tooltip">Share on WhatsApp</span>
-  </a>
-  <a class="share-fab fb" id="shareFb" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M29 16C29 8.82 23.18 3 16 3S3 8.82 3 16c0 6.49 4.75 11.87 10.97 12.84V19.7H10.4V16h3.57v-3.1c0-3.52 2.1-5.47 5.31-5.47 1.54 0 3.14.28 3.14.28v3.46h-1.77c-1.74 0-2.28 1.08-2.28 2.19V16h3.89l-.62 3.7h-3.27v9.14C24.25 27.87 29 22.49 29 16z"/></svg>
-    <span class="fab-tooltip">Share on Facebook</span>
-  </a>
-</div>
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask in this practical. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../notes/class-10/science/acids-bases-and-salts.html">📘 Notes: Acids, bases and salts</a></li>
+   <li><a href="../../cbse-class-10-science-mock-tests.html">📄 Class 10 Science mock tests</a></li>
+   <li><a href="../../cbse-class-12-chemistry-mock-papers.html">📄 Class 12 Chemistry mock papers</a></li>
+   <li><a href="../../virtual-labs/chemistry/index.html">🧪 More chemistry labs</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../about.html">About Us</a> · <a href="../../privacy.html">Privacy Policy</a> · <a href="../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
 <script>
 (function(){
-  var url = encodeURIComponent(window.location.href);
-  var title = encodeURIComponent(document.title);
-  var wa = document.getElementById('shareWa');
-  var fb = document.getElementById('shareFb');
-  if(wa) wa.href = 'https://wa.me/?text=' + title + '%20' + url;
-  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+'use strict';
+/* ───────── chemistry constants ───────── */
+var NS='http://www.w3.org/2000/svg';
+var M1=0.100;            // standard oxalic acid (M/10)
+var V1=10.0;             // pipette volume (mL)
+var KW=1e-14,K1=Math.pow(10,-1.25),K2=Math.pow(10,-4.14);
+var TOL=0.06;            // allowed burette-reading error (mL)
+var PAR=0.15;            // parallax shift when the eye is not level (mL)
+var LIGHT=0.12;          // up to ~2 drops past equivalence still looks light pink (mL)
+var RATE={drop:0,slow:0.35,fast:1.4}; // mL per second for streams; drops handled separately
+function rnd(a,b){return a+Math.random()*(b-a)}
+function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
+var S={cb:null,no:0,setup:0,level:null,rows:[],calc:{v:'',m:'',s:''},revealed:false};
+var T={mode:'setup',flask:null,stop:'closed',swirl:true,eye:'level',helper:false,active:-1,funnel:false,bubble:true,drops:[],dropT:0,anim:null,animT:0,swirlT:0,order:{}};
+try{var sv=JSON.parse(localStorage.getItem('cbse-lab-titration')||'null');if(sv&&sv.cb){S.cb=sv.cb;S.no=sv.no;S.setup=sv.setup||0;S.level=sv.level==null?null:sv.level;S.rows=(sv.rows||[]).filter(function(r){return r.t&&r.t.f!=null});S.calc=sv.calc||S.calc}}catch(e){}
+if(!S.cb)newSample(true);
+if(S.setup>=3)T.bubble=false;
+if(S.setup>=6&&!S.rows.length)T.flask=makeFlask(true);
+function save(){try{localStorage.setItem('cbse-lab-titration',JSON.stringify({cb:S.cb,no:S.no,setup:S.setup,level:S.level,rows:S.rows,calc:S.calc}))}catch(e){}}
+function newSample(silent){S.cb=Math.round(rnd(0.0800,0.1250)*10000)/10000;S.no=Math.floor(rnd(101,999));S.rows=[];S.revealed=false;S.calc={v:'',m:'',s:''};
+ if(T.active>=0){T.active=-1;T.stop='closed'}
+ if(S.setup>=6)T.flask=makeFlask(true);save();
+ if(!silent){renderTable();renderResult();fillCalc();say('A new bottle of NaOH (S-'+S.no+') is on the bench. Its molarity is unknown. Your earlier readings were cleared.','ok')}}
+function makeFlask(ready){return {va:V1+rnd(-0.02,0.02),vb:0,un:0,x:690,used:false,ind:!!ready,local:0}}
+function veq(fl){return 2*M1*fl.va/S.cb}
+/* pH of the flask after adding vb mL of NaOH of molarity cb to va mL of M1 oxalic acid (charge balance, solved by bisection) */
+function pH(va,vb,cb){var V=va+vb,CA=M1*va/V,NA=cb*vb/V,lo=-14.5,hi=0.5;
+ for(var i=0;i<70;i++){var mid=(lo+hi)/2,h=Math.pow(10,mid),d=h*h+K1*h+K1*K2,f=h+NA-KW/h-CA*(K1*h+2*K1*K2)/d;if(f>0)hi=mid;else lo=mid}
+ return -(lo+hi)/2}
+
+/* ───────── bench drawing ───────── */
+var bench=document.getElementById('bench');
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function defs(svg,html){var d=el('defs',{},svg);d.innerHTML=html;return d}
+defs(bench,
+ '<linearGradient id="room" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0f18"/><stop offset="1" stop-color="#161d29"/></linearGradient>'+
+ '<radialGradient id="lamp" cx=".52" cy=".25" r=".6"><stop offset="0" stop-color="#ffefc4" stop-opacity=".16"/><stop offset="1" stop-color="#ffefc4" stop-opacity="0"/></radialGradient>'+
+ '<linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset=".08" stop-color="#5a3c24"/><stop offset="1" stop-color="#2e1d10"/></linearGradient>'+
+ '<pattern id="grain" width="140" height="18" patternUnits="userSpaceOnUse"><path d="M0 6 Q35 2 70 7 T140 6 M0 13 Q40 10 80 14 T140 12" stroke="#000" stroke-opacity=".12" fill="none"/></pattern>'+
+ '<linearGradient id="rod" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4b535e"/><stop offset=".45" stop-color="#e3e8ee"/><stop offset="1" stop-color="#4b535e"/></linearGradient>'+
+ '<linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfe3ff" stop-opacity=".38"/><stop offset=".3" stop-color="#ffffff" stop-opacity=".16"/><stop offset=".7" stop-color="#ffffff" stop-opacity=".06"/><stop offset="1" stop-color="#9fd0f5" stop-opacity=".42"/></linearGradient>'+
+ '<linearGradient id="liq" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cfe6ff" stop-opacity=".62"/><stop offset=".5" stop-color="#f4faff" stop-opacity=".4"/><stop offset="1" stop-color="#b9dbff" stop-opacity=".62"/></linearGradient>'+
+ '<linearGradient id="tile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf6"/><stop offset="1" stop-color="#d9d5ca"/></linearGradient>'+
+ '<linearGradient id="amber" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4a2a10"/><stop offset=".4" stop-color="#8a5526"/><stop offset="1" stop-color="#3d220c"/></linearGradient>'+
+ '<radialGradient id="localPink" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#ff4fa3" stop-opacity=".95"/><stop offset="1" stop-color="#ff4fa3" stop-opacity="0"/></radialGradient>'
+);
+el('rect',{x:0,y:0,width:1000,height:430,fill:'url(#room)'},bench);
+el('rect',{x:0,y:0,width:1000,height:430,fill:'url(#lamp)'},bench);
+el('rect',{x:0,y:388,width:1000,height:42,fill:'url(#wood)'},bench);
+el('rect',{x:0,y:388,width:1000,height:42,fill:'url(#grain)'},bench);
+function lbl(x,y,t,parent){var e=el('text',{x:x,y:y,'font-family':'Inter','font-size':11,'font-weight':700,fill:'#9fb3cc','text-anchor':'middle','letter-spacing':'.08em'},parent||bench);e.textContent=t;return e}
+// reagent shelf (left)
+(function(){var g=el('g',{},bench);
+ g.innerHTML=
+ // NaOH bottle (unknown)
+ '<rect x="48" y="290" width="70" height="98" rx="10" fill="url(#amber)"/><rect x="66" y="268" width="34" height="24" rx="4" fill="#222"/><rect x="56" y="318" width="54" height="40" rx="3" fill="#f3eddc"/>'+
+ '<text x="83" y="336" font-family="Inter" font-size="12" font-weight="800" text-anchor="middle" fill="#3a2a10">NaOH</text><text id="bLab" x="83" y="351" font-family="JetBrains Mono" font-size="10" text-anchor="middle" fill="#6b4e00">S-?</text>'+
+ // volumetric flask of oxalic acid
+ '<path d="M180 388 q-42 0 -42 -40 q0 -32 32 -40 v-60 h20 v60 q32 8 32 40 q0 40 -42 40z" fill="url(#glass)" stroke="#d6f0ff" stroke-opacity=".6"/>'+
+ '<path d="M142 352 q2 32 38 34 q36 -2 38 -34z" fill="url(#liq)"/><path d="M170 262h20" stroke="#fff" stroke-width="1.2"/><rect x="168" y="240" width="24" height="10" rx="3" fill="#3b6fb8"/>'+
+ // indicator dropper bottle
+ '<rect x="238" y="330" width="40" height="58" rx="6" fill="url(#amber)"/><rect x="249" y="306" width="18" height="26" rx="3" fill="#1d1d1d"/><ellipse cx="258" cy="303" rx="9" ry="7" fill="#2b2b2b"/><rect x="243" y="346" width="30" height="20" rx="2" fill="#f3eddc"/><text x="258" y="360" font-family="Inter" font-size="9" font-weight="800" text-anchor="middle" fill="#7a1550">phth</text>'+
+ // wash bottle
+ '<path d="M312 388 v-70 q0 -10 10 -12 h20 q10 2 10 12 v70z" fill="#eef4f8" fill-opacity=".85" stroke="#b8c7d4"/><path d="M332 306 v-14 q0 -8 10 -12 l26 -10" stroke="#e8eef4" stroke-width="4" fill="none" stroke-linecap="round"/>';
+ lbl(83,262,'NaOH (UNKNOWN)',g);lbl(180,228,'M/10 OXALIC ACID',g);lbl(258,292,'PHENOLPHTHALEIN',g);lbl(334,262,'DISTILLED WATER',g)})();
+// right side: pipette on stand, funnel, beaker
+(function(){var g=el('g',{},bench);
+ g.innerHTML='<rect x="860" y="378" width="90" height="10" rx="2" fill="#2d333c"/><rect x="900" y="200" width="6" height="180" fill="url(#rod)"/>'+
+ '<path d="M930 210 v60 q-9 4 -9 22 q0 18 9 22 v66" stroke="#dbeeff" stroke-opacity=".85" stroke-width="5" fill="none"/><path d="M921 292 q0 -18 9 -22 q9 4 9 22 q0 18 -9 22 q-9 -4 -9 -22z" fill="url(#glass)" stroke="#dbeeff" stroke-opacity=".7"/><path d="M926 236h8" stroke="#fff" stroke-width="1.4"/>'+
+ '<path d="M800 388 v-44 h50 v44z" fill="url(#glass)" stroke="#d6f0ff" stroke-opacity=".6"/><path d="M802 388 v-18 h46 v18z" fill="url(#liq)"/>';
+ lbl(930,192,'10 mL PIPETTE',g);lbl(825,334,'BEAKER',g)})();
+// retort stand
+el('rect',{x:380,y:374,width:180,height:16,rx:3,fill:'#2d333c',stroke:'#59626e'},bench);
+el('rect',{x:404,y:24,width:9,height:352,fill:'url(#rod)'},bench);
+el('rect',{x:408,y:118,width:104,height:8,rx:2,fill:'url(#rod)'},bench);
+el('rect',{x:498,y:108,width:44,height:26,rx:4,fill:'#3a414b',stroke:'#6b7480'},bench);
+el('circle',{cx:432,cy:122,r:7,fill:'#5a636f',stroke:'#2d333c'},bench);
+// white tile under the burette
+el('rect',{x:440,y:380,width:160,height:9,rx:2,fill:'url(#tile)'},bench);
+// burette: 0 mL at y=36, 50 mL at y=236 (4 px per mL)
+var BY0=36,BPX=4,BX=520;
+function by(r){return BY0+r*BPX}
+var gBur=el('g',{},bench);
+el('rect',{x:BX-12,y:14,width:24,height:236,rx:4,fill:'url(#glass)',stroke:'#d6f0ff','stroke-opacity':.65},gBur);
+var burLiq=el('rect',{x:BX-10,y:by(0),width:20,height:0,fill:'url(#liq)'},gBur);
+var burMen=el('path',{d:'',stroke:'#eef7ff','stroke-width':1.3,fill:'none'},gBur);
+(function(){var p='';for(var r=0;r<=50;r++){p+='M'+(BX-10)+' '+by(r)+'h'+(r%10===0?13:r%5===0?9:5)}
+ el('path',{d:p,stroke:'#fff','stroke-opacity':.75,'stroke-width':.8},gBur);
+ for(r=0;r<=50;r+=10){var t=el('text',{x:BX+5,y:by(r)+3,'font-family':'Inter','font-size':8,fill:'#fff','fill-opacity':.85},gBur);t.textContent=r}})();
+el('path',{d:'M'+(BX-12)+' 250 h24 l-6 10 h-12z',fill:'url(#glass)',stroke:'#d6f0ff','stroke-opacity':.6},gBur);
+var burLow=el('path',{d:'M'+(BX-10)+' 250 h20 l-5 9 h-10z',fill:'url(#liq)'},gBur);
+// stopcock (rotating handle) with a large invisible hit circle
+var gCock=el('g',{class:'cock',tabindex:0,role:'button','aria-label':'Stopcock: tap to open drop by drop or close'},bench);
+el('circle',{cx:BX,cy:266,r:30,fill:'#fff','fill-opacity':0},gCock);
+el('circle',{class:'chl',cx:BX,cy:266,r:26,fill:'none',stroke:'#e8cc6a','stroke-dasharray':'4 4',opacity:0},gCock);
+el('rect',{x:BX-13,y:259,width:26,height:14,rx:4,fill:'#2f3640',stroke:'#59626e'},gCock);
+var handle=el('g',{},gCock);
+el('rect',{x:-3,y:-16,width:6,height:32,rx:3,fill:'#c9a227',stroke:'#7a5f10'},handle);
+el('circle',{cx:0,cy:0,r:5,fill:'#e8cc6a',stroke:'#7a5f10'},handle);
+// jet
+el('path',{d:'M'+(BX-4)+' 273 h8 l-2 24 h-4z',fill:'url(#glass)',stroke:'#d6f0ff','stroke-opacity':.6},bench);
+var jetLiq=el('path',{d:'M'+(BX-3)+' 273 h6 l-1.5 23 h-3z',fill:'#dceeff','fill-opacity':.55},bench);
+var bubble=el('ellipse',{cx:BX,cy:285,rx:2.2,ry:4,fill:'#05080e',stroke:'#cfe6ff','stroke-width':.8},bench);
+var funnel=el('path',{d:'M'+(BX-22)+' 0 h44 l-16 18 v10 h-12 v-10z',fill:'url(#glass)',stroke:'#d6f0ff','stroke-opacity':.8},bench);
+// stream + drops layer
+var gFlow=el('g',{},bench);
+var stream=el('line',{x1:BX,y1:297,x2:BX,y2:340,stroke:'#e2f1ff','stroke-width':2.2,'stroke-linecap':'round',opacity:0},gFlow);
+// tile puddle (NaOH that missed the flask)
+var puddle=el('ellipse',{cx:BX,cy:381,rx:0,ry:2,fill:'#cfe6ff','fill-opacity':.55},bench);
+// conical flask (draggable)
+var gFl=el('g',{class:'flask',tabindex:0,role:'slider','aria-label':'Conical flask: drag or use arrow keys to move it under the burette'},bench);
+var gFlR=el('g',{},gFl);
+el('rect',{x:-75,y:262,width:150,height:122,fill:'#fff','fill-opacity':0},gFlR);
+el('rect',{class:'fhl',x:-74,y:262,width:148,height:122,rx:10,fill:'none',stroke:'#e8cc6a','stroke-dasharray':'4 4',opacity:0},gFlR);
+var FL='M-18 278 h36 v6 h-4 v22 l52 64 q6 10 -6 10 h-108 q-12 0 -6 -10 l52 -64 v-22 h-4z';
+el('path',{d:FL,fill:'url(#glass)',stroke:'#e1f3ff','stroke-width':1.6,'stroke-opacity':.8},gFlR);
+var flLiq=el('path',{d:'',fill:'url(#liq)'},gFlR);
+var flPink=el('path',{d:'',fill:'#ff5aa8',opacity:0},gFlR);
+var flLocal=el('ellipse',{cx:0,cy:340,rx:16,ry:7,fill:'url(#localPink)',opacity:0},gFlR);
+el('path',{d:'M-30 330 q-12 14 -22 30',stroke:'#fff','stroke-opacity':.45,'stroke-width':2.4,fill:'none'},gFlR);
+el('path',{d:'M-12 292 h24',stroke:'#fff','stroke-opacity':.4,'stroke-width':1},gFlR);
+// pipette / dropper animation layer
+var gAnim=el('g',{},bench);
+function liqTopY(V){return 376-Math.min(46,V*1.15)} // liquid surface height in the flask for V mL
+function halfW(y){return y>=306?14+(y-306)*(52/64):14}
+function liqPath(V){var y=liqTopY(V),w=halfW(y);return 'M'+(-w)+' '+y+' H'+w+' L52 370 q6 10 -6 10 h-104 q-12 0 -6 -10 Z'}
+
+/* ───────── zoomed burette ───────── */
+var zoom=document.getElementById('zoom');
+defs(zoom,'<linearGradient id="ztube" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a8cbe6" stop-opacity=".45"/><stop offset=".25" stop-color="#ffffff" stop-opacity=".12"/><stop offset=".75" stop-color="#ffffff" stop-opacity=".05"/><stop offset="1" stop-color="#8fb9dc" stop-opacity=".5"/></linearGradient>'+
+ '<linearGradient id="zliq" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bcd9f2" stop-opacity=".55"/><stop offset=".5" stop-color="#e9f4ff" stop-opacity=".3"/><stop offset="1" stop-color="#a9cdee" stop-opacity=".55"/></linearGradient>'+
+ '<radialGradient id="zvig" cx=".5" cy=".5" r=".7"><stop offset=".72" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>');
+var zG=el('g',{},zoom);
+function drawZoom(){
+ zG.innerHTML='';var W=320,H=300,mid=150,PXL=56;
+ el('rect',{x:0,y:0,width:W,height:H,fill:'#e9e6dc'},zG);
+ if(S.level==null){el('rect',{x:110,y:0,width:100,height:H,fill:'url(#ztube)'},zG);var t0=el('text',{x:160,y:150,'text-anchor':'middle','font-family':'Inter','font-size':15,'font-weight':700,fill:'#555'},zG);t0.textContent='Burette empty';return}
+ var lv=S.level,sh=T.eye==='above'?-PAR:T.eye==='below'?PAR:0,c=lv+sh,L=105,R=215;
+ // reading card behind the tube: black band just below the meniscus
+ el('rect',{x:L+2,y:mid+4,width:R-L-4,height:22,fill:'#000','fill-opacity':.28},zG);
+ el('rect',{x:L,y:0,width:R-L,height:H,fill:'url(#ztube)'},zG);
+ // liquid below the meniscus
+ el('rect',{x:L+2,y:mid-9,width:R-L-4,height:H-mid+9,fill:'url(#zliq)'},zG);
+ // meniscus: concave, lowest point exactly at the true level
+ var men='M'+(L+2)+' '+(mid-9)+' Q'+((L+R)/2)+' '+(mid+9)+' '+(R-2)+' '+(mid-9);
+ if(T.eye==='above'){el('ellipse',{cx:(L+R)/2,cy:mid-4,rx:(R-L)/2-2,ry:7,fill:'#d7e9f8','fill-opacity':.6,stroke:'#6f8ca6','stroke-width':1},zG)}
+ if(T.eye==='below'){el('ellipse',{cx:(L+R)/2,cy:mid-3,rx:(R-L)/2-2,ry:6,fill:'#3d4f60','fill-opacity':.35},zG)}
+ el('path',{d:men,stroke:'#2b3a48','stroke-width':2.6,fill:'none'},zG);
+ el('path',{d:men+' L'+(R-2)+' '+(mid-5)+' Q'+((L+R)/2)+' '+(mid+13)+' '+(L+2)+' '+(mid-5)+'Z',fill:'#56708a','fill-opacity':.35},zG);
+ // graduations on the front of the tube (they shift against the meniscus when the eye is not level)
+ var p='',from=Math.floor((c-2.8)*10),to=Math.ceil((c+2.8)*10),g=el('g',{},zG);
+ for(var k=from;k<=to;k++){if(k<0||k>500)continue;var y=mid+(k/10-c)*PXL,len=k%10===0?70:k%5===0?42:26;p+='M'+L+' '+y.toFixed(2)+'h'+len;
+  if(k%10===0){var t=el('text',{x:L+76,y:y+7,'font-family':'Inter','font-weight':700,'font-size':21,fill:'#121212',stroke:'#f2efe6','stroke-width':3,'paint-order':'stroke'},g);t.textContent=k/10}}
+ el('path',{d:p,stroke:'#121212','stroke-width':1.6},g);
+ var u=el('text',{x:W-8,y:H-10,'text-anchor':'end','font-family':'Inter','font-size':12,fill:'#555'},zG);u.textContent='mL';
+ el('rect',{x:6,y:H-28,width:176,height:22,rx:11,fill:'#fff','fill-opacity':.85},zG);var e=el('text',{x:16,y:H-12,'font-family':'Inter','font-size':12,'font-weight':700,fill:T.eye==='level'?'#237d69':'#b3261e'},zG);
+ e.textContent=T.eye==='level'?'eye level with meniscus':(T.eye==='above'?'eye ABOVE meniscus':'eye BELOW meniscus');
+ if(T.helper){var hb=el('text',{x:W-8,y:mid+4,'text-anchor':'end','font-family':'JetBrains Mono','font-size':14,'font-weight':700,fill:'#b3261e'},zG);hb.textContent=lv.toFixed(2)}
+ el('rect',{x:0,y:0,width:W,height:H,fill:'url(#zvig)'},zG);
+}
+
+/* ───────── setup sequence ───────── */
+var SETUP=[
+ {q:'Rinse the burette',a:[['with distilled water, then with a little NaOH solution',1,'Good. Rinsing with the NaOH itself removes the film of water, so the solution in the burette is not diluted.'],['with distilled water only',0,'Not quite. The water left inside would dilute the NaOH: you would need more of it and the strength would come out too low.']]},
+ {q:'Fill the burette',a:[['fill with NaOH using a funnel, then remove the funnel',1,'Filled. The funnel is removed so that no drops trickle down from it during the titration.'],['fill with NaOH and leave the funnel on top',0,'Take the funnel off: liquid left in it can drip into the burette later and change the reading.']]},
+ {q:'Check the jet below the stopcock',a:[['open the stopcock fully for a moment to drive out the air bubble',1,'The jet is now full of liquid. Read the initial level in the zoomed view whenever you start a titration.'],['leave the small air bubble in the jet',0,'If the bubble escapes during the titration, the reading falls without any NaOH reaching the flask, so the titre comes out too high.']]},
+ {q:'Rinse the conical flask',a:[['with distilled water only',1,'Right. Water does not change the number of moles of acid you will pipette into it.'],['with the oxalic acid solution',0,'No: acid left on the walls adds extra moles of acid, so more NaOH would be needed. Rinse the flask with water only.']]},
+ {q:'Transfer the oxalic acid',a:[['rinse the pipette with oxalic acid, then pipette 10.0 mL into the flask',1,'10.0 mL of M/10 oxalic acid is in the flask. The last drop stays in the pipette tip: the pipette is calibrated that way.'],['rinse the pipette with water, then pipette 10.0 mL into the flask',0,'Water left in the pipette dilutes the acid you transfer. Rinse it with the oxalic acid solution itself.']]},
+ {q:'Add the indicator',a:[['add 2 drops of phenolphthalein',1,'The solution stays colourless: phenolphthalein is colourless in acid. Set-up complete. Go to Step 2.'],['add 2 drops of methyl orange',0,'For a weak acid and a strong base the equivalence point is near pH 8.3, inside phenolphthalein’s range (8.2–10). Methyl orange changes at pH 3.1–4.4, far too early.']]}
+];
+function renderSteps(){var ol=document.getElementById('steps');ol.innerHTML='';
+ SETUP.forEach(function(st,i){var li=document.createElement('li');li.className=i<S.setup?'done':i===S.setup?'now':'';
+  li.innerHTML='<b>'+st.q+'</b>';
+  if(i===S.setup){if(!T.order[i])T.order[i]=Math.random()<.5?[0,1]:[1,0];var box=document.createElement('div');box.className='opts';
+   T.order[i].forEach(function(j){var o=st.a[j],b=document.createElement('button');b.type='button';b.className='opt';b.textContent='…'+o[0];
+    b.onclick=function(){chooseSetup(i,j)};box.appendChild(b)});li.appendChild(box)}
+  ol.appendChild(li)});
+ if(S.setup>=SETUP.length){var li=document.createElement('li');li.className='now';li.innerHTML='<b>Ready.</b> ';var b=document.createElement('button');b.type='button';b.className='btn gold';b.textContent='Go to Step 2 →';b.onclick=function(){setMode('titrate')};li.appendChild(b);ol.appendChild(li)}}
+function chooseSetup(i,j){var o=SETUP[i].a[j];
+ if(!o[1]){say(o[2],'bad');return}
+ S.setup=i+1;
+ if(i===1){S.level=50;T.funnel=true;animate('fill',1300)}
+ if(i===2){animate('bubble',900)}
+ if(i===3){animate('rinse',700)}
+ if(i===4){T.flask=makeFlask(false);animate('pipette',1500)}
+ if(i===5){if(!T.flask)T.flask=makeFlask(false);animate('indicator',900)}
+ save();say(o[2],'ok');renderSteps();updateTask()}
+function animate(kind,ms){T.anim=kind;T.animT=ms/1000;T.animD=ms/1000}
+function finishAnim(kind){
+ if(kind==='fill'){T.funnel=false}
+ if(kind==='bubble'){T.bubble=false;S.level=rnd(0.3,1.8);save()}
+ if(kind==='indicator'&&T.flask){T.flask.ind=true}
+ if(kind==='refill'){S.level=rnd(0.2,1.6);save();drawZoom();say('Burette refilled. Read the new initial level in the zoomed view.','ok')}
+ if(kind==='newflask'&&T.flask){T.flask.ind=true}
+ T.anim=null;save();renderAll()}
+
+/* ───────── titration controls ───────── */
+var msgEl=document.getElementById('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+function setStop(s){
+ if(s!=='closed'){
+  if(T.active<0){say('Start a titration first: press “Start titration”.','bad');s='closed'}
+  else if(S.level>=50){say('The burette has run down to the 50 mL mark. Stop and refill.','bad');s='closed'}
+ }
+ T.stop=s;T.dropT=0;document.querySelectorAll('#cock .chip').forEach(function(c){c.classList.toggle('on',c.dataset.s===s)})}
+document.querySelectorAll('#cock .chip').forEach(function(c){c.onclick=function(){setStop(c.dataset.s)}});
+gCock.addEventListener('click',function(){setStop(T.stop==='closed'?'drop':'closed')});
+gCock.addEventListener('keydown',function(e){var ord=['closed','drop','slow','fast'],i=ord.indexOf(T.stop);
+ if(e.key==='Enter'||e.key===' '){setStop(T.stop==='closed'?'drop':'closed');e.preventDefault()}
+ if(e.key==='ArrowUp'||e.key==='ArrowRight'){setStop(ord[Math.min(3,i+1)]);e.preventDefault()}
+ if(e.key==='ArrowDown'||e.key==='ArrowLeft'){setStop(ord[Math.max(0,i-1)]);e.preventDefault()}});
+document.getElementById('oneDrop').onclick=function(){if(T.active<0){say('Start a titration first.','bad');return}if(S.level>=50){say('The burette is empty below the 50 mL mark. Refill.','bad');return}releaseDrop()};
+document.getElementById('swirlBtn').onclick=function(){if(T.flask)T.swirlT=1.4};
+document.getElementById('swirl').onchange=function(){T.swirl=this.checked};
+document.getElementById('placeBtn').onclick=function(){if(!T.flask){say('There is no flask yet.','bad');return}T.flask.x=Math.abs(T.flask.x-BX)<1?690:BX;renderAll();scrollTo(T.flask.x)};
+document.getElementById('helper').onchange=function(){T.helper=this.checked;renderAll()};
+document.querySelectorAll('#eye .chip').forEach(function(c){c.onclick=function(){T.eye=c.dataset.eye;document.querySelectorAll('#eye .chip').forEach(function(d){d.classList.toggle('on',d===c)});drawZoom()}});
+document.getElementById('newSample').onclick=function(){if(S.rows.length&&!confirmInline(this))return;newSample();renderAll()};
+function confirmInline(btn){if(btn.dataset.sure){delete btn.dataset.sure;btn.textContent='↺ New sample';return true}
+ btn.dataset.sure=1;btn.textContent='Tap again to clear readings';setTimeout(function(){delete btn.dataset.sure;btn.textContent='↺ New sample'},3500);return false}
+document.getElementById('refillBtn').onclick=function(){
+ if(T.active>=0){say('Finish this titration first, then refill.','bad');return}
+ if(S.setup<3){say('Complete the set-up in Step 1 first.','bad');return}
+ animate('refill',1100);T.funnel=true;setTimeout(function(){T.funnel=false},1100);say('Refilling the burette…')};
+document.getElementById('startBtn').onclick=function(){
+ if(S.setup<SETUP.length){setMode('setup');say('Complete the set-up first.','bad');return}
+ if(T.active>=0){say('A titration is already running. Stop it at the endpoint first.','bad');return}
+ if(T.anim){return}
+ if(S.level>20){say('Only '+(50-S.level).toFixed(0)+' mL is left above the 50 mL mark: not enough for a full titration. Refill the burette first.','bad');return}
+ if(S.rows.length>=8){say('Eight titrations is plenty. Delete one to add another.','bad');return}
+ if(!T.flask||T.flask.used){T.flask=makeFlask(false);animate('newflask',1200);say('Fresh flask: 10.0 mL oxalic acid pipetted in, 2 drops of phenolphthalein added.','ok')}
+ T.flask.used=true;T.flask.x=690;
+ var rough=S.rows.length===0;
+ S.rows.push({t:{i:S.level,eyeI:T.eye,f:null,eyeF:null,end:null,lost:0,rough:rough,va:T.flask.va},i:'',f:''});T.active=S.rows.length-1;
+ setStop('closed');renderTable();updateTask();
+ var ins=document.querySelectorAll('#tb tr:last-child input');if(ins[0])ins[0].focus({preventScroll:true});
+ scrollTo(BX)};
+document.getElementById('endBtn').onclick=function(){
+ if(T.active<0){say('No titration is running.','bad');return}
+ setStop('closed');var fl=T.flask,r=S.rows[T.active],tot=fl.vb+fl.un,eq=veq(fl),ex=tot-eq,end;
+ if(ex<0)end=(fl.un>0.004?'local':'none');else if(ex<=LIGHT)end='light';else end='dark';
+ r.t.f=S.level;r.t.eyeF=T.eye;r.t.end=end;r.t.ex=Math.round(ex*1000)/1000;T.active=-1;save();renderTable();updateTask();
+ var m={none:'You stopped while the flask was still colourless.',local:'Stopped — but the pink was only where the drop fell; the flask has not reached the endpoint.',light:'Light pink that stays: a good endpoint.',dark:'The flask is dark pink: you went past the endpoint.'}[end];
+ say(m+' Now read the final level and type it into the table.',end==='light'?'ok':'bad');
+ var ins=document.querySelectorAll('#tb tr:nth-child('+S.rows.length+') input');if(ins[1])ins[1].focus({preventScroll:true})};
+function releaseDrop(){var v=0.05*rnd(0.9,1.1);deliver(v);T.drops.push({y:297,vy:0})}
+function deliver(v){v=Math.min(v,50-S.level);if(v<=0)return;S.level+=v;
+ var fl=T.flask,r=S.rows[T.active];
+ if(fl&&Math.abs(fl.x-BX)<1){fl.un+=v}else if(r){r.t.lost+=v}
+ if(S.level>=50){S.level=50;setStop('closed');say('The burette has run down to the 50 mL mark. Stop and refill.','bad')}}
+
+/* ───────── flask dragging ───────── */
+var drag=null;
+function svgX(evt){var pt=bench.createSVGPoint();pt.x=evt.clientX;pt.y=evt.clientY;return pt.matrixTransform(bench.getScreenCTM().inverse()).x}
+gFl.addEventListener('pointerdown',function(e){if(!T.flask)return;drag={dx:svgX(e)-T.flask.x};gFl.classList.add('drag');gFl.setPointerCapture(e.pointerId);e.preventDefault()});
+gFl.addEventListener('pointermove',function(e){if(!drag)return;T.flask.x=clamp(svgX(e)-drag.dx,450,760);if(Math.abs(T.flask.x-BX)<22)T.flask.x=BX});
+function endDrag(){if(!drag)return;drag=null;gFl.classList.remove('drag');if(T.flask&&Math.abs(T.flask.x-BX)<40)T.flask.x=BX;renderAll()}
+gFl.addEventListener('pointerup',endDrag);gFl.addEventListener('pointercancel',endDrag);
+gFl.addEventListener('keydown',function(e){if(!T.flask)return;var d=e.shiftKey?40:10;
+ if(e.key==='ArrowLeft'){T.flask.x=clamp(T.flask.x-d,450,760);e.preventDefault()}
+ if(e.key==='ArrowRight'){T.flask.x=clamp(T.flask.x+d,450,760);e.preventDefault()}
+ if(e.key==='Enter'||e.key===' '){T.flask.x=BX;e.preventDefault()}
+ if(Math.abs(T.flask.x-BX)<12)T.flask.x=BX;renderAll()});
+function scrollTo(x){var bs=document.getElementById('benchScroll');if(bs.scrollWidth>bs.clientWidth+4){var px=x/1000*bs.scrollWidth;bs.scrollLeft=px-bs.clientWidth/2}}
+
+/* ───────── animation loop ───────── */
+var last=performance.now(),zLast=null;
+function tick(now){var dt=Math.min(0.1,(now-last)/1000);last=now;
+ // flow
+ if(T.active>=0&&T.stop!=='closed'){
+  if(T.stop==='drop'){T.dropT-=dt;if(T.dropT<=0){releaseDrop();T.dropT=0.55}}
+  else deliver(RATE[T.stop]*dt)}
+ // mixing: unmixed NaOH spreads through the flask; near the endpoint the local pink lasts longer
+ var fl=T.flask;
+ if(fl){var rem=Math.max(0,veq(fl)-fl.vb),swirling=T.swirl||T.swirlT>0,tau=(swirling?0.35:7)*(1+4*Math.exp(-rem/0.4));
+  var m=fl.un*(1-Math.exp(-dt/tau));fl.un-=m;fl.vb+=m;if(fl.un<1e-5){fl.vb+=fl.un;fl.un=0}}
+ if(T.swirlT>0)T.swirlT-=dt;
+ if(T.anim){T.animT-=dt;if(T.anim==='fill'||T.anim==='refill'){var target=T.anim==='fill'?-2:0;S.level=Math.max(target,(S.level==null?50:S.level)-dt*60)}if(T.animT<=0)finishAnim(T.anim)}
+ // drops
+ for(var i=T.drops.length-1;i>=0;i--){var d=T.drops[i];d.vy+=900*dt;d.y+=d.vy*dt;var floor=(fl&&Math.abs(fl.x-BX)<1)?liqTopY(fl.va+fl.vb+fl.un):380;if(d.y>=floor)T.drops.splice(i,1)}
+ draw(now/1000);
+ if(S.level!==zLast){zLast=S.level;drawZoom();updateReadout()}
+ requestAnimationFrame(tick)}
+function flaskColour(fl){if(!fl||!fl.ind)return {a:0,l:0,state:'none'};var ex=fl.vb-veq(fl),a=0;
+ if(ex>0)a=ex<=LIGHT?0.22+ex*1.6:Math.min(0.92,0.45+(ex-LIGHT)*0.9);
+ var l=Math.min(0.95,fl.un/0.05*0.7);return {a:a,l:l,ex:ex}}
+function draw(t){
+ // burette
+ if(S.level==null){burLiq.setAttribute('height',0);burMen.setAttribute('d','');burLow.setAttribute('opacity',0);jetLiq.setAttribute('opacity',0)}
+ else{var top=by(clamp(S.level,-3,50));burLiq.setAttribute('y',top);burLiq.setAttribute('height',Math.max(0,250-top));
+  burMen.setAttribute('d','M'+(BX-10)+' '+(top-1.5)+' q10 4 20 0');burLow.setAttribute('opacity',1);jetLiq.setAttribute('opacity',T.bubble?.35:1)}
+ bubble.setAttribute('opacity',T.bubble&&S.level!=null&&S.setup>=2?1:0);
+ funnel.setAttribute('opacity',T.funnel?1:0);
+ var ang={closed:90,drop:62,slow:35,fast:0}[T.stop];if(T.anim==='bubble')ang=0;
+ handle.setAttribute('transform','translate('+BX+',266) rotate('+ang+')');
+ // stream
+ var fl=T.flask,under=fl&&Math.abs(fl.x-BX)<1,floor=under?liqTopY(fl.va+fl.vb+fl.un):380;
+ var streaming=(T.active>=0&&(T.stop==='slow'||T.stop==='fast'))||T.anim==='bubble';
+ stream.setAttribute('opacity',streaming?.85:0);stream.setAttribute('y2',T.anim==='bubble'?380:floor);stream.setAttribute('stroke-width',T.stop==='fast'||T.anim==='bubble'?3:1.8);
+ // drops
+ while(gFlow.childNodes.length>1)gFlow.removeChild(gFlow.lastChild);
+ T.drops.forEach(function(d){el('ellipse',{cx:BX,cy:d.y,rx:2.6,ry:3.4,fill:'#e6f3ff',opacity:.95},gFlow)});
+ var lost=T.active>=0?S.rows[T.active].t.lost:0;puddle.setAttribute('rx',Math.min(30,lost*14));
+ // flask
+ gFl.style.display=fl?'':'none';
+ if(fl){var V=fl.va+fl.vb+fl.un,sw=(T.swirl&&T.active>=0&&T.stop!=='closed')||T.swirlT>0?Math.sin(t*7)*3:0;
+  gFl.setAttribute('transform','translate('+fl.x.toFixed(1)+',0)');gFlR.setAttribute('transform','rotate('+sw.toFixed(2)+' 0 378)');
+  var lp=fl.va>0&&(fl.used||S.setup>=5)?liqPath(V):'';flLiq.setAttribute('d',lp);flPink.setAttribute('d',lp);
+  var c=flaskColour(fl);flPink.setAttribute('opacity',c.a.toFixed(3));flPink.setAttribute('fill',c.a>0.5?'#d81b7a':'#ff5aa8');
+  var y=liqTopY(V);flLocal.setAttribute('cy',y+8);flLocal.setAttribute('opacity',c.l.toFixed(3));
+  updateFstat(c)}
+ // setup animations
+ gAnim.innerHTML='';
+ if(T.anim==='pipette'||T.anim==='newflask'){var fx=fl?fl.x:690,k=1-T.animT/T.animD;
+  gAnim.innerHTML='<g transform="translate('+fx+','+(150+Math.sin(k*Math.PI)*6)+')"><path d="M0 0 v60 q-9 4 -9 22 q0 18 9 22 v40" stroke="#dbeeff" stroke-opacity=".9" stroke-width="5" fill="none"/><path d="M-9 82 q0 -18 9 -22 q9 4 9 22 q0 18 -9 22 q-9 -4 -9 -22z" fill="#dceeff" fill-opacity="'+(0.6*(1-k))+'" stroke="#dbeeff"/><circle cx="0" cy="'+(148+k*40)+'" r="2.4" fill="#e6f3ff"/></g>'}
+ if(T.anim==='indicator'||(T.anim==='newflask'&&T.animT<0.5)){var fx2=fl?fl.x:690;gAnim.innerHTML+='<g transform="translate('+fx2+',236)"><rect x="-4" y="0" width="8" height="34" rx="3" fill="#e8f2fb" fill-opacity=".8"/><ellipse cx="0" cy="-4" rx="7" ry="8" fill="#2b2b2b"/><circle cx="0" cy="'+(40+(1-T.animT)*30)+'" r="2.4" fill="#fff"/></g>'}
+ if(T.anim==='rinse'){gAnim.innerHTML='<text x="690" y="250" text-anchor="middle" font-family="Inter" font-size="13" fill="#9fd0f5">rinsing with distilled water…</text>'}
+}
+function updateFstat(c){var fl=T.flask,s,dot='#e9f1f8';
+ if(!fl.ind)s='Oxalic acid in the flask — add the indicator.';
+ else if(c.a>0.5){s='Dark pink: excess NaOH — the endpoint has been overshot.';dot='#d81b7a'}
+ else if(c.a>0){s='Light pink that stays — endpoint.';dot='#ff9cc8'}
+ else if(c.l>0.25){s='Pink where the drop falls… it fades as you swirl.';dot='#ffd3e7'}
+ else s=T.active>=0?'Colourless.':'Colourless — 10.0 mL oxalic acid with phenolphthalein.';
+ if(T.active>=0&&Math.abs(fl.x-BX)>=1)s='The flask is not under the burette! Drag it there or press “Place flask”.';
+ if(T.helper&&fl.ind){s+=' [helper: NaOH added '+(fl.vb+fl.un).toFixed(2)+' mL, pH '+pH(fl.va,fl.vb+fl.un,S.cb).toFixed(1)+']'}
+ if(s!==updateFstat.last){document.getElementById('fstat').textContent=s;document.getElementById('fdot').style.background=dot;updateFstat.last=s}}
+function updateReadout(){document.getElementById('readout').textContent=T.helper&&S.level!=null?S.level.toFixed(2)+' mL':''}
+
+/* ───────── modes / task line ───────── */
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setMode(t.dataset.mode)}});
+function setMode(m){T.mode=m;document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.mode===m)});
+ document.getElementById('setupBox').hidden=m!=='setup';document.getElementById('tiBox').hidden=m!=='titrate';
+ document.getElementById('ctlTitle').textContent=m==='setup'?'Set up the apparatus':'Titrate';
+ say('');renderSteps();updateTask();renderAll();scrollTo(m==='setup'&&S.setup<1?300:BX)}
+function updateTask(){var t=document.getElementById('task'),n=S.rows.length,h;
+ if(T.mode==='setup'){h=S.setup<SETUP.length?'<b>Step 1.</b> Prepare the apparatus in the right way. Choose the correct action for each step (wrong choices are explained). ('+S.setup+' of '+SETUP.length+' done)':'<b>Step 1 done.</b> The burette is full and the flask holds 10.0 mL oxalic acid with phenolphthalein. Go to Step 2.'}
+ else if(S.setup<SETUP.length)h='<b>Step 2.</b> Finish the set-up in Step 1 first.';
+ else if(T.active>=0){var r=S.rows[T.active];h='<b>Titration '+(T.active+1)+(r.t.rough?' (rough)':'')+'.</b> First type the <b>initial reading</b> from the zoomed view. Put the flask under the burette, open the stopcock and swirl. '+(r.t.rough?'For the rough titration you may run in quickly and watch for the colour.':'Run in quickly to about 1 mL short of your rough volume, then add <b>one drop at a time</b>.')+' Stop at the first <b>permanent light pink</b>.'}
+ else if(n===0)h='<b>Step 2.</b> Press <b>Start titration</b>. The first one is a rough titration to find the approximate volume.';
+ else{var c=concordant();h=c?'<b>Concordant readings found</b> ('+c.vals.map(function(v){return v.toFixed(2)}).join(', ')+' mL). Check your table, then do the calculation in the Result card.':'<b>Step 2.</b> Type the final reading of titration '+n+' into the table, then '+(S.level>20?'<b>refill the burette</b> and ':'')+'start the next titration. Repeat until two fine titrations agree within 0.1 mL.'}
+ t.innerHTML=h}
+
+/* ───────── table ───────── */
+var tb=document.getElementById('tb');
+function vol(r){var i=parseFloat(r.i),f=parseFloat(r.f);if(isNaN(i)||isNaN(f))return null;var v=f-i;return v>0?v:null}
+function renderTable(){
+ document.getElementById('nObs').textContent=S.rows.length+(S.rows.length===1?' titration':' titrations');
+ if(!S.rows.length){tb.innerHTML='<tr><td colspan="6" class="note" style="padding:16px">No titrations yet. Finish Step 1, then press “Start titration”.</td></tr>';afterTable();return}
+ tb.innerHTML='';S.rows.forEach(function(r,i){var tr=document.createElement('tr');if(i===T.active)tr.className='live';
+  tr.innerHTML='<td>'+(i+1)+(r.t.rough?' <span class="tag">rough</span>':'')+'</td><td class="n">10.0</td><td><input data-k="i" value="'+r.i+'" inputmode="decimal" aria-label="initial burette reading, titration '+(i+1)+'"></td><td><input data-k="f" value="'+r.f+'" inputmode="decimal" aria-label="final burette reading, titration '+(i+1)+'"'+(r.t.f==null?' placeholder="running…"':'')+'></td><td class="n"></td><td>'+(i===T.active?'':'<button class="del" type="button" title="Delete" aria-label="Delete titration '+(i+1)+'">✕</button>')+'</td>';
+  tr.querySelectorAll('input').forEach(function(inp){inp.oninput=function(){r[inp.dataset.k]=inp.value.trim();inp.classList.remove('bad','good');fill(tr,r);save();afterTable()}});
+  var del=tr.querySelector('.del');if(del)del.onclick=function(){S.rows.splice(i,1);if(S.rows.length&&!S.rows.some(function(x){return x.t.rough}))S.rows[0].t.rough=true;save();renderTable();updateTask()};
+  fill(tr,r);tb.appendChild(tr)});
+ afterTable()}
+function fill(tr,r){var v=vol(r);tr.querySelectorAll('td.n')[1].textContent=v==null?'–':v.toFixed(2)}
+function afterTable(){var c=concordant();document.getElementById('concTxt').textContent=c?c.mean.toFixed(2)+' mL':'—';drawGraphs();renderResult();updateTask()}
+function shift(e){return e==='above'?-PAR:e==='below'?PAR:0}
+function readOk(val,truth){return !isNaN(val)&&Math.abs(val-truth)<=TOL}
+function rowGood(r){return !r.t.rough&&r.t.f!=null&&readOk(parseFloat(r.i),r.t.i)&&readOk(parseFloat(r.f),r.t.f)&&r.t.end==='light'&&r.t.lost<=0.02&&vol(r)!=null}
+function concordant(){var g=S.rows.filter(rowGood).map(vol),best=null;
+ for(var a=0;a<g.length;a++){var grp=g.filter(function(v){return v>=g[a]-1e-9&&v<=g[a]+0.1+1e-9});if(grp.length>=2&&(!best||grp.length>=best.length))best=grp}
+ if(!best)return null;return {vals:best,mean:best.reduce(function(s,v){return s+v},0)/best.length}}
+document.getElementById('check').onclick=function(){
+ var fb=[],rows=tb.querySelectorAll('tr');
+ if(!S.rows.length){showFb(['Do some titrations first.']);return}
+ S.rows.forEach(function(r,i){var tr=rows[i],msgs=[];
+  if(r.t.f==null){fb.push('Titration '+(i+1)+': still running — stop at the endpoint first.');return}
+  [['i','initial','eyeI'],['f','final','eyeF']].forEach(function(k){var inp=tr.querySelector('input[data-k="'+k[0]+'"]'),v=parseFloat(r[k[0]]),ok=readOk(v,r.t[k[0]]);
+   inp.classList.toggle('bad',!ok);inp.classList.toggle('good',ok);
+   if(!ok){if(isNaN(v))msgs.push('type the '+k[1]+' reading');
+    else if(r.t[k[2]]!=='level'&&Math.abs(v-(r.t[k[0]]+shift(r.t[k[2]])))<=TOL)msgs.push('the '+k[1]+' reading has a parallax error — your eye was '+r.t[k[2]]+' the meniscus');
+    else if(Math.abs(v-r.t[k[0]])>=0.9&&Math.abs(v-r.t[k[0]])<=1.1)msgs.push('re-read the '+k[1]+' reading: you are 1 mL out — count the whole-mL marks from the nearest number');
+    else msgs.push('re-read the '+k[1]+' reading at the bottom of the meniscus (to 0.05 mL)')}});
+  if(r.t.lost>0.02)msgs.push(r.t.lost.toFixed(2)+' mL of NaOH fell on the tile because the flask was not under the burette — repeat this titration');
+  if(r.t.end==='none')msgs.push('the endpoint was not reached (the flask was still colourless)');
+  if(r.t.end==='local')msgs.push('the pink was only where the drop fell — after swirling it disappears, so the endpoint was not reached');
+  if(r.t.end==='dark'&&!r.t.rough)msgs.push('the endpoint was overshot (dark pink, about '+Math.max(1,Math.round(r.t.ex/0.05))+' drops too many) — repeat, adding the last drops one at a time');
+  if(r.t.end==='dark'&&r.t.rough&&!msgs.length)msgs.push('rough titration overshot, as expected — it only tells you roughly where the endpoint is (it is not used in the calculation)');
+  tr.classList.toggle('flag',msgs.length>0&&!(r.t.rough&&r.t.end!=='none'&&r.t.end!=='local'&&msgs.length===1&&msgs[0].indexOf('rough')===0));
+  if(msgs.length)fb.push('Titration '+(i+1)+': '+msgs.join('; ')+'.')});
+ var c=concordant(),good=S.rows.filter(rowGood).length;
+ if(!c)fb.push(good<2?'You need at least two correct fine titrations (now '+good+').':'Your correct fine titrations do not agree within 0.1 mL yet. Do another one carefully, adding the last drops one at a time.');
+ else fb.push('✓ Concordant readings: '+c.vals.map(function(v){return v.toFixed(2)}).join(' mL, ')+' mL. Mean V₂ = '+c.mean.toFixed(2)+' mL.');
+ showFb(fb)};
+function showFb(a){document.getElementById('fb').innerHTML=a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+
+/* ───────── graphs ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=document.getElementById(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(280,r.width||560),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h}}
+function axes(g,x0,xmax,y0,ymax,xl,yl,xstep,ystep,fx,fy){
+ var x=g.x,L=52,B=44,R=14,T_=16,W=g.w-L-R,H=g.h-T_-B,txt=css('--text')||'#222',mut=css('--muted')||'#666',bd=css('--border')||'#ddd';
+ function P(a,b){return [L+(a-x0)/(xmax-x0)*W,T_+H-(b-y0)/(ymax-y0)*H]}
+ x.clearRect(0,0,g.w,g.h);x.font='12px Inter, sans-serif';x.lineWidth=1;
+ if(xstep)for(var v=x0;v<=xmax+1e-9;v+=xstep){var px=P(v,y0)[0];x.strokeStyle=bd;x.beginPath();x.moveTo(px,T_);x.lineTo(px,T_+H);x.stroke();x.fillStyle=mut;x.textAlign='center';x.fillText(fx(v),px,T_+H+15)}
+ for(v=y0;v<=ymax+1e-9;v+=ystep){var py=P(x0,v)[1];x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(fy(v),L-6,py+4)}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T_);x.lineTo(L,T_+H);x.lineTo(L+W,T_+H);x.stroke();
+ x.fillStyle=txt;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(14,T_+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();
+ P.L=L;P.W=W;P.T=T_;P.H=H;return P}
+function nice(m){var steps=[0.05,0.1,0.2,0.25,0.5,1,2,2.5,5,10],i;for(i=0;i<steps.length;i++){if(m/steps[i]<=6)return steps[i]}return m/5}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);g.x.fillStyle=css('--muted')||'#777';g.x.font='14px Inter, sans-serif';g.x.textAlign='center';g.x.fillText(t,g.w/2,g.h/2)}
+function drawGraphs(){
+ var g1=canvas('g1'),g2=canvas('g2'),gold=css('--gold')||'#c9a227',red='#c0392b',green=css('--green')||'#237d69',navy='#3b6fb8';
+ // titre bars
+ var rows=S.rows.map(function(r,i){return {i:i,v:vol(r),r:r}}).filter(function(o){return o.v!=null&&o.r.t.f!=null});
+ var c=concordant();
+ if(!rows.length)empty(g1,'Your titres appear here');
+ else{var vs=rows.map(function(o){return o.v}),lo=Math.min.apply(null,vs),hi=Math.max.apply(null,vs),span=Math.max(1,hi-lo),y0=Math.max(0,Math.floor((lo-span*.6)*2)/2),y1=Math.ceil((hi+span*.4)*2)/2;
+  var st=nice(y1-y0),P=axes(g1,0,rows.length,y0,y1,'Titration number','V₂ (mL)',0,st,null,function(v){return v.toFixed(st<0.5?2:1)}),x=g1.x,bw=P.W/rows.length;
+  if(c){var a=P(0,c.mean+0.05),b=P(0,c.mean-0.05);x.fillStyle='rgba(35,125,105,.18)';x.fillRect(P.L,a[1],P.W,b[1]-a[1]);x.strokeStyle=green;x.setLineDash([5,4]);x.beginPath();var m=P(0,c.mean);x.moveTo(P.L,m[1]);x.lineTo(P.L+P.W,m[1]);x.stroke();x.setLineDash([]);x.fillStyle=green;x.font='700 12px Inter, sans-serif';x.textAlign='left';x.fillText('concordant mean = '+c.mean.toFixed(2)+' mL',P.L+6,P.T+12)}
+  rows.forEach(function(o,k){var top=P(0,o.v)[1],base=P(0,y0)[1],x0=P.L+k*bw+bw*.22,w=bw*.56,good=rowGood(o.r);
+   x.fillStyle=o.r.t.rough?'#9aa3ae':gold;x.fillRect(x0,top,w,base-top);
+   if(!o.r.t.rough&&!good){x.strokeStyle=red;x.lineWidth=2.5;x.strokeRect(x0,top,w,base-top)}
+   x.fillStyle=css('--text')||'#222';x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(o.v.toFixed(2),x0+w/2,top-5);x.fillStyle=css('--muted')||'#666';x.fillText(String(o.i+1)+(o.r.t.rough?' R':''),x0+w/2,base+15)})}
+ // pH curve
+ if(!c){empty(g2,'Needs concordant readings');return}
+ var cb=2*M1*V1/c.mean,vmax=Math.ceil(c.mean*1.5/5)*5,P2=axes(g2,0,vmax,0,14,'Volume of NaOH added (mL)','pH',nice(vmax),2,function(v){return String(Math.round(v))},function(v){return String(v)}),y=g2.x;
+ var pa=P2(0,10),pb=P2(0,8.2);y.fillStyle='rgba(255,90,168,.16)';y.fillRect(P2.L,pa[1],P2.W,pb[1]-pa[1]);
+ y.fillStyle='#d63f8c';y.font='600 12px Inter, sans-serif';y.textAlign='left';y.fillText('phenolphthalein 8.2–10',P2.L+6,pa[1]+14);
+ y.strokeStyle=navy;y.lineWidth=2.2;y.beginPath();for(var k=0;k<=400;k++){var v=vmax*k/400,q=P2(v,pH(V1,v,cb));if(k)y.lineTo(q[0],q[1]);else y.moveTo(q[0],q[1])}y.stroke();
+ var e=P2(c.mean,pH(V1,c.mean,cb)),ex=P2(c.mean,0);y.strokeStyle=red;y.setLineDash([4,4]);y.lineWidth=1.3;y.beginPath();y.moveTo(e[0],e[1]);y.lineTo(ex[0],ex[1]);y.stroke();y.setLineDash([]);
+ y.fillStyle=red;y.beginPath();y.arc(e[0],e[1],5,0,7);y.fill();y.font='700 12px Inter, sans-serif';y.textAlign='left';y.fillText('endpoint',e[0]+9,e[1]+26);y.fillText(c.mean.toFixed(2)+' mL',e[0]+9,e[1]+41);y.fillText('pH ≈ '+pH(V1,c.mean,cb).toFixed(1),e[0]+9,e[1]+56);
+ var h1=P2(c.mean/2,pH(V1,c.mean/2,cb));y.fillStyle=css('--muted')||'#666';y.beginPath();y.arc(h1[0],h1[1],3.5,0,7);y.fill();y.textAlign='left';y.font='600 12px Inter, sans-serif';y.fillText('½V₂: HC₂O₄⁻ stage',h1[0]+6,h1[1]+16)}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(drawGraphs,150)});
+
+/* ───────── result + calculation ───────── */
+function renderResult(){var c=concordant();
+ document.getElementById('rV').textContent=c?c.mean.toFixed(2)+' mL':'—';
+ var m=c?2*M1*V1/c.mean:null;
+ document.getElementById('rM').textContent=m?m.toFixed(4)+' M':'—';
+ document.getElementById('rS').textContent=m?(m*40).toFixed(2)+' g L⁻¹':'—';
+ document.getElementById('trueBox').hidden=!S.revealed;document.getElementById('rTrue').textContent=S.cb.toFixed(4)+' M ('+(S.cb*40).toFixed(2)+' g L⁻¹)';
+ var e=document.getElementById('err');if(S.revealed&&m)e.textContent='Your molarity differs from the actual value by '+(Math.abs(m-S.cb)/S.cb*100).toFixed(2)+'%.';else if(!S.revealed)e.textContent=''}
+function fillCalc(){['v','m','s'].forEach(function(k){var i=document.getElementById('c'+k.toUpperCase());i.value=S.calc[k]||'';i.classList.remove('bad','good')})}
+['v','m','s'].forEach(function(k){document.getElementById('c'+k.toUpperCase()).oninput=function(){S.calc[k]=this.value.trim();this.classList.remove('bad','good');save()}});
+document.getElementById('checkCalc').onclick=function(){var c=concordant(),e=document.getElementById('err'),out=[];
+ if(!c){e.textContent='First get two concordant fine titrations (press “Check my table”).';return}
+ var V=parseFloat(S.calc.v),M=parseFloat(S.calc.m),St=parseFloat(S.calc.s);
+ var okV=!isNaN(V)&&Math.abs(V-c.mean)<=0.03,useV=isNaN(V)?c.mean:V,mExp=2*M1*V1/useV,okM=!isNaN(M)&&Math.abs(M-mExp)/mExp<=0.006,okS=!isNaN(St)&&!isNaN(M)&&Math.abs(St-M*40)/(M*40)<=0.006;
+ [['V',okV],['M',okM],['S',okS]].forEach(function(p){var i=document.getElementById('c'+p[0]);i.classList.toggle('good',p[1]);i.classList.toggle('bad',!p[1])});
+ if(!okV)out.push('V₂ should be the mean of your concordant titres ('+c.vals.map(function(v){return v.toFixed(2)}).join(' and ')+' mL).');
+ if(!okM)out.push(isNaN(M)?'Type M₂.':'Check M₂: use M₂ = 2 × 0.1 × 10.0 / V₂ — the factor 2 comes from the 1 : 2 ratio in the equation.');
+ if(!okS)out.push(isNaN(St)?'Type the strength.':'Strength = M₂ × 40 g mol⁻¹ (molar mass of NaOH).');
+ e.textContent=out.length?out.join(' '):'✓ Calculation correct: M₂ = '+M.toFixed(4)+' M, strength = '+St.toFixed(2)+' g L⁻¹.'};
+document.getElementById('reveal').onclick=function(){
+ if(!concordant()){document.getElementById('err').textContent='Get two correct, concordant fine titrations first (press “Check my table”).';return}
+ S.revealed=true;renderResult()};
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['What is a standard solution?','A solution whose concentration is known accurately. Here the M/10 oxalic acid is the standard solution; it is made by dissolving an exact mass (12.6 g per litre) of oxalic acid crystals, (COOH)₂·2H₂O, molar mass 126 g mol⁻¹.'],
+ ['Why is oxalic acid used as a primary standard but sodium hydroxide is not?','Oxalic acid crystals are pure, stable and not hygroscopic, so they can be weighed accurately. NaOH absorbs moisture and carbon dioxide from the air, so its exact mass cannot be weighed.'],
+ ['What is the difference between the endpoint and the equivalence point?','The equivalence point is when the acid and base have reacted exactly in the ratio of the equation. The endpoint is when the indicator changes colour. A good indicator makes the two almost coincide.'],
+ ['Why is phenolphthalein used here and not methyl orange?','Oxalic acid is a weak acid and NaOH a strong base, so the equivalence point is slightly alkaline (pH ≈ 8.3). Phenolphthalein changes colour between pH 8.2 and 10; methyl orange changes at pH 3.1–4.4, which is reached much too early.'],
+ ['Why is the burette rinsed with the solution it is filled with, but the conical flask only with water?','Water in the burette would dilute the NaOH and change its molarity. In the flask, water does not matter because the number of moles of acid pipetted in stays the same; rinsing it with acid would add extra moles.'],
+ ['Which meniscus do you read for a colourless solution? For KMnO₄?','The lower meniscus for colourless solutions such as NaOH. For dark coloured solutions like KMnO₄, the upper meniscus, because the lower one cannot be seen.'],
+ ['What are concordant readings?','Titre values that agree with each other within 0.1 mL. Their mean is used in the calculation; the rough titration is not.'],
+ ['What is the basicity of oxalic acid? How does it appear in the calculation?','Oxalic acid is dibasic (two replaceable H⁺). One mole reacts with two moles of NaOH, so M₂ = 2M₁V₁/V₂.'],
+ ['10.0 mL of M/10 oxalic acid needs 12.5 mL of NaOH. Find the molarity and strength of NaOH.','M₂ = 2 × 0.1 × 10.0 / 12.5 = 0.16 M. Strength = 0.16 × 40 = 6.4 g L⁻¹.'],
+ ['Why should the last drop in the pipette not be blown out?','The pipette is calibrated to deliver its stated volume with that small drop left in the tip. Blowing it out delivers more than 10.0 mL.'],
+ ['Why is a white tile placed under the flask?','The faint pink at the endpoint is easier to see against white, so the first permanent pink is not missed.'],
+ ['Why does the pink colour at the endpoint fade after some time?','Carbon dioxide from the air dissolves in the solution and forms carbonic acid, which lowers the pH below about 8.2, where phenolphthalein is colourless again.']];
+document.getElementById('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){var c=concordant();
+ var rows=S.rows.map(function(r,i){var v=vol(r);return '<tr><td>'+(i+1)+(r.t.rough?' (rough)':'')+'</td><td>10.0</td><td>'+(r.i||'')+'</td><td>'+(r.f||'')+'</td><td>'+(v==null?'':v.toFixed(2))+'</td></tr>'}).join('');
+ var img='';try{img='<img src="'+document.getElementById('g1').toDataURL()+'">'+(c?'<img src="'+document.getElementById('g2').toDataURL()+'">':'')}catch(e){}
+ document.getElementById('record').innerHTML='<h1>Experiment: Strength of NaOH solution using standard oxalic acid</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Date: ___________ &nbsp; Sample: S-'+S.no+'</p>'+
+  '<h2>Aim</h2><p>To determine the molarity and strength of the given sodium hydroxide solution by titrating it against standard M/10 oxalic acid solution.</p>'+
+  '<h2>Apparatus</h2><p>Burette, pipette (10 mL), conical flask, burette stand, funnel, white tile, wash bottle; M/10 oxalic acid, NaOH solution, phenolphthalein.</p>'+
+  '<h2>Theory</h2><p>(COOH)₂ + 2NaOH → (COONa)₂ + 2H₂O. M₁V₁/n₁ = M₂V₂/n₂ with n₁ = 1, n₂ = 2, so M₂ = 2M₁V₁/V₂. Strength = M₂ × 40 g L⁻¹. Indicator: phenolphthalein; endpoint colourless → permanent light pink.</p>'+
+  '<h2>Observations</h2><p>Volume of oxalic acid in each titration, V₁ = 10.0 mL; M₁ = 0.1 M.</p><table><tr><th>S. No.</th><th>Oxalic acid (mL)</th><th>Initial reading (mL)</th><th>Final reading (mL)</th><th>Volume of NaOH (mL)</th></tr>'+rows+'</table>'+
+  '<p>Concordant volume V₂ = '+(c?c.mean.toFixed(2):'______')+' mL</p>'+
+  '<h2>Graphs</h2>'+img+
+  '<h2>Calculations and result</h2><p>M₂ = 2 × 0.1 × 10.0 / '+(c?c.mean.toFixed(2):'V₂')+' = '+document.getElementById('rM').textContent+'. Strength of NaOH = '+document.getElementById('rS').textContent+'.</p>'+
+  '<h2>Precautions</h2><ol><li>Rinse the burette and pipette with the solutions they will hold; rinse the flask with water only.</li><li>Remove the funnel and the air bubble before the initial reading.</li><li>Read the lower meniscus with the eye at its level.</li><li>Swirl the flask and add the last drops one at a time.</li><li>Do not blow out the last drop of the pipette.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>Parallax in reading the burette.</li><li>Drop size limits the endpoint to about 0.05 mL.</li><li>Overshooting the endpoint.</li><li>NaOH absorbing CO₂ from air.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+document.getElementById('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+function renderAll(){document.getElementById('sampleTag').textContent='NaOH sample S-'+S.no;var bl=document.getElementById('bLab');if(bl)bl.textContent='S-'+S.no;
+ updateFstat.last=null;drawZoom();updateReadout();draw(0);if(!T.flask){document.getElementById('fstat').textContent='No flask on the tile yet.'}}
+if(/[?&]debug/.test(location.search))window.__lab={S:S,T:T,veq:veq,pH:pH,concordant:concordant,setStop:setStop,deliver:deliver,releaseDrop:releaseDrop};
+fillCalc();renderTable();setMode(S.setup>=SETUP.length?'titrate':'setup');
+requestAnimationFrame(tick);
 })();
 </script>
-</body></html>
+<script src="/share-fab.js" defer></script>
+</body>
+</html>
