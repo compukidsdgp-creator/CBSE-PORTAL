@@ -2326,5 +2326,293 @@
  "bi12-0074": {
   "paper": "biology12-P02",
   "date": "2026-12-02"
+ },
+ "sc10-0126": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0128": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0176": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0179": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0180": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0174": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0177": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0130": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0181": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0134": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0184": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0183": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0138": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0185": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0186": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0187": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0145": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0148": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0188": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0189": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0146": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0191": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0151": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0193": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0152": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0156": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0194": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0195": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0196": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0160": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0162": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0163": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0165": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0167": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0169": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0199": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0200": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0201": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "sc10-0202": {
+  "paper": "science10-P05",
+  "date": "2026-12-04"
+ },
+ "ph12-0046": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0071": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0073": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0075": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0079": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0080": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0081": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0082": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0083": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0084": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0085": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0086": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0087": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0088": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0053": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0089": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0055": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0092": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0093": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0095": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0094": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0064": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0099": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0100": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0102": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0096": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0097": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0098": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0104": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0103": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0106": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0107": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
+ },
+ "ph12-0105": {
+  "paper": "physics12-P03",
+  "date": "2026-12-04"
  }
 }

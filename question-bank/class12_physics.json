@@ -763,6 +763,394 @@
    "type": "LA",
    "chapter": "Ray Optics and Optical Instruments",
    "text": "(a) Derive the relation between the object distance, the image distance and the radius of curvature for refraction at a convex spherical surface, when light travels from a rarer medium of refractive index n₁ to a denser medium of refractive index n₂.\n(b) Use this relation to obtain the lens maker's formula.\n(c) A double convex lens is made of glass of refractive index 1.5. Both its faces have a radius of curvature of 20 cm. Find its focal length.\nOR\n(a) In Young's double slit experiment, derive the expression for the fringe width.\n(b) State two conditions for the interference pattern to be clearly visible.\n(c) What happens to the fringe width if the whole apparatus is immersed in water? Give a reason."
+  },
+  {
+   "id": "ph12-0071",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electric Charges and Fields",
+   "text": "A point charge Q is placed at the centre of a cube. The electric flux through any one face of the cube is:",
+   "options": [
+    "(A) Q/ε₀",
+    "(B) Q/(6ε₀)",
+    "(C) 6Q/ε₀",
+    "(D) Q/(4ε₀)"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ph12-0072",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electric Charges and Fields",
+   "text": "The magnitude of the electric field near an infinite plane sheet of charge with uniform surface charge density σ is:",
+   "options": [
+    "(A) σ/(2ε₀)",
+    "(B) σ/ε₀",
+    "(C) 2σ/ε₀",
+    "(D) σ/(4ε₀)"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ph12-0073",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electrostatic Potential and Capacitance",
+   "text": "A capacitor of capacitance 4 μF is charged to a potential difference of 50 V. The energy stored in it is:",
+   "options": [
+    "(A) 1 × 10⁻² J",
+    "(B) 2.5 × 10⁻³ J",
+    "(C) 2 × 10⁻⁴ J",
+    "(D) 5 × 10⁻³ J"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ph12-0074",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electrostatic Potential and Capacitance",
+   "text": "The electric potential at a distance of 0.3 m from a point charge of 2 nC in air is: (1/4πε₀ = 9 × 10⁹ N m² C⁻²)",
+   "options": [
+    "(A) 6 V",
+    "(B) 60 V",
+    "(C) 600 V",
+    "(D) 18 V"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ph12-0075",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Current Electricity",
+   "text": "A cell of emf 2 V and internal resistance 0.5 Ω is connected across a 3.5 Ω resistor. The potential difference across the terminals of the cell is:",
+   "options": [
+    "(A) 2 V",
+    "(B) 0.25 V",
+    "(C) 1.75 V",
+    "(D) 1.5 V"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ph12-0076",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Current Electricity",
+   "text": "The SI unit of the mobility of charge carriers is:",
+   "options": [
+    "(A) m² V⁻¹ s⁻¹",
+    "(B) m s⁻¹",
+    "(C) V m⁻¹ s",
+    "(D) m V⁻¹ s⁻²"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ph12-0077",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "The work done by the magnetic force on a charged particle moving in a uniform magnetic field is:",
+   "options": [
+    "(A) qvB",
+    "(B) qvBr",
+    "(C) maximum when the velocity is perpendicular to the field",
+    "(D) always zero"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ph12-0078",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "The magnitude of the magnetic field at the centre of a circular loop of radius R carrying a current I is:",
+   "options": [
+    "(A) μ₀I/(2πR)",
+    "(B) μ₀I/(2R)",
+    "(C) μ₀I/(4R)",
+    "(D) μ₀IR/2"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ph12-0079",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Magnetism and Matter",
+   "text": "Which of the following materials is ferromagnetic?",
+   "options": [
+    "(A) Copper",
+    "(B) Aluminium",
+    "(C) Nickel",
+    "(D) Bismuth"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ph12-0080",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electromagnetic Induction",
+   "text": "A metal rod of length 0.5 m moves with a speed of 4 m/s perpendicular to a uniform magnetic field of 0.2 T. The emf induced across its ends is:",
+   "options": [
+    "(A) 0.4 V",
+    "(B) 4 V",
+    "(C) 0.1 V",
+    "(D) 1.6 V"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ph12-0081",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Alternating Current",
+   "text": "The peak value of the household a.c. voltage is about 311 V. Its rms value is about:",
+   "options": [
+    "(A) 311 V",
+    "(B) 440 V",
+    "(C) 220 V",
+    "(D) 155 V"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ph12-0082",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electromagnetic Waves",
+   "text": "The electromagnetic waves used in the remote controls of television sets are:",
+   "options": [
+    "(A) microwaves",
+    "(B) X-rays",
+    "(C) ultraviolet rays",
+    "(D) infrared rays"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ph12-0083",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Ray Optics and Optical Instruments",
+   "text": "When light travels from glass into air, total internal reflection takes place if the angle of incidence in glass is:",
+   "options": [
+    "(A) less than the critical angle",
+    "(B) zero",
+    "(C) greater than the critical angle",
+    "(D) of any value"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ph12-0084",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Wave Optics",
+   "text": "According to Huygens' principle, every point on a wavefront acts as:",
+   "options": [
+    "(A) a sink of energy",
+    "(B) a source of secondary wavelets",
+    "(C) a reflecting surface",
+    "(D) a point of zero disturbance"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ph12-0085",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Dual Nature of Radiation and Matter",
+   "text": "The de Broglie wavelength of a particle having momentum p is: (h is Planck's constant)",
+   "options": [
+    "(A) h/p",
+    "(B) hp",
+    "(C) p/h",
+    "(D) h/(2p)"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ph12-0086",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Nuclei",
+   "text": "The radius of the nucleus of ²⁷Al is R. The radius of the nucleus of ⁶⁴Cu is approximately:",
+   "options": [
+    "(A) 2R",
+    "(B) 3R/4",
+    "(C) 64R/27",
+    "(D) 4R/3"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ph12-0087",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Semiconductor Electronics",
+   "text": "At absolute zero temperature, a crystal of pure silicon behaves as:",
+   "options": [
+    "(A) an insulator",
+    "(B) a good conductor",
+    "(C) an n-type semiconductor",
+    "(D) a p-type semiconductor"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ph12-0088",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Atoms",
+   "text": "According to Bohr's model, the ratio of the radius of the third orbit to that of the first orbit of the hydrogen atom is:",
+   "options": [
+    "(A) 3 : 1",
+    "(B) 1 : 3",
+    "(C) 9 : 1",
+    "(D) 1 : 9"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ph12-0089",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "Assertion (A): A charged particle moving parallel to a uniform magnetic field experiences no magnetic force.\nReason (R): The magnetic force on a moving charge is always perpendicular to its velocity.",
+   "answer": "(B)"
+  },
+  {
+   "id": "ph12-0090",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Dual Nature of Radiation and Matter",
+   "text": "Assertion (A): The maximum kinetic energy of the emitted photoelectrons increases when the intensity of the incident light is increased.\nReason (R): The number of photoelectrons emitted per second is proportional to the intensity of the incident light.",
+   "answer": "(D)"
+  },
+  {
+   "id": "ph12-0091",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Wave Optics",
+   "text": "Assertion (A): In Young's double slit experiment, the fringe width increases when blue light is replaced by red light.\nReason (R): The wavelength of red light is shorter than that of blue light.",
+   "answer": "(C)"
+  },
+  {
+   "id": "ph12-0092",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Current Electricity",
+   "text": "State Kirchhoff's loop rule. A battery of emf 12 V and internal resistance 1 Ω is connected to two resistors of 3 Ω and 2 Ω joined in series. Find the current in the circuit and the potential difference across the 3 Ω resistor."
+  },
+  {
+   "id": "ph12-0093",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Magnetism and Matter",
+   "text": "Distinguish between diamagnetic and paramagnetic materials on the basis of (a) the sign and magnitude of their magnetic susceptibility and (b) their behaviour in a non-uniform magnetic field. Give one example of each."
+  },
+  {
+   "id": "ph12-0094",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Alternating Current",
+   "text": "Define inductive reactance. A pure inductor of inductance (1/π) H is connected to a 220 V (rms), 50 Hz a.c. supply. Find its reactance and the rms current in the circuit."
+  },
+  {
+   "id": "ph12-0095",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Nuclei",
+   "text": "Distinguish between nuclear fission and nuclear fusion. Why is an extremely high temperature needed for nuclear fusion to take place?"
+  },
+  {
+   "id": "ph12-0096",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electrostatic Potential and Capacitance",
+   "text": "Three capacitors of capacitances 2 μF, 3 μF and 6 μF are connected in series across a 12 V battery. Calculate:\n(a) the equivalent capacitance of the combination,\n(b) the charge on each capacitor,\n(c) the potential difference across the 6 μF capacitor and the total energy stored."
+  },
+  {
+   "id": "ph12-0097",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Current Electricity",
+   "text": "Two cells of emf E₁ and E₂ and internal resistances r₁ and r₂ are connected in parallel, with their positive terminals joined together. Derive expressions for the equivalent emf and the equivalent internal resistance of the combination."
+  },
+  {
+   "id": "ph12-0098",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Moving Charges and Magnetism",
+   "text": "(a) Derive an expression for the torque acting on a rectangular current-carrying loop placed in a uniform magnetic field.\n(b) A coil of 50 turns, each of area 4 × 10⁻³ m², carries a current of 2 A. It is placed in a uniform magnetic field of 0.5 T with its normal making an angle of 30° with the field. Calculate the torque on the coil."
+  },
+  {
+   "id": "ph12-0099",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electromagnetic Waves",
+   "text": "(a) What is displacement current? Why was it necessary for Maxwell to introduce it?\n(b) Write the Ampere-Maxwell law.\n(c) State two characteristics of electromagnetic waves."
+  },
+  {
+   "id": "ph12-0100",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Ray Optics and Optical Instruments",
+   "text": "A thin convex lens of focal length 20 cm is placed in contact with a thin concave lens of focal length 30 cm.\n(a) Find the focal length and the power of the combination.\n(b) An object is placed 90 cm in front of the combination. Find the position of the image and the magnification produced."
+  },
+  {
+   "id": "ph12-0101",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Atoms",
+   "text": "Using Bohr's postulates, derive an expression for the total energy of the electron in the nth orbit of the hydrogen atom. What is the significance of the negative sign in this expression?"
+  },
+  {
+   "id": "ph12-0102",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Semiconductor Electronics",
+   "text": "(a) Explain how the depletion region and the potential barrier are formed in a p-n junction.\n(b) Draw the V-I characteristics of a p-n junction diode in forward bias and in reverse bias, and explain the shape of each."
+  },
+  {
+   "id": "ph12-0103",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Electrostatic Potential and Capacitance",
+   "text": "A defibrillator is a medical device that gives a short, strong electric shock to the heart of a patient whose heart has stopped beating normally. Inside the device, a capacitor is charged to a high voltage and then discharged through the patient's chest within a few milliseconds. In one such device, a 50 μF capacitor is charged to 2000 V.\n(a) Calculate the energy stored in the capacitor.\n(b) If the capacitor is charged to only 1000 V, what will be the energy stored?\n(c) Calculate the charge stored on the capacitor when it is charged to 2000 V.\nOR\n(c) How would the capacitance change if the space between the plates were filled with a dielectric of dielectric constant 4? Give a reason."
+  },
+  {
+   "id": "ph12-0104",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Ray Optics and Optical Instruments",
+   "text": "A school observatory has a refracting astronomical telescope. Its objective lens has a focal length of 100 cm and its eyepiece has a focal length of 5 cm. The students use it to look at the Moon and at Jupiter, with the final image formed at infinity (normal adjustment).\n(a) Calculate the magnifying power of the telescope in normal adjustment.\n(b) What is the distance between the objective and the eyepiece in this adjustment?\n(c) Why is the objective of a telescope made with a large aperture?\nOR\n(c) State two advantages of a reflecting telescope over a refracting telescope."
+  },
+  {
+   "id": "ph12-0105",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Electrostatic Potential and Capacitance",
+   "text": "(a) Derive an expression for the electric potential at a point at a distance r from the centre of a short electric dipole, along a line making an angle θ with the dipole axis.\n(b) Use it to show that the potential at any point on the equatorial line of the dipole is zero.\n(c) Two point charges of +3 nC and −2 nC are placed 10 cm apart in air. Find the point between them on the line joining them where the electric potential is zero.\nOR\n(a) Derive an expression for the energy stored in a charged capacitor.\n(b) Show that the energy density of the electric field between the plates of a parallel plate capacitor is ½ε₀E².\n(c) A 10 μF capacitor is charged to 100 V and disconnected from the battery. It is then connected across an uncharged 10 μF capacitor. Find the common potential and the loss of energy."
+  },
+  {
+   "id": "ph12-0106",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Electromagnetic Induction",
+   "text": "(a) A straight conductor of length l slides with a constant velocity v on a pair of parallel rails placed in a uniform magnetic field B perpendicular to the plane of the rails. Derive an expression for the emf induced across the conductor.\n(b) If the total resistance of the circuit is R, obtain expressions for the force needed to keep the conductor moving and the power dissipated.\n(c) Calculate the induced emf, the current and the force needed if l = 0.2 m, B = 0.5 T, v = 10 m/s and R = 2 Ω.\nOR\n(a) Derive an expression for the energy stored in an inductor of self-inductance L carrying a current I.\n(b) Explain how Lenz's law is consistent with the law of conservation of energy.\n(c) The current in a coil of self-inductance 0.4 H falls steadily from 5 A to zero in 0.1 s. Find the emf induced in the coil and the energy that was stored in it at the start."
+  },
+  {
+   "id": "ph12-0107",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Wave Optics",
+   "text": "(a) Using Huygens' principle, verify the laws of refraction for a plane wave travelling from a rarer medium into a denser medium.\n(b) What happens to the frequency, the wavelength and the speed of light when it passes from air into glass?\n(c) Light of wavelength 600 nm in air enters glass of refractive index 1.5. Find its wavelength and speed in the glass.\nOR\n(a) Derive the mirror formula for a concave mirror forming a real image.\n(b) An object is placed 15 cm in front of a concave mirror of focal length 10 cm. Find the position and the magnification of the image.\n(c) Why are concave mirrors used in torches and by dentists?"
   }
  ]
 }
