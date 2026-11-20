@@ -172,38 +172,51 @@ def _upload_video_fb(video_path: Path, caption: str, dry_run: bool) -> str | Non
     end_offset   = int(init_resp.get("end_offset",   file_size))
     print(f"[FB] Upload session {session_id} — transferring {file_size/1e6:.1f} MB…")
 
-    # Step 2 — Transfer (single chunk; FB allows up to 1 GB in one chunk)
+    # Step 2 — Transfer, chunk by chunk. Facebook says which byte range it wants next (start_offset/end_offset)
+    # and keeps asking until start_offset == end_offset. Sending only the first chunk publishes a cut-off video.
     transfer_url = f"{FB_API_BASE}/{PAGE_ID}/videos"
-    with open(video_path, "rb") as fh:
-        video_bytes = fh.read(end_offset - start_offset)
-
     boundary = "----CBSEMockBoundary"
-    body_parts = (
-        f"--{boundary}\r\n"
-        f'Content-Disposition: form-data; name="upload_phase"\r\n\r\n'
-        f"transfer\r\n"
-        f"--{boundary}\r\n"
-        f'Content-Disposition: form-data; name="upload_session_id"\r\n\r\n'
-        f"{session_id}\r\n"
-        f"--{boundary}\r\n"
-        f'Content-Disposition: form-data; name="start_offset"\r\n\r\n'
-        f"{start_offset}\r\n"
-        f"--{boundary}\r\n"
-        f'Content-Disposition: form-data; name="access_token"\r\n\r\n'
-        f"{FB_TOKEN}\r\n"
-        f"--{boundary}\r\n"
-        f'Content-Disposition: form-data; name="video_file_chunk"; filename="{video_path.name}"\r\n'
-        f"Content-Type: video/mp4\r\n\r\n"
-    ).encode() + video_bytes + f"\r\n--{boundary}--\r\n".encode()
-
-    req = urllib.request.Request(transfer_url, data=body_parts, method="POST")
-    req.add_header("Content-Type", f"multipart/form-data; boundary={boundary}")
-    try:
-        with urllib.request.urlopen(req, timeout=120) as r:
-            transfer_resp = json.loads(r.read())
-    except urllib.error.HTTPError as e:
-        print(f"[FB ERROR] Transfer: {e.code} {e.read().decode()[:300]}")
+    chunks = 0
+    with open(video_path, "rb") as fh:
+        while start_offset < end_offset:
+            fh.seek(start_offset)
+            video_bytes = fh.read(end_offset - start_offset)
+            body_parts = (
+                f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="upload_phase"\r\n\r\n'
+                f"transfer\r\n"
+                f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="upload_session_id"\r\n\r\n'
+                f"{session_id}\r\n"
+                f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="start_offset"\r\n\r\n'
+                f"{start_offset}\r\n"
+                f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="access_token"\r\n\r\n'
+                f"{FB_TOKEN}\r\n"
+                f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="video_file_chunk"; filename="{video_path.name}"\r\n'
+                f"Content-Type: video/mp4\r\n\r\n"
+            ).encode() + video_bytes + f"\r\n--{boundary}--\r\n".encode()
+            req = urllib.request.Request(transfer_url, data=body_parts, method="POST")
+            req.add_header("Content-Type", f"multipart/form-data; boundary={boundary}")
+            for attempt in range(3):
+                try:
+                    with urllib.request.urlopen(req, timeout=120) as r:
+                        transfer_resp = json.loads(r.read())
+                    break
+                except urllib.error.HTTPError as e:
+                    print(f"[FB ERROR] Transfer chunk at {start_offset}: {e.code} {e.read().decode()[:300]}")
+                    if attempt == 2:
+                        return None
+                    time.sleep(3 * (attempt + 1))
+            chunks += 1
+            start_offset = int(transfer_resp.get("start_offset", end_offset))
+            end_offset = int(transfer_resp.get("end_offset", end_offset))
+    if start_offset < file_size:
+        print(f"[FB ERROR] Upload incomplete: {start_offset}/{file_size} bytes — not publishing a cut-off video")
         return None
+    print(f"[FB] Transferred {file_size/1e6:.1f} MB in {chunks} chunk(s)")
 
     # Step 3 — Finish (description shown under FB Reel; URL in text is tappable on FB)
     finish_data = {
