@@ -1,0 +1,54 @@
+name: WHY? trig series — teaser comment / comment digest
+
+# teaser: comment "Part 2 drops tomorrow at 8 PM" on the viral Part 1 (owner pins it).
+# digest: started right after each part posts; waits ~55 min, then sends the owner the first comments.
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "teaser or digest"
+        required: true
+        default: "digest"
+      part:
+        description: "part number (digest)"
+        required: false
+        default: "2"
+      dry_run:
+        description: "true for a dry run"
+        required: false
+        default: "false"
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Wait for the first hour of comments
+        if: github.event.inputs.action == 'digest'
+        run: sleep 3300
+      - name: Run
+        env:
+          FB_PAGE_ID:             ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN:   ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID:   ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID:     ${{ secrets.SEO_REPORT_CHAT_ID }}
+        run: |
+          git pull -q origin main || true
+          D=""; [ "${{ github.event.inputs.dry_run }}" = "true" ] && D="--dry-run"
+          if [ "${{ github.event.inputs.action }}" = "teaser" ]; then python3 trig_series.py teaser $D; else python3 trig_series.py digest ${{ github.event.inputs.part }}; fi
+      - name: Save
+        if: github.event.inputs.action == 'teaser' && github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "social-post-bot"; git config user.email "bot@cbsemock.org.in"
+          git add formula-posts/why/series/state.json || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "trig series: teaser comment [skip ci]"
+          for i in 1 2 3 4; do git pull --rebase --autostash -q origin main && git push -q origin main && exit 0; sleep $((i*5)); done

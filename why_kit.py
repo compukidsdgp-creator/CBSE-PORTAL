@@ -159,6 +159,11 @@ def render_frame(fi):
         R.flat_text(ax, 0.5, 0.868, mod.TITLE, size=R.fit_size(mod.TITLE, 36, 0.78),
                     color=GOLD, alpha=min(1, qp))
 
+    # optional series badge under the question ("PART 2 · TRIG SERIES")
+    if getattr(mod, "PART", None) and qp > 0.4:
+        R.pill(ax, 0.5, 0.818, 0.40, 0.032, fill=R.rgba(PINK, 0.95), edge=R.rgba(PINK, 1), lw=1.5, alpha=min(1, qp), zorder=7)
+        R.flat_text(ax, 0.5, 0.818, mod.PART, size=19, color="white", alpha=min(1, qp))
+
     mod.draw(c)
 
     # follow pill on the last beat
@@ -167,7 +172,7 @@ def render_frame(fi):
         y = getattr(mod, "END_Y", 0.418)
         R.pill(ax, 0.5, y, 0.70 * min(1, ep), 0.046, fill=R.rgba("#00b4d8", 1),
                edge=R.rgba(CYAN, 1), lw=2, alpha=min(1, ep), zorder=9)
-        R.flat_text(ax, 0.5, y, "Follow for more WHY? videos", size=25, color="white", alpha=min(1, ep))
+        R.flat_text(ax, 0.5, y, getattr(mod, "END_TEXT", "Follow for more WHY? videos"), size=25, color="white", alpha=min(1, ep))
 
     # caption, words lighting up as they are spoken
     cur = c.cur

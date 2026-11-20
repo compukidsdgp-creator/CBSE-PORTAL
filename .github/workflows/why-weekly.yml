@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      actions: read
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -49,8 +49,19 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           GITHUB_REPOSITORY:      ${{ github.repository }}
           GITHUB_REF_NAME:        ${{ github.ref_name }}
+          TELEGRAM_BOT_TOKEN:     ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID:     ${{ secrets.SEO_REPORT_CHAT_ID }}
+          GH_TOKEN:               ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+          if python3 trig_series.py due why; then        # a WHY? trig-series part takes today's slot
+            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+              python3 trig_series.py post why --dry-run
+            else
+              python3 trig_series.py post why && \
+                gh api -X POST repos/${{ github.repository }}/actions/workflows/trig-series.yml/dispatches \
+                  -f ref=main -f 'inputs[action]=digest' -f "inputs[part]=$(python3 -c 'import trig_series as T;s=T.state();print(max(int(k) for k in s if k.isdigit()))')" || true
+            fi
+          elif [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             python3 post_why_reel.py --dry-run
           else
             python3 post_why_reel.py
