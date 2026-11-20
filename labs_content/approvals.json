@@ -2,5 +2,17 @@
   "physics/01-ohm-s-law": {
     "status": "approved",
     "at": "2026-11-19T00:35:22.042Z"
+  },
+  "chemistry/39-titration-and-endpoint": {
+    "status": "approved",
+    "at": "2026-11-20T00:23:20.671Z"
+  },
+  "biology/07-stomata-and-leaf-impressions": {
+    "status": "approved",
+    "at": "2026-11-20T00:24:02.933Z"
+  },
+  "mathematics/07-pythagoras-theorem-lab": {
+    "status": "approved",
+    "at": "2026-11-20T00:24:24.321Z"
   }
 }
