@@ -1,0 +1,35 @@
+name: Repository snapshot → Google Drive
+
+# A complete copy of the repository (every branch, the full history) as one git bundle file in
+# Drive "CBSEMock Reels/_Repository snapshots/". Run before any history cleanup. Restore with:
+#   git clone CBSE-PORTAL-<date>.bundle CBSE-PORTAL
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Full clone (all branches, all history)
+        run: git clone -q --mirror "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" repo.git
+      - name: Bundle and upload
+        env:
+          RCLONE_DRIVE_TOKEN: ${{ secrets.RCLONE_DRIVE_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null
+          name="CBSE-PORTAL-$(TZ=Asia/Kolkata date +%Y-%m-%d-%H%M).bundle"
+          git -C repo.git bundle create "../$name" --all
+          git bundle verify "$name" >/dev/null && echo "bundle OK: $(du -h "$name" | cut -f1)"
+          printf '[gdrive]\ntype = drive\nscope = drive.file\ntoken = %s\n' "$RCLONE_DRIVE_TOKEN" > rclone.conf
+          rclone --config rclone.conf copy "$name" "gdrive:CBSEMock Reels/_Repository snapshots" --retries 5
+          local=$(md5sum "$name" | cut -d' ' -f1)
+          remote=$(rclone --config rclone.conf md5sum "gdrive:CBSEMock Reels/_Repository snapshots/$name" | cut -d' ' -f1)
+          [ "$local" = "$remote" ] || { echo "::error::Drive copy does not match"; exit 1; }
+          echo "verified in Drive: $name ($remote)"
+          [ -n "$TELEGRAM_BOT_TOKEN" ] && curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+            --data-urlencode "chat_id=$SEO_REPORT_CHAT_ID" \
+            --data-urlencode "text=🗄️ Full repository snapshot saved and verified in Google Drive: CBSEMock Reels/_Repository snapshots/$name ($(du -h "$name" | cut -f1))." >/dev/null || true
