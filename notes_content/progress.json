@@ -36,6 +36,13 @@
  },
  "class10/science/life-processes": {
   "hub_linked": true,
-  "quiz_linked": true
+  "quiz_linked": true,
+  "channels": {
+   "tg": true,
+   "fb": true,
+   "ig": true
+  },
+  "tries": 0,
+  "announced": true
  }
 }
