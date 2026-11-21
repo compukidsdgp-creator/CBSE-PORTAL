@@ -158,7 +158,10 @@ def build_caption(stem: str, slot: str = "morning") -> str:
         greeting = "Evening revision time! 🌙 Lock in this formula before tomorrow."
         cta = "Screenshot & save — your tomorrow self will thank you! 💪"
 
-    caption = f"""{emoji} Formula Flash — {subj_cap} | {topic}
+    series = "Concept in 8 Seconds" if "concept8" in stem.lower() else "Formula Flash"
+    if series != "Formula Flash":
+        greeting = greeting.replace("today's Formula Flash", "a concept in 8 seconds").replace("Lock in this formula", "Lock in this concept")
+    caption = f"""{emoji} {series} — {subj_cap} | {topic}
 
 {greeting}
 
