@@ -200,6 +200,7 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
         <div class="card"><h2>Website bandwidth <small>GitHub Pages soft limit 100 GB / month</small></h2><div id="mon-bw"></div></div>
         <div class="card"><h2>Builds &amp; automation <small>last 24 hours</small></h2><div id="mon-builds"></div></div>
       </div>
+      <div class="card" style="margin-top:14px"><h2>Google Drive backup <small>folder "CBSEMock Reels" · full-quality originals</small></h2><div id="mon-backup"></div></div>
       <p class="note" id="mon-stamp" style="margin-top:14px"></p>
     </section>
 
@@ -424,7 +425,7 @@ const LV_RANK = {green: 0, grey: 0, amber: 1, red: 2};
 const dfmt = s => s ? new Date(s).toLocaleDateString('en-IN', {day: 'numeric', month: 'short', year: 'numeric'}) : '—';
 function monWorst(m) {
   const lv = [...(m.stock || []).map(s => s.level), ...(m.tokens || []).map(t => t.level),
-    m.repo && m.repo.site_level, m.repo && m.repo.repo_level, m.builds && m.builds.pages_level, m.bandwidth && m.bandwidth.level];
+    m.repo && m.repo.site_level, m.repo && m.repo.repo_level, m.builds && m.builds.pages_level, m.bandwidth && m.bandwidth.level, m.backup && m.backup.level];
   return lv.filter(Boolean).reduce((a, b) => LV_RANK[b] > LV_RANK[a] ? b : a, 'green');
 }
 function monDot() {
@@ -480,6 +481,13 @@ function renderMonitor() {
     <div class="sp-row"><span><span class="lv ${b.actions_level || 'grey'}"></span> Automation runs</span><span>${b.actions_24h ?? '—'} runs · ${b.actions_failed_24h ?? 0} failed</span><span></span></div>
     ${(b.actions_failed || []).map(f => `<div class="sp-row"><span></span><span><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.name)}</a> · ${esc(f.at)}</span><span></span></div>`).join('')}
     <div class="sp-row"><span>Actions minutes</span><span>${esc(b.minutes || '')}</span><span></span></div>`;
+  const bk = m.backup || {};
+  $('#mon-backup').innerHTML = bk.files ? `
+    <div class="sp-row"><span><span class="lv ${bk.level}"></span> Files in Drive</span><span>${fmt(bk.files)} files · ${bk.gb} GB${bk.from_history ? ' · ' + bk.from_history + ' recovered from history' : ''}</span><span></span></div>
+    <div class="sp-row"><span>Last file saved</span><span>${bk.last ? esc(bk.last.replace('T', ' ').slice(0, 16)) : '—'}</span><span></span></div>
+    <div class="sp-row"><span>Last nightly run</span><span>${bk.last_run ? `<a href="${esc(bk.last_run.url)}" target="_blank" rel="noopener">${esc(bk.last_run.at)} · ${esc(bk.last_run.result)}</a>` : '—'}</span><span></span></div>
+    <div class="sp-row"><span>Light copies on site</span><span>${fmt(bk.lite)} posted files · ${fmt(bk.lite_saved_mb)} MB saved</span><span></span></div>`
+    : '<p class="empty">No backup yet — it runs every night at about 3:35 AM.</p>';
   $('#mon-stamp').textContent = 'Checked ' + m.generated_at + ' · rebuilt every 3 hours and on ↻ Refresh data · red items are also sent to you on Telegram.';
 }
 

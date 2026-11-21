@@ -301,9 +301,30 @@ def bandwidth(analytics):
             "note": "Estimate: page views × page weight (first visit, nothing cached). GitHub does not publish real Pages bandwidth."}
 
 
+def backup():
+    import csv as _csv
+    man, lite = ROOT / "archive" / "backup_manifest.csv", ROOT / "archive" / "lite.csv"
+    rows = list(_csv.DictReader(open(man, encoding="utf-8"))) if man.exists() else []
+    lrows = [r for r in (_csv.DictReader(open(lite, encoding="utf-8")) if lite.exists() else []) if r["lite_bytes"] != r["original_bytes"]]
+    last = max((r["backed_up_at"] for r in rows), default=None)
+    runs = (_gh(f"repos/{REPO}/actions/workflows/media-backup.yml/runs?per_page=1") or {}).get("workflow_runs", [])
+    run = runs[0] if runs else None
+    age = None
+    if run:
+        t = datetime.strptime(run["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+        age = (datetime.now(timezone.utc) - t).total_seconds() / 3600
+    lv = "grey" if not rows else "red" if (run and run.get("conclusion") == "failure") or (age and age > 50) else "green"
+    return {"files": len(rows), "gb": round(sum(int(r["bytes"]) for r in rows) / GB, 2),
+            "from_history": sum(1 for r in rows if r["source"] == "history"), "last": last,
+            "lite": len(lrows), "lite_saved_mb": round(sum(int(r["original_bytes"]) - int(r["lite_bytes"]) for r in lrows) / MB),
+            "last_run": run and {"result": run.get("conclusion") or run.get("status"), "url": run["html_url"],
+                                 "at": datetime.strptime(run["created_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc).astimezone(IST).strftime("%d %b %H:%M")},
+            "level": lv}
+
+
 def build(analytics=None):
     out = {"generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M IST")}
-    for k, fn in (("stock", stock), ("tokens", tokens), ("repo", repo), ("builds", builds)):
+    for k, fn in (("stock", stock), ("tokens", tokens), ("repo", repo), ("builds", builds), ("backup", backup)):
         try:
             out[k] = fn()
         except Exception as e:
@@ -334,6 +355,8 @@ def red_items(m):
     b = m.get("builds") or {}
     if b.get("pages_level") == "red":
         items.append("The last GitHub Pages build FAILED — the website is not updating")
+    if (m.get("backup") or {}).get("level") == "red":
+        items.append("Google Drive backup failed or has not run for 2 days")
     if (m.get("bandwidth") or {}).get("level") == "red":
         items.append(f"Estimated bandwidth {m['bandwidth']['month_gb']} GB/month (soft limit 100 GB)")
     return items
