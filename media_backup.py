@@ -45,6 +45,25 @@ MEDIA = {".mp4", ".jpg", ".jpeg", ".png", ".webp"}
 SAFE = lambda s: re.sub(r'[\\/:*?"<>|]+', "-", s).strip() or "Other"
 
 
+SUP = str.maketrans("0123456789n", "⁰¹²³⁴⁵⁶⁷⁸⁹ⁿ")
+
+
+def plain_title(t):
+    """Matplotlib/LaTeX title → plain text for YouTube: $\\sin^{2}\\theta$ → sin²θ, \\dfrac{1}{3} → 1/3."""
+    if "$" not in t and "\\" not in t:
+        return t
+    t = re.sub(r"\\d?frac\{([^{}]*)\}\{([^{}]*)\}", lambda m: ("½" if (m[1], m[2]) == ("1", "2") else f"{m[1]}/{m[2]}"), t)
+    t = re.sub(r"\^\{\\circ\}", "°", t)
+    t = re.sub(r"\^\{?(\w)\}?", lambda m: m[1].translate(SUP), t)
+    for a, b in (("\\neq", "≠"), ("\\pi", "π"), ("\\theta", "θ"), ("\\int", "∫"), ("\\times", "×"), ("\\sqrt", "√"),
+                 ("\\cdot", "·"), ("\\sin", "sin"), ("\\cos", "cos"), ("\\tan", "tan"), ("\\sec", "sec"), ("\\,", " "),
+                 ("\\mathrm", ""), ("\\left", ""), ("\\right", "")):
+        t = t.replace(a, b)
+    t = re.sub(r"_(\w)", r"\1", t)
+    t = t.replace("$", "").replace("{", "").replace("}", "")
+    return re.sub(r"\s+([?])", r"\1", re.sub(r"\s{2,}", " ", t)).strip()
+
+
 def group(cls, cat):
     cat = {"Maths": "Maths", "CS": "CS", "AI": "AI"}.get(cat, cat)
     return SAFE(f"Class {cls} {cat}" if cls else cat)
@@ -88,7 +107,7 @@ def items():
             m = why_mod_cap(mod)
             txt = f.with_suffix(".txt")
             desc = txt.read_text(encoding="utf-8").strip() if txt.exists() else (m.CAPTION.strip() if m and hasattr(m, "CAPTION") else "")
-            title = re.sub(r"\$|\\\\|\\mathrm|[{}]", "", getattr(m, "TITLE", f.stem)) if m else f.stem
+            title = plain_title(getattr(m, "TITLE", f.stem)) if m else f.stem
             folder = "1 WHY Series - English/" + ("Trig Series (Parts 2-4)" if d == "series" else why_group(mod, m))
             add(f, f"{folder}/{f.name}", f"TITLE: {title}\n\nDESCRIPTION:\n{desc}")
     for d in ("formula-posts/why/hindi", "formula-posts/why/hindi/posted"):
@@ -215,10 +234,17 @@ def upload(entries, conf, source):
     done = manifest()
     todo = [e for e in entries if not (e[3] in done and done[e[3]]["drive_path"] == e[1] and done[e[3]]["md5"] == md5(e[0]))]
     print(f"[backup] {len(entries)} file(s) · {len(todo)} new or changed")
-    if not todo:
-        return {}, 0
     stage = Path(tempfile.mkdtemp(prefix="stage_"))
     want = {}
+    todo_keys = {e[3] for e in todo}
+    for local, drive, cap, key in entries:          # captions are re-sent every run (rclone skips unchanged ones)
+        if cap and key not in todo_keys:
+            t = (stage / drive).with_suffix(".txt")
+            t.parent.mkdir(parents=True, exist_ok=True)
+            t.write_text(cap.strip() + "\n", encoding="utf-8")
+            want[str(Path(drive).with_suffix(".txt"))] = (None, md5(t), t.stat().st_size)
+    if not todo and not want:
+        return {}, 0
     for local, drive, cap, key in todo:
         dst = stage / drive
         dst.parent.mkdir(parents=True, exist_ok=True)
