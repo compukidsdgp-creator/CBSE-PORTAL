@@ -161,6 +161,11 @@ def build(slug, cfg):
             .replace("__INDEX__", static_index(items, cfg)))
     out.mkdir(exist_ok=True)
     (out / "index.html").write_text(html, encoding="utf-8")
+    try:                                    # keep the floating share buttons (share_tags adds them idempotently)
+        import share_tags
+        share_tags.add(out / "index.html")
+    except Exception as e:
+        print(f"[warn] share buttons: {e}")
     print(f"[reels] /{slug}/  {len(items)} reels")
 
 
