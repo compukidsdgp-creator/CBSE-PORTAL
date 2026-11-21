@@ -221,7 +221,7 @@ def _greek(text):
     look the same on every machine (left to fontconfig, the GitHub runner picked a much larger Latin font)."""
     import re
     return re.sub(r"([^\u0900-\u097F\s]+(?:\s+[^\u0900-\u097F\s]+)*)",
-                  r"{\\fnDejaVu Sans\\fscx88\\fscy88}\1{\\fnNoto Sans Devanagari\\fscx100\\fscy100}", text)
+                  r"{\\fnCBSEMock Latin\\fscx88\\fscy88}\1{\\fnCBSEMock Deva\\fscx100\\fscy100}", text)
 
 
 def hindi_ass(mod, beats, total, path):
@@ -230,9 +230,9 @@ def hindi_ass(mod, beats, total, path):
     head = ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 0\n\n[V4+ Styles]\n"
             "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, "
             "ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-            "Style: Title,Noto Sans Devanagari,58,&H003FC8FF,&H003FC8FF,&H00140A00,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,5,70,70,0,1\n"
-            "Style: Cap,Noto Sans Devanagari,50,&H003FC8FF,&H00FFFFFF,&H00140800,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,5,80,80,0,1\n"
-            "Style: Pill,Noto Sans Devanagari,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,60,60,0,1\n\n"
+            "Style: Title,CBSEMock Deva,58,&H003FC8FF,&H003FC8FF,&H00140A00,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,5,70,70,0,1\n"
+            "Style: Cap,CBSEMock Deva,50,&H003FC8FF,&H00FFFFFF,&H00140800,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,5,80,80,0,1\n"
+            "Style: Pill,CBSEMock Deva,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,60,60,0,1\n\n"
             "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
     ev = []
     t0 = beats[0]["start"] + 0.2 * (beats[0]["end"] - beats[0]["start"]) * 0.18
