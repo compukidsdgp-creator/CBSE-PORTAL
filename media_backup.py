@@ -159,8 +159,11 @@ def items():
         print("[plan] campaign:", e)
     # Images
     for d in ("formula-posts/queue", "formula-posts/posted"):
-        for f in sorted((ROOT / d).iterdir()) if (ROOT / d).exists() else []:
+        for f in sorted((ROOT / d).rglob("*")) if (ROOT / d).exists() else []:   # rglob: carousel set folders too
             if f.suffix.lower() in MEDIA:
+                if f.parent != ROOT / d:                 # a slide of a set → its own folder in Drive
+                    add(f, f"8 Images/Formula images/Carousel sets/{SAFE(f.parent.name)}/{f.name}")
+                    continue
                 parts = f.stem.split("_")
                 subj = parts[1] if len(parts) > 2 and not parts[1].isdigit() else "Other"
                 add(f, f"8 Images/Formula images/{SAFE(subj)}/{f.name}")

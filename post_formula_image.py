@@ -180,8 +180,15 @@ Practice tests, formula sheets, virtual labs — all free!
 
 # ── GitHub raw URL for image ───────────────────────────────────────────────────
 def get_public_image_url(filename: str) -> str:
-    """Return publicly accessible raw GitHub URL for the image."""
+    """Return publicly accessible raw GitHub URL for the image (filename may be '<set folder>/<file>')."""
     return f"{GH_RAW_BASE}/formula-posts/queue/{urllib.parse.quote(filename)}"
+
+IMG_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
+
+
+def set_images(folder: Path) -> list:
+    """Slides of a carousel set: a folder in the queue holding 2–10 images (posted in name order)."""
+    return sorted(f for f in folder.iterdir() if f.suffix.lower() in IMG_EXTS and not f.name.startswith("."))
 
 # ── Facebook Graph API ────────────────────────────────────────────────────────
 def _fb_api(endpoint: str, data: dict, dry_run: bool = False) -> dict:
@@ -279,13 +286,58 @@ def post_to_instagram(image_url: str, caption: str, dry_run: bool = False) -> st
         print(f"[IG FAIL] {publish}")
         return None
 
+# ── Carousel (a set folder in the queue) ─────────────────────────────────────
+def post_carousel_facebook(image_urls: list, caption: str, dry_run: bool = False) -> str | None:
+    """Multi-photo Page post: upload each photo unpublished, then one feed post that attaches them all."""
+    print(f"[FB] Posting a {len(image_urls)}-photo set to Facebook Page {PAGE_ID}…")
+    if not FB_TOKEN:
+        print("[FB ERROR] FB_PAGE_ACCESS_TOKEN not set."); return None
+    ids = []
+    for u in image_urls:
+        r = _fb_api(f"{PAGE_ID}/photos", {"url": u, "published": "false", "access_token": FB_TOKEN}, dry_run=dry_run)
+        if "id" not in r:
+            print(f"[FB FAIL] photo upload: {r}"); return None
+        ids.append(r["id"])
+    data = {"message": caption, "access_token": FB_TOKEN}
+    for i, pid in enumerate(ids):
+        data[f"attached_media[{i}]"] = json.dumps({"media_fbid": pid})
+    r = _fb_api(f"{PAGE_ID}/feed", data, dry_run=dry_run)
+    if "id" in r:
+        print(f"[FB OK] Post ID: {r['id']}"); return r["id"]
+    print(f"[FB FAIL] {r}"); return None
+
+
+def post_carousel_instagram(image_urls: list, caption: str, dry_run: bool = False) -> str | None:
+    """Instagram carousel: one container per slide, a CAROUSEL container, then publish."""
+    print(f"[IG] Creating a {len(image_urls)}-slide carousel on Instagram account {IG_ACCT_ID}…")
+    if not IG_TOKEN:
+        print("[IG ERROR] INSTAGRAM_ACCESS_TOKEN not set."); return None
+    kids = []
+    for u in image_urls:
+        r = _ig_api(f"{IG_ACCT_ID}/media", {"image_url": u, "is_carousel_item": "true", "access_token": IG_TOKEN}, dry_run=dry_run)
+        if "id" not in r:
+            print(f"[IG FAIL] slide container: {r}"); return None
+        kids.append(r["id"])
+    if not dry_run:
+        time.sleep(5)
+    c = _ig_api(f"{IG_ACCT_ID}/media", {"media_type": "CAROUSEL", "children": ",".join(kids), "caption": caption,
+                                         "access_token": IG_TOKEN}, dry_run=dry_run)
+    if "id" not in c:
+        print(f"[IG FAIL] carousel container: {c}"); return None
+    if not dry_run:
+        time.sleep(8)
+    r = _ig_api(f"{IG_ACCT_ID}/media_publish", {"creation_id": c["id"], "access_token": IG_TOKEN}, dry_run=dry_run)
+    if "id" in r:
+        print(f"[IG OK] Media ID: {r['id']}"); return r["id"]
+    print(f"[IG FAIL] {r}"); return None
+
+
 # ── Queue management ──────────────────────────────────────────────────────────
 def get_next_image() -> Path | None:
     """Return the next image file from the queue (alphabetical order)."""
-    exts = {".jpg", ".jpeg", ".png", ".webp"}
     files = sorted(
         f for f in QUEUE_DIR.iterdir()
-        if f.suffix.lower() in exts and not f.name.startswith(".")
+        if not f.name.startswith(".") and (f.suffix.lower() in IMG_EXTS or (f.is_dir() and len(set_images(f)) >= 2))
     )
     return files[0] if files else None
 
@@ -370,6 +422,27 @@ def main():
 
     print(f"[INFO] Next image: {img_path.name}")
 
+    import social_links as SL
+    if img_path.is_dir():                      # carousel set
+        slides = set_images(img_path)[:10]
+        cap_file = img_path / "caption.txt"
+        caption = cap_file.read_text(encoding="utf-8").strip() if cap_file.exists() else build_caption(img_path.name, slot)
+        urls = [get_public_image_url(f"{img_path.name}/{f.name}") for f in slides]
+        print(f"\n── Caption preview ──\n{caption}\n────────────────────")
+        print("\n── Slides ──\n" + "\n".join(urls) + "\n────────────────────\n")
+        fb_id = post_carousel_facebook(urls, caption, dry_run=args.dry_run)
+        ig_id = post_carousel_instagram(urls, SL.ig_caption(caption), dry_run=args.dry_run)
+        log_post(img_path.name + "/", slot, fb_id, ig_id, caption, args.dry_run)
+        if not args.dry_run and (fb_id or ig_id):
+            dest = POSTED_DIR / img_path.name
+            if dest.exists():
+                dest = POSTED_DIR / f"{img_path.name}_{now_ist().strftime('%Y%m%d_%H%M')}"
+            shutil.move(str(img_path), str(dest))
+            print(f"[INFO] Moved set to posted/: {dest.name}")
+        ok = bool(fb_id and ig_id)
+        print(f"\n{'✅' if ok else '⚠️ '}  Done — FB: {fb_id or 'FAILED'}  |  IG: {ig_id or 'FAILED'}")
+        sys.exit(0 if ok else 1)
+
     caption     = build_caption(img_path.stem, slot)
     image_url   = get_public_image_url(img_path.name)
 
@@ -377,7 +450,6 @@ def main():
     print(f"\n── Image URL ──\n{image_url}\n────────────────────\n")
 
     # Post to both platforms
-    import social_links as SL
     info = parse_filename(img_path.stem)
     links = SL.links_for_formula_image(info["subject"], info["topic"], info["class"])
     fb_id = post_to_facebook(image_url, caption, dry_run=args.dry_run)

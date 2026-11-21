@@ -1,0 +1,20 @@
+🔍 Concept in 8 Seconds — Physics | Lens Formula
+
+Where will the image form? 🕯️➡️🔍➡️❓
+A candle is 30 cm in front of a convex lens of focal length 10 cm. Swipe ➡️ to solve it step by step.
+
+1️⃣ The question
+2️⃣ The lens formula: 1/v − 1/u = 1/f
+3️⃣ Put in the values (f = +10 cm, u = −30 cm)
+4️⃣ The answer: v = +15 cm (real image, on the other side)
+5️⃣ Quick recap
+
+⚠️ Board-exam trap: 1/f = 1/v + 1/u is the MIRROR formula. For a lens it is 1/v − 1/u = 1/f.
+
+📚 Class 10 Physics · Light – Reflection and Refraction
+💾 Save it for revision · 📤 Share with a friend who mixes up the two formulas
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#CBSEMock #ConceptIn8Seconds #Class10Physics #LensFormula #CBSEBoards #BoardExam2027
