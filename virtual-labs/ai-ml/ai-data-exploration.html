@@ -1,202 +1,893 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><title>Data exploration · CBSEMOCK AI Studio</title><style>*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -10%,#27376f,#0b1227 48%,#080d1d);font-family:Inter,Segoe UI,Arial,sans-serif;color:#f4f7ff}.top{padding:17px 4vw;border-bottom:1px solid #ffffff18;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#080d1ddd;backdrop-filter:blur(14px);z-index:3}.logo{font-weight:900}.logo em{color:#5eead4;font-style:normal}.top a{color:#b8c7e2;text-decoration:none;font-size:12px;border:1px solid #354565;padding:8px 12px;border-radius:9px}main{max-width:1220px;margin:auto;padding:28px 18px 55px}.crumb{font-size:10px;letter-spacing:1.5px;color:#8295b8}.hero{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin:20px 0}.eyebrow{font-size:10px;color:#5eead4;letter-spacing:2px;font-weight:900}h1{font-size:clamp(29px,4vw,45px);margin:8px 0}.hero p{color:#aab9d4;margin:0;line-height:1.55}.tag{border:1px solid #46577a;border-radius:99px;padding:8px 12px;font-size:11px;color:#cbd8ed}.layout{display:grid;grid-template-columns:1.5fr .9fr;gap:16px}.panel{background:linear-gradient(145deg,#141f3b,#10192e);border:1px solid #283957;border-radius:19px;padding:19px;margin-bottom:15px;box-shadow:0 15px 40px #0003}.panel h2{font-size:16px;margin:0 0 12px}.task{font-size:15px;line-height:1.6}.muted{font-size:11px;color:#95a7c7;line-height:1.5}.visual{background:linear-gradient(145deg,#0b1530,#111e3d);border:1px solid #2a3c60;border-radius:16px;padding:16px;margin-top:14px;overflow:hidden}.vhead{font-size:10px;letter-spacing:1.4px;font-weight:900;color:#b8c9e6}.vhead span{float:right;color:#9b8cf4;font-size:9px}.network{width:100%;max-height:240px;margin:14px auto}.sliderrow{display:flex;gap:18px;flex-wrap:wrap}.sliderrow label,.fullslider{display:grid;gap:7px;flex:1;min-width:160px;font-size:11px;color:#b8c8e3;margin-top:12px}.sliderrow b,.fullslider b{color:#5eead4}input[type=range]{width:100%;accent-color:#5eead4}.readout{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:15px;border-top:1px solid #ffffff18;padding-top:13px;color:#9aacca;font-size:11px}.readout strong{font-size:17px;color:white}.readout span{margin-left:auto;color:#5eead4}.metricrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:15px 0}.metricrow div{background:#1a2949;border:1px solid #34496e;border-radius:12px;padding:11px}.metricrow small{display:block;color:#92a5c8;font-size:9px}.metricrow b{font-size:24px}.matrix-title{font-size:10px;color:#9eb0cf;margin:15px 0 8px}.matrixgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;text-align:center;font-size:10px;color:#aebdd7}.matrixgrid>*{border:1px solid #35496a;background:#1b2a4b;border-radius:8px;padding:9px}.matrixgrid button{color:#fff;cursor:pointer}.matrixgrid button b{display:block;font-size:18px}.matrixgrid button:nth-child(5){background:#0e4947}.matrixgrid button:nth-child(6){background:#532d49}.matrixgrid button:nth-child(8){background:#57431f}.matrixgrid button:nth-child(9){background:#0e4947}.matrix p{font-size:11px;color:#b9c9e3;line-height:1.5}.bars{height:190px;display:flex;align-items:end;justify-content:space-around;gap:12px;padding:15px 8px 0;border-bottom:1px solid #536282;margin-top:15px}.bars div{height:100%;display:flex;flex-direction:column;justify-content:end;align-items:center;gap:5px;flex:1}.bars i{width:min(42px,75%);background:linear-gradient(#5eead4,#665ce4);border-radius:8px 8px 2px 2px;transition:height .2s}.bars small,.bars b{font-size:10px;color:#b5c4df}.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:18px}.stages button{background:#192847;border:1px solid #394b70;border-radius:10px;padding:10px 5px;color:#dce6f8;cursor:pointer;font-size:10px}.stages button b{display:block;color:#5eead4;margin-bottom:8px}.stages button.active{background:#104044;border-color:#5eead4}.stageinfo{margin-top:12px;padding:14px;background:#1a2948;border-radius:10px;font-size:12px;line-height:1.5;color:#c7d6ed}.checks{display:grid;gap:8px;margin-top:14px}.checks label{display:flex;gap:10px;padding:12px;background:#1a2948;border:1px solid #34486c;border-radius:11px;font-size:12px;cursor:pointer}.checks input{accent-color:#5eead4}.checks small{display:block;color:#94a8c9;font-size:10px;margin-top:4px}.perception{display:flex;justify-content:space-around;align-items:center;gap:8px;margin:22px 0}.perception div{background:#1b2b4c;border:1px solid #40547b;border-radius:13px;padding:17px 12px;text-align:center;font-size:25px;flex:1}.perception small{display:block;font-size:8px;color:#a8b9d6;margin-top:6px}.perception strong{color:#5eead4}.flow{display:flex;align-items:center;justify-content:center;gap:8px;margin:32px 0;flex-wrap:wrap}.flow div{background:#1b3651;border:1px solid #4a8b92;border-radius:13px;padding:15px;min-width:100px;display:grid;gap:7px}.flow div:nth-of-type(2){background:#2a2450;border-color:#6656a9}.flow div:nth-of-type(3){background:#103d40;border-color:#277b73}.flow b{font-size:14px}.flow small{font-size:9px;color:#a9bdd7}.flow i{color:#a5b4fc}.matchgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.term,.target{width:100%;padding:10px;border-radius:10px;border:1px solid #394d72;background:#1b2a49;color:#e1eafa;text-align:left;font-size:10px;min-height:43px;cursor:pointer;margin-bottom:7px}.term{font-weight:800}.term.selected{border-color:#5eead4;background:#104044}.target small{display:block;color:#8ea2c5;font-size:9px;margin-top:5px}.target.done{border-color:#2bb59e;background:#10413f}.target.wrong{border-color:#e8798f;background:#4b263c}.option{display:block;padding:10px;border:1px solid #34486a;border-radius:10px;margin:7px 0;font-size:11px;cursor:pointer}.option:has(input:checked){border-color:#a78bfa;background:#292451}.option input{accent-color:#a78bfa}.btn{border:1px solid #465a7e;background:#1e3052;color:#e4edff;border-radius:9px;padding:9px 12px;font-size:10px;font-weight:800;cursor:pointer}.btn.primary{border:0;background:linear-gradient(100deg,#0f9f91,#6559dc)}.btnrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.status{font-size:10px;color:#7eead5;min-height:18px;margin-top:8px}.progress{height:7px;background:#283650;border-radius:8px;overflow:hidden}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#5eead4,#a78bfa)}textarea{width:100%;min-height:90px;background:#0b1530;border:1px solid #394c6d;border-radius:10px;color:#e6edfa;padding:11px;font:inherit;font-size:11px}.fine{font-size:10px;color:#7f91b3;line-height:1.5;margin-top:15px}@media(max-width:800px){.layout{grid-template-columns:1fr}}@media(max-width:540px){.matchgrid{grid-template-columns:1fr}.stages{grid-template-columns:repeat(3,1fr)}.perception{flex-wrap:wrap}.perception div{min-width:25%}.top{padding:14px}.metricrow b{font-size:20px}}
-/* CBSEMOCK Gold Standard common layer */
-.adslot{max-width:1280px;min-height:54px;margin:10px auto;border:1px dashed #49647c;border-radius:10px;display:grid;place-items:center;color:#8198b3;background:#101c32;font-size:9px;letter-spacing:1.3px;text-align:center;padding:8px}.student-record{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:13px;background:#0d1b31;border:1px solid #34486b;border-radius:13px;margin:14px 0}.student-record label{font-size:10px;color:#9fb2d2;display:grid;gap:5px}.student-record input{width:100%;min-width:0;background:#09152a;border:1px solid #3b4e70;border-radius:8px;padding:9px;color:#edf5ff}.teacher-rubric{margin-top:16px;background:linear-gradient(145deg,#141f3b,#10192e);border:1px solid #283957;border-radius:17px;padding:18px}.teacher-rubric h2{font-size:16px;margin:0 0 8px}.rubric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.rubric-grid label{display:grid;gap:6px;color:#aebfdb;font-size:10px}.rubric-grid input{width:100%;accent-color:#5eead4}.rubric-total{font-size:22px;font-weight:900;color:#5eead4}.record-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.record-actions button{cursor:pointer}@media(max-width:800px){.student-record{grid-template-columns:repeat(2,minmax(0,1fr))}.rubric-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.student-record{grid-template-columns:1fr}.rubric-grid{grid-template-columns:1fr}}@media print{.adslot,.record-actions,.top{display:none!important}body{background:white!important;color:#111!important}.panel,.teacher-rubric{break-inside:avoid}}
-
-.immersive-visual{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(230px,.78fr) minmax(300px,1.22fr);gap:12px;align-items:center;padding:18px 22px;margin:4px 0 18px;border:1px solid #4b5d91;border-radius:20px;background:radial-gradient(ellipse at 80% 50%,#29376b 0,#172344 43%,#101a31 100%);box-shadow:0 18px 48px #0003}.iv-copy{position:relative;z-index:2}.iv-kicker{font-size:9px;letter-spacing:1.8px;font-weight:900;color:#70e8e2}.iv-copy h2{font-size:clamp(19px,2.4vw,27px);line-height:1.15;margin:9px 0;color:#f3f7ff}.iv-copy p{font-size:12px;line-height:1.6;color:#b8c8e4;max-width:360px;margin:0}.iv-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;color:#aebfda;font-size:9px}.iv-legend span{display:flex;align-items:center;gap:5px}.dot{width:7px;height:7px;border-radius:50%;display:inline-block}.dot.cyan{background:#55ddea;box-shadow:0 0 10px #55ddea}.dot.violet{background:#a08cff;box-shadow:0 0 10px #a08cff}.dot.mint{background:#73e5b3;box-shadow:0 0 10px #73e5b3}.iv-art{position:relative;z-index:1;min-width:0}.iv-art svg{display:block;width:100%;height:auto;max-height:225px;overflow:visible}.iv-art .edge{stroke:#5ddce7;stroke-width:1.4;opacity:.38;stroke-dasharray:5 7;animation:edgeFlow 4s linear infinite;animation-delay:var(--d)}.iv-art .node{fill:#253c78;stroke:#79e9ec;stroke-width:2;filter:url(#glow);animation:nodePulse 2.8s ease-in-out infinite;animation-delay:var(--d)}.iv-art .axis{stroke:#8296bc;stroke-width:1.3;opacity:.6}.iv-art .svgtxt{fill:#b9c9e7;font:9px Inter,Arial,sans-serif;letter-spacing:1.1px}.iv-art .bar{fill:url(#g);transform-origin:bottom;animation:barRise 1.2s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d)}.iv-art .spark{fill:#b7ffdf;filter:url(#glow)}.iv-art .point{fill:#7be7d1;stroke:#132647;stroke-width:2}.iv-art .trend{fill:none;stroke:url(#g);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:650;stroke-dashoffset:650;animation:drawLine 2.4s ease forwards}.iv-art .stepbox{fill:#1a2d52;stroke:#6178a8;stroke-width:1.2}.iv-art .badrow{stroke:#ff9caa;stroke-width:4;stroke-linecap:round}.iv-art .goodrow{stroke:#75e9b7;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}.iv-art .balance{fill:#6f79dc33;stroke:#8f9cff;stroke-width:2}.iv-art .token rect{fill:#243a68;stroke:#70dfe1;stroke-width:1}.iv-art .pixel{fill:#5adbdc;opacity:.5;animation:nodePulse 3s ease-in-out infinite;animation-delay:var(--d)}.iv-art .detect{fill:none;stroke:#7cf0bc;stroke-width:2.5;stroke-dasharray:7 5;animation:edgeFlow 6s linear infinite}.iv-art .heat{fill:#7c80f8;stroke:#9eabff;stroke-width:1}.iv-glow{position:absolute;z-index:-1;width:240px;height:240px;border-radius:50%;right:12%;top:5%;background:#536bff22;filter:blur(35px)}@keyframes edgeFlow{to{stroke-dashoffset:-48}}@keyframes nodePulse{50%{opacity:.65;filter:drop-shadow(0 0 8px #73e9e9)}}@keyframes barRise{from{transform:scaleY(.08);opacity:.2}to{transform:scaleY(1);opacity:1}}@keyframes drawLine{to{stroke-dashoffset:0}}@media(max-width:760px){.immersive-visual{grid-template-columns:1fr;padding:16px}.iv-art svg{max-height:190px}.iv-copy p{max-width:none}}@media(prefers-reduced-motion:reduce){.immersive-visual *,.landing-art *{animation:none!important;transition:none!important}}
-
-/* ── SHARE BUTTONS FAB (injected) ── */
-.share-fab-wrap{
-  position:fixed;bottom:28px;right:16px;z-index:1000;
-  display:flex;flex-direction:column;gap:10px;
-  align-items:center;
-}
-.share-fab{
-  display:flex;align-items:center;justify-content:center;
-  width:48px;height:48px;border-radius:50%;border:none;
-  cursor:pointer;text-decoration:none;
-  box-shadow:0 4px 14px rgba(0,0,0,.35);
-  transition:transform .18s,box-shadow .18s;
-  font-size:1.35rem;
-}
-.share-fab:hover{transform:scale(1.12);box-shadow:0 6px 20px rgba(0,0,0,.45);}
-.share-fab.wa{background:#25D366;}
-.share-fab.fb{background:#1877F2;}
-.share-fab .fab-tooltip{
-  position:absolute;right:58px;
-  background:rgba(20,20,40,.85);color:#fff;
-  font-size:.7rem;font-weight:600;white-space:nowrap;
-  padding:4px 9px;border-radius:6px;
-  opacity:0;pointer-events:none;
-  transition:opacity .2s;
-}
-.share-fab:hover .fab-tooltip{opacity:1;}
-/* On desktop shift up so it doesn't overlap news FAB */
-@media(min-width:768px){
-  .share-fab-wrap{bottom:28px;right:20px;}
-}
-</style><link rel="canonical" href="https://cbsemock.org.in/virtual-labs/ai-ml/ai-data-exploration.html">
-<meta name="description" content="Explore this interactive Data exploration virtual lab for CBSE students. Inspect data quality, patterns and missing values">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="author" content="CBSE Board Exam Hub">
-<meta name="keywords" content="CBSE, CBSE board exam preparation, Data, exploration, CBSEMOCK, Studio, mock tests, practice papers">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="CBSE Board Exam Hub">
-<meta property="og:url" content="https://cbsemock.org.in/virtual-labs/ai-ml/ai-data-exploration.html">
-<meta property="og:title" content="Data exploration · CBSEMOCK AI Studio">
-<meta property="og:description" content="Explore this interactive Data exploration virtual lab for CBSE students. Inspect data quality, patterns and missing values">
-<meta property="og:image" content="https://cbsemock.org.in/og-image.jpg">
-<meta property="og:image:alt" content="CBSE Board Exam Hub — CBSE study resources and mock tests">
-<meta property="og:locale" content="en_IN">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Data exploration · CBSEMOCK AI Studio">
-<meta name="twitter:description" content="Explore this interactive Data exploration virtual lab for CBSE students. Inspect data quality, patterns and missing values">
-<meta name="twitter:image" content="https://cbsemock.org.in/og-image.jpg">
-<meta name="theme-color" content="#17345f">
-<!-- CBSEMOCK SEO STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "name": "Data exploration · CBSEMOCK AI Studio",
-  "description": "Explore this interactive Data exploration virtual lab for CBSE students. Inspect data quality, patterns and missing values",
-  "url": "https://cbsemock.org.in/virtual-labs/ai-ml/ai-data-exploration.html",
-  "inLanguage": "en-IN",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "CBSE Board Exam Hub",
-    "url": "https://cbsemock.org.in/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "CBSE Board Exam Hub",
-    "url": "https://cbsemock.org.in/"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://cbsemock.org.in/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Virtual Labs",
-      "item": "https://cbsemock.org.in/virtual-labs/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Ai Ml",
-      "item": "https://cbsemock.org.in/virtual-labs/ai-ml/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Data exploration · CBSEMOCK AI Studio",
-      "item": "https://cbsemock.org.in/virtual-labs/ai-ml/ai-data-exploration.html"
-    }
-  ]
-}
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
-<style>.pp-leader{display:flex;justify-content:center;padding:10px 0;}</style>
-
-<!-- Google tag (gtag.js) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Data Exploration: Clean, Describe and Find Patterns — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Explore a class dataset in your browser: fix blank, impossible and duplicate records, find mean, median, mode and σ, plot graphs and train a real model.">
+<meta name="cbse-lab-standard" content="2026-11">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/ai-ml/ai-data-exploration.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Data exploration: clean, describe and find patterns — virtual lab","url":"https://cbsemock.org.in/virtual-labs/ai-ml/ai-data-exploration.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 9","Class 10"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Data exploration in the AI project cycle","Handling missing, impossible and duplicate data","Mean, median, mode, range and standard deviation","Histograms and scatter plots","Training and testing a simple linear model"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
-<!-- MOBILE-FIX:START --><style id="mobile-fix">@media (max-width:768px){html body section.student-record > label,html body main > div.crumb,html body div.hero > div > div.eyebrow,html body div.hero > div.tag,html body div.iv-copy > div.iv-kicker,html body div.iv-legend > span,html body div.panel > p.muted,html body div.visual > div.vhead,html body div.vhead > span,html body div.bars > div > small,html body div.bars > div > b,html body #valC,html body div.visual > label.fullslider,html body #dataVal,html body #download,html body div.btnrow > button.btn,html body div.matchgrid > div > button.term,html body div.matchgrid > div > button.target,html body button.target > small,html body #check,html body #clear,html body div.panel > label.option,html body #quiz,html body #progressText,html body div.panel > p.fine,html body main > p.fine,html body section.teacher-rubric > p.muted,html body div.rubric-grid > label,html body #recordExport,html body div.record-actions > button.btn,html body section.teacher-rubric > p.fine,html body #shareWa > span.fab-tooltip,html body #shareFb > span.fab-tooltip{font-size:12px!important;}html body #dataRange,html body div.rubric-grid > label > input.rubric-score{padding-top:5px!important;padding-bottom:5px!important;}html body label.option > input{padding-top:7px!important;padding-bottom:7px!important;}}</style><!-- MOBILE-FIX:END -->
-<!-- LAB-MOBILE:START -->
 <style>
-@media (max-width:760px){
- .portal-backbar #portal-back,.portal-backbar a{min-height:40px;display:inline-flex;align-items:center}
- .share-fab-wrap{bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;right:10px!important;gap:8px!important}
- .share-fab{width:42px!important;height:42px!important;opacity:.92}
- .share-fab .fab-tooltip{display:none!important}
- body{padding-bottom:64px}
- input[type=range]{min-height:36px;touch-action:pan-y}
- input[type=checkbox],input[type=radio]{min-width:22px;min-height:22px}
- input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=hidden]):not([type=color]),select,textarea{min-height:40px;font-size:max(16px,1em)}
- button:not(.toggle):not(.share-fab),.btn,[role=button],a.button{min-height:40px}
- .toggle{position:relative}.toggle::before{content:"";position:absolute;inset:-9px -4px}
- img,video,canvas{max-width:100%}
- pre,code{white-space:pre-wrap;word-break:break-word}
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800;padding:8px 0}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.75rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+@media(max-width:820px){.tabs{grid-template-columns:1fr 1fr}}
+.tab{text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 12px;font:inherit;transition:all .15s;min-height:44px}
+.tab b{display:block;color:#fff;font-size:.92rem}.tab small{font-size:.76rem;color:#93a6bf;display:block;line-height:1.35}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab.done b::after{content:' ✓';color:#7fe0b8}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px}
+.panel h4{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.row2{display:grid;grid-template-columns:320px 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 10px}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:99px;min-height:40px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.card .chip{background:var(--soft);color:var(--text);border-color:var(--border)}.card .chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:#c9d6e6;cursor:pointer;padding:8px 0;min-height:40px}
+.sw input{width:22px;height:22px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:42px;transition:transform .15s,box-shadow .15s;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.btn.red{background:#5c1f1f;color:#ffd6d0;border:1.5px solid #8a3b34}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.msg{font-size:.88rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+.lab .fb{color:#d8e2ef}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.fb li.ok{color:var(--green)}.lab .fb li.ok{color:#7fe0b8}
+.note{font-size:.82rem;color:var(--muted)}
+.lab .note{color:#93a6bf}
+/* data sheet */
+.dbox{position:relative;border-radius:14px;border:1px solid #1f2d42;background:#f8f6ef;overflow:hidden}
+.dwrap{overflow-x:auto;overflow-y:auto;max-height:480px;-webkit-overflow-scrolling:touch}
+table.dt{border-collapse:separate;border-spacing:0;width:100%;min-width:660px;font:500 14px 'JetBrains Mono',ui-monospace,monospace;color:#1d232c}
+.dt th{position:sticky;top:0;background:#1a3a6b;color:#fff;z-index:2;padding:0;font:700 12.5px Inter,sans-serif;border-right:1px solid #2c4d80}
+.dt th button{all:unset;box-sizing:border-box;display:block;width:100%;min-height:46px;padding:6px 8px;cursor:pointer;text-align:center;line-height:1.2}
+.dt th button small{display:block;font-weight:500;color:#c7d6ee;font-size:12px}
+.dt th button:focus-visible{outline:2px solid var(--gold2);outline-offset:-3px}
+.dt th button[aria-sort] small::after{content:' ▲';color:var(--gold2)}.dt th button[aria-sort=descending] small::after{content:' ▼'}
+.dt td{padding:0 8px;height:42px;text-align:center;border-bottom:1px solid #e3ded0;border-right:1px solid #ece7da;white-space:nowrap}
+.dt td:first-child{color:#8a8476;font-size:12.5px}
+.dt tbody tr{cursor:pointer}.dt tbody tr:nth-child(even) td{background:#f1eee5}
+.dt tbody tr:focus-visible td{background:#e9f1ff}
+.dt tbody tr.picked td{background:#ffeeb0}
+.dt tbody tr.del td{color:#a19c90;text-decoration:line-through;background:#e9e6de}
+.dt td.fixd,.dt td.fild{color:#0b6b56;font-style:italic;font-weight:700}
+.dt td.iss{box-shadow:inset 0 0 0 2px #d22}
+.dt td.blank{background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(0,0,0,.035) 6px 7px)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.8rem;color:#93a6bf;margin-top:8px}
+.legend i{font-style:normal;color:#7fe0b8;font-weight:700}
+.actbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+#selInfo{flex:1 1 100%;font-size:.9rem;color:#d8e2ef}
+#selInfo b{color:var(--gold2)}
+/* inspector */
+.sums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0 12px}
+.sums div{background:#0b1320;border:1px solid #23344d;border-radius:10px;padding:8px 10px}
+.sums small{display:block;font-size:12px;color:#93a6bf;font-weight:700;letter-spacing:.04em}
+.sums b{font:700 1.05rem 'JetBrains Mono',monospace;color:#fff;word-break:break-all}
+.sub{font-size:.8rem;color:#93a6bf;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:6px 0}
+.strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(62px,1fr));gap:5px}
+.strip span{background:#f8f6ef;color:#1d232c;border-radius:7px;padding:4px 4px 5px;text-align:center;font:700 15px 'JetBrains Mono',monospace}
+.strip span i{display:block;font:600 12px Inter,sans-serif;color:#857f71;font-style:normal}
+.strip span.mid{background:#ffe08a;box-shadow:0 0 0 2px var(--gold)}
+.tally{display:flex;flex-wrap:wrap;gap:6px}
+.tally span{background:#13213a;border:1px solid #2f4566;border-radius:8px;padding:4px 9px;font:600 14px 'JetBrains Mono',monospace;color:#e8eef6}
+.tally span b{color:var(--gold2)}
+.helpbox{margin-top:10px;background:#2a2410;border:1px dashed var(--gold);border-radius:10px;padding:8px 12px;font-size:.88rem;color:#ffe9a8}
+.warn{background:#3a1d1a;border:1px solid #8a3b34;color:#ffd6d0;border-radius:10px;padding:8px 12px;font-size:.88rem;margin-bottom:10px}
+.pc{display:block;width:100%;max-width:620px;margin:0 auto;aspect-ratio:4/3;border-radius:10px;background:#fbfaf5}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:10px}
+.kv div{background:#0b1320;border:1px solid #23344d;border-radius:10px;padding:8px 10px}
+.kv small{display:block;font-size:12px;color:#93a6bf;font-weight:700}
+.kv b{font:700 1rem 'JetBrains Mono',monospace;color:#fff}
+.pred{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px;font-size:.9rem}
+.pred input{font:16px 'JetBrains Mono',monospace;width:96px;padding:8px;border-radius:8px;border:1.5px solid #3a5276;background:#0b1320;color:#fff;min-height:42px}
+table.cmp{border-collapse:collapse;width:100%;font-size:.88rem;margin-top:10px}
+.cmp th,.cmp td{padding:7px 8px;border-bottom:1px solid #23344d;text-align:center}
+.cmp th{font-size:.78rem;color:#93a6bf}
+.cmp tr.best td{color:#7fe0b8;font-weight:700}
+/* tables in cards */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border);-webkit-overflow-scrolling:touch}
+table.obs{border-collapse:collapse;width:100%;min-width:860px;font-size:.88rem}
+table.obs.narrow{min-width:560px}
+.obs th,.obs td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:center}
+.obs th{background:var(--soft);font-weight:700;font-size:.78rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs td.l{text-align:left;font-weight:700}
+.obs input,.obs select{font:inherit;font-family:'JetBrains Mono',monospace;font-size:.9rem;width:78px;padding:7px 6px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);color:var(--text);min-height:40px}
+.obs select{width:auto;font-family:Inter,sans-serif}
+.obs input.bad,.obs select.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs input.good,.obs select.good{border-color:var(--green)}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.graphs{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+@media(max-width:820px){.graphs{grid-template-columns:1fr}}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.84rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.15rem;color:var(--navy);word-break:break-word}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1rem;overflow-x:auto}
+pre.code{font:500 13.5px/1.55 'JetBrains Mono',monospace;background:#0b1320;color:#dfe8f5;border-radius:12px;padding:12px 14px;overflow-x:auto;margin:8px 0}
+pre.code .c{color:#7f93ad}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:28px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}.links li:nth-child(5) a{background:linear-gradient(135deg,#b8813b,#4a2f0f)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;counter-reset:s}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.62);font:600 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.08em}
+.sceneB .magB{animation:scan 7s ease-in-out infinite}
+@keyframes scan{0%,100%{transform:translate(0,0)}30%{transform:translate(118px,44px)}55%{transform:translate(60px,110px)}80%{transform:translate(-8px,66px)}}
+.sceneB .blinkB{animation:blink 1.4s ease-in-out infinite alternate}@keyframes blink{to{opacity:.25}}
+.sceneB .barB{transform-box:fill-box;transform-origin:50% 100%;animation:grow 3.6s ease-in-out infinite alternate}
+.sceneB .barB:nth-child(2n){animation-delay:-.9s}.sceneB .barB:nth-child(3n){animation-delay:-1.8s}
+@keyframes grow{0%{transform:scaleY(.82)}100%{transform:scaleY(1.04)}}
+.sceneB .trendB{stroke-dasharray:240;stroke-dashoffset:240;animation:draw 4s ease-in-out infinite}
+@keyframes draw{0%{stroke-dashoffset:240}45%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-240}}
+.sceneB .flowB{stroke-dasharray:4 9;animation:flow 1.3s linear infinite}@keyframes flow{to{stroke-dashoffset:-26}}
+.sceneB .dotB{animation:pulse 2s ease-in-out infinite alternate}@keyframes pulse{to{opacity:.55}}
+@media(prefers-reduced-motion:reduce){.sceneB .magB,.sceneB .blinkB,.sceneB .barB,.sceneB .trendB,.sceneB .flowB,.sceneB .dotB{animation:none}.sceneB .trendB{stroke-dashoffset:0}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt;margin:4pt 0}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:48%;margin:1%;border:1px solid #bbb}
+}
+@media(max-width:700px){
+ .dbox::after{content:'⟷ swipe the sheet';position:absolute;right:8px;bottom:6px;font:600 12px Inter,sans-serif;color:#e8cc6a;background:rgba(5,8,14,.78);padding:3px 9px;border-radius:99px;pointer-events:none;z-index:3}
+ .hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small{font-size:12px}
+ .obs input,.obs select,.pred input{font-size:16px}
+ .obs input{width:84px}
+ .card{padding:16px 14px}
+ .lab{padding:10px}
+ .actbar .btn{flex:1 1 calc(50% - 8px)}
 }
 </style>
-<script>
-(function(){if(!window.matchMedia||!matchMedia('(max-width:760px)').matches)return;var runs=0,t=null;
-function lift(){runs++;var els=document.body.getElementsByTagName('*');for(var i=0;i<els.length;i++){var e=els[i];if(e.closest&&e.closest('svg'))continue;
- var txt=false;for(var n=e.firstChild;n;n=n.nextSibling){if(n.nodeType===3&&n.textContent.trim().length>1){txt=true;break}}if(!txt)continue;
- var fs=parseFloat(getComputedStyle(e).fontSize);if(fs&&fs<12)e.style.fontSize='12px'}}
-function soon(){if(runs>25)return;clearTimeout(t);t=setTimeout(lift,450)}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',lift);else lift();
-try{new MutationObserver(soon).observe(document.body,{childList:true,subtree:true})}catch(e){}})();
-</script>
-<!-- LAB-MOBILE:END -->
-</head><body>
-<!-- Vendor: Top Leaderboard -->
-<div class="pp-leader"><div id="ad-leader-top" style="width:100%;max-width:728px;"></div></div>
+</head>
+<body>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../index.html">Home</a> › <a href="../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../virtual-labs/ai-ml/index.html">AI / ML</a> › Data exploration</nav>
+   <div class="eyebrow">Experiment · Dataset, statistics &amp; charts</div>
+   <h1><span class="g1">Data Exploration</span><span class="g2">Clean, describe and find patterns</span></h1>
+   <p>Forty-one student records were typed in by hand, and a few are wrong. Find the blank, impossible and repeated rows, work out the statistics yourself, spot which habit really goes with higher marks, and test it with a model trained right here.</p>
+   <div class="chips"><span>Class 10 AI (417) · practical file</span><span>Class 9 · data literacy</span><span>⏱ about 30 min</span></div>
+   <a class="go" href="#lab">Open the dataset ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <linearGradient id="b-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#24170c"/></linearGradient>
+ <linearGradient id="b-steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe4ea"/><stop offset=".5" stop-color="#8a939f"/><stop offset="1" stop-color="#47505b"/></linearGradient>
+ <linearGradient id="b-bez" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a313c"/><stop offset="1" stop-color="#141920"/></linearGradient>
+ <radialGradient id="b-scr" cx=".5" cy=".4" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e9e5d8"/></radialGradient>
+ <radialGradient id="b-glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#bfe0ff" stop-opacity=".32"/><stop offset="1" stop-color="#bfe0ff" stop-opacity="0"/></radialGradient>
+ <radialGradient id="b-lens" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset=".6" stop-color="#bfe6ff" stop-opacity=".18"/><stop offset="1" stop-color="#7cc3f2" stop-opacity=".3"/></radialGradient>
+ <linearGradient id="b-card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16243b"/><stop offset="1" stop-color="#0c1525"/></linearGradient>
+ <clipPath id="b-clip"><rect x="62" y="62" width="306" height="186"/></clipPath>
+</defs>
+<rect x="0" y="300" width="760" height="60" fill="url(#b-wood)"/>
+<ellipse cx="215" cy="160" rx="230" ry="150" fill="url(#b-glow)"/>
+<!-- laptop -->
+<rect x="50" y="50" width="330" height="210" rx="11" fill="url(#b-bez)" stroke="#59626e"/>
+<rect x="62" y="62" width="306" height="186" fill="url(#b-scr)"/>
+<g clip-path="url(#b-clip)" font-family="JetBrains Mono,monospace" font-size="11" fill="#1d232c" text-anchor="middle">
+ <rect x="62" y="62" width="306" height="22" fill="#1a3a6b"/>
+ <g fill="#fff" font-family="Inter,sans-serif" font-weight="700" font-size="10"><text x="84" y="77">Roll</text><text x="132" y="77">Study</text><text x="182" y="77">Sleep</text><text x="232" y="77">Screen</text><text x="284" y="77">Attend.</text><text x="338" y="77">Marks</text></g>
+ <g stroke="#e3ded0"><path d="M62 106h306M62 128h306M62 150h306M62 172h306M62 194h306M62 216h306M62 238h306"/><path d="M106 84v164M158 84v164M206 84v164M258 84v164M310 84v164"/></g>
+ <text x="84" y="99">1</text><text x="132" y="99">3.0</text><text x="182" y="99">7.5</text><text x="232" y="99">2.5</text><text x="284" y="99">91</text><text x="338" y="99">78</text>
+ <text x="84" y="121">2</text><text x="132" y="121">1.5</text><text x="182" y="121">6.5</text><text x="232" y="121">4.0</text><text x="284" y="121">84</text><text x="338" y="121">52</text>
+ <text x="84" y="143">3</text><text x="132" y="143">2.5</text><text x="182" y="143">8.0</text><text x="232" y="143">3.0</text><rect class="blinkB" x="260" y="131" width="48" height="18" rx="2" fill="#ffd2cc" stroke="#d22" stroke-width="1.5"/><text x="284" y="143" fill="#b3261e" font-weight="700">930</text><text x="338" y="143">66</text>
+ <text x="84" y="165">4</text><text x="132" y="165">4.5</text><text x="182" y="165">7.0</text><text x="232" y="165">1.5</text><text x="284" y="165">95</text><text x="338" y="165">89</text>
+ <text x="84" y="187">5</text><rect x="110" y="175" width="44" height="18" rx="2" fill="none" stroke="#c9a227" stroke-width="1.5" stroke-dasharray="3 3"/><text x="182" y="187">6.0</text><text x="232" y="187">5.5</text><text x="284" y="187">78</text><text x="338" y="187">41</text>
+ <text x="84" y="209">6</text><text x="132" y="209">2.0</text><text x="182" y="209">7.5</text><text x="232" y="209">3.5</text><text x="284" y="209">88</text><text x="338" y="209">60</text>
+ <text x="84" y="231">4</text><text x="132" y="231">4.5</text><text x="182" y="231">7.0</text><text x="232" y="231">1.5</text><text x="284" y="231">95</text><text x="338" y="231">89</text>
+ <rect x="62" y="216" width="306" height="22" fill="#c9a227" opacity=".16" class="blinkB"/>
+</g>
+<polygon points="30,262 400,262 428,286 2,286" fill="url(#b-steel)"/><rect x="170" y="266" width="90" height="6" rx="3" fill="#59626e"/>
+<!-- magnifier -->
+<g class="magB"><g transform="translate(110 110)"><circle r="30" fill="url(#b-lens)" stroke="#c9a227" stroke-width="6"/><circle r="30" fill="none" stroke="#fff3c4" stroke-width="1.2" opacity=".6"/><path d="M21 21 L46 46" stroke="#5a3c24" stroke-width="10" stroke-linecap="round"/><path d="M-12 -16 q8 -6 18 -4" stroke="#fff" stroke-width="2.5" fill="none" opacity=".8"/></g></g>
+<!-- data flowing to charts -->
+<path class="flowB" d="M380 120 C420 110 430 92 452 92" stroke="#e8cc6a" stroke-width="2" fill="none"/>
+<path class="flowB" d="M380 190 C420 200 430 222 452 222" stroke="#e8cc6a" stroke-width="2" fill="none"/>
+<!-- histogram card -->
+<rect x="452" y="30" width="280" height="126" rx="12" fill="url(#b-card)" stroke="#2c4166"/>
+<path d="M474 136h240M474 136V46" stroke="#5d7396" stroke-width="1.2"/>
+<g fill="#3b6fb8" stroke="#8fb6ee" stroke-width="1"><rect class="barB" x="484" y="122" width="24" height="14"/><rect class="barB" x="510" y="106" width="24" height="30"/><rect class="barB" x="536" y="84" width="24" height="52"/><rect class="barB" x="562" y="62" width="24" height="74"/><rect class="barB" x="588" y="70" width="24" height="66"/><rect class="barB" x="614" y="92" width="24" height="44"/><rect class="barB" x="640" y="112" width="24" height="24"/><rect class="barB" x="666" y="126" width="24" height="10"/></g>
+<path d="M590 50v86" stroke="#e8cc6a" stroke-width="2" stroke-dasharray="4 4"/>
+<!-- scatter card -->
+<rect x="452" y="168" width="280" height="126" rx="12" fill="url(#b-card)" stroke="#2c4166"/>
+<path d="M474 276h240M474 276V184" stroke="#5d7396" stroke-width="1.2"/>
+<g fill="#e8cc6a"><circle class="dotB" cx="490" cy="262" r="4"/><circle cx="506" cy="252" r="4"/><circle class="dotB" cx="520" cy="258" r="4"/><circle cx="534" cy="240" r="4"/><circle cx="550" cy="244" r="4"/><circle class="dotB" cx="566" cy="228" r="4"/><circle cx="580" cy="232" r="4"/><circle cx="596" cy="216" r="4"/><circle class="dotB" cx="612" cy="222" r="4"/><circle cx="628" cy="204" r="4"/><circle cx="646" cy="208" r="4"/><circle class="dotB" cx="664" cy="194" r="4"/><circle cx="690" cy="196" r="4"/></g>
+<path class="trendB" d="M484 266 L704 190" stroke="#ff9d2e" stroke-width="3" stroke-linecap="round" fill="none"/>
+<text x="215" y="40" class="tB">RAW DATA · 41 RECORDS</text><text x="592" y="22" class="tB">HISTOGRAM</text><text x="592" y="316" class="tB">SCATTER · TREND</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Clean the data</li><li><b>2</b>Describe (statistics)</li><li><b>3</b>Find patterns</li><li><b>4</b>Train, test &amp; result</li></ol>
+</header>
 
-    <nav class="top"><div class="logo">✦ CBSEMOCK <em>AI STUDIO</em></div><a href="index.html">← Discovery Hub</a></nav><main><div class="adslot">ADVERTISEMENT · TOP BANNER RESERVED SPACE</div><section class="student-record" aria-label="Student details"><label>Student name<input id="studentName" type="text" placeholder="Enter student name"></label><label>Class / section<input id="studentClass" type="text" placeholder="e.g. Class 10 A"></label><label>Roll number<input id="studentRoll" type="text" placeholder="Roll number"></label><label>Experiment date<input id="studentDate" type="date"></label></section>
-    <div class="crumb">DISCOVERY STUDIO / AI FOUNDATIONS / CLASS 10</div><div class="hero"><div><div class="eyebrow">AI foundations · EXPERIMENT 04</div><h1>Data exploration</h1><p>Inspect data quality, patterns and missing values</p></div><div class="tag">Class 10 · Guided experience</div></div>
-    <section class="immersive-visual" aria-label="Visual concept illustration"><div class="iv-copy"><div class="iv-kicker">VISUAL CONCEPT MAP · DATA</div><h2>Data exploration</h2><p>Read the shape of a dataset: compare values, discover patterns and ask better questions.</p><div class="iv-legend"><span><i class="dot cyan"></i> Input / evidence</span><span><i class="dot violet"></i> Processing</span><span><i class="dot mint"></i> Output / insight</span></div></div><div class="iv-art"><svg viewBox="0 0 520 245" role="img" aria-label="Animated data chart and scatter plot"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#37d8e7"/><stop offset=".55" stop-color="#7c75ff"/><stop offset="1" stop-color="#63e6b1"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="M30 205H490M30 25V205" class="axis"/><rect x="48" y="161" width="27" height="44" rx="7" class="bar" style="--d:0.0s"/><circle cx="61" cy="154" r="4" class="spark"/><rect x="102" y="117" width="27" height="88" rx="7" class="bar" style="--d:0.09s"/><circle cx="115" cy="110" r="4" class="spark"/><rect x="156" y="143" width="27" height="62" rx="7" class="bar" style="--d:0.18s"/><circle cx="169" cy="136" r="4" class="spark"/><rect x="210" y="79" width="27" height="126" rx="7" class="bar" style="--d:0.27s"/><circle cx="223" cy="72" r="4" class="spark"/><rect x="264" y="107" width="27" height="98" rx="7" class="bar" style="--d:0.36s"/><circle cx="277" cy="100" r="4" class="spark"/><rect x="318" y="54" width="27" height="151" rx="7" class="bar" style="--d:0.44999999999999996s"/><circle cx="331" cy="47" r="4" class="spark"/><rect x="372" y="92" width="27" height="113" rx="7" class="bar" style="--d:0.54s"/><circle cx="385" cy="85" r="4" class="spark"/><rect x="426" y="29" width="27" height="176" rx="7" class="bar" style="--d:0.63s"/><circle cx="439" cy="22" r="4" class="spark"/><path d="M62 155L115 125L168 140L221 95L274 110L327 72L380 87L433 40" class="trend"/><circle cx="62" cy="155" r="6" class="point"/><circle cx="115" cy="125" r="6" class="point"/><circle cx="168" cy="140" r="6" class="point"/><circle cx="221" cy="95" r="6" class="point"/><circle cx="274" cy="110" r="6" class="point"/><circle cx="327" cy="72" r="6" class="point"/><circle cx="380" cy="87" r="6" class="point"/><circle cx="433" cy="40" r="6" class="point"/><text x="35" y="18" class="svgtxt">DISTRIBUTION · PATTERN · TREND</text></svg></div><div class="iv-glow"></div></section><div class="layout"><section><div class="panel"><h2>Mission briefing</h2><div class="task">Explore a small set of plant observations.</div><p class="muted">Explore the concept, change an input, observe the result and explain what it means.</p><div class="visual"><div class="vhead">▥ DATA EXPLORER <span>SYNTHETIC DATASET</span></div><div class="bars"><div><i style="height:42%"></i><small>A</small><b>42</b></div><div><i style="height:68%"></i><small>B</small><b>68</b></div><div><i id="barC" style="height:55%"></i><small>C</small><b id="valC">55</b></div><div><i style="height:86%"></i><small>D</small><b>86</b></div><div><i style="height:63%"></i><small>E</small><b>63</b></div></div><label class="fullslider">Adjust Group C <b id="dataVal">55</b><input id="dataRange" type="range" min="10" max="100" value="55"></label></div></div><div class="panel"><h2>✎ Observation log</h2><p class="muted">Record what you observed, what changed and one limitation.</p><textarea id="notes" placeholder="My observation..."></textarea><div class="btnrow"><button class="btn" id="download">Download lab notes</button><button class="btn" onclick="window.print()">Print experiment</button></div></div></section>
-    <aside><div class="panel"><h2>Concept match <span style="float:right;color:#9b8cf4;font-size:9px">DRAG OR TAP</span></h2><p class="muted">Connect each term to its meaning. On mobile, tap a term and then its definition.</p><div class="matchgrid"><div><button class="term" draggable="true" data-term="Mean">Mean</button><button class="term" draggable="true" data-term="Median">Median</button><button class="term" draggable="true" data-term="Outlier">Outlier</button></div><div><button class="target" data-answer="Mean">Arithmetic average<small>Tap or drop here</small></button><button class="target" data-answer="Median">Middle value when ordered<small>Tap or drop here</small></button><button class="target" data-answer="Outlier">Unusually distant observation<small>Tap or drop here</small></button></div></div><div class="btnrow"><button class="btn primary" id="check">Check matches</button><button class="btn" id="clear">Reset</button></div><div id="matchStatus" class="status"></div></div>
-    <div class="panel"><h2>Knowledge check</h2><p class="task" style="font-size:13px">Which measure is the middle value in ordered data?</p><label class="option"><input type="radio" name="q" value="0"> Median</label><label class="option"><input type="radio" name="q" value="1"> Mean</label><label class="option"><input type="radio" name="q" value="2"> Range</label><div class="btnrow"><button class="btn primary" id="quiz">Check answer</button></div><div id="quizStatus" class="status"></div></div>
-    <div class="panel"><h2>Experiment progress <span id="pct" style="float:right;color:#5eead4">0%</span></h2><div class="progress"><i id="bar"></i></div><p class="muted" id="progressText">0 of 3 milestones completed</p><p class="fine">Complete the simulator, concept match and quiz to finish this experiment.</p></div></aside></div>
-    <p class="fine">CBSEMOCK AI & ML Virtual Labs · Educational conceptual model. Outputs are illustrative, not evidence of a validated or trained production AI system. Confirm class-wise syllabus alignment before assessment.</p><section class="teacher-rubric"><h2>Teacher review · Practical rubric</h2><p class="muted">Suggested assessment framework. Teacher may adjust marks to suit the class and task.</p><div class="rubric-grid"><label>Concept understanding · /2<input type="range" min="0" max="2" step="1" value="1" class="rubric-score"></label><label>Experiment and method · /3<input type="range" min="0" max="3" step="1" value="1" class="rubric-score"></label><label>Analysis and interpretation · /3<input type="range" min="0" max="3" step="1" value="1" class="rubric-score"></label><label>Conclusion and reflection · /2<input type="range" min="0" max="2" step="1" value="1" class="rubric-score"></label></div><p>Teacher rubric score: <span class="rubric-total" id="rubricTotal">4 / 10</span></p><div class="record-actions"><button class="btn primary" id="recordExport" type="button">Download complete practical record</button><button class="btn" type="button" onclick="window.print()">Print / Save PDF</button></div><p class="fine">Complete record includes student details, practical notes, experiment title, date and teacher rubric. Existing lab-specific notebook and activities are retained.</p></section><div class="adslot">ADVERTISEMENT · BOTTOM BANNER RESERVED SPACE</div></main>
-    <script>
-let selected=null,done=new Set();const terms=[...document.querySelectorAll('.term')],targets=[...document.querySelectorAll('.target')];
-function update(){let p=Math.round(done.size/3*100);document.getElementById('bar').style.width=p+'%';document.getElementById('pct').textContent=p+'%';document.getElementById('progressText').textContent=done.size+' of 3 milestones completed';}
-function place(t,v){t.dataset.placed=v;t.querySelector('small').textContent='Selected: '+v;t.classList.remove('done','wrong');}
-terms.forEach(t=>{t.addEventListener('dragstart',ev=>ev.dataTransfer.setData('text/plain',t.dataset.term));t.onclick=()=>{terms.forEach(x=>x.classList.remove('selected'));selected=t;t.classList.add('selected');};});
-targets.forEach(t=>{t.ondragover=ev=>ev.preventDefault();t.ondrop=ev=>{ev.preventDefault();place(t,ev.dataTransfer.getData('text/plain'));};t.onclick=()=>{if(selected){place(t,selected.dataset.term);selected.classList.remove('selected');selected=null;}};});
-document.getElementById('check').onclick=()=>{let n=0;targets.forEach(t=>{let ok=t.dataset.placed===t.dataset.answer;t.classList.toggle('done',ok);t.classList.toggle('wrong',!ok);if(ok)n++;});document.getElementById('matchStatus').textContent=n+'/'+targets.length+' correct';if(n===targets.length)done.add('match');else done.delete('match');update();};
-document.getElementById('clear').onclick=()=>{targets.forEach(t=>{delete t.dataset.placed;t.querySelector('small').textContent='Tap or drop here';t.classList.remove('done','wrong');});document.getElementById('matchStatus').textContent='';done.delete('match');update();};
-document.getElementById('quiz').onclick=()=>{let a=document.querySelector('input[name=q]:checked'),s=document.getElementById('quizStatus');if(!a){s.textContent='Choose an answer first.';return;}if(+a.value===0){s.textContent='✓ Correct — excellent reasoning.';done.add('quiz');}else{s.textContent='Not quite. Revisit the concept and try again.';done.delete('quiz');}update();};
-document.getElementById('download').onclick=()=>{let txt='CBSEMOCK AI DISCOVERY STUDIO\nData exploration\nAI foundations · Class 10\n\nObservation:\n'+document.getElementById('notes').value;let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'text/plain'}));a.download='ai-data-exploration_lab_notes.txt';a.click();URL.revokeObjectURL(a.href);};
-document.getElementById('dataRange').oninput=e=>{let n=+e.target.value;document.getElementById('dataVal').textContent=n;document.getElementById('valC').textContent=n;document.getElementById('barC').style.height=n+'%'};</script>
-<script>
-(()=>{const $=id=>document.getElementById(id);const scores=[...document.querySelectorAll('.rubric-score')];function total(){const n=scores.reduce((a,x)=>a+(+x.value||0),0);const el=$('rubricTotal');if(el)el.textContent=n+' / 10';}scores.forEach(x=>x.addEventListener('input',total));total();const b=$('recordExport');if(b)b.addEventListener('click',()=>{const title=document.querySelector('h1')?.textContent?.trim()||document.title;const notes=$('notes')?.value||'No written observations recorded.';const body=['CBSEMOCK AI & ML VIRTUAL LABS','Experiment: '+title,'Student: '+($('studentName')?.value||'Not entered'),'Class: '+($('studentClass')?.value||'Not entered'),'Roll: '+($('studentRoll')?.value||'Not entered'),'Date: '+($('studentDate')?.value||new Date().toISOString().slice(0,10)),'','STUDENT OBSERVATIONS',notes,'','TEACHER RUBRIC',...scores.map((x,i)=>'Criterion '+(i+1)+': '+x.value+'/'+x.max),'Total: '+scores.reduce((a,x)=>a+(+x.value||0),0)+'/10','','Generated by CBSEMOCK AI Studio'];const blob=new Blob([body.join('\n')],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='CBSEMOCK_AI_Practical_Record.txt';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);});})();
-</script>
 
-<!-- Vendor: Bottom Leaderboard -->
-<div class="pp-leader"><div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div></div>
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Data exploration workspace">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-step="0" role="tab" type="button"><b>Step 1 · Clean</b><small>Blank, impossible and repeated rows</small></button>
+   <button class="tab" data-step="1" role="tab" type="button"><b>Step 2 · Describe</b><small>Min, max, mean, median, mode, σ</small></button>
+   <button class="tab" data-step="2" role="tab" type="button"><b>Step 3 · Patterns</b><small>Scatter each habit against Marks</small></button>
+   <button class="tab" data-step="3" role="tab" type="button"><b>Step 4 · Train &amp; test</b><small>Straight-line model, 80 / 20 split</small></button>
+  </div>
+  <div class="task" id="task"></div>
 
-<script src="../../ads.js"></script>
-<script src="../../portal-shell.js"></script>
-<!-- Google AdSense Auto Ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2810600896966939"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-<!-- end AdSense -->
-<!-- Share FABs -->
-<div class="share-fab-wrap">
-  <a class="share-fab wa" id="shareWa" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 2C8.28 2 2 8.28 2 16c0 2.44.65 4.73 1.78 6.72L2 30l7.5-1.75A13.94 13.94 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.44 11.44 0 01-5.84-1.6l-.42-.25-4.45 1.04 1.06-4.33-.28-.45A11.46 11.46 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.3-8.56c-.34-.17-2.02-1-2.33-1.11-.32-.11-.55-.17-.78.17-.23.34-.89 1.11-1.09 1.34-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.01-1.9-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/></svg>
-    <span class="fab-tooltip">Share on WhatsApp</span>
-  </a>
-  <a class="share-fab fb" id="shareFb" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M29 16C29 8.82 23.18 3 16 3S3 8.82 3 16c0 6.49 4.75 11.87 10.97 12.84V19.7H10.4V16h3.57v-3.1c0-3.52 2.1-5.47 5.31-5.47 1.54 0 3.14.28 3.14.28v3.46h-1.77c-1.74 0-2.28 1.08-2.28 2.19V16h3.89l-.62 3.7h-3.27v9.14C24.25 27.87 29 22.49 29 16z"/></svg>
-    <span class="fab-tooltip">Share on Facebook</span>
-  </a>
-</div>
+  <!-- step 1 -->
+  <div id="p0">
+   <div class="dbox"><div class="dwrap" id="dwrap"><table class="dt" aria-label="Dataset: class10_study_habits.csv"><thead id="dth"></thead><tbody id="dtb"></tbody></table></div></div>
+   <div class="legend"><span>Tap a heading to sort (tap again to reverse). Blanks always sink to the bottom.</span><span><i>green italic</i> = value you fixed or filled</span><span>Keys on a row: F fill · X fix · Del delete · U undo</span></div>
+   <div class="actbar">
+    <div id="selInfo" aria-live="polite">Tap a row to select it.</div>
+    <button class="btn navy" data-a="fill" type="button">Fill blank with median</button>
+    <button class="btn navy" data-a="fix" type="button">Fix decimal slip (÷ 10)</button>
+    <button class="btn red" data-a="del" type="button">Delete row</button>
+    <button class="btn ghost" data-a="none" type="button">↶ Undo on this row</button>
+   </div>
+   <div class="tools">
+    <button class="btn gold" id="checkClean" type="button">✓ Check my cleaning</button>
+    <label class="sw"><input type="checkbox" class="helper"> Show readings (helper)</label>
+    <span style="flex:1"></span>
+    <a class="btn ghost" id="csv" download="class10_study_habits.csv" href="#">⬇ Raw CSV (for Python)</a>
+    <button class="btn ghost newData" type="button">↺ New dataset</button>
+   </div>
+   <ul class="fb" id="fbClean" aria-live="polite"></ul>
+  </div>
+
+  <!-- step 2 -->
+  <div id="p1" hidden>
+   <div id="warn1" class="warn" hidden>Your cleaning has not passed the check yet. These numbers still come from unclean data — finish Step 1 first.</div>
+   <div class="panel">
+    <h4><span>Column inspector · cleaned data</span><span id="insTag" class="mono"></span></h4>
+    <div class="sel" id="colSel"></div>
+    <div class="sums"><div><small>n (records)</small><b id="iN">—</b></div><div><small>Σx</small><b id="iS">—</b></div><div><small>Σx²</small><b id="iS2">—</b></div></div>
+    <p class="sub">Sorted values · small number = position</p>
+    <div class="strip" id="strip"></div>
+    <p class="sub" style="margin-top:12px">Tally of values that repeat</p>
+    <div class="tally" id="tally"></div>
+    <div class="helpbox" id="help1" hidden></div>
+    <div class="tools"><label class="sw"><input type="checkbox" class="helper"> Show readings (helper)</label><span style="flex:1"></span><a class="btn ghost" href="#obsStats">Type them in the table ↓</a></div>
+   </div>
+  </div>
+
+  <!-- step 3 -->
+  <div id="p2" hidden>
+   <div class="row2">
+    <div class="panel">
+     <h4><span>Plot against Marks</span></h4>
+     <div class="sel" id="expSel"></div>
+     <p class="note">Each dot is one student. Ask yourself: as this habit goes up, do the marks go up, go down, or show no clear pattern?</p>
+     <div class="helpbox" id="help2" hidden></div>
+     <div class="tools"><label class="sw"><input type="checkbox" class="helper"> Show readings (helper)</label></div>
+     <div class="tools"><a class="btn ghost" href="#obsPat">Record the pattern ↓</a></div>
+    </div>
+    <div class="panel"><h4><span id="expTitle">Scatter plot</span></h4><canvas id="ec" class="pc" width="640" height="480" aria-label="Scatter plot of a feature against marks"></canvas></div>
+   </div>
+  </div>
+
+  <!-- step 4 -->
+  <div id="p3" hidden>
+   <div class="row2">
+    <div class="panel">
+     <h4><span>Train a model</span><span id="modTag" class="mono"></span></h4>
+     <p class="note">Feature to learn from (target = Marks):</p>
+     <div class="sel" id="modSel"></div>
+     <div class="tools"><button class="btn gold" id="train" type="button">▶ Train on 80%</button><button class="btn ghost" id="resplit" type="button">↺ New 80 / 20 split</button></div>
+     <div class="kv" id="kv"></div>
+     <div class="pred" id="predBox" hidden><span id="predLbl">Value</span><input id="predIn" inputmode="decimal" aria-label="feature value for prediction"><span>→ predicted marks <b id="predOut" class="mono">—</b></span><span class="note" id="predNote"></span></div>
+     <div class="tools"><button class="btn ghost" id="cmpBtn" type="button">Train on every feature and compare</button></div>
+     <div id="cmpBox"></div>
+     <div class="msg" id="msg4" aria-live="polite"></div>
+    </div>
+    <div class="panel"><h4><span>Model on graph paper</span><span class="mono" style="text-transform:none">● train ○ test</span></h4><canvas id="mc" class="pc" width="640" height="480" aria-label="Training and test points with the fitted line"></canvas></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation tables</h2>
+  <h3>Table 1 · Data cleaning log <span class="pill" id="nClean">0 actions</span></h3>
+  <div class="tbl"><table class="obs narrow"><thead><tr><th>S. No. in sheet</th><th>Roll no.</th><th>Problem found</th><th>Action taken</th></tr></thead><tbody id="logTb"></tbody></table></div>
+
+  <h3 id="obsStats">Table 2 · Descriptive statistics (cleaned data)</h3>
+  <p class="lead">Fill Marks and at least two other columns. Range and variance work themselves out. Give mean and σ to 2 decimal places. σ divides by n, as in CBSE textbooks and NumPy’s np.std().</p>
+  <div class="tbl"><table class="obs"><thead><tr><th>Column</th><th>n</th><th>Minimum</th><th>Maximum</th><th>Range</th><th>Mean x̄</th><th>Median</th><th>Mode</th><th>Std. dev. σ</th><th>Variance σ²</th></tr></thead><tbody id="stTb"></tbody></table></div>
+  <div class="tools" style="margin-top:12px"><button class="btn navy" id="checkStats" type="button">✓ Check my table</button></div>
+  <ul class="fb" id="fbStats"></ul>
+
+  <h3 id="obsPat">Table 3 · Patterns seen in the scatter plots</h3>
+  <div class="tbl"><table class="obs narrow"><thead><tr><th>Feature</th><th>As the feature increases, Marks…</th><th>Correlation r</th><th>Strength</th></tr></thead><tbody id="patTb"></tbody></table></div>
+  <div class="tools" style="margin-top:12px"><button class="btn navy" id="checkPat" type="button">✓ Check my patterns</button><button class="btn ghost" id="print" type="button">🖨 Print practical record</button></div>
+  <ul class="fb" id="fbPat"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graphs</h2>
+  <p class="lead">The histogram and correlation chart appear once your data is clean; the model graph after you train.</p>
+  <div class="tools" style="margin:0 0 10px"><span class="note">Histogram class width:</span><span class="sel" id="binSel" style="margin:0"></span></div>
+  <div class="graphs">
+   <figure><canvas id="g1" width="560" height="420"></canvas><figcaption><b>Histogram of Marks.</b> Mean (gold) and median (red) are marked; the tallest bar is the modal class.</figcaption></figure>
+   <figure><canvas id="g2" width="560" height="420"></canvas><figcaption><b>Scatter plot with the best-fit line</b> of your model. Gold = training records, blue rings = test records.</figcaption></figure>
+   <figure><canvas id="g3" width="560" height="420"></canvas><figcaption><b>Correlation of each feature with Marks.</b> Appears after you check your patterns.</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Records after cleaning</small><b id="rN">—</b></div>
+   <div class="rbox"><small>Mean / median of Marks (your table)</small><b id="rM">—</b></div>
+   <div class="rbox"><small>Feature used by your model</small><b id="rF">—</b></div>
+   <div class="rbox"><small>Your fitted model</small><b id="rEq">—</b></div>
+   <div class="rbox"><small>Test error (MAE) vs guessing the mean</small><b id="rMae">—</b></div>
+   <div class="rbox true" id="trueBox" style="grid-column:1/-1" hidden><small>Hidden rule that made this dataset</small><b id="rTrue" style="font-size:.95rem">—</b></div>
+   <div class="rbox true" id="trueBox2" hidden><small>True mean marks (40 students, before errors)</small><b id="rTrueM">—</b></div>
+  </div>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the hidden rule</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To explore a dataset of Class 10 students’ study habits: find and treat missing, impossible and duplicate records; calculate descriptive statistics; use a histogram and scatter plots to find patterns; and check the strongest pattern by training and testing a simple straight-line model.</p>
+    <h3>Apparatus / requirements</h3>
+    <p>A computer or phone with a browser; the dataset <span class="mono">class10_study_habits.csv</span> (41 records × 7 columns: Roll, StudyHours, SleepHours, ScreenHours, Attendance, Height_cm, Marks); a calculator; the practical file. To repeat it in Python: Python 3 with the <span class="mono">pandas</span> and <span class="mono">matplotlib</span> libraries.</p>
+    <h3>Theory</h3>
+    <p><b>Data exploration</b> is the stage of the AI project cycle that comes after data acquisition and before modelling. We look at the data with statistics and graphs to check its quality and to find patterns, so we know which features are worth giving to a model.</p>
+    <p><b>Cleaning.</b> Real data has <i>missing values</i> (blank cells), <i>impossible values</i> (a typing slip such as 930% attendance) and <i>duplicate records</i>. A blank feature can be filled with the column’s median, which outliers do not pull. A blank <i>target</i> (Marks) must never be guessed — that row is dropped.</p>
+    <p class="eq">x̄ = Σx ÷ n &nbsp;·&nbsp; Range = max − min</p>
+    <p class="eq">Median = value at position (n + 1)/2 of the sorted list<br>(n even → average of the n/2-th and (n/2 + 1)-th values)</p>
+    <p class="eq">σ = √[ Σ(x − x̄)² ÷ n ] = √( Σx²/n − x̄² )</p>
+    <p><b>Mode</b> is the most frequent value. A <b>histogram</b> shows how one numeric column is spread out; a <b>scatter plot</b> shows whether two columns move together.</p>
+    <p><b>Correlation r</b> (enrichment, Class 11) measures how close the dots are to a straight line, from −1 (falls perfectly) through 0 (no pattern) to +1 (rises perfectly):</p>
+    <p class="eq">r = Σ(x − x̄)(y − ȳ) ÷ √[ Σ(x − x̄)² · Σ(y − ȳ)² ]</p>
+    <p><b>Straight-line model.</b> Least squares gives the line ŷ = m·x + c with m = Σ(x − x̄)(y − ȳ) ÷ Σ(x − x̄)² and c = ȳ − m·x̄. It learns from 80% of the records (training set) and is judged on the 20% it has never seen (test set) using the mean absolute error, MAE = Σ|y − ŷ| ÷ n.</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li>Open the dataset and note its size (rows × columns) and the meaning and unit of every column. Identify the target (Marks) and the features.</li>
+     <li>Sort each column. Blanks collect at the bottom; impossible values show up at the top or bottom.</li>
+     <li>Remove the repeated record (sort by Roll), drop the record with no Marks, correct the decimal slips, and fill blank feature cells with the column median.</li>
+     <li>Press “Check my cleaning” and complete the cleaning log (Table 1).</li>
+     <li>For Marks and at least two other columns, read n, Σx, Σx² and the sorted values in the inspector. Calculate the minimum, maximum, mean, median, mode and σ, and enter them in Table 2.</li>
+     <li>Draw the histogram of Marks and note the modal class and where the mean and median lie.</li>
+     <li>Plot each feature against Marks. Record in Table 3 whether Marks rise, fall or show no clear pattern.</li>
+     <li>Train a straight-line model on the feature with the strongest pattern. Note its equation and its test MAE, and compare with the other features and with simply guessing the mean.</li>
+     <li>Write the result and the limitations in the practical file.</li>
+    </ol>
+    <h3>The same steps in Python</h3>
+    <p class="note">Code for your practical file. It is not run on this page — download the raw CSV above and run it in your own Python.</p>
+<pre class="code">import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('class10_study_habits.csv')
+print(df.shape)                <span class="c"># rows, columns</span>
+print(df.isnull().sum())       <span class="c"># blanks per column</span>
+df = df.drop_duplicates()
+df = df.dropna(subset=['Marks'])          <span class="c"># never guess the target</span>
+df.loc[df['Attendance'] &gt; 100, 'Attendance'] /= 10
+df.loc[df['SleepHours'] &gt; 24, 'SleepHours'] /= 10
+df = df.fillna(df.median(numeric_only=True))
+print(df['Marks'].mean(), df['Marks'].median(), df['Marks'].mode().tolist())
+print(df['Marks'].std(ddof=0))            <span class="c"># σ with n</span>
+plt.hist(df['Marks'], bins=range(0, 101, 10)); plt.show()
+plt.scatter(df['StudyHours'], df['Marks']); plt.show()
+print(df.corr(numeric_only=True)['Marks'])</pre>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>Keep an untouched copy of the raw data; clean a copy.</li>
+     <li>Check every column against its unit before calculating (attendance ≤ 100%, sleep ≤ 24 h).</li>
+     <li>Never fill the target column with a guess; drop that record.</li>
+     <li>Finish cleaning before calculating statistics, and use the same cleaned data for every table and graph.</li>
+     <li>Use n (not n − 1) for σ, as in CBSE textbooks, and state it. (pandas’ .std() uses n − 1 unless you write ddof=0.)</li>
+     <li>Never test a model on the records it was trained on.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Limitations (sources of error)</h3>
+    <ul>
+     <li>The sample is small (about 40 students), so r and the model change noticeably with a different 80 / 20 split.</li>
+     <li>Filling blanks with the median slightly reduces the spread (σ) of that column.</li>
+     <li>Correlation does not prove cause: a pattern between two columns may be due to a third factor.</li>
+     <li>A one-feature straight-line model ignores the other habits that also affect marks, so its error cannot reach zero.</li>
+     <li>The dataset on this page is simulated: each session generates new records from a hidden rule plus random noise, so your answers cannot be copied. The model, statistics and graphs are calculated for real from those records.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask in the AI practical. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../resources/ai-x.html">📘 Class 9–10 AI study notes</a></li>
+   <li><a href="../../cbse-class-10-ai-mock-papers.html">📄 Class 10 AI mock papers</a></li>
+   <li><a href="../../virtual-labs/ai-ml/ai-data-visualisation.html">📊 Lab: data visualisation</a></li>
+   <li><a href="../../virtual-labs/ai-ml/ml-linear-regression.html">📈 Lab: linear regression</a></li>
+   <li><a href="../../virtual-labs/ai-ml/index.html">🤖 All AI / ML labs</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../about.html">About Us</a> · <a href="../../privacy.html">Privacy Policy</a> · <a href="../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
 <script>
 (function(){
-  var url = encodeURIComponent(window.location.href);
-  var title = encodeURIComponent(document.title);
-  var wa = document.getElementById('shareWa');
-  var fb = document.getElementById('shareFb');
-  if(wa) wa.href = 'https://wa.me/?text=' + title + '%20' + url;
-  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+'use strict';
+var $=function(id){return document.getElementById(id)};
+/* ───────── columns ───────── */
+var COLS=[{k:'marks',n:'Marks',u:'/100',csv:'Marks',s:'Marks'},{k:'study',n:'Study time',u:'h/day',csv:'StudyHours',s:'Study'},{k:'sleep',n:'Sleep',u:'h/night',csv:'SleepHours',s:'Sleep'},
+ {k:'screen',n:'Screen time',u:'h/day',csv:'ScreenHours',s:'Screen'},{k:'att',n:'Attendance',u:'%',csv:'Attendance',s:'Attend.'},{k:'height',n:'Height',u:'cm',csv:'Height_cm',s:'Height'}];
+var CN={};COLS.forEach(function(c){CN[c.k]=c});
+var FEATS=['study','sleep','screen','att','height'],SHEET=['study','sleep','screen','att','height','marks'];
+var VALID={study:[0,16],sleep:[0,14],screen:[0,16],att:[0,100],height:[100,220],marks:[0,100]};
+var FIELDS=['min','max','mean','median','mode','sd'];
+var FNAME={min:'minimum',max:'maximum',mean:'mean',median:'median',mode:'mode',sd:'σ'};
+
+/* ───────── maths ───────── */
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function gauss(R){var u=1-R(),v=R();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+function cl(x,a,b){return Math.max(a,Math.min(b,x))}
+function tn(R,m,s,a,b){for(var i=0;i<50;i++){var v=m+s*gauss(R);if(v>=a&&v<=b)return v}return cl(m,a,b)}
+function half(x){return Math.round(x*2)/2}
+function sum(a){var s=0;for(var i=0;i<a.length;i++)s+=a[i];return s}
+function mean(a){return sum(a)/a.length}
+function median(a){if(!a.length)return NaN;var s=a.slice().sort(function(x,y){return x-y}),n=s.length;return n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2}
+function modes(a){var m={},mx=0;a.forEach(function(v){var k=String(v);m[k]=(m[k]||0)+1;mx=Math.max(mx,m[k])});
+ return {vals:Object.keys(m).filter(function(k){return m[k]===mx}).map(Number).sort(function(x,y){return x-y}),f:mx,map:m}}
+function corr(x,y){var mx=mean(x),my=mean(y),sxy=0,sxx=0,syy=0;for(var i=0;i<x.length;i++){sxy+=(x[i]-mx)*(y[i]-my);sxx+=(x[i]-mx)*(x[i]-mx);syy+=(y[i]-my)*(y[i]-my)}return sxx&&syy?sxy/Math.sqrt(sxx*syy):0}
+function lsq(x,y){var mx=mean(x),my=mean(y),sxy=0,sxx=0;for(var i=0;i<x.length;i++){sxy+=(x[i]-mx)*(y[i]-my);sxx+=(x[i]-mx)*(x[i]-mx)}var m=sxx?sxy/sxx:0;return {m:m,c:my-m*mx}}
+function fmt(v){return v==null||isNaN(v)?'':String(+(+v).toFixed(2))}
+var DP1={study:1,sleep:1,screen:1};
+function fmtc(k,v){if(v==null||isNaN(v))return '';return DP1[k]&&Math.abs(v*10-Math.round(v*10))<1e-9?(+v).toFixed(1):fmt(v)}
+function near(a,b){return Math.abs(a-b)<1e-6}
+function ord(n){var s=['th','st','nd','rd'],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0])}
+function describe(k,rows){var a=rows.map(function(r){return r[k]}).filter(function(v){return v!=null});
+ if(!a.length)return null;var m=mean(a),ss=sum(a.map(function(v){return (v-m)*(v-m)}));
+ return {n:a.length,vals:a,min:Math.min.apply(null,a),max:Math.max.apply(null,a),mean:m,median:median(a),modes:modes(a),sd:Math.sqrt(ss/a.length),sds:a.length>1?Math.sqrt(ss/(a.length-1)):0,sum:sum(a),sum2:sum(a.map(function(v){return v*v}))}}
+
+/* ───────── dataset (hidden rule per session) ───────── */
+function gen(seed){
+ var R=rng(seed),drv=R()<0.6?'study':'att';
+ var a=drv==='study'?8+3*R():3+1.5*R(),b=drv==='study'?0.25+0.2*R():1.1+0.4*R(),c=1.8+1.4*R(),b0=62-2.6*a;
+ var rows,rs,ordd,tries=0;
+ do{rows=[];
+  for(var i=0;i<40;i++){var st=half(tn(R,2.6,1.2,0.5,5.5)),sl=half(tn(R,7,0.9,5,9.5)),sc=half(tn(R,3,1.3,0.5,7)),at=Math.round(tn(R,86,7,62,100)),ht=Math.round(tn(R,160,8,142,182));
+   var mk=Math.round(cl(b0+a*st+b*(at-86)-c*(sc-3)+5*gauss(R),18,99));
+   rows.push({roll:i+1,study:st,sleep:sl,screen:sc,att:at,height:ht,marks:mk})}
+  rs={};FEATS.forEach(function(k){rs[k]=corr(rows.map(function(r){return r[k]}),rows.map(function(r){return r.marks}))});
+  ordd=FEATS.slice().sort(function(x,y){return Math.abs(rs[y])-Math.abs(rs[x])});tries++;
+ }while(tries<500&&!(Math.abs(rs.sleep)<0.12&&Math.abs(rs.height)<0.12&&rs.screen<-0.38&&ordd[0]===drv&&Math.abs(rs[ordd[0]])-Math.abs(rs[ordd[1]])>=0.2));
+ var truth=rows.map(function(r){return Object.assign({},r)});
+ var raw=rows.map(function(r){return Object.assign({},r)});
+ var idx=raw.map(function(_,i){return i});for(var j=idx.length-1;j>0;j--){var q=Math.floor(R()*(j+1)),t=idx[j];idx[j]=idx[q];idx[q]=t}
+ var pick=function(test){for(var i=0;i<idx.length;i++){var r=raw[idx[i]];if(!r.iss&&!r.dupOrig&&test(r)){return r}}};
+ var rMT=pick(function(){return true});rMT.iss={t:'missT',k:'marks'};rMT.marks=null;
+ var rImpA=pick(function(r){return r.att<100});rImpA.iss={t:'imp',k:'att',was:rImpA.att};rImpA.att=rImpA.att*10;
+ var rImpS=pick(function(){return true});rImpS.iss={t:'imp',k:'sleep',was:rImpS.sleep};rImpS.sleep=Math.round(rImpS.sleep*10);
+ var fc=['study','screen','att','sleep'],c1=fc[Math.floor(R()*4)],c2=fc.filter(function(k){return k!==c1})[Math.floor(R()*3)];
+ var rF1=pick(function(){return true});rF1.iss={t:'missF',k:c1};rF1[c1]=null;
+ var rF2=pick(function(){return true});rF2.iss={t:'missF',k:c2};rF2[c2]=null;
+ var oi=raw.indexOf(pick(function(r){return raw.indexOf(r)<34}));raw[oi].dupOrig=true;
+ var cp=Object.assign({},raw[oi]);delete cp.dupOrig;cp.iss={t:'dup'};var at2=oi+3+Math.floor(R()*(raw.length-oi-3));raw.splice(at2,0,cp);
+ raw.forEach(function(r,i){r.id=i});
+ raw.forEach(function(r){if(r.iss&&r.iss.t==='dup'){r.partner=raw[oi].id;raw[oi].partner=r.id}});
+ return {raw:raw,truth:truth,coef:{study:a,att:b,screen:-c,sleep:0,height:0},b0:b0,drv:drv}}
+
+/* ───────── state ───────── */
+var KEY='cbse-lab-ai-explore';
+var S={seed:0,act:{},stats:{},pat:{},patChecked:false,model:null,split:1,bin:10,step:0,sort:{k:'id',d:1},sel:null,ins:'marks',exp:'study',mfeat:'study',revealed:false,helper:false};
+try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv&&sv.seed){['seed','act','stats','pat','patChecked','model','split','bin','step','ins','exp','mfeat','revealed'].forEach(function(k){if(sv[k]!==undefined)S[k]=sv[k]})}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({seed:S.seed,act:S.act,stats:S.stats,pat:S.pat,patChecked:S.patChecked,model:S.model,split:S.split,bin:S.bin,step:S.step,ins:S.ins,exp:S.exp,mfeat:S.mfeat,revealed:S.revealed}))}catch(e){}}
+var D;
+function newData(){S.seed=1+Math.floor(Math.random()*2147483646);S.act={};S.stats={};S.pat={};S.patChecked=false;S.model=null;S.split=1;S.sel=null;S.revealed=false;S.sort={k:'id',d:1};D=gen(S.seed);save()}
+if(!S.seed)newData();else D=gen(S.seed);
+
+/* ───────── cleaning ───────── */
+function cleaned(){
+ var rows=D.raw.filter(function(r){return S.act[r.id]!=='del'}).map(function(r){return Object.assign({},r)});
+ rows.forEach(function(r){if(S.act[r.id]==='fix')SHEET.forEach(function(k){if(r[k]!=null&&r[k]>VALID[k][1])r[k]=+(r[k]/10).toFixed(2)})});
+ var med={};SHEET.forEach(function(k){med[k]=median(rows.map(function(r){return r[k]}).filter(function(v){return v!=null}))});
+ rows.forEach(function(r){if(S.act[r.id]==='fill')SHEET.forEach(function(k){if(r[k]==null){r[k]=med[k];r['f_'+k]=1}})});
+ return rows}
+function rowName(r){return 'Row '+(r.id+1)+' (Roll '+r.roll+')'}
+function cleanStatus(){
+ var errs=[],notes=[],un={missT:0,missF:0,imp:0,dup:0};
+ D.raw.forEach(function(r){var a=S.act[r.id],iss=r.iss,no=rowName(r);
+  if(r.dupOrig||(iss&&iss.t==='dup')){
+   if(iss&&iss.t==='dup'){var p=D.raw[r.partner],d=(S.act[r.id]==='del'?1:0)+(S.act[p.id]==='del'?1:0);
+    if(d===0)un.dup++;else if(d===2)errs.push('Rows '+(p.id+1)+' and '+(r.id+1)+' are the same student (Roll '+r.roll+'). You deleted both — keep one copy.')}
+   if(a==='fill'||a==='fix')notes.push(no+': nothing to '+a+' here (no change was made).');return}
+  if(!iss){if(a==='del')errs.push(no+': nothing was wrong with this record. Deleting good data throws information away — undo it.');
+   else if(a==='fill'||a==='fix')notes.push(no+': nothing to '+a+' here (no change was made).');return}
+  if(iss.t==='missT'){if(a==='del')return;if(a==='fill')errs.push(no+': Marks is the target — the answer the model learns. Never invent it with a median; delete this record.');
+   else if(a==='fix')errs.push(no+': there is no typing slip here; Marks is blank. Delete the record.');else un.missT++;return}
+  if(iss.t==='missF'){if(a==='fill')return;if(a==='del'){notes.push(no+': deleting works, but you lose this student’s other readings. Filling the blank '+CN[iss.k].n+' with the median keeps them.');return}
+   if(a==='fix')errs.push(no+': nothing to fix — the '+CN[iss.k].n+' cell is blank. Fill it with the median.');else un.missF++;return}
+  if(iss.t==='imp'){var val=D.raw[r.id][iss.k];if(a==='fix')return;if(a==='del'){notes.push(no+': deleting works, but '+fmt(val)+' is clearly '+fmt(val/10)+' typed without its decimal point — fixing keeps the record.');return}
+   if(a==='fill')errs.push(no+': '+CN[iss.k].n+' = '+fmt(val)+' is still there. “Fill” only fills blanks; use “Fix decimal slip”.');else un.imp++;return}
+ });
+ if(un.missT)errs.push('One student has no Marks. Sort by Marks — blanks sink to the bottom.');
+ if(un.missF)errs.push(un.missF+' blank feature cell'+(un.missF>1?'s are':' is')+' still empty. Sort each column; blanks sink to the bottom.');
+ if(un.imp)errs.push(un.imp+' impossible value'+(un.imp>1?'s remain':' remains')+': a number that cannot be true for its unit. Sort each column and look at the largest values.');
+ if(un.dup)errs.push('One student appears twice. Sort by Roll and look for a repeated roll number.');
+ return {ok:!errs.length,errs:errs,notes:notes}}
+
+/* ───────── evaluation helpers ───────── */
+function evalStats(){
+ var rows=cleaned(),res={},good=[],notes=[];
+ COLS.forEach(function(c){var s=S.stats[c.k]||{};if(!FIELDS.some(function(f){return (s[f]||'').trim()!==''}))return;
+  var d=describe(c.k,rows),rd=describe(c.k,D.raw),why={},ok=true;
+  FIELDS.forEach(function(f){var v=parseFloat(s[f]),w='';
+   if(isNaN(v))w='fill in the '+FNAME[f];
+   else if(f==='min'){if(!near(v,d.min))w=(near(v,rd.min)&&!near(rd.min,d.min))?'minimum '+fmt(v)+' comes from the uncleaned column':'minimum: the smallest value is the first one in the sorted list'}
+   else if(f==='max'){if(!near(v,d.max))w=(near(v,rd.max)&&!near(rd.max,d.max))?'maximum '+fmt(v)+' is the impossible value from the raw data — use the cleaned column':'maximum: the largest value is the last one in the sorted list'}
+   else if(f==='mean'){if(Math.abs(v-d.mean)>0.051){if(Math.abs(v-rd.mean)<=0.051)w='mean: that is the raw-column mean, which still contains the errors';else if(Math.abs(v-d.sum/(d.n-1))<=0.051||Math.abs(v-d.sum/(d.n+1))<=0.051)w='mean: divide Σx by exactly n = '+d.n;else w='mean: x̄ = Σx ÷ n = '+fmt(d.sum)+' ÷ '+d.n+' — recalculate to 2 decimal places'}}
+   else if(f==='median'){if(!near(v,d.median))w=d.n%2===0?'median: n = '+d.n+' is even, so take the average of the '+ord(d.n/2)+' and '+ord(d.n/2+1)+' values':'median: it is the '+ord((d.n+1)/2)+' value in the sorted list'}
+   else if(f==='mode'){if(!d.modes.vals.some(function(m){return near(v,m)}))w='mode: '+fmt(v)+' is not the most frequent value — the top value in the tally appears '+d.modes.f+' times'}
+   else if(f==='sd'){if(Math.abs(v-d.sd)>0.051){if(Math.abs(v-d.sds)<=0.051)notes.push(c.n+': you divided by n − 1 (sample σ). CBSE textbooks and NumPy’s np.std() divide by n, which gives σ = '+d.sd.toFixed(2)+'. Accepted, but write the n version in your file.');else w='σ: use σ = √(Σx²/n − x̄²) with n = '+d.n}}
+   if(w){why[f]=w;ok=false}});
+  res[c.k]={why:why,ok:ok};if(ok)good.push(c.k)});
+ return {res:res,good:good,notes:notes}}
+function rOf(k,rows){var rr=rows.filter(function(r){return r[k]!=null&&r.marks!=null});return corr(rr.map(function(r){return r[k]}),rr.map(function(r){return r.marks}))}
+function patExpect(r){if(r>=0.35)return ['up'];if(r<=-0.35)return ['down'];if(Math.abs(r)<0.2)return ['none'];return r>0?['up','none']:['down','none']}
+function strength(r){var a=Math.abs(r);return a>=0.7?'strong':a>=0.4?'moderate':a>=0.2?'weak':'none'}
+function evalPat(){var rows=cleaned(),out={},ok=true;FEATS.forEach(function(k){var r=rOf(k,rows),v=S.pat[k]||'';out[k]={r:r,ok:patExpect(r).indexOf(v)>=0};if(!out[k].ok)ok=false});return {res:out,ok:ok}}
+function strongest(rows){var best=null,bv=-1;FEATS.forEach(function(k){var a=Math.abs(rOf(k,rows));if(a>bv){bv=a;best=k}});return best}
+function split(rows,sd){var R=rng((sd||S.split)*7919+S.seed%1000),idx=rows.map(function(_,i){return i});for(var i=idx.length-1;i>0;i--){var j=Math.floor(R()*(i+1)),t=idx[i];idx[i]=idx[j];idx[j]=t}
+ var nt=Math.round(rows.length*0.8);return {tr:idx.slice(0,nt).map(function(i){return rows[i]}),te:idx.slice(nt).map(function(i){return rows[i]})}}
+function train(k,sd){var rows=cleaned().filter(function(r){return r[k]!=null&&r.marks!=null});if(rows.length<10)return null;var sp=split(rows,sd);
+ var f=lsq(sp.tr.map(function(r){return r[k]}),sp.tr.map(function(r){return r.marks}));
+ var mae=function(a){return mean(a.map(function(r){return Math.abs(r.marks-(f.m*r[k]+f.c))}))},tm=mean(sp.tr.map(function(r){return r.marks}));
+ return {k:k,m:f.m,c:f.c,trMAE:mae(sp.tr),teMAE:mae(sp.te),base:mean(sp.te.map(function(r){return Math.abs(r.marks-tm)})),sp:sp,r:rOf(k,rows),n:rows.length}}
+
+/* ───────── step 1: the sheet ───────── */
+var dth=$('dth'),dtb=$('dtb');
+function renderHead(){var h='<tr><th><button type="button" data-k="id">S. No.<small>sheet</small></button></th><th><button type="button" data-k="roll">Roll<small>no.</small></button></th>';
+ SHEET.forEach(function(k){h+='<th><button type="button" data-k="'+k+'">'+CN[k].s+'<small>'+CN[k].u+'</small></button></th>'});dth.innerHTML=h+'</tr>';
+ dth.querySelectorAll('button').forEach(function(b){if(b.dataset.k===S.sort.k&&S.sort.k!=='id')b.setAttribute('aria-sort',S.sort.d>0?'ascending':'descending');
+  b.onclick=function(){var k=b.dataset.k;if(S.sort.k===k)S.sort.d*=-1;else S.sort={k:k,d:1};renderHead();renderSheet();$('dwrap').scrollTop=0}})}
+function renderSheet(){
+ var cmap={};cleaned().forEach(function(r){cmap[r.id]=r});
+ var list=D.raw.map(function(r){var c=cmap[r.id];return {r:r,c:c,v:function(k){if(k==='id')return r.id;if(k==='roll')return r.roll;return c?c[k]:r[k]}}});
+ var k=S.sort.k,d=S.sort.d;
+ list.sort(function(A,B){var a=A.v(k),b=B.v(k);if(a==null&&b==null)return A.r.id-B.r.id;if(a==null)return 1;if(b==null)return -1;return (a-b)*d||A.r.id-B.r.id});
+ var h='';list.forEach(function(o){var r=o.r,c=o.c,a=S.act[r.id];
+  var cls=(a==='del'?'del ':'')+(S.sel===r.id?'picked':'');
+  h+='<tr data-id="'+r.id+'" tabindex="0" class="'+cls+'"><td>'+(r.id+1)+'</td><td'+(S.helper&&r.iss&&r.iss.t==='dup'?' class="iss"':'')+'>'+r.roll+'</td>';
+  SHEET.forEach(function(k){var raw=r[k],shown=raw,tc=[];
+   if(c&&a!=='del'){if(raw!=null&&c[k]!==raw){shown=c[k];tc.push('fixd')}else if(raw==null&&c[k]!=null){shown=c[k];tc.push('fild')}}
+   if(shown==null)tc.push('blank');
+   if(S.helper&&r.iss&&r.iss.k===k)tc.push('iss');
+   h+='<td'+(tc.length?' class="'+tc.join(' ')+'"':'')+'>'+(shown==null?'':fmtc(k,shown))+'</td>'});
+  h+='</tr>'});
+ dtb.innerHTML=h;renderSelInfo();renderLog()}
+dtb.addEventListener('click',function(e){var tr=e.target.closest('tr');if(!tr)return;S.sel=+tr.dataset.id;renderSheet();var n=dtb.querySelector('tr[data-id="'+S.sel+'"]');if(n)n.focus({preventScroll:true})});
+dtb.addEventListener('keydown',function(e){var tr=e.target.closest('tr');if(!tr)return;var id=+tr.dataset.id,key=e.key.toLowerCase();
+ if(key==='enter'||key===' '){e.preventDefault();S.sel=id;renderSheet();focusRow(id)}
+ else if(key==='arrowdown'||key==='arrowup'){e.preventDefault();var sib=key==='arrowdown'?tr.nextElementSibling:tr.previousElementSibling;if(sib)sib.focus()}
+ else if({f:'fill',x:'fix',delete:'del',backspace:'del',u:'none'}[key]){e.preventDefault();S.sel=id;act({f:'fill',x:'fix',delete:'del',backspace:'del',u:'none'}[key]);focusRow(id)}});
+function focusRow(id){var n=dtb.querySelector('tr[data-id="'+id+'"]');if(n)n.focus()}
+function renderSelInfo(){var el=$('selInfo');document.querySelectorAll('.actbar .btn').forEach(function(b){b.disabled=S.sel==null});
+ if(S.sel==null){el.innerHTML='Tap a row to select it, then choose an action.';return}
+ var r=D.raw[S.sel],a=S.act[r.id];el.innerHTML='Selected: <b>'+rowName(r)+'</b>'+(a?' · action: <b>'+{fill:'filled blank with median',fix:'decimal slip fixed',del:'deleted'}[a]+'</b>':' · no action yet')}
+function act(a){if(S.sel==null)return;if(a==='none')delete S.act[S.sel];else S.act[S.sel]=a;save();renderSheet();renderStatsTable();refreshAll()}
+document.querySelectorAll('.actbar .btn').forEach(function(b){b.onclick=function(){act(b.dataset.a)}});
+function problemText(r){var a=S.act[r.id];
+ if(a==='del'){if(r.iss&&r.iss.t==='dup')return 'Repeated record (same as row '+(r.partner+1)+')';if(r.dupOrig)return 'Repeated record (same as row '+(r.partner+1)+')';
+  if(r.iss&&r.iss.t==='missT')return 'Marks (target) blank';if(r.iss&&r.iss.t==='missF')return CN[r.iss.k].n+' blank';if(r.iss&&r.iss.t==='imp')return CN[r.iss.k].n+' = '+fmt(D.raw[r.id][r.iss.k])+' (impossible)';return 'none found'}
+ var out=[];SHEET.forEach(function(k){var v=r[k];if(v==null)out.push(CN[k].n+' blank');else if(v>VALID[k][1])out.push(CN[k].n+' = '+fmt(v)+' (impossible)')});return out.join('; ')||'none found'}
+function renderLog(){var ids=Object.keys(S.act).map(Number).sort(function(a,b){return a-b});$('nClean').textContent=ids.length+' action'+(ids.length===1?'':'s');
+ var cmap={};cleaned().forEach(function(r){cmap[r.id]=r});
+ $('logTb').innerHTML=ids.length?ids.map(function(id){var r=D.raw[id],a=S.act[id],c=cmap[id],txt;
+  if(a==='del')txt='Record deleted';else if(a==='fix'){var ch=SHEET.filter(function(k){return r[k]!=null&&c&&c[k]!==r[k]});txt=ch.length?ch.map(function(k){return CN[k].n+' '+fmt(r[k])+' → '+fmt(c[k])}).join('; '):'Fix chosen (no change)'}
+  else{var fl=SHEET.filter(function(k){return r[k]==null&&c&&c[k]!=null});txt=fl.length?fl.map(function(k){return CN[k].n+' filled with median '+fmt(c[k])}).join('; '):'Fill chosen (no change)'}
+  return '<tr><td class="n">'+(id+1)+'</td><td class="n">'+r.roll+'</td><td>'+problemText(r)+'</td><td>'+txt+'</td></tr>'}).join(''):'<tr><td colspan="4" class="note" style="padding:14px">No actions yet. Clean the sheet in Step 1.</td></tr>'}
+$('checkClean').onclick=function(){var cs=cleanStatus(),fb=$('fbClean');
+ var items=cs.errs.map(function(t){return '<li>'+t+'</li>'}).concat(cs.notes.map(function(t){return '<li>Note — '+t+'</li>'}));
+ if(cs.ok)items.unshift('<li class="ok">✓ The data is clean: '+cleaned().length+' records are left. Now go to Step 2 and describe it.</li>');
+ fb.innerHTML=items.join('');refreshAll()};
+function csvText(){var head=['Roll'].concat(SHEET.map(function(k){return CN[k].csv}));
+ return head.join(',')+'\n'+D.raw.map(function(r){return [r.roll].concat(SHEET.map(function(k){return r[k]==null?'':r[k]})).join(',')}).join('\n')+'\n'}
+$('csv').addEventListener('click',function(){try{var csvEl=$('csv');if(csvEl._u)URL.revokeObjectURL(csvEl._u);csvEl._u=URL.createObjectURL(new Blob([csvText()],{type:'text/csv'}));csvEl.href=csvEl._u}catch(e){}});
+
+/* ───────── step 2: inspector ───────── */
+function chips(host,list,cur,cb,label){host.innerHTML='';list.forEach(function(k){var b=document.createElement('button');b.type='button';b.className='chip'+(k===cur?' on':'');b.textContent=label?label(k):CN[k].n;b.onclick=function(){cb(k)};host.appendChild(b)})}
+function renderInspector(){
+ chips($('colSel'),SHEET.slice(5).concat(SHEET.slice(0,5)),S.ins,function(k){S.ins=k;save();renderInspector()});
+ var d=describe(S.ins,cleaned());$('insTag').textContent=CN[S.ins].n+' ('+CN[S.ins].u+')';
+ $('warn1').hidden=cleanStatus().ok;
+ if(!d){$('strip').innerHTML='';return}
+ $('iN').textContent=d.n;$('iS').textContent=fmt(d.sum);$('iS2').textContent=fmt(d.sum2);
+ var s=d.vals.slice().sort(function(a,b){return a-b}),mids=d.n%2?[(d.n+1)/2]:[d.n/2,d.n/2+1];
+ $('strip').innerHTML=s.map(function(v,i){return '<span'+(S.helper&&mids.indexOf(i+1)>=0?' class="mid"':'')+'><i>'+(i+1)+'</i>'+fmt(v)+'</span>'}).join('');
+ var rep=Object.keys(d.modes.map).filter(function(k){return d.modes.map[k]>1}).sort(function(a,b){return d.modes.map[b]-d.modes.map[a]||a-b});
+ $('tally').innerHTML=rep.length?rep.map(function(k){return '<span>'+fmtc(S.ins,+k)+' <b>× '+d.modes.map[k]+'</b></span>'}).join(''):'<span>No value repeats</span>';
+ var h=$('help1');h.hidden=!S.helper;
+ if(S.helper)h.innerHTML='Helper: min '+fmt(d.min)+' · max '+fmt(d.max)+' · mean '+d.mean.toFixed(2)+' · median '+fmt(d.median)+' · mode '+d.modes.vals.map(fmt).join(', ')+' · σ '+d.sd.toFixed(2)}
+
+/* ───────── observation tables ───────── */
+var stTb=$('stTb');
+function renderStatsTable(){var rows=cleaned(),ev=null;
+ stTb.innerHTML=COLS.map(function(c){var s=S.stats[c.k]||{},d=describe(c.k,rows);
+  return '<tr data-c="'+c.k+'"><td class="l">'+c.n+' <span class="note">('+c.u+')</span></td><td class="n">'+(d?d.n:'–')+'</td>'+
+   ['min','max'].map(function(f){return '<td><input data-f="'+f+'" value="'+(s[f]||'')+'" inputmode="decimal" aria-label="'+c.n+' '+FNAME[f]+'"></td>'}).join('')+
+   '<td class="n rng"></td>'+['mean','median','mode','sd'].map(function(f){return '<td><input data-f="'+f+'" value="'+(s[f]||'')+'" inputmode="decimal" aria-label="'+c.n+' '+FNAME[f]+'"></td>'}).join('')+'<td class="n var"></td></tr>'}).join('');
+ stTb.querySelectorAll('tr').forEach(function(tr){var k=tr.dataset.c;derive(tr,k);
+  tr.querySelectorAll('input').forEach(function(inp){inp.oninput=function(){S.stats[k]=S.stats[k]||{};S.stats[k][inp.dataset.f]=inp.value.trim();inp.classList.remove('bad','good');tr.classList.remove('flag');derive(tr,k);save();renderResult()}})})}
+function derive(tr,k){var s=S.stats[k]||{},mn=parseFloat(s.min),mx=parseFloat(s.max),sd=parseFloat(s.sd);
+ tr.querySelector('.rng').textContent=isNaN(mn)||isNaN(mx)?'–':fmt(mx-mn);tr.querySelector('.var').textContent=isNaN(sd)?'–':(sd*sd).toFixed(2)}
+$('checkStats').onclick=function(){var ev=evalStats(),fb=[],cs=cleanStatus();
+ if(!cs.ok)fb.push('Your cleaning is not finished (Step 1 → “Check my cleaning”). Statistics must be worked out on clean data.');
+ stTb.querySelectorAll('tr').forEach(function(tr){var k=tr.dataset.c,e=ev.res[k];tr.querySelectorAll('input').forEach(function(inp){inp.classList.remove('bad','good');if(e){var bad=!!e.why[inp.dataset.f];inp.classList.toggle('bad',bad);inp.classList.toggle('good',!bad)}});
+  tr.classList.toggle('flag',!!(e&&!e.ok));if(e&&!e.ok)fb.push(CN[k].n+': '+Object.keys(e.why).map(function(f){return e.why[f]}).join('; ')+'.')});
+ if(ev.good.indexOf('marks')<0)fb.push('Describe Marks correctly — it is the target column.');
+ if(ev.good.length<3)fb.push('Describe at least three columns correctly (now '+ev.good.length+').');
+ var html=fb.map(function(t){return '<li>'+t+'</li>'}).concat(ev.notes.map(function(t){return '<li>Note — '+t+'</li>'}));
+ if(!fb.length)html.unshift('<li class="ok">✓ Every value you entered is correct ('+ev.good.map(function(k){return CN[k].n}).join(', ')+').</li>');
+ $('fbStats').innerHTML=html.join('');refreshAll()};
+function renderPatTable(){var ev=S.patChecked?evalPat():null;
+ $('patTb').innerHTML=FEATS.map(function(k){var v=S.pat[k]||'',e=ev&&ev.res[k];
+  return '<tr data-k="'+k+'"><td class="l">'+CN[k].n+'</td><td><select aria-label="pattern for '+CN[k].n+'"'+(e?' class="'+(e.ok?'good':'bad')+'"':'')+'><option value="">— choose —</option><option value="up"'+(v==='up'?' selected':'')+'>rise (positive)</option><option value="down"'+(v==='down'?' selected':'')+'>fall (negative)</option><option value="none"'+(v==='none'?' selected':'')+'>no clear pattern</option></select></td><td class="n">'+(e?e.r.toFixed(2):'?')+'</td><td>'+(e?strength(e.r):'?')+'</td></tr>'}).join('');
+ $('patTb').querySelectorAll('select').forEach(function(sel){sel.onchange=function(){S.pat[sel.closest('tr').dataset.k]=sel.value;sel.classList.remove('bad','good');save()}})}
+$('checkPat').onclick=function(){var miss=FEATS.filter(function(k){return !S.pat[k]});
+ if(miss.length){$('fbPat').innerHTML='<li>Choose a pattern for every feature first ('+miss.map(function(k){return CN[k].n}).join(', ')+').</li>';return}
+ S.patChecked=true;save();var ev=evalPat(),fb=[];
+ FEATS.forEach(function(k){var e=ev.res[k],r=e.r;if(!e.ok){var want=patExpect(r)[0];
+  fb.push(CN[k].n+': look again. r = '+r.toFixed(2)+' — '+(want==='up'?'the dots climb from left to right, so Marks rise with it.':want==='down'?'the dots drop from left to right, so Marks fall as it increases.':'the dots form a shapeless cloud; knowing this value tells you almost nothing about Marks.'))}});
+ var html=fb.map(function(t){return '<li>'+t+'</li>'});
+ if(!fb.length)html.unshift('<li class="ok">✓ All five patterns are right. The strongest one is '+CN[strongest(cleaned())].n+' — use it in Step 4.</li>');
+ $('fbPat').innerHTML=html.join('');renderPatTable();refreshAll()};
+
+/* ───────── canvas helpers ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=$(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(300,r.width||560),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h,paper:c.classList.contains('pc')}}
+function nice(m){var steps=[1,2,2.5,5,10],e=Math.pow(10,Math.floor(Math.log10(m/6)));for(var i=0;i<steps.length;i++){if(m/(steps[i]*e)<=7)return steps[i]*e}return m/5}
+function col(g,v,pv){return g.paper?pv:(css(v)||pv)}
+function axes(g,x0,x1,y0,y1,xl,yl,xs,ys){
+ var x=g.x,L=54,B=44,R=16,T=18,W=g.w-L-R,H=g.h-T-B,txt=col(g,'--text','#1d232c'),mut=col(g,'--muted','#5d5d5d'),bd=col(g,'--border','#ddd8cc');
+ x.clearRect(0,0,g.w,g.h);
+ if(g.paper){x.fillStyle='#fbfaf5';x.fillRect(0,0,g.w,g.h);x.strokeStyle='rgba(60,130,110,.12)';x.lineWidth=.6;for(var gx=L;gx<=L+W;gx+=W/50){x.beginPath();x.moveTo(gx,T);x.lineTo(gx,T+H);x.stroke()}for(var gy=T;gy<=T+H;gy+=H/40){x.beginPath();x.moveTo(L,gy);x.lineTo(L+W,gy);x.stroke()}}
+ x.font='12px Inter, sans-serif';x.lineWidth=1;
+ var f=function(v,s){return String(+v.toFixed(s<1?2:s<10?1:0))};
+ for(var v=Math.ceil(x0/xs-1e-9)*xs;v<=x1+1e-9;v+=xs){var px=L+(v-x0)/(x1-x0)*W;x.strokeStyle=bd;x.beginPath();x.moveTo(px,T);x.lineTo(px,T+H);x.stroke();x.fillStyle=mut;x.textAlign='center';x.fillText(f(v,xs),px,T+H+16)}
+ for(v=Math.ceil(y0/ys-1e-9)*ys;v<=y1+1e-9;v+=ys){var py=T+H-(v-y0)/(y1-y0)*H;x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(f(v,ys),L-6,py+4)}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T);x.lineTo(L,T+H);x.lineTo(L+W,T+H);x.stroke();
+ x.fillStyle=txt;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(14,T+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();
+ var P=function(a,b){return [L+(a-x0)/(x1-x0)*W,T+H-(b-y0)/(y1-y0)*H]};P.box={L:L,T:T,W:W,H:H};return P}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);if(g.paper){g.x.fillStyle='#fbfaf5';g.x.fillRect(0,0,g.w,g.h)}g.x.fillStyle=g.paper?'#6b6b6b':(css('--muted')||'#777');g.x.font='14px Inter, sans-serif';g.x.textAlign='center';
+ var words=t.split(' '),line='',y=g.h/2-10,lines=[];words.forEach(function(w){if((line+' '+w).length>34){lines.push(line);line=w}else line=line?line+' '+w:w});lines.push(line);lines.forEach(function(l,i){g.x.fillText(l,g.w/2,y+i*20)})}
+function range(vals,padFrac){var mn=Math.min.apply(null,vals),mx=Math.max.apply(null,vals),p=(mx-mn||1)*padFrac,st=nice(mx-mn+2*p);return {a:Math.floor((mn-p)/st)*st,b:Math.ceil((mx+p)/st)*st,s:st}}
+function dot(x,q,fill,stroke,ring){x.beginPath();x.arc(q[0],q[1],4.5,0,7);if(ring){x.lineWidth=2;x.strokeStyle=stroke;x.stroke()}else{x.fillStyle=fill;x.fill();x.lineWidth=1;x.strokeStyle=stroke;x.stroke()}}
+function scatter(g,k,rows,opts){
+ rows=rows.filter(function(r){return r[k]!=null&&r.marks!=null});if(rows.length<5){empty(g,'Not enough clean records to plot.');return}
+ var xr=range(rows.map(function(r){return r[k]}),.06),yr={a:0,b:100,s:10};
+ var P=axes(g,xr.a,xr.b,yr.a,yr.b,CN[k].n+' ('+CN[k].u+')','Marks',xr.s,yr.s),x=g.x;
+ if(opts.fit){var f=opts.fit;x.save();x.beginPath();x.rect(P.box.L,P.box.T,P.box.W,P.box.H);x.clip();x.strokeStyle='#c0392b';x.lineWidth=2.2;var p1=P(xr.a,f.m*xr.a+f.c),p2=P(xr.b,f.m*xr.b+f.c);x.beginPath();x.moveTo(p1[0],p1[1]);x.lineTo(p2[0],p2[1]);x.stroke();x.restore()}
+ var tset=opts.test||[];
+ rows.forEach(function(r){var q=P(r[k],r.marks);if(tset.indexOf(r)>=0)dot(x,q,null,'#2f6fd0',true);else dot(x,q,'#d9a520','#5c4600')});
+ if(opts.label){x.font='700 13px Inter, sans-serif';x.textAlign='left';x.fillStyle=g.paper?'#1d232c':(css('--text')||'#222');opts.label.forEach(function(t,i){x.fillText(t,P.box.L+10,P.box.T+18+i*18)})}}
+
+/* ───────── step 3 & 4 ───────── */
+function renderExplore(){chips($('expSel'),FEATS,S.exp,function(k){S.exp=k;save();renderExplore()});
+ $('expTitle').textContent=CN[S.exp].n+' vs Marks';var rows=cleaned(),g=canvas('ec');
+ var rr=rows.filter(function(r){return r[S.exp]!=null&&r.marks!=null}),f=null,r=rOf(S.exp,rows);
+ if(S.helper&&rr.length>2)f=lsq(rr.map(function(q){return q[S.exp]}),rr.map(function(q){return q.marks}));
+ scatter(g,S.exp,rows,{fit:f,label:S.helper?['r = '+r.toFixed(2)+' ('+strength(r)+')']:null});
+ var h=$('help2');h.hidden=!S.helper;if(S.helper)h.innerHTML='Helper: r = '+r.toFixed(2)+' → '+(patExpect(r)[0]==='up'?'Marks rise':patExpect(r)[0]==='down'?'Marks fall':'no clear pattern')+' ('+strength(r)+').'}
+var MODEL=null;
+function renderModel(){chips($('modSel'),FEATS,S.mfeat,function(k){S.mfeat=k;save();renderModel()});
+ MODEL=S.model?train(S.model.k):null;var g=canvas('mc');
+ if(!MODEL){empty(g,'Choose a feature and press “Train on 80%”.');$('kv').innerHTML='';$('predBox').hidden=true;$('modTag').textContent='';return}
+ var k=MODEL.k;$('modTag').textContent=CN[k].n;
+ scatter(g,k,MODEL.sp.tr.concat(MODEL.sp.te),{fit:MODEL,test:MODEL.sp.te,label:['Marks = '+MODEL.m.toFixed(2)+' × '+CN[k].s+' '+(MODEL.c<0?'− ':'+ ')+Math.abs(MODEL.c).toFixed(1)]});
+ $('kv').innerHTML='<div><small>Slope m</small><b>'+MODEL.m.toFixed(2)+'</b></div><div><small>Intercept c</small><b>'+MODEL.c.toFixed(1)+'</b></div><div><small>Train MAE</small><b>'+MODEL.trMAE.toFixed(1)+'</b></div><div><small>Test MAE ('+MODEL.sp.te.length+' rec.)</small><b>'+MODEL.teMAE.toFixed(1)+'</b></div><div><small>Guess-the-mean MAE</small><b>'+MODEL.base.toFixed(1)+'</b></div>';
+ $('predBox').hidden=false;$('predLbl').textContent=CN[k].n+' ('+CN[k].u+') =';predict()}
+function predict(){if(!MODEL)return;var v=parseFloat($('predIn').value),xs=MODEL.sp.tr.map(function(r){return r[MODEL.k]}),lo=Math.min.apply(null,xs),hi=Math.max.apply(null,xs);$('predIn').placeholder='e.g. '+fmtc(MODEL.k,median(xs));$('predOut').textContent=isNaN(v)?'—':String(Math.round(cl(MODEL.m*v+MODEL.c,0,100)));
+ $('predNote').textContent=!isNaN(v)&&(v<lo||v>hi)?'⚠ '+fmtc(MODEL.k,v)+' is outside the training data ('+fmtc(MODEL.k,lo)+'–'+fmtc(MODEL.k,hi)+'), so this prediction is not reliable.':''}
+$('predIn').oninput=predict;
+$('train').onclick=function(){var cs=cleanStatus(),m4=$('msg4');
+ if(!cs.ok){m4.className='msg bad';m4.textContent='Clean the data first (Step 1) — a model trained on blanks and typing slips learns the slips.';return}
+ S.model={k:S.mfeat};save();renderModel();var best=strongest(cleaned());
+ var beat=MODEL.teMAE<MODEL.base*0.85;m4.className='msg '+(S.mfeat===best?'ok':'bad');
+ m4.textContent=(S.mfeat===best?'✓ ':'')+'Trained on '+CN[S.mfeat].n+'. '+(beat?'Test MAE '+MODEL.teMAE.toFixed(1)+' is clearly below guessing the mean ('+MODEL.base.toFixed(1)+').':'On this split the test MAE ('+MODEL.teMAE.toFixed(1)+') is not clearly better than guessing the mean ('+MODEL.base.toFixed(1)+'). With only '+MODEL.sp.te.length+' test records one split can be unlucky — try a new split, and use “compare” to see the average over 10 splits.')+(S.mfeat===best?'':' Is this really the feature with the strongest pattern?');
+ refreshAll()};
+$('resplit').onclick=function(){S.split++;save();renderModel();renderCompare();drawGraphs();renderResult()};
+var cmpShown=false;
+function renderCompare(){if(!cmpShown)return;var cs=cleanStatus();if(!cs.ok){$('cmpBox').innerHTML='<p class="note" style="margin-top:8px">Clean the data first.</p>';return}
+ var ms=FEATS.map(function(k){var m=train(k);if(!m)return null;var t=0,bs=0;for(var q=1;q<=10;q++){var z=train(k,S.split*100+q);t+=z.teMAE;bs+=z.base}m.avg=t/10;m.avgBase=bs/10;return m}).filter(Boolean),best=ms.reduce(function(a,b){return b.avg<a.avg?b:a});
+ $('cmpBox').innerHTML='<table class="cmp"><thead><tr><th>Feature</th><th>Slope m</th><th>Test MAE (this split)</th><th>Avg of 10 splits</th></tr></thead><tbody>'+ms.map(function(m){return '<tr'+(m===best?' class="best"':'')+'><td>'+CN[m.k].n+'</td><td>'+m.m.toFixed(2)+'</td><td>'+m.teMAE.toFixed(1)+'</td><td>'+m.avg.toFixed(1)+'</td></tr>'}).join('')+'</tbody></table><p class="note" style="margin-top:6px">Guessing the mean: '+ms[0].base.toFixed(1)+' on this split, '+ms[0].avgBase.toFixed(1)+' averaged over 10 splits. A useless feature does no better than guessing.</p>'}
+$('cmpBtn').onclick=function(){cmpShown=true;renderCompare()};
+
+/* ───────── record graphs ───────── */
+function drawGraphs(){
+ var cs=cleanStatus(),rows=cleaned(),g1=canvas('g1'),g2=canvas('g2'),g3=canvas('g3');
+ chips($('binSel'),[5,10,20],S.bin,function(b){S.bin=b;save();drawGraphs()},function(b){return b+' marks'});
+ if(!cs.ok){empty(g1,'Appears when your cleaning passes the check');}
+ else{var mk=rows.map(function(r){return r.marks}).filter(function(v){return v!=null}),w=S.bin,nb=100/w,cnt=[];for(var i=0;i<nb;i++)cnt.push(0);
+  mk.forEach(function(v){cnt[Math.min(nb-1,Math.floor(v/w))]++});var ym=Math.max.apply(null,cnt),ys=ym*1.25<=8?1:ym*1.25<=16?2:5;var y1=Math.ceil(ym*1.25/ys)*ys;
+  var P=axes(g1,0,100,0,y1,'Marks (class width '+w+')','Number of students',w<10?10:w,ys),x=g1.x;
+  cnt.forEach(function(c,i){if(!c)return;var a=P(i*w,c),b=P((i+1)*w,0);x.fillStyle='rgba(59,111,184,.55)';x.strokeStyle='#1a3a6b';x.lineWidth=1.2;x.fillRect(a[0],a[1],b[0]-a[0],b[1]-a[1]);x.strokeRect(a[0],a[1],b[0]-a[0],b[1]-a[1])});
+  var mi=cnt.indexOf(ym),me=mean(mk),md=median(mk);
+  [[me,'#c9a227','mean '+me.toFixed(1),0],[md,'#c0392b','median '+fmt(md),1]].forEach(function(o){var p=P(o[0],y1),q=P(o[0],0);x.strokeStyle=o[1];x.setLineDash([6,4]);x.lineWidth=2;x.beginPath();x.moveTo(p[0],p[1]+(o[3]?16:0));x.lineTo(q[0],q[1]);x.stroke();x.setLineDash([]);
+   x.fillStyle=o[1];x.font='700 12px Inter, sans-serif';x.textAlign=o[0]>60?'right':'left';x.fillText(o[2],p[0]+(o[0]>60?-5:5),p[1]+12+(o[3]?16:0))});
+  x.fillStyle=css('--text')||'#222';x.textAlign='left';x.font='600 12px Inter, sans-serif';x.fillText('Modal class: '+(mi*w)+'–'+((mi+1)*w),P.box.L+8,P.box.T+P.box.H+-P.box.H+46)}
+ if(!MODEL)empty(g2,'Appears after you train a model in Step 4');
+ else scatter(g2,MODEL.k,MODEL.sp.tr.concat(MODEL.sp.te),{fit:MODEL,test:MODEL.sp.te,label:['Marks = '+MODEL.m.toFixed(2)+'·x '+(MODEL.c<0?'− ':'+ ')+Math.abs(MODEL.c).toFixed(1),'r = '+MODEL.r.toFixed(2)]});
+ if(!cs.ok||!S.patChecked)empty(g3,'Appears after you check your patterns in Table 3');
+ else{var x3=g3.x,rs=FEATS.map(function(k){return rOf(k,rows)});x3.clearRect(0,0,g3.w,g3.h);var L=96,R=20,T=20,B=40,W=g3.w-L-R,H=g3.h-T-B,bh=H/FEATS.length;
+  var X=function(v){return L+(v+1)/2*W},tx=css('--text')||'#222',bd=css('--border')||'#ddd',mu=css('--muted')||'#666';
+  x3.font='12px Inter, sans-serif';for(var v=-1;v<=1.001;v+=0.5){x3.strokeStyle=bd;x3.lineWidth=1;x3.beginPath();x3.moveTo(X(v),T);x3.lineTo(X(v),T+H);x3.stroke();x3.fillStyle=mu;x3.textAlign='center';x3.fillText(v.toFixed(1),X(v),T+H+16)}
+  x3.strokeStyle=tx;x3.lineWidth=1.5;x3.beginPath();x3.moveTo(X(0),T);x3.lineTo(X(0),T+H);x3.stroke();
+  FEATS.forEach(function(k,i){var r=rs[i],y=T+i*bh+bh*.2,h=bh*.6;x3.fillStyle=r>=0?'rgba(35,125,105,.8)':'rgba(179,38,30,.8)';x3.fillRect(Math.min(X(0),X(r)),y,Math.abs(X(r)-X(0)),h);
+   x3.fillStyle=tx;x3.textAlign='right';x3.font='600 12px Inter, sans-serif';x3.fillText(CN[k].n,L-8,y+h/2+4);x3.textAlign=r>=0?'left':'right';x3.fillText(r.toFixed(2),X(r)+(r>=0?5:-5),y+h/2+4)});
+  x3.textAlign='center';x3.font='600 12px Inter, sans-serif';x3.fillText('correlation r with Marks',L+W/2,g3.h-6)}}
+
+/* ───────── result ───────── */
+function unlocked(){var ev=evalStats();return cleanStatus().ok&&ev.good.indexOf('marks')>=0&&ev.good.length>=3&&!!S.model}
+function renderResult(){var cs=cleanStatus(),rows=cleaned(),s=S.stats.marks||{},ev=evalStats();
+ $('rN').textContent=cs.ok?rows.length+' of '+D.raw.length:'—';
+ $('rM').textContent=(s.mean||s.median)?(s.mean||'?')+' / '+(s.median||'?'):'—';
+ $('rF').textContent=MODEL?CN[MODEL.k].n+' (r = '+MODEL.r.toFixed(2)+')':'—';
+ $('rEq').textContent=MODEL?'Marks = '+MODEL.m.toFixed(2)+'·'+CN[MODEL.k].s+' '+(MODEL.c<0?'− ':'+ ')+Math.abs(MODEL.c).toFixed(1):'—';
+ $('rMae').textContent=MODEL?MODEL.teMAE.toFixed(1)+' vs '+MODEL.base.toFixed(1)+' marks':'—';
+ var show=S.revealed&&unlocked();$('trueBox').hidden=!show;$('trueBox2').hidden=!show;
+ var co=D.coef,tm=mean(D.truth.map(function(r){return r.marks}));
+ $('rTrue').textContent='Marks ≈ '+D.b0.toFixed(1)+' + '+co.study.toFixed(2)+'·Study + '+co.att.toFixed(2)+'·(Attendance − 86) − '+(-co.screen).toFixed(2)+'·(Screen − 3) + noise (σ = 5). Sleep and height have no effect.';
+ $('rTrueM').textContent=tm.toFixed(2);
+ var e=$('err');e.textContent='';
+ if(show){var parts=[],ym=parseFloat(s.mean);if(!isNaN(ym))parts.push('Your mean marks differ from the true mean by '+(Math.abs(ym-tm)/tm*100).toFixed(1)+'% (caused by the dropped record and median fills).');
+  if(MODEL){var tc=co[MODEL.k];parts.push(tc?'Your slope '+MODEL.m.toFixed(2)+' vs the true effect '+tc.toFixed(2)+' per '+CN[MODEL.k].u+': '+(Math.abs(MODEL.m-tc)/Math.abs(tc)*100).toFixed(1)+'% error.':'The true effect of '+CN[MODEL.k].n+' is zero; your slope '+MODEL.m.toFixed(2)+' is just noise.')}
+  e.textContent=parts.join(' ')}}
+$('reveal').onclick=function(){if(!unlocked()){var ev=evalStats(),need=[];if(!cleanStatus().ok)need.push('pass “Check my cleaning”');if(ev.good.indexOf('marks')<0||ev.good.length<3)need.push('describe Marks and two more columns correctly in Table 2');if(!S.model)need.push('train a model in Step 4');$('err').textContent='First '+need.join(', ')+'.';return}
+ S.revealed=true;save();renderResult()};
+
+/* ───────── steps, task line, helper ───────── */
+var TASK=[
+ function(){var cs=cleanStatus();return cs.ok?'<b>✓ Step 1 done.</b> The sheet is clean: '+cleaned().length+' records. Move to Step 2.':'<b>Step 1 · Clean the data.</b> These 41 records were typed by hand. Find the <b>blank</b>, <b>impossible</b> and <b>repeated</b> records: tap a heading to sort, tap a row, then choose a fix. Press “Check my cleaning” when you think you have them all.'},
+ function(){return '<b>Step 2 · Describe.</b> Pick a column. From the sorted list, n, Σx and Σx², work out the minimum, maximum, mean, median, mode and σ. Type them into <b>Table 2</b> below — Marks plus at least two other columns.'},
+ function(){return '<b>Step 3 · Find patterns.</b> Plot each feature against Marks. In <b>Table 3</b> say whether Marks rise, fall or show no clear pattern, then press “Check my patterns”.'},
+ function(){return '<b>Step 4 · Train &amp; test.</b> Pick the feature with the strongest pattern and train a straight-line model on 80% of the records. It is tested on the other 20% it has never seen — a lower test MAE means a more useful feature.'}];
+function setStep(i){S.step=i;save();document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',+t.dataset.step===i);t.setAttribute('aria-selected',+t.dataset.step===i)});
+ for(var j=0;j<4;j++)$('p'+j).hidden=j!==i;$('task').innerHTML=TASK[i]();
+ if(i===1)renderInspector();if(i===2)renderExplore();if(i===3){renderModel();renderCompare()}}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setStep(+t.dataset.step)}});
+function renderTabs(){var cs=cleanStatus(),ev=evalStats(),done=[cs.ok,cs.ok&&ev.good.indexOf('marks')>=0&&ev.good.length>=3,S.patChecked&&evalPat().ok,!!S.model&&S.model.k===strongest(cleaned())];
+ document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('done',done[+t.dataset.step])})}
+document.querySelectorAll('.helper').forEach(function(h){h.onchange=function(){S.helper=h.checked;document.querySelectorAll('.helper').forEach(function(o){o.checked=S.helper});renderSheet();setStep(S.step)}});
+document.querySelectorAll('.newData').forEach(function(b){b.onclick=function(){newData();cmpShown=false;$('cmpBox').innerHTML='';['fbClean','fbStats','fbPat'].forEach(function(id){$(id).innerHTML=''});$('msg4').textContent='';
+ renderHead();renderSheet();renderStatsTable();renderPatTable();refreshAll();$('task').innerHTML='A new dataset is loaded — the hidden rule and the errors have changed. Start again from Step 1.'}});
+function refreshAll(){MODEL=S.model?train(S.model.k):null;renderTabs();$('task').innerHTML=TASK[S.step]();if(S.step===1)renderInspector();if(S.step===2)renderExplore();if(S.step===3){renderModel();renderCompare()}drawGraphs();renderResult();renderPatTable()}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(function(){drawGraphs();if(S.step===2)renderExplore();if(S.step===3)renderModel()},150)});
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['What is data exploration, and where does it come in the AI project cycle?','It is the stage after data acquisition and before modelling. We study the data with statistics and graphs to check its quality and to find patterns that tell us which features are useful for the model.'],
+ ['What is the difference between mean, median and mode?','Mean is the sum of the values divided by their number. Median is the middle value of the sorted data. Mode is the value that occurs most often.'],
+ ['Why is the median often used to fill a missing value instead of the mean?','An extreme value (outlier) pulls the mean towards itself, but hardly moves the median. So the median is a safer, more typical value to fill in.'],
+ ['Why must a record with a missing target value be deleted rather than filled?','The target is the answer the model learns. If we invent it, the model learns our guess instead of the truth, so the record is dropped.'],
+ ['What is an outlier? How can you find one?','A value far away from the rest of the data, such as 930% attendance. Sorting the column, a box plot, a histogram or a scatter plot shows it clearly.'],
+ ['What does the standard deviation tell you about a dataset?','How spread out the values are around the mean. A small σ means the values are close to the mean; a large σ means they are widely scattered.'],
+ ['Which graph would you use to show the spread of marks, and which to show the link between study time and marks?','A histogram shows how one numeric column is distributed. A scatter plot shows whether two numeric columns are related.'],
+ ['If the scatter plot of study time against marks rises from left to right, what can you conclude? Does it prove that study causes higher marks?','It shows a positive correlation: students who study longer tend to score more. It does not prove cause by itself, because another factor could be behind both.'],
+ ['Why do we split data into a training set and a testing set?','The model learns from the training set and is then checked on the test set, which it has never seen. This tells us how well it will work on new data and exposes overfitting.'],
+ ['What is MAE and what does a lower MAE mean?','Mean Absolute Error is the average size of the difference between actual and predicted values. A lower MAE means the predictions are closer to the truth.'],
+ ['Name the Python functions you would use to load a CSV file and count the missing values in each column.','pandas.read_csv() loads the file into a DataFrame, and df.isnull().sum() counts the blanks in every column. df.describe() gives the main statistics.'],
+ ['What is a duplicate record, and why should it be removed?','The same observation entered twice. It gives that observation double weight, which biases the statistics and the model.']];
+$('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){var rows=cleaned(),ev=evalStats(),pe=S.patChecked?evalPat():null;
+ var st=COLS.filter(function(c){return S.stats[c.k]}).map(function(c){var s=S.stats[c.k],d=describe(c.k,rows),mn=parseFloat(s.min),mx=parseFloat(s.max),sd=parseFloat(s.sd);
+  return '<tr><td>'+c.n+' ('+c.u+')</td><td>'+(d?d.n:'')+'</td><td>'+(s.min||'')+'</td><td>'+(s.max||'')+'</td><td>'+(isNaN(mn)||isNaN(mx)?'':fmt(mx-mn))+'</td><td>'+(s.mean||'')+'</td><td>'+(s.median||'')+'</td><td>'+(s.mode||'')+'</td><td>'+(s.sd||'')+'</td><td>'+(isNaN(sd)?'':(sd*sd).toFixed(2))+'</td></tr>'}).join('');
+ var pt=FEATS.map(function(k){var v={up:'rise',down:'fall',none:'no clear pattern'}[S.pat[k]]||'';return '<tr><td>'+CN[k].n+'</td><td>'+v+'</td><td>'+(pe?pe.res[k].r.toFixed(2):'')+'</td><td>'+(pe?strength(pe.res[k].r):'')+'</td></tr>'}).join('');
+ var img='';try{img='<img src="'+$('g1').toDataURL()+'">'+(MODEL?'<img src="'+$('g2').toDataURL()+'">':'')+(S.patChecked?'<img src="'+$('g3').toDataURL()+'">':'')}catch(e){}
+ $('record').innerHTML='<h1>Experiment: Data exploration of a student dataset</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Roll no.: ______ &nbsp; Date: ___________ &nbsp; Dataset no.: '+(S.seed%100000)+'</p>'+
+  '<h2>Aim</h2><p>To explore a dataset of Class 10 students’ study habits: treat missing, impossible and duplicate records; calculate descriptive statistics; find patterns with graphs; and test the strongest pattern with a straight-line model.</p>'+
+  '<h2>Apparatus / requirements</h2><p>Computer with a browser (or Python 3 with pandas and matplotlib), dataset class10_study_habits.csv (41 records × 7 columns), calculator, practical file.</p>'+
+  '<h2>Theory</h2><p>x̄ = Σx/n; median = middle value of sorted data; mode = most frequent value; range = max − min; σ = √(Σx²/n − x̄²). Correlation r lies between −1 and +1. Least-squares line ŷ = m·x + c; MAE = Σ|y − ŷ|/n, measured on test data.</p>'+
+  '<h2>Observations</h2><p><b>Table 1 — Data cleaning log</b></p>'+$('logTb').closest('table').outerHTML.replace(/class="[^"]*"/g,'')+
+  '<p><b>Table 2 — Descriptive statistics (cleaned data, '+rows.length+' records)</b></p><table><tr><th>Column</th><th>n</th><th>Min</th><th>Max</th><th>Range</th><th>Mean</th><th>Median</th><th>Mode</th><th>σ</th><th>σ²</th></tr>'+st+'</table>'+
+  '<p><b>Table 3 — Patterns</b></p><table><tr><th>Feature</th><th>Marks…</th><th>r</th><th>Strength</th></tr>'+pt+'</table>'+
+  '<h2>Graphs</h2>'+(img||'<p>(Draw the histogram of Marks and the scatter plot on graph paper.)</p>')+
+  '<h2>Result</h2><p>Records after cleaning: '+$('rN').textContent+'. Mean / median of Marks: '+$('rM').textContent+'. Model: '+$('rEq').textContent+' (feature '+$('rF').textContent+'); test MAE '+$('rMae').textContent+'.</p>'+
+  '<h2>Precautions</h2><ol><li>Kept a copy of the raw data and cleaned a copy.</li><li>Checked every column against its unit.</li><li>Did not fill the target column.</li><li>Calculated statistics only after cleaning.</li><li>Used n for σ.</li><li>Tested the model on unseen records only.</li></ol>'+
+  '<h2>Limitations</h2><ol><li>Small sample; results change with the train/test split.</li><li>Median filling reduces spread slightly.</li><li>Correlation does not prove cause.</li><li>A one-feature model ignores other factors.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+$('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,gen:gen,get D(){return D},cleaned:cleaned,cleanStatus:cleanStatus,describe:describe,evalStats:evalStats,evalPat:evalPat,strongest:strongest,train:train,rOf:rOf};
+renderHead();renderSheet();renderStatsTable();renderPatTable();setStep(S.step||0);refreshAll();
 })();
 </script>
-</body></html>
+<script src="/share-fab.js" defer></script>
+</body>
+</html>
