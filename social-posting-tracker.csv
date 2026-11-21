@@ -7,7 +7,7 @@ notes,Hindi Course A Notes — Class 10,https://cbsemock.org.in/resources/hindi-
 notes,English Communicative Notes — Class 10,https://cbsemock.org.in/resources/english-comm-x.html,✓ 2026-11-18,✓ 2026-11-18,✓ 2026-11-18
 notes,English Language & Literature Notes — Class 10,https://cbsemock.org.in/resources/english-ll-x.html,✓ 2026-11-19,✓ 2026-11-19,✓ 2026-11-19
 notes,Computer Applications Notes — Class 10,https://cbsemock.org.in/resources/comp-app-x.html,,✓ 2026-11-20,✓ 2026-11-20
-notes,Artificial Intelligence Notes — Class 9-10,https://cbsemock.org.in/resources/ai-x.html,,,
+notes,Artificial Intelligence Notes — Class 9-10,https://cbsemock.org.in/resources/ai-x.html,,✓ 2026-11-21,✓ 2026-11-21
 notes,Physics Notes — Class 12,https://cbsemock.org.in/resources/physics-xii.html,,,
 notes,Chemistry Notes — Class 12,https://cbsemock.org.in/resources/chemistry-xii.html,,,
 notes,Mathematics Notes — Class 12,https://cbsemock.org.in/resources/maths-xii.html,,,
@@ -27,7 +27,7 @@ practice_10,English Communicative Mock — Class 10,https://cbsemock.org.in/Engl
 practice_10,English Language & Lit Mock — Class 10,https://cbsemock.org.in/English%20Language%20%26%20Literature%20Mock%20Tests%20_%20Class%2010%20CBSE.html,✓ 2026-11-18,✓ 2026-11-18,✓ 2026-11-18
 practice_10,Hindi Course A Mock — Class 10,https://cbsemock.org.in/Hindi%20Course%20A%20Class%2010%20CBSE.html,✓ 2026-11-19,✓ 2026-11-19,✓ 2026-11-19
 practice_10,Computer Applications Mock — Class 10,https://cbsemock.org.in/Computer%20Applications%20Mock%20Tests%20_%20Class%2010%20CBSE.html,,✓ 2026-11-20,✓ 2026-11-20
-practice_10,AI Mock Papers — Class 10,https://cbsemock.org.in/CBSE%20Class%2010%20AI%20Mock%20Papers.html,,,
+practice_10,AI Mock Papers — Class 10,https://cbsemock.org.in/CBSE%20Class%2010%20AI%20Mock%20Papers.html,,✓ 2026-11-21,✓ 2026-11-21
 practice_12,Physics Board Prep — Class 12,https://cbsemock.org.in/Physics%20XII%20Board%20Prep.html,✓ 2026-11-13,✓ 2026-11-13,✓ 2026-11-13
 practice_12,Chemistry Board Prep — Class 12,https://cbsemock.org.in/Chemistry%20XII%20Board%20Prep.html,✓ 2026-11-14,✓ 2026-11-14,✓ 2026-11-14
 practice_12,Mathematics Board Prep — Class 12,https://cbsemock.org.in/Mathematics%20XII%20Board%20Prep.html,✓ 2026-11-15,✓ 2026-11-15,✓ 2026-11-15
@@ -36,7 +36,7 @@ practice_12,English Core Practice — Class 12,https://cbsemock.org.in/English%2
 practice_12,English Elective Practice — Class 12,https://cbsemock.org.in/English%20Elective%20001%20Class%2012%20Practice%20Papers.html,✓ 2026-11-18,✓ 2026-11-18,✓ 2026-11-18
 practice_12,Computer Science Mock — Class 12,https://cbsemock.org.in/CBSE%20Class%20XII%20CS%20Mock%20Papers.html,✓ 2026-11-19,✓ 2026-11-19,✓ 2026-11-19
 practice_12,Informatics Practices Mock — Class 12,https://cbsemock.org.in/Informatics%20Practices%20065%20Class%2012%20Practice%20Papers.html,,✓ 2026-11-20,✓ 2026-11-20
-practice_12,Physical Education Mock — Class 12,https://cbsemock.org.in/Physical%20Education%20048%20Class%2012%20Practice%20Papers.html,,,
+practice_12,Physical Education Mock — Class 12,https://cbsemock.org.in/Physical%20Education%20048%20Class%2012%20Practice%20Papers.html,,✓ 2026-11-21,✓ 2026-11-21
 practice_12,Bengali Practice — Class 12,https://cbsemock.org.in/Bengali%20Class%2012%20Practice%20Papers.html,,,
 lab,Microscope Skills Lab — Biology Lab,https://cbsemock.org.in/virtual-labs/biology/01-microscope-skills-lab.html,✓ 2026-11-13,✓ 2026-11-13,✓ 2026-11-13
 lab,Onion Peel Cell Study — Biology Lab,https://cbsemock.org.in/virtual-labs/biology/02-onion-peel-cell-study.html,✓ 2026-11-14,✓ 2026-11-14,✓ 2026-11-14
@@ -300,3 +300,5 @@ lab,Vector Coordinate Transformation Lab — Mathematics Lab,https://cbsemock.or
 lab,Differentiation Tangent Gradient Lab — Mathematics Lab,https://cbsemock.org.in/virtual-labs/mathematics/19-differentiation-tangent-gradient-lab.html,,,
 lab,Integration Area Under Curve Lab — Mathematics Lab,https://cbsemock.org.in/virtual-labs/mathematics/20-integration-area-under-curve-lab.html,,,
 lab,Convex Lens Focal Length — Physics Lab,https://cbsemock.org.in/virtual-labs/physics/convex-lens-focal-length.html,,,
+lab,Lab 55 — _Drafts Lab,https://cbsemock.org.in/virtual-labs/computer-science/_drafts/lab-55.html,,,
+lab,Parallel Circuit — _Drafts Lab,https://cbsemock.org.in/virtual-labs/physics/_drafts/03-parallel-circuit.html,,,
