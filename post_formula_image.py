@@ -439,6 +439,12 @@ def main():
                 dest = POSTED_DIR / f"{img_path.name}_{now_ist().strftime('%Y%m%d_%H%M')}"
             shutil.move(str(img_path), str(dest))
             print(f"[INFO] Moved set to posted/: {dest.name}")
+        elif not args.dry_run:
+            # both platforms refused the set: park it so the next slot posts a normal image instead of failing again
+            hold = QUEUE_DIR.parent / "hold"
+            hold.mkdir(exist_ok=True)
+            shutil.move(str(img_path), str(hold / img_path.name))
+            print(f"[WARN] Carousel failed on both platforms — moved to formula-posts/hold/{img_path.name}")
         ok = bool(fb_id and ig_id)
         print(f"\n{'✅' if ok else '⚠️ '}  Done — FB: {fb_id or 'FAILED'}  |  IG: {ig_id or 'FAILED'}")
         sys.exit(0 if ok else 1)
