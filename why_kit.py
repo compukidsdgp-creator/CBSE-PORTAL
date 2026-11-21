@@ -217,9 +217,11 @@ def _ass_time(t):
 
 
 def _greek(text):
-    """π and other Greek letters in DejaVu Sans (the system fallback draws π like a Devanagari letter)."""
+    """Latin, digits, Greek and maths symbols in the bundled DejaVu Sans Bold at a matched size, so Hindi and maths
+    look the same on every machine (left to fontconfig, the GitHub runner picked a much larger Latin font)."""
     import re
-    return re.sub(r"([\u0370-\u03FF]+)", r"{\\fnDejaVu Sans}\1{\\fnNoto Sans Devanagari}", text)
+    return re.sub(r"([^\u0900-\u097F\s]+(?:\s+[^\u0900-\u097F\s]+)*)",
+                  r"{\\fnDejaVu Sans\\fscx88\\fscy88}\1{\\fnNoto Sans Devanagari\\fscx100\\fscy100}", text)
 
 
 def hindi_ass(mod, beats, total, path):
@@ -236,9 +238,10 @@ def hindi_ass(mod, beats, total, path):
     t0 = beats[0]["start"] + 0.2 * (beats[0]["end"] - beats[0]["start"]) * 0.18
     ev.append(f"Dialogue: 0,{_ass_time(t0)},{_ass_time(total)},Title,,0,0,0,,{{\\pos(540,253)\\fad(250,0)}}{_greek(HI['title'])}")
     if HI.get("part"):
-        ev.append(f"Dialogue: 0,{_ass_time(t0)},{_ass_time(total)},Pill,,0,0,0,,{{\\pos(540,349)\\fs32}}{HI['part']}")
+        ev.append(f"Dialogue: 0,{_ass_time(t0)},{_ass_time(total)},Pill,,0,0,0,,{{\\pos(540,349)\\fs32}}{_greek(HI['part'])}")
     for b in beats:
-        words = b["cap"].split()
+        import re as _re
+        words = _re.sub(r"\b(sin|cos|tan|sec|cosec|cot|log) (?=\S)", r"\1\\h", b["cap"]).split()
         if not words:
             continue
         cs = max(1, int(100 * b["speech"] / max(1, len(words))))
@@ -247,7 +250,7 @@ def hindi_ass(mod, beats, total, path):
         if b["name"] == "end" and HI.get("end_text"):
             y = 1920 * (1 - getattr(mod, "END_Y", 0.418))
             ev.append(f"Dialogue: 1,{_ass_time(b['start'] + 0.45 * (b['end'] - b['start']) * 0.3 + 0.3)},{_ass_time(b['end'])},Pill,,0,0,0,,"
-                      f"{{\\pos(540,{y:.0f})}}{HI['end_text']}")
+                      f"{{\\pos(540,{y:.0f})}}{_greek(HI['end_text'])}")
     Path(path).write_text(head + "\n".join(ev) + "\n", encoding="utf-8")
 
 
