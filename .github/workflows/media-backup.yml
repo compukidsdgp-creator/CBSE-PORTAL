@@ -26,14 +26,21 @@ jobs:
         with:
           ref: main
           fetch-depth: ${{ github.event.inputs.mode == 'history' && 0 || 1 }}
-      - name: Install rclone
-        run: curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null && rclone version | head -1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install rclone + Python packages (for reading titles and captions)
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null && rclone version | head -1
+          pip install --quiet matplotlib numpy pillow
       - name: Back up and verify
         env:
           RCLONE_DRIVE_TOKEN: ${{ secrets.RCLONE_DRIVE_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
-        run: python3 media_backup.py ${{ github.event.inputs.mode || 'current' }}
+        run: |
+          python3 media_backup.py plan
+          python3 media_backup.py ${{ github.event.inputs.mode || 'current' }}
       - name: Save the manifest
         if: always()
         run: |
