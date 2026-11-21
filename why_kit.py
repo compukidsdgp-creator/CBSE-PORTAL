@@ -155,14 +155,16 @@ def render_frame(fi):
     qp = back_out(c.phase(beats[0]["name"], 0.0, 0.18))
     R.pill(ax, 0.5, 0.868, 0.84 * min(1, qp), 0.058, fill=R.rgba("#1a1400", 0.85),
            edge=R.rgba(GOLD, 1.0), lw=2.2, alpha=min(1, qp), zorder=7)
-    if qp > 0.4:
+    hindi = G.get("lang") == "hi"
+    if qp > 0.4 and not hindi:
         R.flat_text(ax, 0.5, 0.868, mod.TITLE, size=R.fit_size(mod.TITLE, 36, 0.78),
                     color=GOLD, alpha=min(1, qp))
 
     # optional series badge under the question ("PART 2 · TRIG SERIES")
     if getattr(mod, "PART", None) and qp > 0.4:
         R.pill(ax, 0.5, 0.818, 0.40, 0.032, fill=R.rgba(PINK, 0.95), edge=R.rgba(PINK, 1), lw=1.5, alpha=min(1, qp), zorder=7)
-        R.flat_text(ax, 0.5, 0.818, mod.PART, size=19, color="white", alpha=min(1, qp))
+        if not hindi:
+            R.flat_text(ax, 0.5, 0.818, mod.PART, size=19, color="white", alpha=min(1, qp))
 
     mod.draw(c)
 
@@ -172,7 +174,8 @@ def render_frame(fi):
         y = getattr(mod, "END_Y", 0.418)
         R.pill(ax, 0.5, y, 0.70 * min(1, ep), 0.046, fill=R.rgba("#00b4d8", 1),
                edge=R.rgba(CYAN, 1), lw=2, alpha=min(1, ep), zorder=9)
-        R.flat_text(ax, 0.5, y, getattr(mod, "END_TEXT", "Follow for more WHY? videos"), size=25, color="white", alpha=min(1, ep))
+        if not hindi:
+            R.flat_text(ax, 0.5, y, getattr(mod, "END_TEXT", "Follow for more WHY? videos"), size=25, color="white", alpha=min(1, ep))
 
     # caption, words lighting up as they are spoken
     cur = c.cur
@@ -180,7 +183,8 @@ def render_frame(fi):
     frac = min(1.0, max(0.0, (t - cur["start"] - LEAD) / sp)) if sp else 1.0
     R.pill(ax, 0.5, 0.140, 0.92, 0.120, fill=R.rgba("#000814", 0.6), edge=R.rgba(GOLD, 0.45),
            lw=1.3, zorder=8)
-    V.karaoke(ax, cur["cap"], frac, 0.168, GOLD, size=26, width=38, line_h=0.038)
+    if not hindi:
+        V.karaoke(ax, cur["cap"], frac, 0.168, GOLD, size=26, width=38, line_h=0.038)
 
     draw_header(ax)
     R.draw_footer(ax, t, GOLD)
@@ -188,11 +192,75 @@ def render_frame(fi):
     plt.close(fig)
 
 
-def build(reel, out=None, preview=None, workers=None):
+HI_VOICE = ROOT / "formula-posts" / "why" / "voice_hi"
+HI_DIR = ROOT / "formula-posts" / "why" / "hindi"
+FONTS = ROOT / "assets" / "fonts"
+
+
+def hindi_clip(reel, name, preview=False, say=""):
+    """Hindi narration made on GitHub Actions by tools/parler_voice.py (Indic Parler-TTS, voice Rohit)."""
+    import subprocess
+    src = HI_VOICE / reel / f"{name}.wav"
+    if not src.exists():
+        if preview:
+            return np.zeros(int(SR * max(1.5, 0.36 * len(say.split()))), dtype=np.float32)
+        raise SystemExit(f"missing Hindi voice {src} — run the 'WHY? Hindi' workflow (it makes the voice first)")
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(src), "-af",
+                          "atempo=1.05,silenceremove=start_periods=1:start_threshold=-45dB:stop_periods=-1:stop_threshold=-45dB:stop_duration=0.25",
+                          "-ar", str(SR), "-ac", "1", "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    return np.frombuffer(raw, dtype=np.float32).copy()
+
+
+def _ass_time(t):
+    t = max(0.0, t)
+    return f"{int(t // 3600)}:{int(t % 3600 // 60):02d}:{t % 60:05.2f}"
+
+
+def _greek(text):
+    """π and other Greek letters in DejaVu Sans (the system fallback draws π like a Devanagari letter)."""
+    import re
+    return re.sub(r"([\u0370-\u03FF]+)", r"{\\fnDejaVu Sans}\1{\\fnNoto Sans Devanagari}", text)
+
+
+def hindi_ass(mod, beats, total, path):
+    """Hindi title, badge, end text and karaoke captions as an ASS subtitle layer (libass shapes Devanagari properly)."""
+    HI = mod.HINDI
+    head = ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\nWrapStyle: 0\n\n[V4+ Styles]\n"
+            "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, "
+            "ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
+            "Style: Title,Noto Sans Devanagari,58,&H003FC8FF,&H003FC8FF,&H00140A00,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,5,70,70,0,1\n"
+            "Style: Cap,Noto Sans Devanagari,50,&H003FC8FF,&H00FFFFFF,&H00140800,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,5,80,80,0,1\n"
+            "Style: Pill,Noto Sans Devanagari,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,5,60,60,0,1\n\n"
+            "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
+    ev = []
+    t0 = beats[0]["start"] + 0.2 * (beats[0]["end"] - beats[0]["start"]) * 0.18
+    ev.append(f"Dialogue: 0,{_ass_time(t0)},{_ass_time(total)},Title,,0,0,0,,{{\\pos(540,253)\\fad(250,0)}}{_greek(HI['title'])}")
+    if HI.get("part"):
+        ev.append(f"Dialogue: 0,{_ass_time(t0)},{_ass_time(total)},Pill,,0,0,0,,{{\\pos(540,349)\\fs32}}{HI['part']}")
+    for b in beats:
+        words = b["cap"].split()
+        if not words:
+            continue
+        cs = max(1, int(100 * b["speech"] / max(1, len(words))))
+        kar = "".join(f"{{\\kf{cs}}}{_greek(w)} " for w in words).strip()
+        ev.append(f"Dialogue: 0,{_ass_time(b['start'] + 0.05)},{_ass_time(b['end'])},Cap,,0,0,0,,{{\\pos(540,1653)\\q0}}{kar}")
+        if b["name"] == "end" and HI.get("end_text"):
+            y = 1920 * (1 - getattr(mod, "END_Y", 0.418))
+            ev.append(f"Dialogue: 1,{_ass_time(b['start'] + 0.45 * (b['end'] - b['start']) * 0.3 + 0.3)},{_ass_time(b['end'])},Pill,,0,0,0,,"
+                      f"{{\\pos(540,{y:.0f})}}{HI['end_text']}")
+    Path(path).write_text(head + "\n".join(ev) + "\n", encoding="utf-8")
+
+
+def build(reel, out=None, preview=None, workers=None, lang="en"):
     mod = importlib.import_module(f"why_reels.{reel}")
     beats, clips, t = [], [], 0.0
+    hi = (lang == "hi")
     for name, say, cap, min_d in mod.BEATS:
-        a = synth(say)
+        if hi:
+            say, cap = mod.HINDI["beats"][name]
+            a = hindi_clip(reel, name, preview is not None, say)
+        else:
+            a = synth(say)
         sp = len(a) / SR
         d = max(min_d, LEAD + sp + TAIL)
         beats.append({"name": name, "start": t, "end": t + d, "speech": sp, "cap": cap})
@@ -200,13 +268,25 @@ def build(reel, out=None, preview=None, workers=None):
     total = t
     rng = np.random.default_rng(7)
     stars = np.c_[rng.random(160), rng.random(160) * 0.85 + 0.07, rng.random(160) * 6 + 1]
-    g = {"reel": reel, "beats": beats, "stars": stars}
+    g = {"reel": reel, "beats": beats, "stars": stars, "lang": lang}
     if preview:
         Path(preview).mkdir(parents=True, exist_ok=True)
         g["frame_dir"] = str(preview); _init(g)
+        times = []
         for b in beats:
             for f in (0.35, 0.97):
-                render_frame(int((b["start"] + f * (b["end"] - b["start"])) * FPS))
+                fi = int((b["start"] + f * (b["end"] - b["start"])) * FPS)
+                render_frame(fi); times.append(fi)
+        if hi:   # burn the Hindi layer onto each still so the text can be checked
+            import subprocess
+            ass = Path(preview) / "hi.ass"
+            hindi_ass(mod, beats, total, ass)
+            for fi in times:
+                png = Path(preview) / f"frame_{fi:05d}.png"
+                subprocess.run(["ffmpeg", "-y", "-v", "error", "-loop", "1", "-framerate", str(FPS), "-i", str(png), "-vf",
+                                f"setpts=PTS+{fi / FPS:.3f}/TB,ass={ass}:fontsdir={FONTS}:shaping=complex", "-frames:v", "1",
+                                str(png.with_name(png.stem + "_hi.png"))], check=True)
+                png.unlink()
         print(f"[preview] {reel}: {total:.1f}s, stills in {preview}")
         return total
     tmp = Path(tempfile.mkdtemp(prefix="why_"))
@@ -222,7 +302,19 @@ def build(reel, out=None, preview=None, workers=None):
     print(f"[INFO] {reel}: {nframes} frames ({total:.1f}s)")
     with Pool(workers or os.cpu_count() or 1, initializer=_init, initargs=(g,)) as pool:
         pool.map(render_frame, range(nframes), chunksize=10)
-    V.mux(frame_dir, tmp / "voice.wav", total, out)
+    if hi:
+        import subprocess
+        mid = tmp / "base.mp4"
+        V.mux(frame_dir, tmp / "voice.wav", total, mid)
+        hindi_ass(mod, beats, total, tmp / "hi.ass")
+        res = subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", str(mid), "-vf",
+                              f"ass={tmp / 'hi.ass'}:fontsdir={FONTS}:shaping=complex", "-c:v", "libx264", "-preset", "veryfast",
+                              "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", str(out)],
+                             capture_output=True, text=True)
+        if res.returncode:
+            raise RuntimeError(res.stderr[-600:])
+    else:
+        V.mux(frame_dir, tmp / "voice.wav", total, out)
     shutil.rmtree(tmp, ignore_errors=True)
     print(f"[OK] {out} ({Path(out).stat().st_size / 1048576:.1f} MB, {total:.1f}s)")
     return total
@@ -234,7 +326,15 @@ if __name__ == "__main__":
     ap.add_argument("--out")
     ap.add_argument("--preview")
     ap.add_argument("--queue", type=int, help="write into the WHY? posting queue with this order number")
+    ap.add_argument("--lang", default="en", choices=["en", "hi"])
     a = ap.parse_args()
+    if a.lang == "hi" and not a.preview:
+        HI_DIR.mkdir(parents=True, exist_ok=True)
+        out = Path(a.out) if a.out else HI_DIR / f"why_{a.reel}_hi.mp4"
+        build(a.reel, out=out, lang="hi")
+        mod = importlib.import_module(f"why_reels.{a.reel}")
+        out.with_suffix(".txt").write_text(mod.HINDI["caption"].strip() + "\n", encoding="utf-8")
+        raise SystemExit(0)
     if a.queue:
         QUEUE.mkdir(parents=True, exist_ok=True)
         out = QUEUE / f"{a.queue:02d}_why_{a.reel}.mp4"
@@ -242,4 +342,4 @@ if __name__ == "__main__":
         mod = importlib.import_module(f"why_reels.{a.reel}")
         out.with_suffix(".txt").write_text(mod.CAPTION.strip() + "\n", encoding="utf-8")
     else:
-        build(a.reel, out=a.out or f"why_{a.reel}.mp4", preview=a.preview)
+        build(a.reel, out=a.out or f"why_{a.reel}.mp4", preview=a.preview, lang=a.lang)

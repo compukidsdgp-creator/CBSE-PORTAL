@@ -43,6 +43,23 @@ equation steps at the bottom; `ease`, `lerp`, `outline`; colours CYAN GOLD PINK 
   `🌐 Free notes & mock papers → https://cbsemock.org.in` and `📲 Telegram: t.me/cbsemockportal`, then 6–8 hashtags
   starting `#WhySeries #CBSEMock`.
 
+## Hindi version (every new reel gets one)
+Add a `HINDI = {...}` block at the end of the module (copy the shape from `trig_identity.py`):
+```python
+HINDI = {"title": "… क्यों?",                 # Devanagari + the formula; ≤ 30 characters
+         "part": "भाग 2 · … सीरीज़",          # only if the English has PART
+         "end_text": "और WHY? वीडियो के लिए फ़ॉलो करें",
+         "beats": {"hook": ("spoken Hindi", "on-screen Hindi"), ...},   # EVERY key of BEATS, same order
+         "caption": """… Hindi caption, same shape as English, + #HindiMedium …"""}
+```
+- Spoken text (`say`): natural everyday Hindi a CBSE Hindi-medium student hears in class — NCERT Hindi terms
+  (त्रिज्या, कर्ण, समकोण त्रिभुज, प्रकाश संश्लेषण), English symbols written as spoken in Devanagari ("साइन थीटा",
+  "पाई आर स्क्वेयर्ड", "एच टू ओ"). No digits/symbols in `say`; ≤ 18 words; Parler-TTS reads it literally.
+- On-screen text (`cap`): Devanagari with the maths/chemistry symbols (sin θ, πr², H₂O). Keep it as short as English.
+- No "tomorrow / Part 3 tomorrow" timing in Hindi — Hindi reels post on their own schedule (Sun/Wed/Fri 8 PM).
+- Check: `python3 why_kit.py --reel <name> --lang hi --preview /tmp/h` (silent stills with the Hindi burned in).
+  The Hindi voice and video are made by the "WHY? Hindi" workflow on push; you only commit the module.
+
 ## Check, render, commit
 1. `python3 why_kit.py --reel <name> --preview /tmp/p` → LOOK at every still (2 per beat). Fix until clean.
 2. `python3 why_backup.py render-missing` (renders into the backup, writes the caption .txt). Watch one or two frames

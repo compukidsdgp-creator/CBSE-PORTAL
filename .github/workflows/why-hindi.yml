@@ -1,0 +1,85 @@
+name: WHY? Hindi — voice + render
+
+# A why_reels module with a HINDI = {...} block gets a Hindi voice (Indic Parler-TTS, voice Rohit) and a Hindi video
+# formula-posts/why/hindi/why_<module>_hi.mp4. New videos go to the owner's private Telegram chat as a preview.
+# Posting happens in social-post.yml (8 PM slot, Sun/Wed/Fri) only once formula-posts/why/hindi/ENABLED exists.
+on:
+  push:
+    branches: [main]
+    paths: ["why_reels/*.py", "why_kit.py"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: why-hindi
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Anything to do?
+        id: todo
+        run: |
+          n=$(python3 - <<'PY'
+          import re
+          from pathlib import Path
+          c = 0
+          for f in Path("why_reels").glob("[a-z]*.py"):
+              if re.search(r"^HINDI\s*=", f.read_text(encoding="utf-8"), re.M):
+                  n = f.stem
+                  if not (Path(f"formula-posts/why/hindi/why_{n}_hi.mp4").exists() or Path(f"formula-posts/why/hindi/posted/why_{n}_hi.mp4").exists()):
+                      c += 1
+          print(c)
+          PY
+          )
+          echo "missing=$n" >> $GITHUB_OUTPUT; echo "$n Hindi video(s) missing"
+      - name: Install
+        if: steps.todo.outputs.missing != '0'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          pip install --quiet git+https://github.com/huggingface/parler-tts.git soundfile
+          pip install --quiet --force-reinstall --no-deps torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet -U "protobuf>=5.28" sentencepiece numpy kokoro-onnx pillow matplotlib
+      - name: Hindi narration (missing clips only)
+        if: steps.todo.outputs.missing != '0'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python3 tools/parler_voice.py
+      - name: Render missing Hindi videos
+        if: steps.todo.outputs.missing != '0'
+        run: python3 why_hindi.py render-missing | tee /tmp/render.log; grep '^formula-posts/why/hindi/' /tmp/render.log > /tmp/new.txt || true
+      - name: Save
+        if: steps.todo.outputs.missing != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add formula-posts/why/voice_hi formula-posts/why/hindi campaign_reels/voice mistake_reels/voice 2>/dev/null || true
+          git diff --cached --quiet && { echo "nothing new"; exit 0; }
+          git commit -q -m "why: Hindi voice + videos [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
+      - name: Private preview to the owner
+        if: steps.todo.outputs.missing != '0'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+        run: |
+          [ -s /tmp/new.txt ] || exit 0
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          from tg_photo import send_video
+          on = Path("formula-posts/why/hindi/ENABLED").exists()
+          for f in Path("/tmp/new.txt").read_text().split():
+              cap = Path(f).with_suffix(".txt")
+              first = cap.read_text(encoding="utf-8").splitlines()[0] if cap.exists() else Path(f).stem
+              note = ("It joins the Hindi queue (Sun/Wed/Fri 8 PM)." if on else
+                      "PILOT — nothing posts until you approve. Tell Claude 'Hindi approved' or what to change.")
+              send_video(Path(f), f"🇮🇳 New Hindi WHY? reel\n{first}\n\n{note}", chat=os.environ.get("SEO_REPORT_CHAT_ID"))
+          PY

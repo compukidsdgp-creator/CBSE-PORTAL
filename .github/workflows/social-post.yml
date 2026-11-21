@@ -171,6 +171,14 @@ jobs:
                 gh api -X POST repos/${{ github.repository }}/actions/workflows/trig-series.yml/dispatches \
                   -f ref=main -f 'inputs[action]=digest' -f "inputs[part]=$(python3 -c 'import trig_series as T,json;s=T.state();print(max(int(k) for k in s if k.isdigit()))')" || true
             fi
+          elif python3 why_hindi.py due; then
+            # Sun/Wed/Fri: the Hindi WHY? reel takes this slot (only after the owner approved the pilot → ENABLED file)
+            echo "[HINDI] a Hindi WHY? reel replaces tonight's formula reel"
+            if [ "$DRY" = "true" ]; then
+              python3 why_hindi.py post --dry-run
+            else
+              python3 why_hindi.py post || python3 post_formula_reel.py
+            fi
           elif [ "$DRY" = "true" ]; then
             python3 post_formula_reel.py --dry-run
           else

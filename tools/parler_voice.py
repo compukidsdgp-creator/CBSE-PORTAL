@@ -1,5 +1,5 @@
 """Make the Hindi narration clips for Mistake Bank reels with AI4Bharat Indic Parler-TTS (voice: Rohit).
-Runs on GitHub Actions (needs the HF_TOKEN secret). Writes mistake_reels/voice/<reel-id>/<lang>/<beat>.wav and campaign_reels/voice/<id>/hi/b<i>.wav
+Runs on GitHub Actions (needs the HF_TOKEN secret). Writes mistake_reels/voice/<reel-id>/<lang>/<beat>.wav, campaign_reels/voice/<id>/hi/b<i>.wav and formula-posts/why/voice_hi/<module>/<beat>.wav
     python3 tools/parler_voice.py            (every reel/beat whose clip is missing)
 """
 import sys
@@ -11,6 +11,7 @@ import torch
 from parler_tts import ParlerTTSForConditionalGeneration
 from transformers import AutoTokenizer
 import generate_mistake_reel as G
+ROOT = Path(__file__).resolve().parent.parent
 
 STYLE = {"rohit": "Rohit speaks with a clear, confident and expressive tone at a moderately fast pace, like a teacher explaining "
                   "to students. The recording is very clear with no background noise."}
@@ -34,6 +35,19 @@ for reel in GH.load_specs():
             out = GH.VOICE / reel["id"] / lang / f"b{i}.wav"
             if not out.exists():
                 todo.append((out, b["say"], STYLE[L["voice"]]))
+# WHY? reels: Hindi block HINDI["beats"] → formula-posts/why/voice_hi/<module>/<beat>.wav
+import importlib, re as _re
+for f in sorted((ROOT / "why_reels").glob("[a-z]*.py")):
+    if not _re.search(r"^HINDI\s*=", f.read_text(encoding="utf-8"), _re.M):
+        continue
+    try:
+        m = importlib.import_module(f"why_reels.{f.stem}")
+    except Exception as e:      # e.g. matplotlib missing in the Mistake Bank workflow — the WHY? Hindi workflow covers these
+        print(f"[skip] why_reels.{f.stem}: {e}"); continue
+    for key, (say, _cap) in m.HINDI["beats"].items():
+        out = ROOT / "formula-posts" / "why" / "voice_hi" / f.stem / f"{key}.wav"
+        if not out.exists():
+            todo.append((out, say, STYLE["rohit"]))
 print(f"{len(todo)} clip(s) to make")
 if todo:
     mid = "ai4bharat/indic-parler-tts"
