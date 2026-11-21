@@ -41,12 +41,16 @@ jobs:
         run: |
           python3 media_backup.py plan
           python3 media_backup.py ${{ github.event.inputs.mode || 'current' }}
+      - name: Light copies of posted media (only files verified in Drive)
+        run: |
+          sudo apt-get install -y -qq ffmpeg >/dev/null
+          python3 media_lite.py run
       - name: Save the manifest
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add archive/backup_manifest.csv 2>/dev/null || exit 0
+          git add archive/ formula-posts/ mistake_reels/video campaign_reels/video 2>/dev/null || exit 0
           git diff --cached --quiet && exit 0
-          git commit -q -m "backup: Drive manifest [skip ci]"
+          git commit -q -m "backup: Drive manifest + light copies of posted media [skip ci]"
           for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done

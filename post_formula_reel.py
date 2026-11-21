@@ -82,6 +82,11 @@ def next_reel() -> Path:
             print("[SKIP] No reels in queue or posted. Add .mp4 files to formula-posts/videos/queue/")
             sys.exit(0)
         print(f"[INFO] Queue empty — full circle complete! Resetting {len(posted)} reels back to queue.")
+        try:   # posted reels are light copies in the repo; bring the full-quality originals back from Google Drive
+            import media_lite
+            media_lite.restore([str(f) for f in posted])
+        except BaseException as e:
+            print(f"[WARN] could not restore full-quality originals from Drive ({e}) — re-posting light copies")
         for f in posted:
             shutil.move(str(f), str(QUEUE_DIR / f.name))
         queued = sorted(f for f in QUEUE_DIR.iterdir() if f.suffix.lower() == ".mp4")
