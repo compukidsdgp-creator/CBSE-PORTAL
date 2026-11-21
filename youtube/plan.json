@@ -1,0 +1,1585 @@
+{
+ "slots": {
+  "Formula": "07:30",
+  "extra": "13:30",
+  "WHY": "18:30"
+ },
+ "plan": [
+  {
+   "date": "2026-11-23",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Alternating Current · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/alternating_current_part_1.mp4"
+  },
+  {
+   "date": "2026-11-23",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "Class 10 Maths",
+   "title": "sin²θ + cos²θ = 1 क्यों? | Class 10 Maths (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/Class 10 Maths/why_trig_identity_hi.mp4"
+  },
+  {
+   "date": "2026-11-23",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Maths",
+   "title": "Why is sin²θ + cos²θ = 1? | Class 10 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Maths/04_why_trig_identity.mp4"
+  },
+  {
+   "date": "2026-11-24",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Application of Derivatives · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/application_of_derivatives_part_1.mp4"
+  },
+  {
+   "date": "2026-11-24",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Changing subscripts to balance | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/001-class10-chemistry-subscripts-en.mp4"
+  },
+  {
+   "date": "2026-11-24",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Maths",
+   "title": "Why is 1 + tan²θ = sec²θ? | Class 10 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Trig Series (Parts 2-4)/why_trig_sec.mp4"
+  },
+  {
+   "date": "2026-11-25",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Areas Related to Circles · Part 1 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/areas_related_to_circles_part_1.mp4"
+  },
+  {
+   "date": "2026-11-25",
+   "time": "13:30",
+   "series": "Board Plan",
+   "group": "Board Faq",
+   "title": "Step marking | CBSE Board Exam 2027 #Shorts",
+   "drive_path": "6 Board Plan Campaign - English/Board Faq/01-step-marking.mp4"
+  },
+  {
+   "date": "2026-11-25",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Maths",
+   "title": "Why is sin 30° = ½? | Class 10 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Trig Series (Parts 2-4)/why_sin30_half.mp4"
+  },
+  {
+   "date": "2026-11-26",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Chemical Kinetics · Part 1 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/chemical_kinetics_part_1.mp4"
+  },
+  {
+   "date": "2026-11-26",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "Class 10 Maths",
+   "title": "1 + tan²θ = sec²θ क्यों? | Class 10 Maths (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/Class 10 Maths/why_trig_sec_hi.mp4"
+  },
+  {
+   "date": "2026-11-26",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Maths",
+   "title": "Why is elevation = depression? | Class 10 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Trig Series (Parts 2-4)/why_elevation_depression.mp4"
+  },
+  {
+   "date": "2026-11-27",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "Boolean Algebra & Logic Gates · Part 1 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/boolean_algebra_logic_gates_part_1.mp4"
+  },
+  {
+   "date": "2026-11-27",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Reading the pH scale backwards | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/002-class10-chemistry-ph-backwards-en.mp4"
+  },
+  {
+   "date": "2026-11-27",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Maths",
+   "title": "01_why_circle_area_pi_r_squared | Class 10 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Maths/01_why_circle_area_pi_r_squared.mp4"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Biology",
+   "title": "Ecology & Ecosystem · Part 1 – Formula Revision | Class 12 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Biology/ecology_ecosystem_part_1.mp4"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "13:30",
+   "series": "Board Plan",
+   "group": "90+ Score Hack",
+   "title": "Stop rereading. Start recalling. | CBSE Board Exam 2027 #Shorts",
+   "drive_path": "6 Board Plan Campaign - English/90+ Score Hack/02-active-recall.mp4"
+  },
+  {
+   "date": "2026-11-28",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "How does a computer SEE an image? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/02_why_computer_vision.mp4"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Chemistry",
+   "title": "Acids, Bases & Salts · Part 1 – Formula Revision | Class 10 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Chemistry/acids_bases_salts_part_1.mp4"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "Class 10 Maths",
+   "title": "sin 30° = ½ क्यों? | Class 10 Maths (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/Class 10 Maths/why_sin30_half_hi.mp4"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 CS",
+   "title": "Why is BINARY SEARCH so fast? | Class 12 CS #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 CS/03_why_binary_search.mp4"
+  },
+  {
+   "date": "2026-11-30",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Physics",
+   "title": "Electricity Class 10 · Part 1 – Formula Revision | Class 10 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Physics/electricity_class_10_part_1.mp4"
+  },
+  {
+   "date": "2026-11-30",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Leaving out physical states | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/003-class10-chemistry-physical-states-en.mp4"
+  },
+  {
+   "date": "2026-11-30",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why sodium in KEROSENE, phosphorus in WATER? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/002_why_sodium_kerosene.mp4"
+  },
+  {
+   "date": "2026-12-01",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Biology",
+   "title": "Life Processes · Part 1 – Formula Revision | Class 10 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Biology/life_processes_part_1.mp4"
+  },
+  {
+   "date": "2026-12-01",
+   "time": "13:30",
+   "series": "Board Plan",
+   "group": "Beat The Timer",
+   "title": "Assertion–Reason trick | CBSE Board Exam 2027 #Shorts",
+   "drive_path": "6 Board Plan Campaign - English/Beat The Timer/03-assertion-reason.mp4"
+  },
+  {
+   "date": "2026-12-01",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "How does an AI NEURON decide? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/05_why_neuron.mp4"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Alternating Current · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/alternating_current_part_2.mp4"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "Class 10 Maths",
+   "title": "उन्नयन कोण = अवनमन कोण क्यों? | Class 10 Maths (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/Class 10 Maths/why_elevation_depression_hi.mp4"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 CS",
+   "title": "Why is 0.1 + 0.2 ≠ 0.3 in Python? | Class 12 CS #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 CS/06_why_float_sum.mp4"
+  },
+  {
+   "date": "2026-12-03",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Application of Derivatives · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/application_of_derivatives_part_2.mp4"
+  },
+  {
+   "date": "2026-12-03",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Mixing up displacement types | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/004-class10-chemistry-displacement-types-en.mp4"
+  },
+  {
+   "date": "2026-12-03",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does PARALLEL lower resistance? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/07_why_parallel_resistors.mp4"
+  },
+  {
+   "date": "2026-12-04",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Areas Related to Circles · Part 2 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/areas_related_to_circles_part_2.mp4"
+  },
+  {
+   "date": "2026-12-04",
+   "time": "13:30",
+   "series": "Board Plan",
+   "group": "Board Faq",
+   "title": "Where the marks are: Class 12 Maths | CBSE Board Exam 2027 #Shorts",
+   "drive_path": "6 Board Plan Campaign - English/Board Faq/04-maths-12-weightage.mp4"
+  },
+  {
+   "date": "2026-12-04",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why can AI be BIASED? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/08_why_ai_bias.mp4"
+  },
+  {
+   "date": "2026-12-05",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Chemical Kinetics · Part 2 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/chemical_kinetics_part_2.mp4"
+  },
+  {
+   "date": "2026-12-05",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "Class 10 Maths",
+   "title": "वृत्त का क्षेत्रफल = πr² क्यों? | Class 10 Maths (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/Class 10 Maths/why_circle_area_hi.mp4"
+  },
+  {
+   "date": "2026-12-05",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 Maths",
+   "title": "Why is dy/dx = 0 at a peak? | Class 12 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 Maths/09_why_slope_zero.mp4"
+  },
+  {
+   "date": "2026-12-06",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "Boolean Algebra & Logic Gates · Part 2 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/boolean_algebra_logic_gates_part_2.mp4"
+  },
+  {
+   "date": "2026-12-06",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Oxidation only means oxygen | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/005-class10-chemistry-oxidation-hydrogen-en.mp4"
+  },
+  {
+   "date": "2026-12-06",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why does a neural network need LAYERS? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/10_why_nn_layers.mp4"
+  },
+  {
+   "date": "2026-12-07",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Biology",
+   "title": "Ecology & Ecosystem · Part 2 – Formula Revision | Class 12 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Biology/ecology_ecosystem_part_2.mp4"
+  },
+  {
+   "date": "2026-12-07",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Wrong volume ratio in electrolysis | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/006-class10-chemistry-electrolysis-ratio-en.mp4"
+  },
+  {
+   "date": "2026-12-07",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 CS",
+   "title": "Why does a STACK reverse things? | Class 12 CS #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 CS/11_why_stack_lifo.mp4"
+  },
+  {
+   "date": "2026-12-08",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Chemistry",
+   "title": "Acids, Bases & Salts · Part 2 – Formula Revision | Class 10 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Chemistry/acids_bases_salts_part_2.mp4"
+  },
+  {
+   "date": "2026-12-08",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Physics",
+   "title": "Electricity Class 10 · Part 2 – Formula Revision | Class 10 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Physics/electricity_class_10_part_2.mp4"
+  },
+  {
+   "date": "2026-12-08",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does a convex lens FOCUS light? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/12_why_convex_lens.mp4"
+  },
+  {
+   "date": "2026-12-09",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Biology",
+   "title": "Life Processes · Part 2 – Formula Revision | Class 10 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Biology/life_processes_part_2.mp4"
+  },
+  {
+   "date": "2026-12-09",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Atoms & Nuclei · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/atoms_nuclei_part_1.mp4"
+  },
+  {
+   "date": "2026-12-09",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Maths",
+   "title": "Why is Sn = n/2(a + l)? | Class 10 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Maths/13_why_ap_sum.mp4"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Calculus Quick Reference · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/calculus_quick_reference_part_1.mp4"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Arithmetic Progressions · Part 1 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/arithmetic_progressions_part_1.mp4"
+  },
+  {
+   "date": "2026-12-10",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why split data into TRAIN and TEST? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/14_why_train_test.mp4"
+  },
+  {
+   "date": "2026-12-11",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Coordination Compounds · Part 1 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/coordination_compounds_part_1.mp4"
+  },
+  {
+   "date": "2026-12-11",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "Computer Networks · Part 1 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/computer_networks_part_1.mp4"
+  },
+  {
+   "date": "2026-12-11",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 CS",
+   "title": "How does RECURSION know when to stop? | Class 12 CS #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 CS/15_why_recursion.mp4"
+  },
+  {
+   "date": "2026-12-12",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Biology",
+   "title": "Human Reproduction · Part 1 – Formula Revision | Class 12 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Biology/human_reproduction_part_1.mp4"
+  },
+  {
+   "date": "2026-12-12",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Chemistry",
+   "title": "Carbon & its Compounds · Part 1 – Formula Revision | Class 10 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Chemistry/carbon_its_compounds_part_1.mp4"
+  },
+  {
+   "date": "2026-12-12",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why is the sky BLUE? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/16_why_blue_sky.mp4"
+  },
+  {
+   "date": "2026-12-13",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Physics",
+   "title": "Light Reflection & Refraction · Part 1 – Formula Revision | Class 10 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Physics/light_reflection_refraction_part_1.mp4"
+  },
+  {
+   "date": "2026-12-13",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Atoms & Nuclei · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/atoms_nuclei_part_2.mp4"
+  },
+  {
+   "date": "2026-12-13",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 Maths",
+   "title": "Why is d/dx x² = 2x? | Class 12 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 Maths/17_why_derivative_x2.mp4"
+  },
+  {
+   "date": "2026-12-14",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Calculus Quick Reference · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/calculus_quick_reference_part_2.mp4"
+  },
+  {
+   "date": "2026-12-14",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Arithmetic Progressions · Part 2 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/arithmetic_progressions_part_2.mp4"
+  },
+  {
+   "date": "2026-12-14",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why can 99% accuracy be BAD? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/18_why_accuracy_trap.mp4"
+  },
+  {
+   "date": "2026-12-15",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Coordination Compounds · Part 2 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/coordination_compounds_part_2.mp4"
+  },
+  {
+   "date": "2026-12-15",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "Computer Networks · Part 2 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/computer_networks_part_2.mp4"
+  },
+  {
+   "date": "2026-12-15",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 CS",
+   "title": "How does SQL JOIN match rows? | Class 12 CS #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 CS/19_why_sql_join.mp4"
+  },
+  {
+   "date": "2026-12-16",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Biology",
+   "title": "Human Reproduction · Part 2 – Formula Revision | Class 12 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Biology/human_reproduction_part_2.mp4"
+  },
+  {
+   "date": "2026-12-16",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Chemistry",
+   "title": "Carbon & its Compounds · Part 2 – Formula Revision | Class 10 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Chemistry/carbon_its_compounds_part_2.mp4"
+  },
+  {
+   "date": "2026-12-16",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "How does a chatbot understand WORDS? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/20_why_chatbot_words.mp4"
+  },
+  {
+   "date": "2026-12-17",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Physics",
+   "title": "Light Reflection & Refraction · Part 2 – Formula Revision | Class 10 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Physics/light_reflection_refraction_part_2.mp4"
+  },
+  {
+   "date": "2026-12-17",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Capacitors & Dielectrics · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/capacitors_dielectrics_part_1.mp4"
+  },
+  {
+   "date": "2026-12-17",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Maths",
+   "title": "Why is a cone 1/3 of a cylinder? | Class 10 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Maths/21_why_cone_volume.mp4"
+  },
+  {
+   "date": "2026-12-18",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Derivative Rules · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/derivative_rules_part_1.mp4"
+  },
+  {
+   "date": "2026-12-18",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Coordinate Geometry · Part 1 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/coordinate_geometry_part_1.mp4"
+  },
+  {
+   "date": "2026-12-18",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why does AI need SO MUCH data? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/22_why_ai_data.mp4"
+  },
+  {
+   "date": "2026-12-19",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "d & f Block Elements · Part 1 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/d_f_block_elements_part_1.mp4"
+  },
+  {
+   "date": "2026-12-19",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "Database Management · Part 1 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/database_management_part_1.mp4"
+  },
+  {
+   "date": "2026-12-19",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 CS",
+   "title": "Why can a LIST change but not a TUPLE? | Class 12 CS #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 CS/23_why_list_tuple.mp4"
+  },
+  {
+   "date": "2026-12-20",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Biology",
+   "title": "Photosynthesis Key Equations · Part 1 – Formula Revision | Class 12 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Biology/photosynthesis_key_equations_part_1.mp4"
+  },
+  {
+   "date": "2026-12-20",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Chemistry",
+   "title": "Chemical Reactions & Equations · Part 1 – Formula Revision | Class 10 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Chemistry/chemical_reactions_equations_part_1.mp4"
+  },
+  {
+   "date": "2026-12-20",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 CS",
+   "title": "How does a dictionary find keys INSTANTLY? | Class 12 CS #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 CS/24_why_dict_hash.mp4"
+  },
+  {
+   "date": "2026-12-21",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Capacitors & Dielectrics · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/capacitors_dielectrics_part_2.mp4"
+  },
+  {
+   "date": "2026-12-21",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Derivative Rules · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/derivative_rules_part_2.mp4"
+  },
+  {
+   "date": "2026-12-21",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 CS",
+   "title": "How does data TRAVEL across the internet? | Class 12 CS #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 CS/25_why_packets.mp4"
+  },
+  {
+   "date": "2026-12-22",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Coordinate Geometry · Part 2 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/coordinate_geometry_part_2.mp4"
+  },
+  {
+   "date": "2026-12-22",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "d & f Block Elements · Part 2 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/d_f_block_elements_part_2.mp4"
+  },
+  {
+   "date": "2026-12-22",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 Maths",
+   "title": "Why is ∫ the AREA under a curve? | Class 12 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 Maths/26_why_integral_area.mp4"
+  },
+  {
+   "date": "2026-12-23",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "Database Management · Part 2 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/database_management_part_2.mp4"
+  },
+  {
+   "date": "2026-12-23",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Biology",
+   "title": "Photosynthesis Key Equations · Part 2 – Formula Revision | Class 12 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Biology/photosynthesis_key_equations_part_2.mp4"
+  },
+  {
+   "date": "2026-12-23",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "How does an AI DECISION TREE decide? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/27_why_decision_tree.mp4"
+  },
+  {
+   "date": "2026-12-24",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Chemistry",
+   "title": "Chemical Reactions & Equations · Part 2 – Formula Revision | Class 10 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Chemistry/chemical_reactions_equations_part_2.mp4"
+  },
+  {
+   "date": "2026-12-24",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Current Electricity · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/current_electricity_part_1.mp4"
+  },
+  {
+   "date": "2026-12-24",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why do we see a RAINBOW? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/28_why_rainbow.mp4"
+  },
+  {
+   "date": "2026-12-25",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Differential Equations · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/differential_equations_part_1.mp4"
+  },
+  {
+   "date": "2026-12-25",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Quadratic Equations · Part 1 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/quadratic_equations_part_1.mp4"
+  },
+  {
+   "date": "2026-12-25",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "Why do computers use BINARY? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/29_why_binary_why.mp4"
+  },
+  {
+   "date": "2026-12-26",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Electrochemistry · Part 1 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/electro_chemistry_part_1.mp4"
+  },
+  {
+   "date": "2026-12-26",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "Python Quick Reference · Part 1 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/python_quick_reference_part_1.mp4"
+  },
+  {
+   "date": "2026-12-26",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Maths",
+   "title": "Where does the QUADRATIC FORMULA come from? | Class 10 Maths #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Maths/30_why_quadratic_formula.mp4"
+  },
+  {
+   "date": "2026-12-27",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Biology",
+   "title": "Principles of Inheritance · Part 1 – Formula Revision | Class 12 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Biology/principles_of_inheritance_part_1.mp4"
+  },
+  {
+   "date": "2026-12-27",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Chemistry",
+   "title": "Metals & Non-metals · Part 1 – Formula Revision | Class 10 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Chemistry/metals_non_metals_part_1.mp4"
+  },
+  {
+   "date": "2026-12-27",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why do egg & sperm have only 23 chromosomes? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/31_why_chromosomes_23.mp4"
+  },
+  {
+   "date": "2026-12-28",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Current Electricity · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/current_electricity_part_2.mp4"
+  },
+  {
+   "date": "2026-12-28",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Differential Equations · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/differential_equations_part_2.mp4"
+  },
+  {
+   "date": "2026-12-28",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why isn't current USED UP by a bulb? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/32_why_current_flow.mp4"
+  },
+  {
+   "date": "2026-12-29",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Quadratic Equations · Part 2 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/quadratic_equations_part_2.mp4"
+  },
+  {
+   "date": "2026-12-29",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Electrochemistry · Part 2 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/electro_chemistry_part_2.mp4"
+  },
+  {
+   "date": "2026-12-29",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "How do NESTED loops work? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/33_why_nested_loops.mp4"
+  },
+  {
+   "date": "2026-12-30",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "Python Quick Reference · Part 2 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/python_quick_reference_part_2.mp4"
+  },
+  {
+   "date": "2026-12-30",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Biology",
+   "title": "Principles of Inheritance · Part 2 – Formula Revision | Class 12 Biology #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Biology/principles_of_inheritance_part_2.mp4"
+  },
+  {
+   "date": "2026-12-30",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why do we BALANCE chemical equations? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/34_why_balance_eq.mp4"
+  },
+  {
+   "date": "2026-12-31",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Chemistry",
+   "title": "Metals & Non-metals · Part 2 – Formula Revision | Class 10 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Chemistry/metals_non_metals_part_2.mp4"
+  },
+  {
+   "date": "2026-12-31",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Dual Nature of Matter · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/dual_nature_of_matter_part_1.mp4"
+  },
+  {
+   "date": "2026-12-31",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why does a confusion matrix have FOUR boxes? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/35_why_confusion_matrix.mp4"
+  },
+  {
+   "date": "2027-01-01",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Inverse Trig Functions · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/inverse_trig_functions_part_1.mp4"
+  },
+  {
+   "date": "2027-01-01",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Real Numbers & Polynomials · Part 1 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/real_numbers_polynomials_part_1.mp4"
+  },
+  {
+   "date": "2027-01-01",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does a mirror flip LEFT-RIGHT, not UP-DOWN? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/36_why_mirror_flip.mp4"
+  },
+  {
+   "date": "2027-01-02",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Organic Name Reactions · Part 1 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/organic_name_reactions_part_1.mp4"
+  },
+  {
+   "date": "2027-01-02",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "SQL Functions & Clauses · Part 1 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/sql_functions_clauses_part_1.mp4"
+  },
+  {
+   "date": "2027-01-02",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "Why write FUNCTIONS instead of repeating code? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/37_why_functions_why.mp4"
+  },
+  {
+   "date": "2027-01-03",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Dual Nature of Matter · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/dual_nature_of_matter_part_2.mp4"
+  },
+  {
+   "date": "2027-01-03",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Inverse Trig Functions · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/inverse_trig_functions_part_2.mp4"
+  },
+  {
+   "date": "2027-01-03",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why is the stomach ACIDIC but the intestine BASIC? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/38_why_stomach_ph.mp4"
+  },
+  {
+   "date": "2027-01-04",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Real Numbers & Polynomials · Part 2 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/real_numbers_polynomials_part_2.mp4"
+  },
+  {
+   "date": "2027-01-04",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Organic Name Reactions · Part 2 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/organic_name_reactions_part_2.mp4"
+  },
+  {
+   "date": "2027-01-04",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why is the small intestine SO LONG? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/39_why_small_intestine.mp4"
+  },
+  {
+   "date": "2027-01-05",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 CS",
+   "title": "SQL Functions & Clauses · Part 2 – Formula Revision | Class 12 CS #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 CS/sql_functions_clauses_part_2.mp4"
+  },
+  {
+   "date": "2027-01-05",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Electromagnetic Induction · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/electromagnetic_induction_part_1.mp4"
+  },
+  {
+   "date": "2027-01-05",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does a wire feel a FORCE in a magnet? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/40_why_wire_force.mp4"
+  },
+  {
+   "date": "2027-01-06",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Linear Programming · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/linear_programming_part_1.mp4"
+  },
+  {
+   "date": "2027-01-06",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Statistics Class 10 · Part 1 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/statistics_class_10_part_1.mp4"
+  },
+  {
+   "date": "2027-01-06",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "Why is INDENTATION so important in Python? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/41_why_indentation.mp4"
+  },
+  {
+   "date": "2027-01-07",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Solid State · Part 1 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/solid_state_part_1.mp4"
+  },
+  {
+   "date": "2027-01-07",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Electromagnetic Induction · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/electromagnetic_induction_part_2.mp4"
+  },
+  {
+   "date": "2027-01-07",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does CARBON form millions of compounds? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/42_why_carbon_unique.mp4"
+  },
+  {
+   "date": "2027-01-08",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Linear Programming · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/linear_programming_part_2.mp4"
+  },
+  {
+   "date": "2027-01-08",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Statistics Class 10 · Part 2 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/statistics_class_10_part_2.mp4"
+  },
+  {
+   "date": "2027-01-08",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why do we need BOTH precision and recall? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/43_why_precision_recall.mp4"
+  },
+  {
+   "date": "2027-01-09",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Solid State · Part 2 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/solid_state_part_2.mp4"
+  },
+  {
+   "date": "2027-01-09",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Electromagnetic Waves · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/electromagnetic_waves_part_1.mp4"
+  },
+  {
+   "date": "2027-01-09",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why is a CONCAVE lens's focal length negative? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/44_why_concave_negative.mp4"
+  },
+  {
+   "date": "2027-01-10",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Matrices & Determinants · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/matrices_determinants_part_1.mp4"
+  },
+  {
+   "date": "2027-01-10",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Surface Areas & Volumes · Part 1 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/surface_areas_volumes_part_1.mp4"
+  },
+  {
+   "date": "2027-01-10",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why do plants need BOTH xylem and phloem? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/45_why_xylem_phloem.mp4"
+  },
+  {
+   "date": "2027-01-11",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Solutions & Colligative Prop. · Part 1 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/solutions_colligative_prop_part_1.mp4"
+  },
+  {
+   "date": "2027-01-11",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Electromagnetic Waves · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/electromagnetic_waves_part_2.mp4"
+  },
+  {
+   "date": "2027-01-11",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "Why use a LIST when we have variables? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/46_why_list_vars.mp4"
+  },
+  {
+   "date": "2027-01-12",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Matrices & Determinants · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/matrices_determinants_part_2.mp4"
+  },
+  {
+   "date": "2027-01-12",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Surface Areas & Volumes · Part 2 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/surface_areas_volumes_part_2.mp4"
+  },
+  {
+   "date": "2027-01-12",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does BLUE copper sulphate turn GREEN with iron? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/47_why_iron_copper.mp4"
+  },
+  {
+   "date": "2027-01-13",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Chemistry",
+   "title": "Solutions & Colligative Prop. · Part 2 – Formula Revision | Class 12 Chemistry #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Chemistry/solutions_colligative_prop_part_2.mp4"
+  },
+  {
+   "date": "2027-01-13",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Electrostatics Key Formulae · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/electrostatics_key_formulae_part_1.mp4"
+  },
+  {
+   "date": "2027-01-13",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why 2 ATP without oxygen, but 38 WITH it? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/48_why_atp_count.mp4"
+  },
+  {
+   "date": "2027-01-14",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Probability Theorems · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/probability_theorems_part_1.mp4"
+  },
+  {
+   "date": "2027-01-14",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Trigonometry Identities · Part 1 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/trigonometry_identities_part_1.mp4"
+  },
+  {
+   "date": "2027-01-14",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does POWER have THREE formulas? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/49_why_power_forms.mp4"
+  },
+  {
+   "date": "2027-01-15",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Electrostatics Key Formulae · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/electrostatics_key_formulae_part_2.mp4"
+  },
+  {
+   "date": "2027-01-15",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Probability Theorems · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/probability_theorems_part_2.mp4"
+  },
+  {
+   "date": "2027-01-15",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "Why do we need ELIF, not just many IFs? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/50_why_if_elif.mp4"
+  },
+  {
+   "date": "2027-01-16",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 10 Maths",
+   "title": "Trigonometry Identities · Part 2 – Formula Revision | Class 10 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 10 Maths/trigonometry_identities_part_2.mp4"
+  },
+  {
+   "date": "2027-01-16",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Gauss's Law & Fields · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/gauss_s_law_fields_part_1.mp4"
+  },
+  {
+   "date": "2027-01-16",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why do IONIC compounds melt so HIGH? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/51_why_ionic_mp.mp4"
+  },
+  {
+   "date": "2027-01-17",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Standard Integrals · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/standard_integrals_part_1.mp4"
+  },
+  {
+   "date": "2027-01-17",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Gauss's Law & Fields · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/gauss_s_law_fields_part_2.mp4"
+  },
+  {
+   "date": "2027-01-17",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 Science",
+   "title": "Why is DNA the genetic material, not PROTEIN? | Class 12 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 Science/52_why_dna_genetic.mp4"
+  },
+  {
+   "date": "2027-01-18",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Standard Integrals · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/standard_integrals_part_2.mp4"
+  },
+  {
+   "date": "2027-01-18",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Moving Charges & Devices · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/moving_charges_devices_part_1.mp4"
+  },
+  {
+   "date": "2027-01-18",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "Why is DEBUGGING so important? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/53_why_debugging.mp4"
+  },
+  {
+   "date": "2027-01-19",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Vectors & 3D Geometry · Part 1 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/vectors_3d_geometry_part_1.mp4"
+  },
+  {
+   "date": "2027-01-19",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Moving Charges & Devices · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/moving_charges_devices_part_2.mp4"
+  },
+  {
+   "date": "2027-01-19",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Science",
+   "title": "Why is blood group O the UNIVERSAL DONOR? | Science #Shorts",
+   "drive_path": "1 WHY Series - English/Science/54_why_blood_o.mp4"
+  },
+  {
+   "date": "2027-01-20",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Maths",
+   "title": "Vectors & 3D Geometry · Part 2 – Formula Revision | Class 12 Maths #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Maths/vectors_3d_geometry_part_2.mp4"
+  },
+  {
+   "date": "2027-01-20",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Moving Charges & Magnetism · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/moving_charges_magnetism_part_1.mp4"
+  },
+  {
+   "date": "2027-01-20",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "Why do we need DATA TYPES? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/55_why_data_types.mp4"
+  },
+  {
+   "date": "2027-01-21",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Moving Charges & Magnetism · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/moving_charges_magnetism_part_2.mp4"
+  },
+  {
+   "date": "2027-01-21",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Ray Optics & Wave Optics · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/ray_optics_wave_optics_part_1.mp4"
+  },
+  {
+   "date": "2027-01-21",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why do LONG, THIN wires resist more? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/56_why_resist_dims.mp4"
+  },
+  {
+   "date": "2027-01-22",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Ray Optics & Wave Optics · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/ray_optics_wave_optics_part_2.mp4"
+  },
+  {
+   "date": "2027-01-22",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Semiconductor Devices · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/semiconductor_devices_part_1.mp4"
+  },
+  {
+   "date": "2027-01-22",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "CS",
+   "title": "Why does TIME COMPLEXITY matter? | CS #Shorts",
+   "drive_path": "1 WHY Series - English/CS/57_why_time_complexity.mp4"
+  },
+  {
+   "date": "2027-01-23",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Semiconductor Devices · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/semiconductor_devices_part_2.mp4"
+  },
+  {
+   "date": "2027-01-23",
+   "time": "13:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Wave Optics · Part 1 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/wave_optics_part_1.mp4"
+  },
+  {
+   "date": "2027-01-23",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why do we need BOTH arteries and veins? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/58_why_arteries_veins.mp4"
+  },
+  {
+   "date": "2027-01-24",
+   "time": "07:30",
+   "series": "Formula",
+   "group": "Class 12 Physics",
+   "title": "Wave Optics · Part 2 – Formula Revision | Class 12 Physics #Shorts",
+   "drive_path": "3 Formula Reels/Class 12 Physics/wave_optics_part_2.mp4"
+  },
+  {
+   "date": "2027-01-24",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why do neural networks need ACTIVATION functions? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/59_why_activation_fn.mp4"
+  },
+  {
+   "date": "2027-01-25",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does SOLID salt NOT conduct electricity? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/60_why_ionic_conduct.mp4"
+  },
+  {
+   "date": "2027-01-26",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 Science",
+   "title": "Why is TIR only from DENSER to RARER? | Class 12 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 Science/61_why_tir_denser.mp4"
+  },
+  {
+   "date": "2027-01-27",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why is MITOSIS a copy but MEIOSIS a shuffle? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/62_why_mitosis_meiosis.mp4"
+  },
+  {
+   "date": "2027-01-28",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "AI",
+   "title": "Why does AI learning go AGAINST the gradient? | AI #Shorts",
+   "drive_path": "1 WHY Series - English/AI/63_why_gradient_descent.mp4"
+  },
+  {
+   "date": "2027-01-29",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why use the RIGHT-HAND THUMB rule? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/64_why_thumb_rule.mp4"
+  },
+  {
+   "date": "2027-01-30",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why does blood pass the heart TWICE? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/65_why_double_circ.mp4"
+  },
+  {
+   "date": "2027-01-31",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 Science",
+   "title": "Why do reactions go FASTER when HOT? | Class 12 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 Science/66_why_collision_temp.mp4"
+  },
+  {
+   "date": "2027-02-01",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 12 Science",
+   "title": "Why NO force on a charge moving ALONG B? | Class 12 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 12 Science/67_why_parallel_no_force.mp4"
+  },
+  {
+   "date": "2027-02-02",
+   "time": "18:30",
+   "series": "WHY",
+   "group": "Class 10 Science",
+   "title": "Why do plants SHUT their pores on hot days? | Class 10 Science #Shorts",
+   "drive_path": "1 WHY Series - English/Class 10 Science/68_why_stomata_close.mp4"
+  }
+ ]
+}

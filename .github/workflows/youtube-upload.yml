@@ -1,0 +1,66 @@
+name: YouTube Shorts — upload and schedule
+
+# Every evening: add new reels to youtube/plan.json, then upload every Short planned for the next ~54 hours from the
+# full-quality original in Google Drive, each scheduled to go public at its slot (7:30 AM · 1:30 PM · 6:30 PM IST).
+# The owner gets a Telegram list with the links. Does nothing until the YT_* secrets exist.
+on:
+  schedule:
+    - cron: "35 12 * * *"      # ~18:05 IST (uploads 2 days ahead, so a late GitHub run is harmless)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "schedule = normal run · test = one PRIVATE test upload · extend = only add new reels to the plan"
+        default: schedule
+        type: choice
+        options: [schedule, test, extend]
+permissions:
+  contents: write
+concurrency:
+  group: youtube-upload
+  cancel-in-progress: false
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Ready?
+        id: ready
+        env:
+          A: ${{ secrets.YT_REFRESH_TOKEN }}
+          B: ${{ secrets.RCLONE_DRIVE_TOKEN }}
+        run: |
+          if [ -z "$A" ] || [ -z "$B" ]; then echo "YouTube or Drive secrets not added yet — nothing to do"; echo "go=0" >> $GITHUB_OUTPUT; else echo "go=1" >> $GITHUB_OUTPUT; fi
+      - name: Install
+        if: steps.ready.outputs.go == '1'
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null
+          pip install --quiet matplotlib numpy pillow
+      - name: Upload
+        if: steps.ready.outputs.go == '1'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          RCLONE_DRIVE_TOKEN: ${{ secrets.RCLONE_DRIVE_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+        run: |
+          MODE="${{ github.event.inputs.mode || 'schedule' }}"
+          if [ "$MODE" = "test" ]; then python3 youtube_upload.py test; exit 0; fi
+          python3 youtube_upload.py extend
+          [ "$MODE" = "extend" ] || python3 youtube_upload.py schedule
+      - name: Save
+        if: always() && steps.ready.outputs.go == '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add youtube/ 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -q -m "youtube: plan + uploaded Shorts [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
