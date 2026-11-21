@@ -36,8 +36,8 @@ for reel in GH.load_specs():
             if not out.exists():
                 todo.append((out, b["say"], STYLE[L["voice"]]))
 # WHY? reels: Hindi block HINDI["beats"] → formula-posts/why/voice_hi/<module>/<beat>.wav
-import importlib, re as _re
-for f in sorted((ROOT / "why_reels").glob("[a-z]*.py")):
+import importlib, os as _os, re as _re
+for f in (sorted((ROOT / "why_reels").glob("[a-z]*.py")) if _os.environ.get("WHY_HINDI") else []):   # only in the WHY? Hindi workflow
     if not _re.search(r"^HINDI\s*=", f.read_text(encoding="utf-8"), _re.M):
         continue
     try:

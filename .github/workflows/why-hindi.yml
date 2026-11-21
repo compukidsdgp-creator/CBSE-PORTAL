@@ -51,6 +51,7 @@ jobs:
         if: steps.todo.outputs.missing != '0'
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          WHY_HINDI: "1"
         run: python3 tools/parler_voice.py
       - name: Render missing Hindi videos
         if: steps.todo.outputs.missing != '0'
