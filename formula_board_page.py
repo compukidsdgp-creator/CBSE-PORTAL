@@ -77,11 +77,20 @@ def collect():
 def build_images(items):
     (OUT / "img").mkdir(parents=True, exist_ok=True)
     (OUT / "thumb").mkdir(parents=True, exist_ok=True)
+    import hashlib, json as _json
+    stamp_f = OUT / "sources.json"            # md5 of each source image, so a corrected image is copied again
+    try:
+        stamps = _json.loads(stamp_f.read_text(encoding="utf-8"))
+    except Exception:
+        stamps = {}
     data, made = [], 0
     for slug, src in items:
         full, thumb = OUT / "img" / f"{slug}.jpg", OUT / "thumb" / f"{slug}.webp"
         try:
-            if not (full.exists() and thumb.exists()):
+            h5 = hashlib.md5(src.read_bytes()).hexdigest()
+            changed = slug in stamps and stamps[slug] != h5
+            stamps[slug] = h5
+            if changed or not (full.exists() and thumb.exists()):
                 im = Image.open(src).convert("RGB")
                 w, h = im.size
                 fw = min(FULL_W, w)
@@ -98,6 +107,7 @@ def build_images(items):
         d = describe(src.stem)
         d.update({"id": slug, "r": round(w / h, 3)})
         data.append(d)
+    stamp_f.write_text(_json.dumps({k: stamps[k] for k, _ in items if k in stamps}, indent=0, sort_keys=True) + "\n", encoding="utf-8")
     keep = {d["id"] for d in data}
     for folder, ext in ((OUT / "img", ".jpg"), (OUT / "thumb", ".webp")):
         for f in folder.glob(f"*{ext}"):
