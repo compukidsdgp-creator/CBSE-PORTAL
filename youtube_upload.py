@@ -79,10 +79,15 @@ def access_token():
     need = ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN")
     if not all(os.environ.get(k) for k in need):
         sys.exit("YouTube secrets missing (YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN)")
-    data = urllib.parse.urlencode({"client_id": os.environ["YT_CLIENT_ID"], "client_secret": os.environ["YT_CLIENT_SECRET"],
-                                   "refresh_token": os.environ["YT_REFRESH_TOKEN"], "grant_type": "refresh_token"}).encode()
-    with urllib.request.urlopen("https://oauth2.googleapis.com/token", data=data, timeout=30) as r:
-        return json.load(r)["access_token"]
+    data = urllib.parse.urlencode({"client_id": os.environ["YT_CLIENT_ID"].strip(), "client_secret": os.environ["YT_CLIENT_SECRET"].strip(),
+                                   "refresh_token": os.environ["YT_REFRESH_TOKEN"].strip(), "grant_type": "refresh_token"}).encode()
+    try:
+        with urllib.request.urlopen("https://oauth2.googleapis.com/token", data=data, timeout=30) as r:
+            return json.load(r)["access_token"]
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()[:300]         # Google's error code only (no secrets in it)
+        owner(f"⚠️ YouTube login failed: {body}\nThe YouTube refresh token / client secrets need to be checked.")
+        sys.exit(f"token exchange failed: {body}")
 
 
 def upload(token, video, title, desc, publish_at=None):
