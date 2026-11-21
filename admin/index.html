@@ -102,6 +102,18 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
 .st.todo{background:#2a3350;color:#9fb0d4}.st.draft{background:#3a2f0a;color:#ffd166}.st.changes{background:#3a1520;color:#ff8fa8}.st.live{background:#0e3325;color:#5ff0b0}
 .ok{color:var(--green);font-weight:700}.no{color:#55607a}
 .flag{font-size:11px;color:#ffd166;margin-left:6px}
+/* monitor */
+.mdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-left:4px;vertical-align:1px}
+.lv{display:inline-block;width:10px;height:10px;border-radius:50%}
+.lv.green{background:var(--green)}.lv.amber{background:var(--orange)}.lv.red{background:var(--red)}.lv.grey{background:#55607a}
+.meter{margin:12px 0}.meter .mh{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px}.meter .mh b{font-variant-numeric:tabular-nums}
+.meter .mb{position:relative;height:12px;background:var(--panel2);border-radius:99px;overflow:hidden}.meter .mb i{display:block;height:100%;border-radius:99px}
+.meter small{color:var(--muted);font-size:12px;display:block;margin-top:5px;line-height:1.45}
+.alert-red{background:#3a1520;border:1px solid #6b2235;color:#ffc2cf;border-radius:12px;padding:12px 14px;margin-top:14px;font-size:13px;line-height:1.6}
+.alert-red b{color:#fff}
+.sp-row{display:grid;grid-template-columns:140px 1fr 70px;gap:10px;align-items:center;font-size:13px;padding:4px 0}
+.sp-row .pb{height:9px;background:var(--panel2);border-radius:99px;overflow:hidden}.sp-row .pb i{display:block;height:100%;background:var(--cyan)}
+.sp-row .num{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
 @media(max-width:700px){.subj summary{grid-template-columns:1fr;gap:6px}.subj .cnt{text-align:left}}
 </style>
 </head>
@@ -127,6 +139,7 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
     <nav class="tabs">
       <button class="tab on" data-tab="dash">Dashboard</button>
       <button class="tab" data-tab="tracker">Content tracker</button>
+      <button class="tab" data-tab="monitor">Monitor <span id="mon-dot" class="mdot"></span></button>
       <button class="tab" data-tab="ads">Ad blocks</button>
     </nav>
     <div class="spacer"></div>
@@ -168,6 +181,26 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
         <div class="card"><h2>Top Google searches <small>28 days</small></h2><div class="scroll" id="queries"></div></div>
         <div class="card"><h2>Almost on page 1 <small>pages ranking 5–15: easiest wins</small></h2><div class="scroll" id="nearTop"></div></div>
       </div>
+    </section>
+
+    <!-- MONITOR -->
+    <section id="tab-monitor" class="hidden">
+      <div class="grid kpis" id="mon-kpis"></div>
+      <div id="mon-alerts"></div>
+      <div class="section-title">Stock — last publishing date</div>
+      <div class="card"><div class="scroll" style="max-height:none"><table id="mon-stock"><thead><tr><th></th><th>Stock</th><th class="num">Left</th><th>Schedule</th><th>Last post</th><th>Note</th></tr></thead><tbody></tbody></table></div></div>
+      <div class="section-title">Tokens &amp; keys</div>
+      <div class="card"><table id="mon-tokens"><thead><tr><th></th><th>Token</th><th>Status</th><th>Expiry</th></tr></thead><tbody></tbody></table></div>
+      <div class="section-title">GitHub storage &amp; bandwidth</div>
+      <div class="grid half">
+        <div class="card"><h2>Storage <small>GitHub limits: site 1 GB · repository 1 GB recommended, 5 GB max · file 100 MB</small></h2><div id="mon-meters"></div></div>
+        <div class="card"><h2>What takes the space</h2><div id="mon-space"></div></div>
+      </div>
+      <div class="grid half" style="margin-top:14px">
+        <div class="card"><h2>Website bandwidth <small>GitHub Pages soft limit 100 GB / month</small></h2><div id="mon-bw"></div></div>
+        <div class="card"><h2>Builds &amp; automation <small>last 24 hours</small></h2><div id="mon-builds"></div></div>
+      </div>
+      <p class="note" id="mon-stamp" style="margin-top:14px"></p>
     </section>
 
     <!-- CONTENT TRACKER -->
@@ -276,7 +309,8 @@ $('#logoutBtn').onclick = () => { try { sessionStorage.removeItem('cbse_admin_pw
 
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === t));
-  ['dash', 'tracker', 'ads'].forEach(k => $('#tab-' + k).classList.toggle('hidden', t.dataset.tab !== k));
+  ['dash', 'tracker', 'monitor', 'ads'].forEach(k => $('#tab-' + k).classList.toggle('hidden', t.dataset.tab !== k));
+  if (t.dataset.tab === 'monitor') renderMonitor();
   if (t.dataset.tab === 'ads' && !ADS) loadAds();
   if (t.dataset.tab === 'tracker') { renderTracker(); renderBooster(); renderMistakes(); renderLabs(); renderMockzone(); renderCampaign(); renderNightly(); liveApprovals(); }
 });
@@ -381,10 +415,74 @@ function renderCampaign() {
 function start() {
   $('#login').classList.add('hidden'); $('#app').classList.remove('hidden');
   $('#stamp').textContent = 'Data: ' + DATA.generated_at;
-  renderDash();
+  renderDash(); monDot();
 }
 
 /* ── dashboard ── */
+// ── Monitor ──────────────────────────────────────────────────────────────────
+const LV_RANK = {green: 0, grey: 0, amber: 1, red: 2};
+const dfmt = s => s ? new Date(s).toLocaleDateString('en-IN', {day: 'numeric', month: 'short', year: 'numeric'}) : '—';
+function monWorst(m) {
+  const lv = [...(m.stock || []).map(s => s.level), ...(m.tokens || []).map(t => t.level),
+    m.repo && m.repo.site_level, m.repo && m.repo.repo_level, m.builds && m.builds.pages_level, m.bandwidth && m.bandwidth.level];
+  return lv.filter(Boolean).reduce((a, b) => LV_RANK[b] > LV_RANK[a] ? b : a, 'green');
+}
+function monDot() {
+  const m = DATA && DATA.monitor; const d = $('#mon-dot'); if (!m || !d) return;
+  const w = monWorst(m); d.style.background = w === 'red' ? 'var(--red)' : w === 'amber' ? 'var(--orange)' : 'var(--green)';
+}
+function meter(label, val, max, unit, lv, note) {
+  const pct = Math.min(100, val / max * 100), col = lv === 'red' ? 'var(--red)' : lv === 'amber' ? 'var(--orange)' : 'var(--green)';
+  return `<div class="meter"><div class="mh"><span>${label}</span><b>${val} ${unit} <span style="color:var(--muted);font-weight:500">/ ${max} ${unit}</span></b></div>
+    <div class="mb"><i style="width:${pct.toFixed(1)}%;background:${col}"></i></div>${note ? `<small>${note}</small>` : ''}</div>`;
+}
+function renderMonitor() {
+  const m = DATA.monitor;
+  if (!m) { $('#mon-kpis').innerHTML = '<div class="card empty">Monitor data has not been built yet — press ↻ Refresh data.</div>'; return; }
+  const st = m.stock || [], tk = m.tokens || [], r = m.repo || {}, b = m.builds || {}, bw = m.bandwidth || {};
+  const soonest = st.filter(s => s.until).sort((a, c) => a.until.localeCompare(c.until))[0];
+  const tokBad = tk.filter(t => t.level !== 'green');
+  const nextExp = tk.map(t => (t.detail.match(/until (\d{4}-\d\d-\d\d)/) || [])[1] || t.expires).filter(Boolean).sort()[0];
+  const kpi = (label, val, sub, lv) => `<div class="card kpi"><div class="label"><span class="lv ${lv}"></span> ${label}</div><div class="val" style="font-size:24px">${val}</div><div class="sub">${sub}</div></div>`;
+  $('#mon-kpis').innerHTML =
+    kpi('First stock to run out', soonest ? dfmt(soonest.until) : '—', soonest ? esc(soonest.name) : '', soonest ? soonest.level : 'grey') +
+    kpi('Tokens', tokBad.length ? tokBad.length + ' need attention' : 'All valid', nextExp ? 'next expiry ' + dfmt(nextExp) : 'nothing expires', tokBad.reduce((a, t) => LV_RANK[t.level] > LV_RANK[a] ? t.level : a, 'green')) +
+    kpi('Repository size', (r.repo_gb ?? '—') + ' GB', 'website ' + (r.site_gb ?? '—') + ' GB of 1 GB', LV_RANK[r.repo_level] >= LV_RANK[r.site_level] ? r.repo_level : r.site_level) +
+    kpi('Bandwidth (est.)', bw.month_gb != null ? bw.month_gb + ' GB/mo' : '—', 'of 100 GB soft limit', bw.level || 'grey');
+  const reds = [];
+  st.filter(s => s.level === 'red').forEach(s => reds.push(`<b>${esc(s.name)}</b> runs out ${dfmt(s.until)}${s.note ? ' — ' + esc(s.note) : ''}`));
+  tk.filter(t => t.level === 'red').forEach(t => reds.push(`<b>${esc(t.name)}</b>: ${esc(t.detail)}`));
+  if (r.repo_level === 'red') reds.push(`<b>Repository is ${r.repo_gb} GB</b> — above GitHub's recommended 1 GB. Old videos are the cause; see "What takes the space".`);
+  if (r.site_level === 'red') reds.push(`<b>Website is ${r.site_gb} GB</b> — GitHub Pages stops publishing above 1 GB.`);
+  if (b.pages_level === 'red') reds.push('<b>The last website build failed</b> — changes are not going live.');
+  $('#mon-alerts').innerHTML = reds.length ? `<div class="alert-red">🚨 Needs attention<br>${reds.map(x => '• ' + x).join('<br>')}</div>` : '';
+  $('#mon-stock tbody').innerHTML = st.map(s => `<tr><td><span class="lv ${s.level}"></span></td><td>${esc(s.name)}</td><td class="num">${s.left}</td><td>${esc(s.rate)}</td>
+    <td><b>${dfmt(s.until)}</b>${s.until ? ` <span style="color:var(--muted)">· ${s.days} days</span>` : ''}</td><td style="color:var(--muted)">${esc(s.note)}</td></tr>`).join('');
+  $('#mon-tokens tbody').innerHTML = tk.map(t => `<tr><td><span class="lv ${t.level}"></span></td><td>${esc(t.name)}</td><td>${t.valid ? 'valid' : '<b style="color:var(--red)">NOT WORKING</b>'}</td>
+    <td>${esc(t.detail)}${t.level !== 'green' && t.fix ? `<br><small style="color:var(--muted)">${esc(t.fix)}</small>` : ''}</td></tr>`).join('') || '<tr><td colspan="4" class="empty">No token data.</td></tr>';
+  const L = r.limits || {};
+  $('#mon-meters').innerHTML =
+    meter('Website (GitHub Pages)', r.site_gb, L.site_gb || 1, 'GB', r.site_level, 'Everything published at cbsemock.org.in. Above 1 GB GitHub stops publishing updates.') +
+    meter('Repository incl. history', r.repo_gb ?? r.history_gb, L.repo_soft_gb || 1, 'GB', r.repo_level, 'GitHub recommends under 1 GB and strongly under 5 GB. Deleting files does not shrink the history.') +
+    `<div class="meter"><div class="mh"><span>Files over 50 MB</span><b>${r.files_over_50mb ?? 0}</b></div><small>100 MB per file is GitHub's hard limit.</small></div>`;
+  const maxMb = Math.max(1, ...(r.by_folder || []).map(f => f.mb));
+  $('#mon-space').innerHTML = '<div class="note" style="margin-bottom:6px">By type</div>' +
+    (r.by_type || []).map(f => `<div class="sp-row"><span>${esc(f.name)}</span><span class="pb"><i style="width:${f.mb / maxMb * 100}%"></i></span><span class="num">${f.mb} MB</span></div>`).join('') +
+    '<div class="note" style="margin:12px 0 6px">Biggest folders</div>' +
+    (r.by_folder || []).slice(0, 6).map(f => `<div class="sp-row"><span>${esc(f.name)}</span><span class="pb"><i style="width:${f.mb / maxMb * 100}%;background:var(--purple)"></i></span><span class="num">${f.mb} MB</span></div>`).join('');
+  $('#mon-bw').innerHTML = bw.month_gb != null
+    ? meter('Estimated per month', bw.month_gb, 100, 'GB', bw.level, `${fmt(bw.views_28d)} page views in 28 days × about ${bw.avg_page_kb} KB per page. ${esc(bw.note)}`)
+    : `<p class="empty">${esc(bw.note || 'No data.')}</p>`;
+  $('#mon-builds').innerHTML = `
+    <div class="sp-row"><span><span class="lv ${b.pages_level || 'grey'}"></span> Website builds</span><span>${b.pages_24h ?? '—'} today · busiest hour ${b.pages_peak_hour ?? '—'} (soft limit 10/hour)</span><span></span></div>
+    <div class="sp-row"><span>Last build</span><span>${b.pages_last ? esc(b.pages_last.at) + ' · ' + esc(b.pages_last.result) : '—'}</span><span></span></div>
+    <div class="sp-row"><span>Failed builds</span><span>${b.pages_failed_24h ?? 0}</span><span></span></div>
+    <div class="sp-row"><span><span class="lv ${b.actions_level || 'grey'}"></span> Automation runs</span><span>${b.actions_24h ?? '—'} runs · ${b.actions_failed_24h ?? 0} failed</span><span></span></div>
+    ${(b.actions_failed || []).map(f => `<div class="sp-row"><span></span><span><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.name)}</a> · ${esc(f.at)}</span><span></span></div>`).join('')}
+    <div class="sp-row"><span>Actions minutes</span><span>${esc(b.minutes || '')}</span><span></span></div>`;
+  $('#mon-stamp').textContent = 'Checked ' + m.generated_at + ' · rebuilt every 3 hours and on ↻ Refresh data · red items are also sent to you on Telegram.';
+}
+
 function renderDash() {
   charts.forEach(c => c.destroy()); charts = [];
   Chart.defaults.color = '#8fa0c0'; Chart.defaults.borderColor = '#24314d'; Chart.defaults.font.family = 'Inter';

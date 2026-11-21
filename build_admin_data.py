@@ -40,11 +40,12 @@ SCHEDULE = [
     # day 0=Mon … 6=Sun, time, label, kind
     *[(d, "08:00", "Formula image", "image") for d in range(7)],
     *[(d, "20:00", "Formula image", "image") for d in range(7)],
-    *[(d, "20:00", "Formula reel (voiced)", "reel") for d in range(7)],
+    *[(d, "20:00", "Formula reel (voiced)", "reel") for d in (0, 1, 3, 5)],
+    *[(d, "20:00", "WHY? reel (Hindi)", "why") for d in (6, 2, 4)],
     *[(d, "07:00", "Telegram: quiz · notes · papers · lab", "telegram") for d in range(7)],
     *[(d, "18:00", "Telegram: news digest", "telegram") for d in range(7)],
     *[(d, "15:00", "Mock papers (Class 10 + 12)", "paper") for d in (0, 2, 4)],
-    *[(d, "18:30", "WHY? reel", "why") for d in (6, 2)],
+    *[(d, "17:00", "WHY? reel (English)", "why") for d in (6, 2, 4)],
     *[(d, "11:30", "Weekend promo", "promo") for d in (5, 6)],
     (0, "06:00", "Weekly Focus lesson", "focus"),
     (0, "06:30", "Weekly Booster goes live", "focus"),
@@ -154,7 +155,9 @@ def runway_date(n, days_of_week, per_day=1):
     return last.isoformat() if last else None
 
 
-def queues():
+def queues(mon=None):
+    if mon and mon.get("stock"):
+        return [{"name": r["name"], "left": r["left"], "rate": r["rate"], "until": r["until"]} for r in mon["stock"]]
     imgs = count("formula-posts/queue", {".jpg", ".jpeg", ".png"})
     reels = count("formula-posts/videos/queue", {".mp4"})
     why = count("formula-posts/why/queue", {".mp4"})
@@ -282,17 +285,27 @@ def build():
     last7 = sum(1 for e in ev if (TODAY - e[0]).days < 7)
     prev7 = sum(1 for e in ev if 7 <= (TODAY - e[0]).days < 14)
     ads = json.loads((ROOT / "ads-config.json").read_text(encoding="utf-8"))
+    ga = analytics()
+    try:
+        import monitor_data
+        mon = monitor_data.build(ga)
+        if os.environ.get("MONITOR_ALERT"):
+            monitor_data.alert(mon)
+    except Exception as e:
+        print(f"[warn] monitor: {e}", file=sys.stderr)
+        mon = None
     return {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M IST"),
         "kpis": {"posts_7d": last7, "posts_prev_7d": prev7, "posts_total": len(ev),
                  "live_ads": sum(1 for s in ads.get("slots", {}).values() if s.get("active") and s.get("img"))},
         "history": {"days": days, "series": {k: [by_day[x][k] for x in days] for k in kinds}},
-        "queues": queues(),
+        "queues": queues(mon),
+        "monitor": mon,
         "rotation": rotation(),
         "schedule": [{"day": a, "time": b, "label": c, "kind": k} for a, b, c, k in SCHEDULE],
         "recent": [{"date": e[0].isoformat(), "kind": e[1].split(":")[-1], "label": e[2], "where": e[3]} for e in recent],
         "search_console": search_console(),
-        "analytics": analytics(),
+        "analytics": ga,
         "tracker": tracker(),
         "booster": booster(),
         "labs": labs_tracker(),
