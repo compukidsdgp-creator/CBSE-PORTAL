@@ -28,7 +28,7 @@ border-radius:10px;padding:11px 12px;font-size:15px;outline:none}input:focus{bor
 header.top{position:sticky;top:0;z-index:5;background:rgba(11,18,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .top-in{max-width:1240px;margin:auto;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .brand{font-weight:800;font-size:18px}.brand span{color:var(--accent)}
-.tabs{display:flex;gap:6px;margin-left:8px}
+.tabs{display:flex;gap:6px;margin-left:8px;min-width:0;overflow-x:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs .tab{white-space:nowrap;flex:0 0 auto}
 .tab{background:transparent;border:1px solid transparent;color:var(--muted);padding:8px 12px;border-radius:9px;font-weight:600;cursor:pointer}
 .tab.on{background:var(--panel2);border-color:var(--line);color:var(--text)}
 .spacer{flex:1}.stamp{color:var(--muted);font-size:12px}
@@ -102,6 +102,20 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
 .st.todo{background:#2a3350;color:#9fb0d4}.st.draft{background:#3a2f0a;color:#ffd166}.st.changes{background:#3a1520;color:#ff8fa8}.st.live{background:#0e3325;color:#5ff0b0}
 .ok{color:var(--green);font-weight:700}.no{color:#55607a}
 .flag{font-size:11px;color:#ffd166;margin-left:6px}
+/* youtube */
+.yt-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:4px 0 12px}
+.yt-filters label{font-size:12px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.yt-filters select,.yt-filters input{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:13px}
+.yt-filters input{min-width:200px;flex:1}
+.yt-scroll{max-height:70vh}
+#yt-table td{font-size:13px;white-space:nowrap}
+#yt-table td.t{white-space:normal;min-width:280px}
+#yt-table td.f{color:var(--muted);font-size:12px}
+.ytp{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600}
+.ytp.s-To{background:#2a3247;color:#b9c3dc}.ytp.s-Scheduled{background:#173156;color:#8ec5ff}.ytp.s-Published{background:#143b2a;color:#7be0a8}
+.ytp.s-Skipped{background:#3d2a12;color:#ffc27a}.ytp.s-Missed{background:#3a1520;color:#ff9fb3}
+.ytser{display:inline-block;padding:2px 8px;border-radius:6px;font-size:12px;background:var(--panel2)}
+#yt-table tr.today td{background:rgba(255,209,102,.06)}
 /* monitor */
 .mdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-left:4px;vertical-align:1px}
 .lv{display:inline-block;width:10px;height:10px;border-radius:50%}
@@ -139,6 +153,7 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
     <nav class="tabs">
       <button class="tab on" data-tab="dash">Dashboard</button>
       <button class="tab" data-tab="tracker">Content tracker</button>
+      <button class="tab" data-tab="youtube">YouTube Shorts</button>
       <button class="tab" data-tab="monitor">Monitor <span id="mon-dot" class="mdot"></span></button>
       <button class="tab" data-tab="ads">Ad blocks</button>
     </nav>
@@ -180,6 +195,23 @@ th{color:var(--muted);font-weight:600;font-size:12px}td.num{text-align:right;fon
       <div class="grid half" style="margin-top:14px">
         <div class="card"><h2>Top Google searches <small>28 days</small></h2><div class="scroll" id="queries"></div></div>
         <div class="card"><h2>Almost on page 1 <small>pages ranking 5–15: easiest wins</small></h2><div class="scroll" id="nearTop"></div></div>
+      </div>
+    </section>
+
+    <!-- YOUTUBE SHORTS -->
+    <section id="tab-youtube" class="hidden">
+      <div class="grid kpis" id="yt-kpis"></div>
+      <div class="card" style="margin-top:14px">
+        <h2>Shorts plan <small>uploaded and scheduled automatically every evening (~6 PM) from the Google Drive originals</small></h2>
+        <div class="yt-filters">
+          <label>Series <select id="yt-series"><option value="">All</option></select></label>
+          <label>Status <select id="yt-status"><option value="">All</option><option>To upload</option><option>Scheduled</option><option>Published</option><option>Skipped</option><option>Missed</option></select></label>
+          <label>From <select id="yt-when"><option value="upcoming">Today onwards</option><option value="all">All dates</option></select></label>
+          <input id="yt-q" type="search" placeholder="Search title or subject" aria-label="Search">
+          <button class="btn ghost sm" id="yt-reload" type="button">↻ Reload</button>
+        </div>
+        <div class="scroll yt-scroll"><table id="yt-table"><thead><tr><th>Date</th><th>Day</th><th>Time (IST)</th><th>Series</th><th>YouTube title</th><th>Status</th><th>YouTube link</th><th>Class / subject</th><th>Drive file</th><th></th></tr></thead><tbody></tbody></table></div>
+        <p class="note" id="yt-stamp"></p>
       </div>
     </section>
 
@@ -310,8 +342,9 @@ $('#logoutBtn').onclick = () => { try { sessionStorage.removeItem('cbse_admin_pw
 
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === t));
-  ['dash', 'tracker', 'monitor', 'ads'].forEach(k => $('#tab-' + k).classList.toggle('hidden', t.dataset.tab !== k));
+  ['dash', 'tracker', 'youtube', 'monitor', 'ads'].forEach(k => $('#tab-' + k).classList.toggle('hidden', t.dataset.tab !== k));
   if (t.dataset.tab === 'monitor') renderMonitor();
+  if (t.dataset.tab === 'youtube') loadYouTube();
   if (t.dataset.tab === 'ads' && !ADS) loadAds();
   if (t.dataset.tab === 'tracker') { renderTracker(); renderBooster(); renderMistakes(); renderLabs(); renderMockzone(); renderCampaign(); renderNightly(); liveApprovals(); }
 });
@@ -420,6 +453,72 @@ function start() {
 }
 
 /* ── dashboard ── */
+// ── YouTube Shorts ───────────────────────────────────────────────────────────
+let YT = null;
+const YT_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+function ytWhen(e) { return new Date(e.date + 'T' + e.time + ':00+05:30'); }
+function ytStatus(e) {
+  const u = YT.done[e.drive_path];
+  if (u) return new Date(u.publish_at.length > 16 ? u.publish_at : u.publish_at + ':00+05:30') <= new Date() ? 'Published' : 'Scheduled';
+  if (e.status === 'skip') return 'Skipped';
+  return ytWhen(e) < new Date(Date.now() - 3 * 864e5) ? 'Missed' : 'To upload';
+}
+function ytTime(t) { const [h, m] = t.split(':').map(Number); return ((h + 11) % 12 + 1) + ':' + String(m).padStart(2, '0') + (h < 12 ? ' AM' : ' PM'); }
+async function loadYouTube(force) {
+  if (YT && !force) return renderYouTube();
+  $('#yt-stamp').textContent = 'Loading…';
+  try {
+    const [p, u] = await Promise.all([gh('/contents/youtube/plan.json?ref=main&t=' + Date.now()), gh('/contents/youtube/uploaded.json?ref=main&t=' + Date.now()).catch(() => null)]);
+    YT = {plan: JSON.parse(fromB64(p.content)), sha: p.sha, done: u ? JSON.parse(fromB64(u.content)) : {}};
+    const sel = $('#yt-series');
+    if (sel.options.length < 2) [...new Set(YT.plan.plan.map(e => e.series))].forEach(x => sel.add(new Option(x, x)));
+    renderYouTube();
+  } catch (e) { $('#yt-stamp').textContent = 'Could not load the plan: ' + e.message; }
+}
+function renderYouTube() {
+  const plan = YT.plan.plan, now = new Date(), today = new Date(now.getTime() + 19800000).toISOString().slice(0, 10);
+  const st = plan.map(e => ytStatus(e)), count = k => st.filter(x => x === k).length;
+  const last = plan.length ? plan[plan.length - 1].date : null;
+  const next = plan.find((e, i) => st[i] === 'Scheduled' || st[i] === 'To upload');
+  const kpi = (label, val, sub, small) => `<div class="card kpi"><div class="label">${label}</div><div class="val"${small ? ' style="font-size:20px"' : ''}>${val}</div><div class="sub">${sub}</div></div>`;
+  $('#yt-kpis').innerHTML = kpi('Published', count('Published'), 'live on YouTube') + kpi('Scheduled', count('Scheduled'), 'uploaded, going public at their time') +
+    kpi('To upload', count('To upload'), last ? 'plan runs to ' + dfmt(last) : '') + kpi('Next Short', next ? dfmt(next.date) + ' · ' + ytTime(next.time) : '—', next ? esc(next.series) : (count('Skipped') ? count('Skipped') + ' skipped' : ''), true);
+  const fs = $('#yt-series').value, fst = $('#yt-status').value, q = $('#yt-q').value.trim().toLowerCase(), up = $('#yt-when').value === 'upcoming';
+  const rows = plan.map((e, i) => ({e, s: st[i]})).filter(({e, s}) => (!fs || e.series === fs) && (!fst || s === fst) && (!up || e.date >= today)
+    && (!q || (e.title + ' ' + e.group).toLowerCase().includes(q)));
+  $('#yt-table tbody').innerHTML = rows.slice(0, 400).map(({e, s}) => {
+    const u = YT.done[e.drive_path];
+    const act = s === 'To upload' ? `<button class="btn ghost sm yt-skip" data-p="${esc(e.drive_path)}">Skip</button>` : s === 'Skipped' ? `<button class="btn ghost sm yt-skip" data-p="${esc(e.drive_path)}" data-un="1">Unskip</button>` : '';
+    return `<tr class="${e.date === today ? 'today' : ''}"><td>${dfmt(e.date)}</td><td>${YT_DAYS[new Date(e.date + 'T12:00:00Z').getUTCDay()]}</td><td>${ytTime(e.time)}</td>
+      <td><span class="ytser">${esc(e.series)}</span></td><td class="t">${esc(e.title)}</td><td><span class="ytp s-${s.split(' ')[0]}">${s}</span></td>
+      <td>${u ? `<a href="${esc(u.url)}" target="_blank" rel="noopener">${esc(u.url.replace('https://', ''))}</a>` : ''}</td>
+      <td>${esc(e.group)}</td><td class="f">CBSEMock Reels/${esc(e.drive_path)}</td><td>${act}</td></tr>`;
+  }).join('') || '<tr><td colspan="10" class="empty">Nothing matches.</td></tr>';
+  $('#yt-stamp').textContent = `${rows.length} of ${plan.length} Shorts shown${rows.length > 400 ? ' (first 400)' : ''} · Skip a Short here before it is uploaded (uploads happen ~6 PM for the next two days); to change one already scheduled, edit it in YouTube Studio.`;
+  document.querySelectorAll('.yt-skip').forEach(b => b.onclick = () => ytSkip(b.dataset.p, !b.dataset.un, b));
+}
+async function ytSkip(path, skip, btn) {
+  btn.disabled = true; btn.textContent = 'Saving…';
+  try {
+    for (let attempt = 1; ; attempt++) {
+      const cur = await gh('/contents/youtube/plan.json?ref=main&t=' + Date.now());
+      const data = JSON.parse(fromB64(cur.content));
+      const e = data.plan.find(x => x.drive_path === path);
+      if (!e) throw new Error('not in the plan any more');
+      if (skip) e.status = 'skip'; else delete e.status;
+      try {
+        await gh('/contents/youtube/plan.json', {method: 'PUT', body: JSON.stringify({message: `admin: ${skip ? 'skip' : 'unskip'} YouTube Short ${path.split('/').pop()}`,
+          content: toB64(JSON.stringify(data, null, 1) + '\n'), sha: cur.sha, branch: 'main'})});
+        YT.plan = data; break;
+      } catch (err) { if (attempt >= 3 || !/^(409|422)/.test(err.message)) throw err; await new Promise(r => setTimeout(r, 1200 * attempt)); }
+    }
+    renderYouTube();
+  } catch (err) { btn.textContent = 'Failed'; $('#yt-stamp').textContent = 'Could not save: ' + err.message; }
+}
+['#yt-series', '#yt-status', '#yt-when'].forEach(id => $(id).addEventListener('change', () => YT && renderYouTube()));
+$('#yt-q').addEventListener('input', () => YT && renderYouTube());
+$('#yt-reload').addEventListener('click', () => loadYouTube(true));
+
 // ── Monitor ──────────────────────────────────────────────────────────────────
 const LV_RANK = {green: 0, grey: 0, amber: 1, red: 2};
 const dfmt = s => s ? new Date(s).toLocaleDateString('en-IN', {day: 'numeric', month: 'short', year: 'numeric'}) : '—';
