@@ -23,7 +23,7 @@ jobs:
           curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null
           name="CBSE-PORTAL-$(TZ=Asia/Kolkata date +%Y-%m-%d-%H%M).bundle"
           git -C repo.git bundle create "../$name" --all
-          git bundle verify "$name" >/dev/null && echo "bundle OK: $(du -h "$name" | cut -f1)"
+          git -C repo.git bundle verify "../$name" >/dev/null && echo "bundle OK: $(du -h "$name" | cut -f1)"
           printf '[gdrive]\ntype = drive\nscope = drive.file\ntoken = %s\n' "$RCLONE_DRIVE_TOKEN" > rclone.conf
           rclone --config rclone.conf copy "$name" "gdrive:CBSEMock Reels/_Repository snapshots" --retries 5
           local=$(md5sum "$name" | cut -d' ' -f1)
