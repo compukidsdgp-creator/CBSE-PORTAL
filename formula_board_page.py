@@ -130,6 +130,11 @@ def build_page(data):
             .replace("__COUNT__", str(len(data)))
             .replace("__INDEX__", static_index(data, labels)))
     (OUT / "index.html").write_text(page, encoding="utf-8")
+    try:                                    # keep the floating share buttons (share_tags adds them idempotently)
+        import share_tags
+        share_tags.add(OUT / "index.html")
+    except Exception as e:
+        print(f"[warn] share buttons: {e}")
 
 
 def static_index(data, labels):
