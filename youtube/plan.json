@@ -1535,11 +1535,27 @@
   },
   {
    "date": "2027-01-26",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "AI",
+   "title": "कंप्यूटर तस्वीर कैसे देखता है? | AI (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/AI/why_computer_vision_hi.mp4"
+  },
+  {
+   "date": "2027-01-26",
    "time": "18:30",
    "series": "WHY",
    "group": "Class 12 Science",
    "title": "Why is TIR only from DENSER to RARER? | Class 12 Science #Shorts",
    "drive_path": "1 WHY Series - English/Class 12 Science/61_why_tir_denser.mp4"
+  },
+  {
+   "date": "2027-01-27",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "Class 12 CS",
+   "title": "Python: 0.1 + 0.2 ≠ 0.3 क्यों? | Class 12 CS (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/Class 12 CS/why_float_sum_hi.mp4"
   },
   {
    "date": "2027-01-27",
@@ -1551,6 +1567,14 @@
   },
   {
    "date": "2027-01-28",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "AI",
+   "title": "AI न्यूरॉन कैसे तय करता है? | AI (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/AI/why_neuron_hi.mp4"
+  },
+  {
+   "date": "2027-01-28",
    "time": "18:30",
    "series": "WHY",
    "group": "AI",
@@ -1559,11 +1583,27 @@
   },
   {
    "date": "2027-01-29",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Calling all decomposition exothermic | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/007-class10-chemistry-decomposition-endothermic-en.mp4"
+  },
+  {
+   "date": "2027-01-29",
    "time": "18:30",
    "series": "WHY",
    "group": "Class 10 Science",
    "title": "Why use the RIGHT-HAND THUMB rule? | Class 10 Science #Shorts",
    "drive_path": "1 WHY Series - English/Class 10 Science/64_why_thumb_rule.mp4"
+  },
+  {
+   "date": "2027-01-30",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Adding water to concentrated acid | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/008-class10-chemistry-acid-to-water-en.mp4"
   },
   {
    "date": "2027-01-30",
