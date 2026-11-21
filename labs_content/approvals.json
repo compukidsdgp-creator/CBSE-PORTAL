@@ -14,5 +14,17 @@
   "mathematics/07-pythagoras-theorem-lab": {
     "status": "approved",
     "at": "2026-11-20T00:24:24.321Z"
+  },
+  "physics/03-parallel-circuit": {
+    "status": "approved",
+    "at": "2026-11-21T06:49:19.361Z"
+  },
+  "computer-science/lab-55": {
+    "status": "approved",
+    "at": "2026-11-21T06:49:26.494Z"
+  },
+  "ai-ml/ai-data-exploration": {
+    "status": "approved",
+    "at": "2026-11-21T06:49:33.510Z"
   }
 }
