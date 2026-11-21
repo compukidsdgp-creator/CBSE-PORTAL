@@ -1,6 +1,10 @@
 name: Social tokens — check (diagnostic, posts nothing)
+# Checks every secret that can expire and prints its expiry. Weekly run: if anything expires within 14 days
+# (or is already invalid) the owner gets a private Telegram warning.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"      # Mondays (GitHub may run it hours late — fine for a 14-day warning)
   push:
     branches: [main]
     paths: [".github/workflows/token-check.yml"]
@@ -10,30 +14,84 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Check FB page token and Instagram token
+      - name: Check every expiring secret
         env:
           FB: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           IG: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          HF: ${{ secrets.HF_TOKEN }}
+          ADMIN_GH: ${{ secrets.ADMIN_GH_TOKEN }}
+          GSC: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          TG: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          OWNER: ${{ secrets.SEO_REPORT_CHAT_ID }}
         run: |
+          pip install --quiet google-auth requests >/dev/null 2>&1 || true
           python3 - <<'PY'
           import json, os, urllib.request, urllib.parse
-          API = "https://graph.facebook.com/v21.0"
-          def get(path, **q):
+          from datetime import datetime, timezone, timedelta
+          IST = timezone(timedelta(hours=5, minutes=30))
+          now = datetime.now(timezone.utc)
+          rows, warn = [], []
+          def when(ts):
+              if not ts: return "never expires"
+              d = datetime.fromtimestamp(int(ts), timezone.utc)
+              days = (d - now).days
+              if days < 14: warn.append(True)
+              return f"{d.astimezone(IST):%d %b %Y} ({days} days left)"
+          def get(url, headers=None):
+              req = urllib.request.Request(url, headers=headers or {})
               try:
-                  return json.load(urllib.request.urlopen(f"{API}/{path}?{urllib.parse.urlencode(q)}", timeout=30))
+                  r = urllib.request.urlopen(req, timeout=30); return r, json.load(r)
               except urllib.error.HTTPError as e:
-                  return {"error": e.read().decode()[:300]}
-          for name in ("FB", "IG"):
+                  return e, {"error": e.read().decode()[:200]}
+          API = "https://graph.facebook.com/v21.0"
+          for name, label in (("FB", "Facebook Page token"), ("IG", "Instagram token")):
               t = os.environ.get(name, "")
               if not t:
-                  print(name, ": secret missing"); continue
-              me = get("me", fields="id,name", access_token=t)
-              d = get("debug_token", input_token=t, access_token=t).get("data", {})
-              print(f"{name}: me={me.get('name')} ({me.get('id')}) type={d.get('type')} valid={d.get('is_valid')} "
-                    f"expires_at={d.get('expires_at')} data_access_expires_at={d.get('data_access_expires_at')}")
-              print(f"   scopes: {', '.join(d.get('scopes', []))}")
-              if me.get("error") or d.get("error"):
-                  print("   error:", me.get("error") or d.get("error"))
-          ig = get("17841480792360992", fields="username", access_token=os.environ.get("IG", ""))
-          print("IG account via IG token:", ig.get("username") or ig)
+                  rows.append(f"{label}: secret missing"); warn.append(True); continue
+              _, d = get(f"{API}/debug_token?" + urllib.parse.urlencode({"input_token": t, "access_token": t}))
+              d = d.get("data", {})
+              ok = d.get("is_valid")
+              if not ok: warn.append(True)
+              exp = d.get("expires_at") or None
+              rows.append(f"{label}: {'valid' if ok else 'INVALID'} · token {when(exp)} · "
+                          f"data access {when(d.get('data_access_expires_at'))}")
+          t = os.environ.get("HF", "")
+          if t:
+              _, d = get("https://huggingface.co/api/whoami-v2", {"Authorization": f"Bearer {t}"})
+              tok = (d.get("auth") or {}).get("accessToken") or {}
+              exp = tok.get("expiresAt") or tok.get("expiration")
+              rows.append(f"Hugging Face token: {'valid' if 'name' in d else 'INVALID'} · "
+                          + (f"expires {exp}" if exp else "never expires"))
+              if "name" not in d: warn.append(True)
+          t = os.environ.get("ADMIN_GH", "")
+          if t:
+              r, d = get("https://api.github.com/user", {"Authorization": f"Bearer {t}"})
+              exp = r.headers.get("github-authentication-token-expiration") if hasattr(r, "headers") else None
+              ok = "login" in d
+              if not ok: warn.append(True)
+              if exp:
+                  e = datetime.strptime(exp.replace(" UTC", "").strip(), "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+                  exp = when(e.timestamp())
+              rows.append(f"Admin panel GitHub token: {'valid' if ok else 'INVALID'} · {exp or 'never expires'}")
+          g = os.environ.get("GSC", "")
+          if g:
+              try:
+                  from google.oauth2 import service_account
+                  from google.auth.transport.requests import Request
+                  c = service_account.Credentials.from_service_account_info(json.loads(g), scopes=["https://www.googleapis.com/auth/webmasters.readonly"])
+                  c.refresh(Request())
+                  rows.append("Google Search Console key: valid · never expires (unless the key is deleted)")
+              except Exception as e:
+                  rows.append(f"Google Search Console key: INVALID ({str(e)[:80]})"); warn.append(True)
+          t = os.environ.get("TG", "")
+          if t:
+              _, d = get(f"https://api.telegram.org/bot{t}/getMe")
+              rows.append(f"Telegram bot token: {'valid' if d.get('ok') else 'INVALID'} · never expires")
+              if not d.get("ok"): warn.append(True)
+          rows.append("GitHub workflow token (GITHUB_TOKEN): made fresh for every run · never expires")
+          print("\n".join(rows))
+          if warn and os.environ.get("GITHUB_EVENT_NAME") == "schedule" and t and os.environ.get("OWNER"):
+              msg = "⚠️ A CBSEMock token needs attention (expiring within 14 days or invalid):\n\n" + "\n".join(rows)
+              urllib.request.urlopen(urllib.request.Request(f"https://api.telegram.org/bot{t}/sendMessage",
+                  data=json.dumps({"chat_id": os.environ["OWNER"], "text": msg}).encode(), headers={"Content-Type": "application/json"}), timeout=20)
           PY
