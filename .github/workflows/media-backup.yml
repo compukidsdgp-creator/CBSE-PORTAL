@@ -1,0 +1,45 @@
+name: Media backup → Google Drive
+
+# Copies every reel, image and caption to the owner's Google Drive ("CBSEMock Reels") and verifies each file by MD5.
+# Nothing is deleted from the repository by this workflow. The verified list is archive/backup_manifest.csv.
+on:
+  schedule:
+    - cron: "5 22 * * *"       # ~03:35 IST nightly (GitHub may run it late — fine for a backup)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "current = media in the repo now · history = also recover deleted media from git history"
+        default: current
+        type: choice
+        options: [current, history]
+permissions:
+  contents: write
+concurrency:
+  group: media-backup
+  cancel-in-progress: false
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: ${{ github.event.inputs.mode == 'history' && 0 || 1 }}
+      - name: Install rclone
+        run: curl -fsSL https://rclone.org/install.sh | sudo bash >/dev/null && rclone version | head -1
+      - name: Back up and verify
+        env:
+          RCLONE_DRIVE_TOKEN: ${{ secrets.RCLONE_DRIVE_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SEO_REPORT_CHAT_ID: ${{ secrets.SEO_REPORT_CHAT_ID }}
+        run: python3 media_backup.py ${{ github.event.inputs.mode || 'current' }}
+      - name: Save the manifest
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add archive/backup_manifest.csv 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -q -m "backup: Drive manifest [skip ci]"
+          for i in 1 2 3 4; do git pull -q --rebase -X theirs origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*5)); done
