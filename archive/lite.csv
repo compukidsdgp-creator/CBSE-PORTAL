@@ -1,6 +1,8 @@
 repo_path,drive_path,original_md5,original_bytes,lite_bytes,at
 campaign_reels/video/01-step-marking-hi.mp4,7 Board Plan Campaign - Hindi/Board Faq/01-step-marking-hi.mp4,5333158106af02ae098b900a85c84485,1777326,434824,2026-11-21T13:26:55+05:30
 campaign_reels/video/01-step-marking.mp4,6 Board Plan Campaign - English/Board Faq/01-step-marking.mp4,d170e267914d88890a378cba39b6437d,1684233,388722,2026-11-21T13:26:53+05:30
+campaign_reels/video/02-active-recall-hi.mp4,7 Board Plan Campaign - Hindi/90+ Score Hack/02-active-recall-hi.mp4,8d86451754c6fbc4ea59b6ca3fdc2bf4,2230846,527717,2026-11-24T11:28:20+05:30
+campaign_reels/video/02-active-recall.mp4,6 Board Plan Campaign - English/90+ Score Hack/02-active-recall.mp4,d2cbb829cfa86ae8ee7b1ae83fa63ec7,1956536,433045,2026-11-24T11:28:18+05:30
 formula-posts/posted/01_FormulaFlash_Biology_Photosynthesis.jpg,8 Images/Formula images/FormulaFlash/01_FormulaFlash_Biology_Photosynthesis.jpg,3be248f06a789faa0630a8c7c496a784,601546,210488,2026-11-21T13:26:42+05:30
 formula-posts/posted/01_FormulaFlash_Chemistry_Mole_Concept.jpg,8 Images/Formula images/FormulaFlash/01_FormulaFlash_Chemistry_Mole_Concept.jpg,887627d8dd5e7bbeb77db283c8b3755c,573488,198819,2026-11-21T13:26:42+05:30
 formula-posts/posted/01_FormulaFlash_Maths_Quadratic_Formula.jpg,8 Images/Formula images/FormulaFlash/01_FormulaFlash_Maths_Quadratic_Formula.jpg,6d65ce66c2d506bc28480e76c426cd2c,540243,186368,2026-11-21T13:26:42+05:30
@@ -21,6 +23,7 @@ formula-posts/posted/01e1_AI_Data_Exploration_3_class10.jpg,8 Images/Formula ima
 formula-posts/posted/01e2_AI_Natural_Language_Processing_class10.jpg,8 Images/Formula images/AI/01e2_AI_Natural_Language_Processing_class10.jpg,d8bfcb1ea26ba5b57e4919b3bd53ced0,538522,336250,2026-11-21T13:26:43+05:30
 formula-posts/posted/02b_Chemistry_Biomolecules_class12.jpg,8 Images/Formula images/Chemistry/02b_Chemistry_Biomolecules_class12.jpg,98da0b11c5ae3947dc72d56a8b46d730,479391,281395,2026-11-23T08:06:21+05:30
 formula-posts/posted/02b_Chemistry_d_and_f_Block_Elements_class12.jpg,8 Images/Formula images/Chemistry/02b_Chemistry_d_and_f_Block_Elements_class12.jpg,190cf82e56e9beabb0a5c41376b99512,687675,384039,2026-11-23T08:06:21+05:30
+formula-posts/posted/02b_Physics_Dual_Nature_class12.jpg,8 Images/Formula images/Physics/02b_Physics_Dual_Nature_class12.jpg,22d4fa4a320f7484aacae3e83e2d96d9,552799,342577,2026-11-24T11:28:08+05:30
 formula-posts/videos/posted/acids_bases_salts_part_1.mp4,3 Formula Reels/Class 10 Chemistry/acids_bases_salts_part_1.mp4,ef5df6d534c291fc2267f0788465d745,2641097,683359,2026-11-21T13:26:07+05:30
 formula-posts/videos/posted/acids_bases_salts_part_2.mp4,3 Formula Reels/Class 10 Chemistry/acids_bases_salts_part_2.mp4,2808691a636ff651227ccf3ca6d42422,2814089,700708,2026-11-21T13:26:11+05:30
 formula-posts/videos/posted/alternating_current_part_1.mp4,3 Formula Reels/Class 12 Physics/alternating_current_part_1.mp4,ccc3356879e3400ad616559155c681de,2703765,686801,2026-11-21T13:26:14+05:30
@@ -35,6 +38,7 @@ formula-posts/why/posted/02_why_computer_vision.mp4,1 WHY Series - English/AI/02
 formula-posts/why/posted/03_why_binary_search.mp4,1 WHY Series - English/Class 12 CS/03_why_binary_search.mp4,f15c00adafd0e2a299cee0c3e1848b82,1776518,575526,2026-11-21T13:26:38+05:30
 formula-posts/why/posted/04_why_trig_identity.mp4,1 WHY Series - English/Class 10 Maths/04_why_trig_identity.mp4,a26ec7ba80ebf6d1101626f6d07f0f6f,2125799,668624,2026-11-21T13:26:42+05:30
 formula-posts/why/posted/05_why_neuron.mp4,1 WHY Series - English/AI/05_why_neuron.mp4,d8a96115f2639d3c00dc071ad16a5581,3017424,887408,2026-11-23T08:06:16+05:30
+formula-posts/why/series/why_elevation_depression.mp4,1 WHY Series - English/Trig Series (Parts 2-4)/why_elevation_depression.mp4,dbdcc9ca858cfc49b1ee62abe53fae4c,1744199,584419,2026-11-24T11:28:12+05:30
 formula-posts/why/series/why_sin30_half.mp4,1 WHY Series - English/Trig Series (Parts 2-4)/why_sin30_half.mp4,96d60656ecf7fb428913b901640780b6,1815126,600695,2026-11-23T08:06:25+05:30
 formula-posts/why/series/why_trig_sec.mp4,1 WHY Series - English/Trig Series (Parts 2-4)/why_trig_sec.mp4,aaa29b374944f5877f2d06e602a958ca,1900196,628473,2026-11-22T07:39:10+05:30
 mistake_reels/video/001-class10-chemistry-subscripts-en.mp4,4 Mistake Bank - English/Class 10 Chemistry/001-class10-chemistry-subscripts-en.mp4,c80ec610ad6265ea5e51144bb2379622,2718236,469555,2026-11-21T13:26:45+05:30
@@ -43,4 +47,6 @@ mistake_reels/video/002-class10-chemistry-ph-backwards-en.mp4,4 Mistake Bank - E
 mistake_reels/video/002-class10-chemistry-ph-backwards-hi.mp4,5 Mistake Bank - Hindi/Class 10 Chemistry/002-class10-chemistry-ph-backwards-hi.mp4,f362d56db4d6f82a1667538464a6679f,4153299,676745,2026-11-21T13:26:51+05:30
 mistake_reels/video/003-class10-chemistry-physical-states-en.mp4,4 Mistake Bank - English/Class 10 Chemistry/003-class10-chemistry-physical-states-en.mp4,82d42e6db7b387b82390c8e828ded262,3550725,570900,2026-11-23T08:06:27+05:30
 mistake_reels/video/003-class10-chemistry-physical-states-hi.mp4,5 Mistake Bank - Hindi/Class 10 Chemistry/003-class10-chemistry-physical-states-hi.mp4,3f4d90ac4cd9160c8b4d1f655bf8bb01,3963880,638442,2026-11-22T07:39:11+05:30
+mistake_reels/video/004-class10-chemistry-displacement-types-en.mp4,4 Mistake Bank - English/Class 10 Chemistry/004-class10-chemistry-displacement-types-en.mp4,45134d25940ddc0bfcfcc1aff7d33ca4,4142916,650769,2026-11-24T11:28:14+05:30
 mistake_reels/video/004-class10-chemistry-displacement-types-hi.mp4,5 Mistake Bank - Hindi/Class 10 Chemistry/004-class10-chemistry-displacement-types-hi.mp4,2ea2864ee427cadf84b50fe84e715a77,4382985,687952,2026-11-23T08:06:30+05:30
+mistake_reels/video/005-class10-chemistry-oxidation-hydrogen-hi.mp4,5 Mistake Bank - Hindi/Class 10 Chemistry/005-class10-chemistry-oxidation-hydrogen-hi.mp4,d0a3f7a98d0cff2570a4109c1a5979d6,4770813,781082,2026-11-24T11:28:16+05:30
