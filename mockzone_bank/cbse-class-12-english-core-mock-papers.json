@@ -1,0 +1,557 @@
+{
+ "page": "cbse-class-12-english-core-mock-papers.html",
+ "pools": {
+  "SEC_A_Q1": {
+   "per_paper": 1,
+   "items": [
+    {
+     "passage": "Geminids Meteor Shower",
+     "blurb": "The Geminids meteor shower occurs every December as Earth passes through debris from asteroid 3200 Phaethon. Unlike most showers (which originate from comets), the Geminids can exceed 100 meteors/hour, are visible to the naked eye, and produce bright, longer-lasting streaks due to the moderate speed of the meteors.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "Which evidence from paragraph 1 tells us that the Geminids are exceptionally active?",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Observation rates can exceed 100 meteors per hour — this numerical evidence directly indicates unusually high activity compared to other meteor showers."
+      },
+      {
+       "n": "II",
+       "q": "Complete the following with a suitable reason (paragraph 2): The writer refers to 3200 Phaethon as a 'rocky asteroid' rather than a 'comet' in order to tell the reader that ________.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "…the Geminids originate from a rocky asteroid, not from a comet, which is the usual source of meteor showers."
+      },
+      {
+       "n": "III",
+       "q": "Based on the passage, how does friction help in making the Geminids visible to observers on Earth? (paragraph 2)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Friction causes incoming dust and rock fragments to heat up as they pass through Earth's atmosphere, making them glow and produce bright streaks of light visible from the ground."
+      },
+      {
+       "n": "IV",
+       "q": "Which of the following statements best captures the functional role of the 'radiant' as described in the passage? (paragraph 3)\nA. It is the physical location where cosmic debris is created.\nB. It serves as visual guide for observers to locate the shower.\nC. It determines the speed fragments enter the atmosphere.\nD. It represents the exact area where all meteors disappear",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — It serves as a visual guide for observers to locate the shower. (The radiant helps identify the shower's apparent point of origin.)"
+      },
+      {
+       "n": "V",
+       "q": "How can we say that the Geminids are more 'observer-friendly' than other showers? (Any one reason) (Paragraph 5)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "They can be observed with the unaided eye — no specialised equipment like telescopes or binoculars is required. (Any one acceptable reason: brighter/longer streaks, predictable window, high count, visible across wide sky area.)"
+      },
+      {
+       "n": "VI",
+       "q": "Which of the following best explains why the Geminids are frequently studied by scientists?\nA. Their activity has shown a steady increase over time.\nB. Their meteors travel at extremely high speeds.\nC. Their observation requires specialised equipment.\nD. Their radiant shifts position across the sky.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "A — Their activity has shown a steady increase over time. (Long-term consistency and growth make the Geminids scientifically valuable.)"
+      },
+      {
+       "n": "VII",
+       "q": "How does the mention of the 'mid-nineteenth century' documentation contribute to the authority of the claims made about the shower? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Mentioning documentation since the mid-nineteenth century establishes a long observational history. This strengthens credibility of claims about increasing activity and reliability, as they are supported by sustained scientific observation rather than recent data alone."
+      },
+      {
+       "n": "VIII",
+       "q": "The writer's tone throughout the passage can best be described as ________.\nA. persuasive and promotional, encouraging mass participation\nB. explanatory and informative, aimed at scientific understanding\nC. speculative and argumentative, questioning existing theories\nD. celebratory and emotional, highlighting wonder over facts",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — Explanatory and informative, aimed at scientific understanding. (The passage presents factual explanations in a neutral, objective manner.)"
+      },
+      {
+       "n": "IX",
+       "q": "What does the moderate speed of the Geminids and the resulting 'longer-lasting streaks' suggest about the quality of the viewing experience? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "The moderate speed allows meteors to burn longer in the atmosphere, producing brighter and more sustained streaks. This enhances visibility and gives observers more time to notice and appreciate each meteor, making the viewing experience richer."
+      },
+      {
+       "n": "X",
+       "q": "Complete the following with the most suitable option. The main idea of the passage is the ________.\nA. technical process of how asteroids shed cosmic debris\nB. impact of light pollution on modern scientific learning\nC. historical evolution of astronomy since the nineteenth century\nD. scientific explanation and practical observation of Geminids",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "D — Scientific explanation and practical observation of Geminids. (The passage combines origin/nature explanation with practical guidance on when and how to observe.)"
+      }
+     ]
+    }
+   ]
+  },
+  "SEC_A_Q2": {
+   "per_paper": 1,
+   "items": [
+    {
+     "passage": "UPI Growth Charts",
+     "blurb": "Data study on UPI transactions across four Octobers (2021–2024): Volume: 4.21B → 7.30B → 11.40B → 16.58B; Value: ₹7.71 → ₹12.11 → ₹17.15 → ₹23.49 lakh crore.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "What was the purpose of tracking the four-year growth of India's UPI?\nA. To analyse technical infrastructure\nB. To understand changes in payment behaviour\nC. To count vendors using smartphones\nD. To compare digital with cash practices",
+       "marks": 1,
+       "ans": "B — To understand changes in payment behaviour among different user groups."
+      },
+      {
+       "n": "II",
+       "q": "Is percentage growth in total UPI value greater, less, or roughly the same as in number of transactions? Justify briefly.",
+       "marks": 1,
+       "ans": "Greater. Volume rose ~4× (4.21→16.58B); value rose >3× (₹7.71→₹23.49 lakh crore), so value grew faster, reflecting UPI's use for higher-value payments."
+      },
+      {
+       "n": "III",
+       "q": "Which best describes the overall pattern in paragraph 3?\nA. Both number and value increase steadily\nB. Number increases, value decreases\nC. Value increases, number stays same\nD. Both decrease after initial increase",
+       "marks": 1,
+       "ans": "A — Both the number and total value of transactions increase steadily over four years."
+      },
+      {
+       "n": "IV",
+       "q": "'Shops, homes, workplaces, small roadside vendors' suggests UPI adoption is:\nA. Limited to organised establishments\nB. Widespread across formal and informal settings\nC. Limited to urban digital spaces\nD. Restricted to specific groups",
+       "marks": 1,
+       "ans": "B — Widespread adoption across formal and informal settings."
+      },
+      {
+       "n": "V",
+       "q": "Evaluate UPI's expansion into formal financial systems on small businesses. (About 40 words)",
+       "marks": 2,
+       "ans": "UPI significantly improves small business financial management through digital records, easier income tracking, and reduced cash reliance. Benefit depends on digital literacy and technology access. (1 mark: judgement on extent; 1 mark: justification with benefits/limitations.)"
+      },
+      {
+       "n": "VI",
+       "q": "Which aspect is NOT discussed in the passage?\nA. Growth pattern over time\nB. Changing public attitude\nC. Policy framework governing digital payments\nD. Effect on small businesses",
+       "marks": 1,
+       "ans": "C — The policy framework governing digital payment systems is not discussed."
+      },
+      {
+       "n": "VII",
+       "q": "UPI's usage by small roadside vendors suggests digital payments have become ________. (inclusive/exclusive/marginal)",
+       "marks": 1,
+       "ans": "inclusive"
+      },
+      {
+       "n": "VIII",
+       "q": "Give two reasons UPI is more suitable for Rohan in 2024 than 2021. (About 40 words)",
+       "marks": 2,
+       "ans": "In 2024, far higher transaction volumes indicate greater reliability and acceptance. The large increase in transaction value reflects broader everyday usage, making UPI more trustworthy for daily transactions like groceries and transport than in 2021."
+      }
+     ]
+    }
+   ]
+  },
+  "SEC_B_Q3": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "scenario": "You are Rishitha Menon, member of the Horizon Club of Bala Vidyalaya Sr. Sec. School, Chennai. The school is organising a one-day workshop to help senior students improve project work and presentation skills. Draft a notice inviting students to participate. Include necessary details and registration process. Put your notice in a box.",
+      "ans": "Format (1m): Box, name of issuing authority top-centre, NOTICE (centre), date aligned left, authorisation name/designation/signature bottom left.\nContent (2m): Event name, date/time/venue, purpose, eligibility, registration details, contact info.\nGrammar & Spelling (1m): Accuracy in formal notice language."
+     },
+     "optB": {
+      "scenario": "You are Vijesh Kumar, Secretary of Shantiniketan Residents' Welfare Association, Chandigarh. The Association is organising a Marathon to create awareness on animal conservation, in collaboration with local animal welfare organisations. Write a notice inviting residents to participate. Include necessary details and registration process. Put your notice in a box.",
+      "ans": "Format (1m): Box, association name top-centre, NOTICE (centre), date, authorisation/designation/signature.\nContent (2m): Marathon date/time/route, purpose (animal conservation), registration process, contact details.\nGrammar & Spelling (1m): Accuracy in formal language."
+     }
+    }
+   ]
+  },
+  "SEC_B_Q4": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "scenario": "You are Ananya, lead coordinator of the Media Club at St. Xavier's School, Odisha. Your club is organising a seminar titled 'Digital Storytelling & Ethics'. Draft a formal invitation to Ishaan Grover, a local educational online expert and filmmaker, inviting him to be keynote speaker and lead a hands-on editing session.",
+      "ans": "Format (1m): Formal invitation in third person — Sender's name/designation, date, formal address to recipient, details of event, request to keynote, RSVP info.\nContent (2m): Event purpose, date/time/venue, role expected.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Dr. Sameer, an environmental scientist living in Bengaluru. You have received an invitation from Greenwood International School, Mysuru, to judge the 'Waste-to-Wealth' project competition. Write a formal reply accepting the invitation, confirming your arrival.",
+      "ans": "Format (1m): Formal first-person reply — date, formal address, reference to invitation received.\nContent (2m): Acceptance of invitation, confirmation of date/time, any relevant details.\nGrammar & Spelling (1m)."
+     }
+    }
+   ]
+  },
+  "SEC_B_Q5": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "scenario": "As Kavya, a student volunteer residing at 45, Lake View Road, Jaipur, write a letter to the Editor of a local newspaper proposing a 'Community Food Redistribution Initiative' to address food wastage at social events. Include cues: extent of food wastage, social/environmental consequences, collaboration with NGOs/food banks, mobilising volunteers, promoting responsible consumption.",
+      "ans": "Format (1m): Sender's address, date, Editor's address, subject, 'Yours truly' complimentary close.\nOrganisation of Ideas (1m): Logical flow — problem, consequences, proposal, action plan.\nContent (2m): Food wastage extent, consequences, proposed initiative, NGO collaboration, volunteering, call to action.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Ranjay Thakur, a resident of 12, Mall Road, Shimla. Write a letter of application for the post of Sustainable Tourism Coordinator at 'EcoTrails India'. Include detailed bio-data. (Advertisement shown: Graduate in Tourism/Environmental Studies, passionate about conservation, volunteering experience preferred.)",
+      "ans": "Format (1m): Covering letter (reference to ad, suitability, submission) + Bio-data as separate enclosure (personal details, educational qualifications, work experience, references). 'Yours sincerely' as complimentary close.\nOrganisation (1m): Clear separation of letter and bio-data.\nContent (2m): Relevant qualifications, conservation interest, volunteering experience.\nGrammar & Spelling (1m)."
+     }
+    }
+   ]
+  },
+  "SEC_B_Q6": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "scenario": "As a teenager, you observe increasing doom-scrolling among your peers affecting mental well-being and academic focus. Write an article for your school magazine highlighting why Digital Wellness should be integrated into the school curriculum. You are Smitha Jinan, Class 12 student reporter of SVA Public School, Thrissur.",
+      "ans": "Article Format (1m): Title (centred), By-line (name/designation), Paragraph 1 (introduction/problem), Paragraphs 2–3 (body: causes, effects, solutions), Paragraph 4 (conclusion/recommendation).\nContent (2m): Prevalence of doom-scrolling, algorithm-driven content, mental health impact, school's role, mindful technology use.\nOrganisation of Ideas (1m), Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Prem Kumar, Secretary of the Health Club at Sarvodaya Vidyalaya, New Delhi. Your school recently participated in the launch of the 'Tobacco Free Youth Campaign'. Write a report in 120–150 words for your school magazine, detailing the event and activities planned.",
+      "ans": "Report Format (1m): Headline, By-line, Place & Date, Para 1 (what/why/who/when/where), Para 2 (how it happened), Para 3 (steps taken/planned).\nContent (2m): Campaign launch details, rally/slogans/pledges, student participation, health pledges, future campaigns.\nOrganisation (1m), Grammar & Spelling (1m)."
+     }
+    }
+   ]
+  },
+  "SEC_C_Q7": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "title": "A Thing of Beauty (Keats)",
+      "extract": "A thing of beauty is a joy for ever: / Its loveliness increases; it will never / Pass into nothingness; but still will keep / A bower quiet for us, and a sleep / Full of sweet dreams, and health, and quiet breathing.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete: The phrase 'a joy for ever' suggests that beauty continues to offer ________ beyond the limits of time. (inner fulfilment / physical permanence / social approval)",
+        "marks": 1,
+        "ans": "inner fulfilment"
+       },
+       {
+        "n": "II",
+        "q": "Complete appropriately: A thing of beauty remains a lasting source of joy because ________.",
+        "marks": 1,
+        "ans": "its loveliness never fades and continues to offer peace, comfort, and emotional nourishment to the human mind over time."
+       },
+       {
+        "n": "III",
+        "q": "The image of 'a bower quiet for us' is best interpreted as beauty functioning as a ________.\nA. natural shelter formed by the physical world\nB. deliberate escape from social obligations\nC. protective inner refuge offering calm\nD. symbolic reminder of human weakness",
+        "marks": 1,
+        "ans": "C — protective inner refuge offering calm. (The metaphor suggests a safe, peaceful mental space created by beauty.)"
+       },
+       {
+        "n": "IV",
+        "q": "Which experience is most clearly conveyed through the expressions 'sweet dreams' and 'quiet breathing'?\nA. enjoyment of material comfort and luxury\nB. attainment of emotional and mental peace\nC. development of physical strength and endurance\nD. appreciation of artistic and aesthetic pleasure",
+        "marks": 1,
+        "ans": "B — attainment of emotional and mental peace."
+       },
+       {
+        "n": "V",
+        "q": "How does the metaphor 'a bower quiet for us' contribute to the poet's idea of beauty in the extract?",
+        "marks": 1,
+        "ans": "The metaphor presents beauty as a comforting inner refuge offering peace and rest to the mind. It reinforces that beauty soothes mental distress and provides lasting emotional support."
+       },
+       {
+        "n": "VI",
+        "q": "What contrast does the poet imply between 'beauty' and 'nothingness'?",
+        "marks": 1,
+        "ans": "The poet contrasts beauty, which endures and nurtures the human spirit, with nothingness, which suggests emptiness and absence. While beauty offers continuity and comfort, nothingness represents loss and negation."
+       }
+      ]
+     },
+     "optB": {
+      "title": "A Roadside Stand (Frost)",
+      "extract": "The little old house was out with a little new shed / In front at the edge of the road where the traffic sped, / A roadside stand that too pathetically pled, / It would not be fair to say for a dole of bread, / But for some of the money, the cash, whose flow supports / The flower of cities from sinking and withering faint.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete: The repeated use of the word 'little' suggests the ________ of the roadside stand and the house. (economic fragility / decorative simplicity / rural independence)",
+        "marks": 1,
+        "ans": "economic fragility"
+       },
+       {
+        "n": "II",
+        "q": "Complete appropriately: The phrase 'traffic sped' highlights the contrast between the fast-moving urban world and ________.",
+        "marks": 1,
+        "ans": "the slow, struggling rural life of the roadside sellers."
+       },
+       {
+        "n": "III",
+        "q": "Why does the poet clarify that the stand is not asking for 'a dole of bread'?",
+        "marks": 1,
+        "ans": "To show that the villagers are not seeking charity but fair economic participation — they want dignity through earning, not dependence on handouts."
+       },
+       {
+        "n": "IV",
+        "q": "The phrase 'whose flow supports / The flower of cities' suggests that urban prosperity depends on ________.\nA. natural agricultural abundance\nB. independent urban development\nC. aesthetic appeal of city life\nD. continuous circulation of wealth",
+        "marks": 1,
+        "ans": "D — continuous circulation of wealth."
+       },
+       {
+        "n": "V",
+        "q": "How does the poet's choice of diction in the phrase 'pathetically pled' contribute to the tone of the extract?",
+        "marks": 1,
+        "ans": "The phrase creates a tone of quiet desperation and helpless appeal, evoking sympathy by highlighting the villagers' powerless condition and their ignored plea for economic justice."
+       },
+       {
+        "n": "VI",
+        "q": "Which idea is most strongly conveyed through the extract?\nA. Rural dependence on city charity\nB. Rural–urban economic imbalance\nC. Traffic as modern progress\nD. Urban indifference to nature",
+        "marks": 1,
+        "ans": "B — Rural–urban economic imbalance."
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "SEC_C_Q8": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "title": "On the Face of It",
+      "extract": "Derry: You're… peculiar. You say peculiar things. You ask questions I don't understand.\nMr Lamb: I like to talk. Have company. You don't have to answer questions. You don't have to stop here at all. The gate's open.\nDerry: Yes, but…\nMr Lamb: I've a hive of bees behind those trees over there. Some hear bees and they say, bees buzz. But when you listen to bees for a long while, they humm… and hum means 'sing'. I hear them singing, my bees.\nDerry: But… I like it here. I came in because I liked it… when I looked over the wall.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "What does Mr Lamb mean when he says, 'The gate's open'?\nA. Visitors must ask permission before entering.\nB. Anyone is free to enter or leave without restriction.\nC. He does not want visitors to stay long.\nD. The gate is broken and cannot be closed.",
+        "marks": 1,
+        "ans": "B — Anyone is free to enter or leave without restriction. Mr Lamb uses the open gate as a symbol of freedom, choice, and acceptance."
+       },
+       {
+        "n": "II",
+        "q": "How does Mr Lamb's way of speaking challenge Derry's initial perception of him as 'peculiar'?",
+        "marks": 1,
+        "ans": "Mr Lamb's calm, reflective, and accepting manner shows warmth and openness rather than oddity. His thoughtful observations and lack of judgement gradually reveal depth and sensitivity, challenging Derry's assumption."
+       },
+       {
+        "n": "III",
+        "q": "Mr Lamb's description of bees as 'singing' rather than 'buzzing' reveals his tendency to ________.\nA. perceive ordinary sounds with sensitivity and imagination\nB. interpret familiar experiences in a reflective way\nC. describe natural sounds with poetic emphasis\nD. respond to nature with thoughtful attentiveness",
+        "marks": 1,
+        "ans": "A — perceive ordinary sounds with sensitivity and imagination."
+       },
+       {
+        "n": "IV",
+        "q": "What can be inferred about Derry's emotional state from his statement, 'I like it here'?",
+        "marks": 1,
+        "ans": "Derry feels a sense of comfort and acceptance in Mr Lamb's presence. He experiences emotional ease and belonging, indicating a shift from fear and isolation to tentative trust."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Memories of Childhood II (Bama)",
+      "extract": "'Because we are born into this community, we are never given any honour or dignity or respect; we are stripped of all that. But if we study and make progress, we can throw away these indignities. So study with care, learn all you can… Work hard and learn.' The words that Annan spoke to me that day made a very deep impression on me. And I studied hard, with all my breath and being, in a frenzy almost.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "According to Annan, what is the main reason the community is denied honour and respect?\nA. They lack access to formal education.\nB. They refuse to follow dominant social customs.\nC. They fail to assert themselves in public spaces.\nD. They are born into a socially marginalised sector.",
+        "marks": 1,
+        "ans": "D — They are born into a socially marginalised sector."
+       },
+       {
+        "n": "II",
+        "q": "Annan's advice to 'study with care' reflects his belief that education can ________.\nA. ensure material comfort and financial stability\nB. replace traditional knowledge systems completely\nC. transform social status and restore lost dignity\nD. help individuals escape personal responsibility",
+        "marks": 1,
+        "ans": "C — transform social status and restore lost dignity."
+       },
+       {
+        "n": "III",
+        "q": "What can be inferred about the narrator from the phrase 'with all my breath and being'?",
+        "marks": 1,
+        "ans": "Intense determination and complete commitment to education, showing deep resolve to overcome social discrimination."
+       },
+       {
+        "n": "IV",
+        "q": "List any one way how Annan's advice, 'Work hard and learn,' contributes to his characterisation in this extract.",
+        "marks": 1,
+        "ans": "It portrays Annan as a visionary and compassionate guide who believes in education as a means of empowerment and social equality."
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "SEC_C_Q9": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "title": "Going Places (A.R. Barton)",
+      "extract": "Their father had washed when he came in and his face and arms were shiny and pink and he smelled of soap. He switched on the television, tossed one of little Derek's shoes from his chair onto the sofa, and sat down with a grunt.\n'Sophie meet Danny Casey,' Geoff said. Sophie wriggled where she was sitting at the table. Her father turned his head on his thick neck to look at her. His expression was one of disdain.\n'It's true,' Geoff said.\n'I once knew a man who had known Tom Finney,' his father said reverently to the television. 'But that was a long time ago.'\n'You told us,' Geoff said.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Which description of Sophie's father in the extract indicates that he does not take her claim seriously?\nSelect the most suitable option:\n1. He smells of soap.\n2. He sits down with a grunt.\n3. He turns his head to look at Sophie.\n4. He continues to watch television.\n5. His expression is one of disdain.\nA. 1 and 2  B. 2 and 3  C. 4 and 5  D. 3 and 5",
+        "marks": 1,
+        "ans": "C — 4 and 5 (He continues to watch television and his expression is one of disdain, showing dismissiveness.)"
+       },
+       {
+        "n": "II",
+        "q": "Complete: The father's casual actions at the beginning of the extract suggest a ________ attitude towards his surroundings.",
+        "marks": 1,
+        "ans": "practical / indifferent / routine-bound / unceremonious / matter-of-fact (any one)"
+       },
+       {
+        "n": "III",
+        "q": "Why does Sophie's father refer to knowing 'a man who had known Tom Finney'?",
+        "marks": 1,
+        "ans": "To suggest that genuine associations with famous people are distant and indirect, contrasting with Sophie's improbable claim of having met Danny Casey directly."
+       },
+       {
+        "n": "IV",
+        "q": "What does Sophie's physical reaction (wriggled) reveal about her emotional state at that moment?",
+        "marks": 1,
+        "ans": "It reveals Sophie's nervousness and discomfort, showing her anxiety about her father's sceptical reaction to her claim."
+       },
+       {
+        "n": "V",
+        "q": "The line 'It's true,' spoken by Geoff, highlights his role in the interaction between Sophie and their father. Explain.",
+        "marks": 1,
+        "ans": "Geoff acts as a mediator by supporting Sophie's claim, attempting to validate her statement in front of their sceptical father."
+       },
+       {
+        "n": "VI",
+        "q": "Which central conflict is most likely highlighted through the interaction among Sophie, Geoff, and their father?\nA. Tension between imagination and realism\nB. Emotional distance within working-class families\nC. Generational disagreement over attitudes and beliefs\nD. Contrast between admiration and sceptical realism",
+        "marks": 1,
+        "ans": "A — Tension between imagination and realism. (Sophie's imaginative claim contrasts with her father's sceptical, grounded reaction.)"
+       }
+      ]
+     },
+     "optB": {
+      "title": "Poets and Pancakes (Asokamitran)",
+      "extract": "The make-up room had the look of a hair-cutting salon with lights at all angles around half a dozen large mirrors. They were all incandescent lights, so you can imagine the fiery misery of those subjected to make-up. The make-up department was first headed by a Bengali who became too big for a studio and left. He was succeeded by a Maharashtrian who was assisted by a Dharwar Kannadiga, an Andhra, a Madras Indian Christian, an Anglo-Burmese and the usual local Tamils. All this shows that there was a great deal of national integration long before A.I.R. and Doordarshan began broadcasting programmes on national integration.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Which of the following details about the make-up room are explicitly mentioned in the extract?\n1. The room was fitted with many large mirrors and bright lights.\n2. The lighting caused discomfort to those subjected to make-up.\n3. The make-up work required technical expertise in lighting.\n4. The department included people from different regions of India.\n5. The writer expresses personal emotional involvement with the room.\nA. 1, 2 and 4  B. 2, 3 and 5  C. 1, 3 and 4  D. 3, 4 and 5",
+        "marks": 1,
+        "ans": "A — 1, 2 and 4 are explicitly mentioned."
+       },
+       {
+        "n": "II",
+        "q": "Complete: The phrase 'fiery misery' suggests that the intense lighting ________.",
+        "marks": 1,
+        "ans": "made the experience physically uncomfortable and almost unbearable for actors undergoing make-up."
+       },
+       {
+        "n": "III",
+        "q": "What can be inferred about studio life from the writer's ironic tone in the extract?",
+        "marks": 1,
+        "ans": "The ironic tone suggests that studio life, while glamorous in appearance, involved discomfort and impractical working conditions behind the scenes."
+       },
+       {
+        "n": "IV",
+        "q": "How does the detailed listing of people from different regions function in the extract?\nA. To highlight efficiency within the studio system\nB. To mock rigid systems of official classification\nC. To emphasise diversity within shared workspace\nD. To criticise imbalance among regional groups",
+        "marks": 1,
+        "ans": "C — To emphasise diversity within shared workspace."
+       },
+       {
+        "n": "V",
+        "q": "What is the most likely reason the author compares studio integration with A.I.R. and Doordarshan?",
+        "marks": 1,
+        "ans": "To show that genuine national integration was practised informally in the studio much before it was officially promoted by state-run media."
+       },
+       {
+        "n": "VI",
+        "q": "Identify the irony in the professional setup of the Gemini Studios make-up room as described in the extract.",
+        "marks": 1,
+        "ans": "The irony lies in the fact that a space meant to enhance appearance and glamour actually caused discomfort and misery due to harsh working conditions."
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "SEC_C_Q10": {
+   "per_paper": 6,
+   "items": [
+    {
+     "n": "I",
+     "src": "The Interview II",
+     "q": "According to the interview, how did Umberto Eco make his academic writing accessible to readers?",
+     "marks": 2,
+     "ans": "Umberto Eco made his academic writing accessible by blending scholarly ideas with clarity, humour, and narrative elements. He avoided obscure jargon, used examples familiar to readers, and treated writing as intellectual communication rather than mere technical exposition."
+    },
+    {
+     "n": "II",
+     "src": "Lost Spring",
+     "q": "Explain why the bangle makers of Firozabad are unable to imagine an alternative future despite their hardships.",
+     "marks": 2,
+     "ans": "The bangle makers remain trapped by poverty, caste stigma, and exploitative systems. Social conditioning, lack of education, and fear of breaking inherited occupations prevent them from imagining alternative futures, making suffering seem inevitable rather than changeable."
+    },
+    {
+     "n": "III",
+     "src": "Deep Water",
+     "q": "What does William Douglas's experience in Deep Water suggest about the nature of fear and anticipation?",
+     "marks": 2,
+     "ans": "Douglas's experience shows that fear is intensified by anticipation rather than the actual event. His terror arose from imagined consequences, not drowning itself. Systematic training helped him confront this anticipation, proving that fear can be controlled through rational practice."
+    },
+    {
+     "n": "IV",
+     "src": "The Rattrap",
+     "q": "How does the Christmas episode influence the peddler's perception of human relationships?",
+     "marks": 2,
+     "ans": "The Christmas episode transforms the peddler's cynical view of relationships as traps. Edla's kindness and trust awaken his conscience, making him realise that compassion can inspire moral responsibility and change, even in someone hardened by suspicion and loneliness."
+    },
+    {
+     "n": "V",
+     "src": "My Mother at Sixty-six",
+     "q": "Kamala Das uses imagery and restraint to convey unspoken anxiety rather than overt grief. Comment.",
+     "marks": 2,
+     "ans": "Das's quiet observations of her mother's ageing face, looking out of the window, and the repeated reassurance reflect suppressed fear of loss, showing how unspoken emotions can be more powerful than explicit expressions of grief."
+    },
+    {
+     "n": "VI",
+     "src": "Aunt Jennifer's Tigers",
+     "q": "What does Aunt Jennifer's portrayal of the tigers suggest about her suppressed desires?",
+     "marks": 2,
+     "ans": "Aunt Jennifer's tigers symbolise her suppressed desire for freedom, strength, and fearlessness. Unlike her constrained life, the tigers move confidently and dominantly, reflecting her inner longing to escape patriarchal oppression and assert her identity beyond marital limitations."
+    }
+   ]
+  },
+  "SEC_C_Q11": {
+   "per_paper": 3,
+   "items": [
+    {
+     "n": "I",
+     "src": "The Third Level",
+     "q": "Based on the events of the story, elaborate on Charley's fascination with the third level and the way he relates to the past.",
+     "marks": 2,
+     "ans": "Charley's fascination reflects his desire to escape modern stress into a simpler, secure past. The third level symbolises psychological refuge, where nostalgia replaces anxiety, showing how individuals often romanticise the past to cope with present uncertainties."
+    },
+    {
+     "n": "II",
+     "src": "The Tiger King",
+     "q": "Examine the outcome of the Tiger King's actions in the light of the prophecy and comment on his belief about controlling fate.",
+     "marks": 2,
+     "ans": "The Tiger King's actions ironically fulfil the prophecy he tries to defeat. His obsessive attempts to control fate lead to his death, proving that arrogance and blind faith in power cannot alter destiny, and that human control over fate is ultimately illusory."
+    },
+    {
+     "n": "III",
+     "src": "Journey to the End of the Earth",
+     "q": "Describe the idea that emerges from the author's portrayal of Antarctica as a warning rather than a destination.",
+     "marks": 2,
+     "ans": "Antarctica is portrayed as a warning about environmental destruction rather than a tourist destination. The continent highlights the fragile balance of nature and the consequences of human interference, urging reflection on ecological responsibility before irreversible damage occurs."
+    }
+   ]
+  },
+  "SEC_C_Q12": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "q": "How do Keeping Quiet by Pablo Neruda and Going Places by A. R. Barton present different responses to inner conflict, and what do these responses reveal about the impact of silence and imagination on human growth?",
+      "ans": "Keeping Quiet advocates purposeful silence as self-reflection: pausing from action fosters empathy, self-awareness, and healing — silence promotes personal and collective growth.\n\nGoing Places portrays imagination as escape: Sophie's fantasies reflect dissatisfaction but lack practical grounding. Rather than resolving inner conflict, imagination deepens her frustration and isolation.\n\nConclusion: Conscious silence promotes maturity; unchecked imagination divorced from reality hinders genuine human growth. (5 marks: content relevance, analysis, connection between texts, expression.)"
+     },
+     "optB": {
+      "q": "Indigo and Poets and Pancakes present power operating in very different contexts. Gandhi's actions in Champaran and the ironic portrayal of Gemini Studios bring out ways in which authority is questioned in these texts. Discuss.",
+      "ans": "In Indigo, British planters exercise colonial authority by compelling peasants to grow indigo unfairly. Gandhi challenges this through calm defiance (refusing to leave Champaran), inspiring spontaneous peasant support and triggering an official inquiry that leads to reform.\n\nIn Poets and Pancakes, studio authority operates through hierarchy and insecurity (the Legal Adviser's hollow influence). Asokamitran's ironic tone exposes the emptiness of such authority by mocking its self-importance.\n\nConclusion: Authority can be challenged through ethical resistance (Gandhi) or by exposing its emptiness through irony (Asokamitran). Both texts question power in their respective contexts."
+     }
+    }
+   ]
+  },
+  "SEC_C_Q13": {
+   "per_paper": 1,
+   "items": [
+    {
+     "optA": {
+      "q": "The meeting between Derry and Mr Lamb marks a turning point in Derry's life. Discuss how Mr Lamb's outlook challenges Derry's fear-driven self-image and shapes his understanding of self-worth beyond physical limitations.",
+      "ans": "Derry views himself as ugly and unwanted because of his burnt face, believing people see only his deformity — this fear has isolated him emotionally and socially.\n\nMr Lamb, despite his artificial leg, refuses to see himself as incomplete. Through his open gate, beehive, and garden, he symbolises acceptance and freedom. His statement that 'there are plenty of things to stare at' urges Derry to focus on life's possibilities rather than limitations.\n\nBy treating Derry with respect and warmth, Mr Lamb helps him realise that self-worth comes from attitude, not appearance. This interaction empowers Derry to move beyond fear and begin redefining himself with confidence and hope."
+     },
+     "optB": {
+      "q": "Dr Sadao's decision to shelter an enemy soldier places him in a moral dilemma. Assess whether this decision can be seen as an act of moral courage in the face of competing national loyalties in The Enemy.",
+      "ans": "As a Japanese citizen during wartime, Sadao is expected to report the American prisoner — harbouring him risks severe punishment and social disgrace.\n\nHowever, Sadao's actions reflect moral courage: guided by his identity as a doctor, he prioritises the universal value of human life over political allegiance. His statement that a doctor's duty is to save lives regardless of nationality reinforces this ethical stance.\n\nThough conflicted, he shelters the soldier, performs surgery, and later helps him escape — demonstrating that true courage lies in upholding humanitarian principles even when they oppose dominant national expectations. His dilemma makes the act all the more courageous: he chooses ethics over convenience."
+     }
+    }
+   ]
+  }
+ }
+}
