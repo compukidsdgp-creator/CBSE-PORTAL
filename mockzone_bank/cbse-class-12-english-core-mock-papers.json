@@ -6,7 +6,7 @@
    "items": [
     {
      "passage": "Geminids Meteor Shower",
-     "blurb": "The Geminids meteor shower occurs every December as Earth passes through debris from asteroid 3200 Phaethon. Unlike most showers (which originate from comets), the Geminids can exceed 100 meteors/hour, are visible to the naked eye, and produce bright, longer-lasting streaks due to the moderate speed of the meteors.",
+     "blurb": "<b>1.</b> Every December, as the nights grow long and cold, the sky puts on one of its most dependable shows: the Geminid meteor shower. Around its peak, usually on the night of 13–14 December, an observer under a clear, dark sky can count more than 100 meteors an hour — a rate that very few annual showers can match. Astronomers therefore rank the Geminids among the strongest showers of the year.<br><br><b>2.</b> Most meteor showers are born from comets, icy bodies that shed dust as they swing close to the Sun. The Geminids are an exception. Their source is 3200 Phaethon, a small rocky asteroid whose orbit carries it unusually close to the Sun. Each passage leaves behind a trail of grit and rock fragments. When Earth ploughs through this trail in December, the fragments enter the upper atmosphere at about 35 kilometres per second. Friction with the air heats them until they glow and burn up, drawing bright streaks of light across the sky far above the ground.<br><br><b>3.</b> Although the meteors may appear anywhere in the sky, their paths, if traced backwards, seem to spread out from a single point near the bright star Castor in the constellation Gemini, which gives the shower its name. This point, called the radiant, is only an effect of perspective, much like parallel railway lines that seem to meet in the distance. For sky-watchers, however, it is a handy guide: once Gemini has risen in the east, they know which part of the sky to watch.<br><br><b>4.</b> In recorded history the Geminids are a fairly young shower. They were first documented in the mid-nineteenth century, when observers noted only a modest number of meteors each hour. Since then, records have shown the shower's activity rising steadily, decade after decade. This long, carefully kept record of growth is one reason why scientists study the Geminids so closely.<br><br><b>5.</b> For ordinary watchers the shower is remarkably friendly. No telescope or binoculars are needed; the naked eye is the best instrument, because it takes in a wide sweep of sky. The meteors travel at a moderate speed compared with those of many other showers, so they burn for longer and leave bright, lingering streaks that are easy to notice. And because Gemini rises early, the display begins by mid-evening rather than only before dawn. All a viewer needs is a dark spot away from city lights, warm clothing and a little patience.",
      "qs": [
       {
        "n": "I",
@@ -79,6 +79,158 @@
        "ans": "D — Scientific explanation and practical observation of Geminids. (The passage combines origin/nature explanation with practical guidance on when and how to observe.)"
       }
      ]
+    },
+    {
+     "passage": "The Stepwells of Western India",
+     "blurb": "<b>1.</b> Long before taps and overhead tanks, communities in the dry lands of western India solved the problem of water with remarkable engineering. In Gujarat and Rajasthan, where rain falls for only a few months and the water table sinks deep in summer, people built stepwells — deep, stone-lined shafts that led down, flight after flight, to the water below. Called <i>vav</i> in Gujarat and <i>baori</i> or <i>baoli</i> in Rajasthan, they were built over many centuries, and hundreds of them still survive.<br><br><b>2.</b> The idea was simple but clever. A stepwell reached down to the groundwater, while its wide, stepped sides allowed people to walk down to whatever level the water had reached. In the monsoon the well filled almost to the top; as the dry months passed, users simply climbed further down. The thick stone walls kept the lower levels cool, so the wells also served as shaded resting places in the scorching summer.<br><br><b>3.</b> Stepwells were rarely mere utilities. Many were commissioned by kings, merchants and, notably, royal women. Rani ki Vav at Patan in Gujarat, built in the eleventh century in memory of King Bhima I and traditionally credited to his queen, Udayamati, is designed like an inverted temple. Its seven levels of galleries carry hundreds of carved sculptures, many showing the avatars of Vishnu. Floods from the nearby Saraswati river later buried the well under silt for centuries — and this burial helped preserve its carvings. Excavated in the twentieth century, it was declared a UNESCO World Heritage Site in 2014.<br><br><b>4.</b> In Rajasthan, Chand Baori at Abhaneri, near Jaipur, displays a different genius. Built around the ninth century, it is a square pit about thirty metres deep, lined on three sides by roughly 3,500 narrow steps arranged in a dizzying zigzag pattern across thirteen levels.<br><br><b>5.</b> With the arrival of piped water and hand pumps, many stepwells were abandoned, filled with rubbish or left to decay. Today, however, interest in them is returning. As Indian cities face falling groundwater levels, several stepwells have been cleaned and restored, and some once again collect rainwater. Water experts point out that these old structures embody a principle modern planners are only now rediscovering: catch the monsoon where it falls and store it close to where people live.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "Why did stepwells in Gujarat and Rajasthan have to be so deep? (paragraph 1)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Because rain falls for only a few months there and the water table sinks deep in summer, so the wells had to reach far down to the groundwater."
+      },
+      {
+       "n": "II",
+       "q": "According to paragraph 2, the stepped sides of a stepwell were useful because they ________.\nA. made the well cheaper to build than an ordinary well\nB. stopped the well from overflowing during the monsoon\nC. let people reach the water at whatever level it stood\nD. kept animals from falling into the water",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — let people reach the water at whatever level it stood (they climbed further down as the water level fell)."
+      },
+      {
+       "n": "III",
+       "q": "Apart from supplying water, state one other purpose that stepwells served. (paragraph 2)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Their thick stone walls kept the lower levels cool, so they served as shaded resting places during the hot summer."
+      },
+      {
+       "n": "IV",
+       "q": "The description of Rani ki Vav as 'designed like an inverted temple' suggests that its builders ________.\nA. meant it to be both sacred and useful, with its decoration leading down towards the water\nB. built it on the ruins of an older temple\nC. reserved it for priests and religious ceremonies\nD. built it underneath a temple to hide it from invaders",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "A — meant it to be both sacred and useful, with its decoration leading down towards the water."
+      },
+      {
+       "n": "V",
+       "q": "What is ironic about the role of the Saraswati river in the history of Rani ki Vav? (paragraph 3)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Its floods buried the stepwell under silt for centuries, yet that very burial protected and preserved the carvings."
+      },
+      {
+       "n": "VI",
+       "q": "How does the writer show that stepwells were 'rarely mere utilities'? Give two pieces of evidence from the passage. (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Any two (1 mark each): they were commissioned by kings, merchants and royal women; Rani ki Vav was built as a memorial and designed like a temple; it has seven levels of galleries with hundreds of sculptures of Vishnu's avatars; Chand Baori's 3,500 steps form an artistic zigzag geometry."
+      },
+      {
+       "n": "VII",
+       "q": "Which of the following statements is TRUE according to the passage?\nA. Chand Baori has seven levels of carved galleries.\nB. Rani ki Vav was built in the ninth century.\nC. Stepwells were built only in Gujarat.\nD. Rani ki Vav became a UNESCO World Heritage Site in 2014.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "D — Rani ki Vav became a UNESCO World Heritage Site in 2014. (A describes Rani ki Vav, B is Chand Baori's date, C is contradicted by the Rajasthan examples.)"
+      },
+      {
+       "n": "VIII",
+       "q": "Complete the following with a suitable reason: The steps of Chand Baori are called 'dizzying' because ________. (paragraph 4)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "…about 3,500 narrow steps run in a steep, repeating zigzag pattern down thirteen levels of a 30-metre-deep pit, which confuses the eye."
+      },
+      {
+       "n": "IX",
+       "q": "Why does the writer feel that stepwells are relevant to Indian cities today? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Cities face falling groundwater levels. Stepwells show how to catch monsoon rain where it falls and store it close to where people live; restored stepwells are again collecting rainwater. (1 mark: modern problem; 1 mark: the principle/solution stepwells offer.)"
+      },
+      {
+       "n": "X",
+       "q": "Which of the following would be the most suitable title for the passage?\nA. The Royal Queens of Gujarat\nB. Stepwells: Old Answers to a Modern Water Problem\nC. The Decline of Indian Architecture\nD. Groundwater Laws in Rajasthan",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — Stepwells: Old Answers to a Modern Water Problem. (The passage covers how stepwells worked, their art, and their relevance today.)"
+      }
+     ]
+    },
+    {
+     "passage": "The Arribada: Odisha's Turtle Arrivals",
+     "blurb": "<b>1.</b> On a few nights each year, the beaches of Odisha witness one of nature's most extraordinary gatherings. Thousands upon thousands of olive ridley sea turtles emerge from the Bay of Bengal, often within the same few nights, to lay their eggs in the sand. This mass nesting is called an <i>arribada</i>, a Spanish word meaning 'arrival'. Gahirmatha, the mouth of the Rushikulya river and the mouth of the Devi river are among the most important nesting sites for this species anywhere in the world.<br><br><b>2.</b> The olive ridley is one of the smallest sea turtles, named after the olive-green colour of its heart-shaped shell. After mating in the coastal waters, each female crawls up the beach, usually at night, digs a flask-shaped pit with her hind flippers and lays about a hundred eggs. She covers the nest, smooths the sand over it and returns to the sea, never to see her young.<br><br><b>3.</b> The eggs incubate in the warm sand for roughly 45 to 60 days. Curiously, the temperature of the sand decides the sex of the hatchlings: warmer nests produce more females, cooler ones more males. When they hatch, the tiny turtles scramble towards the brightest horizon, which on a natural beach is the moonlit sea. Bright lights from roads, hotels and houses can confuse them, drawing them inland, where they die of exhaustion or are eaten by predators. Even on dark beaches the odds are harsh: scientists estimate that only about one hatchling in a thousand survives to adulthood.<br><br><b>4.</b> Adult turtles face dangers too. Many drown after being caught in the nets of trawlers that fish close to the shore. To reduce these deaths, fishing near the nesting beaches is banned during the breeding season, the Indian Coast Guard patrols the coast under 'Operation Olivia', and trawlers are urged to use Turtle Excluder Devices — escape hatches in nets that let turtles out while keeping the fish in.<br><br><b>5.</b> The olive ridley is listed as 'Vulnerable' by the IUCN and enjoys the highest level of protection under India's Wildlife (Protection) Act. Yet laws alone cannot save it. Local fishing communities, forest officials and student volunteers now guard nests, shift eggs laid below the high-tide line to safe hatcheries and switch off beach lights during the hatching season. Their work suggests that the survival of a species can depend as much on neighbours as on law.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "What is an 'arribada'? (paragraph 1)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "The mass nesting of olive ridley turtles, when thousands of females come ashore within a few nights to lay eggs; the word is Spanish for 'arrival'."
+      },
+      {
+       "n": "II",
+       "q": "Which of the following is NOT mentioned in the passage as a nesting site in Odisha?\nA. Gahirmatha\nB. The mouth of the Rushikulya river\nC. The mouth of the Mahanadi river\nD. The mouth of the Devi river",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — The mouth of the Mahanadi river."
+      },
+      {
+       "n": "III",
+       "q": "Complete the following: The female turtle is said 'never to see her young' because ________. (paragraph 2)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "…she lays the eggs, covers the nest and returns to the sea long before they hatch, 45 to 60 days later."
+      },
+      {
+       "n": "IV",
+       "q": "According to paragraph 3, what decides whether a hatchling will be male or female?\nA. The size of the egg\nB. The temperature of the sand around the nest\nC. The depth of the nest\nD. The age of the mother",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — The temperature of the sand around the nest (warmer nests give more females)."
+      },
+      {
+       "n": "V",
+       "q": "Explain how artificial lighting near beaches endangers hatchlings. (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Hatchlings instinctively move towards the brightest horizon, normally the moonlit sea (1). Lights from roads, hotels and houses confuse them and draw them inland, where they die of exhaustion or are eaten by predators instead of reaching the sea (1)."
+      },
+      {
+       "n": "VI",
+       "q": "What does the figure 'one hatchling in a thousand' tell us about the life of an olive ridley? (paragraph 3)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "That the odds of survival are extremely low — almost all hatchlings die young, which is why mass nesting and the protection of every nest matter."
+      },
+      {
+       "n": "VII",
+       "q": "Turtle Excluder Devices are described as 'escape hatches'. This means they ________.\nA. help turtles dig their nests faster\nB. guide hatchlings towards the sea\nC. scare turtles away from fishing areas\nD. let trapped turtles get out of the net while the fish stay in",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "D — let trapped turtles get out of the net while the fish stay in."
+      },
+      {
+       "n": "VIII",
+       "q": "List any two steps taken to protect adult turtles at sea. (paragraph 4)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Any two (½ each): seasonal ban on fishing near nesting beaches; Coast Guard patrols under 'Operation Olivia'; use of Turtle Excluder Devices in trawl nets."
+      },
+      {
+       "n": "IX",
+       "q": "'The survival of a species can depend as much on neighbours as on law.' How does paragraph 5 support this statement? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Although the turtle has the highest legal protection (1), it is local fishing communities, forest staff and student volunteers who actually guard nests, shift eggs to safe hatcheries and switch off beach lights during hatching (1) — showing that community action makes the law work."
+      },
+      {
+       "n": "X",
+       "q": "The writer's attitude towards the olive ridley and its protectors is best described as ________.\nA. appreciative and concerned\nB. detached and critical\nC. humorous and light-hearted\nD. pessimistic and hopeless",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "A — appreciative and concerned (wonder at the arribada, worry about threats, praise for local protectors)."
+      }
+     ]
     }
    ]
   },
@@ -87,7 +239,7 @@
    "items": [
     {
      "passage": "UPI Growth Charts",
-     "blurb": "Data study on UPI transactions across four Octobers (2021–2024): Volume: 4.21B → 7.30B → 11.40B → 16.58B; Value: ₹7.71 → ₹12.11 → ₹17.15 → ₹23.49 lakh crore.",
+     "blurb": "<b>1.</b> To understand how payment habits are changing among different groups of users, a study tracked the growth of India's Unified Payments Interface (UPI) over four years, comparing the figures for the month of October from 2021 to 2024.<br><br><b>2.</b> The table below shows the number of UPI transactions and their total value in each of those months.<table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">October</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Transactions (billion)</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Value (₹ lakh crore)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">2021</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">4.21</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">7.71</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">2022</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">7.30</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">12.11</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">2023</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">11.40</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">17.15</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">2024</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">16.58</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">23.49</td></tr></table><b>3.</b> Read together, the two columns tell a clear story: both figures climb every single year, without a dip, and each year's total is well above the one before.<br><br><b>4.</b> Once seen as a tool for tech-savvy young people in big cities, UPI is now used in shops, homes, workplaces, and even by small roadside vendors who display a QR code on a piece of cardboard. A tea seller can accept ₹10 as easily as a large store accepts ₹10,000.<br><br><b>5.</b> For small business owners, this shift has meant entry into the formal financial system. Every UPI payment leaves a digital record, which helps them track daily income, reduces the need to handle and store cash, and can later support an application for a loan. The benefit, however, depends on a steady internet connection and on the owner's comfort with a smartphone.<br><br><b>6.</b> Taken together, the figures suggest that UPI has moved from being a convenient option to an essential part of daily financial life for millions of Indians.",
      "qs": [
       {
        "n": "I",
@@ -97,13 +249,13 @@
       },
       {
        "n": "II",
-       "q": "Is percentage growth in total UPI value greater, less, or roughly the same as in number of transactions? Justify briefly.",
+       "q": "Is the percentage growth in the total value of UPI transactions greater than, less than, or roughly the same as the percentage growth in the number of transactions? Justify briefly with figures from the table.",
        "marks": 1,
-       "ans": "Greater. Volume rose ~4× (4.21→16.58B); value rose >3× (₹7.71→₹23.49 lakh crore), so value grew faster, reflecting UPI's use for higher-value payments."
+       "ans": "Less. The number of transactions grew about 3.9 times (4.21 → 16.58 billion, ≈ +294%), while the value grew only about 3 times (₹7.71 → ₹23.49 lakh crore, ≈ +205%). So the average payment became smaller (≈ ₹1,830 → ≈ ₹1,420), showing UPI is increasingly used for small everyday purchases."
       },
       {
        "n": "III",
-       "q": "Which best describes the overall pattern in paragraph 3?\nA. Both number and value increase steadily\nB. Number increases, value decreases\nC. Value increases, number stays same\nD. Both decrease after initial increase",
+       "q": "Which best describes the overall pattern in paragraphs 2–3?\nA. Both number and value increase steadily\nB. Number increases, value decreases\nC. Value increases, number stays same\nD. Both decrease after initial increase",
        "marks": 1,
        "ans": "A — Both the number and total value of transactions increase steadily over four years."
       },
@@ -133,9 +285,117 @@
       },
       {
        "n": "VIII",
-       "q": "Give two reasons UPI is more suitable for Rohan in 2024 than 2021. (About 40 words)",
+       "q": "Rohan carries almost no cash and pays for groceries and transport with his phone. Using the table and paragraph 4, give two reasons why UPI is a more suitable option for him in 2024 than it was in 2021. (About 40 words)",
        "marks": 2,
-       "ans": "In 2024, far higher transaction volumes indicate greater reliability and acceptance. The large increase in transaction value reflects broader everyday usage, making UPI more trustworthy for daily transactions like groceries and transport than in 2021."
+       "ans": "(1) Transactions rose from 4.21 billion to 16.58 billion, so UPI is now far more widely accepted and dependable. (2) It is used even by small roadside vendors for amounts as small as ₹10, so Rohan can pay for everyday items like groceries and auto fares anywhere. (1 mark each reason)"
+      }
+     ]
+    },
+    {
+     "passage": "How Students Travel to School — A Five-City Survey",
+     "blurb": "<b>1.</b> A student-led survey asked 2,000 students of Classes XI and XII in five Indian cities — Delhi, Pune, Lucknow, Kochi and Bhubaneswar — how they usually travel to school and how long the journey takes. The aim was to find out whether school journeys are becoming safer, healthier and greener, or simply longer. <i>(Figures are illustrative.)</i><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Usual mode of travel</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Students (%)</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Average one-way time (minutes)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">School bus</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">31</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">38</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Private car</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">18</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">27</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Two-wheeler (dropped by a parent)</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">16</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">19</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Public bus / metro</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">14</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">42</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Walking</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">12</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">14</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Bicycle</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">6</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">17</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Auto / e-rickshaw</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">3</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">24</td></tr></table><b>2.</b> Students living within two kilometres of school were the most likely to walk or cycle. Even so, nearly half of them were still driven to school, mostly because their parents felt the roads were unsafe.<br><br><b>3.</b> Asked what would make them switch to walking or cycling, 58% chose 'safe footpaths and cycle lanes', 21% 'a friend to travel with', 14% 'secure bicycle parking at school' and 7% 'lighter school bags'.<br><br><b>4.</b> Students who spent more than 40 minutes on the road each way reported feeling tired before the first period far more often than those with short journeys. Planners add that every car trip replaced by a bus seat, a walk or a bicycle ride also means less congestion and cleaner air around schools at peak hours.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "The main purpose of the survey was to ________.\nA. rank the five cities by the quality of their schools\nB. compare the fares charged by different modes of transport\nC. find out whether school journeys are becoming safer, healthier and greener\nD. persuade parents to buy bicycles for their children",
+       "marks": 1,
+       "ans": "C — find out whether school journeys are becoming safer, healthier and greener (paragraph 1)."
+      },
+      {
+       "n": "II",
+       "q": "Which mode of travel takes the longest on average? Suggest one likely reason.",
+       "marks": 1,
+       "ans": "Public bus / metro (42 minutes). Likely reason: waiting time, many stops, changes between routes, or walking to and from stations (any one). (½ + ½)"
+      },
+      {
+       "n": "III",
+       "q": "What percentage of the students surveyed reach school in a private motor vehicle (car or two-wheeler)?",
+       "marks": 1,
+       "ans": "34% (car 18% + two-wheeler 16%)."
+      },
+      {
+       "n": "IV",
+       "q": "Which of the following statements is supported by the table?\nA. School buses carry nearly a third of the students.\nB. More students cycle than walk.\nC. Auto-rickshaws are the second most common mode.\nD. Walking is the slowest way to reach school.",
+       "marks": 1,
+       "ans": "A — School buses carry nearly a third (31%) of the students."
+      },
+      {
+       "n": "V",
+       "q": "On the basis of paragraph 3, suggest two steps a municipal corporation and a school could take to encourage walking and cycling. Justify each with data. (About 40 words)",
+       "marks": 2,
+       "ans": "(1) The corporation should build safe footpaths and cycle lanes near schools — the most popular choice (58%). (2) Schools should provide secure bicycle parking (14%), or organise 'walking buddy' groups so students have a friend to travel with (21%). (1 mark each step with its figure.)"
+      },
+      {
+       "n": "VI",
+       "q": "Complete the following: Nearly half the students living within two kilometres of school are still driven there, mainly because ________.",
+       "marks": 1,
+       "ans": "their parents feel the roads are unsafe (paragraph 2)."
+      },
+      {
+       "n": "VII",
+       "q": "Fill in the blank with the correct option: The link between long journeys and tiredness before the first period suggests that travel time affects students' ________. (attendance / alertness / handwriting)",
+       "marks": 1,
+       "ans": "alertness"
+      },
+      {
+       "n": "VIII",
+       "q": "Anika lives 1.5 km from school and is driven there every day; the car takes 12 minutes in traffic. Using the survey, give two reasons why cycling could be a better choice for her. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): cycling takes only about 17 minutes on average, barely longer than her car ride; it is daily exercise that keeps her fresh rather than tired; it removes one car from the congested, polluted area around the school at peak hours; she lives within the 2 km range in which walking and cycling are most practical."
+      }
+     ]
+    },
+    {
+     "passage": "Preparing for the Boards — What Students Rely On",
+     "blurb": "<b>1.</b> A district-level survey of 1,500 Class XII students asked how they prepare for their board examinations: which resource they rely on most, how long they study on their own on school days, and how confident they feel about different types of questions. <i>(Figures are illustrative.)</i><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Main study resource</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Students (%)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">NCERT textbooks</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">34</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Coaching notes</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">22</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Online video lessons</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">20</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Sample and previous years' papers</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">15</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">AI chatbots</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">6</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Study groups with friends</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">3</td></tr></table><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Self-study on school days</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Students (%)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Less than 1 hour</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">12</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">1–2 hours</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">38</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">2–4 hours</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">35</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">More than 4 hours</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">15</td></tr></table><b>2.</b> While 64% of the students said they felt confident about multiple-choice questions, only 41% felt the same about long-answer questions. Nearly three out of four admitted that they practised writing complete answers only in the last month before the examination.<br><br><b>3.</b> Teachers who reviewed the findings were encouraged that the textbook remains the most common anchor. They cautioned, however, that watching videos or reading ready-made notes can create an illusion of understanding; real confidence, they said, comes from regular, timed practice in writing answers and from checking them against the marking scheme.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "Which resource do students rely on most, according to the survey?\nA. Coaching notes\nB. Online video lessons\nC. NCERT textbooks\nD. AI chatbots",
+       "marks": 1,
+       "ans": "C — NCERT textbooks (34%)."
+      },
+      {
+       "n": "II",
+       "q": "What percentage of students study on their own for two hours or more on school days?",
+       "marks": 1,
+       "ans": "50% (2–4 hours: 35% + more than 4 hours: 15%)."
+      },
+      {
+       "n": "III",
+       "q": "Complete the following: The gap between confidence in MCQs (64%) and in long answers (41%) suggests that students ________.",
+       "marks": 1,
+       "ans": "are less practised in organising and writing extended answers than in recognising the correct option."
+      },
+      {
+       "n": "IV",
+       "q": "Which of the following statements is supported by the data?\nA. More students rely on AI chatbots than on study groups.\nB. Most students study for more than four hours a day.\nC. Coaching notes are more popular than textbooks.\nD. Online videos are the least used resource.",
+       "marks": 1,
+       "ans": "A — More students rely on AI chatbots (6%) than on study groups (3%)."
+      },
+      {
+       "n": "V",
+       "q": "Why do the teachers warn that videos and ready-made notes can create 'an illusion of understanding'? (About 40 words)",
+       "marks": 2,
+       "ans": "Watching or reading feels easy, so students believe they have mastered a topic (1), but they have not actively recalled or written anything; the gap shows up only when they must write a full answer under time pressure (1)."
+      },
+      {
+       "n": "VI",
+       "q": "Fill in the blank with the correct option: The finding that most students write full answers only in the last month shows a tendency to ________ practice. (postpone / overdo / avoid reading)",
+       "marks": 1,
+       "ans": "postpone"
+      },
+      {
+       "n": "VII",
+       "q": "According to the teachers, where does 'real confidence' come from? (paragraph 3)",
+       "marks": 1,
+       "ans": "From regular, timed practice in writing answers and checking them against the marking scheme."
+      },
+      {
+       "n": "VIII",
+       "q": "Kabir studies for less than an hour a day, mostly by watching video lessons, and fears long-answer questions. Using the survey, suggest two changes to his preparation. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): increase self-study to at least 1–2 hours, as most students do; use the NCERT textbook as his main resource; write complete long answers every week under timed conditions instead of waiting for the last month; check them against the marking scheme; solve sample and previous years' papers."
       }
      ]
     }
@@ -153,6 +413,26 @@
       "scenario": "You are Vijesh Kumar, Secretary of Shantiniketan Residents' Welfare Association, Chandigarh. The Association is organising a Marathon to create awareness on animal conservation, in collaboration with local animal welfare organisations. Write a notice inviting residents to participate. Include necessary details and registration process. Put your notice in a box.",
       "ans": "Format (1m): Box, association name top-centre, NOTICE (centre), date, authorisation/designation/signature.\nContent (2m): Marathon date/time/route, purpose (animal conservation), registration process, contact details.\nGrammar & Spelling (1m): Accuracy in formal language."
      }
+    },
+    {
+     "optA": {
+      "scenario": "You are Tanvi Rao, Secretary of the Literary Club, Sunbeam Senior Secondary School, Varanasi. The club is organising an inter-house quiz on the Indian Constitution to mark Constitution Day (26 November). Draft a notice in about 50 words for the students of Classes IX–XII, giving the necessary details. Put the notice in a box.",
+      "ans": "Model answer:\nSUNBEAM SENIOR SECONDARY SCHOOL, VARANASI\nNOTICE\n18 November 20XX\nINTER-HOUSE CONSTITUTION QUIZ\nTo mark Constitution Day, the Literary Club is organising an inter-house quiz on the Indian Constitution for Classes IX–XII.\nDate: 26 November 20XX | Time: 10:00 a.m. | Venue: School Auditorium\nEach house may send a team of three. Submit names to the undersigned by 22 November.\nTanvi Rao\nSecretary, Literary Club\n\nMarking — Format (1m): box, school name, NOTICE, date, heading, name and designation. Content (2m): occasion/purpose, eligibility, date-time-venue, team size and last date. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Harpreet Singh, Secretary of Shivalik Enclave Residents' Welfare Association, Mohali. The overhead water tanks of all the blocks will be cleaned next Sunday, and the water supply will remain suspended for most of the day. Draft a notice in about 50 words informing the residents. Put the notice in a box.",
+      "ans": "Model answer:\nSHIVALIK ENCLAVE RESIDENTS' WELFARE ASSOCIATION, MOHALI\nNOTICE\n12 April 20XX\nSUSPENSION OF WATER SUPPLY\nResidents are informed that the overhead tanks of all blocks will be cleaned on Sunday, 16 April 20XX. Water supply will remain suspended from 9:00 a.m. to 5:00 p.m. Please store enough water in advance. Inconvenience is regretted. Queries: RWA office, 98XXXXXX10.\nHarpreet Singh\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): reason, date, hours of suspension, advice to residents, contact. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Rohit Chauhan, Sports Captain of Doon Valley School, Shimla. Selection trials for the school's Under-17 football team will be held next week for an inter-school tournament. Draft a notice in about 50 words inviting interested students. Put the notice in a box.",
+      "ans": "Model answer:\nDOON VALLEY SCHOOL, SHIMLA\nNOTICE\n3 August 20XX\nSELECTION TRIALS — UNDER-17 FOOTBALL TEAM\nTrials to select the school team for the Inter-School Football Tournament will be held on 10 and 11 August at 3:30 p.m. on the main ground. Students born on or after 1 January 20XX may give their names to the undersigned by 7 August. Report in sports kit with studs and shin guards.\nRohit Chauhan\nSports Captain\n\nMarking — Format (1m): box, school name, NOTICE, date, heading, name and designation. Content (2m): purpose, eligibility, dates-time-venue, last date, kit. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Sunita Pillai, Secretary of the Senior Citizens' Forum, Nehru Nagar, Thiruvananthapuram. The Forum, with the help of a city eye hospital, is organising a free eye check-up camp for elderly residents. Draft a notice in about 50 words for display on the community notice board. Put the notice in a box.",
+      "ans": "Model answer:\nSENIOR CITIZENS' FORUM, NEHRU NAGAR, THIRUVANANTHAPURAM\nNOTICE\n20 January 20XX\nFREE EYE CHECK-UP CAMP\nIn association with City Eye Hospital, the Forum is organising a free eye check-up camp for residents above 60 years on Sunday, 28 January, from 9:00 a.m. to 1:00 p.m. at the Community Hall. Cataract screening and spectacles at concessional rates will be available. Register at the Forum office by 25 January.\nSunita Pillai\nSecretary\n\nMarking — Format (1m). Content (2m): organiser and partner, eligibility, date-time-venue, services, registration. Grammar & Spelling (1m)."
+     }
     }
    ]
   },
@@ -167,6 +447,26 @@
      "optB": {
       "scenario": "You are Dr. Sameer, an environmental scientist living in Bengaluru. You have received an invitation from Greenwood International School, Mysuru, to judge the 'Waste-to-Wealth' project competition. Write a formal reply accepting the invitation, confirming your arrival.",
       "ans": "Format (1m): Formal first-person reply — date, formal address, reference to invitation received.\nContent (2m): Acceptance of invitation, confirmation of date/time, any relevant details.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are the Principal of Navyug Public School, Dehradun. Draft a formal invitation in about 50 words to Colonel (Retd.) Vikram Thapa, a decorated army veteran, requesting him to be the Chief Guest at the school's Annual Sports Meet and to give away the prizes.",
+      "ans": "Model answer:\nNavyug Public School, Dehradun\nrequests the pleasure of the company of\nColonel (Retd.) Vikram Thapa\nas Chief Guest at its\nANNUAL SPORTS MEET\non Saturday, 14 December 20XX, at 9:00 a.m.\nat the School Sports Ground.\nThe Colonel is requested to declare the meet open and give away the prizes.\nRSVP: The Principal | 0135-27XXXXX\n\nMarking — Format (1m): third-person formal style, host, guest's name, RSVP. Content (2m): occasion, role requested, date-time-venue. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "Your friend Meghna has invited you to spend a week of the summer vacation with her family at their coffee estate in Coorg. Write a reply in about 50 words accepting the invitation. You are Sahil/Saira, 24 Lajpat Nagar, Jaipur.",
+      "ans": "Model answer:\n24 Lajpat Nagar, Jaipur\n5 May 20XX\nDear Meghna,\nThank you so much for inviting me to your coffee estate in Coorg! I would love to come. My parents have agreed, and I plan to reach Madikeri by bus on 2 June. I can't wait to walk through the plantations with you. Please convey my regards to Aunty and Uncle.\nWith love,\nSaira\n\nMarking — Format (1m): informal reply — address, date, salutation, close. Content (2m): thanks, acceptance, travel/arrival details. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Riya Das, Cultural Secretary of Green Meadows School, Guwahati. The school is celebrating 'Grandparents' Day' with a special assembly, a cultural programme by students and a lunch. Draft a formal invitation in about 50 words to the grandparents of all students.",
+      "ans": "Model answer:\nThe Principal, staff and students of\nGreen Meadows School, Guwahati\ncordially invite you to\nGRANDPARENTS' DAY\non Saturday, 12 September 20XX, at 10:00 a.m.\nin the School Auditorium.\nProgramme: special assembly, cultural performances by students, followed by lunch.\nRSVP: Riya Das, Cultural Secretary | 0361-26XXXXX\n\nMarking — Format (1m): third-person formal invitation, hosts, occasion, RSVP. Content (2m): occasion, date-time-venue, programme. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Dr Anjali Mehra, a well-known paediatrician in Delhi. The Principal of St. Mary's School, Shillong, has invited you to give a talk to Class XI students on adolescent health. Write a formal reply in about 50 words regretting your inability to accept the invitation.",
+      "ans": "Model answer:\nDr Anjali Mehra thanks the Principal, St. Mary's School, Shillong, for the kind invitation to address the students of Class XI on adolescent health on 18 October 20XX. She regrets her inability to accept, as she will be presenting a paper at a medical conference in Singapore on that date. She wishes the programme every success and would be glad to visit on a later date.\n\nMarking — Format (1m): formal reply (third person, or first-person letter with date and addresses). Content (2m): thanks, reference to the invitation, regret with reason, good wishes/alternative. Grammar & Spelling (1m)."
      }
     }
    ]
@@ -183,6 +483,26 @@
       "scenario": "You are Ranjay Thakur, a resident of 12, Mall Road, Shimla. Write a letter of application for the post of Sustainable Tourism Coordinator at 'EcoTrails India'. Include detailed bio-data. (Advertisement shown: Graduate in Tourism/Environmental Studies, passionate about conservation, volunteering experience preferred.)",
       "ans": "Format (1m): Covering letter (reference to ad, suitability, submission) + Bio-data as separate enclosure (personal details, educational qualifications, work experience, references). 'Yours sincerely' as complimentary close.\nOrganisation (1m): Clear separation of letter and bio-data.\nContent (2m): Relevant qualifications, conservation interest, volunteering experience.\nGrammar & Spelling (1m)."
      }
+    },
+    {
+     "optA": {
+      "scenario": "You are Nisha Joshi, 17 Ashok Vihar, Indore. Walking in your city has become difficult and unsafe: footpaths are broken, and those that exist are taken over by vendors and parked vehicles, pushing pedestrians onto the road. Write a letter in 120–150 words to the Editor of a national daily expressing your concern and suggesting remedies.",
+      "ans": "Format (1m): sender's address, date, The Editor (name of daily, city), subject (e.g. 'Unsafe footpaths endanger pedestrians'), Sir/Madam, body, 'Yours truly', name.\nOrganisation of Ideas (1m): problem → effects → causes → suggestions → appeal.\nContent (2m) — value points: footpaths broken, uneven or missing; encroachment by vendors and parked two-wheelers/cars; pedestrians, children, elderly and people with disabilities forced onto busy roads; risk of accidents, especially at night; suggestions — repair footpaths with ramps and kerbs, clear encroachments and create designated vending zones, fine illegal parking, install lights and zebra crossings near schools and markets, conduct pedestrian safety audits; appeal to the municipal corporation.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Rohan Iyer, 8 Gandhi Bazaar, Mysuru. You saw the following advertisement: 'WANTED — Junior Content Writer for Little Lamp Books, a children's publisher. Graduate in English or Mass Communication; excellent writing skills in English and one Indian language; one year's experience preferred. Apply with a detailed resume to the HR Manager, Little Lamp Books, MG Road, Bengaluru, within 10 days.' Write a letter of application in 120–150 words, with your bio-data.",
+      "ans": "Format (1m): sender's address, date, The HR Manager (address), subject 'Application for the post of Junior Content Writer', Sir/Madam, 'Yours sincerely', signature; enclosure — bio-data as a separate section.\nOrganisation (1m): covering letter (source of advertisement, interest, suitability, availability for interview) clearly separate from bio-data.\nContent (2m) — value points: B.A. English (or Mass Communication); fluent in English and Kannada; one year as content intern/writer (e.g. for a magazine or ed-tech firm); writes short stories for children; samples/portfolio attached. Bio-data — name, date of birth, contact, qualifications with years and marks, experience, skills (writing, editing, proofreading, basic design software), achievements, languages, references.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Kanika Bose, 14 Salt Lake, Sector II, Kolkata. Your grandfather nearly lost his savings to a caller who pretended to be a bank official. Write a letter in 120–150 words to the Editor of a national daily about the rising number of online frauds targeting senior citizens, and suggest how they can be prevented.",
+      "ans": "Format (1m): sender's address, date, The Editor (name of daily, city), subject (e.g. 'Protect senior citizens from online fraud'), Sir/Madam, 'Yours truly', name.\nOrganisation of Ideas (1m): incident → extent of problem → reasons → remedies → appeal.\nContent (2m) — value points: personal incident (caller posing as bank official asking for OTP/KYC update); common tricks — fake KYC calls, prize messages, phishing links, screen-sharing apps, 'digital arrest' threats; why the elderly are targeted — trust, unfamiliarity with apps, living alone; remedies — awareness camps by banks and police, helpline 1930 and the cybercrime portal publicised widely, families and students teaching digital safety, banks never asking for OTP — repeated warnings, faster freezing of fraudulent accounts; appeal to authorities and media.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Devansh Rathore, 22 Shastri Circle, Jodhpur. You saw this advertisement: 'WANTED — Front Office Executive, The Lakeview Heritage Hotel, Udaipur. Graduate with a diploma in hotel management; fluent English and Hindi; knowledge of a foreign language an advantage; pleasant personality. Apply to the General Manager within a week.' Write a letter of application in 120–150 words, with your bio-data.",
+      "ans": "Format (1m): sender's address, date, The General Manager (hotel address), subject, Sir/Madam, 'Yours sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to advertisement, interest, key qualifications, request for interview) separate from bio-data.\nContent (2m) — value points: B.A./B.Com with diploma in hotel management; six-month internship at a hotel front desk; fluent English and Hindi, basic French; knowledge of reservation software; courteous, calm under pressure; knowledge of Rajasthan's heritage useful for guests. Bio-data — personal details, qualifications with years, experience, skills, languages, hobbies, references.\nGrammar & Spelling (1m)."
+     }
     }
    ]
   },
@@ -197,6 +517,26 @@
      "optB": {
       "scenario": "You are Prem Kumar, Secretary of the Health Club at Sarvodaya Vidyalaya, New Delhi. Your school recently participated in the launch of the 'Tobacco Free Youth Campaign'. Write a report in 120–150 words for your school magazine, detailing the event and activities planned.",
       "ans": "Report Format (1m): Headline, By-line, Place & Date, Para 1 (what/why/who/when/where), Para 2 (how it happened), Para 3 (steps taken/planned).\nContent (2m): Campaign launch details, rally/slogans/pledges, student participation, health pledges, future campaigns.\nOrganisation (1m), Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Many students still look upon vocational skills such as carpentry, electrical repair, tailoring or organic farming as a 'fallback' for those who do not do well in academics. You are Aditi Kulkarni, Class XII. Write an article in 120–150 words for your school magazine on 'Skills Alongside Scholarship', arguing that every student should learn a practical skill.",
+      "ans": "Format (1m): title, by-line (Aditi Kulkarni, XII), paragraphs.\nOrganisation of Ideas (1m): introduction (the stigma) → benefits → how schools can help → conclusion.\nContent (2m) — value points: the old divide between 'head' and 'hand' work; NEP 2020's call for vocational exposure and internships in school; benefits — confidence, problem-solving, dignity of labour, employability, entrepreneurship, better understanding of science through hands-on work; examples — coding, electrical repair, food processing, tailoring, kitchen gardening; how schools can help — skill labs, local artisans as mentors, short internships, skill fairs; conclusion — a skill complements, not replaces, scholarship.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Kavya Menon, President of the MUN Society of Riverside International School, Ahmedabad. Your school recently hosted a two-day inter-school Model United Nations conference. Write a report in 120–150 words for your school newsletter.",
+      "ans": "Format (1m): heading (e.g. 'Young Diplomats Debate World Issues'), by-line, place and date.\nOrganisation (1m): what, when, where, who → proceedings → outcome.\nContent (2m) — value points: dates and venue; number of schools and delegates; inauguration by the Principal/chief guest; committees and agendas (e.g. UNGA on climate refugees, UNSC on maritime security, WHO on pandemic preparedness); position papers, debates, draft resolutions; crisis session; best-delegate and verbal-mention awards; valedictory; impact — research, public speaking, diplomacy, respect for other views; vote of thanks.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Summers in Indian cities are becoming harsher, and concrete-covered neighbourhoods stay hot even at night. You are Vivek/Vidya Nair. Write an article in 120–150 words for a national daily on 'Cooling Our Cities: Why We Need More Trees'.",
+      "ans": "Format (1m): title, by-line, paragraphs.\nOrganisation of Ideas (1m): problem → causes → role of trees → action → conclusion.\nContent (2m) — value points: heatwaves and the 'urban heat island' effect — concrete, asphalt and glass absorb heat and release it at night; loss of green cover for roads and buildings; effects — heat stress, higher electricity use for cooling, worse air quality, hardship for outdoor workers; trees cool through shade and transpiration, absorb dust and carbon dioxide, support birds; actions — plant native, shade-giving species (neem, peepal, jamun), protect existing trees, green school campuses and terraces, involve RWAs and students in tree adoption, cool roofs; conclusion — a tree planted today is shade for the next generation.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Arnav Gupta, Head Boy of Sanskriti Public School, Lucknow. Your school recently organised a Career Guidance Fair for students of Classes X–XII. Write a report in 120–150 words for your school magazine.",
+      "ans": "Format (1m): heading (e.g. 'Career Fair Opens New Doors'), by-line, place and date.\nOrganisation (1m): what-when-where-who → events → response → outcome.\nContent (2m) — value points: date, venue, inauguration; stalls by universities, skill institutes, armed forces, design and law schools; talks by professionals (doctor, data scientist, entrepreneur, civil servant); aptitude tests and one-to-one counselling; parents' session; information on entrance exams and scholarships; student response and questions; outcome — clearer, informed choices beyond conventional careers; vote of thanks.\nGrammar & Spelling (1m)."
      }
     }
    ]
@@ -289,6 +629,178 @@
        }
       ]
      }
+    },
+    {
+     "optA": {
+      "title": "Keeping Quiet (Pablo Neruda)",
+      "extract": "It would be an exotic moment / without rush, without engines, / we would all be together / in a sudden strangeness. // Fishermen in the cold sea / would not harm whales / and the man gathering salt / would look at his hurt hands.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: The moment is called 'exotic' because it would be ________. (rare and unfamiliar / foreign and colourful / dangerous and thrilling)",
+        "marks": 1,
+        "ans": "rare and unfamiliar"
+       },
+       {
+        "n": "II",
+        "q": "The phrase 'without rush, without engines' points to the poet's criticism of ________.\nA. the replacement of farm animals by machines\nB. the shortage of transport in villages\nC. the frantic pace and noise of modern life\nD. unemployment caused by industries",
+        "marks": 1,
+        "ans": "C — the frantic pace and noise of modern life."
+       },
+       {
+        "n": "III",
+        "q": "Why would the togetherness the poet imagines feel like a 'sudden strangeness'?",
+        "marks": 1,
+        "ans": "Because people are so used to hurry, noise and division that being still and united, all at once, would feel unfamiliar."
+       },
+       {
+        "n": "IV",
+        "q": "The image of fishermen who 'would not harm whales' suggests that the pause would ________.\nA. put an end to fishing altogether\nB. improve the fishermen's catch\nC. make the sea calm for sailors\nD. make people aware of the harm they do to other creatures",
+        "marks": 1,
+        "ans": "D — make people aware of the harm they do to other creatures."
+       },
+       {
+        "n": "V",
+        "q": "What does the salt-gatherer looking at 'his hurt hands' reveal?",
+        "marks": 1,
+        "ans": "In the moment of stillness he would notice his own pain — the cost of endless labour that he normally ignores; the pause brings self-awareness."
+       },
+       {
+        "n": "VI",
+        "q": "Identify the poetic device in 'without rush, without engines'.\nA. Simile\nB. Repetition (anaphora)\nC. Personification\nD. Oxymoron",
+        "marks": 1,
+        "ans": "B — Repetition (anaphora): 'without' is repeated to stress the absence of hurry and machines."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Aunt Jennifer's Tigers (Adrienne Rich)",
+      "extract": "Aunt Jennifer's tigers prance across a screen, / Bright topaz denizens of a world of green. / They do not fear the men beneath the tree; / They pace in sleek chivalric certainty.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: The verb 'prance' shows that the tigers move with ________. (confidence and joy / fear and caution / anger and violence)",
+        "marks": 1,
+        "ans": "confidence and joy"
+       },
+       {
+        "n": "II",
+        "q": "In 'Bright topaz denizens of a world of green', the word 'denizens' means ________.\nA. hunters\nB. guardians\nC. visitors\nD. inhabitants",
+        "marks": 1,
+        "ans": "D — inhabitants (the tigers live in the green world of the jungle she has embroidered)."
+       },
+       {
+        "n": "III",
+        "q": "What contrast is implied between the tigers and the woman who creates them?",
+        "marks": 1,
+        "ans": "The tigers are fearless, proud and free, while Aunt Jennifer is timid and oppressed in her marriage; her art expresses the spirit she cannot live out."
+       },
+       {
+        "n": "IV",
+        "q": "Why is it significant that the tigers 'do not fear the men beneath the tree'?",
+        "marks": 1,
+        "ans": "The men stand for male power/patriarchy (and hunters); the tigers' fearlessness represents the defiance Aunt Jennifer longs for but lacks."
+       },
+       {
+        "n": "V",
+        "q": "The phrase 'sleek chivalric certainty' presents the tigers as ________.\nA. graceful, noble and self-assured\nB. clumsy and untamed\nC. cruel and bloodthirsty\nD. weary and resigned",
+        "marks": 1,
+        "ans": "A — graceful, noble and self-assured."
+       },
+       {
+        "n": "VI",
+        "q": "Write the rhyme scheme of the stanza.",
+        "marks": 1,
+        "ans": "aabb (two rhyming couplets: screen/green, tree/certainty)."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "My Mother at Sixty-six (Kamala Das)",
+      "extract": "…but soon / put that thought away, and / looked out at Young / Trees sprinting, the merry children spilling / out of their homes, but after the airport's / security check, standing a few yards / away, I looked again at her, wan, pale / as a late winter's moon and felt that old / familiar ache, my childhood's fear,",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete: The poet 'put that thought away' because ________.",
+        "marks": 1,
+        "ans": "she could not bear to dwell on the painful realisation that her mother was ageing and nearing death, so she distracted herself."
+       },
+       {
+        "n": "II",
+        "q": "Identify the poetic device in 'Young / Trees sprinting'.\nA. Simile\nB. Alliteration\nC. Personification\nD. Hyperbole",
+        "marks": 1,
+        "ans": "C — Personification (the trees are given the human action of sprinting; they seem to run past the moving car)."
+       },
+       {
+        "n": "III",
+        "q": "Why are the children described as 'merry' and 'spilling / out of their homes'?",
+        "marks": 1,
+        "ans": "To show youth, energy and abundance of life — a deliberate contrast with the tired, ageing mother beside the poet."
+       },
+       {
+        "n": "IV",
+        "q": "The simile 'pale / as a late winter's moon' suggests the mother's ________.\nA. calm beauty\nB. waning strength and approaching end\nC. cold and distant nature\nD. habit of travelling at night",
+        "marks": 1,
+        "ans": "B — waning strength and approaching end (a late winter's moon is dim and about to fade)."
+       },
+       {
+        "n": "V",
+        "q": "What is the poet's 'childhood's fear'?",
+        "marks": 1,
+        "ans": "The fear of losing her mother — of being separated from her for ever."
+       },
+       {
+        "n": "VI",
+        "q": "Pick out the word from the extract that means 'having lost healthy colour'.",
+        "marks": 1,
+        "ans": "wan"
+       }
+      ]
+     },
+     "optB": {
+      "title": "A Thing of Beauty (John Keats)",
+      "extract": "Therefore, on every morrow, are we wreathing / A flowery band to bind us to the earth, / Spite of despondence, of the inhuman dearth / Of noble natures, of the gloomy days, / Of all the unhealthy and o'er-darkened ways / Made for our searching:",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete: 'wreathing / A flowery band' refers to ________.",
+        "marks": 1,
+        "ans": "creating, day after day, bonds of beauty and happy memories that tie us lovingly to life on earth."
+       },
+       {
+        "n": "II",
+        "q": "'the inhuman dearth / Of noble natures' refers to ________.\nA. a scarcity of flowers and trees\nB. a shortage of food in hard times\nC. a lack of good, noble-hearted people\nD. the absence of gods in the modern world",
+        "marks": 1,
+        "ans": "C — a lack of good, noble-hearted people."
+       },
+       {
+        "n": "III",
+        "q": "What does 'on every morrow' suggest about the bond between man and beauty?",
+        "marks": 1,
+        "ans": "That it is renewed every day — beauty continually refreshes our attachment to life."
+       },
+       {
+        "n": "IV",
+        "q": "Mention any two hardships of human life referred to in the extract.",
+        "marks": 1,
+        "ans": "Any two (½ each): despondence (despair); the dearth of noble natures; gloomy days; unhealthy and dark ways of life."
+       },
+       {
+        "n": "V",
+        "q": "The poet's attitude in the extract is ________.\nA. hopeful despite suffering\nB. bitter and pessimistic\nC. angry and rebellious\nD. indifferent and detached",
+        "marks": 1,
+        "ans": "A — hopeful despite suffering."
+       },
+       {
+        "n": "VI",
+        "q": "What does the phrase 'to bind us to the earth' suggest?",
+        "marks": 1,
+        "ans": "That beauty gives us a reason to live and keeps us attached to life in spite of its sorrows."
+       }
+      ]
+     }
     }
    ]
   },
@@ -353,6 +865,130 @@
         "q": "List any one way how Annan's advice, 'Work hard and learn,' contributes to his characterisation in this extract.",
         "marks": 1,
         "ans": "It portrays Annan as a visionary and compassionate guide who believes in education as a means of empowerment and social equality."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "The Tiger King (Kalki)",
+      "extract": "The Maharaja of Pratibandapuram is the hero of this story. He may be identified as His Highness Jamedar-General, Khiledar-Major, Sata Vyaghra Samhari, Maharajadhiraja Visva Bhuvana Samrat, Sir Jilani Jung Jung Bahadur, M.A.D., A.C.T.C., or C.R.C.K. But this name is often shortened to the Tiger King.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "The writer lists the king's many titles mainly to ________.\nA. honour the king's military achievements\nB. satirise the vanity and pomp of princely rulers\nC. provide accurate historical information\nD. show how well-educated the king was",
+        "marks": 1,
+        "ans": "B — satirise the vanity and pomp of princely rulers."
+       },
+       {
+        "n": "II",
+        "q": "What does the title 'Sata Vyaghra Samhari' (slayer of a hundred tigers) foreshadow?",
+        "marks": 1,
+        "ans": "The king's obsession with killing a hundred tigers to defeat the prophecy — and the irony that the 'hundredth tiger', a wooden toy, finally causes his death."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The string of letters 'M.A.D., A.C.T.C., C.R.C.K.' adds humour because ________.",
+        "marks": 1,
+        "ans": "it looks like a list of grand honours or degrees, but 'M.A.D.' reads as 'mad' and the rest are meaningless — mocking the king's self-importance."
+       },
+       {
+        "n": "IV",
+        "q": "The tone of the extract is best described as ________.\nA. reverent and admiring\nB. tragic and solemn\nC. mock-heroic and ironic\nD. neutral and indifferent",
+        "marks": 1,
+        "ans": "C — mock-heroic and ironic."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Journey to the End of the Earth (Tishani Doshi)",
+      "extract": "Human civilisations have been around for a paltry 12,000 years — barely a few seconds on the geological clock. In that short amount of time, we've managed to create quite a ruckus, etching our dominance over the planet with our villages, towns, cities, megacities. The rapid increase of human populations has led us to fight with other species for limited resources, and the unabated burning of fossil fuels has now created a blanket of carbon dioxide around the world, which is slowly but surely increasing the average global temperature.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Why does the writer call 12,000 years 'paltry'?",
+        "marks": 1,
+        "ans": "Compared with the earth's geological history of millions of years, 12,000 years is tiny — 'barely a few seconds on the geological clock'."
+       },
+       {
+        "n": "II",
+        "q": "The expression 'create quite a ruckus' suggests that humans have ________.\nA. caused great disturbance to the planet in a short time\nB. lived in harmony with other species\nC. filled the world with music and festivals\nD. explored the farthest corners of space",
+        "marks": 1,
+        "ans": "A — caused great disturbance to the planet in a short time."
+       },
+       {
+        "n": "III",
+        "q": "Complete: According to the extract, the unabated burning of fossil fuels has ________.",
+        "marks": 1,
+        "ans": "created a blanket of carbon dioxide around the world that is slowly but surely raising the average global temperature."
+       },
+       {
+        "n": "IV",
+        "q": "Which two human activities does the writer blame in the extract?\nA. Tourism and scientific research\nB. Mining and deforestation\nC. War and migration\nD. Population growth and burning of fossil fuels",
+        "marks": 1,
+        "ans": "D — Population growth and burning of fossil fuels."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "The Third Level (Jack Finney)",
+      "extract": "The presidents of the New York Central and the New York, New Haven and Hartford railroads will swear on a stack of timetables that there are only two. But I say there are three, because I've been on the third level of the Grand Central Station. Yes, I've taken the obvious step: I talked to a psychiatrist friend of mine, among others. I told him about the third level at Grand Central Station, and he said it was a waking-dream wish fulfilment.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "'swear on a stack of timetables' is a humorous twist on ________.\nA. swearing on a holy book to prove one is telling the truth\nB. checking timetables before travelling\nC. complaining about late trains\nD. signing an official railway document",
+        "marks": 1,
+        "ans": "A — swearing on a holy book to prove one is telling the truth."
+       },
+       {
+        "n": "II",
+        "q": "On what grounds does the narrator insist that there are three levels?",
+        "marks": 1,
+        "ans": "On his own experience — he claims he has personally been on the third level of Grand Central Station."
+       },
+       {
+        "n": "III",
+        "q": "Complete: By calling the third level a 'waking-dream wish fulfilment', the psychiatrist means that ________.",
+        "marks": 1,
+        "ans": "Charley imagined it while awake because he wished to escape his worries and insecurity in the modern world."
+       },
+       {
+        "n": "IV",
+        "q": "The narrator's tone in the extract is ________.\nA. fearful and confused\nB. defensive yet confident\nC. angry and bitter\nD. sad and regretful",
+        "marks": 1,
+        "ans": "B — defensive yet confident (he expects disbelief but sticks to his claim)."
+       }
+      ]
+     },
+     "optB": {
+      "title": "The Enemy (Pearl S. Buck)",
+      "extract": "Dr Sadao Hoki's house was built on a spot on the Japanese coast where as a little boy he had often played. The low square stone house was set upon rocks well above a narrow beach that was outlined with bent pines. As a boy Sadao had climbed the pines, supporting himself on his bare feet, as he had seen men do in the South Seas when they climbed for coconuts.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "What does the location of the house tell us about Sadao's bond with his homeland?",
+        "marks": 1,
+        "ans": "He has deep roots there — he built his home where he played as a child, showing a strong attachment to Japan and his past."
+       },
+       {
+        "n": "II",
+        "q": "The 'bent pines' most likely suggest ________.\nA. trees decorated for a festival\nB. trees that had died long ago\nC. trees cut by local fishermen\nD. trees shaped by strong sea winds",
+        "marks": 1,
+        "ans": "D — trees shaped by strong sea winds on an exposed coast."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The house's position 'well above a narrow beach' becomes important later in the story because ________.",
+        "marks": 1,
+        "ans": "from there Sadao and Hana see the wounded American washed ashore; the lonely spot lets them hide him and later help him escape by boat to a nearby island."
+       },
+       {
+        "n": "IV",
+        "q": "The main purpose of this extract is to ________.\nA. describe the war between Japan and America\nB. establish the setting and Sadao's roots\nC. criticise Sadao's lifestyle\nD. explain how coconuts are harvested",
+        "marks": 1,
+        "ans": "B — establish the setting and Sadao's roots."
        }
       ]
      }
@@ -447,6 +1083,178 @@
        }
       ]
      }
+    },
+    {
+     "optA": {
+      "title": "The Last Lesson (Alphonse Daudet)",
+      "extract": "I started for school very late that morning and was in great dread of a scolding, especially because M. Hamel had said that he would question us on participles, and I did not know the first word about them. For a moment I thought of running away and spending the day out of doors. It was so warm, so bright! The birds were chirping at the edge of the woods; and in the open field back of the sawmill the Prussian soldiers were drilling. It was all much more tempting than the rule for participles, but I had the strength to resist, and hurried off to school.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Franz was 'in great dread of a scolding' mainly because ________.\nA. he had quarrelled with his classmates\nB. he was late and unprepared for the test on participles\nC. he had lost his books on the way\nD. the Prussian soldiers had stopped him",
+        "marks": 1,
+        "ans": "B — he was late and unprepared for the test on participles."
+       },
+       {
+        "n": "II",
+        "q": "Complete: The description of the warm, bright morning sets up a contrast between ________ and ________.",
+        "marks": 1,
+        "ans": "the freedom and temptation of the outdoors and the dull, fearful prospect of the lesson on participles."
+       },
+       {
+        "n": "III",
+        "q": "What is ironic about the Prussian soldiers drilling 'in the open field', given what Franz learns at school that day?",
+        "marks": 1,
+        "ans": "Franz sees the soldiers as part of a pleasant scene, but they are the occupying force — that very day he learns that an order from Berlin has ended French teaching in Alsace and Lorraine."
+       },
+       {
+        "n": "IV",
+        "q": "The words 'I had the strength to resist' reveal that Franz ________.\nA. was rebellious by nature\nB. did not care about punishment\nC. was basically dutiful, despite the temptation\nD. wanted to see the soldiers closely",
+        "marks": 1,
+        "ans": "C — was basically dutiful, despite the temptation."
+       },
+       {
+        "n": "V",
+        "q": "What does the phrase 'I did not know the first word about them' tell us about Franz's attitude to his studies at this stage?",
+        "marks": 1,
+        "ans": "He was careless about his lessons and had not prepared at all — he took school lightly before he realised its value."
+       },
+       {
+        "n": "VI",
+        "q": "Which of the following can be inferred from the extract?\n1. Franz often neglected his lessons.\n2. M. Hamel was known to scold pupils who were unprepared.\n3. Franz was drawn to the beauty of nature.\n4. The villagers welcomed the Prussian soldiers.\nA. 1, 2 and 3\nB. 2 and 4\nC. 1 and 4\nD. 3 and 4",
+        "marks": 1,
+        "ans": "A — 1, 2 and 3. (Nothing in the extract suggests the villagers welcomed the soldiers.)"
+       }
+      ]
+     },
+     "optB": {
+      "title": "Indigo (Louis Fischer)",
+      "extract": "When I first visited Gandhi in 1942 at his ashram in Sevagram, in central India, he said, 'I will tell you how it happened that I decided to urge the departure of the British. It was in 1917.'\nHe had gone to the December 1916 annual convention of the Indian National Congress party in Lucknow. There were 2,301 delegates and many visitors. During the proceedings, Gandhi recounted, 'a peasant came up to me looking like any other peasant in India, poor and emaciated, and said, \"I am Rajkumar Shukla. I am from Champaran, and I want you to come to my district\"!'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: Gandhi's words suggest that the events of 1917 were ________ in his decision to urge the departure of the British. (incidental / decisive / irrelevant)",
+        "marks": 1,
+        "ans": "decisive"
+       },
+       {
+        "n": "II",
+        "q": "The writer most likely mentions the 2,301 delegates and many visitors in order to ________.\nA. show how wealthy the Congress party was\nB. contrast a huge, formal gathering with one humble peasant who reached Gandhi\nC. explain why Gandhi was too busy to meet anyone\nD. criticise the Congress for ignoring peasants",
+        "marks": 1,
+        "ans": "B — contrast a huge, formal gathering with one humble peasant who reached Gandhi."
+       },
+       {
+        "n": "III",
+        "q": "What do the words 'poor and emaciated' suggest about the peasants of Champaran?",
+        "marks": 1,
+        "ans": "They were starved and exploited — the indigo sharecropping system imposed by British landlords had left them in extreme poverty."
+       },
+       {
+        "n": "IV",
+        "q": "Which quality of Rajkumar Shukla is evident from his approach to Gandhi? Support your answer.",
+        "marks": 1,
+        "ans": "Determination/persistence — an ordinary, unknown peasant boldly approached a national leader at a big convention and directly asked him to come to Champaran."
+       },
+       {
+        "n": "V",
+        "q": "Whose account is presented in the extract?\nA. Rajkumar Shukla's diary\nB. A Congress delegate's speech\nC. Gandhi's autobiography\nD. Louis Fischer's record of what Gandhi told him",
+        "marks": 1,
+        "ans": "D — Louis Fischer's record of what Gandhi told him at Sevagram in 1942."
+       },
+       {
+        "n": "VI",
+        "q": "Based on the extract, why can the meeting with Shukla be called a turning point?",
+        "marks": 1,
+        "ans": "It took Gandhi to Champaran, the struggle that Gandhi himself links to his decision to urge the British to leave India — it showed him that ordinary Indians could resist injustice without fear."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "Lost Spring (Anees Jung)",
+      "extract": "'Why do you do this?' I ask Saheb whom I encounter every morning scrounging for gold in the garbage dumps of my neighbourhood. Saheb left his home long ago. Set amidst the green fields of Dhaka, his home is not even a distant memory. There were many storms that swept away their fields and homes, his mother tells him. That's why they left, looking for gold in the big city where he now lives.\n'I have nothing else to do,' he mutters, looking away.\n'Go to school,' I say glibly, realising immediately how hollow the advice must sound.\n'There is no school in my neighbourhood. When they build one, I will go.'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Why is Saheb's search through garbage described as 'scrounging for gold'?",
+        "marks": 1,
+        "ans": "For ragpickers garbage is as precious as gold — it is their means of survival; the phrase is also ironic, since the 'gold' is only waste."
+       },
+       {
+        "n": "II",
+        "q": "The word 'glibly' shows that the author's advice was ________.\nA. given angrily\nB. carefully planned\nC. given easily, without thinking about how practical it was\nD. meant as a joke",
+        "marks": 1,
+        "ans": "C — given easily, without thinking about how practical it was."
+       },
+       {
+        "n": "III",
+        "q": "Why did Saheb's family leave Dhaka?",
+        "marks": 1,
+        "ans": "Many storms swept away their fields and homes, so they came to the big city looking for a living."
+       },
+       {
+        "n": "IV",
+        "q": "Complete: Saheb's reply, 'When they build one, I will go', reveals ________.",
+        "marks": 1,
+        "ans": "his innocence and wish to study, and also that poor neighbourhoods lack schools — his education depends on circumstances beyond his control."
+       },
+       {
+        "n": "V",
+        "q": "'his home is not even a distant memory' suggests that ________.\nA. Saheb left Dhaka as a very small child\nB. Saheb wants to forget his home\nC. Saheb's mother never spoke about Dhaka\nD. Saheb's home was in the city",
+        "marks": 1,
+        "ans": "A — Saheb left Dhaka as a very small child."
+       },
+       {
+        "n": "VI",
+        "q": "What does Saheb's action of 'looking away' reveal about his feelings?",
+        "marks": 1,
+        "ans": "Embarrassment or helplessness — he avoids the author's eyes because he knows his life has no better option."
+       }
+      ]
+     },
+     "optB": {
+      "title": "The Rattrap (Selma Lagerlöf)",
+      "extract": "The whole world, with its lands and seas, its cities and villages, was nothing but a big rattrap. It had never existed for any other purpose than to set baits for people. It offered riches and joys, shelter and food, heat and clothing, exactly as the rattrap offered cheese and pork, and as soon as anybody let himself be tempted to touch the bait, it closed in on him, and then everything came to an end.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete: The peddler compares the world to a rattrap because ________.",
+        "marks": 1,
+        "ans": "he believes it tempts people with attractive baits and then traps and ruins those who reach for them."
+       },
+       {
+        "n": "II",
+        "q": "Which of the following are the 'baits' the world offers, according to the extract?\nA. Cheese and pork only\nB. Lands, seas, cities and villages\nC. Wire, traps and tools\nD. Riches, joys, shelter, food, heat and clothing",
+        "marks": 1,
+        "ans": "D — Riches, joys, shelter, food, heat and clothing."
+       },
+       {
+        "n": "III",
+        "q": "What does this philosophy reveal about the peddler's state of mind?",
+        "marks": 1,
+        "ans": "He is bitter, lonely and cynical; the world has never been kind to him, so he takes pleasure in thinking ill of it."
+       },
+       {
+        "n": "IV",
+        "q": "The comparison running through the whole extract is an example of ________.\nA. an extended metaphor\nB. onomatopoeia\nC. alliteration\nD. an oxymoron",
+        "marks": 1,
+        "ans": "A — an extended metaphor."
+       },
+       {
+        "n": "V",
+        "q": "How does the peddler himself get caught in the 'rattrap' later in the story?",
+        "marks": 1,
+        "ans": "He steals the crofter's thirty kronor (the bait), then gets lost in the forest and realises he has walked into the trap himself."
+       },
+       {
+        "n": "VI",
+        "q": "What finally frees the peddler from the trap?",
+        "marks": 1,
+        "ans": "Edla Willmansson's kindness — she treats him like a captain, which awakens his better self, and he returns the money."
+       }
+      ]
+     }
     }
    ]
   },
@@ -455,7 +1263,7 @@
    "items": [
     {
      "n": "I",
-     "src": "The Interview II",
+     "src": "The Interview",
      "q": "According to the interview, how did Umberto Eco make his academic writing accessible to readers?",
      "marks": 2,
      "ans": "Umberto Eco made his academic writing accessible by blending scholarly ideas with clarity, humour, and narrative elements. He avoided obscure jargon, used examples familiar to readers, and treated writing as intellectual communication rather than mere technical exposition."
@@ -494,6 +1302,90 @@
      "q": "What does Aunt Jennifer's portrayal of the tigers suggest about her suppressed desires?",
      "marks": 2,
      "ans": "Aunt Jennifer's tigers symbolise her suppressed desire for freedom, strength, and fearlessness. Unlike her constrained life, the tigers move confidently and dominantly, reflecting her inner longing to escape patriarchal oppression and assert her identity beyond marital limitations."
+    },
+    {
+     "n": "I",
+     "src": "Deep Water",
+     "q": "How did Douglas's experience on a California beach as a small child sow the seeds of his fear of water?",
+     "marks": 2,
+     "ans": "When he was three or four, his father took him to a beach in California. As they stood in the surf, the waves knocked him down and swept over him; he was buried under water, his breath was gone, and he was frightened. His father laughed, but the terror stayed and gave him an aversion to water."
+    },
+    {
+     "n": "II",
+     "src": "Poets and Pancakes",
+     "q": "Why did the visit of the English poet to Gemini Studios remain a mystery to its staff?",
+     "marks": 2,
+     "ans": "The studio made Tamil films for simple folk and no one could see why a poet should address its staff. His accent was hard to follow and the audience listened in bewildered silence. Only years later did the author learn, from 'The God That Failed', that the visitor was Stephen Spender, editor of 'The Encounter'."
+    },
+    {
+     "n": "III",
+     "src": "Going Places",
+     "q": "How do Sophie and Jansie differ in their expectations of life after school?",
+     "marks": 2,
+     "ans": "Jansie is realistic: she accepts that both of them are 'earmarked' for the biscuit factory. Sophie refuses to accept this and dreams of owning a boutique or becoming an actress or a fashion designer, ignoring that she lacks the money and opportunity."
+    },
+    {
+     "n": "IV",
+     "src": "A Thing of Beauty",
+     "q": "Name any four 'things of beauty' that, according to Keats, remove the 'pall' from our dark spirits. What do they have in common?",
+     "marks": 2,
+     "ans": "The sun, the moon, trees old and young, sheep, daffodils, clear rills, musk-rose blooms in the mid-forest brake, the grandeur of the mighty dead, lovely tales (any four — 1 mark). They are simple, natural and freely available to all, and they lift human suffering (1 mark)."
+    },
+    {
+     "n": "V",
+     "src": "A Roadside Stand",
+     "q": "What 'childish longing' does the poet notice in the owners of the roadside stand, and why does he call it 'vain'?",
+     "marks": 2,
+     "ans": "They long for a passing car to stop and buy their produce so that some city money comes their way. It is vain because the cars rush by without a glance; if one ever stops, it is only to ask the way, to turn around, or to ask whether they sell gas."
+    },
+    {
+     "n": "VI",
+     "src": "The Rattrap",
+     "q": "Why did the peddler accept Edla Willmansson's invitation after turning down the ironmaster's?",
+     "marks": 2,
+     "ans": "He feared the ironmaster's invitation because he had stolen thirty kronor and might be found out. Edla's kindness and compassion reassured him, and she promised that he could leave just as freely as he had come — so he trusted her and went."
+    },
+    {
+     "n": "I",
+     "src": "The Last Lesson",
+     "q": "What unusual things did Franz notice in the classroom on the day of the last lesson?",
+     "marks": 2,
+     "ans": "Any four (½ each): there was no usual bustle — it was as quiet as a Sunday morning; M. Hamel did not scold him for being late but spoke kindly; M. Hamel wore his fine Sunday clothes — green coat, frilled shirt and embroidered black silk cap; the village elders, including old Hauser with his primer, sat on the back benches; everyone looked sad and solemn."
+    },
+    {
+     "n": "II",
+     "src": "The Interview",
+     "q": "Why does Umberto Eco describe himself as 'a university professor who writes novels on Sundays'?",
+     "marks": 2,
+     "ans": "He sees his identity mainly as an academic and scholar; his novels are a weekend pursuit. Even 'The Name of the Rose', which sold between 10 and 15 million copies, did not change his view that he belongs primarily to the academic community."
+    },
+    {
+     "n": "III",
+     "src": "Aunt Jennifer's Tigers",
+     "q": "What do Aunt Jennifer's 'fluttering' fingers and the 'ivory needle' that is hard to pull suggest?",
+     "marks": 2,
+     "ans": "Her fingers flutter with nervousness and fear; she finds even the light ivory needle hard to pull. Both show how weak and frightened she has become under the burden of an oppressive marriage."
+    },
+    {
+     "n": "IV",
+     "src": "Keeping Quiet",
+     "q": "Why does Neruda say that his call for stillness should not be confused with 'total inactivity'?",
+     "marks": 2,
+     "ans": "He wants a pause for introspection, not death or idleness — 'Life is what it is about; I want no truck with death.' The silence should help people understand themselves and stop harming others, not end life's activity."
+    },
+    {
+     "n": "V",
+     "src": "Going Places",
+     "q": "How does Geoff's attitude to life differ from Sophie's?",
+     "marks": 2,
+     "ans": "Geoff, an apprentice mechanic, is quiet and practical and accepts his working life, though he enjoys his own private world. Sophie romanticises his silence and his journeys across the city and lives in fantasies about fame and wealth."
+    },
+    {
+     "n": "VI",
+     "src": "Poets and Pancakes",
+     "q": "Why does the author describe Kothamangalam Subbu as a valuable figure at Gemini Studios?",
+     "marks": 2,
+     "ans": "Subbu, the Boss's No. 2, gave a sense of direction to film-making; he could suggest many solutions to any creative problem. A poet and novelist (author of 'Thillana Mohanambal') and a fine actor, he was also loyal and generous, with many people dependent on him."
     }
    ]
   },
@@ -520,6 +1412,48 @@
      "q": "Describe the idea that emerges from the author's portrayal of Antarctica as a warning rather than a destination.",
      "marks": 2,
      "ans": "Antarctica is portrayed as a warning about environmental destruction rather than a tourist destination. The continent highlights the fragile balance of nature and the consequences of human interference, urging reflection on ecological responsibility before irreversible damage occurs."
+    },
+    {
+     "n": "I",
+     "src": "On the Face of It",
+     "q": "Why does Derry return to Mr Lamb's garden even though his mother has forbidden it?",
+     "marks": 2,
+     "ans": "Mr Lamb treated him as normal and made him see that life offers much more than his burnt face. Derry realises that if he does not go back now he will never go anywhere; returning is his choice to face the world instead of hiding."
+    },
+    {
+     "n": "II",
+     "src": "The Enemy",
+     "q": "How did Dr Sadao's servants react to his sheltering the American prisoner of war?",
+     "marks": 2,
+     "ans": "They disapproved strongly, fearing punishment and seeing it as disloyal to Japan. Yumi refused to wash the white man, the others refused to help and grumbled about harbouring an enemy, and finally all the servants left the house together."
+    },
+    {
+     "n": "III",
+     "src": "Memories of Childhood",
+     "q": "Why did Zitkala-Sa resist having her long hair cut at the Carlisle Indian School?",
+     "marks": 2,
+     "ans": "Her mother had taught her that short hair was worn by mourners, and shingled hair by cowards (captured warriors). So she hid under a bed; when she was dragged out and her hair was cut, she felt she had lost her spirit and dignity."
+    },
+    {
+     "n": "I",
+     "src": "Journey to the End of the Earth",
+     "q": "Explain the lesson of the phytoplankton: 'take care of the small things and the big things will take care of themselves'.",
+     "marks": 2,
+     "ans": "Phytoplankton are single-celled plants that sustain the entire Southern Ocean food chain and, through photosynthesis, absorb carbon and release oxygen. Further depletion of the ozone layer would harm them, and with them all marine life and the global carbon cycle — so protecting the smallest life forms protects the whole planet."
+    },
+    {
+     "n": "II",
+     "src": "Memories of Childhood",
+     "q": "Which incident first made Bama aware of untouchability?",
+     "marks": 2,
+     "ans": "On her way home she saw an elder of her street carrying a packet of vadai by its string, without touching it, and handing it to a Naicker landlord. She found it funny at first, but her brother Annan explained that people of their community were considered untouchable."
+    },
+    {
+     "n": "III",
+     "src": "The Tiger King",
+     "q": "How did the Maharaja save his throne after refusing a British officer permission to hunt a tiger?",
+     "marks": 2,
+     "ans": "To pacify the officer, the Maharaja sent his wife about fifty expensive diamond rings, worth around three lakh rupees, expecting her to choose one or two. She kept all of them and sent her thanks — the throne was saved, but at great cost."
     }
    ]
   },
@@ -535,6 +1469,26 @@
       "q": "Indigo and Poets and Pancakes present power operating in very different contexts. Gandhi's actions in Champaran and the ironic portrayal of Gemini Studios bring out ways in which authority is questioned in these texts. Discuss.",
       "ans": "In Indigo, British planters exercise colonial authority by compelling peasants to grow indigo unfairly. Gandhi challenges this through calm defiance (refusing to leave Champaran), inspiring spontaneous peasant support and triggering an official inquiry that leads to reform.\n\nIn Poets and Pancakes, studio authority operates through hierarchy and insecurity (the Legal Adviser's hollow influence). Asokamitran's ironic tone exposes the emptiness of such authority by mocking its self-importance.\n\nConclusion: Authority can be challenged through ethical resistance (Gandhi) or by exposing its emptiness through irony (Asokamitran). Both texts question power in their respective contexts."
      }
+    },
+    {
+     "optA": {
+      "q": "Some see the interview as a source of truth and even an art; others see it as an intrusion that wounds the person interviewed. Discuss these contrasting views as presented in Part I of 'The Interview'. Which view do you find more convincing in today's age of social media?",
+      "ans": "Value points:\n• Positive view: the interview is a commonplace of journalism; some regard it as a source of truth and an art; Denis Brian notes that almost everything of moment reaches us through one person asking questions of another; the interviewer holds great power and influence.\n• Negative view: V.S. Naipaul felt people are wounded by interviews and lose a part of themselves; Lewis Carroll had a 'just horror of the interviewer'; Rudyard Kipling called it immoral, a crime, an assault; H.G. Wells spoke of 'the interviewing ordeal' (though he himself interviewed Stalin); Saul Bellow described interviews as like thumbprints on his windpipe.\n• Own view (any reasoned stand): e.g. social media has multiplied both — interviews give public access to ideas, but viral clips, trolling and loss of privacy make the intrusion sharper; balance through consent and responsible journalism.\nMarking: content 3 (both views + own stand), organisation/expression 2."
+     },
+     "optB": {
+      "q": "Saheb and Mukesh are both trapped by poverty, yet only Mukesh dares to dream. Compare the two boys in 'Lost Spring' and explain what Mukesh's dream of becoming a motor mechanic signifies.",
+      "ans": "Value points:\n• Saheb: ragpicker in Seemapuri whose family fled storms in Dhaka; his name, 'Saheb-e-Alam' (lord of the universe), is ironic; barefoot and without school; later works at a tea stall for ₹800 and all his meals — the steel canister is heavier than the plastic bag because he has lost his freedom and is no longer his own master.\n• Mukesh: son of a bangle-making family in Firozabad, where generations are trapped by poverty, caste, sahukars, middlemen, police and politicians — the 'vicious circle'; elders accept it as 'karam'.\n• Mukesh insists on being his own master and wants to be a motor mechanic, even though the garage is far and he will walk there.\n• Significance: his dream breaks the inherited cycle; it shows that hope and self-assertion can survive even in crushing poverty; contrast with Saheb, who drifts from one dependence to another.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Describe the stages through which William Douglas overcame his fear of water in 'Deep Water' and how he tested himself afterwards. What lesson does his experience teach?",
+      "ans": "Value points:\n• Two frightening experiences — the waves on a California beach, and the near-drowning when a big boy threw him into the deep end of the Y.M.C.A. pool.\n• Hired an instructor; practised five days a week, an hour a day, from October to April: a rope attached to a belt round his waist ran through a pulley; he learnt to put his face under water, exhale under water and inhale above, then to kick with his legs, and finally to swim lengths of the pool.\n• Residual terror remained, so he tested himself: swam two miles across Lake Wentworth in New Hampshire to Stamp Act Island, and then at Warm Lake dived in, swam to the other shore and back, and shouted with joy — the terror had fled.\n• Lesson: the fear of fear can be conquered by will and patient effort; in Roosevelt's words, 'All we have to fear is fear itself'; having faced death, he felt a sense of peace.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "'The battle of Champaran is won!' Gandhi's campaign in Champaran achieved far more than a refund to the peasants. Discuss how his methods — fearless non-violent defiance, insistence on self-reliance and social work — made Champaran a turning point.",
+      "ans": "Value points:\n• Background: sharecroppers were forced to grow indigo on 15% of their land; when synthetic indigo arrived, the planters extorted compensation for releasing them.\n• Fearless defiance: Gandhi disobeyed the order to quit Champaran; thousands of peasants gathered at Motihari; the case against him was dropped — civil disobedience triumphed for the first time in modern India.\n• Settlement: an official inquiry followed; the planters agreed to refund 25% of the money; Gandhi accepted because the refund mattered less than the planters' surrender of prestige — within a few years they left the estates.\n• Self-reliance: he declined C.F. Andrews' help, saying the peasants must not lean on an Englishman; Indians had to free themselves.\n• Social work: schools opened in six villages, with Kasturba, Mahadev Desai and Narhari Parikh teaching; a doctor volunteered; hygiene and sanitation were improved.\n• Turning point: the peasants learnt courage; Gandhi's politics became linked to the daily problems of ordinary people.\nMarking: content 3, organisation/expression 2."
+     }
     }
    ]
   },
@@ -549,6 +1503,26 @@
      "optB": {
       "q": "Dr Sadao's decision to shelter an enemy soldier places him in a moral dilemma. Assess whether this decision can be seen as an act of moral courage in the face of competing national loyalties in The Enemy.",
       "ans": "As a Japanese citizen during wartime, Sadao is expected to report the American prisoner — harbouring him risks severe punishment and social disgrace.\n\nHowever, Sadao's actions reflect moral courage: guided by his identity as a doctor, he prioritises the universal value of human life over political allegiance. His statement that a doctor's duty is to save lives regardless of nationality reinforces this ethical stance.\n\nThough conflicted, he shelters the soldier, performs surgery, and later helps him escape — demonstrating that true courage lies in upholding humanitarian principles even when they oppose dominant national expectations. His dilemma makes the act all the more courageous: he chooses ethics over convenience."
+     }
+    },
+    {
+     "optA": {
+      "q": "In 'The Third Level', Charley's grandfather's stamp collection and his friend Sam play a crucial part in blurring the line between reality and fantasy. Discuss.",
+      "ans": "Value points:\n• Charley inherited his grandfather's stamp collection; Sam, his psychiatrist friend, calls the hobby (and the third level) a 'temporary refuge from reality'.\n• Charley finds in the collection a first-day cover postmarked July 1894, addressed to his grandfather in Galesburg, Illinois — something that could not have been there before.\n• The letter is from Sam, who says he has found the third level, settled in Galesburg of 1894 and started a hay, feed and grain business, and urges Charley and Louisa to keep looking.\n• Sam has disappeared; Charley learns he bought about $800 of old-style currency — the very psychiatrist who dismissed the third level has used it to escape.\n• Effect: the rational explanation and the fantastic event collide; the ending leaves the reader unsure whether the third level is psychological or real, deepening the theme of escape from modern stress.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "Explain how Geoff Green's 'Students on Ice' programme hopes to shape the future by taking high-school students to Antarctica. How effective do you think such first-hand experience can be?",
+      "ans": "Value points:\n• Founder Geoff Green felt that taking only celebrities and retirees to Antarctica gave little back; he chose young people at an impressionable age.\n• The aim: give them an inspiring educational opportunity to understand the planet and respect it.\n• Seeing glaciers retreat and ice shelves collapse makes global warming real, not abstract.\n• The students are future policy-makers; first-hand understanding may lead them to act responsibly.\n• Own evaluation: experiential learning creates lasting conviction and empathy; but the impact depends on students sharing their experience and on wider policy action (any reasoned view).\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "The play 'On the Face of It' ends with Mr Lamb lying fallen from his ladder just as Derry returns. Discuss the significance of this ending for Derry.",
+      "ans": "Value points:\n• Derry returns against his mother's wishes, saying that if he does not go back now he will never go anywhere — a sign of his growth.\n• He finds Mr Lamb fallen from the ladder while picking crab-apples; Derry weeps beside him and says he came back.\n• Irony: the man who taught him to see beyond disability is struck down at the very moment Derry chooses life.\n• Significance: Derry has moved from self-pity and anger to care for another person; his return proves that Mr Lamb's lessons — to be curious about the world and not let others' stares define him — have taken root.\n• The ending is tragic yet hopeful: friendship and acceptance have changed Derry for good.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "Zitkala-Sa and Bama belong to different cultures and centuries, yet both faced humiliation and both chose to resist. Compare their experiences in 'Memories of Childhood'.",
+      "ans": "Value points:\n• Zitkala-Sa: a Native American girl at the Carlisle Indian School; the noisy bell, tight clothes and the loss of her blanket made her feel indecently dressed; the rigid dining rules confused her; she hid under a bed to escape the shingling of her hair, was dragged out and tied to a chair; she felt like one of many little animals driven by a herder — her cultural identity was stripped away.\n• Her resistance: open, physical struggle — she 'kicked and scratched wildly' though she lost.\n• Bama: a Dalit girl in Tamil Nadu; saw an elder carry vadai by its string for a Naicker landlord; realised the indignity of untouchability.\n• Her resistance: Annan's advice that education could throw away these indignities; she studied with all her breath and being and stood first in her class, earning respect.\n• Comparison: both experienced discrimination as children — racial/cultural for one, caste-based for the other; one fought immediately and alone, the other through the long, quiet route of education; both show the human urge for dignity.\nMarking: content 3, organisation/expression 2."
      }
     }
    ]
