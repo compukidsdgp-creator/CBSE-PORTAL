@@ -407,7 +407,8 @@
     "sc10-0119",
     "sc10-0120"
    ],
-   "posted": false
+   "posted": true,
+   "posted_at": "2026-11-25 16:02 IST"
   },
   "class12": {
    "subject_key": "physics12",
