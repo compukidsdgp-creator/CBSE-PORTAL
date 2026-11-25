@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Respiration in Germinating Seeds (Respirometer) — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Respirometer lab: weigh germinating seeds, read the coloured index on a capillary scale and find the rate of oxygen uptake and the RQ using KOH and water.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="cbse-lab-standard" content="2026-11">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/biology/12-cellular-respiration-in-germinating-seeds.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Respiration in germinating seeds — respirometer virtual lab","url":"https://cbsemock.org.in/virtual-labs/biology/12-cellular-respiration-in-germinating-seeds.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 10","Class 11"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Aerobic respiration in plants","Rate of respiration of germinating seeds","Use of a simple respirometer","Respiratory quotient (RQ)"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800;padding:8px 0}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.72rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.76rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.benchbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+#bench{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none}
+#bench .hot{cursor:pointer}#bench .plg{cursor:grab;touch-action:none}
+#bench .hot:focus,#bench .plg:focus{outline:none}#bench .hot:focus-visible .hl,#bench .plg:focus-visible .hl{opacity:1}
+.benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.hint{position:absolute;left:12px;bottom:8px;font-size:.74rem;color:#8ea2bd;background:rgba(5,8,14,.7);padding:4px 9px;border-radius:99px;pointer-events:none}
+@media(max-width:700px){#bench{min-width:820px}.hint{display:none}.benchbox::after{content:'⟷ swipe the bench · tap a clip or syringe';position:absolute;right:8px;bottom:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 8px;border-radius:99px;pointer-events:none}}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px;min-width:0}
+.panel h4{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#zoom{display:block;width:100%;height:auto;border-radius:10px;background:#20262f}
+.zcap{font-size:.8rem;color:#8ea2bd;margin-top:8px}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 8px;align-items:center}
+.sel .lb{font-size:.8rem;color:#93a6bf;margin-right:4px}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:99px;min-height:40px;min-width:40px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.chip:disabled{opacity:.45;cursor:not-allowed}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.nudge button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;min-height:42px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff}
+.nudge button:hover{background:#21385c}.nudge button:active{transform:translateY(1px)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:#c9d6e6;cursor:pointer;padding:9px 0;min-height:40px}
+.sw input{width:22px;height:22px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:42px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.rough{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px;font-size:.88rem}
+.rough input,.obs input{font-family:'JetBrains Mono',monospace;font-size:16px;width:96px;padding:7px 8px;min-height:40px;border-radius:8px;border:1.5px solid #3a5276;background:#0b1320;color:#fff}
+.clock{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.clock .lcd{font-family:'JetBrains Mono',monospace;font-size:1.5rem;font-weight:700;color:#9df5c9;background:#06110c;border:1px solid #1f4a37;border-radius:10px;padding:4px 12px;letter-spacing:.04em}
+.clock .st{font-size:.82rem;color:#c9d6e6}
+.msg{font-size:.85rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:780px;font-size:.88rem}
+.obs th,.obs td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:center}
+.obs th{background:var(--soft);font-weight:700;font-size:.78rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs input{background:var(--card);color:var(--text);border-color:var(--border);width:90px}
+.obs input.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs input.good{border-color:var(--green)}
+.obs .del{cursor:pointer;border:0;background:none;color:var(--muted);font-size:1.1rem;min-width:40px;min-height:40px}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.massrow{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:4px 0 12px;font-size:.92rem}
+.massrow input{font-family:'JetBrains Mono',monospace;font-size:16px;width:96px;padding:7px 8px;min-height:40px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);color:var(--text)}
+.massrow input.bad{border-color:var(--red)}.massrow input.good{border-color:var(--green)}
+.note{font-size:.8rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.graphs{grid-template-columns:1fr}}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card);min-width:0}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.2rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.concl{margin-top:12px;font-size:.95rem}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:.98rem;overflow-x:auto}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:28px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;counter-reset:s}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.62);font:600 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.06em}
+.sceneB .idxB{animation:creep 9s ease-in-out infinite}
+@keyframes creep{0%{transform:translateX(0)}80%{transform:translateX(150px)}100%{transform:translateX(150px)}}
+.sceneB .sproutB{transform-box:fill-box;transform-origin:0 50%;animation:grow 4s ease-in-out infinite alternate}
+@keyframes grow{to{transform:scaleX(1.25)}}
+.sceneB .rippleB{animation:pulse 2.6s ease-in-out infinite alternate}@keyframes pulse{to{opacity:.45}}
+.sceneB .heatB{animation:pulse 1.4s ease-in-out infinite alternate}
+@media(prefers-reduced-motion:reduce){.sceneB .idxB,.sceneB .sproutB,.sceneB .rippleB,.sceneB .heatB{animation:none}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt;margin-bottom:6pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:48%;margin:1%;border:1px solid #bbb}
+}
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small,.note,.tab small,.zcap,.obs th,.hv .chips span,.crumb,.nb,.sel .lb,footer{font-size:12px}.card{padding:16px 14px}.lab{padding:10px}}
+</style>
+</head>
+<body>
+<div class="lab-draft" style="background:#fff4d6;color:#6b4e00;padding:8px 14px;font:600 14px Inter,sans-serif;text-align:center">Draft preview — waiting for approval in the admin panel</div>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../../index.html">Home</a> › <a href="../../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../../virtual-labs/biology/index.html">Biology</a> › Respiration in seeds</nav>
+   <div class="eyebrow">Experiment · Simple Respirometer</div>
+   <h1><span class="g1">Respiration</span><span class="g2">in Germinating Seeds</span></h1>
+   <p>Sprouting seeds breathe in oxygen. Seal them in a tube with KOH, watch the coloured index creep along the capillary, read the scale against a stopwatch — then find how fast an unknown seed respires and what food it is burning.</p>
+   <div class="chips"><span>Class 11 · Respiration in plants</span><span>Class 10 · Life processes</span><span>⏱ about 25 min</span></div>
+   <a class="go" href="#lab">Set up the respirometer ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <linearGradient id="b-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#24170c"/></linearGradient>
+ <linearGradient id="b-glass" x1="0" x2="1"><stop offset="0" stop-color="#cfe9ff" stop-opacity=".35"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".12"/><stop offset="1" stop-color="#a9d4f5" stop-opacity=".4"/></linearGradient>
+ <linearGradient id="b-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fb4e6" stop-opacity=".42"/><stop offset="1" stop-color="#1f5f93" stop-opacity=".55"/></linearGradient>
+ <linearGradient id="b-scale" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6f2e4"/><stop offset="1" stop-color="#d9d2bb"/></linearGradient>
+ <linearGradient id="b-cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f6ff" stop-opacity=".9"/><stop offset=".5" stop-color="#9cc6e4" stop-opacity=".35"/><stop offset="1" stop-color="#e9f6ff" stop-opacity=".8"/></linearGradient>
+ <radialGradient id="b-seed" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#f3e2b4"/><stop offset="1" stop-color="#b8904f"/></radialGradient>
+ <linearGradient id="b-merc" x1="0" x2="1"><stop offset="0" stop-color="#ff6b5e"/><stop offset="1" stop-color="#b3261e"/></linearGradient>
+</defs>
+<rect x="0" y="300" width="760" height="60" fill="url(#b-wood)"/>
+<!-- capillary over its mm scale -->
+<rect x="40" y="92" width="480" height="26" rx="2" fill="url(#b-scale)"/>
+<path d="M40 92v12M88 92v12M136 92v12M184 92v12M232 92v12M280 92v12M328 92v12M376 92v12M424 92v12M472 92v12M520 92v12M64 92v7M112 92v7M160 92v7M208 92v7M256 92v7M304 92v7M352 92v7M400 92v7M448 92v7M496 92v7" stroke="#333" stroke-width="1.2"/>
+<path d="M30 84 H560 V150" fill="none" stroke="url(#b-cap)" stroke-width="9" stroke-linejoin="round"/>
+<path d="M30 84 H560 V150" fill="none" stroke="#dff1ff" stroke-opacity=".5" stroke-width="2"/>
+<g class="idxB"><rect x="96" y="80.5" width="26" height="7" rx="3" fill="#d6283a"/><rect x="98" y="81.5" width="20" height="2" rx="1" fill="#ff8c96" opacity=".7"/></g>
+<!-- water bath (glass beaker) -->
+<rect x="440" y="190" width="250" height="110" rx="6" fill="url(#b-water)"/>
+<path class="rippleB" d="M448 198 q20 -4 40 0 t40 0 t40 0 t40 0 t40 0 t40 0" stroke="#bfe6ff" stroke-width="1.5" fill="none" opacity=".8"/>
+<rect x="436" y="168" width="258" height="134" rx="8" fill="url(#b-glass)" stroke="#cfe9ff" stroke-opacity=".7" stroke-width="2"/>
+<!-- boiling tube with seeds -->
+<rect x="533" y="150" width="54" height="16" rx="3" fill="#3a2a22"/>
+<path d="M538 166 V276 q0 16 22 16 q22 0 22 -16 V166" fill="url(#b-glass)" stroke="#e1f2ff" stroke-width="2"/>
+<path d="M541 262 V276 q0 13 19 13 q19 0 19 -13 V262 Z" fill="#e8f3f8" opacity=".55"/>
+<path d="M540 256 h40" stroke="#9aa3ae" stroke-width="2" stroke-dasharray="3 2"/>
+<rect x="541" y="232" width="38" height="22" rx="6" fill="#f7f7f2" opacity=".95"/>
+<g>
+ <ellipse cx="550" cy="226" rx="7" ry="5" fill="url(#b-seed)"/><path class="sproutB" d="M556 226 q8 -2 12 -8" stroke="#f4f7e8" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+ <ellipse cx="568" cy="228" rx="7" ry="5" fill="url(#b-seed)"/>
+ <ellipse cx="559" cy="216" rx="7" ry="5" fill="url(#b-seed)"/><path class="sproutB" d="M552 214 q-6 -6 -4 -12" stroke="#f4f7e8" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+ <ellipse cx="572" cy="214" rx="6" ry="4.5" fill="url(#b-seed)"/>
+</g>
+<!-- thermometer -->
+<rect x="652" y="120" width="10" height="170" rx="5" fill="#e9f3fa" opacity=".85"/>
+<rect class="heatB" x="655" y="170" width="4" height="114" rx="2" fill="url(#b-merc)"/><circle cx="657" cy="286" r="7" fill="#c9302c"/>
+<text x="300" y="70" class="tB">capillary + coloured index →</text>
+<text x="300" y="138" class="tB">mm scale</text>
+<text x="490" y="324" class="tB">water bath 25 °C</text>
+<text x="620" y="232" class="tB" style="text-anchor:start">seeds</text>
+<text x="606" y="276" class="tB" style="text-anchor:start">KOH</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Weigh &amp; set up</li><li><b>2</b>Readings with KOH</li><li><b>3</b>Readings with water</li><li><b>4</b>Graph, RQ &amp; viva</li></ol>
+</header>
+
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Respirometer bench">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-mode="setup" role="tab"><b>Step 1 · Weigh &amp; set up</b><small>Read the balance, choose the bath temperature</small></button>
+   <button class="tab" data-mode="koh" role="tab"><b>Step 2 · With KOH</b><small>O₂ taken in (CO₂ is absorbed)</small></button>
+   <button class="tab" data-mode="wat" role="tab"><b>Step 3 · With water</b><small>O₂ taken in − CO₂ given out</small></button>
+  </div>
+  <div class="task" id="task"></div>
+  <div class="benchbox">
+   <div class="benchscroll" id="benchScroll"><svg id="bench" viewBox="0 0 1000 330" role="img" aria-label="Respirometer: two boiling tubes in a water bath with capillary tubes over millimetre scales, screw clips, syringes, stopwatch and balance"></svg></div>
+   <span class="hint">Tap a screw clip to open or close it · drag a syringe plunger to reset its index</span>
+  </div>
+  <div class="row2">
+   <div class="panel">
+    <h4><span>Hand lens on the capillary scales</span><span id="zTag" class="mono">Live</span></h4>
+    <svg id="zoom" viewBox="0 0 480 250" aria-label="Magnified view of both capillary scales and their coloured indices"></svg>
+    <div class="sel" id="snaps"></div>
+    <div class="zcap">Read the <b>centre of the curved left edge</b> (meniscus) of each red index, to the nearest 0.5 mm. Tap a reading number to see the scales exactly as they were at that moment.</div>
+   </div>
+   <div class="panel">
+    <h4><span>Controls</span><span id="sampleTag" class="mono">Sample S-?</span></h4>
+    <div id="setupBox">
+     <div class="sel"><span class="lb">Water bath</span><span id="tChips"></span></div>
+     <div class="rough">
+      <span>Mass of soaked seeds <input id="massIn" inputmode="decimal" placeholder="g" aria-label="mass of seeds in grams"></span>
+      <button class="btn gold" id="saveMass" type="button">Save mass</button>
+     </div>
+    </div>
+    <div id="runBox" hidden>
+     <div class="clock"><span class="lcd" id="lcd">00:00</span><span class="st" id="runState">Clips open</span></div>
+     <div class="sel"><span class="lb">Clock speed</span><span id="spChips"></span></div>
+     <div class="sel"><span class="lb">Syringe on</span><span id="tubeChips"></span></div>
+     <div class="nudge" id="nudge"><button data-d="-5" type="button">−5 mm</button><button data-d="-1" type="button">−1 mm</button><button data-d="1" type="button">+1 mm</button><button data-d="5" type="button">+5 mm</button></div>
+     <div class="tools">
+      <button class="btn navy" id="eqBtn" type="button">① Open clips · equilibrate</button>
+      <button class="btn gold" id="closeBtn" type="button">② Close clips · start stopwatch</button>
+      <button class="btn gold" id="lapBtn" type="button">＋ Take reading</button>
+      <button class="btn ghost" id="stopBtn" type="button">■ Stop</button>
+     </div>
+    </div>
+    <div class="tools">
+     <label class="sw"><input type="checkbox" id="labels"> Show readings (helper)</label>
+     <span style="flex:1"></span>
+     <button class="btn ghost" id="resetRun" type="button">↺ Redo this run</button>
+     <button class="btn ghost" id="newSample" type="button">↺ New sample</button>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 + 0 readings</span></h2>
+  <p class="lead">Internal diameter of the capillary = <b>1.5 mm</b>, so its cross-section A = π r² = π × (0.75 mm)² = <b>1.767 mm²</b>. A movement of x mm means a gas volume of A·x mm³ (1 mm³ = 1 µL). Bath temperature: <b id="tShow" class="mono">25 °C</b>.</p>
+  <div class="massrow"><span>Mass of soaked seeds (from the balance): <b id="massShow" class="mono">not saved</b></span></div>
+  <h3>Table 1 · Respirometer with KOH (CO₂ absorbed)</h3>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Time t<br>(min)</th><th>Test index<br>reading (mm)</th><th>Control index<br>reading (mm)</th><th>Test moved<br>(mm)</th><th>Control moved<br>(mm)</th><th>Corrected<br>x (mm)</th><th>O₂ taken in<br>A·x (mm³)</th><th></th></tr></thead>
+   <tbody id="tb1"></tbody>
+  </table></div>
+  <h3>Table 2 · Respirometer with water (CO₂ not absorbed)</h3>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Time t<br>(min)</th><th>Test index<br>reading (mm)</th><th>Control index<br>reading (mm)</th><th>Test moved<br>(mm)</th><th>Control moved<br>(mm)</th><th>Corrected<br>y (mm)</th><th>O₂ in − CO₂ out<br>A·y (mm³)</th><th></th></tr></thead>
+   <tbody id="tb2"></tbody>
+  </table></div>
+  <p class="note" style="margin-top:8px">Moved = reading − first reading of that run. Corrected = test moved − control moved (the control tube of boiled seeds cancels changes in room temperature and pressure).</p>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graphs</h2>
+  <p class="lead">Each graph appears after 5 correct readings in that run, spread over at least 8 minutes.</p>
+  <div class="graphs">
+   <figure><canvas id="g1" width="560" height="420"></canvas><figcaption><b>With KOH.</b> Test and control index movement, and the corrected movement x. The slope of the best-fit line of x gives the rate of oxygen uptake.</figcaption></figure>
+   <figure><canvas id="g2" width="560" height="420"></canvas><figcaption><b>KOH vs water.</b> x = O₂ taken in; y = O₂ taken in − CO₂ given out. From the slopes, RQ = (x − y) / x.</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Rate of O₂ uptake · table</small><b id="rT">—</b></div>
+   <div class="rbox"><small>Rate of O₂ uptake · graph</small><b id="rG">—</b></div>
+   <div class="rbox"><small>RQ = CO₂ out ÷ O₂ in · graph</small><b id="rQ">—</b></div>
+   <div class="rbox"><small>Food being respired</small><b id="rF" style="font-size:1rem">—</b></div>
+   <div class="rbox true" id="trueBox" hidden><small>Actual values for this sample</small><b id="rTrue" style="font:600 .92rem/1.45 Inter,sans-serif">—</b></div>
+  </div>
+  <p class="concl" id="concl"></p>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the actual values</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To show that germinating seeds take in oxygen during respiration, to find their rate of oxygen uptake with a simple respirometer, and to find the respiratory quotient (RQ) of the seeds.</p>
+    <h3>Apparatus and materials</h3>
+    <p>Germinating seeds (soaked for 24 hours), the same number of boiled and cooled seeds (control), two boiling tubes with rubber bungs, two capillary tubes (internal diameter 1.5 mm) bent at right angles, millimetre scales, wire gauze platforms, moist cotton wool, 10% potassium hydroxide (KOH) solution, water, coloured liquid (eosin) for the index, screw clips, syringes, a water bath with thermometer, a stopwatch, a balance and petroleum jelly.</p>
+    <h3>Theory</h3>
+    <p>Germinating seeds respire very actively, because the growing embryo needs a lot of energy (ATP). In aerobic respiration, food is oxidised and oxygen is used up:</p>
+    <p class="eq">C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy</p>
+    <p>KOH absorbs the carbon dioxide given out: <span class="mono">2KOH + CO₂ → K₂CO₃ + H₂O</span>. So in the KOH tube the volume of gas falls by the volume of O₂ taken in, the pressure drops and the coloured index moves <b>towards the seeds</b>. Volume of O₂ = A × x, where A is the cross-section of the capillary.</p>
+    <p>With water instead of KOH, CO₂ stays in the tube, so the index moves only by (O₂ taken in − CO₂ given out) = y. Hence:</p>
+    <p class="eq">RQ = CO₂ given out / O₂ taken in = (x − y) / x</p>
+    <p>For carbohydrates RQ = 1 (6CO₂ ÷ 6O₂). For fats it is less than 1, about 0.7 (tripalmitin: 102CO₂ ÷ 145O₂ = 0.7). For proteins it is about 0.9. The control tube of boiled (dead) seeds does not respire; any movement of its index is due to changes in temperature or air pressure, and is subtracted.</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li>Soak the seeds in water for 24 hours. Kill an equal number by boiling them, then cool them to room temperature.</li>
+     <li>Blot the germinating seeds dry and weigh them.</li>
+     <li>Pour 2 mL of KOH solution into each boiling tube. Place a wire gauze platform above it and a layer of moist cotton wool on the gauze, so the seeds never touch the KOH.</li>
+     <li>Put the germinating seeds in the test tube and the boiled seeds in the control tube. Fit the bungs carrying the capillary tubes and seal them with petroleum jelly so they are airtight.</li>
+     <li>Introduce a drop of coloured liquid into each capillary as an index. Stand both tubes in a water bath at a fixed temperature.</li>
+     <li>Leave the screw clips open for at least 5 minutes so that the air inside reaches the bath temperature (equilibration). Use the syringe to bring each index near the start of its scale.</li>
+     <li>Close the screw clips and start the stopwatch at once. Read the position of both indices immediately, and then every 2 minutes for at least 10 minutes.</li>
+     <li>Repeat with water in place of KOH, using the same seeds.</li>
+     <li>Work out x and y, plot graphs of movement against time, and calculate the rate of oxygen uptake per gram per hour and the RQ.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>The apparatus must be airtight: seal the bungs with petroleum jelly.</li>
+     <li>The seeds must not touch the KOH; it is corrosive and would kill them. Handle KOH with care.</li>
+     <li>Equilibrate for at least 5 minutes with the clips open before taking readings.</li>
+     <li>Keep the tubes in the water bath and do not hold them in your hand; body heat expands the air and moves the index.</li>
+     <li>Use the same mass (or number) of seeds and the same volume of liquid in the test and the control tube.</li>
+     <li>Always read the same edge of the index, with your eye directly above it.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>Small leaks at the bung or rubber tubing let air in and reduce the movement.</li>
+     <li>Changes of room temperature or pressure during the run (only partly corrected by the control tube).</li>
+     <li>KOH may not absorb all the CO₂ at once, so the O₂ uptake is underestimated slightly.</li>
+     <li>The bore of the capillary may not be perfectly uniform.</li>
+     <li>Seeds germinate unevenly, and microbes on the seeds also respire.</li>
+     <li>Parallax and judging the curved edge of the index.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask in this practical. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../../notes/class-10/science/life-processes.html">📘 Notes: Life processes</a></li>
+   <li><a href="../../../cbse-class-10-science-mock-tests.html">📄 Class 10 Science mock tests</a></li>
+   <li><a href="../../../cbse-class-12-biology-mock-papers.html">📄 Biology mock papers</a></li>
+   <li><a href="../../../virtual-labs/biology/13-yeast-fermentation.html">🧫 Next lab: yeast fermentation</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../../about.html">About Us</a> · <a href="../../../privacy.html">Privacy Policy</a> · <a href="../../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
+<script>
+(function(){
+'use strict';
+/* ───────── model ───────── */
+var NS='http://www.w3.org/2000/svg';
+var BORE=1.5, AREA=Math.PI*0.75*0.75;   // capillary bore (mm) and cross-section (mm²)
+var READ_TOL=0.6, MASS_TOL=0.011, EQ_MIN=300, DROP=8, SMAX=200, MAXT=20*60;
+var SEEDS=[
+ {n:'Wheat',food:'carbohydrate (starch)',rq:1.00,r:[2.2,2.8]},
+ {n:'Maize',food:'carbohydrate (starch)',rq:1.00,r:[2.0,2.6]},
+ {n:'Groundnut',food:'fat (oil)',rq:0.70,r:[2.6,3.4]},
+ {n:'Mustard',food:'fat (oil)',rq:0.72,r:[2.8,3.6]}];
+var TEMPS=[25,30,35];
+function rnd(a,b){return a+Math.random()*(b-a)}
+function r1(x){return Math.round(x*10)/10}
+function r2(x){return Math.round(x*100)/100}
+function newRun(){return {st:'off',eq:0,t:0,p0:{a:r1(rnd(12,24)),b:r1(rnd(12,24))},laps:[],rows:[],off:false}}
+var S={mode:'setup',speed:10,labels:false,sel:'a',snap:null};
+function newSample(){var i=Math.floor(Math.random()*SEEDS.length),sd=SEEDS[i];
+ S.seed=i;S.R25=r2(rnd(sd.r[0],sd.r[1]));S.rq=r2(Math.min(1.00,sd.rq+rnd(-0.02,0.02)));S.m=r2(rnd(2.2,2.8));S.code=Math.floor(rnd(101,999));
+ S.T=25;S.dr={koh:r2(rnd(-0.25,0.3)),wat:r2(rnd(-0.25,0.3))};S.ph=[rnd(0,6.3),rnd(0,6.3),rnd(0,6.3),rnd(0,6.3)];
+ S.runs={koh:newRun(),wat:newRun()};S.mass='';S.massOk=false;S.revealed=false;S.snap=null}
+var KEY='cbse-lab-resp-seeds';
+try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv&&sv.runs&&sv.R25){['seed','R25','rq','m','code','T','dr','ph','runs','mass','massOk','revealed'].forEach(function(k){S[k]=sv[k]});
+ ['koh','wat'].forEach(function(k){if(S.runs[k].st==='run')S.runs[k].st='done'})}}catch(e){}
+if(S.R25==null)newSample();
+function save(){try{localStorage.setItem(KEY,JSON.stringify({seed:S.seed,R25:S.R25,rq:S.rq,m:S.m,code:S.code,T:S.T,dr:S.dr,ph:S.ph,runs:S.runs,mass:S.mass,massOk:S.massOk,revealed:S.revealed}))}catch(e){}}
+function rate(){return S.R25*Math.pow(2,(S.T-25)/10)}                 // mm³ O₂ per g per min (Q10 = 2)
+function vel(rk){return rate()*S.m/AREA*(rk==='koh'?1:(1-S.rq))}         // true index speed of the test tube (mm/min)
+function wob(k,rk,tm){var o=(k==='a'?0:2)+(rk==='koh'?0:1)*0.7,p=S.ph;return 0.10*Math.sin(1.7*tm+p[(k==='a'?0:2)]+o)+0.06*Math.sin(4.1*tm+p[(k==='a'?1:3)]+o)}
+function pos(rk,k,t){var R=S.runs[rk];if(R.st==='off'||R.st==='equil')return R.p0[k];
+ var tm=t/60,A=8*Math.exp(-R.eq/90),tr=-(k==='a'?1.25:1)*A*(1-Math.exp(-t/90));   // warming air pushes the index back if not equilibrated
+ return R.p0[k]+(k==='a'?vel(rk):0)*tm+S.dr[rk]*tm+tr+wob(k,rk,tm)-wob(k,rk,0)}
+function curRun(){return S.mode==='wat'?'wat':'koh'}
+
+/* ───────── helpers ───────── */
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function $(id){return document.getElementById(id)}
+function mmss(s){s=Math.max(0,Math.floor(s));return (s<600?'0':'')+Math.floor(s/60)+':'+('0'+s%60).slice(-2)}
+var msgEl=$('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+
+/* ───────── bench ───────── */
+var bench=$('bench');
+function SX(mm){return 60+mm*2.8}
+var CY={a:112,b:40},TXP={a:742,b:862};
+el('defs',{},bench).innerHTML=
+ '<linearGradient id="room" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0f18"/><stop offset="1" stop-color="#151b26"/></linearGradient>'+
+ '<linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset=".08" stop-color="#5a3c24"/><stop offset="1" stop-color="#2e1d10"/></linearGradient>'+
+ '<pattern id="grain" width="140" height="18" patternUnits="userSpaceOnUse"><path d="M0 6 Q35 2 70 7 T140 6 M0 13 Q40 10 80 14 T140 12" stroke="#000" stroke-opacity=".12" fill="none"/></pattern>'+
+ '<linearGradient id="scale" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6f2e4"/><stop offset="1" stop-color="#dcd5bf"/></linearGradient>'+
+ '<linearGradient id="capg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".5" stop-color="#9cc6e4" stop-opacity=".35"/><stop offset="1" stop-color="#eaf6ff" stop-opacity=".85"/></linearGradient>'+
+ '<linearGradient id="capv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#eaf6ff" stop-opacity=".95"/><stop offset=".5" stop-color="#9cc6e4" stop-opacity=".35"/><stop offset="1" stop-color="#eaf6ff" stop-opacity=".85"/></linearGradient>'+
+ '<linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#cfe9ff" stop-opacity=".38"/><stop offset=".45" stop-color="#ffffff" stop-opacity=".1"/><stop offset="1" stop-color="#a9d4f5" stop-opacity=".42"/></linearGradient>'+
+ '<linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fb4e6" stop-opacity=".4"/><stop offset="1" stop-color="#1f5f93" stop-opacity=".6"/></linearGradient>'+
+ '<radialGradient id="seedG" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#f3e2b4"/><stop offset="1" stop-color="#b8904f"/></radialGradient>'+
+ '<radialGradient id="seedB" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#b59a6a"/><stop offset="1" stop-color="#6d5330"/></radialGradient>'+
+ '<linearGradient id="rubber" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a4038"/><stop offset="1" stop-color="#2a1d19"/></linearGradient>'+
+ '<linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9dee5"/><stop offset=".5" stop-color="#8a939f"/><stop offset="1" stop-color="#4a525d"/></linearGradient>'+
+ '<linearGradient id="merc" x1="0" x2="1"><stop offset="0" stop-color="#ff6b5e"/><stop offset="1" stop-color="#b3261e"/></linearGradient>';
+el('rect',{x:0,y:0,width:1000,height:330,fill:'url(#room)'},bench);
+el('rect',{x:0,y:296,width:1000,height:34,fill:'url(#wood)'},bench);
+el('rect',{x:0,y:296,width:1000,height:34,fill:'url(#grain)'},bench);
+// scales
+function scaleStrip(y){el('rect',{x:SX(-2),y:y,width:SX(202)-SX(-2),height:24,rx:2,fill:'url(#scale)',stroke:'#8b8574','stroke-width':1},bench);
+ var p='',lab=el('g',{'font-family':'Inter','font-size':11,'font-weight':600,fill:'#2b2b2b','text-anchor':'middle'},bench);
+ for(var mm=0;mm<=SMAX;mm++){var x=SX(mm).toFixed(1),h=mm%10===0?11:mm%5===0?7:4;p+='M'+x+' '+y+'v'+h;if(mm%20===0){el('text',{x:x,y:y+22},lab).textContent=mm}}
+ el('path',{d:p,stroke:'#2b2b2b','stroke-width':.7},bench);
+ el('text',{x:SX(202)+6,y:y+16,'font-family':'Inter','font-size':11,fill:'#93a6bf'},bench).textContent='mm'}
+scaleStrip(CY.b+7);scaleStrip(CY.a+7);
+// labels of the two respirometers
+el('text',{x:SX(0),y:CY.b-10,'font-family':'Inter','font-size':13,'font-weight':700,fill:'#e8cc6a','letter-spacing':'.06em'},bench).textContent='CONTROL · boiled seeds';
+var testLbl=el('text',{x:SX(0),y:CY.a-10,'font-family':'Inter','font-size':13,'font-weight':700,fill:'#e8cc6a','letter-spacing':'.06em'},bench);
+// water bath
+el('rect',{x:690,y:196,width:280,height:100,rx:6,fill:'url(#water)'},bench);
+el('path',{d:'M698 202 q20 -4 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0',stroke:'#bfe6ff','stroke-width':1.4,fill:'none',opacity:.7},bench);
+// tubes
+var tubeG={},liq={},seedsG={};
+['a','b'].forEach(function(k){var x=TXP[k],g=el('g',{},bench);tubeG[k]=g;
+ el('path',{d:'M'+(x-17)+' 160 V272 q0 16 17 16 q17 0 17 -16 V160',fill:'url(#glass)',stroke:'#e1f2ff','stroke-width':1.8},g);
+ liq[k]=el('path',{d:'M'+(x-15)+' 256 V272 q0 13 15 13 q15 0 15 -13 V256 Z',fill:'#e8f3f8',opacity:.6},g);
+ el('path',{d:'M'+(x-15)+' 252 h30',stroke:'#9aa3ae','stroke-width':2,'stroke-dasharray':'3 2'},g);
+ el('rect',{x:x-15,y:230,width:30,height:20,rx:6,fill:'#f7f7f2',opacity:.95},g);
+ var sg=el('g',{},g);seedsG[k]=sg;
+ [[-8,226],[6,227],[-1,217],[9,215],[-9,214]].forEach(function(p,i){el('ellipse',{cx:x+p[0],cy:p[1],rx:5.5,ry:4,fill:k==='a'?'url(#seedG)':'url(#seedB)',transform:'rotate('+(i*37)+' '+(x+p[0])+' '+p[1]+')'},sg);
+  if(k==='a'&&i%2===0)el('path',{d:'M'+(x+p[0]+4)+' '+p[1]+' q5 -2 7 -7',stroke:'#f4f7e8','stroke-width':1.8,fill:'none','stroke-linecap':'round'},sg)});
+ el('rect',{x:x-20,y:146,width:40,height:16,rx:3,fill:'url(#rubber)'},g);
+ // capillary: up from bung then left over the scale
+ var cy=CY[k];el('path',{d:'M'+x+' 146 V'+cy+' H'+SX(-6),fill:'none',stroke:'#cfe7f7','stroke-opacity':.55,'stroke-width':8,'stroke-linejoin':'round'},bench);
+ el('path',{d:'M'+x+' 146 V'+cy+' H'+SX(-6),fill:'none',stroke:'#e7f5ff','stroke-opacity':.75,'stroke-width':1.6,'stroke-linejoin':'round'},bench);
+});
+el('rect',{x:686,y:178,width:288,height:120,rx:8,fill:'url(#glass)',stroke:'#cfe9ff','stroke-opacity':.7,'stroke-width':2},bench);
+// thermometer in the bath
+el('rect',{x:948,y:150,width:10,height:140,rx:5,fill:'#e9f3fa',opacity:.85},bench);
+var merc=el('rect',{x:951,y:200,width:4,height:84,rx:2,fill:'url(#merc)'},bench);el('circle',{cx:953,cy:286,r:7,fill:'#c9302c'},bench);
+var thermoTxt=el('text',{x:940,y:142,'font-family':'JetBrains Mono','font-size':14,'font-weight':700,fill:'#9cc8ff','text-anchor':'middle'},bench);
+// side arms with screw clips and syringes
+var clip={},plunger={},plg={},armY={a:128,b:92};
+['a','b'].forEach(function(k){var x=TXP[k],y=armY[k],x2=x+58;
+ el('path',{d:'M'+x+' '+y+' H'+(x+14),stroke:'#cfe7f7','stroke-opacity':.7,'stroke-width':6},bench);
+ el('rect',{x:x+12,y:y-5,width:40,height:10,rx:5,fill:'#3d2f2a'},bench);                       // rubber tubing
+ // syringe barrel + plunger
+ el('rect',{x:x2-6,y:y-7,width:46,height:14,rx:2,fill:'#e9f4fb',opacity:.75,stroke:'#cfe7f7'},bench);
+ el('path',{d:'M'+(x2+2)+' '+(y-7)+'v4M'+(x2+10)+' '+(y-7)+'v4M'+(x2+18)+' '+(y-7)+'v4M'+(x2+26)+' '+(y-7)+'v4',stroke:'#555','stroke-width':1},bench);
+ var pg=el('g',{class:'plg',tabindex:0,role:'slider','aria-label':(k==='a'?'Test':'Control')+' syringe plunger'},bench);plg[k]=pg;
+ el('rect',{x:-30,y:y-26,width:64,height:52,fill:'transparent'},pg);
+ el('rect',{x:0,y:y-4,width:30,height:8,fill:'#bfc6cf'},pg);el('rect',{x:28,y:y-11,width:5,height:22,rx:1.5,fill:'#8a939f'},pg);
+ el('rect',{x:-2,y:y-6,width:5,height:12,fill:'#2b2b2b'},pg);
+ el('rect',{x:-26,y:y-24,width:62,height:48,rx:8,fill:'none',stroke:'#e8cc6a','stroke-width':1.5,'stroke-dasharray':'4 4',opacity:0,class:'hl'},pg);
+ plunger[k]={g:pg,x0:x2};
+ // screw clip (hot spot)
+ var cg=el('g',{class:'hot',tabindex:0,role:'button','aria-label':(k==='a'?'Test':'Control')+' screw clip'},bench);clip[k]=cg;
+ el('rect',{x:x+10,y:y-26,width:44,height:52,fill:'transparent'},cg);
+ var jaw=el('g',{},cg);el('rect',{x:x+28,y:y-14,width:5,height:28,rx:1,fill:'url(#steel)'},jaw);el('rect',{x:x+22,y:y-17,width:17,height:5,rx:2,fill:'#9aa3ae'},jaw);el('circle',{cx:x+30.5,cy:y-19,r:4,fill:'#c9a227'},jaw);
+ clip[k].jaw=jaw;el('rect',{x:x+8,y:y-24,width:48,height:48,rx:8,fill:'none',stroke:'#e8cc6a','stroke-width':1.5,'stroke-dasharray':'4 4',opacity:0,class:'hl'},cg);
+});
+// coloured indices
+var idx={},idxLbl={};
+['a','b'].forEach(function(k){var g=el('g',{},bench);idx[k]=g;
+ el('rect',{x:0,y:CY[k]-3,width:DROP*2.8,height:6,rx:2.5,fill:'#d6283a'},g);el('rect',{x:2,y:CY[k]-2.2,width:DROP*2.8-6,height:1.6,rx:.8,fill:'#ff9aa3',opacity:.7},g);
+ idxLbl[k]=el('text',{x:0,y:CY[k]+44,'font-family':'JetBrains Mono','font-size':13,'font-weight':700,fill:'#ffd36b','text-anchor':'start',opacity:0},bench)});
+// stopwatch
+el('rect',{x:66,y:186,width:150,height:92,rx:16,fill:'#1d232c',stroke:'#4a525d','stroke-width':2},bench);
+el('rect',{x:128,y:176,width:26,height:12,rx:3,fill:'#4a525d'},bench);
+el('rect',{x:80,y:206,width:122,height:44,rx:6,fill:'#0f2a1d'},bench);
+var swTxt=el('text',{x:141,y:238,'font-family':'JetBrains Mono','font-size':26,'font-weight':700,fill:'#9df5c9','text-anchor':'middle'},bench);
+var swSub=el('text',{x:141,y:268,'font-family':'Inter','font-size':12,fill:'#93a6bf','text-anchor':'middle'},bench);
+// balance with seed dish
+var balG=el('g',{class:'hot',tabindex:0,role:'button','aria-label':'Balance with the seeds'},bench);
+el('rect',{x:270,y:180,width:200,height:108,fill:'transparent'},balG);
+el('rect',{x:280,y:244,width:180,height:44,rx:8,fill:'#d7dbe0',stroke:'#8a939f'},balG);
+el('rect',{x:300,y:252,width:110,height:28,rx:4,fill:'#0f1a14'},balG);
+var balTxt=el('text',{x:404,y:273,'font-family':'JetBrains Mono','font-size':20,'font-weight':700,fill:'#b6ff9e','text-anchor':'end'},balG);
+el('text',{x:436,y:272,'font-family':'Inter','font-size':12,'font-weight':700,fill:'#333','text-anchor':'middle'},balG).textContent='TARE';
+el('rect',{x:330,y:234,width:80,height:8,rx:2,fill:'#9aa3ae'},balG);
+el('ellipse',{cx:370,cy:228,rx:52,ry:9,fill:'#f2f2f2',stroke:'#bbb'},balG);
+[[-22,222],[-8,219],[8,221],[22,223],[0,225],[-14,226],[14,226]].forEach(function(p,i){el('ellipse',{cx:370+p[0],cy:p[1],rx:5.5,ry:4,fill:'url(#seedG)',transform:'rotate('+(i*41)+' '+(370+p[0])+' '+p[1]+')'},balG)});
+var balLbl=el('text',{x:370,y:200,'font-family':'Inter','font-size':13,'font-weight':700,fill:'#e8cc6a','text-anchor':'middle'},balG);
+// reagent bottles
+function bottle(x,lbl,col){el('rect',{x:x,y:226,width:44,height:62,rx:6,fill:col,opacity:.85,stroke:'#cfd6de'},bench);el('rect',{x:x+12,y:212,width:20,height:16,rx:3,fill:'#3a414b'},bench);
+ el('rect',{x:x+5,y:244,width:34,height:26,rx:2,fill:'#fff'},bench);el('text',{x:x+22,y:262,'font-family':'Inter','font-size':11,'font-weight':800,fill:'#222','text-anchor':'middle'},bench).textContent=lbl}
+bottle(510,'KOH','#d8e6ee');bottle(570,'H₂O','#a8d3ef');
+// thermostat
+var thG=el('g',{class:'hot',tabindex:0,role:'button','aria-label':'Water bath thermostat'},bench);
+el('rect',{x:630,y:226,width:56,height:70,fill:'transparent'},thG);
+el('rect',{x:636,y:236,width:46,height:56,rx:6,fill:'#2b313a',stroke:'#59626e'},thG);
+var thTxt=el('text',{x:659,y:258,'font-family':'JetBrains Mono','font-size':13,'font-weight':700,fill:'#ffb86b','text-anchor':'middle'},thG);
+el('circle',{cx:659,cy:276,r:7,fill:'#59626e',stroke:'#9aa3ae'},thG);
+var eqTxt=el('text',{x:740,y:22,'font-family':'Inter','font-size':13,'font-weight':700,fill:'#9cc8ff','text-anchor':'middle'},bench);
+
+/* ───────── zoom (hand lens) ───────── */
+var zoom=$('zoom'),zg=el('g',{},zoom);
+el('defs',{},zoom).innerHTML='<linearGradient id="zs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f4e8"/><stop offset="1" stop-color="#dcd5bf"/></linearGradient>'+
+ '<linearGradient id="zc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef8ff"/><stop offset=".5" stop-color="#b9d9ee"/><stop offset="1" stop-color="#eef8ff"/></linearGradient>'+
+ '<radialGradient id="zv" cx=".5" cy=".5" r=".7"><stop offset=".75" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".3"/></radialGradient>';
+function strip(y,label,p){var PXM=28,W=480,c=p+2.5,L=c-W/2/PXM;function zx(mm){return (mm-L)*PXM}
+ el('text',{x:10,y:y+18,'font-family':'Inter','font-size':17,'font-weight':800,fill:'#e8cc6a'},zg).textContent=label;
+ el('rect',{x:0,y:y+26,width:W,height:26,fill:'url(#zc)'},zg);
+ el('rect',{x:0,y:y+34,width:W,height:10,fill:'#f4fbff'},zg);
+ // index with concave menisci: centre of the left meniscus is at p
+ var xl=zx(p),xr=zx(p+DROP),k=0.3*PXM;
+ el('path',{d:'M'+(xl-k)+' '+(y+34)+' Q'+(xl+k)+' '+(y+39)+' '+(xl-k)+' '+(y+44)+' L'+(xr+k)+' '+(y+44)+' Q'+(xr-k)+' '+(y+39)+' '+(xr+k)+' '+(y+34)+' Z',fill:'#d6283a'},zg);
+ el('path',{d:'M'+(xl+6)+' '+(y+36)+' H'+(xr-6),stroke:'#ff9aa3','stroke-width':1.5,opacity:.8},zg);
+ el('rect',{x:0,y:y+52,width:W,height:56,fill:'url(#zs)'},zg);
+ var d='';for(var mm=Math.floor(L);mm<=Math.ceil(L+W/PXM);mm++){if(mm<0||mm>SMAX)continue;var x=zx(mm),h=mm%10===0?28:mm%5===0?20:12;d+='M'+x.toFixed(1)+' '+(y+52)+'v'+h;
+  if(mm%5===0)el('text',{x:x,y:y+100,'text-anchor':'middle','font-family':'Inter','font-weight':700,'font-size':mm%10===0?20:15,fill:mm%10===0?'#1d1d1d':'#555'},zg).textContent=mm}
+ el('path',{d:d,stroke:'#1d1d1d','stroke-width':1.3},zg);
+ if(S.labels)el('text',{x:W-8,y:y+18,'text-anchor':'end','font-family':'JetBrains Mono','font-size':16,'font-weight':700,fill:'#ffd36b'},zg).textContent=p.toFixed(1)+' mm'}
+function drawZoom(){zg.innerHTML='';var rk=curRun(),R=S.runs[rk],a,b,tag='Live';
+ if(S.snap!=null&&R.laps[S.snap]){var L=R.laps[S.snap];a=L.a;b=L.b;tag='Reading '+(S.snap+1)+' · t = '+mmss(L.t)}
+ else{var t=R.t;a=pos(rk,'a',t);b=pos(rk,'b',t)}
+ el('rect',{x:0,y:0,width:480,height:250,fill:'#20262f'},zg);
+ strip(4,'TEST · S-'+S.code,a);strip(128,'CONTROL',b);
+ el('rect',{x:0,y:0,width:480,height:250,fill:'url(#zv)'},zg);
+ $('zTag').textContent=tag}
+
+/* ───────── controls ───────── */
+function chipRow(box,items,on,click){box.innerHTML='';items.forEach(function(it){var b=document.createElement('button');b.type='button';b.className='chip'+(it.v===on?' on':'');b.textContent=it.t;if(it.dis)b.disabled=true;b.onclick=function(){click(it.v)};box.appendChild(b)})}
+function tLocked(){return S.runs.koh.st!=='off'||S.runs.wat.st!=='off'}
+function buildChips(){
+ chipRow($('tChips'),TEMPS.map(function(t){return {v:t,t:t+' °C',dis:tLocked()&&t!==S.T}}),S.T,function(v){if(tLocked()){say('The bath temperature is fixed once readings have started. Use “New sample” to change it.','bad');return}S.T=v;save();render();buildChips()});
+ chipRow($('spChips'),[{v:1,t:'1×'},{v:10,t:'10×'},{v:30,t:'30×'}],S.speed,function(v){S.speed=v;buildChips()});
+ chipRow($('tubeChips'),[{v:'a',t:'Test'},{v:'b',t:'Control'}],S.sel,function(v){S.sel=v;buildChips();render()});
+ var R=S.runs[curRun()],sn=$('snaps');sn.innerHTML='';
+ if(S.mode!=='setup'){var items=[{v:null,t:'Live'}].concat(R.laps.map(function(l,i){return {v:i,t:String(i+1)}}));
+  items.forEach(function(it){var b=document.createElement('button');b.type='button';b.className='chip'+(S.snap===it.v?' on':'');b.textContent=it.t;b.setAttribute('aria-label',it.v==null?'Live view':'Reading '+(it.v+1));b.onclick=function(){S.snap=it.v;buildChips();drawZoom()};sn.appendChild(b)})}}
+function syringe(k,d){var rk=curRun(),R=S.runs[rk];if(S.mode==='setup'){say('Go to Step 2 or 3 to use the syringes.','bad');return}
+ if(R.st==='run'||R.st==='done'){say('The screw clips are closed. Open them (“Redo this run”) before using the syringe.','bad');return}
+ R.p0[k]=Math.min(120,Math.max(2,r1(R.p0[k]+d)));save();render()}
+document.querySelectorAll('#nudge button').forEach(function(b){b.onclick=function(){syringe(S.sel,parseFloat(b.dataset.d))}});
+['a','b'].forEach(function(k){var g=plg[k],drag=null;
+ function sx(e){var pt=bench.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;return pt.matrixTransform(bench.getScreenCTM().inverse()).x}
+ g.addEventListener('pointerdown',function(e){S.sel=k;buildChips();drag={x:sx(e),acc:0};g.setPointerCapture(e.pointerId);e.preventDefault()});
+ g.addEventListener('pointermove',function(e){if(!drag)return;var x=sx(e),d=(x-drag.x)/3;if(Math.abs(d)>=1){syringe(k,-Math.round(d));drag.x=x}});
+ g.addEventListener('pointerup',function(){drag=null});g.addEventListener('pointercancel',function(){drag=null});
+ g.addEventListener('keydown',function(e){var d=e.shiftKey?5:1;if(e.key==='ArrowLeft'){syringe(k,d);e.preventDefault()}if(e.key==='ArrowRight'){syringe(k,-d);e.preventDefault()}});
+ g.addEventListener('focus',function(){S.sel=k;buildChips()});
+ function clk(){if(S.mode==='setup'){say('The clips are used in Steps 2 and 3.','bad');return}var R=S.runs[curRun()];if(R.st==='off')startEq();else if(R.st==='equil')closeClips();else say('The clips are already closed for this run.','bad')}
+ clip[k].addEventListener('click',clk);clip[k].addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){clk();e.preventDefault()}});
+ tubeG[k].style.cursor='pointer';tubeG[k].addEventListener('click',function(){S.sel=k;buildChips();render()});
+});
+function hotKey(g,f){g.addEventListener('click',f);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){f();e.preventDefault()}})}
+hotKey(balG,function(){if(S.mode!=='setup')setMode('setup');$('massIn').focus()});
+hotKey(thG,function(){if(S.mode!=='setup'){say('Set the bath temperature in Step 1.','bad');return}if(tLocked()){say('The bath temperature is fixed once readings have started.','bad');return}S.T=TEMPS[(TEMPS.indexOf(S.T)+1)%TEMPS.length];save();buildChips();render()});
+$('labels').onchange=function(){S.labels=this.checked;render();drawZoom()};
+$('saveMass').onclick=function(){var v=parseFloat($('massIn').value);
+ if(isNaN(v)){say('Type the mass shown on the balance, in grams (two decimal places).','bad');return}
+ S.mass=v.toFixed(2);if(Math.abs(v-S.m)>MASS_TOL){S.massOk=false;save();renderTable();say('That is not what the balance shows. Look at the display again (to 0.01 g).','bad');return}
+ S.massOk=true;save();renderTable();say('Mass saved: '+v.toFixed(2)+' g. Now go to Step 2.','ok')};
+function startEq(){var rk=curRun(),R=S.runs[rk];if(!S.massOk){say('First weigh the seeds and save their mass in Step 1.','bad');return}
+ if(R.st!=='off'){say(R.st==='equil'?'The tubes are already equilibrating.':'This run has started. Use “Redo this run” to start it again.','bad');return}
+ R.st='equil';R.eq=0;save();buildChips();render();say('Clips open: the air in the tubes is warming to '+S.T+' °C. Wait at least 5 minutes, and use the syringes to bring both indices near the start of the scale.','ok')}
+function closeClips(){var rk=curRun(),R=S.runs[rk];if(R.st==='off'){say('Open the clips and equilibrate first (button ①).','bad');return}if(R.st!=='equil'){say('The clips are already closed.','bad');return}
+ R.st='run';R.t=0;R.laps=[];R.rows=[];lap(true);autoScroll();
+ say(R.eq<EQ_MIN?'Clips closed after only '+mmss(R.eq)+' of equilibration — the readings may not be reliable.':'Clips closed and stopwatch started. Reading 1 (t = 0) taken: type both index positions into the table.',R.eq<EQ_MIN?'bad':'ok')}
+function lap(first){var rk=curRun(),R=S.runs[rk];if(R.st!=='run'){say(R.st==='done'?'This run has stopped. Use “Redo this run” to repeat it.':'Close the clips and start the stopwatch first.','bad');return}
+ if(R.laps.length>=10){say('Ten readings is plenty for one run. Stop the run.','bad');return}
+ var tt=Math.round(R.t);if(R.laps.length&&tt-R.laps[R.laps.length-1].t<20){say('Wait a little longer between readings (every 2 minutes is ideal).','bad');return}
+ R.laps.push({t:tt,a:r2(pos(rk,'a',tt)),b:r2(pos(rk,'b',tt))});R.rows.push({a:'',b:''});S.snap=R.laps.length-1;save();buildChips();renderTable();drawZoom();
+ if(!first)say('Reading '+R.laps.length+' taken at t = '+mmss(tt)+'. The hand lens shows the scales at that moment.','ok')}
+function stopRun(){var R=S.runs[curRun()];if(R.st!=='run'){say('The stopwatch is not running.','bad');return}R.st='done';save();buildChips();render();say('Run stopped with '+R.laps.length+' readings.','ok')}
+$('eqBtn').onclick=startEq;$('closeBtn').onclick=closeClips;$('lapBtn').onclick=function(){lap(false)};$('stopBtn').onclick=stopRun;
+function confirmInline(btn,label){if(btn.dataset.sure){delete btn.dataset.sure;btn.textContent=label;return true}
+ btn.dataset.sure=1;btn.textContent='Tap again to clear';setTimeout(function(){delete btn.dataset.sure;btn.textContent=label},3500);return false}
+$('resetRun').onclick=function(){if(S.mode==='setup'){say('Choose Step 2 or 3 to redo a run.','bad');return}var rk=curRun();if(S.runs[rk].laps.length&&!confirmInline(this,'↺ Redo this run'))return;
+ S.runs[rk]=newRun();S.snap=null;save();buildChips();renderTable();render();autoScroll();say('Run cleared. Open the clips and equilibrate again.','ok')};
+$('newSample').onclick=function(){if((S.runs.koh.laps.length||S.runs.wat.laps.length)&&!confirmInline(this,'↺ New sample'))return;newSample();save();$('massIn').value='';setMode('setup');renderTable();say('A new coded seed sample is on the balance. Its kind and rate of respiration are unknown.','ok')};
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setMode(t.dataset.mode)}});
+function setMode(m){S.mode=m;S.snap=null;document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.mode===m)});
+ $('setupBox').hidden=m!=='setup';$('runBox').hidden=m==='setup';
+ $('task').innerHTML=m==='setup'
+  ?'<b>Step 1.</b> Read the <b>balance</b> and type the mass of the soaked seeds. Choose the water-bath temperature (tap the chips or the thermostat). Both tubes already hold 2 mL of KOH below a gauze, cotton wool and the seeds.'
+  :m==='koh'
+  ?'<b>Step 2 · KOH absorbs CO₂.</b> ① Open the screw clips and wait <b>at least 5 min</b> (watch the bench timer). Use a syringe to put each index near 10–20 mm. ② Close the clips — reading 1 is taken at t = 0. Then press <b>Take reading</b> about every 2 min up to 10 min and type the index positions into Table 1.'
+  :'<b>Step 3 · Water instead of KOH.</b> The same seeds, but CO₂ now stays in the tube. Equilibrate again for 5 min, close the clips and take readings every 2 min for 10 min into Table 2. Compare the movement with Step 2.';
+ if(m!=='setup')$('massIn').blur();say('');buildChips();render();drawZoom();autoScroll()}
+
+/* ───────── render bench ───────── */
+function render(){var rk=curRun(),R=S.runs[rk],t=R.t,show=S.mode!=='setup'?rk:'koh';
+ testLbl.textContent='TEST · seed sample S-'+S.code+' · '+(show==='koh'?'KOH':'water');
+ ['a','b'].forEach(function(k){var p=pos(show,k,S.runs[show].t),x=SX(p);idx[k].setAttribute('transform','translate('+x.toFixed(2)+',0)');
+  idxLbl[k].setAttribute('x',(x-6).toFixed(1));idxLbl[k].textContent='▲ '+p.toFixed(1)+' mm';idxLbl[k].setAttribute('opacity',S.labels?1:0);
+  liq[k].setAttribute('fill',show==='koh'?'#e8f3f8':'#7fc2ec');
+  var open=S.runs[show].st==='off'||S.runs[show].st==='equil';clip[k].jaw.setAttribute('transform',open?'rotate(-35 '+(TXP[k]+30)+' '+armY[k]+')':'');
+  var off=(S.runs[show].p0[k]-18)*0.8;plunger[k].g.setAttribute('transform','translate('+(plunger[k].x0+Math.max(-4,Math.min(14,off))).toFixed(1)+',0)');
+  plunger[k].g.querySelector('.hl').setAttribute('opacity',S.mode!=='setup'&&S.sel===k&&open?1:0)});
+ var bt=S.T+0.15*Math.sin(Date.now()/4000);thermoTxt.textContent=bt.toFixed(1)+' °C';thTxt.textContent=S.T+'°C';merc.setAttribute('y',290-S.T*2.9);merc.setAttribute('height',S.T*2.9-6);
+ var R2=S.runs[show];swTxt.textContent=R2.st==='run'||R2.st==='done'?mmss(R2.t):'00:00';
+ swSub.textContent=R2.st==='run'?'running':R2.st==='done'?'stopped':'ready';
+ eqTxt.textContent=R2.st==='equil'?'Clips open · equilibrating '+mmss(R2.eq):R2.st==='off'?'Clips open':'Clips closed';
+ balTxt.textContent=S.m.toFixed(2);balLbl.textContent=S.labels?'mass = '+S.m.toFixed(2)+' g':'soaked seeds';
+ $('sampleTag').textContent='Sample S-'+S.code;$('tShow').textContent=S.T+' °C';
+ if(S.mode!=='setup'){$('lcd').textContent=R.st==='equil'?'EQ '+mmss(R.eq):mmss(R.t);
+  $('runState').textContent=R.st==='off'?'Clips open — press ① to start equilibrating':R.st==='equil'?(R.eq>=EQ_MIN?'Equilibrated ✓ — close the clips':'Equilibrating… (need 5:00)'):R.st==='run'?'Stopwatch running · '+R.laps.length+' reading(s)':(R.off?'Index ran off the scale — stopped':'Run finished · '+R.laps.length+' reading(s)');
+  $('eqBtn').disabled=R.st!=='off';$('closeBtn').disabled=R.st!=='equil';$('lapBtn').disabled=R.st!=='run';$('stopBtn').disabled=R.st!=='run';
+  document.querySelectorAll('#nudge button').forEach(function(b){b.disabled=!(R.st==='off'||R.st==='equil')})}
+ var bs=$('benchScroll');if(bs.scrollWidth>bs.clientWidth+4&&S.mode!=='setup'&&R.st==='run'){var px=SX(pos(rk,'a',R.t))/1000*bs.scrollWidth;if(px<bs.scrollLeft+30||px>bs.scrollLeft+bs.clientWidth-30)bs.scrollLeft=px-bs.clientWidth*0.3}}
+function focusBench(x){var bs=$('benchScroll');if(bs.scrollWidth<=bs.clientWidth+4)return;bs.scrollLeft=x/1000*bs.scrollWidth-bs.clientWidth/2}
+function autoScroll(){var R=S.runs[curRun()];if(S.mode==='setup')focusBench(420);else if(R.st==='off'||R.st==='equil')focusBench(820);else focusBench(SX(pos(curRun(),'a',R.t))+80)}
+/* clock */
+var last=performance.now(),saveT=0;
+setInterval(function(){var now=performance.now(),dt=Math.min(1,(now-last)/1000)*S.speed;last=now;var any=false;
+ ['koh','wat'].forEach(function(rk){var R=S.runs[rk];
+  if(R.st==='equil'){R.eq+=dt;any=true}
+  if(R.st==='run'){R.t=Math.min(MAXT,R.t+dt);any=true;
+   if(pos(rk,'a',R.t)>SMAX-DROP-2||pos(rk,'b',R.t)>SMAX-DROP-2){R.st='done';R.off=true;if(rk===curRun())say('The test index has reached the end of the scale. The run has stopped; use the readings you have, or redo the run with the index nearer 0.','bad');buildChips()}
+   if(R.t>=MAXT){R.st='done';buildChips();if(rk===curRun())say('20 minutes is up; the run has stopped.','ok')}}});
+ if(any){render();if(S.snap==null&&S.mode!=='setup')drawZoom();saveT+=dt;if(saveT>20){saveT=0;save()}}},100);
+setInterval(function(){thermoTxt.textContent=(S.T+0.15*Math.sin(Date.now()/4000)).toFixed(1)+' °C'},1000);
+
+/* ───────── tables ───────── */
+var TB={koh:$('tb1'),wat:$('tb2')};
+function num(v){var x=parseFloat(v);return isNaN(x)?null:x}
+function calc(rk){var R=S.runs[rk],o=R.rows[0],a0=o?num(o.a):null,b0=o?num(o.b):null;
+ return R.rows.map(function(r,i){var a=num(r.a),b=num(r.b),tm=R.laps[i].t/60;if(a==null||b==null||a0==null||b0==null)return {tm:tm};
+  var ma=a-a0,mb=b-b0,c=ma-mb;return {tm:tm,ma:ma,mb:mb,c:c,v:c*AREA}})}
+function okRead(rk,i,k){var R=S.runs[rk],v=num(R.rows[i][k]);return v!=null&&Math.abs(v-R.laps[i][k])<=READ_TOL}
+function goodPts(rk){var R=S.runs[rk];if(!R.laps.length||R.eq<EQ_MIN||!okRead(rk,0,'a')||!okRead(rk,0,'b'))return [];
+ var c=calc(rk),out=[];R.rows.forEach(function(r,i){if(okRead(rk,i,'a')&&okRead(rk,i,'b')&&c[i].c!=null)out.push({tm:c[i].tm,c:c[i].c,ma:c[i].ma,mb:c[i].mb})});return out}
+function enough(p){return p.length>=5&&p[p.length-1].tm-p[0].tm>=8}
+function renderTable(){
+ var mt=$('massShow');mt.textContent=S.mass?S.mass+' g'+(S.massOk?' ✓':' ✗ (re-read the balance)'):'not saved';
+ $('nObs').textContent=S.runs.koh.laps.length+' + '+S.runs.wat.laps.length+' readings';
+ ['koh','wat'].forEach(function(rk){var R=S.runs[rk],tb=TB[rk];
+  if(!R.laps.length){tb.innerHTML='<tr><td colspan="9" class="note" style="padding:16px">No readings yet. In Step '+(rk==='koh'?2:3)+', equilibrate, close the clips and take readings.</td></tr>';return}
+  tb.innerHTML='';R.laps.forEach(function(l,i){var r=R.rows[i],tr=document.createElement('tr');
+   tr.innerHTML='<td>'+(i+1)+'</td><td class="n">'+(l.t/60).toFixed(2)+'</td><td><input data-k="a" value="'+r.a+'" inputmode="decimal" aria-label="test index reading '+(i+1)+'"></td><td><input data-k="b" value="'+r.b+'" inputmode="decimal" aria-label="control index reading '+(i+1)+'"></td>'+
+    '<td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td><button class="del" type="button" aria-label="Delete reading '+(i+1)+'">✕</button></td>';
+   tr.querySelectorAll('input').forEach(function(inp){inp.oninput=function(){r[inp.dataset.k]=inp.value.trim();inp.classList.remove('bad','good');fillAll(rk);save();drawGraphs();renderResult()}});
+   tr.querySelector('.del').onclick=function(){R.laps.splice(i,1);R.rows.splice(i,1);S.snap=null;save();buildChips();renderTable()};
+   tb.appendChild(tr)});fillAll(rk)});
+ drawGraphs();renderResult()}
+function fillAll(rk){var c=calc(rk);TB[rk].querySelectorAll('tr').forEach(function(tr,i){var td=tr.querySelectorAll('td.n');if(td.length<5)return;var x=c[i];
+ if(!x||x.c==null){for(var j=1;j<5;j++)td[j].textContent='–';return}
+ td[1].textContent=x.ma.toFixed(1);td[2].textContent=x.mb.toFixed(1);td[3].textContent=x.c.toFixed(1);td[4].textContent=x.v.toFixed(1)})}
+$('check').onclick=function(){var fb=[];
+ if(!S.mass)fb.push('Save the mass of the seeds from the balance in Step 1.');else if(!S.massOk)fb.push('Mass: '+S.mass+' g is not what the balance shows — read it again.');
+ ['koh','wat'].forEach(function(rk){var R=S.runs[rk],nm=rk==='koh'?'Table 1 (KOH)':'Table 2 (water)',rows=TB[rk].querySelectorAll('tr');
+  if(!R.laps.length){fb.push(nm+': no readings yet.');return}
+  if(R.eq<EQ_MIN)fb.push(nm+': the clips were closed after only '+mmss(R.eq)+' of equilibration (at least 5:00 is needed). The air was still warming and pushed the index back, so redo this run.');
+  R.laps.forEach(function(l,i){var tr=rows[i],bad=[];['a','b'].forEach(function(k){var inp=tr.querySelector('input[data-k="'+k+'"]'),ok=okRead(rk,i,k);inp.classList.toggle('bad',!ok);inp.classList.toggle('good',ok);if(!ok)bad.push(k==='a'?'test':'control')});
+   tr.classList.toggle('flag',bad.length>0);if(bad.length)fb.push(nm+', reading '+(i+1)+' (t = '+mmss(l.t)+'): re-read the '+bad.join(' and ')+' index'+(S.runs[rk].rows[i].a===''||S.runs[rk].rows[i].b===''?' (a box is empty)':'')+'. Tap “'+(i+1)+'” under the hand lens to see that moment.')});
+  if(!okRead(rk,0,'a')||!okRead(rk,0,'b'))fb.push(nm+': reading 1 is the starting point for every “moved” value, so it must be correct.');
+  var p=goodPts(rk);if(!enough(p))fb.push(nm+': you need at least 5 correct readings spread over 8 minutes or more (now '+p.length+(p.length?', over '+(p[p.length-1].tm-p[0].tm).toFixed(1)+' min':'')+').');
+  if(R.off)fb.push(nm+': the index ran off the end of the scale; next time start it nearer 0 mm.')});
+ if(!fb.length)fb.push('✓ All readings are correct and both runs were properly equilibrated. Well done — see your graphs and result below.');
+ $('fb').innerHTML=fb.map(function(x){return '<li>'+x+'</li>'}).join('')};
+
+/* ───────── graphs ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=$(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(280,r.width||560),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h}}
+function nice(m){var steps=[.5,1,2,2.5,5,10,20,25,50,100],e=Math.pow(10,Math.floor(Math.log10(m/6)));for(var i=0;i<steps.length;i++){if(m/(steps[i]*e)<=7)return steps[i]*e}return m/5}
+function axes(g,x0,x1,y0,y1,xl,yl,xs,ys){
+ var x=g.x,L=52,B=44,R=14,T=16,W=g.w-L-R,H=g.h-T-B,txt=css('--text')||'#222',mut=css('--muted')||'#666',bd=css('--border')||'#ddd';
+ function P(a,b){return [L+(a-x0)/(x1-x0)*W,T+H-(b-y0)/(y1-y0)*H]}
+ x.clearRect(0,0,g.w,g.h);x.font='12px Inter, sans-serif';x.lineWidth=1;
+ for(var v=x0;v<=x1+1e-9;v+=xs){var px=P(v,0)[0];x.strokeStyle=bd;x.beginPath();x.moveTo(px,T);x.lineTo(px,T+H);x.stroke();x.fillStyle=mut;x.textAlign='center';x.fillText(String(Math.round(v*10)/10),px,T+H+15)}
+ for(v=Math.ceil(y0/ys)*ys;v<=y1+1e-9;v+=ys){var py=P(0,v)[1];x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(String(Math.round(v*10)/10),L-6,py+4)}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T);x.lineTo(L,T+H);x.lineTo(L+W,T+H);x.stroke();
+ if(y0<0){var z=P(0,0)[1];x.lineWidth=1;x.beginPath();x.moveTo(L,z);x.lineTo(L+W,z);x.stroke()}
+ x.fillStyle=txt;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(13,T+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();return P}
+function fit(p,key){var n=p.length,mx=0,my=0,sxy=0,sxx=0;p.forEach(function(q){mx+=q.tm;my+=q[key]});mx/=n;my/=n;p.forEach(function(q){sxy+=(q.tm-mx)*(q[key]-my);sxx+=(q.tm-mx)*(q.tm-mx)});var b=sxy/sxx;return {b:b,a:my-b*mx}}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);g.x.fillStyle=css('--muted')||'#777';g.x.font='14px Inter, sans-serif';g.x.textAlign='center';g.x.fillText(t,g.w/2,g.h/2)}
+function dot(x,q,col,sq){x.fillStyle=col;x.strokeStyle='rgba(0,0,0,.45)';x.lineWidth=1;x.beginPath();if(sq)x.rect(q[0]-4,q[1]-4,8,8);else x.arc(q[0],q[1],4.5,0,7);x.fill();x.stroke()}
+function legendBox(x,l,t,w,h){x.save();x.globalAlpha=.88;x.fillStyle=css('--card')||'#fff';x.beginPath();if(x.roundRect)x.roundRect(l,t,w,h,6);else x.rect(l,t,w,h);x.fill();x.restore()}
+var FIT=null;
+function drawGraphs(){var g1=canvas('g1'),g2=canvas('g2'),p1=goodPts('koh'),p2=goodPts('wat');FIT=null;
+ var gold=css('--gold')||'#c9a227',navy='#3b6fb8',grey='#8b949e',red='#c0392b',green=css('--green')||'#237d69';
+ if(!enough(p1)){empty(g1,'Needs 5 correct KOH readings over ≥ 8 min ('+p1.length+' so far)');empty(g2,'Complete Table 1 first');return}
+ var f1=fit(p1,'c'),tmax=Math.max(10,p1[p1.length-1].tm),xs=2,tx=Math.ceil(tmax/xs)*xs;
+ var vals=[0];p1.forEach(function(q){vals.push(q.ma,q.mb,q.c)});var ymin=Math.min.apply(null,vals),ymax=Math.max.apply(null,vals)*1.35+2;
+ var ys=nice(ymax-Math.min(0,ymin));ymin=ymin<0?Math.floor(ymin/(ys/2))*(ys/2):0;ymax=Math.ceil(ymax/ys)*ys;
+ var P=axes(g1,0,tx,ymin,ymax,'time t (min)','index movement (mm)',xs,ys),x=g1.x;
+ x.strokeStyle=navy;x.lineWidth=2;x.beginPath();var a=P(0,f1.a),b=P(tx,f1.a+f1.b*tx);x.moveTo(a[0],a[1]);x.lineTo(b[0],b[1]);x.stroke();
+ p1.forEach(function(q){dot(x,P(q.tm,q.mb),grey,true);dot(x,P(q.tm,q.ma),gold);dot(x,P(q.tm,q.c),navy)});
+ var lp=P(tx*0.04,ymax);legendBox(x,lp[0],lp[1]+3,Math.min(212,g1.w-lp[0]-20),38);x.font='700 12px Inter, sans-serif';x.textAlign='left';x.fillStyle=navy;x.fillText('slope of x = '+f1.b.toFixed(2)+' mm/min',lp[0]+4,lp[1]+16);
+ x.font='12px Inter, sans-serif';x.fillStyle=gold;x.fillText('● test',lp[0]+4,lp[1]+34);x.fillStyle=grey;x.fillText('■ control',lp[0]+52,lp[1]+34);x.fillStyle=navy;x.fillText('● corrected x',lp[0]+120,lp[1]+34);
+ FIT={s1:f1.b};
+ if(!enough(p2)){empty(g2,'Needs 5 correct water readings over ≥ 8 min ('+p2.length+' so far)');return}
+ var f2=fit(p2,'c'),t2=Math.max(tx,Math.ceil(p2[p2.length-1].tm/xs)*xs),v2=[0];p1.forEach(function(q){v2.push(q.c)});p2.forEach(function(q){v2.push(q.c)});
+ var y0=Math.min.apply(null,v2),y1=Math.max.apply(null,v2)*1.45+2,s2=nice(y1-Math.min(0,y0));y0=y0<0?Math.floor(y0/(s2/2))*(s2/2):0;y1=Math.ceil(y1/s2)*s2;
+ var Q=axes(g2,0,t2,y0,y1,'time t (min)','corrected movement (mm)',xs,s2),y=g2.x;
+ [[f1,navy],[f2,green]].forEach(function(o){y.strokeStyle=o[1];y.lineWidth=2;y.beginPath();var a=Q(0,o[0].a),b=Q(t2,o[0].a+o[0].b*t2);y.moveTo(a[0],a[1]);y.lineTo(b[0],b[1]);y.stroke()});
+ p1.forEach(function(q){dot(y,Q(q.tm,q.c),navy)});p2.forEach(function(q){dot(y,Q(q.tm,q.c),green,true)});
+ var rq=(f1.b-f2.b)/f1.b,lq=Q(t2*0.04,y1);legendBox(y,lq[0],lq[1]+3,180,56);y.font='700 12px Inter, sans-serif';y.textAlign='left';
+ y.fillStyle=navy;y.fillText('x (KOH): '+f1.b.toFixed(2)+' mm/min',lq[0]+4,lq[1]+16);y.fillStyle=green;y.fillText('y (water): '+f2.b.toFixed(2)+' mm/min',lq[0]+4,lq[1]+34);
+ y.fillStyle=red;y.fillText('RQ = (x − y)/x = '+rq.toFixed(2),lq[0]+4,lq[1]+52);
+ FIT.s2=f2.b;FIT.rq=rq}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(drawGraphs,150)});
+
+/* ───────── result ───────── */
+function massUsed(){return S.massOk?parseFloat(S.mass):null}
+function food(rq){return rq>=0.9?'carbohydrate (RQ ≈ 1)':rq<=0.8?'fat (RQ ≈ 0.7)':'protein or a mixture (RQ ≈ 0.9)'}
+function tableRate(){var p=goodPts('koh'),m=massUsed();if(!p.length||!m)return null;var q=p[p.length-1];if(q.tm<=0)return null;return q.c*AREA/q.tm/m*60}
+function renderResult(){var m=massUsed(),tr=tableRate();
+ $('rT').textContent=tr!=null?tr.toFixed(0)+' µL g⁻¹ h⁻¹':'—';
+ var gr=FIT&&m?FIT.s1*AREA*60/m:null;$('rG').textContent=gr!=null?gr.toFixed(0)+' µL g⁻¹ h⁻¹':'—';
+ $('rQ').textContent=FIT&&FIT.rq!=null?FIT.rq.toFixed(2):'—';$('rF').textContent=FIT&&FIT.rq!=null?food(FIT.rq):'—';
+ var c='';if(gr!=null)c='At '+S.T+' °C, 1 g of these germinating seeds took in about '+gr.toFixed(0)+' µL ('+(gr/1000).toFixed(2)+' mL) of oxygen per hour.';
+ if(FIT&&FIT.rq!=null)c+=' The RQ of about '+FIT.rq.toFixed(2)+' shows that the seeds are mainly respiring '+food(FIT.rq).split(' (')[0]+'.';
+ $('concl').textContent=c;
+ var tb=$('trueBox');tb.hidden=!S.revealed;var sd=SEEDS[S.seed],act=rate()*60;
+ $('rTrue').textContent=sd.n+' seeds · stored food: '+sd.food+' · O₂ uptake '+act.toFixed(0)+' µL g⁻¹ h⁻¹ · RQ '+S.rq.toFixed(2);
+ var e=$('err');e.textContent='';if(S.revealed&&gr!=null){e.textContent='Your graph value differs from the actual rate by '+(Math.abs(gr-act)/act*100).toFixed(1)+'%'+(FIT.rq!=null?', and your RQ by '+Math.abs(FIT.rq-S.rq).toFixed(2)+'.':'.')}}
+$('reveal').onclick=function(){if(!S.massOk||!enough(goodPts('koh'))||!enough(goodPts('wat'))){$('err').textContent='First save the correct mass and complete both tables with at least 5 correct readings each (press “Check my table”).';return}
+ S.revealed=true;save();renderResult()};
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['Why are germinating seeds used for this experiment?','The embryo is growing fast and needs a lot of energy, so germinating seeds respire much faster than dry seeds. The change in gas volume is large enough to measure.'],
+ ['What is the role of KOH in the respirometer?','KOH absorbs the carbon dioxide given out by the seeds (2KOH + CO₂ → K₂CO₃ + H₂O). The fall in gas volume is then equal to the oxygen taken in.'],
+ ['Why does the coloured index move towards the seeds?','Oxygen is used up and the CO₂ produced is absorbed by KOH, so the pressure inside the tube falls. The higher outside air pressure pushes the index towards the tube.'],
+ ['Why is a control with boiled seeds set up?','Boiled seeds are dead and do not respire. Any movement in the control is due to changes in temperature or atmospheric pressure, and is subtracted from the test reading.'],
+ ['Why are the clips kept open for 5 minutes before readings are taken?','To let the air in the tubes reach the temperature of the water bath. Otherwise the warming air expands and moves the index, giving wrong readings.'],
+ ['What is the respiratory quotient?','The ratio of the volume of CO₂ given out to the volume of O₂ taken in during respiration, at the same temperature and pressure: RQ = CO₂ / O₂.'],
+ ['What is the RQ of carbohydrates and of fats?','Carbohydrates: 1 (6 CO₂ ÷ 6 O₂ for glucose). Fats: less than 1, about 0.7 (tripalmitin: 102 CO₂ ÷ 145 O₂). Proteins: about 0.9.'],
+ ['In the tube with water, the index of wheat seeds hardly moved. Why?','Wheat respires carbohydrate (RQ = 1), so the volume of CO₂ given out equals the O₂ taken in. With no KOH to absorb the CO₂, the total gas volume does not change.'],
+ ['Why does the index move towards the seeds in the water tube for groundnut seeds?','Groundnut respires fat, which has an RQ of about 0.7. Less CO₂ is released than O₂ is used, so the gas volume still falls.'],
+ ['How would the rate change if the bath were made 10 °C warmer?','It would roughly double, because respiration is controlled by enzymes and, within limits, their activity about doubles for a 10 °C rise (Q₁₀ ≈ 2).'],
+ ['Why should the seeds not touch the KOH solution?','KOH is strongly alkaline and corrosive; it would kill the seeds and stop respiration.'],
+ ['What is the RQ during anaerobic respiration?','Infinite (or undefined), because CO₂ is given out but no oxygen is taken in.']];
+$('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function recTable(rk){var R=S.runs[rk],c=calc(rk);return '<table><tr><th>S. No.</th><th>t (min)</th><th>Test (mm)</th><th>Control (mm)</th><th>Test moved</th><th>Control moved</th><th>Corrected (mm)</th><th>Volume (mm³)</th></tr>'+
+ R.laps.map(function(l,i){var x=c[i]||{},r=R.rows[i];return '<tr><td>'+(i+1)+'</td><td>'+(l.t/60).toFixed(2)+'</td><td>'+(r.a||'')+'</td><td>'+(r.b||'')+'</td><td>'+(x.c!=null?x.ma.toFixed(1):'')+'</td><td>'+(x.c!=null?x.mb.toFixed(1):'')+'</td><td>'+(x.c!=null?x.c.toFixed(1):'')+'</td><td>'+(x.c!=null?x.v.toFixed(1):'')+'</td></tr>'}).join('')+'</table>'}
+function buildRecord(){var img='';try{img='<img src="'+$('g1').toDataURL()+'"><img src="'+$('g2').toDataURL()+'">'}catch(e){}
+ $('record').innerHTML='<h1>Experiment: Rate of respiration and RQ of germinating seeds</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Date: ___________ &nbsp; Seed sample: S-'+S.code+'</p>'+
+  '<h2>Aim</h2><p>To show that germinating seeds take in oxygen during respiration, and to find their rate of oxygen uptake and their respiratory quotient using a simple respirometer.</p>'+
+  '<h2>Apparatus</h2><p>Germinating and boiled seeds, two boiling tubes with bungs, bent capillary tubes (bore 1.5 mm) with mm scales, wire gauze, moist cotton wool, 10% KOH, water, coloured index liquid, screw clips, syringes, water bath with thermometer, stopwatch, balance, petroleum jelly.</p>'+
+  '<h2>Theory</h2><p>C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy. KOH absorbs CO₂, so the index moves by x (O₂ taken in). With water it moves by y (O₂ in − CO₂ out). Volume = A·x with A = 1.767 mm². RQ = (x − y)/x.</p>'+
+  '<h2>Observations</h2><p>Mass of seeds = '+(S.mass||'______')+' g &nbsp; Bath temperature = '+S.T+' °C</p><p><b>Table 1 · with KOH</b></p>'+recTable('koh')+'<p><b>Table 2 · with water</b></p>'+recTable('wat')+
+  '<h2>Graphs</h2>'+(FIT?img:'<p>(Plot corrected movement against time for both runs on graph paper.)</p>')+
+  '<h2>Result</h2><p>Rate of oxygen uptake: '+$('rT').textContent+' (table), '+$('rG').textContent+' (graph). RQ = '+$('rQ').textContent+'; food respired: '+$('rF').textContent+'.</p>'+
+  '<h2>Precautions</h2><ol><li>Apparatus airtight; bungs sealed with petroleum jelly.</li><li>Seeds kept away from the KOH.</li><li>Equilibrated for at least 5 minutes before readings.</li><li>Tubes kept in the water bath, not held in the hand.</li><li>Same edge of the index read each time, without parallax.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>Leaks at the bung or tubing.</li><li>Temperature and pressure changes during the run.</li><li>Incomplete absorption of CO₂ by KOH.</li><li>Non-uniform bore of the capillary.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+$('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,pos:pos,lap:lap,setMode:setMode,render:render,rate:rate,AREA:AREA};
+if(S.mass)$('massIn').value=S.mass;
+setMode('setup');renderTable();
+})();
+</script>
+</body>
+</html>
