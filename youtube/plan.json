@@ -1615,11 +1615,27 @@
   },
   {
    "date": "2027-01-31",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "AI",
+   "title": "AI पक्षपाती क्यों हो सकता है? | AI (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/AI/why_ai_bias_hi.mp4"
+  },
+  {
+   "date": "2027-01-31",
    "time": "18:30",
    "series": "WHY",
    "group": "Class 12 Science",
    "title": "Why do reactions go FASTER when HOT? | Class 12 Science #Shorts",
    "drive_path": "1 WHY Series - English/Class 12 Science/66_why_collision_temp.mp4"
+  },
+  {
+   "date": "2027-02-01",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "Class 12 CS",
+   "title": "बाइनरी सर्च इतनी तेज़ क्यों? | Class 12 CS (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/Class 12 CS/why_binary_search_hi.mp4"
   },
   {
    "date": "2027-02-01",
@@ -1631,11 +1647,35 @@
   },
   {
    "date": "2027-02-02",
+   "time": "13:30",
+   "series": "WHY Hindi",
+   "group": "Class 10 Science",
+   "title": "पैरेलल में प्रतिरोध कम क्यों? | Class 10 Science (हिंदी) #Shorts",
+   "drive_path": "2 WHY Series - Hindi/Class 10 Science/why_parallel_resistors_hi.mp4"
+  },
+  {
+   "date": "2027-02-02",
    "time": "18:30",
    "series": "WHY",
    "group": "Class 10 Science",
    "title": "Why do plants SHUT their pores on hot days? | Class 10 Science #Shorts",
    "drive_path": "1 WHY Series - English/Class 10 Science/68_why_stomata_close.mp4"
+  },
+  {
+   "date": "2027-02-03",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Treating all bases as alkalis | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/009-class10-chemistry-bases-alkalis-en.mp4"
+  },
+  {
+   "date": "2027-02-04",
+   "time": "13:30",
+   "series": "Mistake Bank",
+   "group": "Class 10 Chemistry",
+   "title": "Board Exam Mistake: Mixing up baking soda and washing soda | Class 10 Chemistry #Shorts",
+   "drive_path": "4 Mistake Bank - English/Class 10 Chemistry/010-class10-chemistry-baking-washing-soda-en.mp4"
   }
  ]
 }
