@@ -535,6 +535,158 @@
        "ans": "A — Lonar: Where Geology, Life and Heritage Meet (the passage covers the crater's origin, its unusual lake and its temples)."
       }
      ]
+    },
+    {
+     "passage": "Chilika: A Lagoon Brought Back to Life",
+     "blurb": "<b>1.</b> On the east coast of India, at the southern edge of the Mahanadi delta, a long, narrow ridge of sand separates the Bay of Bengal from a vast sheet of shallow water. This is Chilika, spread across the Puri, Khordha and Ganjam districts of Odisha. In the monsoon it covers more than a thousand square kilometres, and it is often described as the largest brackish-water lagoon in Asia. Brackish water is neither fresh like a river nor as salty as the sea; in Chilika, fresh water brought by rivers from the north mixes with seawater that flows in through openings in the sand ridge.<br><br><b>2.</b> This mixing is the lagoon's lifeline. The northern part, close to the river mouths, is nearly fresh, while the part near the sea is much saltier, and the balance shifts with every season. Such variety supports an astonishing range of fish, prawns and crabs, and tens of thousands of fishing families depend on the lagoon for their living. Chilika is also one of the very few lagoons in the world that is home to the Irrawaddy dolphin, a shy, round-headed dolphin without a beak, often spotted near Satapada.<br><br><b>3.</b> Every winter the lagoon becomes one of the largest gathering places of migratory birds in the country. Ducks, geese, flamingos and waders arrive from as far away as Central Asia and Siberia, and in a good season their numbers run into lakhs. Nalabana, a low island in the middle of the lagoon that disappears under water during the monsoon, has been declared a bird sanctuary because so many of them feed and rest there.<br><br><b>4.</b> In 1981 Chilika became one of the first two Indian wetlands to be listed as Ramsar sites, wetlands of international importance. Yet within a few years it was in trouble. Silt carried down by the rivers piled up, and the mouth connecting the lagoon to the sea became choked. With less seawater coming in, the lagoon grew less salty, freshwater weeds spread across its surface and the catch of fish and prawns fell sharply. In 1993 Chilika was placed on the Montreux Record, a list of Ramsar sites whose ecological character is under threat. The turning point came in 2000, when, after careful scientific study, a new mouth was cut through the sand ridge. Seawater flowed in again, the weeds died back, the catch rose and dolphins were seen more often. In 2002 Chilika became the first site in Asia to be removed from the Montreux Record.<br><br><b>5.</b> The recovery is not complete. Unregulated prawn enclosures, tourist boats that crowd and chase the dolphins, and fresh deposits of silt remain serious threats. But Chilika has shown that a damaged wetland can be revived when scientific understanding is combined with the knowledge and support of the people who live by it.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "What is meant by 'brackish' water, according to paragraph 1?",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Water that is neither fresh like river water nor as salty as the sea — a mixture of the two."
+      },
+      {
+       "n": "II",
+       "q": "The water of Chilika is a mixture of ________.\nA. rainwater and groundwater\nB. water from two different seas\nC. river water from the north and seawater from the Bay of Bengal\nD. melted snow and river water",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — river water from the north and seawater from the Bay of Bengal (entering through openings in the sand ridge)."
+      },
+      {
+       "n": "III",
+       "q": "Complete the following with a suitable reason (paragraph 2): The northern part of the lagoon is nearly fresh because ________.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "…it lies close to the mouths of the rivers that bring in fresh water, and far from the openings through which seawater enters."
+      },
+      {
+       "n": "IV",
+       "q": "Which of the following describes the Irrawaddy dolphin as presented in the passage?\nA. A shy, round-headed dolphin without a beak\nB. A large dolphin that lives only in the open sea\nC. A dolphin with a long, pointed beak\nD. A dolphin found in every lagoon of India",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "A — A shy, round-headed dolphin without a beak."
+      },
+      {
+       "n": "V",
+       "q": "Why has Nalabana island been declared a bird sanctuary? (paragraph 3)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Because a very large number of migratory birds feed and rest on this low island in the middle of the lagoon every winter."
+      },
+      {
+       "n": "VI",
+       "q": "According to paragraph 4, the Montreux Record is ________.\nA. a list of the largest lakes in Asia\nB. an award given to the cleanest wetland\nC. a record of the number of birds visiting a wetland\nD. a list of Ramsar sites whose ecological character is under threat",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "D — a list of Ramsar sites whose ecological character is under threat."
+      },
+      {
+       "n": "VII",
+       "q": "Explain how the choking of the lagoon's mouth harmed Chilika. (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Silt brought by the rivers blocked the mouth, so less seawater could flow in and the lagoon became less salty (1). As a result freshwater weeds spread over its surface and the catch of fish and prawns fell sharply, hurting the fishing families (1)."
+      },
+      {
+       "n": "VIII",
+       "q": "The word 'unregulated' in paragraph 5 means ________.\nA. very large in size\nB. not controlled by rules or authority\nC. built close to the sea\nD. owned by the government",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — not controlled by rules or authority."
+      },
+      {
+       "n": "IX",
+       "q": "How did cutting a new mouth in 2000 help Chilika recover, and what lesson does the passage draw from this? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "The new mouth let seawater flow in again, restoring the salt balance; the weeds died back, the fish and prawn catch rose and dolphins were seen more often (1). The lesson is that a damaged wetland can be revived when science works together with the knowledge and support of local people (1)."
+      },
+      {
+       "n": "X",
+       "q": "Which of the following would be the most suitable title for the passage?\nA. The Birds of Siberia\nB. Fishing Villages of Odisha\nC. Chilika: A Wetland Lost and Found Again\nD. How Dolphins Learn to Swim",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — Chilika: A Wetland Lost and Found Again (the passage traces the lagoon's richness, its decline and its recovery)."
+      }
+     ]
+    },
+    {
+     "passage": "Konark: The Temple That Tells Time",
+     "blurb": "<b>1.</b> About 35 kilometres from Puri, close to the sea, stands one of India's most remarkable monuments: the Sun Temple of Konark. It was built around 1250 CE by King Narasimhadeva I of the Eastern Ganga dynasty and dedicated to Surya, the Sun god. The builders did not simply raise a temple; they carved it in the shape of a gigantic stone chariot, mounted on twenty-four wheels and pulled by seven galloping horses, as if the god himself were driving across the sky.<br><br><b>2.</b> The wheels are the temple's most famous feature. Each is nearly three metres across and has eight thick spokes, with a thinner spoke between every two of them. Guides at Konark like to show visitors that the wheels can work as sundials: the shadow thrown by a spoke on the carved rim moves through the day, and since the eight thick spokes divide the circle into eight parts of three hours each, a trained eye can read the time from it. The twelve pairs of wheels are often said to stand for the twelve months of the year, and the seven horses for the seven days of the week.<br><br><b>3.</b> Every surface is crowded with carvings — musicians and dancers, elephants and horses, hunters, soldiers, and scenes of everyday life. The great tower that once rose above the sanctum has long since fallen, and what visitors see today is mainly the jagamohana, the large assembly hall in front of it. Even in its broken state the temple stood out so clearly on the coast that European sailors used it as a landmark and called it the 'Black Pagoda', while the Jagannath temple at Puri, with its white-washed walls, was the 'White Pagoda'.<br><br><b>4.</b> By the end of the nineteenth century the jagamohana was in danger of collapsing. In 1903 the British administration had it filled with sand and its entrances sealed so that the walls would not cave in. The sand saved the structure, but it also hid the interior from view for more than a century; in recent years the Archaeological Survey of India has been working out how it can be removed safely. In 1984 Konark was declared a UNESCO World Heritage Site, and today a carving of its chariot wheel appears on Indian ten-rupee notes.<br><br><b>5.</b> The temple's greatest enemy now is the very sea that made it a landmark. The temple is built largely of khondalite, a stone that weathers in the salty, moist air, and strong coastal winds wear away fine details year after year. Protecting Konark therefore needs constant care — and visitors who remember that the stone wheels have been turning, in their quiet way, for nearly eight hundred years.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "Why can the Sun Temple be described as a 'stone chariot'? (paragraph 1)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Because it is carved in the shape of a gigantic chariot of the Sun god, mounted on twenty-four wheels and pulled by seven horses."
+      },
+      {
+       "n": "II",
+       "q": "The Sun Temple at Konark was built ________.\nA. by the British administration in 1903\nB. around 1250 CE by King Narasimhadeva I\nC. by European sailors as a landmark\nD. by the Archaeological Survey of India",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — around 1250 CE by King Narasimhadeva I of the Eastern Ganga dynasty."
+      },
+      {
+       "n": "III",
+       "q": "Complete the following (paragraph 2): A trained eye can read the time from a wheel because ________.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "…the shadow of a spoke moves across the carved rim through the day, and the eight thick spokes divide the circle into eight parts of three hours each."
+      },
+      {
+       "n": "IV",
+       "q": "According to paragraph 2, the seven horses are often said to represent ________.\nA. the seven kings of the dynasty\nB. the seven colours of the rainbow\nC. the seven rivers of Odisha\nD. the seven days of the week",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "D — the seven days of the week."
+      },
+      {
+       "n": "V",
+       "q": "What do visitors to Konark mainly see today, and why? (paragraph 3)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Mainly the jagamohana (the large assembly hall), because the great tower over the sanctum fell long ago."
+      },
+      {
+       "n": "VI",
+       "q": "European sailors called the Konark temple the 'Black Pagoda' because ________.\nA. it stood out clearly on the coast and served them as a landmark\nB. it was built entirely of black marble\nC. it was painted black every year\nD. it was hidden from view by sand",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "A — it stood out clearly on the coast and served them as a landmark (in contrast with the white-washed 'White Pagoda' at Puri)."
+      },
+      {
+       "n": "VII",
+       "q": "Why was the jagamohana filled with sand in 1903, and what was the drawback of this step? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "It was in danger of collapsing, so it was filled with sand and its entrances sealed to keep the walls from caving in (1). The drawback was that the sand hid the interior from view for more than a century, and removing it safely is still being worked out (1)."
+      },
+      {
+       "n": "VIII",
+       "q": "The word 'weathers' in paragraph 5 means ________.\nA. changes the climate\nB. predicts the weather\nC. is worn away by wind, moisture and air\nD. grows stronger with age",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — is worn away by wind, moisture and air."
+      },
+      {
+       "n": "IX",
+       "q": "Why does the writer call the sea the temple's 'greatest enemy'? Mention two reasons. (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "The temple is built largely of khondalite, which weathers in the salty, moist sea air (1). Strong coastal winds also wear away its fine carvings year after year, so the sea that made Konark a landmark now slowly damages it (1)."
+      },
+      {
+       "n": "X",
+       "q": "Which of the following best states the central idea of the passage?\nA. Konark is famous only for its wheels.\nB. Konark is a marvel of art, science and history that needs constant protection.\nC. The British destroyed the temple at Konark.\nD. Sailors built the Konark temple as a lighthouse.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — Konark is a marvel of art, science and history that needs constant protection."
+      }
+     ]
     }
    ]
   },
@@ -918,6 +1070,114 @@
        "ans": "Any two (1 mark each): join the school's daily activity period or a yoga/dance club, so that activity fits into the school day despite coaching; walk or cycle to school or coaching on a safe route; use the school ground for an hour after classes; aim gradually for 60 minutes a day — students who are active for an hour or more report sleeping better and feeling less stressed."
       }
      ]
+    },
+    {
+     "passage": "Reading for Pleasure — Are Senior Students Still Turning the Pages?",
+     "blurb": "<b>1.</b> A survey of 900 students — 450 in Class XI and 450 in Class XII — in Bhopal, Patna and Coimbatore asked how much time they spend each week reading for pleasure: stories, novels, comics, biographies, magazines or long articles, but not textbooks or study material. <i>(Figures are illustrative.)</i><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Reading for pleasure (per week)</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Class XI (%)</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Class XII (%)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">None at all</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">18</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">31</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Less than 1 hour</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">34</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">37</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">1–3 hours</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">30</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">22</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">More than 3 hours</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">18</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">10</td></tr></table><b>2.</b> Students who read at least a little were asked which format they prefer: printed books (46%), online articles and web fiction (27%), e-books (17%) and audiobooks (10%).<br><br><b>3.</b> Those who read for less than an hour a week gave these main reasons: pressure of board examinations and entrance tests (44%), time spent on the phone and social media (29%), not finding books that interest them (15%) and no access to a library (12%).<br><br><b>4.</b> Students who read for more than three hours a week were more likely than others to say that they enjoy writing and feel confident speaking in class. The survey team recommends a weekly library period even in Class XII, class libraries with books chosen by students, reading clubs and book-swap days.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "The survey mainly set out to find out ________.\nA. which city has the largest library\nB. how much time senior students spend reading for pleasure\nC. how many textbooks students buy each year\nD. which subjects students find most difficult",
+       "marks": 1,
+       "ans": "B — how much time senior students spend reading for pleasure (not textbooks)."
+      },
+      {
+       "n": "II",
+       "q": "What percentage of Class XII students read for pleasure for less than one hour a week, including those who do not read at all?",
+       "marks": 1,
+       "ans": "68% (31% + 37%)."
+      },
+      {
+       "n": "III",
+       "q": "Which of the following statements is supported by the table?\nA. The share of students who do not read at all is higher in Class XII than in Class XI.\nB. More Class XII students than Class XI students read for more than three hours.\nC. Most Class XI students read for more than three hours a week.\nD. Reading habits are the same in both classes.",
+       "marks": 1,
+       "ans": "A — The share of non-readers is higher in Class XII (31%) than in Class XI (18%)."
+      },
+      {
+       "n": "IV",
+       "q": "Complete the following: Among students who read at least a little, the most popular format is ________.",
+       "marks": 1,
+       "ans": "printed books (46%)."
+      },
+      {
+       "n": "V",
+       "q": "Using paragraph 3, give two likely reasons why reading for pleasure falls between Class XI and Class XII. (About 40 words)",
+       "marks": 2,
+       "ans": "Pressure of board examinations and entrance tests, the most common reason (44%), grows sharply in Class XII and leaves little free time (1). Time spent on phones and social media (29%) also takes away the leisure hours that might have gone into reading (1)."
+      },
+      {
+       "n": "VI",
+       "q": "Fill in the blank with the correct option: Nearly one Class XII student in ________ does not read for pleasure at all. (three / five / ten)",
+       "marks": 1,
+       "ans": "three (31% is close to one in three)."
+      },
+      {
+       "n": "VII",
+       "q": "How many Class XI students in the survey read for pleasure for more than three hours a week?",
+       "marks": 1,
+       "ans": "81 students (18% of 450)."
+      },
+      {
+       "n": "VIII",
+       "q": "Arjun, a Class XII student, has not finished a book for pleasure in months; he says he cannot find anything he likes and spends his free time on his phone. Using the survey, give him two suggestions with reasons. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): join a reading club or book-swap day, where friends recommend books he may enjoy; ask for books of his own choice in the class library; try short formats such as articles, e-books or audiobooks that fit into short breaks; replace some phone time with reading — students who read more than three hours a week feel more confident writing and speaking."
+      }
+     ]
+    },
+    {
+     "passage": "Where Does the Pocket Money Go?",
+     "blurb": "<b>1.</b> A survey of 800 students of Classes XI and XII in Lucknow, Pune and Guwahati, all of whom receive a monthly allowance, asked how they spend it. Only 35% said they keep track of their spending, in a notebook or on a phone app. The table compares, on average, how the two groups use their money. <i>(Figures are illustrative.)</i><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Use of monthly pocket money</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Students who track spending (%)</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Students who do not track (%)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Food and snacks</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">24</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">33</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Mobile recharge, apps and games</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">12</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">22</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Clothes and accessories</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">14</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">19</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Books and stationery</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">15</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">9</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Travel</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">13</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">12</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Saved</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">22</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">5</td></tr></table><b>2.</b> Four in ten students who do not track their spending said they often run out of money before the end of the month, compared with fewer than one in ten of those who track it. Many in the first group said they had made online purchases they later regretted.<br><br><b>3.</b> The average monthly allowance reported was about ₹1,500.<br><br><b>4.</b> The survey team suggests a simple monthly budget, writing down every expense for at least a month, waiting a day before any online purchase, and setting aside savings at the start of the month rather than at the end.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "The main purpose of the survey was to find out ________.\nA. how much pocket money parents can afford\nB. which phone apps are most popular\nC. how often students travel by bus\nD. how senior students spend their pocket money",
+       "marks": 1,
+       "ans": "D — how senior students spend their pocket money (and how tracking affects it)."
+      },
+      {
+       "n": "II",
+       "q": "What share of their pocket money do students who do not track their spending use on food and snacks and on mobile recharge, apps and games together?",
+       "marks": 1,
+       "ans": "55% (33% + 22%)."
+      },
+      {
+       "n": "III",
+       "q": "Which of the following conclusions is supported by the table?\nA. Students who do not track spend more on books than those who track.\nB. Students who track save more than four times as large a share as those who do not.\nC. Both groups save the same share of their money.\nD. Clothes take the largest share of money in both groups.",
+       "marks": 1,
+       "ans": "B — Trackers save 22% against 5%, more than four times as large a share."
+      },
+      {
+       "n": "IV",
+       "q": "Complete the following: The one use on which both groups spend almost the same share of their money is ________.",
+       "marks": 1,
+       "ans": "travel (13% and 12%)."
+      },
+      {
+       "n": "V",
+       "q": "Using the survey, give two likely reasons why students who track their spending save more. (About 40 words)",
+       "marks": 2,
+       "ans": "Writing down every expense shows them where the money goes, so they cut wasteful spending on snacks, apps and games (1). Tracking also helps them plan and resist impulse purchases, so they do not run out before the month ends and can set money aside (1)."
+      },
+      {
+       "n": "VI",
+       "q": "Fill in the blank with the correct option: With an allowance of ₹1,500, a typical student who tracks spending saves about ₹________ a month. (75 / 150 / 330)",
+       "marks": 1,
+       "ans": "330 (22% of ₹1,500)."
+      },
+      {
+       "n": "VII",
+       "q": "How many of the 800 students surveyed keep track of their spending?",
+       "marks": 1,
+       "ans": "280 students (35% of 800)."
+      },
+      {
+       "n": "VIII",
+       "q": "Kabir, a Class XI student, does not track his spending and usually runs out of money by the third week, often after buying things online. Using the survey, give him two suggestions with reasons. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): write down every expense for a month to see where his money goes; make a simple monthly budget; wait a day before any online purchase so that he avoids buys he will regret; set aside savings at the start of the month rather than hoping something is left at the end — trackers save 22% against 5%."
+      }
+     ]
     }
    ]
   },
@@ -992,6 +1252,26 @@
      "optB": {
       "scenario": "You are Ramesh/Rama Bhattacharya, Secretary of the Senior Citizens' Forum, Salt Lake, Kolkata. With the help of a local bank, the Forum is holding a workshop to help senior citizens use smartphones and digital payments safely and to protect themselves from online fraud. Draft a notice in about 50 words for the members. Put the notice in a box.",
       "ans": "Model answer:\nSENIOR CITIZENS' FORUM, SALT LAKE, KOLKATA\nNOTICE\n15 January 20XX\nWORKSHOP ON SAFE DIGITAL BANKING\nThe Forum, with the help of a local bank, is holding a free workshop at the Community Hall on 22 January, from 11:00 a.m. to 1:00 p.m. Bank officials will explain how to use smartphones and UPI safely and how to avoid online fraud. Members should bring their smartphones. Tea will be served. Register with the Secretary by 19 January.\nRama Bhattacharya\nSecretary\n\nMarking — Format (1m): box, forum name, NOTICE, date, heading, signatory. Content (2m): purpose, date-time-venue, resource persons, what to bring, registration. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Kritika/Kartik Sood, Secretary of the Red Cross Club of Government Model Senior Secondary School, Sector 16, Chandigarh. The club, with the help of the Indian Red Cross Society, is organising a two-day first-aid training camp for students. Draft a notice in about 50 words inviting students to enrol. Put the notice in a box.",
+      "ans": "Model answer:\nGOVERNMENT MODEL SENIOR SECONDARY SCHOOL, SECTOR 16, CHANDIGARH\nNOTICE\n10 October 20XX\nFIRST-AID TRAINING CAMP\nThe Red Cross Club, with the help of the Indian Red Cross Society, is organising a free two-day first-aid training camp in the school hall on 18 and 19 October, from 9:00 a.m. to 1:00 p.m. Trainers will teach CPR, bandaging and the handling of burns and fractures. Students of Classes IX to XII may enrol. Certificates will be given. Give your names to the undersigned by 15 October.\nKartik Sood\nSecretary, Red Cross Club\n\nMarking — Format (1m): box, school name, NOTICE, date, heading, name and designation. Content (2m): purpose, organisers, dates-time-venue, what will be taught, eligibility, certificate, last date for names. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Anil/Anita Joshi, Secretary of Gulmohar Residents' Welfare Association, Gomti Nagar, Lucknow. The electricity department will replace the transformer that supplies the colony, so power will be cut for several hours. Draft a notice in about 50 words informing the residents. Put the notice in a box.",
+      "ans": "Model answer:\nGULMOHAR RESIDENTS' WELFARE ASSOCIATION, GOMTI NAGAR, LUCKNOW\nNOTICE\n4 May 20XX\nPOWER SHUTDOWN ON SUNDAY\nResidents are informed that the electricity department will replace the colony's transformer on Sunday, 8 May. Power supply will remain suspended from 9:00 a.m. to 3:00 p.m. Residents are requested to store water in advance, charge their phones and inverters, and keep lifts unused during this period. The inconvenience is regretted.\nAnita Joshi\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): reason, date, time of shutdown, precautions, regret. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Mohit/Mohini Bhardwaj, Head Boy/Head Girl of Doon International School, Dehradun. Because of dense morning fog and severe cold, the school has decided to change its timings for the winter months. Draft a notice in about 50 words informing students of the new timings. Put the notice in a box.",
+      "ans": "Model answer:\nDOON INTERNATIONAL SCHOOL, DEHRADUN\nNOTICE\n2 December 20XX\nCHANGE IN SCHOOL TIMINGS\nIn view of dense morning fog and severe cold, the school will function from 9:00 a.m. to 2:30 p.m. instead of 7:45 a.m. to 1:30 p.m., with effect from 5 December till 15 February. School buses will leave each stop one hour later than now. Students must wear full winter uniform. For queries, contact the class teacher.\nMohini Bhardwaj\nHead Girl\n\nMarking — Format (1m): box, school name, NOTICE, date, heading, name and designation. Content (2m): reason, old and new timings, period, bus timings, uniform, contact. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Prakash/Priya Nair, Secretary of Vasant Vihar Residents' Welfare Association, Kochi. The Association is organising a tree plantation drive in the colony on World Environment Day. Draft a notice in about 50 words inviting residents to take part. Put the notice in a box.",
+      "ans": "Model answer:\nVASANT VIHAR RESIDENTS' WELFARE ASSOCIATION, KOCHI\nNOTICE\n28 May 20XX\nTREE PLANTATION DRIVE\nTo mark World Environment Day, the Association will hold a tree plantation drive on 5 June from 7:00 to 9:00 a.m., starting at the community park. Saplings of neem, jamun and mango will be provided free. Residents, especially children, are requested to bring gardening gloves and adopt a sapling to care for. Register with the Secretary by 2 June.\nPriya Nair\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): occasion, date-time-venue, saplings provided, what to bring, adoption idea, registration. Grammar & Spelling (1m)."
      }
     }
    ]
@@ -1068,6 +1348,26 @@
       "scenario": "You are Captain Nisha Bhatt, a commercial airline pilot living in Ranchi. The Principal of DAV Public School, Ranchi, has invited you to speak to Class XI and XII students at the school's Career Day. Write a formal reply in about 50 words accepting the invitation.",
       "ans": "Model answer:\nCaptain Nisha Bhatt thanks the Principal, DAV Public School, Ranchi, for the kind invitation to address the students of Classes XI and XII at the school's Career Day on 20 November 20XX at 10:30 a.m. She is pleased to accept and will speak on careers in aviation and the training required. She will reach the school by 10:00 a.m. and would welcome questions from students.\n\nMarking — Format (1m): formal reply (third person, or first-person letter with date and addresses). Content (2m): thanks, reference to the invitation with occasion/date, acceptance, topic/arrival details. Grammar & Spelling (1m)."
      }
+    },
+    {
+     "optA": {
+      "scenario": "Sardar Patel Vidyalaya, Ahmedabad, has installed a rooftop solar power plant that will meet most of the school's electricity needs. As the Principal, draft a formal invitation in about 50 words to the District Collector, requesting her to inaugurate the plant.",
+      "ans": "Model answer:\nThe Principal, staff and students of\nSardar Patel Vidyalaya, Ahmedabad\nrequest the pleasure of the company of\nMs Radhika Iyer, District Collector, Ahmedabad,\nas Chief Guest at the inauguration of the school's\nRooftop Solar Power Plant\non Friday, 14 November 20XX, at 10:00 a.m.\nin the school quadrangle.\nThe programme will be followed by a student exhibition on clean energy.\nRSVP: Mr A. Shah, Administrative Officer | 079-XXXXXX45\n\nMarking — Format (1m): formal third-person invitation, hosts, chief guest, RSVP. Content (2m): occasion, date-time-venue, role of chief guest, programme. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Dr Arvind Menon, a space scientist living in Thiruvananthapuram. The Principal of Hill View Public School, Kollam, has invited you to address students on National Science Day, but you will be away at an international conference on that date. Write a formal reply in about 50 words declining the invitation.",
+      "ans": "Model answer:\nDr Arvind Menon thanks the Principal, Hill View Public School, Kollam, for the kind invitation to address the students on National Science Day, 28 February 20XX. He regrets his inability to accept, as he will be attending an international conference abroad on that date. He wishes the celebration every success and would be glad to visit the school on a later date.\n\nMarking — Format (1m): formal reply (third person, or first-person letter with date and addresses). Content (2m): thanks, reference to invitation with occasion/date, regret with reason, good wishes/alternative. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "The Rotary Club of Jaipur Pink City is holding a charity concert of Rajasthani folk music to raise funds for a school for children with hearing impairment. As the Club Secretary, draft a formal invitation in about 50 words to be sent to prominent citizens of the city.",
+      "ans": "Model answer:\nThe Rotary Club of Jaipur Pink City\nrequests the pleasure of your company\nat a Charity Concert of Rajasthani Folk Music\nin aid of Shravan Vidyalaya, a school for children with hearing impairment,\non Saturday, 20 December 20XX, at 6:30 p.m.\nat Ravindra Manch, Jaipur.\nDonor passes available at the venue.\nRSVP: Mrs Kavita Rathore, Secretary | 98XXXXXX12\n\nMarking — Format (1m): formal third-person invitation, host, RSVP. Content (2m): occasion, cause, date-time-venue, passes. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "Your friend Lakshmi has invited you to her younger sister's Bharatanatyam arangetram (first solo stage performance) in Chennai next month. Write a reply in about 50 words accepting the invitation.",
+      "ans": "Model answer:\n12, Civil Lines\nNagpur\n6 January 20XX\nDear Lakshmi\nThank you so much for inviting me to Meera's arangetram on 1 February at the Music Academy, Chennai. I would not miss it for anything! My parents have agreed, and I will reach Chennai a day early to help with the preparations. Please convey my best wishes to Meera.\nWith love\nAnanya\n\nMarking — Format (1m): informal reply — address, date, salutation, closing. Content (2m): thanks, reference to occasion/date/venue, acceptance with details, good wishes. Grammar & Spelling (1m)."
+     }
     }
    ]
   },
@@ -1143,6 +1443,26 @@
       "scenario": "You are Neha/Nitin Agarwal, 23 Swaroop Nagar, Kanpur. You saw this advertisement: 'WANTED — Junior Accounts Assistant for Ganga Textiles Pvt. Ltd., Kanpur. B.Com. with knowledge of accounting software and GST returns; good with numbers; freshers may apply. Apply to the Manager (HR) within 10 days.' Write a letter of application in 120–150 words, with your bio-data.",
       "ans": "Format (1m): sender's address, date, The Manager (HR) (company address), subject 'Application for the post of Junior Accounts Assistant', Sir/Madam, 'Yours sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to advertisement, interest, key qualifications, availability for interview) separate from bio-data.\nContent (2m) — value points: B.Com. with good marks; certificate course in accounting software; working knowledge of GST returns, ledgers and spreadsheets; internship with a chartered accountant's firm; accurate, honest and punctual; willing to learn. Bio-data — personal details, educational qualifications with years, certificate courses, internship, computer skills, languages, references.\nGrammar & Spelling (1m)."
      }
+    },
+    {
+     "optA": {
+      "scenario": "You are Ritu/Rahul Saxena, 31 Mukherjee Nagar, Delhi. Many coaching centres in your area run in cramped basements and upper floors with narrow staircases, no fire exits and poor ventilation, and hundreds of students crowd into them every day. Write a letter in 120–150 words to the Editor of a national daily drawing attention to the risk to students' lives and suggesting what should be done.",
+      "ans": "Format (1m): sender's address, date, The Editor (name of daily, city), subject (e.g. 'Unsafe coaching centres put students at risk'), Sir/Madam, 'Yours truly', name.\nOrganisation of Ideas (1m): problem → dangers → suggestions → appeal.\nContent (2m) — value points: coaching centres in basements and on upper floors of residential buildings; overcrowded rooms, single narrow staircase, no fire exits or extinguishers, tangled wiring, poor ventilation, flooding risk in basements during heavy rain; students from across the country at risk; suggestions — strict registration and safety audits, fire safety certificates, ban on classes in unsafe basements, limits on batch size, emergency exits and drills, regular inspection with heavy penalties, a helpline for students to report violations; appeal to the municipal corporation and education department to act before a tragedy; parents and students to check safety before enrolling.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Sanjana/Sanjay Iyer, 7 Anna Nagar, Madurai. You saw this advertisement: 'WANTED — Computer Teacher (Primary Classes) for Little Flower Matriculation School, Madurai. Graduate with a diploma in computer applications; ability to teach young children with patience; experience preferred. Apply to the Principal within a week.' Write a letter of application in 120–150 words, with your bio-data.",
+      "ans": "Format (1m): sender's address, date, The Principal (school address), subject 'Application for the post of Computer Teacher (Primary)', Sir/Madam, 'Yours sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to advertisement, interest, key qualifications, availability for interview) separate from bio-data.\nContent (2m) — value points: B.Sc./B.C.A. with a diploma in computer applications; knowledge of basic coding for children, office software and educational apps; one year's experience teaching computers in a primary school or summer computer camps; patient and creative with young learners; can use games and activities. Bio-data — personal details, educational qualifications with years, diploma, experience, skills, languages known, references.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Bhaskar/Bhavna Kalita, 18 Zoo Road, Guwahati. Every monsoon even a short spell of rain floods the roads of your area because the drains are clogged with plastic and silt; traffic stops, shops are damaged and children wade through dirty water to school. Write a letter in 120–150 words to the Editor of a local daily highlighting the problem and suggesting solutions.",
+      "ans": "Format (1m): sender's address, date, The Editor (name of daily, city), subject (e.g. 'Clogged drains flood our roads every monsoon'), Sir/Madam, 'Yours truly', name.\nOrganisation of Ideas (1m): problem → effects → causes → suggestions → appeal.\nContent (2m) — value points: knee-deep water after brief showers; traffic jams, vehicles breaking down, damage to shops and homes; risk of electrocution, falls into open drains, water-borne diseases and mosquitoes; children unable to reach school safely; causes — drains choked with plastic, garbage and silt, encroachment on drains, lack of regular cleaning before the monsoon; suggestions — desilting of drains before the rains, ban on single-use plastic, covering open drains, removing encroachments, pumps at low-lying points, citizen awareness against dumping waste; appeal to the municipal corporation.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Meghna/Mayank Ghosh, 26 Ballygunge Place, Kolkata. You saw this advertisement: 'WANTED — Assistant Librarian for St. Paul's College, Kolkata. Degree in Library and Information Science; familiarity with library software and digital catalogues; good communication skills. Apply to the Principal within ten days.' Write a letter of application in 120–150 words, with your bio-data.",
+      "ans": "Format (1m): sender's address, date, The Principal (college address), subject 'Application for the post of Assistant Librarian', Sir/Madam, 'Yours sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to advertisement, interest, suitability, availability for interview) separate from bio-data.\nContent (2m) — value points: B.Lib.I.Sc./M.Lib.I.Sc.; training in library software and digital cataloguing; internship at a public or university library; experience in issuing, shelving, stock verification and helping readers find resources; organised, courteous, good with computers. Bio-data — personal details, educational qualifications with years, training, internship/experience, computer skills, languages known, references.\nGrammar & Spelling (1m)."
+     }
     }
    ]
   },
@@ -1217,6 +1537,26 @@
      "optB": {
       "scenario": "You are Ishaan/Isha Chatterjee, Secretary of the Science Club of Modern High School, Durgapur. Your school recently hosted an inter-school science and technology exhibition. Write a report in 120–150 words for your school magazine.",
       "ans": "Format (1m): heading (e.g. 'Young Minds, Bright Ideas: Inter-School Science Exhibition'), by-line, place and date.\nOrganisation (1m): what-when-where-who → exhibits → judging and prizes → outcome.\nContent (2m) — value points: dates and venue; number of schools and exhibits; inauguration by the chief guest (e.g. a scientist from a research institute); themes such as clean energy, water conservation, health and smart agriculture; notable exhibits — a solar-powered water purifier, a low-cost air-quality monitor, a smart irrigation model, a waste-to-compost unit; quiz and science talks; judging and prizes; visitors and parents; appreciation of students' creativity; vote of thanks.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Many young people finish school without knowing how to plan a budget, how a bank account works or how to spot an online fraud. You are Aarav/Aarohi Kapoor, Class XII, Jaipur. Write an article in 120–150 words for a youth magazine on 'Money Lessons Should Begin at School'.",
+      "ans": "Format (1m): title, by-line, paragraphs.\nOrganisation of Ideas (1m): introduction → why financial literacy matters → what it should cover → how schools can teach it → conclusion.\nContent (2m) — value points: teenagers handle pocket money, UPI and online shopping early; lack of knowledge leads to overspending, debt traps, falling for fake loan apps and phishing; what to teach — budgeting, saving, how banks and interest work, digital payment safety, avoiding fraud, basics of insurance and investment; how — simple modules in the timetable, budgeting projects, talks by bank officials, school banks or mock markets; parents to involve children in household budgets; conclusion — money skills are life skills and build independent, responsible citizens.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Tanmay/Tanvi Deshmukh, President of the Interact Club of Saraswati Vidya Mandir, Nagpur. Members of the club recently spent a day at an old-age home in the city. Write a report in 120–150 words for your school magazine.",
+      "ans": "Format (1m): heading (e.g. 'A Day of Smiles at Aashirwad Old-Age Home'), by-line, place and date.\nOrganisation (1m): what-when-where-who → activities → residents' response → reflections.\nContent (2m) — value points: date and name of the home; number of students and teachers; gifts collected — fruit, books, blankets, medicines; activities — songs, a short play, antakshari, carrom and board games, helping residents write letters or use video calls; residents shared stories of their lives; health check-up by a doctor parent; students' feelings — respect for elders, the loneliness of the aged, value of time and attention; the club's plan to visit every month; vote of thanks.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Students today use AI tools to explain lessons, solve problems and even write their assignments. You are Nandini/Nikhil Rao, Class XII, Hyderabad. Write an article in 120–150 words for your school magazine on 'AI in Our Schoolbags: Helper or Shortcut?'.",
+      "ans": "Format (1m): title, by-line, paragraphs.\nOrganisation of Ideas (1m): introduction → benefits → dangers → responsible use → conclusion.\nContent (2m) — value points: AI chatbots and apps widely used by students; benefits — instant explanations, practice questions, help with languages, support for students without tutors, saves time in research; dangers — copying assignments without understanding, loss of original thinking and writing skills, wrong or made-up answers, privacy concerns, unfair advantage; responsible use — use AI to learn, not to replace learning; check facts with textbooks and teachers; acknowledge help; schools to frame clear guidelines and teach AI literacy; conclusion — a good servant but a poor master.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Rehan/Ruhi Mirza, Head of the Disaster Management Club of Army Public School, Srinagar. Your school recently conducted an earthquake evacuation drill with the help of the State Disaster Response Force. Write a report in 120–150 words for your school magazine.",
+      "ans": "Format (1m): heading (e.g. 'Drop, Cover, Hold: School Holds Earthquake Drill'), by-line, place and date.\nOrganisation (1m): what-when-where-who → how the drill was carried out → observations → lessons/follow-up.\nContent (2m) — value points: date; drill conducted with the State Disaster Response Force; siren signal; students practised 'drop, cover and hold' under desks; orderly evacuation by marked routes to the open assembly ground; head count by class teachers; first-aid and stretcher demonstration; mock rescue of 'injured' students; whole school evacuated in a few minutes; officials pointed out improvements — keeping corridors clear, assigning helpers for younger and differently-abled students; importance of preparedness in an earthquake-prone region; drills to be repeated every term.\nGrammar & Spelling (1m)."
      }
     }
    ]
@@ -1825,6 +2165,178 @@
        }
       ]
      }
+    },
+    {
+     "optA": {
+      "title": "Aunt Jennifer's Tigers (Adrienne Rich)",
+      "extract": "Refer to the second stanza of the poem in your textbook, beginning 'Aunt Jennifer's fingers fluttering through her wool…' and ending '…Sits heavily upon Aunt Jennifer's hand.'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: In this stanza Aunt Jennifer is shown ________. (doing needlework with wool / writing a letter / painting a picture)",
+        "marks": 1,
+        "ans": "doing needlework with wool (she is embroidering the tigers on a panel)"
+       },
+       {
+        "n": "II",
+        "q": "Whose wedding band is mentioned, and why is its weight called 'massive'?",
+        "marks": 1,
+        "ans": "Uncle's. A ring is not literally heavy; 'massive' shows how heavily the marriage and her husband's authority press upon her."
+       },
+       {
+        "n": "III",
+        "q": "The line 'Sits heavily upon Aunt Jennifer's hand' suggests that ________.\nA. the ring is too large for her finger\nB. she is proud of her expensive ring\nC. her hands are tired after a long day's work\nD. the burden of an unequal marriage weighs down her spirit",
+        "marks": 1,
+        "ans": "D — the burden of an unequal marriage weighs down her spirit."
+       },
+       {
+        "n": "IV",
+        "q": "The husband is called only 'Uncle' and is never named. What does this suggest?",
+        "marks": 1,
+        "ans": "That he stands for male authority in general rather than an individual — he is known to us only through the control he exercises over Aunt Jennifer."
+       },
+       {
+        "n": "V",
+        "q": "In this stanza the wedding band is used as a symbol of ________.\nA. love and companionship\nB. the oppressive bond of marriage\nC. the family's wealth\nD. a religious vow",
+        "marks": 1,
+        "ans": "B — the oppressive bond of marriage."
+       },
+       {
+        "n": "VI",
+        "q": "How does this stanza contrast with the picture of the tigers in the first stanza?",
+        "marks": 1,
+        "ans": "The tigers are bold, confident and fearless, while their creator is timid and weighed down; her free creations show the courage she herself cannot express."
+       }
+      ]
+     },
+     "optB": {
+      "title": "A Roadside Stand (Robert Frost)",
+      "extract": "Refer to the second stanza of the poem in your textbook, beginning 'The polished traffic passed with a mind ahead…' and ending '…Why keep your money (this crossly) and go along.'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: The word 'artless' used for the paint of the signs means ________. (unskilled and simple / cunning and clever / bright and costly)",
+        "marks": 1,
+        "ans": "unskilled and simple"
+       },
+       {
+        "n": "II",
+        "q": "Why are the city travellers 'out of sorts' if they glance at the stand at all?",
+        "marks": 1,
+        "ans": "They are annoyed that the beautiful landscape is spoilt by the crude, home-made signboards of the stand."
+       },
+       {
+        "n": "III",
+        "q": "The signs 'with N turned wrong and S turned wrong' show that ________.\nA. the owners wanted to attract attention with a clever trick\nB. the owners, poor and little educated, painted the signs themselves\nC. the signs had been damaged by the weather\nD. the travellers could not read English",
+        "marks": 1,
+        "ans": "B — the owners, poor and little educated, painted the signs themselves."
+       },
+       {
+        "n": "IV",
+        "q": "Name any two things offered for sale at the stand.",
+        "marks": 1,
+        "ans": "Any two: wild berries in wooden quarts; crook-necked golden squash with silver warts; a 'beautiful mountain scene' (the scenery itself) for those who stop."
+       },
+       {
+        "n": "V",
+        "q": "In the lines 'You have the money, but if you want to be mean, / Why keep your money (this crossly) and go along', the voice is that of ________.\nA. a government official\nB. a city traveller complaining about prices\nC. the stand-owners, hurt and irritated at being ignored\nD. a police officer directing traffic",
+        "marks": 1,
+        "ans": "C — the stand-owners, hurt and irritated at being ignored."
+       },
+       {
+        "n": "VI",
+        "q": "What does the bracketed phrase '(this crossly)' reveal about the stand-owners?",
+        "marks": 1,
+        "ans": "Their wounded pride and frustration — they need the money badly, yet they resent the stingy travellers who pass them by without a thought."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "Keeping Quiet (Pablo Neruda)",
+      "extract": "Refer to the stanza of the poem in your textbook beginning 'Those who prepare green wars…' and ending '…in the shade, doing nothing.'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: 'Green wars' most likely refers to ________. (the destruction of nature by humans / wars fought in forests / quarrels among farmers)",
+        "marks": 1,
+        "ans": "the destruction of nature by humans"
+       },
+       {
+        "n": "II",
+        "q": "What is ironic about the phrase 'victories with no survivors'?",
+        "marks": 1,
+        "ans": "A victory is meant to benefit the winner, but if no one survives, the victory is meaningless — modern war destroys winners and losers alike."
+       },
+       {
+        "n": "III",
+        "q": "The image of the warmongers putting on 'clean clothes' suggests ________.\nA. a fresh start, free from the stains of violence and hatred\nB. a uniform for a new battle\nC. a festival celebrating victory\nD. their wish to look rich",
+        "marks": 1,
+        "ans": "A — a fresh start, free from the stains of violence and hatred."
+       },
+       {
+        "n": "IV",
+        "q": "Whom does the poet mean by 'their brothers', and what idea does the word convey?",
+        "marks": 1,
+        "ans": "Their former enemies and all fellow human beings; it conveys universal brotherhood — those who fought would walk together as brothers."
+       },
+       {
+        "n": "V",
+        "q": "The picture of people walking 'in the shade, doing nothing' presents ________.\nA. laziness that the poet criticises\nB. a moment of peace and calm in place of destructive action\nC. soldiers resting before an attack\nD. workers on strike",
+        "marks": 1,
+        "ans": "B — a moment of peace and calm in place of destructive action."
+       },
+       {
+        "n": "VI",
+        "q": "Identify the poetic device in 'wars with gas, wars with fire' and state its effect.",
+        "marks": 1,
+        "ans": "Repetition (anaphora) of 'wars with'; it stresses the many cruel forms of modern warfare and the poet's horror at them."
+       }
+      ]
+     },
+     "optB": {
+      "title": "A Roadside Stand (Robert Frost)",
+      "extract": "Refer to the stanza of the poem in your textbook beginning 'Sometimes I feel myself I can hardly bear…' and ending '…they had none, didn't it see?'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: The owners wait 'in almost open prayer' for ________. (a car to stop and buy something / the rain to fall / a letter from the city)",
+        "marks": 1,
+        "ans": "a car to stop and buy something"
+       },
+       {
+        "n": "II",
+        "q": "Why does the poet call the passing cars 'selfish'?",
+        "marks": 1,
+        "ans": "They are absorbed in their own journeys and pass by without a thought for the poor people waiting at the stand."
+       },
+       {
+        "n": "III",
+        "q": "The first car that did stop at the stand ________.\nA. bought all the berries\nB. asked the price of the squash\nC. used the yard to back and turn around, ploughing up the grass\nD. offered the owners a lift to the city",
+        "marks": 1,
+        "ans": "C — used the yard to back and turn around, ploughing up the grass."
+       },
+       {
+        "n": "IV",
+        "q": "What did one of the cars ask for, and why was the request a disappointment?",
+        "marks": 1,
+        "ans": "A gallon of gas (petrol). The stand had none — the travellers treated it as a service point instead of buying what the owners had to sell, so their hopes were dashed again."
+       },
+       {
+        "n": "V",
+        "q": "In 'The sadness that lurks near the open window', the poet uses ________.\nA. a simile\nB. alliteration\nC. personification\nD. a pun",
+        "marks": 1,
+        "ans": "C — personification (sadness is described as lurking and waiting like a person)."
+       },
+       {
+        "n": "VI",
+        "q": "What feeling do the words 'didn't it see?' express?",
+        "marks": 1,
+        "ans": "Exasperation — the owners are annoyed that the car (referred to coldly as 'it') could not see the obvious, just as the rich are blind to the poverty before them."
+       }
+      ]
+     }
     }
    ]
   },
@@ -2261,6 +2773,130 @@
         "q": "Why is this carefree description important for what follows in the chapter?",
         "marks": 1,
         "ans": "It shows her innocence just before she witnesses the humiliating vadai incident; the contrast makes her discovery of untouchability all the more shocking."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "The Enemy (Pearl S. Buck)",
+      "extract": "Refer to the part of the story in which Hana asks the maid Yumi to wash the wounded American, and then washes him herself.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "How does Yumi respond when Hana asks her to wash the wounded man?\nA. She does it gladly.\nB. She refuses.\nC. She runs to call the police.\nD. She asks the gardener to do it.",
+        "marks": 1,
+        "ans": "B — She refuses (she will not wash the white man)."
+       },
+       {
+        "n": "II",
+        "q": "Why does Hana decide to wash the man herself?",
+        "marks": 1,
+        "ans": "No servant would do it and the man had to be cleaned before Sadao could treat him, so she overcomes her own fear and distaste out of compassion and loyalty to her husband."
+       },
+       {
+        "n": "III",
+        "q": "Complete: Yumi's refusal reflects the servants' ________.",
+        "marks": 1,
+        "ans": "hatred of the enemy and fear of the consequences of helping an American during the war."
+       },
+       {
+        "n": "IV",
+        "q": "What does this episode reveal about Hana?",
+        "marks": 1,
+        "ans": "Her courage, compassion and sense of duty — she rises above prejudice and fear to care for a helpless human being."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Memories of Childhood II — We Too Are Human Beings (Bama)",
+      "extract": "Refer to the part of the chapter in which Bama watches an elder of her street carrying a small packet of food to the landlord.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "How was the elder carrying the packet?\nA. On his head\nB. In a cloth bag over his shoulder\nC. Wrapped in a banana leaf in both hands\nD. Holding it by its string, without touching the packet itself",
+        "marks": 1,
+        "ans": "D — Holding it by its string, without touching the packet itself."
+       },
+       {
+        "n": "II",
+        "q": "Why did Bama find the scene funny at first?",
+        "marks": 1,
+        "ans": "A grown man holding a packet away from himself by a string looked comical to her, and she thought he was playing a game or might drop it."
+       },
+       {
+        "n": "III",
+        "q": "Complete: Annan explained that the elder carried the packet in that way because ________.",
+        "marks": 1,
+        "ans": "the upper-caste landlord's family believed that the food would be polluted if a person of their community touched it."
+       },
+       {
+        "n": "IV",
+        "q": "How did Bama feel once she understood the meaning of what she had seen?",
+        "marks": 1,
+        "ans": "Her amusement turned into anger and humiliation; she felt like touching the packet herself, and the incident made her aware of untouchability for the first time."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "Memories of Childhood I — The Cutting of My Long Hair (Zitkala-Sa)",
+      "extract": "Refer to the part of the account in which Zitkala-Sa is dragged out from her hiding place and her long braids are cut.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "How did the narrator resist when she was carried downstairs?\nA. By pleading politely in English\nB. By kicking, scratching and crying aloud\nC. By pretending to faint\nD. By running out of the building",
+        "marks": 1,
+        "ans": "B — By kicking, scratching and crying aloud (she was finally tied fast in a chair)."
+       },
+       {
+        "n": "II",
+        "q": "What does the verb 'gnaw', used for the scissors cutting her braid, suggest?",
+        "marks": 1,
+        "ans": "A slow, cruel, animal-like action — her hair, a mark of her identity and pride, is being destroyed bit by bit."
+       },
+       {
+        "n": "III",
+        "q": "Complete: When the narrator says 'Then I lost my spirit', she means that ________.",
+        "marks": 1,
+        "ans": "her will to resist was broken and she felt defeated and stripped of her dignity and identity."
+       },
+       {
+        "n": "IV",
+        "q": "To what does she compare herself after the hair-cutting, and why?",
+        "marks": 1,
+        "ans": "To one of many little animals driven by a herder — she felt that she had lost her individuality and was being pushed around without any say, like cattle."
+       }
+      ]
+     },
+     "optB": {
+      "title": "The Tiger King (Kalki)",
+      "extract": "Refer to the concluding part of the story, in which the Maharaja buys a wooden toy tiger as a birthday present for his son.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "On what occasion did the Maharaja buy the wooden tiger?\nA. His own coronation\nB. His wedding anniversary\nC. His son's third birthday\nD. The killing of the hundredth tiger",
+        "marks": 1,
+        "ans": "C — His son's third birthday."
+       },
+       {
+        "n": "II",
+        "q": "How did the toy tiger cause the Maharaja's death?",
+        "marks": 1,
+        "ans": "A tiny sliver of its rough wood pierced his right hand as he played with the prince; the wound became infected, the infection spread through his arm, and he died during the operation."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The statement that the hundredth tiger 'took its final revenge' is ironic because ________.",
+        "marks": 1,
+        "ans": "the king who had killed ninety-nine real tigers was killed by a wooden toy tiger, and the prophecy came true after all."
+       },
+       {
+        "n": "IV",
+        "q": "What is the main idea brought out by the ending?\nA. Fate cannot be escaped, however powerful one is.\nB. Toys should be made of plastic.\nC. Surgeons in the state were careless.\nD. Hunting is a healthy sport.",
+        "marks": 1,
+        "ans": "A — Fate cannot be escaped, however powerful one is."
        }
       ]
      }
@@ -2871,6 +3507,178 @@
        }
       ]
      }
+    },
+    {
+     "optA": {
+      "title": "Lost Spring (Anees Jung)",
+      "extract": "Refer to the part of the chapter in which the author notices Saheb's tennis shoes and, later, describes his new job at a tea stall.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: Saheb got his tennis shoes ________. (as a gift from someone / from the tennis club as a prize / with money he had saved)",
+        "marks": 1,
+        "ans": "as a gift from someone (they were discarded shoes that someone gave him)"
+       },
+       {
+        "n": "II",
+        "q": "Why is a pair of shoes with a hole 'a dream come true' for Saheb?",
+        "marks": 1,
+        "ans": "Because he has always walked barefoot; even old, torn shoes are a luxury for a boy as poor as he is."
+       },
+       {
+        "n": "III",
+        "q": "Saheb's watching tennis at the neighbourhood club shows ________.\nA. his wish to become a coach\nB. his longing for a world of comfort and play that is closed to him\nC. that he works at the club\nD. that he dislikes sport",
+        "marks": 1,
+        "ans": "B — his longing for a world of comfort and play that is closed to him."
+       },
+       {
+        "n": "IV",
+        "q": "What are the terms of Saheb's job at the tea stall?",
+        "marks": 1,
+        "ans": "He is paid 800 rupees a month and all his meals."
+       },
+       {
+        "n": "V",
+        "q": "Why does the author feel that the steel canister is heavier than the plastic bag Saheb once carried?",
+        "marks": 1,
+        "ans": "The bag was his own and he was free as a ragpicker; the canister belongs to the tea-stall owner, so Saheb has lost his freedom — he is no longer his own master."
+       },
+       {
+        "n": "VI",
+        "q": "Which of the following best describes the change in Saheb?\nA. From hunger to plenty\nB. From a carefree child to a happy worker\nC. From freedom to bondage, though he now earns a wage\nD. From a worker to a student",
+        "marks": 1,
+        "ans": "C — From freedom to bondage, though he now earns a wage."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Indigo (Louis Fischer)",
+      "extract": "Refer to the part of the chapter which describes what Gandhi did to improve the health, education and cleanliness of the villagers of Champaran.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Who among the following volunteered to teach in the schools Gandhi opened?\nA. The British planters\nB. Mahadev Desai, Narhari Parikh and their wives\nC. The lieutenant-governor's officials\nD. Rajkumar Shukla's landlord",
+        "marks": 1,
+        "ans": "B — Mahadev Desai, Narhari Parikh and their wives (and later Gandhi's son Devdas and others)."
+       },
+       {
+        "n": "II",
+        "q": "In how many villages were primary schools opened?",
+        "marks": 1,
+        "ans": "In six villages."
+       },
+       {
+        "n": "III",
+        "q": "Complete: Kasturba taught the villagers about ________.",
+        "marks": 1,
+        "ans": "personal cleanliness and community sanitation (keeping the ashram and surroundings clean)."
+       },
+       {
+        "n": "IV",
+        "q": "Name the three medicines that were available to the villagers.",
+        "marks": 1,
+        "ans": "Castor oil, quinine and sulphur ointment."
+       },
+       {
+        "n": "V",
+        "q": "What were health conditions like in the villages, and how did Gandhi try to improve them?",
+        "marks": 1,
+        "ans": "Health conditions were miserable; Gandhi got a doctor to volunteer his services for six months, and the volunteers also worked to improve cleanliness and sanitation."
+       },
+       {
+        "n": "VI",
+        "q": "What does this part of the chapter reveal about Gandhi's idea of freedom?\nA. That it meant only political independence\nB. That it was the work of lawyers alone\nC. That it could be achieved by force\nD. That it included social and cultural upliftment of ordinary people",
+        "marks": 1,
+        "ans": "D — That it included social and cultural upliftment of ordinary people, not merely political or economic relief."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "Poets and Pancakes (Asokamitran)",
+      "extract": "Refer to the concluding part of the chapter, in which the author comes across the book 'The God That Failed' and finally learns who the English poet who visited Gemini Studios was.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: 'The God That Failed' is a collection of essays by ________. (six eminent writers / six film directors / six English poets of the Romantic age)",
+        "marks": 1,
+        "ans": "six eminent writers"
+       },
+       {
+        "n": "II",
+        "q": "What experience do the six essays have in common?",
+        "marks": 1,
+        "ans": "Each writer describes his journey into communism and his disillusionment with it."
+       },
+       {
+        "n": "III",
+        "q": "The poet who had once visited Gemini Studios turned out to be ________.\nA. Louis Fischer\nB. André Gide\nC. Richard Wright\nD. Stephen Spender",
+        "marks": 1,
+        "ans": "D — Stephen Spender."
+       },
+       {
+        "n": "IV",
+        "q": "Why had the poet's visit puzzled the staff of the studio for years?",
+        "marks": 1,
+        "ans": "No one could understand his English accent or why an English poet should address a Tamil film studio; the purpose of his visit remained a mystery."
+       },
+       {
+        "n": "V",
+        "q": "How did the book help the author solve the mystery of the poet's visit?",
+        "marks": 1,
+        "ans": "One of the six essays was by Stephen Spender; reading it and recognising the name, the author realised that Spender was the English poet who had addressed the studio staff years earlier."
+       },
+       {
+        "n": "VI",
+        "q": "What is the tone of the author in this concluding part?\nA. Bitter and angry\nB. Gently ironic and amused\nC. Fearful and anxious\nD. Solemn and tragic",
+        "marks": 1,
+        "ans": "B — Gently ironic and amused."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Deep Water (William O. Douglas)",
+      "extract": "Refer to the concluding part of the story, in which Douglas, after his training, tests himself in the lakes and finally conquers his fear of water.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: Even after the instructor's training, Douglas was 'not finished' because ________. (he still wondered whether the terror would return when he was alone in the water / he had not learnt to dive / he had no time to swim)",
+        "marks": 1,
+        "ans": "he still wondered whether the terror would return when he was alone in the water"
+       },
+       {
+        "n": "II",
+        "q": "What did Douglas do at Lake Wentworth in New Hampshire?",
+        "marks": 1,
+        "ans": "He dived off a dock and swam a long distance across the lake to an island, swimming in different strokes; the terror returned only once and he was able to overcome it."
+       },
+       {
+        "n": "III",
+        "q": "Why did Douglas go to Warm Lake?\nA. To teach his friends to swim\nB. To test himself once more, and finally know that his fear was gone\nC. To catch fish for dinner\nD. To meet his old instructor",
+        "marks": 1,
+        "ans": "B — To test himself once more, and finally know that his fear was gone."
+       },
+       {
+        "n": "IV",
+        "q": "How did Douglas express his joy after swimming across Warm Lake and back?",
+        "marks": 1,
+        "ans": "He shouted with joy, because he had at last conquered his fear of water."
+       },
+       {
+        "n": "V",
+        "q": "What does Douglas mean when he says 'In death there is peace. There is terror only in the fear of death'?",
+        "marks": 1,
+        "ans": "Death itself is calm; what terrifies us is the fear of it — once that fear is conquered, life can be lived freely."
+       },
+       {
+        "n": "VI",
+        "q": "Which of the following best states the message of this part?\nA. Water sports are dangerous.\nB. Only an instructor can teach courage.\nC. Fear can be conquered through will-power and repeated effort.\nD. Swimming should be learnt early.",
+        "marks": 1,
+        "ans": "C — Fear can be conquered through will-power and repeated effort (as Roosevelt said, 'All we have to fear is fear itself')."
+       }
+      ]
+     }
     }
    ]
   },
@@ -3170,6 +3978,90 @@
      "q": "Why did Edla insist that the peddler stay for Christmas even after he was found to be an impostor?",
      "marks": 2,
      "ans": "She felt it was unfair to drive away a man they themselves had invited, after promising him Christmas cheer (1). She pitied him — he had been chased about the whole year and was afraid of being caught — and she wanted him to enjoy at least one day of peace with them (1)."
+    },
+    {
+     "n": "I",
+     "src": "The Last Lesson",
+     "q": "Why did Franz think that something was wrong when he saw a crowd at the bulletin-board in front of the town hall?",
+     "marks": 2,
+     "ans": "For the last two years all the bad news — lost battles, the draft, the orders of the commanding officer — had been put up on that board (1). So the crowd made him wonder what new trouble had come; in fact it was the order that only German would be taught in the schools of Alsace and Lorraine (1)."
+    },
+    {
+     "n": "II",
+     "src": "Going Places",
+     "q": "Why did Sophie not want Jansie to know about her 'meeting' with Danny Casey?",
+     "marks": 2,
+     "ans": "Jansie was nosey and could not keep a secret; she would spread the news all over the neighbourhood (1). Sophie feared the gossip, her father's scorn and the exposure of a meeting that existed mostly in her imagination (1)."
+    },
+    {
+     "n": "III",
+     "src": "Deep Water",
+     "q": "How did his fear of water affect Douglas's life in the years after the incident at the Y.M.C.A. pool?",
+     "marks": 2,
+     "ans": "The fear stayed with him for years and ruined his fishing trips and his enjoyment of canoeing, boating and swimming (1). Whenever he went near water the old terror returned and paralysed him, until he resolved to get an instructor and conquer it (1)."
+    },
+    {
+     "n": "IV",
+     "src": "Poets and Pancakes",
+     "q": "Explain the title 'Poets and Pancakes'.",
+     "marks": 2,
+     "ans": "'Pancake' was the brand of make-up material that Gemini Studios bought in truckloads for its actors (1). 'Poets' refers to the many poets who worked at the studio, such as Kothamangalam Subbu, and to the English poet who once visited it — the chapter is a humorous account of life at the studio (1)."
+    },
+    {
+     "n": "V",
+     "src": "My Mother at Sixty-six",
+     "q": "Why does the poet 'smile and smile and smile' while parting from her mother?",
+     "marks": 2,
+     "ans": "She smiles to hide her fear and grief that this may be her last meeting with her ageing mother (1). The repeated smile is a brave mask meant to comfort her mother and herself, and it shows how hard she finds it to express her pain (1)."
+    },
+    {
+     "n": "VI",
+     "src": "A Thing of Beauty",
+     "q": "Keats names ordinary things like the sun, the moon and trees as 'shapes of beauty'. Why does he choose such common objects?",
+     "marks": 2,
+     "ans": "Beauty, for Keats, is not rare or costly; it is all around us in nature, freely available to everyone (1). Because these things are always present, they can remove the 'pall' of sadness from our spirits every day and bind us to the earth (1)."
+    },
+    {
+     "n": "I",
+     "src": "The Last Lesson",
+     "q": "What did Franz mean when he wondered, 'Will they make them sing in German, even the pigeons?'",
+     "marks": 2,
+     "ans": "Hearing the pigeons cooing on the roof, Franz mocked the order that only German be taught in Alsace and Lorraine (1). His words show that one cannot force a people to give up their language — it is as natural to them as cooing is to pigeons; the order was unjust and absurd (1)."
+    },
+    {
+     "n": "II",
+     "src": "Indigo",
+     "q": "Why did Gandhi refuse to let C.F. Andrews stay on in Champaran, although the lawyers wanted him to?",
+     "marks": 2,
+     "ans": "The lawyers felt that having an Englishman on their side would help them in the unequal fight (1). Gandhi said that this showed the weakness of their hearts; their cause was just and they must rely on themselves — he wanted to teach the people self-reliance (1)."
+    },
+    {
+     "n": "III",
+     "src": "The Interview",
+     "q": "What does Saul Bellow's description of interviews as 'thumbprints on his windpipe' suggest?",
+     "marks": 2,
+     "ans": "Though Bellow had agreed to be interviewed several times, he felt that interviews were suffocating and violent, like someone pressing on his throat (1). The image shows how some writers feel that interviews intrude on their privacy and choke their freedom of expression (1)."
+    },
+    {
+     "n": "IV",
+     "src": "Lost Spring",
+     "q": "What are the 'two distinct worlds' that the author sees in the lives of the bangle makers of Firozabad?",
+     "marks": 2,
+     "ans": "One is the world of the family, caught in a web of poverty and burdened by the stigma of caste (1). The other is a vicious circle of moneylenders (sahukars), middlemen, policemen, bureaucrats and politicians who exploit them, together keeping the children trapped (1)."
+    },
+    {
+     "n": "V",
+     "src": "Aunt Jennifer's Tigers",
+     "q": "Why is it significant that Aunt Jennifer creates her tigers through embroidery?",
+     "marks": 2,
+     "ans": "Embroidery is a quiet, domestic craft expected of women, done within the home (1). Through this permitted activity she secretly expresses the strength and freedom she cannot have in her marriage — the art becomes her silent protest (1)."
+    },
+    {
+     "n": "VI",
+     "src": "The Rattrap",
+     "q": "Why did the peddler leave the highway after robbing the crofter, and what happened to him in the forest?",
+     "marks": 2,
+     "ans": "He feared being caught with the stolen thirty kronor, so he turned off the public road into the forest (1). He lost his way, walked in circles in the dark December woods and realised that he himself had been caught in a rattrap, just as he had always said would happen to others (1)."
     }
    ]
   },
@@ -3322,6 +4214,48 @@
      "q": "What attracted Charley to the Galesburg of 1894?",
      "marks": 2,
      "ans": "It was a peaceful, gracious town with big old frame houses, huge lawns and tremendous trees whose branches met overhead; summer evenings were long, and people sat out on their lawns, the men smoking cigars and the women waving fans (1). Above all, it was free from the worries of modern life — the First World War was twenty years away and the Second over forty (1)."
+    },
+    {
+     "n": "I",
+     "src": "Journey to the End of the Earth",
+     "q": "Why, according to Tishani Doshi, is Antarctica the ideal place to study how changes in the environment affect the earth?",
+     "marks": 2,
+     "ans": "Antarctica holds about ninety per cent of the earth's total ice, so changes there affect the whole planet (1). Its simple ecosystem and lack of biodiversity make it the perfect place to see how little changes in the environment can have big repercussions (1)."
+    },
+    {
+     "n": "II",
+     "src": "On the Face of It",
+     "q": "How does Mr Lamb speak of his lost leg, and what does this show about him?",
+     "marks": 2,
+     "ans": "He says plainly that he lost it in the war and that children call him 'Lamey-Lamb', without any self-pity or bitterness (1). It shows that he has accepted his disability and refuses to let it limit his life — an example for Derry (1)."
+    },
+    {
+     "n": "III",
+     "src": "The Third Level",
+     "q": "Why does Charley say that Grand Central Station is 'growing like a tree'? How does this prepare the reader for his discovery?",
+     "marks": 2,
+     "ans": "Charley often got lost there and felt it kept pushing out new corridors and staircases like roots (1). The image makes the station seem endless and mysterious, so the discovery of an unknown third level becomes believable (1)."
+    },
+    {
+     "n": "I",
+     "src": "Journey to the End of the Earth",
+     "q": "Explain the significance of the title 'Journey to the End of the Earth'.",
+     "marks": 2,
+     "ans": "Literally, it is the author's voyage to Antarctica, the southernmost 'end' of the earth (1). Figuratively, it warns that if global warming and human greed continue, we may be heading towards the end of the earth as we know it (1)."
+    },
+    {
+     "n": "II",
+     "src": "The Enemy",
+     "q": "Why had Dr Sadao not been sent abroad with the troops during the war?",
+     "marks": 2,
+     "ans": "The old General was under his medical care and might need an operation at any time (1). Sadao was such a skilled surgeon that the General trusted no one else, so he was kept at home (1)."
+    },
+    {
+     "n": "III",
+     "src": "Memories of Childhood",
+     "q": "Why did people in Bama's village want to know which street a person lived on?",
+     "marks": 2,
+     "ans": "People of different castes lived on separate streets, so a person's street revealed his caste (1). When Annan was asked his name and then his street, the questioner only wanted to know his caste so that he could decide how to treat him — a hidden form of discrimination (1)."
     }
    ]
   },
@@ -3397,6 +4331,26 @@
       "q": "Art and beauty outlast human beings. Discuss how this idea is presented in 'Aunt Jennifer's Tigers' and 'A Thing of Beauty'.",
       "ans": "Value points:\n• Aunt Jennifer's Tigers: Aunt Jennifer, oppressed in marriage, creates tigers that prance proud and unafraid; even when she dies, still 'ringed with ordeals', the tigers in the panel 'will go on prancing, proud and unafraid' — her art survives and expresses the freedom she never had.\n• A Thing of Beauty: 'a thing of beauty is a joy for ever'; its loveliness increases and never passes into nothingness; nature, the grandeur of the mighty dead and 'lovely tales' are an 'endless fountain of immortal drink'.\n• Comparison: both see beauty and art as permanent, unlike fragile human life; for Rich, art is a quiet act of defiance by a suffering woman; for Keats, beauty is a universal source of joy that binds us to the earth despite sorrow.\n• Tone: Rich is ironic and sombre; Keats is celebratory and hopeful.\n• Conclusion: whether as protest or as consolation, art and beauty give lasting meaning to transient human lives.\nMarking: content 3, organisation/expression 2."
      }
+    },
+    {
+     "optA": {
+      "q": "Edla Willmansson and her father, the ironmaster, both invite the peddler home, but for very different reasons. Compare the two characters in 'The Rattrap' and show how Edla's response changes the peddler.",
+      "ans": "Value points:\n• The ironmaster: hearty, impulsive and proud; he mistakes the peddler for his old comrade Captain von Stahle and invites him home out of nostalgia and loneliness; when he sees him by daylight and learns the truth, he is angry and wants to hand him over to the sheriff — his kindness depends on status.\n• Edla: gentle, perceptive and compassionate; she notices the peddler's fear and poverty; her friendly persuasion succeeds where her father failed; after the truth comes out she insists that he stay for Christmas because they had promised him peace; she treats him with dignity, not as a thief.\n• Effect on the peddler: Edla's trust makes him feel valued for the first time; he leaves the crofter's thirty kronor with a rattrap as a Christmas present, signing himself Captain von Stahle — he has been 'released' from the rattrap of the world.\n• Conclusion: unconditional kindness awakens the goodness in a person; Edla, not the ironmaster, redeems him.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "We often realise the value of something only when we are about to lose it. Discuss with reference to Franz, M. Hamel and the village elders in 'The Last Lesson'.",
+      "ans": "Value points:\n• The order from Berlin: only German to be taught in the schools of Alsace and Lorraine; this is the last French lesson.\n• Franz: careless, late, unprepared on participles, dreams of playing outdoors; on hearing the news he regrets wasting time — his books, once a nuisance, now seem old friends; he wishes he could learn everything that day and listens with new attention.\n• M. Hamel: dressed in his Sunday best, unusually patient; admits that he too sent pupils to water his flowers and gave holidays; praises French as the most beautiful language, the key to their prison; is overcome at the end and writes 'Vive La France!'\n• The village elders: sit on the back benches to show respect and regret for not having gone to school more; old Hauser holds his primer.\n• Common failing — procrastination: everyone put off learning, thinking there was plenty of time.\n• Conclusion: the loss of their language awakens love for it — a reminder to value our language, culture and opportunities before they are taken away.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Both Douglas in 'Deep Water' and the peddler in 'The Rattrap' are trapped — one by fear, the other by a bitter view of the world — and both are finally set free. Compare the traps they are caught in and how each finds release.",
+      "ans": "Value points:\n• Douglas's trap: a childhood fear of water, made worse when a bully threw him into the deep end of the Y.M.C.A. pool; the terror stayed for years and spoilt his canoeing, fishing and swimming.\n• His release: determination and effort — an instructor trains him piece by piece with a rope and pulley; he then tests himself at Lake Wentworth and Warm Lake; he learns that there is terror only in the fear of death.\n• The peddler's trap: poverty, loneliness and cynicism; he sees the world as a rattrap that baits people with riches and comfort; he steals the crofter's money and gets lost in the forest — caught in his own trap.\n• His release: Edla's kindness and trust; treated as a captain, he rediscovers his goodness and returns the stolen money with the rattrap as a gift.\n• Comparison: Douglas frees himself through will-power; the peddler is freed by another's compassion; both show that inner barriers can be overcome.\n• Conclusion: whether through courage or kindness, release comes from changing the mind.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "'Lost Spring' and 'A Roadside Stand' both show the lives of the poor and the indifference of the privileged. Compare how Anees Jung and Robert Frost present this theme.",
+      "ans": "Value points:\n• Lost Spring: Saheb, a ragpicker in Seemapuri, and Mukesh's family of bangle makers in Firozabad; children lose their childhood (their 'spring') to poverty and hazardous work; they are trapped by tradition, caste and a vicious circle of moneylenders, middlemen, police and politicians; promises such as schools are empty.\n• A Roadside Stand: poor rural people set up a stand by the highway hoping to earn a little city money; the 'polished traffic' passes by; cars stop only to turn around or ask the way; the 'greedy good-doers' plan to resettle them near the theatre and store, robbing them of independence.\n• Indifference: in both texts the comfortable classes ignore or exploit the poor; welfare is offered without understanding their real needs.\n• Treatment: Jung uses factual, journalistic reporting with interviews and sharp details; Frost uses a poem of sympathy mixed with irony and self-questioning.\n• Conclusion: both writers appeal to the reader's conscience — the poor need dignity and real opportunity, not pity.\nMarking: content 3, organisation/expression 2."
+     }
     }
    ]
   },
@@ -3471,6 +4425,26 @@
      "optB": {
       "q": "'The Tiger King' can be read not only as a satire on vanity but also as a comment on the destruction of wildlife by those in power. Discuss.",
       "ans": "Value points:\n• Power without restraint: the Maharaja forbids anyone else to hunt tigers and kills them by the dozen to defeat a prophecy; the dewan and officials serve his whim, and when he refuses a British officer permission to hunt, he saves his throne by sending costly diamond rings to the officer's wife.\n• Wildlife wiped out: within a few years the tiger population of his state is destroyed; he marries for access to more tigers in his father-in-law's state; the dewan has to release an old tiger from a zoo — showing how scarce tigers have become.\n• Satire: the long titles, the astrologers, the expensive diamond rings sent to please the British, the frantic search for the hundredth tiger — all mock the vanity of rulers.\n• Irony of fate: the hundredth 'tiger' is a wooden toy whose sliver causes his death — nature's revenge.\n• Relevance today: hunting for sport and status, habitat loss and the need for conservation.\n• Conclusion: Kalki's humour carries a serious message — unchecked power and vanity can destroy nature, and ultimately the destroyer himself.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Charley says that the modern world is full of 'insecurity, fear, war, worry'. Discuss how 'The Third Level' presents Charley's discovery as a response to the anxieties of modern life, and whether escape can be a solution.",
+      "ans": "Value points:\n• Charley's world: a 31-year-old in New York in the mid-twentieth century; Sam, his psychiatrist friend, says modern life is full of insecurity, fear, war and worry and that people want to escape; Charley's stamp collecting is a 'temporary refuge from reality'.\n• The third level: an imagined or real platform with gaslights, brass spittoons, old-fashioned clothes and a train to Galesburg of 1894 — a peaceful town of big houses, long summer evenings and no world wars.\n• Escape as a response: the third level offers a dream of security and simplicity; Charley even withdraws his savings to buy old currency to go there with his wife Louisa.\n• Twist: he cannot find the third level again; but the first-day cover from Sam, now living in Galesburg in 1894, suggests that the escape was real — even the psychiatrist has escaped.\n• Can escape be a solution? It gives temporary relief and shows human longing for peace, but real problems need courage to face; the story treats escapism with sympathy and gentle irony.\n• Conclusion: the story blends fantasy with reality to comment on the stress of modern life.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "In 'The Tiger King', the Maharaja's whims are carried out by a crowd of officials, astrologers and servants. Discuss how Kalki uses the dewan and others to satirise flattery and blind obedience to power.",
+      "ans": "Value points:\n• The court: astrologers who predict the prince's death by the hundredth tiger; officials who carry out every royal order without question; the absurd string of titles reflects the flattery around the king.\n• The dewan: obeys the king's command not to let anyone else hunt tigers; when tigers in the state are wiped out, he helps find a bride from a state with many tigers; finally, desperate, he brings an old tiger from the People's Park in Madras and pushes it near the king's hunting ground.\n• Fear and flattery: officials fear the king's anger and the loss of their jobs; the hunters secretly kill the tiger the king missed and hide the truth to save themselves.\n• The British officer: the king saves his throne by sending costly diamond rings to the officer's wife — bribery and servility at a higher level.\n• Satire: Kalki's mock-heroic tone exposes how a circle of yes-men feeds a ruler's vanity and keeps the truth from him; their obedience leads to the destruction of wildlife and to the king's own ironic end.\n• Conclusion: unchecked power surrounded by flatterers becomes foolish and self-destructive.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "The title 'The Enemy' raises the question of who the real enemy is. Discuss the significance of the title with reference to Dr Sadao, the American prisoner and the society around them.",
+      "ans": "Value points:\n• The obvious enemy: the wounded American prisoner of war washed ashore near Sadao's house in wartime Japan; by law and national feeling he should be handed over.\n• Sadao and Hana: as a doctor Sadao saves his life; Hana nurses him in spite of the servants' desertion; their humanity rises above nationality.\n• The servants and society: hatred, fear and superstition — they see the man only as a white enemy and leave the house; prejudice and blind patriotism are presented as forces that divide people.\n• The General: self-centred; promises to send assassins but forgets because he is absorbed in his own illness — power that uses others.\n• Sadao's inner conflict: patriotism versus his duty as a doctor and as a human being; he finally helps the American escape in his own boat.\n• The real enemy: not a person but war, hatred and prejudice; the title is ironic — the 'enemy' turns out to be a frightened young man, while inhumanity is the true foe.\n• Conclusion: humanity transcends national borders.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "Symbols such as the open gate, the bees, the garden and the ladder carry much of the meaning of 'On the Face of It'. Discuss how Susan Hill uses these symbols to present the play's central ideas.",
+      "ans": "Value points:\n• The open gate: Mr Lamb's garden gate is never locked — it stands for openness, acceptance and freedom; anyone may come and go; it contrasts with Derry's closed, fearful life.\n• The bees: Mr Lamb hears them 'singing', not buzzing — a sign of his positive, imaginative outlook that turns the ordinary into something joyful.\n• The garden and the crab apples: a world where everything grows and has value; Derry, like an unwanted plant, finds himself accepted there; Mr Lamb's invitation to help pick crab apples gives Derry a reason to return.\n• The ladder: Mr Lamb climbs it to pick crab apples and falls at the end; it suggests both effort towards life and the fragility of life.\n• Derry's return: by coming back against his mother's wishes, Derry walks through the 'open gate' into a fuller life, even though he finds Mr Lamb fallen.\n• Conclusion: through simple symbols the play shows that acceptance, a positive attitude and human contact can heal the scars of fear and isolation.\nMarking: content 3, organisation/expression 2."
      }
     }
    ]
