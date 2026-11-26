@@ -1,0 +1,17 @@
+🥞 WHY? (हिंदी) — स्टैक चीज़ों को उलटा क्यों कर देता है?
+
+प्लेटों के एक ढेर के बारे में सोचिए 🍽️
+PUSH A, B, C → सिर्फ़ सबसे ऊपर (TOP) वाली प्लेट तक पहुँच → POP से मिलते हैं C, B, A!
+अंदर: A B C → बाहर: C B A = Last In, First Out (LIFO) 🔁
+
+Undo (Ctrl+Z), ब्राउज़र का Back बटन और स्ट्रिंग उलटना — सब स्टैक से चलते हैं।
+Python: push → append(), pop → pop()
+
+कक्षा 12 कंप्यूटर साइंस, डेटा स्ट्रक्चर का पसंदीदा सवाल — LIFO अब कभी नहीं भूलेंगे। 🧠
+
+💾 सेव करें · 📤 अपने CS साथियों के साथ शेयर करें
+
+🌐 फ्री नोट्स और मॉक पेपर → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #HindiMedium #ComputerScience #Stack #DataStructures #Python #CSClass12
