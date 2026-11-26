@@ -687,6 +687,158 @@
        "ans": "B — Konark is a marvel of art, science and history that needs constant protection."
       }
      ]
+    },
+    {
+     "passage": "Majuli: The Island the River Gives and Takes",
+     "blurb": "<b>1.</b> In the middle of the Brahmaputra, a short ferry ride from Nimati Ghat near Jorhat in Assam, lies Majuli, often described as one of the largest river islands in the world. It is not made of rock but of silt — the fine soil that the river carries down from the Himalayas and drops when its waters slow down. The same river that built Majuli over thousands of years is now slowly taking it back.<br><br><b>2.</b> For more than five hundred years Majuli has been the heart of Assam's Neo-Vaishnavite tradition. It is believed that the saint-reformer Srimanta Sankardeva met his chief disciple, Madhavdeva, on the island, and the monasteries they inspired, called satras, became centres of prayer, music, dance and learning. Monks at the satras still perform the Sattriya dance, and at Samaguri Satra craftsmen shape large masks of bamboo, clay and cloth for religious plays, a skill handed down within families for generations.<br><br><b>3.</b> Most of the island's people are farmers and fishers, and the largest community is the Mising. Their houses, called chang ghar, stand on bamboo stilts, high enough for floodwater to flow underneath. Floods are not a disaster that comes once in a lifetime here; they are a yearly visitor. The waters that drown the fields also leave behind fresh silt, which keeps the soil fertile for rice, mustard and vegetables when the river goes down.<br><br><b>4.</b> But the river has grown more restless. Many experts believe that after the great Assam earthquake of 1950 the Brahmaputra became wider and its banks weaker, and year after year it has eaten away the island's edges. Majuli has lost well over half of its land in the last hundred years; whole villages have moved, and some satras have had to shift more than once. Embankments, sandbags and porcupine-like frames of bamboo placed in the water to slow the current have saved some stretches, though no single method has been enough.<br><br><b>5.</b> Hope has also come from ordinary people. Not far from Majuli, on a bare sandbar in the river, a young man named Jadav Payeng began planting bamboo and trees in 1979, carrying water to them every day. Decades later that sandbar is a forest of several hundred hectares, home to birds, deer and even elephants, and Payeng is known as the 'Forest Man of India'. In 2016 Majuli was made a district of its own — the first island district in the country. Its future depends on whether science, government and the islanders themselves can learn to live with a river that both gives and takes.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "Why does the writer say that Majuli is 'not made of rock'? (paragraph 1)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Because the island is made of silt — fine soil brought down by the Brahmaputra from the Himalayas and dropped where its waters slow down."
+      },
+      {
+       "n": "II",
+       "q": "According to paragraph 2, the satras of Majuli are ________.\nA. forts built to protect the island from floods\nB. markets where farmers sell rice and mustard\nC. monasteries that became centres of prayer, music, dance and learning\nD. ferry stations on the Brahmaputra",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — monasteries that became centres of prayer, music, dance and learning."
+      },
+      {
+       "n": "III",
+       "q": "Complete the following (paragraph 2): The masks made at Samaguri Satra are used for ________.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "…religious plays (they are made of bamboo, clay and cloth by families of craftsmen)."
+      },
+      {
+       "n": "IV",
+       "q": "The Mising build their houses on bamboo stilts because ________.\nA. it keeps the houses cool in summer\nB. floodwater can flow underneath without entering the house\nC. bamboo is the only material found on the island\nD. it is a rule laid down by the satras",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — floodwater can flow underneath without entering the house."
+      },
+      {
+       "n": "V",
+       "q": "How are the yearly floods both harmful and useful to the farmers of Majuli? (paragraph 3)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "They drown the fields, but they also leave fresh silt that keeps the soil fertile for rice, mustard and vegetables."
+      },
+      {
+       "n": "VI",
+       "q": "Which of the following is NOT mentioned in paragraph 4 as a way of protecting the island?\nA. Embankments\nB. Sandbags\nC. Bamboo frames placed in the water\nD. Moving the river to a new course",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "D — Moving the river to a new course."
+      },
+      {
+       "n": "VII",
+       "q": "What changes have taken place in the Brahmaputra and on Majuli in recent decades? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "After the 1950 earthquake the river is believed to have become wider, with weaker banks, so it erodes the island's edges every year (1). As a result Majuli has lost well over half its land in a hundred years; villages have moved and some satras have shifted more than once (1)."
+      },
+      {
+       "n": "VIII",
+       "q": "The word 'restless' in paragraph 4 is closest in meaning to ________.\nA. tired after hard work\nB. sleepless at night\nC. calm and steady\nD. constantly moving and changing",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "D — constantly moving and changing."
+      },
+      {
+       "n": "IX",
+       "q": "What does the story of Jadav Payeng show about the role of ordinary people in protecting the environment? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Payeng, an ordinary young man, planted trees on a bare sandbar from 1979 and watered them daily; it is now a forest of several hundred hectares sheltering birds, deer and elephants (1). It shows that one person's patient, long-term effort can repair damaged land and inspire hope (1)."
+      },
+      {
+       "n": "X",
+       "q": "Which of the following best expresses the central idea of the passage?\nA. Majuli is a rich and fragile island whose future depends on learning to live with the river.\nB. Majuli is famous only for its masks.\nC. The Brahmaputra should be dammed to stop all floods.\nD. The people of Majuli should leave the island.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "A — Majuli is a rich and fragile island whose future depends on learning to live with the river."
+      }
+     ]
+    },
+    {
+     "passage": "The Great Indian Bustard: A Giant on the Brink",
+     "blurb": "<b>1.</b> Walk through the dry grasslands near Jaisalmer in the early morning and, if you are very lucky, you may see a tall, sand-coloured bird striding through the grass with its head held high. Standing about a metre tall, with a black cap on its head and long, strong legs, the Great Indian Bustard — called the godawan in Rajasthan — is one of the heaviest birds in the world that can still fly. A large male can weigh around fifteen kilograms.<br><br><b>2.</b> The bird was once found across the open plains of western and central India. Today it is listed as Critically Endangered, and fewer than about 150 are thought to survive, most of them in and around the Desert National Park in Rajasthan, with a handful in Gujarat, Maharashtra, Karnataka and Andhra Pradesh. It is the state bird of Rajasthan, and the famous ornithologist Salim Ali once argued that it should be chosen as India's national bird; the peacock was chosen instead.<br><br><b>3.</b> Several things have pushed the bustard to the edge. It needs wide, open grasslands, but such land has long been treated as 'wasteland' and turned into farms, roads, canals and, more recently, wind and solar parks. A female usually lays just one egg a year, on the bare ground, where it can easily be crushed by cattle or eaten by dogs and foxes. With so few chicks born each year, every adult that dies is a serious loss.<br><br><b>4.</b> The deadliest danger now hangs in the air. The overhead power lines that carry electricity across the desert cut straight through the bird's flight paths. The bustard's eyes are on the sides of its head, so it cannot see well straight ahead, and its heavy body cannot turn quickly in flight. Many birds have been killed by flying into the wires. In 2021 the Supreme Court directed that, in the bird's most important habitats, power lines should be laid underground wherever possible and fitted with bright 'bird diverters' where they could not.<br><br><b>5.</b> There are also signs of hope. At breeding centres near Jaisalmer, scientists collect eggs from the wild and hatch them under careful watch, raising the chicks so that one day their young can be released into protected grasslands. Local people, once unaware of the bird, now help forest staff to spot nests and guard them. Saving the godawan, experts say, is really about saving the grassland itself — and with it the foxes, gazelles, lizards and countless smaller creatures that share its home.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "Why does the writer say that the Great Indian Bustard is remarkable even though it can fly? (paragraph 1)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Because it is one of the heaviest flying birds in the world — about a metre tall, with a large male weighing around fifteen kilograms."
+      },
+      {
+       "n": "II",
+       "q": "According to paragraph 2, most of the surviving bustards are found ________.\nA. in the forests of Karnataka\nB. in and around the Desert National Park in Rajasthan\nC. in zoos across India\nD. along the coast of Gujarat",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — in and around the Desert National Park in Rajasthan."
+      },
+      {
+       "n": "III",
+       "q": "Complete the following (paragraph 2): Salim Ali is mentioned in the passage because ________.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "…he argued that the Great Indian Bustard should be chosen as India's national bird."
+      },
+      {
+       "n": "IV",
+       "q": "Which of the following is a reason why the bustard's numbers grow so slowly?\nA. It migrates out of India every winter.\nB. It eats only one kind of grass.\nC. The female usually lays just one egg a year, on bare ground.\nD. It cannot survive in hot weather.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — The female usually lays just one egg a year, on bare ground."
+      },
+      {
+       "n": "V",
+       "q": "Why does the writer put the word 'wasteland' in inverted commas? (paragraph 3)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "To show that the label is wrong — grasslands may look empty, but they are a valuable living habitat, not waste."
+      },
+      {
+       "n": "VI",
+       "q": "Why are bustards so often killed by power lines?\nA. They are attracted by the hum of electricity.\nB. They fly only at night.\nC. They build nests on electric poles.\nD. Their eyes are on the sides of the head, so they see poorly ahead, and their heavy bodies cannot turn quickly.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "D — Their eyes are on the sides of the head, so they see poorly ahead, and their heavy bodies cannot turn quickly."
+      },
+      {
+       "n": "VII",
+       "q": "What steps did the Supreme Court direct in 2021 to protect the bustard, and why? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "It directed that in the bird's most important habitats power lines be laid underground wherever possible, and that bright bird diverters be fitted where this could not be done (1). This was because collisions with overhead wires had become the deadliest threat to the bird (1)."
+      },
+      {
+       "n": "VIII",
+       "q": "The phrase 'on the brink' in the title means ________.\nA. very close to disappearing\nB. at the edge of a river\nC. growing in number again\nD. hidden from human view",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "A — very close to disappearing (extinction)."
+      },
+      {
+       "n": "IX",
+       "q": "Why do experts say that saving the godawan is 'really about saving the grassland itself'? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "The bustard can survive only in wide, open grasslands, so protecting it means protecting that habitat (1). A healthy grassland also shelters many other animals — foxes, gazelles, lizards and smaller creatures — so saving the bird saves a whole ecosystem (1)."
+      },
+      {
+       "n": "X",
+       "q": "Which of the following would be the most suitable conclusion to draw from the passage?\nA. The bustard is safe now that breeding centres exist.\nB. Power lines are the only threat to the bustard.\nC. The bustard can still be saved if its habitat is protected and threats are reduced with the help of local people.\nD. Grasslands should be turned into solar parks.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — The bustard can still be saved if its habitat is protected and threats are reduced with the help of local people."
+      }
+     ]
     }
    ]
   },
@@ -1178,6 +1330,114 @@
        "ans": "Any two (1 mark each): write down every expense for a month to see where his money goes; make a simple monthly budget; wait a day before any online purchase so that he avoids buys he will regret; set aside savings at the start of the month rather than hoping something is left at the end — trackers save 22% against 5%."
       }
      ]
+    },
+    {
+     "passage": "Where Do Senior Students Get Their News?",
+     "blurb": "<b>1.</b> A survey of 600 students of Classes XI and XII in Bhopal, Coimbatore and Patna asked them to name their main source of news, and how much they trust that source. The table shows the share of students who named each source, and the share of those users who said they trust it 'a lot'. <i>(Figures are illustrative.)</i><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Main source of news</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Students who use it as their main source (%)</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Users who trust it 'a lot' (%)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Social media apps</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">38</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">25</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">TV news channels</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">20</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">41</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Newspapers (print or e-paper)</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">17</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">68</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">News websites and apps</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">13</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">47</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Family and friends</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">8</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">35</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Radio and podcasts</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">4</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">52</td></tr></table><b>2.</b> Two out of every three students said they had forwarded a news item to friends without checking it, and nearly a third later found that something they had forwarded was false.<br><br><b>3.</b> Students who read a newspaper at least four days a week were far more likely to say they could tell a real news report from a rumour.<br><br><b>4.</b> The survey team suggests checking any surprising news against at least one newspaper or trusted news website, looking at the date and source before sharing, and never forwarding a message only because it has been 'forwarded many times'.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "The survey mainly set out to find ________.\nA. how many hours students spend on their phones\nB. where senior students get their news and how far they trust it\nC. which newspaper is the most popular in Patna\nD. whether students prefer films to news",
+       "marks": 1,
+       "ans": "B — where senior students get their news and how far they trust it."
+      },
+      {
+       "n": "II",
+       "q": "How many of the 600 students named newspapers as their main source of news?",
+       "marks": 1,
+       "ans": "102 students (17% of 600)."
+      },
+      {
+       "n": "III",
+       "q": "Which of the following conclusions is supported by the table?\nA. The most popular source of news is also the most trusted.\nB. TV news is trusted more than newspapers by its users.\nC. The most popular source of news is the least trusted by its own users.\nD. Radio and podcasts are the second most popular source.",
+       "marks": 1,
+       "ans": "C — Social media apps are the main source for 38% of students, but only 25% of their users trust them 'a lot', the lowest of all."
+      },
+      {
+       "n": "IV",
+       "q": "Complete the following: The source of news that is trusted 'a lot' by the largest share of its users is ________.",
+       "marks": 1,
+       "ans": "newspapers (print or e-paper) — 68% of their users."
+      },
+      {
+       "n": "V",
+       "q": "Give two likely reasons why social media is the most popular source of news among students and yet the least trusted. (About 40 words)",
+       "marks": 2,
+       "ans": "It is popular because students already spend much time on their phones, and news there is free, instant and shared by friends (1). It is trusted least because anyone can post on it, so rumours, fake or edited stories and unchecked forwards spread easily, as many students discovered (1)."
+      },
+      {
+       "n": "VI",
+       "q": "Fill in the blank with the correct option: Of the students whose main source is social media, about ________ trust it 'a lot'. (57 / 95 / 228)",
+       "marks": 1,
+       "ans": "57 (25% of the 228 students who rely mainly on social media; 228 is 38% of 600)."
+      },
+      {
+       "n": "VII",
+       "q": "What share of students rely mainly on the two internet-based sources — social media apps and news websites and apps — taken together?",
+       "marks": 1,
+       "ans": "51% (38% + 13%) — just over half of the students."
+      },
+      {
+       "n": "VIII",
+       "q": "Ira, a Class XII student, often forwards dramatic news she receives on a messaging app to her class group. Using the survey, give her two suggestions, with reasons. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): check surprising news against a newspaper or trusted news website first, because nearly a third of students found they had forwarded something false; look at the date and source before sharing; do not forward a message just because it says 'forwarded many times'; read a newspaper regularly, since regular readers can better tell news from rumour."
+      }
+     ]
+    },
+    {
+     "passage": "What's in the Tiffin? — A Lunch-Box Survey",
+     "blurb": "<b>1.</b> A survey looked at the lunch boxes of 900 students of Classes VI to XII in three schools in Jaipur, Kochi and Shillong. Two of the schools, with 500 students between them, follow a 'healthy tiffin' policy that discourages packaged snacks; the third school, with 400 students, has no such policy. The table compares what students in the two groups brought on a typical day. <i>(Figures are illustrative.)</i><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">What the student brought</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Schools with a 'healthy tiffin' policy (%)</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">School without the policy (%)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Home-cooked meal (roti-sabzi, rice, idli, etc.)</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">64</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">41</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Packaged snacks (chips, biscuits, instant noodles)</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">9</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">27</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Fruit or salad</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">15</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">6</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Sandwich or other bread-based food</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">8</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">14</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">No tiffin (buys from canteen or skips lunch)</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">4</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">12</td></tr></table><b>2.</b> Teachers in the school without the policy reported that more students complained of feeling tired and hungry in the last two periods of the day.<br><br><b>3.</b> Most students who carried packaged snacks said they did so because the food was quick and easy, not because they preferred its taste.<br><br><b>4.</b> The survey team suggests involving students in planning the week's tiffin, packing cut fruit or sprouts as a quick option, and schools holding 'tiffin talk' sessions with parents.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "The main aim of the survey was to find out ________.\nA. how much students pay at the school canteen\nB. what students carry in their lunch boxes, and whether a school policy makes a difference\nC. which city has the tastiest food\nD. how many students walk to school",
+       "marks": 1,
+       "ans": "B — what students carry in their lunch boxes, and whether a school policy makes a difference."
+      },
+      {
+       "n": "II",
+       "q": "How many students in the schools with a 'healthy tiffin' policy brought fruit or salad?",
+       "marks": 1,
+       "ans": "75 students (15% of 500)."
+      },
+      {
+       "n": "III",
+       "q": "Which of the following statements is supported by the table?\nA. Packaged snacks are three times as common in the school without the policy.\nB. More students skip lunch in the schools with the policy.\nC. Sandwiches are more popular in the schools with the policy.\nD. Both groups bring fruit equally often.",
+       "marks": 1,
+       "ans": "A — Packaged snacks: 27% against 9%, three times as common."
+      },
+      {
+       "n": "IV",
+       "q": "Complete the following: In the school without the policy, the number of students who brought no tiffin was ________.",
+       "marks": 1,
+       "ans": "48 (12% of 400)."
+      },
+      {
+       "n": "V",
+       "q": "Give two likely reasons why students in the schools with the policy bring home-cooked food much more often. (About 40 words)",
+       "marks": 2,
+       "ans": "The policy discourages packaged snacks, so parents and students plan home-cooked meals instead (1). Regular reminders and checks make healthy eating a habit, and students see their classmates bringing similar food, so they do not feel left out (1)."
+      },
+      {
+       "n": "VI",
+       "q": "Fill in the blank with the correct option: The share of students bringing a home-cooked meal is ________ percentage points higher in the schools with the policy. (13 / 23 / 33)",
+       "marks": 1,
+       "ans": "23 (64% − 41%)."
+      },
+      {
+       "n": "VII",
+       "q": "How many students in all, across the three schools, did not carry a tiffin?",
+       "marks": 1,
+       "ans": "68 students (4% of 500 = 20, plus 12% of 400 = 48)."
+      },
+      {
+       "n": "VIII",
+       "q": "Your friend Aryan carries a packet of chips and biscuits to school every day because 'there is no time in the morning', and often feels sleepy in the last periods. Using the survey, give him two suggestions, with reasons. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): pack cut fruit or sprouts, which take very little time; plan the week's tiffin with his parents the night before; choose a home-cooked meal, since students without healthy lunches felt more tired and hungry in the last periods; remember that packaged snacks are chosen for convenience, not because they are better."
+      }
+     ]
     }
    ]
   },
@@ -1272,6 +1532,26 @@
      "optB": {
       "scenario": "You are Prakash/Priya Nair, Secretary of Vasant Vihar Residents' Welfare Association, Kochi. The Association is organising a tree plantation drive in the colony on World Environment Day. Draft a notice in about 50 words inviting residents to take part. Put the notice in a box.",
       "ans": "Model answer:\nVASANT VIHAR RESIDENTS' WELFARE ASSOCIATION, KOCHI\nNOTICE\n28 May 20XX\nTREE PLANTATION DRIVE\nTo mark World Environment Day, the Association will hold a tree plantation drive on 5 June from 7:00 to 9:00 a.m., starting at the community park. Saplings of neem, jamun and mango will be provided free. Residents, especially children, are requested to bring gardening gloves and adopt a sapling to care for. Register with the Secretary by 2 June.\nPriya Nair\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): occasion, date-time-venue, saplings provided, what to bring, adoption idea, registration. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Kunal/Kavya Sethi, Secretary of the Robotics and Coding Club of Kendriya Vidyalaya No. 1, Jalandhar. The club is holding a five-day robotics workshop during the winter break for students of Classes VIII to XI. Draft a notice in about 50 words inviting students to register. Put the notice in a box.",
+      "ans": "Model answer:\nKENDRIYA VIDYALAYA NO. 1, JALANDHAR\nNOTICE\n10 December 20XX\nWINTER ROBOTICS WORKSHOP\nThe Robotics and Coding Club will hold a five-day robotics workshop from 26 to 30 December, 10:00 a.m. to 1:00 p.m., in the Computer Lab. Students of Classes VIII–XI will learn to build and program simple robots. Kits will be provided; seats are limited to 40. Register with the undersigned by 18 December.\nKavya Sethi\nSecretary, Robotics and Coding Club\n\nMarking — Format (1m): box, school name, NOTICE, date, heading, name and designation. Content (2m): event, dates, time, venue, eligibility, what students will do, kits/seats, last date to register. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Farhan/Fiza Ansari, Secretary of the Lake Gardens Residents' Welfare Association, Bhopal. The Association, with the help of the municipal veterinary department, is holding a free anti-rabies vaccination camp for pet dogs and community (stray) dogs of the colony. Draft a notice in about 50 words for residents. Put the notice in a box.",
+      "ans": "Model answer:\nLAKE GARDENS RESIDENTS' WELFARE ASSOCIATION, BHOPAL\nNOTICE\n3 March 20XX\nFREE ANTI-RABIES VACCINATION CAMP\nThe Association, with the Municipal Veterinary Department, will hold a free anti-rabies vaccination camp for pet and community dogs on Sunday, 9 March, from 8:00 to 11:00 a.m. at the colony park. Pet owners must bring their dogs on a leash with any earlier vaccination record. Residents who feed community dogs are requested to help bring them. Contact the Secretary for details.\nFiza Ansari\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): purpose, organisers, date-time-venue, instructions for pet owners, help with community dogs, contact. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Rhea/Rohan Fernandes, Secretary of the Photography Club of Our Lady of Fatima High School, Mangaluru. The club is holding its annual photography exhibition on the theme 'Faces of My City' and invites entries from students. Draft a notice in about 50 words. Put the notice in a box.",
+      "ans": "Model answer:\nOUR LADY OF FATIMA HIGH SCHOOL, MANGALURU\nNOTICE\n6 January 20XX\nCALL FOR ENTRIES: PHOTOGRAPHY EXHIBITION\nThe Photography Club invites entries for its annual exhibition, 'Faces of My City', to be held on 30–31 January in the school hall. Students of Classes VI–XII may submit up to two original photographs (A4 prints) with a title, by 20 January. The best entries will be displayed and awarded. Contact the undersigned for details.\nRohan Fernandes\nSecretary, Photography Club\n\nMarking — Format (1m): box, school name, NOTICE, date, heading, name and designation. Content (2m): event, theme, dates and venue, eligibility, number and size of entries, last date, awards, contact. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Shalini/Shantanu Oraon, Secretary of the Sunrise Apartments Owners' Association, Ranchi. The Association, with the help of the city police, is organising a free self-defence workshop for women and girls of the complex. Draft a notice in about 50 words. Put the notice in a box.",
+      "ans": "Model answer:\nSUNRISE APARTMENTS OWNERS' ASSOCIATION, RANCHI\nNOTICE\n20 February 20XX\nFREE SELF-DEFENCE WORKSHOP\nThe Association, with the help of the Ranchi Police, will hold a free self-defence workshop for women and girls aged 12 and above on 1 and 2 March, 5:00 to 6:30 p.m., in the Community Hall. Trained officers will teach simple techniques and safety tips. Participants should wear comfortable clothes. Register at the Association office by 27 February.\nShalini Oraon\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): purpose, organisers, who may join, dates-time-venue, what will be taught, dress, registration. Grammar & Spelling (1m)."
      }
     }
    ]
@@ -1368,6 +1648,26 @@
       "scenario": "Your friend Lakshmi has invited you to her younger sister's Bharatanatyam arangetram (first solo stage performance) in Chennai next month. Write a reply in about 50 words accepting the invitation.",
       "ans": "Model answer:\n12, Civil Lines\nNagpur\n6 January 20XX\nDear Lakshmi\nThank you so much for inviting me to Meera's arangetram on 1 February at the Music Academy, Chennai. I would not miss it for anything! My parents have agreed, and I will reach Chennai a day early to help with the preparations. Please convey my best wishes to Meera.\nWith love\nAnanya\n\nMarking — Format (1m): informal reply — address, date, salutation, closing. Content (2m): thanks, reference to occasion/date/venue, acceptance with details, good wishes. Grammar & Spelling (1m)."
      }
+    },
+    {
+     "optA": {
+      "scenario": "Mr and Mrs Suresh Deshmukh of 21 Shivaji Nagar, Satara, are holding a naming ceremony (naamkaran) for their grandson. Draft a formal invitation in about 50 words to be sent to their relatives and friends.",
+      "ans": "Model answer:\nMr and Mrs Suresh Deshmukh\nrequest the pleasure of your company\nat the Naamkaran (naming ceremony)\nof their grandson,\nson of Rohit and Pallavi Deshmukh,\non Sunday, 18 January 20XX, at 11:00 a.m.,\nat their residence, 21 Shivaji Nagar, Satara.\nLunch to follow.\nRSVP: Rohit Deshmukh | 98XXXXXX45\n\nMarking — Format (1m): formal third-person invitation, hosts, RSVP. Content (2m): occasion, whose ceremony, date-time-venue, lunch. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Arjun/Anjali Menon, an International Master in chess living in Kochi. The Principal of Bhavan's Vidya Mandir, Thrissur, has invited you to be the chief guest at the school's inter-school chess championship. Write a reply in about 50 words accepting the invitation.",
+      "ans": "Model answer:\n15 Marine Drive\nKochi\n12 November 20XX\nThe Principal\nBhavan's Vidya Mandir\nThrissur\nSubject: Acceptance of invitation\nDear Sir/Madam\nThank you for inviting me to be the chief guest at your Inter-School Chess Championship on 25 November at 10:00 a.m. I am delighted to accept. I would be happy to play a short simultaneous game with the young players after the opening. Kindly let me know the programme in advance.\nYours sincerely\nAnjali Menon\n\nMarking — Format (1m): sender's address, date, receiver's address, subject, salutation, closing. Content (2m): thanks, reference to occasion/date/time, acceptance, offer or request about the programme. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Kalinga Higher Secondary School, Cuttack, is completing a hundred years. As Secretary of its Old Students' Association, draft a formal invitation in about 50 words to former students for the centenary alumni meet.",
+      "ans": "Model answer:\nThe Old Students' Association\nof Kalinga Higher Secondary School, Cuttack\nrequests the pleasure of your company\nat the Centenary Alumni Meet\nto celebrate 100 years of the school\non Sunday, 8 February 20XX, from 10:00 a.m.\nin the school grounds.\nCultural programme, felicitation of former teachers and lunch.\nRSVP: Mr Prasanta Mohanty, Secretary | 94XXXXXX20\n\nMarking — Format (1m): formal third-person invitation, host, RSVP. Content (2m): occasion, date-time-venue, programme. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "Your friend Tenzin has invited you to spend Losar (the Tibetan New Year) with his family in Gangtok. You cannot go because you will be attending the NCC annual training camp at that time. Write a reply in about 50 words declining the invitation. You are Rahul/Ritu, 7 Station Road, Siliguri.",
+      "ans": "Model answer:\n7 Station Road, Siliguri\n2 February 20XX\nDear Tenzin,\nThank you so much for inviting me to celebrate Losar with your family in Gangtok. I would have loved to come, but I will be at the NCC annual training camp that week and cannot miss it. Please give my warm wishes to Aunty and Uncle. Let's plan a visit in the summer holidays!\nWith love,\nRitu\n\nMarking — Format (1m): informal reply — address, date, salutation, closing. Content (2m): thanks, reference to occasion and place, regret with reason, good wishes, plan to meet. Grammar & Spelling (1m)."
+     }
     }
    ]
   },
@@ -1463,6 +1763,26 @@
       "scenario": "You are Meghna/Mayank Ghosh, 26 Ballygunge Place, Kolkata. You saw this advertisement: 'WANTED — Assistant Librarian for St. Paul's College, Kolkata. Degree in Library and Information Science; familiarity with library software and digital catalogues; good communication skills. Apply to the Principal within ten days.' Write a letter of application in 120–150 words, with your bio-data.",
       "ans": "Format (1m): sender's address, date, The Principal (college address), subject 'Application for the post of Assistant Librarian', Sir/Madam, 'Yours sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to advertisement, interest, suitability, availability for interview) separate from bio-data.\nContent (2m) — value points: B.Lib.I.Sc./M.Lib.I.Sc.; training in library software and digital cataloguing; internship at a public or university library; experience in issuing, shelving, stock verification and helping readers find resources; organised, courteous, good with computers. Bio-data — personal details, educational qualifications with years, training, internship/experience, computer skills, languages known, references.\nGrammar & Spelling (1m)."
      }
+    },
+    {
+     "optA": {
+      "scenario": "You are Harshit/Harshita Yadav, 34 Sector 12, Rohtak. Stray cattle wander on the main roads and highways around your city, especially after dark; drivers swerve suddenly, two-wheelers crash into them and the animals themselves are often injured. Write a letter in 120–150 words to the Editor of a national daily drawing attention to the problem and suggesting solutions.",
+      "ans": "Format (1m): sender's address, date, The Editor (name of daily, city), subject (e.g. 'Stray cattle turning our roads into danger zones'), Sir/Madam, 'Yours truly', name.\nOrganisation of Ideas (1m): problem → dangers → causes → suggestions → appeal.\nContent (2m) — value points: cows and bulls sit or stroll on main roads and highways; hard to see at night, sudden braking and swerving; accidents involving two-wheelers and cars, injuries and deaths; traffic jams; animals hurt or killed, eat plastic from garbage; causes — owners let cattle loose once they stop giving milk, too few cowsheds (gaushalas), open garbage attracts them; suggestions — more cattle shelters, tagging cattle and fining owners who abandon them, reflective collars or radium tags, regular drives by the municipal body, clearing garbage dumps near roads, helpline for residents; appeal to the district administration and municipal corporation.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Sneha/Suraj Raman, 11 Thillai Nagar, Tiruchirappalli. You saw this advertisement: 'WANTED — Trainee Radio Jockey for Radio Kaveri 90.8, a community FM station, Tiruchirappalli. Graduate; clear voice and good pronunciation in Tamil and English; interest in local culture and current affairs. Apply to the Station Director within a week.' Write a letter of application in 120–150 words, with your bio-data.",
+      "ans": "Format (1m): sender's address, date, The Station Director (station address), subject 'Application for the post of Trainee Radio Jockey', Sir/Madam, 'Yours sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to advertisement, interest, suitability, availability for audition/interview) separate from bio-data.\nContent (2m) — value points: graduate (e.g. B.A. in Mass Communication or English); fluent in Tamil and English with clear diction; experience as compere at college events, anchor of the college radio club or podcast; won elocution/debate prizes; knows local festivals, music and civic issues; can handle basic audio-editing software; willing to work in shifts; ready for a voice audition. Bio-data — personal details, educational qualifications with years, experience, skills (anchoring, audio editing, script writing), languages known, achievements, references.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Gaurav/Gauri Sandhu, 22 Model Town, Patiala. Every winter, garbage, plastic and dry leaves are burnt in the open in your locality, filling the air with thick, choking smoke. Write a letter in 120–150 words to the Editor of a local daily drawing attention to the problem and suggesting solutions.",
+      "ans": "Format (1m): sender's address, date, The Editor (name of daily, city), subject (e.g. 'Open burning of garbage is choking our city'), Sir/Madam, 'Yours truly', name.\nOrganisation of Ideas (1m): problem → effects → causes → suggestions → appeal.\nContent (2m) — value points: heaps of garbage, plastic and dry leaves set on fire in vacant plots and street corners; smoke worst on cold, still evenings; burning plastic releases toxic fumes; coughing, breathlessness, eye irritation, risk to children, the elderly and people with breathing problems; poor visibility; adds to winter smog; causes — irregular garbage collection, lack of composting, ignorance of harm, weak enforcement of the ban; suggestions — daily door-to-door collection, compost pits for leaves in parks and colonies, segregation of waste, fines for burning, awareness drives through schools and RWAs; appeal to the municipal corporation and pollution control board.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Ritika/Rajat Dubey, 8 Arera Colony, Bhopal. You saw this advertisement: 'WANTED — Junior Translator (English–Hindi) for Saraswati Prakashan, a publisher of educational books, Bhopal. Graduate with English and Hindi; diploma or certificate in translation preferred; computer typing in both languages. Apply to the Managing Editor within ten days.' Write a letter of application in 120–150 words, with your bio-data.",
+      "ans": "Format (1m): sender's address, date, The Managing Editor (publisher's address), subject 'Application for the post of Junior Translator (English–Hindi)', Sir/Madam, 'Yours sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to advertisement, interest, suitability, availability for a test/interview) separate from bio-data.\nContent (2m) — value points: B.A. with English and Hindi; postgraduate diploma/certificate in translation; experience translating study material, newsletters or articles (internship or freelance); accurate, meets deadlines; types in English and Hindi (Unicode), familiar with word-processing software; ready to take a translation test. Bio-data — personal details, educational qualifications with years, training, experience, computer skills, languages known, references.\nGrammar & Spelling (1m)."
+     }
     }
    ]
   },
@@ -1557,6 +1877,26 @@
      "optB": {
       "scenario": "You are Rehan/Ruhi Mirza, Head of the Disaster Management Club of Army Public School, Srinagar. Your school recently conducted an earthquake evacuation drill with the help of the State Disaster Response Force. Write a report in 120–150 words for your school magazine.",
       "ans": "Format (1m): heading (e.g. 'Drop, Cover, Hold: School Holds Earthquake Drill'), by-line, place and date.\nOrganisation (1m): what-when-where-who → how the drill was carried out → observations → lessons/follow-up.\nContent (2m) — value points: date; drill conducted with the State Disaster Response Force; siren signal; students practised 'drop, cover and hold' under desks; orderly evacuation by marked routes to the open assembly ground; head count by class teachers; first-aid and stretcher demonstration; mock rescue of 'injured' students; whole school evacuated in a few minutes; officials pointed out improvements — keeping corridors clear, assigning helpers for younger and differently-abled students; importance of preparedness in an earthquake-prone region; drills to be repeated every term.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Many teenagers spend little real time with their grandparents, even when they live in the same house. You are Diya/Dev Chawla, Class XII, Chandigarh. Write an article in 120–150 words for your school magazine on 'What Our Grandparents Can Teach Us'.",
+      "ans": "Format (1m): title, by-line, paragraphs.\nOrganisation of Ideas (1m): introduction → the gap today → what grandparents offer → how to bridge the gap → conclusion.\nContent (2m) — value points: busy schedules, screens and nuclear families keep generations apart; grandparents often feel lonely or left out; what they offer — family history and roots, stories, values like patience and thrift, traditional recipes, home remedies, crafts, languages and songs, life experience in facing difficulties, unconditional love and emotional support; what young people can give back — help with smartphones and online services, company, outings, listening; ideas — a weekly 'no-phone' family hour, recording their stories, cooking or gardening together; conclusion — two generations learning from each other make a stronger family.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Aisha/Aman Bhatia, Secretary of the Literary Club of Shiksha Bharati Public School, Shimla. Your school recently held a two-day literature festival with authors, poets and storytellers. Write a report in 120–150 words for your school magazine.",
+      "ans": "Format (1m): heading (e.g. 'Words in the Hills: School Hosts Literature Festival'), by-line, place and date.\nOrganisation (1m): what-when-where-who → main sessions → student participation → response/conclusion.\nContent (2m) — value points: dates; inaugurated by a well-known author or the Principal; sessions — meet-the-author talks, a poetry reading in English and Hindi, a panel on writing for young readers, a storytelling session for junior classes, a workshop on creative writing; book stalls by publishers; students interviewed authors, staged a book-based skit, displayed their own poems and stories; open-mic evening; prize distribution for the creative writing contest; large attendance including parents; vote of thanks; plan to make the festival an annual event and start a reading club.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Many students give up their hobbies in the senior classes, believing that anything other than studies is a waste of time. You are Megha/Manish Thakur, Class XII, Bhubaneswar. Write an article in 120–150 words for your school magazine on 'Hobbies: Not a Waste of Time'.",
+      "ans": "Format (1m): title, by-line, paragraphs.\nOrganisation of Ideas (1m): introduction → the common belief → benefits of hobbies → balancing hobbies with studies → conclusion.\nContent (2m) — value points: pressure of board exams and entrance tests makes students drop music, sport, painting, reading or gardening; benefits — relieve stress and refresh the mind, improve concentration and creativity, build patience and discipline, give a sense of achievement beyond marks, help find friends with shared interests, may even lead to a career; a hobby is a healthy alternative to endless scrolling; balance — fix a short daily slot, use weekends, choose hobbies that need little equipment; conclusion — a hobby makes us better students and happier people.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Nikita/Nakul Joshi, Head Girl/Head Boy of Gyan Jyoti Senior Secondary School, Haldwani. Your school observed Constitution Day (26 November) with a special assembly and a mock parliament session. Write a report in 120–150 words for your school magazine.",
+      "ans": "Format (1m): heading (e.g. 'Young Citizens Celebrate Constitution Day'), by-line, place and date.\nOrganisation (1m): what-when-where-who → events of the day → highlights → message/conclusion.\nContent (2m) — value points: 26 November, the day in 1949 when the Constitution was adopted; special assembly — reading of the Preamble by all students; talk by the Principal or a guest (e.g. a lawyer) on fundamental rights and duties; quiz on the Constitution; mock parliament by Class XI–XII students — Speaker, ministers and opposition; a bill on banning single-use plastic debated and passed; question hour; students learnt about debate, discipline and respect for differing views; exhibition of charts on the makers of the Constitution; message — rights come with duties; vote of thanks.\nGrammar & Spelling (1m)."
      }
     }
    ]
@@ -2337,6 +2677,178 @@
        }
       ]
      }
+    },
+    {
+     "optA": {
+      "title": "A Roadside Stand (Robert Frost)",
+      "extract": "Refer to the lines of the poem in your textbook beginning 'The hurt to the scenery wouldn't be my complaint…' and ending '…That the party in power is said to be keeping from us.'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: 'The hurt to the scenery' refers to ________. (the way the crude stand and its signs spoil the beauty of the landscape / damage caused to the fields by floods / the cutting of trees along the road)",
+        "marks": 1,
+        "ans": "the way the crude stand and its signs spoil the beauty of the landscape"
+       },
+       {
+        "n": "II",
+        "q": "Why does the poet say that the hurt to the scenery 'wouldn't be my complaint'?",
+        "marks": 1,
+        "ans": "Unlike the city travellers, he is not troubled by the ugliness of the stand; what troubles him is the unspoken suffering of the poor people who run it — it shows his compassion."
+       },
+       {
+        "n": "III",
+        "q": "The 'trusting sorrow of what is unsaid' is the sorrow of the stand-owners, who ________.\nA. complain loudly to every passing car\nB. silently hope that city people will help them, without voicing their need\nC. have stopped hoping for anything\nD. trust only their own neighbours",
+        "marks": 1,
+        "ans": "B — silently hope that city people will help them, without voicing their need."
+       },
+       {
+        "n": "IV",
+        "q": "Why do the stand-owners want 'some city money to feel in hand'?",
+        "marks": 1,
+        "ans": "They hope the money will make their lives 'expand' — give them a taste of the better, more comfortable life that city people enjoy."
+       },
+       {
+        "n": "V",
+        "q": "What is meant by 'the life of the moving-pictures' promise'?\nA. A career as actors in films\nB. Free cinema tickets from the government\nC. The comfortable, prosperous life shown in films\nD. A life of constant travel",
+        "marks": 1,
+        "ans": "C — The comfortable, prosperous life shown in films."
+       },
+       {
+        "n": "VI",
+        "q": "What feeling of the rural poor is expressed in the words 'the party in power is said to be keeping from us'?",
+        "marks": 1,
+        "ans": "Suspicion and resentment — they feel that the politicians in power have promised them prosperity but are denying it to them."
+       }
+      ]
+     },
+     "optB": {
+      "title": "My Mother at Sixty-six (Kamala Das)",
+      "extract": "Refer to the concluding lines of the poem in your textbook, from '…but after the airport's / security check…' to the end of the poem.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: The poet looks at her mother again from 'a few yards away' after ________. (the airport's security check / reaching Cochin / waking her mother up)",
+        "marks": 1,
+        "ans": "the airport's security check"
+       },
+       {
+        "n": "II",
+        "q": "What does the physical distance of 'a few yards' suggest about the relationship at this moment?",
+        "marks": 1,
+        "ans": "It mirrors the growing emotional distance and the coming separation — the poet must leave, and age and time are drawing her mother away from her."
+       },
+       {
+        "n": "III",
+        "q": "The poet's spoken words at parting are ________.\nA. full of complaints about the journey\nB. a long farewell speech\nC. a few light, cheerful words that hide her deep fear\nD. a promise never to leave again",
+        "marks": 1,
+        "ans": "C — a few light, cheerful words that hide her deep fear."
+       },
+       {
+        "n": "IV",
+        "q": "Why is the word 'Amma' a fitting word for the poet to use at this moment?",
+        "marks": 1,
+        "ans": "It is a tender, childlike word; it shows that, faced with the fear of losing her mother, the grown-up poet feels like a child again, full of love and dependence."
+       },
+       {
+        "n": "V",
+        "q": "The gap between what the poet feels and what she says and does shows ________.\nA. her indifference to her mother\nB. her effort to control her fear so as not to upset her mother\nC. her anger at her mother's illness\nD. her relief at going away",
+        "marks": 1,
+        "ans": "B — her effort to control her fear so as not to upset her mother."
+       },
+       {
+        "n": "VI",
+        "q": "What is the central concern of these concluding lines?",
+        "marks": 1,
+        "ans": "The pain and fear of separation from an ageing parent, and the helplessness of a child who knows she may lose her mother but must hide her grief and part with a smile."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "Keeping Quiet (Pablo Neruda)",
+      "extract": "Refer to the stanza of the poem in your textbook beginning 'What I want should not be confused…' and ending '…I want no truck with death.'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: This stanza is the poet's ________ of the call for stillness he has made earlier in the poem. (clarification / rejection / summary for children)",
+        "marks": 1,
+        "ans": "clarification"
+       },
+       {
+        "n": "II",
+        "q": "What does the line 'Life is what it is about' tell us about the purpose of the silence the poet wants?",
+        "marks": 1,
+        "ans": "The pause is meant to renew and enrich life — to help us live more thoughtfully and fully — not to stop life."
+       },
+       {
+        "n": "III",
+        "q": "In 'I want no truck with death', the word 'truck' is used in the sense of ________.\nA. a heavy goods vehicle\nB. dealings or association\nC. a trade route\nD. a burden to be carried",
+        "marks": 1,
+        "ans": "B — dealings or association."
+       },
+       {
+        "n": "IV",
+        "q": "How does this stanza connect with the poet's earlier picture of 'victories with no survivors'?",
+        "marks": 1,
+        "ans": "War brings only death; the poet's silence is the opposite of that destruction — he is on the side of life, so his pause is a protest against death, not a wish for it."
+       },
+       {
+        "n": "V",
+        "q": "The tone of the stanza is best described as ________.\nA. firm and reassuring\nB. angry and bitter\nC. playful and teasing\nD. fearful and uncertain",
+        "marks": 1,
+        "ans": "A — firm and reassuring."
+       },
+       {
+        "n": "VI",
+        "q": "Most of the poem uses 'we', but this stanza uses 'I' ('What I want', 'I want'). Why?",
+        "marks": 1,
+        "ans": "Here the poet speaks personally and directly to explain his own intention, which makes the clarification sincere and leaves no room for misunderstanding."
+       }
+      ]
+     },
+     "optB": {
+      "title": "A Thing of Beauty (John Keats)",
+      "extract": "Refer to the opening lines of the poem in your textbook, from 'A thing of beauty is a joy for ever…' to '…and health, and quiet breathing.'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: 'Its loveliness increases' suggests that a beautiful thing ________. (becomes dearer to us each time we see or recall it / becomes larger in size / costs more with time)",
+        "marks": 1,
+        "ans": "becomes dearer to us each time we see or recall it"
+       },
+       {
+        "n": "II",
+        "q": "The word 'still' in 'but still will keep' means ________.\nA. motionless\nB. silent\nC. always; continuing to\nD. a photograph",
+        "marks": 1,
+        "ans": "C — always; continuing to."
+       },
+       {
+        "n": "III",
+        "q": "How can a thing of beauty give us 'health', according to the extract?",
+        "marks": 1,
+        "ans": "It calms the mind and brings peaceful sleep and quiet breathing; this peace of mind restores and keeps us healthy."
+       },
+       {
+        "n": "IV",
+        "q": "Give one example from everyday life of a 'thing of beauty' that continues to give joy, and say why it fits Keats's idea.",
+        "marks": 1,
+        "ans": "Any suitable example, e.g. a sunrise over the hills seen on a holiday — even years later, remembering it brings peace and happiness, so its joy lasts 'for ever'."
+       },
+       {
+        "n": "V",
+        "q": "The rhyme scheme of the five lines of the extract is ________.\nA. abab c\nB. aabb c\nC. abca b\nD. aaaa b",
+        "marks": 1,
+        "ans": "B — aabb c (ever/never, keep/sleep; 'breathing' rhymes with the next line)."
+       },
+       {
+        "n": "VI",
+        "q": "What effect is created by the repeated 'and' in 'sweet dreams, and health, and quiet breathing'?",
+        "marks": 1,
+        "ans": "The repeated 'and' adds blessings one after another and slows the rhythm, creating the calm, restful mood that beauty itself brings."
+       }
+      ]
+     }
     }
    ]
   },
@@ -2897,6 +3409,130 @@
         "q": "What is the main idea brought out by the ending?\nA. Fate cannot be escaped, however powerful one is.\nB. Toys should be made of plastic.\nC. Surgeons in the state were careless.\nD. Hunting is a healthy sport.",
         "marks": 1,
         "ans": "A — Fate cannot be escaped, however powerful one is."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "The Tiger King (Kalki)",
+      "extract": "Refer to the part of the story in which the astrologers foretell the infant prince's death, and the ten-day-old prince astonishes them by speaking.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "What did the astrologers predict about the newborn prince?\nA. That he would become a great scholar\nB. That he would never marry\nC. That he would lose his kingdom to the British\nD. That he would one day have to die, and that his death would come from a tiger",
+        "marks": 1,
+        "ans": "D — That he would one day have to die, and that his death would come from a tiger."
+       },
+       {
+        "n": "II",
+        "q": "Why was everyone astonished when the infant spoke?",
+        "marks": 1,
+        "ans": "He was only ten days old, and babies of that age cannot speak — the miracle is a piece of exaggeration that makes fun of royal legends."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The prince's words 'Let tigers beware!' show that ________.",
+        "marks": 1,
+        "ans": "even as a baby he was arrogant and believed he could defeat fate by killing tigers."
+       },
+       {
+        "n": "IV",
+        "q": "Why is the scene ironic, in the light of the story's ending?",
+        "marks": 1,
+        "ans": "The king who boasted that tigers should beware of him is finally killed by a tiger after all — a wooden toy tiger — so the prophecy comes true in spite of his boast."
+       }
+      ]
+     },
+     "optB": {
+      "title": "The Enemy (Pearl S. Buck)",
+      "extract": "Refer to the part of the story in which Dr Sadao tells the old General about the American prisoner in his house, and the General offers to deal with the matter himself.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Why did Sadao finally decide to tell the General about the prisoner?\nA. He wanted a reward from the government.\nB. The servants had left, and he feared that he would be reported and arrested for sheltering an enemy.\nC. The General had seen the prisoner himself.\nD. Hana had asked him to hand the man over.",
+        "marks": 1,
+        "ans": "B — The servants had left, and he feared that he would be reported and arrested for sheltering an enemy."
+       },
+       {
+        "n": "II",
+        "q": "Why did the General not want Sadao to be arrested?",
+        "marks": 1,
+        "ans": "Sadao was the only surgeon he trusted, and he might need an operation at any time; Sadao was indispensable to him."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The General suggested that the prisoner be ________.",
+        "marks": 1,
+        "ans": "killed quietly at night by his private assassins and his body removed, so that no one need know."
+       },
+       {
+        "n": "IV",
+        "q": "What does the General's plan reveal about him?",
+        "marks": 1,
+        "ans": "He is selfish and ruthless — he cares only for his own health and is willing to have a man murdered secretly rather than follow the law or show mercy."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "On the Face of It (Susan Hill)",
+      "extract": "Refer to the part of the play in which Derry tells Mr Lamb what he once overheard a woman say about his face, and how it made him feel.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "What had Derry overheard the woman say?\nA. That he should see a better doctor\nB. That only his mother could love a face like his\nC. That he was the cleverest boy in the town\nD. That he should not go out in the sun",
+        "marks": 1,
+        "ans": "B — That only his mother could love a face like his."
+       },
+       {
+        "n": "II",
+        "q": "Why had the remark hurt Derry so deeply?",
+        "marks": 1,
+        "ans": "It suggested that no one except his mother could ever love him because of his burnt face, which made him feel ugly, unwanted and alone."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The remark had made Derry ________ towards other people.",
+        "marks": 1,
+        "ans": "bitter, suspicious and withdrawn — he avoided people and expected only pity or cruelty from them."
+       },
+       {
+        "n": "IV",
+        "q": "What does Mr Lamb want Derry to understand in reply?",
+        "marks": 1,
+        "ans": "That he should not let other people's thoughtless words decide how he sees himself; what matters is what is inside him and how he chooses to live."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Memories of Childhood I — The Cutting of My Long Hair (Zitkala-Sa)",
+      "extract": "Refer to the part of the account in which Zitkala-Sa's friend Judéwin warns her that the paleface women are going to cut their long hair, and Zitkala-Sa replies.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "How did Judéwin come to know about the plan to cut their hair?\nA. A teacher announced it in class.\nB. Her mother wrote to her about it.\nC. She knew a few words of English and overheard the paleface woman talking.\nD. She saw other girls with cut hair.",
+        "marks": 1,
+        "ans": "C — She knew a few words of English and overheard the paleface woman talking."
+       },
+       {
+        "n": "II",
+        "q": "What did Judéwin advise the narrator to do?",
+        "marks": 1,
+        "ans": "She advised her to submit, because the people at the school were strong and they could not resist them."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The narrator's reply, 'I will not submit! I will struggle first!', shows her ________.",
+        "marks": 1,
+        "ans": "courage, defiance and determination to defend her dignity and identity."
+       },
+       {
+        "n": "IV",
+        "q": "How do the two girls differ in their response to the threat?",
+        "marks": 1,
+        "ans": "Judéwin accepts that resistance is useless and chooses to give in; the narrator refuses to accept the injustice without a fight, even though she is helpless."
        }
       ]
      }
@@ -3679,6 +4315,178 @@
        }
       ]
      }
+    },
+    {
+     "optA": {
+      "title": "Lost Spring (Anees Jung)",
+      "extract": "Refer to the part of the chapter which describes Seemapuri, where Saheb's family and other ragpickers live, and what garbage means to them.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: Seemapuri is described as a place 'on the periphery of Delhi yet miles away from it' because ________. (it lies on the edge of the city but is cut off from its comforts and facilities / it is far away in another state / it is a modern suburb)",
+        "marks": 1,
+        "ans": "it lies on the edge of the city but is cut off from its comforts and facilities"
+       },
+       {
+        "n": "II",
+        "q": "Where did the people of Seemapuri originally come from, and when?",
+        "marks": 1,
+        "ans": "They are squatters who came from Bangladesh, back in 1971."
+       },
+       {
+        "n": "III",
+        "q": "Which of the following describes the homes in Seemapuri?\nA. Brick houses with running water\nB. Structures of mud with roofs of tin and tarpaulin, without sewage, drainage or running water\nC. Government flats with electricity\nD. Wooden houses on stilts",
+        "marks": 1,
+        "ans": "B — Structures of mud with roofs of tin and tarpaulin, without sewage, drainage or running water."
+       },
+       {
+        "n": "IV",
+        "q": "Why did the people of Seemapuri prefer a ration card to a home in their old land?",
+        "marks": 1,
+        "ans": "The ration card lets them buy grain and gets their names on voters' lists; for them, food is more important for survival than an identity."
+       },
+       {
+        "n": "V",
+        "q": "For the children of Seemapuri, garbage is ________.\nA. a source of disease they avoid\nB. something to be burnt every evening\nC. wrapped in wonder — a chance of finding a coin or something precious\nD. a reason to leave the city",
+        "marks": 1,
+        "ans": "C — wrapped in wonder — a chance of finding a coin or something precious (for the elders, it is a means of survival)."
+       },
+       {
+        "n": "VI",
+        "q": "What does the description of Seemapuri reveal about the lives of the urban poor?",
+        "marks": 1,
+        "ans": "They live without basic amenities, struggle daily for food, and have so little that garbage itself becomes 'gold' — their childhood and dignity are lost in the fight to survive."
+       }
+      ]
+     },
+     "optB": {
+      "title": "The Rattrap (Selma Lagerlöf)",
+      "extract": "Refer to the concluding part of the story, in which a package left by the peddler for Edla is found at the manor house, and the letter inside it is read.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: The package left for Edla contained ________. (a small rattrap, three wrinkled ten-kronor notes and a letter / a gold watch and a letter / the clothes she had given him)",
+        "marks": 1,
+        "ans": "a small rattrap, three wrinkled ten-kronor notes and a letter"
+       },
+       {
+        "n": "II",
+        "q": "Why did the peddler return the money?",
+        "marks": 1,
+        "ans": "Edla had treated him kindly, as if he were a captain, so he wanted to behave like a real captain in return and not embarrass her at Christmas by being a thief; he asked her to give the money back to the old crofter."
+       },
+       {
+        "n": "III",
+        "q": "How did the peddler describe himself in the letter?\nA. As a rat who would have been caught in the world's rattrap if he had not been raised to captain\nB. As a captain who had lost his way\nC. As a soldier from the ironmaster's regiment\nD. As a beggar asking for more help",
+        "marks": 1,
+        "ans": "A — As a rat who would have been caught in the world's rattrap if he had not been raised to captain."
+       },
+       {
+        "n": "IV",
+        "q": "Why did he sign the letter 'Captain von Stahle'?",
+        "marks": 1,
+        "ans": "Edla's respect and kindness had made him feel like a worthy, honourable man; the signature shows his new self-respect and his wish to live up to the dignity she gave him."
+       },
+       {
+        "n": "V",
+        "q": "Why is the rattrap a fitting Christmas present?",
+        "marks": 1,
+        "ans": "The rattrap was the symbol of his bitter philosophy that the world traps people; giving it away shows that he has escaped the trap — through Edla's kindness he was able to 'clear himself'."
+       },
+       {
+        "n": "VI",
+        "q": "Which of the following best expresses the message of the ending?\nA. Thieves can never change.\nB. Strangers should never be invited home.\nC. Money brings happiness at Christmas.\nD. Kindness and trust can awaken the goodness hidden in every human being.",
+        "marks": 1,
+        "ans": "D — Kindness and trust can awaken the goodness hidden in every human being."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "Indigo (Louis Fischer)",
+      "extract": "Refer to the part of the chapter which describes Gandhi's arrival at Rajendra Prasad's house in Patna and his decision to go first to Muzaffarpur, where he was received by Professor Kripalani.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: At Rajendra Prasad's house, the servants took Gandhi to be ________. (another poor peasant, because of his simple dress and Shukla's company / a famous lawyer from Bombay / a British official)",
+        "marks": 1,
+        "ans": "another poor peasant, because of his simple dress and Shukla's company"
+       },
+       {
+        "n": "II",
+        "q": "Why was Gandhi not allowed to draw water from the well?",
+        "marks": 1,
+        "ans": "The servants thought he might be an untouchable, and feared that drops from his bucket would pollute the whole source."
+       },
+       {
+        "n": "III",
+        "q": "Why did Gandhi decide to go to Muzaffarpur before going to Champaran?\nA. To meet the British Commissioner first\nB. To obtain more complete information about conditions than Shukla could give\nC. To take a train to Delhi\nD. To collect money for the peasants",
+        "marks": 1,
+        "ans": "B — To obtain more complete information about conditions than Shukla could give."
+       },
+       {
+        "n": "IV",
+        "q": "How was Gandhi received at Muzaffarpur station?",
+        "marks": 1,
+        "ans": "He arrived at midnight on 15 April 1917, and Professor J.B. Kripalani was waiting for him with a large group of students."
+       },
+       {
+        "n": "V",
+        "q": "Why was it 'an extraordinary thing' for Professor Malkani to let Gandhi stay in his house?\nA. Malkani's house was very small.\nB. Gandhi usually stayed in hotels.\nC. Malkani did not know who Gandhi was.\nD. Malkani was a government schoolteacher, and in those days it was risky for a government servant to shelter someone who opposed the British.",
+        "marks": 1,
+        "ans": "D — Malkani was a government schoolteacher, and in those days it was risky for a government servant to shelter someone who opposed the British."
+       },
+       {
+        "n": "VI",
+        "q": "What does the treatment Gandhi received at Rajendra Prasad's house reveal about Indian society at that time?",
+        "marks": 1,
+        "ans": "It reveals the deep-rooted practice of untouchability and the habit of judging people by their dress and appearance — social evils Gandhi also fought against."
+       }
+      ]
+     },
+     "optB": {
+      "title": "The Last Lesson (Alphonse Daudet)",
+      "extract": "Refer to the part of the story in which Franz is called upon to recite the rule for participles and fails, and M. Hamel speaks to him.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: When his turn came to recite, Franz ________. (got mixed up on the first words and stood holding on to his desk / recited the rule perfectly / refused to stand up)",
+        "marks": 1,
+        "ans": "got mixed up on the first words and stood holding on to his desk"
+       },
+       {
+        "n": "II",
+        "q": "How did Franz feel as he stood unable to recite?",
+        "marks": 1,
+        "ans": "His heart was beating, he did not dare look up, and he would have given anything to be able to say the rule loud and clear — he felt ashamed and regretful."
+       },
+       {
+        "n": "III",
+        "q": "Why did M. Hamel not scold Franz?\nA. He did not notice the mistake.\nB. He had been ordered not to punish pupils.\nC. He felt Franz must feel bad enough already, and the moment was too sad for scolding.\nD. Franz was his favourite pupil.",
+        "marks": 1,
+        "ans": "C — He felt Franz must feel bad enough already, and the moment was too sad for scolding."
+       },
+       {
+        "n": "IV",
+        "q": "What habit of the people of Alsace does M. Hamel point to?",
+        "marks": 1,
+        "ans": "Putting off learning till tomorrow — every day they said, 'I've plenty of time; I'll learn it tomorrow.'"
+       },
+       {
+        "n": "V",
+        "q": "According to M. Hamel, the Prussians will now have the right to say that the people of Alsace ________.\nA. pretend to be Frenchmen but can neither speak nor write their own language\nB. are better farmers than soldiers\nC. should leave their villages\nD. have forgotten German",
+        "marks": 1,
+        "ans": "A — pretend to be Frenchmen but can neither speak nor write their own language."
+       },
+       {
+        "n": "VI",
+        "q": "What lesson does this part of the story teach readers?",
+        "marks": 1,
+        "ans": "We should not put off learning or take precious things like our language and education for granted; their value is often realised only when it is too late."
+       }
+      ]
+     }
     }
    ]
   },
@@ -4062,6 +4870,90 @@
      "q": "Why did the peddler leave the highway after robbing the crofter, and what happened to him in the forest?",
      "marks": 2,
      "ans": "He feared being caught with the stolen thirty kronor, so he turned off the public road into the forest (1). He lost his way, walked in circles in the dark December woods and realised that he himself had been caught in a rattrap, just as he had always said would happen to others (1)."
+    },
+    {
+     "n": "I",
+     "src": "The Last Lesson",
+     "q": "Why did M. Hamel wear his fine Sunday clothes on the day of the last lesson?",
+     "marks": 2,
+     "ans": "He wore his beautiful green coat, frilled shirt and little black silk cap, which he wore only on inspection and prize days (1). It was his way of honouring the last French lesson — a solemn farewell to his pupils, to the language he loved and to forty years of teaching (1)."
+    },
+    {
+     "n": "II",
+     "src": "Poets and Pancakes",
+     "q": "Why does Asokamitran call the make-up department of Gemini Studios an example of 'national integration'?",
+     "marks": 2,
+     "ans": "Its staff came from many regions and communities — a Bengali head, a Maharashtrian who succeeded him, along with a Kannadiga from Dharwar, an Andhra, a Madras Indian Christian, an Anglo-Burmese and local Tamils (1). People of such different backgrounds worked together, so the author calls it, with gentle humour, national integration in practice (1)."
+    },
+    {
+     "n": "III",
+     "src": "Deep Water",
+     "q": "Who threw Douglas into the deep end of the Y.M.C.A. pool, and what does the incident show about thoughtless 'fun'?",
+     "marks": 2,
+     "ans": "A big bruiser of a boy, about eighteen years old, picked up the ten- or eleven-year-old Douglas, who weighed very little, and tossed him into the deep end, just for fun (1). A 'joke' that the bully forgot at once nearly drowned Douglas and left him with a fear that haunted him for years — careless bullying can do lasting harm (1)."
+    },
+    {
+     "n": "IV",
+     "src": "The Interview",
+     "q": "Why does Christopher Silvester call the interview 'a supremely serviceable medium of communication'?",
+     "marks": 2,
+     "ans": "In spite of mixed opinions about it, the interview is extremely useful — it brings readers close to famous people (1). Today our most vivid impressions of our contemporaries come through interviews, and the interviewer holds a position of unprecedented power and influence (1)."
+    },
+    {
+     "n": "V",
+     "src": "Aunt Jennifer's Tigers",
+     "q": "The poem is spoken by an onlooker, probably a niece or nephew. How does this point of view shape our picture of Aunt Jennifer?",
+     "marks": 2,
+     "ans": "The speaker watches her from outside, describing her trembling fingers, heavy wedding band and terrified hands rather than letting her speak (1). This quiet, sympathetic view makes her seem silenced and lonely, while the bold tigers she creates seem to speak for her; the speaker sees the contrast she cannot voice (1)."
+    },
+    {
+     "n": "VI",
+     "src": "A Thing of Beauty",
+     "q": "How does Keats show that beauty is found both in nature and in human imagination? Give one example of each.",
+     "marks": 2,
+     "ans": "Nature: the sun, the moon, trees giving shade to sheep, daffodils, clear rills and musk-roses in the forest (any one) (1). Imagination: the grand fates (dooms) we imagine for the mighty dead and the lovely tales we have heard or read (any one); both kinds lift our spirits (1)."
+    },
+    {
+     "n": "I",
+     "src": "Lost Spring",
+     "q": "Why does the author find Saheb's full name, 'Saheb-e-Alam', ironic?",
+     "marks": 2,
+     "ans": "'Saheb-e-Alam' means 'lord of the universe' (1). Yet Saheb is a barefoot ragpicker who scrounges for a living in garbage dumps; the grand name only highlights how poor and powerless he really is (1)."
+    },
+    {
+     "n": "II",
+     "src": "Going Places",
+     "q": "Explain the significance of the title 'Going Places'.",
+     "marks": 2,
+     "ans": "'Going places' means becoming successful; Sophie dreams of glamorous careers — a boutique, acting, fashion design — and of a life with the football star Danny Casey (1). The title is ironic: her family's poverty and her own fantasies mean she is really going nowhere, while only her daydreams 'go places' (1)."
+    },
+    {
+     "n": "III",
+     "src": "The Rattrap",
+     "q": "Why did the ironmaster mistake the peddler for an old acquaintance, and why did the peddler not correct him?",
+     "marks": 2,
+     "ans": "In the dim light of the forge, the ironmaster thought the ragged man was Nils Olof, an old comrade from his regiment who had fallen on hard times (1). The peddler let him believe it at first because the ironmaster might give him a few kronor, but he refused to go to the manor house for fear of being caught with the stolen money (1)."
+    },
+    {
+     "n": "IV",
+     "src": "The Interview",
+     "q": "Why did Rudyard Kipling consider interviewing 'immoral'?",
+     "marks": 2,
+     "ans": "Kipling felt that an interview was an offence against a person's privacy, as much a crime as an assault on his body (1). He believed that no respectable man would ask for an interview, much less give one; even his wife wrote in her diary that their day was 'wrecked' by reporters (1)."
+    },
+    {
+     "n": "V",
+     "src": "My Mother at Sixty-six",
+     "q": "What is the significance of the setting — a car journey to the airport — in 'My Mother at Sixty-six'?",
+     "marks": 2,
+     "ans": "Sitting beside her mother in the car gives the poet the close, quiet moment in which she notices her mother's ageing face; the moving car and the scenes rushing past suggest time passing swiftly (1). The airport is the place of parting, so the journey leads naturally to the fear of permanent separation that ends the poem (1)."
+    },
+    {
+     "n": "VI",
+     "src": "Aunt Jennifer's Tigers",
+     "q": "Aunt Jennifer is defeated in life but victorious in her art. Do you agree? Give reasons.",
+     "marks": 2,
+     "ans": "Yes. In life she is crushed by an oppressive marriage — her fingers flutter, the wedding band weighs heavily, and even in death her hands remain 'terrified' and 'ringed with ordeals' (1). But the tigers she creates are bold, proud and unafraid, and they will go on prancing after she is gone, so her art expresses the courage she could not live out (1)."
     }
    ]
   },
@@ -4256,6 +5148,48 @@
      "q": "Why did people in Bama's village want to know which street a person lived on?",
      "marks": 2,
      "ans": "People of different castes lived on separate streets, so a person's street revealed his caste (1). When Annan was asked his name and then his street, the questioner only wanted to know his caste so that he could decide how to treat him — a hidden form of discrimination (1)."
+    },
+    {
+     "n": "I",
+     "src": "On the Face of It",
+     "q": "How does Mr Lamb try to make Derry see that his burnt face need not decide the kind of life he lives?",
+     "marks": 2,
+     "ans": "Mr Lamb treats Derry as a normal boy, never pities or stares at his face, and talks of his own tin leg and the nickname 'Lamey-Lamb' without bitterness (1). He tells Derry that what matters is what is inside a person's head and how one looks at the world; if Derry hides away and hates people, the scar will rule him, but he can choose to live fully (1)."
+    },
+    {
+     "n": "II",
+     "src": "Memories of Childhood",
+     "q": "What happened at Zitkala-Sa's first breakfast at the boarding school, and why did she begin to cry?",
+     "marks": 2,
+     "ans": "She did not know the rules of the bells: she sat down at the first bell while everyone stood, rose at the second when all sat down, and felt a paleface woman watching her (1). When the third bell rang and others began eating, she cried instead, because she was confused, afraid to try anything more and felt humiliated in a strange place (1)."
+    },
+    {
+     "n": "III",
+     "src": "Journey to the End of the Earth",
+     "q": "Why are the 'half-million-year-old carbon records' trapped in Antarctica's ice important?",
+     "marks": 2,
+     "ans": "Layers of Antarctic ice hold air and carbon from hundreds of thousands of years ago, so they preserve a record of the earth's past climate (1). Comparing these records with today's helps scientists understand how much human activity has changed the atmosphere and what may happen in future (1)."
+    },
+    {
+     "n": "I",
+     "src": "The Enemy",
+     "q": "Where did Sadao meet Hana, and why did he wait before falling in love with her?",
+     "marks": 2,
+     "ans": "He met her in America, at the house of an old professor, while he was studying there (1). He waited until he was sure she was Japanese, because his father would not have received her otherwise — his love was shaped by loyalty to family and country (1)."
+    },
+    {
+     "n": "II",
+     "src": "The Tiger King",
+     "q": "How was the crown prince of Pratibandapuram brought up, and what does Kalki satirise through this?",
+     "marks": 2,
+     "ans": "The prince was fed on the milk of an English cow, tutored in English by an Englishman, looked after by an English nanny and shown only English films (1). Kalki mocks the blind imitation of the British by Indian royalty, who valued all things English while neglecting their own people and culture (1)."
+    },
+    {
+     "n": "III",
+     "src": "The Third Level",
+     "q": "How does Charley respond to Sam's view that his stamp collecting is 'a temporary refuge from reality'?",
+     "marks": 2,
+     "ans": "Charley does not agree: he points out that his grandfather, who lived in peaceful times and needed no refuge, started the collection (1). He adds that President Roosevelt collected stamps too, so the hobby cannot simply be an escape (1)."
     }
    ]
   },
@@ -4351,6 +5285,26 @@
       "q": "'Lost Spring' and 'A Roadside Stand' both show the lives of the poor and the indifference of the privileged. Compare how Anees Jung and Robert Frost present this theme.",
       "ans": "Value points:\n• Lost Spring: Saheb, a ragpicker in Seemapuri, and Mukesh's family of bangle makers in Firozabad; children lose their childhood (their 'spring') to poverty and hazardous work; they are trapped by tradition, caste and a vicious circle of moneylenders, middlemen, police and politicians; promises such as schools are empty.\n• A Roadside Stand: poor rural people set up a stand by the highway hoping to earn a little city money; the 'polished traffic' passes by; cars stop only to turn around or ask the way; the 'greedy good-doers' plan to resettle them near the theatre and store, robbing them of independence.\n• Indifference: in both texts the comfortable classes ignore or exploit the poor; welfare is offered without understanding their real needs.\n• Treatment: Jung uses factual, journalistic reporting with interviews and sharp details; Frost uses a poem of sympathy mixed with irony and self-questioning.\n• Conclusion: both writers appeal to the reader's conscience — the poor need dignity and real opportunity, not pity.\nMarking: content 3, organisation/expression 2."
      }
+    },
+    {
+     "optA": {
+      "q": "'The real relief for them is to be free from fear.' Show how Gandhi helped the peasants of Champaran and the lawyers who advised him to free themselves from fear, and why he valued this more than a legal victory.",
+      "ans": "Value points:\n• The situation: sharecroppers bound by the 15 per cent arrangement to grow indigo; exploited by British landlords; crushed and fear-stricken; lawyers took fat fees from them.\n• Gandhi's view: law courts are useless when peasants are so frightened; the real relief is freedom from fear.\n• Example of defiance: at Motihari he disobeyed the order to leave, accepted the penalty, and thousands of peasants gathered spontaneously — the case was dropped; the peasants saw that the British could be challenged.\n• The lawyers: at first they would go home if he were jailed; ashamed, they decided to court arrest with him — they too lost their fear.\n• Self-reliance: he refused C.F. Andrews' help so that Indians would rely on themselves; he accepted a 25 per cent refund because the landlords' surrender of money and prestige mattered more than the amount.\n• Result: within a few years the planters left; the peasants became masters of the land; Gandhi also worked on health, education and cleanliness.\n• Conclusion: by removing fear he gave the poor confidence and dignity — the first step towards freedom.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "In 'Keeping Quiet', Neruda's call for twelve seconds of silence is a call for introspection, not inactivity. Discuss how, according to the poem, such a pause could change our relationship with nature, with other human beings and with ourselves.",
+      "ans": "Value points:\n• The call: count to twelve, keep still, speak in no language, stop moving our arms — a pause for reflection, not death or laziness ('I want no truck with death').\n• Nature: fishermen would not harm whales; the pause would end our violence against nature; 'green wars' would stop; the earth itself can teach us how life revives after seeming dead.\n• Other human beings: we would be together in a 'sudden strangeness'; the salt-gatherer would look at his hurt hands — we would notice suffering; warmongers would put on clean clothes and walk with their brothers in the shade — war and hatred would give way to brotherhood.\n• Ourselves: we are 'single-minded' about keeping our lives moving and do not understand ourselves; silence could break this sadness and help us know our true needs.\n• The paradox: stillness becomes the start of a better, more active life — 'Life is what it is about'.\n• Conclusion: a moment of quiet introspection could bring peace, compassion and self-knowledge.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Asokamitran describes life at Gemini Studios with gentle humour and irony. Discuss how he uses these to present the people of the studio, with reference to the make-up department, the office boy, Kothamangalam Subbu and the Legal Adviser.",
+      "ans": "Value points:\n• Make-up department: brightly lit like a hair-cutting salon; make-up men turned decent-looking people into 'hideous crimson-hued monsters'; staff from many regions — 'national integration' — said with a smile.\n• The office boy: a middle-aged man who had joined hoping to become a star, actor or poet; frustrated and bitter, he blamed Subbu for his failure — his grand ambition contrasts comically with his job of slapping paint on extras.\n• Subbu: the Boss's 'No. 2'; loyal, talented poet, actor and story-writer, but his cheerfulness and flattery are described with light irony; 'tailor-made to be a number two'.\n• The Legal Adviser: called 'the opposite' by others; he switched on a recorder during an argument and the talented actress, hearing her outburst played back, never returned — he is the man who ended a career without meaning to.\n• Self-irony: the author mocks his own job of cutting newspaper clippings, which others thought was doing nothing.\n• Effect: the humour is never cruel; it exposes vanity, ambition and absurdity while showing affection for the people.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "In 'A Roadside Stand' the poet's feelings move from criticism of the city to sympathy for the rural poor and finally to a troubled look at his own mind. Trace the changing feelings of the poet through the poem.",
+      "ans": "Value points:\n• Opening: the little stand pleads not for charity but for city money; the poet's sympathy for its owners.\n• Criticism of city people: the 'polished traffic' passes with its mind ahead; travellers are annoyed at the 'artless' signs; at most they stop to turn round or ask for petrol — selfish and indifferent.\n• Sympathy: the 'trusting sorrow' of the poor; their wish for a life like the 'moving-pictures' promise'; their 'childish longing' and almost open prayer for a car to stop.\n• Anger at false benefactors: the 'greedy good-doers, beneficent beasts of prey' who plan to resettle the poor and rob them of independence.\n• Self-examination: the poet admits that he sometimes wishes their pain could be ended at one stroke; then, coming back 'into the sane', he wonders how he would feel if someone offered to put him out of his pain.\n• Conclusion: the poem moves from protest to pity to honest self-questioning, showing the complexity of the poet's compassion.\nMarking: content 3, organisation/expression 2."
+     }
     }
    ]
   },
@@ -4445,6 +5399,26 @@
      "optB": {
       "q": "Symbols such as the open gate, the bees, the garden and the ladder carry much of the meaning of 'On the Face of It'. Discuss how Susan Hill uses these symbols to present the play's central ideas.",
       "ans": "Value points:\n• The open gate: Mr Lamb's garden gate is never locked — it stands for openness, acceptance and freedom; anyone may come and go; it contrasts with Derry's closed, fearful life.\n• The bees: Mr Lamb hears them 'singing', not buzzing — a sign of his positive, imaginative outlook that turns the ordinary into something joyful.\n• The garden and the crab apples: a world where everything grows and has value; Derry, like an unwanted plant, finds himself accepted there; Mr Lamb's invitation to help pick crab apples gives Derry a reason to return.\n• The ladder: Mr Lamb climbs it to pick crab apples and falls at the end; it suggests both effort towards life and the fragility of life.\n• Derry's return: by coming back against his mother's wishes, Derry walks through the 'open gate' into a fuller life, even though he finds Mr Lamb fallen.\n• Conclusion: through simple symbols the play shows that acceptance, a positive attitude and human contact can heal the scars of fear and isolation.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Charley insists that the third level is real, while his psychiatrist friend Sam calls it a 'waking-dream wish fulfilment'. Which view do you find more convincing? Give reasons from 'The Third Level'.",
+      "ans": "Value points (either view, well supported, with reference to the text):\n• The case for fantasy: Charley is unhappy with the modern world of insecurity, fear, war and worry; Sam explains the third level as a wish to escape; Charley's stamp collecting is called a temporary refuge from reality; he cannot find the corridor again; even his wife is worried.\n• The case for reality: Charley describes the third level in precise detail — gas lights, brass spittoons, old-fashioned clothes, an 1894 newspaper; the clerk rejects his modern money; and at the end the first-day cover dated 1894 in his grandfather's collection holds a letter from Sam saying he has found the third level and is living in Galesburg — Sam has disappeared.\n• Balanced view: Finney deliberately blurs the line between reality and fantasy; the ending suggests that the desire to escape is shared even by the rational psychiatrist.\n• Conclusion: a clear personal judgement with reasons.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "Imagine you are Hana. On the night the American prisoner leaves your house in the boat, write a diary entry recording your thoughts and feelings about the events of the past few days.",
+      "ans": "Value points:\n• Format: date, informal first-person diary style, reflective tone (format is part of expression).\n• The beginning: finding the wounded white man on the beach in the mist; recognising him as an American prisoner of war; the dilemma — to hand him over or help him.\n• Hana's feelings: fear and disgust at first, yet pity for a helpless young man; washing his wounds herself when Yumi refused; helping with the anaesthetic during the operation in spite of her horror.\n• The servants: their anger and fear; their leaving the house; Hana's loneliness and worry for her children and husband.\n• Sadao's choice: his talk with the General; the nights of waiting for assassins; finally giving the man the boat, food, clothes and a flashlight to signal.\n• Reflection: relief mixed with fear; pride in her husband's humanity; the thought that the 'enemy' is a frightened young man, and that hatred, not people, is the real enemy.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Tishani Doshi suggests that Antarctica makes visitors aware both of how small and recent human beings are and of how great an impact they have had on the earth. Discuss this idea.",
+      "ans": "Value points:\n• How small: Antarctica's vast white silence and its immense geological history; human civilisations are only about 12,000 years old — barely a few seconds on the geological clock; Gondwana and the slow shifting of continents put human life in perspective.\n• How great our impact: in that short time humans have burnt fossil fuels, cut forests and multiplied in numbers, creating a blanket of carbon dioxide and global warming; Antarctica's ice cores hold carbon records that show the change.\n• Antarctica as a warning: melting ice and the fragile food chain (phytoplankton) show how small changes can have huge effects.\n• The lesson: humility before nature and responsibility for it; young people, like those on Students on Ice, can be inspired to act.\n• Conclusion: the paradox of being tiny yet powerful should make us careful custodians of the earth.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "Education is presented in 'Memories of Childhood' as a path to dignity. Discuss with reference to Annan's advice and Bama's response, and say whether education alone can end discrimination.",
+      "ans": "Value points:\n• The context: Bama sees an elder of her community carry a packet of vadai by its string so as not to 'pollute' it; she learns from Annan that this is because of untouchability.\n• Annan's advice: people of their community are denied honour, dignity and respect; but if they study and make progress they can throw away these indignities; people will come to them of their own accord.\n• Bama's response: she studied with all her breath and being, stood first in her class, and many people became her friends — education gave her confidence and respect.\n• Zitkala-Sa's contrast: her school education was used to strip her of identity — education can also be a tool of oppression when it ignores culture.\n• Can education alone end discrimination? It empowers individuals and opens doors, but laws, changes in social attitudes, and the willingness of the privileged to give up prejudice are also needed.\n• Conclusion: a reasoned personal view.\nMarking: content 3, organisation/expression 2."
      }
     }
    ]
