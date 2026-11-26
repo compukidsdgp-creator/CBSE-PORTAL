@@ -1,0 +1,19 @@
+🧲 WHY? — Why is there a MINUS sign in ε = −dΦ/dt?
+
+Push a magnet's N pole towards a coil → flux increases → current flows ⚡
+The coil's near face becomes N → it REPELS the magnet
+So you must push → your work becomes the bulb's electrical energy 💡
+
+🤔 With a PLUS sign the coil would PULL the magnet in…
+faster magnet → more current → stronger pull → energy from nothing ❌
+That breaks conservation of energy!
+
+✅ Lenz's law: the induced current always OPPOSES the change in flux — that's the minus sign.
+Electromagnetic Induction — Class 12 Physics. 📘
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #LenzsLaw #ElectromagneticInduction #Class12Physics #BoardExam2027 #CBSE #Physics
