@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Pair of Linear Equations: Graphical Method — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Graph-paper lab: plot three pairs of linear equations with a ruler, read the solution with a magnifier and find when a pair is consistent from a₁/a₂, b₁/b₂, c₁/c₂.">
+<meta name="cbse-lab-standard" content="2026-11">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/mathematics/03-pair-of-linear-equations-lab.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Pair of linear equations in two variables: graphical method and consistency — virtual lab","url":"https://cbsemock.org.in/virtual-labs/mathematics/03-pair-of-linear-equations-lab.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 10"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Graphical solution of a pair of linear equations","Consistent and inconsistent pairs","Conditions a1/a2, b1/b2, c1/c2","Intersecting, parallel and coincident lines"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --l1:#1f4fa8;--l2:#c0392b;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s;min-height:40px;display:inline-flex;align-items:center}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.75rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.pairs{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.pairs .lbl{font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-right:2px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 200px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s;min-height:44px}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.78rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.eqbar{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;background:#101a2b;border:1px solid #23344d;border-radius:12px;padding:8px 14px;margin-bottom:12px;font-family:'JetBrains Mono',monospace;font-size:1rem}
+.eqbar .t{font-family:Inter,sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf}
+.eqbar .e1{color:#8fb6ff}.eqbar .e2{color:#ff9d8f}
+.envgrid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:12px;align-items:start}
+@media(max-width:820px){.envgrid{grid-template-columns:1fr}}
+.paperbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#3a2a1a}
+.paperscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+#paper{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none;cursor:crosshair;outline:none}
+#paper:focus-visible{box-shadow:inset 0 0 0 3px var(--gold)}
+#paper .hit{cursor:grab;touch-action:none}
+@media(max-width:700px){#paper{min-width:640px}.paperbox::after{content:'⟷ swipe the graph paper';position:absolute;right:8px;bottom:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 9px;border-radius:99px;pointer-events:none}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px}
+.panel h4{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+#mag{display:block;width:100%;max-width:300px;margin:0 auto;aspect-ratio:1;border-radius:50%;box-shadow:0 0 0 6px #2a2f38,0 0 0 8px #59626e,0 10px 24px rgba(0,0,0,.5);background:#fbfaf3}
+.magcap{font-size:.78rem;color:#8ea2bd;text-align:center;margin:12px 0 4px}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 8px}
+.sel .grp{width:100%;font-size:.78rem;font-weight:700;color:#93a6bf;margin-top:2px}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:99px;min-height:40px;min-width:40px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.chip.done::after{content:' ✓';color:#7fe0b8}.chip.on.done::after{color:var(--navy2)}
+.chip.l1{border-color:#3a5fa8}.chip.l2{border-color:#a8473a}.chip.l1.on,.chip.l2.on{border-color:var(--gold)}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:6px}
+.nudge button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;min-height:42px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff}
+.nudge button:hover{background:#21385c}.nudge button:active{transform:translateY(1px)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:#c9d6e6;cursor:pointer;padding:8px 0;min-height:40px}
+.sw input{width:22px;height:22px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:42px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.btn.l1{background:#1f4fa8;color:#fff}.btn.l2{background:#a93226;color:#fff}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.msg{font-size:.88rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+.vt{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:.88rem}
+.vt caption{text-align:left;font-family:'JetBrains Mono',monospace;font-size:.92rem;padding:4px 0 6px}
+.vt th{font-size:.78rem;color:#93a6bf;font-weight:700;padding:4px;text-align:center}
+.vt td{padding:3px 4px;text-align:center}
+.vt input,.rd input{font:inherit;font-family:'JetBrains Mono',monospace;font-size:16px;width:100%;max-width:110px;min-height:42px;padding:6px 8px;border-radius:8px;border:1.5px solid #3a5276;background:#0b1320;color:#fff;text-align:center}
+.vt input.bad,.rd input.bad{border-color:#ff8a80;background:rgba(179,38,30,.15)}
+.vt input.good{border-color:#4cc2a4}
+.rd{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px;font-size:.9rem}
+.rd label{display:inline-flex;align-items:center;gap:6px}
+.rd input{width:96px}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:1060px;font-size:.88rem}
+.obs th,.obs td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:center;vertical-align:middle}
+.obs th{background:var(--soft);font-weight:700;font-size:.78rem;line-height:1.3}
+.obs td.eqs{font-family:'JetBrains Mono',monospace;font-size:.8rem;text-align:left;white-space:nowrap;line-height:1.5}
+.obs input,.obs select{font:inherit;font-size:16px;min-height:42px;padding:6px 8px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);color:var(--text)}
+.obs input{font-family:'JetBrains Mono',monospace;width:86px;text-align:center}
+.obs select{max-width:190px}
+.obs .bad{border-color:var(--red)!important;background:rgba(179,38,30,.08)}
+.obs .good{border-color:var(--green)!important}
+.obs .dv{display:block;font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:2px}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.note{font-size:.8rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:980px){.graphs{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.graphs{grid-template-columns:1fr}}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:1}
+.graphs figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.concl{margin-top:12px;padding-left:20px}.concl li{margin:4px 0}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1rem}
+.ctab{overflow-x:auto}.ctab table{border-collapse:collapse;width:100%;min-width:520px;font-size:.9rem;margin:8px 0}
+.ctab th,.ctab td{border:1px solid var(--border);padding:7px 8px;text-align:center}.ctab th{background:var(--soft);font-size:.82rem}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:28px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}
+.links li:nth-child(4) a{background:linear-gradient(135deg,#b8873b,#4a3110)}.links li:nth-child(5) a{background:linear-gradient(135deg,#3b8fb8,#10344a)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:10px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.72);font:700 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.1em}
+.sceneB .draw2{stroke-dasharray:404;stroke-dashoffset:404;animation:drawL 7s ease-in-out infinite}
+.sceneB .pencilB{animation:pen 7s ease-in-out infinite}
+.sceneB .solB{opacity:0;animation:sol 7s ease-in-out infinite}
+@keyframes drawL{0%,8%{stroke-dashoffset:404}55%,92%{stroke-dashoffset:0}100%{stroke-dashoffset:404}}
+@keyframes pen{0%,8%{transform:translate(0,0)}55%,92%{transform:translate(360px,180px)}100%{transform:translate(0,0)}}
+@keyframes sol{0%,30%{opacity:0}38%,92%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.sceneB .draw2{animation:none;stroke-dashoffset:0}.sceneB .pencilB{animation:none;transform:translate(360px,180px)}.sceneB .solB{animation:none;opacity:1}#paper .inkdraw{animation:none!important}}
+@keyframes ink{to{stroke-dashoffset:0}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt;margin:4pt 0}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:31%;margin:1%;border:1px solid #bbb}
+}
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small,.obs th{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="lab-draft" style="background:#fff4d6;color:#6b4e00;padding:8px 14px;font:600 14px Inter,sans-serif;text-align:center">Draft preview — waiting for approval in the admin panel</div>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../../index.html">Home</a> › <a href="../../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../../virtual-labs/mathematics/index.html">Mathematics</a> › Pair of linear equations</nav>
+   <div class="eyebrow">Experiment · Graph paper &amp; ruler</div>
+   <h1><span class="g1">Pair of Linear Equations</span><span class="g2">Graphical Method &amp; Consistency</span></h1>
+   <p>Plot three pairs of lines on real graph paper, read where they meet with a magnifier, and discover the rule that tells you — without drawing — whether a pair has one solution, none or infinitely many.</p>
+   <div class="chips"><span>Class 10 · Chapter 3</span><span>CBSE lab activity · consistency</span><span>⏱ about 30 min</span></div>
+   <a class="go" href="#lab">Open the graph paper ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <linearGradient id="b-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#24170c"/></linearGradient>
+ <pattern id="b-mm" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M6 0V6H0" fill="none" stroke="#9ccfae" stroke-width=".5"/></pattern>
+ <pattern id="b-cm" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="url(#b-mm)"/><path d="M30 0V30H0" fill="none" stroke="#5aa77a" stroke-width="1"/></pattern>
+ <linearGradient id="b-paper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffef6"/><stop offset="1" stop-color="#ece8d6"/></linearGradient>
+ <linearGradient id="b-ruler" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f5ff" stop-opacity=".75"/><stop offset="1" stop-color="#b5d6ee" stop-opacity=".55"/></linearGradient>
+ <radialGradient id="b-sol"><stop offset="0" stop-color="#ffe9a0" stop-opacity=".95"/><stop offset=".5" stop-color="#ffcf4a" stop-opacity=".35"/><stop offset="1" stop-color="#ffcf4a" stop-opacity="0"/></radialGradient>
+ <linearGradient id="b-pen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f4c430"/><stop offset=".5" stop-color="#ffe27a"/><stop offset="1" stop-color="#d9a514"/></linearGradient>
+</defs>
+<rect x="0" y="292" width="760" height="68" fill="url(#b-wood)"/>
+<g transform="rotate(-3 380 170)">
+ <rect x="146" y="22" width="474" height="290" fill="#000" opacity=".35" transform="translate(6 8)"/>
+ <rect x="146" y="22" width="474" height="290" fill="url(#b-paper)"/>
+ <rect x="160" y="34" width="450" height="270" fill="url(#b-cm)"/>
+ <path d="M160 214H610M310 34V304" stroke="#2b2b2b" stroke-width="1.6"/>
+ <text x="604" y="230" font-size="13" font-family="Inter" fill="#333">X</text><text x="316" y="48" font-size="13" font-family="Inter" fill="#333">Y</text>
+ <line x1="190" y1="250" x2="570" y2="70" stroke="#1f4fa8" stroke-width="2.4" stroke-linecap="round"/>
+ <line class="draw2" x1="200" y1="90" x2="560" y2="270" stroke="#c0392b" stroke-width="2.4" stroke-linecap="round"/>
+ <!-- ruler laid along the red line -->
+ <g transform="translate(200 90) rotate(26.565)"><rect x="-20" y="4" width="440" height="34" rx="3" fill="url(#b-ruler)" stroke="#8fb4cf"/>
+  <path d="M-10 4v10M0 4v6M10 4v6M20 4v6M30 4v6M40 4v10M50 4v6M60 4v6M70 4v6M80 4v6M90 4v10M100 4v6M110 4v6M120 4v6M130 4v6M140 4v10M150 4v6M160 4v6M170 4v6M180 4v6M190 4v10M200 4v6M210 4v6M220 4v6M230 4v6M240 4v10M250 4v6M260 4v6M270 4v6M280 4v6M290 4v10M300 4v6M310 4v6M320 4v6M330 4v6M340 4v10M350 4v6M360 4v6M370 4v6M380 4v6M390 4v10" stroke="#355a78" stroke-width="1"/></g>
+ <g class="solB"><circle cx="359.5" cy="169.7" r="26" fill="url(#b-sol)"/><circle cx="359.5" cy="169.7" r="4" fill="#1a1a1a"/>
+  <path d="M359.5 169.7V214M359.5 169.7H310" stroke="#555" stroke-width="1.2" stroke-dasharray="4 3"/><rect x="372" y="136" width="128" height="20" rx="4" fill="#fffef6" opacity=".9"/><text x="436" y="151" font-size="12.5" font-weight="800" font-family="Inter,sans-serif" text-anchor="middle" fill="#7a5c00" letter-spacing=".08em">SOLUTION (x, y)</text></g>
+ <!-- pencil drawing the red line -->
+ <g transform="translate(200 90)"><g class="pencilB"><g transform="rotate(32)"><path d="M0 0 L7 -14 L-7 -14 Z" fill="#e8c9a0"/><path d="M0 0 L2.4 -5 L-2.4 -5Z" fill="#333"/><rect x="-7" y="-104" width="14" height="90" fill="url(#b-pen)"/><rect x="-7" y="-116" width="14" height="12" fill="#c9c9c9"/><rect x="-7" y="-126" width="14" height="10" rx="3" fill="#e57a8a"/></g></g></g>
+</g>
+<!-- protractor and eraser on the desk -->
+<path d="M620 334 A74 74 0 0 1 768 334 Z" fill="#cfe9ff" fill-opacity=".35" stroke="#9cc6e6" stroke-width="1.5"/><path d="M694 334 v-8" stroke="#9cc6e6"/>
+<rect x="40" y="318" width="54" height="22" rx="4" fill="#f2f2f2"/><rect x="40" y="318" width="22" height="22" rx="4" fill="#4a7bd1"/>
+<text x="692" y="74" class="tB">GRAPH PAPER</text><path d="M660 80 L612 100" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/><text x="694" y="352" class="tB">GEOMETRY BOX</text><text x="74" y="62" class="tB">PENCIL</text><path d="M100 66 L150 84" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/><text x="72" y="270" class="tB">RULER</text><path d="M100 262 L200 200" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Table of values</li><li><b>2</b>Plot &amp; draw lines</li><li><b>3</b>Read &amp; compare ratios</li><li><b>4</b>Result &amp; viva</li></ol>
+</header>
+
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Graph paper workspace">
+  <div class="pairs" id="pairs"><span class="lbl">Pair</span></div>
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-step="table" role="tab" type="button"><b>Step 1 · Table of values</b><small>Three solutions (x, y) for each equation</small></button>
+   <button class="tab" data-step="plot" role="tab" type="button"><b>Step 2 · Plot &amp; draw</b><small>Mark the points, lay the ruler, draw</small></button>
+   <button class="tab" data-step="read" role="tab" type="button"><b>Step 3 · Read the graph</b><small>Use the magnifier to read the solution</small></button>
+  </div>
+  <div class="task" id="task"></div>
+  <div class="eqbar" id="eqbar"></div>
+  <div class="envgrid">
+   <div class="paperbox"><div class="paperscroll" id="paperScroll"><svg id="paper" viewBox="0 0 628 628" role="img" tabindex="0" aria-label="Graph paper, 1 cm = 1 unit on both axes, with x and y from −5 to 9"></svg></div></div>
+   <div class="panel">
+    <div id="pTable">
+     <h4><span>Table of values</span><span id="pairTag"></span></h4>
+     <div id="vtables"></div>
+     <div class="tools"><button class="btn gold" id="checkVals" type="button">✓ Check my values</button></div>
+    </div>
+    <div id="pMag" hidden>
+     <h4><span>Magnifier</span><span id="magTag" class="mono"></span></h4>
+     <svg id="mag" viewBox="0 0 300 300" aria-label="Magnified view of the graph paper"></svg>
+     <div class="magcap">One small square = 0.1 unit (1 mm). The bold lines are whole units.</div>
+     <div id="plotCtl">
+      <div class="sel" id="sel"></div>
+      <div class="nudge" id="nudge"><button data-dx="-1" type="button" aria-label="left 1 unit">←1</button><button data-dx="-0.1" type="button" aria-label="left 0.1">←.1</button><button data-dx="0.1" type="button" aria-label="right 0.1">.1→</button><button data-dx="1" type="button" aria-label="right 1 unit">1→</button><button data-dy="-1" type="button" aria-label="down 1 unit">↓1</button><button data-dy="-0.1" type="button" aria-label="down 0.1">↓.1</button><button data-dy="0.1" type="button" aria-label="up 0.1">.1↑</button><button data-dy="1" type="button" aria-label="up 1 unit">1↑</button></div>
+      <div class="tools" id="drawBtns"><button class="btn l1" id="draw1" type="button">📏 Draw line 1</button><button class="btn l2" id="draw2" type="button">📏 Draw line 2</button><button class="btn ghost" id="erase" type="button">⌫ Erase point</button></div>
+     </div>
+     <div id="readCtl" hidden>
+      <div class="rd"><span>Point of intersection:</span><label>x <input id="sx" inputmode="decimal" placeholder="x" aria-label="x-coordinate read from graph"></label><label>y <input id="sy" inputmode="decimal" placeholder="y" aria-label="y-coordinate read from graph"></label></div>
+      <p class="note" style="color:#93a6bf;margin-top:6px">Leave these empty if your lines do not meet at a single point.</p>
+     </div>
+    </div>
+    <div class="tools">
+     <label class="sw"><input type="checkbox" id="helper"> Show readings (helper)</label>
+     <span style="flex:1"></span>
+     <button class="btn ghost" id="newSet" type="button">↺ New set of pairs</button>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nOk">0 / 3 checked</span></h2>
+  <p class="lead">Write each ratio as a fraction (for example <span class="mono">2/4</span> or <span class="mono">−1/3</span>) using the equations in the form a x + b y + c = 0. The solution column fills in from Step 3.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>Pair</th><th>Equations</th><th>a₁/a₂</th><th>b₁/b₂</th><th>c₁/c₂</th><th>Comparison of ratios</th><th>Graphical representation</th><th>Number of solutions</th><th>Solution read<br>from graph</th><th>Consistent /<br>inconsistent</th></tr></thead>
+   <tbody id="tb"></tbody>
+  </table></div>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graphs</h2>
+  <p class="lead">Your own lines, redrawn neatly from Step 2, with the key construction marked on each.</p>
+  <div class="graphs">
+   <figure><canvas id="g0" width="400" height="400"></canvas><figcaption id="c0"></figcaption></figure>
+   <figure><canvas id="g1" width="400" height="400"></canvas><figcaption id="c1"></figcaption></figure>
+   <figure><canvas id="g2" width="400" height="400"></canvas><figcaption id="c2"></figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small id="rPairLbl">Solution read from your graph</small><b id="rRead">—</b></div>
+   <div class="rbox"><small>Where your drawn lines cross</small><b id="rCross">—</b></div>
+   <div class="rbox true" id="trueBox" hidden><small>Exact solution (by elimination)</small><b id="rTrue">—</b></div>
+  </div>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the exact solution</button><span class="note" id="err"></span></div>
+  <ol class="concl" id="concl"></ol>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To obtain the conditions for consistency of a pair of linear equations in two variables by the graphical method, and to solve a consistent pair graphically.</p>
+    <h3>Apparatus</h3>
+    <p>Graph paper (mm squares), a sharp pencil, a 15 cm ruler (scale) from the geometry box, an eraser, and three pairs of linear equations.</p>
+    <h3>Theory</h3>
+    <p>A pair of linear equations in two variables can be written as</p>
+    <p class="eq">a₁x + b₁y + c₁ = 0 &nbsp;and&nbsp; a₂x + b₂y + c₂ = 0</p>
+    <p>The graph of each equation is a straight line. Every point on a line is a solution of that equation, so a point common to both lines is a solution of the pair. Two lines in a plane can do only one of three things:</p>
+    <div class="ctab"><table>
+     <tr><th>Compare the ratios</th><th>The lines</th><th>Solutions</th><th>The pair is</th></tr>
+     <tr><td>a₁/a₂ ≠ b₁/b₂</td><td>intersect at one point</td><td>exactly one (unique)</td><td>consistent</td></tr>
+     <tr><td>a₁/a₂ = b₁/b₂ ≠ c₁/c₂</td><td>are parallel</td><td>none</td><td>inconsistent</td></tr>
+     <tr><td>a₁/a₂ = b₁/b₂ = c₁/c₂</td><td>coincide</td><td>infinitely many</td><td>dependent (consistent)</td></tr>
+    </table></div>
+    <p>Why it works: if a₁/a₂ = b₁/b₂, the two lines have the same slope −a/b, so they are parallel or the same line. If c₁/c₂ is also equal, one equation is just a multiple of the other.</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li>Draw the x-axis and y-axis on the graph paper and choose a scale (here 1 cm = 1 unit on both axes).</li>
+     <li>For the first equation, choose three values of x and work out y. Pick x so that y is a whole number or a half — such points are easy to plot exactly.</li>
+     <li>Plot the three points. They must lie in a straight line; if one does not, recheck its calculation.</li>
+     <li>Join the points with a ruler and extend the line across the paper. Label it with its equation.</li>
+     <li>Repeat steps 2–4 for the second equation on the same axes.</li>
+     <li>See whether the lines intersect, are parallel or coincide. If they intersect, drop perpendiculars to the axes and read the coordinates of the point of intersection.</li>
+     <li>Work out a₁/a₂, b₁/b₂ and c₁/c₂ and compare them. Repeat for all three pairs and record the results.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>Use a sharp pencil so that points and lines are thin.</li>
+     <li>Use the same scale on both axes and mark it on the graph paper.</li>
+     <li>Plot at least three points for each line; the third point checks the other two.</li>
+     <li>Keep the points well apart so the ruler line is accurate.</li>
+     <li>Write each equation in the form ax + by + c = 0 before finding the ratios, and keep the signs.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Limitations and sources of error</h3>
+    <ul>
+     <li>The graphical method gives only approximate values; a pencil line has thickness, so the crossing can be read only to about 0.1 unit.</li>
+     <li>If the solution has awkward values (like 7/3) or lies off the paper, the graph cannot show it accurately; algebraic methods (substitution, elimination) give the exact answer.</li>
+     <li>A small error in plotting one point tilts the line and moves the point of intersection.</li>
+     <li>Lines that are nearly parallel meet at a very narrow angle, which makes the crossing hard to locate.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask on this activity. Try to answer before you open each one.</p>
+  <details class="q"><summary>1. What is the general form of a pair of linear equations in two variables?</summary><p>a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0, where the a’s, b’s and c’s are real numbers and a₁² + b₁² ≠ 0, a₂² + b₂² ≠ 0 (a and b are not both zero).</p></details>
+  <details class="q"><summary>2. What does the graph of a linear equation in two variables look like?</summary><p>A straight line. Every point on the line is a solution of the equation, and every solution is a point on the line.</p></details>
+  <details class="q"><summary>3. When is a pair of linear equations called consistent?</summary><p>When it has at least one solution — either a unique solution (intersecting lines) or infinitely many solutions (coincident lines).</p></details>
+  <details class="q"><summary>4. If a₁/a₂ = b₁/b₂ ≠ c₁/c₂, what can you say about the lines and the solutions?</summary><p>The lines are parallel. They never meet, so the pair has no solution and is inconsistent.</p></details>
+  <details class="q"><summary>5. How many solutions does a pair of coincident lines have? What is such a pair called?</summary><p>Infinitely many — every point on the line is a solution. The pair is called dependent, and it is consistent.</p></details>
+  <details class="q"><summary>6. Why do we plot three points for each line when two points are enough to fix a line?</summary><p>The third point is a check. If it does not lie on the line through the other two, there is a mistake in a calculation or in plotting.</p></details>
+  <details class="q"><summary>7. Without drawing, is the pair x − 2y = 0 and 3x + 4y − 20 = 0 consistent?</summary><p>a₁/a₂ = 1/3 and b₁/b₂ = −2/4 = −1/2. Since 1/3 ≠ −1/2 the lines intersect, so the pair is consistent with a unique solution, (4, 2).</p></details>
+  <details class="q"><summary>8. For what value of k will 2x + 3y = 5 and 4x + ky = 10 have infinitely many solutions?</summary><p>We need 2/4 = 3/k = 5/10. So 3/k = 1/2, which gives k = 6.</p></details>
+  <details class="q"><summary>9. Where does the line x + 2y = 4 cut the two axes?</summary><p>Put y = 0: x = 4, so it cuts the x-axis at (4, 0). Put x = 0: y = 2, so it cuts the y-axis at (0, 2).</p></details>
+  <details class="q"><summary>10. Why is the graphical method not always reliable for finding the solution?</summary><p>Readings are limited by the scale and by the thickness of the lines, so non-integer solutions such as (7/3, 5/4) can only be estimated. Substitution or elimination gives the exact solution.</p></details>
+  <details class="q"><summary>11. Can two distinct straight lines meet at two different points?</summary><p>No. Two distinct lines meet in at most one point. If they share two points, they are the same line (coincident).</p></details>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../../resources/maths-x.html">📘 Class 10 Maths (Standard) resources</a></li>
+   <li><a href="../../../cbse-class-10-maths-standard-mock-tests.html">📄 Maths Standard mock tests</a></li>
+   <li><a href="../../../cbse-class-10-maths-basic-mock-tests.html">📄 Maths Basic mock tests</a></li>
+   <li><a href="../../../virtual-labs/mathematics/01-linear-function-explorer.html">📈 Linear function explorer lab</a></li>
+   <li><a href="../../../formula-board/">📐 Formula board</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../../about.html">About Us</a> · <a href="../../../privacy.html">Privacy Policy</a> · <a href="../../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
+<script>
+(function(){
+'use strict';
+/* ───────── maths + state ───────── */
+var NS='http://www.w3.org/2000/svg';
+var XMIN=-5,XMAX=9,YMIN=-5,YMAX=9,U=40,M=34;       // graph paper: 1 cm = 1 unit, 1 unit = 40 svg px
+var KEY='cbse-lab-pair-linear-v1';
+var PLOT_TOL=0.05;     // a plotted point must sit on the right mm line
+var READ_TOL=0.12;     // reading of the crossing: within about one small square
+var VAL_TOL=0.02;      // y in the table of values (allows 2-dp rounding)
+function ri(a,b){return a+Math.floor(Math.random()*(b-a+1))}
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function r1(x){return Math.round(x*10)/10}
+function isTenth(x){return Math.abs(Math.round(x*10)-x*10)<1e-9}
+function gcd(a,b){a=Math.abs(a);b=Math.abs(b);while(b){var t=a%b;a=b;b=t}return a||1}
+function frac(p,q){if(q<0){p=-p;q=-q}var g=gcd(p,q);p/=g;q/=g;return q===1?String(p).replace('-','−'):(String(p).replace('-','−')+'/'+q)}
+function fmtN(x,d){var s=(Math.abs(x)<1e-9?0:x).toFixed(d===undefined?1:d);return s.replace('-','−')}
+function num(s){if(s===undefined||s===null)return NaN;s=String(s).trim().replace(/[−–]/g,'-');if(!s)return NaN;
+ var m=s.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)$/);if(m){var d=parseFloat(m[2]);return d===0?NaN:parseFloat(m[1])/d}
+ return /^-?(\d+\.?\d*|\.\d+)$/.test(s)?parseFloat(s):NaN}
+function eqStr(L){ // a x + b y + c = 0 with proper signs
+ function term(k,v,first){if(k===0)return '';var s=k<0?(first?'−':' − '):(first?'':' + '),a=Math.abs(k);return s+(v&&a===1?'':a)+v}
+ return term(L.a,'x',true)+term(L.b,'y',false)+term(L.c,'',false)+' = 0'}
+function yOn(L,x){return -(L.a*x+L.c)/L.b}
+function niceCount(L){var n=0;for(var x=XMIN+1;x<=XMAX-1;x++){var y=yOn(L,x);if(y>=YMIN+1&&y<=YMAX-1&&Math.abs(y*2-Math.round(y*2))<1e-9)n++}return n}
+function randLine(){for(var t=0;t<500;t++){var L={a:pick([-4,-3,-2,-1,1,2,3,4]),b:pick([-2,-1,1,2]),c:ri(-10,10)};
+  if(L.c===0||gcd(gcd(L.a,L.b),L.c)!==1)continue;if(Math.abs(L.a/L.b)>3.5)continue;if(niceCount(L)>=4)return L}return {a:1,b:1,c:-4}}
+function scale(L,k){return {a:L.a*k,b:L.b*k,c:L.c*k}}
+function genInt(){for(var t=0;t<20000;t++){var A=randLine(),B=randLine(),det=A.a*B.b-B.a*A.b;if(det===0)continue;
+  var x=(A.b*B.c-B.b*A.c)/det,y=(B.a*A.c-A.a*B.c)/det;
+  if(!isTenth(x)||!isTenth(y))continue;if(Math.abs(x-Math.round(x))<1e-9&&Math.abs(y-Math.round(y))<1e-9)continue; // make the reading a real skill
+  if(x<-3||x>7||y<-3||y>7||Math.abs(x)<0.5||Math.abs(y)<0.5)continue;
+  var ang=Math.abs(Math.atan(-A.a/A.b)-Math.atan(-B.a/B.b));if(ang>Math.PI/2)ang=Math.PI-ang;if(ang<0.5)continue;
+  return {type:'int',L:[A,B],sol:{x:r1(x),y:r1(y)}}}
+ return {type:'int',L:[{a:2,b:1,c:-7},{a:1,b:-2,c:1}],sol:{x:2.6,y:1.8}}}
+function genPar(){for(var t=0;t<5000;t++){var A=randLine(),k=pick([2,-2,3,-1]),c2=ri(-10,10);if(c2===0||c2===A.c)continue;
+  var B={a:A.a,b:A.b,c:c2};if(niceCount(B)<4)continue;var gap=Math.abs(A.c-c2)/Math.hypot(A.a,A.b);if(gap<1.4||gap>4.5)continue;
+  return {type:'par',L:[A,scale(B,k)]}}
+ return {type:'par',L:[{a:1,b:2,c:-4},{a:2,b:4,c:-16}]}}
+function genCoi(){var A=randLine();return {type:'coi',L:[A,scale(A,pick([2,3,-2]))]}}
+function blankPair(p){p.rows=[[{x:'',y:''},{x:'',y:''},{x:'',y:''}],[{x:'',y:''},{x:'',y:''},{x:'',y:''}]];p.pts=[[null,null,null],[null,null,null]];p.lines=[null,null];
+ p.tabOK=false;p.pin={x:2,y:2};p.sx='';p.sy='';p.obs={r1:'',r2:'',r3:'',cmp:'',gr:'',ns:'',cons:''};p.ok=false;return p}
+var S={setNo:0,pairs:[],cur:0,step:'table',sel:{l:0,i:0},helper:false,revealed:false};
+function newSet(){var ps=[genInt(),genPar(),genCoi()];for(var i=ps.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=ps[i];ps[i]=ps[j];ps[j]=t}
+ ps.forEach(function(p,i){p.id='ABC'[i];blankPair(p)});S.pairs=ps;S.setNo=ri(101,999);S.cur=0;S.step='table';S.sel={l:0,i:0};S.revealed=false;save()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({setNo:S.setNo,pairs:S.pairs,cur:S.cur,step:S.step,revealed:S.revealed}))}catch(e){}}
+try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv&&sv.pairs&&sv.pairs.length===3){S.setNo=sv.setNo;S.pairs=sv.pairs;S.cur=sv.cur||0;S.step=sv.step||'table';S.revealed=!!sv.revealed}}catch(e){}
+if(!S.pairs.length)newSet();
+function P(){return S.pairs[S.cur]}
+
+/* ───────── geometry of drawn lines ───────── */
+function lineFrom(ln){var p=ln.p,q=ln.q,a=q[1]-p[1],b=p[0]-q[0];return {a:a,b:b,c:-(a*p[0]+b*p[1])}}
+function crossOf(l1,l2){var A=lineFrom(l1),B=lineFrom(l2),det=A.a*B.b-B.a*A.b,n=Math.hypot(A.a,A.b)*Math.hypot(B.a,B.b);
+ if(Math.abs(det)/n<0.02)return null;var x=(A.b*B.c-B.b*A.c)/det,y=(B.a*A.c-A.a*B.c)/det;return {x:x,y:y}}
+function clipLine(ln,x0,x1,y0,y1){var p=ln.p,q=ln.q,dx=q[0]-p[0],dy=q[1]-p[1],ts=[];
+ if(Math.abs(dx)>1e-9){[x0,x1].forEach(function(X){var t=(X-p[0])/dx,y=p[1]+t*dy;if(y>=y0-1e-9&&y<=y1+1e-9)ts.push(t)})}
+ if(Math.abs(dy)>1e-9){[y0,y1].forEach(function(Y){var t=(Y-p[1])/dy,x=p[0]+t*dx;if(x>=x0-1e-9&&x<=x1+1e-9)ts.push(t)})}
+ if(ts.length<2)return null;var a=Math.min.apply(null,ts),b=Math.max.apply(null,ts);return [[p[0]+a*dx,p[1]+a*dy],[p[0]+b*dx,p[1]+b*dy]]}
+function distToLine(ln,x,y){var L=lineFrom(ln);return Math.abs(L.a*x+L.b*y+L.c)/Math.hypot(L.a,L.b)}
+
+/* ───────── graph paper ───────── */
+function X(x){return M+(x-XMIN)*U}function Y(y){return M+(YMAX-y)*U}
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+var paper=document.getElementById('paper');
+(function drawPaper(){
+ var d=el('defs',{},paper);
+ d.innerHTML='<linearGradient id="pp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffef7"/><stop offset="1" stop-color="#f1eedf"/></linearGradient>'+
+  '<clipPath id="clipP"><rect x="'+X(XMIN)+'" y="'+Y(YMAX)+'" width="'+(XMAX-XMIN)*U+'" height="'+(YMAX-YMIN)*U+'"/></clipPath>'+
+  '<filter id="graphite"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="1" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.1"/></filter>';
+ el('rect',{x:0,y:0,width:628,height:628,fill:'url(#pp)'},paper);
+ var mm='',half='',cm='',n=(XMAX-XMIN)*10;
+ for(var i=0;i<=n;i++){var x=(X(XMIN)+i*4).toFixed(1),y=(Y(YMAX)+i*4).toFixed(1),s='M'+x+' '+Y(YMAX)+'V'+Y(YMIN)+'M'+X(XMIN)+' '+y+'H'+X(XMAX);
+  if(i%10===0)cm+=s;else if(i%5===0)half+=s;else mm+=s}
+ el('path',{d:mm,stroke:'#b9dcc4','stroke-width':.45,fill:'none'},paper);
+ el('path',{d:half,stroke:'#8cc4a0','stroke-width':.8,fill:'none'},paper);
+ el('path',{d:cm,stroke:'#4f9d6c','stroke-width':1.15,fill:'none'},paper);
+ // pencil axes
+ var ax=el('g',{stroke:'#2a2a2a','stroke-width':1.6,fill:'none','stroke-linecap':'round'},paper);
+ el('path',{d:'M'+X(XMIN)+' '+Y(0)+'H'+X(XMAX)+'M'+X(0)+' '+Y(YMIN)+'V'+Y(YMAX)},ax);
+ el('path',{d:'M'+(X(XMAX)-8)+' '+(Y(0)-5)+'L'+X(XMAX)+' '+Y(0)+'L'+(X(XMAX)-8)+' '+(Y(0)+5)+'M'+(X(XMIN)+8)+' '+(Y(0)-5)+'L'+X(XMIN)+' '+Y(0)+'L'+(X(XMIN)+8)+' '+(Y(0)+5)+
+  'M'+(X(0)-5)+' '+(Y(YMAX)+8)+'L'+X(0)+' '+Y(YMAX)+'L'+(X(0)+5)+' '+(Y(YMAX)+8)+'M'+(X(0)-5)+' '+(Y(YMIN)-8)+'L'+X(0)+' '+Y(YMIN)+'L'+(X(0)+5)+' '+(Y(YMIN)-8)},ax);
+ var tx=el('g',{'font-family':'Inter','font-size':13,fill:'#2a2a2a'},paper),t;
+ for(var k=XMIN+1;k<XMAX;k++){if(!k)continue;t=el('text',{x:X(k),y:Y(0)+17,'text-anchor':'middle'},tx);t.textContent=String(k).replace('-','−');
+  el('path',{d:'M'+X(k)+' '+(Y(0)-3)+'v6',stroke:'#2a2a2a','stroke-width':1.2},paper)}
+ for(k=YMIN+1;k<YMAX;k++){if(!k)continue;t=el('text',{x:X(0)-6,y:Y(k)+4.5,'text-anchor':'end'},tx);t.textContent=String(k).replace('-','−');
+  el('path',{d:'M'+(X(0)-3)+' '+Y(k)+'h6',stroke:'#2a2a2a','stroke-width':1.2},paper)}
+ [['O',X(0)-12,Y(0)+17],['X',X(XMAX)-4,Y(0)-10],['X′',X(XMIN)+2,Y(0)-10],['Y',X(0)+9,Y(YMAX)+12],['Y′',X(0)+9,Y(YMIN)-4]].forEach(function(a){t=el('text',{x:a[1],y:a[2],'font-weight':700},tx);t.textContent=a[0]});
+ var sc=el('g',{},paper);
+ t=el('text',{x:X(XMAX),y:23,'text-anchor':'end','font-family':'Inter','font-size':12.5,'font-weight':700,fill:'#2a2a2a'},sc);t.textContent='Scale: 1 cm = 1 unit (both axes)';
+ paper.appendChild(el('rect',{x:0,y:0,width:628,height:628,fill:'none',stroke:'#cfc8b0','stroke-width':2}));
+})();
+var gLines=el('g',{'clip-path':'url(#clipP)'},paper),gLab=el('g',{},paper),gPts=el('g',{},paper),gPin=el('g',{},paper),gRuler=el('g',{},paper);
+var COL=['#1f4fa8','#c0392b'];
+
+/* ───────── magnifier ───────── */
+var mag=document.getElementById('mag');var Z=150; // px per unit in the magnifier (1 mm = 15 px)
+el('defs',{},mag).innerHTML='<clipPath id="clipM"><circle cx="150" cy="150" r="150"/></clipPath><radialGradient id="vig" cx=".5" cy=".5" r=".5"><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></radialGradient>';
+var magG=el('g',{'clip-path':'url(#clipM)'},mag);
+
+/* ───────── UI refs ───────── */
+var $=function(id){return document.getElementById(id)};
+var msgEl=$('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+function reduced(){return window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches}
+
+/* ───────── pair chips, tabs, task ───────── */
+function buildPairs(){var box=$('pairs');box.querySelectorAll('button').forEach(function(b){b.remove()});
+ S.pairs.forEach(function(p,i){var b=document.createElement('button');b.type='button';b.className='chip'+(i===S.cur?' on':'')+(p.ok?' done':'');b.textContent='Pair '+p.id;
+  b.onclick=function(){S.cur=i;S.sel={l:0,i:0};save();buildPairs();setStep(S.step)};box.appendChild(b)})}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setStep(t.dataset.step)}});
+function setStep(st){var p=P();
+ if(st!=='table'&&!p.tabOK){st='table';say('Finish and check the table of values for Pair '+p.id+' first — you need correct points before you can plot them.','bad')}else say('');
+ S.step=st;save();
+ document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.step===st)});
+ $('pTable').hidden=st!=='table';$('pMag').hidden=st==='table';$('plotCtl').hidden=st!=='plot';$('readCtl').hidden=st!=='read';
+ var task={table:'<b>Step 1.</b> For each equation of Pair '+p.id+', choose three values of x and work out y. Choose x so that y is a whole number or a half — those points can be plotted exactly on mm paper. Keep the points spread out. Then press <b>Check my values</b>.',
+  plot:'<b>Step 2.</b> Pick a point below, then tap its place on the graph paper. Use the arrow buttons (or keyboard arrows) and the magnifier to sit it exactly on the right lines. When a line’s points are marked, press <b>Draw line</b> to lay the ruler and draw it.',
+  read:'<b>Step 3.</b> Look at your two lines. If they cross, drag the reading pin (or tap) onto the crossing, read x and y to one decimal place from the magnifier and type them. Then fill Pair '+p.id+'’s row in the observation table below.'}[st];
+ $('task').innerHTML=task;
+ $('eqbar').innerHTML='<span class="t">Pair '+p.id+'</span><span class="e1">(1) '+eqStr(p.L[0])+'</span><span class="e2">(2) '+eqStr(p.L[1])+'</span>';
+ $('pairTag').textContent='Set S-'+S.setNo+' · Pair '+p.id;
+ $('sx').value=p.sx;$('sy').value=p.sy;
+ buildVT();buildSel();render()}
+
+/* ───────── step 1: table of values ───────── */
+function buildVT(){var p=P(),h='';
+ [0,1].forEach(function(l){h+='<table class="vt"><caption style="color:'+(l?'#ff9d8f':'#8fb6ff')+'">('+(l+1)+') '+eqStr(p.L[l])+'</caption><tr><th>x</th><td><input data-l="'+l+'" data-i="0" data-k="x" inputmode="decimal" aria-label="line '+(l+1)+' point 1 x"></td><td><input data-l="'+l+'" data-i="1" data-k="x" inputmode="decimal" aria-label="line '+(l+1)+' point 2 x"></td><td><input data-l="'+l+'" data-i="2" data-k="x" inputmode="decimal" aria-label="line '+(l+1)+' point 3 x"></td></tr>'+
+  '<tr><th>y</th><td><input data-l="'+l+'" data-i="0" data-k="y" inputmode="decimal" aria-label="line '+(l+1)+' point 1 y"></td><td><input data-l="'+l+'" data-i="1" data-k="y" inputmode="decimal" aria-label="line '+(l+1)+' point 2 y"></td><td><input data-l="'+l+'" data-i="2" data-k="y" inputmode="decimal" aria-label="line '+(l+1)+' point 3 y"></td></tr></table>'});
+ $('vtables').innerHTML=h;
+ $('vtables').querySelectorAll('input').forEach(function(inp){var r=p.rows[+inp.dataset.l][+inp.dataset.i];inp.value=r[inp.dataset.k];
+  inp.oninput=function(){r[inp.dataset.k]=inp.value.trim();inp.classList.remove('bad','good');
+   if(p.tabOK){p.tabOK=false;p.pts=[[null,null,null],[null,null,null]];p.lines=[null,null];say('Table changed — check it again; the points on the paper were cleared.','bad');render()}
+   save()}})}
+function valRow(L,r){var x=num(r.x),y=num(r.y);if(isNaN(x)||isNaN(y))return 'fill';
+ var lhs=L.a*x+L.b*y+L.c;if(Math.abs(y-yOn(L,x))>VAL_TOL)return 'wrong:'+fmtN(lhs,2);
+ if(x<XMIN+0.5||x>XMAX-0.5||y<YMIN+0.5||y>YMAX-0.5)return 'off';
+ if(!isTenth(x)||!isTenth(y))return 'fine';return ''}
+$('checkVals').onclick=function(){var p=P(),msgs=[],ins=$('vtables').querySelectorAll('input');
+ [0,1].forEach(function(l){var L=p.L[l],xs=[];
+  p.rows[l].forEach(function(r,i){var v=valRow(L,r),bad=v!=='',tag='Line '+(l+1)+', point '+(i+1)+': ';
+   ins.forEach(function(inp){if(+inp.dataset.l===l&&+inp.dataset.i===i){inp.classList.toggle('bad',bad);inp.classList.toggle('good',!bad)}});
+   if(v==='fill')msgs.push(tag+'type both x and y.');
+   else if(v.indexOf('wrong')===0)msgs.push(tag+'('+r.x+', '+r.y+') does not satisfy '+eqStr(L).replace(' = 0','')+' = 0 — the left side comes to '+v.slice(6)+', not 0. Recalculate y (watch the signs).');
+   else if(v==='off')msgs.push(tag+'('+r.x+', '+r.y+') is off this graph paper (x and y must be between −4.5 and 8.5). Choose another x.');
+   else if(v==='fine')msgs.push(tag+'y = '+r.y+' cannot be plotted exactly on mm paper (it is not a multiple of 0.1). Choose an x that makes y whole or a half.');
+   if(v==='')xs.push(num(r.x))});
+  if(xs.length===3){var dist=xs.filter(function(x,i){return xs.indexOf(x)===i});
+   if(dist.length<3)msgs.push('Line '+(l+1)+': use three different values of x — repeating a point gives no check.');
+   else if(Math.max.apply(null,xs)-Math.min.apply(null,xs)<2)msgs.push('Line '+(l+1)+': spread your points at least 2 units apart in x so the ruler line is accurate.')}});
+ if(msgs.length){p.tabOK=false;save();say(msgs.slice(0,4).join(' ')+(msgs.length>4?' (+'+(msgs.length-4)+' more)':''),'bad');return}
+ p.tabOK=true;save();say('All six points are correct solutions. Now go to Step 2 and plot them.','ok')};
+
+/* ───────── step 2: plotting ───────── */
+function buildSel(){var p=P(),box=$('sel');box.innerHTML='';
+ [0,1].forEach(function(l){var g=document.createElement('div');g.className='grp';g.textContent='Line '+(l+1)+': '+eqStr(p.L[l]);box.appendChild(g);
+  [0,1,2].forEach(function(i){var r=p.rows[l][i],b=document.createElement('button');b.type='button';
+   b.className='chip l'+(l+1)+(S.sel.l===l&&S.sel.i===i?' on':'')+(p.pts[l][i]?' done':'');b.textContent='('+r.x+', '+r.y+')';
+   b.setAttribute('aria-label','Line '+(l+1)+' point ('+r.x+', '+r.y+')'+(p.pts[l][i]?' plotted':' not plotted'));
+   b.onclick=function(){S.sel={l:l,i:i};buildSel();render();scrollTo_(p.pts[l][i])};box.appendChild(b)})})}
+function clampU(v,lo,hi){return Math.min(hi,Math.max(lo,v))}
+function placePoint(x,y){var p=P(),l=S.sel.l,i=S.sel.i;
+ p.pts[l][i]={x:r1(clampU(x,XMIN,XMAX)),y:r1(clampU(y,YMIN,YMAX))};
+ if(p.lines[l]){p.lines[l]=null;say('Line '+(l+1)+' was erased because one of its points moved. Draw it again.','bad')}
+ save()}
+function svgPt(evt){var pt=paper.createSVGPoint();pt.x=evt.clientX;pt.y=evt.clientY;var q=pt.matrixTransform(paper.getScreenCTM().inverse());return {x:(q.x-M)/U+XMIN,y:YMAX-(q.y-M)/U}}
+var drag=null,justDragged=false,downOnHit=false;
+paper.addEventListener('click',function(e){if(justDragged||downOnHit){justDragged=false;downOnHit=false;return}
+ var u=svgPt(e);if(u.x<XMIN||u.x>XMAX||u.y<YMIN||u.y>YMAX)return;
+ if(S.step==='plot'){var had=!!P().pts[S.sel.l][S.sel.i];placePoint(u.x,u.y);if(!had)say('Point marked where you tapped. Check it in the magnifier and nudge it onto the exact lines.','ok');buildSel();render()}
+ else if(S.step==='read'){P().pin={x:r1(u.x),y:r1(u.y)};save();render()}});
+function startDrag(e,kind,l,i){
+ // a point of the other line may sit exactly where the selected (unplotted) point belongs: let the tap through to mark it
+ if(kind==='pt'&&!(S.sel.l===l&&S.sel.i===i)&&!P().pts[S.sel.l][S.sel.i])return;
+ downOnHit=true;drag={kind:kind,l:l,i:i,moved:false};e.target.setPointerCapture(e.pointerId);if(kind==='pt'){S.sel={l:l,i:i};buildSel()}e.preventDefault();e.stopPropagation()}
+paper.addEventListener('pointermove',function(e){if(!drag)return;var u=svgPt(e);drag.moved=true;
+ if(drag.kind==='pt'){placePoint(u.x,u.y)}else{P().pin={x:r1(clampU(u.x,XMIN,XMAX)),y:r1(clampU(u.y,YMIN,YMAX))}}render()});
+function endDrag(){if(drag){if(drag.moved){justDragged=true;setTimeout(function(){justDragged=false},60)}if(drag.kind==='pt')buildSel();save();drag=null}}
+paper.addEventListener('pointerdown',function(){downOnHit=false});
+paper.addEventListener('pointerup',endDrag);paper.addEventListener('pointercancel',endDrag);
+function nudge(dx,dy){var p=P();
+ if(S.step==='plot'){var pt=p.pts[S.sel.l][S.sel.i];if(!pt){say('Tap the graph paper first to mark this point, then fine-adjust it.','bad');return}placePoint(pt.x+dx,pt.y+dy);buildSel()}
+ else if(S.step==='read'){p.pin={x:r1(clampU(p.pin.x+dx,XMIN,XMAX)),y:r1(clampU(p.pin.y+dy,YMIN,YMAX))};save()}
+ render()}
+document.querySelectorAll('#nudge button').forEach(function(b){b.onclick=function(){nudge(parseFloat(b.dataset.dx||0),parseFloat(b.dataset.dy||0))}});
+paper.addEventListener('keydown',function(e){var d=e.shiftKey?1:0.1,m={ArrowLeft:[-d,0],ArrowRight:[d,0],ArrowUp:[0,d],ArrowDown:[0,-d]}[e.key];
+ if(m&&S.step!=='table'){nudge(m[0],m[1]);e.preventDefault()}});
+$('erase').onclick=function(){var p=P(),l=S.sel.l;if(!p.pts[l][S.sel.i]){say('This point is not on the paper yet.','bad');return}
+ p.pts[l][S.sel.i]=null;if(p.lines[l]){p.lines[l]=null}save();buildSel();render();say('Point rubbed out.','ok')};
+function drawLine(l){var p=P(),pts=p.pts[l].map(function(q,i){return q?{x:q.x,y:q.y,i:i}:null}).filter(Boolean);
+ if(pts.length<2){say('Mark at least two points of line '+(l+1)+' first (three is better — the third is a check).','bad');return}
+ var best=null,bd=-1;for(var a=0;a<pts.length;a++)for(var b=a+1;b<pts.length;b++){var d=Math.hypot(pts[a].x-pts[b].x,pts[a].y-pts[b].y);if(d>bd){bd=d;best=[pts[a],pts[b]]}}
+ if(bd<0.5){say('Those points are on top of each other — spread them out.','bad');return}
+ var trial={p:[best[0].x,best[0].y],q:[best[1].x,best[1].y]};
+ for(var k=0;k<pts.length;k++){var off=distToLine(trial,pts[k].x,pts[k].y);
+  if(off>0.08){var r=p.rows[l][pts[k].i];say('The ruler will not pass through all three points: ('+r.x+', '+r.y+') is about '+fmtN(off,1)+' unit off the line through the other two. Check where you marked it in the magnifier.','bad');return}}
+ // realistic imperfection: the ruler edge sits on the pencil dots, not exactly on their centres
+ function j(){return (Math.random()-.5)*0.03}
+ var ln={p:[trial.p[0]+j(),trial.p[1]+j()],q:[trial.q[0]+j(),trial.q[1]+j()]};
+ p.lines[l]=ln;save();animateRuler(l,ln);say('Line '+(l+1)+' drawn and labelled.'+(pts.length<3?' (Only two points — plot the third as a check.)':''),'ok');renderObs();drawGraphs();renderResult()}
+$('draw1').onclick=function(){drawLine(0)};$('draw2').onclick=function(){drawLine(1)};
+var inking=null;
+function animateRuler(l,ln){gRuler.innerHTML='';var seg=clipLine(ln,XMIN,XMAX,YMIN,YMAX);if(!seg){render();return}
+ if(reduced()){render();return}
+ var a=seg[0],b=seg[1],ang=Math.atan2(Y(b[1])-Y(a[1]),X(b[0])-X(a[0]))*180/Math.PI,len=Math.hypot(X(b[0])-X(a[0]),Y(b[1])-Y(a[1]));
+ var cx=(X(a[0])+X(b[0]))/2,cy=(Y(a[1])+Y(b[1]))/2,g=el('g',{transform:'translate('+cx+' '+cy+') rotate('+ang+')',opacity:.92},gRuler);
+ var w=Math.min(620,Math.max(300,len+20));el('rect',{x:-w/2,y:1.5,width:w,height:36,rx:3,fill:'#dff0ff','fill-opacity':.55,stroke:'#7fa8c8'},g);
+ var tk='';for(var i=0;i*8<w-8;i++){tk+='M'+(-w/2+6+i*8)+' 1.5v'+(i%5===0?10:5)}el('path',{d:tk,stroke:'#355a78','stroke-width':1},g);
+ inking={l:l,len:len};render();
+ setTimeout(function(){inking=null;gRuler.innerHTML='';render()},1300)}
+
+/* ───────── render ───────── */
+var usedLab=[];
+function pickT(p,l,a,b){if(l===0)usedLab=[];var obst=[];[0,1].forEach(function(m){p.pts[m].forEach(function(q){if(q)obst.push([X(q.x)+30,Y(q.y)-8])})});obst=obst.concat(usedLab);
+ var best=0.84,bs=-1;[0.86,0.74,0.62,0.5,0.38,0.26,0.16].forEach(function(t){var x=X(a[0]+(b[0]-a[0])*t),y=Y(a[1]+(b[1]-a[1])*t),d=1e9;
+  obst.forEach(function(o){d=Math.min(d,Math.hypot(o[0]-x,o[1]-y))});if(x<90||x>560||y<50||y>590)d-=200;if(d>bs){bs=d;best=t}});
+ usedLab.push([X(a[0]+(b[0]-a[0])*best),Y(a[1]+(b[1]-a[1])*best)]);return best}
+function render(){var p=P();
+ gLines.innerHTML='';gLab.innerHTML='';gPts.innerHTML='';gPin.innerHTML='';
+ // lines
+ [0,1].forEach(function(l){var ln=p.lines[l];if(!ln)return;var seg=clipLine(ln,XMIN,XMAX,YMIN,YMAX);if(!seg)return;
+  var a=seg[0],b=seg[1],len=Math.hypot(X(b[0])-X(a[0]),Y(b[1])-Y(a[1]));
+  var line=el('line',{x1:X(a[0]),y1:Y(a[1]),x2:X(b[0]),y2:Y(b[1]),stroke:COL[l],'stroke-width':1.7,'stroke-linecap':'round',opacity:.88,filter:'url(#graphite)'},gLines);
+  if(inking&&inking.l===l){line.setAttribute('class','inkdraw');line.style.strokeDasharray=len;line.style.strokeDashoffset=len;line.style.animation='ink 1s .15s ease-out forwards'}
+  // label like a student writes it, along the line
+  var t=pickT(p,l,a,b),lx=X(a[0]+(b[0]-a[0])*t),ly=Y(a[1]+(b[1]-a[1])*t),ang=Math.atan2(Y(b[1])-Y(a[1]),X(b[0])-X(a[0]))*180/Math.PI;if(ang>90)ang-=180;if(ang<-90)ang+=180;
+  var tx=el('text',{x:lx,y:ly,transform:'rotate('+ang.toFixed(1)+' '+lx+' '+ly+') translate(0 '+(l?18:-8)+')','text-anchor':'middle','font-family':'Inter','font-size':13,'font-weight':700,fill:COL[l],stroke:'#fffef7','stroke-width':4,'paint-order':'stroke'},gLab);
+  tx.textContent=eqStr(p.L[l])});
+ // points
+ [0,1].forEach(function(l){p.pts[l].forEach(function(q,i){if(!q)return;var cx=X(q.x),cy=Y(q.y),on=S.step==='plot'&&S.sel.l===l&&S.sel.i===i;
+  var g=el('g',{},gPts);
+  if(on)el('circle',{cx:cx,cy:cy,r:12,fill:'none',stroke:'#c9a227','stroke-width':2,'stroke-dasharray':'3 3'},g);
+  el('circle',{cx:cx,cy:cy,r:2.6,fill:'#222'},g);el('circle',{cx:cx,cy:cy,r:5,fill:'none',stroke:COL[l],'stroke-width':1.2},g);
+  var r=p.rows[l][i],lt=el('text',{x:cx+7,y:cy-7,'font-family':'Inter','font-size':12,fill:'#333',stroke:'#fffef7','stroke-width':3,'paint-order':'stroke'},g);
+  lt.textContent=S.helper?'('+fmtN(q.x)+', '+fmtN(q.y)+')':'('+r.x+', '+r.y+')';if(S.helper)lt.setAttribute('fill','#8a6a00');
+  if(S.step==='plot'){var h=el('circle',{cx:cx,cy:cy,r:20,fill:'transparent',class:'hit'},g);h.addEventListener('pointerdown',function(e){startDrag(e,'pt',l,i)})}})});
+ // reading pin with perpendiculars to the axes
+ if(S.step==='read'){var pn=p.pin,px=X(pn.x),py=Y(pn.y);
+  el('path',{d:'M'+px+' '+py+'V'+Y(0)+'M'+px+' '+py+'H'+X(0),stroke:'#555','stroke-width':1.1,'stroke-dasharray':'4 3',fill:'none'},gPin);
+  el('circle',{cx:px,cy:py,r:9,fill:'rgba(201,162,39,.18)',stroke:'#a8860f','stroke-width':1.6},gPin);
+  el('path',{d:'M'+(px-14)+' '+py+'h28M'+px+' '+(py-14)+'v28',stroke:'#a8860f','stroke-width':1.2},gPin);
+  if(S.helper){var ht=el('text',{x:px+12,y:py+22,'font-family':'JetBrains Mono,ui-monospace,monospace','font-size':12,fill:'#8a6a00',stroke:'#fffef7','stroke-width':3,'paint-order':'stroke'},gPin);ht.textContent='('+fmtN(pn.x)+', '+fmtN(pn.y)+')'}
+  var hp=el('circle',{cx:px,cy:py,r:22,fill:'transparent',class:'hit'},gPin);hp.addEventListener('pointerdown',function(e){startDrag(e,'pin')})}
+ drawMag();
+}
+function magCentre(){var p=P();if(S.step==='read')return p.pin;var q=p.pts[S.sel.l][S.sel.i];if(q)return q;
+ return null}
+function drawMag(){magG.innerHTML='';if(S.step==='table')return;var p=P(),c=magCentre();
+ el('rect',{x:0,y:0,width:300,height:300,fill:'#fffef7'},magG);
+ if(!c){var t0=el('text',{x:150,y:146,'text-anchor':'middle','font-family':'Inter','font-size':15,fill:'#555'},magG);t0.textContent='Tap the graph paper to';var t1=el('text',{x:150,y:166,'text-anchor':'middle','font-family':'Inter','font-size':15,fill:'#555'},magG);t1.textContent='mark this point';$('magTag').textContent='';return}
+ function mx(x){return 150+(x-c.x)*Z}function my(y){return 150-(y-c.y)*Z}
+ var mm='',half='',cm='',labs=[];
+ for(var k=Math.floor((c.x-1.1)*10);k<=Math.ceil((c.x+1.1)*10);k++){var x=mx(k/10).toFixed(1),s='M'+x+' 0V300';if(k%10===0){cm+=s;labs.push(['x',k/10])}else if(k%5===0)half+=s;else mm+=s}
+ for(k=Math.floor((c.y-1.1)*10);k<=Math.ceil((c.y+1.1)*10);k++){var y=my(k/10).toFixed(1),s2='M0 '+y+'H300';if(k%10===0){cm+=s2;labs.push(['y',k/10])}else if(k%5===0)half+=s2;else mm+=s2}
+ el('path',{d:mm,stroke:'#b9dcc4','stroke-width':1.2,fill:'none'},magG);el('path',{d:half,stroke:'#8cc4a0','stroke-width':1.8,fill:'none'},magG);el('path',{d:cm,stroke:'#4f9d6c','stroke-width':2.6,fill:'none'},magG);
+ if(Math.abs(c.x)<1.2)el('line',{x1:mx(0),y1:0,x2:mx(0),y2:300,stroke:'#2a2a2a','stroke-width':4},magG);
+ if(Math.abs(c.y)<1.2)el('line',{x1:0,y1:my(0),x2:300,y2:my(0),stroke:'#2a2a2a','stroke-width':4},magG);
+ [0,1].forEach(function(l){var ln=p.lines[l];if(!ln)return;var seg=clipLine(ln,c.x-1.2,c.x+1.2,c.y-1.2,c.y+1.2);if(!seg)return;
+  el('line',{x1:mx(seg[0][0]),y1:my(seg[0][1]),x2:mx(seg[1][0]),y2:my(seg[1][1]),stroke:COL[l],'stroke-width':5.5,'stroke-linecap':'round',opacity:.72},magG)});
+ [0,1].forEach(function(l){p.pts[l].forEach(function(q){if(!q||Math.abs(q.x-c.x)>1.2||Math.abs(q.y-c.y)>1.2)return;
+  el('circle',{cx:mx(q.x),cy:my(q.y),r:7,fill:'#222',opacity:.85},magG);el('circle',{cx:mx(q.x),cy:my(q.y),r:15,fill:'none',stroke:COL[l],'stroke-width':2.5},magG)})});
+ if(S.step==='read'){el('path',{d:'M'+(mx(c.x)-30)+' '+my(c.y)+'h60M'+mx(c.x)+' '+(my(c.y)-30)+'v60',stroke:'#a8860f','stroke-width':2},magG);el('circle',{cx:mx(c.x),cy:my(c.y),r:16,fill:'none',stroke:'#a8860f','stroke-width':2.5},magG)}
+ labs.forEach(function(a){var t;if(a[0]==='x'){var X_=mx(a[1]);if(X_<75||X_>225)return;el('rect',{x:X_-27,y:52,width:54,height:22,rx:4,fill:'#fffef7',opacity:.92},magG);t=el('text',{x:X_,y:68,'text-anchor':'middle','font-family':'JetBrains Mono,ui-monospace,monospace','font-size':15,'font-weight':700,fill:'#2f6f47'},magG);t.textContent='x='+String(a[1]).replace('-','−')}
+  else{var Y_=my(a[1]);if(Y_<95||Y_>250)return;el('rect',{x:40,y:Y_-11,width:54,height:22,rx:4,fill:'#fffef7',opacity:.92},magG);t=el('text',{x:67,y:Y_+5,'text-anchor':'middle','font-family':'JetBrains Mono,ui-monospace,monospace','font-size':15,'font-weight':700,fill:'#2f6f47'},magG);t.textContent='y='+String(a[1]).replace('-','−')}});
+ el('rect',{x:0,y:0,width:300,height:300,fill:'url(#vig)'},magG);
+ $('magTag').textContent=S.helper?'('+fmtN(c.x)+', '+fmtN(c.y)+')':(S.step==='read'?'reading pin':'selected point');
+}
+function scrollTo_(q){var sc=$('paperScroll');if(!q||sc.scrollWidth<=sc.clientWidth+4)return;var px=X(q.x)/628*sc.scrollWidth;if(px<sc.scrollLeft+40||px>sc.scrollLeft+sc.clientWidth-40)sc.scrollLeft=px-sc.clientWidth/2}
+$('helper').onchange=function(){S.helper=this.checked;render()};
+['sx','sy'].forEach(function(id){$(id).oninput=function(){P()[id]=this.value.trim();this.classList.remove('bad');save();renderObs();renderResult()}});
+$('newSet').onclick=function(){var b=this;if(!b.dataset.sure){b.dataset.sure=1;b.textContent='Tap again: clears all work';setTimeout(function(){delete b.dataset.sure;b.textContent='↺ New set of pairs'},3500);return}
+ delete b.dataset.sure;b.textContent='↺ New set of pairs';newSet();buildPairs();setStep('table');renderObs();drawGraphs();renderResult();showFb([]);say('A new set of three pairs is ready. Start with Pair A.','ok')};
+
+/* ───────── observation table ───────── */
+var OPT={cmp:[['','— choose —'],['ne','a₁/a₂ ≠ b₁/b₂'],['eqne','a₁/a₂ = b₁/b₂ ≠ c₁/c₂'],['eq','a₁/a₂ = b₁/b₂ = c₁/c₂']],
+ gr:[['','— choose —'],['int','Intersecting lines'],['par','Parallel lines'],['coi','Coincident lines']],
+ ns:[['','— choose —'],['one','Exactly one (unique)'],['none','No solution'],['inf','Infinitely many']],
+ cons:[['','— choose —'],['c','Consistent'],['i','Inconsistent'],['d','Dependent (consistent)']]};
+var ANS={int:{cmp:'ne',gr:'int',ns:'one',cons:['c']},par:{cmp:'eqne',gr:'par',ns:'none',cons:['i']},coi:{cmp:'eq',gr:'coi',ns:'inf',cons:['d','c']}};
+var tb=$('tb');
+function buildObs(){tb.innerHTML='';S.pairs.forEach(function(p,pi){var tr=document.createElement('tr');
+ function sel(k){return '<select data-k="'+k+'" aria-label="'+k+' for pair '+p.id+'">'+OPT[k].map(function(o){return '<option value="'+o[0]+'">'+o[1]+'</option>'}).join('')+'</select>'}
+ function rin(k,lbl){return '<input data-k="'+k+'" inputmode="text" placeholder="p/q" aria-label="'+lbl+' for pair '+p.id+'"><span class="dv" data-dv="'+k+'"></span>'}
+ tr.innerHTML='<td><b>'+p.id+'</b></td><td class="eqs"><span style="color:var(--l1)">'+eqStr(p.L[0])+'</span><br><span style="color:var(--l2)">'+eqStr(p.L[1])+'</span></td>'+
+  '<td>'+rin('r1','a1 over a2')+'</td><td>'+rin('r2','b1 over b2')+'</td><td>'+rin('r3','c1 over c2')+'</td><td>'+sel('cmp')+'</td><td>'+sel('gr')+'</td><td>'+sel('ns')+'</td><td class="mono" data-sol></td><td>'+sel('cons')+'</td>';
+ tr.querySelectorAll('[data-k]').forEach(function(c){c.value=p.obs[c.dataset.k];var ev=c.tagName==='SELECT'?'onchange':'oninput';
+  c[ev]=function(){p.obs[c.dataset.k]=c.value.trim?c.value.trim():c.value;c.classList.remove('bad','good');if(p.ok){p.ok=false;buildPairs()}save();renderObs();renderResult()}});
+ tb.appendChild(tr)});renderObs()}
+function renderObs(){var rows=tb.querySelectorAll('tr');S.pairs.forEach(function(p,i){var tr=rows[i];if(!tr)return;
+ ['r1','r2','r3'].forEach(function(k){var v=num(p.obs[k]);tr.querySelector('[data-dv="'+k+'"]').textContent=p.obs[k]?(isNaN(v)?'?':'= '+fmtN(v,3)):''});
+ var sx=num(p.sx),sy=num(p.sy);tr.querySelector('[data-sol]').textContent=(!isNaN(sx)&&!isNaN(sy))?'('+fmtN(sx)+', '+fmtN(sy)+')':(p.obs.ns==='none'?'none':p.obs.ns==='inf'?'every point on the line':'—')});
+ $('nOk').textContent=S.pairs.filter(function(p){return p.ok}).length+' / 3 checked'}
+function plotIssues(p){var out=[];[0,1].forEach(function(l){p.pts[l].forEach(function(q,i){var r=p.rows[l][i];if(!q)return;
+  if(Math.abs(q.x-num(r.x))>PLOT_TOL||Math.abs(q.y-num(r.y))>PLOT_TOL)out.push('the point ('+r.x+', '+r.y+') of line '+(l+1)+' is marked at ('+fmtN(q.x)+', '+fmtN(q.y)+') — re-mark it using the magnifier')})});return out}
+function ratioMsg(name,val,p1,p2){var want=p1/p2,v=num(val);if(isNaN(v))return name+' is missing or not a number (write it like 2/4)';
+ if(Math.abs(v-want)<=0.006*Math.max(1,Math.abs(want)))return '';
+ if(Math.abs(v-p2/p1)<=0.006*Math.max(1,Math.abs(p2/p1)))return name+' is upside down — put the coefficient from equation (1) on top';
+ if(Math.abs(v+want)<=0.006*Math.max(1,Math.abs(want)))return name+' has the wrong sign — keep the sign of each coefficient as it appears in ax + by + c = 0';
+ return name+' is not right — read the coefficients from the equations again'}
+$('check').onclick=function(){var fb=[],rows=tb.querySelectorAll('tr');
+ S.pairs.forEach(function(p,pi){var tr=rows[pi],m=[],A=p.L[0],B=p.L[1],ans=ANS[p.type];
+  var rm=[ratioMsg('a₁/a₂',p.obs.r1,A.a,B.a),ratioMsg('b₁/b₂',p.obs.r2,A.b,B.b),ratioMsg('c₁/c₂',p.obs.r3,A.c,B.c)];
+  ['r1','r2','r3'].forEach(function(k,j){var c=tr.querySelector('[data-k="'+k+'"]');c.classList.toggle('bad',!!rm[j]);c.classList.toggle('good',!rm[j]);if(rm[j])m.push(rm[j])});
+  var drawn=p.lines[0]&&p.lines[1];
+  if(!p.tabOK)m.push('finish the table of values in Step 1 first');
+  else if(!drawn)m.push('draw both lines in Step 2 — the graphical representation must come from your own graph');
+  m=m.concat(plotIssues(p));
+  function chk(k,ok,reason){var c=tr.querySelector('[data-k="'+k+'"]');c.classList.toggle('bad',!ok);c.classList.toggle('good',ok);if(!ok)m.push(reason)}
+  chk('cmp',p.obs.cmp===ans.cmp,'the comparison of ratios does not match the values of your ratios');
+  chk('gr',p.obs.gr===ans.gr&&!!drawn,'look at your graph again: do the lines cross once, never meet, or lie on top of each other?');
+  chk('ns',p.obs.ns===ans.ns,{int:'intersecting lines share exactly one point',par:'parallel lines have no common point',coi:'coincident lines share every point'}[p.type]+', so think again about the number of solutions');
+  chk('cons',ans.cons.indexOf(p.obs.cons)>=0,p.type==='par'?'a pair with no solution is called inconsistent':p.type==='int'?'a pair with a unique solution is consistent (dependent means infinitely many)':'a pair with infinitely many solutions is dependent (and consistent)');
+  var sx=num(p.sx),sy=num(p.sy),hasSol=!isNaN(sx)||!isNaN(sy);
+  if(p.type==='int'){
+   if(isNaN(sx)||isNaN(sy))m.push('read the point of intersection in Step 3 and type both coordinates');
+   else if(drawn){var cr=crossOf(p.lines[0],p.lines[1]);
+    if(cr&&(Math.abs(sx-cr.x)>READ_TOL||Math.abs(sy-cr.y)>READ_TOL)){m.push('your reading ('+fmtN(sx)+', '+fmtN(sy)+') is not where your lines cross — put the pin exactly on the crossing and read again from the magnifier');$('sx').classList.add('bad');$('sy').classList.add('bad')}
+    else if(cr&&(Math.abs(cr.x-p.sol.x)>0.2||Math.abs(cr.y-p.sol.y)>0.2))m.push('your lines cross away from the true solution — one of your points is plotted wrongly')}}
+  else if(hasSol)m.push(p.type==='par'?'these lines never meet, so there is no point of intersection to read — clear the solution boxes in Step 3':'these lines lie on top of each other, so there is no single point to read — clear the solution boxes in Step 3');
+  p.ok=m.length===0;tr.classList.toggle('flag',!p.ok);
+  if(m.length)fb.push('<b>Pair '+p.id+':</b> '+m.join('; ')+'.')});
+ save();buildPairs();renderObs();renderResult();drawGraphs();
+ if(!fb.length)fb.push('✓ All three pairs are correct. You have found the three conditions — see your result below and reveal the exact solution.');
+ showFb(fb)};
+function showFb(a){$('fb').innerHTML=a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+
+/* ───────── graphs (canvas) ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function drawGraphs(){S.pairs.forEach(function(p,i){drawPair(i)})}
+function drawPair(i){var p=S.pairs[i],c=$('g'+i),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(260,r.width||360),h=w;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);
+ var pad=24,s=(w-2*pad)/(XMAX-XMIN);function gx(v){return pad+(v-XMIN)*s}function gy(v){return pad+(YMAX-v)*s}
+ var bd=css('--border')||'#ddd',txt=css('--text')||'#222',mut=css('--muted')||'#666';
+ x.clearRect(0,0,w,h);x.lineWidth=1;x.strokeStyle=bd;
+ for(var k=XMIN;k<=XMAX;k++){x.beginPath();x.moveTo(gx(k),gy(YMIN));x.lineTo(gx(k),gy(YMAX));x.stroke();x.beginPath();x.moveTo(gx(XMIN),gy(k));x.lineTo(gx(XMAX),gy(k));x.stroke()}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(gx(XMIN),gy(0));x.lineTo(gx(XMAX),gy(0));x.moveTo(gx(0),gy(YMIN));x.lineTo(gx(0),gy(YMAX));x.stroke();
+ x.fillStyle=mut;x.font='12px Inter, sans-serif';x.textAlign='center';for(k=XMIN+1;k<XMAX;k++){if(k&&k%2===0)x.fillText(String(k),gx(k),gy(0)+14)}
+ x.textAlign='right';for(k=YMIN+1;k<YMAX;k++){if(k&&k%2===0)x.fillText(String(k),gx(0)-4,gy(k)+4)}
+ var cap=$('c'+i);
+ if(!p.lines[0]||!p.lines[1]){x.fillStyle=mut;x.font='14px Inter, sans-serif';x.textAlign='center';x.fillText('Draw both lines of Pair '+p.id+' in Step 2',w/2,h/2-30);cap.innerHTML='<b>Pair '+p.id+'.</b> Not drawn yet.';return}
+ var cols=[css('--l1')||'#1f4fa8',css('--l2')||'#c0392b'];
+ if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)cols=['#7fa8ff','#ff8a7a'];
+ [0,1].forEach(function(l){var seg=clipLine(p.lines[l],XMIN,XMAX,YMIN,YMAX);if(!seg)return;x.strokeStyle=cols[l];x.lineWidth=l?2:3.2;if(l)x.setLineDash(p.type==='coi'?[7,5]:[]);
+  x.beginPath();x.moveTo(gx(seg[0][0]),gy(seg[0][1]));x.lineTo(gx(seg[1][0]),gy(seg[1][1]));x.stroke();x.setLineDash([]);
+  // y-intercept of the drawn line
+  var L=lineFrom(p.lines[l]);if(Math.abs(L.b)>1e-9){var yi=-L.c/L.b;if(yi>YMIN&&yi<YMAX){x.fillStyle=cols[l];x.beginPath();x.arc(gx(0),gy(yi),4,0,7);x.fill()}}});
+ x.font='700 12px Inter, sans-serif';
+ if(p.type==='int'){var cr=crossOf(p.lines[0],p.lines[1]);if(cr){var red='#c9a227';x.strokeStyle=mut;x.setLineDash([4,4]);x.lineWidth=1.2;x.beginPath();x.moveTo(gx(cr.x),gy(cr.y));x.lineTo(gx(cr.x),gy(0));x.moveTo(gx(cr.x),gy(cr.y));x.lineTo(gx(0),gy(cr.y));x.stroke();x.setLineDash([]);
+  x.fillStyle=red;x.beginPath();x.arc(gx(cr.x),gy(cr.y),5.5,0,7);x.fill();x.strokeStyle='#5c4600';x.stroke();x.fillStyle=txt;x.textAlign=gx(cr.x)>w*.6?'right':'left';x.fillText('('+fmtN(cr.x)+', '+fmtN(cr.y)+')',gx(cr.x)+(gx(cr.x)>w*.6?-9:9),gy(cr.y)-9);
+  cap.innerHTML='<b>Pair '+p.id+' — intersecting.</b> Your lines cross at about ('+fmtN(cr.x)+', '+fmtN(cr.y)+'): the unique solution.'}}
+ else{var A=p.L[0],m1=-A.a/A.b;var lt=p.type==='par'?'slopes equal: m = '+frac(-A.a,A.b):'one line on top of the other';x.textAlign='left';var tw=x.measureText(lt).width;x.fillStyle=css('--card')||'#fff';x.fillRect(pad+2,pad+1,tw+8,18);x.fillStyle=txt;x.fillText(lt,pad+6,pad+14);
+  cap.innerHTML=p.type==='par'?'<b>Pair '+p.id+' — parallel.</b> Same slope ('+frac(-A.a,A.b)+'), different y-intercepts (dots): the lines never meet, no solution.':'<b>Pair '+p.id+' — coincident.</b> Line (2) (dashed) lies exactly on line (1): every point is a solution.'}}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(drawGraphs,150)});
+
+/* ───────── result ───────── */
+function intPair(){for(var i=0;i<3;i++)if(S.pairs[i].type==='int')return S.pairs[i];return null}
+function renderResult(){var p=intPair(),sx=num(p.sx),sy=num(p.sy),cr=p.lines[0]&&p.lines[1]?crossOf(p.lines[0],p.lines[1]):null,allOk=S.pairs.every(function(q){return q.ok});
+ $('rPairLbl').textContent='Solution read from your graph'+(allOk?' (Pair '+p.id+')':'');
+ $('rRead').textContent=(!isNaN(sx)&&!isNaN(sy))?'('+fmtN(sx)+', '+fmtN(sy)+')':'—';
+ $('rCross').textContent=allOk&&cr?'('+fmtN(cr.x,2)+', '+fmtN(cr.y,2)+')':'—';
+ $('trueBox').hidden=!S.revealed;$('rTrue').textContent='x = '+fmtN(p.sol.x)+', y = '+fmtN(p.sol.y);
+ var e=$('err');e.textContent='';
+ if(S.revealed&&!isNaN(sx)&&!isNaN(sy))e.textContent='Percentage error of your graphical reading: x '+fmtN(Math.abs(sx-p.sol.x)/Math.abs(p.sol.x)*100)+'%, y '+fmtN(Math.abs(sy-p.sol.y)/Math.abs(p.sol.y)*100)+'%.';
+ var c=$('concl');
+ if(!allOk){c.innerHTML='<li class="note">Your conclusions appear here once all three rows of the observation table are checked correct.</li>';return}
+ var txt={int:'a₁/a₂ ≠ b₁/b₂, the lines intersect, the pair has a unique solution and is <b>consistent</b>.',par:'a₁/a₂ = b₁/b₂ ≠ c₁/c₂, the lines are parallel, there is no solution and the pair is <b>inconsistent</b>.',coi:'a₁/a₂ = b₁/b₂ = c₁/c₂, the lines coincide, there are infinitely many solutions and the pair is <b>dependent (consistent)</b>.'};
+ c.innerHTML=S.pairs.map(function(q){return '<li>Pair '+q.id+': '+txt[q.type]+'</li>'}).join('')}
+$('reveal').onclick=function(){if(!S.pairs.every(function(q){return q.ok})){$('err').textContent='First get all three pairs correct (press “Check my table”).';return}
+ S.revealed=true;save();renderResult()};
+
+/* ───────── printable record ───────── */
+function buildRecord(){var nm={cmp:{},gr:{},ns:{},cons:{}};Object.keys(OPT).forEach(function(k){OPT[k].forEach(function(o){nm[k][o[0]]=o[1]})});
+ var vals=S.pairs.map(function(p){return '<p><b>Pair '+p.id+'</b></p><table><tr><th>Equation</th><th colspan="3">x</th><th colspan="3">y</th></tr>'+[0,1].map(function(l){var r=p.rows[l];return '<tr><td>'+eqStr(p.L[l])+'</td><td>'+r[0].x+'</td><td>'+r[1].x+'</td><td>'+r[2].x+'</td><td>'+r[0].y+'</td><td>'+r[1].y+'</td><td>'+r[2].y+'</td></tr>'}).join('')+'</table>'}).join('');
+ var obs=S.pairs.map(function(p){var sx=num(p.sx),sy=num(p.sy);return '<tr><td>'+p.id+'</td><td>'+eqStr(p.L[0])+'<br>'+eqStr(p.L[1])+'</td><td>'+(p.obs.r1||'')+'</td><td>'+(p.obs.r2||'')+'</td><td>'+(p.obs.r3||'')+'</td><td>'+(nm.cmp[p.obs.cmp]&&p.obs.cmp?nm.cmp[p.obs.cmp]:'')+'</td><td>'+(p.obs.gr?nm.gr[p.obs.gr]:'')+'</td><td>'+(p.obs.ns?nm.ns[p.obs.ns]:'')+'</td><td>'+(!isNaN(sx)&&!isNaN(sy)?'('+fmtN(sx)+', '+fmtN(sy)+')':'')+'</td><td>'+(p.obs.cons?nm.cons[p.obs.cons]:'')+'</td></tr>'}).join('');
+ var img='';try{img=[0,1,2].map(function(i){return '<img src="'+$('g'+i).toDataURL()+'">'}).join('')}catch(e){}
+ $('record').innerHTML='<h1>Activity: Conditions for consistency of a pair of linear equations (graphical method)</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Roll No.: ______ &nbsp; Date: ___________ &nbsp; Set: S-'+S.setNo+'</p>'+
+  '<h2>Aim</h2><p>To obtain the conditions for consistency of a pair of linear equations in two variables by the graphical method.</p>'+
+  '<h2>Materials required</h2><p>Graph paper, pencil, ruler (scale), eraser.</p>'+
+  '<h2>Theory</h2><p>For a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0: if a₁/a₂ ≠ b₁/b₂ the lines intersect (unique solution, consistent); if a₁/a₂ = b₁/b₂ ≠ c₁/c₂ they are parallel (no solution, inconsistent); if a₁/a₂ = b₁/b₂ = c₁/c₂ they coincide (infinitely many solutions, dependent and consistent).</p>'+
+  '<h2>Tables of values</h2>'+vals+
+  '<h2>Observation table</h2><table><tr><th>Pair</th><th>Equations</th><th>a₁/a₂</th><th>b₁/b₂</th><th>c₁/c₂</th><th>Comparison</th><th>Graph</th><th>Solutions</th><th>Solution from graph</th><th>Consistent?</th></tr>'+obs+'</table>'+
+  '<h2>Graphs</h2>'+img+
+  '<h2>Result</h2><ol>'+$('concl').innerHTML+'</ol><p>Solution of the intersecting pair read from the graph: '+$('rRead').textContent+(S.revealed?'; exact solution: '+$('rTrue').textContent:'')+'.</p>'+
+  '<h2>Precautions</h2><ol><li>Use a sharp pencil and the same scale on both axes.</li><li>Plot at least three points for each line.</li><li>Keep the points well apart and extend the lines across the paper.</li><li>Keep the signs when writing a, b and c.</li></ol>'+
+  '<h2>Limitations</h2><ol><li>Graphical solutions are approximate (about 0.1 unit).</li><li>A small plotting error moves the point of intersection.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+$('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,P:P,crossOf:crossOf,render:render,setStep:setStep,placePoint:placePoint,buildSel:buildSel,yOn:yOn};
+buildPairs();buildObs();setStep(S.step);drawGraphs();renderResult();
+})();
+</script>
+</body>
+</html>
