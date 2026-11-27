@@ -46,6 +46,22 @@
   "announced": true
  },
  "class10/science/how-do-organisms-reproduce": {
-  "hub_linked": true
+  "hub_linked": true,
+  "channels": {
+   "tg": true,
+   "fb": true,
+   "ig": true
+  },
+  "tries": 0,
+  "announced": true
+ },
+ "class10/science/control-and-coordination": {
+  "channels": {
+   "tg": true,
+   "fb": true,
+   "ig": true
+  },
+  "tries": 0,
+  "announced": true
  }
 }
