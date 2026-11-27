@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Light Is Necessary for Photosynthesis (Starch Test) — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Destarch a plant, cover part of a leaf with black paper, boil it in alcohol and add iodine. Count blue-black squares to show that light is needed for photosynthesis.">
+<meta name="cbse-lab-standard" content="2026-11">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/biology/09-photosynthesis-starch-test.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Light is necessary for photosynthesis: the iodine starch test — virtual lab","url":"https://cbsemock.org.in/virtual-labs/biology/09-photosynthesis-starch-test.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 7","Class 10"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Photosynthesis","Destarching a plant","Iodine test for starch","Light is necessary for photosynthesis","Chlorophyll is necessary for photosynthesis"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.hero p{color:rgba(255,255,255,.86);max-width:780px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.72rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.76rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:disabled{opacity:.45;cursor:not-allowed}
+.tab:not(:disabled):hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.benchbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+#bench{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none}
+.benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.hint{position:absolute;left:12px;top:10px;font-size:.74rem;color:#8ea2bd;background:rgba(5,8,14,.6);padding:4px 9px;border-radius:99px;pointer-events:none}
+@media(max-width:700px){#bench{min-width:820px}.hint{display:none}.benchbox::after{content:'⟷ swipe the bench';position:absolute;right:8px;top:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 8px;border-radius:99px;pointer-events:none}}
+.row2{display:grid;grid-template-columns:1.15fr 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px;min-width:0}
+.panel h4{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.leafbox{position:relative;border-radius:10px;overflow:hidden;background:#0b1320}
+.leafscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:10px}
+#leafCv{display:block;width:100%;aspect-ratio:12/7;border-radius:10px;touch-action:pan-y;cursor:default}
+#leafCv.dragok{cursor:ew-resize}
+@media(max-width:700px){.leafbox.count #leafCv{width:600px;max-width:none;touch-action:manipulation}.leafbox.count::after{content:'⟷ swipe to see the whole leaf';position:absolute;right:8px;bottom:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 8px;border-radius:99px;pointer-events:none}}
+.cap{font-size:.8rem;color:#8ea2bd;margin-top:8px}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 10px}
+.lbl{font-size:.8rem;font-weight:700;color:#b9c8da;margin-top:6px}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:8px 12px;border-radius:99px;min-height:42px;min-width:44px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.chip:disabled{opacity:.45;cursor:not-allowed}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:4px 0 8px}
+.nudge button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;min-height:42px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff}
+.nudge button:active{transform:translateY(1px)}
+.nudge button:disabled{opacity:.4}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:#c9d6e6;cursor:pointer;padding:9px 0;min-height:42px}
+.sw input{width:22px;height:22px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:42px;transition:transform .15s,box-shadow .15s}
+.btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.btn.run{background:#1e5a4c;color:#d9fff3}.btn.stop{background:#7a2a22;color:#ffe1dc}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.steps{list-style:none;display:grid;gap:8px}
+.steps li{background:#0d1626;border:1px solid #233650;border-radius:12px;padding:10px 12px}
+.steps li.done{border-color:#2f7d62}.steps li.cur{border-color:var(--gold)}
+.steps .hd{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:700;font-size:.88rem;color:#e8eef6}
+.steps .hd span.t{font-family:'JetBrains Mono',monospace;color:var(--gold2);font-size:.85rem}
+.steps p{font-size:.8rem;color:#9fb2c9;margin:4px 0 8px}
+.steps .tools{margin-top:4px}
+.count{display:flex;gap:10px;flex-wrap:wrap;font-size:.86rem;color:#d6e1ef;margin:6px 0}
+.count b{font-family:'JetBrains Mono',monospace;color:var(--gold2)}
+.msg{font-size:.85rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:900px;font-size:.88rem}
+.obs th,.obs td{padding:8px 6px;border-bottom:1px solid var(--border);text-align:center;vertical-align:middle}
+.obs th{background:var(--soft);font-weight:700;font-size:.78rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs input,.obs select{font:inherit;font-size:16px;font-family:'JetBrains Mono',monospace;width:76px;min-height:42px;padding:6px 8px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);color:var(--text)}
+.obs select{font-family:Inter,sans-serif;width:150px;font-size:16px}
+.obs .bad{border-color:var(--red)!important;background:rgba(179,38,30,.08)}
+.obs .good{border-color:var(--green)!important}
+.obs .del{cursor:pointer;border:0;background:none;color:var(--muted);font-size:1.1rem;min-width:42px;min-height:42px}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.obs td small,.obs th small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.graphs figcaption sup{font-size:12px}
+.note{font-size:.8rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:1fr;gap:16px;max-width:760px}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.concl{margin-top:12px;padding:12px 14px;border-radius:12px;border-left:4px solid var(--gold);background:var(--soft);font-size:.95rem}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1rem;overflow-x:auto}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:24px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}.links li:nth-child(4) a{background:linear-gradient(135deg,#b8873b,#4a3210)}
+footer{text-align:center;padding:26px 16px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;counter-reset:s}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.62);font:600 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.08em}
+.sceneB .rayB{animation:pulse 2.4s ease-in-out infinite alternate}
+.sceneB .rayB2{animation-delay:-1.2s}
+@keyframes pulse{to{opacity:.35}}
+.sceneB .flB,#bench .fl{transform-box:fill-box;transform-origin:50% 100%;animation:flick 1.1s ease-in-out infinite alternate}
+@keyframes flick{0%{transform:scaleY(1)}40%{transform:scaleY(1.1) skewX(2deg)}100%{transform:scaleY(.92) skewX(-2deg)}}
+.sceneB .bub,#bench .bub{animation:rise 1.8s linear infinite}
+.sceneB .bub:nth-of-type(2n),#bench .bub:nth-of-type(2n){animation-delay:-.6s}.sceneB .bub:nth-of-type(3n),#bench .bub:nth-of-type(3n){animation-delay:-1.2s}
+@keyframes rise{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-46px);opacity:0}}
+.sceneB .dropB{animation:drip 2.6s ease-in infinite}
+@keyframes drip{0%,35%{transform:translateY(0);opacity:0}40%{opacity:1}75%{transform:translateY(44px);opacity:1}80%,100%{transform:translateY(46px);opacity:0}}
+.sceneB .stainB{animation:stain 5.2s ease-in-out infinite alternate}
+@keyframes stain{0%,30%{opacity:.15}100%{opacity:1}}
+#bench .plant{transition:transform 1.2s ease-in-out,filter 1s ease-in-out}
+#bench .door{transition:transform .8s ease-in-out;transform-box:fill-box;transform-origin:0 50%}
+#bench .dropF{animation:drip1 .7s ease-in forwards}
+@keyframes drip1{0%{transform:translateY(0);opacity:1}90%{transform:translateY(70px);opacity:1}100%{transform:translateY(74px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.sceneB .rayB,.sceneB .flB,.sceneB .bub,.sceneB .dropB,.sceneB .stainB,#bench .fl,#bench .bub,#bench .dropF{animation:none}#bench .plant,#bench .door{transition:none}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:70%;margin:1%;border:1px solid #bbb}
+}
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small,.tab small,.cap,.note,.steps p,.obs th,.crumb,.nb,.hv .chips span{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="lab-draft" style="background:#fff4d6;color:#6b4e00;padding:8px 14px;font:600 14px Inter,sans-serif;text-align:center">Draft preview — waiting for approval in the admin panel</div>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../../index.html">Home</a> › <a href="../../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../../virtual-labs/biology/index.html">Biology</a> › Starch test</nav>
+   <div class="eyebrow">Experiment · Potted plant, black paper &amp; iodine</div>
+   <h1><span class="g1">Light Makes Starch</span><span class="g2">The Iodine Test on a Leaf</span></h1>
+   <p>Destarch a potted plant, cover part of one leaf with black paper and leave it in the sun. Then decolourise the leaf in alcohol, add iodine and count where it turns blue-black.</p>
+   <div class="chips"><span>Class 10 · Life Processes</span><span>Class 7 · Nutrition in plants</span><span>⏱ about 20 min</span></div>
+   <a class="go" href="#lab">Destarch the plant ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <radialGradient id="h-sun"><stop offset="0" stop-color="#fff6c9"/><stop offset=".45" stop-color="#ffd45c"/><stop offset="1" stop-color="#ff9d2e" stop-opacity="0"/></radialGradient>
+ <linearGradient id="h-ray" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".5"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></linearGradient>
+ <linearGradient id="h-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#24170c"/></linearGradient>
+ <linearGradient id="h-pot" x1="0" x2="1"><stop offset="0" stop-color="#8a3f1f"/><stop offset=".45" stop-color="#c9673a"/><stop offset="1" stop-color="#7a3518"/></linearGradient>
+ <linearGradient id="h-leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5dbb4f"/><stop offset="1" stop-color="#2f7d33"/></linearGradient>
+ <linearGradient id="h-glass" x1="0" x2="1"><stop offset="0" stop-color="#9fd6ff" stop-opacity=".35"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".12"/><stop offset="1" stop-color="#7cc3f2" stop-opacity=".35"/></linearGradient>
+ <linearGradient id="h-steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe4ea"/><stop offset="1" stop-color="#5a636e"/></linearGradient>
+ <radialGradient id="h-fl" cx=".5" cy=".8" r=".7"><stop offset="0" stop-color="#e6f3ff"/><stop offset=".5" stop-color="#5aa0ff"/><stop offset="1" stop-color="#2b5fd9" stop-opacity=".6"/></radialGradient>
+</defs>
+<rect x="0" y="300" width="760" height="60" fill="url(#h-wood)"/>
+<circle cx="80" cy="60" r="70" fill="url(#h-sun)"/>
+<polygon class="rayB" points="96,70 300,150 250,200" fill="url(#h-ray)"/>
+<polygon class="rayB rayB2" points="70,90 220,230 170,250" fill="url(#h-ray)"/>
+<!-- potted plant with the test leaf -->
+<path d="M150 300 L140 246 h96 L226 300Z" fill="url(#h-pot)"/><rect x="134" y="238" width="108" height="12" rx="3" fill="#a24f2a"/>
+<ellipse cx="188" cy="242" rx="50" ry="5" fill="#3b2614"/>
+<path d="M188 242 C186 200 192 160 188 110" stroke="#3f7d2c" stroke-width="5" fill="none"/>
+<path d="M188 196 C160 186 132 194 118 214 C142 220 168 212 188 196Z" fill="url(#h-leaf)"/>
+<path d="M188 150 C166 136 146 136 132 148 C150 160 172 160 188 150Z" fill="url(#h-leaf)"/>
+<path d="M188 112 C182 94 186 80 196 72 C200 88 198 102 188 112Z" fill="url(#h-leaf)"/>
+<g transform="translate(190 168) rotate(-14)">
+ <path d="M0 0 C30 -26 80 -30 128 -2 C80 24 30 22 0 0Z" fill="url(#h-leaf)" stroke="#2a6a2a"/>
+ <path d="M0 0 L124 -2" stroke="#a8dd88" stroke-width="1.4"/>
+ <rect x="52" y="-30" width="26" height="58" rx="2" fill="#111"/><rect x="54" y="-34" width="22" height="7" rx="2" fill="#9aa3ae"/><rect x="54" y="25" width="22" height="7" rx="2" fill="#9aa3ae"/>
+</g>
+<!-- water bath with alcohol tube -->
+<path d="M370 300 l14 -70 M450 300 l-14 -70" stroke="#5a636e" stroke-width="4"/><rect x="368" y="226" width="86" height="6" rx="2" fill="url(#h-steel)"/>
+<rect x="398" y="276" width="26" height="24" rx="2" fill="#3a414b"/><path class="flB" d="M411 250 C418 260 420 270 411 276 C402 270 404 260 411 250Z" fill="url(#h-fl)"/>
+<path d="M372 140 h78 v84 q0 4 -4 4 h-70 q-4 0 -4 -4Z" fill="url(#h-glass)" stroke="#cfe8ff" stroke-width="1.5"/>
+<rect x="374" y="164" width="74" height="60" fill="#9cc9e8" opacity=".35"/>
+<rect x="401" y="104" width="20" height="112" rx="10" fill="url(#h-glass)" stroke="#e6f4ff" stroke-width="1.4"/>
+<rect x="403" y="150" width="16" height="64" rx="8" fill="#6fbf4a" opacity=".85"/>
+<path d="M407 168 C404 182 414 186 413 200 C409 196 405 186 407 168Z" fill="#e7e3c2"/>
+<circle class="bub" cx="384" cy="218" r="2.5" fill="#fff" opacity=".8"/><circle class="bub" cx="436" cy="220" r="2" fill="#fff" opacity=".8"/><circle class="bub" cx="392" cy="214" r="1.8" fill="#fff" opacity=".8"/><circle class="bub" cx="428" cy="216" r="2.6" fill="#fff" opacity=".8"/>
+<!-- petri dish with the stained leaf -->
+<ellipse cx="610" cy="286" rx="118" ry="24" fill="#e9eef2" opacity=".2" stroke="#d8f0ff" stroke-width="1.5"/>
+<g transform="translate(540 284) scale(1 .42)">
+ <path d="M0 0 C34 -40 100 -44 150 -2 C100 40 34 38 0 0Z" fill="#c79a45"/>
+ <path class="stainB" d="M0 0 C18 -22 40 -34 62 -38 L62 34 C40 30 18 20 0 0Z M96 -37 C118 -32 136 -20 150 -2 C136 16 118 30 96 35Z" fill="#1d1b3a"/>
+</g>
+<ellipse cx="610" cy="282" rx="118" ry="24" fill="none" stroke="#d8f0ff" stroke-width="1.2" opacity=".7"/>
+<path d="M700 150 h12 v60 l-6 14 l-6 -14Z" fill="url(#h-glass)" stroke="#d8f0ff"/><rect x="698" y="128" width="16" height="24" rx="6" fill="#2d333c"/>
+<path d="M702 196 h8 v14 l-4 10 l-4 -10Z" fill="#8a4a12" opacity=".85"/>
+<circle class="dropB" cx="706" cy="232" r="4" fill="#8a4a12"/>
+<text x="190" y="330" class="tB">DESTARCHED PLANT</text><text x="306" y="216" class="tB">BLACK PAPER</text><text x="411" y="92" class="tB">ALCOHOL · WATER BATH</text><text x="600" y="330" class="tB">IODINE TEST</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Destarch &amp; cover</li><li><b>2</b>Sunlight</li><li><b>3</b>Boil, decolourise, iodine</li><li><b>4</b>Count &amp; conclude</li></ol>
+</header>
+
+
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Photosynthesis starch test bench">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-step="prep" role="tab" type="button"><b>Step 1 · Prepare the plant</b><small>Destarch, cover part of a leaf, give it light</small></button>
+   <button class="tab" data-step="test" role="tab" type="button"><b>Step 2 · Starch test</b><small>Boil, alcohol bath, rinse, iodine</small></button>
+   <button class="tab" data-step="obs" role="tab" type="button"><b>Step 3 · Observe &amp; count</b><small>1 cm grid: count blue-black squares</small></button>
+  </div>
+  <div class="task" id="task"></div>
+  <div class="benchbox">
+   <div class="benchscroll" id="benchScroll"><svg id="bench" viewBox="0 0 1000 360" role="img" aria-label="Laboratory bench for the starch test"></svg></div>
+   <span class="hint" id="hint">Bench view · use the controls on the right</span>
+  </div>
+  <div class="row2">
+   <div class="panel">
+    <h4><span id="leafTitle">The test leaf (close-up)</span><span id="leafTag" class="mono">Leaf —</span></h4>
+    <div class="leafbox" id="leafBox"><div class="leafscroll" id="leafScroll"><canvas id="leafCv" tabindex="0" aria-label="Close-up of the test leaf"></canvas></div></div>
+    <div class="cap" id="leafCap"></div>
+    <div id="countBox" hidden>
+     <div class="sel" id="tickMode">
+      <button class="chip on" type="button" data-m="leaf">Tick leaf squares ●</button>
+      <button class="chip" type="button" data-m="blue">Tick blue-black squares ✓</button>
+      <button class="chip" type="button" id="clearTicks">Clear ticks</button>
+     </div>
+     <div class="count"><span>Leaf squares ticked: <b id="nLeaf">0</b></span><span>Blue-black ticked: <b id="nBlue">0</b></span></div>
+    </div>
+   </div>
+   <div class="panel" id="ctrl">
+    <h4><span id="ctrlTitle">Controls</span><span id="plantTag" class="mono"></span></h4>
+    <!-- step 1 -->
+    <div id="pPrep">
+     <div class="lbl">Plant</div>
+     <div class="sel" id="plantSel">
+      <button class="chip" type="button" data-p="A">A · green leaf + black strip</button>
+      <button class="chip" type="button" data-p="B">B · variegated leaf (croton)</button>
+     </div>
+     <div class="lbl">Keep the plant in a dark cupboard for</div>
+     <div class="sel" id="darkSel"><button class="chip" type="button" data-h="0">0 h (skip)</button><button class="chip" type="button" data-h="24">24 h</button><button class="chip" type="button" data-h="48">48 h</button><button class="chip" type="button" data-h="72">72 h</button></div>
+     <div class="tools" style="margin-top:0"><button class="btn navy" type="button" id="darkBtn">🌑 Put in the dark</button></div>
+     <div id="stripBox">
+      <div class="lbl">Black paper strip — slide it along the leaf, then clip it</div>
+      <div class="nudge" id="stripNudge"><button type="button" data-d="-0.5">−5 mm</button><button type="button" data-d="-0.1">−1 mm</button><button type="button" data-d="0.1">+1 mm</button><button type="button" data-d="0.5">+5 mm</button></div>
+      <div class="sel" id="coverSel"><button class="chip" type="button" data-c="upper">Clip on upper surface only</button><button class="chip" type="button" data-c="both">Clip on both surfaces</button></div>
+     </div>
+     <div class="lbl">Then place the plant in sunlight for</div>
+     <div class="sel" id="lightSel"><button class="chip" type="button" data-h="0">0 h (control)</button><button class="chip" type="button" data-h="1">1 h</button><button class="chip" type="button" data-h="2">2 h</button><button class="chip" type="button" data-h="3">3 h</button><button class="chip" type="button" data-h="4">4 h</button><button class="chip" type="button" data-h="6">6 h</button></div>
+     <div class="tools" style="margin-top:0"><button class="btn gold" type="button" id="sunBtn">☀ Place in sunlight</button><button class="btn navy" type="button" id="pluckBtn">✂ Pluck the leaf →</button></div>
+    </div>
+    <!-- step 2 -->
+    <div id="pTest" hidden>
+     <ol class="steps">
+      <li id="sBoil"><div class="hd">1 · Boil in water <span class="t" id="tBoil">0.0 min</span></div><p>Kills the cells and softens the leaf so iodine can get in. Boil for about 3–5 minutes.</p><div class="tools"><button class="btn run" type="button" id="boilBtn">▶ Start boiling</button></div></li>
+      <li id="sAlc"><div class="hd">2 · Alcohol in a water bath <span class="t" id="tAlc">0.0 min</span></div><p>Alcohol dissolves chlorophyll. It catches fire easily, so heat it only in a water bath. Stop when the leaf is pale.</p><div class="tools"><button class="btn run" type="button" id="alcBtn">▶ Start water bath</button></div></li>
+      <li id="sRinse"><div class="hd">3 · Rinse in warm water <span class="t" id="tRinse">—</span></div><p>The alcohol leaves the leaf brittle. Warm water softens it again.</p><div class="tools"><button class="btn run" type="button" id="rinseBtn">💧 Rinse the leaf</button></div></li>
+      <li id="sIod"><div class="hd">4 · Iodine solution <span class="t" id="tIod">0 drops</span></div><p>Spread the leaf in a petri dish and add dilute iodine drop by drop until the whole leaf is covered. Wait for the colour.</p><div class="tools"><button class="btn gold" type="button" id="dropBtn">💧 Add 1 drop</button><button class="btn ghost" type="button" id="toObs">Observe →</button></div></li>
+     </ol>
+    </div>
+    <!-- step 3 -->
+    <div id="pObs" hidden>
+     <p class="cap" style="margin-top:0">Lay the transparent 1 cm grid on the leaf. Count a square as a <b>leaf square</b> if more than half of it lies on the leaf, and as <b>blue-black</b> if more than half of its leaf part is blue-black. Tap squares on the close-up to keep count, then record and type your counts into the table.</p>
+     <div class="tools"><button class="btn gold" type="button" id="recBtn">＋ Record this leaf</button><button class="btn navy" type="button" id="againBtn">↺ Test another leaf</button></div>
+    </div>
+    <div class="tools">
+     <label class="sw"><input type="checkbox" id="helper"> Show readings (helper)</label>
+     <span style="flex:1"></span>
+     <button class="btn ghost" id="newPlant" type="button">↺ New plant</button>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 leaves</span></h2>
+  <p class="lead">Test at least three leaves of plant A with different hours of light (one can be a 0 h control). Plant B tests whether chlorophyll is needed. Choose the colours you saw and type your square counts.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Plant</th><th>In dark<br>(h)</th><th>In light<br>(h)</th><th>Colour of covered part<br><small>(B: non-green part)</small></th><th>Colour of uncovered part<br><small>(B: green part)</small></th><th>Total leaf<br>squares</th><th>Blue-black<br>squares</th><th>Starch area<br>(%)</th><th></th></tr></thead>
+   <tbody id="tb"><tr><td colspan="10" class="note" style="padding:16px">No leaves tested yet. Finish Step 3 and press “Record this leaf”.</td></tr></tbody>
+  </table></div>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graph</h2>
+  <p class="lead">Appears after 3 correct plant-A leaves with at least 3 different light times. Starch area rises with time in light, then levels off: the plateau is the part of the leaf that could get light.</p>
+  <div class="graphs">
+   <figure><canvas id="g1" width="560" height="420"></canvas><figcaption><b>Starch area (%) against hours of sunlight.</b> Points are your counts; the curve is a best fit y = P(1 − e<sup>−t/τ</sup>). The dashed line marks the plateau P.</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Covered area from your best leaf</small><b id="rT">—</b></div>
+   <div class="rbox"><small>Plateau P from graph</small><b id="rG">—</b></div>
+   <div class="rbox"><small>Covered area from graph (100 − P)</small><b id="rG2">—</b></div>
+   <div class="rbox true" id="trueBox" hidden><small>Actual leaf area under the strip</small><b id="rTrue">—</b></div>
+  </div>
+  <div class="concl" id="concl">Your conclusion appears here once your table is checked.</div>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the actual covered area</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To show experimentally that light is necessary for photosynthesis (and, with a variegated leaf, that chlorophyll is necessary), using the iodine test for starch.</p>
+    <h3>Apparatus</h3>
+    <p>A potted plant with broad leaves (such as balsam or hibiscus) and a variegated plant (croton or money plant), a strip of black paper, paper clips, a beaker, a boiling tube, a tripod stand with wire gauze, a burner, a water bath, alcohol (ethanol or methylated spirit), dilute iodine solution, a dropper, a petri dish, forceps, a white tile and a 1 cm grid drawn on a transparent sheet.</p>
+    <h3>Theory</h3>
+    <p>Green plants make glucose by photosynthesis, using carbon dioxide and water, in the presence of sunlight and chlorophyll:</p>
+    <p class="eq">6CO₂ + 12H₂O —(sunlight, chlorophyll)→ C₆H₁₂O₆ + 6O₂ + 6H₂O</p>
+    <p>Extra glucose is quickly stored as <b>starch</b> in the leaf. So starch in a leaf is evidence that photosynthesis has taken place there.</p>
+    <p><b>Iodine test:</b> iodine solution is yellowish-brown. With starch it gives a <b>blue-black</b> colour. Parts without starch stay yellowish-brown.</p>
+    <p><b>Destarching:</b> a plant kept in the dark for 48–72 hours uses up and moves out the starch already in its leaves, so any starch found later must have been made during the experiment.</p>
+    <p>The part of the leaf under the black paper gets no light, so it cannot photosynthesise and stays starch-free. In a variegated leaf, the white or yellow parts have no chlorophyll, so they make no starch either.</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li>Keep the potted plant in a dark room or cupboard for 48–72 hours to destarch it.</li>
+     <li>Fix a strip of black paper across a leaf on <b>both</b> its upper and lower surfaces with paper clips, so that no light reaches the covered part.</li>
+     <li>Keep the plant in bright sunlight for 4–6 hours.</li>
+     <li>Pluck the leaf and remove the black paper. Boil the leaf in water for 3–5 minutes.</li>
+     <li>Put the leaf in a boiling tube of alcohol and heat it in a water bath until the leaf becomes pale (about 8–10 minutes).</li>
+     <li>Rinse the leaf in warm water and spread it in a petri dish.</li>
+     <li>Add a few drops of dilute iodine solution to cover the whole leaf and observe the colour after a minute.</li>
+     <li>Place a transparent 1 cm grid over the leaf and count the leaf squares and the blue-black squares.</li>
+     <li>Repeat with a variegated leaf that has been in light, and compare the green and non-green parts.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>Destarch the plant fully (48–72 hours in the dark) before covering the leaf.</li>
+     <li>Fix the black paper on both surfaces of the leaf so that no light leaks in from below or the sides.</li>
+     <li>Never heat alcohol directly on a flame: it is inflammable. Always use a water bath.</li>
+     <li>Boil the leaf in water first so that the cells are killed and iodine can enter.</li>
+     <li>Remove all the chlorophyll before adding iodine, or the green colour will hide the result.</li>
+     <li>Handle the boiled leaf with forceps; it tears easily.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>A plant that is not fully destarched still has old starch, which can make covered parts turn blue.</li>
+     <li>Light leaks under the edges of the strip, so the boundary is not perfectly sharp.</li>
+     <li>Chlorophyll that is not fully removed masks the iodine colour.</li>
+     <li>Counting squares is an estimate: squares cut by the leaf edge or the strip edge need judgement, and a 1 cm grid is coarse compared with a strip only 2–3 cm wide.</li>
+     <li>Different parts of a leaf photosynthesise at slightly different rates, so a short exposure gives patchy staining.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask on this experiment. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../../notes/class-10/science/life-processes.html">📘 Life Processes — notes</a></li>
+   <li><a href="../../../chapters/life-processes-10.html">📝 Life Processes — chapter practice</a></li>
+   <li><a href="../../../cbse-class-10-science-mock-tests.html">📄 Class 10 Science mock tests</a></li>
+   <li><a href="../../../virtual-labs/biology/10-photosynthesis-light-and-co.html">🌿 Next lab: light and CO₂</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../../about.html">About Us</a> · <a href="../../../privacy.html">Privacy Policy</a> · <a href="../../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
+<script>
+(function(){
+'use strict';
+/* ───────── helpers ───────── */
+var NS='http://www.w3.org/2000/svg';
+var CW=12,CH=7,PPC=40;                       // close-up world: 12 cm × 7 cm, 40 px per cm when painted
+var MIN=350;                                  // ms of real time per simulated minute (boiling / water bath)
+var DEV=2600;                                 // ms for the iodine colour to develop fully
+function rnd(a,b){return a+Math.random()*(b-a)}
+function r1(x){return Math.round(x*10)/10}
+function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
+function sstep(a,b,x){var t=clamp((x-a)/(b-a),0,1);return t*t*(3-2*t)}
+function mix(a,b,t){return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t]}
+function rgb(c){return 'rgb('+Math.round(c[0])+','+Math.round(c[1])+','+Math.round(c[2])+')'}
+function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function $(id){return document.getElementById(id)}
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+
+/* ───────── state ───────── */
+var KEY='cbse-lab-starch';
+var S={sess:null,leaf:null,step:'prep',rows:[],helper:false,revealed:false,tickMode:'leaf'};
+var run={boil:false,alc:false,busy:false};
+try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv&&sv.sess&&sv.leaf){S.sess=sv.sess;S.leaf=sv.leaf;S.rows=sv.rows||[];S.revealed=!!sv.revealed;S.step=sv.step||'prep'}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({sess:S.sess,leaf:S.leaf,rows:S.rows,revealed:S.revealed,step:S.step}))}catch(e){}}
+var M=null;
+function newSess(){S.sess={L:r1(rnd(8.6,10.2)),W:r1(rnd(4.6,5.6)),w:r1(rnd(1.8,2.8)),plantNo:Math.floor(rnd(11,99)),strip:null,leafCount:0};S.rows=[];S.revealed=false;S.leaf=null;newLeaf()}
+function newLeaf(){S.sess.leafCount++;var keep=S.leaf?S.leaf.plant:'A';
+ S.leaf={no:S.sess.leafCount,seed:Math.floor(Math.random()*1e9),plant:keep,darkSel:null,dark:null,cover:null,lightSel:null,light:null,plucked:false,boil:0,alc:0,rinsed:false,drops:0,iodT:0,loc:'plant',ticks:{leaf:{},blue:{}},recorded:false};
+ buildModel();S.step='prep'}
+
+/* ───────── leaf model (shape, rate field, variegation) ───────── */
+function buildModel(){var lf=S.leaf,g=mulberry(lf.seed),sc=0.95+g()*0.1;
+ var L=S.sess.L*sc,W=S.sess.W*sc,mx=0;
+ for(var i=1;i<400;i++){var t=i/400,v=Math.pow(t,0.55)*Math.pow(1-t,0.85);if(v>mx)mx=v}
+ var ph=[],k;for(k=0;k<6;k++)ph.push(g()*6.283);
+ var blobs=[],nb=2+Math.floor(g()*3);
+ M={L:L,W:W,x0:(CW-L)/2+0.35,yc:CH/2,mx:mx,ph:ph,fr:[1.1+g()*0.8,0.9+g()*0.9,1.6+g()*0.9],blobs:blobs,mph:g()*6.283};
+ for(k=0;k<nb;k++)blobs.push({x:M.x0+L*(0.2+g()*0.6),y:M.yc+(g()-.5)*W*0.45,rx:0.45+g()*0.8,ry:0.3+g()*0.5});
+ if(S.sess.strip==null)S.sess.strip=r1(L*0.4);
+ clampStrip();TR=null;dirty=true}
+function hw(x){var t=(x-M.x0)/M.L;if(t<=0||t>=1)return -1;return M.W/2*Math.pow(t,0.55)*Math.pow(1-t,0.85)/M.mx}
+function edge(x,y){return hw(x)-Math.abs(y-M.yc)}                 // > 0 inside the leaf (cm)
+function kf(x,y){var v=0.6*Math.sin(M.fr[0]*x+M.ph[0])*Math.sin(M.fr[1]*y+M.ph[1])+0.4*Math.sin(M.fr[2]*(x+y)*0.7+M.ph[2]);return clamp(0.9+0.45*v,0.45,1.35)} // local photosynthesis rate
+function pen(x,y){return 0.25+0.5*(0.5+0.5*Math.sin(2.3*x+M.ph[3])*Math.sin(2.9*y+M.ph[4]))}  // iodine uptake by an unboiled leaf (patchy)
+function chl(x,y){if(S.leaf.plant!=='B')return 1;var e=edge(x,y),m=0.32+0.18*Math.sin(3.1*x+M.mph)+0.07*Math.sin(7.3*x+M.ph[5]);if(e<m)return 0;
+ for(var i=0;i<M.blobs.length;i++){var b=M.blobs[i],dx=(x-b.x)/b.rx,dy=(y-b.y)/b.ry;if(dx*dx+dy*dy<1)return 0}return 1}
+function clampStrip(){S.sess.strip=r1(clamp(S.sess.strip,0.8,M.L-S.sess.w-0.6))}
+function stripX(){return M.x0+S.sess.strip}
+function coverAt(x){if(S.leaf.plant!=='A'||!S.leaf.cover)return 0;var s=stripX(),w=S.sess.w;return sstep(s-0.12,s+0.12,x)*(1-sstep(s+w-0.12,s+w+0.12,x))} // light leaks a little under the edges
+function lightAt(x){return 1-coverAt(x)*(S.leaf.cover==='both'?0.97:0.55)}
+function starch(x,y){var lf=S.leaf,k=kf(x,y);
+ var s=(lf.dark==null?1.1:1.1*Math.exp(-lf.dark/24))*k;             // starch left after the dark period
+ var h=lf.light||0;if(h>0)s+=lightAt(x)*chl(x,y)*(1-Math.exp(-h*k/3.5)); // starch made in light (saturates)
+ return s}
+function iodCov(x,y){var n=S.leaf.drops;if(!n)return 0;var dx=(x-(M.x0+M.L/2))/(M.L/2),dy=(y-M.yc)/(M.W/2),d=Math.sqrt(dx*dx+dy*dy),r=n/4.5;return 1-sstep(r-0.08,r+0.08,d)}
+function dev(){if(!S.leaf.drops)return 0;return clamp((Date.now()-S.leaf.iodT)/DEV,0,1)}
+var GREEN=[56,134,54],GREEN2=[84,158,66],CREAM=[232,222,150],PALE=[238,233,206],BROWN=[194,128,44],BLUE=[28,26,58];
+function look(x,y,full){var lf=S.leaf,ch=chl(x,y),k=kf(x,y);
+ var c=ch?mix(GREEN,GREEN2,(k-0.45)/1.8):CREAM;
+ if(lf.boil>0)c=mix(c,ch?[70,104,46]:[214,204,146],Math.min(1,lf.boil/3));
+ var C=lf.alc>0?Math.exp(-lf.alc/3):1;
+ if(lf.alc>0)c=mix(PALE,c,C);
+ var st=0;
+ if(lf.drops>0){var cv=iodCov(x,y),dv=full?1:dev();
+  c=mix(c,BROWN,cv*dv*0.85);
+  st=sstep(0.3,0.7,starch(x,y))*(lf.boil>=3?1:pen(x,y))*cv*dv*(1-0.75*C);
+  c=mix(c,BLUE,st*0.95)}
+ return {c:c,st:st}}
+
+/* what the leaf really shows (used for checking the student's counts and colours) */
+var TR=null;
+function truth(){if(TR)return TR;var tot=0,blue=0,cells={},i,j,a,b,x,y;
+ for(i=0;i<CW;i++)for(j=0;j<CH;j++){var inn=0,bb=0;
+  for(a=0;a<10;a++)for(b=0;b<10;b++){x=i+(a+.5)/10;y=j+(b+.5)/10;if(edge(x,y)>0){inn++;if(look(x,y,true).st>0.5)bb++}}
+  var isL=inn>=50,isB=isL&&bb*2>=inn;if(isL)tot++;if(isB)blue++;if(inn)cells[i+','+j]={leaf:isL,blue:isB}}
+ var rc=[0,0],re=[0,0],area=0,cov=0,s=stripX(),w=S.sess.w;
+ for(x=M.x0+0.025;x<M.x0+M.L;x+=0.05)for(y=M.yc-M.W/2+0.025;y<M.yc+M.W/2;y+=0.05){if(edge(x,y)<=0)continue;area++;var p=look(x,y,true).st>0.5,cC,eE;
+  if(S.leaf.plant==='A'){if(x>=s&&x<=s+w)cov++;cC=x>s+0.2&&x<s+w-0.2;eE=x<s-0.2||x>s+w+0.2}else{var ch=chl(x,y);cC=!ch;eE=!!ch}
+  if(cC){rc[0]++;if(p)rc[1]++}if(eE){re[0]++;if(p)re[1]++}}
+ function cat(r){if(!r[0])return 'na';var f=r[1]/r[0];return f<0.2?'brown':f>0.65?'blue':'patchy'}
+ TR={tot:tot,blue:blue,cells:cells,catC:cat(rc),catE:cat(re),covPct:S.leaf.plant==='A'?cov/area*100:null};return TR}
+
+/* ───────── close-up canvas ───────── */
+var off=document.createElement('canvas');off.width=CW*PPC;off.height=CH*PPC;var octx=off.getContext('2d');
+var dirty=true,avgCol=GREEN,dishURL='',dishT=0;
+function paintLeaf(){var W=off.width,H=off.height,img=octx.createImageData(W,H),d=img.data,sr=0,sg=0,sb=0,n=0;
+ for(var py=0;py<H;py++){var y=(py+.5)/PPC;for(var px=0;px<W;px++){var x=(px+.5)/PPC,e=edge(x,y),o=(py*W+px)*4;if(e<-0.03){d[o+3]=0;continue}
+  var c=look(x,y,false).c,a=clamp((e+0.03)/0.06,0,1);d[o]=c[0];d[o+1]=c[1];d[o+2]=c[2];d[o+3]=a*255;if((px&3)===0&&(py&3)===0&&a>0.9){sr+=c[0];sg+=c[1];sb+=c[2];n++}}}
+ octx.putImageData(img,0,0);if(n)avgCol=[sr/n,sg/n,sb/n];
+ // veins
+ var lf=S.leaf,vc=lf.drops?'rgba(214,170,96,.45)':lf.alc>2?'rgba(255,252,236,.45)':'rgba(206,240,170,.55)';
+ octx.strokeStyle=vc;octx.lineCap='round';octx.lineWidth=0.07*PPC;octx.beginPath();octx.moveTo(M.x0*PPC,M.yc*PPC);octx.lineTo((M.x0+M.L*0.98)*PPC,M.yc*PPC);octx.stroke();
+ octx.lineWidth=0.03*PPC;
+ for(var xv=M.x0+0.7;xv<M.x0+M.L*0.9;xv+=0.85){var x2=xv+0.9,h2=Math.max(0,hw(x2))*0.86;[-1,1].forEach(function(sg){octx.beginPath();octx.moveTo(xv*PPC,M.yc*PPC);octx.quadraticCurveTo((xv+0.35)*PPC,(M.yc+sg*h2*0.55)*PPC,x2*PPC,(M.yc+sg*h2)*PPC);octx.stroke()})}
+}
+var cv=$('leafCv'),cvW=480;
+function drawCv(){var r=cv.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(280,r.width||480),h=w*CH/CW;cvW=w;
+ cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);var x=cv.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);var k=w/CW,lf=S.leaf;
+ if(dirty){paintLeaf();dirty=false}
+ var bg;
+ if(!lf.plucked){bg=x.createLinearGradient(0,0,0,h);bg.addColorStop(0,'#1d3324');bg.addColorStop(1,'#0c1a12')}
+ else{bg=x.createRadialGradient(w/2,h/2,10,w/2,h/2,w*0.7);bg.addColorStop(0,'#f4f6f7');bg.addColorStop(1,'#d5dde3')}
+ x.fillStyle=bg;x.fillRect(0,0,w,h);
+ if(lf.plucked&&lf.loc==='dish'){x.strokeStyle='rgba(120,150,170,.55)';x.lineWidth=2;x.beginPath();x.ellipse(w/2,h/2,w*0.48,h*0.47,0,0,7);x.stroke()}
+ // petiole
+ x.strokeStyle=lf.drops?rgb(mix(avgCol,BROWN,.4)):rgb(mix(avgCol,[90,120,60],.3));x.lineWidth=0.14*k;x.lineCap='round';
+ x.beginPath();x.moveTo((M.x0-(lf.plucked?0.9:1.6))*k,(M.yc+(lf.plucked?0.1:0.4))*k);x.quadraticCurveTo((M.x0-0.4)*k,(M.yc+0.05)*k,M.x0*k,M.yc*k);x.stroke();
+ x.drawImage(off,0,0,w,h);
+ // black paper strip (on the plant only)
+ if(lf.plant==='A'&&!lf.plucked){var s=stripX()*k,sw=S.sess.w*k,t=(M.yc-M.W/2-0.35)*k,bh=(M.W+0.7)*k;
+  x.save();x.globalAlpha=lf.cover?0.97:0.7;x.fillStyle='#0b0b0d';x.fillRect(s,t,sw,bh);x.globalAlpha=1;
+  x.strokeStyle=lf.cover?'#3a3a40':'#e8cc6a';x.setLineDash(lf.cover?[]:[5,4]);x.lineWidth=1.5;x.strokeRect(s,t,sw,bh);x.setLineDash([]);
+  if(lf.cover){[t-0.18*k,t+bh-0.12*k].forEach(function(cy){var g=x.createLinearGradient(0,cy,0,cy+0.3*k);g.addColorStop(0,'#e3e8ee');g.addColorStop(1,'#6d7682');x.fillStyle=g;x.fillRect(s+sw*0.2,cy,sw*0.6,0.3*k)})}
+  x.restore();
+  x.fillStyle='#e8cc6a';x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(lf.cover?(lf.cover==='both'?'clipped · both surfaces':'clipped · upper surface only'):'strip not clipped yet',s+sw/2,Math.max(14,t-6));
+  if(S.helper){x.fillText('strip: '+S.sess.strip.toFixed(1)+'–'+(S.sess.strip+S.sess.w).toFixed(1)+' cm from leaf base',w/2,h-8)}}
+ // grid + ticks in step 3
+ if(S.step==='obs'){x.strokeStyle='rgba(30,90,200,.55)';x.lineWidth=1;x.beginPath();for(var i=0;i<=CW;i++){x.moveTo(i*k,0);x.lineTo(i*k,h)}for(var j=0;j<=CH;j++){x.moveTo(0,j*k);x.lineTo(w,j*k)}x.stroke();
+  var T=S.helper?truth():null;
+  for(var key in (T?T.cells:{})){var c=T.cells[key],ij=key.split(',');if(!c.leaf)continue;x.strokeStyle=c.blue?'rgba(0,200,255,.9)':'rgba(232,204,106,.9)';x.lineWidth=2;x.strokeRect(+ij[0]*k+3,+ij[1]*k+3,k-6,k-6)}
+  x.textAlign='center';x.textBaseline='middle';
+  Object.keys(lf.ticks.leaf).forEach(function(key){var ij=key.split(',');x.fillStyle='rgba(232,140,20,.95)';x.beginPath();x.arc(+ij[0]*k+k*0.22,+ij[1]*k+k*0.22,Math.max(4,k*0.09),0,7);x.fill()});
+  Object.keys(lf.ticks.blue).forEach(function(key){var ij=key.split(',');x.fillStyle='#19e3a0';x.font='800 '+Math.round(k*0.42)+'px Inter, sans-serif';x.fillText('✓',+ij[0]*k+k*0.66,+ij[1]*k+k*0.62)});
+  x.textBaseline='alphabetic'}
+ // dish image for the bench (throttled)
+ if(lf.loc==='dish'&&Date.now()-dishT>280){dishT=Date.now();try{dishURL=off.toDataURL();if(B.dishImg)B.dishImg.setAttribute('href',dishURL)}catch(e){}}
+}
+/* pointer: drag the strip in step 1, tap squares in step 3 */
+var drag=null;
+function cvPt(e){var r=cv.getBoundingClientRect();return {x:(e.clientX-r.left)/r.width*CW,y:(e.clientY-r.top)/r.height*CH}}
+function canMoveStrip(){var lf=S.leaf;return S.step==='prep'&&lf.plant==='A'&&lf.light==null&&!run.busy}
+cv.addEventListener('pointerdown',function(e){var p=cvPt(e);
+ if(canMoveStrip()&&p.x>stripX()-0.4&&p.x<stripX()+S.sess.w+0.4){drag={dx:p.x-stripX(),id:e.pointerId};cv.setPointerCapture(e.pointerId);e.preventDefault()}
+ else drag={tap:true,x:p.x,y:p.y}});
+cv.addEventListener('pointermove',function(e){if(!drag||drag.tap)return;var p=cvPt(e);moveStrip(p.x-drag.dx-M.x0)});
+cv.addEventListener('pointerup',function(e){var d=drag;drag=null;if(!d||!d.tap||S.step!=='obs')return;var p=cvPt(e);if(Math.abs(p.x-d.x)>0.3||Math.abs(p.y-d.y)>0.3)return;
+ var key=Math.floor(p.x)+','+Math.floor(p.y),set=S.leaf.ticks[S.tickMode];if(set[key])delete set[key];else set[key]=1;save();updCounts();drawCv()});
+cv.addEventListener('pointercancel',function(){drag=null});
+cv.addEventListener('keydown',function(e){if(!canMoveStrip())return;var d=e.shiftKey?0.5:0.1;if(e.key==='ArrowLeft'){moveStrip(S.sess.strip-d);e.preventDefault()}if(e.key==='ArrowRight'){moveStrip(S.sess.strip+d);e.preventDefault()}});
+function moveStrip(v){if(!canMoveStrip())return;var was=S.leaf.cover;S.sess.strip=v;clampStrip();if(was){S.leaf.cover=null;say('The strip moved, so it is no longer clipped. Clip it again.','bad')}TR=null;dirty=true;save();render()}
+document.querySelectorAll('#stripNudge button').forEach(function(b){b.onclick=function(){moveStrip(S.sess.strip+parseFloat(b.dataset.d))}});
+
+/* ───────── bench (SVG) ───────── */
+var bench=$('bench'),B={};
+(function buildBench(){
+ el('defs',{},bench).innerHTML=
+ '<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1420"/><stop offset="1" stop-color="#18202d"/></linearGradient>'+
+ '<linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset=".1" stop-color="#5a3c24"/><stop offset="1" stop-color="#2e1d10"/></linearGradient>'+
+ '<linearGradient id="cup" x1="0" x2="1"><stop offset="0" stop-color="#4a3220"/><stop offset=".5" stop-color="#6b4a2e"/><stop offset="1" stop-color="#3a2616"/></linearGradient>'+
+ '<linearGradient id="pot" x1="0" x2="1"><stop offset="0" stop-color="#8a3f1f"/><stop offset=".45" stop-color="#c9673a"/><stop offset="1" stop-color="#7a3518"/></linearGradient>'+
+ '<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fc2ff"/><stop offset="1" stop-color="#d9f0ff"/></linearGradient>'+
+ '<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2b0" stop-opacity=".45"/><stop offset="1" stop-color="#fff2b0" stop-opacity=".05"/></linearGradient>'+
+ '<radialGradient id="sun"><stop offset="0" stop-color="#fffbe0"/><stop offset=".5" stop-color="#ffd45c"/><stop offset="1" stop-color="#ffb02e" stop-opacity="0"/></radialGradient>'+
+ '<linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#9fd6ff" stop-opacity=".38"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".1"/><stop offset="1" stop-color="#7cc3f2" stop-opacity=".38"/></linearGradient>'+
+ '<linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe4ea"/><stop offset="1" stop-color="#5a636e"/></linearGradient>'+
+ '<radialGradient id="flame" cx=".5" cy=".8" r=".7"><stop offset="0" stop-color="#e6f3ff"/><stop offset=".5" stop-color="#5aa0ff"/><stop offset="1" stop-color="#2b5fd9" stop-opacity=".6"/></radialGradient>'+
+ '<linearGradient id="iod" x1="0" x2="1"><stop offset="0" stop-color="#4a2306"/><stop offset=".5" stop-color="#8a4a12"/><stop offset="1" stop-color="#3a1a04"/></linearGradient>';
+ el('rect',{x:0,y:0,width:1000,height:360,fill:'url(#wall)'},bench);
+ el('rect',{x:0,y:300,width:1000,height:60,fill:'url(#wood)'},bench);
+ var tB='font-family:Inter,sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;fill:#c9d6e6';
+ /* scene 1: cupboard, clock, window */
+ var g1=B.g1=el('g',{},bench);
+ g1.innerHTML='<rect x="40" y="50" width="260" height="250" rx="4" fill="url(#cup)"/><rect x="56" y="66" width="228" height="222" fill="#030405"/>'+
+  '<text x="170" y="330" text-anchor="middle" style="'+tB+'">DARK CUPBOARD</text>'+
+  '<rect x="700" y="40" width="260" height="160" rx="4" fill="#3b3326"/><rect x="712" y="52" width="236" height="136" fill="url(#sky)"/><circle cx="890" cy="96" r="44" fill="url(#sun)"/><path d="M830 52v136M712 120h236" stroke="#3b3326" stroke-width="6"/>'+
+  '<text x="830" y="330" text-anchor="middle" style="'+tB+'">SUNLIGHT</text>';
+ B.beam=el('polygon',{points:'712,188 948,188 980,300 640,300',fill:'url(#beam)',opacity:0},g1);
+ var ck=el('g',{transform:'translate(370 104)'},g1);
+ ck.innerHTML='<circle r="36" fill="#f4f1e4" stroke="#9aa3ae" stroke-width="4"/><path d="M0 -30v6M30 0h-6M0 30v-6M-30 0h6" stroke="#333" stroke-width="2.5"/><circle r="3" fill="#333"/>';
+ B.hand=el('line',{x1:0,y1:0,x2:0,y2:-24,stroke:'#b3261e','stroke-width':3,'stroke-linecap':'round'},ck);
+ B.clockT=el('text',{x:0,y:-46,'text-anchor':'middle',style:'font-family:JetBrains Mono,monospace;font-size:15px;font-weight:700;fill:#e8cc6a'},ck);
+ // plant (moves between cupboard, bench and sunlight)
+ var P=B.plant=el('g',{class:'plant'},g1);
+ P.innerHTML='<path d="M-38 300 L-46 250 h92 L38 300Z" fill="url(#pot)"/><rect x="-52" y="242" width="104" height="12" rx="3" fill="#a24f2a"/><ellipse cx="0" cy="246" rx="46" ry="5" fill="#3b2614"/>'+
+  '<path d="M0 246 C-2 200 4 160 0 112" stroke="#3f7d2c" stroke-width="5" fill="none"/>';
+ B.small=[];[[0,206,-1],[0,170,-1],[0,140,1],[0,116,-1]].forEach(function(a,i){var p=el('path',{d:'M0 0 C-14 -12 -40 -12 -56 2 C-38 12 -14 10 0 0Z',transform:'translate(0 '+a[1]+') scale('+(a[2])+' 1) rotate('+(i%2?14:-10)+')',fill:'#3f8f3a',stroke:'#2a6a2a'},P);B.small.push(p)});
+ var tl=B.tleaf=el('g',{transform:'translate(2 186) rotate(-16)'},P);
+ B.tlPath=el('path',{d:'M0 0 C30 -28 86 -32 132 -2 C86 26 30 24 0 0Z',fill:'#3f8f3a',stroke:'#2a6a2a','stroke-width':1.2},tl);
+ B.tlVar=el('path',{d:'M0 0 C30 -28 86 -32 132 -2 C86 26 30 24 0 0Z',fill:'none',stroke:'#e8de96','stroke-width':5,opacity:0},tl);
+ el('path',{d:'M2 0 L128 -2',stroke:'#a8dd88','stroke-width':1.3},tl);
+ B.tlStrip=el('rect',{x:50,y:-34,width:26,height:66,rx:2,fill:'#0b0b0d'},tl);
+ B.tlClip=el('g',{},tl);
+ /* scene 2: boiling water, water bath, warm water, petri dish */
+ var g2=B.g2=el('g',{},bench);
+ function stand(cx){return '<path d="M'+(cx-46)+' 300 l12 -88 M'+(cx+46)+' 300 l-12 -88 M'+cx+' 300 v-88" stroke="#5a636e" stroke-width="4"/><rect x="'+(cx-58)+'" y="206" width="116" height="7" rx="2" fill="url(#steel)"/>'+
+  '<rect x="'+(cx-12)+'" y="262" width="24" height="38" rx="3" fill="#3a414b"/><rect x="'+(cx-20)+'" y="294" width="40" height="7" rx="2" fill="#2d333c"/>'}
+ g2.innerHTML=stand(150)+stand(400)+
+  '<path d="M104 112 h92 v90 q0 4 -4 4 h-84 q-4 0 -4 -4Z" fill="url(#glass)" stroke="#cfe8ff" stroke-width="1.5"/><rect x="106" y="134" width="88" height="70" fill="#9cc9e8" opacity=".35"/>'+
+  '<path d="M344 112 h112 v90 q0 4 -4 4 h-104 q-4 0 -4 -4Z" fill="url(#glass)" stroke="#cfe8ff" stroke-width="1.5"/><rect x="346" y="134" width="108" height="70" fill="#9cc9e8" opacity=".35"/>'+
+  '<path d="M560 214 h82 v82 q0 4 -4 4 h-74 q-4 0 -4 -4Z" fill="url(#glass)" stroke="#cfe8ff" stroke-width="1.5"/><rect x="562" y="232" width="78" height="66" fill="#bfe0f2" opacity=".35"/>'+
+  '<path class="steam" d="M584 206 q-8 -14 0 -26 q8 -12 0 -24 M616 206 q-8 -14 0 -26 q8 -12 0 -24" stroke="#fff" stroke-opacity=".25" stroke-width="3" fill="none"/>'+
+  '<rect x="690" y="290" width="270" height="10" rx="2" fill="#f2f4f5"/>'+
+  '<rect x="940" y="196" width="40" height="94" rx="8" fill="url(#iod)"/><rect x="946" y="180" width="28" height="18" rx="3" fill="#2d333c"/><rect x="944" y="226" width="32" height="30" fill="#f4f1e4"/><text x="960" y="245" text-anchor="middle" style="font:700 9px Inter,sans-serif;fill:#3a1a04">IODINE</text>'+
+  '<text x="150" y="332" text-anchor="middle" style="'+tB+'">BOILING WATER</text><text x="400" y="332" text-anchor="middle" style="'+tB+'">ALCOHOL · WATER BATH</text><text x="600" y="332" text-anchor="middle" style="'+tB+'">WARM WATER</text><text x="820" y="332" text-anchor="middle" style="'+tB+'">PETRI DISH · IODINE</text>';
+ B.fl1=el('path',{class:'fl',d:'M150 222 C160 236 162 250 150 262 C138 250 140 236 150 222Z',fill:'url(#flame)'},g2);
+ B.fl2=el('path',{class:'fl',d:'M400 222 C410 236 412 250 400 262 C388 250 390 236 400 222Z',fill:'url(#flame)'},g2);
+ function bubbles(x0,x1,y){var g=el('g',{},g2);for(var i=0;i<7;i++)el('circle',{class:'bub',cx:x0+(x1-x0)*(i+.5)/7,cy:y-(i%3)*6,r:1.8+(i%3)*0.8,fill:'#fff',opacity:.85},g);return g}
+ B.bub1=bubbles(110,190,202);B.bub2=bubbles(350,450,202);
+ B.tube=el('rect',{x:386,y:58,width:28,height:144,rx:14,fill:'url(#glass)',stroke:'#e6f4ff','stroke-width':1.4},g2);
+ B.alcFill=el('rect',{x:389,y:104,width:22,height:95,rx:10,fill:'#dfeef2',opacity:.75},g2);
+ // leaf token (in beaker / tube / warm water)
+ B.tok=el('path',{d:'M0 0 C12 -12 34 -13 52 -1 C34 11 12 10 0 0Z',fill:'#3f8f3a',stroke:'rgba(0,0,0,.35)'},g2);
+ // petri dish with the real leaf image
+ el('ellipse',{cx:820,cy:282,rx:116,ry:22,fill:'#e9eef2',opacity:.25,stroke:'#d8f0ff','stroke-width':1.5},g2);
+ B.dishImg=el('image',{x:710,y:-50,width:220,height:128,transform:'translate(0 296) scale(1 .4) translate(0 -64)',preserveAspectRatio:'none',opacity:0},g2);
+ el('ellipse',{cx:820,cy:280,rx:116,ry:22,fill:'none',stroke:'#d8f0ff','stroke-width':1.2,opacity:.75},g2);
+ var dr=B.dropper=el('g',{transform:'translate(820 120)'},g2);
+ dr.innerHTML='<rect x="-9" y="-18" width="18" height="26" rx="7" fill="#2d333c"/><path d="M-6 8 h12 v52 l-6 14 l-6 -14Z" fill="url(#glass)" stroke="#d8f0ff"/><path d="M-4 40 h8 v20 l-4 10 l-4 -10Z" fill="#8a4a12" opacity=".85"/>';
+ B.dropLayer=el('g',{},g2);
+})();
+function plantX(){var lf=S.leaf;if(B._pos)return B._pos;return lf.light!=null&&lf.light>0?830:470}
+function renderBench(){var lf=S.leaf,scene1=S.step==='prep';
+ B.g1.style.display=scene1?'':'none';B.g2.style.display=scene1?'none':'';
+ if(scene1){B.plant.style.transform='translate('+plantX()+'px,0px)';B.plant.style.filter=plantX()===170?'brightness(.3)':'';
+  var col=rgb(avgCol);B.tlPath.setAttribute('fill',lf.plucked?'none':col);B.tlVar.setAttribute('opacity',lf.plant==='B'?0.95:0);
+  B.small.forEach(function(p){p.setAttribute('stroke',lf.plant==='B'?'#e8de96':'#2a6a2a');p.setAttribute('stroke-width',lf.plant==='B'?3:1)});
+  var showStrip=lf.plant==='A'&&!lf.plucked;B.tlStrip.style.display=showStrip?'':'none';
+  B.tlStrip.setAttribute('x',(132*S.sess.strip/M.L).toFixed(1));B.tlStrip.setAttribute('width',(132*S.sess.w/M.L).toFixed(1));B.tlStrip.setAttribute('opacity',lf.cover?1:0.55);
+  B.tlClip.innerHTML=showStrip&&lf.cover?'<rect x="'+(132*S.sess.strip/M.L+4).toFixed(1)+'" y="-38" width="'+(132*S.sess.w/M.L-8).toFixed(1)+'" height="7" rx="2" fill="#9aa3ae"/><rect x="'+(132*S.sess.strip/M.L+4).toFixed(1)+'" y="28" width="'+(132*S.sess.w/M.L-8).toFixed(1)+'" height="7" rx="2" fill="#9aa3ae"/>':'';
+  B.beam.setAttribute('opacity',B._sun?1:0)}
+ else{B.fl1.style.display=run.boil?'':'none';B.bub1.style.display=run.boil?'':'none';
+  B.fl2.style.display=run.alc?'':'none';B.bub2.style.display=run.alc?'':'none';
+  var C=Math.exp(-lf.alc/3),inTube=lf.alc>0;B.alcFill.setAttribute('fill',inTube?rgb(mix([96,170,64],[223,238,242],C)):'#dfeef2');
+  var t=B.tok,c=rgb(avgCol);t.setAttribute('fill',c);t.style.display='';
+  if(lf.loc==='beaker')t.setAttribute('transform','translate(124 170) rotate(8)');
+  else if(lf.loc==='tube')t.setAttribute('transform','translate(406 128) rotate(84) scale(.95 .7)');
+  else if(lf.loc==='rinse')t.setAttribute('transform','translate(576 262) rotate(-6)');
+  else if(lf.loc==='hand')t.setAttribute('transform','translate(250 285) rotate(-4)');
+  else t.style.display='none';
+  B.dishImg.setAttribute('opacity',lf.loc==='dish'?1:0)}
+}
+function scrollBenchTo(x){var bs=$('benchScroll');if(bs.scrollWidth>bs.clientWidth+4){var px=x/1000*bs.scrollWidth;bs.scrollLeft=px-bs.clientWidth/2}}
+function dropAnim(){var d=el('circle',{class:'dropF',cx:820,cy:196,r:4.5,fill:'#8a4a12'},B.dropLayer);setTimeout(function(){d.remove()},800)}
+
+/* ───────── controls ───────── */
+var msgEl=$('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+function chips(id,attr,val,fn){document.querySelectorAll('#'+id+' .chip').forEach(function(b){b.classList.toggle('on',String(b.dataset[attr])===String(val));b.onclick=function(){fn(b.dataset[attr])}})}
+function anim(ms,step,done){var t0=performance.now();run.busy=true;(function f(now){var p=clamp((now-t0)/ms,0,1);step(p);if(p<1)requestAnimationFrame(f);else{run.busy=false;done()}})(t0)}
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('darkBtn').onclick=function(){var lf=S.leaf;if(run.busy)return;if(lf.darkSel==null){say('First choose how long the plant stays in the dark.','bad');return}
+ if(lf.light!=null){say('The plant has already been in sunlight. Use “Test another leaf” to start again.','bad');return}
+ var h=+lf.darkSel;scrollBenchTo(170);B._pos=170;render();
+ anim(reduce?10:2400,function(p){B.hand.setAttribute('transform','rotate('+(p*h/12*360)+')');B.clockT.textContent=Math.round(p*h)+' h in dark'},function(){lf.dark=h;B._pos=null;TR=null;dirty=true;save();render();
+  say(h>=48?'The plant spent '+h+' hours in the dark. Its leaves should now be free of starch.':h===0?'You skipped destarching. Old starch is still in the leaves.':'Only 24 hours in the dark: some old starch may still be left in the leaves.',h>=48?'ok':'bad')})};
+$('sunBtn').onclick=function(){var lf=S.leaf;if(run.busy)return;
+ if(lf.dark==null){say('Destarch the plant first: keep it in the dark cupboard (choose 0 h only if you want to see what goes wrong).','bad');return}
+ if(lf.plant==='A'&&!lf.cover){say('Clip the black paper strip onto the leaf before giving it light.','bad');return}
+ if(lf.lightSel==null){say('Choose how many hours of sunlight to give.','bad');return}
+ if(lf.light!=null){say('This leaf has already had its light. Pluck it now.','bad');return}
+ var h=+lf.lightSel;
+ if(h===0){lf.light=0;save();render();say('Control: the plant stays in the dark, with no light at all. Now pluck the leaf.','ok');return}
+ scrollBenchTo(830);B._pos=830;B._sun=true;render();
+ anim(reduce?10:2200,function(p){B.hand.setAttribute('transform','rotate('+(p*h/12*360)+')');B.clockT.textContent=(p*h).toFixed(1)+' h in sun'},function(){lf.light=h;B._pos=null;TR=null;dirty=true;save();render();say(h+' hours of sunlight given. Pluck the leaf to test it.','ok')})};
+$('pluckBtn').onclick=function(){var lf=S.leaf;if(run.busy)return;if(lf.light==null){say('Give the plant its light (or the 0 h control) before plucking the leaf.','bad');return}
+ lf.plucked=true;lf.loc='hand';B._sun=false;dirty=true;save();setStep('test');say('Leaf plucked'+(lf.plant==='A'?' and the black paper removed':'')+'. Now boil it in water.','ok')};
+function stopTimers(){run.boil=false;run.alc=false}
+$('boilBtn').onclick=function(){var lf=S.leaf;if(lf.alc>0||lf.drops)return;if(run.boil){run.boil=false;say('Leaf boiled for '+lf.boil.toFixed(1)+' min.',lf.boil>=3?'ok':'bad')}else{stopTimers();run.boil=true;lf.loc='beaker';scrollBenchTo(150);say('Boiling… stop after about 3–5 minutes.','')}save();render()};
+$('alcBtn').onclick=function(){var lf=S.leaf;if(lf.rinsed||lf.drops)return;if(run.alc){run.alc=false;say('Leaf kept in hot alcohol for '+lf.alc.toFixed(1)+' min.',lf.alc>=8?'ok':'bad')}else{stopTimers();run.alc=true;lf.loc='tube';scrollBenchTo(400);say('The water bath heats the alcohol. Watch the leaf lose its green colour.','')}save();render()};
+$('rinseBtn').onclick=function(){var lf=S.leaf;if(lf.drops)return;stopTimers();lf.rinsed=true;lf.loc='rinse';scrollBenchTo(600);dirty=true;save();render();say('Rinsed in warm water: the leaf is soft again. Spread it in the petri dish and add iodine.','ok')};
+$('dropBtn').onclick=function(){var lf=S.leaf;if(S.step!=='test')return;if(lf.drops>=10){say('That is plenty of iodine.','bad');return}stopTimers();
+ if(!lf.drops&&lf.loc!=='dish'){lf.loc='dish'}lf.drops++;lf.iodT=Date.now();scrollBenchTo(820);dropAnim();TR=null;dirty=true;dishT=0;save();render();
+ say(lf.drops<5?'Iodine is spreading over the leaf ('+lf.drops+' drop'+(lf.drops>1?'s':'')+'). Keep adding until it covers the whole leaf.':'The leaf is covered. Wait a moment for the colour, then go to Step 3.','ok')};
+$('toObs').onclick=function(){if(!S.leaf.drops){say('Add iodine first.','bad');return}setStep('obs')};
+$('recBtn').onclick=function(){var lf=S.leaf;if(lf.recorded){say('This leaf is already in the table. Test another leaf.','bad');return}
+ if(dev()<1){say('Wait a few seconds: the iodine colour is still developing.','bad');return}
+ if(S.rows.length>=10){say('Ten leaves is plenty. Delete one to add another.','bad');return}
+ var T=truth();S.rows.push({t:{no:lf.no,plant:lf.plant,dark:lf.dark,light:lf.light,cover:lf.cover,boil:r1(lf.boil),alc:r1(lf.alc),rinsed:lf.rinsed,drops:lf.drops,tot:T.tot,blue:T.blue,catC:T.catC,catE:T.catE,covPct:T.covPct},cC:'',cE:'',tot:'',bb:''});
+ lf.recorded=true;save();renderTable();say('Leaf '+lf.no+' added to the table. Choose the colours and type your two counts there.','ok');
+ setTimeout(function(){var s=document.querySelector('#tb tr:last-child select');if(s)s.focus({preventScroll:true})},50)};
+$('againBtn').onclick=function(){if(run.busy)return;stopTimers();if(!S.leaf.recorded&&S.leaf.drops&&!confirmInline(this,'↺ Test another leaf'))return;newLeaf();save();setStep('prep');say('A fresh leaf on plant '+S.leaf.plant+'. Start again from the dark cupboard.','ok')};
+$('newPlant').onclick=function(){if(run.busy)return;if(S.rows.length&&!confirmInline(this,'↺ New plant'))return;stopTimers();newSess();save();renderTable();setStep('prep');say('A new plant is on the bench. Its leaf size and the strip width are new.','ok')};
+function confirmInline(btn,label){if(btn.dataset.sure){delete btn.dataset.sure;btn.textContent=label;return true}
+ btn.dataset.sure=1;btn.textContent='Tap again to confirm';setTimeout(function(){delete btn.dataset.sure;btn.textContent=label},3500);return false}
+$('helper').onchange=function(){S.helper=this.checked;render()};
+document.querySelectorAll('#tickMode .chip[data-m]').forEach(function(b){b.onclick=function(){S.tickMode=b.dataset.m;document.querySelectorAll('#tickMode .chip[data-m]').forEach(function(c){c.classList.toggle('on',c===b)})}});
+$('clearTicks').onclick=function(){S.leaf.ticks={leaf:{},blue:{}};save();updCounts();drawCv()};
+function updCounts(){$('nLeaf').textContent=Object.keys(S.leaf.ticks.leaf).length;$('nBlue').textContent=Object.keys(S.leaf.ticks.blue).length}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){if(!t.disabled)setStep(t.dataset.step)}});
+function setStep(s){S.step=s;save();render();if(s==='obs'){var bx=$('leafBox');bx.scrollIntoView&&bx.scrollIntoView({block:'nearest'})}}
+
+/* ───────── main render ───────── */
+var NAMES={brown:'Yellowish-brown',blue:'Blue-black',patchy:'Patchy / pale blue',na:'—'};
+function render(){var lf=S.leaf,st=S.step;
+ document.querySelectorAll('.tab').forEach(function(t){var s=t.dataset.step;t.classList.toggle('on',s===st);t.disabled=s==='prep'?lf.plucked:s==='test'?!lf.plucked:!lf.drops});
+ $('pPrep').hidden=st!=='prep';$('pTest').hidden=st!=='test';$('pObs').hidden=st!=='obs';$('countBox').hidden=st!=='obs';
+ $('leafBox').classList.toggle('count',st==='obs');
+ $('leafTag').textContent='Plant '+S.sess.plantNo+lf.plant+' · leaf '+lf.no;
+ $('plantTag').textContent=lf.plant==='A'?'green leaf + strip':'variegated leaf';
+ $('ctrlTitle').textContent=st==='prep'?'Prepare the plant':st==='test'?'Starch test':'Observe and count';
+ cv.classList.toggle('dragok',canMoveStrip());
+ // step 1 controls
+ var locked=lf.dark!=null||run.busy;
+ chips('plantSel','p',lf.plant,function(p){if(lf.dark!=null||run.busy){say('Choose the plant before it goes into the dark. Use “Test another leaf” to switch.','bad');return}lf.plant=p;TR=null;dirty=true;save();render()});
+ chips('darkSel','h',lf.darkSel,function(h){if(lf.dark!=null){say('The plant has already been in the dark for '+lf.dark+' h.','bad');return}lf.darkSel=+h;save();render()});
+ chips('coverSel','c',lf.cover,function(c){if(lf.light!=null){say('The leaf has already had its light.','bad');return}lf.cover=c;TR=null;dirty=true;save();render();say(c==='both'?'Strip clipped on both surfaces: no light can reach the covered part.':'Strip clipped on the upper surface only.',c==='both'?'ok':'')});
+ chips('lightSel','h',lf.lightSel,function(h){if(lf.light!=null){say('The leaf has already had its light.','bad');return}lf.lightSel=+h;save();render()});
+ document.querySelectorAll('#plantSel .chip').forEach(function(b){b.disabled=locked});
+ document.querySelectorAll('#darkSel .chip').forEach(function(b){b.disabled=lf.dark!=null});
+ $('darkBtn').disabled=lf.dark!=null;$('stripBox').hidden=lf.plant!=='A';
+ document.querySelectorAll('#stripNudge button,#coverSel .chip').forEach(function(b){b.disabled=lf.light!=null});
+ document.querySelectorAll('#lightSel .chip').forEach(function(b){b.disabled=lf.light!=null});
+ $('sunBtn').disabled=lf.light!=null;$('pluckBtn').disabled=lf.light==null;
+ if(!run.busy){var hh=lf.light!=null?lf.light:lf.dark!=null?lf.dark:0;B.hand.setAttribute('transform','rotate('+(hh/12*360)+')');B.clockT.textContent=lf.light!=null?lf.light+' h in sun':lf.dark!=null?lf.dark+' h in dark':'0 h'}
+ // step 2 controls
+ $('tBoil').textContent=lf.boil.toFixed(1)+' min';$('tAlc').textContent=lf.alc.toFixed(1)+' min';$('tRinse').textContent=lf.rinsed?'done':'—';$('tIod').textContent=lf.drops+' drop'+(lf.drops===1?'':'s');
+ var bb=$('boilBtn'),ab=$('alcBtn');bb.textContent=run.boil?'■ Stop boiling':'▶ Start boiling';bb.className='btn '+(run.boil?'stop':'run');bb.disabled=lf.alc>0||lf.drops>0;
+ ab.textContent=run.alc?'■ Take out of the bath':'▶ Start water bath';ab.className='btn '+(run.alc?'stop':'run');ab.disabled=lf.rinsed||lf.drops>0;
+ $('rinseBtn').disabled=lf.rinsed||lf.drops>0;$('toObs').disabled=!lf.drops;
+ var cur=lf.drops?'sIod':lf.rinsed?'sIod':lf.alc>0?'sAlc':lf.boil>0?'sBoil':'sBoil';
+ ['sBoil','sAlc','sRinse','sIod'].forEach(function(id){var e=$(id);e.classList.toggle('cur',id===cur);e.classList.toggle('done',(id==='sBoil'&&lf.boil>=3&&cur!=='sBoil')||(id==='sAlc'&&lf.alc>=8&&!run.alc&&cur!=='sAlc')||(id==='sRinse'&&lf.rinsed)||(id==='sIod'&&lf.drops>=5))});
+ if(S.helper&&st==='test'){$('tBoil').textContent+=' (≥3)';$('tAlc').textContent+=' (≥8)'}
+ // step 3
+ $('recBtn').disabled=lf.recorded;updCounts();
+ // task line + caption
+ var task='';
+ if(st==='prep'){
+  if(lf.dark==null)task='<b>Step 1.</b> Choose plant <b>A</b> (green leaf, to test light) or <b>B</b> (variegated leaf, to test chlorophyll). Then destarch it: keep it in the <b>dark cupboard</b>. How long is long enough?';
+  else if(lf.plant==='A'&&!lf.cover)task='<b>Step 1.</b> Slide the black paper strip across the leaf (drag it on the close-up, or use the buttons), then <b>clip</b> it. Think about which surfaces need covering.';
+  else if(lf.light==null)task='<b>Step 1.</b> Choose the hours of sunlight and press <b>Place in sunlight</b>. Test several leaves with different times, and one 0 h control.';
+  else task='<b>Step 1.</b> Done. <b>Pluck the leaf</b> and take it to the starch-test bench.'}
+ else if(st==='test'){
+  if(!lf.boil&&!lf.alc&&!lf.drops)task='<b>Step 2.</b> Put the leaf in <b>boiling water</b>. Stop the timer after a few minutes.';
+  else if(!lf.alc&&!lf.drops)task='<b>Step 2.</b> Now move the leaf to the boiling tube of <b>alcohol in the water bath</b>. Take it out when it is pale.';
+  else if(!lf.rinsed&&!lf.drops)task='<b>Step 2.</b> <b>Rinse</b> the leaf in warm water to soften it.';
+  else if(lf.drops<5)task='<b>Step 2.</b> Add <b>iodine</b> drop by drop until the whole leaf is covered.';
+  else task='<b>Step 2.</b> Watch the colour appear on the leaf, then go to <b>Observe →</b>.'}
+ else task='<b>Step 3.</b> Look at the leaf on the 1 cm grid. Tap squares to tick them as you count, press <b>Record this leaf</b>, then fill in its row in the table.';
+ $('task').innerHTML=task;
+ var cap='';
+ if(st==='prep')cap=lf.plant==='A'?'Close-up of the test leaf on the plant. '+(canMoveStrip()?'Drag the black strip sideways, or select the leaf and use ← →.':'')+'':'Close-up of a variegated leaf: the cream parts have no chlorophyll.';
+ else if(st==='test')cap=lf.drops?'The leaf in the petri dish, with iodine.':lf.alc>0?'Chlorophyll is leaving the leaf: '+Math.round((1-Math.exp(-lf.alc/3))*100)+'% gone'+(S.helper?'':'')+'.':'The plucked leaf.';
+ else{cap='1 cm grid laid on the leaf.';if(S.helper){var T=truth();cap+=' Helper: '+T.tot+' leaf squares, '+T.blue+' blue-black; covered part '+NAMES[T.catC].toLowerCase()+', uncovered part '+NAMES[T.catE].toLowerCase()+'.'}}
+ $('leafCap').textContent=cap;
+ $('hint').textContent=st==='prep'?'Dark cupboard  →  bench  →  sunlight':'Boiling water  →  alcohol bath  →  warm water  →  iodine';
+ renderBench();drawCv()}
+
+/* timers: boiling / water bath / colour development */
+setInterval(function(){var lf=S.leaf,ch=false;
+ if(run.boil){lf.boil=Math.min(15,lf.boil+120/MIN);ch=true;if(lf.boil>=15){run.boil=false;say('The leaf has boiled for 15 minutes; that is more than enough.','')}}
+ if(run.alc){lf.alc=Math.min(20,lf.alc+120/MIN);ch=true;if(lf.alc>=20){run.alc=false}}
+ if(lf.drops&&Date.now()-lf.iodT<DEV+200)ch=true;
+ if(ch){dirty=true;TR=null;render();if(!run.boil&&!run.alc)save()}},120);
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(function(){drawCv();drawGraphs()},150)});
+
+/* ───────── table ───────── */
+var tb=$('tb');
+var OPTS='<option value="">— choose —</option><option value="brown">Yellowish-brown</option><option value="blue">Blue-black</option><option value="patchy">Patchy / pale blue</option>';
+function pct(r){var t=parseFloat(r.tot),b=parseFloat(r.bb);if(isNaN(t)||isNaN(b)||t<=0||b<0||b>t)return null;return b/t*100}
+function renderTable(){
+ $('nObs').textContent=S.rows.length+(S.rows.length===1?' leaf':' leaves');
+ if(!S.rows.length){tb.innerHTML='<tr><td colspan="10" class="note" style="padding:16px">No leaves tested yet. Finish Step 3 and press “Record this leaf”.</td></tr>';drawGraphs();renderResult();return}
+ tb.innerHTML='';S.rows.forEach(function(r,i){var tr=document.createElement('tr'),t=r.t;
+  tr.innerHTML='<td>'+(i+1)+'</td><td>'+t.plant+'<small>'+(t.plant==='A'?'strip':'variegated')+'</small></td><td class="n">'+t.dark+'</td><td class="n">'+t.light+'</td>'+
+   '<td><select data-k="cC" aria-label="colour of covered part">'+OPTS+'</select></td><td><select data-k="cE" aria-label="colour of uncovered part">'+OPTS+'</select></td>'+
+   '<td><input data-k="tot" inputmode="numeric" aria-label="total leaf squares" value="'+r.tot+'"></td><td><input data-k="bb" inputmode="numeric" aria-label="blue-black squares" value="'+r.bb+'"></td>'+
+   '<td class="n pc"></td><td><button class="del" type="button" title="Delete" aria-label="Delete row">✕</button></td>';
+  tr.querySelectorAll('select').forEach(function(s){s.value=r[s.dataset.k];s.onchange=function(){r[s.dataset.k]=s.value;s.classList.remove('bad','good');save();drawGraphs();renderResult()}});
+  tr.querySelectorAll('input').forEach(function(inp){inp.oninput=function(){r[inp.dataset.k]=inp.value.trim();inp.classList.remove('bad','good');fill(tr,r);save();drawGraphs();renderResult()}});
+  tr.querySelector('.del').onclick=function(){S.rows.splice(i,1);save();renderTable()};
+  fill(tr,r);tb.appendChild(tr)});
+ drawGraphs();renderResult()}
+function fill(tr,r){var p=pct(r);tr.querySelector('.pc').textContent=p==null?'–':p.toFixed(1)}
+function tolT(t){return Math.max(2,Math.round(t*0.06))}
+function tolB(t){return Math.max(2,Math.round(t*0.08))}
+function readOk(r){var t=r.t;return r.cC===t.catC&&r.cE===t.catE&&Math.abs(parseFloat(r.tot)-t.tot)<=tolT(t.tot)&&Math.abs(parseFloat(r.bb)-t.blue)<=tolB(t.tot)}
+function condProblems(t){var m=[];
+ if(t.dark<48)m.push(t.dark===0?'the plant was not destarched, so old starch is still in the leaf and the test proves nothing':'24 hours in the dark is not enough to destarch the plant fully; keep it in the dark for 48–72 hours');
+ if(t.plant==='A'&&t.cover==='upper')m.push('the strip covered only the upper surface, so light reached the “covered” part from below and the sides; clip it on both surfaces');
+ if(t.boil<3)m.push('the leaf was boiled in water for only '+t.boil.toFixed(1)+' min, so its cells were not killed and iodine could not get in evenly (boil 3–5 min)');
+ if(t.alc<8)m.push('the leaf stayed in hot alcohol for only '+t.alc.toFixed(1)+' min, so chlorophyll was left and the green colour hid the iodine colour (about 8–10 min)');
+ if(t.drops<5)m.push('only '+t.drops+' drop'+(t.drops===1?'':'s')+' of iodine: part of the leaf was never tested');
+ return m}
+function good(r){return readOk(r)&&!condProblems(r.t).length}
+$('check').onclick=function(){var fb=[],rows=tb.querySelectorAll('tr');
+ if(!S.rows.length){showFb(['Test and record at least one leaf first.']);return}
+ S.rows.forEach(function(r,i){var tr=rows[i],t=r.t,m=[];
+  [['cC',t.catC,'covered'],['cE',t.catE,'uncovered']].forEach(function(a){var s=tr.querySelector('select[data-k="'+a[0]+'"]'),ok=r[a[0]]===a[1];s.classList.toggle('bad',!ok);s.classList.toggle('good',ok);
+   if(!ok)m.push(r[a[0]]?'look again at the colour of the '+(t.plant==='B'?(a[2]==='covered'?'non-green':'green'):a[2])+' part'+(a[1]==='patchy'?' (it is neither fully brown nor fully blue-black)':''):'choose the colour of the '+(t.plant==='B'?(a[2]==='covered'?'non-green':'green'):a[2])+' part')});
+  var it=tr.querySelector('input[data-k="tot"]'),ib=tr.querySelector('input[data-k="bb"]'),vt=parseFloat(r.tot),vb=parseFloat(r.bb);
+  var okT=!isNaN(vt)&&Math.abs(vt-t.tot)<=tolT(t.tot),okB=!isNaN(vb)&&Math.abs(vb-t.blue)<=tolB(t.tot);
+  it.classList.toggle('bad',!okT);it.classList.toggle('good',okT);ib.classList.toggle('bad',!okB);ib.classList.toggle('good',okB);
+  if(!okT)m.push('recount the leaf squares: count a square only if more than half of it is on the leaf');
+  if(!okB)m.push('recount the blue-black squares: count one only if more than half of its leaf part is blue-black');
+  var c=condProblems(t);if(c.length)m.push('wrong conditions: '+c.join('; '));
+  tr.classList.toggle('flag',m.length>0);
+  if(m.length)fb.push('Leaf '+(i+1)+': '+m.join('; ')+'.')});
+ var gA=S.rows.filter(function(r){return r.t.plant==='A'&&good(r)}),hs={};gA.forEach(function(r){hs[r.t.light]=1});
+ if(gA.length<3||Object.keys(hs).length<3)fb.push('For the graph you need at least 3 correct plant-A leaves with 3 different light times (now '+gA.length+' leaves, '+Object.keys(hs).length+' different times).');
+ if(!gA.some(function(r){return r.t.light>=4}))fb.push('Give at least one plant-A leaf 4 hours or more of sunlight, so the starch has time to fill the whole uncovered part.');
+ if(!fb.length)fb.push('✓ All readings are correct and every leaf was tested properly. See your graph and result below.');
+ showFb(fb);renderResult(true)};
+function showFb(a){$('fb').innerHTML=a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+
+/* ───────── graph ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=$(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(300,r.width||560),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h}}
+function axes(g,xmax,ymax,xl,yl,xstep,ystep){
+ var x=g.x,L=56,Bm=44,R=16,T=16,W=g.w-L-R,H=g.h-T-Bm,txt=css('--text')||'#222',mut=css('--muted')||'#666',bd=css('--border')||'#ddd';
+ x.clearRect(0,0,g.w,g.h);x.font='12px Inter, sans-serif';x.lineWidth=1;
+ for(var v=0;v<=xmax+1e-9;v+=xstep){var px=L+v/xmax*W;x.strokeStyle=bd;x.beginPath();x.moveTo(px,T);x.lineTo(px,T+H);x.stroke();x.fillStyle=mut;x.textAlign='center';x.fillText(String(v),px,T+H+16)}
+ for(v=0;v<=ymax+1e-9;v+=ystep){var py=T+H-v/ymax*H;x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(String(v),L-6,py+4)}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T);x.lineTo(L,T+H);x.lineTo(L+W,T+H);x.stroke();
+ x.fillStyle=txt;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(14,T+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();
+ return function(a,b){return [L+a/xmax*W,T+H-b/ymax*H]}}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);g.x.fillStyle=css('--muted')||'#777';g.x.font='14px Inter, sans-serif';g.x.textAlign='center';g.x.fillText(t,g.w/2,g.h/2)}
+var FIT=null;
+function graphRows(){return S.rows.filter(function(r){return r.t.plant==='A'&&good(r)}).map(function(r){return {h:r.t.light,y:pct(r)}})}
+function drawGraphs(){var g=canvas('g1'),pts=graphRows(),hs={};FIT=null;pts.forEach(function(p){hs[p.h]=1});
+ if(pts.length<3||Object.keys(hs).length<3){empty(g,'Needs 3 correct plant-A leaves, 3 different times ('+pts.length+' so far)');return}
+ // least-squares fit of y = P(1 − e^(−t/τ)) by a grid search over τ (P solved exactly for each τ)
+ var best=null;for(var tau=0.2;tau<=8;tau+=0.02){var sxy=0,sxx=0;pts.forEach(function(p){var f=1-Math.exp(-p.h/tau);sxy+=f*p.y;sxx+=f*f});if(!sxx)continue;var P=Math.min(100,sxy/sxx),e=0;
+  pts.forEach(function(p){var d=p.y-P*(1-Math.exp(-p.h/tau));e+=d*d});if(!best||e<best.e)best={P:P,tau:tau,e:e}}
+ FIT=best;var gold=css('--gold')||'#c9a227',navy='#3b6fb8',red='#c0392b';
+ var P=axes(g,7,100,'Time in sunlight (h)','Starch (blue-black) area (%)',1,10),x=g.x;
+ x.strokeStyle=red;x.setLineDash([6,5]);x.lineWidth=1.5;x.beginPath();var a=P(0,best.P),b=P(7,best.P);x.moveTo(a[0],a[1]);x.lineTo(b[0],b[1]);x.stroke();x.setLineDash([]);
+ x.fillStyle=red;x.font='700 12px Inter, sans-serif';x.textAlign='left';x.fillText('plateau P ≈ '+best.P.toFixed(1)+'%',P(0.25,0)[0],b[1]+17);
+ x.strokeStyle=navy;x.lineWidth=2;x.beginPath();for(var t=0;t<=7.001;t+=0.05){var q=P(t,best.P*(1-Math.exp(-t/best.tau)));if(t===0)x.moveTo(q[0],q[1]);else x.lineTo(q[0],q[1])}x.stroke();
+ var c2=P(7,100-best.P),c1=P(7,0);x.strokeStyle='rgba(120,120,120,.6)';x.lineWidth=6;x.beginPath();x.moveTo(c1[0]-4,a[1]);x.lineTo(c1[0]-4,P(0,100)[1]);x.stroke();
+ x.fillStyle=css('--muted')||'#666';x.font='600 12px Inter, sans-serif';x.textAlign='right';x.fillText('100 − P ≈ '+(100-best.P).toFixed(1)+'% (covered)',c1[0]-12,P(0,100)[1]+16);
+ pts.forEach(function(p){var q=P(p.h,p.y);x.fillStyle=gold;x.strokeStyle='#5c4600';x.lineWidth=1;x.beginPath();x.arc(q[0],q[1],5,0,7);x.fill();x.stroke()})}
+
+/* ───────── result ───────── */
+function bestRow(){var g=S.rows.filter(function(r){return r.t.plant==='A'&&r.t.light>=4&&good(r)});if(!g.length)return null;g.sort(function(a,b){return b.t.light-a.t.light});return g[0]}
+function renderResult(fromCheck){var br=bestRow(),est=br?100-pct(br):null;
+ $('rT').textContent=est!=null?est.toFixed(1)+' %':'—';
+ $('rG').textContent=FIT?FIT.P.toFixed(1)+' %':'—';$('rG2').textContent=FIT?(100-FIT.P).toFixed(1)+' %':'—';
+ var tbx=$('trueBox');tbx.hidden=!(S.revealed&&br);if(br)$('rTrue').textContent=br.t.covPct.toFixed(1)+' %';
+ var e=$('err');if(S.revealed&&br){var s='Your covered-area estimate from leaf '+(S.rows.indexOf(br)+1)+' differs from the actual value by '+(Math.abs(est-br.t.covPct)/br.t.covPct*100).toFixed(1)+'%';if(FIT){var ga=S.rows.filter(function(r){return r.t.plant==='A'&&good(r)}),mc=ga.reduce(function(m,r){return m+r.t.covPct},0)/ga.length;s+='; the graph value (100 − P) differs from the average actual covered area of your graphed leaves ('+mc.toFixed(1)+'%) by '+(Math.abs(100-FIT.P-mc)/mc*100).toFixed(1)+'%'}e.textContent=s+'. The strip is only 2–3 squares wide, so each column of squares cut by its edges can swing the estimate: with a 1 cm grid a difference of up to about 30% is normal. A finer grid would give a closer value.'}else if(!fromCheck||S.revealed)e.textContent='';
+ // conclusion from the student's own correct rows
+ var gd=S.rows.filter(good),txt=[];
+ var lightRow=gd.filter(function(r){return r.t.plant==='A'&&r.t.light>0&&r.cC==='brown'&&r.cE==='blue'})[0];
+ if(lightRow)txt.push('In plant A the part under the black paper stayed <b>yellowish-brown</b> (no starch), while the uncovered part turned <b>blue-black</b> (starch). Starch was made only where light fell, so <b>light is necessary for photosynthesis</b>.');
+ if(gd.some(function(r){return r.t.plant==='A'&&r.t.light===0&&r.cE==='brown'}))txt.push('The 0 h control leaf showed no starch anywhere, which confirms the plant had been destarched.');
+ if(gd.some(function(r){return r.t.plant==='B'&&r.cC==='brown'&&r.cE==='blue'}))txt.push('In the variegated leaf only the green parts turned blue-black, so <b>chlorophyll is necessary for photosynthesis</b>.');
+ if(FIT)txt.push('The starch area grew with time in sunlight and levelled off at about '+FIT.P.toFixed(0)+'% of the leaf — the uncovered part.');
+ $('concl').innerHTML=txt.length?txt.join(' '):'Your conclusion appears here once you have correct readings in the table (press “Check my table”).'}
+$('reveal').onclick=function(){var gd=S.rows.filter(good);if(gd.length<3||!bestRow()){$('err').textContent='First get at least 3 correct, properly tested leaves, including one plant-A leaf with 4 h or more of sunlight (press “Check my table”).';return}
+ S.revealed=true;save();renderResult()};
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['Why is the plant kept in the dark for 48–72 hours before the experiment?','To destarch it. In the dark the plant uses up its stored starch and moves it out of the leaves, so any starch found later must have been made during the experiment.'],
+ ['Why is the leaf boiled in water first?','Boiling kills the cells, stops all enzyme action and breaks the cell membranes, so iodine can enter the cells. It also softens the leaf.'],
+ ['Why is the leaf then heated in alcohol?','Alcohol dissolves chlorophyll and removes it from the leaf. A pale leaf shows the iodine colour clearly; a green one hides it.'],
+ ['Why is alcohol heated in a water bath and not directly on the flame?','Alcohol is volatile and highly inflammable, and it boils at about 78 °C. A water bath heats it gently and keeps it away from the flame.'],
+ ['Why is the leaf washed in warm water after the alcohol treatment?','Alcohol makes the leaf hard and brittle. Warm water softens it so it can be spread flat without breaking, and removes the alcohol.'],
+ ['What colour does iodine solution give with starch?','Blue-black. Iodine solution itself is yellowish-brown, so parts without starch look yellowish-brown.'],
+ ['Why did the part covered with black paper not turn blue-black?','No light reached it, so it could not photosynthesise and made no starch. This shows that light is necessary for photosynthesis.'],
+ ['Why should the black paper cover both surfaces of the leaf?','Light can enter through the lower surface or around the edges. Covering only the upper surface lets some light reach the “covered” part, and it may then make starch.'],
+ ['Which parts of a variegated leaf turn blue-black, and what does this show?','Only the green parts. The white or yellow parts have no chlorophyll, so they make no starch. This shows that chlorophyll is necessary for photosynthesis.'],
+ ['Write the overall equation of photosynthesis.','6CO₂ + 12H₂O → C₆H₁₂O₆ + 6O₂ + 6H₂O, in the presence of sunlight and chlorophyll.'],
+ ['In what form do plants store the food they make, and why test for starch rather than glucose?','Glucose made in photosynthesis is quickly turned into starch and stored in the leaf. Starch builds up and is easy to detect with iodine, so its presence shows photosynthesis took place.'],
+ ['How could you show that carbon dioxide is also necessary for photosynthesis?','Enclose part of a destarched plant with a dish of potassium hydroxide, which absorbs CO₂, and keep it in light. A leaf from that part gives a negative starch test, while a leaf from an untreated part gives a positive test.']];
+$('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){
+ var rows=S.rows.map(function(r,i){var p=pct(r);return '<tr><td>'+(i+1)+'</td><td>'+r.t.plant+'</td><td>'+r.t.dark+'</td><td>'+r.t.light+'</td><td>'+(r.cC?NAMES[r.cC]:'')+'</td><td>'+(r.cE?NAMES[r.cE]:'')+'</td><td>'+(r.tot||'')+'</td><td>'+(r.bb||'')+'</td><td>'+(p==null?'':p.toFixed(1))+'</td></tr>'}).join('');
+ var img='';try{img='<img src="'+$('g1').toDataURL()+'">'}catch(e){}
+ $('record').innerHTML='<h1>Experiment: Light is necessary for photosynthesis (starch test)</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Date: ___________ &nbsp; Plant: '+S.sess.plantNo+'</p>'+
+  '<h2>Aim</h2><p>To show experimentally that light is necessary for photosynthesis (and, with a variegated leaf, that chlorophyll is necessary), using the iodine test for starch.</p>'+
+  '<h2>Apparatus</h2><p>Potted plant, variegated plant, black paper strip, paper clips, beaker, boiling tube, tripod stand, wire gauze, burner, water bath, alcohol, dilute iodine solution, dropper, petri dish, forceps, transparent 1 cm grid.</p>'+
+  '<h2>Theory</h2><p>6CO₂ + 12H₂O —(sunlight, chlorophyll)→ C₆H₁₂O₆ + 6O₂ + 6H₂O. Glucose is stored as starch, which gives a blue-black colour with iodine. A destarched plant makes new starch only in the parts that receive light and contain chlorophyll.</p>'+
+  '<h2>Observations</h2><table><tr><th>S. No.</th><th>Plant</th><th>In dark (h)</th><th>In light (h)</th><th>Colour of covered / non-green part</th><th>Colour of uncovered / green part</th><th>Total leaf squares</th><th>Blue-black squares</th><th>Starch area (%)</th></tr>'+rows+'</table>'+
+  '<h2>Graph</h2>'+(FIT?img:'<p>(Plot starch area (%) against time in sunlight on graph paper.)</p>')+
+  '<h2>Result</h2><p>Covered area from the best leaf = '+$('rT').textContent+'; plateau from the graph = '+$('rG').textContent+'. '+$('concl').textContent+'</p>'+
+  '<h2>Precautions</h2><ol><li>Destarch the plant for 48–72 hours.</li><li>Clip the black paper on both surfaces of the leaf.</li><li>Heat alcohol only in a water bath, never on a flame.</li><li>Boil the leaf in water before the alcohol treatment.</li><li>Remove all the chlorophyll before adding iodine.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>Incomplete destarching.</li><li>Light leaking under the edges of the strip.</li><li>Chlorophyll not fully removed.</li><li>Judgement in counting squares at the leaf and strip edges.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+$('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(!S.sess)newSess();else buildModel();
+if(/[?&]debug/.test(location.search))window.__lab={S:S,truth:function(){TR=null;return truth()},render:render,run:run,M:function(){return M}};
+render();renderTable();
+})();
+
+</script>
+</body>
+</html>
