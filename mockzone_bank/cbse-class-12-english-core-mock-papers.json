@@ -991,6 +991,158 @@
        "ans": "B — Affectionate and appreciative, while admitting its problems."
       }
      ]
+    },
+    {
+     "passage": "Racing on Water: Kerala's Snake Boats",
+     "blurb": "<b>1.</b> On the second Saturday of August, the banks of Punnamada Lake near Alappuzha in Kerala disappear under a sea of people. Some have waited since dawn; others watch from rooftops, coconut trees and the decks of houseboats. When the race begins, long, slender boats shoot across the water, a hundred oars rising and falling as if moved by a single arm, while the rowers' songs and the roar of the crowd echo across the backwaters.<br><br><b>2.</b> These boats are the famous <i>chundan vallams</i>, or snake boats. According to local tradition, they were first built centuries ago as war boats for the rulers of the small kingdoms that lay along Kerala's network of rivers and lagoons. The wars have long ended, but the boats have survived, and today they compete not for territory but for pride.<br><br><b>3.</b> The best-known contest, the Nehru Trophy Boat Race, has an unusual history. In 1952, Prime Minister Jawaharlal Nehru visited Alappuzha, and a special race of snake boats was arranged in his honour. He was so thrilled by the spectacle that he jumped into the winning boat and rode in it, ignoring the worries of his security staff. After returning to Delhi, he sent a silver trophy shaped like a snake boat. The race has been held for that trophy ever since.<br><br><b>4.</b> A snake boat is a remarkable piece of craftsmanship. More than thirty metres long but very narrow, it is traditionally built from the timber of the <i>anjili</i>, or wild jack tree. Its stern rises high above the water, like the raised hood of a snake, which gives the boat its name. Around a hundred rowers sit in pairs along its length, while a few men with long oars stand at the stern to steer. In the middle, singers and drummers keep the rhythm with <i>vanchipattu</i>, the traditional boat songs, so that every oar strikes the water at the same moment.<br><br><b>5.</b> Each boat belongs to a whole village rather than to one owner. Villagers raise money for its upkeep, oil its wood, and treat it with almost the affection given to a member of the family. For weeks before the race, rowers practise every morning and evening. Victory brings no prize money to an individual; it brings honour to the village. That is perhaps the real lesson of the snake-boat race: on a boat with a hundred oars, no single rower, however strong, can win alone.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "What picture of the race day does the writer create in paragraph 1? Mention any one detail.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "A picture of huge excitement and crowds — e.g. the banks covered by a sea of people / people watching from rooftops, trees and houseboats / a hundred oars moving like one arm (any one)."
+      },
+      {
+       "n": "II",
+       "q": "According to paragraph 2, snake boats were originally built ________.\nA. to carry rice and coconuts to market\nB. as war boats for the rulers of small kingdoms\nC. for tourists on houseboat holidays\nD. for the Nehru Trophy race",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — as war boats for the rulers of small kingdoms."
+      },
+      {
+       "n": "III",
+       "q": "Complete the following (paragraph 2): Today the boats compete not for territory but for ________.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "pride (the honour of their villages)."
+      },
+      {
+       "n": "IV",
+       "q": "Why did Nehru's action in 1952 worry his security staff?",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Because he jumped into the winning boat and rode in it — a risky act for a Prime Minister on a crowded, fast-moving racing boat."
+      },
+      {
+       "n": "V",
+       "q": "The trophy that Nehru sent from Delhi was ________.\nA. a gold medal for the best rower\nB. a cash prize for the village\nC. a silver trophy shaped like a snake boat\nD. a bronze statue of a rower",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — a silver trophy shaped like a snake boat."
+      },
+      {
+       "n": "VI",
+       "q": "Pick out the word from paragraph 1 that means 'long, thin and graceful'.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "slender."
+      },
+      {
+       "n": "VII",
+       "q": "Explain how a snake boat got its name and how a hundred rowers manage to row together. (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Its stern rises high above the water like the raised hood of a snake, so it is called a snake boat (1). Singers and drummers in the middle keep the rhythm with vanchipattu, the traditional boat songs, so that all the oars strike the water at the same moment (1)."
+      },
+      {
+       "n": "VIII",
+       "q": "The phrase 'as if moved by a single arm' (paragraph 1) suggests ________.\nA. that only one man rows the boat\nB. perfect coordination among all the rowers\nC. that the rowers are very tired\nD. that the boat is moved by a motor",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — perfect coordination among all the rowers."
+      },
+      {
+       "n": "IX",
+       "q": "How do the people of a village show that the snake boat is important to them? Give two points. (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Any two (1 mark each): the boat belongs to the whole village, which raises money for its upkeep; they oil and care for its wood and treat it almost like a family member; rowers practise morning and evening for weeks; a win brings honour to the whole village, not prize money to any individual."
+      },
+      {
+       "n": "X",
+       "q": "Which of the following best expresses the main idea of the last paragraph?\nA. Strong rowers always win the race.\nB. Villages earn a lot of money from boat races.\nC. Success in the race depends on teamwork and shared effort.\nD. Snake boats are too costly to maintain.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — Success in the race depends on teamwork and shared effort."
+      }
+     ]
+    },
+    {
+     "passage": "Loktak: The Lake of Floating Islands",
+     "blurb": "<b>1.</b> In the valley of Manipur, less than fifty kilometres south of Imphal, lies Loktak, the largest freshwater lake in north-east India. Seen from the hills around it, the lake looks strangely patterned, as if someone had scattered hundreds of green rings and islands across its surface. These are not ordinary islands at all. They float.<br><br><b>2.</b> The floating islands are called <i>phumdis</i>. Each is a thick mat of grasses, reeds, soil and decaying plant matter, woven together over many years. Some are small enough for one person to stand on; others stretch for several kilometres. In the dry months, many phumdis sink a little and their roots touch the lake bed, where they soak up nutrients. When the monsoon raises the water level, they float up again.<br><br><b>3.</b> For the people who live around Loktak, the phumdis are a home and a livelihood. Fishing families build small huts on them, and some cut the phumdis into circular enclosures called <i>athaphums</i>, in which fish are reared. The lake also supplies water for drinking and irrigation, and since the 1980s it has fed a hydroelectric project.<br><br><b>4.</b> The southern part of the lake holds Keibul Lamjao National Park, often described as the only floating national park in the world. It is the last natural home of the sangai, or brow-antlered deer, which is the state animal of Manipur. Because the deer seems to step delicately as it moves across the soft, springy phumdis, it is sometimes called the 'dancing deer'. In the 1970s the sangai was feared to be almost extinct, with only a handful left in the wild; careful protection has since helped its numbers grow, though it remains endangered.<br><br><b>5.</b> Loktak, however, is under strain. A barrage built to keep the water level high for the power project means that the phumdis no longer settle on the lake bed in the dry season, so many have grown thinner and weaker. Silt washed down from deforested hills, waste from nearby towns, and the spread of fish-farming enclosures have added to the problem. Loktak was declared a wetland of international importance under the Ramsar Convention in 1990, but protecting it means balancing the needs of fishermen, farmers, power planners and the sangai. Saving the lake, as one local saying puts it, means saving the people too.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "Why does the lake look 'strangely patterned' when seen from the hills? (paragraph 1)",
+       "type": "sa",
+       "marks": 1,
+       "ans": "Because hundreds of green rings and floating islands (phumdis) are scattered across its surface."
+      },
+      {
+       "n": "II",
+       "q": "A phumdi is ________.\nA. a type of fishing boat\nB. a floating mat of grasses, reeds, soil and decaying plant matter\nC. a small rocky island\nD. a hut built on stilts",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — a floating mat of grasses, reeds, soil and decaying plant matter."
+      },
+      {
+       "n": "III",
+       "q": "Complete the following (paragraph 2): In the dry months, phumdis sink a little so that their roots can ________.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "touch the lake bed and soak up nutrients."
+      },
+      {
+       "n": "IV",
+       "q": "What are athaphums used for?",
+       "type": "sa",
+       "marks": 1,
+       "ans": "For rearing fish — they are circular enclosures cut out of phumdis."
+      },
+      {
+       "n": "V",
+       "q": "The sangai is called the 'dancing deer' because ________.\nA. it is trained to dance at festivals\nB. it seems to step delicately as it moves across the soft, springy phumdis\nC. it jumps from one island to another in the monsoon\nD. local dancers wear its antlers",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "B — it seems to step delicately as it moves across the soft, springy phumdis."
+      },
+      {
+       "n": "VI",
+       "q": "Pick out the word from paragraph 5 that means 'pressure or stress'.",
+       "type": "sa",
+       "marks": 1,
+       "ans": "strain."
+      },
+      {
+       "n": "VII",
+       "q": "How has the barrage built for the power project harmed the phumdis? (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "The barrage keeps the water level high all year (1). As a result, the phumdis cannot settle on the lake bed in the dry season to absorb nutrients, so many of them have become thinner and weaker (1)."
+      },
+      {
+       "n": "VIII",
+       "q": "Keibul Lamjao National Park is unique because ________.\nA. it is the oldest national park in India\nB. it has no animals at all\nC. it is often described as the only floating national park in the world\nD. it lies on a mountain top",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — it is often described as the only floating national park in the world."
+      },
+      {
+       "n": "IX",
+       "q": "Mention any two threats to Loktak, other than the barrage, and say why protecting the lake is difficult. (Answer in about 40 words)",
+       "type": "la",
+       "marks": 2,
+       "ans": "Threats (any two, ½ mark each): silt from deforested hills; waste from nearby towns; too many fish-farming enclosures. Difficulty (1): the needs of fishermen, farmers, power planners and the sangai have to be balanced against one another."
+      },
+      {
+       "n": "X",
+       "q": "What does the local saying 'Saving the lake means saving the people too' suggest?\nA. The lake is more important than the people.\nB. The people should leave the lake.\nC. The lives and livelihoods of the local people depend on a healthy lake.\nD. Only tourists benefit from the lake.",
+       "type": "mcq",
+       "marks": 1,
+       "ans": "C — The lives and livelihoods of the local people depend on a healthy lake."
+      }
+     ]
     }
    ]
   },
@@ -1698,6 +1850,114 @@
        "ans": "Any two (1 mark each): attend a career-counselling session or take an aptitude test before deciding; explore her interest in writing and debating through an internship, hobby or online course, since students who did this felt more confident; consider humanities, law or media, which more students now choose; do not pick a course just because friends have."
       }
      ]
+    },
+    {
+     "passage": "More Girls on the Field — A District Sports Meet",
+     "blurb": "<b>1.</b> Every year the schools of one district in Maharashtra send teams to a district-level inter-school sports meet. The table shows the number of girls who entered each sport in 2020 and in 2025. <i>(Figures are illustrative.)</i><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Sport</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Girls' entries 2020</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Girls' entries 2025</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Athletics</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">320</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">410</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Kabaddi</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">90</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">210</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Football</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">40</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">150</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Badminton</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">180</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">220</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Chess</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">150</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">160</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Wrestling</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">20</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">75</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Cricket</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">30</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">120</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\"><b>Total</b></td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\"><b>830</b></td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\"><b>1,345</b></td></tr></table><b>2.</b> Over the same period, the number of schools with a woman physical-education teacher or coach rose from 18 to 41, and 25 schools built separate changing rooms and toilets for girls near their playgrounds.<br><br><b>3.</b> When asked what had encouraged them, the girls most often mentioned seeing Indian women athletes win medals on television, support from their parents, and school scholarships for sportspersons.<br><br><b>4.</b> Coaches, however, pointed out that many girls still drop out of sport after Class X because of the pressure of board examinations, a lack of safe transport for evening practice, and too few playgrounds in crowded neighbourhoods.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "The table mainly shows ________.\nA. the medals won by girls at the sports meet\nB. how the number of girls entering different sports changed between 2020 and 2025\nC. the number of boys and girls in each sport\nD. the money spent on sports by each school",
+       "marks": 1,
+       "ans": "B — how the number of girls entering different sports changed between 2020 and 2025."
+      },
+      {
+       "n": "II",
+       "q": "In which sport did the number of girls' entries rise by the largest number between 2020 and 2025?",
+       "marks": 1,
+       "ans": "Kabaddi — up by 120 entries (from 90 to 210)."
+      },
+      {
+       "n": "III",
+       "q": "Which of the following statements is supported by the table?\nA. Chess had the fastest growth of all sports.\nB. The number of girls entering cricket became four times as large.\nC. Athletics had fewer entries in 2025 than in 2020.\nD. Badminton entries more than doubled.",
+       "marks": 1,
+       "ans": "B — Cricket entries rose from 30 to 120, i.e. four times as many."
+      },
+      {
+       "n": "IV",
+       "q": "Complete the following: The total number of girls' entries increased by about ________ per cent between 2020 and 2025.",
+       "marks": 1,
+       "ans": "62 (from 830 to 1,345: an increase of 515; 515 ÷ 830 × 100 ≈ 62%)."
+      },
+      {
+       "n": "V",
+       "q": "Give two reasons, based on paragraphs 2 and 3, why more girls took part in sport in 2025. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): more schools had women PE teachers or coaches (18 → 41); 25 schools built separate changing rooms and toilets for girls; girls were inspired by Indian women athletes winning medals on television; parents were more supportive; schools offered sports scholarships."
+      },
+      {
+       "n": "VI",
+       "q": "Fill in the blank with the correct option: Although athletics still had the most entries in 2025, its share of the total ________. (fell from about 39% to about 30% / rose from 30% to 39% / stayed exactly the same)",
+       "marks": 1,
+       "ans": "fell from about 39% to about 30% (320 of 830 ≈ 38.6%; 410 of 1,345 ≈ 30.5%)."
+      },
+      {
+       "n": "VII",
+       "q": "How many more girls entered football in 2025 than in 2020?",
+       "marks": 1,
+       "ans": "110 more girls (150 − 40 = 110)."
+      },
+      {
+       "n": "VIII",
+       "q": "You are the Sports Captain of your school. Using paragraph 4, suggest two steps your school could take so that girls do not give up sport after Class X. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): arrange morning or in-school practice sessions, or safe group transport for evening practice; plan a timetable that balances practice with board-exam preparation, with counselling for students and parents; share or develop playgrounds (e.g. with nearby schools or the municipality); continue scholarships and recognition for senior sportspersons."
+      }
+     ]
+    },
+    {
+     "passage": "Who Visits the City Museum?",
+     "blurb": "<b>1.</b> A state museum in a south Indian city keeps a record of its visitors. The table compares the number of visitors (in thousands) in 2022 and 2025. <i>(Figures are illustrative.)</i><table style=\"border-collapse:collapse;margin:.5rem 0;font-size:.85rem\"><tr><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Type of visitor</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">2022 (thousands)</th><th style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">2025 (thousands)</th></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">School groups</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">42</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">65</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Families</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">55</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">60</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">College students</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">18</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">36</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Senior citizens</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">9</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">15</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">Foreign tourists</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">6</td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\">14</td></tr><tr><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\"><b>Total</b></td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\"><b>130</b></td><td style=\"border:1px solid var(--border,#999);padding:.2rem .5rem\"><b>190</b></td></tr></table><b>2.</b> In 2023 the museum introduced free entry for students on Sundays, a mobile audio-guide app in six languages, and evening opening hours on Fridays.<br><br><b>3.</b> A visitors' survey found that 'hands-on' galleries — where visitors can touch replicas, try old tools and watch craftspeople at work — were the most popular, while galleries with long written labels were the least visited.<br><br><b>4.</b> The museum now plans a 'museum on wheels' — a bus fitted with display cases — to take selected objects to schools in villages and small towns.",
+     "qs": [
+      {
+       "n": "I",
+       "q": "The purpose of the table is to ________.\nA. show the ticket prices for different visitors\nB. compare the number of different types of visitors in 2022 and 2025\nC. list the galleries of the museum\nD. show the museum's income",
+       "marks": 1,
+       "ans": "B — compare the number of different types of visitors in 2022 and 2025."
+      },
+      {
+       "n": "II",
+       "q": "Which group of visitors was the largest in 2022, and which was the largest in 2025?",
+       "marks": 1,
+       "ans": "Families were the largest group in 2022 (55,000); school groups were the largest in 2025 (65,000)."
+      },
+      {
+       "n": "III",
+       "q": "Which of the following statements is supported by the table?\nA. The number of college students doubled.\nB. Fewer families visited in 2025.\nC. Foreign tourists were the largest group in 2025.\nD. Senior citizens tripled in number.",
+       "marks": 1,
+       "ans": "A — College students rose from 18,000 to 36,000, i.e. they doubled."
+      },
+      {
+       "n": "IV",
+       "q": "Complete the following: The total number of visitors rose from 1,30,000 to 1,90,000, an increase of about ________ per cent.",
+       "marks": 1,
+       "ans": "46 (an increase of 60,000; 60,000 ÷ 1,30,000 × 100 ≈ 46%)."
+      },
+      {
+       "n": "V",
+       "q": "Which steps taken in 2023 probably helped to bring in more students and young people? Give two. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): free entry for students on Sundays; a mobile audio-guide app in six languages, which suits young, phone-using visitors; evening opening on Fridays, convenient for college students and working people."
+      },
+      {
+       "n": "VI",
+       "q": "Fill in the blank with the correct option: Between 2022 and 2025, the number of families visiting the museum ________. (rose only slightly, by about 9% / doubled / fell sharply)",
+       "marks": 1,
+       "ans": "rose only slightly, by about 9% (from 55,000 to 60,000)."
+      },
+      {
+       "n": "VII",
+       "q": "By how many did the number of foreign tourists increase?",
+       "marks": 1,
+       "ans": "By 8,000 (from 6,000 to 14,000)."
+      },
+      {
+       "n": "VIII",
+       "q": "You are a member of your school's Heritage Club. Using paragraphs 3 and 4, suggest two ways the museum could make its galleries more attractive to students. (About 40 words)",
+       "marks": 2,
+       "ans": "Any two (1 mark each): add more hands-on displays where students can touch replicas and try old tools; arrange live demonstrations by craftspeople; replace long written labels with short labels, pictures, videos or QR-code audio; bring the 'museum on wheels' to schools and hold workshops linked to the syllabus."
+      }
+     ]
     }
    ]
   },
@@ -1832,6 +2092,26 @@
      "optB": {
       "scenario": "You are Payal/Paras Gill, Secretary of the Residents' Welfare Association, Sector 23, Gurugram. The Association is organising an eco-friendly 'Holi Milan' in the community park, with natural colours only and limited use of water. Draft a notice in about 50 words for the residents. Put the notice in a box.",
       "ans": "Model answer:\nRESIDENTS' WELFARE ASSOCIATION, SECTOR 23, GURUGRAM\nNOTICE\n5 March 20XX\nECO-FRIENDLY HOLI MILAN\nAll residents are invited to an eco-friendly Holi Milan in the community park on 14 March, from 10:00 a.m. to 1:00 p.m. Herbal colours will be provided by the Association; chemical colours, balloons and water guns are not allowed, to save water and protect pets and the elderly. Music, folk dance and snacks will follow. Contribution: ₹200 per family, payable at the office by 10 March.\nParas Gill\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): event, date-time-venue, natural colours provided, what is not allowed and why, programme, contribution and last date. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Ananya/Aniket Kulkarni, Examination In-charge (Student Council) of Jnana Prabodhini Vidyalaya, Pune. The board-examination admit cards of Classes X and XII will be given out in school next week. Draft a notice in about 50 words informing the students of the date, time, place and what they must bring. Put the notice in a box.",
+      "ans": "Model answer:\nJNANA PRABODHINI VIDYALAYA, PUNE\nNOTICE\n2 February 20XX\nDISTRIBUTION OF BOARD ADMIT CARDS\nAdmit cards for the Class X and XII Board Examinations will be distributed on 9 February, from 9:00 a.m. to 12:30 p.m., in the Examination Room (Ground Floor). Students must come in school uniform with their school identity card and sign the register. Check all details carefully and report any error on the spot. Admit cards will not be given to anyone else.\nAniket Kulkarni\nExamination In-charge, Student Council\n\nMarking — Format (1m): box, school name, NOTICE, date, heading, name and designation. Content (2m): what, for whom, date-time-venue, what to bring, checking details, cards not given to others. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Rukmini/Raghav Sharma, Secretary of the Ashiana Residents' Welfare Association, Sector 4, Panchkula. With winter approaching, the Association is collecting woollen clothes and blankets for homeless people in the city. Draft a notice in about 50 words requesting the residents to donate. Put the notice in a box.",
+      "ans": "Model answer:\nASHIANA RESIDENTS' WELFARE ASSOCIATION, SECTOR 4, PANCHKULA\nNOTICE\n20 November 20XX\nWARM CLOTHES FOR THE HOMELESS\nThe Association is collecting woollen clothes, blankets and shoes for the homeless people of our city, who suffer greatly in the cold. Residents are requested to donate clean articles in good condition at the community hall between 10:00 a.m. and 6:00 p.m. from 25 to 30 November. Volunteers will distribute them at night shelters on 1 December. For details, contact the undersigned.\nRaghav Sharma\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): purpose, items wanted (clean, usable), place, dates and time, how they will be distributed, contact. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Lavanya/Lokesh Iyer, Secretary of the Mathematics Club of Sri Ramakrishna Vidyalaya, Coimbatore. The club is holding an inter-house Mathematics quiz to mark National Mathematics Day (22 December), the birth anniversary of Srinivasa Ramanujan. Draft a notice in about 50 words inviting teams to register. Put the notice in a box.",
+      "ans": "Model answer:\nSRI RAMAKRISHNA VIDYALAYA, COIMBATORE\nNOTICE\n12 December 20XX\nINTER-HOUSE MATHEMATICS QUIZ\nTo mark National Mathematics Day, the birth anniversary of Srinivasa Ramanujan, the Mathematics Club will hold an inter-house Maths quiz on 22 December at 10:00 a.m. in the school auditorium. Each house may send a team of three students from Classes IX–XII. Rounds include puzzles, mental maths and Indian mathematicians. Register with the undersigned by 18 December.\nLokesh Iyer\nSecretary, Mathematics Club\n\nMarking — Format (1m): box, school name, NOTICE, date, heading, name and designation. Content (2m): occasion, event, date-time-venue, eligibility and team size, rounds, how and by when to register. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Meenal/Mohit Agarwal, Secretary of the Rajhans Apartments Owners' Association, Vaishali Nagar, Jaipur. Because of the shortage of parking space, the Association will issue parking stickers to residents' vehicles, and vehicles without stickers will not be allowed inside. Draft a notice in about 50 words for the residents. Put the notice in a box.",
+      "ans": "Model answer:\nRAJHANS APARTMENTS OWNERS' ASSOCIATION, VAISHALI NAGAR, JAIPUR\nNOTICE\n3 January 20XX\nPARKING STICKERS FOR RESIDENTS' VEHICLES\nTo manage the shortage of parking space, the Association will issue parking stickers for residents' vehicles from 8 to 15 January, 6:00–8:00 p.m., at the society office. Bring a copy of the vehicle's registration certificate and your flat number. From 16 January, vehicles without stickers will not be allowed inside; visitors must park outside the gate.\nMohit Agarwal\nSecretary\n\nMarking — Format (1m): box, association name, NOTICE, date, heading, signatory. Content (2m): reason, dates-time-place of issue, documents needed, rule from a given date, arrangement for visitors. Grammar & Spelling (1m)."
      }
     }
    ]
@@ -1968,6 +2248,26 @@
       "scenario": "Your friend Harleen has invited you to celebrate Lohri with her family in Amritsar. Write a reply in about 50 words accepting the invitation. You are Aditi/Aditya, 16 Rose Garden, Ludhiana.",
       "ans": "Model answer:\n16 Rose Garden, Ludhiana\n6 January 20XX\nDear Harleen,\nThank you for inviting me to celebrate Lohri with your family in Amritsar. I am thrilled to accept! My parents have agreed, and I will reach Amritsar by the morning bus on 13 January. I am looking forward to the bonfire, the songs and Aunty's sarson da saag. Do tell me if I should bring anything.\nWith love,\nAditi\n\nMarking — Format (1m): informal reply — address, date, salutation, closing. Content (2m): thanks, reference to occasion and place, acceptance, travel plans, enthusiasm. Grammar & Spelling (1m)."
      }
+    },
+    {
+     "optA": {
+      "scenario": "You are the Principal of Vidya Bharati Senior Secondary School, Bhubaneswar. The school is holding a three-day Book Fair in its library hall. Draft a formal invitation in about 50 words to Ms Sanghamitra Mohanty, a well-known poet, requesting her to inaugurate the fair.",
+      "ans": "Model answer:\nVidya Bharati Senior Secondary School, Bhubaneswar\nrequests the pleasure of the company of\nMs Sanghamitra Mohanty, eminent poet,\nas Chief Guest to inaugurate\nthe School Book Fair 20XX\non Monday, 12 January 20XX, at 10:00 a.m.\nin the Library Hall.\nThe inauguration will be followed by a reading of her poems and an interaction with students.\nPrincipal\nRSVP: 0674-25XXXXX\n\nMarking — Format (1m): formal third-person invitation, host, chief guest, RSVP. Content (2m): occasion (Book Fair, three days), purpose (to inaugurate), date-time-venue, programme. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Ms Pooja Rawat, a national-level archery coach living in Dehradun. The Principal of Hill Top Public School, Mussoorie, has invited you to be the Chief Guest at the school's Annual Sports Day. Write a reply in about 50 words regretting your inability to attend, as you will be at a national coaching camp on that date.",
+      "ans": "Model answer:\n14 Rajpur Road, Dehradun\n10 November 20XX\nThe Principal\nHill Top Public School, Mussoorie\nSubject: Inability to attend the Annual Sports Day\nDear Sir/Madam,\nThank you for inviting me as Chief Guest at your Annual Sports Day on 22 November. I am honoured, but I regret that I cannot attend, as I shall be at a national archery coaching camp in Patiala that week. I wish your young athletes every success and would be happy to visit on another occasion.\nYours sincerely,\nPooja Rawat\n\nMarking — Format (1m): formal reply — address, date, receiver, subject, salutation, closing. Content (2m): thanks, reference to occasion and date, regret with reason, good wishes/offer to come later. Grammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Mr and Mrs Bankit Lyngdoh are opening a bookshop-cum-café called 'Pages & Chai' at Police Bazaar, Shillong. Draft a formal invitation in about 50 words to be sent to friends, writers and book lovers of the city for the opening.",
+      "ans": "Model answer:\nMr and Mrs Bankit Lyngdoh\nrequest the pleasure of your company\nat the opening of\n'Pages & Chai'\n— a bookshop and café —\non Saturday, 14 February 20XX, at 5:00 p.m.\nat Police Bazaar, Shillong.\nThe shop will be opened by a well-known children's author, followed by a reading session and tea.\nRSVP: 98XXXXXX21\n\nMarking — Format (1m): formal third-person invitation, hosts, RSVP. Content (2m): occasion, name and nature of the shop, date-time-venue, programme. Grammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "Your friend Neikhrielie has invited you to visit her family in Kohima during the Hornbill Festival in December. Write a reply in about 50 words accepting the invitation. You are Tanvi/Tarun, 22 Ganeshguri, Guwahati.",
+      "ans": "Model answer:\n22 Ganeshguri, Guwahati\n20 November 20XX\nDear Neikhrielie,\nThank you so much for inviting me to Kohima for the Hornbill Festival! I am delighted to accept. My parents have agreed, and I shall reach Kohima by bus on 2 December. I can't wait to see the dances of the different Naga tribes, the crafts and the food stalls at Kisama. Please convey my regards to Aunty and Uncle.\nWith love,\nTarun\n\nMarking — Format (1m): informal reply — address, date, salutation, closing. Content (2m): thanks, reference to occasion and place, acceptance, travel plans, what one looks forward to. Grammar & Spelling (1m)."
+     }
     }
    ]
   },
@@ -2103,6 +2403,26 @@
       "scenario": "You are Prerna/Pranav Joshi, 6 Bajaj Nagar, Nagpur. You saw this advertisement: 'WANTED — Trainee Software Tester for Sahyadri Infotech Pvt. Ltd., Pune. B.Sc. (Computer Science) or BCA; knowledge of manual testing and basic SQL; good communication skills. Apply to the HR Manager within ten days.' Write a letter of application in 120–150 words, with your bio-data.",
       "ans": "Format (1m): sender's address, date, The HR Manager, Sahyadri Infotech Pvt. Ltd. (address), subject 'Application for the post of Trainee Software Tester', Sir/Madam, 'Yours sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to the advertisement, suitability, availability for a test/interview) separate from bio-data.\nContent (2m) — value points: BCA/B.Sc. (Computer Science) with good marks; certificate course in software testing; knowledge of manual testing, writing test cases and bug reports, basic SQL; final-year project or internship testing a web or mobile app; attention to detail, teamwork, good written and spoken English; willing to relocate to Pune; ready for a technical test. Bio-data — personal details, educational qualifications with years, certification, project/internship, technical skills, languages known, references.\nGrammar & Spelling (1m)."
      }
+    },
+    {
+     "optA": {
+      "scenario": "You are Shruti/Shreyas Pandey, 12 Ashok Nagar, Prayagraj. Although single-use plastic carry bags have been banned, shopkeepers and vendors in your city still use them freely, and they choke drains and harm cattle. Write a letter in 120–150 words to the Editor of a national daily, drawing attention to the problem and suggesting solutions.",
+      "ans": "Format (1m): sender's address, date, The Editor (name of daily, city), subject (e.g. 'Ban on plastic bags exists only on paper'), Sir/Madam, 'Yours truly', name.\nOrganisation of Ideas (1m): problem → its effects → causes → suggestions → appeal.\nContent (2m) — value points: ban on single-use plastic bags ignored in markets, vegetable mandis and by street vendors; bags given free with every purchase; effects — drains choked and waterlogging in the monsoon, cattle and stray animals swallow bags and die, litter on roads and riverbanks (Ganga, Yamuna), plastic burnt in the open, microplastics in soil and water; causes — weak checking, cheap supply, habit of shoppers; suggestions — regular inspections and fines on manufacturers and sellers, stopping supply at source, cheap cloth and jute bags at shops, 'bring your own bag' campaigns, involving schools and RWAs, rewards for plastic-free markets; appeal to the authorities and citizens.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Kiran/Kamal Meena, 9 Talwandi, Kota. You saw this advertisement: 'WANTED — Front Desk Receptionist for Sunshine Multispeciality Hospital, Kota. Graduate with good computer skills; fluency in Hindi and English; pleasant manners; experience preferred. Apply to the Administrative Officer within a week.' Write a letter of application in 120–150 words, with your bio-data.",
+      "ans": "Format (1m): sender's address, date, The Administrative Officer, Sunshine Multispeciality Hospital, Kota, subject 'Application for the post of Front Desk Receptionist', Sir/Madam, 'Yours faithfully/sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to the advertisement, suitability, availability for interview) separate from bio-data.\nContent (2m) — value points: graduate (e.g. B.A./B.Com.) with good marks; certificate in computer applications — MS Office, data entry, hospital/front-office software; fluent in Hindi and English; one year's experience at a clinic or hotel front desk; handling calls, appointments, records and visitors; patient, courteous and calm under pressure; willing to work in shifts; available for interview at short notice. Bio-data — personal details, educational qualifications with years, computer course, experience, skills, languages known, references.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "You are Aditi/Abhinav Mishra, 28 Kidwai Nagar, Lucknow. Open grounds where children once played in your city are being turned into parking lots, shops and buildings, and children now play on busy roads or stay indoors with their phones. Write a letter in 120–150 words to the Editor of a national daily, highlighting the problem and suggesting what can be done.",
+      "ans": "Format (1m): sender's address, date, The Editor (name of daily, city), subject (e.g. 'Give our children back their playgrounds'), Sir/Madam, 'Yours truly', name.\nOrganisation of Ideas (1m): problem → effects on children → causes → suggestions → appeal.\nContent (2m) — value points: parks and open grounds encroached upon or converted into parking, commercial complexes and flats; many schools have tiny or no playgrounds; effects — children play cricket and football on roads and risk accidents, more screen time, obesity, poor fitness, stress, fewer friendships, loss of local sports talent; causes — land prices, poor planning, encroachment, no rules to protect open spaces; suggestions — survey and protect existing grounds as 'open spaces' in the city plan, remove encroachments, develop small neighbourhood parks, open school grounds to children after school hours, involve RWAs in upkeep, multi-use sports courts; appeal to the municipal corporation and development authority.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Rubina/Rohit Das, 5 Doctors' Colony, Cuttack. You saw this advertisement: 'WANTED — Junior Laboratory Technician for Nirmal Diagnostics, Bhubaneswar. DMLT or B.Sc. (Medical Laboratory Technology); knowledge of sample collection and basic pathology tests; computer-literate. Freshers may apply. Apply to the Lab Manager within ten days.' Write a letter of application in 120–150 words, with your bio-data.",
+      "ans": "Format (1m): sender's address, date, The Lab Manager, Nirmal Diagnostics, Bhubaneswar, subject 'Application for the post of Junior Laboratory Technician', Sir/Madam, 'Yours faithfully/sincerely', signature; bio-data as an enclosure.\nOrganisation (1m): covering letter (reference to the advertisement, suitability, availability for interview) separate from bio-data.\nContent (2m) — value points: DMLT/B.Sc. MLT with good marks; six months' internship at a hospital laboratory; skills — blood sample collection, labelling and storage, routine blood, urine and sugar tests, use of microscope and analysers, hygiene and safety rules, entering reports on computer; careful, punctual, good with patients; willing to work in shifts; available for interview. Bio-data — personal details, educational and professional qualifications with years, internship, skills, languages known, references.\nGrammar & Spelling (1m)."
+     }
     }
    ]
   },
@@ -2237,6 +2557,26 @@
      "optB": {
       "scenario": "You are Kavya/Karan Malhotra, Secretary of the IT Club of Doon Public School, Paschim Vihar, New Delhi. Your school recently held a workshop on cyber safety, conducted by an officer of the city's cyber-crime cell. Write a report in 120–150 words for your school magazine.",
       "ans": "Format (1m): heading (e.g. 'Stay Smart, Stay Safe Online'), by-line, place and date.\nOrganisation (1m): what-when-where-who → sessions → highlights → message/conclusion.\nContent (2m) — value points: workshop held on — in the school auditorium for students of Classes IX–XII; conducted by an officer of the cyber-crime cell; topics — strong passwords and two-factor authentication, not sharing OTPs or personal details, phishing links and fake prize messages, privacy settings on social media, cyberbullying and how to report it, online gaming and in-app purchases, digital footprint; live demonstration of a fake website; reporting on the national cyber-crime portal and helpline 1930; question-answer session; quiz with prizes; Principal's closing remarks; message — think before you click; students pledged to stay safe online.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "Many students are so afraid of failing — in a test, a competition or an entrance examination — that they stop trying new things. You are Nisha/Naveen Rathi, Class XII, Jaipur. Write an article in 120–150 words for your school magazine on 'Failure: A Stepping Stone to Success'.",
+      "ans": "Format (1m): title, by-line, paragraphs.\nOrganisation of Ideas (1m): introduction → why students fear failure → what failure teaches → how to deal with it → conclusion.\nContent (2m) — value points: fear of failure is common because of marks-based comparison, pressure from family and peers, social media showing only success; failure is an event, not a person's identity; it shows what went wrong and what to improve; builds patience, resilience and humility; examples — scientists' experiments that failed many times, sportspersons who lost before winning, ISRO's Chandrayaan-2 setback followed by Chandrayaan-3's success; how to deal with it — analyse mistakes, set small goals, seek help from teachers, talk openly with parents, try again; parents and teachers should praise effort, not just results; conclusion — those who never fail are those who never try.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Gauri/Gaurav Patil, Secretary of the Eco Club of Krishna Vidya Niketan, Belagavi. Students of Class XI recently went on a day's educational visit to an organic farm near the city. Write a report in 120–150 words for your school magazine.",
+      "ans": "Format (1m): heading (e.g. 'A Day on an Organic Farm'), by-line, place and date.\nOrganisation (1m): what-when-where-who → what students saw and did → what they learnt → conclusion.\nContent (2m) — value points: visit on — by 60 students of Class XI with two teachers; farm about 20 km from the city; welcomed by the farmer-owner; saw vermicompost pits, cow-dung manure, crop rotation and mixed cropping, drip irrigation, neem-based pest sprays instead of chemicals; plucked vegetables, planted saplings, tried a bullock-drawn plough; learnt how chemical-free farming protects soil, water and health, and how farmers sell directly to customers; tasted a simple lunch made from farm produce; interaction about the challenges — lower yields at first, certification, market prices; students resolved to start a kitchen garden and compost pit in school; vote of thanks.\nGrammar & Spelling (1m)."
+     }
+    },
+    {
+     "optA": {
+      "scenario": "In many Indian cities, young people prefer to be dropped by car or to ride their own scooters rather than use buses or the metro. You are Simran/Siddharth Kaur, Class XII, Chandigarh. Write an article in 120–150 words for a youth magazine on 'Why the Young Should Choose Public Transport'.",
+      "ans": "Format (1m): title, by-line, paragraphs.\nOrganisation of Ideas (1m): introduction → the present situation → benefits of public transport → what stops young people and how to overcome it → conclusion.\nContent (2m) — value points: roads choked with private vehicles, carrying one or two people each; benefits — less traffic, less air and noise pollution, lower fuel use and carbon emissions, cheaper, safer than riding without a licence, time to read or rest, independence, meeting people; metro, e-buses and shared cycles now available in many cities; what stops young people — status, comfort, crowding, last-mile problems; solutions — student passes, walk or cycle the last stretch, travel in groups, demand better services; role models choosing public transport; conclusion — small daily choices by the young can make cities cleaner and healthier.\nGrammar & Spelling (1m)."
+     },
+     "optB": {
+      "scenario": "You are Ritika/Rahul Bisht, Convener of the Electoral Literacy Club of Government Inter College, Almora. To mark National Voters' Day (25 January), the club organised a voter-awareness rally and other activities. Write a report in 120–150 words for your school magazine.",
+      "ans": "Format (1m): heading (e.g. 'Every Vote Counts: Voters' Day Rally'), by-line, place and date.\nOrganisation (1m): what-when-where-who → activities → message/response → conclusion.\nContent (2m) — value points: National Voters' Day observed on 25 January; rally by about 150 students of Classes XI–XII through the main market, flagged off by the Principal / an officer of the district election office; placards and slogans ('No voter to be left behind', 'Every vote counts'); street play on the importance of voting and the dangers of selling one's vote; helping new voters (18+) to register through the voter helpline app/form; mock poll with a demonstration EVM and VVPAT in school; pledge to vote ethically; poster and slogan competition; residents' response; message — voting is both a right and a duty.\nGrammar & Spelling (1m)."
      }
     }
    ]
@@ -3361,6 +3701,178 @@
        }
       ]
      }
+    },
+    {
+     "optA": {
+      "title": "Keeping Quiet (Pablo Neruda)",
+      "extract": "Read the complete poem 'Keeping Quiet' in your textbook and answer the questions that follow.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: 'Keeping Quiet' is written in ________. (free verse, without a regular rhyme scheme or metre / rhyming couplets / the strict form of a sonnet)",
+        "marks": 1,
+        "ans": "free verse, without a regular rhyme scheme or metre"
+       },
+       {
+        "n": "II",
+        "q": "Complete: When the poet imagines that 'we would all be together', he pictures a world in which ________.",
+        "marks": 1,
+        "ans": "differences of nation, language and class are forgotten and all people share one calm, united moment."
+       },
+       {
+        "n": "III",
+        "q": "Which two kinds of harm does the poem want the moment of silence to stop?",
+        "marks": 1,
+        "ans": "Harm to nature (fishermen harming whales, 'green wars' against the environment) and harm to fellow human beings (wars with gas and fire, 'victories with no survivors')."
+       },
+       {
+        "n": "IV",
+        "q": "The overall tone of the poem is best described as ________.\nA. angry and accusing\nB. calm, gentle and persuasive\nC. mocking and humorous\nD. sad and hopeless",
+        "marks": 1,
+        "ans": "B — calm, gentle and persuasive."
+       },
+       {
+        "n": "V",
+        "q": "The poet uses the word 'perhaps' twice ('perhaps a huge silence…', 'Perhaps the Earth can teach us…'). What does this word tell us about his attitude?",
+        "marks": 1,
+        "ans": "It shows that he is humble and hopeful rather than certain or preachy — he suggests, not commands, that silence might help us."
+       },
+       {
+        "n": "VI",
+        "q": "The lines about the Earth on which 'everything seems dead / and later proves to be alive' most clearly suggest ________.\nA. a desert after a storm\nB. a city at night\nC. winter giving way to spring\nD. a volcano erupting",
+        "marks": 1,
+        "ans": "C — winter giving way to spring."
+       }
+      ]
+     },
+     "optB": {
+      "title": "My Mother at Sixty-six (Kamala Das)",
+      "extract": "Read the complete poem 'My Mother at Sixty-six' in your textbook and answer the questions that follow.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: The whole poem is written as ________. (a single long sentence without stanza breaks / four rhyming stanzas / a dialogue between mother and daughter)",
+        "marks": 1,
+        "ans": "a single long sentence without stanza breaks"
+       },
+       {
+        "n": "II",
+        "q": "How does this form suit the poet's experience?",
+        "marks": 1,
+        "ans": "The unbroken flow mirrors the continuous journey and the rush of the poet's thoughts and feelings, which she cannot stop or separate into neat parts."
+       },
+       {
+        "n": "III",
+        "q": "The poem moves through three places. Which of the following gives them in the correct order?\nA. Airport → car → Cochin\nB. Parents' home → car journey → airport\nC. Cochin → hospital → home\nD. Car → parents' home → railway station",
+        "marks": 1,
+        "ans": "B — Parents' home → car journey → airport."
+       },
+       {
+        "n": "IV",
+        "q": "The poem focuses almost entirely on two people. Who are they, and why is this focus significant?",
+        "marks": 1,
+        "ans": "The poet and her mother; it keeps attention on their private bond and on the poet's personal fear of losing her mother."
+       },
+       {
+        "n": "V",
+        "q": "The poet's feelings change in the poem from ________.\nA. joy to anger\nB. boredom to excitement\nC. pain and fear, through an effort to escape the thought, to a brave pretence of cheerfulness\nD. hope to complete despair",
+        "marks": 1,
+        "ans": "C — pain and fear, through an effort to escape the thought, to a brave pretence of cheerfulness."
+       },
+       {
+        "n": "VI",
+        "q": "Which universal human experience does the poem express?",
+        "marks": 1,
+        "ans": "The fear of losing an ageing parent and the pain of separation — something every child feels as parents grow old."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "A Thing of Beauty (John Keats)",
+      "extract": "Refer to the lines of the poem in your textbook from 'Some shape of beauty moves away the pall…' to '…Rich with a sprinkling of fair musk-rose blooms:'",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: In the phrase 'Some shape of beauty', the word 'shape' means ________. (a beautiful form or object / a geometric figure / a ghost)",
+        "marks": 1,
+        "ans": "a beautiful form or object"
+       },
+       {
+        "n": "II",
+        "q": "Why do you think Keats mentions trees that are 'old and young'?",
+        "marks": 1,
+        "ans": "To show that beauty exists at every stage of life and that nature constantly renews itself, so its beauty never ends."
+       },
+       {
+        "n": "III",
+        "q": "The phrase 'daffodils / With the green world they live in' suggests that ________.\nA. daffodils grow only in cold countries\nB. the flowers are beautiful together with their natural surroundings\nC. daffodils are greener than other flowers\nD. the poet is planting a garden",
+        "marks": 1,
+        "ans": "B — the flowers are beautiful together with their natural surroundings."
+       },
+       {
+        "n": "IV",
+        "q": "Which sense, besides sight, is appealed to by 'a sprinkling of fair musk-rose blooms'?",
+        "marks": 1,
+        "ans": "The sense of smell — the musk rose is a fragrant flower."
+       },
+       {
+        "n": "V",
+        "q": "The lines of the extract are written in ________.\nA. free verse\nB. rhyming couplets\nC. blank verse\nD. alternate rhyme (abab)",
+        "marks": 1,
+        "ans": "B — rhyming couplets (e.g. moon / boon, daffodils / rills, make / brake)."
+       },
+       {
+        "n": "VI",
+        "q": "Many images in the extract — a 'shady boon', a 'cooling covert', the 'mid-forest brake' — suggest shade and coolness. Why are they suitable here?",
+        "marks": 1,
+        "ans": "Shade and coolness bring relief from heat, just as beauty brings relief and comfort to our troubled, 'dark' spirits."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Aunt Jennifer's Tigers (Adrienne Rich)",
+      "extract": "Read the complete poem 'Aunt Jennifer's Tigers' in your textbook and answer the questions that follow.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: The poem has ________ stanzas, each made up of two rhyming couplets. (three / four / five)",
+        "marks": 1,
+        "ans": "three"
+       },
+       {
+        "n": "II",
+        "q": "How does the poem show the passage of time from the first stanza to the last?",
+        "marks": 1,
+        "ans": "It begins in the present, with Aunt Jennifer alive and embroidering, and moves to the future in the last stanza ('When Aunt is dead'), when her tigers will still be prancing."
+       },
+       {
+        "n": "III",
+        "q": "Which pair of words from the poem best shows the contrast between the tigers and their maker?\nA. 'prance' and 'fluttering'\nB. 'screen' and 'wool'\nC. 'green' and 'tree'\nD. 'band' and 'hand'",
+        "marks": 1,
+        "ans": "A — 'prance' and 'fluttering'."
+       },
+       {
+        "n": "IV",
+        "q": "Aunt Jennifer never speaks in the poem. What does her silence suggest?",
+        "marks": 1,
+        "ans": "That she is a voiceless, suppressed woman who cannot express herself openly; only her art — the tigers — speaks for her."
+       },
+       {
+        "n": "V",
+        "q": "The central theme of the poem is ________.\nA. the joy of needlework\nB. the suppression of a woman in marriage and the freedom she finds through art\nC. the cruelty of tiger hunting\nD. the beauty of the jungle",
+        "marks": 1,
+        "ans": "B — the suppression of a woman in marriage and the freedom she finds through art."
+       },
+       {
+        "n": "VI",
+        "q": "What effect does the poem's regular rhyme and steady rhythm have, given that the subject is a woman's suffering?",
+        "marks": 1,
+        "ans": "The calm, orderly form contrasts with the fear and turmoil in Aunt Jennifer's life, giving the poem a controlled, ironic tone — like her own quiet, outward calm."
+       }
+      ]
+     }
     }
    ]
   },
@@ -4169,6 +4681,130 @@
         "q": "How does the mist from which the man appears suit the situation in the story?",
         "marks": 1,
         "ans": "The mist creates mystery and uncertainty; it reflects the moral confusion of the moment, when the line between 'enemy' and 'fellow human being' is no longer clear."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "The Tiger King (Kalki)",
+      "extract": "Refer to the part of the story in which a high-ranking British officer visiting Pratibandapuram wishes to hunt a tiger, the Maharaja refuses, and he then has to find a way to save his throne.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "What did the British officer want besides killing a tiger?\nA. A share of the state's revenue\nB. To be photographed with the tiger he had killed (or, failing that, with one the Maharaja had killed)\nC. A palace of his own in the state\nD. To marry a princess of the state",
+        "marks": 1,
+        "ans": "B — To be photographed with the tiger he had killed (or, failing that, with one the Maharaja had killed)."
+       },
+       {
+        "n": "II",
+        "q": "Why did the Maharaja turn down the officer's request?",
+        "marks": 1,
+        "ans": "Because of his vow to kill a hundred tigers himself — he had banned tiger hunting by anyone except himself, and would not let anyone, even a British officer, take one of 'his' tigers."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The Maharaja feared that his refusal might ________.",
+        "marks": 1,
+        "ans": "anger the British and cost him his kingdom (his throne)."
+       },
+       {
+        "n": "IV",
+        "q": "What does this episode satirise about the British officials of the time?",
+        "marks": 1,
+        "ans": "Their greed and vanity — the officer's wife happily kept all fifty costly diamond rings, worth about three lakh rupees, and the Maharaja's throne was saved by a bribe, not by justice."
+       }
+      ]
+     },
+     "optB": {
+      "title": "The Enemy (Pearl S. Buck)",
+      "extract": "Refer to the part of the story in which, while the wounded American is hidden in Sadao's house, a messenger in official uniform arrives at the door, and Hana fears the worst.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "When Hana saw the messenger in official uniform, she thought that ________.\nA. he had brought a letter from Sadao's father\nB. he had come to arrest Sadao for sheltering the enemy\nC. he wanted medical help for his family\nD. he was a new servant",
+        "marks": 1,
+        "ans": "B — he had come to arrest Sadao for sheltering the enemy."
+       },
+       {
+        "n": "II",
+        "q": "Why had the messenger actually come?",
+        "marks": 1,
+        "ans": "To summon Sadao to the palace because the old General was ill and in pain and needed his attention."
+       },
+       {
+        "n": "III",
+        "q": "Complete: Hana's relief on learning the real purpose of the visit shows ________.",
+        "marks": 1,
+        "ans": "how tense and frightened the couple had been, living in constant fear that their secret would be discovered."
+       },
+       {
+        "n": "IV",
+        "q": "How does this incident increase the suspense of the story?",
+        "marks": 1,
+        "ans": "The reader, like Hana, expects the secret to be exposed; the false alarm keeps the danger alive and leads to Sadao telling the General about the prisoner."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "The Third Level (Jack Finney)",
+      "extract": "Refer to the part of the story in which Charley, planning to return to the third level, buys old-style currency, and then tells what happened when he went back to look for the corridor.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Charley bought old-style currency because ________.\nA. he collected old banknotes as a hobby\nB. he planned to buy two tickets to Galesburg on the third level\nC. the bank had run out of new notes\nD. his psychiatrist advised him to",
+        "marks": 1,
+        "ans": "B — he planned to buy two tickets to Galesburg on the third level."
+       },
+       {
+        "n": "II",
+        "q": "How much money did Charley take out of the bank, and how much old-style money did he get for it?",
+        "marks": 1,
+        "ans": "He took out three hundred dollars — nearly all they had — and got less than two hundred dollars in old-style bills, since dealers charge a premium."
+       },
+       {
+        "n": "III",
+        "q": "Complete: Charley did not mind losing money on the exchange because ________.",
+        "marks": 1,
+        "ans": "prices in the Galesburg of 1894 were very low (eggs were thirteen cents a dozen), so the money would go a long way."
+       },
+       {
+        "n": "IV",
+        "q": "What happened when Charley went back to Grand Central to find the third level?",
+        "marks": 1,
+        "ans": "He could never find the corridor that led to the third level again."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Journey to the End of the Earth (Tishani Doshi)",
+      "extract": "Refer to the part of the chapter in which the author describes Gondwana, the supercontinent that existed millions of years ago.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Gondwana was ________.\nA. a research ship that sailed to Antarctica\nB. a giant southern supercontinent, centred roughly around present-day Antarctica\nC. an ancient Indian kingdom\nD. a glacier in the Himalayas",
+        "marks": 1,
+        "ans": "B — a giant southern supercontinent, centred roughly around present-day Antarctica."
+       },
+       {
+        "n": "II",
+        "q": "How was the climate of Gondwana different from that of Antarctica today?",
+        "marks": 1,
+        "ans": "It was much warmer and supported a huge variety of plants and animals (flora and fauna)."
+       },
+       {
+        "n": "III",
+        "q": "Complete: Gondwana began to break up into separate landmasses around the time when ________.",
+        "marks": 1,
+        "ans": "the dinosaurs were wiped out and the age of mammals got under way."
+       },
+       {
+        "n": "IV",
+        "q": "Why would this part of the earth's history be of special interest to an Indian visitor to Antarctica?",
+        "marks": 1,
+        "ans": "Because India was once part of Gondwana and joined to Antarctica; visiting Antarctica helps one understand how the Indian landmass and today's continents came to be."
        }
       ]
      }
@@ -5295,6 +5931,178 @@
        }
       ]
      }
+    },
+    {
+     "optA": {
+      "title": "Going Places (A. R. Barton)",
+      "extract": "Refer to the part of the story in which Sophie tells her brother Geoff that she has met Danny Casey in the arcade.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: Danny Casey was ________. (a young Irish football star who played for United / Geoff's friend from the workshop / a famous actor)",
+        "marks": 1,
+        "ans": "a young Irish football star who played for United"
+       },
+       {
+        "n": "II",
+        "q": "According to Sophie, why did she not get Danny Casey's autograph?",
+        "marks": 1,
+        "ans": "Because neither of them had a pen or paper."
+       },
+       {
+        "n": "III",
+        "q": "Geoff's first reaction to Sophie's story was one of ________.\nA. delight and pride\nB. disbelief and doubt\nC. anger and jealousy\nD. fear for her safety",
+        "marks": 1,
+        "ans": "B — disbelief and doubt."
+       },
+       {
+        "n": "IV",
+        "q": "What did Sophie claim Danny Casey had said about meeting her again?",
+        "marks": 1,
+        "ans": "That he would meet her again — she said they had arranged to meet the following week."
+       },
+       {
+        "n": "V",
+        "q": "Why did Sophie tell Geoff, of all people, about this meeting?",
+        "marks": 1,
+        "ans": "She admired Geoff and longed to be part of his world; Danny Casey was Geoff's hero too, so she wanted to impress him and win his attention."
+       },
+       {
+        "n": "VI",
+        "q": "What does the episode reveal about Sophie?",
+        "marks": 1,
+        "ans": "That she lives in a world of fantasy — she imagines or exaggerates a meeting with a celebrity to escape her dull, ordinary life."
+       }
+      ]
+     },
+     "optB": {
+      "title": "The Rattrap (Selma Lagerlöf)",
+      "extract": "Refer to the part of the story in which, after the peddler has refused the ironmaster's invitation, the ironmaster's daughter Edla comes to the forge to persuade him to come to the manor house.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Which of the following describes Edla Willmansson as she appears at the forge?\nA. Proud and beautiful\nB. Not at all pretty, but modest and quite shy\nC. Loud and bossy\nD. Suspicious and unkind",
+        "marks": 1,
+        "ans": "B — Not at all pretty, but modest and quite shy."
+       },
+       {
+        "n": "II",
+        "q": "What did Edla notice about the peddler as soon as she saw him?",
+        "marks": 1,
+        "ans": "That he was afraid (frightened)."
+       },
+       {
+        "n": "III",
+        "q": "Complete: On seeing his fear, Edla thought that either he had stolen something or ________.",
+        "marks": 1,
+        "ans": "he had escaped from jail."
+       },
+       {
+        "n": "IV",
+        "q": "What promise did Edla make to the peddler to win his confidence?",
+        "marks": 1,
+        "ans": "That he would be allowed to leave just as freely as he had come — she only asked him to stay with them over Christmas Eve."
+       },
+       {
+        "n": "V",
+        "q": "Why did the peddler agree to go with Edla when he had refused her father?",
+        "marks": 1,
+        "ans": "Because of her friendly, compassionate manner — she spoke so kindly that he felt he could trust her."
+       },
+       {
+        "n": "VI",
+        "q": "What does this part of the story reveal about Edla's character?",
+        "marks": 1,
+        "ans": "She is perceptive, kind and compassionate; though she suspects the man is not what he seems, she treats him with sympathy rather than suspicion."
+       }
+      ]
+     }
+    },
+    {
+     "optA": {
+      "title": "Lost Spring (Anees Jung)",
+      "extract": "Refer to the concluding part of the chapter, from the author's description of the 'two distinct worlds' of the bangle makers of Firozabad to Mukesh's dream of becoming a motor mechanic.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "Complete with the correct option: According to the author, the burden placed on the child of a bangle maker is one that he ________. (cannot put down, and accepts as naturally as his father did / can easily throw away / shares with his teachers)",
+        "marks": 1,
+        "ans": "cannot put down, and accepts as naturally as his father did"
+       },
+       {
+        "n": "II",
+        "q": "'Daring is not part of his growing up' means that ________.\nA. children in Firozabad are taught to take risks\nB. the children are brought up to accept tradition and not to question or break away from it\nC. the children are too young to work\nD. the children are not allowed to play outdoors",
+        "marks": 1,
+        "ans": "B — the children are brought up to accept tradition and not to question or break away from it."
+       },
+       {
+        "n": "III",
+        "q": "What does Mukesh want to become?",
+        "marks": 1,
+        "ans": "A motor mechanic (he wants to learn to drive a car)."
+       },
+       {
+        "n": "IV",
+        "q": "The garage is a long way from Mukesh's home. What does he say he will do, and what does this show?",
+        "marks": 1,
+        "ans": "He says he will walk to the garage; it shows his determination to pursue his dream in spite of difficulties."
+       },
+       {
+        "n": "V",
+        "q": "The comparison of Mukesh's dream to 'a mirage' suggests that the dream ________.\nA. is sure to come true soon\nB. seems real and inviting but may be very hard to reach in his circumstances\nC. is about travelling in the desert\nD. is the same as his father's",
+        "marks": 1,
+        "ans": "B — seems real and inviting but may be very hard to reach in his circumstances."
+       },
+       {
+        "n": "VI",
+        "q": "Why is the author cheered when she senses 'a flash' of daring in Mukesh?",
+        "marks": 1,
+        "ans": "Because it shows that he may break free from the vicious circle and the family tradition of bangle making — a sign of hope for change."
+       }
+      ]
+     },
+     "optB": {
+      "title": "Poets and Pancakes (Asokamitran)",
+      "extract": "Refer to the part of the chapter which describes the visit of the Moral Re-Armament (MRA) movement to Madras and Gemini Studios.",
+      "qs": [
+       {
+        "n": "I",
+        "q": "The Moral Re-Armament movement is described in the chapter as ________.\nA. a Tamil theatre company\nB. a kind of counter-movement to international Communism\nC. a political party of Madras\nD. a British film studio",
+        "marks": 1,
+        "ans": "B — a kind of counter-movement to international Communism."
+       },
+       {
+        "n": "II",
+        "q": "Name the two plays that the MRA group presented.",
+        "marks": 1,
+        "ans": "'Jotham Valley' and 'The Forgotten Factor'."
+       },
+       {
+        "n": "III",
+        "q": "Complete: The author says that the MRA plays were presented in ________.",
+        "marks": 1,
+        "ans": "a most professional manner."
+       },
+       {
+        "n": "IV",
+        "q": "Why is the word 'army' used for a group that came only to present plays?",
+        "marks": 1,
+        "ans": "The movement saw itself as an army on a mission to spread its ideas; the large, organised, disciplined group moved like a troop — the word is also gently ironic, since it came armed with plays, not weapons."
+       },
+       {
+        "n": "V",
+        "q": "What does the MRA visit tell us about Madras in the early 1950s?",
+        "marks": 1,
+        "ans": "That the city, and its film world, was open to influences from abroad and was touched by the world-wide contest of ideas between Communism and its opponents."
+       },
+       {
+        "n": "VI",
+        "q": "How does the MRA episode prepare the reader for the later mystery of the English poet's visit?",
+        "marks": 1,
+        "ans": "Both visitors came from the West linked to the fight against Communism; the author understood the poet's visit only years later, on finding that he was one of the contributors to 'The God That Failed', essays by former Communists."
+       }
+      ]
+     }
     }
    ]
   },
@@ -5846,6 +6654,90 @@
      "q": "How does Kamala Das use contrast in 'My Mother at Sixty-six' to bring out her feelings?",
      "marks": 2,
      "ans": "The mother's pale, ashen face is set against the young trees sprinting and merry children spilling out of their homes — age and death against youth and life (1). There is also a contrast between the poet's inner fear of losing her mother and the outward smile and cheerful 'See you soon, Amma' with which she hides it (1)."
+    },
+    {
+     "n": "I",
+     "src": "The Last Lesson",
+     "q": "How did Franz's feelings about his grammar and history books change when he learnt that this was his last French lesson?",
+     "marks": 2,
+     "ans": "Earlier the books had seemed a nuisance and a burden to carry (1). Now he felt they were old friends that he could not bear to give up, and he regretted not having learnt his lessons (1)."
+    },
+    {
+     "n": "II",
+     "src": "Indigo",
+     "q": "Gandhi said that what he did in Champaran was 'a very ordinary thing'. What did he mean, and why was it a turning point?",
+     "marks": 2,
+     "ans": "He had simply declared that the British could not order him about in his own country (1). This open, peaceful defiance of an unjust order showed Indians that they need not fear British authority, and it shaped his later freedom struggle (1)."
+    },
+    {
+     "n": "III",
+     "src": "The Interview",
+     "q": "Why did Lewis Carroll never consent to be interviewed?",
+     "marks": 2,
+     "ans": "He is said to have had 'a just horror of the interviewer' (1); it was his horror of being lionised — made a celebrity — that made him keep away interviewers and would-be acquaintances (1)."
+    },
+    {
+     "n": "IV",
+     "src": "A Roadside Stand",
+     "q": "Why does Frost call the city planners and reformers 'greedy good-doers' and 'beneficent beasts of prey'?",
+     "marks": 2,
+     "ans": "The phrases are oxymorons that expose their hypocrisy (1): they claim to help the rural poor but actually exploit them for their own gain, taking away their land and independence like predators (1)."
+    },
+    {
+     "n": "V",
+     "src": "Lost Spring",
+     "q": "Saheb now works at a tea stall. Why does the author feel that the steel canister he carries is 'heavier' than the plastic bag he used to carry?",
+     "marks": 2,
+     "ans": "As a ragpicker, the plastic bag was his own and he was his own master (1). At the tea stall he earns a fixed wage but is a servant who has lost his freedom, so the canister is a heavier burden on his spirit (1)."
+    },
+    {
+     "n": "VI",
+     "src": "Deep Water",
+     "q": "After his training, how did Douglas test himself in Lake Wentworth and later in Warm Lake, and why did he go on testing himself?",
+     "marks": 2,
+     "ans": "In Lake Wentworth he swam two miles across the lake; when the old terror returned briefly in mid-lake he laughed it away ('Well, Mr Terror…') (1). Because he still had residual doubts, he later dived into Warm Lake and swam across and back — only then was he sure that his fear had gone (1)."
+    },
+    {
+     "n": "I",
+     "src": "Deep Water",
+     "q": "Why did Douglas feel embarrassed on his first visit to the Y.M.C.A. pool, and what does his decision to go in anyway show about him?",
+     "marks": 2,
+     "ans": "He hated using water wings and having to walk into the pool and show his skinny legs (1). He subdued his pride and went in all the same, which shows how determined he was to learn swimming (1)."
+    },
+    {
+     "n": "II",
+     "src": "The Rattrap",
+     "q": "How was the old crofter different from the peddler in his attitude towards other people?",
+     "marks": 2,
+     "ans": "The crofter was lonely, trusting and generous: he welcomed the stranger, fed him, chatted and even showed him where he kept his thirty kronor (1). The peddler was bitter and suspicious; he saw the world as a rattrap and other people as either baits or victims, and repaid the crofter by robbing him (1)."
+    },
+    {
+     "n": "III",
+     "src": "The Interview",
+     "q": "What is V. S. Naipaul's view of interviews, as quoted in 'The Interview'?",
+     "marks": 2,
+     "ans": "Naipaul feels that some people are wounded by interviews (1) and that they lose a part of themselves in the process — the interview intrudes on a person's private self (1)."
+    },
+    {
+     "n": "IV",
+     "src": "The Last Lesson",
+     "q": "What was the 'order from Berlin', and how did it change things in Alsace?",
+     "marks": 2,
+     "ans": "The order said that only German was to be taught in the schools of Alsace and Lorraine (1). A new German master was to arrive the next day, so French lessons ended and the people of Alsace were being cut off from their own language and identity (1)."
+    },
+    {
+     "n": "V",
+     "src": "Going Places",
+     "q": "What picture of Sophie's family and home life does the story give, and how does it explain her longing to 'go places'?",
+     "marks": 2,
+     "ans": "Sophie comes from a crowded working-class home: her father comes home from work, washes and settles in front of the television to watch football; there is little money, Geoff works as an apprentice mechanic, and the girls are expected to go to the biscuit factory (1). This dull, limited life makes Sophie escape into dreams of glamour and success (1)."
+    },
+    {
+     "n": "VI",
+     "src": "Keeping Quiet",
+     "q": "Neruda asks fishermen, the man gathering salt and 'those who prepare green wars' to keep quiet. Why does he include such different kinds of people?",
+     "marks": 2,
+     "ans": "To show that his call is universal — for ordinary workers and powerful warmongers alike (1); everyone, whatever his work or position, needs a moment of introspection to stop harming nature, others and himself (1)."
     }
    ]
   },
@@ -6124,6 +7016,48 @@
      "q": "About ninety per cent of the earth's ice is stored in Antarctica. Why does this make the continent important for the whole world?",
      "marks": 2,
      "ans": "If this ice melts because of global warming, sea levels will rise and coastal lands and cities across the world will be threatened (1). Changes in Antarctica's ice also affect ocean currents and climate everywhere, so the continent acts as an early warning for the planet (1)."
+    },
+    {
+     "n": "I",
+     "src": "The Third Level",
+     "q": "What happened to Sam at the end of the story, and how does this twist affect the reader?",
+     "marks": 2,
+     "ans": "Sam, the psychiatrist who had called the third level a 'waking-dream wish fulfilment', disappeared; a letter from him postmarked 1894 shows that he found the third level and settled in Galesburg (1). The twist turns the sceptic into a believer and leaves the reader wondering whether the third level is real (1)."
+    },
+    {
+     "n": "II",
+     "src": "Memories of Childhood",
+     "q": "Why does Zitkala-Sa say that after her hair was cut she felt like 'one of many little animals driven by a herder'?",
+     "marks": 2,
+     "ans": "Long hair was a mark of pride, while shingled hair was worn by cowards, so cutting it took away her identity and dignity (1). No one comforted her or reasoned with her; she felt treated like an animal, without a will of her own (1)."
+    },
+    {
+     "n": "III",
+     "src": "On the Face of It",
+     "q": "Mr Lamb keeps his garden gate open and invites anyone to come in. What does this show about him, and how is Derry different?",
+     "marks": 2,
+     "ans": "It shows that Mr Lamb is open, friendly and unafraid of people; despite his tin leg he welcomes company and does not shut himself away (1). Derry, ashamed of his burnt face, avoids people and hides; he slips into the garden only because he thinks the place is empty (1)."
+    },
+    {
+     "n": "I",
+     "src": "The Tiger King",
+     "q": "Why did the hunters hide the truth about the Maharaja's 'hundredth' tiger?",
+     "marks": 2,
+     "ans": "The Maharaja's bullet had missed; the tiger had only fainted from the shock (1). The hunters feared they would lose their jobs if the Maharaja learnt that he had missed, so one of them shot the tiger dead from close range and kept the secret (1)."
+    },
+    {
+     "n": "II",
+     "src": "On the Face of It",
+     "q": "Why is 'On the Face of It' a fitting title for Susan Hill's play about Derry and Mr Lamb?",
+     "marks": 2,
+     "ans": "'On the face of it' means 'judging by appearances' — Derry and Mr Lamb are judged by their burnt face and tin leg (1). Beneath the surface, they are much alike, and the play shows that what lies inside a person matters more than outward appearance (1)."
+    },
+    {
+     "n": "III",
+     "src": "The Enemy",
+     "q": "At the end of the story, Sadao wonders why he could not kill the American. What answer does the story suggest?",
+     "marks": 2,
+     "ans": "As a surgeon, Sadao's duty was to save life, not to take it (1). His basic humanity — and his memories of the Americans he had known — proved stronger than national hatred: to him the wounded man was a human being before he was an enemy (1)."
     }
    ]
   },
@@ -6259,6 +7193,26 @@
       "q": "Mukund Padmanabhan's interview with Umberto Eco reveals as much about the art of interviewing as it does about Eco. What qualities of a good interviewer does Padmanabhan show, and what qualities of a good interviewee does Eco show?",
       "ans": "Value points:\n• The interviewer: well prepared — knows Eco's scholarly works and novels; asks clear, focused questions (how he manages so many kinds of work, whether he is a scholar or novelist, why 'The Name of the Rose' succeeded); listens and follows up on Eco's answers; respectful, never intrusive — keeps to Eco's work rather than his private life; allows Eco to speak freely.\n• The interviewee: frank and humble — sees himself as a university professor who writes novels on Sundays; explains his ideas simply, with examples (interstices, telling the story of his research); witty and good-humoured; honest about not fully knowing why his novel succeeded.\n• Result: the interview is informative and engaging; the reader learns about Eco's mind, work habits and values — a contrast with Kipling's and Naipaul's view of interviews as an assault.\n• Conclusion: a good interview is a respectful conversation that brings out the best in both people.\nMarking: content 3, organisation/expression 2."
      }
+    },
+    {
+     "optA": {
+      "q": "Through the make-up department, the office boy, Kothamangalam Subbu and the Legal Adviser, Asokamitran shows that Gemini Studios was a world of hierarchy, ambition and frustration. Discuss with reference to 'Poets and Pancakes'.",
+      "ans": "Value points:\n• Hierarchy in the make-up department: the chief make-up man worked on the leading actor and actress, his senior assistant on the 'second' hero and heroine, the junior on the comedians, and the office boy on the crowd — rank decided who did what.\n• Frustrated ambition: the office boy had joined hoping to become a star actor, screenwriter, director or lyricist; years of slapping paint on extras left him bitter, and he poured out his anger on the author.\n• Subbu, 'No. 2': ever loyal to the Boss, full of ideas that got the Boss out of tight spots, a gifted poet and actor — yet his success made others resentful; the office boy blamed him for his own lack of progress.\n• The Legal Adviser: a 'man of law' whose recording of an angry actress's outburst ended her career — power used without thought.\n• The author's own position: cutting newspaper clippings in a cubicle, others thought he was doing nothing — the unseen worker.\n• Tone: gentle humour and irony; the studio is a small world reflecting society's ambitions and inequalities.\n• Conclusion: behind the glamour of films lay ordinary people with ordinary hopes and disappointments.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "'Aunt Jennifer's Tigers' presents a contrast between the creative spirit of a woman and the burden of an unequal marriage. Discuss with reference to the images of the tigers, Aunt Jennifer's hands and the wedding band.",
+      "ans": "Value points:\n• The tigers: bright 'topaz denizens' of a 'world of green'; they 'prance', are proud, fearless of men, and move with 'sleek chivalric certainty' — everything Aunt Jennifer cannot be.\n• Aunt Jennifer's hands: 'fluttering' fingers that find even the ivory needle hard to pull — nervous, weak, timid.\n• The wedding band: 'the massive weight of Uncle's wedding band' sits heavily on her hand — a symbol of a dominating husband and the oppressive bonds of marriage.\n• Even in death: her 'terrified hands' remain 'ringed with ordeals she was mastered by' — the double meaning of 'ringed'.\n• The triumph of art: the tigers she created 'will go on prancing, proud and unafraid' — her art outlives her suffering and expresses her suppressed desire for freedom.\n• Form: rhyming couplets and a calm, ironic tone heighten the contrast.\n• Conclusion: the poem is a quiet protest against the suppression of women and a tribute to the power of art.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Gandhi's work in Champaran went far beyond winning a refund for the sharecroppers. Discuss the steps he took to improve the social and cultural life of the villages, and why he believed this was necessary.",
+      "ans": "Value points:\n• Gandhi 'never contented himself with large political or economic solutions'; he saw the cultural and social backwardness of the Champaran villages and wanted to do something immediately.\n• Education: he appealed for teachers; Mahadev Desai and Narhari Parikh and their wives volunteered, as did others from Bombay, Poona and elsewhere; his youngest son Devdas and Kasturba also came; primary schools were opened in six villages.\n• Cleanliness: Kasturba taught the ashram rules of personal cleanliness and community sanitation.\n• Health: conditions were miserable; Gandhi got a doctor to volunteer for six months; only three medicines were available — castor oil, quinine and sulphur ointment.\n• Why: freedom from fear and from poverty had to go together with self-reliance and dignity; political victory was not enough if people remained ignorant, unhealthy and dependent.\n• Self-reliance: he did not want the peasants to depend on outsiders (e.g. he refused C. F. Andrews's continued help).\n• Conclusion: Champaran shows Gandhi's practical, all-round idea of freedom.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "In 'My Mother at Sixty-six', Kamala Das turns a short car journey into a moving expression of the universal fear of losing a parent. Discuss how she does this through imagery, contrast and the ending of the poem.",
+      "ans": "Value points:\n• The situation: an ordinary drive from her parents' home to Cochin airport; the mother dozing beside her — a simple, real experience.\n• Imagery of age and death: the mother's face 'ashen like that of a corpse'; later 'wan, pale as a late winter's moon' — ageing, loss of strength, approaching end.\n• Contrast: young trees sprinting and merry children spilling out of their homes — youth, energy and life, against the mother's age; the poet looks out to escape her painful thought.\n• The 'old familiar ache' and 'childhood's fear': the fear of losing her mother, felt since childhood.\n• The ending: at the airport she says only 'See you soon, Amma' and smiles and smiles and smiles — the brave, cheerful mask hides deep anxiety; the repetition shows the effort it costs.\n• Form: one long unbroken sentence, simple words, run-on lines — the flow of thought and feeling.\n• Universal appeal: every child dreads a parent's old age and death; restraint makes the feeling more moving.\nMarking: content 3, organisation/expression 2."
+     }
     }
    ]
   },
@@ -6393,6 +7347,26 @@
      "optB": {
       "q": "Jack Finney makes the fantasy in 'The Third Level' seem believable. Discuss the techniques he uses — the first-person narrator, precise details, real places and dates, and the ending with the first-day cover — to make readers half-believe Charley's story.",
       "ans": "Value points:\n• First-person narrator: Charley speaks directly and calmly to the reader, admits that others doubt him and that he has seen a psychiatrist — his honesty wins trust.\n• Real places: Grand Central Station, Vanderbilt Avenue, Galesburg, Illinois — the story is set in a familiar world.\n• Precise details of 1894: gas lights, brass spittoons, old-style clothes, a locomotive with a funnel-shaped stack, the newspaper 'The World' with news of President Cleveland, the old-style currency the clerk will not accept.\n• Ordinary concerns: hurrying home to his wife Louisa; his interest in stamps — he sounds like an ordinary man, not a dreamer.\n• Sam's view: the psychiatrist's 'waking-dream wish fulfilment' gives a rational explanation, which makes the twist stronger.\n• The ending: the first-day cover postmarked 18 July 1894, with Sam's letter from Galesburg — tangible 'proof' that leaves the question open.\n• Conclusion: by blending realism with fantasy, Finney makes the reader share Charley's longing and doubt.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Imagine you are a Class XI student who has just returned from an expedition to Antarctica with the 'Students on Ice' programme described in 'Journey to the End of the Earth'. Write a diary entry recording what you saw and what the journey taught you about the earth's past, present and future.",
+      "ans": "Format: date/day, informal first-person style.\nValue points:\n• The journey: crossing the ocean on a research vessel, the endless white landscape, icebergs, the silence, the 24-hour summer daylight, wildlife such as penguins, seals and whales.\n• The past: Antarctica was once part of Gondwana, joined with India; its ice holds half-million-year-old carbon records — a window into the earth's history.\n• The present: signs of global warming — shrinking ice shelves, the hole in the ozone layer; human beings have been on earth for only 12,000 years yet have created a huge impact.\n• The future: if the ice melts, sea levels will rise; small changes can have big effects — the lesson of phytoplankton: 'take care of the small things and the big things will take care of themselves'.\n• Why such programmes matter: young people who see these changes first-hand will act — Geoff Green's idea.\n• Personal resolve: to save energy, cut plastic, spread awareness in school.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "Derry's mother loves her son deeply, yet her love also keeps him shut away from the world. Discuss the role of Derry's mother in 'On the Face of It' and what the play suggests about how families should support a child who is different.",
+      "ans": "Value points:\n• Her love and fear: she is anxious and over-protective; she has heard gossip about Mr Lamb and forbids Derry to go back to him.\n• How it limits Derry: she treats him as someone to be protected from the world; her pity, like that of others, makes him feel different; Derry has overheard a woman say only a mother could love his face — he believes everyone sees only his scars.\n• Derry's resistance: after meeting Mr Lamb he insists on returning — 'if I don't go back there, I'll never go anywhere in the world again'; he chooses independence over protection.\n• Contrast with Mr Lamb: he neither pities nor fears Derry; he talks to him as an equal and encourages him to look beyond his face.\n• What families should do: love without over-protecting; build confidence; encourage friendships and activities; treat the child as a whole person; help him face, not hide from, the world.\n• Conclusion: real support means giving a child the courage and freedom to live fully.\nMarking: content 3, organisation/expression 2."
+     }
+    },
+    {
+     "optA": {
+      "q": "Imagine you are Zitkala-Sa. On the evening of your first day at the boarding school, you write a letter (which you can never send) to your mother. Describe what happened to you that day and how you felt, based on 'Memories of Childhood'.",
+      "ans": "Format: informal letter — date, 'Dear Mother', closing.\nValue points:\n• The cold first day in the 'land of apples': snow on the ground, bare trees; the loud bell for breakfast, the clatter of shoes, the noise and confusion.\n• Clothes: the stiff, tight clothes; being made to give up her soft moccasins and blanket; feeling immodest and ashamed.\n• Breakfast: a line of Indian girls marching into the dining room; she sat down when she should have stood; bells for every action — 'eating by formula'; a paleface woman watching her; she began to cry.\n• The hair-cutting: Judéwin's warning that the women would cut their long hair; her mother had told her that only unskilled warriors captured by the enemy had their hair shingled, and that mourners wore short hair; her decision to struggle; hiding under the bed in a dark room; being found, dragged out, tied fast in a chair; the cold scissors and her braids gnawed off.\n• Her feelings: anguish, loneliness, loss of spirit, humiliation; no one to comfort her; like an animal driven by a herder; longing for her mother.\n• Resolve: 'I will not submit' — a flicker of resistance.\nMarking: content 3, organisation/expression 2."
+     },
+     "optB": {
+      "q": "Write a newspaper report, as it might have appeared in the Pratibandapuram Gazette, on the sudden death of the Maharaja, the 'Tiger King'. Base it on the events of the story.",
+      "ans": "Format: headline (e.g. 'Tiger King Dies After Toy Tiger Injury'), by-line, place and date; report in the third person.\nValue points:\n• The news: the Maharaja of Pratibandapuram, famous for his vow to kill a hundred tigers, has died after an infection in his hand.\n• Background: astrologers had predicted at his birth that his death would be caused by a tiger, the hundredth tiger; he banned tiger hunting by others, hunted every tiger in his state, married a princess from a state with many tigers, spent huge sums, and nearly lost his throne over a British officer's wish to hunt.\n• The hundredth tiger: shot by him at last (in fact, the old tiger only fainted and was killed by the hunters) — celebrations.\n• The fatal gift: for the crown prince's third birthday he bought a wooden toy tiger, crudely carved, at a toy shop; a sliver from it pricked his right hand.\n• Death: the hand became infected, the infection spread to his whole arm; three surgeons operated, but he died.\n• Comment: the prophecy came true in an ironic way — the hundredth tiger took its revenge; a lesson about arrogance and the destruction of wildlife.\nMarking: content 3, organisation/expression 2."
      }
     }
    ]
