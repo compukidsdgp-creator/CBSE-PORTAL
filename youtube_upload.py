@@ -9,6 +9,7 @@ Login:    YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (scope youtube.upload
 
     python3 youtube_upload.py schedule [--hours 54] [--dry-run]   upload every planned Short due within the next N hours
     python3 youtube_upload.py extend                               add new reels (not yet in the plan) to the end of their lane
+    python3 youtube_upload.py playlists                            put uploaded Shorts into their class-wise playlists
     python3 youtube_upload.py test                                 upload one PRIVATE test Short (not scheduled), print its link
     python3 youtube_upload.py status
 """
@@ -126,6 +127,103 @@ def when(e):
     return datetime.strptime(f"{e['date']} {e['time']}", "%Y-%m-%d %H:%M").replace(tzinfo=IST)
 
 
+# ── Playlists (class-wise) ───────────────────────────────────────────────────
+PLAYLISTS_FILE = ROOT / "youtube" / "playlists.json"
+PLAYLISTS = {   # key → (title, description)
+    "c10-maths":   ("Class 10 Maths — CBSE Board Shorts", "Class 10 Maths in under a minute: WHY? explainers, formula revision and exam tips for the CBSE board exams. Free notes & mock papers: https://cbsemock.org.in"),
+    "c10-science": ("Class 10 Science — CBSE Board Shorts", "Class 10 Science (Physics, Chemistry, Biology) in under a minute: WHY? explainers, formula revision and common board-exam mistakes. https://cbsemock.org.in"),
+    "c10-ai":      ("Class 10 Artificial Intelligence — Shorts", "Class 10 AI (CBSE code 417) concepts explained simply. https://cbsemock.org.in"),
+    "c12-physics": ("Class 12 Physics — CBSE Board Shorts", "Class 12 Physics in under a minute: WHY? explainers and formula revision for the CBSE board exams. https://cbsemock.org.in"),
+    "c12-chemistry": ("Class 12 Chemistry — CBSE Board Shorts", "Class 12 Chemistry in under a minute: WHY? explainers and formula revision for the CBSE board exams. https://cbsemock.org.in"),
+    "c12-maths":   ("Class 12 Maths — CBSE Board Shorts", "Class 12 Maths in under a minute: WHY? explainers and formula revision for the CBSE board exams. https://cbsemock.org.in"),
+    "c12-biology": ("Class 12 Biology — CBSE Board Shorts", "Class 12 Biology in under a minute: WHY? explainers and formula revision for the CBSE board exams. https://cbsemock.org.in"),
+    "c12-cs":      ("Class 12 Computer Science — Python Shorts", "Class 12 Computer Science and Python concepts explained in under a minute. https://cbsemock.org.in"),
+    "board-plan":  ("Board Exam Strategy 2027 — Shorts", "Smart CBSE board-exam strategy: step marking, time management, board FAQs and daily score hacks. https://cbsemock.org.in"),
+    "hindi":       ("हिंदी में WHY? — CBSE Shorts (Hindi)", "CBSE कक्षा 10 और 12 के कॉन्सेप्ट हिंदी में, एक मिनट से कम में। फ्री नोट्स और मॉक पेपर: https://cbsemock.org.in"),
+}
+
+
+def playlist_keys(e):
+    """Which class-wise playlists a planned Short belongs to."""
+    g, t = e.get("group", ""), e.get("title", "").lower()
+    keys = []
+    if e.get("series") == "Board Plan":
+        keys.append("board-plan")
+    elif g == "Class 10 Maths":
+        keys.append("c10-maths")
+    elif g in ("Class 10 Science", "Class 10 Physics", "Class 10 Chemistry", "Class 10 Biology"):
+        keys.append("c10-science")
+    elif g == "AI":
+        keys.append("c10-ai")
+    elif g in ("Class 12 CS", "CS"):
+        keys.append("c12-cs")
+    elif g in ("Class 12 Physics", "Class 12 Chemistry", "Class 12 Maths", "Class 12 Biology"):
+        keys.append("c12-" + g.split()[-1].lower())
+    elif g in ("Class 12 Science", "Science"):   # WHY? reels tagged only "Science": decide by the topic
+        if re.search(r"dna|gene|protein|blood|cell", t):
+            keys.append("c12-biology")
+        elif re.search(r"reaction|rate|mole|acid|bond", t):
+            keys.append("c12-chemistry")
+        else:
+            keys.append("c12-physics")
+    if e.get("series") == "WHY Hindi":
+        keys.append("hindi")
+    return keys
+
+
+def _yt(token, method, path, body=None, params=None):
+    q = urllib.parse.urlencode(params or {})
+    req = urllib.request.Request(f"https://www.googleapis.com/youtube/v3/{path}?{q}", method=method,
+                                 data=json.dumps(body).encode() if body is not None else None,
+                                 headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+
+def playlist_id(token, key, cache):
+    if key in cache:
+        return cache[key]
+    title, desc = PLAYLISTS[key]
+    res = _yt(token, "POST", "playlists", {"snippet": {"title": title, "description": desc, "defaultLanguage": "hi" if key == "hindi" else "en"},
+                                          "status": {"privacyStatus": "public"}}, {"part": "snippet,status"})
+    cache[key] = res["id"]
+    jsave(PLAYLISTS_FILE, cache)
+    print(f"[yt] created playlist '{title}' → {res['id']}")
+    return res["id"]
+
+
+def add_to_playlists(token, plan=None, limit=60):
+    """Put every uploaded Short into its class-wise playlists (idempotent; remembered in uploaded.json)."""
+    plan = plan or jload(PLAN, {}).get("plan", [])
+    done, cache = jload(DONE, {}), jload(PLAYLISTS_FILE, {})
+    by_path = {e["drive_path"]: e for e in plan}
+    n = 0
+    for path, u in done.items():
+        e = by_path.get(path)
+        if not e:
+            continue
+        for key in playlist_keys(e):
+            if key in u.get("playlists", []):
+                continue
+            if n >= limit:
+                return n
+            try:
+                pid = playlist_id(token, key, cache)
+                _yt(token, "POST", "playlistItems", {"snippet": {"playlistId": pid, "resourceId": {"kind": "youtube#video", "videoId": u["id"]}}},
+                    {"part": "snippet"})
+                u.setdefault("playlists", []).append(key)
+                jsave(DONE, done)
+                n += 1
+            except urllib.error.HTTPError as err:
+                body = err.read().decode()[:200]
+                if "insufficient" in body.lower() or err.code == 403:
+                    print("[yt] playlists need the broader YouTube permission — refresh token has upload-only scope; skipping")
+                    return n
+                print(f"[yt] playlist add failed for {path}: {err.code} {body}")
+    print(f"[yt] {n} playlist entr{'y' if n == 1 else 'ies'} added")
+    return n
+
+
 # ── Commands ─────────────────────────────────────────────────────────────────
 def schedule(hours=54, dry=False):
     plan, done = jload(PLAN, {}).get("plan", []), jload(DONE, {})
@@ -175,6 +273,10 @@ def schedule(hours=54, dry=False):
         except Exception as err:
             bad += 1
             lines.append(f"• ⚠️ FAILED {e['title']} — {str(err)[:200]}")
+    try:
+        add_to_playlists(token)
+    except Exception as err:
+        print(f"[yt] playlists: {err}")
     if ok or bad:
         head = f"▶️ YouTube: {ok} Short(s) uploaded and scheduled" + (f", {bad} FAILED" if bad else "")
         owner(head + "\n\n" + "\n".join(lines) + "\n\nTo change or stop one, open YouTube Studio → Content before its time.")
@@ -242,5 +344,7 @@ if __name__ == "__main__":
         extend()
     elif a[0] == "test":
         test()
+    elif a[0] == "playlists":
+        add_to_playlists(access_token())
     else:
         status()

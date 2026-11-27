@@ -9,10 +9,10 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "schedule = normal run · test = one PRIVATE test upload · extend = only add new reels to the plan"
+        description: "schedule = normal run · test = one PRIVATE test upload · extend = only add new reels to the plan · playlists = sort uploaded Shorts into playlists"
         default: schedule
         type: choice
-        options: [schedule, test, extend]
+        options: [schedule, test, extend, playlists]
 permissions:
   contents: write
 concurrency:
@@ -53,6 +53,7 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'schedule' }}"
           if [ "$MODE" = "test" ]; then python3 youtube_upload.py test; exit 0; fi
+          if [ "$MODE" = "playlists" ]; then python3 youtube_upload.py playlists; exit 0; fi
           python3 youtube_upload.py extend
           [ "$MODE" = "extend" ] || python3 youtube_upload.py schedule
       - name: Save
