@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Properties of Acids and Bases — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Lab-bench practical: test two unlabelled bottles with litmus, phenolphthalein, methyl orange, zinc and sodium carbonate, then identify the acid and the base.">
+<meta name="cbse-lab-standard" content="2026-11">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/chemistry/01-acid-base-indicator-lab.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Properties of acids and bases (HCl and NaOH) — virtual lab","url":"https://cbsemock.org.in/virtual-labs/chemistry/01-acid-base-indicator-lab.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 10"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Acid–base indicators","Litmus, phenolphthalein and methyl orange","Reaction of acids and bases with zinc","Reaction of acids with metal carbonates","Tests for hydrogen and carbon dioxide"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
+<style>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800;padding:8px 0}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.hero p{color:rgba(255,255,255,.86);max-width:780px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.72rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
+
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s;min-height:44px}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.76rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.benchbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+#bench{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none}
+#bench .it{cursor:grab;touch-action:none}#bench .it.drag{cursor:grabbing}
+#bench .slot{cursor:pointer}
+#bench .it:focus,#bench .slot:focus{outline:none}
+#bench .it:focus-visible .hl,#bench .slot:focus-visible .hl{opacity:1}
+.benchscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:700px){#bench{min-width:820px}.hint{display:none}.benchbox::after{content:'⟷ swipe the bench · tap a bottle, then a button';position:absolute;right:8px;bottom:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 9px;border-radius:99px;pointer-events:none}}
+.hint{position:absolute;left:12px;top:10px;font-size:.74rem;color:#8ea2bd;background:rgba(5,8,14,.6);padding:4px 9px;border-radius:99px;pointer-events:none}
+.row2{display:grid;grid-template-columns:300px 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px}
+.panel h4{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px}
+#tubeView{display:block;width:100%;max-width:290px;margin:0 auto;height:auto;border-radius:10px;background:#0a111c}
+.scrcap{font-size:.8rem;color:#a9bbd2;text-align:center;margin-top:8px;min-height:2.6em}
+.scrcap b{color:#e8cc6a}
+.sel{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 8px;align-items:center}
+.sel .lbl{font-size:.78rem;color:#93a6bf;font-weight:700;margin-right:2px}
+.chip{cursor:pointer;border:1.5px solid #2f4566;background:#13213a;color:#d6e1ef;font:inherit;font-size:.82rem;font-weight:700;padding:7px 12px;border-radius:99px;min-height:42px;min-width:42px}
+.chip.on{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.chip .ok{color:#7fe0b8;margin-left:4px}.chip.on .ok{color:#0f5a40}
+.selinfo{font-size:.86rem;color:#c9d6e6;margin:6px 0 8px;min-height:1.4em}.selinfo b{color:#fff}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.acts button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;min-height:44px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff;padding:6px 8px}
+.acts button:hover{background:#21385c}.acts button:active{transform:translateY(1px)}
+.acts button:disabled{opacity:.45;cursor:not-allowed}
+.acts .wide{grid-column:span 3}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:#c9d6e6;cursor:pointer;padding:8px 0;min-height:42px}
+.sw input{width:22px;height:22px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:44px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.msg{font-size:.88rem;margin-top:8px;min-height:1.3em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}.msg.warn{color:#ffd27a}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:860px;font-size:.88rem}
+.obs th,.obs td{padding:7px 8px;border-bottom:1px solid var(--border);text-align:center;vertical-align:middle}
+.obs th{background:var(--soft);font-weight:700;font-size:.8rem;line-height:1.3}
+.obs td.tn{text-align:left;font-weight:600}
+.obs td.tn small{display:block;font-weight:500;color:var(--muted);font-size:.78rem}
+.obs select{font:inherit;font-size:16px;min-height:42px;padding:6px 8px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);color:var(--text);max-width:230px;width:100%}
+.obs select.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs select.good{border-color:var(--green)}
+.obs select:disabled{opacity:.5}
+.obs .na{color:var(--muted)}
+.obs tr.flag td{background:rgba(201,162,39,.09)}
+.obs tr.okrow td:last-child{color:var(--green);font-weight:800}
+.obs .st{font-size:.8rem;color:var(--muted);white-space:nowrap}
+.note{font-size:.82rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:4px}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox select{font:inherit;font-size:16px;min-height:44px;width:100%;padding:6px 8px;border-radius:8px;border:1.5px solid var(--border);background:var(--card);color:var(--text)}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:.98rem;overflow-x:auto}
+.ctab{overflow-x:auto;margin:8px 0}
+.ctab table{border-collapse:collapse;width:100%;min-width:420px;font-size:.88rem}
+.ctab th,.ctab td{border:1px solid var(--border);padding:6px 8px;text-align:center}
+.ctab th{background:var(--soft)}
+.sw8{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:4px;border:1px solid rgba(0,0,0,.25)}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:28px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}
+footer{text-align:center;padding:26px 16px 90px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:10px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;counter-reset:s}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.62);font:600 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.06em}
+.sceneB .dropB{animation:drip 2.8s ease-in infinite}
+@keyframes drip{0%,30%{transform:translateY(0);opacity:0}35%{opacity:1}62%{transform:translateY(58px);opacity:1}66%,100%{transform:translateY(58px);opacity:0}}
+.sceneB .litB{animation:litmus 5.6s ease-in-out infinite}
+@keyframes litmus{0%,25%{fill:#4a63c9}55%,85%{fill:#c8323c}100%{fill:#4a63c9}}
+.sceneB .bub{animation:rise 2.2s linear infinite}
+.sceneB .bub:nth-child(2){animation-delay:-.5s}.sceneB .bub:nth-child(3){animation-delay:-1s}.sceneB .bub:nth-child(4){animation-delay:-1.4s}.sceneB .bub:nth-child(5){animation-delay:-1.8s}.sceneB .bub:nth-child(6){animation-delay:-.25s}
+@keyframes rise{0%{transform:translateY(0);opacity:0}10%{opacity:.9}90%{opacity:.9}100%{transform:translateY(-62px);opacity:0}}
+.sceneB .milkB{animation:milk 6s ease-in-out infinite alternate}
+@keyframes milk{0%{opacity:.15}100%{opacity:.92}}
+.sceneB .glowB{animation:pulse 1.6s ease-in-out infinite alternate}@keyframes pulse{to{opacity:.6}}
+@media(prefers-reduced-motion:reduce){.sceneB .dropB,.sceneB .litB,.sceneB .bub,.sceneB .milkB,.sceneB .glowB{animation:none}.sceneB .milkB{opacity:.8}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record .lines{border-bottom:1px solid #aaa;height:18pt}
+}
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small,.tab small,.obs th,.obs td.tn small,.hint,.note{font-size:12px}.obs td,.obs th{padding:6px}}
+</style>
+</head>
+<body>
+<div class="lab-draft" style="background:#fff4d6;color:#6b4e00;padding:8px 14px;font:600 14px Inter,sans-serif;text-align:center">Draft preview — waiting for approval in the admin panel</div>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../../index.html">Home</a> › <a href="../../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../../virtual-labs/chemistry/index.html">Chemistry</a> › Acids and bases</nav>
+   <div class="eyebrow">Experiment · Test-tube bench</div>
+   <h1><span class="g1">Acids &amp; Bases</span><span class="g2">Properties of HCl and NaOH</span></h1>
+   <p>Two bottles, A and B, have lost their labels. One holds dilute hydrochloric acid, the other dilute sodium hydroxide. Test them with indicators, zinc and sodium carbonate, and let the evidence tell you which is which.</p>
+   <div class="chips"><span>Class 10 · Practical 1 (B)</span><span>Litmus · zinc · Na₂CO₃</span><span>⏱ about 25 min</span></div>
+   <a class="go" href="#lab">Open the bench ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <linearGradient id="h-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2e"/><stop offset="1" stop-color="#24170c"/></linearGradient>
+ <linearGradient id="h-glass" x1="0" x2="1"><stop offset="0" stop-color="#cfe9ff" stop-opacity=".35"/><stop offset=".35" stop-color="#ffffff" stop-opacity=".12"/><stop offset=".8" stop-color="#ffffff" stop-opacity=".05"/><stop offset="1" stop-color="#cfe9ff" stop-opacity=".35"/></linearGradient>
+ <linearGradient id="h-rack" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a77b4f"/><stop offset="1" stop-color="#5e3f22"/></linearGradient>
+ <linearGradient id="h-bottle" x1="0" x2="1"><stop offset="0" stop-color="#9fb8c8" stop-opacity=".45"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".18"/><stop offset="1" stop-color="#9fb8c8" stop-opacity=".45"/></linearGradient>
+ <radialGradient id="h-glow"><stop offset="0" stop-color="#9fd6ff" stop-opacity=".35"/><stop offset="1" stop-color="#9fd6ff" stop-opacity="0"/></radialGradient>
+ <clipPath id="h-c1"><path d="M232 96v150a14 14 0 0 0 28 0V96z"/></clipPath>
+ <clipPath id="h-c2"><path d="M392 96v150a14 14 0 0 0 28 0V96z"/></clipPath>
+ <clipPath id="h-c3"><path d="M596 150v96a14 14 0 0 0 28 0v-96z"/></clipPath>
+</defs>
+<rect x="0" y="300" width="760" height="60" fill="url(#h-wood)"/>
+<circle class="glowB" cx="410" cy="200" r="150" fill="url(#h-glow)"/>
+<!-- reagent bottle (unlabelled A) -->
+<rect x="62" y="196" width="76" height="104" rx="9" fill="url(#h-bottle)" stroke="#cfe3ef" stroke-opacity=".7"/>
+<rect x="64" y="226" width="72" height="72" rx="7" fill="#dfeef6" opacity=".18"/>
+<rect x="88" y="172" width="24" height="26" fill="url(#h-bottle)" stroke="#cfe3ef" stroke-opacity=".7"/>
+<path d="M86 172h28l-3-12h-22z" fill="#2b2b2b"/><ellipse cx="100" cy="150" rx="11" ry="14" fill="#a3262b"/>
+<rect x="76" y="236" width="48" height="40" rx="4" fill="#f5efdc"/><text x="100" y="266" text-anchor="middle" style="font:800 26px Inter,sans-serif" fill="#1a3a6b">A</text>
+<!-- dropper above litmus tube with a falling drop -->
+<path d="M240 30h12v34l-6 12-6-12z" fill="url(#h-bottle)" stroke="#cfe3ef" stroke-opacity=".8"/><ellipse cx="246" cy="22" rx="9" ry="12" fill="#a3262b"/>
+<path class="dropB" d="M246 80c3 4 4 7 4 9a4 4 0 0 1-8 0c0-2 1-5 4-9z" fill="#dfeffa" opacity=".9"/>
+<!-- rack -->
+<rect x="200" y="168" width="440" height="14" rx="3" fill="url(#h-rack)"/>
+<rect x="200" y="284" width="440" height="12" rx="3" fill="url(#h-rack)"/>
+<rect x="204" y="168" width="10" height="128" fill="#6b4a2e"/><rect x="626" y="168" width="10" height="128" fill="#6b4a2e"/>
+<!-- tube 1: litmus turning red -->
+<g clip-path="url(#h-c1)"><rect class="litB" x="230" y="196" width="32" height="70" fill="#4a63c9"/></g>
+<path d="M230 92v154a16 16 0 0 0 32 0V92" fill="url(#h-glass)" stroke="#d6ecff" stroke-opacity=".75" stroke-width="1.6"/>
+<path d="M237 110v120" stroke="#fff" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+<!-- tube 2: zinc + acid, hydrogen bubbles -->
+<g clip-path="url(#h-c2)"><rect x="390" y="190" width="32" height="76" fill="#dbeef6" opacity=".28"/>
+ <path d="M396 254l7-5 6 3 3 7-5 5-8-1zM405 246l8-3 6 4-1 6-7 2-5-4z" fill="#8e969f" stroke="#5d646c" stroke-width=".8"/>
+ <g fill="none" stroke="#f2fbff" stroke-width="1.2"><circle class="bub" cx="400" cy="248" r="2.2"/><circle class="bub" cx="408" cy="245" r="1.8"/><circle class="bub" cx="413" cy="250" r="2.4"/><circle class="bub" cx="404" cy="244" r="1.5"/><circle class="bub" cx="410" cy="252" r="2"/><circle class="bub" cx="398" cy="252" r="1.7"/></g></g>
+<path d="M390 92v154a16 16 0 0 0 32 0V92" fill="url(#h-glass)" stroke="#d6ecff" stroke-opacity=".75" stroke-width="1.6"/>
+<path d="M397 110v120" stroke="#fff" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+<!-- tube 3: carbonate + acid, delivery tube into lime water -->
+<rect x="508" y="90" width="22" height="14" rx="3" fill="#b07a45"/>
+<path d="M519 92V64h90v100" fill="none" stroke="#d6ecff" stroke-opacity=".8" stroke-width="4" stroke-linejoin="round"/>
+<path d="M508 104v142a11 11 0 0 0 22 0V104" fill="url(#h-glass)" stroke="#d6ecff" stroke-opacity=".75" stroke-width="1.6"/>
+<g clip-path="url(#h-c3)"><rect x="594" y="186" width="32" height="80" fill="#e9f3f6" opacity=".22"/><rect class="milkB" x="594" y="186" width="32" height="80" fill="#f4f3ec"/></g>
+<path d="M594 150v96a16 16 0 0 0 32 0v-96" fill="url(#h-glass)" stroke="#d6ecff" stroke-opacity=".75" stroke-width="1.6"/>
+<rect x="510" y="238" width="18" height="14" rx="5" fill="#f6f6f2" opacity=".9"/>
+<g fill="none" stroke="#f2fbff" stroke-width="1"><circle class="bub" cx="515" cy="236" r="1.6"/><circle class="bub" cx="522" cy="238" r="1.9"/><circle class="bub" cx="518" cy="240" r="1.4"/></g>
+<text x="246" y="320" class="tB">LITMUS</text><text x="406" y="320" class="tB">ZINC + ACID</text><text x="566" y="320" class="tB">LIME WATER</text><text x="100" y="320" class="tB">BOTTLE A</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Indicator tests</li><li><b>2</b>Zinc + H₂ test</li><li><b>3</b>Na₂CO₃ + lime water</li><li><b>4</b>Identify &amp; viva</li></ol>
+</header>
+
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="Test-tube bench">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-step="ind" role="tab" type="button"><b>Step 1 · Indicators</b><small>Litmus, phenolphthalein, methyl orange</small></button>
+   <button class="tab" data-step="zn" role="tab" type="button"><b>Step 2 · Zinc granules</b><small>Warm if needed, test the gas</small></button>
+   <button class="tab" data-step="cb" role="tab" type="button"><b>Step 3 · Sodium carbonate</b><small>Pass the gas through lime water</small></button>
+  </div>
+  <div class="task" id="task"></div>
+  <div class="benchbox">
+   <div class="benchscroll" id="benchScroll"><svg id="bench" viewBox="0 0 1000 380" role="img" aria-label="Lab bench with reagent bottles, a test-tube stand and apparatus"></svg></div>
+   <span class="hint" id="hint">Tap a bottle or jar, then use the buttons — or drag it onto a test tube</span>
+  </div>
+  <div class="row2">
+   <div class="panel">
+    <h4><span>Magnified tube</span><span id="tubeTag" style="text-transform:none;letter-spacing:.02em">Tube A</span></h4>
+    <svg id="tubeView" viewBox="0 0 260 320" aria-label="Magnified view of the selected test tube"></svg>
+    <div class="scrcap" id="cap"></div>
+   </div>
+   <div class="panel">
+    <h4><span>Work at the bench</span><span id="sampleTag" class="mono">Set S-?</span></h4>
+    <div class="sel" id="testSel"></div>
+    <div class="sel" id="tubeSel"></div>
+    <div class="sel" id="itemSel"></div>
+    <div class="selinfo" id="selInfo"></div>
+    <div class="acts" id="acts"></div>
+    <div class="tools">
+     <button class="btn ghost" id="shake" type="button">〰 Shake tube</button>
+     <button class="btn ghost" id="rinse" type="button">🚿 Fresh tube</button>
+     <label class="sw"><input type="checkbox" id="helper"> Show readings (helper)</label>
+     <span style="flex:1"></span>
+     <button class="btn ghost" id="newSet" type="button">↺ New samples</button>
+    </div>
+    <div class="tools">
+     <button class="btn gold" id="recBtn" type="button">＋ Record this observation</button>
+     <span class="note" style="color:#93a6bf">Then fill in what you saw in the table below.</span>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 / 12</span></h2>
+  <p class="lead">Record each tube after you have watched it. Choose what you <b>saw</b>, the result of the gas test, and what it tells you about the sample.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Experiment</th><th>Sample</th><th>Observation</th><th>Gas test</th><th>Inference</th><th>Status</th></tr></thead>
+   <tbody id="tb"></tbody>
+  </table></div>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <p class="lead">Use your observations to decide what each bottle contains. The labels can be revealed once at least 10 rows of your table are correct.</p>
+  <div class="result">
+   <div class="rbox"><small>Correct observations</small><b id="rScore">0 / 12</b></div>
+   <div class="rbox"><small>Bottle A contains</small><select id="idA" aria-label="Bottle A contains"><option value="">— choose —</option><option value="HCl">dilute HCl (acid)</option><option value="NaOH">dilute NaOH (base)</option></select></div>
+   <div class="rbox"><small>Bottle B contains</small><select id="idB" aria-label="Bottle B contains"><option value="">— choose —</option><option value="HCl">dilute HCl (acid)</option><option value="NaOH">dilute NaOH (base)</option></select></div>
+   <div class="rbox true" id="trueBox" hidden><small>Actual labels</small><b id="rTrue">—</b></div>
+  </div>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the bottle labels</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To study the properties of acids and bases (dilute HCl and dilute NaOH) by their reaction with (a) litmus solution (blue and red) and other indicators, (b) zinc metal and (c) solid sodium carbonate.</p>
+    <h3>Apparatus and materials</h3>
+    <p>Test tubes, test-tube stand, test-tube holder, droppers, spatula, cork with a bent delivery tube, spirit lamp, wooden splinter and matchbox; dilute HCl, dilute NaOH, blue and red litmus solution, phenolphthalein, methyl orange, zinc granules, solid sodium carbonate and freshly prepared lime water.</p>
+    <h3>Theory</h3>
+    <p><b>Indicators</b> change colour with the nature of the solution. Acids give H⁺(aq) ions in water; bases (alkalis) give OH⁻(aq) ions.</p>
+    <div class="ctab"><table>
+     <tr><th>Indicator</th><th>In acid (HCl)</th><th>In base (NaOH)</th></tr>
+     <tr><td>Blue litmus</td><td><span class="sw8" style="background:#c8323c"></span>turns red</td><td>no change</td></tr>
+     <tr><td>Red litmus</td><td>no change</td><td><span class="sw8" style="background:#3a5fc0"></span>turns blue</td></tr>
+     <tr><td>Phenolphthalein</td><td>stays colourless</td><td><span class="sw8" style="background:#e0379b"></span>turns pink</td></tr>
+     <tr><td>Methyl orange</td><td><span class="sw8" style="background:#d7263d"></span>turns red</td><td><span class="sw8" style="background:#f2c230"></span>turns yellow</td></tr>
+    </table></div>
+    <p><b>Zinc</b> displaces hydrogen from dilute HCl in the cold. It also reacts with sodium hydroxide, but only on warming, to form sodium zincate:</p>
+    <p class="eq">Zn(s) + 2HCl(aq) → ZnCl₂(aq) + H₂(g)↑</p>
+    <p class="eq">Zn(s) + 2NaOH(aq) —heat→ Na₂ZnO₂(aq) + H₂(g)↑</p>
+    <p>Hydrogen burns with a <b>pop</b> sound when a burning splinter is brought near it.</p>
+    <p><b>Metal carbonates</b> react with acids to give a salt, water and carbon dioxide, which turns lime water milky. Sodium carbonate does not react with sodium hydroxide, because both are basic.</p>
+    <p class="eq">Na₂CO₃(s) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g)↑</p>
+    <p class="eq">Ca(OH)₂(aq) + CO₂(g) → CaCO₃(s) + H₂O(l)</p>
+    <p>If too much CO₂ is passed, the milkiness disappears, because soluble calcium hydrogencarbonate forms:</p>
+    <p class="eq">CaCO₃(s) + H₂O(l) + CO₂(g) → Ca(HCO₃)₂(aq)</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li><b>Indicators:</b> take about 2 mL of sample A in a clean test tube and add 2–3 drops of blue litmus solution. Shake gently and note the colour. Repeat with sample B.</li>
+     <li>Repeat step 1 in fresh test tubes with red litmus solution, phenolphthalein and methyl orange.</li>
+     <li><b>Zinc:</b> put two zinc granules in a test tube and add about 2 mL of sample A. Watch the surface of the zinc for bubbles.</li>
+     <li>Close the mouth of the tube with a cork for a few seconds so that the gas collects. Remove the cork and at once bring a burning splinter near the mouth. Note what happens.</li>
+     <li>Repeat with sample B. If nothing happens in the cold, hold the tube in a holder and warm it gently over the spirit lamp, then test the gas again.</li>
+     <li><b>Sodium carbonate:</b> put a spatula-full of solid sodium carbonate in a test tube and add about 2 mL of sample A.</li>
+     <li>At once fit the cork with the delivery tube and dip its other end into freshly prepared lime water. Watch the lime water.</li>
+     <li>Repeat with sample B. Record every observation and write your inference.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>Handle acids and alkalis carefully. Never taste or smell them; wash any spill with plenty of water.</li>
+     <li>Use clean test tubes and a separate dropper for each reagent, so that samples are not mixed.</li>
+     <li>Use small quantities: a test tube should not be more than about one-third full.</li>
+     <li>While warming, hold the tube with a holder, heat it gently and point its mouth away from yourself and others. Never heat a corked tube.</li>
+     <li>Use freshly prepared, clear lime water and pass the gas only while the effervescence is brisk.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>A dirty tube or a shared dropper can carry acid into the base (or the reverse) and give a misleading colour.</li>
+     <li>Reading a colour before the indicator has spread through the liquid.</li>
+     <li>The oxide coat on zinc delays the first bubbles by a few seconds; a quick look may suggest no reaction.</li>
+     <li>The hydrogen escapes quickly from an open tube, so the pop test may fail if the gas is not collected first.</li>
+     <li>Passing CO₂ for too long can make milky lime water clear again; stale lime water may not turn milky at all.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask in this practical. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../../notes/class-10/science/acids-bases-and-salts.html">📘 Notes: Acids, bases and salts</a></li>
+   <li><a href="../../../cbse-class-10-science-mock-tests.html">📄 Class 10 Science mock tests</a></li>
+   <li><a href="../../../virtual-labs/chemistry/02-ph-scale-explorer.html">🧪 Next lab: pH of samples</a></li>
+   <li><a href="../../../virtual-labs/chemistry/39-titration-and-endpoint.html">⚗️ Lab: Acid–base titration</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../../about.html">About Us</a> · <a href="../../../privacy.html">Privacy Policy</a> · <a href="../../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
+<script>
+(function(){
+'use strict';
+/* ───────── constants + helpers ───────── */
+var NS='http://www.w3.org/2000/svg';
+var DROP=0.05;                    // volume of one drop (mL)
+var KEY='cbse-lab-acidbase';
+var CA_LIME=0.04;                 // Ca(OH)2 in the lime-water tube (mmol): ~2 mL of saturated solution
+var LIME_EFF=0.065;               // fraction of the CO2 that actually dissolves as it bubbles through
+function $(id){return document.getElementById(id)}
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function rnd(a,b){return a+Math.random()*(b-a)}
+function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
+function f1(x){return (Math.round(x*10)/10).toFixed(1)}
+function mixC(a,b,f){return [a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f,a[2]+(b[2]-a[2])*f,a[3]+(b[3]-a[3])*f]}
+function rgba(c){return 'rgba('+Math.round(c[0])+','+Math.round(c[1])+','+Math.round(c[2])+','+c[3].toFixed(3)+')'}
+function solid(c){return 'rgb('+Math.round(c[0])+','+Math.round(c[1])+','+Math.round(c[2])+')'}
+
+var TESTS={
+ bl:{name:'Blue litmus solution',short:'Blue litmus',step:'ind'},
+ rl:{name:'Red litmus solution',short:'Red litmus',step:'ind'},
+ ph:{name:'Phenolphthalein',short:'Phenolphthalein',step:'ind'},
+ mo:{name:'Methyl orange',short:'Methyl orange',step:'ind'},
+ zn:{name:'Zinc granules',short:'Zinc',step:'zn'},
+ cb:{name:'Solid sodium carbonate',short:'Na₂CO₃',step:'cb'}};
+var ORDER=['bl','rl','ph','mo','zn','cb'];
+var IND={bl:{name:'blue litmus',pH0:8.6},rl:{name:'red litmus',pH0:4.2},ph:{name:'phenolphthalein',pH0:7},mo:{name:'methyl orange',pH0:4.4}};
+var OBS={
+ bl:[['b2r','Blue → red'],['bnc','No change (stays blue)'],['b2c','Blue → colourless']],
+ rl:[['r2b','Red → blue'],['rnc','No change (stays red)'],['r2c','Red → colourless']],
+ ph:[['c2p','Colourless → pink'],['cnc','No change (colourless)'],['c2y','Colourless → yellow']],
+ mo:[['o2r','Orange → red'],['o2y','Orange → yellow'],['onc','No change (orange)']],
+ zn:[['cold','Bubbles on zinc in the cold'],['warm','Bubbles only on warming'],['none','No reaction even on warming']],
+ cb:[['fizz','Brisk effervescence'],['dis','Solid dissolves, no effervescence']]};
+var GAS=[['pop','Burns with a pop'],['burn','Splinter burns, no pop'],['out','Flame goes out'],['milky','Lime water turns milky'],['clear','Lime water stays clear'],['nogas','No gas evolved']];
+var INF=[['acid','Acidic'],['base','Basic']];
+function label(list,k){for(var i=0;i<list.length;i++)if(list[i][0]===k)return list[i][1];return ''}
+
+/* ───────── state ───────── */
+var S={assign:null,conc:null,no:0,rows:{},ident:{A:'',B:''},revealed:false,step:'ind',test:'bl',slot:'A',sel:'A',helper:false};
+try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv&&sv.assign){S.assign=sv.assign;S.conc=sv.conc;S.no=sv.no;S.rows=sv.rows||{};S.ident=sv.ident||{A:'',B:''};S.revealed=!!sv.revealed;S.step=sv.step||'ind';S.test=sv.test||'bl'}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({assign:S.assign,conc:S.conc,no:S.no,rows:S.rows,ident:S.ident,revealed:S.revealed,step:S.step,test:S.test}))}catch(e){}}
+function newSet(){var acidA=Math.random()<.5;S.assign={A:acidA?'HCl':'NaOH',B:acidA?'NaOH':'HCl'};
+ S.conc={A:Math.round(rnd(0.8,1.2)*100)/100,B:Math.round(rnd(0.8,1.2)*100)/100};S.no=Math.floor(rnd(101,999));S.rows={};S.ident={A:'',B:''};S.revealed=false;resetTubes();save()}
+var T={};  // tubes, key = test + '-' + slot
+function newTube(test,slot){return {test:test,slot:slot,src:{A:0,B:0},vS:0,vI:0,ind:null,indBad:false,drops:0,acid:0,base:0,zn:0,znT:0,carb:0,carbAdded:0,solid:0,
+ T:25,Tmax:25,head:0,hgas:null,cork:false,lime:false,limeUsed:false,limeAbs:0,milk:0,milkMax:0,rate:0,gas:null,coldMax:0,warmMax:0,gasBest:null,
+ mixed:1,prevCol:null,shake:0,bub:[],lbub:[],acc:0,lacc:0,foam:0,age:0}}
+function resetTubes(){ORDER.forEach(function(t){T[t+'-A']=newTube(t,'A');T[t+'-B']=newTube(t,'B')})}
+resetTubes();
+if(!S.assign)newSet();
+function key(){return S.test+'-'+S.slot}
+function cur(){return T[key()]}
+
+/* ───────── chemistry ───────── */
+function vol(t){return t.vS+t.vI}
+function pH(t){var V=vol(t);if(V<=0)return null;
+ if(t.vS<=0)return t.ind?IND[t.ind].pH0:7;
+ var net=t.acid-t.base;                      // mmol of excess H+ (positive) or OH- (negative)
+ if(Math.abs(net)/V<1e-7)return 7;
+ return net>0?-Math.log10(net/V):14+Math.log10(-net/V)}
+var CLEAR=[226,239,246,0.22];
+function indRGB(ind,p){
+ if(ind==='bl'||ind==='rl'){var red=[200,50,60],pur=[123,75,154],blu=[58,95,192];
+  if(p<=4.5)return red;if(p>=8.3)return blu;return p<6.4?mixC(red.concat(1),pur.concat(1),(p-4.5)/1.9):mixC(pur.concat(1),blu.concat(1),(p-6.4)/1.9)}
+ if(ind==='mo'){var r=[215,38,61,1],o=[239,138,38,1],y=[242,194,48,1];
+  if(p<=3.1)return r;if(p<=4.4)return mixC(r,o,(p-3.1)/1.3);if(p<=5.6)return mixC(o,y,(p-4.4)/1.2);return y}
+ return null}
+function target(t){var V=vol(t);if(V<=0)return null;if(!t.ind)return CLEAR.slice();
+ var p=pH(t),conc=t.drops/V,str=clamp(0.12+0.42*conc,0,0.9),c;
+ if(t.ind==='ph'){c=mixC(CLEAR,[224,55,155,str],clamp((p-8.2)/1.8,0,1))}
+ else{var rgb=indRGB(t.ind,p);c=[rgb[0],rgb[1],rgb[2],str]}
+ if(t.indBad)c=mixC(c,[120,96,70,c[3]],.45);
+ return c}
+function display(t){var tg=target(t);if(!tg)return null;if(!t.prevCol)return tg;return mixC(t.prevCol,tg,t.mixed)}
+function typeOf(t){var a=t.src.A>0,b=t.src.B>0;if(a&&b)return 'mix';if(a)return S.assign.A;if(b)return S.assign.B;return null}
+function sampleOf(t){var a=t.src.A>0,b=t.src.B>0;return a&&b?'AB':a?'A':b?'B':null}
+
+function step(t,k,dt){
+ t.age+=dt;if(t.zn)t.znT+=dt;
+ if(S.heat&&S.heat.key===k)t.T=Math.min(100,t.T+11*dt);else t.T+=(25-t.T)*dt/45;
+ t.Tmax=Math.max(t.Tmax,t.T);
+ var V=vol(t),rate=0,gas=null;
+ if(t.zn>0&&V>0){var H=t.acid/V,OH=t.base/V,ind=Math.pow(clamp(t.znT/3.5,0,1),2);
+  var rA=0.0045*(t.zn/2)*H*ind*(1+(t.T-25)/25);                                   // Zn + 2H+ → Zn2+ + H2
+  var rB=0.0045*1.2*(t.zn/2)*OH*Math.pow(clamp((t.T-42)/33,0,1.4),1.3)*ind;        // Zn + 2OH- → ZnO2^2- + H2 (warm only)
+  t.acid=Math.max(0,t.acid-2*rA*dt);t.base=Math.max(0,t.base-2*rB*dt);rate+=rA+rB;if(rA+rB>0)gas='h2';
+  if(t.T<35)t.coldMax=Math.max(t.coldMax,rA+rB);if(t.T>=45)t.warmMax=Math.max(t.warmMax,rA+rB)}
+ if(t.carbAdded>0&&V>0){
+  if(t.acid>0&&t.carb>0){var r=0.065*t.acid*clamp(t.carb/0.05,0,1);                // CO3^2- + 2H+ → H2O + CO2
+   t.acid=Math.max(0,t.acid-2*r*dt);t.carb=Math.max(0,t.carb-r*dt);t.solid=Math.max(0,t.solid-r*dt);rate+=r;gas='co2'}
+  t.solid=Math.max(0,t.solid-0.075*dt)}                                              // the rest simply dissolves
+ t.rate=rate;t.gas=gas;
+ // gas in the tube
+ if(gas){t.hgas=gas;
+  if(t.lime){t.head=0;if(gas==='co2'){t.limeAbs+=rate*LIME_EFF*dt}}
+  else if(t.cork){t.head=Math.min(1,t.head+rate/(gas==='h2'?0.0045:0.05)*0.2*dt)}
+  else{var tg=gas==='h2'?Math.min(0.18,rate/0.0045*0.12):Math.min(1,rate/0.03);t.head+=(tg-t.head)*1.2*dt}}
+ else if(!t.cork&&!t.lime){t.head=Math.max(0,t.head-t.head*(t.hgas==='h2'?1.5:0.12)*dt)}
+ t.milk=t.limeAbs<=CA_LIME?t.limeAbs/CA_LIME:Math.max(0,(2*CA_LIME-t.limeAbs)/CA_LIME);t.milkMax=Math.max(t.milkMax,t.milk);
+ // mixing: slow diffusion; fast when shaken or stirred by bubbles
+ var tau=t.shake>0?0.3:(rate>0?1.5:6);t.mixed+=(1-t.mixed)*Math.min(1,dt/tau);if(t.mixed>0.999){t.mixed=1;t.prevCol=null}
+ t.shake=Math.max(0,t.shake-dt);
+ t.foam+=((gas==='co2'?clamp(rate/0.05,0,1):0)-t.foam)*Math.min(1,2*dt);
+ // bubbles (positions in fractions of the liquid column)
+ if(V>0){t.acc+=rate*(gas==='h2'?2700:330)*dt;
+  while(t.acc>=1){t.acc-=1;if(t.bub.length<70)t.bub.push(gas==='h2'?{x:rnd(-.6,.6),y:rnd(.03,.14),r:rnd(.5,1),w:rnd(0,6)}:{x:rnd(-.7,.7),y:rnd(.02,.35),r:rnd(.8,1.6),w:rnd(0,6)})}
+  var sp=1.8*dt/Math.max(V,0.6);
+  t.bub=t.bub.filter(function(b){b.y+=sp*(0.7+b.r*0.4);b.w+=dt*7;return b.y<1});}
+ else t.bub=[];
+ if(t.lime&&gas==='co2'){t.lacc+=rate*160*dt;while(t.lacc>=1){t.lacc-=1;if(t.lbub.length<30)t.lbub.push({x:rnd(-.3,.3),y:0.05,r:rnd(.7,1.3)})}}
+ t.lbub=t.lbub.filter(function(b){b.y+=dt*0.9;return b.y<1});
+}
+
+/* ───────── actions ───────── */
+var msgEl=$('msg');function say(t,c){msgEl.innerHTML=t;msgEl.className='msg '+(c||'')}
+function busy(){if(S.heat){say('Wait — the tube is being warmed.','warn');return true}return false}
+function addLiquid(t,what,mL){
+ if(busy())return;
+ if(t.cork||t.lime){say('Take the cork out of the tube first.','bad');return}
+ if(vol(t)+mL>6.01){say('That would fill the tube too far. A test tube should be no more than about one-third full — use a fresh tube.','bad');return}
+ var wasEmpty=vol(t)<=0,before=display(t);
+ if(what==='A'||what==='B'){t.src[what]+=mL;t.vS+=mL;var mm=S.conc[what]*mL;if(S.assign[what]==='HCl')t.acid+=mm;else t.base+=mm;
+  // a little acid and base neutralise each other at once
+  var n=Math.min(t.acid,t.base);t.acid-=n;t.base-=n}
+ else{var ind=what.slice(4);if(t.ind&&t.ind!==ind)t.indBad=true;if(!t.ind)t.ind=ind;t.vI+=mL;t.drops+=mL/DROP}
+ if(wasEmpty){t.prevCol=null;t.mixed=1}else{t.prevCol=before;t.mixed=0}
+ drips.push({slot:t.slot,t:0,col:what==='A'||what==='B'?[230,240,248,.9]:(target({vS:0,vI:1,ind:what.slice(4),drops:20,acid:0,base:0,indBad:false})||CLEAR)});
+ var n2=Math.round(mL/DROP),txt=mL>=1?f1(mL)+' mL':n2+' drop'+(n2>1?'s':'');
+ say('Added '+txt+' of '+(what.length===1?'sample '+what:IND[what.slice(4)].name)+' to tube '+t.slot+'.'+(wasEmpty||t.test==='zn'||t.test==='cb'?'':' Shake the tube to mix it.'),'ok')}
+function addSolid(t,what){if(busy())return;if(t.cork||t.lime){say('Take the cork out of the tube first.','bad');return}
+ if(what==='zn'){if(t.zn>=6){say('Two granules are enough.','bad');return}t.zn+=2;say('Two zinc granules dropped into tube '+t.slot+' with the tongs.','ok')}
+ else{if(t.carbAdded>=3.8){say('One spatula-full is enough.','bad');return}t.carb+=1.9;t.carbAdded+=1.9;t.solid+=1.9;say('One spatula (about 0.2 g) of sodium carbonate added to tube '+t.slot+'.','ok')}}
+function warm(t){if(busy())return;
+ if(t.cork){say('Never heat a corked test tube — the gas pressure can burst it. Remove the cork first.','bad');return}
+ if(vol(t)<=0){say('There is nothing in the tube to warm.','bad');return}
+ S.heat={key:key(),time:3};say('Holding tube '+t.slot+' in the holder over the flame, mouth pointing away…','ok')}
+function corkToggle(t){if(busy())return;if(vol(t)<=0&&!t.cork){say('Put something in the tube first.','bad');return}
+ t.cork=!t.cork;say(t.cork?'Tube '+t.slot+' is closed with a cork. Gas will collect in it.':'Cork removed.','ok')}
+function limeToggle(t){if(busy())return;if(!t.lime&&vol(t)<=0){say('Put the sodium carbonate and the sample in first.','bad');return}
+ t.lime=!t.lime;t.cork=t.lime;if(t.lime)t.limeUsed=true;say(t.lime?'Cork with delivery tube fitted; its end dips into the lime water.':'Delivery tube removed.','ok')}
+function splinter(t){if(busy())return;
+ if(t.lime){say('Remove the delivery tube first.','bad');return}
+ var wasCorked=t.cork;t.cork=false;var res;
+ if(t.head>=0.3&&t.hgas==='h2'){res='pop';t.head=0}else if(t.head>=0.3&&t.hgas==='co2'){res='out'}else res='burn';
+ var pr={pop:3,out:2,burn:1};if(!t.gasBest||pr[res]>pr[t.gasBest])t.gasBest=res;
+ S.spl={key:key(),time:1.8,res:res};
+ say((wasCorked?'You take out the cork and at once bring the burning splinter to the mouth… ':'Burning splinter brought to the mouth of the tube… ')+'watch the flame.','ok')}
+function shake(){var t=cur();if(busy())return;if(vol(t)<=0){say('The tube is empty.','bad');return}if(t.cork||t.lime){say('Remove the cork before shaking — or keep your thumb off and swirl gently.','bad');return}t.shake=1.2;say('Shaking tube '+t.slot+' gently…','ok')}
+
+/* ───────── bench ───────── */
+var bench=$('bench');
+var SLOT={A:560,B:650},LAMP=792,LIMEX=868,PXML=16;
+var D=el('defs',{},bench);
+D.innerHTML=
+ '<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16202e"/><stop offset="1" stop-color="#0d131c"/></linearGradient>'+
+ '<pattern id="tiles" width="50" height="40" patternUnits="userSpaceOnUse"><path d="M0 0H50M0 0V40" stroke="#fff" stroke-opacity=".035"/></pattern>'+
+ '<linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a3c24"/><stop offset=".06" stop-color="#6b4a2e"/><stop offset="1" stop-color="#2e1d10"/></linearGradient>'+
+ '<pattern id="grain" width="140" height="18" patternUnits="userSpaceOnUse"><path d="M0 6 Q35 2 70 7 T140 6 M0 13 Q40 10 80 14 T140 12" stroke="#000" stroke-opacity=".12" fill="none"/></pattern>'+
+ '<linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#d3ecff" stop-opacity=".42"/><stop offset=".3" stop-color="#ffffff" stop-opacity=".1"/><stop offset=".75" stop-color="#ffffff" stop-opacity=".04"/><stop offset="1" stop-color="#d3ecff" stop-opacity=".38"/></linearGradient>'+
+ '<linearGradient id="rackG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b08355"/><stop offset="1" stop-color="#5e3f22"/></linearGradient>'+
+ '<linearGradient id="brass" x1="0" x2="1"><stop offset="0" stop-color="#7a5a1e"/><stop offset=".5" stop-color="#e2c172"/><stop offset="1" stop-color="#6d4f17"/></linearGradient>'+
+ '<radialGradient id="flameG" cx=".5" cy=".8" r=".75"><stop offset="0" stop-color="#e9f3ff"/><stop offset=".35" stop-color="#7fb2ff"/><stop offset=".7" stop-color="#ffcf5c" stop-opacity=".85"/><stop offset="1" stop-color="#ff8a1c" stop-opacity="0"/></radialGradient>'+
+ '<radialGradient id="flameS" cx=".5" cy=".75" r=".7"><stop offset="0" stop-color="#fffbe6"/><stop offset=".45" stop-color="#ffd35c"/><stop offset="1" stop-color="#ff8a1c"/></radialGradient>'+
+ '<radialGradient id="warmG"><stop offset="0" stop-color="#ffb347" stop-opacity=".55"/><stop offset="1" stop-color="#ff7a00" stop-opacity="0"/></radialGradient>'+
+ '<clipPath id="clT"><path d="M-13 96V262A13 13 0 0 0 13 262V96Z"/></clipPath>'+
+ '<clipPath id="clL"><path d="M-10 170V272A10 10 0 0 0 10 272V170Z"/></clipPath>';
+el('rect',{x:0,y:0,width:1000,height:300,fill:'url(#wall)'},bench);
+el('rect',{x:0,y:0,width:1000,height:300,fill:'url(#tiles)'},bench);
+el('rect',{x:0,y:296,width:1000,height:84,fill:'url(#wood)'},bench);
+el('rect',{x:0,y:296,width:1000,height:84,fill:'url(#grain)'},bench);
+el('rect',{x:0,y:294,width:1000,height:3,fill:'#8a6440',opacity:.7},bench);
+// white tile behind the stand: colours are judged against white
+el('rect',{x:505,y:62,width:200,height:232,rx:6,fill:'#eef1f3',opacity:.92},bench);
+el('text',{x:605,y:76,'text-anchor':'middle','font-family':'Inter','font-size':10,fill:'#7a8794'},bench).textContent='white tile';
+// test-tube stand
+var gRackBack=el('g',{},bench);
+gRackBack.innerHTML='<rect x="513" y="284" width="184" height="12" rx="3" fill="url(#rackG)"/><rect x="515" y="170" width="8" height="122" fill="#6b4a2e"/><rect x="689" y="170" width="8" height="122" fill="#6b4a2e"/>';
+var gSlots={},gSlotDyn={};
+['A','B'].forEach(function(s){var g=el('g',{class:'slot',tabindex:0,role:'button','aria-label':'Test tube '+s,'data-slot':s},bench);
+ el('rect',{x:-24,y:70,width:48,height:226,rx:10,fill:'none',stroke:'#e8cc6a','stroke-width':1.6,'stroke-dasharray':'5 4',opacity:0,class:'hl'},g);
+ gSlotDyn[s]=el('g',{},g);
+ el('rect',{x:-30,y:60,width:60,height:240,fill:'transparent'},g);
+ gSlots[s]=g});
+var gRackFront=el('g',{'pointer-events':'none'},bench);
+gRackFront.innerHTML='<rect x="511" y="170" width="188" height="12" rx="3" fill="url(#rackG)"/><ellipse cx="560" cy="171" rx="16" ry="2.5" fill="#3a2614"/><ellipse cx="650" cy="171" rx="16" ry="2.5" fill="#3a2614"/><ellipse cx="605" cy="171" rx="16" ry="2.5" fill="#3a2614" opacity=".7"/>';
+var gFx=el('g',{'pointer-events':'none'},bench);     // drips, splinter, heating holder
+
+// items
+var ITEMS={},itemDefs=[
+ {id:'A',x:62,steps:'ind zn cb',w:64,label:'Bottle A'},
+ {id:'B',x:144,steps:'ind zn cb',w:64,label:'Bottle B'},
+ {id:'ind-bl',x:226,steps:'ind',w:52,label:'Blue litmus solution'},
+ {id:'ind-rl',x:284,steps:'ind',w:52,label:'Red litmus solution'},
+ {id:'ind-ph',x:342,steps:'ind',w:52,label:'Phenolphthalein'},
+ {id:'ind-mo',x:400,steps:'ind',w:52,label:'Methyl orange'},
+ {id:'zn',x:300,steps:'zn',w:96,label:'Zinc granules'},
+ {id:'cb',x:300,steps:'cb',w:96,label:'Solid sodium carbonate'},
+ {id:'cork',x:732,steps:'zn',w:56,label:'Cork'},
+ {id:'lamp',x:LAMP,steps:'zn',w:64,label:'Spirit lamp'},
+ {id:'dtube',x:742,steps:'cb',w:64,label:'Cork with delivery tube'},
+ {id:'splint',x:944,steps:'zn cb',w:64,label:'Burning splinter'}];
+var LAMPFLAME;
+function drawItem(d,g){var x=0,h='';
+ if(d.id==='A'||d.id==='B'){
+  h='<rect x="-26" y="196" width="52" height="98" rx="8" fill="url(#glass)" stroke="#cfe3ef" stroke-opacity=".75"/>'+
+   '<rect x="-24" y="222" width="48" height="70" rx="6" fill="#e5f1f7" opacity=".2"/>'+
+   '<path d="M-24 222q24 4 48 0" stroke="#fff" stroke-opacity=".35" fill="none"/>'+
+   '<rect x="-10" y="174" width="20" height="24" fill="url(#glass)" stroke="#cfe3ef" stroke-opacity=".75"/>'+
+   '<path d="M-12 174h24l-3-12h-18z" fill="#2b2b2b"/><ellipse cx="0" cy="152" rx="10" ry="13" fill="#9c2328"/><ellipse cx="-3" cy="147" rx="3" ry="5" fill="#fff" opacity=".25"/>'+
+   '<rect x="-19" y="232" width="38" height="40" rx="3" fill="#f5efdc"/><text x="0" y="261" text-anchor="middle" font-family="Inter" font-weight="800" font-size="24" fill="#1a3a6b">'+d.id+'</text>'+
+   '<path d="M-19 276h38" stroke="#b3261e" stroke-width="3"/><text x="0" y="314" text-anchor="middle" font-family="Inter" font-weight="700" font-size="13" fill="#e8cc6a">sample '+d.id+'</text>'+
+   '<path d="M-20 205v80" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>';
+ }else if(d.id.indexOf('ind-')===0){var ind=d.id.slice(4),col=solid(target({vS:0,vI:1,ind:ind,drops:20,acid:0,base:0,indBad:false}));
+  if(ind==='ph')col='rgba(235,240,244,.35)';
+  var nm={bl:['Blue','litmus'],rl:['Red','litmus'],ph:['Phenol-','phthalein'],mo:['Methyl','orange']}[ind];
+  h='<rect x="-20" y="222" width="40" height="72" rx="6" fill="url(#glass)" stroke="#cfe3ef" stroke-opacity=".7"/>'+
+   '<rect x="-18" y="236" width="36" height="56" rx="5" fill="'+col+'" opacity=".85"/>'+
+   '<rect x="-7" y="206" width="14" height="18" fill="url(#glass)" stroke="#cfe3ef" stroke-opacity=".7"/><path d="M-9 206h18l-2-9h-14z" fill="#2b2b2b"/><ellipse cx="0" cy="190" rx="7" ry="9" fill="#2f2f2f"/>'+
+   '<rect x="-16" y="248" width="32" height="26" rx="2" fill="#f5efdc" opacity=".95"/>'+
+   '<text x="0" y="314" text-anchor="middle" font-family="Inter" font-weight="700" font-size="12" fill="#e8cc6a">'+nm[0]+'</text><text x="0" y="329" text-anchor="middle" font-family="Inter" font-weight="700" font-size="12" fill="#e8cc6a">'+nm[1]+'</text>'+
+   '<path d="M-15 228v60" stroke="#fff" stroke-opacity=".3" stroke-width="2.5" stroke-linecap="round"/>';
+ }else if(d.id==='zn'){
+  h='<rect x="-40" y="226" width="80" height="68" rx="8" fill="url(#glass)" stroke="#cfe3ef" stroke-opacity=".7"/>'+
+   '<path d="M-34 292l4-12 9-4 7 6 8-7 9 3 6 8 10-5 7 9v4z" fill="#8e969f" stroke="#59606a" stroke-width=".8"/>'+
+   '<path d="M-28 280l6-6 8 2 2 7-7 3zM2 276l7-5 8 3 1 7-9 2zM-10 271l6-4 6 3-2 6-7 0z" fill="#a4abb3" stroke="#5d646c" stroke-width=".8"/>'+
+   '<rect x="-42" y="216" width="84" height="12" rx="3" fill="#3a414b"/>'+
+   '<rect x="-26" y="240" width="52" height="22" rx="2" fill="#f5efdc"/><text x="0" y="256" text-anchor="middle" font-family="Inter" font-weight="800" font-size="12" fill="#333">Zn</text>'+
+   '<path d="M46 290l40-60M52 292l40-60" stroke="#9aa3ae" stroke-width="3" stroke-linecap="round"/>'+
+   '<text x="0" y="314" text-anchor="middle" font-family="Inter" font-weight="700" font-size="13" fill="#e8cc6a">zinc granules</text>';
+ }else if(d.id==='cb'){
+  h='<rect x="-40" y="226" width="80" height="68" rx="8" fill="url(#glass)" stroke="#cfe3ef" stroke-opacity=".7"/>'+
+   '<path d="M-37 292v-20q18-10 37-6t37 4v22z" fill="#f4f4f1"/><path d="M-37 272q18-10 37-6t37 4" stroke="#d9d9d2" fill="none"/>'+
+   '<rect x="-42" y="216" width="84" height="12" rx="3" fill="#3a414b"/>'+
+   '<rect x="-30" y="238" width="60" height="22" rx="2" fill="#f5efdc"/><text x="0" y="254" text-anchor="middle" font-family="Inter" font-weight="800" font-size="12" fill="#333">Na₂CO₃</text>'+
+   '<path d="M48 292l38-52" stroke="#c9ced4" stroke-width="3" stroke-linecap="round"/><ellipse cx="46" cy="293" rx="7" ry="3" fill="#c9ced4"/>'+
+   '<text x="0" y="314" text-anchor="middle" font-family="Inter" font-weight="700" font-size="13" fill="#e8cc6a">sodium carbonate</text>';
+ }else if(d.id==='cork'){
+  h='<path d="M-12 276h24l-3 18h-18z" fill="#b07a45" stroke="#7a4f27"/><circle cx="-4" cy="284" r="1.5" fill="#7a4f27"/><circle cx="4" cy="288" r="1.2" fill="#7a4f27"/>'+
+   '<text x="0" y="314" text-anchor="middle" font-family="Inter" font-weight="700" font-size="13" fill="#e8cc6a">cork</text>';
+ }else if(d.id==='dtube'){
+  h='<path d="M-12 276h24l-3 18h-18z" fill="#b07a45" stroke="#7a4f27"/><path d="M0 278V232h30v30" fill="none" stroke="#d6ecff" stroke-opacity=".85" stroke-width="4" stroke-linejoin="round"/>'+
+   '<text x="0" y="314" text-anchor="middle" font-family="Inter" font-weight="700" font-size="12" fill="#e8cc6a">delivery tube</text>';
+ }else if(d.id==='lamp'){
+  h='<ellipse cx="0" cy="288" rx="30" ry="8" fill="#000" opacity=".3"/>'+
+   '<path d="M-26 290q-6-30 10-42h32q16 12 10 42z" fill="url(#glass)" stroke="#cfe3ef" stroke-opacity=".7"/>'+
+   '<path d="M-24 289q-3-16 2-24h44q5 8 2 24z" fill="#9fd2e8" opacity=".35"/>'+
+   '<rect x="-8" y="236" width="16" height="13" rx="2" fill="url(#brass)"/><rect x="-2" y="228" width="4" height="9" fill="#efe6cf"/>'+
+   '<g class="lflame"><ellipse cx="0" cy="212" rx="9" ry="22" fill="url(#flameG)"/></g>'+
+   '<text x="0" y="314" text-anchor="middle" font-family="Inter" font-weight="700" font-size="13" fill="#e8cc6a">spirit lamp</text>';
+ }else if(d.id==='splint'){
+  h='<rect x="-22" y="276" width="44" height="18" rx="2" fill="#c0392b"/><rect x="-22" y="276" width="44" height="5" fill="#8e2a20"/><text x="0" y="291" text-anchor="middle" font-family="Inter" font-weight="800" font-size="9" fill="#fff">MATCHES</text>'+
+   '<path d="M-26 270L18 236" stroke="#d8b27a" stroke-width="4" stroke-linecap="round"/><path d="M18 236l3-2" stroke="#3a2a1a" stroke-width="4" stroke-linecap="round"/>'+
+   '<path class="sflame" d="M22 214c5 7 7 13 5 18-2 5-9 5-11 0-2-5 1-11 6-18z" fill="url(#flameS)"/>'+
+   '<text x="0" y="314" text-anchor="middle" font-family="Inter" font-weight="700" font-size="13" fill="#e8cc6a">splinter</text>'}
+ var w=d.w;g.innerHTML='<rect class="hl" x="'+(-w/2-4)+'" y="140" width="'+(w+8)+'" height="182" rx="10" fill="none" stroke="#e8cc6a" stroke-width="1.6" stroke-dasharray="5 4" opacity="0"/>'+h+
+  '<rect x="'+(-Math.max(w,56)/2)+'" y="140" width="'+Math.max(w,56)+'" height="196" fill="transparent"/>';
+}
+itemDefs.forEach(function(d){var g=el('g',{class:'it',tabindex:0,role:'button','aria-label':d.label,'data-id':d.id,transform:'translate('+d.x+',0)'},bench);drawItem(d,g);ITEMS[d.id]={d:d,g:g}});
+LAMPFLAME=ITEMS.lamp.g.querySelector('.lflame');
+// lime-water tube (part of the step 3 set-up)
+var gLime=el('g',{transform:'translate('+LIMEX+',0)','pointer-events':'none'},bench);
+gLime.innerHTML='<rect x="-20" y="284" width="40" height="10" rx="2" fill="url(#rackG)"/><rect x="-16" y="200" width="6" height="86" fill="#6b4a2e"/>';
+var gLimeDyn=el('g',{},gLime);
+el('text',{x:0,y:314,'text-anchor':'middle','font-family':'Inter','font-weight':700,'font-size':13,fill:'#e8cc6a'},gLime).textContent='lime water';
+var gDel=el('g',{'pointer-events':'none'},bench);       // delivery tube when fitted
+
+/* ───────── drawing the tubes ───────── */
+var drips=[];
+function tubeSVG(t,s,big){
+ // big = magnified view (centred at 130); otherwise bench tube in local coords
+ var cx=big?130:0,hw=big?34:13,top=big?36:96,bot=big?262:262,R=hw,px=big?34:PXML,base=bot+R,h='';
+ var V=vol(t),hl=Math.min(V*px,base-top-10),col=display(t),surf=base-hl;
+ var clip=big?'url(#zcl)':'url(#clT)';
+ h+='<g clip-path="'+clip+'">';
+ if(V>0&&col){
+  if(big&&t.prevCol&&t.mixed<1){var band=0.12+0.88*t.mixed;
+   zs[0].setAttribute('stop-color',solid(target(t)));zs[0].setAttribute('stop-opacity',target(t)[3].toFixed(3));
+   zs[1].setAttribute('offset',(band*0.7).toFixed(3));zs[1].setAttribute('stop-color',solid(target(t)));zs[1].setAttribute('stop-opacity',target(t)[3].toFixed(3));
+   zs[2].setAttribute('offset',Math.min(1,band).toFixed(3));zs[2].setAttribute('stop-color',solid(t.prevCol));zs[2].setAttribute('stop-opacity',t.prevCol[3].toFixed(3));
+   zs[3].setAttribute('stop-color',solid(t.prevCol));zs[3].setAttribute('stop-opacity',t.prevCol[3].toFixed(3));
+   h+='<rect x="'+(cx-hw-2)+'" y="'+surf+'" width="'+(2*hw+4)+'" height="'+(hl+4)+'" fill="url(#zg)"/>'}
+  else h+='<rect x="'+(cx-hw-2)+'" y="'+surf+'" width="'+(2*hw+4)+'" height="'+(hl+4)+'" fill="'+rgba(col)+'"/>';
+  // meniscus
+  h+='<path d="M'+(cx-hw)+' '+(surf-(big?4:1.5))+'Q'+cx+' '+(surf+(big?5:2))+' '+(cx+hw)+' '+(surf-(big?4:1.5))+'" stroke="'+rgba([255,255,255,big?.55:.4])+'" stroke-width="'+(big?1.6:1)+'" fill="none"/>';
+  if(t.foam>0.05)h+='<rect x="'+(cx-hw)+'" y="'+(surf-(big?18:7)*t.foam)+'" width="'+(2*hw)+'" height="'+((big?18:7)*t.foam+2)+'" fill="#f7fbff" opacity="'+(0.35+0.5*t.foam).toFixed(2)+'"/>';
+ }
+ // solids
+ if(t.zn>0){var gs=big?2.6:1;var gx=[[-0.45,0],[0.35,-0.1],[0,-0.55],[-0.1,0.4],[0.5,0.3],[-0.55,0.45]];
+  for(var i=0;i<Math.min(t.zn,6);i++){var q=gx[i],x0=cx+q[0]*hw,y0=base-(big?14:5)+q[1]*(big?8:3);
+   h+='<path d="M'+(x0-6*gs)+' '+y0+'l'+(3*gs)+' '+(-4*gs)+' '+(5*gs)+' '+(-1*gs)+' '+(4*gs)+' '+(3*gs)+' '+(-1*gs)+' '+(4*gs)+' '+(-6*gs)+' '+(2*gs)+'z" fill="#8f979f" stroke="#555c64" stroke-width="'+(big?1:.5)+'"/>'}}
+ if(t.solid>0.02){var sz=Math.sqrt(t.solid/1.9);h+='<ellipse cx="'+cx+'" cy="'+(base-(big?6:2))+'" rx="'+(hw*0.85*Math.max(.25,sz))+'" ry="'+((big?12:5)*sz+1)+'" fill="#f6f6f2" opacity=".95"/>'}
+ // bubbles
+ if(V>0)t.bub.forEach(function(b){var y=base-b.y*hl,x=cx+(b.x*hw*0.85)+Math.sin(b.w)*(big?2:.6);h+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+(b.r*(big?2.6:1)).toFixed(2)+'" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.85)" stroke-width="'+(big?.9:.5)+'"/>'});
+ h+='</g>';
+ // glass
+ h+='<path d="M'+(cx-hw-2)+' '+(top-4)+'V'+bot+'A'+(R+2)+' '+(R+2)+' 0 0 0 '+(cx+hw+2)+' '+bot+'V'+(top-4)+'" fill="url(#'+(big?'zglass':'glass')+')" stroke="#d6ecff" stroke-opacity=".8" stroke-width="'+(big?2:1.3)+'"/>';
+ h+='<path d="M'+(cx-hw-5)+' '+(top-4)+'h'+(2*hw+10)+'" stroke="#d6ecff" stroke-opacity=".8" stroke-width="'+(big?3:2)+'" stroke-linecap="round"/>';
+ h+='<path d="M'+(cx-hw*0.55)+' '+(top+12)+'V'+(bot-6)+'" stroke="#fff" stroke-opacity=".38" stroke-width="'+(big?5:2.4)+'" stroke-linecap="round"/>';
+ // warm glow
+ if(t.T>40)h+='<ellipse cx="'+cx+'" cy="'+(base-4)+'" rx="'+(hw*1.6)+'" ry="'+(hw*1.2)+'" fill="url(#'+(big?'zwarm':'warmG')+')" opacity="'+clamp((t.T-40)/45,0,1).toFixed(2)+'"/>';
+ if(big&&t.T>58&&!t.cork){for(var k2=0;k2<3;k2++){var ph=(perfNow/900+k2/3)%1;h+='<path d="M'+(cx-14+k2*14)+' '+(top-6-ph*30)+'q6 -8 0 -16" stroke="#fff" stroke-opacity="'+(0.35*(1-ph)).toFixed(2)+'" fill="none" stroke-width="2"/>'}}
+ // cork
+ if(t.cork){h+='<path d="M'+(cx-hw-4)+' '+(top-16*(big?1.6:1))+'h'+(2*hw+8)+'l-3 '+(22*(big?1.6:1))+'h'+(-(2*hw+2))+'z" fill="#b07a45" stroke="#7a4f27"/>'}
+ // label tape
+ if(!big)h+='<rect x="-11" y="110" width="22" height="16" rx="2" fill="#fbf6e6" opacity=".95"/><text x="0" y="122.5" text-anchor="middle" font-family="Inter" font-weight="800" font-size="11" fill="#1a3a6b">'+s+'</text>';
+ return h}
+
+/* ───────── magnified view ───────── */
+var zv=$('tubeView');
+var ZD=el('defs',{},zv);
+ZD.innerHTML='<linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0"/><stop offset=".1"/><stop offset=".2"/><stop offset="1"/></linearGradient>'+
+ '<linearGradient id="zglass" x1="0" x2="1"><stop offset="0" stop-color="#d3ecff" stop-opacity=".45"/><stop offset=".25" stop-color="#fff" stop-opacity=".1"/><stop offset=".8" stop-color="#fff" stop-opacity=".03"/><stop offset="1" stop-color="#d3ecff" stop-opacity=".4"/></linearGradient>'+
+ '<radialGradient id="zwarm"><stop offset="0" stop-color="#ffb347" stop-opacity=".5"/><stop offset="1" stop-color="#ff7a00" stop-opacity="0"/></radialGradient>'+
+ '<radialGradient id="zfl" cx=".5" cy=".75" r=".7"><stop offset="0" stop-color="#fffbe6"/><stop offset=".45" stop-color="#ffd35c"/><stop offset="1" stop-color="#ff8a1c"/></radialGradient>'+
+ '<clipPath id="zcl"><path d="M96 36V262A34 34 0 0 0 164 262V20Z"/></clipPath>'+
+ '<clipPath id="zlc"><path d="M215 170V292A12 12 0 0 0 239 292V170Z"/></clipPath>';
+var zs=ZD.querySelectorAll('#zg stop');
+el('rect',{x:0,y:0,width:260,height:320,fill:'#0a111c'},zv);
+el('rect',{x:70,y:6,width:120,height:308,rx:8,fill:'#eef1f3'},zv);           // white tile
+var zDyn=el('g',{},zv);
+var zHelp=el('text',{x:8,y:18,'font-family':'JetBrains Mono','font-size':12,fill:'#e8cc6a'},zv);
+
+/* ───────── interaction ───────── */
+var selInfo=$('selInfo'),acts=$('acts');
+var INFO={A:'Bottle A — a dropper bottle of an unknown dilute solution.',B:'Bottle B — a dropper bottle of an unknown dilute solution.',
+ 'ind-bl':'Blue litmus solution (dropper bottle).','ind-rl':'Red litmus solution (dropper bottle).','ind-ph':'Phenolphthalein solution (dropper bottle). It is colourless.','ind-mo':'Methyl orange solution (dropper bottle).',
+ zn:'Zinc granules — pick them up with the tongs.',cb:'Solid sodium carbonate — use the spatula.',cork:'A cork to close the tube so that the gas collects.',
+ lamp:'Spirit lamp — for warming the tube gently.',dtube:'Cork fitted with a bent delivery tube that dips into the lime water.',splint:'A burning wooden splinter, for testing the gas.'};
+function buildActs(){var t=cur(),id=S.sel,b=[];
+ if(id==='A'||id==='B')b=[['+1 drop',function(){addLiquid(cur(),id,DROP)}],['+5 drops',function(){addLiquid(cur(),id,5*DROP)}],['+2 mL',function(){addLiquid(cur(),id,2)}]];
+ else if(id.indexOf('ind-')===0)b=[['+1 drop',function(){addLiquid(cur(),id,DROP)}],['+3 drops',function(){addLiquid(cur(),id,3*DROP)}],['+2 mL',function(){addLiquid(cur(),id,2)}]];
+ else if(id==='zn')b=[['Add 2 granules with tongs',function(){addSolid(cur(),'zn')},1]];
+ else if(id==='cb')b=[['Add 1 spatula (≈ 0.2 g)',function(){addSolid(cur(),'cb')},1]];
+ else if(id==='lamp')b=[['🔥 Warm gently for 3 s',function(){warm(cur())},1]];
+ else if(id==='cork')b=[[t.cork?'Remove the cork':'Close the tube with the cork',function(){corkToggle(cur())},1]];
+ else if(id==='dtube')b=[[t.lime?'Remove the delivery tube':'Fit the delivery tube into lime water',function(){limeToggle(cur())},1]];
+ else if(id==='splint')b=[['Bring the burning splinter to the mouth',function(){splinter(cur())},1]];
+ acts.innerHTML='';b.forEach(function(a){var bt=document.createElement('button');bt.type='button';bt.textContent=a[0];if(a[2])bt.className='wide';
+  bt.onclick=function(){a[1]();buildActs();buildSel();scrollToSlot()};acts.appendChild(bt)});
+ selInfo.innerHTML='<b>Selected:</b> '+INFO[id]+' <span style="color:#93a6bf">→ goes into tube '+S.slot+'</span>'}
+function buildSel(){var ts=$('testSel');ts.innerHTML='';
+ if(S.step==='ind'){var l=document.createElement('span');l.className='lbl';l.textContent='Indicator:';ts.appendChild(l);
+  ['bl','rl','ph','mo'].forEach(function(k){var b=document.createElement('button');b.type='button';b.className='chip'+(S.test===k?' on':'');
+   b.innerHTML=TESTS[k].short+(S.rows[k+'-A']&&S.rows[k+'-B']?'<span class="ok">✓</span>':'');b.onclick=function(){S.test=k;S.slot='A';S.sel='A';save();refresh()};ts.appendChild(b)})}
+ ts.hidden=S.step!=='ind';
+ var is=$('itemSel');is.innerHTML='<span class="lbl">Use:</span>';
+ Object.keys(ITEMS).forEach(function(k){if(ITEMS[k].d.steps.indexOf(S.step)<0)return;var b=document.createElement('button');b.type='button';b.className='chip'+(S.sel===k?' on':'');
+  b.textContent=CHIP[k];b.onclick=function(){selectItem(k);buildSel()};is.appendChild(b)});
+ var tu=$('tubeSel');tu.innerHTML='<span class="lbl">Working on:</span>';
+ ['A','B'].forEach(function(s){var b=document.createElement('button');b.type='button';b.className='chip'+(S.slot===s?' on':'');
+  b.innerHTML='Tube '+s+(S.rows[S.test+'-'+s]?'<span class="ok">✓</span>':'');b.onclick=function(){selectSlot(s)};tu.appendChild(b)})}
+function selectSlot(s){S.slot=s;refresh();scrollToSlot()}
+function selectItem(id){S.sel=id;buildActs();highlight()}
+function highlight(){for(var k in ITEMS)ITEMS[k].g.querySelector('.hl').setAttribute('opacity',S.sel===k?1:0);
+ ['A','B'].forEach(function(s){gSlots[s].querySelector('.hl').setAttribute('opacity',S.slot===s?1:0)})}
+function scrollToSlot(){var bs=$('benchScroll');if(bs.scrollWidth<=bs.clientWidth+4)return;var px=SLOT[S.slot]/1000*bs.scrollWidth;
+ if(px<bs.scrollLeft+60||px>bs.scrollLeft+bs.clientWidth-60)bs.scrollTo({left:px-bs.clientWidth/2,behavior:'smooth'})}
+function svgPt(e){var p=bench.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(bench.getScreenCTM().inverse())}
+var dragging=null;
+var CHIP={A:'Bottle A',B:'Bottle B','ind-bl':'Blue litmus','ind-rl':'Red litmus','ind-ph':'Phenolphthalein','ind-mo':'Methyl orange',zn:'Zinc',cb:'Na₂CO₃',cork:'Cork',lamp:'Spirit lamp',dtube:'Delivery tube',splint:'Splinter'};
+function defaultAct(id,slot){var t=T[S.test+'-'+slot];S.slot=slot;
+ if(id==='A'||id==='B')addLiquid(t,id,2);else if(id.indexOf('ind-')===0)addLiquid(t,id,3*DROP);else if(id==='zn'||id==='cb')addSolid(t,id);
+ else if(id==='cork')corkToggle(t);else if(id==='dtube')limeToggle(t);else if(id==='splint')splinter(t);else if(id==='lamp')warm(t)}
+Object.keys(ITEMS).forEach(function(k){var g=ITEMS[k].g,d=ITEMS[k].d;
+ g.addEventListener('pointerdown',function(e){var p=svgPt(e);dragging={k:k,x0:p.x,y0:p.y,moved:false};g.setPointerCapture(e.pointerId);e.preventDefault()});
+ g.addEventListener('pointermove',function(e){if(!dragging||dragging.k!==k)return;var p=svgPt(e),dx=p.x-dragging.x0,dy=p.y-dragging.y0;
+  if(!dragging.moved&&Math.hypot(dx,dy)>8){dragging.moved=true;g.classList.add('drag')}
+  if(dragging.moved&&k!=='lamp')g.setAttribute('transform','translate('+(d.x+dx)+','+dy+')')});
+ function end(e){if(!dragging||dragging.k!==k)return;var p=svgPt(e),mv=dragging.moved;dragging=null;g.classList.remove('drag');g.setAttribute('transform','translate('+d.x+',0)');
+  if(!mv){selectItem(k);buildSel();return}
+  var hit=null;['A','B'].forEach(function(s){if(Math.abs(p.x-SLOT[s])<46&&p.y<300)hit=s});
+  if(hit){selectItem(k);defaultAct(k,hit);refresh();}else say('Drop it onto test tube A or B.','warn')}
+ g.addEventListener('pointerup',end);g.addEventListener('pointercancel',function(){dragging=null;g.classList.remove('drag');g.setAttribute('transform','translate('+d.x+',0)')});
+ g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){selectItem(k);buildSel();e.preventDefault()}})});
+['A','B'].forEach(function(s){gSlots[s].addEventListener('click',function(){selectSlot(s)});
+ gSlots[s].addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){selectSlot(s);e.preventDefault()}})});
+$('shake').onclick=shake;
+$('rinse').onclick=function(){if(busy())return;var b=this;if(vol(cur())>0&&!b.dataset.sure){b.dataset.sure=1;b.textContent='Tap again to empty it';setTimeout(function(){delete b.dataset.sure;b.textContent='🚿 Fresh tube'},3000);return}
+ delete b.dataset.sure;b.textContent='🚿 Fresh tube';T[key()]=newTube(S.test,S.slot);say('Tube '+S.slot+' emptied, washed and rinsed with distilled water.','ok');buildActs()};
+$('helper').onchange=function(){S.helper=this.checked};
+$('newSet').onclick=function(){var b=this;if(Object.keys(S.rows).length&&!b.dataset.sure){b.dataset.sure=1;b.textContent='Tap again to clear readings';setTimeout(function(){delete b.dataset.sure;b.textContent='↺ New samples'},3500);return}
+ delete b.dataset.sure;b.textContent='↺ New samples';newSet();$('idA').value='';$('idB').value='';renderTable();renderResult();refresh();showFb([]);say('New bottles A and B are on the bench. Their labels are hidden again.','ok')};
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setStep(t.dataset.step)}});
+var TASK={
+ ind:'<b>Step 1 · Indicators.</b> Choose an indicator. Pour about <b>2 mL of sample A into tube A</b> and 2 mL of sample B into tube B, add <b>2–3 drops</b> of the indicator, shake, and compare the colour against the white tile. Record both tubes, then do the next indicator.',
+ zn:'<b>Step 2 · Zinc.</b> Put <b>two zinc granules</b> in each tube and add about 2 mL of its sample. Watch the zinc. To test the gas, <b>close the tube with the cork</b> for a few seconds, then bring the burning splinter. If nothing happens, warm the tube gently on the spirit lamp and test again.',
+ cb:'<b>Step 3 · Sodium carbonate.</b> Put <b>one spatula of Na₂CO₃</b> in each tube and add about 2 mL of its sample. At once <b>fit the delivery tube</b> so the gas bubbles through the lime water, and watch it. Record both tubes.'};
+function setStep(st){if(S.heat)return;S.spl=null;S.step=st;S.test=st==='ind'?(TESTS[S.test]&&TESTS[S.test].step==='ind'?S.test:'bl'):st;S.slot='A';S.sel='A';save();refresh();say('')}
+function refresh(){
+ document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.step===S.step)});
+ $('task').innerHTML=TASK[S.step];
+ for(var k in ITEMS){var on=ITEMS[k].d.steps.indexOf(S.step)>=0;ITEMS[k].g.style.display=on?'':'none'}
+ gLime.style.display=S.step==='cb'?'':'none';
+ if(!ITEMS[S.sel]||ITEMS[S.sel].g.style.display==='none')S.sel='A';
+ $('sampleTag').textContent='Set S-'+S.no;
+ buildSel();buildActs();highlight()}
+
+/* ───────── record ───────── */
+$('recBtn').onclick=function(){var t=cur(),k=key();
+ if(busy())return;
+ if(t.vS<=0){say('Add the sample to tube '+S.slot+' first.','bad');return}
+ if(S.step==='ind'&&!t.ind){say('Add a few drops of '+TESTS[S.test].name.toLowerCase()+' first.','bad');return}
+ if(S.test==='zn'&&!t.zn){say('Add the zinc granules first.','bad');return}
+ if(S.test==='cb'&&!t.carbAdded){say('Add the sodium carbonate first.','bad');return}
+ var old=S.rows[k]||{};
+ S.rows[k]={t:{s:sampleOf(t),type:typeOf(t),ind:t.ind,indBad:t.indBad,mixed:Math.round(t.mixed*100)/100,pH:Math.round(pH(t)*100)/100,vS:Math.round(t.vS*100)/100,drops:Math.round(t.drops),
+  coldMax:t.coldMax,warmMax:t.warmMax,Tmax:Math.round(t.Tmax),gasBest:t.gasBest,limeUsed:t.limeUsed,limeMax:Math.round(t.milkMax*100)/100},obs:old.obs||'',gas:old.gas||'',inf:old.inf||''};
+ save();renderTable();
+ var n=ORDER.indexOf(S.test)*2+(S.slot==='A'?1:2);
+ say('Tube '+S.slot+' recorded as row '+n+'. Fill in what you saw in the table below.','ok')};
+
+/* ───────── table + check ───────── */
+var tb=$('tb');
+function opts(list,v,none){return '<option value="">'+(none||'— choose —')+'</option>'+list.map(function(o){return '<option value="'+o[0]+'"'+(o[0]===v?' selected':'')+'>'+o[1]+'</option>'}).join('')}
+function rowKeys(){var a=[];ORDER.forEach(function(t){a.push(t+'-A',t+'-B')});return a}
+function renderTable(){var html='';
+ rowKeys().forEach(function(k,i){var p=k.split('-'),test=p[0],slot=p[1],r=S.rows[k],dis=r?'':' disabled',isInd=TESTS[test].step==='ind';
+  html+='<tr data-k="'+k+'"><td>'+(i+1)+'</td><td class="tn">'+TESTS[test].name+'<small>'+(isInd?'2 mL sample + 2–3 drops':test==='zn'?'2 granules + 2 mL sample; splinter test':'1 spatula + 2 mL sample; lime water')+'</small></td><td><b>'+slot+'</b></td>'+
+   '<td><select data-f="obs" aria-label="Observation row '+(i+1)+'"'+dis+'>'+opts(OBS[test],r&&r.obs)+'</select></td>'+
+   '<td>'+(isInd?'<span class="na">—</span>':'<select data-f="gas" aria-label="Gas test row '+(i+1)+'"'+dis+'>'+opts(GAS,r&&r.gas)+'</select>')+'</td>'+
+   '<td><select data-f="inf" aria-label="Inference row '+(i+1)+'"'+dis+'>'+opts(INF,r&&r.inf)+'</select></td>'+
+   '<td class="st">'+(r?'recorded':'not yet')+'</td></tr>'});
+ tb.innerHTML=html;
+ tb.querySelectorAll('select').forEach(function(s){s.onchange=function(){var k=s.closest('tr').dataset.k;S.rows[k][s.dataset.f]=s.value;s.classList.remove('bad','good');save();renderResult()}});
+ $('nObs').textContent=Object.keys(S.rows).length+' / 12';
+ renderResult()}
+function truth(k){var p=k.split('-'),test=p[0],slot=p[1],t=S.rows[k].t,iss=[],exp={obs:null,gas:null,inf:null};
+ var nat=t.type==='HCl'?'acid':t.type==='NaOH'?'base':null;exp.inf=nat;
+ if(t.type==='mix')iss.push('this tube contains <b>both</b> samples — empty it and use one sample only');
+ else if(t.s!==slot)iss.push('tube '+slot+' should hold sample '+slot+', but you poured sample '+t.s+' into it');
+ if(TESTS[test].step==='ind'){
+  if(t.ind!==test||t.indBad)iss.push('this tube has the wrong indicator in it — use a fresh tube with '+TESTS[test].name.toLowerCase());
+  if(t.mixed<0.85)iss.push('the indicator had not spread through the liquid when you recorded — shake the tube, wait a moment, then record again');
+  var q=t.pH;exp.obs={bl:q<=4.5?'b2r':'bnc',rl:q>=8.3?'r2b':'rnc',ph:q>=9?'c2p':'cnc',mo:q<=3.4?'o2r':q>=5?'o2y':'onc'}[test];exp.gas=['na']}
+ else if(test==='zn'){
+  if(t.vS<1)iss.push('use about 2 mL of the sample, not just a few drops');
+  if(nat==='acid'){exp.obs='cold';if(t.coldMax<0.0008)iss.push('you recorded before the bubbles started — the oxide coat on zinc delays the reaction for a few seconds')}
+  else if(nat==='base'){if(t.warmMax>0.0006)exp.obs='warm';else{exp.obs='none';iss.push('zinc reacts with sodium hydroxide only when warm — warm the tube gently over the spirit lamp and watch again')}}
+  if(t.gasBest==='pop')exp.gas=['pop'];
+  else if(t.gasBest==='burn'){exp.gas=['burn'];if(nat==='acid'||t.warmMax>0.0006)iss.push('the splinter did not pop because the hydrogen escaped — close the tube with the cork for a few seconds, then test at once')}
+  else iss.push('test the gas with a burning splinter')}
+ else{
+  if(t.vS<1)iss.push('use about 2 mL of the sample, not just a few drops');
+  if(nat==='acid'){exp.obs='fizz';
+   if(t.limeMax>=0.4)exp.gas=['milky'];
+   else if(t.limeUsed){exp.gas=['clear'];iss.push('the lime water did not turn milky because the gas reached it after the fizzing had slowed — fit the delivery tube at once')}
+   else{exp.gas=t.gasBest==='out'?['out']:null;iss.push('pass the gas through lime water — that is the test for carbon dioxide (many gases put out a flame)')}}
+  else if(nat==='base'){exp.obs='dis';exp.gas=['nogas','clear']}}
+ return {exp:exp,iss:iss,ind:TESTS[test].step==='ind'}}
+function evalRow(k){var r=S.rows[k];if(!r)return null;var tr=truth(k),e=tr.exp;
+ var o={obs:r.obs===e.obs,gas:tr.ind||!!(e.gas&&e.gas.indexOf(r.gas)>=0),inf:r.inf===e.inf,iss:tr.iss};o.good=o.obs&&o.gas&&o.inf&&!o.iss.length;return o}
+function goodCount(){return rowKeys().filter(function(k){var e=evalRow(k);return e&&e.good}).length}
+$('check').onclick=function(){var fb=[],keys=rowKeys(),missing=0;
+ keys.forEach(function(k,i){var tr=tb.querySelector('tr[data-k="'+k+'"]'),e=evalRow(k);
+  if(!e){missing++;tr.classList.remove('flag','okrow');return}
+  var p=k.split('-'),nm=TESTS[p[0]].short+', tube '+p[1],m=[];
+  ['obs','gas','inf'].forEach(function(f){var s=tr.querySelector('select[data-f="'+f+'"]');if(!s)return;s.classList.toggle('bad',!e[f]);s.classList.toggle('good',e[f])});
+  if(!S.rows[k].obs||!S.rows[k].inf||(!truth(k).ind&&!S.rows[k].gas))m.push('fill in every column');
+  else{if(!e.obs)m.push('the observation does not match what this tube showed — look at it again in the magnified view');
+   if(!e.gas)m.push('the gas-test result does not match what happened');
+   if(!e.inf)m.push('check your inference: what does this observation tell you about the sample?')}
+  m=m.concat(e.iss);
+  tr.classList.toggle('flag',!e.good);tr.classList.toggle('okrow',e.good);tr.querySelector('.st').textContent=e.good?'✓ correct':'✗ see below';
+  if(m.length)fb.push('<b>Row '+(i+1)+'</b> ('+nm+'): '+m.join('; ')+'.')});
+ if(missing)fb.push(missing+' row'+(missing>1?'s are':' is')+' not recorded yet.');
+ if(!fb.length)fb.push('✓ All twelve observations are correct and every test was done properly. Now identify the bottles in the Result section.');
+ showFb(fb);renderResult()};
+function showFb(a){$('fb').innerHTML=a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+
+/* ───────── result ───────── */
+function renderResult(){var g=goodCount();$('rScore').textContent=g+' / 12';
+ $('idA').value=S.ident.A||'';$('idB').value=S.ident.B||'';
+ var tbx=$('trueBox');tbx.hidden=!S.revealed;
+ var nm={HCl:'dilute HCl',NaOH:'dilute NaOH'};$('rTrue').textContent='A = '+nm[S.assign.A]+' · B = '+nm[S.assign.B];
+ var e=$('err');
+ if(S.revealed){var ok=S.ident.A===S.assign.A&&S.ident.B===S.assign.B;e.textContent=ok?'✓ Your identification is correct — and it rests on evidence from '+g+' correct observations.':'✗ Your identification does not match. Compare your indicator rows again: which bottle turned blue litmus red?'}
+ else e.textContent=''}
+$('idA').onchange=function(){S.ident.A=this.value;save();renderResult()};
+$('idB').onchange=function(){S.ident.B=this.value;save();renderResult()};
+$('reveal').onclick=function(){var g=goodCount();
+ if(g<10){$('err').textContent='Get at least 10 rows of the table correct first (press “Check my table”). Now: '+g+'.';return}
+ if(!S.ident.A||!S.ident.B){$('err').textContent='Choose what bottles A and B contain first.';return}
+ S.revealed=true;save();renderResult()};
+
+/* ───────── animation ───────── */
+var last=performance.now(),perfNow=last;
+function frame(now){var dt=Math.min(0.1,(now-last)/1000);last=now;perfNow=now;
+ if(!document.hidden){
+  for(var k in T)step(T[k],k,dt);
+  if(S.heat){S.heat.time-=dt;var ht=T[S.heat.key];if(ht.T>88&&!S.heat.warned){S.heat.warned=true;say('Careful — the liquid is close to boiling and may bump out. Heat gently and keep the mouth pointed away.','warn')}
+   if(S.heat.time<=0){var w=T[S.heat.key];S.heat=null;say('Tube taken off the flame. It is now about '+(S.helper?Math.round(w.T)+' °C':'warm')+'. Watch the zinc.','ok')}}
+  if(S.spl){S.spl.time-=dt;if(S.spl.time<=0){var rr=S.spl.res;S.spl=null;
+   say(rr==='pop'?'The gas burned with a sharp <b>pop</b>.':rr==='out'?'The flame <b>went out</b> at the mouth of the tube.':'The splinter just kept burning — no pop.',rr==='burn'?'warn':'ok')}}
+  drips=drips.filter(function(d){d.t+=dt;return d.t<0.45});
+  render()}
+ requestAnimationFrame(frame)}
+function render(){
+ var heatSlot=S.heat?T[S.heat.key].slot:null,spl=S.spl;
+ ['A','B'].forEach(function(s){var t=T[S.test+'-'+s],g=gSlots[s],tr='translate('+SLOT[s]+',0)';
+  if(heatSlot===s&&S.heat.key.split('-')[0]===S.test)tr='translate('+LAMP+',-78) rotate(-16 0 275)';
+  else if(t.shake>0)tr+=' rotate('+(Math.sin(t.age*28)*5*Math.min(1,t.shake)).toFixed(2)+' 0 280)';
+  g.setAttribute('transform',tr);
+  var h=tubeSVG(t,s,false);
+  if(S.helper&&vol(t)>0){var p=pH(t);h+='<text x="0" y="62" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#e8cc6a">pH '+(t.vS>0?p.toFixed(1):'–')+'</text>'+(t.T>30?'<text x="0" y="48" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#ffb37a">'+Math.round(t.T)+' °C</text>':'')}
+  if(heatSlot===s)h+='<path d="M10 150L70 120" stroke="#8a6a3e" stroke-width="7" stroke-linecap="round"/><path d="M-16 146h32" stroke="#555" stroke-width="5"/>';
+  gSlotDyn[s].innerHTML=h});
+ LAMPFLAME.style.display=S.heat?'':'none';
+ if(S.heat)LAMPFLAME.setAttribute('transform','translate(0,212) scale(1,'+(1+Math.sin(perfNow/70)*.06).toFixed(3)+') translate(0,-212)');
+ // drips + splinter on the bench
+ var fx='';
+ drips.forEach(function(d){var x=SLOT[d.slot],tb2=T[S.test+'-'+d.slot],y=40+d.t/0.45*(275-vol(tb2)*PXML-40);
+  fx+='<path d="M'+(x-4)+' 6h8v26l-4 8-4-8z" fill="url(#glass)" stroke="#cfe3ef"/><ellipse cx="'+x+'" cy="0" rx="6" ry="8" fill="#9c2328"/>';
+  fx+='<path d="M'+x+' '+(y-6)+'c3 4 4 6 4 8a4 4 0 0 1-8 0c0-2 1-4 4-8z" fill="'+rgba([d.col[0],d.col[1],d.col[2],Math.max(.6,d.col[3])])+'"/>'});
+ if(spl&&spl.key.split('-')[0]===S.test){var sx=SLOT[T[spl.key].slot],ph=1.8-spl.time,res=spl.res;
+  fx+='<path d="M'+(sx+70)+' 40L'+(sx+12)+' 84" stroke="#d8b27a" stroke-width="4" stroke-linecap="round"/>';
+  if(ph<0.9||res==='burn')fx+='<path d="M'+(sx+8)+' 70c5 7 7 13 5 18-2 5-9 5-11 0-2-5 1-11 6-18z" fill="url(#flameS)"/>';
+  else if(res==='pop'&&ph<1.4)fx+='<path d="M'+sx+' 80l8-22 4 18 18-10-10 18 20 4-20 6 10 16-18-8-6 20-4-20-18 8 10-16-20-6 20-4-10-18 18 10z" fill="#fff3b0" opacity=".9"/><text x="'+(sx+34)+'" y="56" font-family="Inter" font-weight="800" font-size="20" fill="#ffe08a">pop!</text>';
+  else if(res==='out')fx+='<path d="M'+(sx+8)+' 80q-8 -14 2 -26q8 -12 -2 -24" stroke="#9aa3ae" stroke-opacity=".7" stroke-width="3" fill="none"/>'}
+ gFx.innerHTML=fx;
+ // delivery tube + lime water
+ var dl='';if(S.step==='cb'){var lt=null;['A','B'].forEach(function(s){if(T['cb-'+s].lime)lt=T['cb-'+s]});
+  var ld=lt||{milk:0,lbub:[]},mc=mixC([226,239,246,.25],[250,250,246,1],clamp(ld.milk,0,1));
+  var lh='<g clip-path="url(#clL)"><rect x="-12" y="214" width="24" height="70" fill="'+rgba(mc)+'"/>';
+  (ld.lbub||[]).forEach(function(b){lh+='<circle cx="'+(b.x*8).toFixed(1)+'" cy="'+(278-b.y*62).toFixed(1)+'" r="'+(b.r*1.6).toFixed(1)+'" fill="none" stroke="rgba(255,255,255,.85)" stroke-width=".6"/>'});
+  lh+='</g><path d="M-12 166V272A12 12 0 0 0 12 272V166" fill="url(#glass)" stroke="#d6ecff" stroke-opacity=".8" stroke-width="1.3"/><path d="M-15 166h30" stroke="#d6ecff" stroke-opacity=".8" stroke-width="2" stroke-linecap="round"/>';
+  if(S.helper)lh+='<text x="0" y="150" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#e8cc6a">'+Math.round(ld.milk*100)+'% milky</text>';
+  gLimeDyn.innerHTML=lh;
+  if(lt){var x0=SLOT[lt.slot];dl='<path d="M'+x0+' 84V52H'+LIMEX+'V268" fill="none" stroke="#d6ecff" stroke-opacity=".85" stroke-width="4" stroke-linejoin="round"/>'}}
+ gDel.innerHTML=dl;
+ renderZoom()}
+function renderZoom(){var t=cur(),h=tubeSVG(t,S.slot,true);
+ if(S.test==='cb'){var mc=mixC([226,239,246,.25],[250,250,246,1],clamp(t.milk,0,1));
+  h+='<g clip-path="url(#zlc)"><rect x="212" y="230" width="30" height="80" fill="'+rgba(mc)+'"/>';
+  t.lbub.forEach(function(b){h+='<circle cx="'+(227+b.x*14).toFixed(1)+'" cy="'+(300-b.y*68).toFixed(1)+'" r="'+(b.r*2.4).toFixed(1)+'" fill="none" stroke="rgba(255,255,255,.9)" stroke-width=".8"/>'});
+  h+='</g><path d="M213 168V292A14 14 0 0 0 241 292V168" fill="url(#zglass)" stroke="#d6ecff" stroke-opacity=".8" stroke-width="1.5"/>'+
+   '<text transform="translate(253 238) rotate(-90)" text-anchor="middle" font-family="Inter" font-weight="700" font-size="12" fill="#e8cc6a">lime water</text>';
+  if(t.lime)h+='<path d="M130 6V0M130 4H227V296" fill="none" stroke="#d6ecff" stroke-opacity=".8" stroke-width="5" stroke-linejoin="round"/>'}
+ if(S.spl&&S.spl.key===key()){var ph=1.8-S.spl.time,res=S.spl.res;
+  h+='<path d="M250 0L150 40" stroke="#d8b27a" stroke-width="7" stroke-linecap="round"/>';
+  if(ph<0.9||res==='burn')h+='<path d="M146 6c9 12 12 22 9 30-3 8-15 8-18 0-3-8 1-18 9-30z" fill="url(#zfl)"/>';
+  else if(res==='pop'&&ph<1.45)h+='<g transform="translate(140 30)"><path d="M0 -34l8 22 22-12-12 22 26 6-26 6 14 22-22-12-8 24-6-24-22 12 12-22-26-6 26-6-12-22 22 12z" fill="#fff3b0" opacity=".92"/></g><text x="186" y="80" font-family="Inter" font-weight="800" font-size="26" fill="#d97706">pop!</text>';
+  else if(res==='out')h+='<path d="M140 40q-14-16 2-28q12-10-2-22" stroke="#7f8a96" stroke-width="4" fill="none" opacity=".7"/>'}
+ zDyn.innerHTML=h;
+ $('tubeTag').textContent=TESTS[S.test].short+' · tube '+S.slot;
+ var bits=[];if(t.src.A>0)bits.push(f1(t.src.A)+' mL of A');if(t.src.B>0)bits.push(f1(t.src.B)+' mL of B');
+ if(t.ind)bits.push(Math.round(t.drops)+' drop'+(Math.round(t.drops)===1?'':'s')+' of '+IND[t.ind].name);if(t.zn)bits.push(t.zn+' Zn granules');if(t.carbAdded)bits.push(Math.round(t.carbAdded/1.9)+' spatula Na₂CO₃');
+ if(t.cork)bits.push(t.lime?'delivery tube fitted':'corked');
+ var capt=bits.length?'<b>In the tube:</b> '+bits.join(' + '):'Empty, clean test tube.';
+ if(S.helper&&vol(t)>0)capt+='<br><span class="mono" style="color:#e8cc6a">helper: pH '+(t.vS>0?pH(t).toFixed(1):'–')+' · '+Math.round(t.T)+' °C · gas '+(t.gas?(t.gas==='h2'?'H₂':'CO₂'):'none')+(t.head>0.05?' · gas collected '+Math.round(t.head*100)+'%':'')+'</span>';
+ var cap=$('cap');if(cap._h!==capt){cap.innerHTML=capt;cap._h=capt}
+ zHelp.textContent=S.helper&&t.T>30?Math.round(t.T)+' °C':''}
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['What is an acid–base indicator?','A substance (usually a dye) that shows one colour in an acidic solution and another colour in a basic solution, so it tells us the nature of the solution.'],
+ ['Why does blue litmus turn red in dilute hydrochloric acid?','HCl gives H⁺(aq) ions in water. Litmus is a natural dye from lichens whose acid form is red, so the H⁺ ions change blue litmus to red.'],
+ ['What is the colour of phenolphthalein and methyl orange in acids and in bases?','Phenolphthalein is colourless in acid and pink in base. Methyl orange turns red in acid and yellow in base.'],
+ ['Which gas is evolved when zinc reacts with dilute HCl? How will you test it?','Hydrogen: Zn + 2HCl → ZnCl₂ + H₂. When a burning splinter is brought near the mouth of the tube, the gas burns with a pop sound.'],
+ ['Does zinc react with sodium hydroxide? Write the equation.','Yes, on warming. Zn + 2NaOH → Na₂ZnO₂ + H₂. The salt formed is sodium zincate and hydrogen gas is given off.'],
+ ['Why did we close the tube with a cork before the pop test?','Hydrogen is very light and escapes quickly from an open tube. Closing it for a few seconds lets enough gas collect to give a clear pop.'],
+ ['Why does lime water turn milky when CO₂ is passed through it?','CO₂ reacts with calcium hydroxide to form insoluble calcium carbonate, which stays suspended as a white precipitate: Ca(OH)₂ + CO₂ → CaCO₃ + H₂O.'],
+ ['What happens if excess carbon dioxide is passed through lime water?','The milkiness disappears, because calcium carbonate changes into soluble calcium hydrogencarbonate: CaCO₃ + H₂O + CO₂ → Ca(HCO₃)₂.'],
+ ['Why is there no effervescence when sodium carbonate is added to sodium hydroxide?','Both are basic. There are no H⁺ ions to react with the carbonate ions, so no carbon dioxide is formed; the solid simply dissolves.'],
+ ['Name the products formed when sodium carbonate reacts with dilute HCl.','Sodium chloride, water and carbon dioxide: Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂.'],
+ ['What are olfactory indicators? Give two examples.','Substances whose smell changes in acidic or basic media, for example onion, vanilla essence and clove oil. Onion and vanilla lose their smell in a basic solution.'],
+ ['Why should you never taste or smell a solution to test whether it is an acid or a base?','Laboratory acids and alkalis are corrosive and can burn the mouth, nose and skin. Indicators give the answer safely.']];
+$('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){var nm={HCl:'dilute HCl',NaOH:'dilute NaOH','':'________'};
+ var rows=rowKeys().map(function(k,i){var p=k.split('-'),r=S.rows[k]||{},test=p[0],isInd=TESTS[test].step==='ind';
+  return '<tr><td>'+(i+1)+'</td><td>'+TESTS[test].name+'</td><td>'+p[1]+'</td><td>'+(label(OBS[test],r.obs)||'')+'</td><td>'+(isInd?'—':(label(GAS,r.gas)||''))+'</td><td>'+(label(INF,r.inf)||'')+'</td></tr>'}).join('');
+ $('record').innerHTML='<h1>Experiment: Properties of acids and bases (HCl and NaOH)</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Date: ___________ &nbsp; Sample set: S-'+S.no+'</p>'+
+  '<h2>Aim</h2><p>To study the properties of acids and bases (dilute HCl and dilute NaOH) by their reaction with litmus solution (blue/red) and other indicators, zinc metal and solid sodium carbonate.</p>'+
+  '<h2>Apparatus and materials</h2><p>Test tubes, test-tube stand and holder, droppers, spatula, cork with delivery tube, spirit lamp, splinter, matchbox; samples A and B, blue and red litmus solution, phenolphthalein, methyl orange, zinc granules, solid sodium carbonate, freshly prepared lime water.</p>'+
+  '<h2>Theory</h2><p>Acids give H⁺(aq) ions and turn blue litmus red; bases give OH⁻(aq) ions and turn red litmus blue, phenolphthalein pink and methyl orange yellow.<br>Zn + 2HCl → ZnCl₂ + H₂↑ ; Zn + 2NaOH → Na₂ZnO₂ + H₂↑ (on heating). Hydrogen burns with a pop.<br>Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂↑ ; Ca(OH)₂ + CO₂ → CaCO₃↓ + H₂O (lime water turns milky). Na₂CO₃ does not react with NaOH.</p>'+
+  '<h2>Observations</h2><table><tr><th>S. No.</th><th>Experiment</th><th>Sample</th><th>Observation</th><th>Gas test</th><th>Inference</th></tr>'+rows+'</table>'+
+  '<h2>Result</h2><p>Sample A is '+nm[S.ident.A||'']+' and sample B is '+nm[S.ident.B||'']+'. Acids turn blue litmus red, react with zinc in the cold to give hydrogen and react with sodium carbonate to give carbon dioxide. Bases turn red litmus blue and phenolphthalein pink, react with zinc only on heating and do not react with sodium carbonate. Correct observations: '+goodCount()+' / 12.</p>'+
+  '<h2>Precautions</h2><ol><li>Never taste or smell the chemicals; handle acids and alkalis carefully.</li><li>Use clean test tubes and a separate dropper for each reagent.</li><li>Use small quantities of the samples.</li><li>Warm the tube gently with a holder, mouth pointing away; never heat a corked tube.</li><li>Use freshly prepared lime water and pass the gas while the effervescence is brisk.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>Contaminated tubes or droppers.</li><li>Reading a colour before the indicator has mixed.</li><li>Hydrogen escaping before the pop test.</li><li>Passing excess CO₂, which makes the lime water clear again.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+$('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,T:T,cur:cur,addLiquid:addLiquid,addSolid:addSolid,warm:warm,corkToggle:corkToggle,limeToggle:limeToggle,splinter:splinter,setStep:setStep,selectSlot:selectSlot,truth:truth,evalRow:evalRow,pH:pH};
+refresh();renderTable();requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
