@@ -18,13 +18,13 @@
     {
      "q": "The IUPAC name of [Co(NH₃)₄Cl₂]⁺ is:",
      "opts": [
-      "A. tetraamminedichlorocobalt(III) ion",
+      "A. tetraamminedichloridocobalt(III) ion",
       "B. tetraaminedichlorocobalt(II) ion",
       "C. diamminetetrachlorocobaltate(III)",
       "D. tetrachlorodiamminecobalt(III)"
      ],
-     "ans": "C",
-     "key": "Naming: ligands alphabetical — tetraammine before dichloro; Co is +3; cation so named as …cobalt(III) ion."
+     "ans": "A",
+     "key": "Ligands in alphabetical order — ammine before chlorido (dichloro in older usage); oxidation state of Co: x + 4(0) + 2(−1) = +1 → x = +3. The complex is a cation, so the name ends in cobalt(III) ion."
     },
     {
      "q": "Which of the following electrolytes shows maximum depression in freezing point at the same molality?",
@@ -82,18 +82,18 @@
      "key": "Ambidentate ligands (like NO₂⁻, SCN⁻) can bind through different donor atoms → linkage isomerism."
     },
     {
-     "q": "Which polymer is formed by free radical polymerization of styrene?",
+     "q": "Which of the following ions is colourless in aqueous solution?",
      "opts": [
-      "A. Nylon",
-      "B. Bakelite",
-      "C. Polystyrene",
-      "D. PVC"
+      "A. Ti³⁺",
+      "B. Sc³⁺",
+      "C. V³⁺",
+      "D. Cr³⁺"
      ],
-     "ans": "D",
-     "key": "Wait — PVC from vinyl chloride; polystyrene from styrene via free radical. Answer: C (Polystyrene)."
+     "ans": "B",
+     "key": "Sc³⁺ has the configuration [Ar]3d⁰. With no d electrons no d–d transition is possible, so it absorbs no visible light and is colourless. Ti³⁺ (3d¹), V³⁺ (3d²) and Cr³⁺ (3d³) are coloured."
     },
     {
-     "q": "The specific conductance of a solution decreases on dilution. The molar conductance:",
+     "q": "The specific conductance (conductivity) of a solution decreases on dilution. Its molar conductivity:",
      "opts": [
       "A. decreases",
       "B. increases",
@@ -101,7 +101,7 @@
       "D. first increases then decreases"
      ],
      "ans": "B",
-     "key": "On dilution: κ decreases but Λm = κ×1000/M increases because dilution increases ionic mobility/dissociation."
+     "key": "Λm = κ × 1000/c. On dilution κ falls (fewer ions per cm³), but the volume that contains one mole of electrolyte rises much faster (and a weak electrolyte also dissociates more), so Λm increases."
     },
     {
      "q": "Glucose and fructose are:",
@@ -111,8 +111,8 @@
       "C. functional group isomers",
       "D. chain isomers"
      ],
-     "ans": "A",
-     "key": "Glucose (aldohexose) and fructose (ketohexose) are functional isomers — same molecular formula C₆H₁₂O₆ but different functional groups."
+     "ans": "C",
+     "key": "Both are C₆H₁₂O₆, but glucose is an aldohexose (–CHO group) and fructose a ketohexose (C=O group) — functional group isomers."
     },
     {
      "q": "The cell reaction is spontaneous when:",
@@ -122,8 +122,8 @@
       "C. E_cell > 0",
       "D. ΔG > 0 and E_cell > 0"
      ],
-     "ans": "B",
-     "key": "Wait — ΔG = −nFE_cell. Spontaneous when ΔG < 0, i.e., E_cell > 0. Answer: C."
+     "ans": "C",
+     "key": "ΔG = −nFE_cell. A reaction is spontaneous when ΔG < 0, i.e. when E_cell is positive."
     },
     {
      "q": "Which of the following is correct about peptide bond?",
@@ -137,7 +137,7 @@
      "key": "Peptide bond: –CO–NH– formed between –COOH of one amino acid and –NH₂ of another, with loss of water."
     },
     {
-     "q": "[A-R Q13] A: Physisorption is exothermic. R: Chemisorption involves covalent bonds with enthalpy ~40-400 kJ/mol.",
+     "q": "[A-R Q13] A: Aldehydes are generally more reactive than ketones towards nucleophilic addition. R: Aldehydes are oxidised by Tollens' reagent but ketones are not.",
      "opts": [
       "A. Both A and R true, R explains A",
       "B. Both true, R not correct explanation",
@@ -145,21 +145,10 @@
       "D. A false R true"
      ],
      "ans": "B",
-     "key": "Both are true: physisorption IS exothermic (van der Waals forces released). But R describes chemisorption, not explaining A's physisorption."
+     "key": "Both statements are true, but R does not explain A. Aldehydes are more reactive because the carbonyl carbon carries only one alkyl group — less steric hindrance and less +I electron release, so it is more electrophilic."
     },
     {
-     "q": "[A-R Q14] A: Geometrical isomerism is not possible in square planar complexes [MA₄]. R: All four ligands are identical.",
-     "opts": [
-      "A. Both A and R true, R explains A",
-      "B. Both true, R not correct explanation",
-      "C. A true R false",
-      "D. A false R true"
-     ],
-     "ans": "C",
-     "key": "Wait — A is TRUE (no geo isomers in MA₄). R is also TRUE and IS the reason. Answer should be A."
-    },
-    {
-     "q": "[A-R Q15] A: Lyophilic sols are more stable than lyophobic sols. R: Lyophilic colloids have high affinity for dispersion medium.",
+     "q": "[A-R Q14] A: Geometrical isomerism is not possible in a square planar complex of the type [MA₄]. R: All four ligands in [MA₄] are identical.",
      "opts": [
       "A. Both A and R true, R explains A",
       "B. Both true, R not correct explanation",
@@ -167,7 +156,18 @@
       "D. A false R true"
      ],
      "ans": "A",
-     "key": "Both true and R correctly explains A — affinity for solvent creates solvation layer preventing coagulation."
+     "key": "Both true, and R is the correct explanation: with four identical ligands no cis/trans arrangement is possible, so [MA₄] has no geometrical isomers."
+    },
+    {
+     "q": "[A-R Q15] A: Transition metals have lower melting points than the s-block metals of the same period. R: In transition metals, (n−1)d electrons as well as ns electrons take part in metallic bonding.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "D",
+     "key": "A is false — transition metals have much HIGHER melting points than s-block metals (e.g. Fe 1811 K vs K 336 K). R is true, and it is exactly why their metallic bonding is strong and their melting points are high."
     },
     {
      "q": "[A-R Q16] A: Phenol is more reactive than benzene towards electrophilic substitution. R: –OH group is an ortho/para director.",
@@ -179,6 +179,358 @@
      ],
      "ans": "A",
      "key": "Both true; –OH donates electrons by resonance activating ring, especially at o/p positions — R correctly explains A."
+    },
+    {
+     "q": "A mixture of two liquids shows a large positive deviation from Raoult's law. Which statement about it is correct?",
+     "opts": [
+      "A. ΔmixH is negative",
+      "B. It forms a minimum-boiling azeotrope",
+      "C. Its vapour pressure is lower than predicted by Raoult's law",
+      "D. ΔmixV is negative"
+     ],
+     "ans": "B",
+     "key": "Positive deviation: A–B attractions are weaker than A–A and B–B, so molecules escape easily — vapour pressure is higher than ideal, ΔmixH > 0, ΔmixV > 0. Such mixtures (e.g. ethanol–water) form minimum-boiling azeotropes."
+    },
+    {
+     "q": "When chlorobenzene is nitrated with a mixture of conc. HNO₃ and conc. H₂SO₄, the product is:",
+     "opts": [
+      "A. only 1-chloro-3-nitrobenzene",
+      "B. nitrobenzene and HCl",
+      "C. a mixture of 1-chloro-2-nitrobenzene and 1-chloro-4-nitrobenzene, with the 4-isomer as the major product",
+      "D. 1-chloro-3,5-dinitrobenzene"
+     ],
+     "ans": "C",
+     "key": "Chlorine deactivates the ring (−I effect) but directs incoming groups to ortho and para positions (+R effect). The para product is major because the ortho position is sterically hindered."
+    },
+    {
+     "q": "The unit in which molar conductivity is commonly expressed is:",
+     "opts": [
+      "A. S cm² mol⁻¹",
+      "B. S cm⁻¹",
+      "C. Ω cm",
+      "D. S mol cm⁻²"
+     ],
+     "ans": "A",
+     "key": "Λm = κ/c. κ is in S cm⁻¹ and c in mol cm⁻³, so Λm is in S cm² mol⁻¹ (S m² mol⁻¹ in SI)."
+    },
+    {
+     "q": "For a zero-order reaction, the half-life is:",
+     "opts": [
+      "A. independent of the initial concentration",
+      "B. inversely proportional to the initial concentration",
+      "C. proportional to the square of the initial concentration",
+      "D. directly proportional to the initial concentration"
+     ],
+     "ans": "D",
+     "key": "For zero order, [R] = [R]₀ − kt, so t½ = [R]₀/2k — directly proportional to [R]₀."
+    },
+    {
+     "q": "The most common and stable oxidation state shown by the lanthanoids is:",
+     "opts": [
+      "A. +2",
+      "B. +3",
+      "C. +4",
+      "D. +6"
+     ],
+     "ans": "B",
+     "key": "All lanthanoids show +3. A few also show +2 (Eu, Yb) or +4 (Ce, Tb) when this gives an empty, half-filled or filled 4f subshell."
+    },
+    {
+     "q": "Which of the following is NOT a characteristic of interstitial compounds of transition metals?",
+     "opts": [
+      "A. They have very high melting points",
+      "B. They are very hard",
+      "C. They retain metallic conductivity",
+      "D. They are chemically very reactive"
+     ],
+     "ans": "D",
+     "key": "Interstitial compounds (small atoms like H, C, N trapped in the metal lattice, e.g. TiC, Fe₃H) are hard, high-melting, conducting and chemically inert."
+    },
+    {
+     "q": "Which of the following ligands is a strong-field ligand that generally causes pairing of d electrons?",
+     "opts": [
+      "A. CN⁻",
+      "B. I⁻",
+      "C. Cl⁻",
+      "D. F⁻"
+     ],
+     "ans": "A",
+     "key": "Spectrochemical series: I⁻ < Br⁻ < Cl⁻ < F⁻ < OH⁻ < H₂O < NH₃ < en < CN⁻ < CO. CN⁻ produces a large splitting (Δo > P), giving low-spin complexes."
+    },
+    {
+     "q": "Ethanol heated with concentrated H₂SO₄ at 413 K mainly gives:",
+     "opts": [
+      "A. ethene",
+      "B. ethanal",
+      "C. ethoxyethane",
+      "D. ethanoic acid"
+     ],
+     "ans": "C",
+     "key": "At 413 K, with excess ethanol, one protonated ethanol molecule is attacked by another (SN2) → C₂H₅–O–C₂H₅. At 443 K, dehydration to ethene dominates."
+    },
+    {
+     "q": "Which of the following pairs of elements have almost the same atomic radius?",
+     "opts": [
+      "A. Ti and Zr",
+      "B. Sc and Y",
+      "C. Zr and Hf",
+      "D. Cr and Mo"
+     ],
+     "ans": "C",
+     "key": "Because of the lanthanoid contraction, the expected increase in size from the 4d to the 5d series is cancelled, so Zr (160 pm) and Hf (159 pm) are almost the same size."
+    },
+    {
+     "q": "Which of the following amines does NOT react with Hinsberg's reagent (benzenesulphonyl chloride)?",
+     "opts": [
+      "A. (C₂H₅)₃N",
+      "B. C₂H₅NH₂",
+      "C. (C₂H₅)₂NH",
+      "D. C₆H₅NH₂"
+     ],
+     "ans": "A",
+     "key": "The reaction needs a hydrogen atom on nitrogen. Tertiary amines like triethylamine have no N–H bond, so they do not react."
+    },
+    {
+     "q": "Deficiency of which vitamin causes scurvy (bleeding gums)?",
+     "opts": [
+      "A. Vitamin A",
+      "B. Vitamin D",
+      "C. Vitamin B₁₂",
+      "D. Vitamin C"
+     ],
+     "ans": "D",
+     "key": "Vitamin C (ascorbic acid). It is water soluble and is excreted in urine, so it cannot be stored and must be taken regularly (citrus fruits, amla, green vegetables)."
+    },
+    {
+     "q": "The correct IUPAC name of (CH₃)₂CHCH₂Cl is:",
+     "opts": [
+      "A. 2-methyl-1-chloropropane",
+      "B. 1-chloro-2-methylpropane",
+      "C. 2-methyl-3-chloropropane",
+      "D. 3-chloro-2-methylpropane"
+     ],
+     "ans": "B",
+     "key": "Longest chain = 3 C (propane), numbered from the end nearer the substituents: Cl on C-1, CH₃ on C-2. Prefixes in alphabetical order: 1-chloro-2-methylpropane."
+    },
+    {
+     "q": "[A-R Q13] A: The rate of most reactions increases when the temperature is raised. R: Raising the temperature lowers the activation energy of a reaction.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "C",
+     "key": "A is true. R is false: temperature does not change Ea (a catalyst does). A rise in temperature increases the fraction of molecules having energy ≥ Ea, so the rate increases."
+    },
+    {
+     "q": "[A-R Q14] A: Carboxylic acids do not give the characteristic addition reactions of the carbonyl group shown by aldehydes and ketones. R: Resonance in the carboxyl group reduces the electrophilic character of its carbonyl carbon.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "A",
+     "key": "Both true, and R explains A: the lone pair on the –OH oxygen is delocalised onto the C=O group, so the carbonyl carbon is much less electrophilic."
+    },
+    {
+     "q": "[A-R Q15] A: Ethylamine is soluble in water. R: Ethylamine reacts with nitrous acid to evolve nitrogen gas.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "B",
+     "key": "Both true, but R is not the reason. Ethylamine dissolves because its –NH₂ group forms hydrogen bonds with water molecules."
+    },
+    {
+     "q": "[A-R Q16] A: The molar conductivity of a strong electrolyte decreases on dilution. R: On dilution, the interionic attractions in a solution decrease.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "D",
+     "key": "A is false — Λm of a strong electrolyte increases slightly on dilution. R is true; the weakening of interionic attractions is why Λm increases (Λm = Λ°m − A√c)."
+    },
+    {
+     "q": "Which of the following is NOT a colligative property?",
+     "opts": [
+      "A. Osmotic pressure",
+      "B. Relative lowering of vapour pressure",
+      "C. Vapour pressure of the solution",
+      "D. Elevation in boiling point"
+     ],
+     "ans": "C",
+     "key": "Colligative properties depend only on the number of solute particles. The relative lowering (p° − p)/p° is colligative, but the vapour pressure p itself also depends on the nature of the solvent."
+    },
+    {
+     "q": "The number of faradays required to reduce 1 mol of MnO₄⁻ to Mn²⁺ in acidic medium is:",
+     "opts": [
+      "A. 5 F",
+      "B. 3 F",
+      "C. 2 F",
+      "D. 7 F"
+     ],
+     "ans": "A",
+     "key": "Mn changes from +7 in MnO₄⁻ to +2: MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O. 5 mol of electrons = 5 F."
+    },
+    {
+     "q": "Which of the following ions has the highest limiting molar conductivity in water at 298 K?",
+     "opts": [
+      "A. Na⁺",
+      "B. K⁺",
+      "C. Li⁺",
+      "D. H⁺"
+     ],
+     "ans": "D",
+     "key": "H⁺ (about 350 S cm² mol⁻¹) moves by proton transfer from one water molecule to the next along hydrogen bonds, which is much faster than ordinary ionic migration."
+    },
+    {
+     "q": "For a first-order reaction, a graph of ln[R] against time t is:",
+     "opts": [
+      "A. a straight line through the origin with positive slope",
+      "B. a straight line with slope −k and intercept ln[R]₀",
+      "C. a parabola",
+      "D. a straight line with slope +k/2.303"
+     ],
+     "ans": "B",
+     "key": "Integrated first-order equation: ln[R] = ln[R]₀ − kt, which is y = c + mx with slope −k and intercept ln[R]₀."
+    },
+    {
+     "q": "Which of the following has the highest boiling point?",
+     "opts": [
+      "A. 1-Bromobutane",
+      "B. 1-Chlorobutane",
+      "C. 2-Bromo-2-methylpropane",
+      "D. 2-Chlorobutane"
+     ],
+     "ans": "A",
+     "key": "Boiling point rises with the size of the halogen (stronger van der Waals forces: Br > Cl) and falls with branching (smaller surface area). 1-Bromobutane is unbranched and has Br."
+    },
+    {
+     "q": "Bromoethane heated with alcoholic KOH mainly gives:",
+     "opts": [
+      "A. ethanol",
+      "B. ethoxyethane",
+      "C. ethene",
+      "D. ethanal"
+     ],
+     "ans": "C",
+     "key": "Alcoholic KOH (ethoxide/strong base) brings about β-elimination (dehydrohalogenation): CH₃CH₂Br + KOH(alc) → CH₂=CH₂ + KBr + H₂O. Aqueous KOH would give ethanol."
+    },
+    {
+     "q": "Which reagent oxidises a primary alcohol to an aldehyde without oxidising it further to a carboxylic acid?",
+     "opts": [
+      "A. Acidified KMnO₄",
+      "B. Excess acidified K₂Cr₂O₇",
+      "C. Concentrated HNO₃",
+      "D. Pyridinium chlorochromate (PCC)"
+     ],
+     "ans": "D",
+     "key": "PCC (CrO₃ with pyridine and HCl) in CH₂Cl₂ is a mild oxidant and stops at the aldehyde stage. Strong oxidants carry on to the carboxylic acid."
+    },
+    {
+     "q": "The formation of a cyanohydrin when ethanal reacts with HCN is an example of:",
+     "opts": [
+      "A. electrophilic addition",
+      "B. nucleophilic addition",
+      "C. nucleophilic substitution",
+      "D. elimination"
+     ],
+     "ans": "B",
+     "key": "The nucleophile CN⁻ attacks the electrophilic carbonyl carbon and the product adds H and CN across C=O — nucleophilic addition."
+    },
+    {
+     "q": "Rosenmund reduction converts:",
+     "opts": [
+      "A. an acyl chloride into an aldehyde",
+      "B. a ketone into an alkane",
+      "C. an ester into an alcohol",
+      "D. a nitrile into an amine"
+     ],
+     "ans": "A",
+     "key": "RCOCl + H₂ —Pd/BaSO₄ (poisoned)→ RCHO + HCl. The poisoned catalyst stops the reduction at the aldehyde."
+    },
+    {
+     "q": "Gabriel phthalimide synthesis is used to prepare:",
+     "opts": [
+      "A. secondary amines",
+      "B. aromatic primary amines",
+      "C. aliphatic primary amines",
+      "D. tertiary amines"
+     ],
+     "ans": "C",
+     "key": "Potassium phthalimide + alkyl halide, then hydrolysis, gives pure primary aliphatic amines. Aryl halides do not undergo the needed SN2 step, so aromatic amines cannot be made."
+    },
+    {
+     "q": "In sucrose, the two monosaccharide units are joined by a glycosidic linkage between:",
+     "opts": [
+      "A. C1 of α-glucose and C4 of another glucose",
+      "B. C1 of α-glucose and C2 of β-fructose",
+      "C. C1 of β-galactose and C4 of glucose",
+      "D. C1 of β-glucose and C4 of another β-glucose"
+     ],
+     "ans": "B",
+     "key": "Sucrose = α-D-glucose + β-D-fructose joined C1–C2. Both reducing groups are used up, so sucrose is a non-reducing sugar. (A = maltose, C = lactose, D = cellulose link.)"
+    },
+    {
+     "q": "The α-helix structure of a protein is mainly stabilised by:",
+     "opts": [
+      "A. peptide bonds",
+      "B. disulphide bonds only",
+      "C. ionic bonds between side chains",
+      "D. hydrogen bonds between C=O and N–H groups of the backbone"
+     ],
+     "ans": "D",
+     "key": "In the α-helix each C=O group forms a hydrogen bond with the N–H group four residues further along the chain. Peptide bonds form the chain itself (primary structure)."
+    },
+    {
+     "q": "[A-R Q13] A: An ideal solution has a large positive enthalpy of mixing. R: In an ideal solution, A–B intermolecular attractions are of the same strength as A–A and B–B attractions.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "D",
+     "key": "A is false: for an ideal solution ΔmixH = 0 (and ΔmixV = 0). R is true and is the reason why ΔmixH is zero."
+    },
+    {
+     "q": "[A-R Q14] A: The half-life of a first-order reaction does not depend on the initial concentration of the reactant. R: For a first-order reaction, t½ = 0.693/k.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "A",
+     "key": "Both true, and R explains A: the expression for t½ contains only the rate constant k and no concentration term."
+    },
+    {
+     "q": "[A-R Q15] A: Haloalkanes are only very slightly soluble in water. R: Haloalkanes form strong hydrogen bonds with water molecules.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "C",
+     "key": "A is true. R is false: haloalkanes cannot form hydrogen bonds with water. The energy released by new attractions is less than that needed to break the hydrogen bonds between water molecules, so they dissolve very little."
+    },
+    {
+     "q": "[A-R Q16] A: Ethanal has a lower boiling point than ethanol. R: The carbonyl group in ethanal is polar.",
+     "opts": [
+      "A. Both A and R true, R explains A",
+      "B. Both true, R not correct explanation",
+      "C. A true R false",
+      "D. A false R true"
+     ],
+     "ans": "B",
+     "key": "Both true, but R does not explain A. Ethanol molecules are associated by intermolecular hydrogen bonding (O–H), which ethanal lacks; that is why ethanol boils higher."
     }
    ]
   },
@@ -186,13 +538,13 @@
    "per_paper": 5,
    "items": [
     {
-     "q": "Explain why Frenkel defect is not found in alkali metal halides but Schottky defect is.",
-     "ans": "Alkali halides: large cation/anion radius ratio → cation too large to fit in interstitial spaces → Frenkel defect not possible.\nSchottky defect occurs when equal numbers of cations and anions leave lattice → electrical neutrality maintained → common in NaCl.",
+     "q": "Account for the following: (i) Transition metals and many of their compounds act as good catalysts. (ii) Manganese shows the maximum number of oxidation states in the first transition series.",
+     "ans": "(i) They can show variable oxidation states, so they form unstable intermediate compounds with reactants, and their surfaces provide sites where reactants are adsorbed and bonds are weakened — this gives a path of lower activation energy. [1]\n(ii) Mn (3d⁵4s²) has the largest number of unpaired electrons plus the 4s pair, so it can lose or share any number of electrons from 2 to 7; it shows oxidation states from +2 to +7. [1]",
      "marks": 2
     },
     {
-     "q": "A solution of 4.2 g of HNO₃ in 250 g of water freezes at −0.28°C. Calculate degree of ionisation. (Kf for water = 1.86 K·kg/mol, M of HNO₃ = 63)",
-     "ans": "Molality = 4.2/(63×0.25) = 0.267 mol/kg.\nΔTf = Kf × m × i → 0.28 = 1.86 × 0.267 × i → i = 0.565.\nFor HNO₃ (→ H⁺ + NO₃⁻): i = 1+α. So α = i−1 = −0.435? Recalculate: i = 0.28/(1.86×0.267) ≈ 0.564. Hm, expected ~56% dissociation.",
+     "q": "Give a simple chemical test to distinguish between the following pairs of compounds: (i) Propanal and propanone (ii) Benzoic acid and phenol",
+     "ans": "(i) Tollens' test: warm each with Tollens' reagent (ammoniacal AgNO₃). Propanal gives a silver mirror; propanone does not. (Fehling's solution also works: red ppt of Cu₂O with propanal only.) [1]\n(ii) Sodium hydrogencarbonate test: benzoic acid gives brisk effervescence of CO₂ with NaHCO₃ solution; phenol (a weaker acid) does not. (Or: phenol gives a violet colour with neutral FeCl₃.) [1]",
      "marks": 2
     },
     {
@@ -202,12 +554,62 @@
     },
     {
      "q": "Distinguish between order and molecularity of a reaction with one example each.",
-     "ans": "Order: experimentally determined sum of powers of concentration terms in rate law. Can be fractional/zero. E.g., H₂+Br₂→2HBr is 3/2 order.\nMolecularity: number of reactant species colliding simultaneously in elementary step. Always whole number 1–3. E.g., N₂O→N₂+½O₂ is unimolecular.",
+     "ans": "Order: experimentally determined sum of powers of concentration terms in rate law. Can be fractional/zero. E.g., H₂+Br₂→2HBr is 3/2 order.\nMolecularity: number of reactant species colliding simultaneously in elementary step. Always whole number 1–3. E.g., NH₄NO₂ → N₂ + 2H₂O is unimolecular.",
      "marks": 2
     },
     {
-     "q": "What are biodegradable and non-biodegradable polymers? Give one example each.",
-     "ans": "Biodegradable: broken down by microorganisms. E.g., PHBV (poly-3-hydroxybutyrate-co-3-hydroxyvalerate), used in packaging.\nNon-biodegradable: not decomposed naturally. E.g., polyethylene (PE), causing environmental pollution.",
+     "q": "Explain why: (i) Phenol is more acidic than ethanol. (ii) o-Nitrophenol is steam volatile whereas p-nitrophenol is not.",
+     "ans": "(i) The phenoxide ion is stabilised by resonance — its negative charge is delocalised over the benzene ring; the ethoxide ion has no such stabilisation (and the ethyl group's +I effect intensifies the charge). So phenol loses H⁺ more easily. [1]\n(ii) o-Nitrophenol has intramolecular hydrogen bonding, so its molecules do not associate and it is volatile; p-nitrophenol has intermolecular hydrogen bonding, which associates the molecules and lowers volatility. [1]",
+     "marks": 2
+    },
+    {
+     "q": "The conductivity of a 0.050 M solution of a weak monobasic acid HA at 298 K is 3.9 × 10⁻⁴ S cm⁻¹. If its limiting molar conductivity is 390 S cm² mol⁻¹, calculate its molar conductivity and degree of dissociation.",
+     "ans": "Λm = κ × 1000/c = (3.9 × 10⁻⁴ × 1000)/0.050 = 7.8 S cm² mol⁻¹ [1]\nα = Λm/Λ°m = 7.8/390 = 0.02 (i.e. 2% dissociated) [1]",
+     "marks": 2
+    },
+    {
+     "q": "The rate law for a reaction A + 2B → products is: rate = k[A][B]². (i) What is the overall order of the reaction and the unit of k? (ii) By what factor will the rate change if the concentration of A is halved and that of B is tripled?",
+     "ans": "(i) Overall order = 1 + 2 = 3; unit of k = (mol L⁻¹)¹⁻³ s⁻¹ = L² mol⁻² s⁻¹ [1]\n(ii) New rate = k(½[A])(3[B])² = (9/2) k[A][B]², so the rate becomes 4.5 times. [1]",
+     "marks": 2
+    },
+    {
+     "q": "Write the IUPAC name of K₃[Fe(C₂O₄)₃]. Oxalate is a weak-field ligand — state the hybridisation of iron and the magnetic behaviour of the complex.",
+     "ans": "Potassium trioxalatoferrate(III) [1]\nFe³⁺ is 3d⁵; with weak-field oxalate the electrons stay unpaired (5 unpaired), so outer-orbital sp³d² hybridisation, octahedral, and the complex is (strongly) paramagnetic. [1]",
+     "marks": 2
+    },
+    {
+     "q": "Write chemical equations for: (i) Reimer–Tiemann reaction (ii) Kolbe's reaction",
+     "ans": "(i) Phenol + CHCl₃ + aq. NaOH (heat) → intermediate (substituted benzal chloride) → on acidification gives salicylaldehyde (2-hydroxybenzaldehyde): C₆H₅OH + CHCl₃ + 3NaOH → o-HOC₆H₄CHO + 3NaCl + 2H₂O (overall) [1]\n(ii) Sodium phenoxide + CO₂ (400 K, 4–7 atm), then H⁺ → salicylic acid (2-hydroxybenzoic acid): C₆H₅ONa + CO₂ → o-HOC₆H₄COONa —H⁺→ o-HOC₆H₄COOH [1]",
+     "marks": 2
+    },
+    {
+     "q": "How does RNA differ from DNA in (i) the pentose sugar present and (ii) the nitrogenous bases present? State one difference in their structure.",
+     "ans": "(i) DNA contains 2-deoxy-D-ribose; RNA contains D-ribose. [½]\n(ii) Both contain adenine, guanine and cytosine; DNA has thymine whereas RNA has uracil. [½]\nStructure: DNA is a double helix (two strands with complementary base pairing); RNA is usually a single strand. [1]",
+     "marks": 2
+    },
+    {
+     "q": "For the reaction 2N₂O₅(g) → 4NO₂(g) + O₂(g), the rate of formation of NO₂ at a certain instant is 2.8 × 10⁻³ mol L⁻¹ s⁻¹. Calculate (i) the rate of disappearance of N₂O₅, and (ii) the rate of formation of O₂ at that instant.",
+     "ans": "Rate = −½ Δ[N₂O₅]/Δt = ¼ Δ[NO₂]/Δt = Δ[O₂]/Δt\n(i) −Δ[N₂O₅]/Δt = (2/4) × 2.8 × 10⁻³ = 1.4 × 10⁻³ mol L⁻¹ s⁻¹ [1]\n(ii) Δ[O₂]/Δt = (1/4) × 2.8 × 10⁻³ = 7.0 × 10⁻⁴ mol L⁻¹ s⁻¹ [1]",
+     "marks": 2
+    },
+    {
+     "q": "Give reasons: (i) Transition metals readily form alloys with one another. (ii) The highest oxidation state of a 3d metal is usually shown in its oxide or fluoride.",
+     "ans": "(i) Transition metals have similar atomic radii and similar properties, so atoms of one metal can easily take the place of another in the crystal lattice. [1]\n(ii) Oxygen and fluorine are small and highly electronegative; F is a strong oxidiser and O can form multiple bonds with the metal, so they can stabilise high oxidation states (e.g. Mn₂O₇ — Mn +7; CrF₆ — Cr +6). [1]",
+     "marks": 2
+    },
+    {
+     "q": "Write the main product and name the reaction: (i) Propene is treated with water in the presence of dilute H₂SO₄. (ii) Phenol is treated with concentrated nitric acid.",
+     "ans": "(i) CH₃CH=CH₂ + H₂O —H⁺→ CH₃CH(OH)CH₃ (propan-2-ol); acid-catalysed hydration (follows Markovnikov's rule). [1]\n(ii) C₆H₅OH + 3HNO₃ (conc.) → 2,4,6-trinitrophenol (picric acid) + 3H₂O; nitration (electrophilic substitution). [1]",
+     "marks": 2
+    },
+    {
+     "q": "Arrange the following in increasing order of reactivity towards nucleophilic addition, and justify: ethanal, propanone, methanal, butanone.",
+     "ans": "Butanone < propanone < ethanal < methanal [1]\nAs alkyl groups increase, (a) their +I effect lowers the positive charge on the carbonyl carbon and (b) steric hindrance to the approaching nucleophile increases; methanal has no alkyl group and butanone has the bulkiest groups. [1]",
+     "marks": 2
+    },
+    {
+     "q": "Give two observations about glucose that cannot be explained by its open-chain structure. What do they indicate?",
+     "ans": "Any two: glucose does not give Schiff's test or the 2,4-DNP test, though it has a –CHO group; it does not form the hydrogensulphite addition product with NaHSO₃; glucose pentaacetate does not react with hydroxylamine; glucose exists in two crystalline forms (α and β) that show mutarotation. [1]\nThey indicate that the –CHO group is not free: glucose exists mainly as a six-membered cyclic hemiacetal (pyranose) structure, formed by reaction of the C-5 –OH with the –CHO group. [1]",
      "marks": 2
     }
    ]
@@ -216,13 +618,13 @@
    "per_paper": 7,
    "items": [
     {
-     "q": "(i) What is meant by kosmotropic (structure-making) ions in aqueous solution? Give an example. (ii) Explain the significance of linkage isomerism with an example. (iii) Why do transition metals form coloured compounds?",
-     "ans": "(i) Kosmotropic ions strongly hydrate and organize water structure around them. E.g., F⁻, Li⁺ (small, high charge density).\n(ii) Linkage isomers: ambidentate ligand bonds via different atoms. [Co(NH₃)₅NO₂]²⁺ (N-bonded nitro) vs [Co(NH₃)₅ONO]²⁺ (O-bonded nitrito).\n(iii) Transition metals have partially filled d orbitals. d-d transitions absorb visible light → complementary colour observed.",
+     "q": "(i) What is meant by lanthanoid contraction? Write two of its consequences. (ii) Why do actinoids show a wider range of oxidation states than lanthanoids?",
+     "ans": "(i) The steady decrease in atomic and ionic (M³⁺) radii from La to Lu, caused by the poor shielding of the nuclear charge by 4f electrons. [1]\nConsequences (any two): 4d and 5d elements of the same group have almost identical radii (Zr 160 pm, Hf 159 pm), so they occur together and are hard to separate; separation of individual lanthanoids is difficult; basic strength of Ln(OH)₃ decreases from La(OH)₃ to Lu(OH)₃. [1]\n(ii) In actinoids the 5f, 6d and 7s levels are of comparable energy, so electrons from all three can be used in bonding. [1]",
      "marks": 3
     },
     {
-     "q": "Draw the structures of: (i) XeF₄ (ii) H₂SO₄ (iii) HNO₃. What shapes do (i) and (ii) adopt?",
-     "ans": "(i) XeF₄: 6 electron pairs (4 bonds + 2 lone pairs) → octahedral electron geometry → square planar shape.\n(ii) H₂SO₄: S in centre, 2 OH groups + 2 =O; tetrahedral around S.\n(iii) HNO₃: N bonded to OH, one =O, one O (with +ve charge in resonance).\nShapes: XeF₄ = square planar; H₂SO₄ = tetrahedral.",
+     "q": "(i) 2.0 g of a non-volatile, non-electrolyte solute is dissolved in 50 g of benzene. The freezing point of benzene is lowered by 0.40 K. Calculate the molar mass of the solute. (Kf for benzene = 5.12 K kg mol⁻¹) (ii) Why does a 0.1 m solution of NaCl show nearly twice the depression in freezing point shown by a 0.1 m glucose solution?",
+     "ans": "(i) ΔTf = Kf × (w₂ × 1000)/(M₂ × w₁) [1]\nM₂ = (5.12 × 2.0 × 1000)/(0.40 × 50) = 512 g mol⁻¹ [1]\n(ii) NaCl dissociates completely into Na⁺ and Cl⁻ (i ≈ 2), doubling the number of solute particles; glucose does not dissociate (i = 1). Depression is a colligative property, so it is nearly doubled. [1]",
      "marks": 3
     },
     {
@@ -231,23 +633,93 @@
      "marks": 3
     },
     {
-     "q": "(i) What is Duma's method for estimation of nitrogen in organic compounds? (ii) An organic compound contains 0.42 g N per gram. Calculate % N by Kjeldahl's method if 0.5 g sample gave 0.1 g NH₃.",
-     "ans": "(i) Duma's method: organic compound heated with CuO; N converted to N₂; collected over KOH (absorbs CO₂); volume measured. %N = (volume N₂ × 28)/(22400 × sample mass) × 100.\n(ii) Kjeldahl: moles NH₃ = 0.1/17 = 0.00588 mol. Moles N = 0.00588. Mass N = 0.00588×14 = 0.0824 g. %N = (0.0824/0.5)×100 = 16.5%.",
+     "q": "A first-order reaction is 25% complete in 30 minutes. Calculate (i) the rate constant, (ii) the half-life, and (iii) the time required for 75% completion of the reaction. (log 4 = 0.6021, log 3 = 0.4771)",
+     "ans": "(i) k = (2.303/t) log([R]₀/[R]) = (2.303/30) log(100/75) = (2.303/30)(0.1249) = 9.59 × 10⁻³ min⁻¹ [1]\n(ii) t½ = 0.693/k = 0.693/(9.59 × 10⁻³) ≈ 72.3 min [1]\n(iii) t₇₅% = (2.303/k) log(100/25) = (2.303 × 0.6021)/(9.59 × 10⁻³) ≈ 144.6 min (= 2 × t½, as expected for first order) [1]",
      "marks": 3
     },
     {
-     "q": "Explain: (i) Why does adsorption always result in a decrease in entropy? (ii) How does temperature affect adsorption? (iii) Distinguish between physical and chemical adsorption (two points each).",
-     "ans": "(i) Gas molecules lose freedom moving from bulk to surface → more ordered → ΔS < 0.\n(ii) Physisorption decreases with increasing T (exothermic process). Chemisorption may first increase (to overcome activation energy) then decrease.\n(iii) Physical: low enthalpy (~20-40 kJ/mol), reversible, multilayers possible, occurs at low T.\nChemical: high enthalpy (~40-400 kJ/mol), irreversible, monolayer, high T needed.",
+     "q": "Give reasons: (i) Aniline does not undergo Friedel–Crafts reaction. (ii) The pKb of aniline is higher than that of methylamine. (iii) Primary amines have higher boiling points than tertiary amines of comparable molar mass.",
+     "ans": "(i) Aniline is a Lewis base and forms a salt with the Lewis acid AlCl₃; the nitrogen then carries a positive charge and strongly deactivates the ring. [1]\n(ii) In aniline the lone pair on N is delocalised into the benzene ring (resonance), so it is less available for protonation — aniline is a weaker base (higher pKb). In methylamine the +I effect of CH₃ increases electron density on N. [1]\n(iii) Primary amines have two N–H bonds and form intermolecular hydrogen bonds; tertiary amines have no N–H bond and cannot. [1]",
      "marks": 3
     },
     {
-     "q": "Give reasons: (i) HF is a weaker acid than HCl in aqueous solution but stronger than HCl in glacial acetic acid. (ii) O₃ is a better oxidising agent than O₂. (iii) H₂SO₄ reacts with NaCl to give HCl but not with NaI.",
-     "ans": "(i) In water: HF strong H-bonds → less ionization. In acetic acid (less basic): HCl not protonated; HF more readily donates proton.\n(ii) O₃ → O₂ + [O] (nascent oxygen) — highly reactive, better oxidizer than O₂.\n(iii) H₂SO₄ oxidizes I⁻ to I₂ (I⁻ is a stronger reducing agent). Cl⁻ not oxidised under same conditions.",
+     "q": "(i) Why are haloarenes much less reactive than haloalkanes towards nucleophilic substitution? (ii) Which of 1-bromobutane and 2-bromobutane reacts faster by the SN2 mechanism? Give reason. (iii) Write the chemical equation for the reaction of chlorobenzene with chlorine in the presence of anhydrous FeCl₃ and name the major product.",
+     "ans": "(i) In haloarenes the C–X bond acquires partial double-bond character by resonance (and the carbon is sp² hybridised), so the bond is shorter and stronger; the electron-rich ring also repels the incoming nucleophile. [1]\n(ii) 1-Bromobutane — it is a primary halide; backside attack of the nucleophile is less hindered than at the secondary carbon of 2-bromobutane. [1]\n(iii) C₆H₅Cl + Cl₂ —(anhyd. FeCl₃)→ 1,4-dichlorobenzene (major) + 1,2-dichlorobenzene (minor) + HCl. Cl is ortho/para directing. [1]",
      "marks": 3
     },
     {
-     "q": "(i) What is the principle of column chromatography? (ii) A compound shows a Rf of 0.6 in TLC. What does this indicate? (iii) Distinguish between primary and secondary structure of proteins.",
-     "ans": "(i) Column chromatography: compounds separated by differential adsorption onto stationary phase (silica/alumina) as mobile phase (eluent) passes through. More polar compounds adsorb more strongly, elute last.\n(ii) Rf=0.6 means compound travels 60% of solvent front distance — moderately polar.\n(iii) Primary structure: sequence of amino acids (peptide bonds). Secondary structure: α-helix or β-pleated sheet (H-bonds between backbone C=O and N-H groups).",
+     "q": "(i) What is glycogen? How is its structure similar to that of amylopectin? (ii) Distinguish between the primary and secondary structure of proteins. (iii) What are anomers? Name the two anomers of glucose.",
+     "ans": "(i) Glycogen is the storage polysaccharide of animals (liver, muscles). Like amylopectin, it is a branched chain of α-D-glucose units joined by C1–C4 glycosidic links, with branching through C1–C6 links (glycogen is more highly branched). [1]\n(ii) Primary structure: the sequence in which amino acids are linked by peptide bonds. Secondary structure: the shape of the polypeptide chain — α-helix or β-pleated sheet — held by hydrogen bonds between C=O and N–H groups of the backbone. [1]\n(iii) Cyclic forms of a sugar that differ only in the configuration at C-1 (the anomeric carbon); α-D-glucose and β-D-glucose. [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) State Raoult's law for a solution containing a non-volatile solute. (ii) 27 g of glucose (C₆H₁₂O₆, M = 180 g mol⁻¹) is dissolved in 162 g of water at 30 °C. Calculate the vapour pressure of the solution if the vapour pressure of pure water at this temperature is 31.8 mm Hg.",
+     "ans": "(i) The relative lowering of vapour pressure equals the mole fraction of the solute: (p° − p)/p° = x₂. [1]\n(ii) n(glucose) = 27/180 = 0.15 mol; n(water) = 162/18 = 9.0 mol; x₂ = 0.15/9.15 = 0.0164 [1]\np° − p = 31.8 × 0.0164 = 0.52 mm Hg, so p = 31.8 − 0.52 ≈ 31.28 mm Hg [1]",
+     "marks": 3
+    },
+    {
+     "q": "In a first-order reaction, the concentration of the reactant falls from 0.80 mol L⁻¹ to 0.20 mol L⁻¹ in 46 minutes. Calculate (i) the half-life, (ii) the rate constant, and (iii) the time taken for the concentration to fall to 0.05 mol L⁻¹.",
+     "ans": "(i) 0.80 → 0.40 → 0.20 is two half-lives, so 2t½ = 46 min, t½ = 23 min [1]\n(ii) k = 0.693/t½ = 0.693/23 = 3.01 × 10⁻² min⁻¹ [1]\n(iii) 0.80 → 0.05 is a fall by a factor of 16 = 2⁴, i.e. 4 half-lives: t = 4 × 23 = 92 min (check: t = (2.303/k) log 16 = 92 min) [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) Calculate the spin-only magnetic moment of Fe²⁺ (Z = 26). (ii) Cr²⁺ and Mn³⁺ both have the d⁴ configuration, yet Cr²⁺ is a reducing agent while Mn³⁺ is an oxidising agent. Explain. (iii) Why are Zn²⁺ salts white while Cu²⁺ salts are coloured?",
+     "ans": "(i) Fe²⁺: [Ar]3d⁶ → 4 unpaired electrons; μ = √[n(n+2)] = √24 ≈ 4.90 BM [1]\n(ii) Cr²⁺ (d⁴) → Cr³⁺ (d³, half-filled t₂g, very stable), so Cr²⁺ readily loses an electron (reducing). Mn³⁺ (d⁴) → Mn²⁺ (d⁵, half-filled, extra stable), so Mn³⁺ readily gains an electron (oxidising). [1]\n(iii) Zn²⁺ is 3d¹⁰ — no vacant d orbital, so no d–d transition and no colour; Cu²⁺ is 3d⁹, so d–d transitions absorb visible light and the complementary colour is seen. [1]",
+     "marks": 3
+    },
+    {
+     "q": "Optically active (R)-2-bromobutane is hydrolysed. (i) Why is 2-bromobutane optically active? (ii) What is the stereochemistry of butan-2-ol obtained if the reaction proceeds by the SN2 mechanism? (iii) What product mixture is obtained if it proceeds by the SN1 mechanism? Explain.",
+     "ans": "(i) C-2 is attached to four different groups (H, Br, CH₃, C₂H₅) — a chiral (asymmetric) carbon, so the molecule is not superimposable on its mirror image. [1]\n(ii) SN2: OH⁻ attacks from the side opposite to Br in a single step, so the configuration is inverted — (S)-butan-2-ol is formed (Walden inversion). [1]\n(iii) SN1: a planar carbocation forms, and OH⁻ can attack from either face, giving a (nearly) racemic mixture of (R)- and (S)-butan-2-ol — largely optically inactive (racemisation). [1]",
+     "marks": 3
+    },
+    {
+     "q": "Write chemical equations for: (i) Clemmensen reduction of acetophenone (ii) Aldol condensation of ethanal (iii) Hell–Volhard–Zelinsky reaction of propanoic acid",
+     "ans": "(i) C₆H₅COCH₃ + 4[H] —Zn-Hg/conc. HCl→ C₆H₅CH₂CH₃ (ethylbenzene) + H₂O [1]\n(ii) 2CH₃CHO —dil. NaOH→ CH₃CH(OH)CH₂CHO (3-hydroxybutanal, aldol) —heat, −H₂O→ CH₃CH=CHCHO (but-2-enal) [1]\n(iii) CH₃CH₂COOH —(i) Cl₂/red P (ii) H₂O→ CH₃CH(Cl)COOH (2-chloropropanoic acid) + HCl [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) Write the equation for the preparation of benzenediazonium chloride from aniline. (ii) Why is this reaction carried out at 273–278 K? (iii) Write the equation for the coupling reaction of benzenediazonium chloride with phenol in alkaline medium and state the colour of the product.",
+     "ans": "(i) C₆H₅NH₂ + NaNO₂ + 2HCl —273–278 K→ C₆H₅N₂⁺Cl⁻ + NaCl + 2H₂O [1]\n(ii) Diazonium salts are unstable; at higher temperatures benzenediazonium chloride decomposes (to phenol and N₂), so it is prepared cold and used immediately. [1]\n(iii) C₆H₅N₂⁺Cl⁻ + C₆H₅OH —OH⁻→ p-HO–C₆H₄–N=N–C₆H₅ (4-hydroxyazobenzene, p-hydroxyazobenzene) + HCl; orange dye. [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) Write the equations for the preparation of phenol from cumene (isopropylbenzene). What is the useful by-product? (ii) Why does phenol give a white precipitate with bromine water at room temperature, whereas benzene needs Br₂ with FeBr₃?",
+     "ans": "(i) C₆H₅CH(CH₃)₂ + O₂ (air) → C₆H₅C(CH₃)₂OOH (cumene hydroperoxide) [1]\nC₆H₅C(CH₃)₂OOH —H⁺/H₂O→ C₆H₅OH + CH₃COCH₃; by-product: acetone (propanone) [1]\n(ii) The –OH group strongly activates the ring by donating electron density (+R effect), so even bromine water brominates all o/p positions, giving 2,4,6-tribromophenol (white ppt). Benzene's ring is not activated, so a Lewis acid is needed to generate Br⁺. [1]",
+     "marks": 3
+    },
+    {
+     "q": "For the cell reaction Ni(s) + 2Fe³⁺(aq) → Ni²⁺(aq) + 2Fe²⁺(aq), calculate at 298 K: (i) E°cell, (ii) ΔG°, (iii) the equilibrium constant K. (E°Fe³⁺/Fe²⁺ = +0.77 V, E°Ni²⁺/Ni = −0.25 V, F = 96500 C mol⁻¹)",
+     "ans": "(i) E°cell = E°cathode − E°anode = 0.77 − (−0.25) = 1.02 V [1]\n(ii) n = 2; ΔG° = −nFE° = −2 × 96500 × 1.02 = −1.97 × 10⁵ J mol⁻¹ (−196.9 kJ mol⁻¹) [1]\n(iii) log K = nE°/0.0591 = (2 × 1.02)/0.0591 = 34.52, so K ≈ 3.3 × 10³⁴ [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) The rate constant of a reaction is 1.2 × 10⁻³ s⁻¹ at 300 K and its activation energy is 60 kJ mol⁻¹. Calculate the rate constant at 320 K. (R = 8.314 J K⁻¹ mol⁻¹) (ii) How does a catalyst increase the rate of a reaction without changing ΔG?",
+     "ans": "(i) log(k₂/k₁) = [Ea/(2.303R)] × (T₂ − T₁)/(T₁T₂) = [60000/(2.303 × 8.314)] × (20/(300 × 320)) = 0.653 [1]\nk₂/k₁ = 4.50, so k₂ = 1.2 × 10⁻³ × 4.50 ≈ 5.4 × 10⁻³ s⁻¹ [1]\n(ii) A catalyst provides an alternative path with a lower activation energy; it lowers the energy barrier for both forward and reverse reactions equally, so the energies of reactants and products, and hence ΔG, are unchanged. [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) How many stereoisomers does [Co(en)₂Cl₂]⁺ have? Name the types. (ii) Which of them is optically active, and why? (iii) Write the IUPAC name of [Co(en)₂Cl₂]Cl.",
+     "ans": "(i) Three: the trans isomer, and the cis isomer, which exists as a pair of enantiomers (d and l). Geometrical and optical isomerism. [1]\n(ii) The cis form — it has no plane of symmetry, so it is not superimposable on its mirror image; the trans form has a plane of symmetry and is optically inactive. [1]\n(iii) Dichloridobis(ethane-1,2-diamine)cobalt(III) chloride [1]",
+     "marks": 3
+    },
+    {
+     "q": "Write the mechanism of the acid-catalysed dehydration of ethanol to ethene at 443 K.",
+     "ans": "Step 1 — protonation of the alcohol: CH₃CH₂–OH + H⁺ ⇌ CH₃CH₂–OH₂⁺ (fast) [1]\nStep 2 — loss of water to form a carbocation (slow, rate-determining): CH₃CH₂–OH₂⁺ → CH₃CH₂⁺ + H₂O [1]\nStep 3 — loss of a proton from the β-carbon: CH₃CH₂⁺ → CH₂=CH₂ + H⁺ (the H⁺ released is taken up by HSO₄⁻/water, so the acid is regenerated). [1]",
+     "marks": 3
+    },
+    {
+     "q": "Write chemical equations for: (i) Cannizzaro reaction of benzaldehyde (ii) Wolff–Kishner reduction of propanone (iii) Stephen reduction of ethanenitrile",
+     "ans": "(i) 2C₆H₅CHO + conc. KOH → C₆H₅CH₂OH (benzyl alcohol) + C₆H₅COOK (potassium benzoate) [1]\n(ii) CH₃COCH₃ + NH₂NH₂ → (CH₃)₂C=NNH₂ + H₂O; then KOH/ethylene glycol, heat → CH₃CH₂CH₃ (propane) + N₂ [1]\n(iii) CH₃CN + SnCl₂ + HCl → CH₃CH=NH (imine, as salt) —H₃O⁺→ CH₃CHO (ethanal) + NH₃ (NH₄Cl) [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) What are essential amino acids? Give one example. (ii) What is a zwitterion? Write the zwitterionic form of glycine. (iii) Name the two components of starch and give one structural difference between them.",
+     "ans": "(i) Amino acids that the body cannot synthesise and that must be obtained from the diet, e.g. valine (or leucine, lysine, phenylalanine). [1]\n(ii) A dipolar ion carrying both a positive and a negative charge, formed by transfer of H⁺ from –COOH to –NH₂ in the same molecule; glycine: H₃N⁺–CH₂–COO⁻ [1]\n(iii) Amylose and amylopectin. Amylose is an unbranched chain of α-D-glucose (C1–C4 links); amylopectin is branched, with C1–C6 links at branch points besides C1–C4 links. [1]",
+     "marks": 3
+    },
+    {
+     "q": "(i) Why is the dipole moment of chlorobenzene lower than that of cyclohexyl chloride? (ii) Write the Wurtz–Fittig reaction with an example. (iii) Why does p-dichlorobenzene have a higher melting point than its ortho and meta isomers?",
+     "ans": "(i) In chlorobenzene the C–Cl carbon is sp² hybridised (more electronegative than sp³) and resonance gives the C–Cl bond partial double-bond character, so the bond is less polar than the sp³ C–Cl bond of cyclohexyl chloride. [1]\n(ii) An aryl halide and an alkyl halide with sodium in dry ether: C₆H₅Cl + 2Na + CH₃Cl → C₆H₅CH₃ (toluene) + 2NaCl [1]\n(iii) The para isomer is symmetrical and packs more closely in the crystal lattice, so more energy is needed to melt it. [1]",
      "marks": 3
     }
    ]
@@ -261,8 +733,28 @@
      "marks": 4
     },
     {
-     "q": "[CBQ] Drug-Receptor Interactions\nA pharmaceutical student studies how drugs interact with enzymes and receptors.\n(i) What is meant by a 'competitive inhibitor'? [1m]\n(ii) Distinguish between agonist and antagonist drugs. [1m]\n(iii) Why should drugs NOT be taken without medical advice? [1m]\n(iv) Give one example each of: analgesic, antibiotic, antacid. [1m]",
-     "ans": "(i) Competitive inhibitor: drug binds to active site of enzyme (same site as substrate), competing with it — reduces enzyme activity reversibly.\n(ii) Agonist: mimics natural molecule at receptor → activates it. Antagonist: binds receptor but does NOT activate it → blocks natural molecule.\n(iii) Self-medication: incorrect dose/drug can cause toxicity, drug resistance, side effects, or masking of symptoms.\n(iv) Analgesic: aspirin. Antibiotic: penicillin. Antacid: magnesium hydroxide (milk of magnesia).",
+     "q": "[CBQ] Ethanol in Petrol — India's E20 Programme\nIndia now sells petrol blended with 20% ethanol (E20). Most of this ethanol is made by fermenting sugarcane molasses with yeast. Pure ethanol for industrial use is often 'denatured' by adding methanol so that it is unfit to drink.\n(i) Name the enzymes in yeast that convert sucrose first to glucose/fructose and then to ethanol. [1m]\n(ii) Ethanol mixes with water in all proportions but petrol does not. Explain. [1m]\n(iii) Why is drinking denatured spirit (containing methanol) extremely dangerous? [1m]\n(iv) Give a chemical test to distinguish ethanol from methanol. [1m]",
+     "ans": "(i) Invertase converts sucrose to glucose and fructose; zymase converts glucose/fructose to ethanol and CO₂. [1]\n(ii) Ethanol has an –OH group and forms hydrogen bonds with water molecules; petrol (hydrocarbons) cannot form hydrogen bonds with water. [1]\n(iii) In the liver methanol is oxidised to methanal and then methanoic acid, which are toxic — even small amounts can cause blindness and death. [1]\n(iv) Iodoform test: warm with I₂ and NaOH — ethanol gives a yellow precipitate of iodoform (CHI₃); methanol does not. [1]",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] Antifreeze for Army Trucks in Ladakh\nIn winter, night temperatures near Leh fall to −10 °C and below. To stop the water in a truck radiator from freezing, mechanics add ethylene glycol (HOCH₂CH₂OH, M = 62 g mol⁻¹), a non-volatile, non-electrolyte liquid. (Kf of water = 1.86 K kg mol⁻¹, Kb of water = 0.52 K kg mol⁻¹)\n(i) Which colligative property is used here? [1m]\n(ii) Calculate the minimum mass of ethylene glycol to be added to 5.0 kg of water so that it does not freeze at −10 °C. [1m]\n(iii) Why would 1 mol of NaCl in 1 kg of water lower the freezing point almost twice as much as 1 mol of ethylene glycol? [1m]\n(iv) Calculate the boiling point of the same radiator solution. [1m]",
+     "ans": "(i) Depression in freezing point. [1]\n(ii) ΔTf = 10 K → m = ΔTf/Kf = 10/1.86 = 5.38 mol kg⁻¹; moles needed = 5.38 × 5.0 = 26.9 mol; mass = 26.9 × 62 ≈ 1.67 × 10³ g (≈ 1.67 kg). [1]\n(iii) NaCl dissociates into Na⁺ and Cl⁻ (van't Hoff factor i ≈ 2), doubling the number of particles; ethylene glycol does not dissociate (i = 1). [1]\n(iv) ΔTb = Kb × m = 0.52 × 5.38 ≈ 2.80 K, so boiling point ≈ 102.8 °C (375.95 K). [1]",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] Proteins in the Kitchen\nWhen an egg is boiled, the clear albumin turns white and solid. When a few drops of lemon juice are added to hot milk, it curdles and paneer separates. In both cases the proteins lose their natural shape, although the chain of amino acids is not broken.\n(i) Name the process that occurs to the proteins in both examples. [1m]\n(ii) Which level of protein structure remains intact in this process, and which levels are destroyed? [1m]\n(iii) What causes the change in each case — boiling the egg and adding lemon juice to milk? [1m]\n(iv) Name the bond that joins amino acids in a protein, and give one example each of a fibrous and a globular protein. [1m]",
+     "ans": "(i) Denaturation of proteins. [1]\n(ii) Primary structure (the amino-acid sequence held by peptide bonds) remains intact; secondary and tertiary structures (held by hydrogen bonds, disulphide links etc.) are disrupted. [1]\n(iii) Egg: heat (rise in temperature) breaks the hydrogen bonds; milk: change in pH (acid from lemon juice) makes the milk protein casein coagulate. [1]\n(iv) Peptide bond (–CO–NH–). Fibrous: keratin (or myosin/collagen); globular: insulin (or albumin/haemoglobin). [1]",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] Checking Drinking Water in Chennai\nA water-testing laboratory in Chennai checks the quality of drinking water by measuring its conductivity — the more dissolved salts, the higher the conductivity. First, the conductivity cell is calibrated with 0.01 M KCl solution (κ = 1.41 × 10⁻³ S cm⁻¹ at 298 K), which shows a resistance of 470 Ω. The same cell filled with a sample of RO-purified tap water shows a resistance of 2650 Ω at 298 K.\n(i) Why does dissolving salts in water increase its conductivity? [1m]\n(ii) Calculate the cell constant. [1m]\n(iii) Calculate the conductivity of the water sample. [1m]\n(iv) Why should all conductivity readings be taken at the same temperature? [1m]",
+     "ans": "(i) Salts dissociate into ions, which carry current through the solution; pure water has very few ions. [1]\n(ii) G* = κ × R = 1.41 × 10⁻³ S cm⁻¹ × 470 Ω ≈ 0.663 cm⁻¹ [1]\n(iii) κ = G*/R = 0.663/2650 ≈ 2.50 × 10⁻⁴ S cm⁻¹ [1]\n(iv) Conductivity of an electrolyte solution increases with temperature (ions move faster as viscosity falls), so readings at different temperatures are not comparable. [1]",
+     "marks": 4
+    },
+    {
+     "q": "[CBQ] EDTA — A Ligand at Work\nIn a municipal laboratory in Pune, the hardness of water is found by titrating it with a solution of EDTA, which binds Ca²⁺ and Mg²⁺ ions very strongly. In hospitals, calcium disodium EDTA is used to remove poisonous lead from the body as a stable, water-soluble complex. In living things, metal complexes are equally important: chlorophyll and haemoglobin are both coordination compounds.\n(i) What is the denticity of the EDTA⁴⁻ ion? Name its donor atoms. [1m]\n(ii) Why are complexes of chelating ligands like EDTA more stable than complexes of similar monodentate ligands? [1m]\n(iii) Name the central metal ions in chlorophyll and haemoglobin. [1m]\n(iv) How does EDTA help in estimating the hardness of water? [1m]",
+     "ans": "(i) Hexadentate; it binds through 2 nitrogen atoms and 4 oxygen atoms (of the carboxylate groups). [1]\n(ii) Chelate effect: a multidentate ligand forms ring structures with the metal ion; one ligand displaces several monodentate ones (entropy increases), and the ring makes dissociation difficult. [1]\n(iii) Chlorophyll — Mg²⁺; haemoglobin — Fe²⁺. [1]\n(iv) Ca²⁺ and Mg²⁺ form very stable 1:1 complexes with EDTA; the volume of EDTA solution of known concentration needed to complex all these ions (detected with an indicator) gives the hardness. [1]",
      "marks": 4
     }
    ]
@@ -273,22 +765,64 @@
     {
      "q": "(A) (i) Draw orbital diagrams showing t₂g and eg configuration for [CoF₆]³⁻ and [Co(CN)₆]³⁻. (ii) Explain why one is high spin and other is low spin. (iii) Predict magnetic properties of both.",
      "ans": "(i) Co³⁺ is d⁶. [CoF₆]³⁻: weak field F⁻ → small Δ → electrons fill all d orbitals before pairing → t₂g⁴ eg² (high spin). [Co(CN)₆]³⁻: strong field CN⁻ → large Δ → t₂g⁶ eg⁰ (low spin).\n(ii) CN⁻ causes large crystal field splitting (Δ > P, pairing energy) → low spin. F⁻ causes small Δ < P → high spin.\n(iii) [CoF₆]³⁻: 4 unpaired electrons → paramagnetic. [Co(CN)₆]³⁻: 0 unpaired → diamagnetic.",
-     "orq": "(B) (i) Describe Williamson's synthesis of ethers with mechanism. (ii) Why can't phenyl ethers be made by Williamson's synthesis starting from phenol as alkyl halide? (iii) Compare SN2 vs SN1 mechanism.",
-     "orans": "(i) Williamson's synthesis: alkoxide (R–O⁻) + alkyl halide → ether via SN2.\nCH₃CH₂O⁻Na⁺ + CH₃I → CH₃CH₂OCH₃ + NaI\nMechanism: nucleophilic attack of O⁻ on C–X bond, Walden inversion.\n(ii) Phenol can ACT as acid to form phenoxide, but phenyl C–halogen bond (C₆H₅X) has partial double bond character → C is not electrophilic → SN2 impossible.\n(iii) SN2: one step, backside attack, retention of configuration at new C, second-order kinetics. SN1: two steps (carbocation intermediate), any direction, first-order kinetics, favoured by tertiary substrates.",
+     "orq": "(B) (i) Describe Williamson's synthesis of ethers with an example and state its mechanism. (ii) To prepare anisole (methoxybenzene), why is sodium phenoxide treated with methyl iodide, and not sodium methoxide with bromobenzene? (iii) Why does a tertiary alkyl halide give an alkene rather than an ether in Williamson's synthesis?",
+     "orans": "(i) An alkyl halide reacts with a sodium alkoxide to give an ether: CH₃CH₂O⁻Na⁺ + CH₃I → CH₃CH₂OCH₃ + NaI [1]\nMechanism: SN2 — the alkoxide ion attacks the carbon bearing the halogen from the back side in one step, displacing the halide ion. [1]\n(ii) In bromobenzene the C–Br bond has partial double-bond character (resonance) and the carbon is sp² hybridised, so it does not undergo SN2 attack by methoxide; methyl iodide reacts readily by SN2 with phenoxide. C₆H₅O⁻Na⁺ + CH₃I → C₆H₅OCH₃ + NaI [2]\n(iii) Alkoxide is a strong base as well as a nucleophile; with a tertiary halide, backside attack is sterically hindered, so elimination (E2) dominates and an alkene is formed. [1]",
      "marks": 5
     },
     {
-     "q": "(A) (i) What is Ziegler-Natta catalyst? (ii) Compare addition and condensation polymerisation. (iii) Write structural unit of Nylon-6,6 and give its monomer.",
-     "ans": "(i) Ziegler-Natta catalyst: TiCl₄ + Al(C₂H₅)₃ — stereospecific polymerisation of olefins; gives isotactic polymers.\n(ii) Addition: monomers add without loss of atoms; chain growth; requires unsaturation. E.g., polyethylene. Condensation: two different functional groups react with loss of small molecule (H₂O, HCl). E.g., nylon, polyester.\n(iii) Nylon-6,6: –[NH–(CH₂)₆–NH–CO–(CH₂)₄–CO]–. Monomers: hexamethylenediamine + adipic acid.",
-     "orq": "(B) (i) What is the difference between mutarotation and racemisation? (ii) Explain why starch is digestible but cellulose is not. (iii) Give the functions of lipids in the body.",
-     "orans": "(i) Mutarotation: interconversion of α and β anomers of sugars in solution → change in optical rotation to equilibrium value. Racemisation: conversion of optically active compound to racemic mixture (equal R and S) → no optical activity.\n(ii) Starch has α-1,4 glycosidic bonds; human enzymes (amylases) can hydrolyse α-linkages. Cellulose has β-1,4 bonds; humans lack β-glucosidase → indigestible.\n(iii) Lipids: energy storage (9 kcal/g), cell membrane structure (phospholipids), insulation, transport of fat-soluble vitamins (A,D,E,K), hormone synthesis.",
+     "q": "(A) (i) Write the mechanism of the addition of HCN to ethanal in the presence of a base. (ii) Why do carboxylic acids have higher boiling points than aldehydes, ketones and even alcohols of comparable molecular mass? (iii) Write the products of the reactions: (a) ethanal is warmed with Tollens' reagent; (b) benzoic acid is treated with PCl₅.",
+     "ans": "(i) Step 1: base generates the nucleophile: HCN + OH⁻ → CN⁻ + H₂O. Step 2: CN⁻ attacks the electrophilic carbonyl carbon of CH₃CHO, forming a tetrahedral alkoxide intermediate CH₃CH(O⁻)CN. [1]\nStep 3: the intermediate takes a proton from HCN/water: CH₃CH(OH)CN (2-hydroxypropanenitrile, ethanal cyanohydrin). [1]\n(ii) Carboxylic acid molecules are held by extensive intermolecular hydrogen bonding and exist as cyclic dimers even in the vapour phase, so more energy is needed to separate them. [1]\n(iii) (a) CH₃CHO + 2[Ag(NH₃)₂]⁺ + 3OH⁻ → CH₃COO⁻ + 2Ag↓ (silver mirror) + 2H₂O + 4NH₃ [1]\n(b) C₆H₅COOH + PCl₅ → C₆H₅COCl (benzoyl chloride) + POCl₃ + HCl [1]",
+     "orq": "(B) (i) How is nitrobenzene converted into aniline? Write the equation. (ii) Why is the –NH₂ group of aniline acetylated before carrying out its nitration? (iii) Write the products when benzenediazonium chloride is treated with (a) hypophosphorous acid (H₃PO₂), (b) potassium iodide.",
+     "orans": "(i) Reduction with Sn/HCl (or Fe/HCl): C₆H₅NO₂ + 6[H] → C₆H₅NH₂ + 2H₂O [1]\n(ii) Direct nitration of aniline oxidises it (tarry products) and, in strong acid, aniline is protonated to the anilinium ion, which is meta directing — a large amount of m-nitroaniline forms. [1]\nAcetylation (to acetanilide) reduces the activating effect of –NH₂, protects it from oxidation and gives mainly the p-nitro product; the acetyl group is removed afterwards by hydrolysis. [1]\n(iii) (a) C₆H₅N₂⁺Cl⁻ + H₃PO₂ + H₂O → C₆H₆ (benzene) + N₂ + H₃PO₃ + HCl [1]\n(b) C₆H₅N₂⁺Cl⁻ + KI → C₆H₅I (iodobenzene) + KCl + N₂ [1]",
      "marks": 5
     },
     {
      "q": "(A) (i) What is Henry's law? State its applications. (ii) The Henry's law constant for oxygen in water at 25°C is 46.82 kbar. Find mole fraction of O₂ when partial pressure = 0.2 bar.",
      "ans": "(i) Henry's law: at constant T, solubility of gas in liquid ∝ its partial pressure. p = K_H × x. Applications: carbonation of drinks; oxygen supply in scuba diving; decompression sickness prevention.\n(ii) x(O₂) = p/K_H = 0.2/46820 = 4.27×10⁻⁶.",
-     "orq": "(B) Explain the following observations: (i) Colloidal gold has different colours depending on particle size. (ii) Fog is an aerosol. (iii) Smoke screen uses Tyndall effect. (iv) Lyophilic sols are reversible. (v) Coagulation of colloid by electrolyte.",
-     "orans": "(i) Different particle sizes absorb different wavelengths of visible light → gold colloid appears red, blue or purple.\n(ii) Fog = liquid (water droplets) dispersed in gas (air) = aerosol colloid.\n(iii) Smoke particles scatter light beam (Tyndall effect) → beam becomes visible → effective screen.\n(iv) Lyophilic sols: strong solvation of particles. After coagulation, on adding solvent they redisperse = reversible.\n(v) Electrolyte neutralises surface charge on colloid particles → particles lose electrostatic repulsion → aggregate = coagulate (Hardy-Schulze rule: higher valence ion more effective).",
+     "orq": "(B) (i) State Raoult's law for a solution of two volatile liquids. (ii) Give two differences between ideal and non-ideal solutions. (iii) At 25 °C the vapour pressures of pure benzene and pure toluene are 95 mm Hg and 28 mm Hg respectively. Calculate the total vapour pressure of a solution in which the mole fraction of benzene is 0.40, and the mole fraction of benzene in the vapour.",
+     "orans": "(i) For a solution of volatile liquids, the partial vapour pressure of each component is directly proportional to its mole fraction in the solution: p₁ = p₁° x₁, p₂ = p₂° x₂. [1]\n(ii) Ideal: obeys Raoult's law at all concentrations; ΔmixH = 0 and ΔmixV = 0 (A–B interactions same as A–A and B–B). Non-ideal: does not obey Raoult's law; ΔmixH ≠ 0, ΔmixV ≠ 0; shows positive or negative deviation. [2]\n(iii) p(benzene) = 0.40 × 95 = 38.0 mm Hg; p(toluene) = 0.60 × 28 = 16.8 mm Hg; P(total) = 54.8 mm Hg [1]\ny(benzene) = 38.0/54.8 ≈ 0.69 [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) State Kohlrausch's law of independent migration of ions. How is it used to find the limiting molar conductivity of a weak electrolyte such as acetic acid? (ii) Calculate the emf at 298 K of the cell: Ni(s) | Ni²⁺(0.01 M) || Ag⁺(0.002 M) | Ag(s). Also calculate ΔG° for the cell reaction. (E°Ni²⁺/Ni = −0.25 V, E°Ag⁺/Ag = +0.80 V, F = 96500 C mol⁻¹)",
+     "ans": "(i) At infinite dilution, the limiting molar conductivity of an electrolyte is the sum of the limiting ionic conductivities of its cation and anion, each ion contributing independently. [1]\nΛ°m(CH₃COOH) = Λ°m(CH₃COONa) + Λ°m(HCl) − Λ°m(NaCl) — all strong electrolytes whose Λ°m can be found by extrapolation. [1]\n(ii) Cell reaction: Ni + 2Ag⁺ → Ni²⁺ + 2Ag; n = 2; E°cell = 0.80 − (−0.25) = 1.05 V [1]\nE = E° − (0.0591/2) log([Ni²⁺]/[Ag⁺]²) = 1.05 − 0.02955 log(0.01/(0.002)²) = 1.05 − 0.02955 × log 2500 = 1.05 − 0.100 = 0.95 V [1]\nΔG° = −nFE° = −2 × 96500 × 1.05 = −2.03 × 10⁵ J mol⁻¹ = −202.65 kJ mol⁻¹ [1]",
+     "orq": "(B) (i) Predict the products of electrolysis in each case: (a) aqueous NaCl with inert (platinum) electrodes; (b) aqueous CuSO₄ with copper electrodes. (ii) A current of 1.5 A is passed through aqueous AgNO₃ solution for 40 minutes. Calculate the mass of silver deposited at the cathode. (Ag = 108 g mol⁻¹, F = 96500 C mol⁻¹) (iii) Define limiting molar conductivity.",
+     "orans": "(i) (a) Cathode: H₂ gas (water is reduced in preference to Na⁺); anode: Cl₂ gas (overpotential of O₂); NaOH remains in solution. [1]\n(b) Cathode: Cu is deposited; anode: Cu dissolves as Cu²⁺ (copper anode is oxidised), so the CuSO₄ concentration stays the same. [1]\n(ii) Q = I × t = 1.5 × 40 × 60 = 3600 C [1]\nAg⁺ + e⁻ → Ag: mass = (3600/96500) × 108 ≈ 4.03 g [1]\n(iii) The molar conductivity of an electrolyte when its concentration approaches zero (infinite dilution), Λ°m. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) On the basis of valence bond theory, explain the geometry and magnetic behaviour of [Ni(CN)₄]²⁻ and [NiCl₄]²⁻. (ii) Draw the geometrical isomers of [Pt(NH₃)₂Cl₂]. Is either of them optically active? (iii) Write the formula of tetraamminediaquacobalt(III) chloride.",
+     "ans": "(i) Ni²⁺ is 3d⁸. CN⁻ is strong field: it pairs the two unpaired 3d electrons, leaving one 3d orbital empty → dsp² hybridisation, square planar, no unpaired electron → diamagnetic. [1]\nCl⁻ is weak field: the 3d electrons stay as they are (2 unpaired) → sp³ hybridisation, tetrahedral → paramagnetic. [1]\n(ii) cis-isomer: the two Cl on the same side (adjacent, 90°); trans-isomer: the two Cl opposite each other (180°). (Square planar sketches with Pt at the centre.) [1]\nNeither is optically active — square planar complexes have a plane of symmetry (the molecular plane). [1]\n(iii) [Co(NH₃)₄(H₂O)₂]Cl₃ [1]",
+     "orq": "(B) (i) Write the electronic configurations of Cr (Z = 24) and Cu (Z = 29) and explain why they differ from the expected configurations. (ii) Why do transition elements show variable oxidation states? (iii) Why does zinc have the lowest enthalpy of atomisation in the 3d series? (iv) Why is Cu⁺ unstable in aqueous solution?",
+     "orans": "(i) Cr: [Ar]3d⁵4s¹ (not 3d⁴4s²); Cu: [Ar]3d¹⁰4s¹ (not 3d⁹4s²). [1]\nThe 3d and 4s energies are close, and half-filled (d⁵) and completely filled (d¹⁰) subshells have extra stability (exchange energy, symmetry). [1]\n(ii) The (n−1)d and ns electrons have very similar energies, so different numbers of electrons can be lost or used in bonding. [1]\n(iii) In Zn (3d¹⁰4s²) the d electrons do not take part in metallic bonding, so the metallic bonding is weakest. [1]\n(iv) Cu⁺ disproportionates: 2Cu⁺(aq) → Cu²⁺(aq) + Cu(s). The much larger (more negative) hydration enthalpy of Cu²⁺ more than compensates for the second ionisation enthalpy of copper. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) An organic compound A (C₃H₆O) gives a yellow precipitate when warmed with iodine and sodium hydroxide, but does not give a silver mirror with Tollens' reagent. A on reduction with NaBH₄ gives B, which on heating with conc. H₂SO₄ gives C (C₃H₆). Identify A, B and C and write the equations involved. (ii) Arrange CH₃COOH, ClCH₂COOH and FCH₂COOH in increasing order of acid strength and justify.",
+     "ans": "(i) A gives the iodoform test (has CH₃CO–) but is not an aldehyde → A = propanone, CH₃COCH₃. [1]\nCH₃COCH₃ + 3I₂ + 4NaOH → CHI₃ (yellow) + CH₃COONa + 3NaI + 3H₂O\nCH₃COCH₃ —NaBH₄→ CH₃CH(OH)CH₃ — B = propan-2-ol [1]\nCH₃CH(OH)CH₃ —conc. H₂SO₄, heat→ CH₃CH=CH₂ + H₂O — C = propene [1]\n(ii) CH₃COOH < ClCH₂COOH < FCH₂COOH [1]\nElectron-withdrawing halogens (−I effect) stabilise the carboxylate anion; F is more electronegative than Cl, so it stabilises it most. CH₃ (+I) destabilises the anion. [1]",
+     "orq": "(B) (i) How are primary, secondary and tertiary alcohols distinguished by the Lucas test? (ii) Anisole is heated with HI. Write the equation and explain why the products are phenol and methyl iodide, and not iodobenzene and methanol. (iii) What is the product when propene undergoes hydroboration–oxidation? Write the equation.",
+     "orans": "(i) Lucas reagent = conc. HCl + anhydrous ZnCl₂. Tertiary alcohols give turbidity (insoluble alkyl chloride) immediately; secondary alcohols in about 5 minutes; primary alcohols give no turbidity at room temperature. [2]\n(ii) C₆H₅OCH₃ + HI → C₆H₅OH + CH₃I [1]\nAfter protonation of the ether oxygen, I⁻ attacks the methyl carbon by SN2. The O–C(aryl) bond has partial double-bond character and the sp² carbon is not attacked, so phenol and methyl iodide form. [1]\n(iii) CH₃CH=CH₂ —(i) B₂H₆ (ii) H₂O₂/OH⁻→ CH₃CH₂CH₂OH (propan-1-ol, anti-Markovnikov product) [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) Define osmotic pressure. Why is osmotic pressure preferred over other colligative properties for finding the molar masses of proteins? (ii) 2.4 g of a protein is dissolved in water to make 300 mL of solution. The osmotic pressure of the solution at 27 °C is 3.9 mm Hg. Calculate the molar mass of the protein. (R = 0.0821 L atm K⁻¹ mol⁻¹) (iii) A desalination plant near Chennai obtains drinking water from sea water by reverse osmosis. What condition must the applied pressure satisfy?",
+     "ans": "(i) The excess pressure that must be applied on the solution side to just stop the flow of solvent into it through a semipermeable membrane. [1]\nIt is measured at room temperature (proteins are not denatured), and even very dilute solutions of high-molar-mass substances give a large, easily measured osmotic pressure. [1]\n(ii) π = 3.9/760 atm = 5.13 × 10⁻³ atm; V = 0.300 L; M = wRT/(πV) [1]\nM = (2.4 × 0.0821 × 300)/(5.13 × 10⁻³ × 0.300) ≈ 3.84 × 10⁴ g mol⁻¹ [1]\n(iii) The pressure applied on the sea-water side must be greater than its osmotic pressure, so that water flows from the sea water to the pure-water side. [1]",
+     "orq": "(B) (i) What is the van't Hoff factor? What value does it have for a solute that associates in solution? (ii) 3.0 g of acetic acid (CH₃COOH) dissolved in 100 g of benzene lowers its freezing point by 1.45 K. Calculate the apparent molar mass of acetic acid, the van't Hoff factor and the degree of association, assuming it forms dimers. (Kf for benzene = 5.12 K kg mol⁻¹) (iii) Why is the observed molar mass of acetic acid in benzene higher than its true value?",
+     "orans": "(i) i = normal molar mass/abnormal (observed) molar mass (= observed colligative property/calculated value); for association i < 1. [1]\n(ii) M(apparent) = (Kf × w₂ × 1000)/(ΔTf × w₁) = (5.12 × 3.0 × 1000)/(1.45 × 100) ≈ 105.9 g mol⁻¹ [1]\ni = 60/105.9 = 0.566 [1]\nFor 2CH₃COOH ⇌ (CH₃COOH)₂: i = 1 − α/2 → α = 2(1 − 0.566) = 0.867, i.e. about 86.7% associated. [1]\n(iii) In benzene, acetic acid molecules pair up as hydrogen-bonded dimers, reducing the number of particles, so the depression is smaller and the calculated molar mass larger. [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) A divalent ion M²⁺ of the first transition series has a spin-only magnetic moment of 5.92 BM. How many unpaired electrons does it have? Identify the ion. (ii) Give two differences between lanthanoids and actinoids. (iii) Why is Ce⁴⁺ a good oxidising agent?",
+     "ans": "(i) μ = √[n(n+2)] = 5.92 → n(n+2) = 35 → n = 5 unpaired electrons [1]\nM²⁺ is 3d⁵ → Mn²⁺ (Mn = [Ar]3d⁵4s²) [1]\n(ii) Any two: actinoids show a wider range of oxidation states (up to +7) than lanthanoids (mainly +3); all actinoids are radioactive, lanthanoids (except Pm) are not; actinoid contraction from element to element is greater; actinoids form complexes and oxocations (UO₂²⁺) more readily. [2]\n(iii) Ce⁴⁺ (4f⁰) readily changes to the more stable common oxidation state +3, so it accepts electrons easily (E°Ce⁴⁺/Ce³⁺ = +1.74 V). [1]",
+     "orq": "(B) (i) On the basis of crystal field theory, explain why [Ti(H₂O)₆]³⁺ is violet in colour, and why it becomes colourless when heated to remove water. (ii) Predict the number of unpaired electrons in [Fe(CN)₆]³⁻ and [Fe(H₂O)₆]³⁺ and explain. (iii) CoCl₃·5NH₃ gives two moles of AgCl per mole when treated with excess AgNO₃. Write its formula as a complex.",
+     "orans": "(i) Ti³⁺ is 3d¹ (t₂g¹ in an octahedral field). It absorbs light (blue-green region) to promote the electron to eg (d–d transition), so the complementary violet colour is seen. [1]\nWithout ligands there is no crystal-field splitting, so no d–d transition is possible and the anhydrous compound is colourless. [1]\n(ii) Fe³⁺ is 3d⁵. CN⁻ is strong field (Δo > P): t₂g⁵eg⁰ → 1 unpaired electron. [1]\nH₂O is weak field (Δo < P): t₂g³eg² → 5 unpaired electrons. [1]\n(iii) Two Cl⁻ are ionisable (outside the coordination sphere) → [Co(NH₃)₅Cl]Cl₂ [1]",
+     "marks": 5
+    },
+    {
+     "q": "(A) (i) Propanamide is heated with Br₂ and aqueous NaOH. Write the equation and name the product and the reaction. (ii) Arrange C₂H₅NH₂, (C₂H₅)₂NH and (C₂H₅)₃N in decreasing order of basic strength in aqueous solution and explain. (iii) Describe the carbylamine test. Which class of amines gives it?",
+     "ans": "(i) CH₃CH₂CONH₂ + Br₂ + 4NaOH → CH₃CH₂NH₂ + Na₂CO₃ + 2NaBr + 2H₂O [1]\nProduct: ethanamine (ethylamine) — one carbon fewer than the amide; Hoffmann bromamide degradation reaction. [1]\n(ii) (C₂H₅)₂NH > (C₂H₅)₃N > C₂H₅NH₂ [1]\nIn water, basicity depends on the +I effect (more alkyl groups → more basic), on solvation of the ammonium ion by hydrogen bonding (more N–H → better solvation) and on steric hindrance; the balance of these makes the secondary amine strongest and the primary weakest for ethyl groups. [1]\n(iii) On warming with chloroform and alcoholic KOH, primary amines (aliphatic and aromatic) give isocyanides with a very foul smell: RNH₂ + CHCl₃ + 3KOH → RNC + 3KCl + 3H₂O. Only primary amines give it. [1]",
+     "orq": "(B) (i) Write the SN2 mechanism for the reaction of bromomethane with hydroxide ion, showing the transition state. (ii) Arrange 1-bromopentane, 2-bromopentane and 2-bromo-2-methylbutane in decreasing order of SN2 reactivity, with reason. (iii) Why must Grignard reagents be prepared under anhydrous conditions?",
+     "orans": "(i) HO⁻ attacks the carbon from the side opposite to Br. In the transition state [HO···CH₃···Br]⁻ the carbon is partially bonded to both OH and Br, with the three H atoms in one plane. Br⁻ then leaves, giving CH₃OH with inversion of configuration; single step, rate = k[CH₃Br][OH⁻]. [2]\n(ii) 1-Bromopentane > 2-bromopentane > 2-bromo-2-methylbutane [1]\nPrimary < secondary < tertiary in crowding around the carbon bearing Br; bulky groups hinder the backside approach of the nucleophile. [1]\n(iii) Grignard reagents are very reactive and react with any source of protons such as water to form alkanes: RMgX + H₂O → RH + Mg(OH)X, destroying the reagent. [1]",
      "marks": 5
     }
    ]
