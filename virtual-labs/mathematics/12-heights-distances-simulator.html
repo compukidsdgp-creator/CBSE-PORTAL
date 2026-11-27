@@ -1,224 +1,848 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><title>Math Lab 12 | Heights & Distances Simulator | CBSEMOCK</title><style>
-:root{--bg:#081522;--panel:#102438;--panel2:#153149;--line:#294b63;--ink:#edf7ff;--muted:#a6bdce;--cyan:#48d9e5;--mint:#73e4b0;--gold:#ffd36e}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#1b4561,#081522 58%);color:var(--ink);font:14px/1.5 Inter,Segoe UI,Arial,sans-serif}header{position:sticky;top:0;z-index:20;background:#081522ed;border-bottom:1px solid var(--line);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:900;letter-spacing:1px}.brand span{color:var(--cyan)}.meta,.muted{color:var(--muted);font-size:11px}.pill,.tag{border:1px solid #3b7183;color:#a9f2ed;border-radius:30px;padding:6px 10px;font-size:10px;font-weight:800}.ad{max-width:1100px;min-height:54px;margin:12px auto;border:1px dashed #547086;border-radius:10px;display:grid;place-items:center;color:#91aabc;background:#102438;font-size:10px;letter-spacing:1px}main{max-width:1500px;margin:auto;padding:16px}.hero{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:10px 0 16px}.eyebrow{color:var(--cyan);font-size:10px;letter-spacing:1.8px;font-weight:900}.hero h1{font-size:clamp(24px,3vw,34px);margin:4px 0}.sub{color:var(--muted);max-width:820px}.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{border-radius:7px;background:#153149}.student{display:grid;grid-template-columns:repeat(3,1fr) 1.2fr;gap:8px;padding:12px;background:#0d2031;border:1px solid var(--line);border-radius:12px;margin-bottom:14px}.student label{font-size:10px;color:var(--muted)}input,textarea{font:inherit;color:var(--ink);background:#091a29;border:1px solid #35566d;border-radius:7px;padding:8px;min-width:0}input[type=text]{width:100%;margin-top:4px}input[type=range]{width:100%;padding:0;accent-color:var(--cyan)}.layout{display:grid;grid-template-columns:265px minmax(400px,1fr) 285px;gap:12px;align-items:start}.panel{background:linear-gradient(150deg,#122b40,#0e2133);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:0 10px 28px #0003}.ph{padding:11px 14px;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:1.5px;color:#b9d6e6;font-weight:900}.pb{padding:13px}.control{margin:12px 0}.control label{display:flex;justify-content:space-between;gap:8px;color:#c9dce8;font-size:11px}.control b{color:var(--cyan)}.btn{border:1px solid #41677f;background:#1b3b52;color:#eefaff;padding:9px 11px;border-radius:8px;font-weight:750;font-size:11px;cursor:pointer}.primary{background:#087f88;border-color:#28b9bd}.good{background:#176247;border-color:#3d9e78}.btnrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}.tabs button{background:#10283b;color:#b8cedd;border:1px solid #2d4c62;border-radius:8px;padding:8px 11px;font-size:11px;font-weight:800;cursor:pointer}.tabs button.active{background:#087f88;color:white}.tab{display:none}.tab.active{display:block}.stage{background:#e4ecec;color:#122a3a;border-radius:11px;padding:12px}.stagehead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}.stagehead h2{font-size:14px;margin:0}.visual{background:#0a1927;border:1px solid #3b5a70;border-radius:9px;padding:7px}.visual canvas{display:block;width:100%;height:auto}.readouts{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:9px}.metric{background:#091a29;border:1px solid #29485e;border-radius:9px;padding:10px;text-align:center}.metric small{display:block;color:var(--muted);font-size:10px}.metric strong{display:block;color:var(--mint);font:700 19px ui-monospace,monospace}.formula{font:700 16px ui-monospace,monospace;color:#8ff0d7;text-align:center;padding:10px;background:#091a29;border-radius:9px;border:1px solid #29485e}.note{padding:10px;border:1px solid #286174;background:#102d3a;border-radius:9px;color:#c8edf0;font-size:11px;margin-top:10px}.field{margin:8px 0}.field label{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}.field textarea{width:100%;min-height:58px;resize:vertical}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:10px}th,td{padding:8px;border-bottom:1px solid #29485e;text-align:left;white-space:nowrap}th{color:#83dfe5;background:#102b40}td{color:#d4e4ed}.challenge{padding:11px;background:#0b1d2c;border:1px solid #31536b;border-radius:9px;margin:8px 0}.feedback{font-size:11px;min-height:20px;margin-top:7px;color:#9deac9}.adinline{border:1px dashed #547086;border-radius:8px;padding:15px;text-align:center;color:#829bad;font-size:9px;margin:12px 0}.rightcard{margin-bottom:11px}.step{display:flex;gap:9px;margin:9px 0;color:#c5d8e5;font-size:11px}.step i{font-style:normal;flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#17475a;color:#8ef1e3;font-weight:900}.progress{height:7px;background:#071522;border-radius:9px;overflow:hidden;margin:8px 0}.progress i{display:block;width:0;height:100%;background:linear-gradient(90deg,#0d9a9d,#7de4b5)}.footer{text-align:center;color:#718ba0;padding:18px;font-size:10px}@media(max-width:1050px){.layout{grid-template-columns:245px minmax(0,1fr)}.rightcol{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.rightcard{margin:0}}@media(max-width:700px){header{padding:10px}.meta{display:none}main{padding:10px}.hero{display:block}.tags{margin-top:9px}.student{grid-template-columns:1fr 1fr}.layout{grid-template-columns:1fr}.rightcol{grid-column:auto;display:block}.readouts{grid-template-columns:1fr 1fr}.tabs{position:sticky;top:55px;background:#081522;padding:7px 0;z-index:10}}@media print{header,.ad,.tabs,.btn,.no-print{display:none!important}body{background:white;color:#111}.panel{box-shadow:none;border:1px solid #aaa;break-inside:avoid}.tab{display:block!important}.layout{display:block}.panel{margin-bottom:12px}}
-
-/* ── SHARE BUTTONS FAB (injected) ── */
-.share-fab-wrap{
-  position:fixed;bottom:28px;right:16px;z-index:1000;
-  display:flex;flex-direction:column;gap:10px;
-  align-items:center;
-}
-.share-fab{
-  display:flex;align-items:center;justify-content:center;
-  width:48px;height:48px;border-radius:50%;border:none;
-  cursor:pointer;text-decoration:none;
-  box-shadow:0 4px 14px rgba(0,0,0,.35);
-  transition:transform .18s,box-shadow .18s;
-  font-size:1.35rem;
-}
-.share-fab:hover{transform:scale(1.12);box-shadow:0 6px 20px rgba(0,0,0,.45);}
-.share-fab.wa{background:#25D366;}
-.share-fab.fb{background:#1877F2;}
-.share-fab .fab-tooltip{
-  position:absolute;right:58px;
-  background:rgba(20,20,40,.85);color:#fff;
-  font-size:.7rem;font-weight:600;white-space:nowrap;
-  padding:4px 9px;border-radius:6px;
-  opacity:0;pointer-events:none;
-  transition:opacity .2s;
-}
-.share-fab:hover .fab-tooltip{opacity:1;}
-/* On desktop shift up so it doesn't overlap news FAB */
-@media(min-width:768px){
-  .share-fab-wrap{bottom:28px;right:20px;}
-}
-</style><link rel="canonical" href="https://cbsemock.org.in/virtual-labs/mathematics/12-heights-distances-simulator.html">
-<meta name="description" content="Explore this interactive Heights &amp; Distances Simulator virtual lab for CBSE students. To investigate Heights &amp; Distances Simulator using a dynamic…">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="author" content="CBSE Board Exam Hub">
-<meta name="keywords" content="CBSE, CBSE board exam preparation, Math, Lab, Heights, Distances, Simulator, CBSEMOCK, mock tests, practice papers">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="CBSE Board Exam Hub">
-<meta property="og:url" content="https://cbsemock.org.in/virtual-labs/mathematics/12-heights-distances-simulator.html">
-<meta property="og:title" content="Math Lab 12 | Heights &amp; Distances Simulator | CBSEMOCK">
-<meta property="og:description" content="Explore this interactive Heights &amp; Distances Simulator virtual lab for CBSE students. To investigate Heights &amp; Distances Simulator using a dynamic…">
-<meta property="og:image" content="https://cbsemock.org.in/og-image.jpg">
-<meta property="og:image:alt" content="CBSE Board Exam Hub — CBSE study resources and mock tests">
-<meta property="og:locale" content="en_IN">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Math Lab 12 | Heights &amp; Distances Simulator | CBSEMOCK">
-<meta name="twitter:description" content="Explore this interactive Heights &amp; Distances Simulator virtual lab for CBSE students. To investigate Heights &amp; Distances Simulator using a dynamic…">
-<meta name="twitter:image" content="https://cbsemock.org.in/og-image.jpg">
-<meta name="theme-color" content="#17345f">
-<!-- CBSEMOCK SEO STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LearningResource",
-  "name": "Math Lab 12 | Heights & Distances Simulator | CBSEMOCK",
-  "description": "Explore this interactive Heights & Distances Simulator virtual lab for CBSE students. To investigate Heights & Distances Simulator using a dynamic…",
-  "url": "https://cbsemock.org.in/virtual-labs/mathematics/12-heights-distances-simulator.html",
-  "inLanguage": "en-IN",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "CBSE Board Exam Hub",
-    "url": "https://cbsemock.org.in/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "CBSE Board Exam Hub",
-    "url": "https://cbsemock.org.in/"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://cbsemock.org.in/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Virtual Labs",
-      "item": "https://cbsemock.org.in/virtual-labs/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Mathematics",
-      "item": "https://cbsemock.org.in/virtual-labs/mathematics/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Math Lab 12 | Heights & Distances Simulator | CBSEMOCK",
-      "item": "https://cbsemock.org.in/virtual-labs/mathematics/12-heights-distances-simulator.html"
-    }
-  ]
-}
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2810600896966939" crossorigin="anonymous"></script>
-<style>.pp-leader{display:flex;justify-content:center;padding:10px 0;}</style>
-
-<!-- Google tag (gtag.js) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- favicon --><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<title>Heights and Distances with a Clinometer — Virtual Lab | CBSEMock</title>
+<meta name="description" content="Field lab: sight the top of a school flagpole with a clinometer, read the plumb line and the tape, then use tan θ and two graphs to find its unknown height.">
+<meta name="cbse-lab-standard" content="2026-11">
+<link rel="canonical" href="https://cbsemock.org.in/virtual-labs/mathematics/12-heights-distances-simulator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Heights and distances with a clinometer — virtual lab","url":"https://cbsemock.org.in/virtual-labs/mathematics/12-heights-distances-simulator.html","learningResourceType":["Simulation","Lab"],"educationalLevel":["Class 10"],"inLanguage":"en-IN","isAccessibleForFree":true,"teaches":["Some applications of trigonometry","Angle of elevation","Heights and distances","Using a clinometer","tan θ = height ÷ distance"],"provider":{"@type":"Organization","@id":"https://cbsemock.org.in/#organization","name":"CBSEMOCK","url":"https://cbsemock.org.in/"}}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9HPDB24Y7"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G9HPDB24Y7');</script>
-<!-- MOBILE-FIX:START --><style id="mobile-fix">@media (max-width:768px){html body header > div.pill,html body section.hero > div > div.eyebrow,html body div.tags > span.tag,html body section.student > label,html body section.panel > div.ph,html body div.control > label,html body #v_d,html body #v_theta,html body #reset,html body #random,html body div.pb > div.note,html body div.step > i,html body div.step > div > b,html body div.step > div > span.muted,html body div.tabs > button,html body div.stage > div.muted,html body div.metric > small,html body #explain,html body section.panel.rightcard > div.ph,html body #sideNote,html body div.pb > div.muted,html body div.step > div,html body div.pb > p.muted,html body footer.footer,html body #shareWa > span.fab-tooltip,html body #shareFb > span.fab-tooltip{font-size:12px!important;}html body #d,html body #theta{padding-top:4px!important;padding-bottom:4px!important;}}</style><!-- MOBILE-FIX:END -->
-<!-- LAB-MOBILE:START -->
 <style>
-@media (max-width:760px){
- .portal-backbar #portal-back,.portal-backbar a{min-height:40px;display:inline-flex;align-items:center}
- .share-fab-wrap{bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;right:10px!important;gap:8px!important}
- .share-fab{width:42px!important;height:42px!important;opacity:.92}
- .share-fab .fab-tooltip{display:none!important}
- body{padding-bottom:64px}
- input[type=range]{min-height:36px;touch-action:pan-y}
- input[type=checkbox],input[type=radio]{min-width:22px;min-height:22px}
- input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=hidden]):not([type=color]),select,textarea{min-height:40px;font-size:max(16px,1em)}
- button:not(.toggle):not(.share-fab),.btn,[role=button],a.button{min-height:40px}
- .toggle{position:relative}.toggle::before{content:"";position:absolute;inset:-9px -4px}
- img,video,canvas{max-width:100%}
- pre,code{white-space:pre-wrap;word-break:break-word}
-}
-</style>
-<script>
-(function(){if(!window.matchMedia||!matchMedia('(max-width:760px)').matches)return;var runs=0,t=null;
-function lift(){runs++;var els=document.body.getElementsByTagName('*');for(var i=0;i<els.length;i++){var e=els[i];if(e.closest&&e.closest('svg'))continue;
- var txt=false;for(var n=e.firstChild;n;n=n.nextSibling){if(n.nodeType===3&&n.textContent.trim().length>1){txt=true;break}}if(!txt)continue;
- var fs=parseFloat(getComputedStyle(e).fontSize);if(fs&&fs<12)e.style.fontSize='12px'}}
-function soon(){if(runs>25)return;clearTimeout(t);t=setTimeout(lift,450)}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',lift);else lift();
-try{new MutationObserver(soon).observe(document.body,{childList:true,subtree:true})}catch(e){}})();
-</script>
-<!-- LAB-MOBILE:END -->
-</head><body>
-<!-- Vendor: Top Leaderboard -->
-<div class="pp-leader"><div id="ad-leader-top" style="width:100%;max-width:728px;"></div></div>
-<header><div><div class="brand">CBSE<span>MOCK</span> · MATHEMATICS STUDIO</div><div class="meta">Classes 9–12 · Interactive virtual practical laboratory</div></div><div class="pill">LAB 12 · INTERACTIVE PRACTICAL</div></header><div class="ad">ADVERTISEMENT · TOP BANNER RESERVED SPACE</div><main><section class="hero"><div><div class="eyebrow">TRIGONOMETRY · APPLICATION · INVESTIGATION 12</div><h1>Heights & Distances Simulator</h1><div class="sub">Estimate the height of an object using horizontal distance and angle of elevation, then test how measurement changes affect the result.</div></div><div class="tags"><span class="tag">Guided discovery</span><span class="tag">Live mathematical model</span><span class="tag">Practical record</span><span class="tag">Assessment</span></div></section><section class="student"><label>Student name<input id="student" type="text" placeholder="Enter student name"></label><label>Class / section<input id="className" type="text" placeholder="e.g. Class 10 A"></label><label>Roll number<input id="roll" type="text" placeholder="Roll number"></label><label>Experiment date<input id="date" type="text"></label></section><div class="layout"><aside><section class="panel"><div class="ph">01 · EXPERIMENT CONTROLS</div><div class="pb"><div class="formula">Height = distance × tan(θ)</div><div id="controls"></div><div class="btnrow"><button class="btn primary" id="reset">↺ Reset apparatus</button><button class="btn" id="random">⚄ New trial</button></div><div class="note">Change one variable at a time. Observe the model, record evidence and explain the mathematical relationship.</div></div></section><section class="panel" style="margin-top:11px"><div class="ph">02 · MATHEMATICAL APPARATUS</div><div class="pb"><div class="step"><i>1</i><div><b>Interactive model</b><br><span class="muted">Manipulate the variables and inspect the output.</span></div></div><div class="step"><i>2</i><div><b>Live measurement</b><br><span class="muted">Use the calculated values as experimental evidence.</span></div></div><div class="step"><i>3</i><div><b>Data recorder</b><br><span class="muted">Record repeated trials in the practical notebook.</span></div></div><div class="adinline">ADVERTISEMENT · LEFT PANEL SLOT</div></div></section></aside><section class="panel"><div class="pb"><div class="tabs"><button class="active" data-tab="station">Lab station</button><button data-tab="theory">Theory & procedure</button><button data-tab="analysis">Analysis</button><button data-tab="notebook">Notebook</button><button data-tab="assessment">Assessment</button></div><div class="tab active" id="station"><div class="stage"><div class="stagehead"><h2>Interactive mathematical workspace</h2><span>Live simulation</span></div><div class="visual"><canvas id="plot" width="820" height="430"></canvas></div><div class="muted" style="color:#37596b;margin-top:7px">The model updates as you adjust the apparatus controls. Values are simulated mathematical outputs, not physical measurements.</div></div><div class="readouts"><div class="metric"><small>Primary result</small><strong id="r1">—</strong></div><div class="metric"><small>Secondary result</small><strong id="r2">—</strong></div><div class="metric"><small>Relationship</small><strong id="r3">—</strong></div><div class="metric"><small>Check</small><strong id="r4">—</strong></div></div><div class="note" id="explain">Adjust a control to begin the investigation.</div></div><div class="tab" id="theory"><h3>Learning objective</h3><p>To investigate Heights & Distances Simulator using a dynamic mathematical model and justify a conclusion from recorded values.</p><h3>Mathematical principle</h3><div class="formula">Height = distance × tan(θ)</div><h3>Procedure</h3><div class="step"><i>1</i><div>Enter student details and note the initial settings.</div></div><div class="step"><i>2</i><div>Change one independent variable while keeping the others fixed.</div></div><div class="step"><i>3</i><div>Observe the visual model and note the calculated values.</div></div><div class="step"><i>4</i><div>Repeat with at least three different settings and record the readings.</div></div><div class="step"><i>5</i><div>Use the pattern in your observations to write a mathematical conclusion.</div></div><h3>Variables</h3><p><b>Independent:</b> the control being changed. <b>Dependent:</b> calculated result. <b>Controlled:</b> other settings held constant.</p><div class="note">Guided investigation: Change the angle and distance separately. Discuss why field measurements need a level line of sight.</div><h3>Common errors to avoid</h3><ul><li>Changing several variables simultaneously.</li><li>Recording rounded values before completing calculations.</li><li>Confusing linear, square and cubic units.</li><li>Writing a conclusion that is not supported by observations.</li></ul></div><div class="tab" id="analysis"><h3>Live mathematical analysis</h3><div class="formula" id="analysisFormula">Height = distance × tan(θ)</div><div class="output" id="working">The working will appear here.</div><h3>Observation table</h3><div class="tablewrap"><table><thead><tr><th>Trial</th><th>Settings</th><th>Result 1</th><th>Result 2</th></tr></thead><tbody id="obsRows"><tr><td colspan="4">Run and record trials to populate this table.</td></tr></tbody></table></div><div class="note" id="analysisText">Compare the readings and identify the pattern.</div></div><div class="tab" id="notebook"><h3>Digital practical notebook</h3><div class="field"><label>Hypothesis / prediction</label><textarea id="hypothesis" placeholder="I predict that..."></textarea></div><div class="field"><label>Observations and evidence</label><textarea id="observations" placeholder="The values show that..."></textarea></div><div class="field"><label>Conclusion</label><textarea id="conclusion" placeholder="Therefore..."></textarea></div><div class="field"><label>Sources of error / limitations</label><textarea id="errors" placeholder="Rounding, assumptions, measurement limits..."></textarea></div><div class="btnrow"><button class="btn good" id="record">＋ Record current trial</button><button class="btn" id="csv">Export CSV</button><button class="btn" id="report">Print / Save PDF</button></div><div class="feedback" id="noteFeedback"></div><h3>Recorded trials</h3><div class="tablewrap"><table><thead><tr><th>#</th><th>Settings</th><th>Result 1</th><th>Result 2</th><th>Time</th></tr></thead><tbody id="trialRows"></tbody></table></div></div><div class="tab" id="assessment"><h3>Knowledge check</h3><p class="muted">Select the best answer. Feedback is provided after checking.</p><div id="quiz"></div><div class="metric"><small>Assessment score</small><strong id="score">0 / 5</strong></div><div class="progress"><i id="progress"></i></div><button class="btn primary" id="grade">Check answers</button><div class="feedback" id="quizFeedback"></div><h3>Investigation challenge</h3><div class="challenge"><p>At 25 m and 35°, estimate the height.</p><button class="btn" id="checkChallenge">Check my model</button><div class="feedback" id="challengeFeedback"></div></div></div></div></section><aside class="rightcol"><section class="panel rightcard"><div class="ph">03 · LIVE RESULT MONITOR</div><div class="pb"><div class="metric"><small>Primary result</small><strong id="side1">—</strong></div><div class="metric"><small>Secondary result</small><strong id="side2">—</strong></div><div class="metric"><small>Current interpretation</small><strong id="side3" style="font-size:13px">Ready</strong></div><div class="note" id="sideNote">The right panel tracks your current model.</div></div></section><section class="panel rightcard"><div class="ph">04 · TEACHER OBSERVATION</div><div class="pb"><div class="muted">Suggested assessment rubric</div><div class="step"><i>✓</i><div>Correct apparatus use – 2 marks</div></div><div class="step"><i>✓</i><div>Accurate observations – 2 marks</div></div><div class="step"><i>✓</i><div>Mathematical reasoning – 3 marks</div></div><div class="step"><i>✓</i><div>Conclusion and communication – 3 marks</div></div><div class="metric"><small>Total</small><strong>10 marks</strong></div></div></section><section class="panel rightcard"><div class="ph">05 · QUICK REFERENCE</div><div class="pb"><div class="formula">Height = distance × tan(θ)</div><p class="muted">Class 10 · Mathematics<br>Use exact values where possible and state units clearly. Check whether the result is reasonable before submitting.</p><div class="adinline">ADVERTISEMENT · SIDEBAR SLOT</div></div></section></aside></div></main><div class="ad">ADVERTISEMENT · BOTTOM BANNER RESERVED SPACE</div><footer class="footer">CBSEMOCK · Mathematics Discovery Studio · Lab 12 · Interactive educational model</footer><script>
-(()=>{const D={"lab": 12, "class": 10, "title": "Heights & Distances Simulator", "strand": "TRIGONOMETRY · APPLICATION", "desc": "Estimate the height of an object using horizontal distance and angle of elevation, then test how measurement changes affect the result.", "controls": [{"id": "d", "label": "Horizontal distance (m)", "min": 2.0, "max": 100.0, "step": 1.0, "value": 25.0}, {"id": "theta", "label": "Elevation angle", "min": 5.0, "max": 85.0, "step": 1.0, "value": 35.0}], "formula": "Height = distance × tan(θ)", "guided": "Change the angle and distance separately. Discuss why field measurements need a level line of sight.", "challenge": "At 25 m and 35°, estimate the height.", "questions": [{"q": "Angle of elevation is measured from:", "opts": ["Vertical", "Horizontal", "Object top", "Ground distance"], "a": 1}, {"q": "Height formula is:", "opts": ["d sinθ", "d tanθ", "d cosθ", "d/θ"], "a": 1}, {"q": "If angle increases (same d), height:", "opts": ["Increases", "Decreases", "Same", "Zero"], "a": 1}, {"q": "A clinometer measures:", "opts": ["Mass", "Angle", "Distance", "Time"], "a": 1}, {"q": "Angle of depression is measured:", "opts": ["Below horizontal", "Above vertical", "From north", "From centre"], "a": 1}], "answers": [1, 1, 0, 1, 0]}, $=id=>document.getElementById(id), cv=$('plot'),ctx=cv.getContext('2d');let trials=[],last={};const fmt=n=>Number.isFinite(n)?(Math.abs(n)<1e-8?'0':Number(n.toFixed(3)).toString()):'—';
-$('date').value=new Date().toISOString().slice(0,10);$('controls').innerHTML=D.controls.map(c=>`<div class="control"><label for="${c.id}">${c.label}<b id="v_${c.id}">${c.value}</b></label><input type="range" id="${c.id}" min="${c.min}" max="${c.max}" step="${c.step}" value="${c.value}"></div>`).join('');
-const val=id=>+$(id).value, vals=()=>Object.fromEntries(D.controls.map(c=>[c.id,val(c.id)]));
-function calc(v){let a,b,c,d,e,primary,secondary,rel,check,explain,work,kind=D.lab;
-if(kind===2){a=v.a;b=v.h;c=v.k;primary=`Vertex (${fmt(b)}, ${fmt(c)})`;secondary=a>0?'Opens upward':'Opens downward';rel=`Axis x = ${fmt(b)}`;check=`${a>0?'Minimum':'Maximum'} ${fmt(c)}`;explain=`The vertex is (${fmt(b)}, ${fmt(c)}). The sign of a determines the opening; |a| controls vertical stretch.`;work=`y = ${fmt(a)}(x − ${fmt(b)})² + ${fmt(c)}. Vertex = (${fmt(b)}, ${fmt(c)}).`;}
-else if(kind===3){a=v.a1;b=v.b1;c=v.a2;d=v.b2;let x=(b-d)/(c-a);primary=c===a?(b===d?'Coincident':'No solution'):`x = ${fmt(x)}`;secondary=c===a?'Parallel / coincident':`y = ${fmt(a*x+b)}`;rel=c===a?'Equal slopes':`Slopes ${fmt(a)} and ${fmt(c)}`;check=c===a?(b===d?'Infinite solutions':'0 solutions'):'1 solution';explain=c===a?(b===d?'The two equations represent the same line.':'The lines are parallel and distinct.'):'The two lines intersect once; that point satisfies both equations.';work=`Line 1: y=${fmt(a)}x+${fmt(b)}\nLine 2: y=${fmt(c)}x+${fmt(d)}\n${explain}`;}
-else if(kind===4){let dx=v.x2-v.x1,dy=v.y2-v.y1,dist=Math.hypot(dx,dy);primary=`AB = ${fmt(dist)} units`;secondary=`Δx ${fmt(dx)} · Δy ${fmt(dy)}`;rel=`Slope ${dx===0?'undefined':fmt(dy/dx)}`;check=`d² = ${fmt(dx*dx+dy*dy)}`;explain='The distance is the hypotenuse of a right triangle with horizontal leg Δx and vertical leg Δy.';work=`Δx = ${fmt(v.x2)} − (${fmt(v.x1)}) = ${fmt(dx)}\nΔy = ${fmt(v.y2)} − (${fmt(v.y1)}) = ${fmt(dy)}\nAB = √(${fmt(dx)}² + ${fmt(dy)}²) = ${fmt(dist)}`;}
-else if(kind===5){let x=(v.m*v.x2+v.n*v.x1)/(v.m+v.n),y=(v.m*v.y2+v.n*v.y1)/(v.m+v.n);primary=`P = (${fmt(x)}, ${fmt(y)})`;secondary=`Ratio ${fmt(v.m)}:${fmt(v.n)}`;rel=v.m===v.n?'Midpoint':'Internal division';check=`Segment ratio ${fmt(v.m/v.n)}`;explain='The section point is a weighted average of the endpoint coordinates. Equal ratio gives the midpoint.';work=`x = (${fmt(v.m)}×${fmt(v.x2)} + ${fmt(v.n)}×${fmt(v.x1)}) / ${fmt(v.m+v.n)} = ${fmt(x)}\ny = (${fmt(v.m)}×${fmt(v.y2)} + ${fmt(v.n)}×${fmt(v.y1)}) / ${fmt(v.m+v.n)} = ${fmt(y)}`;}
-else if(kind===6){let A=v.A,B=v.B,C=180-A-B;primary=`C = ${fmt(C)}°`;secondary=`Sum ${fmt(A+B+C)}°`;rel=C>0&&C<180?'Valid triangle':'Invalid angles';check='180° invariant';explain='The third angle is the remainder after subtracting the first two angles from 180°.';work=`C = 180° − ${fmt(A)}° − ${fmt(B)}° = ${fmt(C)}°`;}
-else if(kind===7){let c0=Math.hypot(v.a,v.b);primary=`c = ${fmt(c0)}`;secondary=`a²+b² = ${fmt(v.a*v.a+v.b*v.b)}`;rel=`Area squares ${fmt(v.a*v.a)} + ${fmt(v.b*v.b)}`;check=`c² = ${fmt(c0*c0)}`;explain='The square of the hypotenuse equals the sum of the squares of the two perpendicular sides.';work=`c = √(${fmt(v.a)}² + ${fmt(v.b)}²) = ${fmt(c0)}`;}
-else if(kind===8){let ang=v.theta,valid=Math.abs(ang-90)<2.6;primary=`${fmt(ang)}°`;secondary=valid?'Perpendicular':'Not perpendicular';rel=`Radius ${fmt(v.r)} cm`;check=valid?'Tangent condition met':'Adjust to 90°';explain='At the point of contact, the radius is perpendicular to the tangent. This is the defining right-angle relationship.';work=`Angle between radius and tangent = ${fmt(ang)}°.\nPerpendicular condition: 90°.`;}
-else if(kind===9){let csa=2*Math.PI*v.r*v.h,tsa=2*Math.PI*v.r*(v.r+v.h);primary=`CSA ${fmt(csa)} cm²`;secondary=`TSA ${fmt(tsa)} cm²`;rel=`Volume ${fmt(Math.PI*v.r*v.r*v.h)} cm³`;check='Area in cm²';explain='Curved surface area is the circumference of the base multiplied by height. Total surface area adds both circular ends.';work=`CSA = 2π × ${fmt(v.r)} × ${fmt(v.h)} = ${fmt(csa)} cm²\nTSA = 2πr(r+h) = ${fmt(tsa)} cm²`;}
-else if(kind===10){let l=Math.hypot(v.r,v.h),csa=Math.PI*v.r*l,vol=Math.PI*v.r*v.r*v.h/3;primary=`l = ${fmt(l)} cm`;secondary=`CSA ${fmt(csa)} cm²`;rel=`Volume ${fmt(vol)} cm³`;check='1 circular base';explain='The slant height is the hypotenuse of a right triangle formed by radius and vertical height.';work=`l = √(${fmt(v.r)}² + ${fmt(v.h)}²) = ${fmt(l)} cm\nCSA = πrl = ${fmt(csa)} cm²\nV = ⅓πr²h = ${fmt(vol)} cm³`;}
-else if(kind===11||kind===12){let rad=v.theta*Math.PI/180,opp=v.hyp*Math.sin(rad),adj=v.hyp*Math.cos(rad);primary=`sin θ = ${fmt(Math.sin(rad))}`;secondary=`cos θ = ${fmt(Math.cos(rad))}`;rel=`tan θ = ${fmt(Math.tan(rad))}`;check=`Opp ${fmt(opp)} · Adj ${fmt(adj)}`;explain='For an acute angle in a right triangle, sine is opposite/hypotenuse, cosine is adjacent/hypotenuse and tangent is opposite/adjacent.';work=`θ = ${fmt(v.theta)}°\nOpposite = ${fmt(v.hyp)} × sin θ = ${fmt(opp)}\nAdjacent = ${fmt(v.hyp)} × cos θ = ${fmt(adj)}`;if(kind===12){let height=v.d*Math.tan(rad);primary=`Height ${fmt(height)} m`;secondary=`Distance ${fmt(v.d)} m`;rel=`Angle ${fmt(v.theta)}°`;check='tan θ = h/d';explain='The vertical height is the opposite side and horizontal distance is the adjacent side of the right triangle.';work=`h = d tan θ = ${fmt(v.d)} × tan(${fmt(v.theta)}°) = ${fmt(height)} m`;}}
-else if(kind===13){let an=v.a,dd=v.d,nn=v.n,term=an+(nn-1)*dd,sum=nn/2*(2*an+(nn-1)*dd);primary=`aₙ = ${fmt(term)}`;secondary=`Sₙ = ${fmt(sum)}`;rel=`Common difference ${fmt(dd)}`;check=`${nn} terms`;explain='An arithmetic progression changes by a constant common difference between consecutive terms.';work=`aₙ = a + (n−1)d = ${fmt(an)} + (${fmt(nn)}−1)×${fmt(dd)} = ${fmt(term)}\nSₙ = n/2[2a+(n−1)d] = ${fmt(sum)}`;}
-else if(kind===14){let ar=[v.v1,v.v2,v.v3,v.v4,v.v5].sort((x,y)=>x-y),mean=ar.reduce((x,y)=>x+y,0)/5,median=ar[2],counts={};ar.forEach(x=>counts[x]=(counts[x]||0)+1);let max=Math.max(...Object.values(counts)),modes=Object.keys(counts).filter(x=>counts[x]===max&&max>1).join(', ')||'None';primary=`Mean ${fmt(mean)}`;secondary=`Median ${fmt(median)}`;rel=`Mode ${modes}`;check=`Range ${fmt(ar[4]-ar[0])}`;explain='The mean uses every value; the median is the middle sorted value; the mode is the most frequent value.';work=`Sorted data: ${ar.join(', ')}\nMean = ${fmt(mean)}\nMedian = ${fmt(median)}\nMode = ${modes}`;}
-else if(kind===15){let sim=window.mathLabSim||null;primary=sim?`Even: ${fmt(sim.even)} / ${fmt(sim.n)}`:'Ready to simulate';secondary=sim?`P̂ = ${fmt(sim.even/sim.n)}`:`${v.n} trials`;rel='Expected P(even) = 0.5';check=sim?`Difference ${fmt(Math.abs(sim.even/sim.n-.5))}`:'Run simulation';explain='Each fair die outcome is equally likely. The theoretical probability of an even number is 3/6 = 1/2.';work=sim?`Trials = ${sim.n}\nEven outcomes = ${sim.even}\nExperimental probability = ${fmt(sim.even/sim.n)}\nTheoretical probability = 0.5`:'Press Run simulation to generate experimental evidence.';}
-else if(kind===16){let fs=[v.f1,v.f2,v.f3,v.f4],cf=[],s=0;fs.forEach(x=>{s+=x;cf.push(s)});primary=`Total N = ${s}`;secondary=`Median position ${fmt(s/2)}`;rel=`CF ${cf.join(' · ')}`;check='Non-decreasing';explain='Cumulative frequency is the running sum of class frequencies; the final cumulative frequency equals the total number of observations.';work=`Frequencies: ${fs.join(', ')}\nCumulative frequencies: ${cf.join(', ')}\nTotal = ${s}`;}
-else if(kind===17){let det=v.a*v.d-v.b*v.c;primary=`det(A) = ${fmt(det)}`;secondary=det===0?'Singular':'Non-singular';rel=`Trace ${fmt(v.a+v.d)}`;check='2×2 matrix';explain='For a 2×2 matrix, determinant is ad − bc. A zero determinant means the matrix is singular.';work=`A = [[${v.a}, ${v.b}], [${v.c}, ${v.d}]]\ndet(A) = ${v.a}×${v.d} − ${v.b}×${v.c} = ${det}`;}
-else if(kind===18){let rad=v.angle*Math.PI/180,x=v.x,y=v.y,xp=x*Math.cos(rad)-y*Math.sin(rad),yp=x*Math.sin(rad)+y*Math.cos(rad);primary=`(${fmt(xp)}, ${fmt(yp)})`;secondary=`Angle ${fmt(v.angle)}°`;rel=`Radius ${fmt(Math.hypot(x,y))}`;check='Length preserved';explain='Rotation about the origin changes orientation but preserves distance from the origin and all lengths.';work=`x′ = x cosθ − y sinθ = ${fmt(xp)}\ny′ = x sinθ + y cosθ = ${fmt(yp)}`;}
-else if(kind===19){let x=v.x,h=v.h,a=v.a,der=2*a*x,sec=a*((x+h)**2-x*x)/h;primary=`f′(x) = ${fmt(der)}`;secondary=`Secant ≈ ${fmt(sec)}`;rel=`At x = ${fmt(x)}`;check=`Difference ${fmt(Math.abs(sec-der))}`;explain='The derivative is the limiting slope of the secant as the step size approaches zero. Here f(x)=a x², so f′(x)=2ax.';work=`f(x) = ${fmt(a)}x²\nf′(x) = 2ax = ${fmt(der)}\nSecant slope for h=${fmt(h)}: ${fmt(sec)}`;}
-else {let n=Math.max(1,Math.floor(v.N)),a=v.a,b=v.b,dx=(b-a)/n,sum=0;for(let i=0;i<n;i++)sum+=Math.pow(a+i*dx,2)*dx;let exact=(b**3-a**3)/3;primary=`Approx ${fmt(sum)}`;secondary=`Exact ${fmt(exact)}`;rel=`Rectangles ${n}`;check=`Error ${fmt(Math.abs(exact-sum))}`;explain='The left Riemann sum approximates area with rectangles. Increasing the number of rectangles generally improves the approximation.';work=`Δx = (${fmt(b)}−${fmt(a)})/${n} = ${fmt(dx)}\nLeft sum ≈ ${fmt(sum)}\nExact integral = (${fmt(b)}³−${fmt(a)}³)/3 = ${fmt(exact)}`;}
-return {primary,secondary,rel,check,explain,work,values:v};}
-function draw(){let v=vals(),r=calc(v);last=r;D.controls.forEach(c=>$('v_'+c.id).textContent=fmt(v[c.id]));$('r1').textContent=r.primary;$('r2').textContent=r.secondary;$('r3').textContent=r.rel;$('r4').textContent=r.check;$('side1').textContent=r.primary;$('side2').textContent=r.secondary;$('side3').textContent=r.rel;$('explain').textContent=r.explain;$('sideNote').textContent=r.explain;$('working').textContent=r.work;$('analysisText').textContent=r.explain;drawVisual(v);}
-function drawVisual(v){let W=cv.width,H=cv.height;ctx.clearRect(0,0,W,H);ctx.fillStyle='#0a1927';ctx.fillRect(0,0,W,H);ctx.strokeStyle='#203b50';for(let x=40;x<W;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke()}for(let y=30;y<H;y+=30){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}ctx.strokeStyle='#a9c5d5';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,H/2);ctx.lineTo(W,H/2);ctx.moveTo(W/2,0);ctx.lineTo(W/2,H);ctx.stroke();ctx.fillStyle='#c8dbe8';ctx.font='12px Arial';ctx.fillText('Mathematical model · Lab '+D.lab,14,20);let lab=D.lab;ctx.strokeStyle='#62e4b2';ctx.lineWidth=3;ctx.beginPath();
-if(lab===2){for(let px=0;px<=W;px++){let x=(px-W/2)/45,y=v.a*(x-v.h)**2+v.k,py=H/2-y*22;if(px===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)}ctx.stroke();dot(W/2+v.h*45,H/2-v.k*22,'#ffd36e');}
-else if(lab===3){[ [v.a1,v.b1], [v.a2,v.b2] ].forEach((p,j)=>{ctx.strokeStyle=j?'#ffd36e':'#62e4b2';ctx.beginPath();for(let px=0;px<=W;px++){let x=(px-W/2)/45,y=p[0]*x+p[1],py=H/2-y*22;if(px===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)}ctx.stroke()});}
-else if([4,5,18].includes(lab)){let x1=lab===18?0:v.x1,y1=lab===18?0:v.y1,x2=lab===18?v.x*Math.cos(v.angle*Math.PI/180)-v.y*Math.sin(v.angle*Math.PI/180):v.x2,y2=lab===18?v.x*Math.sin(v.angle*Math.PI/180)+v.y*Math.cos(v.angle*Math.PI/180):v.y2;ctx.strokeStyle='#62e4b2';ctx.beginPath();ctx.moveTo(W/2+x1*35,H/2-y1*35);ctx.lineTo(W/2+x2*35,H/2-y2*35);ctx.stroke();dot(W/2+x1*35,H/2-y1*35,'#ffd36e');dot(W/2+x2*35,H/2-y2*35,'#48d9e5');}
-else if(lab===6){let A=v.A*Math.PI/180,B=v.B*Math.PI/180,C=Math.PI-A-B,pts=[[W/2-130,H/2+75],[W/2+130,H/2+75],[W/2-130+260*Math.cos(B),H/2+75-260*Math.sin(B)]];ctx.strokeStyle='#62e4b2';ctx.beginPath();ctx.moveTo(...pts[0]);ctx.lineTo(...pts[1]);ctx.lineTo(...pts[2]);ctx.closePath();ctx.stroke();ctx.fillStyle='#ffd36e';pts.forEach(p=>dot(...p,'#ffd36e'));}
-else if(lab===7){let a=v.a,b=v.b,s=25,ox=W/2-a*s/2,oy=H/2+b*s/2;ctx.strokeStyle='#62e4b2';ctx.strokeRect(ox,oy-b*s,a*s,b*s);ctx.beginPath();ctx.moveTo(ox,oy);ctx.lineTo(ox+a*s,oy-b*s);ctx.stroke();ctx.fillStyle='#ffd36e';ctx.fillText('a = '+fmt(a),ox,oy+18);ctx.fillText('b = '+fmt(b),ox-35,oy-b*s/2);ctx.fillText('c = '+fmt(Math.hypot(a,b)),ox+a*s/2,oy-b*s/2);}
-else if(lab===8){ctx.strokeStyle='#62e4b2';ctx.beginPath();ctx.arc(W/2,H/2,Math.min(v.r*25,140),0,Math.PI*2);ctx.stroke();let rad=(v.theta||90)*Math.PI/180,R=Math.min(v.r*25,140),x=W/2+R*Math.cos(rad),y=H/2-R*Math.sin(rad);ctx.strokeStyle='#ffd36e';ctx.beginPath();ctx.moveTo(W/2,H/2);ctx.lineTo(x,y);ctx.lineTo(x+140*Math.sin(rad),y+140*Math.cos(rad));ctx.stroke();dot(x,y,'#ffd36e');}
-else if(lab===9||lab===10){ctx.strokeStyle='#62e4b2';ctx.beginPath();ctx.ellipse(W/2,H/2+70,Math.min(v.r*20,130),Math.min(v.r*7,45),0,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.ellipse(W/2,H/2-70,Math.min(v.r*20,130),Math.min(v.r*7,45),0,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.moveTo(W/2-Math.min(v.r*20,130),H/2+70);ctx.lineTo(W/2-Math.min(v.r*20,130),H/2-70);ctx.moveTo(W/2+Math.min(v.r*20,130),H/2+70);ctx.lineTo(W/2+Math.min(v.r*20,130),H/2-70);ctx.stroke();}
-else if(lab===11||lab===12){let th=(v.theta||v.theta===0?v.theta:35)*Math.PI/180,L=180;ctx.strokeStyle='#62e4b2';ctx.beginPath();ctx.moveTo(W/2-100,H/2+80);ctx.lineTo(W/2+L,H/2+80);ctx.lineTo(W/2-100+L*Math.cos(th),H/2+80-L*Math.sin(th));ctx.closePath();ctx.stroke();}
-else if(lab===13){let a=v.a,d=v.d;ctx.fillStyle='#62e4b2';for(let n=0;n<v.n;n++){ctx.fillRect(35+n*25,H/2-(a+n*d)*8,16,(a+n*d)*8)}ctx.fillStyle='#ffd36e';ctx.fillText('Sequence terms',35,H/2+35);}
-else if(lab===14){let ar=[v.v1,v.v2,v.v3,v.v4,v.v5],max=Math.max(...ar,1);ctx.fillStyle='#62e4b2';ar.forEach((x,i)=>ctx.fillRect(100+i*115,H-45-x/max*280,55,x/max*280));}
-else if(lab===15){ctx.fillStyle='#62e4b2';ctx.font='18px Arial';ctx.fillText('Coin / die probability experiment',W/2-145,H/2);ctx.fillText('Theoretical P(even) = 0.5',W/2-115,H/2+35);}
-else if(lab===16){let fs=[v.f1,v.f2,v.f3,v.f4],cum=0,pts=[[70,H-55]];fs.forEach((f,i)=>{cum+=f;pts.push([70+(i+1)*150,H-55-cum*12])});ctx.strokeStyle='#62e4b2';ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(...p):ctx.moveTo(...p));ctx.stroke();pts.forEach(p=>dot(...p,'#ffd36e'));}
-else if(lab===17){ctx.fillStyle='#62e4b2';ctx.fillText('A = [ '+v.a+'   '+v.b+' ]',W/2-100,H/2-12);ctx.fillText('    [ '+v.c+'   '+v.d+' ]',W/2-100,H/2+25);ctx.fillStyle='#ffd36e';ctx.fillText('det(A) = '+fmt(v.a*v.d-v.b*v.c),W/2-90,H/2+75);}
-else if(lab===19){for(let px=0;px<=W;px++){let x=(px-W/2)/65,y=v.a*x*x,py=H/2-y*18;if(px===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)}ctx.stroke();let x=v.x,y=v.a*x*x,grad=2*v.a*x,px=W/2+x*65,py=H/2-y*18;ctx.strokeStyle='#ffd36e';ctx.beginPath();ctx.moveTo(px-100,py+grad*100/65*18);ctx.lineTo(px+100,py-grad*100/65*18);ctx.stroke();dot(px,py,'#ffd36e');}
-else {let n=Math.max(1,Math.floor(v.N)),a=v.a,b=v.b,dx=(b-a)/n;ctx.fillStyle='#62e4b2';for(let i=0;i<n;i++){let x=a+i*dx,y=x*x,px=W/2+(x-(a+b)/2)*85,base=H/2+100,h=y*9;ctx.fillRect(px,base-h,Math.max(1,dx*85),h)}ctx.strokeStyle='#ffd36e';ctx.beginPath();for(let px=0;px<=W;px++){let x=(px-W/2)/85+(a+b)/2,y=x*x,py=H/2+100-y*9;if(px===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)}ctx.stroke();}
-function dot(x,y,color){ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.fill();}}
-D.questions.forEach((q,i)=>{let el=document.createElement('div');el.className='challenge';el.innerHTML=`<p><b>Q${i+1}.</b> ${q.q}</p>`+q.opts.map((o,j)=>`<label style="display:block;margin:5px 0;font-size:11px"><input type="radio" name="q${i}" value="${j}"> ${o}</label>`).join('')+`<div class="feedback" id="qf${i}"></div>`;$('quiz').appendChild(el)});
-if(D.lab===15){let b=document.createElement('button');b.className='btn good';b.textContent='▶ Run dice simulation';b.onclick=()=>{let n=val('n'),even=0;for(let i=0;i<n;i++){let face=1+Math.floor(Math.random()*6);if(face%2===0)even++;}window.mathLabSim={n,even};draw()};$('controls').appendChild(b)}D.controls.forEach(c=>$(c.id).addEventListener('input',draw));$('reset').onclick=()=>{D.controls.forEach(c=>$(c.id).value=c.value);draw()};$('random').onclick=()=>{D.controls.forEach(c=>{$(c.id).value=Math.min(c.max,Math.max(c.min,c.min+Math.round(Math.random()*(c.max-c.min)/c.step)*c.step))});draw()};
-$('record').onclick=()=>{if(!last.values)return;trials.push({settings:Object.entries(last.values).map(([k,v])=>k+'='+fmt(v)).join('; '),r1:last.primary,r2:last.secondary,time:new Date().toLocaleTimeString()});$('trialRows').innerHTML=trials.map((t,i)=>`<tr><td>${i+1}</td><td>${t.settings}</td><td>${t.r1}</td><td>${t.r2}</td><td>${t.time}</td></tr>`).join('');$('obsRows').innerHTML=trials.map((t,i)=>`<tr><td>${i+1}</td><td>${t.settings}</td><td>${t.r1}</td><td>${t.r2}</td></tr>`).join('');$('noteFeedback').textContent='Trial recorded in the practical notebook.'};
-$('csv').onclick=()=>{let rows=[['Trial','Settings','Result 1','Result 2','Time'],...trials.map((t,i)=>[i+1,t.settings,t.r1,t.r2,t.time])];download('math_lab_'+D.lab+'_trials.csv',rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\n'),'text/csv')};$('report').onclick=()=>window.print();function download(n,d,t){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([d],{type:t}));a.href=u;a.download=n;a.click();URL.revokeObjectURL(u)}
-document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.id===b.dataset.tab))});$('grade').onclick=()=>{let score=0;D.questions.forEach((q,i)=>{let s=document.querySelector(`input[name=q${i}]:checked`),ok=s&&+s.value===D.answers[i];if(ok)score++;$('qf'+i).textContent=s?(ok?'Correct.':'Review this concept and try again.'):'Choose an answer.';$('qf'+i).style.color=ok?'#8ce8b9':'#ffbd88'});$('score').textContent=score+' / 5';$('progress').style.width=score*20+'%';$('quizFeedback').textContent=score>=4?'Strong understanding.':score>=2?'Good start. Review and retry.':'Revisit the theory and try again.'};$('checkChallenge').onclick=()=>{$('challengeFeedback').textContent='Use the controls to reproduce the target condition, then justify it in your notebook. Current model: '+last.primary+'. '+last.secondary+'.'};draw();})();
-</script>
-<!-- Vendor: Bottom Leaderboard -->
-<div class="pp-leader"><div id="ad-leader-bottom" style="width:100%;max-width:728px;"></div></div>
+:root{--navy:#1a3a6b;--navy2:#0f2347;--gold:#c9a227;--gold2:#e8cc6a;--bg:#f3f1ed;--card:#fff;--text:#1a1a1a;--muted:#5d5d5d;--border:#ddd8cc;--soft:#f1eee6;--green:#237d69;--red:#b3261e;
+ --grd:linear-gradient(135deg,#1a3a6b 0%,#0f2347 100%)}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--soft:#1f2630;--green:#4cc2a4;--red:#ff8a80}}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{font:16px/1.65 Inter,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:'Crimson Pro',Georgia,serif;line-height:1.2}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.hero{background:var(--grd);color:#fff;padding:0 18px 40px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;width:420px;height:420px;right:-150px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(232,204,106,.25),transparent 70%)}
+.hero>*{position:relative;z-index:1}
+.topbar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{color:#fff;text-decoration:none;font-weight:800}.brand b{color:var(--gold2)}
+.nb{color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.28);transition:all .18s}
+.nb:hover{background:var(--gold);color:var(--navy2);border-color:var(--gold)}
+.crumb{font-size:.8rem;color:rgba(255,255,255,.72);margin-bottom:8px}.crumb a{color:var(--gold2);text-decoration:none;display:inline-block;padding:5px 0}
+.hero p{color:rgba(255,255,255,.86);max-width:780px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 70px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px 22px;margin:0 0 20px}
+.card>h2{font-size:1.55rem;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+@media(prefers-color-scheme:dark){.card>h2,.card h3{color:var(--gold2)}}
+.card h3{font-size:1.2rem;color:var(--navy);margin:14px 0 6px}
+.lead{color:var(--muted);margin-bottom:12px}
+.pill{font-family:Inter,sans-serif;font-size:.72rem;font-weight:800;background:var(--grd);color:var(--gold2);padding:4px 10px;border-radius:99px}
 
-<script src="../../ads.js"></script>
-<script src="../../portal-shell.js"></script>
-<!-- Google AdSense Auto Ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2810600896966939"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-<!-- end AdSense -->
-<!-- Share FABs -->
-<div class="share-fab-wrap">
-  <a class="share-fab wa" id="shareWa" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 2C8.28 2 2 8.28 2 16c0 2.44.65 4.73 1.78 6.72L2 30l7.5-1.75A13.94 13.94 0 0016 30c7.72 0 14-6.28 14-14S23.72 2 16 2zm0 25.5a11.44 11.44 0 01-5.84-1.6l-.42-.25-4.45 1.04 1.06-4.33-.28-.45A11.46 11.46 0 014.5 16C4.5 9.6 9.6 4.5 16 4.5S27.5 9.6 27.5 16 22.4 27.5 16 27.5zm6.3-8.56c-.34-.17-2.02-1-2.33-1.11-.32-.11-.55-.17-.78.17-.23.34-.89 1.11-1.09 1.34-.2.23-.4.26-.74.09-.34-.17-1.44-.53-2.74-1.69-1.01-.9-1.7-2.01-1.9-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.67c-.23 0-.6.09-.91.43-.32.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.02-.83 2.31-1.62.28-.8.28-1.48.2-1.62-.09-.14-.32-.23-.66-.4z"/></svg>
-    <span class="fab-tooltip">Share on WhatsApp</span>
-  </a>
-  <a class="share-fab fb" id="shareFb" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M29 16C29 8.82 23.18 3 16 3S3 8.82 3 16c0 6.49 4.75 11.87 10.97 12.84V19.7H10.4V16h3.57v-3.1c0-3.52 2.1-5.47 5.31-5.47 1.54 0 3.14.28 3.14.28v3.46h-1.77c-1.74 0-2.28 1.08-2.28 2.19V16h3.89l-.62 3.7h-3.27v9.14C24.25 27.87 29 22.49 29 16z"/></svg>
-    <span class="fab-tooltip">Share on Facebook</span>
-  </a>
-</div>
+/* ── lab workspace ── */
+.lab{margin-top:24px;scroll-margin-top:12px;background:#0b1320;border:1px solid #22324a;border-radius:20px;padding:14px;box-shadow:0 18px 40px rgba(15,35,71,.25);color:#e8eef6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tab{flex:1 1 220px;text-align:left;cursor:pointer;border:1.5px solid #2c3e58;background:#111c2e;color:#c9d6e6;border-radius:14px;padding:10px 14px;font:inherit;transition:all .15s}
+.tab b{display:block;color:#fff;font-size:.95rem}.tab small{font-size:.76rem;color:#93a6bf}
+.tab.on{border-color:var(--gold);background:linear-gradient(135deg,#1d3253,#142540);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.tab:hover{border-color:#4b6488}
+.task{background:#13213a;border:1px solid #2b4163;border-left:4px solid var(--gold);border-radius:12px;padding:10px 14px;font-size:.9rem;color:#d8e2ef;margin-bottom:12px}
+.task b{color:var(--gold2)}
+.fieldbox{position:relative;border-radius:14px;overflow:hidden;border:1px solid #1f2d42;background:#05080e}
+.fieldscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+#field{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none}
+#field .obs-g{cursor:grab;touch-action:none}#field .obs-g.drag{cursor:grabbing}
+#field .obs-g:focus{outline:none}#field .obs-g:focus .hl{opacity:1}
+.hint{position:absolute;left:12px;top:10px;font-size:.74rem;color:#dfe8f3;background:rgba(5,8,14,.6);padding:4px 9px;border-radius:99px;pointer-events:none}
+@media(max-width:700px){#field{min-width:860px}.hint{display:none}.fieldbox::after{content:'⟷ swipe the field · drag the student to walk';position:absolute;right:8px;bottom:6px;font-size:12px;color:#e8cc6a;background:rgba(5,8,14,.75);padding:3px 8px;border-radius:99px;pointer-events:none}}
+.row2{display:grid;grid-template-columns:320px 1fr;gap:12px;margin-top:12px}
+@media(max-width:820px){.row2{grid-template-columns:1fr}}
+.panel{background:#101a2b;border:1px solid #23344d;border-radius:14px;padding:12px}
+.panel h4{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#93a6bf;margin-bottom:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.panel h4+svg,.vw{display:block;width:100%;height:auto}
+#straw{display:block;width:100%;max-width:280px;margin:0 auto;aspect-ratio:1;border-radius:50%;touch-action:none;cursor:ns-resize;box-shadow:0 0 0 6px #2a2f38,0 0 0 8px #3b4250,0 10px 24px rgba(0,0,0,.5)}
+#straw:focus-visible{outline:3px solid var(--gold);outline-offset:6px}
+#hchart{display:block;width:100%;max-width:300px;margin:0 auto;border-radius:10px}
+#tape{display:block;width:100%;height:auto;border-radius:10px;margin-top:6px}
+.scrcap{font-size:.78rem;color:#9fb2ca;text-align:center;margin-top:12px}
+.clgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.clgrid{grid-template-columns:1fr}}
+.clgrid figure{background:#0b1320;border:1px solid #23344d;border-radius:12px;padding:6px}
+.clgrid figcaption{font-size:.76rem;color:#9fb2ca;text-align:center;margin-top:2px}
+.ctl{display:grid;grid-template-columns:56px 1fr;gap:8px;align-items:center;margin-top:10px}
+.ctl>span{font-size:.8rem;font-weight:700;color:#c9d6e6}
+.nudge{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.nudge button{cursor:pointer;font:inherit;font-weight:800;font-size:.85rem;white-space:nowrap;padding:0 2px;min-height:42px;border-radius:10px;border:1px solid #33496a;background:#182a45;color:#fff}
+.nudge button:hover{background:#21385c}.nudge button:active{transform:translateY(1px)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:#c9d6e6;cursor:pointer;padding:8px 0;min-height:40px}
+.sw input{width:18px;height:18px;accent-color:var(--gold)}
+.btn{cursor:pointer;border:0;font:inherit;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:99px;min-height:42px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.navy{background:var(--grd);color:#ffe4a0}.btn.ghost{background:transparent;border:1.5px solid #3a5276;color:#d6e1ef}
+.card .btn.ghost{color:var(--navy);border-color:var(--gold)}
+@media(prefers-color-scheme:dark){.card .btn.ghost{color:var(--gold2)}}
+.rough{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px;font-size:.88rem}
+.rough input,.obs input{font:inherit;font-family:'JetBrains Mono',monospace;font-size:.9rem;width:96px;padding:8px 8px;min-height:40px;border-radius:8px;border:1.5px solid #3a5276;background:#0b1320;color:#fff}
+.msg{font-size:.85rem;margin-top:8px;min-height:1.2em}.msg.ok{color:#7fe0b8}.msg.bad{color:#ffab9e}
+.steady{font-family:'JetBrains Mono',monospace;letter-spacing:0;text-transform:none}
+/* table */
+.tbl{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+table.obs{border-collapse:collapse;width:100%;min-width:760px;font-size:.88rem}
+.obs th,.obs td{padding:8px 8px;border-bottom:1px solid var(--border);text-align:center}
+.obs th{background:var(--soft);font-weight:700;font-size:.78rem;line-height:1.3}
+.obs td.n{font-family:'JetBrains Mono',monospace}
+.obs input{background:var(--card);color:var(--text);border-color:var(--border);width:90px}
+.obs input.bad{border-color:var(--red);background:rgba(179,38,30,.08)}
+.obs input.good{border-color:var(--green)}
+.obs .del{cursor:pointer;border:0;background:none;color:var(--muted);font-size:1.1rem;min-width:40px;min-height:40px;border-radius:8px}
+.obs tr.flag td{background:rgba(201,162,39,.08)}
+.note{font-size:.8rem;color:var(--muted)}
+.fb{margin-top:10px;font-size:.9rem}.fb li{margin:4px 0 4px 18px}
+.graphs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.graphs{grid-template-columns:1fr}}
+.graphs figure{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+.graphs canvas{display:block;width:100%;aspect-ratio:4/3}
+.graphs figcaption{font-size:.82rem;color:var(--muted);margin-top:6px}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rbox{background:var(--soft);border-radius:14px;padding:12px 14px}
+.rbox small{display:block;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.rbox b{font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--navy)}
+@media(prefers-color-scheme:dark){.rbox b{color:var(--gold2)}}
+.rbox.true{background:rgba(35,125,105,.1);border:1.5px solid var(--green)}
+.theory p,.theory li{margin:6px 0}.theory ul,.theory ol{padding-left:20px}
+.eq{font-family:'JetBrains Mono',monospace;background:var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;text-align:center;font-size:1.05rem;overflow-x:auto}
+.theory svg{display:block;width:100%;max-width:420px;height:auto;margin:8px auto}
+details.q{border:1.5px solid var(--border);border-radius:12px;padding:10px 14px;margin:8px 0}
+details.q summary{cursor:pointer;font-weight:700;list-style:none;min-height:28px}
+details.q summary::before{content:'＋ ';color:var(--gold)}details.q[open] summary::before{content:'－ '}
+details.q p{margin-top:8px;color:var(--text)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}@media(max-width:760px){.two{grid-template-columns:1fr}}
+.links{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.links a{display:flex;justify-content:space-between;align-items:center;min-height:54px;padding:12px 16px;border-radius:14px;color:#fff;text-decoration:none;font-weight:700;background:linear-gradient(135deg,#3b6fb8,#0f2347);transition:transform .2s}
+.links a::after{content:'→';color:var(--gold2)}.links a:hover{transform:translateY(-3px)}
+.links li:nth-child(2) a{background:linear-gradient(135deg,#2b9a80,#12483e)}.links li:nth-child(3) a{background:linear-gradient(135deg,#8b6bc2,#392653)}.links li:nth-child(4) a{background:linear-gradient(135deg,#c08a2b,#5a3c0c)}
+footer{text-align:center;padding:26px 16px 90px;font-size:.8rem;color:rgba(255,255,255,.7);background:var(--grd)}
+footer a{color:var(--gold2);text-decoration:none;display:inline-block;padding:6px 4px}
+#record{display:none}
+/* ── header: lab scene ── */
+.hv{padding-bottom:26px}
+.hv .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:6px 0 10px}
+.hv .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}.hv .chips span{font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22)}
+.hv .go{display:inline-block;background:var(--gold);color:var(--navy2);text-decoration:none;font-weight:800;padding:11px 20px;border-radius:99px;box-shadow:0 6px 0 rgba(0,0,0,.22);transition:transform .15s}
+.hv .go:hover{transform:translateY(-2px)}
+.hsteps{max-width:1180px;margin:22px auto 0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;counter-reset:s}
+.hsteps li{display:flex;align-items:center;gap:10px;font-size:.84rem;font-weight:700;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);position:relative}
+.hsteps li b{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--navy2);font-size:.8rem}
+.hsteps li:not(:last-child)::after{content:'›';position:absolute;right:-8px;color:var(--gold2);font-size:1.1rem;z-index:1}
+@media(max-width:640px){.hsteps{grid-template-columns:1fr 1fr}.hsteps li:nth-child(2)::after{display:none}}
+/* B — lab scene */
+.hv-b{background:radial-gradient(ellipse at 70% 60%,#1a2c4a 0,#0b1424 55%,#060a12 100%)}
+.hB{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:10px;align-items:end;min-height:380px}
+.hB-txt{padding:18px 0 10px}
+.hB h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:0 0 14px}
+.hB h1 .g1{display:block;background:linear-gradient(90deg,#fff3c4,#e8cc6a 50%,#ff9d2e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hB h1 .g2{display:block;font-size:.55em;color:#fff;margin-top:6px}
+.hB p{color:rgba(255,255,255,.8)}
+.sceneB{display:block;width:100%;height:auto}
+.sceneB .tB{fill:rgba(255,255,255,.72);font:600 13px Inter,sans-serif;text-anchor:middle;letter-spacing:.08em;text-transform:uppercase}
+.sceneB .flagB{transform-box:fill-box;transform-origin:0 50%;animation:wave 1.8s ease-in-out infinite alternate}
+@keyframes wave{0%{transform:skewY(-5deg) scaleX(.96)}100%{transform:skewY(4deg) scaleX(1.02)}}
+.sceneB .sightB{stroke-dasharray:8 7;animation:flow 1.4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-30}}
+.sceneB .plumbB{transform-origin:300px 128px;animation:swing 2.2s ease-in-out infinite alternate}
+@keyframes swing{0%{transform:rotate(-5deg)}100%{transform:rotate(5deg)}}
+.sceneB .glowB{animation:pulse 2.6s ease-in-out infinite alternate}@keyframes pulse{to{opacity:.6}}
+@media(prefers-reduced-motion:reduce){.sceneB .flagB,.sceneB .sightB,.sceneB .plumbB,.sceneB .glowB{animation:none}}
+@media(max-width:860px){.hB{grid-template-columns:1fr;min-height:0}.hB-scene{margin:0 -10px}}
+@media print{
+ body{background:#fff;color:#000;font-size:11pt}
+ body>*:not(#record){display:none!important}
+ #record{display:block;padding:0}
+ #record h1{font-size:18pt;margin-bottom:4pt}#record h2{font-size:13pt;margin:12pt 0 4pt;border-bottom:1px solid #999}
+ #record table{border-collapse:collapse;width:100%;font-size:9.5pt}#record td,#record th{border:1px solid #777;padding:3pt;text-align:center}
+ #record img{width:48%;margin:1%;border:1px solid #bbb}
+}
+@media(max-width:700px){.hv .eyebrow,.pill,.panel h4,.panel h4 span,.rbox small,.obs th,.tab small,.note,.scrcap,.clgrid figcaption{font-size:12px}.sw input{width:22px;height:22px}.rough input,.obs input{font-size:16px}.hv .chips span{font-size:12px}}
+</style>
+</head>
+<body>
+<header class="hero hv hv-b">
+ <div class="topbar"><a class="brand" href="../../index.html">CBSE<b>Mock</b></a><a class="nb" href="../../virtual-labs/index.html">🔬 All virtual labs</a></div>
+ <div class="hB">
+  <div class="hB-txt"><nav class="crumb"><a href="../../index.html">Home</a> › <a href="../../virtual-labs/index.html">Virtual Labs</a> › <a href="../../virtual-labs/mathematics/index.html">Mathematics</a> › Heights and distances</nav>
+   <div class="eyebrow">Experiment · Clinometer &amp; measuring tape</div>
+   <h1><span class="g1">How Tall Is It?</span><span class="g2">Heights &amp; Distances with a Clinometer</span></h1>
+   <p>Walk out on the school ground, sight the top of the flagpole through a straw clinometer and read where the plumb line falls. Then let tan θ, and two graphs, tell you the height of a pole you can never climb.</p>
+   <div class="chips"><span>Class 10 · Some Applications of Trigonometry</span><span>Maths lab activity</span><span>⏱ about 25 min</span></div>
+   <a class="go" href="#lab">Go out to the flagpole ↓</a>
+  </div>
+  <div class="hB-scene"><svg class="sceneB" viewBox="0 0 760 360" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+<defs>
+ <linearGradient id="h-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1a30" stop-opacity="0"/><stop offset=".55" stop-color="#1d3556" stop-opacity=".55"/><stop offset="1" stop-color="#c77a3a" stop-opacity=".55"/></linearGradient>
+ <linearGradient id="h-ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3c5a2e"/><stop offset="1" stop-color="#16220f"/></linearGradient>
+ <linearGradient id="h-pole" x1="0" x2="1"><stop offset="0" stop-color="#6d7681"/><stop offset=".45" stop-color="#eef2f6"/><stop offset="1" stop-color="#58606b"/></linearGradient>
+ <linearGradient id="h-bld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a3a52"/><stop offset="1" stop-color="#18243a"/></linearGradient>
+ <radialGradient id="h-sun"><stop offset="0" stop-color="#ffd27a" stop-opacity=".75"/><stop offset=".4" stop-color="#ff9d2e" stop-opacity=".25"/><stop offset="1" stop-color="#ff7a00" stop-opacity="0"/></radialGradient>
+ <linearGradient id="h-plast" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f5ff" stop-opacity=".85"/><stop offset="1" stop-color="#9cc8ea" stop-opacity=".55"/></linearGradient>
+ <clipPath id="h-ins"><circle cx="300" cy="140" r="62"/></clipPath>
+</defs>
+<rect x="0" y="0" width="760" height="300" fill="url(#h-sky)"/>
+<circle class="glowB" cx="470" cy="292" r="120" fill="url(#h-sun)"/>
+<!-- school building -->
+<rect x="470" y="186" width="290" height="114" fill="url(#h-bld)"/>
+<rect x="470" y="180" width="290" height="8" fill="#33476a"/>
+<g fill="#ffcf7a" opacity=".55"><rect x="486" y="200" width="18" height="22"/><rect x="520" y="200" width="18" height="22"/><rect x="554" y="200" width="18" height="22"/><rect x="690" y="200" width="18" height="22"/><rect x="724" y="200" width="18" height="22"/><rect x="486" y="244" width="18" height="22"/><rect x="520" y="244" width="18" height="22" opacity=".4"/><rect x="690" y="244" width="18" height="22"/><rect x="724" y="244" width="18" height="22" opacity=".4"/></g>
+<!-- neem tree -->
+<rect x="52" y="226" width="9" height="74" fill="#3b2a1a"/>
+<ellipse cx="56" cy="214" rx="44" ry="34" fill="#1f3a22"/><ellipse cx="34" cy="226" rx="24" ry="18" fill="#284a2b"/><ellipse cx="80" cy="222" rx="24" ry="19" fill="#22402a"/>
+<!-- ground + measuring tape -->
+<rect x="0" y="300" width="760" height="60" fill="url(#h-ground)"/>
+<rect x="176" y="300" width="464" height="6" fill="#f2c94c"/>
+<path d="M199 300v4M222 300v4M245 300v4M268 300v6M291 300v4M314 300v4M337 300v4M360 300v4M383 300v6M406 300v4M429 300v4M452 300v4M475 300v4M498 300v6M521 300v4M544 300v4M567 300v4M590 300v4M613 300v6" stroke="#3a2c00" stroke-width="1.2"/>
+<!-- flagpole on its plinth -->
+<rect x="606" y="292" width="68" height="8" fill="#9b9488"/><rect x="614" y="284" width="52" height="8" fill="#b4ad9f"/><rect x="622" y="277" width="36" height="8" fill="#cbc4b5"/>
+<rect x="637" y="60" width="6" height="218" fill="url(#h-pole)"/>
+<line x1="645" y1="66" x2="645" y2="250" stroke="#d9d2c0" stroke-width="1" opacity=".7"/>
+<circle cx="640" cy="56" r="5" fill="#e8cc6a"/>
+<g transform="translate(643 66)"><g class="flagB"><rect width="54" height="12" fill="#ff9933"/><rect y="12" width="54" height="12" fill="#ffffff"/><rect y="24" width="54" height="12" fill="#138808"/><circle cx="27" cy="18" r="4.6" fill="none" stroke="#000080" stroke-width="1.2"/><circle cx="27" cy="18" r="1" fill="#000080"/></g></g>
+<!-- student with clinometer -->
+<g>
+ <path d="M164 300 l3 -38 h8 l3 38 h-5 l-2 -32 l-2 32z" fill="#20314f"/>
+ <path d="M162 264 q0 -30 9 -32 q9 2 9 32z" fill="#eef2f6"/>
+ <path d="M178 240 q8 2 10 -4" stroke="#c9946a" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+ <circle cx="172" cy="226" r="8" fill="#c9946a"/><path d="M164 223 q8 -11 16 -1 q-2 -6 -8 -7 q-6 1 -8 8z" fill="#1d1a17"/>
+ <g transform="rotate(-21.3 188 234)"><path d="M178 233 h20 a10 10 0 0 1 -20 0z" fill="url(#h-plast)" stroke="#bfe0ff" stroke-width=".8"/><rect x="176" y="230" width="24" height="3" fill="#ffffff"/></g>
+</g>
+<!-- line of sight and the angle of elevation -->
+<line x1="188" y1="234" x2="637" y2="234" stroke="rgba(255,255,255,.45)" stroke-width="1.2" stroke-dasharray="4 5"/>
+<line class="sightB" x1="190" y1="233" x2="638" y2="58" stroke="#ffd36b" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M258 234 A70 70 0 0 0 253.2 208.6" fill="none" stroke="#ffd36b" stroke-width="2"/>
+<text x="272" y="226" fill="#ffd36b" font-family="Crimson Pro,Georgia,serif" font-size="20" font-style="italic" font-weight="700">θ</text>
+<!-- dimensions -->
+<path d="M690 58v176M684 58h12M684 234h12" stroke="rgba(255,255,255,.55)" stroke-width="1.2" fill="none"/>
+<text x="702" y="152" fill="#fff" font-family="Inter,sans-serif" font-size="13" font-weight="700">H − h</text>
+<path d="M690 236v62M684 298h12" stroke="rgba(255,255,255,.55)" stroke-width="1.2" fill="none"/>
+<text x="702" y="272" fill="#fff" font-family="Inter,sans-serif" font-size="13" font-weight="700">h</text>
+<path d="M176 322h464M176 316v12M640 316v12" stroke="rgba(255,255,255,.55)" stroke-width="1.2" fill="none"/>
+<text x="408" y="317" fill="#fff" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">d</text>
+<!-- inset: zoomed clinometer with swinging plumb line -->
+<line x1="244" y1="168" x2="194" y2="228" stroke="rgba(232,204,106,.6)" stroke-width="1.2" stroke-dasharray="3 3"/>
+<circle cx="300" cy="140" r="64" fill="#0b1424" stroke="#e8cc6a" stroke-width="2"/>
+<g clip-path="url(#h-ins)">
+ <g transform="rotate(-21.3 300 128)">
+  <path d="M250 128 h100 a50 50 0 0 1 -100 0z" fill="url(#h-plast)" stroke="#bfe0ff" stroke-width="1"/>
+  <path d="M250 128h100" stroke="#1a3a6b" stroke-width="1"/>
+  <g stroke="#1a3a6b" stroke-width="1"><path d="M300 178v-9M264.6 163.4l6.4-6.4M335.4 163.4l-6.4-6.4M250 128h9M350 128h-9M281 174.2l2.1-6.2M319 174.2l-2.1-6.2M267.4 160.6l5.1-4.3"/></g>
+  <rect x="240" y="120" width="120" height="7" rx="3" fill="#fafafa"/><path d="M252 120v7M268 120v7M284 120v7M316 120v7M332 120v7M348 120v7" stroke="#ff5a5a" stroke-width="2"/>
+ </g>
+ <g class="plumbB"><line x1="300" y1="128" x2="300" y2="190" stroke="#f5f0e0" stroke-width="1.2"/><circle cx="300" cy="192" r="5" fill="#9aa3ae" stroke="#4a525d"/></g>
+ <circle cx="300" cy="128" r="2.4" fill="#e8cc6a"/>
+</g>
+<text x="300" y="64" class="tB">clinometer</text><text x="640" y="40" class="tB">flagpole</text><text x="408" y="346" class="tB">measuring tape</text>
+</svg></div>
+ </div>
+ <ol class="hsteps"><li><b>1</b>Eye height</li><li><b>2</b>Sight &amp; read</li><li><b>3</b>Graphs</li><li><b>4</b>Result &amp; viva</li></ol>
+</header>
+
+
+<main class="wrap">
+ <section class="lab" id="lab" aria-label="School ground with flagpole, measuring tape and clinometer">
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-mode="eye" role="tab" type="button"><b>Step 1 · Eye height</b><small>Read the height chart at your eye line</small></button>
+   <button class="tab" data-mode="sight" role="tab" type="button"><b>Step 2 · Sight &amp; read</b><small>Clinometer + tape: 6 observations</small></button>
+  </div>
+  <div class="task" id="task"></div>
+  <div class="fieldbox">
+   <div class="fieldscroll" id="fieldScroll"><svg id="field" viewBox="0 0 1000 470" role="img" aria-label="School ground: a flagpole, a measuring tape laid from its foot, and a student holding a clinometer"></svg></div>
+   <span class="hint" id="hint">Drag the student along the tape, or use the Walk buttons</span>
+  </div>
+  <div class="row2">
+   <div class="panel" id="panelA">
+    <div id="eyeView">
+     <h4><span>Height chart on the wall (zoomed)</span><span id="sTag1" class="steady"></span></h4>
+     <svg id="hchart" viewBox="0 0 300 260" aria-label="Zoomed height chart with the pencil mark at eye level"></svg>
+     <div class="scrcap">The red pencil line was drawn level with your eye. Read the chart where the line crosses it.</div>
+    </div>
+    <div id="sightView" hidden>
+     <h4><span>Through the straw</span><span id="sTag2" class="steady"></span></h4>
+     <svg id="straw" viewBox="-130 -130 260 260" tabindex="0" aria-label="View through the clinometer straw. Drag up or down, or use the arrow keys, to tilt."></svg>
+     <div class="scrcap">Bring the <b>very top</b> of the pole onto the cross-wire. Drag the view up/down, or use the Tilt buttons.</div>
+     <h4 style="margin-top:14px"><span>Tape under your feet (zoomed)</span><span id="dRead" class="steady"></span></h4>
+     <svg id="tape" viewBox="0 0 440 130" aria-label="Zoomed measuring tape at the student’s feet"></svg>
+     <div class="scrcap">The tape’s zero is at the flagpole (to the right), so the numbers grow to the left. Read whole metres from the red box, then the centimetres up to the red toe line.</div>
+    </div>
+   </div>
+   <div class="panel">
+    <div id="eyeBox">
+     <h4><span>Record your eye height</span></h4>
+     <p class="note" style="color:#b9c7d8">Eye height is measured from the ground to your eye. You add it at the end, because the clinometer measures the angle from your <b>eye</b>, not from the ground.</p>
+     <div class="rough">
+      <span>Eye height h <input id="hIn" inputmode="decimal" placeholder="m" aria-label="eye height in metres"> m</span>
+      <button class="btn gold" id="saveH" type="button">Save eye height</button>
+     </div>
+    </div>
+    <div id="sightBox" hidden>
+     <h4><span>Clinometer</span><span id="swing" class="steady">steady</span></h4>
+     <div class="clgrid">
+      <figure><svg id="clino" class="vw" viewBox="0 0 320 270" aria-label="Protractor clinometer with straw and plumb line"></svg><figcaption>Whole clinometer</figcaption></figure>
+      <figure><svg id="clmag" class="vw" viewBox="0 0 300 210" aria-label="Magnified protractor scale where the plumb line crosses it"></svg><figcaption>Magnifier on the plumb line</figcaption></figure>
+     </div>
+     <div class="ctl"><span>Walk</span><div class="nudge" id="walkBtns"><button type="button" data-d="1" aria-label="walk 1 metre away">← 1 m</button><button type="button" data-d="0.1" aria-label="walk 10 centimetres away">← 10 cm</button><button type="button" data-d="-0.1" aria-label="walk 10 centimetres closer">10 cm →</button><button type="button" data-d="-1" aria-label="walk 1 metre closer">1 m →</button></div></div>
+     <div class="ctl"><span>Tilt</span><div class="nudge" id="tiltBtns"><button type="button" data-t="-5">−5°</button><button type="button" data-t="-0.5">−½°</button><button type="button" data-t="0.5">+½°</button><button type="button" data-t="5">+5°</button></div></div>
+     <div class="tools">
+      <label class="sw"><input type="checkbox" id="labels"> Show readings (helper)</label>
+      <span style="flex:1"></span>
+      <button class="btn ghost" id="newSite" type="button">↺ New flagpole</button>
+     </div>
+     <div class="rough">
+      <button class="btn gold" id="recBtn" type="button">＋ Record this observation</button>
+      <span class="note" style="color:#9fb2ca">Then type the tape reading and the plumb-line reading into the table.</span>
+     </div>
+    </div>
+    <div class="msg" id="msg" aria-live="polite"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="card" style="margin-top:22px">
+  <h2>Observation table <span class="pill" id="nObs">0 / 6</span></h2>
+  <p class="lead">Eye height h = <b id="hShow" class="mono">not measured yet</b>. Distance d is from the foot of the flagpole to the point directly below your eye. θ is worked out from your plumb-line reading: θ = 90° − reading.</p>
+  <div class="tbl"><table class="obs">
+   <thead><tr><th>S. No.</th><th>Distance from<br>foot, d (m)</th><th>Plumb-line<br>reading (°)</th><th>Angle of elevation<br>θ = 90° − reading</th><th>tan θ</th><th>d · tan θ<br>= H − h (m)</th><th>Height<br>H = h + d tan θ (m)</th><th></th></tr></thead>
+   <tbody id="tb"><tr><td colspan="8" class="note" style="padding:16px">No observations yet. Go to Step 2, sight the top of the pole and press “Record this observation”.</td></tr></tbody>
+  </table></div>
+  <div class="tools" style="margin-top:12px">
+   <button class="btn navy" id="check" type="button">✓ Check my table</button>
+   <button class="btn ghost" id="print" type="button">🖨 Print practical record</button>
+  </div>
+  <ul class="fb" id="fb"></ul>
+ </section>
+
+ <section class="card">
+  <h2>Graphs</h2>
+  <p class="lead">They appear after 5 correct observations. The same height should come out of both.</p>
+  <div class="graphs">
+   <figure><canvas id="g1" width="560" height="420"></canvas><figcaption><b>θ–d graph.</b> As you walk away, θ falls. Where the curve crosses θ = 45°, the distance equals H − h (tan 45° = 1).</figcaption></figure>
+   <figure><canvas id="g2" width="560" height="420"></canvas><figcaption><b>tan θ – 1/d graph.</b> A straight line through the origin, because tan θ = (H − h) × (1/d). Its slope is H − h.</figcaption></figure>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Result</h2>
+  <div class="result">
+   <div class="rbox"><small>Mean H from table</small><b id="rT">—</b></div>
+   <div class="rbox"><small>From θ–d graph (h + d at 45°)</small><b id="rG1">—</b></div>
+   <div class="rbox"><small>From tan θ–1/d graph (h + slope)</small><b id="rG2">—</b></div>
+   <div class="rbox"><small>Two-station method (nearest &amp; farthest)</small><b id="rTS">—</b></div>
+   <div class="rbox true" id="trueBox" hidden><small>Actual height of this flagpole</small><b id="rTrue">—</b></div>
+  </div>
+  <div class="tools" style="margin-top:12px"><button class="btn gold" id="reveal" type="button">Reveal the actual height</button><span class="note" id="err"></span></div>
+ </section>
+
+ <section class="card theory">
+  <h2>Aim, theory and procedure</h2>
+  <div class="two">
+   <div>
+    <h3>Aim</h3>
+    <p>To make a clinometer and use it to find the height of an object (a school flagpole) by measuring the angle of elevation of its top from different distances.</p>
+    <h3>Apparatus</h3>
+    <p>A protractor, a drinking straw, a thread with a small weight (a nut or washer) as a plumb bob, cello tape, a 30 m measuring tape, a height chart or metre scale, a pencil and the practical file.</p>
+    <h3>Theory</h3>
+    <p>The <b>angle of elevation</b> of the top of an object is the angle between the horizontal line through your eye and the line of sight to the top, when the top is above your eye.</p>
+    <svg viewBox="0 0 420 210" aria-label="Right triangle formed by eye, foot of pole at eye level and top of pole">
+     <path d="M30 186h360" stroke="#7a8a6a" stroke-width="3"/>
+     <path d="M350 186V24" stroke="#6b7480" stroke-width="5"/>
+     <path d="M60 150H350" stroke="currentColor" stroke-dasharray="5 5" opacity=".6"/>
+     <path d="M60 150L350 24" stroke="#c9a227" stroke-width="2.5"/>
+     <path d="M60 150V186" stroke="currentColor" stroke-width="1.4"/>
+     <path d="M110 150A50 50 0 0 0 105.9 130.2" fill="none" stroke="#c9a227" stroke-width="2"/>
+     <path d="M338 150v-12h12" fill="none" stroke="currentColor" stroke-width="1.2"/>
+     <g font-family="Inter,sans-serif" font-size="15" font-weight="700" fill="currentColor"><text x="118" y="144">θ</text><text x="200" y="174">d</text><text x="360" y="92">H − h</text><text x="40" y="174">h</text><text x="36" y="144">eye</text><text x="360" y="182">H</text></g>
+    </svg>
+    <p>The eye, the point on the pole level with the eye, and the top of the pole form a right triangle. So</p>
+    <p class="eq">tan θ = (H − h) / d &nbsp;⇒&nbsp; H = h + d · tan θ</p>
+    <p><b>Reading a clinometer:</b> the straw lies along the straight edge of the protractor and the plumb line always hangs vertically. When the straw is level the thread falls on 90°. Tilting the straw up by θ moves the thread to 90° − θ on one scale (90° + θ on the other), so <b>θ = 90° − reading</b> (or reading − 90°).</p>
+    <p><b>Two stations (foot unreachable):</b> if the angles from two points a distance s apart on the same line are α (farther) and β (nearer), then</p>
+    <p class="eq">H − h = s · tan α · tan β / (tan β − tan α)</p>
+   </div>
+   <div>
+    <h3>Procedure</h3>
+    <ol>
+     <li><b>Make the clinometer:</b> tape the straw along the straight edge of the protractor. Tie the thread at the centre hole and hang the weight from it, so the thread swings freely across the scale.</li>
+     <li>Stand straight against the height chart and ask a friend to mark the level of your eye. Read your eye height h.</li>
+     <li>Lay the measuring tape on level ground with its zero at the foot of the flagpole.</li>
+     <li>Stand at a point on the tape. Look through the straw and tilt the protractor until you see the <b>top</b> of the pole in the middle of the straw.</li>
+     <li>Hold still until the plumb line stops swinging. Ask your friend to read the scale where the thread crosses it (or pinch the thread against the protractor and read it yourself).</li>
+     <li>Read the distance d on the tape, directly below your eye.</li>
+     <li>Repeat from at least six different distances, for example from about 6 m to 30 m.</li>
+     <li>Work out θ = 90° − reading, tan θ and H = h + d tan θ for each reading. Plot θ against d and tan θ against 1/d.</li>
+    </ol>
+   </div>
+  </div>
+  <div class="two">
+   <div>
+    <h3>Precautions</h3>
+    <ul>
+     <li>The ground between you and the pole should be level, and the tape should be stretched straight, not sagging.</li>
+     <li>Sight the very top of the pole, not the flag or the rope.</li>
+     <li>Read the protractor only after the plumb line has come to rest.</li>
+     <li>Keep the protractor in a vertical plane; a twisted protractor gives a wrong reading.</li>
+     <li>Use the same eye height h that you measured, and add it to every value of d tan θ.</li>
+     <li>Avoid very steep (above 70°) or very shallow (below 15°) angles, where a small angle error gives a big height error.</li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sources of error</h3>
+    <ul>
+     <li>The protractor can be read only to about 1°; near 70° this alone changes the height by more than half a metre.</li>
+     <li>The hand shakes, so the straw may not point exactly at the top.</li>
+     <li>The plumb line may still be swinging, or rub against the protractor face.</li>
+     <li>The ground may not be perfectly level, and the eye may not be exactly above the point read on the tape.</li>
+     <li>The straw may not be taped exactly parallel to the 0°–180° line of the protractor.</li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <section class="card">
+  <h2>Viva voce</h2>
+  <p class="lead">Questions examiners often ask about this activity. Try to answer before you open each one.</p>
+  <div id="viva"></div>
+ </section>
+
+ <section class="card">
+  <h2>Keep going</h2>
+  <ul class="links">
+   <li><a href="../../cbse-class-10-maths-standard-mock-tests.html">📄 Class 10 Maths Standard mock tests</a></li>
+   <li><a href="../../cbse-class-10-maths-basic-mock-tests.html">📄 Class 10 Maths Basic mock tests</a></li>
+   <li><a href="../../resources/maths-x.html">📘 Class 10 Maths resources</a></li>
+   <li><a href="../../virtual-labs/mathematics/11-trigonometric-ratio-explorer.html">📐 Trigonometric ratio lab</a></li>
+   <li><a href="../../formula-board/">🧮 Formula board</a></li>
+  </ul>
+ </section>
+</main>
+<footer>&copy; 2026 CBSEMock.org.in · <a href="../../about.html">About Us</a> · <a href="../../privacy.html">Privacy Policy</a> · <a href="../../contact.html">Contact</a></footer>
+
+<div id="record"></div>
+
 <script>
 (function(){
-  var url = encodeURIComponent(window.location.href);
-  var title = encodeURIComponent(document.title);
-  var wa = document.getElementById('shareWa');
-  var fb = document.getElementById('shareFb');
-  if(wa) wa.href = 'https://wa.me/?text=' + title + '%20' + url;
-  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+'use strict';
+/* ───────── model + state ───────── */
+var NS='http://www.w3.org/2000/svg';
+var D2R=Math.PI/180;
+var K=26,POLE=930,GROUND=430,DMIN=4,DMAX=34;   // field drawing: 26 px per metre, pole foot at x=930
+var AIM_TOL=0.6;     // straw must point within 0.6° of the top
+var ANG_TOL=1.0;     // protractor read to the nearest degree
+var D_TOL=0.05;      // tape read to 5 cm
+var H_TOL=0.006;     // eye height read to ±0.6 cm
+var SWING_TOL=0.7;   // plumb line counts as settled below 0.7°
+var RM=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+function rnd(a,b){return a+Math.random()*(b-a)}
+function r1(x){return Math.round(x*10)/10}
+function r2(x){return Math.round(x*100)/100}
+function deg(x){return x/D2R}
+var KEY='cbse-lab-heights';
+var S={H:null,h:null,no:0,mode:'eye',d:22,tilt:8,labels:false,rows:[],hRead:null,revealed:false};
+try{var sv=JSON.parse(localStorage.getItem(KEY)||'null');if(sv&&sv.H){S.H=sv.H;S.h=sv.h;S.no=sv.no;S.rows=sv.rows||[];S.hRead=(typeof sv.hRead==='number')?sv.hRead:null}}catch(e){}
+if(!S.H)newSample(true);
+function save(){try{localStorage.setItem(KEY,JSON.stringify({H:S.H,h:S.h,no:S.no,rows:S.rows,hRead:S.hRead}))}catch(e){}}
+function newSample(silent){S.H=r1(rnd(9,15));S.h=Math.round(rnd(140,166))/100;S.no=Math.floor(rnd(101,999));S.rows=[];S.hRead=null;S.revealed=false;save();
+ if(!silent){buildField();renderTable();say('A new flagpole (and a new observer, with a new eye height). Start again from Step 1.','ok')}}
+function elevTrue(){return deg(Math.atan((S.H-S.h)/S.d))}
+/* plumb-line swing (damped) and hand tremor */
+var sw={a:0,t0:0},trem=0;
+function psi(now){if(RM)return 0;var t=(now-sw.t0)/1000;return sw.a*Math.exp(-t/2.2)*Math.cos(2*Math.PI*t/1.15)}
+function kick(x){var now=performance.now(),cur=psi(now);sw.a=Math.max(-7,Math.min(7,cur+(Math.random()<.5?-1:1)*x));sw.t0=now}
+
+/* ───────── helpers ───────── */
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function defs(svg,html){var d=el('defs',{},svg);d.innerHTML=html;return d}
+function X(d){return POLE-d*K}
+var msgEl=document.getElementById('msg');function say(t,c){msgEl.textContent=t;msgEl.className='msg '+(c||'')}
+
+/* ───────── field ───────── */
+var field=document.getElementById('field');
+defs(field,
+ '<linearGradient id="fsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5d93c9"/><stop offset=".7" stop-color="#a9cbe6"/><stop offset="1" stop-color="#e6eef2"/></linearGradient>'+
+ '<linearGradient id="fgrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fa456"/><stop offset="1" stop-color="#4c6b31"/></linearGradient>'+
+ '<linearGradient id="fpole" x1="0" x2="1"><stop offset="0" stop-color="#6d7681"/><stop offset=".45" stop-color="#f3f6f9"/><stop offset="1" stop-color="#58606b"/></linearGradient>'+
+ '<linearGradient id="fbld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9d9b8"/><stop offset="1" stop-color="#d2bf98"/></linearGradient>'+
+ '<linearGradient id="fplast" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef7ff" stop-opacity=".95"/><stop offset="1" stop-color="#9cc8ea" stop-opacity=".7"/></linearGradient>'+
+ '<pattern id="fturf" width="24" height="10" patternUnits="userSpaceOnUse"><path d="M2 9l2-5M9 10l1-6M15 9l3-5M21 10l1-4" stroke="#3e5a26" stroke-width="1" opacity=".5"/></pattern>');
+var gStatic=el('g',{},field),gPole=el('g',{},field),gTape=el('g',{},field),gSight=el('g',{},field),gObs=null,gHelp=el('g',{},field);
+(function(){
+ el('rect',{x:0,y:0,width:1000,height:GROUND,fill:'url(#fsky)'},gStatic);
+ // clouds
+ gStatic.insertAdjacentHTML('beforeend','<g fill="#fff" opacity=".75"><ellipse cx="180" cy="70" rx="46" ry="13"/><ellipse cx="214" cy="62" rx="30" ry="12"/><ellipse cx="520" cy="44" rx="38" ry="10"/><ellipse cx="548" cy="38" rx="22" ry="9"/></g>');
+ // school building behind the flagpole (two storeys, ≈ 8.5 m)
+ var bTop=GROUND-8.5*K;
+ el('rect',{x:560,y:bTop,width:440,height:8.5*K,fill:'url(#fbld)'},gStatic);
+ el('rect',{x:552,y:bTop-8,width:456,height:10,fill:'#a2533a'},gStatic);
+ el('rect',{x:560,y:GROUND-4.4*K,width:440,height:5,fill:'#c3ad84'},gStatic);
+ var w='';for(var i=0;i<9;i++){var x=578+i*46;w+='<rect x="'+x+'" y="'+(bTop+26)+'" width="24" height="40" fill="#5b7894"/><rect x="'+x+'" y="'+(GROUND-4.4*K+26)+'" width="24" height="40" fill="#5b7894"/>'}
+ gStatic.insertAdjacentHTML('beforeend','<g opacity=".85">'+w+'</g><text x="780" y="'+(bTop-14)+'" font-family="Inter" font-size="13" font-weight="800" fill="#7a3a26" text-anchor="middle" letter-spacing="2">SCHOOL BLOCK B</text>');
+ // neem tree, far left
+ gStatic.insertAdjacentHTML('beforeend','<rect x="40" y="'+(GROUND-120)+'" width="12" height="120" fill="#6b4a2e"/><ellipse cx="46" cy="'+(GROUND-140)+'" rx="56" ry="44" fill="#3f6b33"/><ellipse cx="18" cy="'+(GROUND-120)+'" rx="30" ry="24" fill="#4a7a3a"/><ellipse cx="80" cy="'+(GROUND-126)+'" rx="30" ry="24" fill="#3a6430"/>');
+ el('rect',{x:0,y:GROUND,width:1000,height:470-GROUND,fill:'url(#fgrass)'},gStatic);
+ el('rect',{x:0,y:GROUND,width:1000,height:470-GROUND,fill:'url(#fturf)'},gStatic);
+})();
+function buildField(){
+ // flagpole (height H to the top of the finial)
+ gPole.innerHTML='';var top=GROUND-S.H*K;
+ el('rect',{x:POLE-34,y:GROUND-6,width:68,height:6,fill:'#9b9488'},gPole);
+ el('rect',{x:POLE-26,y:GROUND-12,width:52,height:6,fill:'#b4ad9f'},gPole);
+ el('rect',{x:POLE-3.5,y:top+8,width:7,height:GROUND-12-top-8,fill:'url(#fpole)'},gPole);
+ el('circle',{cx:POLE,cy:top+4,r:4,fill:'#d4af37',stroke:'#8a6d12','stroke-width':.8},gPole);
+ el('line',{x1:POLE+4,y1:top+10,x2:POLE+4,y2:GROUND-30,stroke:'#e9e2cf','stroke-width':.8},gPole);
+ var fy=top+12,fw=1.2*K,fh=0.8*K;
+ var f=el('g',{transform:'translate('+(POLE+4)+','+fy+')'},gPole);
+ f.innerHTML='<g class="flagF"><rect width="'+fw+'" height="'+(fh/3)+'" fill="#ff9933"/><rect y="'+(fh/3)+'" width="'+fw+'" height="'+(fh/3)+'" fill="#fff"/><rect y="'+(2*fh/3)+'" width="'+fw+'" height="'+(fh/3)+'" fill="#138808"/><circle cx="'+(fw/2)+'" cy="'+(fh/2)+'" r="'+(fh/7)+'" fill="none" stroke="#000080" stroke-width=".9"/></g>';
+ // measuring tape from the pole foot outwards
+ gTape.innerHTML='';
+ el('rect',{x:X(DMAX+1),y:GROUND+2,width:(DMAX+1)*K,height:7,fill:'#f2c94c',stroke:'#b58f12','stroke-width':.6},gTape);
+ var p='',lab='';for(var m=0;m<=DMAX+1;m++){var x=X(m);p+='M'+x+' '+(GROUND+2)+'v'+(m%5===0?7:4);
+  if(m%5===0)lab+='<text x="'+x+'" y="'+(GROUND+24)+'" text-anchor="middle">'+m+' m</text>'}
+ el('path',{d:p,stroke:'#3a2c00','stroke-width':1},gTape);
+ gTape.insertAdjacentHTML('beforeend','<g font-family="Inter" font-size="12" font-weight="700" fill="#1f2a12">'+lab+'</g><rect x="'+(POLE-6)+'" y="'+(GROUND)+'" width="10" height="12" rx="2" fill="#333"/>');
+ // observer
+ if(gObs)gObs.remove();
+ gObs=el('g',{class:'obs-g',tabindex:0,role:'slider','aria-label':'student: arrow keys walk away or closer','aria-valuemin':DMIN,'aria-valuemax':DMAX},field);
+ field.insertBefore(gObs,gHelp);
+ var T=(S.h+0.1)*K,ey=GROUND-S.h*K;
+ el('rect',{x:-30,y:GROUND-T-16,width:60,height:T+30,fill:'transparent'},gObs);
+ el('rect',{class:'hl',x:-24,y:GROUND-T-12,width:48,height:T+20,rx:8,fill:'none',stroke:'#e8cc6a','stroke-width':1.5,'stroke-dasharray':'4 4',opacity:0},gObs);
+ var hip=GROUND-0.5*T,sh=GROUND-0.8*T;
+ el('path',{d:'M-4 '+GROUND+' L-3 '+hip+' L3 '+hip+' L4 '+GROUND+' L1.5 '+GROUND+' L0 '+(hip+6)+' L-1.5 '+GROUND+'Z',fill:'#22355a'},gObs);
+ el('path',{d:'M-5 '+(hip+2)+' Q-6 '+sh+' 0 '+(sh-2)+' Q6 '+sh+' 5 '+(hip+2)+'Z',fill:'#f4f6f8',stroke:'#c9d1db','stroke-width':.6},gObs);
+ el('path',{d:'M3 '+(sh+2)+' Q9 '+(ey+8)+' 8 '+(ey+2),stroke:'#b9845b','stroke-width':2.2,fill:'none','stroke-linecap':'round'},gObs);
+ el('circle',{cx:0,cy:ey-1,r:3.6,fill:'#c9946a'},gObs);
+ el('path',{d:'M-3.6 '+(ey-2)+' q3.6 -5 7.2 0 q-1 -3.5 -3.6 -3.6 q-2.6 .1 -3.6 3.6z',fill:'#1d1a17'},gObs);
+ S._clin=el('g',{},gObs);
+ S._clin.innerHTML='<path d="M3 0 h9 a4.5 4.5 0 0 1 -9 0z" fill="url(#fplast)" stroke="#5f86a8" stroke-width=".5"/><rect x="2" y="-1.6" width="11" height="1.6" fill="#fff" stroke="#999" stroke-width=".3"/>';
+ S._ey=ey;
+ el('path',{d:'M-5 '+(GROUND+1)+' h10',stroke:'#d22','stroke-width':2},gObs);
+ bindObserver();
+ render();
+}
+
+/* ───────── views ───────── */
+var straw=document.getElementById('straw');
+defs(straw,'<clipPath id="stc"><circle r="122"/></clipPath><radialGradient id="stv" r=".5"><stop offset=".78" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>'+
+ '<linearGradient id="ssky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a9fd2"/><stop offset="1" stop-color="#c7dcec"/></linearGradient>');
+var stIn=el('g',{'clip-path':'url(#stc)'},straw);
+el('circle',{r:122,fill:'url(#stv)','pointer-events':'none'},straw);
+el('path',{d:'M-122 0H-10M10 0H122M0 -122V-10M0 10V122',stroke:'#1a1a1a','stroke-width':1.1,opacity:.85,'pointer-events':'none'},straw);
+el('circle',{r:122,fill:'none',stroke:'#e9e5d8','stroke-width':5,'pointer-events':'none'},straw);
+var clino=document.getElementById('clino'),clmag=document.getElementById('clmag'),tapeV=document.getElementById('tape'),hchart=document.getElementById('hchart');
+var PL='<linearGradient id="plast" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4faff" stop-opacity=".97"/><stop offset="1" stop-color="#cfe6f7" stop-opacity=".92"/></linearGradient>';
+defs(clino,PL.replace('id="plast"','id="plastA"'));
+defs(clmag,PL.replace('id="plast"','id="plastB"')+'<clipPath id="mclip"><circle cx="150" cy="105" r="98"/></clipPath><radialGradient id="mvig" cx=".5" cy=".5" r=".5"><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>');
+var clProt=el('g',{},clino),clPlumb=el('g',{},clino);
+el('rect',{x:0,y:0,width:300,height:210,fill:'#0b1320'},clmag);
+var mgIn=el('g',{'clip-path':'url(#mclip)'},clmag),mgProt=el('g',{},mgIn),mgPlumb=el('g',{},mgIn);
+el('circle',{cx:150,cy:105,r:98,fill:'url(#mvig)','pointer-events':'none'},clmag);
+el('circle',{cx:150,cy:105,r:98,fill:'none',stroke:'#3b4250','stroke-width':4},clmag);
+
+/* protractor drawn upside down: straight edge (with straw) on top, arc below.
+   Outer scale value v sits at (−R cos v, R sin v) from the centre; inner scale = 180 − v. */
+function protractor(g,cx,cy,R,o){
+ g.innerHTML='';var gg=el('g',{transform:'rotate('+(-S.tilt).toFixed(2)+' '+cx+' '+cy+')'},g);
+ el('path',{d:'M'+(cx-R)+' '+cy+' A'+R+' '+R+' 0 0 0 '+(cx+R)+' '+cy+' Z',fill:o.fill,stroke:'#6d8fae','stroke-width':1.2},gg);
+ if(o.inner)el('path',{d:'M'+(cx-R*.32)+' '+cy+' A'+(R*.32)+' '+(R*.32)+' 0 0 0 '+(cx+R*.32)+' '+cy,fill:'none',stroke:'#6d8fae','stroke-width':.8},gg);
+ var p='',txt='';
+ for(var v=Math.max(0,o.lo);v<=Math.min(180,o.hi);v++){
+  var len=v%10===0?o.t10:v%5===0?o.t5:o.t1,c=Math.cos(v*D2R),s=Math.sin(v*D2R);
+  p+='M'+(cx-R*c).toFixed(2)+' '+(cy+R*s).toFixed(2)+'L'+(cx-(R-len)*c).toFixed(2)+' '+(cy+(R-len)*s).toFixed(2);
+  if(v%o.every===0){var rot=90-v,ro=R-o.r1,ri=R-o.r2;
+   txt+='<text x="'+(cx-ro*c).toFixed(1)+'" y="'+(cy+ro*s).toFixed(1)+'" transform="rotate('+rot+' '+(cx-ro*c).toFixed(1)+' '+(cy+ro*s).toFixed(1)+')" font-size="'+o.f1+'" fill="#111" font-weight="700">'+v+'</text>';
+   if(o.f2)txt+='<text x="'+(cx-ri*c).toFixed(1)+'" y="'+(cy+ri*s).toFixed(1)+'" transform="rotate('+rot+' '+(cx-ri*c).toFixed(1)+' '+(cy+ri*s).toFixed(1)+')" font-size="'+o.f2+'" fill="#b3261e" font-weight="600">'+(180-v)+'</text>'}}
+ el('path',{d:p,stroke:'#111','stroke-width':o.sw},gg);
+ gg.insertAdjacentHTML('beforeend','<g font-family="Inter,sans-serif" text-anchor="middle" dominant-baseline="middle">'+txt+'</g>');
+ el('path',{d:'M'+(cx-R)+' '+cy+'H'+(cx+R),stroke:'#2b4a6a','stroke-width':1},gg);
+ if(o.straw){var sx0=cx-R-16,sx1=cx+R+16,st='';for(var x=sx0+8;x<sx1;x+=16)st+='M'+x+' '+(cy-9)+'l6 7';
+  gg.insertAdjacentHTML('beforeend','<rect x="'+sx0+'" y="'+(cy-9)+'" width="'+(sx1-sx0)+'" height="7.5" rx="3.5" fill="#fbfbfb" stroke="#9aa" stroke-width=".6"/><path d="'+st+'" stroke="#e8463c" stroke-width="2.4"/>');
+  el('circle',{cx:cx,cy:cy,r:2.2,fill:'#333'},gg)}
+}
+function drawClino(){
+ protractor(clProt,160,132,104,{fill:'url(#plastA)',lo:0,hi:180,t1:4,t5:7,t10:12,every:30,r1:24,r2:0,f1:13,f2:0,sw:.6,straw:true,inner:true});
+ var c=90-S.tilt;protractor(mgProt,150,150-640,640,{fill:'url(#plastB)',lo:Math.floor(c-11),hi:Math.ceil(c+11),t1:13,t5:22,t10:32,every:5,r1:50,r2:76,f1:18,f2:14,sw:1.3});
+}
+function drawPlumb(p){
+ var a=p*D2R;
+ clPlumb.innerHTML='<line x1="160" y1="132" x2="'+(160+118*Math.sin(a)).toFixed(2)+'" y2="'+(132+118*Math.cos(a)).toFixed(2)+'" stroke="#2a2a2a" stroke-width="1.1"/><circle cx="'+(160+124*Math.sin(a)).toFixed(2)+'" cy="'+(132+124*Math.cos(a)).toFixed(2)+'" r="6" fill="#9aa3ae" stroke="#4a525d"/>';
+ var px=150,py=150-640;
+ mgPlumb.innerHTML='<line x1="'+(px+560*Math.sin(a)).toFixed(2)+'" y1="'+(py+560*Math.cos(a)).toFixed(2)+'" x2="'+(px+760*Math.sin(a)).toFixed(2)+'" y2="'+(py+760*Math.cos(a)).toFixed(2)+'" stroke="#1d1d1d" stroke-width="2"/>';
+}
+function drawStraw(){
+ var tau=S.tilt+trem,G=25,d=S.d,H=S.H,h=S.h,RAD=G/D2R;
+ function Y(phi){return ((tau-phi)*G).toFixed(1)}
+ var top=deg(Math.atan((H-h)/d)),foot=deg(Math.atan(-h/d)),db=d+14,dist=Math.hypot(d,H-h);
+ var bT=deg(Math.atan((8.5-h)/db)),bB=deg(Math.atan(-h/db)),roof=deg(Math.atan((8.5+0.4-h)/db));
+ var pw=Math.max(3,0.14/d*RAD),fr=Math.max(2.5,0.08/dist*RAD);
+ var fl=0.2/dist*RAD,fw=1.2/dist*RAD,fh=0.8/dist*RAD,sk=Math.sin(performance.now()/600)*4;
+ var s='<rect x="-140" y="-140" width="280" height="280" fill="url(#ssky)"/>'+
+  '<rect x="-140" y="'+Y(roof)+'" width="280" height="'+Math.max(0,(roof-bB)*G).toFixed(1)+'" fill="#e3d2b0"/>'+
+  '<rect x="-140" y="'+Y(roof)+'" width="280" height="'+Math.max(0,(roof-bT)*G).toFixed(1)+'" fill="#a2533a"/>'+
+  '<rect x="-140" y="'+Y(bB)+'" width="280" height="300" fill="#6f9550"/>'+
+  '<rect x="'+(-pw/2).toFixed(1)+'" y="'+Y(top-fr*2/G)+'" width="'+pw.toFixed(1)+'" height="'+Math.max(0,(top-fr*2/G-foot)*G).toFixed(1)+'" fill="#d9dee4" stroke="#6d7681" stroke-width=".8"/>'+
+  '<circle cx="0" cy="'+(+Y(top)+fr).toFixed(1)+'" r="'+fr.toFixed(1)+'" fill="#d4af37" stroke="#8a6d12" stroke-width=".8"/>'+
+  '<g transform="translate('+(pw/2).toFixed(1)+','+(+Y(top)+fr*2+fl).toFixed(1)+') skewY('+sk.toFixed(1)+')"><rect width="'+fw.toFixed(1)+'" height="'+(fh/3).toFixed(1)+'" fill="#ff9933"/><rect y="'+(fh/3).toFixed(1)+'" width="'+fw.toFixed(1)+'" height="'+(fh/3).toFixed(1)+'" fill="#fff"/><rect y="'+(2*fh/3).toFixed(1)+'" width="'+fw.toFixed(1)+'" height="'+(fh/3).toFixed(1)+'" fill="#138808"/><circle cx="'+(fw/2).toFixed(1)+'" cy="'+(fh/2).toFixed(1)+'" r="'+(fh/7).toFixed(1)+'" fill="none" stroke="#000080" stroke-width="1"/></g>';
+ stIn.innerHTML=s;
+}
+function drawTape(){
+ var c=S.d,W=440,mid=220,P=400;tapeV.innerHTML='';
+ el('rect',{x:0,y:0,width:W,height:130,fill:'#5f7f42'},tapeV);
+ el('rect',{x:0,y:20,width:W,height:76,fill:'#f2c94c',stroke:'#b58f12'},tapeV);
+ var p='',t='';for(var cm=Math.floor((c-0.6)*100);cm<=Math.ceil((c+0.6)*100);cm++){if(cm<0)continue;var x=mid-(cm/100-c)*P,len=cm%100===0?40:cm%10===0?28:cm%5===0?18:10;
+  p+='M'+x.toFixed(1)+' 20v'+len;
+  if(cm%100===0)t+='<text x="'+x.toFixed(1)+'" y="72" font-size="17" font-weight="800" text-anchor="middle" fill="#b3261e">0</text><rect x="'+(x-28).toFixed(1)+'" y="99" width="56" height="26" rx="3" fill="#b3261e"/><text x="'+x.toFixed(1)+'" y="118" fill="#fff" font-size="19" font-weight="800" text-anchor="middle">'+(cm/100)+' m</text>';
+  else if(cm%10===0)t+='<text x="'+x.toFixed(1)+'" y="70" font-size="17" font-weight="700" text-anchor="middle" fill="#1d1d1d">'+(cm%100)+'</text>'}
+ el('path',{d:p,stroke:'#1d1d1d','stroke-width':1.4},tapeV);
+ tapeV.insertAdjacentHTML('beforeend','<g font-family="Inter,sans-serif">'+t+'</g>');
+ // the student's toe line: red mark directly below the eye
+ tapeV.insertAdjacentHTML('beforeend','<path d="M'+mid+' 8 V100" stroke="#d22" stroke-width="2.2"/><path d="M'+(mid-8)+' 6 h16 l-8 12z" fill="#d22"/>');
+}
+function drawChart(){
+ var hc=Math.round(S.h*100),mid=130,P=9;hchart.innerHTML='';
+ el('rect',{x:0,y:0,width:300,height:260,fill:'#e9e4d6'},hchart);
+ el('rect',{x:40,y:0,width:100,height:260,fill:'#f7f2e4',stroke:'#b9b09a'},hchart);
+ var p='',t='';for(var cm=hc-15;cm<=hc+15;cm++){var y=mid-(cm-hc)*P,len=cm%10===0?36:cm%5===0?24:13;p+='M40 '+y+'h'+len;
+  if(cm%5===0)t+='<text x="'+(40+len+8)+'" y="'+(y+6)+'" font-size="'+(cm%10===0?19:16)+'" font-weight="'+(cm%10===0?800:600)+'" fill="#1d1d1d">'+cm+'</text>'}
+ el('path',{d:p,stroke:'#1d1d1d','stroke-width':1.4},hchart);
+ hchart.insertAdjacentHTML('beforeend','<g font-family="Inter,sans-serif">'+t+'</g><rect x="104" y="6" width="32" height="20" rx="4" fill="#f7f2e4"/><text x="132" y="21" text-anchor="end" font-family="Inter" font-size="14" font-weight="700" fill="#555">cm</text>');
+ // pencil line at eye level + the student's head in profile, facing the chart
+ hchart.insertAdjacentHTML('beforeend','<path d="M40 '+mid+'H150" stroke="#c0392b" stroke-width="2.2"/>'+
+  '<path d="M286 '+(mid-70)+' q-60 -6 -82 30 q-10 18 -8 30 l-12 16 q-2 4 4 6 l8 2 q-2 10 2 16 q4 6 14 4 q6 12 24 14 l14 60 h40 z" fill="#c9946a"/>'+
+  '<path d="M286 '+(mid-72)+' q-66 -8 -88 30 q20 -14 42 -10 q20 4 46 0z" fill="#1d1a17"/>'+
+  '<ellipse cx="'+(206)+'" cy="'+mid+'" rx="6" ry="3.4" fill="#fff"/><circle cx="'+(204)+'" cy="'+mid+'" r="2.4" fill="#222"/>'+
+  '<path d="M196 '+mid+'H150" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>');
+}
+
+/* ───────── interaction ───────── */
+function clampD(d){return Math.min(DMAX,Math.max(DMIN,r1(d)))}
+function walk(d){var nd=clampD(d);if(nd!==S.d){kick(1.4);S.d=nd;render()}}
+function tilt(t){var nt=Math.min(85,Math.max(0,Math.round(t*10)/10));if(nt!==S.tilt){kick(Math.min(5,Math.abs(nt-S.tilt)*0.7+0.4));S.tilt=nt;render()}}
+document.querySelectorAll('#walkBtns button').forEach(function(b){b.onclick=function(){walk(S.d+parseFloat(b.dataset.d))}});
+document.querySelectorAll('#tiltBtns button').forEach(function(b){b.onclick=function(){tilt(S.tilt+parseFloat(b.dataset.t))}});
+var drag=null;
+function svgX(evt){var pt=field.createSVGPoint();pt.x=evt.clientX;pt.y=evt.clientY;return pt.matrixTransform(field.getScreenCTM().inverse()).x}
+function bindObserver(){var g=gObs;
+ g.addEventListener('pointerdown',function(e){drag={dx:svgX(e)-X(S.d)};g.classList.add('drag');g.setPointerCapture(e.pointerId);e.preventDefault()});
+ g.addEventListener('pointermove',function(e){if(!drag)return;walk((POLE-(svgX(e)-drag.dx))/K)});
+ g.addEventListener('pointerup',function(){drag=null;g.classList.remove('drag')});
+ g.addEventListener('pointercancel',function(){drag=null;g.classList.remove('drag')});
+ g.addEventListener('keydown',function(e){var st=e.shiftKey?1:0.1;if(e.key==='ArrowLeft'){walk(S.d+st);e.preventDefault()}if(e.key==='ArrowRight'){walk(S.d-st);e.preventDefault()}})}
+var sdrag=null;
+straw.addEventListener('pointerdown',function(e){sdrag={y:e.clientY,t:S.tilt};straw.setPointerCapture(e.pointerId);e.preventDefault()});
+straw.addEventListener('pointermove',function(e){if(!sdrag)return;var r=straw.getBoundingClientRect(),u=260/r.height;tilt(sdrag.t+(e.clientY-sdrag.y)*u/25)});
+straw.addEventListener('pointerup',function(){sdrag=null});straw.addEventListener('pointercancel',function(){sdrag=null});
+straw.addEventListener('keydown',function(e){var st=e.shiftKey?5:0.5;if(e.key==='ArrowUp'){tilt(S.tilt+st);e.preventDefault()}if(e.key==='ArrowDown'){tilt(S.tilt-st);e.preventDefault()}});
+document.getElementById('labels').onchange=function(){S.labels=this.checked;render()};
+document.getElementById('newSite').onclick=function(){if(S.rows.length&&!confirmInline(this))return;newSample();setMode('eye')};
+function confirmInline(btn){if(btn.dataset.sure){delete btn.dataset.sure;btn.textContent='↺ New flagpole';return true}
+ btn.dataset.sure=1;btn.textContent='Tap again to clear readings';setTimeout(function(){delete btn.dataset.sure;btn.textContent='↺ New flagpole'},3500);return false}
+document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){setMode(t.dataset.mode)}});
+function setMode(m){S.mode=m;document.querySelectorAll('.tab').forEach(function(t){t.classList.toggle('on',t.dataset.mode===m);t.setAttribute('aria-selected',t.dataset.mode===m)});
+ var eye=m==='eye';
+ document.getElementById('eyeView').hidden=!eye;document.getElementById('eyeBox').hidden=!eye;
+ document.getElementById('sightView').hidden=eye;document.getElementById('sightBox').hidden=eye;
+ document.getElementById('task').innerHTML=eye
+  ?'<b>Step 1.</b> You stood straight against the height chart on the school wall and a friend drew a pencil line level with your eye. Read the chart where the red line crosses it (in cm) and save your eye height <b>h in metres</b>.'
+  :'<b>Step 2.</b> Walk to a point on the tape. Tilt the clinometer until the <b>top</b> of the flagpole sits on the cross-wire, wait for the plumb line to settle, then press <b>Record</b>. Type the tape reading d and the plumb-line reading into the table. Take <b>6 readings</b> from about 6 m to 30 m.';
+ say('');render()}
+
+document.getElementById('saveH').onclick=function(){
+ var v=parseFloat(document.getElementById('hIn').value);
+ if(isNaN(v)){say('Type your eye height in metres, for example 1.48.','bad');return}
+ if(v>3){say('That looks like centimetres. Write it in metres: divide by 100 (for example 148 cm = 1.48 m).','bad');return}
+ if(Math.abs(v-S.h)>H_TOL){say('Look again at the zoomed chart: count the centimetre marks from the nearest labelled line up (or down) to the red pencil line.','bad');return}
+ S.hRead=r2(v);save();renderTable();
+ say('Eye height h = '+S.hRead.toFixed(2)+' m saved. Now go to Step 2.','ok')};
+
+document.getElementById('recBtn').onclick=function(){
+ if(S.hRead===null){say('First measure and save your eye height in Step 1.','bad');return}
+ if(S.rows.length>=10){say('Ten observations is plenty. Delete one to add another.','bad');return}
+ var p=psi(performance.now());
+ S.rows.push({t:{d:S.d,th:Math.round(S.tilt*10)/10,aim:Math.round((S.tilt-elevTrue())*100)/100,sw:Math.round(Math.abs(p)*100)/100},d:'',r:''});save();renderTable();
+ say('Observation '+S.rows.length+' recorded. Type the tape reading and the plumb-line reading into the table.','ok')};
+
+/* ───────── render ───────── */
+function render(){
+ if(!gObs)return;
+ gObs.setAttribute('transform','translate('+X(S.d).toFixed(2)+',0)');gObs.setAttribute('aria-valuenow',S.d);
+ S._clin.setAttribute('transform','translate(0,'+S._ey+') rotate('+(-S.tilt)+' 2 0)');
+ var sight=S.mode==='sight',x0=X(S.d)+7,y0=S._ey,c=Math.cos(S.tilt*D2R),s=Math.sin(S.tilt*D2R),L=Math.min((1000-x0)/c,s>0.001?(y0-2)/s:1e4);
+ gSight.innerHTML=sight?'<line x1="'+x0+'" y1="'+y0+'" x2="'+(x0+L*c).toFixed(1)+'" y2="'+(y0-L*s).toFixed(1)+'" stroke="#ffd36b" stroke-width="1.6" stroke-dasharray="7 6" opacity=".9"/>':'';
+ gHelp.innerHTML='';
+ if(S.labels&&sight){var xm=(X(S.d)+POLE)/2;
+  gHelp.innerHTML='<path d="M'+X(S.d)+' '+(GROUND+32)+'H'+POLE+'" stroke="#fff" stroke-width="1.2"/><text x="'+xm+'" y="'+(GROUND+30)+'" fill="#fff" font-family="JetBrains Mono" font-size="13" text-anchor="middle" font-weight="700">d = '+S.d.toFixed(1)+' m</text>'+
+   '<path d="M'+(x0+40)+' '+y0+'A40 40 0 0 0 '+(x0+40*c).toFixed(1)+' '+(y0-40*s).toFixed(1)+'" fill="none" stroke="#ffd36b" stroke-width="1.6"/><path d="M'+x0+' '+y0+'H'+POLE+'" stroke="#fff" stroke-dasharray="3 4" opacity=".7"/>'+
+   '<text x="'+(x0+48)+'" y="'+(y0-8)+'" fill="#ffe9a8" font-family="JetBrains Mono" font-size="13" font-weight="700">θ = '+S.tilt.toFixed(1)+'°</text>'}
+ if(sight){drawClino();drawTape();
+  document.getElementById('dRead').textContent=S.labels?'d = '+S.d.toFixed(2)+' m':'';
+  var bs=document.getElementById('fieldScroll');if(bs.scrollWidth>bs.clientWidth+4&&!drag){var px=X(S.d)/1000*bs.scrollWidth;if(px<bs.scrollLeft+60||px>bs.scrollLeft+bs.clientWidth-60)bs.scrollLeft=px-bs.clientWidth/3}}
+ else{drawChart();document.getElementById('sTag1').textContent=S.labels?'h = '+S.h.toFixed(2)+' m':''}
+}
+var swingEl=document.getElementById('swing');
+function frame(){
+ if(S.mode==='sight'){
+  if(!RM)trem=trem*0.85+(Math.random()-.5)*0.06;
+  var p=psi(performance.now());drawPlumb(p);drawStraw();
+  var st=Math.abs(p)<SWING_TOL?(S.labels?'steady · θ = '+S.tilt.toFixed(1)+'°':'steady'):'swinging…';
+  if(swingEl.textContent!==st)swingEl.textContent=st}
+ requestAnimationFrame(frame)}
+
+/* ───────── table ───────── */
+var tb=document.getElementById('tb');
+function calc(r){var d=parseFloat(r.d),rd=parseFloat(r.r);if(isNaN(d)||isNaN(rd)||d<=0||rd<0||rd>180)return null;
+ var th=Math.abs(90-rd);if(th<=0||th>=89.5)return null;var t=Math.tan(th*D2R),dt=d*t;
+ return {d:d,rd:rd,th:th,t:t,dt:dt,H:S.hRead!==null?S.hRead+dt:null}}
+function renderTable(){
+ document.getElementById('hShow').textContent=S.hRead!==null?S.hRead.toFixed(2)+' m':'not measured yet';
+ document.getElementById('nObs').textContent=S.rows.length+' / 6';
+ if(!S.rows.length){tb.innerHTML='<tr><td colspan="8" class="note" style="padding:16px">No observations yet. Go to Step 2, sight the top of the pole and press “Record this observation”.</td></tr>';drawGraphs();renderResult();return}
+ tb.innerHTML='';S.rows.forEach(function(r,i){var tr=document.createElement('tr');
+  tr.innerHTML='<td>'+(i+1)+'</td><td><input data-k="d" value="'+r.d+'" inputmode="decimal" aria-label="distance d in metres, observation '+(i+1)+'"></td><td><input data-k="r" value="'+r.r+'" inputmode="decimal" aria-label="plumb-line reading in degrees, observation '+(i+1)+'"></td>'+
+   '<td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td><button class="del" type="button" title="Delete" aria-label="delete observation '+(i+1)+'">✕</button></td>';
+  tr.querySelectorAll('input').forEach(function(inp){inp.oninput=function(){r[inp.dataset.k]=inp.value.trim();inp.classList.remove('bad','good');fill(tr,r);save();drawGraphs();renderResult()}});
+  tr.querySelector('.del').onclick=function(){S.rows.splice(i,1);save();renderTable()};
+  fill(tr,r);tb.appendChild(tr)});
+ drawGraphs();renderResult()}
+function fill(tr,r){var c=calc(r),td=tr.querySelectorAll('td.n');
+ if(!c){td.forEach(function(t){t.textContent='–'});return}
+ td[0].textContent=c.th.toFixed(1)+'°';td[1].textContent=c.t.toFixed(4);td[2].textContent=c.dt.toFixed(2);td[3].textContent=c.H!==null?c.H.toFixed(2):'(save h)'}
+function rowOK(r){var c=calc(r);return c&&Math.abs(c.d-r.t.d)<=D_TOL+1e-9&&Math.abs(c.th-r.t.th)<=ANG_TOL+1e-9&&Math.abs(r.t.aim)<=AIM_TOL&&r.t.sw<=SWING_TOL}
+function goodRows(){return S.rows.filter(rowOK).map(calc)}
+function validRows(){return S.rows.map(calc).filter(Boolean)}
+document.getElementById('check').onclick=function(){
+ var fb=[],rows=tb.querySelectorAll('tr');
+ if(!S.rows.length){showFb(['Record some observations first.']);return}
+ if(S.hRead===null)fb.push('Measure and save your eye height in Step 1, so the heights can be worked out.');
+ S.rows.forEach(function(r,i){var tr=rows[i],c=calc(r),msgs=[];
+  var dI=tr.querySelector('input[data-k="d"]'),rI=tr.querySelector('input[data-k="r"]');
+  var dv=parseFloat(r.d),dOK=!isNaN(dv)&&Math.abs(dv-r.t.d)<=D_TOL+1e-9;
+  var rv=parseFloat(r.r),aOK=!isNaN(rv)&&Math.abs(Math.abs(90-rv)-r.t.th)<=ANG_TOL+1e-9;
+  dI.classList.toggle('bad',!dOK);dI.classList.toggle('good',dOK);rI.classList.toggle('bad',!aOK);rI.classList.toggle('good',aOK);
+  if(!dOK)msgs.push('re-read the tape: whole metres from the red box, then the centimetres up to the red toe line');
+  if(!aOK){if(!isNaN(rv)&&Math.abs(rv-r.t.th)<=ANG_TOL)msgs.push('you seem to have typed θ itself; type the plumb-line reading from the protractor (θ = 90° − reading is worked out for you)');
+   else msgs.push('re-read the plumb line where it crosses the protractor scale (use the magnifier; each small mark is 1°)')}
+  if(Math.abs(r.t.aim)>AIM_TOL)msgs.push('the straw was pointing '+Math.abs(r.t.aim).toFixed(1)+'° '+(r.t.aim<0?'below':'above')+' the top of the pole — sight the very top on the cross-wire and take this reading again');
+  if(r.t.sw>SWING_TOL)msgs.push('the plumb line was still swinging when you recorded — wait until it settles');
+  if(c&&dOK&&aOK&&(c.th>70||c.th<15))msgs.push('this angle ('+c.th.toFixed(0)+'°) is '+(c.th>70?'very steep':'very shallow')+'; a 1° slip here changes the height a lot, so prefer angles between 20° and 60°');
+  tr.classList.toggle('flag',msgs.length>0);
+  if(msgs.length)fb.push('Observation '+(i+1)+': '+msgs.join('; ')+'.')});
+ var good=goodRows();
+ if(good.length<5)fb.push('You need at least 5 correct, well-sighted observations for the graphs (now '+good.length+').');
+ if(good.length>=3){var ds=good.map(function(c){return c.d});if(Math.max.apply(null,ds)-Math.min.apply(null,ds)<10)fb.push('Spread your positions out more (for example from about 6 m to 30 m) so the graphs are reliable.')}
+ if(!fb.length)fb.push('✓ All readings are correct and every sighting was on the top of the pole. Well done — see your graphs and result below.');
+ showFb(fb)};
+function showFb(a){document.getElementById('fb').innerHTML=a.map(function(x){return '<li>'+x+'</li>'}).join('')}
+
+/* ───────── graphs ───────── */
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function canvas(id){var c=document.getElementById(id),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1,w=Math.max(300,r.width||560),h=w*.75;
+ c.width=w*dpr;c.height=h*dpr;var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);return {x:x,w:w,h:h}}
+function axes(g,xmax,ymax,xl,yl,xstep,ystep,fx,fy){
+ var x=g.x,L=56,B=44,R=16,T=16,W=g.w-L-R,H=g.h-T-B,txt=css('--text')||'#222',mut=css('--muted')||'#666',bd=css('--border')||'#ddd';
+ x.clearRect(0,0,g.w,g.h);x.font='12px Inter, sans-serif';x.lineWidth=1;
+ for(var v=0;v<=xmax+1e-9;v+=xstep){var px=L+v/xmax*W;x.strokeStyle=bd;x.beginPath();x.moveTo(px,T);x.lineTo(px,T+H);x.stroke();x.fillStyle=mut;x.textAlign='center';x.fillText(fx(v),px,T+H+15)}
+ for(v=0;v<=ymax+1e-9;v+=ystep){var py=T+H-v/ymax*H;x.strokeStyle=bd;x.beginPath();x.moveTo(L,py);x.lineTo(L+W,py);x.stroke();x.fillStyle=mut;x.textAlign='right';x.fillText(fy(v),L-6,py+4)}
+ x.strokeStyle=txt;x.lineWidth=1.5;x.beginPath();x.moveTo(L,T);x.lineTo(L,T+H);x.lineTo(L+W,T+H);x.stroke();
+ x.fillStyle=txt;x.font='600 12px Inter, sans-serif';x.textAlign='center';x.fillText(xl,L+W/2,g.h-8);
+ x.save();x.translate(14,T+H/2);x.rotate(-Math.PI/2);x.fillText(yl,0,0);x.restore();
+ return function(a,b){return [L+a/xmax*W,T+H-b/ymax*H]}}
+function nice(m){var steps=[1,2,2.5,5,10],e=Math.pow(10,Math.floor(Math.log10(m/6)));for(var i=0;i<steps.length;i++){if(m/(steps[i]*e)<=7)return steps[i]*e}return m/5}
+function empty(g,t){g.x.clearRect(0,0,g.w,g.h);g.x.fillStyle=css('--muted')||'#777';g.x.font='14px Inter, sans-serif';g.x.textAlign='center';g.x.fillText(t,g.w/2,g.h/2)}
+function dot(x,q,col){x.fillStyle=col;x.strokeStyle='#5c4600';x.lineWidth=1;x.beginPath();x.arc(q[0],q[1],4.5,0,7);x.fill();x.stroke()}
+// least squares in θ: find k = H − h minimising Σ(atan(k/d) − θ)²  (golden-section search)
+function fitAngle(rows){function E(k){var s=0;rows.forEach(function(c){var e=deg(Math.atan(k/c.d))-c.th;s+=e*e});return s}
+ var a=0.5,b=60,g=(Math.sqrt(5)-1)/2,c=b-g*(b-a),d=a+g*(b-a);for(var i=0;i<80;i++){if(E(c)<E(d))b=d;else a=c;c=b-g*(b-a);d=a+g*(b-a)}return (a+b)/2}
+function fitSlope(rows){var sxy=0,sxx=0;rows.forEach(function(c){var x=1/c.d;sxy+=x*c.t;sxx+=x*x});return sxy/sxx}
+function twoStation(rows){if(rows.length<2)return null;var s=rows.slice().sort(function(p,q){return p.d-q.d}),n=s[0],f=s[s.length-1];if(f.d-n.d<4||f.t>=n.t)return null;
+ return (f.d-n.d)*f.t*n.t/(n.t-f.t)}
+var FIT=null;
+function drawGraphs(){
+ var g1=canvas('g1'),g2=canvas('g2'),rows=goodRows();FIT=null;
+ if(rows.length<5){var t='Needs 5 correct readings ('+rows.length+' so far)';empty(g1,t);empty(g2,t);return}
+ var gold=css('--gold')||'#c9a227',navy='#3b6fb8',red='#c0392b';
+ // θ–d
+ var k1=fitAngle(rows),mx=Math.max.apply(null,rows.map(function(c){return c.d}).concat([k1]))*1.1,st=nice(mx);mx=Math.ceil(mx/st)*st;
+ var P=axes(g1,mx,90,'distance d (m)','θ (degrees)',st,15,function(v){return String(Math.round(v*10)/10)},function(v){return v+'°'}),x=g1.x;
+ x.strokeStyle=gold;x.setLineDash([6,5]);x.lineWidth=1.5;x.beginPath();var a=P(0,45),b=P(mx,45);x.moveTo(a[0],a[1]);x.lineTo(b[0],b[1]);x.stroke();x.setLineDash([]);
+ x.strokeStyle=navy;x.lineWidth=2;x.beginPath();var first=true;
+ for(var dd=mx/300;dd<=mx;dd+=mx/300){var q=P(dd,deg(Math.atan(k1/dd)));if(first){x.moveTo(q[0],q[1]);first=false}else x.lineTo(q[0],q[1])}x.stroke();
+ var kp=P(k1,45);x.strokeStyle=red;x.setLineDash([3,4]);x.lineWidth=1.2;x.beginPath();x.moveTo(kp[0],kp[1]);x.lineTo(kp[0],P(0,0)[1]);x.stroke();x.setLineDash([]);
+ x.fillStyle=red;x.beginPath();x.arc(kp[0],kp[1],4.5,0,7);x.fill();x.font='700 12px Inter, sans-serif';x.textAlign='left';x.fillText('θ = 45° at d ≈ '+k1.toFixed(2)+' m = H − h',kp[0]+8,kp[1]-10);
+ rows.forEach(function(c){dot(x,P(c.d,c.th),gold)});
+ // tan θ – 1/d: least-squares line through the origin
+ var k2=fitSlope(rows),xs=rows.map(function(c){return 1/c.d}),ys=rows.map(function(c){return c.t});
+ var mxx=Math.max.apply(null,xs)*1.15,stx=nice(mxx);mxx=Math.ceil(mxx/stx)*stx;
+ var myy=Math.max(Math.max.apply(null,ys),Math.min(k2*mxx,Math.max.apply(null,ys)*1.3))*1.1,sty=nice(myy);myy=Math.ceil(myy/sty)*sty;
+ var Q=axes(g2,mxx,myy,'1/d (m⁻¹)','tan θ',stx,sty,function(v){return v.toFixed(stx<0.01?3:2)},function(v){return v.toFixed(sty<0.1?2:1)}),y=g2.x;
+ var xe=Math.min(mxx,myy/k2),p0=Q(0,0),p1=Q(xe,k2*xe);
+ y.strokeStyle=navy;y.lineWidth=2;y.beginPath();y.moveTo(p0[0],p0[1]);y.lineTo(p1[0],p1[1]);y.stroke();
+ var xa=xe*0.3,xb=xe*0.75,A=Q(xa,k2*xa),Bq=Q(xb,k2*xb),C=Q(xb,k2*xa);
+ y.strokeStyle=red;y.setLineDash([4,4]);y.lineWidth=1.3;y.beginPath();y.moveTo(A[0],A[1]);y.lineTo(C[0],C[1]);y.lineTo(Bq[0],Bq[1]);y.stroke();y.setLineDash([]);
+ y.fillStyle=red;y.font='700 12px Inter, sans-serif';y.textAlign='left';y.fillText('slope = Δ(tan θ)/Δ(1/d) ≈ '+k2.toFixed(2)+' m',Math.min(A[0],g2.w-230),C[1]+18);
+ rows.forEach(function(c){dot(y,Q(1/c.d,c.t),gold)});
+ FIT={k1:k1,k2:k2};
+}
+window.addEventListener('resize',function(){clearTimeout(window._rz);window._rz=setTimeout(drawGraphs,150)});
+
+/* ───────── result ───────── */
+function renderResult(){var v=validRows().filter(function(c){return c.H!==null}),h=S.hRead,ts=twoStation(goodRows());
+ var mean=v.length?v.reduce(function(s,c){return s+c.H},0)/v.length:null;
+ document.getElementById('rT').textContent=mean!==null?mean.toFixed(2)+' m':'—';
+ document.getElementById('rG1').textContent=FIT&&h!==null?(h+FIT.k1).toFixed(2)+' m':'—';
+ document.getElementById('rG2').textContent=FIT&&h!==null?(h+FIT.k2).toFixed(2)+' m':'—';
+ document.getElementById('rTS').textContent=ts!==null&&h!==null?(h+ts).toFixed(2)+' m':'—';
+ var tbx=document.getElementById('trueBox');tbx.hidden=!S.revealed;document.getElementById('rTrue').textContent=S.H.toFixed(2)+' m';
+ var e=document.getElementById('err');e.textContent='';
+ if(S.revealed&&mean!==null){e.textContent='Your table mean differs from the actual height by '+(Math.abs(mean-S.H)/S.H*100).toFixed(1)+'%.'+(FIT&&h!==null?' Graph (slope): '+(Math.abs(h+FIT.k2-S.H)/S.H*100).toFixed(1)+'%.':'')}}
+document.getElementById('reveal').onclick=function(){
+ if(goodRows().length<5||S.hRead===null){document.getElementById('err').textContent='Complete at least 5 correct observations first (press “Check my table”).';return}
+ S.revealed=true;renderResult()};
+
+/* ───────── viva ───────── */
+var VIVA=[
+ ['What is meant by the angle of elevation?','When you look at an object above your eye level, the angle between the horizontal line through your eye and your line of sight to the object is its angle of elevation.'],
+ ['How is the angle of depression related to the angle of elevation?','The angle of depression of B seen from A equals the angle of elevation of A seen from B, because the two horizontal lines are parallel and the two angles are alternate angles.'],
+ ['Why do you add your eye height h to d tan θ?','The clinometer measures the angle from your eye, so d tan θ gives only the part of the pole above eye level. The part below eye level, h, must be added to get the full height H.'],
+ ['Your clinometer reads 58° when you sight the top. What is the angle of elevation?','θ = 90° − 58° = 32°. When the straw is level the plumb line falls on 90°, and it moves by exactly the angle through which the straw is tilted.'],
+ ['At what angle of elevation is your distance from the pole equal to its height above your eye?','At 45°, because tan 45° = 1, so H − h = d.'],
+ ['What happens to the angle of elevation as you walk towards the pole?','It increases. tan θ = (H − h)/d, so as d decreases, tan θ and hence θ increase (but θ never reaches 90°).'],
+ ['Why should you avoid very steep or very shallow angles?','The relative error in the height is about 2Δθ / sin 2θ, which is smallest at θ = 45° and grows rapidly near 0° and 90°. So a 1° reading slip matters least near 45°.'],
+ ['How can you find the height if you cannot reach the foot of the tower?','Measure the angles α and β from two points on the same line, a known distance s apart. Then height above eye level = s tan α tan β / (tan β − tan α).'],
+ ['From a point 30 m away, the angle of elevation of the top of a tower is 60°. Find its height (ignore eye height).','h = 30 tan 60° = 30√3 ≈ 51.96 m.'],
+ ['When does a vertical pole cast a shadow equal to its own length?','When the Sun’s altitude (angle of elevation) is 45°, since tan 45° = 1.'],
+ ['Why does the clinometer use a plumb line?','Gravity makes the plumb line hang truly vertical. The horizontal is perpendicular to it, so the protractor can measure the tilt of the straw from the horizontal.'],
+ ['Which angles are used in CBSE board questions on heights and distances?','Board questions use only 30°, 45° and 60°, and involve at most two right triangles. In the field you can use any angle with a calculator or tables.']];
+document.getElementById('viva').innerHTML=VIVA.map(function(q,i){return '<details class="q"><summary>'+(i+1)+'. '+q[0]+'</summary><p>'+q[1]+'</p></details>'}).join('');
+
+/* ───────── printable record ───────── */
+function buildRecord(){
+ var rows=S.rows.map(function(r,i){var c=calc(r);return '<tr><td>'+(i+1)+'</td><td>'+(r.d||'')+'</td><td>'+(r.r||'')+'</td><td>'+(c?c.th.toFixed(1):'')+'</td><td>'+(c?c.t.toFixed(4):'')+'</td><td>'+(c?c.dt.toFixed(2):'')+'</td><td>'+(c&&c.H!==null?c.H.toFixed(2):'')+'</td></tr>'}).join('');
+ var img='';try{img='<img src="'+document.getElementById('g1').toDataURL()+'"><img src="'+document.getElementById('g2').toDataURL()+'">'}catch(e){}
+ document.getElementById('record').innerHTML='<h1>Activity: Height of a flagpole using a clinometer</h1><p>Name: ____________________ &nbsp; Class/Section: ________ &nbsp; Date: ___________ &nbsp; Site: F-'+S.no+'</p>'+
+  '<h2>Aim</h2><p>To make a clinometer and use it to find the height of an object by measuring the angle of elevation of its top.</p>'+
+  '<h2>Apparatus</h2><p>Protractor, drinking straw, thread with a plumb bob, cello tape, 30 m measuring tape, height chart.</p>'+
+  '<h2>Theory</h2><p>tan θ = (H − h)/d, so H = h + d tan θ, where θ is the angle of elevation of the top, d the distance from the foot and h the eye height. Clinometer: θ = 90° − plumb-line reading.</p>'+
+  '<h2>Observations</h2><p>Eye height h = '+(S.hRead!==null?S.hRead.toFixed(2):'____')+' m</p><table><tr><th>S. No.</th><th>d (m)</th><th>Reading (°)</th><th>θ (°)</th><th>tan θ</th><th>d tan θ (m)</th><th>H (m)</th></tr>'+rows+'</table>'+
+  '<h2>Graphs</h2>'+(FIT?img:'<p>(Plot θ against d and tan θ against 1/d on graph paper.)</p>')+
+  '<h2>Result</h2><p>Height of the flagpole: from the table (mean) = '+document.getElementById('rT').textContent+'; from the θ–d graph = '+document.getElementById('rG1').textContent+'; from the tan θ–1/d graph = '+document.getElementById('rG2').textContent+'; two-station method = '+document.getElementById('rTS').textContent+'.</p>'+
+  '<h2>Precautions</h2><ol><li>Level ground and a straight, taut tape.</li><li>Sight the very top of the pole.</li><li>Read only after the plumb line comes to rest.</li><li>Keep the protractor in a vertical plane.</li><li>Add the eye height to every value of d tan θ.</li></ol>'+
+  '<h2>Sources of error</h2><ol><li>The protractor is read only to the nearest degree.</li><li>Hand shake while sighting.</li><li>Ground not perfectly level.</li><li>Straw not exactly parallel to the 0°–180° line.</li></ol><p style="margin-top:18pt">Teacher’s signature: ____________________</p>'}
+document.getElementById('print').onclick=function(){buildRecord();window.print()};
+window.addEventListener('beforeprint',buildRecord);
+
+/* ───────── start ───────── */
+if(/[?&]debug/.test(location.search))window.__lab={S:S,render:render,walk:walk,tilt:tilt,elevTrue:elevTrue,psi:psi,goodRows:goodRows,FIT:function(){return FIT}};
+buildField();
+setMode(S.hRead!==null?'sight':'eye');renderTable();
+requestAnimationFrame(frame);
 })();
 </script>
-</body></html>
+<script src="/share-fab.js" defer></script>
+</body>
+</html>
