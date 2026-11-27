@@ -138,6 +138,7 @@ PLAYLISTS = {   # key → (title, description)
     "c12-maths":   ("Class 12 Maths — CBSE Board Shorts", "Class 12 Maths in under a minute: WHY? explainers and formula revision for the CBSE board exams. https://cbsemock.org.in"),
     "c12-biology": ("Class 12 Biology — CBSE Board Shorts", "Class 12 Biology in under a minute: WHY? explainers and formula revision for the CBSE board exams. https://cbsemock.org.in"),
     "c12-cs":      ("Class 12 Computer Science — Python Shorts", "Class 12 Computer Science and Python concepts explained in under a minute. https://cbsemock.org.in"),
+    "why":         ("WHY? Series — Understand, Don't Memorise", "One concept, one picture, under a minute. Why is sin²θ + cos²θ = 1? Why is a circle's area πr²? CBSE Class 10 & 12 concepts explained so you never have to cram them. Free notes & mock papers: https://cbsemock.org.in"),
     "board-plan":  ("Board Exam Strategy 2027 — Shorts", "Smart CBSE board-exam strategy: step marking, time management, board FAQs and daily score hacks. https://cbsemock.org.in"),
     "hindi":       ("हिंदी में WHY? — CBSE Shorts (Hindi)", "CBSE कक्षा 10 और 12 के कॉन्सेप्ट हिंदी में, एक मिनट से कम में। फ्री नोट्स और मॉक पेपर: https://cbsemock.org.in"),
 }
@@ -166,6 +167,8 @@ def playlist_keys(e):
             keys.append("c12-chemistry")
         else:
             keys.append("c12-physics")
+    if e.get("series") == "WHY":
+        keys.append("why")
     if e.get("series") == "WHY Hindi":
         keys.append("hindi")
     return keys
