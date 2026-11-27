@@ -179,6 +179,7 @@ def build():
 <a href="../mock-zone/index.html">📝 Mock tests</a>
 <a href="../formula-board/">🧮 Formula Board</a>
 <a href="../why-reels/">🎬 All reels</a>
+<a href="https://www.youtube.com/@CBSEMOCK?sub_confirmation=1" rel="noopener">▶️ YouTube: all our Shorts</a>
 <a href="https://t.me/cbsemockportal" rel="noopener">✈️ Telegram channel</a>
 </nav>
 <h2>From our latest posts</h2>

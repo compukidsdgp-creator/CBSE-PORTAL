@@ -335,7 +335,8 @@ def post_facebook(img_path: str, subject_key: str,
         f"📥 Download today's paper:\n{pdf_url}\n\n"
         f"🌐 More free resources: www.cbsemock.org.in\n"
         f"📲 Join our Telegram for every new paper: https://t.me/cbsemockportal\n"
-        f"📸 Follow on Instagram: https://www.instagram.com/cbsemock/\n\n"
+        f"📸 Follow on Instagram: https://www.instagram.com/cbsemock/\n"
+        f"▶️ YouTube Shorts: https://www.youtube.com/@CBSEMOCK\n\n"
         f"#CBSE #PreBoard #Class{meta['class']} #{meta['label'].replace(' ','')} "
         f"#FreeStudyMaterial #CBSEExam #StudyWithUs #CBSEMock"
     )

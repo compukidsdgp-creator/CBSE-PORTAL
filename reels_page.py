@@ -331,6 +331,7 @@ footer a{display:inline-block;padding:6px 4px}
   <div class="wall" id="wall"></div>
   <div class="follow">
     <p>New reels every week. Follow us to get them as they arrive.</p>
+    <a href="https://www.youtube.com/@CBSEMOCK?sub_confirmation=1" target="_blank" rel="noopener" style="background:#FF0000">YouTube</a>
     <a href="https://www.instagram.com/cbsemock/" target="_blank" rel="noopener" style="background:linear-gradient(45deg,#f09433,#dc2743 50%,#bc1888)">Instagram</a>
     <a href="https://t.me/cbsemockportal" target="_blank" rel="noopener" style="background:#229ED9">Telegram</a>
     <a href="https://www.facebook.com/profile.php?id=61596243964780" target="_blank" rel="noopener" style="background:#1877f2">Facebook</a>
