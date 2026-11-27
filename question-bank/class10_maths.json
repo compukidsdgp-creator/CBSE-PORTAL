@@ -1754,6 +1754,723 @@
    "type": "CBQ",
    "chapter": "Circles",
    "text": "A circular running track has its centre at O and an inner radius of 15 m. A lamp post P stands outside the track at a distance of 25 m from O. Two straight paths PA and PB are laid from the lamp post so that each just touches the inner edge of the track, at A and B respectively.\n(a) What is the measure of ∠OAP? Give a reason.\n(b) Find the length of the path PA.\n(c) If ∠APB = 70°, find ∠AOB.\nOR\n(c) Find the area of the quadrilateral OAPB."
+  },
+  {
+   "id": "ma10-0163",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Real Numbers",
+   "text": "The HCF of 2³ × 3² × 5 and 2² × 3³ × 7 is:",
+   "options": [
+    "(A) 36",
+    "(B) 72",
+    "(C) 108",
+    "(D) 180"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0164",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Real Numbers",
+   "text": "The LCM of 18, 24 and 30 is:",
+   "options": [
+    "(A) 120",
+    "(B) 180",
+    "(C) 360",
+    "(D) 720"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0165",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Real Numbers",
+   "text": "Which of the following is a rational number?",
+   "options": [
+    "(A) 3 + √5",
+    "(B) √2 × √18",
+    "(C) √7 / 2",
+    "(D) 2π"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0166",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Polynomials",
+   "text": "If α and β are the zeroes of the polynomial x² − 7x + 10, then the value of α²β + αβ² is:",
+   "options": [
+    "(A) 17",
+    "(B) 70",
+    "(C) 49",
+    "(D) 100"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0167",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Polynomials",
+   "text": "A quadratic polynomial, the sum of whose zeroes is 5 and the product of whose zeroes is −6, is:",
+   "options": [
+    "(A) x² + 5x − 6",
+    "(B) x² − 5x + 6",
+    "(C) x² + 5x + 6",
+    "(D) x² − 5x − 6"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0168",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "The value of k for which the lines kx + 3y = 7 and 2x + 6y = 5 are parallel is:",
+   "options": [
+    "(A) 1",
+    "(B) 2",
+    "(C) 3",
+    "(D) 6"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0169",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "The pair of linear equations y = 0 and y = −5 has:",
+   "options": [
+    "(A) exactly one solution",
+    "(B) exactly two solutions",
+    "(C) infinitely many solutions",
+    "(D) no solution"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0170",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Quadratic Equations",
+   "text": "The sum of the roots of the quadratic equation 2x² − 9x + 4 = 0 is:",
+   "options": [
+    "(A) 9/2",
+    "(B) −9/2",
+    "(C) 2",
+    "(D) 4"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0171",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Quadratic Equations",
+   "text": "If x = 2 is a root of the equation 3x² + px − 8 = 0, then the value of p is:",
+   "options": [
+    "(A) −2",
+    "(B) 2",
+    "(C) 4",
+    "(D) −4"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0172",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Quadratic Equations",
+   "text": "The quadratic equation x² − 4x + k = 0 has no real roots when:",
+   "options": [
+    "(A) k < 4",
+    "(B) k = 4",
+    "(C) k > 4",
+    "(D) k ≤ 4"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0173",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "The sum of the first 10 terms of the AP 4, 9, 14, 19, ... is:",
+   "options": [
+    "(A) 245",
+    "(B) 255",
+    "(C) 265",
+    "(D) 275"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0174",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "The number of terms in the AP 5, 9, 13, ..., 81 is:",
+   "options": [
+    "(A) 20",
+    "(B) 19",
+    "(C) 21",
+    "(D) 18"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0175",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Arithmetic Progressions",
+   "text": "The 8th term of an AP whose first term is −5 and common difference is 3 is:",
+   "options": [
+    "(A) 16",
+    "(B) 19",
+    "(C) 13",
+    "(D) 21"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0176",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Triangles",
+   "text": "ΔABC ~ ΔPQR and AB/PQ = 2/3. If the perimeter of ΔPQR is 45 cm, then the perimeter of ΔABC is:",
+   "options": [
+    "(A) 20 cm",
+    "(B) 67.5 cm",
+    "(C) 30 cm",
+    "(D) 15 cm"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0177",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Triangles",
+   "text": "In ΔDEF, a line parallel to EF meets DE at X and DF at Y. If DX : XE = 3 : 4 and DF = 14 cm, then DY is equal to:",
+   "options": [
+    "(A) 8 cm",
+    "(B) 6 cm",
+    "(C) 10.5 cm",
+    "(D) 7 cm"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0178",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordinate Geometry",
+   "text": "If the distance between the points (4, p) and (1, 0) is 5 units, then the value of p is:",
+   "options": [
+    "(A) 4 only",
+    "(B) ±4",
+    "(C) −4 only",
+    "(D) 0"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0179",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordinate Geometry",
+   "text": "If (2, 3) is the mid-point of the line segment joining the points (a, 5) and (6, b), then the value of a + b is:",
+   "options": [
+    "(A) 1",
+    "(B) 3",
+    "(C) 5",
+    "(D) −1"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0180",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Introduction to Trigonometry",
+   "text": "If 5 cot θ = 12, where θ is an acute angle, then cosec θ is equal to:",
+   "options": [
+    "(A) 12/13",
+    "(B) 5/12",
+    "(C) 13/12",
+    "(D) 13/5"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0181",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Introduction to Trigonometry",
+   "text": "The value of tan 60° × cot 30° − sec 0° is:",
+   "options": [
+    "(A) 0",
+    "(B) 1",
+    "(C) 2",
+    "(D) 3"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0182",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "A kite is flying on a string 80 m long. If the string is straight and makes an angle of 30° with the level ground, the height of the kite above the ground is:",
+   "options": [
+    "(A) 40 m",
+    "(B) 40√3 m",
+    "(C) 80√3 m",
+    "(D) 20 m"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0183",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "The height of a vertical tower and the length of its shadow on level ground are in the ratio 1 : √3. The angle of elevation of the sun is:",
+   "options": [
+    "(A) 45°",
+    "(B) 60°",
+    "(C) 90°",
+    "(D) 30°"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0184",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Circles",
+   "text": "PA and PB are tangents drawn from an external point P to a circle with centre O. If ∠APB = 80°, then ∠POA is equal to:",
+   "options": [
+    "(A) 40°",
+    "(B) 50°",
+    "(C) 80°",
+    "(D) 100°"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0185",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Circles",
+   "text": "A quadrilateral ABCD is drawn so that each of its sides touches a circle. If AB = 7 cm, BC = 8 cm and CD = 9 cm, then the length of AD is:",
+   "options": [
+    "(A) 6 cm",
+    "(B) 10 cm",
+    "(C) 8 cm",
+    "(D) 7 cm"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0186",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Areas Related to Circles",
+   "text": "A sector of a circle of radius 21 cm has an arc of length 22 cm. The central angle of the sector is: (Use π = 22/7)",
+   "options": [
+    "(A) 30°",
+    "(B) 60°",
+    "(C) 90°",
+    "(D) 120°"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0187",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Areas Related to Circles",
+   "text": "If the circumference of a circle and its area are numerically equal, then the radius of the circle is:",
+   "options": [
+    "(A) 4 units",
+    "(B) π units",
+    "(C) 1 unit",
+    "(D) 2 units"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0188",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Surface Areas and Volumes",
+   "text": "The volume of a solid hemisphere of radius 3 cm is:",
+   "options": [
+    "(A) 18π cm³",
+    "(B) 36π cm³",
+    "(C) 27π cm³",
+    "(D) 9π cm³"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ma10-0189",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Surface Areas and Volumes",
+   "text": "A right circular cylinder and a right circular cone have equal base radii and equal heights. The ratio of the volume of the cylinder to that of the cone is:",
+   "options": [
+    "(A) 1 : 3",
+    "(B) 1 : 1",
+    "(C) 2 : 1",
+    "(D) 3 : 1"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0190",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Statistics",
+   "text": "The class mark of the class interval 25 − 35 is:",
+   "options": [
+    "(A) 10",
+    "(B) 25",
+    "(C) 30",
+    "(D) 35"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0191",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Statistics",
+   "text": "In the assumed mean method, the mean is found using x̄ = a + (Σfᵢdᵢ)/(Σfᵢ). Here dᵢ stands for:",
+   "options": [
+    "(A) xᵢ + a",
+    "(B) xᵢ − a",
+    "(C) a − xᵢ",
+    "(D) xᵢ / a"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0192",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Statistics",
+   "text": "For the distribution\nClass: 0-10, 10-20, 20-30, 30-40, 40-50\nFrequency: 5, 8, 12, 10, 5\nthe median class is:",
+   "options": [
+    "(A) 10-20",
+    "(B) 30-40",
+    "(C) 0-10",
+    "(D) 20-30"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0193",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "Two coins are tossed together. The probability of getting at least one head is:",
+   "options": [
+    "(A) 1/4",
+    "(B) 1/2",
+    "(C) 3/4",
+    "(D) 1"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0194",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "The six letters of the word SCHOOL are written on six identical cards, one letter on each card. If one card is picked at random, the probability that it shows the letter O is:",
+   "options": [
+    "(A) 1/2",
+    "(B) 2/3",
+    "(C) 1/6",
+    "(D) 1/3"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0195",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Probability",
+   "text": "One card is drawn at random from a well-shuffled deck of 52 playing cards. The probability of drawing a red king is:",
+   "options": [
+    "(A) 1/13",
+    "(B) 1/26",
+    "(C) 1/52",
+    "(D) 2/13"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0196",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Real Numbers",
+   "text": "Assertion (A): The HCF of 18 and 25 is 1.\nReason (R): Two numbers whose HCF is 1 are called co-prime numbers.",
+   "answer": "(B)"
+  },
+  {
+   "id": "ma10-0197",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Introduction to Trigonometry",
+   "text": "Assertion (A): For some acute angle θ, the value of sec θ can be 1/2.\nReason (R): For every acute angle θ, 0 < cos θ < 1, so sec θ = 1/cos θ is always greater than 1.",
+   "answer": "(D)"
+  },
+  {
+   "id": "ma10-0198",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Surface Areas and Volumes",
+   "text": "Assertion (A): If the radius of a sphere is doubled, its volume becomes eight times the original volume.\nReason (R): The volume of a sphere is directly proportional to the square of its radius.",
+   "answer": "(C)"
+  },
+  {
+   "id": "ma10-0199",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Real Numbers",
+   "text": "Express 156 and 234 as products of their prime factors. Hence find their HCF and LCM."
+  },
+  {
+   "id": "ma10-0200",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Polynomials",
+   "text": "If one zero of the polynomial 2x² + kx − 6 is 2, find the value of k and the other zero of the polynomial."
+  },
+  {
+   "id": "ma10-0201",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Coordinate Geometry",
+   "text": "Using the distance formula, show that the points A(1, 2), B(4, 6) and C(7, 10) are collinear."
+  },
+  {
+   "id": "ma10-0202",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Introduction to Trigonometry",
+   "text": "If 2 sin(A − B) = 1 and 2 cos(A + B) = 1, where A and B are acute angles and A > B, find the values of A and B."
+  },
+  {
+   "id": "ma10-0203",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Circles",
+   "text": "From an external point P, two tangents PA and PB are drawn to a circle with centre O. If PA = 12 cm and ∠APB = 60°, find the length of the chord AB. Give reasons."
+  },
+  {
+   "id": "ma10-0204",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Areas Related to Circles",
+   "text": "A sector of a circle of radius 10.5 cm has a central angle of 60°. Find the length of its arc and the area of the sector. (Use π = 22/7)"
+  },
+  {
+   "id": "ma10-0205",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Probability",
+   "text": "A bag contains 6 red balls, 4 green balls and some blue balls. If the probability of drawing a blue ball at random from the bag is 1/3, find the number of blue balls in the bag."
+  },
+  {
+   "id": "ma10-0206",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Quadratic Equations",
+   "text": "Find the roots of the quadratic equation 2x² − 7x + 3 = 0 by the method of factorisation."
+  },
+  {
+   "id": "ma10-0207",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Arithmetic Progressions",
+   "text": "The 5th term of an AP is 22 and its 9th term is 38. Find the AP and its 15th term."
+  },
+  {
+   "id": "ma10-0208",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Real Numbers",
+   "text": "Prove that √5 is an irrational number. Hence show that 4 − 3√5 is also irrational."
+  },
+  {
+   "id": "ma10-0209",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Polynomials",
+   "text": "If α and β are the zeroes of the polynomial p(x) = x² − 6x + 8, find a quadratic polynomial whose zeroes are 2α + 1 and 2β + 1."
+  },
+  {
+   "id": "ma10-0210",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "A parking lot charges a fixed amount for the first two hours and a further fixed amount for every additional hour. Rahul paid ₹50 for parking his scooter for 5 hours and Sita paid ₹70 for 9 hours. Find the fixed charge for the first two hours and the charge for each additional hour. How much will a person pay for 12 hours?"
+  },
+  {
+   "id": "ma10-0211",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Quadratic Equations",
+   "text": "The sum of a positive number and its reciprocal is 17/4. Form a quadratic equation and find the number."
+  },
+  {
+   "id": "ma10-0212",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Arithmetic Progressions",
+   "text": "How many terms of the AP 27, 24, 21, ... must be taken so that their sum is 126? Explain why there are two answers."
+  },
+  {
+   "id": "ma10-0213",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Triangles",
+   "text": "In ΔPQR, ∠PQR = 90° and QS is perpendicular to PR, meeting it at S. Prove that ΔPSQ ~ ΔQSR. If PS = 4 cm and SR = 9 cm, find the length of QS."
+  },
+  {
+   "id": "ma10-0214",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Coordinate Geometry",
+   "text": "Find the point P on the y-axis which is equidistant from the points A(6, 3) and B(−2, −1). Also find the length PA."
+  },
+  {
+   "id": "ma10-0215",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Introduction to Trigonometry",
+   "text": "Prove that cos A/(1 − sin A) + cos A/(1 + sin A) = 2 sec A. Hence find the value of the left-hand side when A = 60°."
+  },
+  {
+   "id": "ma10-0216",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Circles",
+   "text": "Prove that the line segment joining the points of contact of two parallel tangents to a circle passes through the centre of the circle."
+  },
+  {
+   "id": "ma10-0217",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Areas Related to Circles",
+   "text": "The pendulum of a clock is 42 cm long. It swings through an angle of 30° from one extreme position to the other. Find the length of the arc described by the tip of the pendulum and the area of the sector swept by the pendulum in one swing. (Use π = 22/7)"
+  },
+  {
+   "id": "ma10-0218",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Statistics",
+   "text": "Find the mean of the following frequency distribution using the step-deviation method:\nClass: 10-20, 20-30, 30-40, 40-50, 50-60\nFrequency: 6, 8, 12, 10, 4"
+  },
+  {
+   "id": "ma10-0219",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Quadratic Equations",
+   "text": "A tourist plans a trip with a budget of ₹6000 for daily expenses. If she extends her trip by 5 days, she has to reduce her daily expenses by ₹100. Find the original duration of the trip.\nOR\nThe hypotenuse of a right-angled triangle is 25 cm and the difference between the lengths of the other two sides is 5 cm. Form a quadratic equation and find the lengths of the other two sides."
+  },
+  {
+   "id": "ma10-0220",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Pair of Linear Equations in Two Variables",
+   "text": "Two towns A and B are 160 km apart on a straight highway. One car starts from A and another from B at the same time. If the cars travel in the same direction, they meet after 8 hours. If they travel towards each other, they meet after 1 hour 20 minutes. Find the speeds of the two cars.\nOR\nA fraction becomes 7/10 if 2 is added to both its numerator and denominator. If 4 is added to both its numerator and denominator, it becomes 3/4. Find the fraction."
+  },
+  {
+   "id": "ma10-0221",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "A man standing on one bank of a river observes that the angle of elevation of the top of a tree standing on the opposite bank is 60°. When he moves 30 m away from the bank in the same straight line, the angle of elevation becomes 30°. Find the height of the tree and the width of the river. (Use √3 = 1.732)\nOR\nFrom a point 20 m above the surface of a still lake, the angle of elevation of a cloud is 30° and the angle of depression of its reflection in the lake is 60°. Find the height of the cloud above the lake."
+  },
+  {
+   "id": "ma10-0222",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Surface Areas and Volumes",
+   "text": "A model rocket is made of a solid right circular cylinder of radius 6 cm and height 10 cm, with a solid cone of the same radius and height 8 cm fixed on top of it. Find (a) the total surface area and (b) the volume of the model. (Use π = 3.14)\nOR\nA solid is made up of a right circular cylinder with a hemisphere fixed at one end and a cone fixed at the other end. The common radius is 7 cm, the height of the cylinder is 10 cm and the height of the cone is 24 cm. Find (a) the total surface area of the solid and (b) the volume of its cylindrical and conical parts together. (Use π = 22/7)"
+  },
+  {
+   "id": "ma10-0223",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Statistics",
+   "text": "Find the mean and the mode of the following frequency distribution:\nClass: 10-25, 25-40, 40-55, 55-70, 70-85\nFrequency: 6, 10, 16, 12, 6\nOR\nThe median of the following distribution is 32.5 and the sum of all the frequencies is 40. Find the values of x and y.\nClass: 0-10, 10-20, 20-30, 30-40, 40-50, 50-60\nFrequency: 4, x, 10, 12, y, 3"
+  },
+  {
+   "id": "ma10-0224",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Arithmetic Progressions",
+   "text": "An auditorium has 20 seats in the first row, 24 seats in the second row, 28 seats in the third row, and so on, for 25 rows.\n(a) How many seats are there in the auditorium?\n(b) Which row has 72 seats?\n(c) How many seats are there in the last five rows together?\nOR\nThe sum of the first 8 terms of an AP is 136 and the sum of its first 15 terms is 465. Find the AP and the sum of its first n terms."
+  },
+  {
+   "id": "ma10-0225",
+   "section": "SECTION D",
+   "type": "LA",
+   "chapter": "Circles",
+   "text": "(a) Prove that the tangent at any point of a circle is perpendicular to the radius through the point of contact.\n(b) PQ is a chord of length 24 cm of a circle of radius 13 cm with centre O. The tangents at P and Q meet at a point T. Find the length TP."
+  },
+  {
+   "id": "ma10-0226",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Real Numbers",
+   "text": "For the school sports day, 144 students of Class IX and 180 students of Class X are to march in a parade. The PT teacher wants them to march in columns so that every column has the same number of students, all the students in a column are from the same class, and the number of columns is as small as possible.\n(a) What is the largest number of students that can march in each column?\n(b) How many columns will be formed in all?\n(c) Write 144 and 180 as products of prime factors and find their LCM.\nOR\n(c) Two bells in the school ring at intervals of 12 minutes and 18 minutes. If they ring together at 8:00 a.m., at what time will they next ring together?"
+  },
+  {
+   "id": "ma10-0227",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Coordinate Geometry",
+   "text": "On a city map drawn on a coordinate grid, the hospital is at H(−2, 3) and the school is at S(4, −5). Each unit on the grid represents 1 km. A straight road joins the hospital and the school.\n(a) Find the distance between the hospital and the school.\n(b) A bus stop is to be built exactly midway between H and S. Find its coordinates.\n(c) A post office P lies on the road HS such that HP : PS = 1 : 3. Find the coordinates of P.\nOR\n(c) The road HS crosses the x-axis at a point. Find the ratio in which the x-axis divides HS and the coordinates of this point."
+  },
+  {
+   "id": "ma10-0228",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Some Applications of Trigonometry",
+   "text": "A lighthouse stands 75 m high on a rocky coast. The keeper at the top watches a ship sailing straight towards the base of the lighthouse. At first, the angle of depression of the ship is 30°. A little later, it is 45°.\n(a) How far was the ship from the base of the lighthouse when the angle of depression was 30°?\n(b) How far is the ship from the base when the angle of depression is 45°?\n(c) Find the distance travelled by the ship between the two observations. (Use √3 = 1.732)\nOR\n(c) How far from the base will the ship be when the angle of depression becomes 60°? (Use √3 = 1.732)"
+  },
+  {
+   "id": "ma10-0229",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Surface Areas and Volumes",
+   "text": "A farmer stores grain in a metal silo. The silo is a right circular cylinder of radius 3 m and height 10 m with a conical roof of the same radius and height 4 m.\n(a) Find the slant height of the conical roof.\n(b) Find the area of metal sheet needed to make the conical roof. (Use π = 3.14)\n(c) Find the volume of grain the cylindrical part can hold. (Use π = 3.14)\nOR\n(c) Find the total area of the outer curved surface of the silo (cylinder and roof together) that is to be painted. (Use π = 3.14)"
+  },
+  {
+   "id": "ma10-0230",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Probability",
+   "text": "At a school fete, a box contains 40 tokens numbered 11 to 50, one number on each token. A visitor draws one token at random and wins a prize depending on the number drawn.\n(a) Find the probability that the number on the token is a multiple of 5.\n(b) Find the probability that the number is a perfect square.\n(c) Find the probability that the number is a prime number.\nOR\n(c) Find the probability that the number is divisible by both 2 and 3."
+  },
+  {
+   "id": "ma10-0231",
+   "section": "SECTION E",
+   "type": "CBQ",
+   "chapter": "Areas Related to Circles",
+   "text": "A rotating garden sprinkler is fixed at a point O on a lawn. It throws water up to a distance of 21 m and turns back and forth through an angle of 60°, so that the region it waters is a sector of a circle.\n(a) Find the area of the lawn watered by the sprinkler. (Use π = 22/7)\n(b) Find the length of the curved outer edge of the watered region.\n(c) If the angle of turning is increased to 120°, how much more area will be watered?\nOR\n(c) Find the perimeter of the watered region."
   }
  ]
 }

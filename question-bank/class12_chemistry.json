@@ -763,6 +763,394 @@
    "type": "LA",
    "chapter": "Solutions",
    "text": "(a) State Raoult's law for a solution of two volatile liquids. What is meant by positive deviation from Raoult's law? Give one example and explain the cause of the deviation.\n(b) The vapour pressures of pure liquids A and B at a certain temperature are 400 mm Hg and 600 mm Hg respectively. If the total vapour pressure of their solution is 520 mm Hg, find the mole fraction of each liquid in the solution and the mole fraction of A in the vapour phase.\nOR\n(a) What is the van't Hoff factor? What is its value for a solute that associates in solution?\n(b) 2.0 g of a non-electrolyte solute dissolved in 100 g of benzene lowers the freezing point of benzene by 0.64 K. Calculate the molar mass of the solute. (K_f for benzene = 5.12 K kg mol⁻¹)\n(c) Why is a 1 M solution of NaCl expected to show a greater depression in freezing point than a 1 M solution of glucose?"
+  },
+  {
+   "id": "ch12-0071",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Solutions",
+   "text": "Which of the following 0.1 molal aqueous solutions will have the highest freezing point?",
+   "options": [
+    "(A) NaCl",
+    "(B) CaCl₂",
+    "(C) Urea",
+    "(D) Al₂(SO₄)₃"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0072",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Solutions",
+   "text": "Which of the following mixtures shows a negative deviation from Raoult's law?",
+   "options": [
+    "(A) Ethanol and acetone",
+    "(B) Chloroform and acetone",
+    "(C) Benzene and toluene",
+    "(D) Ethanol and water"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0073",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electrochemistry",
+   "text": "The cell constant (G*) of a conductivity cell whose electrodes have area A and are separated by a distance l is:",
+   "options": [
+    "(A) A/l",
+    "(B) R/κ",
+    "(C) κ/R",
+    "(D) l/A"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0074",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Electrochemistry",
+   "text": "If the standard emf (E°cell) of a galvanic cell is positive, then the standard Gibbs energy change (ΔG°) of the cell reaction is:",
+   "options": [
+    "(A) negative",
+    "(B) positive",
+    "(C) zero",
+    "(D) impossible to predict"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0075",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Chemical Kinetics",
+   "text": "For the reaction 2N₂O₅ → 4NO₂ + O₂, the rate of formation of NO₂ is related to the rate of disappearance of N₂O₅ by:",
+   "options": [
+    "(A) d[NO₂]/dt = −d[N₂O₅]/dt",
+    "(B) d[NO₂]/dt = −2 d[N₂O₅]/dt",
+    "(C) d[NO₂]/dt = −½ d[N₂O₅]/dt",
+    "(D) d[NO₂]/dt = −4 d[N₂O₅]/dt"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0076",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Chemical Kinetics",
+   "text": "The half-life of a first order reaction is 10 minutes. The time required for 75% of the reaction to be completed is:",
+   "options": [
+    "(A) 30 minutes",
+    "(B) 40 minutes",
+    "(C) 20 minutes",
+    "(D) 15 minutes"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0077",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "The d- and f-Block Elements",
+   "text": "On the basis of its electronic configuration, which of the following ions is expected to be colourless?",
+   "options": [
+    "(A) Ti³⁺",
+    "(B) V³⁺",
+    "(C) Fe³⁺",
+    "(D) Cu⁺"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0078",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "The d- and f-Block Elements",
+   "text": "The oxidation state of chromium in potassium dichromate, K₂Cr₂O₇, is:",
+   "options": [
+    "(A) +6",
+    "(B) +3",
+    "(C) +7",
+    "(D) +4"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0079",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "The d- and f-Block Elements",
+   "text": "The most common oxidation state shown by the lanthanoids is:",
+   "options": [
+    "(A) +3",
+    "(B) +2",
+    "(C) +4",
+    "(D) +5"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0080",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordination Compounds",
+   "text": "The number of ions produced when one formula unit of [Co(NH₃)₅Cl]Cl₂ dissolves in water is:",
+   "options": [
+    "(A) 2",
+    "(B) 3",
+    "(C) 4",
+    "(D) 6"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0081",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Coordination Compounds",
+   "text": "Which of the following is an ambidentate ligand?",
+   "options": [
+    "(A) NO₂⁻",
+    "(B) NH₃",
+    "(C) ethane-1,2-diamine (en)",
+    "(D) C₂O₄²⁻"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0082",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "An alcohol is best converted into an alkyl chloride, with both the by-products escaping as gases, by using:",
+   "options": [
+    "(A) PCl₅",
+    "(B) PCl₃",
+    "(C) HCl with anhydrous ZnCl₂",
+    "(D) SOCl₂"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0083",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "The preparation of an alkyl iodide by heating an alkyl chloride with sodium iodide in dry acetone is called the:",
+   "options": [
+    "(A) Swarts reaction",
+    "(B) Wurtz reaction",
+    "(C) Finkelstein reaction",
+    "(D) Sandmeyer reaction"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0084",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "Which of the following compounds is the most acidic?",
+   "options": [
+    "(A) Phenol",
+    "(B) p-Cresol",
+    "(C) Ethanol",
+    "(D) p-Nitrophenol"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0085",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "Which of the following compounds does NOT undergo aldol condensation?",
+   "options": [
+    "(A) Ethanal",
+    "(B) Methanal",
+    "(C) Propanal",
+    "(D) Propanone"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0086",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "A carboxylic acid can be reduced directly to a primary alcohol by:",
+   "options": [
+    "(A) LiAlH₄",
+    "(B) NaBH₄",
+    "(C) H₂ / Pd–BaSO₄",
+    "(D) Zn–Hg / concentrated HCl"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0087",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Amines",
+   "text": "In the Hoffmann bromamide degradation, an amide is converted into a primary amine that contains:",
+   "options": [
+    "(A) the same number of carbon atoms",
+    "(B) one carbon atom more",
+    "(C) one carbon atom less",
+    "(D) two carbon atoms less"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0088",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Biomolecules",
+   "text": "Which of the following is a non-reducing sugar?",
+   "options": [
+    "(A) Glucose",
+    "(B) Maltose",
+    "(C) Lactose",
+    "(D) Sucrose"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "ch12-0089",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Amines",
+   "text": "Assertion (A): Aniline is a weaker base than methylamine.\nReason (R): In aniline, the lone pair of electrons on the nitrogen atom is delocalised over the benzene ring and is less available for protonation.",
+   "answer": "(A)"
+  },
+  {
+   "id": "ch12-0090",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "The d- and f-Block Elements",
+   "text": "Assertion (A): Transition metals form a large number of interstitial compounds.\nReason (R): Transition metals have very low melting points.",
+   "answer": "(C)"
+  },
+  {
+   "id": "ch12-0091",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Alcohols, Phenols and Ethers",
+   "text": "Assertion (A): Phenol undergoes electrophilic substitution reactions more readily than benzene.\nReason (R): Phenol is slightly soluble in water.",
+   "answer": "(B)"
+  },
+  {
+   "id": "ch12-0092",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "Write the chemical equations for the following reactions:\n(a) Clemmensen reduction of propanone\n(b) Etard reaction"
+  },
+  {
+   "id": "ch12-0093",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Coordination Compounds",
+   "text": "On the basis of crystal field theory, write the electronic configuration of a d⁴ metal ion in an octahedral field when (a) Δ₀ > P and (b) Δ₀ < P. Which of the two complexes will be high spin?"
+  },
+  {
+   "id": "ch12-0094",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "Explain why an alkyl halide reacts with KCN to form mainly an alkyl cyanide, but with AgCN it forms mainly an alkyl isocyanide."
+  },
+  {
+   "id": "ch12-0095",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "The d- and f-Block Elements",
+   "text": "State any two differences between the lanthanoids and the actinoids."
+  },
+  {
+   "id": "ch12-0096",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Biomolecules",
+   "text": "What is meant by the denaturation of a protein? Give one example. Which level of structure of the protein remains unaffected during denaturation?"
+  },
+  {
+   "id": "ch12-0097",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Solutions",
+   "text": "(a) Define the van't Hoff factor.\n(b) 5.85 g of sodium chloride is dissolved in 500 g of water. Assuming complete dissociation, calculate the freezing point of the solution. (Kf for water = 1.86 K kg mol⁻¹, molar mass of NaCl = 58.5 g mol⁻¹, freezing point of water = 273.15 K)"
+  },
+  {
+   "id": "ch12-0098",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Chemical Kinetics",
+   "text": "The rate constant of a first order reaction is 1.155 × 10⁻³ s⁻¹. Calculate:\n(a) the half-life of the reaction,\n(b) the time taken for the concentration of the reactant to fall from 0.8 M to 0.1 M,\n(c) the fraction of the reactant left unreacted after 20 minutes."
+  },
+  {
+   "id": "ch12-0099",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Coordination Compounds",
+   "text": "Using valence bond theory, predict (a) the hybridisation, (b) the geometry and (c) the magnetic behaviour of [Ni(CN)₄]²⁻ and [NiCl₄]²⁻. (Atomic number of Ni = 28)"
+  },
+  {
+   "id": "ch12-0100",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "How will you bring about the following conversions? Write the chemical equations.\n(a) Ethanol to iodoethane\n(b) Benzene to chlorobenzene\n(c) Propene to 1-bromopropane"
+  },
+  {
+   "id": "ch12-0101",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+   "text": "Arrange the following as directed and give a reason in each case:\n(a) CH₃COOH, ClCH₂COOH, FCH₂COOH — increasing order of acid strength\n(b) Ethanal, propanone, methanal — increasing order of reactivity towards nucleophilic addition\n(c) Butane, propanal, propan-1-ol — increasing order of boiling point"
+  },
+  {
+   "id": "ch12-0102",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Amines",
+   "text": "Write the chemical equations for the following reactions:\n(a) Carbylamine reaction of aniline\n(b) Coupling reaction of benzenediazonium chloride with phenol\n(c) Acetylation of aniline"
+  },
+  {
+   "id": "ch12-0103",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "The d- and f-Block Elements",
+   "text": "In a school laboratory, a teacher shows the class aqueous solutions of copper(II) sulphate (blue), zinc sulphate (colourless), iron(II) sulphate (pale green) and potassium permanganate (purple). She explains that many transition metal ions are coloured and paramagnetic, and that iron and its compounds are used as catalysts in industry, for example in the Haber process for making ammonia.\n(a) Why is zinc sulphate solution colourless while copper(II) sulphate solution is blue?\n(b) Give two reasons why transition metals and their compounds act as good catalysts.\n(c) Calculate the spin-only magnetic moment of the Fe²⁺ ion. (Atomic number of Fe = 26)\nOR\n(c) Mn²⁺ is much more resistant than Fe²⁺ to oxidation to the +3 state. Explain on the basis of electronic configuration. (Atomic numbers: Mn = 25, Fe = 26)"
+  },
+  {
+   "id": "ch12-0104",
+   "section": "SECTION D",
+   "type": "CBQ",
+   "chapter": "Haloalkanes and Haloarenes",
+   "text": "A student took a sample of optically active 2-bromobutane and heated it with aqueous potassium hydroxide. The product, butan-2-ol, was found to be optically inactive. Her teacher explained that the reaction went mainly through a planar carbocation, which the hydroxide ion can attack from either side. In a second experiment, 1-bromobutane reacted in a single step with complete inversion of configuration.\n(a) What is a racemic mixture? Why is it optically inactive?\n(b) Why does the SN1 reaction of an optically active alkyl halide give a racemic product?\n(c) Which of the two, 1-bromobutane or 2-bromobutane, reacts faster by the SN2 mechanism? Give a reason.\nOR\n(c) Which of the two, C₆H₅CH₂Cl or C₆H₅CHClC₆H₅, is hydrolysed more easily by aqueous KOH through the SN1 mechanism? Give a reason."
+  },
+  {
+   "id": "ch12-0105",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "The d- and f-Block Elements",
+   "text": "(a) Write the electronic configurations of chromium (Z = 24) and copper (Z = 29). Why are these different from the expected configurations?\n(b) Explain why (i) transition metals show variable oxidation states and (ii) the E° value for the Mn³⁺/Mn²⁺ couple is much more positive than that for the Fe³⁺/Fe²⁺ couple.\n(c) Write the balanced chemical equations for the preparation of potassium permanganate from pyrolusite ore (MnO₂).\nOR\n(a) What are actinoids? Why do actinoids show a wider range of oxidation states than lanthanoids?\n(b) Compare the lanthanoids and the actinoids with respect to (i) atomic and ionic sizes and (ii) chemical reactivity.\n(c) Name a lanthanoid that shows the +4 oxidation state and state why it acts as an oxidising agent in this state."
+  },
+  {
+   "id": "ch12-0106",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Amines",
+   "text": "(a) An aromatic compound A (C₇H₇NO) on heating with bromine and sodium hydroxide gives compound B (C₆H₇N). B reacts with sodium nitrite and hydrochloric acid at 273–278 K to give C, which on warming with water gives D, a compound that gives a violet colour with neutral FeCl₃ solution. Identify A, B, C and D and write the chemical equations involved.\n(b) Arrange the following in increasing order of basic strength in aqueous solution: C₂H₅NH₂, (C₂H₅)₂NH, (C₂H₅)₃N, NH₃.\nOR\n(a) Describe the Hinsberg test for distinguishing primary, secondary and tertiary amines.\n(b) Why is aniline acetylated before its nitration?\n(c) Why are aliphatic amines stronger bases than ammonia?"
+  },
+  {
+   "id": "ch12-0107",
+   "section": "SECTION E",
+   "type": "LA",
+   "chapter": "Electrochemistry",
+   "text": "(a) Define molar conductivity. How does it change with dilution for (i) a strong electrolyte and (ii) a weak electrolyte?\n(b) The conductivity of a 0.002 M solution of acetic acid is 7.81 × 10⁻⁵ S cm⁻¹. Calculate its molar conductivity and degree of dissociation, given that the limiting molar conductivity of acetic acid is 390.5 S cm² mol⁻¹.\nOR\n(a) Write the Nernst equation and calculate the emf of the following cell at 298 K:\nMg(s) | Mg²⁺(0.01 M) || Ag⁺(0.001 M) | Ag(s)\n(E°Mg²⁺/Mg = −2.37 V, E°Ag⁺/Ag = +0.80 V)\n(b) How many coulombs of electricity are required to reduce 0.5 mol of Cu²⁺ ions to copper metal? (F = 96500 C mol⁻¹)"
   }
  ]
 }

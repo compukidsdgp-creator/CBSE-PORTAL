@@ -2137,6 +2137,419 @@
    "type": "LA",
    "chapter": "Electricity",
    "text": "(a) State Joule's law of heating and derive the expression H = I²Rt.\n(b) Give two practical applications of the heating effect of electric current.\n(c) An electric kettle draws a current of 5 A from a 220 V supply. Calculate the heat produced in 2 minutes.\nOR\n(a) Draw the schematic diagram of a circuit consisting of a battery of three cells of 2 V each, resistors of 5 Ω, 8 Ω and 12 Ω connected in series, an ammeter, a plug key and a voltmeter connected across the 12 Ω resistor.\n(b) Calculate the current in the circuit and the reading of the voltmeter.\n(c) Why are household appliances not connected in series?"
+  },
+  {
+   "id": "sc10-0203",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Heredity",
+   "text": "Pea plants with round yellow seeds (RRYY) are crossed with plants having wrinkled green seeds (rryy). When the F₁ plants are self-pollinated, the fraction of F₂ plants with wrinkled yellow seeds is:",
+   "options": [
+    "(A) 9/16",
+    "(B) 3/16",
+    "(C) 1/16",
+    "(D) 6/16"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0204",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Heredity",
+   "text": "Which of the following statements about genes is correct?",
+   "options": [
+    "(A) Genes are made up of proteins.",
+    "(B) Genes are present only in the cytoplasm of a cell.",
+    "(C) A gene is a section of DNA that provides the information for making a protein.",
+    "(D) Each body cell carries only one copy of every gene."
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0205",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Our Environment",
+   "text": "In the aquatic food chain phytoplankton → zooplankton → small fish → large fish, the highest concentration of a non-biodegradable pesticide will be found in the:",
+   "options": [
+    "(A) phytoplankton",
+    "(B) zooplankton",
+    "(C) small fish",
+    "(D) large fish"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0206",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Our Environment",
+   "text": "The ozone layer in the upper atmosphere protects living organisms on the Earth from:",
+   "options": [
+    "(A) infrared radiation",
+    "(B) ultraviolet radiation",
+    "(C) visible light",
+    "(D) microwaves"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0207",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Life Processes",
+   "text": "Which of the following events does NOT take place during photosynthesis?",
+   "options": [
+    "(A) Absorption of light energy by chlorophyll",
+    "(B) Conversion of light energy into chemical energy and splitting of water molecules",
+    "(C) Reduction of carbon dioxide to carbohydrates",
+    "(D) Oxidation of glucose to carbon dioxide and water"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0208",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "Control and Coordination",
+   "text": "The part of the human brain that controls involuntary actions such as blood pressure, salivation and vomiting is the:",
+   "options": [
+    "(A) cerebrum",
+    "(B) cerebellum",
+    "(C) medulla",
+    "(D) hypothalamus"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0209",
+   "section": "SECTION A",
+   "type": "MCQ",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "In human beings, the structure that supplies nutrition to the developing embryo from the mother's blood is the:",
+   "options": [
+    "(A) placenta",
+    "(B) ovary",
+    "(C) oviduct",
+    "(D) cervix"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0210",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Life Processes",
+   "text": "Assertion (A): Guard cells control the exchange of gases through the stomata of a leaf.\nReason (R): Guard cells do not contain any chloroplasts.",
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0211",
+   "section": "SECTION A",
+   "type": "A/R",
+   "chapter": "Heredity",
+   "text": "Assertion (A): In human beings, the sex of a child is decided by the mother.\nReason (R): A woman has a perfect pair of sex chromosomes, both called X.",
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0212",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Heredity",
+   "text": "What are sex chromosomes? How many sex chromosomes are present in (a) a body cell of a human male and (b) a human sperm cell?"
+  },
+  {
+   "id": "sc10-0213",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Our Environment",
+   "text": "What is a food web? Why is a food web more stable than a single food chain?"
+  },
+  {
+   "id": "sc10-0214",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Life Processes",
+   "text": "Name the products formed when glucose is broken down (a) in human muscle cells during vigorous exercise, when oxygen is in short supply, and (b) in the mitochondria in the presence of oxygen. Why do we sometimes get muscle cramps after running fast?"
+  },
+  {
+   "id": "sc10-0215",
+   "section": "SECTION A",
+   "type": "VSA",
+   "chapter": "Control and Coordination",
+   "text": "Explain how the shoot of a plant kept near a window bends towards the light. Name the plant hormone involved."
+  },
+  {
+   "id": "sc10-0216",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "Heredity",
+   "text": "In pea plants, green pod colour (G) is dominant over yellow pod colour (g). A plant that is heterozygous for pod colour is crossed with a plant having yellow pods.\n(a) Write the gametes produced by each parent.\n(b) Work out the genotypes of the offspring and state the ratio of plants with green pods to plants with yellow pods.\n(c) How can a gardener find out whether a pea plant with green pods is homozygous or heterozygous?"
+  },
+  {
+   "id": "sc10-0217",
+   "section": "SECTION A",
+   "type": "SA",
+   "chapter": "Control and Coordination",
+   "text": "(a) Draw a neat diagram of a neuron and label any four parts.\n(b) Describe how a nerve impulse travels from one neuron to the next."
+  },
+  {
+   "id": "sc10-0218",
+   "section": "SECTION A",
+   "type": "CBQ",
+   "chapter": "Our Environment",
+   "text": "The eco-club of a school carried out a one-week survey of the waste thrown away in the school canteen. They found vegetable peels, leftover food, paper plates, plastic spoons, plastic water bottles, glass bottles and aluminium foil. The club then set up two separate bins and a compost pit behind the school garden.\n(a) Classify the items found into biodegradable and non-biodegradable waste.\n(b) Why is it better to use paper or leaf plates instead of plastic plates? Give one reason.\n(c) Suggest two changes in our habits that can reduce the amount of non-biodegradable waste we produce.\nOR\n(c) What happens to the biodegradable waste put into the compost pit? Which organisms bring about this change?"
+  },
+  {
+   "id": "sc10-0219",
+   "section": "SECTION A",
+   "type": "LA",
+   "chapter": "How do Organisms Reproduce?",
+   "text": "(a) Name three different types of methods used to prevent pregnancy and explain how each of them works.\n(b) How are sexually transmitted diseases spread? Name one bacterial and one viral sexually transmitted disease.\n(c) Why is the misuse of medical tests to find out the sex of an unborn child harmful to society?"
+  },
+  {
+   "id": "sc10-0220",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Which of the following is an example of a combination reaction?",
+   "options": [
+    "(A) 2KClO₃ → 2KCl + 3O₂",
+    "(B) Zn + H₂SO₄ → ZnSO₄ + H₂",
+    "(C) 2Mg + O₂ → 2MgO",
+    "(D) NaOH + HCl → NaCl + H₂O"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0221",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "In the reaction CuO + H₂ → Cu + H₂O, the substance that gets oxidised is:",
+   "options": [
+    "(A) CuO",
+    "(B) H₂",
+    "(C) Cu",
+    "(D) H₂O"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0222",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "The chemical formula of washing soda is:",
+   "options": [
+    "(A) NaHCO₃",
+    "(B) Na₂CO₃",
+    "(C) CaOCl₂",
+    "(D) Na₂CO₃·10H₂O"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0223",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "When zinc granules are heated with sodium hydroxide solution, the gas evolved is:",
+   "options": [
+    "(A) oxygen",
+    "(B) hydrogen",
+    "(C) chlorine",
+    "(D) carbon dioxide"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0224",
+   "section": "SECTION B",
+   "type": "MCQ",
+   "chapter": "Carbon and its Compounds",
+   "text": "The hydrogenation of vegetable oils to make vegetable ghee is carried out in the presence of a catalyst such as:",
+   "options": [
+    "(A) nickel",
+    "(B) iron",
+    "(C) copper",
+    "(D) aluminium"
+   ],
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0225",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Acids, Bases and Salts",
+   "text": "Assertion (A): Plaster of Paris should be stored in a moisture-proof container.\nReason (R): Plaster of Paris reacts with water to form gypsum, which sets into a hard solid mass.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0226",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Carbon and its Compounds",
+   "text": "Assertion (A): Ethanol is used in medicines such as cough syrups and tincture of iodine.\nReason (R): Ethanol burns in air with a clean blue flame.",
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0227",
+   "section": "SECTION B",
+   "type": "A/R",
+   "chapter": "Acids, Bases and Salts",
+   "text": "Assertion (A): Sodium chloride is a basic salt.\nReason (R): Sodium chloride is formed by the reaction of a strong acid with a strong base.",
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0228",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "What is rancidity? State two ways in which rancidity of food containing fats and oils can be prevented."
+  },
+  {
+   "id": "sc10-0229",
+   "section": "SECTION B",
+   "type": "VSA",
+   "chapter": "Acids, Bases and Salts",
+   "text": "While diluting a concentrated acid, why should the acid be added slowly to water and not water to the acid? What could happen if water were added to the concentrated acid?"
+  },
+  {
+   "id": "sc10-0230",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Acids, Bases and Salts",
+   "text": "Write balanced chemical equations for the following and describe what is observed in each case:\n(a) Dilute hydrochloric acid is added to zinc granules.\n(b) Dilute hydrochloric acid is added to sodium hydroxide solution containing a few drops of phenolphthalein.\n(c) Dilute hydrochloric acid is added to calcium carbonate, and the gas formed is passed through lime water."
+  },
+  {
+   "id": "sc10-0231",
+   "section": "SECTION B",
+   "type": "SA",
+   "chapter": "Chemical Reactions and Equations",
+   "text": "Balance the following chemical equations and state the type of reaction in each case:\n(a) Na + H₂O → NaOH + H₂\n(b) Zn + AgNO₃ → Zn(NO₃)₂ + Ag\n(c) CaCO₃ → CaO + CO₂ (on heating)"
+  },
+  {
+   "id": "sc10-0232",
+   "section": "SECTION B",
+   "type": "CBQ",
+   "chapter": "Acids, Bases and Salts",
+   "text": "Riya wanted to test some household substances without using litmus. She used turmeric powder, red cabbage juice and a few drops of phenolphthalein from the school laboratory. She also noticed that the smell of chopped onion on a cloth strip disappeared when the strip was dipped in a basic solution. She tested soap solution, lemon juice, baking soda solution and vinegar.\n(a) What colour change will be seen when turmeric is added to soap solution?\n(b) What are olfactory indicators? Name two substances that can be used as olfactory indicators.\n(c) A solution turns phenolphthalein pink. Is it acidic or basic? State whether its pH is more or less than 7.\nOR\n(c) Which two of the substances tested by Riya will turn blue litmus red? Will they change the colour of phenolphthalein?"
+  },
+  {
+   "id": "sc10-0233",
+   "section": "SECTION B",
+   "type": "LA",
+   "chapter": "Metals and Non-metals",
+   "text": "(a) Distinguish between roasting and calcination. Write one balanced chemical equation for each.\n(b) How is mercury obtained from its ore, cinnabar (HgS)? Write the chemical equations involved.\n(c) Describe the electrolytic refining of copper with the help of a labelled diagram.\nOR\n(a) Why are sulphide and carbonate ores converted into oxides before the metal is extracted from them?\n(b) Write the balanced chemical equation for the reaction of iron(III) oxide with aluminium. What is this reaction called, and where is it used?\n(c) Why are highly reactive metals such as sodium and magnesium obtained by electrolysis of their molten chlorides and not by reduction with carbon?"
+  },
+  {
+   "id": "sc10-0234",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "When an object is placed at the centre of curvature of a concave mirror, the image formed is:",
+   "options": [
+    "(A) virtual, erect and enlarged",
+    "(B) real, inverted and of the same size, at the centre of curvature",
+    "(C) real, inverted and diminished, at the focus",
+    "(D) virtual, erect and diminished"
+   ],
+   "answer": "(B)"
+  },
+  {
+   "id": "sc10-0235",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "The Sun is seen about two minutes before actual sunrise and for about two minutes after actual sunset. This is due to:",
+   "options": [
+    "(A) dispersion of light",
+    "(B) scattering of light",
+    "(C) atmospheric refraction",
+    "(D) reflection of light from clouds"
+   ],
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0236",
+   "section": "SECTION C",
+   "type": "MCQ",
+   "chapter": "Electricity",
+   "text": "If the potential difference across a resistor of fixed resistance is doubled, the electric power consumed by it becomes:",
+   "options": [
+    "(A) two times",
+    "(B) half",
+    "(C) the same",
+    "(D) four times"
+   ],
+   "answer": "(D)"
+  },
+  {
+   "id": "sc10-0237",
+   "section": "SECTION C",
+   "type": "A/R",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "Assertion (A): Danger signal lights are red in colour.\nReason (R): Red light, having the longest wavelength in the visible spectrum, is scattered the least by fog and smoke.",
+   "answer": "(A)"
+  },
+  {
+   "id": "sc10-0238",
+   "section": "SECTION C",
+   "type": "A/R",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "Assertion (A): A concave mirror can form a virtual image of an object.\nReason (R): A concave mirror always forms a magnified image.",
+   "answer": "(C)"
+  },
+  {
+   "id": "sc10-0239",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "An object 4 cm high is placed 15 cm in front of a concave mirror of focal length 10 cm. Using the mirror formula, find the position, nature and size of the image."
+  },
+  {
+   "id": "sc10-0240",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "(a) Define 1 dioptre of power of a lens.\n(b) A convex lens of focal length 25 cm and a concave lens of focal length 10 cm are placed in contact. Find the power and the focal length of the combination. Will the combination behave as a converging or a diverging lens?"
+  },
+  {
+   "id": "sc10-0241",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "(a) What is hypermetropia? State two causes of this defect.\n(b) The near point of a hypermetropic eye is 50 cm. Find the power of the lens needed so that the person can read a book held at 25 cm. Name the type of lens."
+  },
+  {
+   "id": "sc10-0242",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Electricity",
+   "text": "Three resistors of 5 Ω, 10 Ω and 30 Ω are connected in parallel across a 12 V battery. Calculate (a) the current through each resistor, (b) the total current drawn from the battery and (c) the equivalent resistance of the combination."
+  },
+  {
+   "id": "sc10-0243",
+   "section": "SECTION C",
+   "type": "SA",
+   "chapter": "Magnetic Effects of Electric Current",
+   "text": "(a) State the right-hand thumb rule.\n(b) Describe the pattern of the magnetic field lines due to a current-carrying circular loop.\n(c) How will the magnetic field at the centre of a circular coil change if (i) the current in it is doubled and (ii) the number of turns is made three times, the current remaining the same?"
+  },
+  {
+   "id": "sc10-0244",
+   "section": "SECTION C",
+   "type": "CBQ",
+   "chapter": "The Human Eye and the Colourful World",
+   "text": "During a school trip to the hills, students noticed that the sky was deep blue at noon, while the Sun looked reddish at sunrise. Their teacher explained that sunlight is scattered by the very small particles of air in the atmosphere, and that the amount of scattering depends on the wavelength of the light. She added that astronauts in space see the sky as dark.\n(a) Why does the clear sky appear blue?\n(b) Why does the sky appear dark to astronauts in space?\n(c) Why does the Sun appear reddish at sunrise and sunset?\nOR\n(c) What is the Tyndall effect? Give one example of it seen in daily life."
+  },
+  {
+   "id": "sc10-0245",
+   "section": "SECTION C",
+   "type": "LA",
+   "chapter": "Light - Reflection and Refraction",
+   "text": "(a) Draw ray diagrams to show the formation of the image by a concave mirror when the object is placed (i) between the pole and the focus and (ii) beyond the centre of curvature. State the nature of the image in each case.\n(b) An object is placed 10 cm from a convex lens of focal length 15 cm. Find the position and the magnification of the image, and state its nature.\nOR\n(a) Explain, with a ray diagram, why a pencil partly dipped in water in a glass tumbler appears bent at the surface of the water.\n(b) The refractive index of diamond is 2.42. What is the meaning of this statement?\n(c) Calculate the speed of light in a medium of refractive index 2.4. (Speed of light in vacuum = 3 × 10⁸ m/s)"
   }
  ]
 }
