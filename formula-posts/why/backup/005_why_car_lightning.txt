@@ -1,0 +1,19 @@
+⚡ WHY? — Why is a car a SAFE place when lightning strikes?
+
+❌ Not the rubber tyres — the bolt has just crossed kilometres of air!
+✅ The METAL body is a hollow conductor around you.
+
+Lightning hits → charge spreads over the OUTER surface → flows around the body → jumps to the ground 🌩️
+E = 0 inside the metal → Gauss's law: no charge on the inside → E = 0 in the cabin.
+
+That's electrostatic shielding — the car is a Faraday cage. 🚗
+(Hard metal roof only · windows shut · don't touch metal parts.)
+
+Electrostatics of Conductors — Class 12 Physics. 📘
+
+💾 Save it · 📤 Share with your batchmates
+
+🌐 Free notes & mock papers → https://cbsemock.org.in
+📲 Telegram: t.me/cbsemockportal
+
+#WhySeries #CBSEMock #Electrostatics #FaradayCage #GaussLaw #Class12Physics #BoardExam2027 #CBSE
